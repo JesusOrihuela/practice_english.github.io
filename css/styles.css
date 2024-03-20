@@ -165,10 +165,30 @@ footer {
     border-radius: 5px; /* Esquinas redondeadas */
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #listenButton:hover {
+    background-color: #ddd;
+    color: #00247D;
+}
+
+#speakButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ddd;
+    background-color: #00247D;
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#speakButton:hover {
     background-color: #ddd;
     color: #00247D;
 }

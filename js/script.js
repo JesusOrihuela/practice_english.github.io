@@ -868,13 +868,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Crear una nueva instancia de SpeechSynthesisUtterance
         const utterance = new SpeechSynthesisUtterance(phraseText);
         // Establecer el idioma a inglés británico o americano según prefieras
-        utterance.lang = 'en-GB'; // o 'en-US' para inglés americano
+        utterance.lang = 'en-US'; // o 'en-US' para inglés americano
 
         // Hablar la frase
         window.speechSynthesis.speak(utterance);
     }
 
-    // Agregar el event listener al elemento con id="Phrase"
-    document.getElementById('Phrase').addEventListener('click', speakPhrase);
+    // Agregar el event listener al nuevo botón
+    document.getElementById('speakButton').addEventListener('click', speakPhrase);
 
 });
