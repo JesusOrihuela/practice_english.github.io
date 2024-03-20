@@ -685,6 +685,17 @@ document.addEventListener('DOMContentLoaded', function() {
         tryAnotherButton.disabled = true;
     };
 
+    recognition.onnomatch = function(event) {
+        alert('Voice Recognition Error');
+        // Inicializa recognizedText con el mensaje inicial
+        recognizedTextElement.textContent = "Press the button when you're ready to talk";
+        // Reactiva el botón
+        listenButton.disabled = false;
+        // Mantiene desactivados los botones Try Again y Try Another
+        tryAgainButton.disabled = true;
+        tryAnotherButton.disabled = true;
+    };
+
     recognition.onspeechend = function() {
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
         listenButton.disabled = true;
