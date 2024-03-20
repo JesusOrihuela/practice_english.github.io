@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eae2b75a;
+    overflow-x: hidden
+}
+
+header {
+    width: 100%;
+    background-color: #FCBF49;
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del encabezado */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+main {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap; /* Asegura que las secciones se apilen verticalmente */
+    justify-content: space-around;
+}
+
+.practice-section {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.practice-section h2 {
+    margin-bottom: 1rem;
+    color: #00247D;
+}
+
+.practice-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.practice-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #00247D;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .practice-section {
+        width: calc(50% - 10px); /* Ajusta el ancho de las secciones en pantallas más grandes */
+    }
+}
+
+@media (min-width: 1024px) {
+    .practice-section {
+        width: calc(33.33% - 10px); /* Ajusta el ancho de las secciones en pantallas aún más grandes */
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: #FCBF49;
+    color: #00247D;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Estilos para el main de dailyLife.html */
+.practice-page {
+    background-color: #eae2b75a;
+}
+
+.practice-page main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 64vh;
+}
+
+.practice-page main {
+    flex: 1 0 auto;
+}
+
+.practice-page footer {
+    flex-shrink: 0;
+}
+
+.practice-page #Phrase, .practice-page #Traduction {
+    text-align: center;
+    margin: 5px 0; /* Ajusta el margen para dar espacio entre los elementos */
+}
+
+.practice-page #Phrase {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.practice-page #Traduction {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.practice-page #recognizedText {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
+    text-align: center;
+}
+
+.main-title {
+    text-align: center;
+    color: #00247D;
+    margin-top: 0px;
+}
+
+#listenButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ddd;
+    background-color: #00247D;
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#listenButton:hover {
+    background-color: #ddd;
+    color: #00247D;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre los botones */
+    margin-top: 10px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #00247D; /* Color de fondo azul */
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Añade margen horizontal a los botones */
+}
+
+.button-container button:hover {
+    background-color: #ddd;
+    color: #00247D;
+}
+
+.button-container button:disabled {
+    background-color: #cccccc; /* Color de fondo gris cuando el botón está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
+}
