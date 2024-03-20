@@ -663,10 +663,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     recognition.onresult = function(event) {
-        const speechResult = event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-        const targetPhrase = phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
+        const speechResult = event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
+        const targetPhrase = phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
         // Actualiza recognizedText con el texto reconocido
-        recognizedTextElement.textContent = 'I understood: ' + event.results[0][0].transcript;
+        recognizedTextElement.textContent = 'I understood: "' + event.results[0][0].transcript + '"';
         if (speechResult === targetPhrase) {
             alert('Correct!');
         } else {
