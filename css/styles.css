@@ -133,6 +133,10 @@ footer {
     font-weight: bold;
 }
 
+#Phrase {
+    cursor: pointer;
+}
+
 .practice-page #Traduction {
     font-size: 1.2rem;
     font-style: italic;

@@ -860,4 +860,21 @@ document.addEventListener('DOMContentLoaded', function() {
         contenedorLista2.textContent = 'No se seleccionó ninguna lista.';
     }
 
+    // Función para hablar la frase actual
+    function speakPhrase() {
+        const phraseElement = document.getElementById('Phrase');
+        const phraseText = phraseElement.textContent;
+
+        // Crear una nueva instancia de SpeechSynthesisUtterance
+        const utterance = new SpeechSynthesisUtterance(phraseText);
+        // Establecer el idioma a inglés británico o americano según prefieras
+        utterance.lang = 'en-GB'; // o 'en-US' para inglés americano
+
+        // Hablar la frase
+        window.speechSynthesis.speak(utterance);
+    }
+
+    // Agregar el event listener al elemento con id="Phrase"
+    document.getElementById('Phrase').addEventListener('click', speakPhrase);
+
 });
