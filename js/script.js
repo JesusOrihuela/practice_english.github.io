@@ -803,6 +803,16 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             alert('Try Again!');
         }
+        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+        listenButton.disabled = true;
+        listenButton.style.backgroundColor = '#cccccc';
+        listenButton.style.cursor = 'not-allowed';
+        speakButton.disabled = true;
+        speakButton.style.backgroundColor = '#cccccc';
+        speakButton.style.cursor = 'not-allowed';
+        // Reactiva los botones Try Again y Try Another
+        tryAgainButton.disabled = false;
+        tryAnotherButton.disabled = false;
     };
 
     recognition.onerror = function(event) {
@@ -818,18 +828,20 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     recognition.onspeechend = function() {
-        // Actualiza recognizedText con el mensaje inicial
-        recognizedTextElement.textContent = "I didn't understand you. Try again!";
-        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-        listenButton.disabled = true;
-        listenButton.style.backgroundColor = '#cccccc';
-        listenButton.style.cursor = 'not-allowed';
-        speakButton.disabled = true;
-        speakButton.style.backgroundColor = '#cccccc';
-        speakButton.style.cursor = 'not-allowed';
-        // Reactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = false;
-        tryAnotherButton.disabled = false;
+        if (recognizedTextElement.textContent === "Listening...") {
+            // Actualiza recognizedText con el mensaje inicial
+            recognizedTextElement.textContent = "I didn't understand you. Try again!";
+            // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+            listenButton.disabled = true;
+            listenButton.style.backgroundColor = '#cccccc';
+            listenButton.style.cursor = 'not-allowed';
+            speakButton.disabled = true;
+            speakButton.style.backgroundColor = '#cccccc';
+            speakButton.style.cursor = 'not-allowed';
+            // Reactiva los botones Try Again y Try Another
+            tryAgainButton.disabled = false;
+            tryAnotherButton.disabled = false;
+        }
     };
 
     tryAgainButton.addEventListener('click', function() {
