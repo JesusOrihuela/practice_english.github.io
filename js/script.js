@@ -871,18 +871,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para hablar la frase actual
-    function speakPhrase() {
-        const phraseElement = document.getElementById('Phrase');
-        const phraseText = phraseElement.textContent;
+function speakPhrase() {
+    const phraseElement = document.getElementById('Phrase');
+    const phraseText = phraseElement.textContent;
 
-        // Crear una nueva instancia de SpeechSynthesisUtterance
-        const utterance = new SpeechSynthesisUtterance(phraseText);
-        // Establecer el idioma a inglés británico o americano según prefieras
-        utterance.lang = 'en-US'; // o 'en-US' para inglés americano
+    // Crear una nueva instancia de SpeechSynthesisUtterance
+    const utterance = new SpeechSynthesisUtterance(phraseText);
+    // Establecer el idioma a inglés británico o americano según prefieras
+    utterance.lang = 'en-US'; // o 'en-US' para inglés americano
 
-        // Hablar la frase
-        window.speechSynthesis.speak(utterance);
-    }
+    // Desactivar el botón speakButton antes de iniciar la reproducción del audio
+    document.getElementById('speakButton').disabled = true;
+
+    // Agregar un evento para reactivar el botón una vez que el audio haya terminado
+    utterance.onend = function() {
+        document.getElementById('speakButton').disabled = false;
+    };
+
+    // Hablar la frase
+    window.speechSynthesis.speak(utterance);
+}
 
     // Agregar el event listener al nuevo botón
     document.getElementById('speakButton').addEventListener('click', speakPhrase);
