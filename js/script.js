@@ -815,10 +815,33 @@ document.addEventListener('DOMContentLoaded', function() {
         tryAnotherButton.disabled = false;
     };
 
+    recognition.onspeechend = function(event) {
+        const speechResult = event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
+        const targetPhrase = phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
+        speechResult = expandContractions(speechResult);
+        targetPhrase = expandContractions(targetPhrase);
+        // Actualiza recognizedText con el texto reconocido
+        recognizedTextElement.textContent = 'I understood: "' + event.results[0][0].transcript + '"';
+        if (speechResult === targetPhrase) {
+            alert('Correct!');
+        } else {
+            alert('Try Again!');
+        }
+        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+        listenButton.disabled = true;
+        listenButton.style.backgroundColor = '#cccccc';
+        listenButton.style.cursor = 'not-allowed';
+        speakButton.disabled = true;
+        speakButton.style.backgroundColor = '#cccccc';
+        speakButton.style.cursor = 'not-allowed';
+        // Reactiva los botones Try Again y Try Another
+        tryAgainButton.disabled = false;
+        tryAnotherButton.disabled = false;
+    };
+
     recognition.onerror = function(event) {
         // Actualiza recognizedText con el mensaje inicial
         recognizedTextElement.textContent = "I didn't understand you. Try again!";
-        alert('I understood: "' + event.results[0][0].transcript + '"');
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
         listenButton.disabled = true;
         listenButton.style.backgroundColor = '#cccccc';
@@ -834,7 +857,6 @@ document.addEventListener('DOMContentLoaded', function() {
     recognition.onnomatch = function() {
         // Actualiza recognizedText con el mensaje inicial
         recognizedTextElement.textContent = "I didn't understand you. Try again!";
-        alert('I understood: "' + event.results[0][0].transcript + '"');
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
         listenButton.disabled = true;
         listenButton.style.backgroundColor = '#cccccc';
