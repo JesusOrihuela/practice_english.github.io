@@ -818,6 +818,7 @@ document.addEventListener('DOMContentLoaded', function() {
     recognition.onerror = function(event) {
         // Actualiza recognizedText con el mensaje inicial
         recognizedTextElement.textContent = "I didn't understand you. Try again!";
+        alert('I understood: "' + event.results[0][0].transcript + '"');
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
         listenButton.disabled = true;
         listenButton.style.backgroundColor = '#cccccc';
@@ -833,6 +834,7 @@ document.addEventListener('DOMContentLoaded', function() {
     recognition.onnomatch = function() {
         // Actualiza recognizedText con el mensaje inicial
         recognizedTextElement.textContent = "I didn't understand you. Try again!";
+        alert('I understood: "' + event.results[0][0].transcript + '"');
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
         listenButton.disabled = true;
         listenButton.style.backgroundColor = '#cccccc';
