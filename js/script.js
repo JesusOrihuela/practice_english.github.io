@@ -827,7 +827,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tryAnotherButton.disabled = true;
     };
 
-    recognition.onspeechend = function() {
+    recognition.onend = function() {
         if (recognizedTextElement.textContent === "Listening...") {
             // Actualiza recognizedText con el mensaje inicial
             recognizedTextElement.textContent = "I didn't understand you. Try again!";
