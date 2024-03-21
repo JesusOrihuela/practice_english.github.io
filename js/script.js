@@ -816,32 +816,33 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     recognition.onerror = function(event) {
-        alert('Voice Recognition Error');
-        // Inicializa recognizedText con el mensaje inicial
-        recognizedTextElement.textContent = "Press the button when you're ready to talk";
-        // Reactiva el botón
-        listenButton.disabled = false;
-        speakButton.disabled = false;
-        // Mantiene desactivados los botones Try Again y Try Another
-        tryAgainButton.disabled = true;
-        tryAnotherButton.disabled = true;
+        // Actualiza recognizedText con el mensaje inicial
+        recognizedTextElement.textContent = "I didn't understand you. Try again!";
+        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+        listenButton.disabled = true;
+        listenButton.style.backgroundColor = '#cccccc';
+        listenButton.style.cursor = 'not-allowed';
+        speakButton.disabled = true;
+        speakButton.style.backgroundColor = '#cccccc';
+        speakButton.style.cursor = 'not-allowed';
+        // Reactiva los botones Try Again y Try Another
+        tryAgainButton.disabled = false;
+        tryAnotherButton.disabled = false;
     };
 
-    recognition.onend = function() {
-        if (recognizedTextElement.textContent === "Listening...") {
-            // Actualiza recognizedText con el mensaje inicial
-            recognizedTextElement.textContent = "I didn't understand you. Try again!";
-            // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-            listenButton.disabled = true;
-            listenButton.style.backgroundColor = '#cccccc';
-            listenButton.style.cursor = 'not-allowed';
-            speakButton.disabled = true;
-            speakButton.style.backgroundColor = '#cccccc';
-            speakButton.style.cursor = 'not-allowed';
-            // Reactiva los botones Try Again y Try Another
-            tryAgainButton.disabled = false;
-            tryAnotherButton.disabled = false;
-        }
+    recognition.onnomatch = function() {
+        // Actualiza recognizedText con el mensaje inicial
+        recognizedTextElement.textContent = "I didn't understand you. Try again!";
+        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+        listenButton.disabled = true;
+        listenButton.style.backgroundColor = '#cccccc';
+        listenButton.style.cursor = 'not-allowed';
+        speakButton.disabled = true;
+        speakButton.style.backgroundColor = '#cccccc';
+        speakButton.style.cursor = 'not-allowed';
+        // Reactiva los botones Try Again y Try Another
+        tryAgainButton.disabled = false;
+        tryAnotherButton.disabled = false;
     };
 
     tryAgainButton.addEventListener('click', function() {
