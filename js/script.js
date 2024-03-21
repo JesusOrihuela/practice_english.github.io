@@ -854,7 +854,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tryAnotherButton.disabled = false;
     };
 
-    recognition.onnomatch = function() {
+    recognition.onnomatch = function(event) {
         // Actualiza recognizedText con el mensaje inicial
         recognizedTextElement.textContent = "I didn't understand you. Try again!";
         // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
