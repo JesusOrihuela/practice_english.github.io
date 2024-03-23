@@ -174,6 +174,11 @@ footer {
     color: #00247D;
 }
 
+#listenButton:disabled {
+    background-color: #cccccc; /* Color de fondo gris cuando el botón está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
+}
+
 #speakButton {
     display: inline-block;
     padding: 10px 20px;
@@ -191,6 +196,11 @@ footer {
 #speakButton:hover {
     background-color: #ddd;
     color: #00247D;
+}
+
+#speakButton:disabled {
+    background-color: #cccccc; /* Color de fondo gris cuando el botón está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
 }
 
 .button-container {

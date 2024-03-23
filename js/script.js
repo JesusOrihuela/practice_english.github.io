@@ -768,117 +768,96 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const listenButton = document.getElementById('listenButton');
     const phraseElement = document.getElementById('Phrase');
-    const recognizedTextElement = document.getElementById('recognizedText');
+    const message = document.getElementById('recognizedText');
     const tryAgainButton = document.getElementById('tryAgainButton');
     const tryAnotherButton = document.getElementById('tryAnotherButton');
-    const recognition = new webkitSpeechRecognition();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
+    let understood = false;
+    let microphone = false;
 
     // Inicializa recognizedText con el mensaje inicial
-    recognizedTextElement.textContent = "Press the button when you're ready to talk";
+    message.textContent = "Press the button when you're ready to talk";
 
-    listenButton.addEventListener('click', function() {
-        // Actualiza recognizedText a "Listening..." cuando el micrófono esté activo
-        recognizedTextElement.textContent = "Listening...";
-        // Desactiva el botón
-        listenButton.disabled = true;
-        speakButton.disabled = true;
-        // Desactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = true;
-        tryAnotherButton.disabled = true;
+    listenButton.addEventListener('click', () => {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+        recognition.lang = 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        // Actualiza el mensaje inicial
+        message.textContent = "Press the button when you're ready to talk";
+        
         recognition.start();
+
+        recognition.onstart = () => {
+            microphone = true;
+            // Actualiza recognizedText a "Listening..." cuando el micrófono esté activo
+            message.textContent = "Listening...";
+            // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+            listenButton.disabled = true;
+            speakButton.disabled = true;
+            // Reactiva los botones Try Again y Try Another
+            tryAgainButton.disabled = false;
+            tryAnotherButton.disabled = false;
+        };
+
+        recognition.onresult = (event) => {
+            const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
+            const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
+            if (speechResult === targetPhrase) {
+                // Actualiza recognizedText con el texto reconocido
+                message.textContent = 'Correct!';
+                understood = true;
+            } else {
+                // Actualiza recognizedText con el texto reconocido
+                message.textContent = 'Try Again. I understood: "' + event.results[0][0].transcript + '"';
+                understood = true;
+            }
+        };
+        
+        recognition.onspeechend = () => {
+            recognition.stop();
+        };
+    
+        recognition.onerror = (event) => {
+            // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
+            listenButton.disabled = true;
+            speakButton.disabled = true;
+            // Reactiva los botones Try Again y Try Another
+            tryAgainButton.disabled = false;
+            tryAnotherButton.disabled = false;
+            if (event.error === 'no-speech') {
+                message.textContent = "I didn't understand you. Try again!";
+            }
+            else if (event.error === 'audio-capture') {
+                message.textContent = 'No microphone was found. Connect a microphone and try again!';
+            }
+            else if (event.error === 'not-allowed') {
+                message.textContent = 'Permission to use the microphone is blocked. Change the permission in the settings and try again!';
+            }
+            else {
+                message.textContent = 'An error occurred. Try again!';
+            }
+        };
+
+        recognition.onend = () => {
+            if (!microphone) {
+                // Actualiza recognizedText con el mensaje de error
+                message.textContent = 'No microphone was found. Connect a microphone and try again!';
+            }
+            else if (!understood) {
+                // Actualiza recognizedText con el mensaje de error
+                message.textContent = 'Try Again. I did not understand you!';
+            }
+        };
+
     });
 
-    recognition.onresult = function(event) {
-        const speechResult = event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
-        const targetPhrase = phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
-        speechResult = expandContractions(speechResult);
-        targetPhrase = expandContractions(targetPhrase);
-        // Actualiza recognizedText con el texto reconocido
-        recognizedTextElement.textContent = 'I understood: "' + event.results[0][0].transcript + '"';
-        if (speechResult === targetPhrase) {
-            alert('Correct!');
-        } else {
-            alert('Try Again!');
-        }
-        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-        listenButton.disabled = true;
-        listenButton.style.backgroundColor = '#cccccc';
-        listenButton.style.cursor = 'not-allowed';
-        speakButton.disabled = true;
-        speakButton.style.backgroundColor = '#cccccc';
-        speakButton.style.cursor = 'not-allowed';
-        // Reactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = false;
-        tryAnotherButton.disabled = false;
-    };
-
-    recognition.onspeechend = function(event) {
-        const speechResult = event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
-        const targetPhrase = phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,"");
-        speechResult = expandContractions(speechResult);
-        targetPhrase = expandContractions(targetPhrase);
-        // Actualiza recognizedText con el texto reconocido
-        recognizedTextElement.textContent = 'I understood: "' + event.results[0][0].transcript + '"';
-        if (speechResult === targetPhrase) {
-            alert('Correct!');
-        } else {
-            alert('Try Again!');
-        }
-        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-        listenButton.disabled = true;
-        listenButton.style.backgroundColor = '#cccccc';
-        listenButton.style.cursor = 'not-allowed';
-        speakButton.disabled = true;
-        speakButton.style.backgroundColor = '#cccccc';
-        speakButton.style.cursor = 'not-allowed';
-        // Reactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = false;
-        tryAnotherButton.disabled = false;
-    };
-
-    recognition.onerror = function(event) {
-        // Actualiza recognizedText con el mensaje inicial
-        recognizedTextElement.textContent = "I didn't understand you. Try again!";
-        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-        listenButton.disabled = true;
-        listenButton.style.backgroundColor = '#cccccc';
-        listenButton.style.cursor = 'not-allowed';
-        speakButton.disabled = true;
-        speakButton.style.backgroundColor = '#cccccc';
-        speakButton.style.cursor = 'not-allowed';
-        // Reactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = false;
-        tryAnotherButton.disabled = false;
-    };
-
-    recognition.onnomatch = function(event) {
-        // Actualiza recognizedText con el mensaje inicial
-        recognizedTextElement.textContent = "I didn't understand you. Try again!";
-        // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
-        listenButton.disabled = true;
-        listenButton.style.backgroundColor = '#cccccc';
-        listenButton.style.cursor = 'not-allowed';
-        speakButton.disabled = true;
-        speakButton.style.backgroundColor = '#cccccc';
-        speakButton.style.cursor = 'not-allowed';
-        // Reactiva los botones Try Again y Try Another
-        tryAgainButton.disabled = false;
-        tryAnotherButton.disabled = false;
-    };
-
-    tryAgainButton.addEventListener('click', function() {
+    tryAgainButton.addEventListener('click', () => {
         // Reactiva el botón
         listenButton.disabled = false;
-        listenButton.style.backgroundColor = '#00247D';
-        listenButton.style.cursor = 'pointer';
         speakButton.disabled = false;
-        speakButton.style.backgroundColor = '#00247D';
-        speakButton.style.cursor = 'pointer';
         // Inicializa recognizedText con el mensaje inicial
-        recognizedTextElement.textContent = "Press the button when you're ready to talk";
+        message.textContent = "Press the button when you're ready to talk";
         // Mantiene desactivados los botones Try Again y Try Another
         tryAgainButton.disabled = true;
         tryAnotherButton.disabled = true;
@@ -908,26 +887,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Función para hablar la frase actual
-function speakPhrase() {
-    const phraseElement = document.getElementById('Phrase');
-    const phraseText = phraseElement.textContent;
+    function speakPhrase() {
+        const phraseElement = document.getElementById('Phrase');
+        const phraseText = phraseElement.textContent;
 
-    // Crear una nueva instancia de SpeechSynthesisUtterance
-    const utterance = new SpeechSynthesisUtterance(phraseText);
-    // Establecer el idioma a inglés británico o americano según prefieras
-    utterance.lang = 'en-US'; // o 'en-US' para inglés americano
+        // Crear una nueva instancia de SpeechSynthesisUtterance
+        const utterance = new SpeechSynthesisUtterance(phraseText);
+        // Establecer el idioma a inglés británico o americano según prefieras
+        utterance.lang = 'en-GB'; // o 'en-US' para inglés americano
 
-    // Desactivar el botón speakButton antes de iniciar la reproducción del audio
-    document.getElementById('speakButton').disabled = true;
+        // No se permite hacer click en el botón mientras se está reproduciendo el audio, sin desactivarlo
+        document.getElementById('speakButton').style.cursor = 'not-allowed';
+        document.getElementById('listenButton').style.cursor = 'not-allowed';        
 
-    // Agregar un evento para reactivar el botón una vez que el audio haya terminado
-    utterance.onend = function() {
-        document.getElementById('speakButton').disabled = false;
-    };
+        // Agregar un evento para reactivar el botón una vez que el audio haya terminado
+        utterance.onend = function() {
+            document.getElementById('speakButton').style.cursor = 'pointer';
+            document.getElementById('listenButton').style.cursor = 'pointer';     
+        };
 
-    // Hablar la frase
-    window.speechSynthesis.speak(utterance);
-}
+        // Hablar la frase
+        window.speechSynthesis.speak(utterance);
+    }
 
     // Agregar el event listener al nuevo botón
     document.getElementById('speakButton').addEventListener('click', speakPhrase);
