@@ -773,6 +773,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tryAnotherButton = document.getElementById('tryAnotherButton');
     let understood = false;
     let microphone = false;
+    const jsConfetti = new JSConfetti();
 
     // Inicializa recognizedText con el mensaje inicial
     message.textContent = "Press the button when you're ready to talk";
@@ -807,6 +808,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Actualiza recognizedText con el texto reconocido
                 message.textContent = 'Correct!';
                 understood = true;
+                jsConfetti.addConfetti();
             } else {
                 // Actualiza recognizedText con el texto reconocido
                 message.textContent = 'Try Again. I understood: "' + event.results[0][0].transcript + '"';
@@ -893,17 +895,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Crear una nueva instancia de SpeechSynthesisUtterance
         const utterance = new SpeechSynthesisUtterance(phraseText);
-        // Establecer el idioma a inglés británico o americano según prefieras
-        utterance.lang = 'en-GB'; // o 'en-US' para inglés americano
+        // Establecer el idioma a inglés británico o americano aleatoriamente
+        utterance.lang = Math.random() < 0.5 ? 'en-GB' : 'en-US';
 
-        // No se permite hacer click en el botón mientras se está reproduciendo el audio, sin desactivarlo
-        document.getElementById('speakButton').style.cursor = 'not-allowed';
-        document.getElementById('listenButton').style.cursor = 'not-allowed';        
+        // Se desactiva el botón de hablar y escuchar mientras se reproduce el audio
+        document.getElementById('speakButton').disabled = true;
+        document.getElementById('listenButton').disabled = true;
 
         // Agregar un evento para reactivar el botón una vez que el audio haya terminado
         utterance.onend = function() {
-            document.getElementById('speakButton').style.cursor = 'pointer';
-            document.getElementById('listenButton').style.cursor = 'pointer';     
+            document.getElementById('speakButton').disabled = false;
+            document.getElementById('listenButton').disabled = false;
         };
 
         // Hablar la frase
