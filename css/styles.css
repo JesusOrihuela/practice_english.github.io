@@ -18,7 +18,7 @@ header {
 
 header img {
     max-width: 100%; /* Asegura que la imagen no exceda el ancho del encabezado */
-    height: auto; /* Mantiene la proporción de la imagen */
+    height: auto; /* Ajusta la altura de la imagen automáticamente */
 }
 
 main {
@@ -102,7 +102,6 @@ footer {
     }
 }
 
-/* Estilos para el main de dailyLife.html */
 .practice-page {
     background-color: #eae2b75a;
 }
