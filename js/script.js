@@ -808,7 +808,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
                 if (event.results[0][0].confidence >= 0.975) {
                     message.textContent = 'Excellent!';
-                    jsConfetti.addConfetti({confettiNumber: 1500});
+                    jsConfetti.addConfetti({confettiNumber: 1000});
                 }
                 else if (event.results[0][0].confidence >= 0.95) {
                     message.textContent = 'Great!';
