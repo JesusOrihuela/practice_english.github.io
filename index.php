@@ -44,12 +44,10 @@
         function setVariables(lista1, lista2) {
             localStorage.setItem('lista1', lista1);
             localStorage.setItem('lista2', lista2);
-            window.location.href = 'practice.html';
+            window.location.href = 'practice.php';
         }
     </script>
 
 </body>
 
 <?php include 'footer.php'; ?>
-
-</html>
