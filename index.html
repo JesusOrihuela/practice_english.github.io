@@ -1,4 +1,17 @@
-<?php include 'header.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice English</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.ico">
+</head>
+
+<header>
+    <a href="index.html"><img src="img/logo.png" alt="Practice English"></a>
+</header>
 
 <body class="index-page">
 
@@ -44,10 +57,14 @@
         function setVariables(lista1, lista2) {
             localStorage.setItem('lista1', lista1);
             localStorage.setItem('lista2', lista2);
-            window.location.href = 'practice.php';
+            window.location.href = 'practice.html';
         }
     </script>
 
 </body>
 
-<?php include 'footer.php'; ?>
+<footer>
+    <p>© 2024 Desarrollado por Jesús Orihuela.</p>
+</footer>
+
+</html>
