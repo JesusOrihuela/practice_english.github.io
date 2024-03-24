@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "¿Podría poner más hielo en mi bebida, por favor?",
             "¿Ofrecen algún descuento para grupos grandes?",
             "¿Hay que pagar un descorche si traigo mi propio vino?",
-            "¿Podría pedir mi filete a término medio, por favor?",
+            "¿Podría tener mi filete a término medio, por favor?",
             "¿Hay un límite de personas para una reserva?",
             "¿Tiene alguna recomendación para los aperitivos?",
             "¿Podría servirme un poco más de salsa?",
@@ -857,6 +857,8 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         recognition.onend = () => {
+            console.log('microphone: ', microphone);
+            console.log('understood: ', understood);
             if (!microphone) {
                 // Actualiza recognizedText con el mensaje de error
                 message.textContent = 'No microphone was found. Connect a microphone and try again!';
