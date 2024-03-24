@@ -835,7 +835,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     
         recognition.onerror = (event) => {
-            console.error('OnError: ', understood);
+            console.log('OnError: ', understood);
             // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
             listenButton.disabled = true;
             speakButton.disabled = true;
