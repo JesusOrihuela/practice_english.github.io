@@ -810,17 +810,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
                 if (event.results[0][0].confidence >= 0.975) {
                     message.textContent = 'Excellent!';
+                    jsConfetti.addConfetti({confettiNumber: 2000});
                 }
                 else if (event.results[0][0].confidence >= 0.95) {
                     message.textContent = 'Great!';
+                    jsConfetti.addConfetti({confettiNumber: 400});
                 }
                 else if (event.results[0][0].confidence >= 0.9) {
                     message.textContent = 'Good!';
+                    jsConfetti.addConfetti({confettiNumber: 150});
+                }
+                else {
+                    jsConfetti.addConfetti({confettiNumber: 50});
                 }
                 // Agrega el porcentaje de confianza al mensaje, redondeado a dos decimales
                 message.textContent += '\nConfidence: ' + (event.results[0][0].confidence * 100).toFixed(2) + '%';
                 understood = true;
-                jsConfetti.addConfetti();
             } else {
                 // Actualiza recognizedText con el texto reconocido
                 message.textContent = 'Try Again. I understood: "' + event.results[0][0].transcript + '"';
