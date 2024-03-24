@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "¿Podrías vigilarme mientras hago este ejercicio?",
             "¿Está bien si uso este banco después de ti?",
             "¿Podrías ayudarme a ajustar la configuración en esta máquina?",
-            "¿Cuántas series y repeticiones debo hacer para este ejercicio?",
+            "¿Cuántas series y repeticiones debería hacer para este ejercicio?",
             "¿Podrías demostrarme cómo hacer una sentadilla correctamente?",
             "¿Puedes recomendarme un peso adecuado para empezar?",
             "¿Hay una rutina específica de calentamiento que debería seguir?",
