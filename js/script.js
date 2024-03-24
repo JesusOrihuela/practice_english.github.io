@@ -794,9 +794,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reactiva los botones Try Again y Try Another
             tryAgainButton.disabled = false;
             tryAnotherButton.disabled = false;
+            console.log('OnStart: ', understood);
         };
 
         recognition.onresult = (event) => {
+            console.log('OnResult 1: ', understood);
             const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             if (speechResult === targetPhrase) {
@@ -825,17 +827,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 message.textContent = 'Try Again. I understood: "' + event.results[0][0].transcript + '"';
                 understood = true;
             }
+            console.log('OnResult 2: ', understood);
         };
-        
-        recognition.onnomatch = () => {
-            console.log('No match');
-        }
 
         recognition.onspeechend = () => {
             recognition.stop();
         };
     
         recognition.onerror = (event) => {
+            console.error('OnError: ', understood);
             // Mantiene desactivado el botón, le cambia el color de fondo, y no permite el click
             listenButton.disabled = true;
             speakButton.disabled = true;
@@ -857,8 +857,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
 
         recognition.onend = () => {
-            console.log('microphone: ', microphone);
-            console.log('understood: ', understood);
+            console.log('OnEnd: ', understood);
             if (!microphone) {
                 // Actualiza recognizedText con el mensaje de error
                 message.textContent = 'No microphone was found. Connect a microphone and try again!';
