@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "¿Está bien si trabajo con esta máquina después de ti?",
             "¿Podrías explicarme los beneficios de usar pesas libres en lugar de máquinas?",
             "¿Cuál es la técnica de respiración adecuada para este ejercicio?",
-            "¿Me puedes ayudar a entender qué grupos musculares trabaja esta máquina?",
+            "¿Me puedes ayudar a entender qué grupos musculares se trabajan en esta máquina?",
             "¿Tienes alguna sugerencia para aumentar la intensidad de mi entrenamiento?",
             "¿Debería seguir algún tipo de rutina de enfriamiento después de mi entrenamiento?",
             "¿Cómo desinfecto correctamente el equipo después de usarlo?",
