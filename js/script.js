@@ -831,6 +831,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         };
         
+        recognition.onnomatch = () => {
+            console.log('No match');
+        }
+
         recognition.onspeechend = () => {
             recognition.stop();
         };
