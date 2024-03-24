@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "¿Puedo pedir una guarnición de patatas fritas con mi comida?",
             "¿Hay que pagar por usar tarjeta de crédito?",
             "¿Tienen un patio apto para perros?",
-            "¿Puedo pedir mi hamburguesa bien hecha?",
+            "¿Puedo pedir mi hamburguesa bien cocida?",
             "¿Hay menú infantil?",
             "¿Podría envasar las sobras en recipientes separados?",
             "¿Tienen cócteles sin alcohol?",
