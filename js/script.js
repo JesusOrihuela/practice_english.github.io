@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Could you spot me while I do this exercise?",
             "Is it okay if I use this bench after you?",
             "Could you help me adjust the settings on this machine?",
-            "How many sets and reps should I do for this exercise?",
+            "How many sets and repetitions should I do for this exercise?",
             "Could you demonstrate how to do a proper squat?",
             "Can you recommend a good weight for me to start with?",
             "Is there a specific warm-up routine I should follow?",

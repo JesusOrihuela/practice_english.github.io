@@ -119,10 +119,6 @@ footer {
     flex: 1 0 auto;
 }
 
-.practice-page footer {
-    flex-shrink: 0;
-}
-
 .practice-page #Phrase, .practice-page #Traduction {
     text-align: center;
     margin: 5px 0; /* Ajusta el margen para dar espacio entre los elementos */
