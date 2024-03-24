@@ -758,7 +758,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "you'll": "you you will",
             "you'll've": "you you will have",
             "you're": "you are",
-            "you've": "you have"
+            "you've": "you have",
+            "-": " "
         };
     
         return text.replace(/\b\w+['’]\w+\b/g, function(match) {
@@ -805,8 +806,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             if (speechResult === targetPhrase) {
-                // Actualiza recognizedText con el texto reconocido
-                message.textContent = 'Correct!';
+                message.textContent = 'Correct, but could be better!';
+                // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
+                if (event.results[0][0].confidence >= 0.975) {
+                    message.textContent = 'Excellent!';
+                }
+                else if (event.results[0][0].confidence >= 0.95) {
+                    message.textContent = 'Great!';
+                }
+                else if (event.results[0][0].confidence >= 0.9) {
+                    message.textContent = 'Good!';
+                }
+                // Agrega el porcentaje de confianza al mensaje, redondeado a dos decimales
+                message.textContent += '\nConfidence: ' + (event.results[0][0].confidence * 100).toFixed(2) + '%';
                 understood = true;
                 jsConfetti.addConfetti();
             } else {
@@ -884,8 +896,8 @@ document.addEventListener('DOMContentLoaded', function() {
         contenedorLista1.textContent = listas[lista1][indiceAleatorio];
         contenedorLista2.textContent = listas[lista2][indiceAleatorio];
     } else {
-        contenedorLista1.textContent = 'No se seleccionó ninguna lista.';
-        contenedorLista2.textContent = 'No se seleccionó ninguna lista.';
+        contenedorLista1.textContent = 'Something went wrong. Please try again later!';
+        contenedorLista2.textContent = 'Something went wrong. Please try again later!';
     }
 
     // Función para hablar la frase actual
