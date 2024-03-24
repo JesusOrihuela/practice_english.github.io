@@ -794,6 +794,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reactiva los botones Try Again y Try Another
             tryAgainButton.disabled = false;
             tryAnotherButton.disabled = false;
+            // Understood se reinicia a falso
+            understood = false;
             console.log('OnStart: ', understood);
         };
 
