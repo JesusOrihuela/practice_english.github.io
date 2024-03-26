@@ -826,7 +826,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 understood = true;
             } else {
                 // Actualiza recognizedText con el texto reconocido
-                message.textContent = 'Try Again. I understood: "' + event.results[0][0].transcript + '"';
+                let recognizedText = event.results[0][0].transcript;
+                // Si dentro de recognizedText se encuentra la palabra "i", se reemplaza por "I"
+                recognizedText = recognizedText.replace(/\bi\b/g, 'I');
+                // Se pone la primera letra de recognizedText en mayúscula
+                recognizedText = recognizedText.charAt(0).toUpperCase() + recognizedText.slice(1);
+                // Se actualiza recognizedText con el mensaje
+                message.textContent = 'Try Again. I understood: "' + recognizedText + '"';
                 understood = true;
             }
             console.log('OnResult 2: ', understood);
