@@ -49,12 +49,13 @@ header img {
     border-radius: 10px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    transition: 0.3s; /* Transición suave */
+    animation: loadUp 1s ease-out;
+    transition: box-shadow 0.5s ease;
 }
 
 /* Estilos para los títulos de las secciones */
 .practice-section h2 {
-    color: #00247D;
+    color: #002685;
 }
 
 /* Efecto de sombra al pasar el cursor sobre las secciones */
@@ -65,27 +66,51 @@ header img {
 }
 
 .practice-section:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
 }
 
+.practice-section:not(:hover) {
+    box-shadow: none; 
+}
+
+/* Estilos para los botones de práctica */
 .practice-button {
     display: inline-block;
     padding: 1rem 2rem;
     font-size: 1rem;
-    color: white;
-    background-image: linear-gradient(to right, #00247D 0%, #00187D 51%, #000C7D 100%);
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    transition: 0.5s;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
 }
 
+/* Efecto de animación al pasar el cursor sobre los botones */
 .practice-button:hover {
-    background-image: linear-gradient(to left, #00247D 0%, #00187D 51%, #000C7D 100%);
+    transform: scale(1.1); /* Aumentar el tamaño del botón en un 10% */
+    background-color: #001a5c;
     color: #fff;
-    text-decoration: none; 
+    text-decoration: none;
+}
+
+/* Efecto de animación al quitar el cursor del botón */
+.practice-button:not(:hover) {
+    transform: scale(1); /* Volver al tamaño original del botón */
+    background-color: #002685;
+    color: #fff;
+}
+
+/* Añadir una animación de carga hacia arriba */
+@keyframes loadUp {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -98,10 +123,12 @@ header img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    animation: fadeIn 1s ease-out forwards; /* Añadir la animación de desvanecimiento */
 }
 
 #Phrase, #Traduction {
     margin: 10px 0; /* Ajusta el margen para dar espacio entre los elementos */
+    text-align: center; /* Alinea el texto al centro */
 }
 
 #Phrase {
@@ -118,10 +145,12 @@ header img {
     margin-top: 10px;
     margin-bottom: 10px;
     font-style: italic;
+    text-align: center;
 }
 
 .listening-title {
     color: #00247D;
+    text-align: center;
 }
 
 .button-container {
@@ -135,7 +164,7 @@ header img {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #00247D; /* Color de fondo azul */
+    background-color: #00247D;
     border: none;
     border-radius: 5px; /* Esquinas redondeadas */
     cursor: pointer;
@@ -153,6 +182,29 @@ header img {
     cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
 }
 
+/* Añadir una animación de desvanecimiento con retraso */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Aplicar la animación a los elementos dentro de .practice */
+.practice > * {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Aplicar un retraso a la animación para cada elemento */
+.practice > *:nth-child(1) { animation-delay: 0.1s; }
+.practice > *:nth-child(2) { animation-delay: 0.2s; }
+.practice > *:nth-child(3) { animation-delay: 0.3s; }
+.practice > *:nth-child(4) { animation-delay: 0.4s; }
+.practice > *:nth-child(5) { animation-delay: 0.5s; }
+.practice > *:nth-child(6) { animation-delay: 0.6s; }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Pie de página */
