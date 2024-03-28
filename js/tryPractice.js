@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentTheme = localStorage.getItem('currentTheme'); // Obtiene el tema actual del almacenamiento local
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
+        loadContractions(); // Carga las contracciones
     }
 });
 
@@ -10,9 +11,18 @@ function loadPhrases(jsonFile) {
         .then(response => response.json())
         .then(data => {
             const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
-            applyContractions(phrase).then(phraseWithContractions => {
-                displayPhraseAndTranslation(phrase, translation);
-            });
+            displayPhraseAndTranslation(phrase, translation);
+            applyContractions(phrase); // Aplica las contracciones a la frase
+        })
+        .catch(error => console.error('Error:', error));
+}
+
+function loadContractions() {
+    fetch('json/contractions.json')
+        .then(response => response.json())
+        .then(data => {
+            const contractions = data.contractions;
+            // Aquí puedes hacer lo que necesites con las contracciones, por ejemplo, aplicarlas a una frase
         })
         .catch(error => console.error('Error:', error));
 }
@@ -25,24 +35,26 @@ function getRandomPhraseAndTranslation(phrases, translations) {
     };
 }
 
-function applyContractions(phrase) {
-    return fetch('json/contractions.json')
-        .then(response => response.json())
-        .then(contractions => {
-            let phraseWithContractions = phrase;
-            for (const [contraction, expansion] of Object.entries(contractions)) {
-                phraseWithContractions = phraseWithContractions.replace(new RegExp(contraction, 'g'), expansion);
-            }
-            return phraseWithContractions;
-        });
-}
-
-function displayPhraseAndTranslation(originalPhrase, translation) {
+function displayPhraseAndTranslation(phrase, translation) {
     const phraseElement = document.getElementById('Phrase');
-    phraseElement.textContent = originalPhrase; // Muestra la frase original en el contenedor 'Phrase'
+    phraseElement.textContent = phrase; // Muestra la frase en el contenedor 'Phrase'
 
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 
-    console.log(phraseWithContractions); // Muestra la frase con contracciones en la consola
+    console.log(applyContractions(phrase));
+}
+
+function applyContractions(phrase) {
+    fetch('json/contractions.json')
+        .then(response => response.json())
+        .then(data => {
+            const contractions = data.contractions;
+            let modifiedPhrase = phrase;
+            contractions.forEach(contraction => {
+                const regex = new RegExp(contraction.original, 'g');
+                modifiedPhrase = modifiedPhrase.replace(regex, contraction.expanded);
+            });
+        })
+        .catch(error => console.error('Error:', error));
 }

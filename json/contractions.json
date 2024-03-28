@@ -1,122 +1,480 @@
 {
-    "ain't": "is not",
-    "aren't": "are not",
-    "can't": "cannot",
-    "can't've": "cannot have",
-    "'cause": "because",
-    "could've": "could have",
-    "couldn't": "could not",
-    "couldn't've": "could not have",
-    "didn't": "did not",
-    "doesn't": "does not",
-    "don't": "do not",
-    "hadn't": "had not",
-    "hadn't've": "had not have",
-    "hasn't": "has not",
-    "haven't": "have not",
-    "he'd": "he would",
-    "he'd've": "he would have",
-    "he'll": "he will",
-    "he'll've": "he will have",
-    "he's": "he is",
-    "how'd": "how did",
-    "how'd'y": "how do you",
-    "how'll": "how will",
-    "how's": "how is",
-    "I'd": "I would",
-    "I'd've": "I would have",
-    "I'll": "I will",
-    "I'll've": "I will have",
-    "I'm": "I am",
-    "I've": "I have",
-    "isn't": "is not",
-    "it'd": "it had",
-    "it'd've": "it would have",
-    "it'll": "it will",
-    "it'll've": "it will have",
-    "it's": "it is",
-    "let's": "let us",
-    "ma'am": "madam",
-    "mayn't": "may not",
-    "might've": "might have",
-    "mightn't": "might not",
-    "mightn't've": "might not have",
-    "must've": "must have",
-    "mustn't": "must not",
-    "mustn't've": "must not have",
-    "needn't": "need not",
-    "needn't've": "need not have",
-    "o'clock": "of the clock",
-    "oughtn't": "ought not",
-    "oughtn't've": "ought not have",
-    "shan't": "shall not",
-    "sha'n't": "shall not",
-    "shan't've": "shall not have",
-    "she'd": "she would",
-    "she'd've": "she would have",
-    "she'll": "she will",
-    "she'll've": "she will have",
-    "she's": "she is",
-    "should've": "should have",
-    "shouldn't": "should not",
-    "shouldn't've": "should not have",
-    "so've": "so have",
-    "so's": "so is",
-    "that'd": "that would",
-    "that'd've": "that would have",
-    "that's": "that is",
-    "there'd": "there had",
-    "there'd've": "there would have",
-    "there's": "there is",
-    "they'd": "they would",
-    "they'd've": "they would have",
-    "they'll": "they will",
-    "they'll've": "they will have",
-    "they're": "they are",
-    "they've": "they have",
-    "to've": "to have",
-    "wasn't": "was not",
-    "we'd": "we had",
-    "we'd've": "we would have",
-    "we'll": "we will",
-    "we'll've": "we will have",
-    "we're": "we are",
-    "we've": "we have",
-    "weren't": "were not",
-    "what'll": "what will",
-    "what'll've": "what will have",
-    "what're": "what are",
-    "what's": "what is",
-    "what've": "what have",
-    "when's": "when is",
-    "when've": "when have",
-    "where'd": "where did",
-    "where's": "where is",
-    "where've": "where have",
-    "who'll": "who will",
-    "who'll've": "who will have",
-    "who's": "who is",
-    "who've": "who have",
-    "why's": "why is",
-    "why've": "why have",
-    "will've": "will have",
-    "won't": "will not",
-    "won't've": "will not have",
-    "would've": "would have",
-    "wouldn't": "would not",
-    "wouldn't've": "would not have",
-    "y'all": "you all",
-    "y'alls": "you alls",
-    "y'all'd": "you all would",
-    "y'all'd've": "you all would have",
-    "y'all're": "you all are",
-    "y'all've": "you all have",
-    "you'd": "you had",
-    "you'd've": "you would have",
-    "you'll": "you you will",
-    "you'll've": "you you will have",
-    "you're": "you are",
-    "you've": "you have",
-    "-": " "
+    "contractions": [
+        {
+            "original": "ain't",
+            "expanded": "is not"
+        },
+        {
+            "original": "aren't",
+            "expanded": "are not"
+        },
+        {
+            "original": "can't",
+            "expanded": "cannot"
+        },
+        {
+            "original": "can't've",
+            "expanded": "cannot have"
+        },
+        {
+            "original": "'cause",
+            "expanded": "because"
+        },
+        {
+            "original": "could've",
+            "expanded": "could have"
+        },
+        {
+            "original": "couldn't",
+            "expanded": "could not"
+        },
+        {
+            "original": "couldn't've",
+            "expanded": "could not have"
+        },
+        {
+            "original": "didn't",
+            "expanded": "did not"
+        },
+        {
+            "original": "doesn't",
+            "expanded": "does not"
+        },
+        {
+            "original": "don't",
+            "expanded": "do not"
+        },
+        {
+            "original": "hadn't",
+            "expanded": "had not"
+        },
+        {
+            "original": "hadn't've",
+            "expanded": "had not have"
+        },
+        {
+            "original": "hasn't",
+            "expanded": "has not"
+        },
+        {
+            "original": "haven't",
+            "expanded": "have not"
+        },
+        {
+            "original": "he'd",
+            "expanded": "he would"
+        },
+        {
+            "original": "he'd've",
+            "expanded": "he would have"
+        },
+        {
+            "original": "he'll",
+            "expanded": "he will"
+        },
+        {
+            "original": "he'll've",
+            "expanded": "he will have"
+        },
+        {
+            "original": "he's",
+            "expanded": "he is"
+        },
+        {
+            "original": "how'd",
+            "expanded": "how did"
+        },
+        {
+            "original": "how'd'y",
+            "expanded": "how do you"
+        },
+        {
+            "original": "how'll",
+            "expanded": "how will"
+        },
+        {
+            "original": "how's",
+            "expanded": "how is"
+        },
+        {
+            "original": "I'd",
+            "expanded": "I would"
+        },
+        {
+            "original": "I'd've",
+            "expanded": "I would have"
+        },
+        {
+            "original": "I'll",
+            "expanded": "I will"
+        },
+        {
+            "original": "I'll've",
+            "expanded": "I will have"
+        },
+        {
+            "original": "I'm",
+            "expanded": "I am"
+        },
+        {
+            "original": "I've",
+            "expanded": "I have"
+        },
+        {
+            "original": "isn't",
+            "expanded": "is not"
+        },
+        {
+            "original": "it'd",
+            "expanded": "it had"
+        },
+        {
+            "original": "it'd've",
+            "expanded": "it would have"
+        },
+        {
+            "original": "it'll",
+            "expanded": "it will"
+        },
+        {
+            "original": "it'll've",
+            "expanded": "it will have"
+        },
+        {
+            "original": "it's",
+            "expanded": "it is"
+        },
+        {
+            "original": "let's",
+            "expanded": "let us"
+        },
+        {
+            "original": "ma'am",
+            "expanded": "madam"
+        },
+        {
+            "original": "mayn't",
+            "expanded": "may not"
+        },
+        {
+            "original": "might've",
+            "expanded": "might have"
+        },
+        {
+            "original": "mightn't",
+            "expanded": "might not"
+        },
+        {
+            "original": "mightn't've",
+            "expanded": "might not have"
+        },
+        {
+            "original": "must've",
+            "expanded": "must have"
+        },
+        {
+            "original": "mustn't",
+            "expanded": "must not"
+        },
+        {
+            "original": "mustn't've",
+            "expanded": "must not have"
+        },
+        {
+            "original": "needn't",
+            "expanded": "need not"
+        },
+        {
+            "original": "needn't've",
+            "expanded": "need not have"
+        },
+        {
+            "original": "o'clock",
+            "expanded": "of the clock"
+        },
+        {
+            "original": "oughtn't",
+            "expanded": "ought not"
+        },
+        {
+            "original": "oughtn't've",
+            "expanded": "ought not have"
+        },
+        {
+            "original": "shan't",
+            "expanded": "shall not"
+        },
+        {
+            "original": "sha'n't",
+            "expanded": "shall not"
+        },
+        {
+            "original": "shan't've",
+            "expanded": "shall not have"
+        },
+        {
+            "original": "she'd",
+            "expanded": "she would"
+        },
+        {
+            "original": "she'd've",
+            "expanded": "she would have"
+        },
+        {
+            "original": "she'll",
+            "expanded": "she will"
+        },
+        {
+            "original": "she'll've",
+            "expanded": "she will have"
+        },
+        {
+            "original": "she's",
+            "expanded": "she is"
+        },
+        {
+            "original": "should've",
+            "expanded": "should have"
+        },
+        {
+            "original": "shouldn't",
+            "expanded": "should not"
+        },
+        {
+            "original": "shouldn't've",
+            "expanded": "should not have"
+        },
+        {
+            "original": "so've",
+            "expanded": "so have"
+        },
+        {
+            "original": "so's",
+            "expanded": "so is"
+        },
+        {
+            "original": "that'd",
+            "expanded": "that would"
+        },
+        {
+            "original": "that'd've",
+            "expanded": "that would have"
+        },
+        {
+            "original": "that's",
+            "expanded": "that is"
+        },
+        {
+            "original": "there'd",
+            "expanded": "there had"
+        },
+        {
+            "original": "there'd've",
+            "expanded": "there would have"
+        },
+        {
+            "original": "there's",
+            "expanded": "there is"
+        },
+        {
+            "original": "they'd",
+            "expanded": "they would"
+        },
+        {
+            "original": "they'd've",
+            "expanded": "they would have"
+        },
+        {
+            "original": "they'll",
+            "expanded": "they will"
+        },
+        {
+            "original": "they'll've",
+            "expanded": "they will have"
+        },
+        {
+            "original": "they're",
+            "expanded": "they are"
+        },
+        {
+            "original": "they've",
+            "expanded": "they have"
+        },
+        {
+            "original": "to've",
+            "expanded": "to have"
+        },
+        {
+            "original": "wasn't",
+            "expanded": "was not"
+        },
+        {
+            "original": "we'd",
+            "expanded": "we had"
+        },
+        {
+            "original": "we'd've",
+            "expanded": "we would have"
+        },
+        {
+            "original": "we'll",
+            "expanded": "we will"
+        },
+        {
+            "original": "we'll've",
+            "expanded": "we will have"
+        },
+        {
+            "original": "we're",
+            "expanded": "we are"
+        },
+        {
+            "original": "we've",
+            "expanded": "we have"
+        },
+        {
+            "original": "weren't",
+            "expanded": "were not"
+        },
+        {
+            "original": "what'll",
+            "expanded": "what will"
+        },
+        {
+            "original": "what'll've",
+            "expanded": "what will have"
+        },
+        {
+            "original": "what're",
+            "expanded": "what are"
+        },
+        {
+            "original": "what's",
+            "expanded": "what is"
+        },
+        {
+            "original": "what've",
+            "expanded": "what have"
+        },
+        {
+            "original": "when's",
+            "expanded": "when is"
+        },
+        {
+            "original": "when've",
+            "expanded": "when have"
+        },
+        {
+            "original": "where'd",
+            "expanded": "where did"
+        },
+        {
+            "original": "where's",
+            "expanded": "where is"
+        },
+        {
+            "original": "where've",
+            "expanded": "where have"
+        },
+        {
+            "original": "who'll",
+            "expanded": "who will"
+        },
+        {
+            "original": "who'll've",
+            "expanded": "who will have"
+        },
+        {
+            "original": "who's",
+            "expanded": "who is"
+        },
+        {
+            "original": "who've",
+            "expanded": "who have"
+        },
+        {
+            "original": "why's",
+            "expanded": "why is"
+        },
+        {
+            "original": "why've",
+            "expanded": "why have"
+        },
+        {
+            "original": "will've",
+            "expanded": "will have"
+        },
+        {
+            "original": "won't",
+            "expanded": "will not"
+        },
+        {
+            "original": "won't've",
+            "expanded": "will not have"
+        },
+        {
+            "original": "would've",
+            "expanded": "would have"
+        },
+        {
+            "original": "wouldn't",
+            "expanded": "would not"
+        },
+        {
+            "original": "wouldn't've",
+            "expanded": "would not have"
+        },
+        {
+            "original": "y'all",
+            "expanded": "you all"
+        },
+        {
+            "original": "y'alls",
+            "expanded": "you alls"
+        },
+        {
+            "original": "y'all'd",
+            "expanded": "you all would"
+        },
+        {
+            "original": "y'all'd've",
+            "expanded": "you all would have"
+        },
+        {
+            "original": "y'all're",
+            "expanded": "you all are"
+        },
+        {
+            "original": "y'all've",
+            "expanded": "you all have"
+        },
+        {
+            "original": "you'd",
+            "expanded": "you had"
+        },
+        {
+            "original": "you'd've",
+            "expanded": "you would have"
+        },
+        {
+            "original": "you'll",
+            "expanded": "you you will"
+        },
+        {
+            "original": "you'll've",
+            "expanded": "you you will have"
+        },
+        {
+            "original": "you're",
+            "expanded": "you are"
+        },
+        {
+            "original": "you've",
+            "expanded": "you have"
+        },
+        {
+            "original": "-",
+            "expanded": " "
+        }
+    ]
 }
-   
