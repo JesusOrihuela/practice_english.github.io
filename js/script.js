@@ -688,8 +688,11 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('OnResult 1: ', understood);
             const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
-            console.log('Speech Result: ', speechResult);
-            console.log('Target Phrase: ', targetPhrase);
+            console.log('Speech Result:');
+            console.log(speechResult);
+            console.log('Target Phrase:');
+            console.log(expandContractions(speechResult));
+            console.log(expandContractions(targetPhrase));
             console.log(speechResult === targetPhrase);
             if (speechResult === targetPhrase) {
                 message.textContent = 'Correct, but could be better!';
