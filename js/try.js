@@ -1,35 +1,37 @@
-let currentTheme = ''; // Variable global para almacenar el tema actual
+document.addEventListener('DOMContentLoaded', function() {
+    const currentTheme = localStorage.getItem('currentTheme'); // Obtiene el tema actual del almacenamiento local
+    if (currentTheme) {
+        loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
+    }
+});
 
 function setVariables(theme) {
-    currentTheme = theme; // Asigna el tema actual
-    localStorage.setItem('currentTheme', currentTheme); // Almacena el tema actual en el almacenamiento local
-    window.location.href = 'practice.html'; // Redirige a practice.html
+    localStorage.setItem('currentTheme', theme); // Guarda el tema actual en el almacenamiento local
+    window.location.href = 'tryPractice.html'; // Redirige al usuario a tryPractice.html
 }
 
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
         .then(response => response.json())
         .then(data => {
-            displayRandomPhraseAndTranslation(data.phrases, data.traductions);
+            const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
+            displayPhraseAndTranslation(phrase, translation);
         })
         .catch(error => console.error('Error:', error));
 }
 
-function displayRandomPhraseAndTranslation(phrases, translations) {
-    const phrasesContainer = document.getElementById('Phrase');
-    const translationsContainer = document.getElementById('Traduction');
+function getRandomPhraseAndTranslation(phrases, translations) {
     const randomIndex = Math.floor(Math.random() * phrases.length);
-    phrasesContainer.textContent = phrases[randomIndex];
-    translationsContainer.textContent = translations[randomIndex];
+    return {
+        phrase: phrases[randomIndex],
+        translation: translations[randomIndex]
+    };
 }
 
-// Función para cargar las frases cuando se carga la página
-function loadPhrasesOnPageLoad() {
-    const theme = localStorage.getItem('currentTheme');
-    if (theme) {
-        loadPhrases(`json/${theme}.json`);
-    }
-}
+function displayPhraseAndTranslation(phrase, translation) {
+    const phraseElement = document.getElementById('Phrase');
+    phraseElement.textContent = phrase; // Muestra la frase en el contenedor 'Phrase'
 
-// Llama a la función para cargar las frases cuando se carga la página
-loadPhrasesOnPageLoad();
+    const translationElement = document.getElementById('Traduction');
+    translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
+}
