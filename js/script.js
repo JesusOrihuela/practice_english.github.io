@@ -899,36 +899,17 @@ document.addEventListener('DOMContentLoaded', function() {
         return Math.floor(Math.random() * longitudLista);
     }
 
-    // Función para cargar datos de un archivo .json
-    function loadJSON(file) {
-        return fetch(file)
-            .then(response => response.json())
-            .catch(error => console.error('Error:', error));
-    }
-
     // Mostrar las listas correspondientes
     var contenedorLista1 = document.getElementById('Phrase');
     var contenedorLista2 = document.getElementById('Traduction');
 
-    // Obtener el nombre del archivo .json de localStorage
-    var jsonFileName = localStorage.getItem('jsonFileName');
-    console.log('JSON File Name: ', jsonFileName);
-
-    if (jsonFileName) {
-        loadJSON('../json/' + jsonFileName + '.json').then(data => {
-            console.log('../json/' + jsonFileName + '.json')
-            if (data.phrases && data.traductions) {
-                var indiceAleatorio = obtenerIndiceAleatorio(data.phrases.length);
-                contenedorLista1.textContent = data.phrases[indiceAleatorio];
-                contenedorLista2.textContent = data.traductions[indiceAleatorio];
-            } else {
-                contenedorLista1.textContent = 'Something went wrong. Please try again later!';
-                contenedorLista2.textContent = 'Something went wrong. Please try again later!';
-            }
-        });
+    if (listas[lista1] && listas[lista2]) {
+        var indiceAleatorio = obtenerIndiceAleatorio(listas[lista1].length);
+        contenedorLista1.textContent = listas[lista1][indiceAleatorio];
+        contenedorLista2.textContent = listas[lista2][indiceAleatorio];
     } else {
-        contenedorLista1.textContent = 'Please select a topic to practice!';
-        contenedorLista2.textContent = 'Please select a topic to practice!';
+        contenedorLista1.textContent = 'Something went wrong. Please try again later!';
+        contenedorLista2.textContent = 'Something went wrong. Please try again later!';
     }
 
     // Función para hablar la frase actual
