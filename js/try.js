@@ -1,10 +1,3 @@
-let currentTheme = ''; // Variable global para almacenar el tema actual
-
-function setVariables(theme) {
-    currentTheme = theme; // Asigna el tema actual
-    loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
-}
-
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
         .then(response => response.json())
