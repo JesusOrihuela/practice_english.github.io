@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function setVariables(theme) {
-    localStorage.setItem('currentTheme', theme); // Guarda el tema actual en el almacenamiento local
-    window.location.href = 'tryPractice.html'; // Redirige al usuario a tryPractice.html
-}
-
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
         .then(response => response.json())
