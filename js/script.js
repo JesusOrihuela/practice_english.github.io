@@ -633,18 +633,24 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Función para expandir las contracciones
-    function expandContractions(text) {
+function expandContractions(text) {
+    return new Promise((resolve, reject) => {
         // Carga las contracciones desde contractions.json
         fetch('json/contractions.json')
             .then(response => response.json())
             .then(contractions => {
                 // Reemplaza las contracciones en el texto
-                return text.replace(/\b\w+['’]\w+\b/g, function(match) {
+                const expandedText = text.replace(/\b\w+['’]\w+\b/g, function(match) {
                     return contractions[match] || match;
                 });
+                resolve(expandedText);
             })
-            .catch(error => console.error('Error:', error));
-    }
+            .catch(error => {
+                console.error('Error:', error);
+                reject(error);
+            });
+    });
+}
 
     const listenButton = document.getElementById('listenButton');
     const phraseElement = document.getElementById('Phrase');
