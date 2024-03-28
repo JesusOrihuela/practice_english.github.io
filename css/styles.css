@@ -60,9 +60,11 @@ header img {
 
 /* Efecto de sombra al pasar el cursor sobre las secciones */
 .practice-section img {
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 175px;
     border-radius: 15px;
+    object-fit: cover;
+    
 }
 
 .practice-section:hover {
