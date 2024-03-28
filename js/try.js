@@ -1,3 +1,11 @@
+let currentTheme = ''; // Variable global para almacenar el tema actual
+
+function setVariables(theme) {
+    currentTheme = theme; // Asigna el tema actual
+    localStorage.setItem('currentTheme', currentTheme); // Almacena el tema actual en el almacenamiento local
+    window.location.href = 'practice.html'; // Redirige a practice.html
+}
+
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
         .then(response => response.json())
@@ -14,3 +22,14 @@ function displayRandomPhraseAndTranslation(phrases, translations) {
     phrasesContainer.textContent = phrases[randomIndex];
     translationsContainer.textContent = translations[randomIndex];
 }
+
+// Función para cargar las frases cuando se carga la página
+function loadPhrasesOnPageLoad() {
+    const theme = localStorage.getItem('currentTheme');
+    if (theme) {
+        loadPhrases(`json/${theme}.json`);
+    }
+}
+
+// Llama a la función para cargar las frases cuando se carga la página
+loadPhrasesOnPageLoad();
