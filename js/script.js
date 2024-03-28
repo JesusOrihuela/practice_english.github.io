@@ -916,6 +916,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (jsonFileName) {
         loadJSON('../json/' + jsonFileName + '.json').then(data => {
+            console.log('../json/' + jsonFileName + '.json')
             if (data.phrases && data.traductions) {
                 var indiceAleatorio = obtenerIndiceAleatorio(data.phrases.length);
                 contenedorLista1.textContent = data.phrases[indiceAleatorio];
