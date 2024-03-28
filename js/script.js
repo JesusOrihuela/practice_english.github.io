@@ -633,14 +633,13 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     let contractions = {};
-    document.addEventListener('DOMContentLoaded', function() {
-        fetch('json/contractions.json')
-            .then(response => response.json())
-            .then(data => {
-                contractions = data;
-            })
-            .catch(error => console.error('Error:', error));
-    });
+    // Carga las contracciones desde el archivo JSON
+    fetch('json/contractions.json')
+        .then(response => response.json())
+        .then(data => {
+            contractions = data;
+        })
+        .catch(error => console.error('Error:', error));
     // Función para expandir las contracciones
     function expandContractions(text) {
         // Reemplaza las contracciones en el texto
@@ -693,8 +692,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             console.log('Speech Result:');
             console.log(speechResult);
-            console.log('Target Phrase:');
             console.log(expandContractions(speechResult));
+            console.log('Target Phrase:');
+            console.log(targetPhrase);
             console.log(expandContractions(targetPhrase));
             console.log(speechResult === targetPhrase);
             if (speechResult === targetPhrase) {
