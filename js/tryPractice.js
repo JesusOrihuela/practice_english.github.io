@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentTheme = localStorage.getItem('currentTheme'); // Obtiene el tema actual del almacenamiento local
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
-        loadContractions(); // Carga las contracciones
     }
 });
 
@@ -12,17 +11,6 @@ function loadPhrases(jsonFile) {
         .then(data => {
             const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
             displayPhraseAndTranslation(phrase, translation);
-            applyContractions(phrase); // Aplica las contracciones a la frase
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-function loadContractions() {
-    fetch('json/contractions.json')
-        .then(response => response.json())
-        .then(data => {
-            const contractions = data.contractions;
-            // Aquí puedes hacer lo que necesites con las contracciones, por ejemplo, aplicarlas a una frase
         })
         .catch(error => console.error('Error:', error));
 }
@@ -46,15 +34,16 @@ function displayPhraseAndTranslation(phrase, translation) {
 }
 
 function applyContractions(phrase) {
+    let modifiedPhrase = phrase;
     fetch('json/contractions.json')
         .then(response => response.json())
         .then(data => {
             const contractions = data.contractions;
-            let modifiedPhrase = phrase;
             contractions.forEach(contraction => {
                 const regex = new RegExp(contraction.original, 'g');
                 modifiedPhrase = modifiedPhrase.replace(regex, contraction.expanded);
             });
         })
         .catch(error => console.error('Error:', error));
+    return modifiedPhrase;
 }

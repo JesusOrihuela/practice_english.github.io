@@ -804,10 +804,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             console.log('Speech Result:');
-            console.log(speechResult);
+            console.log(event.results[0][0].transcript);
             console.log(expandContractions(speechResult));
             console.log('Target Phrase:');
-            console.log(targetPhrase);
+            console.log(phraseElement.textContent);
             console.log(expandContractions(targetPhrase));
             console.log(speechResult, " = ", targetPhrase, ": ", speechResult === targetPhrase);
             if (speechResult === targetPhrase) {
