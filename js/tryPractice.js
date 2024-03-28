@@ -5,15 +5,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function loadPhrases(jsonFile) {
-    fetch(jsonFile)
-        .then(response => response.json())
-        .then(data => {
-            const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
-            console.log(applyContractions(phrase)); // Muestra la frase con contracciones aplicadas en la consola
-            displayPhraseAndTranslation(phrase, translation);
-        })
-        .catch(error => console.error('Error:', error));
+async function loadPhrases(jsonFile) {
+    try {
+        const response = await fetch(jsonFile);
+        const data = await response.json();
+        const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
+        const modifiedPhrase = await applyContractions(phrase);
+        console.log(modifiedPhrase); // Muestra la frase con contracciones aplicadas en la consola
+        displayPhraseAndTranslation(phrase, translation);
+    } catch (error) {
+        console.error('Error:', error);
+    }
 }
 
 function getRandomPhraseAndTranslation(phrases, translations) {
@@ -31,20 +33,22 @@ function displayPhraseAndTranslation(phrase, translation) {
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 
-    console.log(applyContractions(phrase)); // Muestra la frase con contracciones aplicadas en la consola
+    console.log(modifiedPhrase); // Muestra la frase con contracciones aplicadas en la consola
 }
 
 function applyContractions(phrase) {
-    let modifiedPhrase = phrase;
-    fetch('json/contractions.json')
-        .then(response => response.json())
-        .then(data => {
-            const contractions = data.contractions;
-            contractions.forEach(contraction => {
-                const regex = new RegExp(contraction.original, 'g');
-                modifiedPhrase = modifiedPhrase.replace(regex, contraction.expanded);
-            });
-        })
-        .catch(error => console.error('Error:', error));
-    return modifiedPhrase;
+    return new Promise((resolve, reject) => {
+        fetch('json/contractions.json')
+            .then(response => response.json())
+            .then(data => {
+                let modifiedPhrase = phrase;
+                const contractions = data.contractions;
+                contractions.forEach(contraction => {
+                    const regex = new RegExp(contraction.original, 'g');
+                    modifiedPhrase = modifiedPhrase.replace(regex, contraction.expanded);
+                });
+                resolve(modifiedPhrase);
+            })
+            .catch(error => reject(error));
+    });
 }
