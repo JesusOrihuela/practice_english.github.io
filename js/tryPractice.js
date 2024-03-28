@@ -10,8 +10,7 @@ function loadPhrases(jsonFile) {
         .then(response => response.json())
         .then(data => {
             const { phrase, translation } = getRandomPhraseAndTranslation(data.phrases, data.traductions);
-            const modifiedPhrase = applyContractions(phrase);
-            console.log(modifiedPhrase); // Muestra la frase con contracciones aplicadas en la consola
+            console.log(applyContractions(phrase)); // Muestra la frase con contracciones aplicadas en la consola
             displayPhraseAndTranslation(phrase, translation);
         })
         .catch(error => console.error('Error:', error));
@@ -32,7 +31,7 @@ function displayPhraseAndTranslation(phrase, translation) {
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 
-    console.log(modifiedPhrase); // Muestra la frase con contracciones aplicadas en la consola
+    console.log(applyContractions(phrase)); // Muestra la frase con contracciones aplicadas en la consola
 }
 
 function applyContractions(phrase) {
