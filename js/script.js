@@ -632,21 +632,27 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
     };
 
-    let contractions = {};
-    // Carga las contracciones desde el archivo JSON
-    fetch('json/contractions.json')
-        .then(response => response.json())
-        .then(data => {
-            contractions = data;
-        })
-        .catch(error => console.error('Error:', error));
+    let contractions = {}; // Variable global para almacenar las contracciones
+
+    // Función para cargar las contracciones desde el archivo JSON
+    function loadContractions() {
+        fetch('json/contractions.json')
+            .then(response => response.json())
+            .then(data => {
+                contractions = data;
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
     // Función para expandir las contracciones
     function expandContractions(text) {
-        // Reemplaza las contracciones en el texto
         return text.replace(/\b\w+['’]\w+\b/g, function(match) {
             return contractions[match] || match;
         });
     }
+
+    // Llamar a la función loadContractions cuando se carga la página
+    document.addEventListener('DOMContentLoaded', loadContractions);
 
     const listenButton = document.getElementById('listenButton');
     const phraseElement = document.getElementById('Phrase');
