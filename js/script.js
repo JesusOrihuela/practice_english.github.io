@@ -686,6 +686,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('OnResult 1: ', understood);
             const speechResult = expandContractions(event.results[0][0].transcript.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
             const targetPhrase = expandContractions(phraseElement.textContent.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""));
+            console.log('SpeechResult: ', event.results[0][0].transcript);
             if (speechResult === targetPhrase) {
                 message.textContent = 'Correct, but could be better!';
                 // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
