@@ -1,13 +1,21 @@
-let currentTheme = ''; // Variable global para almacenar el tema actual
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtener la sección del almacenamiento local
+    var section = localStorage.getItem('section');
 
-function setVariables(theme) {
-    console.log("setVariables");
-    currentTheme = theme; // Asigna el tema actual
-    loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
+    // Si hay una sección guardada, cargar las frases y traducciones
+    if (section) {
+        loadPhrases(`json/${section}.json`);
+    }
+});
+
+function setVariables(section) {
+    // Guardar la sección en el almacenamiento local
+    localStorage.setItem('section', section);
+    // Cargar las frases y traducciones para la sección seleccionada
+    loadPhrases(`json/${section}.json`);
 }
 
 function loadPhrases(jsonFile) {
-    console.log("loadPhrases");
     fetch(jsonFile)
         .then(response => response.json())
         .then(data => {
@@ -17,7 +25,6 @@ function loadPhrases(jsonFile) {
 }
 
 function displayRandomPhraseAndTranslation(phrases, translations) {
-    console.log("displayRandomPhraseAndTranslation");
     const phrasesContainer = document.getElementById('Phrase');
     const translationsContainer = document.getElementById('Traduction');
     const randomIndex = Math.floor(Math.random() * phrases.length);
