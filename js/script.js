@@ -632,27 +632,31 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
     };
 
-    let contractions = {}; // Variable global para almacenar las contracciones
+    let contractions = {}; // Variable global para almacenar las contractions
 
-    // Función para cargar las contracciones desde el archivo JSON
+    // Función para cargar las contractions desde el archivo JSON
     function loadContractions() {
         fetch('json/contractions.json')
             .then(response => response.json())
             .then(data => {
                 contractions = data;
+                console.log('Contractions loaded:', contractions); // Verificar que las contractions se cargan correctamente
             })
             .catch(error => console.error('Error:', error));
     }
 
-    // Función para expandir las contracciones
+    // Función para expandir las contractions
     function expandContractions(text) {
         return text.replace(/\b\w+['’]\w+\b/g, function(match) {
-            return contractions[match] || match;
+            const expanded = contractions[match];
+            console.log('Expanding:', match, 'to:', expanded); // Verificar que las contractions se están expandiendo
+            return expanded || match;
         });
     }
 
     // Llamar a la función loadContractions cuando se carga la página
     document.addEventListener('DOMContentLoaded', loadContractions);
+
 
     const listenButton = document.getElementById('listenButton');
     const phraseElement = document.getElementById('Phrase');
@@ -702,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Target Phrase:');
             console.log(targetPhrase);
             console.log(expandContractions(targetPhrase));
-            console.log(speechResult === targetPhrase);
+            console.log(speechResult, " = ", targetPhrase, ": ", speechResult === targetPhrase);
             if (speechResult === targetPhrase) {
                 message.textContent = 'Correct, but could be better!';
                 // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
