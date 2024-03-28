@@ -58,11 +58,9 @@
         </main>
     
         <script>
-            let currentTheme = ''; // Variable global para almacenar el tema actual
-    
             function setVariables(theme) {
-                currentTheme = theme; // Asigna el tema actual
-                loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
+                localStorage.setItem('currentTheme', theme); // Almacena el tema actual en el almacenamiento local
+                window.location.href = 'practice.html'; // Redirige a practice.html
             }
         </script>
     
