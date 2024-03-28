@@ -632,25 +632,22 @@ document.addEventListener('DOMContentLoaded', function() {
         ],
     };
 
-    // Función para expandir las contracciones
-function expandContractions(text) {
-    return new Promise((resolve, reject) => {
-        // Carga las contracciones desde contractions.json
+    let contractions = {};
+    document.addEventListener('DOMContentLoaded', function() {
         fetch('json/contractions.json')
             .then(response => response.json())
-            .then(contractions => {
-                // Reemplaza las contracciones en el texto
-                const expandedText = text.replace(/\b\w+['’]\w+\b/g, function(match) {
-                    return contractions[match] || match;
-                });
-                resolve(expandedText);
+            .then(data => {
+                contractions = data;
             })
-            .catch(error => {
-                console.error('Error:', error);
-                reject(error);
-            });
+            .catch(error => console.error('Error:', error));
     });
-}
+    // Función para expandir las contracciones
+    function expandContractions(text) {
+        // Reemplaza las contracciones en el texto
+        return text.replace(/\b\w+['’]\w+\b/g, function(match) {
+            return contractions[match] || match;
+        });
+    }
 
     const listenButton = document.getElementById('listenButton');
     const phraseElement = document.getElementById('Phrase');
