@@ -18,49 +18,48 @@
         <section class="practice-section">
             <h2>Greetings</h2>
             <img src="img/Greetings.jpg" alt="Greetings">
-            <button onclick="setVariables('Greetings_phrases', 'Greetings_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Greetings')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Accountability</h2>
             <img src="img/Accountability.jpg" alt="Accountability">
-            <button onclick="setVariables('Accountability_phrases', 'Accountability_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Accountability')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Gym</h2>
             <img src="img/Gym.jpg" alt="Gym">
-            <button onclick="setVariables('Gym_phrases', 'Gym_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Gym')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Restaurant</h2>
             <img src="img/Restaurant.jpg" alt="Restaurant">
-            <button onclick="setVariables('Restaurant_phrases', 'Restaurant_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Restaurant')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Kitchen</h2>
             <img src="img/Kitchen.jpg" alt="Kitchen">
-            <button onclick="setVariables('Kitchen_phrases', 'Kitchen_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Kitchen')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Traveling</h2>
             <img src="img/Traveling.jpg" alt="Traveling">
-            <button onclick="setVariables('Traveling_phrases', 'Traveling_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Traveling')" class="practice-button">Practicar</button>
         </section>
 
         <section class="practice-section">
             <h2>Technology</h2>
             <img src="img/Technology.jpg" alt="Technology">
-            <button onclick="setVariables('Technology_phrases', 'Technology_traductions')" class="practice-button">Practicar</button>
+            <button onclick="setVariables('Technology')" class="practice-button">Practicar</button>
     </main>
 
     <script>
-        function setVariables(lista1, lista2) {
-            localStorage.setItem('lista1', lista1);
-            localStorage.setItem('lista2', lista2);
+        function setVariables(jsonFileName) {
+            localStorage.setItem('jsonFileName', jsonFileName);
             window.location.href = 'practice.html';
         }
     </script>
