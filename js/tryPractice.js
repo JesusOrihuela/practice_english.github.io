@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
     }
+
+    document.getElementById('listenButton').addEventListener('click', startSpeechRecognition);
 });
 
 function loadPhrases(jsonFile) {
