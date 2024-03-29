@@ -217,9 +217,11 @@ footer {
     padding: 10px 0;
     width: 100%;
     margin-top: auto;
-    display: flex; /* Añade display: flex; */
-    justify-content: space-between; /* Añade justify-content: space-between; */
-    align-items: center; /* Añade align-items: center; para alinear verticalmente */
+    display: flex; /* Añade display: flex; para alinear los elementos horizontalmente */
+    justify-content: space-between; /* Añade justify-content: space-between; para distribuir el espacio entre los elementos */
+    align-items: center; /* Añade align-items: center; para alinear los elementos verticalmente */
+    box-sizing: border-box; /* Añade box-sizing: border-box; para incluir el padding en el ancho total */
+    padding: 10px 20px; /* Añade padding para dejar un espacio entre el borde del footer y el contenido */
 }
 
 /* Estilos para el contenido del pie de página */
@@ -227,7 +229,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Asegúrate de que el contenido del pie de página ocupe todo el ancho */
+    width: 100%;
 }
 
 /* Estilos para el logo de GitHub */
