@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para el botón de pronunciación de la frase
 function startSpeaking() {
     const phraseElement = document.getElementById('Phrase');
     const phrase = phraseElement.textContent; // Obtiene la frase actual
@@ -41,6 +43,8 @@ function startSpeaking() {
     speechSynthesis.speak(utterance); // Inicia la lectura de la frase
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para el botón de escuchar al usuario
 function startListening() {
     const recognition = new webkitSpeechRecognition(); // Crea una nueva instancia de reconocimiento de voz
     recognition.lang = 'es-ES'; // Configura el idioma a español
@@ -59,6 +63,8 @@ function startListening() {
     recognition.start(); // Inicia el reconocimiento de voz
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para mostrar el texto reconocido
 function displayRecognizedText(text) {
     const recognizedTextElement = document.getElementById('recognizedText');
     const phraseElement = document.getElementById('Phrase');
@@ -71,6 +77,8 @@ function displayRecognizedText(text) {
     }
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para cargar las frases basadas en el tema actual dependiendo del botón presionado a partir de un archivo JSON
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
         .then(response => response.json())
@@ -81,6 +89,8 @@ function loadPhrases(jsonFile) {
         .catch(error => console.error('Error:', error));
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para obtener una frase y su traducción aleatoria
 function getRandomPhraseAndTranslation(phrases, translations) {
     const randomIndex = Math.floor(Math.random() * phrases.length);
     return {
@@ -89,6 +99,8 @@ function getRandomPhraseAndTranslation(phrases, translations) {
     };
 }
 
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Función para mostrar la frase y su traducción
 function displayPhraseAndTranslation(phrase, translation) {
     const phraseElement = document.getElementById('Phrase');
     phraseElement.textContent = phrase; // Muestra la frase en el contenedor 'Phrase'
