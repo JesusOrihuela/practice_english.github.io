@@ -30,15 +30,18 @@ document.addEventListener('DOMContentLoaded', function() {
         speakButton.disabled = false;
     });
 
-    // Inicializa variables
-    const phraseElement = document.getElementById('Phrase');
-    const recognizedTextElement = document.getElementById('recognizedText');
-    const translationElement = document.getElementById('Traduction');
+    // Establece un texto inicial para recognizedText
+    const message = document.getElementById('recognizedText');
+    message.textContent = "Pronuncia la frase correctamente para comenzar.";
+
+    // Inicializa la librería de confeti
+    const jsConfetti = new JSConfetti();
 });
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para el botón de pronunciación de la frase
 function startSpeaking() {
+    const phraseElement = document.getElementById('Phrase');
     const phrase = phraseElement.textContent; // Obtiene la frase actual
 
     const speechSynthesis = window.speechSynthesis;
@@ -50,26 +53,56 @@ function startSpeaking() {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para el botón de escuchar al usuario
 function startListening() {
-    const recognition = new webkitSpeechRecognition(); // Crea una nueva instancia de reconocimiento de voz
-    recognition.lang = 'es-ES'; // Configura el idioma a español
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    recognition.lang = 'es-US'; // Configura el idioma a inglés
     recognition.interimResults = false; // Solo queremos los resultados finales
     recognition.maxAlternatives = 1; // Solo queremos la mejor alternativa
 
+    // Inicializa variables
+    let understood = false;
+    let microphone = false;
+
+    // Establece un texto inicial para recognizedText
+    message.textContent = "Pronuncia la frase correctamente para comenzar."; 
+
+    recognition.start(); // Inicia el reconocimiento de voz
+
+    recognition.onstart = function() {
+        microphone = true;
+
+        // Actualiza recognizedText a "Listening..." cuando el micrófono esté activo
+        message.textContent = "Listening...";
+
+        // Desactiva los botones de escucha y hablar
+        listenButton.disabled = true;
+        speakButton.disabled = true;
+
+        // Activa los botones de intentar de nuevo y intentar otro
+        tryAnotherButton.disabled = false;
+        tryAgainButton.disabled = false;
+
+        // Understood se reinicia a falso
+        understood = false;
+    }
+
+    // Acciones cuando se detecta un resultado
     recognition.onresult = function(event) {
         const speechResult = event.results[0][0].transcript; // Obtiene el resultado del reconocimiento de voz
         displayRecognizedText(speechResult);
     };
 
+    // Acciones cuando se detecta un error
     recognition.onerror = function(event) {
         console.error('Error de reconocimiento de voz:', event.error);
     };
 
-    recognition.start(); // Inicia el reconocimiento de voz
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para mostrar el texto reconocido
 function displayRecognizedText(text) {
+    const message = document.getElementById('recognizedText');
+    const phraseElement = document.getElementById('Phrase');
     const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase original
     const cleanedPhrase = cleanContractions(originalPhrase); // Limpia la frase original
     const cleanedText = cleanContractions(text); // Limpia el texto reconocido
@@ -80,10 +113,10 @@ function displayRecognizedText(text) {
     console.log('Texto limpiado:', cleanedText);
 
     if (cleanedText.trim().toLowerCase() === cleanedPhrase.toLowerCase()) {
-        recognizedTextElement.textContent = "Correct";
+        message.textContent = "Correct";
     } else {
         // Muestra el texto original con contracciones en caso de error
-        recognizedTextElement.textContent = `Incorrect. You said: "${text}"`;
+        message.textContent = `Incorrect. You said: "${text}"`;
     }
 }
 
@@ -112,7 +145,10 @@ function getRandomPhraseAndTranslation(phrases, translations) {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para mostrar la frase y su traducción
 function displayPhraseAndTranslation(phrase, translation) {
+    const phraseElement = document.getElementById('Phrase');
     phraseElement.textContent = phrase; // Muestra la frase en el contenedor 'Phrase'
+
+    const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
 
