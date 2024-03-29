@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
     }
-
-    document.getElementById('listenButton').addEventListener('click', startSpeechRecognition);
 });
 
 function loadPhrases(jsonFile) {
@@ -33,7 +31,7 @@ function displayPhraseAndTranslation(phrase, translation) {
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
 
-function startSpeechRecognition() {
+document.getElementById('startRecording').addEventListener('click', function() {
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
     recognition.lang = 'en-US';
     recognition.interimResults = false;
@@ -44,20 +42,16 @@ function startSpeechRecognition() {
     recognition.onresult = function(event) {
         const speechResult = event.results[0][0].transcript;
         const phraseElement = document.getElementById('Phrase');
-        const recognitionResultElement = document.getElementById('recognitionResult');
+        const resultElement = document.getElementById('result');
 
         if (speechResult.toLowerCase() === phraseElement.textContent.toLowerCase()) {
-            recognitionResultElement.textContent = '¡Correcto!';
+            resultElement.textContent = '¡Correcto!';
         } else {
-            recognitionResultElement.textContent = 'Incorrecto. Intenta de nuevo.';
+            resultElement.textContent = 'Incorrecto. Intenta de nuevo.';
         }
-    };
-
-    recognition.onspeechend = function() {
-        recognition.stop();
     };
 
     recognition.onerror = function(event) {
         console.error('Error:', event.error);
     };
-}
+});
