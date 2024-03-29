@@ -7,7 +7,6 @@ const tryAgainButton = document.getElementById('tryAgainButton');
 const tryAnotherButton = document.getElementById('tryAnotherButton');
 let understood = false;
 let microphone = false;
-let jsConfetti = new JSConfetti();
 
 // ----------------------------------------------------------------------------------------------------------------------------------
 // Función para 
@@ -59,6 +58,7 @@ listenButton.addEventListener('click', function() {
     recognition.lang = 'en-US';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
+    const jsConfetti = new JSConfetti();
 
     // Actualiza el mensaje inicial
     message.textContent = "Press the button when you're ready to talk";
