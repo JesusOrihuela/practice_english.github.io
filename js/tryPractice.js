@@ -68,11 +68,19 @@ function startListening() {
 function displayRecognizedText(text) {
     const recognizedTextElement = document.getElementById('recognizedText');
     const phraseElement = document.getElementById('Phrase');
-    const phrase = phraseElement.textContent.trim(); // Obtiene la frase actual
+    const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase original
+    const cleanedPhrase = cleanContractions(originalPhrase); // Limpia la frase original
+    const cleanedText = cleanContractions(text); // Limpia el texto reconocido
 
-    if (text.trim().toLowerCase() === phrase.toLowerCase()) {
+    console.log('Frase original:', originalPhrase);
+    console.log('Frase limpiada:', cleanedPhrase);
+    console.log('Texto reconocido:', text);
+    console.log('Texto limpiado:', cleanedText);
+
+    if (cleanedText.trim().toLowerCase() === cleanedPhrase.toLowerCase()) {
         recognizedTextElement.textContent = "Correct";
     } else {
+        // Muestra el texto original con contracciones en caso de error
         recognizedTextElement.textContent = `Incorrect. You said: "${text}"`;
     }
 }
@@ -107,5 +115,27 @@ function displayPhraseAndTranslation(phrase, translation) {
 
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
+}
+
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Carga el archivo contractions.json
+let contractionsData = null;
+fetch('json/contractions.json')
+    .then(response => response.json())
+    .then(data => {
+        contractionsData = data.contractions;
+    })
+    .catch(error => console.error('Error al cargar contracciones:', error));
+
+// Función para limpiar las contracciones
+function cleanContractions(text) {
+    if (!contractionsData) return text; // Si no se han cargado las contracciones, retorna el texto sin cambios
+
+    contractionsData.forEach(contraction => {
+        const regex = new RegExp(contraction.original, 'gi');
+        text = text.replace(regex, contraction.expanded);
+    });
+
+    return text;
 }
 
