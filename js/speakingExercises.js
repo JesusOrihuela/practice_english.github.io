@@ -45,9 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = "Press the button when you're ready to talk";
     });
 
-    // Establece un texto inicial para recognizedText
-    message = document.getElementById('recognizedText');
-    message.textContent = "Pronuncia la frase correctamente para comenzar.";
+    // Inicializa recognizedText con el mensaje inicial
+    message.textContent = "Press the button when you're ready to talk";
 });
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -89,7 +88,7 @@ function startListening() {
     let microphone = false;
 
     // Establece un texto inicial para recognizedText
-    message.textContent = "Pronuncia la frase correctamente para comenzar."; 
+    message.textContent = "Press the button when you're ready to talk";
 
     recognition.start(); // Inicia el reconocimiento de voz
 
