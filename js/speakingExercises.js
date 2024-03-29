@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Inicializa recognizedText con el mensaje inicial
-    message = document.getElementById('message');
+    message = document.getElementById('recognizedText')
     message.textContent = "Press the button when you're ready to talk";
 });
 

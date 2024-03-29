@@ -220,6 +220,7 @@ footer {
     display: flex; /* Añade display: flex; */
     justify-content: space-between; /* Añade justify-content: space-between; */
     align-items: center; /* Añade align-items: center; para alinear verticalmente */
+    padding: 10px 20px; /* Añade padding para evitar que el contenido esté pegado a los bordes */
 }
 
 /* Estilos para el contenido del pie de página */
