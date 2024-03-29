@@ -1,7 +1,11 @@
+// ---------------------------------------------------------------------------------------------------------------------------------
+// Inicialización de los elementos de la página
 document.addEventListener('DOMContentLoaded', function() {
-    const currentTheme = localStorage.getItem('currentTheme'); // Obtiene el tema actual del almacenamiento local
+    // Obtiene el tema actual del almacenamiento local
+    const currentTheme = localStorage.getItem('currentTheme'); 
+    // Carga las frases basadas en el tema actual
     if (currentTheme) {
-        loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
+        loadPhrases(`json/${currentTheme}.json`);
     }
 
     // Inicializa el botón de escucha
@@ -11,6 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa el botón de hablar
     const speakButton = document.getElementById('speakButton');
     speakButton.addEventListener('click', startSpeaking);
+
+    // Inicializa el botón de intentar de nuevo
+    const tryAnotherButton = document.getElementById('tryAnotherButton');
+    tryAnotherButton.addEventListener('click', function() {
+        location.reload(); // Reinicia la página
+    });
+
+    // Inicializa el botón de intentar de nuevo
+    const tryAgainButton = document.getElementById('tryAgainButton');
+    tryAgainButton.addEventListener('click', function() {
+        // Habilita los botones de escucha y hablar
+        listenButton.disabled = false;
+        speakButton.disabled = false;
+    });
 });
 
 function startSpeaking() {
