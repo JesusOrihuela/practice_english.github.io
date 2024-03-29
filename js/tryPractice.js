@@ -7,7 +7,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Inicializa el botón de escucha
     const listenButton = document.getElementById('listenButton');
     listenButton.addEventListener('click', startListening);
+
+    // Inicializa el botón de hablar
+    const speakButton = document.getElementById('speakButton');
+    speakButton.addEventListener('click', startSpeaking);
 });
+
+function startSpeaking() {
+    const phraseElement = document.getElementById('Phrase');
+    const phrase = phraseElement.textContent; // Obtiene la frase actual
+
+    const speechSynthesis = window.speechSynthesis;
+    const utterance = new SpeechSynthesisUtterance(phrase);
+    utterance.lang = 'es-ES'; // Configura el idioma a español
+    speechSynthesis.speak(utterance); // Inicia la lectura de la frase
+}
 
 function startListening() {
     const recognition = new webkitSpeechRecognition(); // Crea una nueva instancia de reconocimiento de voz
