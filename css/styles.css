@@ -103,6 +103,35 @@ header img {
     color: #fff;
 }
 
+/* Estilos para los botones de Coming Soon */
+.soon-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+}
+
+/* Efecto de animación al pasar el cursor sobre los botones */
+.soon-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño del botón en un 10% */
+    background-color: #c31849;
+    color: #fff;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+/* Efecto de animación al quitar el cursor del botón */
+.soon-button:not(:hover) {
+    transform: scale(1); /* Volver al tamaño original del botón */
+    background-color: #810c2d;
+    color: #fff;
+}
+
 /* Añadir una animación de carga hacia arriba */
 @keyframes loadUp {
     0% {
