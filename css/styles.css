@@ -86,6 +86,7 @@ header img {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+    width: 200px;
 }
 
 /* Efecto de animación al pasar el cursor sobre los botones */
@@ -114,6 +115,7 @@ header img {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+    width: 200px;
 }
 
 /* Efecto de animación al pasar el cursor sobre los botones */
@@ -122,7 +124,7 @@ header img {
     background-color: #c31849;
     color: #fff;
     text-decoration: none;
-    pointer-events: none;
+    cursor: not-allowed; /* Cambiar el cursor a "no permitido" cuando el botón está desactivado */
 }
 
 /* Efecto de animación al quitar el cursor del botón */
