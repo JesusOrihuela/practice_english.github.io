@@ -7,7 +7,7 @@ const tryAgainButton = document.getElementById('tryAgainButton');
 const tryAnotherButton = document.getElementById('tryAnotherButton');
 let understood = false;
 let microphone = false;
-const jsConfetti = new JSConfetti();
+let jsConfetti = new JSConfetti();
 
 // ----------------------------------------------------------------------------------------------------------------------------------
 // Función para 
