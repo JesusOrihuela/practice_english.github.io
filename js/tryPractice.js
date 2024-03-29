@@ -4,27 +4,32 @@ document.addEventListener('DOMContentLoaded', function() {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
     }
 
+    // Inicializa el botón de escucha
     const listenButton = document.getElementById('listenButton');
     listenButton.addEventListener('click', startListening);
 });
 
 function startListening() {
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-
-    recognition.start();
+    const recognition = new webkitSpeechRecognition(); // Crea una nueva instancia de reconocimiento de voz
+    recognition.lang = 'es-ES'; // Configura el idioma a español
+    recognition.interimResults = false; // Solo queremos los resultados finales
+    recognition.maxAlternatives = 1; // Solo queremos la mejor alternativa
 
     recognition.onresult = function(event) {
-        const speechResult = event.results[0][0].transcript;
-        const recognizedTextElement = document.getElementById('recognizedText');
-        recognizedTextElement.textContent = speechResult;
+        const speechResult = event.results[0][0].transcript; // Obtiene el resultado del reconocimiento de voz
+        displayRecognizedText(speechResult);
     };
 
     recognition.onerror = function(event) {
-        console.error('Error:', event.error);
+        console.error('Error de reconocimiento de voz:', event.error);
     };
+
+    recognition.start(); // Inicia el reconocimiento de voz
+}
+
+function displayRecognizedText(text) {
+    const recognizedTextElement = document.getElementById('recognizedText');
+    recognizedTextElement.textContent = text; // Muestra el texto reconocido en el contenedor 'recognizedText'
 }
 
 function loadPhrases(jsonFile) {
@@ -52,3 +57,4 @@ function displayPhraseAndTranslation(phrase, translation) {
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
+
