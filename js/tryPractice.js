@@ -35,6 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Habilita los botones de escucha y hablar
         listenButton.disabled = false;
         speakButton.disabled = false;
+
+        // Mantiene desactivados los botones Try Again y Try Another
+        tryAgainButton.disabled = true;
+        tryAnotherButton.disabled = true;
+
+        // Inicializa recognizedText con el mensaje inicial
+        message.textContent = "Press the button when you're ready to talk";
     });
 
     // Establece un texto inicial para recognizedText
@@ -50,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function startSpeaking() {
     // Obtiene la frase actual
     const phraseElement = document.getElementById('Phrase');
-    const phrase = phraseElement.textContent; 
+    const phraseText = phraseElement.textContent; 
 
     // Crear una nueva instancia de SpeechSynthesisUtterance
     const utterance = new SpeechSynthesisUtterance(phraseText);
@@ -109,35 +116,91 @@ function startListening() {
     // Acciones cuando se detecta un resultado
     recognition.onresult = function(event) {
         const speechResult = event.results[0][0].transcript; // Obtiene el resultado del reconocimiento de voz
-        displayRecognizedText(speechResult);
+        const speechConfidence = event.results[0][0].confidence; // Obtiene la confianza del resultado
+        displayRecognizedText(speechResult, speechConfidence);
+    };
+
+    // Acciones cuando se detiene el reconocimiento de voz
+    recognition.onspeechend = function() {
+        recognition.stop(); // Detiene el reconocimiento de voz
     };
 
     // Acciones cuando se detecta un error
     recognition.onerror = function(event) {
-        console.error('Error de reconocimiento de voz:', event.error);
+        // Mantiene desactivado el botón de escucha y hablar
+        listenButton.disabled = true;
+        speakButton.disabled = true;
+
+        // Reactiva los botones Try Again y Try Another
+        tryAgainButton.disabled = false;
+        tryAnotherButton.disabled = false;
+        // Actualiza recognizedText con el mensaje de error correspondiente
+        if (event.error === 'no-speech') {
+            message.textContent = "I didn't understand you. Try again!";
+        }
+        else if (event.error === 'audio-capture') {
+            message.textContent = 'No microphone was found. Connect a microphone and try again!';
+        }
+        else if (event.error === 'not-allowed') {
+            message.textContent = 'Permission to use the microphone is blocked. Change the permission in the settings and try again!';
+        }
+        else {
+            message.textContent = 'An error occurred. Try again!';
+        }
+    };
+
+    // Acciones cuando se termina el reconocimiento de voz
+    recognition.onend = function() {
+        // Si no se ha entendido o no se ha encontrado un micrófono, se muestra el mensaje correspondiente
+        if (!microphone) {
+            message.textContent = 'No microphone was found. Connect a microphone and try again!';
+        }
+        else if (!understood) {
+            message.textContent = 'Try Again. I did not understand you!';
+        }
     };
 
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para mostrar el texto reconocido
-function displayRecognizedText(text) {
-    const message = document.getElementById('recognizedText');
-    const phraseElement = document.getElementById('Phrase');
-    const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase original
-    const cleanedPhrase = cleanContractions(originalPhrase); // Limpia la frase original
-    const cleanedText = cleanContractions(text); // Limpia el texto reconocido
+function displayRecognizedText(text, confidence) {
+    const phraseElement = document.getElementById('Phrase'); // Obtiene la frase a pronunciar
+    const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase del usuario
+    const cleanedPhrase = expandContractions(originalPhrase).trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""); // Limpia la frase original
+    const cleanedText = expandContractions(text).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""); // Limpia el texto reconocido
 
-    console.log('Frase original:', originalPhrase);
-    console.log('Frase limpiada:', cleanedPhrase);
-    console.log('Texto reconocido:', text);
-    console.log('Texto limpiado:', cleanedText);
-
-    if (cleanedText.trim().toLowerCase() === cleanedPhrase.toLowerCase()) {
-        message.textContent = "Correct";
+    if (cleanedText === cleanedPhrase) {
+        // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
+        if (confidence >= 0.975) {
+            message.textContent = 'Excellent!';
+            jsConfetti.addConfetti({confettiNumber: 1000});
+        }
+        else if (confidence >= 0.95) {
+            message.textContent = 'Great!';
+            jsConfetti.addConfetti({confettiNumber: 400});
+        }
+        else if (confidence >= 0.9) {
+            message.textContent = 'Good!';
+            jsConfetti.addConfetti({confettiNumber: 150});
+        }
+        else {
+            message.textContent = 'Correct, but could be better!';
+            jsConfetti.addConfetti({confettiNumber: 50});
+        }
+        // Agrega el porcentaje de confianza al mensaje, redondeado a dos decimales
+        message.textContent += '\nConfidence: ' + (confidence * 100).toFixed(2) + '%';
+        understood = true;
     } else {
-        // Muestra el texto original con contracciones en caso de error
-        message.textContent = `Incorrect. You said: "${text}"`;
+        // Actualiza recognizedText con el texto reconocido
+        let recognizedText = text;
+        // Si dentro de recognizedText se encuentra la palabra "i", se reemplaza por "I"
+        recognizedText = recognizedText.replace(/\bi\b/g, 'I');
+        // Se pone la primera letra de recognizedText en mayúscula
+        recognizedText = recognizedText.charAt(0).toUpperCase() + recognizedText.slice(1);
+        // Se actualiza recognizedText con el mensaje
+        message.textContent = 'Try Again. I understood: "' + recognizedText + '"';
+        understood = true;
     }
 }
 
@@ -184,7 +247,7 @@ fetch('json/contractions.json')
     .catch(error => console.error('Error al cargar contracciones:', error));
 
 // Función para limpiar las contracciones
-function cleanContractions(text) {
+function expandContractions(text) {
     if (!contractionsData) return text; // Si no se han cargado las contracciones, retorna el texto sin cambios
 
     contractionsData.forEach(contraction => {
