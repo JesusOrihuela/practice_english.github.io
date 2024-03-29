@@ -4,8 +4,7 @@ let speakButton;
 let tryAnotherButton;
 let tryAgainButton;
 let message;
-// Inicializa la librería de confeti
-const jsConfetti = new JSConfetti();
+let jsConfetti;
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Inicialización de los elementos de la página
@@ -169,6 +168,7 @@ function displayRecognizedText(text, confidence) {
     const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase del usuario
     const cleanedPhrase = expandContractions(originalPhrase).trim().toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""); // Limpia la frase original
     const cleanedText = expandContractions(text).toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡?!]/g,""); // Limpia el texto reconocido
+    jsConfetti = new JSConfetti(); // Inicializa la librería de confeti
 
     if (cleanedText === cleanedPhrase) {
         // Actualiza recognizedText con el texto reconocido dependiendo del nivel de confianza
