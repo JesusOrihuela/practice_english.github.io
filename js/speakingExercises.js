@@ -1,10 +1,10 @@
 // Declaración de variables globales
-let listenButton;
-let speakButton;
-let tryAnotherButton;
-let tryAgainButton;
-let message;
-let jsConfetti;
+let listenButton; // Botón de escucha
+let speakButton; // Botón de hablar
+let tryAnotherButton; // Botón de intentar otro
+let tryAgainButton; // Botón de intentar de nuevo
+let message; // Mensaje
+let jsConfetti; // Biblioteca de confeti
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Inicialización de los elementos de la página
