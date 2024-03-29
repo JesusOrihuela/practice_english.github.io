@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Estilos generales */
 body {
     font-family: 'Raleway', sans-serif;
@@ -86,7 +84,7 @@ header img {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
-    width: 200px;
+    width: 170px;
 }
 
 /* Efecto de animación al pasar el cursor sobre los botones */
@@ -115,7 +113,7 @@ header img {
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
-    width: 200px;
+    width: 170px;
 }
 
 /* Efecto de animación al pasar el cursor sobre los botones */
