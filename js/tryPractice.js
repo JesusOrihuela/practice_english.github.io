@@ -48,13 +48,30 @@ document.addEventListener('DOMContentLoaded', function() {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para el botón de pronunciación de la frase
 function startSpeaking() {
+    // Obtiene la frase actual
     const phraseElement = document.getElementById('Phrase');
-    const phrase = phraseElement.textContent; // Obtiene la frase actual
+    const phrase = phraseElement.textContent; 
 
+    // Obtiene la síntesis de voz
     const speechSynthesis = window.speechSynthesis;
-    const utterance = new SpeechSynthesisUtterance(phrase);
-    utterance.lang = 'es-ES'; // Configura el idioma a español
-    speechSynthesis.speak(utterance); // Inicia la lectura de la frase
+
+    // Crear una nueva instancia de SpeechSynthesisUtterance
+    const utterance = new SpeechSynthesisUtterance(phraseText);
+    // Establecer el idioma a inglés británico o americano aleatoriamente
+    utterance.lang = Math.random() < 0.5 ? 'en-GB' : 'en-US';
+
+    // Se desactiva el botón de hablar y escuchar mientras se reproduce el audio
+    speakButton.disabled = true;
+    listenButton.disabled = true;
+
+    // Agregar un evento para reactivar el botón una vez que el audio haya terminado
+    utterance.onend = function() {
+        speakButton.disabled = false;
+        listenButton.disabled = false;
+    };
+
+    // Inicia la lectura de la frase
+    speechSynthesis.speak(utterance); 
 }
 
 // ---------------------------------------------------------------------------------------------------------------------------------
