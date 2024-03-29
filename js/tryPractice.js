@@ -1,3 +1,10 @@
+// Declaración de variables globales
+let listenButton;
+let speakButton;
+let tryAnotherButton;
+let tryAgainButton;
+let message;
+
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Inicialización de los elementos de la página
 document.addEventListener('DOMContentLoaded', function() {
@@ -9,21 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Inicializa el botón de escucha
-    const listenButton = document.getElementById('listenButton');
+    listenButton = document.getElementById('listenButton');
     listenButton.addEventListener('click', startListening);
 
     // Inicializa el botón de hablar
-    const speakButton = document.getElementById('speakButton');
+    speakButton = document.getElementById('speakButton');
     speakButton.addEventListener('click', startSpeaking);
 
     // Inicializa el botón de intentar de nuevo
-    const tryAnotherButton = document.getElementById('tryAnotherButton');
+    tryAnotherButton = document.getElementById('tryAnotherButton');
     tryAnotherButton.addEventListener('click', function() {
         location.reload(); // Reinicia la página
     });
 
     // Inicializa el botón de intentar de nuevo
-    const tryAgainButton = document.getElementById('tryAgainButton');
+    tryAgainButton = document.getElementById('tryAgainButton');
     tryAgainButton.addEventListener('click', function() {
         // Habilita los botones de escucha y hablar
         listenButton.disabled = false;
@@ -31,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Establece un texto inicial para recognizedText
-    const message = document.getElementById('recognizedText');
+    message = document.getElementById('recognizedText');
     message.textContent = "Pronuncia la frase correctamente para comenzar.";
 
     // Inicializa la librería de confeti
