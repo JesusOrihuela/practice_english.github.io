@@ -52,9 +52,6 @@ function startSpeaking() {
     const phraseElement = document.getElementById('Phrase');
     const phrase = phraseElement.textContent; 
 
-    // Obtiene la síntesis de voz
-    const speechSynthesis = window.speechSynthesis;
-
     // Crear una nueva instancia de SpeechSynthesisUtterance
     const utterance = new SpeechSynthesisUtterance(phraseText);
     // Establecer el idioma a inglés británico o americano aleatoriamente
