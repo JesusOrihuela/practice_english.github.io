@@ -118,6 +118,7 @@ function startListening() {
         const speechResult = event.results[0][0].transcript; // Obtiene el resultado del reconocimiento de voz
         const speechConfidence = event.results[0][0].confidence; // Obtiene la confianza del resultado
         displayRecognizedText(speechResult, speechConfidence);
+        understood = true;
     };
 
     // Acciones cuando se detiene el reconocimiento de voz
