@@ -29,12 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
         listenButton.disabled = false;
         speakButton.disabled = false;
     });
+
+    // Inicializa variables
+    const phraseElement = document.getElementById('Phrase');
+    const recognizedTextElement = document.getElementById('recognizedText');
+    const translationElement = document.getElementById('Traduction');
 });
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para el botón de pronunciación de la frase
 function startSpeaking() {
-    const phraseElement = document.getElementById('Phrase');
     const phrase = phraseElement.textContent; // Obtiene la frase actual
 
     const speechSynthesis = window.speechSynthesis;
@@ -66,8 +70,6 @@ function startListening() {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para mostrar el texto reconocido
 function displayRecognizedText(text) {
-    const recognizedTextElement = document.getElementById('recognizedText');
-    const phraseElement = document.getElementById('Phrase');
     const originalPhrase = phraseElement.textContent.trim(); // Obtiene la frase original
     const cleanedPhrase = cleanContractions(originalPhrase); // Limpia la frase original
     const cleanedText = cleanContractions(text); // Limpia el texto reconocido
@@ -110,10 +112,7 @@ function getRandomPhraseAndTranslation(phrases, translations) {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Función para mostrar la frase y su traducción
 function displayPhraseAndTranslation(phrase, translation) {
-    const phraseElement = document.getElementById('Phrase');
     phraseElement.textContent = phrase; // Muestra la frase en el contenedor 'Phrase'
-
-    const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
 
