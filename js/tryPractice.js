@@ -11,6 +11,9 @@ let microphone = false;
 // ----------------------------------------------------------------------------------------------------------------------------------
 // Función para 
 document.addEventListener('DOMContentLoaded', function() {
+    // Crea una nueva instancia de JSConfetti
+    const jsConfetti = new JSConfetti();
+    // Obtiene el tema actual del almacenamiento local
     const currentTheme = localStorage.getItem('currentTheme'); // Obtiene el tema actual del almacenamiento local
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
@@ -58,7 +61,6 @@ listenButton.addEventListener('click', function() {
     recognition.lang = 'en-US';
     recognition.interimResults = false;
     recognition.maxAlternatives = 1;
-    const jsConfetti = new JSConfetti();
 
     // Actualiza el mensaje inicial
     message.textContent = "Press the button when you're ready to talk";
