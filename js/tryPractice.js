@@ -4,6 +4,8 @@ let speakButton;
 let tryAnotherButton;
 let tryAgainButton;
 let message;
+// Inicializa la librería de confeti
+const jsConfetti = new JSConfetti();
 
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Inicialización de los elementos de la página
@@ -47,9 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Establece un texto inicial para recognizedText
     message = document.getElementById('recognizedText');
     message.textContent = "Pronuncia la frase correctamente para comenzar.";
-
-    // Inicializa la librería de confeti
-    const jsConfetti = new JSConfetti();
 });
 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -105,10 +104,6 @@ function startListening() {
         listenButton.disabled = true;
         speakButton.disabled = true;
 
-        // Activa los botones de intentar de nuevo y intentar otro
-        tryAnotherButton.disabled = false;
-        tryAgainButton.disabled = false;
-
         // Understood se reinicia a falso
         understood = false;
     }
@@ -159,6 +154,10 @@ function startListening() {
         else if (!understood) {
             message.textContent = 'Try Again. I did not understand you!';
         }
+
+        // Activa los botones de intentar de nuevo y intentar otro
+        tryAnotherButton.disabled = false;
+        tryAgainButton.disabled = false;
     };
 
 }
@@ -191,7 +190,6 @@ function displayRecognizedText(text, confidence) {
         }
         // Agrega el porcentaje de confianza al mensaje, redondeado a dos decimales
         message.textContent += '\nConfidence: ' + (confidence * 100).toFixed(2) + '%';
-        understood = true;
     } else {
         // Actualiza recognizedText con el texto reconocido
         let recognizedText = text;
@@ -201,7 +199,6 @@ function displayRecognizedText(text, confidence) {
         recognizedText = recognizedText.charAt(0).toUpperCase() + recognizedText.slice(1);
         // Se actualiza recognizedText con el mensaje
         message.textContent = 'Try Again. I understood: "' + recognizedText + '"';
-        understood = true;
     }
 }
 
