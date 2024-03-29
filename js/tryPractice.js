@@ -30,3 +30,32 @@ function displayPhraseAndTranslation(phrase, translation) {
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
+
+function startSpeechRecognition() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+        const speechResult = event.results[0][0].transcript;
+        const phraseElement = document.getElementById('Phrase');
+        const recognitionResultElement = document.getElementById('recognitionResult');
+
+        if (speechResult.toLowerCase() === phraseElement.textContent.toLowerCase()) {
+            recognitionResultElement.textContent = '¡Correcto!';
+        } else {
+            recognitionResultElement.textContent = 'Incorrecto. Intenta de nuevo.';
+        }
+    };
+
+    recognition.onspeechend = function() {
+        recognition.stop();
+    };
+
+    recognition.onerror = function(event) {
+        console.error('Error:', event.error);
+    };
+}
