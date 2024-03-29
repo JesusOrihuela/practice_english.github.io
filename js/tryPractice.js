@@ -29,7 +29,14 @@ function startListening() {
 
 function displayRecognizedText(text) {
     const recognizedTextElement = document.getElementById('recognizedText');
-    recognizedTextElement.textContent = text; // Muestra el texto reconocido en el contenedor 'recognizedText'
+    const phraseElement = document.getElementById('Phrase');
+    const phrase = phraseElement.textContent.trim(); // Obtiene la frase actual
+
+    if (text.trim().toLowerCase() === phrase.toLowerCase()) {
+        recognizedTextElement.textContent = "Correct";
+    } else {
+        recognizedTextElement.textContent = `Incorrect. You said: "${text}"`;
+    }
 }
 
 function loadPhrases(jsonFile) {
