@@ -3,7 +3,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (currentTheme) {
         loadPhrases(`json/${currentTheme}.json`); // Carga las frases basadas en el tema actual
     }
+
+    const listenButton = document.getElementById('listenButton');
+    listenButton.addEventListener('click', startListening);
 });
+
+function startListening() {
+    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    recognition.lang = 'en-US';
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.start();
+
+    recognition.onresult = function(event) {
+        const speechResult = event.results[0][0].transcript;
+        const recognizedTextElement = document.getElementById('recognizedText');
+        recognizedTextElement.textContent = speechResult;
+    };
+
+    recognition.onerror = function(event) {
+        console.error('Error:', event.error);
+    };
+}
 
 function loadPhrases(jsonFile) {
     fetch(jsonFile)
@@ -30,28 +52,3 @@ function displayPhraseAndTranslation(phrase, translation) {
     const translationElement = document.getElementById('Traduction');
     translationElement.textContent = translation; // Muestra la traducción en el contenedor 'Traduction'
 }
-
-document.getElementById('startRecording').addEventListener('click', function() {
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-
-    recognition.start();
-
-    recognition.onresult = function(event) {
-        const speechResult = event.results[0][0].transcript;
-        const phraseElement = document.getElementById('Phrase');
-        const resultElement = document.getElementById('result');
-
-        if (speechResult.toLowerCase() === phraseElement.textContent.toLowerCase()) {
-            resultElement.textContent = '¡Correcto!';
-        } else {
-            resultElement.textContent = 'Incorrecto. Intenta de nuevo.';
-        }
-    };
-
-    recognition.onerror = function(event) {
-        console.error('Error:', event.error);
-    };
-});
