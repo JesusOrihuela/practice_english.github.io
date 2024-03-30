@@ -26,64 +26,6 @@ header img {
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
-/* Cuerpo principal */
-/* Estilos para el contenedor principal */
-.soon {
-    width: 80%;
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: fadeIn 1s ease-out forwards; /* Añadir la animación de desvanecimiento */
-}
-
-.soon h1 {
-    color: #00247D;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: center;
-    font-style: bold;
-}
-
-.soon h3 {
-    color: #000000;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    text-align: center;
-    font-style: normal;
-    font-weight: 300;
-}
-
-.soon img {
-    height: 250px;
-    width: auto;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-/* Añadir una animación de desvanecimiento con retraso */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Aplicar la animación a los elementos dentro de .soon */
-.soon > * {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-/* Aplicar un retraso a la animación para cada elemento */
-.soon > *:nth-child(1) { animation-delay: 0.2s; }
-.soon > *:nth-child(2) { animation-delay: 0.4s; }
-.soon > *:nth-child(3) { animation-delay: 0.6s; }
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Estilos para el pie de página */
 footer {
     background: radial-gradient(circle, #FCBF49, rgba(252, 191, 73, 0.8));
@@ -131,19 +73,9 @@ footer {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Estilos responsivos */
 @media (min-width: 768px) {
-    .soon-section {
-        width: calc(50% - 10px); /* Ajusta el ancho de las secciones en pantallas más grandes */
-    }
-
     .footer-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
-}
-
-@media (min-width: 1024px) {
-    .soon-section {
-        width: calc(33.33% - 10px); /* Ajusta el ancho de las secciones en pantallas aún más grandes */
     }
 }

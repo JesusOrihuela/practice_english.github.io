@@ -1,0 +1,92 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Cuerpo principal del speakingExercises */
+/* Estilos para el contenedor principal */
+.speakingExercises {
+    width: 80%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1s ease-out forwards; /* Añadir la animación de desvanecimiento */
+}
+
+#Phrase, #Traduction {
+    margin: 10px 0; /* Ajusta el margen para dar espacio entre los elementos */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+#Phrase {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#Traduction {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+#recognizedText {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+.listening-title {
+    color: #00247D;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Ajusta el espacio entre los botones */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #00247D;
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Añade margen horizontal a los botones */
+}
+
+.button-container button:hover {
+    background-color: #ddd;
+    color: #00247D;
+}
+
+.button-container button:disabled {
+    background-color: #cccccc; /* Color de fondo gris cuando el botón está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
+}
+
+/* Añadir una animación de desvanecimiento con retraso */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Aplicar la animación a los elementos dentro de .speakingExercises */
+.speakingExercises > * {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Aplicar un retraso a la animación para cada elemento */
+.speakingExercises > *:nth-child(1) { animation-delay: 0.1s; }
+.speakingExercises > *:nth-child(2) { animation-delay: 0.2s; }
+.speakingExercises > *:nth-child(3) { animation-delay: 0.3s; }
+.speakingExercises > *:nth-child(4) { animation-delay: 0.4s; }
+.speakingExercises > *:nth-child(5) { animation-delay: 0.5s; }
+.speakingExercises > *:nth-child(6) { animation-delay: 0.6s; }

@@ -1,0 +1,132 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Cuerpo principal del speakingMain */
+/* Estilos para el contenedor principal */
+.speakingMain {
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap; /* Asegura que las secciones se apilen verticalmente */
+    justify-content: space-around;
+}
+
+/* Estilos para las secciones de práctica */
+.practice-section {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 3rem;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    animation: loadUp 1s ease-out;
+    transition: box-shadow 0.5s ease;
+}
+
+/* Estilos para los títulos de las secciones */
+.practice-section h2 {
+    color: #002685;
+}
+
+/* Efecto de sombra al pasar el cursor sobre las secciones */
+.practice-section img {
+    width: 300px;
+    height: 175px;
+    border-radius: 15px;
+    object-fit: cover;
+    
+}
+
+.practice-section:hover {
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+}
+
+.practice-section:not(:hover) {
+    box-shadow: none; 
+}
+
+/* Estilos para los botones de práctica */
+.practice-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+    width: 170px;
+}
+
+/* Efecto de animación al pasar el cursor sobre los botones */
+.practice-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño del botón en un 10% */
+    background-color: #001a5c;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Efecto de animación al quitar el cursor del botón */
+.practice-button:not(:hover) {
+    transform: scale(1); /* Volver al tamaño original del botón */
+    background-color: #002685;
+    color: #fff;
+}
+
+/* Estilos para los botones de Coming Soon */
+.soon-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+    width: 170px;
+}
+
+/* Efecto de animación al pasar el cursor sobre los botones */
+.soon-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño del botón en un 10% */
+    background-color: #c31849;
+    color: #fff;
+    text-decoration: none;
+    cursor: not-allowed; /* Cambiar el cursor a "no permitido" cuando el botón está desactivado */
+}
+
+/* Efecto de animación al quitar el cursor del botón */
+.soon-button:not(:hover) {
+    transform: scale(1); /* Volver al tamaño original del botón */
+    background-color: #810c2d;
+    color: #fff;
+}
+
+/* Añadir una animación de carga hacia arriba */
+@keyframes loadUp {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Estilos responsivos */
+@media (min-width: 768px) {
+    .practice-section {
+        width: calc(50% - 10px); /* Ajusta el ancho de las secciones en pantallas más grandes */
+    }
+}
+
+@media (min-width: 1024px) {
+    .practice-section {
+        width: calc(33.33% - 10px); /* Ajusta el ancho de las secciones en pantallas aún más grandes */
+    }
+}

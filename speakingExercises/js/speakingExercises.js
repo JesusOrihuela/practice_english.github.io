@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentTheme = localStorage.getItem('currentTheme'); 
     // Carga las frases basadas en el tema actual
     if (currentTheme) {
-        loadPhrases(`json/${currentTheme}.json`);
+        loadPhrases(`../json/${currentTheme}.json`);
     }
 
     // Inicializa el botón de escucha
@@ -237,7 +237,7 @@ function displayPhraseAndTranslation(phrase, translation) {
 // ---------------------------------------------------------------------------------------------------------------------------------
 // Carga el archivo contractions.json
 let contractionsData = null;
-fetch('json/contractions.json')
+fetch('../json/contractions.json')
     .then(response => response.json())
     .then(data => {
         contractionsData = data.contractions;

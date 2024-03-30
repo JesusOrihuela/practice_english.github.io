@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Cuerpo principal del index */
+/* Estilos para los botones de práctica */
+.practice-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Asegurarse de que la transformación y el cambio de color también tengan una transición */
+    width: 170px;
+}
+
+/* Efecto de animación al pasar el cursor sobre los botones */
+.practice-button:hover {
+    transform: scale(1.1); /* Aumentar el tamaño del botón en un 10% */
+    background-color: #001a5c;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Efecto de animación al quitar el cursor del botón */
+.practice-button:not(:hover) {
+    transform: scale(1); /* Volver al tamaño original del botón */
+    background-color: #002685;
+    color: #fff;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Estilos responsivos */
+
