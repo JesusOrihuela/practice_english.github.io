@@ -80,7 +80,7 @@ function startSpeaking() {
 // Función para el botón de escuchar al usuario
 function startListening() {
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
-    recognition.lang = 'es-US'; // Configura el idioma a inglés
+    recognition.lang = 'en-US'; // Establece el idioma en inglés
     recognition.interimResults = false; // Solo queremos los resultados finales
     recognition.maxAlternatives = 1; // Solo queremos la mejor alternativa
 
