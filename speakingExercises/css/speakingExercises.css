@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     animation: fadeIn 1s ease-out forwards; /* Añadir la animación de desvanecimiento */
+    margin-bottom: 80px;
 }
 
 #Phrase, #Traduction {
@@ -27,7 +28,7 @@
 }
 
 #recognizedText {
-    margin-top: 10px;
+    
     margin-bottom: 10px;
     font-style: italic;
     text-align: center;
