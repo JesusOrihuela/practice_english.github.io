@@ -8,3 +8,10 @@ document.querySelectorAll('.practice-section img').forEach(function(img) {
     img.style.width = '100%';
     img.style.objectFit = 'cover';
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const practiceSections = document.querySelectorAll('.practice-section');
+    practiceSections.forEach((section, index) => {
+        section.style.animationDelay = `${index * 0.1}s`;
+    });
+});
