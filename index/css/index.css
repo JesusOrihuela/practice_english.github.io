@@ -1,4 +1,119 @@
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Estilos del Visual */
+.Left, .Right {
+    flex: 1 1 40%; /* flex: 1 1 35% es equivalente a flex-grow: 1; flex-shrink: 1; flex-basis: 35%; Es decir, los elementos pueden crecer y encogerse, y su tamaño base es del 35% del contenedor */
+    padding: 30px;
+}
+
+.Left {
+    order: 1; /* Cambia el orden de los elementos */
+    align-content: center;
+    position: relative;
+}
+
+.Right {
+    order: 2; /* Cambia el orden de los elementos */
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Right img {
+    max-width: 100%; /* Asegura que la imagen nunca sea más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: contain; /* Ajusta la imagen para que se ajuste al contenedor */
+}
+
+#skewingImage {
+    transition: transform 0.5s ease-out; /* Ajusta la duración y la función de tiempo según tus preferencias */
+}
+
+h1 {
+    font-size: 4em;
+    color: #FCBF49;
+}
+
+/* Media query para dispositivos con ancho de pantalla menor a 768px */
+@media (max-width: 768px) {
+    .Left, .Right {
+        flex: 1 1 100%; /* Hace que los elementos ocupen el 100% del ancho en pantallas pequeñas */
+    }
+}
+
+/* Estilos para los hexágonos */
+.hexagon {
+    width: 50px; /* Ajusta el tamaño de los hexágonos según tus necesidades */
+    height: 57.74px; /* Altura calculada para mantener la proporción correcta */
+    background-color: rgba(200, 159, 78, 0.5); /* Color de fondo de los hexágonos con transparencia */
+    position: absolute; /* Posicionamiento absoluto para colocarlos en posiciones específicas */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* Posicionamiento de los hexágonos */
+.Left .hexagon:nth-child(1) {
+    top: 15%; /* Ajusta la posición vertical del primer hexágono */
+    left: 15%; /* Ajusta la posición horizontal del primer hexágono */
+    width: 60px; /* Tamaño diferente para el primer hexágono */
+    height: 70.4px; /* Altura ajustada para mantener la proporción correcta */
+    background-color: rgba(252, 191, 73, 0.5);
+    animation: moveHexagon3 7s infinite; /* Ajusta la duración y el número de iteraciones según tus necesidades */
+}
+
+.Left .hexagon:nth-child(2) {
+    bottom: 10%; /* Ajusta la posición vertical del segundo hexágono */
+    left: 40%; /* Ajusta la posición horizontal del segundo hexágono */
+    background-color: rgba(252, 148, 73, 0.5);
+    animation: moveHexagon2 13s infinite; /* Ajusta la duración y el número de iteraciones según tus necesidades */
+}
+
+.Right .hexagon:nth-child(1) {
+    bottom: 10%; /* Ajusta la posición vertical del tercer hexágono */
+    left: 30%; /* Ajusta la posición horizontal del tercer hexágono */
+    width: 70px; /* Tamaño diferente para el tercer hexágono */
+    height: 82.4px; /* Altura ajustada para mantener la proporción correcta */
+    background-color: rgba(204, 144, 25, 0.5);
+    animation: moveHexagon1 10s infinite; /* Ajusta la duración y el número de iteraciones según tus necesidades */
+}
+
+/* Definición de las animaciones */
+@keyframes moveHexagon1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveHexagon2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(300px, -50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes moveHexagon3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Cuerpo principal del index */
 /* Estilos para los botones de práctica */
 .practice-button {

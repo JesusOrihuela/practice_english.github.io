@@ -1,0 +1,61 @@
+#game-container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#word-display {
+    margin-bottom: 20px;
+}
+
+#keyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+#keyboard button {
+    padding: 10px;
+    font-size: 18px;
+    flex: 0 0 auto; /* Esto asegura que los botones no crezcan ni se encogan */
+    text-align: center;
+    width: 40px; /* Ajusta el ancho según sea necesario */
+}
+
+#restart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #00247D;
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#restart-button:hover {
+    background-color: #ddd;
+    color: #00247D;
+}
+
+#restart-button:disabled {
+    background-color: #cccccc; /* Color de fondo gris cuando el botón está desactivado */
+    cursor: not-allowed; /* Cambia el cursor a "no permitido" cuando el botón está desactivado */
+}
+
+button.correct {
+    background-color: green;
+}
+
+button.incorrect {
+    background-color: red;
+}
+
