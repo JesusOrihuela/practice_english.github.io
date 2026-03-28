@@ -1,0 +1,22 @@
+# ── Development tools ─────────────────────────────────────────
+tools/node_modules/
+tools/package-lock.json
+
+# ── Audio files (pre-generated, ~390 MB) ──────────────────────
+# These are generated locally with: node tools/generate-audio.mjs
+# Excluding them keeps the repo lightweight. The app falls back to
+# Kokoro TTS (in-browser) for any phrase without a pre-generated file.
+# speaking/audio/
+
+# ── Editor & IDE ──────────────────────────────────────────────
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Claude Code ───────────────────────────────────────────────
+.claude/
+
+# ── OS ────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini

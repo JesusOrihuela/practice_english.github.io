@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Quiz — Practice English</title>
+    <meta name="description" content="Test your English vocabulary with multiple choice questions. Proven testing effect — retrieval practice builds stronger long-term memory.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <style>:root { --activity-clr: #7C3AED; --activity-clr-light: #EDE9FE; }</style>
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
+        </a>
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn active">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <main class="quiz-page" id="main-content">
+
+        <!-- Topic Picker (shown first) -->
+        <div id="topic-picker">
+            <div class="topic-picker-header">
+                <h1>Vocabulary <span>Quiz</span></h1>
+                <p>Choose a topic to test your vocabulary knowledge.</p>
+            </div>
+            <div class="topic-grid" id="topic-grid"></div>
+        </div>
+
+        <!-- Quiz Content (hidden until topic selected) -->
+        <div id="quiz-content" class="hidden">
+
+            <!-- Session bar -->
+            <div class="session-info-bar">
+                <button class="back-btn" id="back-btn" aria-label="Back to topic picker">← Topics</button>
+                <span id="quiz-counter" role="status" aria-live="polite">0 / 0 learned</span>
+                <span class="streak-badge" id="quiz-streak"><span aria-hidden="true">🔥</span> 0 day streak</span>
+            </div>
+
+            <!-- Word card -->
+            <div class="word-card" id="word-card">
+                <span class="word-category-badge" id="quiz-category">Adjective</span>
+                <div class="quiz-word" id="quiz-word">—</div>
+            </div>
+
+            <!-- Answer choices -->
+            <div class="choices-grid" id="choices-grid" role="group" aria-label="Definition choices">
+                <!-- Filled by JS -->
+            </div>
+
+            <!-- Feedback panel (hidden until answered) -->
+            <div class="quiz-feedback hidden" id="quiz-feedback" role="status" aria-live="polite">
+                <p class="feedback-result" id="feedback-result"></p>
+                <p class="feedback-correct" id="feedback-correct"></p>
+                <p class="feedback-example" id="feedback-example"></p>
+            </div>
+
+            <!-- Rating area (hidden until answered) -->
+            <div class="rating-area hidden" id="rating-area">
+                <p class="rating-label">How well did you know it?</p>
+                <div class="rating-buttons">
+                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
+                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
+                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+                </div>
+            </div>
+
+            <!-- Session done -->
+            <div class="session-done hidden" id="session-done" role="status" aria-live="polite">
+                <div class="done-icon">🎉</div>
+                <h2>Session Complete!</h2>
+                <p id="done-message">Great work today.</p>
+                <button class="continue-btn" id="continue-btn">Keep Going →</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../js/quiz.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>

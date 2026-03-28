@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictation — Practice English</title>
+    <meta name="description" content="Improve your English listening and spelling with dictation exercises. Listen to phrases and type what you hear — works in every browser.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/dictation.css">
+    <style>:root { --activity-clr: #2563EB; --activity-clr-light: #DBEAFE; }</style>
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
+        </a>
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn active">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <main class="dictation-page" id="main-content">
+
+
+        <!-- Topic Picker (shown on first load) -->
+        <div id="topic-picker">
+            <div class="dict-header">
+                <h1>Dictation <span>Practice</span></h1>
+                <p>Listen to each phrase and type exactly what you hear. Works in every browser — no microphone needed.</p>
+            </div>
+            <div class="topic-grid" id="topic-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Exercise Area (hidden until topic chosen) -->
+        <div id="exercise-area" class="hidden">
+
+            <!-- Session bar -->
+            <div class="session-info-bar">
+                <button class="back-btn" id="back-btn">← Topics</button>
+                <span id="dict-counter">0 / 0 learned</span>
+                <span class="streak-badge" id="dict-streak">🔥 0 day streak</span>
+            </div>
+
+            <h1 class="dict-title">Listen & <span>Type</span></h1>
+            <p class="dict-subtitle">Press Play, then type what you hear. Press Enter to check.</p>
+
+            <!-- Audio Controls -->
+            <div class="audio-controls">
+                <button id="play-btn" class="play-btn">▶ Play</button>
+                <button id="replay-btn" class="replay-btn" disabled>🔄 Replay</button>
+            </div>
+
+            <!-- Text Input -->
+            <div class="dict-input-wrapper">
+                <input type="text" id="dict-input"
+                       placeholder="Type what you hear…"
+                       autocomplete="off" spellcheck="false" autocorrect="off">
+                <button id="check-btn">Check ✓</button>
+            </div>
+
+            <!-- Feedback: diff view -->
+            <div id="dict-feedback" class="dict-feedback hidden" role="status" aria-live="polite"></div>
+
+            <!-- Reveal answer button (shown after wrong attempt) -->
+            <button id="reveal-btn" class="reveal-btn hidden">👁 Reveal Answer</button>
+
+            <!-- Rating Area -->
+            <div class="rating-area hidden" id="rating-area">
+                <p class="rating-label">How well did you do?</p>
+                <div class="rating-buttons">
+                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
+                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
+                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+                </div>
+            </div>
+
+            <!-- Skip button -->
+            <button id="skip-btn" class="skip-btn" disabled>Skip →</button>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/tts.js"></script>
+    <script src="../../shared/js/audio-player.js"></script>
+    <script src="../js/dictation.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>

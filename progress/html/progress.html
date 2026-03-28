@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Progress — Practice English</title>
+    <meta name="description" content="Track your English learning progress — streaks, vocabulary mastered, phrases practiced, and activity history all in one place.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/progress.css">
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
+        </a>
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <span class="mode-streak" id="mode-streak"></span>
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn active">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <main class="progress-page" id="main-content">
+
+
+        <!-- Page Header -->
+        <div class="prog-header">
+            <h1>My <span>Progress</span></h1>
+            <p>All your learning activity at a glance — powered by what you've practiced.</p>
+        </div>
+
+        <!-- Hero Stats Row -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-value" id="stat-streak">0</div>
+                <div class="stat-label">Day Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-value" id="stat-vocab">0</div>
+                <div class="stat-label">Words Learned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🗣️</div>
+                <div class="stat-value" id="stat-phrases">0</div>
+                <div class="stat-label">Cards Practiced</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-value" id="stat-sessions">0</div>
+                <div class="stat-label">Sessions Total</div>
+            </div>
+        </div>
+
+        <!-- Activity Heatmap (last 60 days) -->
+        <div class="section-block">
+            <h2 class="section-title">Activity — Last 60 Days</h2>
+            <div class="heatmap" id="heatmap"></div>
+            <div class="heatmap-legend">
+                <span>Less</span>
+                <div class="legend-dot l0"></div>
+                <div class="legend-dot l1"></div>
+                <div class="legend-dot l2"></div>
+                <div class="legend-dot l3"></div>
+                <span>More</span>
+            </div>
+        </div>
+
+        <!-- Speaking Topics Progress -->
+        <div class="section-block">
+            <h2 class="section-title">Speaking Practice — Topics</h2>
+            <div class="topics-progress" id="topics-progress">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Vocabulary Mastery -->
+        <div class="section-block">
+            <h2 class="section-title">Vocabulary Mastery</h2>
+            <div class="vocab-breakdown" id="vocab-breakdown">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Other Activities Progress -->
+        <div class="section-block">
+            <h2 class="section-title">Other Activities</h2>
+            <div class="topics-progress" id="activities-breakdown">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Recent Sessions -->
+        <div class="section-block">
+            <h2 class="section-title">Recent Sessions</h2>
+            <div class="sessions-list" id="sessions-list">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../js/progress-page.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>

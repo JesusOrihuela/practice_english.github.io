@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Generator — PracticeEnglish Dev Tool</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; color: #f8fafc; }
+    .subtitle { color: #94a3b8; font-size: 0.9rem; margin-bottom: 2rem; }
+    .card { background: #1e293b; border: 1px solid #334155; border-radius: 0.75rem; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .card h2 { font-size: 1rem; font-weight: 600; margin-bottom: 1rem; color: #cbd5e1; }
+    label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.35rem; }
+    .voice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.5rem; }
+    .voice-item { display: flex; align-items: center; gap: 0.5rem; background: #0f172a; border: 1px solid #334155; border-radius: 0.5rem; padding: 0.5rem 0.75rem; cursor: pointer; transition: border-color 0.15s; }
+    .voice-item:hover { border-color: #6366f1; }
+    .voice-item input[type=checkbox] { accent-color: #6366f1; width: 16px; height: 16px; }
+    .voice-item .name { font-size: 0.85rem; font-weight: 600; flex: 1; }
+    .voice-item .badge { font-size: 0.7rem; padding: 1px 6px; border-radius: 99px; background: #334155; color: #94a3b8; }
+    .voice-item .badge.a  { background: #14532d; color: #86efac; }
+    .voice-item .badge.am { background: #1e3a5f; color: #93c5fd; }
+    .badge.br { background: #3b1f5e; color: #c4b5fd; }
+    .speed-row { display: flex; align-items: center; gap: 1rem; }
+    .speed-row input[type=range] { flex: 1; accent-color: #6366f1; }
+    .speed-val { font-size: 0.9rem; font-weight: 700; color: #818cf8; min-width: 3rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.4rem; border-radius: 0.5rem; border: none; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: filter 0.15s, transform 0.1s; }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: #6366f1; color: #fff; }
+    .btn-primary:hover { filter: brightness(1.1); }
+    .btn-secondary { background: #334155; color: #e2e8f0; }
+    .btn-secondary:hover { filter: brightness(1.15); }
+    .btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; filter: none; }
+    .btn-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .progress-wrap { margin-top: 1.25rem; display: none; }
+    .progress-wrap.visible { display: block; }
+    .progress-bar-track { background: #334155; border-radius: 99px; height: 8px; overflow: hidden; margin-bottom: 0.5rem; }
+    .progress-bar-fill { background: #6366f1; height: 100%; border-radius: 99px; width: 0%; transition: width 0.3s ease; }
+    .progress-text { font-size: 0.82rem; color: #94a3b8; }
+    .log-wrap { margin-top: 1rem; max-height: 260px; overflow-y: auto; background: #0f172a; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.75rem; font-size: 0.78rem; font-family: monospace; display: none; }
+    .log-wrap.visible { display: block; }
+    .log-line { color: #64748b; line-height: 1.6; }
+    .log-line.ok   { color: #4ade80; }
+    .log-line.skip { color: #fbbf24; }
+    .log-line.err  { color: #f87171; }
+    .log-line.info { color: #818cf8; }
+    .status-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.78rem; font-weight: 700; }
+    .status-idle     { background: #334155; color: #94a3b8; }
+    .status-loading  { background: #1e3a5f; color: #60a5fa; }
+    .status-ready    { background: #14532d; color: #4ade80; }
+    .status-running  { background: #312e81; color: #a5b4fc; }
+    .status-done     { background: #166534; color: #86efac; }
+    .status-error    { background: #7f1d1d; color: #fca5a5; }
+    .folder-path { font-size: 0.82rem; color: #6366f1; font-family: monospace; margin-left: 0.5rem; }
+    .topic-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.5rem; }
+    .topic-item { display: flex; align-items: center; gap: 0.5rem; background: #0f172a; border: 1px solid #334155; border-radius: 0.5rem; padding: 0.5rem 0.75rem; cursor: pointer; }
+    .topic-item:hover { border-color: #6366f1; }
+    .topic-item input { accent-color: #6366f1; }
+    .topic-item label { margin: 0; font-size: 0.85rem; cursor: pointer; color: #e2e8f0; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.5rem; margin-top: 0.75rem; }
+    .summary-item { background: #0f172a; border: 1px solid #1e293b; border-radius: 0.5rem; padding: 0.5rem 0.75rem; font-size: 0.8rem; }
+    .summary-item .s-topic { color: #94a3b8; }
+    .summary-item .s-count { color: #4ade80; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<h1>🔊 Audio Generator</h1>
+<p class="subtitle">Pre-generates Kokoro TTS audio files for all topics. Run this locally whenever you add new phrases.</p>
+
+<!-- Step 1: Output folder -->
+<div class="card">
+  <h2>1 — Output Folder</h2>
+  <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
+    Select the <code style="color:#818cf8">speaking/audio/</code> folder in your project.
+    Files will be written directly to disk — no downloads needed.
+  </p>
+  <div class="btn-row">
+    <button class="btn btn-secondary" id="btn-folder">📁 Select folder…</button>
+    <span class="folder-path" id="folder-path"></span>
+  </div>
+</div>
+
+<!-- Step 2: Voice selection -->
+<div class="card">
+  <h2>2 — Voices</h2>
+  <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
+    Each phrase gets one audio file per voice selected.
+    Grades from the official VOICES.md — higher = more natural.
+  </p>
+  <div class="voice-grid" id="voice-grid"></div>
+</div>
+
+<!-- Step 3: Speed -->
+<div class="card">
+  <h2>3 — Speed</h2>
+  <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
+    0.95 is the sweet spot — natural prosody without rushing. Dictation playback rate is handled separately in the app.
+  </p>
+  <div class="speed-row">
+    <input type="range" id="speed-slider" min="0.75" max="1.15" step="0.05" value="0.95">
+    <span class="speed-val" id="speed-val">0.95</span>
+  </div>
+</div>
+
+<!-- Step 4: Topics -->
+<div class="card">
+  <h2>4 — Topics</h2>
+  <div class="topic-grid" id="topic-grid"></div>
+</div>
+
+<!-- Step 5: Generate -->
+<div class="card">
+  <h2>5 — Generate</h2>
+  <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
+    The model loads once (~92 MB, cached by browser). Existing files are skipped automatically —
+    safe to re-run after adding new phrases.
+  </p>
+  <div class="btn-row">
+    <button class="btn btn-primary" id="btn-generate" disabled>⚡ Generate Audio</button>
+    <button class="btn btn-secondary" id="btn-stop" disabled>⏹ Stop</button>
+    <span class="status-badge status-idle" id="status">Idle</span>
+  </div>
+  <div class="progress-wrap" id="progress-wrap">
+    <div class="progress-bar-track"><div class="progress-bar-fill" id="progress-fill"></div></div>
+    <div class="progress-text" id="progress-text"></div>
+  </div>
+  <div class="log-wrap" id="log-wrap"></div>
+
+  <!-- Summary after generation -->
+  <div id="summary-area" style="display:none; margin-top:1rem;">
+    <p style="font-size:0.85rem;color:#4ade80;font-weight:700;margin-bottom:0.5rem;">✓ Generation complete</p>
+    <div class="summary-grid" id="summary-grid"></div>
+  </div>
+</div>
+
+<script type="module">
+import { KokoroTTS } from 'https://esm.sh/kokoro-js@1.2.1';
+
+// ---- Voice catalog (English only, best quality first) ----
+const VOICE_CATALOG = [
+  { id: 'af_heart',    label: 'Heart',    accent: 'American F', grade: 'A',   default: true  },
+  { id: 'af_bella',    label: 'Bella',    accent: 'American F', grade: 'A-',  default: true  },
+  { id: 'af_nicole',   label: 'Nicole',   accent: 'American F', grade: 'B-',  default: true  },
+  { id: 'af_sarah',    label: 'Sarah',    accent: 'American F', grade: 'B-',  default: false },
+  { id: 'af_sky',      label: 'Sky',      accent: 'American F', grade: 'B-',  default: false },
+  { id: 'am_michael',  label: 'Michael',  accent: 'American M', grade: 'B-',  default: true  },
+  { id: 'am_adam',     label: 'Adam',     accent: 'American M', grade: 'C+',  default: false },
+  { id: 'bf_emma',     label: 'Emma',     accent: 'British F',  grade: 'B-',  default: true  },
+  { id: 'bf_isabella', label: 'Isabella', accent: 'British F',  grade: 'C+',  default: false },
+  { id: 'bm_george',   label: 'George',   accent: 'British M',  grade: 'C+',  default: false },
+];
+
+const TOPICS = [
+  'greetings', 'traveling', 'technology', 'restaurant',
+  'kitchen', 'supermarket', 'entertainment', 'accountability', 'gym',
+];
+
+// ---- Build voice UI ----
+const voiceGrid = document.getElementById('voice-grid');
+VOICE_CATALOG.forEach(v => {
+  const item = document.createElement('label');
+  item.className = 'voice-item';
+  const gradeClass = v.grade.startsWith('A') ? 'a' : v.accent.includes('M') ? 'am' : 'br';
+  item.innerHTML = `
+    <input type="checkbox" value="${v.id}" ${v.default ? 'checked' : ''}>
+    <span class="name">${v.label}</span>
+    <span class="badge ${gradeClass}">${v.accent}</span>
+    <span class="badge">${v.grade}</span>`;
+  voiceGrid.appendChild(item);
+});
+
+// ---- Build topic UI ----
+const topicGrid = document.getElementById('topic-grid');
+TOPICS.forEach(t => {
+  const item = document.createElement('div');
+  item.className = 'topic-item';
+  item.innerHTML = `<input type="checkbox" id="t-${t}" value="${t}" checked>
+    <label for="t-${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</label>`;
+  topicGrid.appendChild(item);
+});
+
+// ---- Speed slider ----
+const speedSlider = document.getElementById('speed-slider');
+const speedVal    = document.getElementById('speed-val');
+speedSlider.addEventListener('input', () => speedVal.textContent = speedSlider.value);
+
+// ---- State ----
+let outputDir = null;
+let tts       = null;
+let stopped   = false;
+
+// ---- Folder selection ----
+document.getElementById('btn-folder').addEventListener('click', async () => {
+  try {
+    outputDir = await window.showDirectoryPicker({ mode: 'readwrite' });
+    document.getElementById('folder-path').textContent = outputDir.name + '/';
+    document.getElementById('btn-generate').disabled = false;
+    setStatus('ready', '✓ Folder selected');
+    log('Folder: ' + outputDir.name, 'info');
+  } catch { /* user cancelled */ }
+});
+
+// ---- Stop ----
+document.getElementById('btn-stop').addEventListener('click', () => {
+  stopped = true;
+  setStatus('idle', 'Stopped');
+});
+
+// ---- Generate ----
+document.getElementById('btn-generate').addEventListener('click', async () => {
+  const voices  = [...document.querySelectorAll('#voice-grid input:checked')].map(el => el.value);
+  const topics  = [...document.querySelectorAll('#topic-grid input:checked')].map(el => el.value);
+  const speed   = parseFloat(speedSlider.value);
+
+  if (!voices.length) { alert('Select at least one voice.'); return; }
+  if (!topics.length) { alert('Select at least one topic.'); return; }
+  if (!outputDir)     { alert('Select an output folder first.'); return; }
+
+  stopped = false;
+  document.getElementById('btn-generate').disabled = true;
+  document.getElementById('btn-stop').disabled = false;
+  document.getElementById('progress-wrap').classList.add('visible');
+  document.getElementById('log-wrap').classList.add('visible');
+  document.getElementById('summary-area').style.display = 'none';
+
+  // Load model if needed
+  if (!tts) {
+    setStatus('loading', 'Loading model…');
+    log('Loading Kokoro-82M (q8, wasm)…', 'info');
+    try {
+      tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-ONNX', {
+        dtype: 'q8', device: 'wasm',
+        progress_callback: (p) => {
+          if (p.status === 'progress' && p.progress != null)
+            log(`  ${(p.file||'').split('/').pop()}  ${Math.round(p.progress)}%`, 'info');
+        },
+      });
+      log('Model ready ✓', 'ok');
+    } catch (e) {
+      log('Failed to load model: ' + e.message, 'err');
+      setStatus('error', 'Model load failed');
+      document.getElementById('btn-generate').disabled = false;
+      document.getElementById('btn-stop').disabled = true;
+      return;
+    }
+  }
+
+  setStatus('running', 'Generating…');
+
+  // Count total work
+  const phraseCounts = {};
+  for (const topic of topics) {
+    try {
+      const data = await fetch('../speaking/json/' + topic + '.json').then(r => r.json());
+      phraseCounts[topic] = (data.phrases || []).length;
+    } catch { phraseCounts[topic] = 0; }
+  }
+  const totalFiles = topics.reduce((s, t) => s + phraseCounts[t] * voices.length, 0);
+  let done = 0, skipped = 0, generated = 0, errors = 0;
+
+  updateProgress(0, totalFiles, 'Starting…');
+
+  const summaryData = {};
+
+  for (const topic of topics) {
+    if (stopped) break;
+
+    let data;
+    try {
+      data = await fetch('../speaking/json/' + topic + '.json').then(r => r.json());
+    } catch {
+      log(`[${topic}] Failed to load JSON`, 'err'); errors++;
+      continue;
+    }
+    const phrases = data.phrases || [];
+
+    // Ensure topic subdirectory
+    let topicDir;
+    try {
+      topicDir = await outputDir.getDirectoryHandle(topic, { create: true });
+    } catch (e) {
+      log(`[${topic}] Cannot create folder: ${e.message}`, 'err'); continue;
+    }
+
+    summaryData[topic] = { phrases: phrases.length, gen: 0, skip: 0 };
+
+    for (let i = 0; i < phrases.length; i++) {
+      if (stopped) break;
+
+      for (const voiceId of voices) {
+        if (stopped) break;
+
+        const fileName = `${i}_${voiceId}.wav`;
+
+        // Skip if already exists
+        let exists = false;
+        try { await topicDir.getFileHandle(fileName); exists = true; } catch {}
+        if (exists) {
+          log(`skip  ${topic}/${fileName}`, 'skip');
+          summaryData[topic].skip++;
+          done++; skipped++;
+          updateProgress(done, totalFiles, `${topic}/${fileName}`);
+          continue;
+        }
+
+        // Generate
+        try {
+          log(`gen   ${topic}/${fileName} — "${phrases[i].slice(0, 48)}…"`, 'info');
+          const audio = await tts.generate(phrases[i], { voice: voiceId, speed });
+          const wav = pcmToWav(audio.audio, audio.sampling_rate);
+
+          const fh = await topicDir.getFileHandle(fileName, { create: true });
+          const wr = await fh.createWritable();
+          await wr.write(wav);
+          await wr.close();
+
+          log(`  ✓ ${fileName}`, 'ok');
+          summaryData[topic].gen++;
+          done++; generated++;
+        } catch (e) {
+          log(`  ✗ ${topic}/${fileName}: ${e.message}`, 'err');
+          errors++; done++;
+        }
+
+        updateProgress(done, totalFiles, `${topic}/${fileName}`);
+      }
+    }
+  }
+
+  // Done
+  const finalMsg = stopped
+    ? `Stopped — ${generated} generated, ${skipped} skipped, ${errors} errors`
+    : `Done — ${generated} generated, ${skipped} skipped, ${errors} errors`;
+
+  setStatus(errors > 0 ? 'error' : 'done', finalMsg);
+  log(finalMsg, errors > 0 ? 'err' : 'ok');
+  updateProgress(done, totalFiles, finalMsg);
+
+  document.getElementById('btn-generate').disabled = false;
+  document.getElementById('btn-stop').disabled = true;
+
+  // Summary
+  if (!stopped) {
+    const sg = document.getElementById('summary-grid');
+    sg.innerHTML = '';
+    for (const [topic, info] of Object.entries(summaryData)) {
+      const div = document.createElement('div');
+      div.className = 'summary-item';
+      div.innerHTML = `<div class="s-topic">${topic}</div>
+        <div class="s-count">${info.phrases} phrases × ${voices.length} voices</div>
+        <div style="font-size:0.75rem;color:#64748b;">${info.gen} new · ${info.skip} skipped</div>`;
+      sg.appendChild(div);
+    }
+    document.getElementById('summary-area').style.display = 'block';
+  }
+});
+
+// ---- Helpers ----
+
+function setStatus(type, text) {
+  const el = document.getElementById('status');
+  el.className = 'status-badge status-' + type;
+  el.textContent = text;
+}
+
+function updateProgress(done, total, label) {
+  const pct = total > 0 ? (done / total * 100) : 0;
+  document.getElementById('progress-fill').style.width = pct.toFixed(1) + '%';
+  document.getElementById('progress-text').textContent =
+    `${done} / ${total} files  (${pct.toFixed(0)}%)  —  ${label}`;
+}
+
+function log(msg, type = '') {
+  const wrap = document.getElementById('log-wrap');
+  const line = document.createElement('div');
+  line.className = 'log-line ' + type;
+  line.textContent = msg;
+  wrap.appendChild(line);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+/** Convert Float32 PCM to 16-bit WAV Blob */
+function pcmToWav(float32, sampleRate) {
+  const samples = float32.length;
+  const buf  = new ArrayBuffer(44 + samples * 2);
+  const view = new DataView(buf);
+  const str  = (off, s) => { for (let i = 0; i < s.length; i++) view.setUint8(off + i, s.charCodeAt(i)); };
+
+  str(0,  'RIFF');
+  view.setUint32(4,  36 + samples * 2, true);
+  str(8,  'WAVE');
+  str(12, 'fmt ');
+  view.setUint32(16, 16,            true);  // chunk size
+  view.setUint16(20, 1,             true);  // PCM
+  view.setUint16(22, 1,             true);  // mono
+  view.setUint32(24, sampleRate,    true);
+  view.setUint32(28, sampleRate * 2,true);  // byte rate
+  view.setUint16(32, 2,             true);  // block align
+  view.setUint16(34, 16,            true);  // bits per sample
+  str(36, 'data');
+  view.setUint32(40, samples * 2, true);
+
+  const out = new Int16Array(buf, 44);
+  for (let i = 0; i < samples; i++)
+    out[i] = Math.max(-32768, Math.min(32767, float32[i] * 32767 | 0));
+
+  return new Uint8Array(buf);
+}
+</script>
+</body>
+</html>

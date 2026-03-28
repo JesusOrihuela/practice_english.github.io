@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble — Practice English</title>
+    <meta name="description" content="Rebuild scrambled English sentences by tapping words into place. Syntactic reconstruction trains word order and grammar without translation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/scramble.css">
+    <style>:root { --activity-clr: #EC4899; --activity-clr-light: #FCE7F3; }</style>
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
+        </a>
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn active">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <main class="scramble-page" id="main-content">
+
+
+        <!-- Topic Picker -->
+        <div id="topic-picker">
+            <div class="scramble-header">
+                <h1>Word <span>Scramble</span></h1>
+                <p>Tap words to put the sentence in the right order. No clues — your brain does the work.</p>
+            </div>
+            <div class="topic-grid" id="topic-grid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Exercise Area -->
+        <div id="exercise-area" class="hidden">
+
+            <!-- Session bar -->
+            <div class="session-info-bar">
+                <button class="back-btn" id="back-btn">← Topics</button>
+                <span id="scramble-counter" role="status" aria-live="polite">0 / 0 learned</span>
+                <span class="streak-badge" id="scramble-streak">🔥 0 day streak</span>
+            </div>
+
+            <h1 class="scramble-title">Build the <span>Sentence</span></h1>
+            <p class="scramble-subtitle">Tap words to add them. Tap placed words to remove them.</p>
+
+            <!-- Spanish hint -->
+            <div class="hint-card" id="hint-card">
+                <span class="hint-label" aria-label="Spanish hint"><span aria-hidden="true">🇪🇸</span> Hint</span>
+                <span class="hint-text" id="hint-text">—</span>
+            </div>
+
+            <!-- Construction area (where user builds the sentence) -->
+            <div class="construction-zone">
+                <p class="zone-label">Your sentence</p>
+                <div class="construction-area" id="construction-area" role="region" aria-label="Built sentence" aria-live="polite">
+                    <span class="placeholder-text" id="placeholder">Tap words below to start…</span>
+                </div>
+            </div>
+
+            <!-- Word bank (scrambled tiles to pick from) -->
+            <div class="word-bank-zone">
+                <p class="zone-label">Word bank</p>
+                <div class="word-bank" id="word-bank" role="group" aria-label="Available words"></div>
+            </div>
+
+            <!-- Check / Clear buttons -->
+            <div class="action-row">
+                <button class="clear-btn" id="clear-btn">↩ Clear</button>
+                <button class="check-btn" id="check-btn">Check ✓</button>
+            </div>
+
+            <!-- Feedback -->
+            <div class="scramble-feedback hidden" id="scramble-feedback" role="status" aria-live="polite">
+                <p class="feedback-result" id="feedback-result"></p>
+                <p class="feedback-answer" id="feedback-answer"></p>
+            </div>
+
+            <!-- Rating area -->
+            <div class="rating-area hidden" id="rating-area">
+                <p class="rating-label">How well did you know it?</p>
+                <div class="rating-buttons">
+                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
+                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
+                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../js/scramble.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>
