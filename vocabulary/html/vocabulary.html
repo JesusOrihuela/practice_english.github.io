@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocabulary Trainer — Practice English</title>
+    <meta name="description" content="Build your English vocabulary with smart spaced-repetition flashcards. 100+ words categorised by difficulty — easy, medium, and hard.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/vocabulary.css">
+    <style>:root { --activity-clr: #0EA5E9; --activity-clr-light: #E0F2FE; }</style>
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#vocab-wrapper">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
+        </a>
+
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn active">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <div id="vocab-wrapper">
+
+        <!-- Topic Picker (shown first) -->
+        <div id="topic-picker">
+            <div class="topic-picker-header">
+                <h1>Vocabulary <span>Trainer</span></h1>
+                <p>Choose a topic, flip each card to reveal the meaning, then rate how well you know it.</p>
+            </div>
+            <div class="topic-grid" id="topic-grid"></div>
+        </div>
+
+        <!-- Vocab Content (hidden until topic selected) -->
+        <div id="vocab-content" class="hidden">
+
+            <!-- Stats Bar -->
+            <div class="vocab-stats-bar">
+                <button class="back-btn" id="back-btn" aria-label="Back to topic picker">← Topics</button>
+                <span id="cards-remaining" role="status" aria-live="polite">Loading…</span>
+                <span class="streak-badge" id="vocab-streak"><span aria-hidden="true">🔥</span> 0 day streak</span>
+            </div>
+
+            <!-- Flashcard -->
+            <div class="flashcard-scene" id="flashcard-scene" role="button" tabindex="0" aria-label="Flashcard — press Enter or Space to flip">
+                <div class="flashcard" id="flashcard">
+
+                    <!-- Front: word -->
+                    <div class="flashcard-face flashcard-front">
+                        <span class="word-category" id="word-category">Adjective</span>
+                        <div class="word-text" id="word-text">—</div>
+                        <p class="flip-hint">Tap to reveal meaning</p>
+                    </div>
+
+                    <!-- Back: definition + example + translation -->
+                    <div class="flashcard-face flashcard-back">
+                        <span class="word-category" id="word-category-back">Adjective</span>
+                        <div class="word-definition" id="word-definition"></div>
+                        <div class="word-example" id="word-example"></div>
+                        <div class="word-translation" id="word-translation"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Rating Buttons (appear after flip) -->
+            <div class="rating-area hidden" id="rating-area">
+                <p class="rating-label">How well did you know this word?</p>
+                <div class="rating-buttons">
+                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
+                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
+                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+                </div>
+            </div>
+
+            <!-- Session Complete -->
+            <div class="session-done hidden" id="session-done">
+                <div class="done-icon">🎉</div>
+                <h2>Session Complete!</h2>
+                <p id="done-message">You reviewed all cards for today.</p>
+                <button id="continue-btn" class="continue-btn">Review More →</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../js/vocabulary.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>

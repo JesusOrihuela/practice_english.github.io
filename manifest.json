@@ -1,0 +1,38 @@
+{
+    "name": "Practice English",
+    "short_name": "PracticeEng",
+    "description": "Learn English with speaking practice, vocabulary flashcards, and spaced repetition — free, offline, and installable.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#F0F4FF",
+    "theme_color": "#2563EB",
+    "lang": "en",
+    "icons": [
+        {
+            "src": "index/img/ico/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "index/img/ico/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Speaking Practice",
+            "url": "./speaking/html/speaking.html",
+            "description": "Choose a topic and practice speaking"
+        },
+        {
+            "name": "Vocabulary Trainer",
+            "url": "./vocabulary/html/vocabulary.html",
+            "description": "Flashcard vocabulary with spaced repetition"
+        }
+    ]
+}

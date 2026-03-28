@@ -1,0 +1,337 @@
+/* ============================================================
+   dictation.css — Dictation Practice Interface
+   ============================================================ */
+
+.dictation-page {
+  width: 100%;
+  max-width: var(--max-w);
+  padding: 36px 24px 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+/* ---- Topic Picker ---- */
+#topic-picker { width: 100%; }
+#topic-picker.hidden { display: none; }
+
+.dict-header {
+  text-align: center;
+  margin-bottom: 32px;
+  animation: fadeIn 0.5s ease-out both;
+}
+
+.dict-header h1 {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: var(--clr-text);
+  margin-bottom: 8px;
+}
+
+.dict-header h1 span { color: var(--clr-primary); }
+
+.dict-header p {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+/* ---- Topic Buttons — taller with top stripe ---- */
+.topic-btn {
+  padding: 20px 14px 16px;
+  min-height: 100px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-top: 3px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    border-top-color var(--transition),
+    transform var(--transition-bounce),
+    box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0;
+  animation: slideUp 0.4s ease-out forwards;
+}
+
+.topic-btn:hover {
+  background: var(--clr-primary-light);
+  border-color: var(--clr-primary-light);
+  border-top-color: var(--clr-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.topic-btn .topic-emoji { font-size: 1.6rem; line-height: 1; }
+.topic-btn .topic-label { font-size: 0.85rem; font-weight: 700; }
+.topic-btn .topic-progress { font-size: 0.7rem; color: var(--clr-text-muted); font-weight: 600; }
+
+/* ---- Exercise Area ---- */
+#exercise-area { width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: center; gap: 0; }
+#exercise-area.hidden { display: none; }
+
+#dict-counter {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+/* ---- Title ---- */
+.dict-title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 800;
+  color: var(--clr-text);
+  text-align: center;
+  margin-bottom: 6px;
+  animation: fadeIn 0.5s 0.1s ease-out both;
+}
+
+.dict-title span { color: var(--clr-primary); }
+
+.dict-subtitle {
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 28px;
+  animation: fadeIn 0.5s 0.2s ease-out both;
+}
+
+/* ---- Audio Controls — large and impressive ---- */
+.audio-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 22px;
+  width: 100%;
+  animation: fadeIn 0.5s 0.3s ease-out both;
+}
+
+.play-btn {
+  width: 100%;
+  padding: 16px 32px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  box-shadow: var(--shadow-primary);
+  transition: transform var(--transition-bounce), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ripple on :active */
+.play-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.25);
+  border-radius: inherit;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.play-btn:active::after {
+  transform: scale(2.5);
+  opacity: 0;
+  transition: 0s;
+}
+
+.play-btn:hover  { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 32px rgba(37,99,235,0.38); }
+.play-btn:active { transform: scale(0.97); }
+.play-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
+
+.replay-btn {
+  padding: 11px 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition-bounce);
+}
+
+.replay-btn:hover  { background: var(--clr-primary-light); border-color: var(--clr-primary); transform: translateY(-2px); }
+.replay-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+/* ---- Text Input ---- */
+.dict-input-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+  animation: fadeIn 0.5s 0.4s ease-out both;
+}
+
+#dict-input {
+  flex: 1;
+  padding: 16px 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+#dict-input:focus {
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+#dict-input:disabled { opacity: 0.55; cursor: not-allowed; }
+
+#check-btn {
+  padding: 16px 24px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--clr-success) 0%, #047857 100%);
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform var(--transition-bounce), filter var(--transition);
+}
+
+#check-btn:hover  { transform: scale(1.04); filter: brightness(1.08); }
+#check-btn:active { transform: scale(0.97); }
+
+/* ---- Feedback (diff view) ---- */
+.dict-feedback {
+  width: 100%;
+  padding: 18px 20px 18px 24px;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-left: 4px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  word-break: break-word;
+  animation: fadeInScale 0.3s ease-out both;
+}
+
+.dict-feedback.hidden { display: none; }
+
+.dict-feedback.correct {
+  background: var(--clr-success-light);
+  border-color: var(--clr-success-light);
+  border-left-color: var(--clr-success);
+}
+
+.dict-feedback.incorrect {
+  background: var(--clr-danger-light);
+  border-color: var(--clr-danger-light);
+  border-left-color: var(--clr-danger);
+}
+
+/* Word-level diff coloring */
+.word-ok {
+  color: var(--clr-success);
+  position: relative;
+}
+
+/* Subtle checkmark on correct words */
+.word-ok::after {
+  content: '';
+  display: inline-block;
+}
+
+.word-wrong   { color: var(--clr-danger); text-decoration: line-through; }
+.word-missing { color: var(--clr-text-muted); font-style: italic; }
+
+/* ---- Reveal Button ---- */
+.reveal-btn {
+  padding: 9px 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.reveal-btn:hover { background: var(--clr-border); color: var(--clr-text); }
+.reveal-btn.hidden { display: none; }
+
+/* ---- Rating Area — page-specific gradient accent ---- */
+.rating-area::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-danger), var(--clr-primary), var(--clr-success));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+/* ---- Skip Button ---- */
+.skip-btn {
+  padding: 9px 22px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface);
+  border: 2px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition-bounce);
+}
+
+.skip-btn:hover   { background: var(--clr-surface-2); border-color: var(--clr-border-hover); transform: translateY(-1px); }
+.skip-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .dictation-page { padding: 24px 14px 56px; }
+  .topic-grid { grid-template-columns: repeat(2, 1fr); }
+  .audio-controls { gap: 8px; }
+  .play-btn { padding: 14px 24px; font-size: 1rem; }
+  .dict-input-wrapper { flex-direction: column; }
+  #check-btn { width: 100%; padding: 14px; }
+}

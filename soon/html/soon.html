@@ -1,36 +1,66 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Coming Soon — Practice English</title>
+    <meta name="description" content="New features are coming to Practice English — stay tuned for more ways to improve your English skills.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/soon.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/soon.css">
     <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
 </head>
 
-<header>
-    <a href="../../index.html"><img src="../../index/img/ico/logo.png" alt="Practice English"></a>
-</header>
-
 <body>
-    <main class="soon">
-        <h1>Coming Soon!</h1>
-        <h3>Thank you for your patience. We are working hard to bring you new content.</h3>
-        <img src="../img/comingSoon.png" alt="Construction 3d PNGs by Vecteezy">
-    </main>
-</body>
-
-<footer>
-    <div class="footer-content">
-        <p>© 2024 Developed by Jesús Orihuela.</p>
-        <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank">
-            <i class="fa fa-github github-logo"></i>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.png" alt="Practice English">
         </a>
-    </div>
-</footer>
+
+    </header>
+
+    <main class="soon" id="main-content">
+        <span class="soon-badge">🚧 In Progress</span>
+
+        <h1>Something <span>new</span><br>is coming!</h1>
+
+        <p>
+            We're working hard to bring you exciting new content and features.
+            Thank you for your patience — it'll be worth the wait!
+        </p>
+
+        <img src="../img/comingSoon.png" alt="Coming soon illustration" loading="lazy">
+
+        <a href="../../index.html" class="btn-back">← Back to Home</a>
+
+        <div class="soon-dots">
+            <div class="dot active"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
 
 </html>

@@ -1,55 +1,204 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice English</title>
+    <title>Practice English — Learn to Speak & Build Vocabulary</title>
+    <meta name="description" content="Free interactive English learning app. Practice speaking, listen and type dictation, and build vocabulary with spaced repetition. Works offline, no signup required.">
+    <meta property="og:title" content="Practice English — Learn to Speak & Build Vocabulary">
+    <meta property="og:description" content="Free interactive English learning app. Practice speaking, dictation, and vocabulary with spaced repetition. Works offline.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Free interactive English learning — speaking, dictation, vocabulary with spaced repetition.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index/css/generalities.css">
+    <link rel="stylesheet" href="index/css/index.css">
     <link rel="icon" href="index/img/ico/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
 </head>
 
-<header>
-    <a href="index.html"><img src="index/img/ico/logo.png" alt="Practice English"></a>
-</header>
-
 <body>
-    <main class="index">
-        <div>
-            <div class="container">
-              <!--Left Col-->
-              <div class="Left">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="index.html" aria-label="Practice English — Home">
+            <img src="index/img/ico/logo.png" alt="Practice English">
+        </a>
+    </header>
+
+    <main class="index" id="main-content">
+        <section class="hero">
+            <!-- Left Column -->
+            <div class="hero-left">
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
-                <h1>Ready to practice your English?</h1>
-                <p>Listen, Speak, and learn Vocabulary with all kinds of exercises made just for you!</p>
-              </div>
-              <!--Right Col-->
-              <div class="Right">
-                <div class="hexagon"></div>
-                <img id="skewingImage" src="index/img/learn.png" />
-              </div>
+
+                <span class="hero-badge">🌍 Free English Learning</span>
+
+                <h1 class="hero-title">
+                    Ready to master your<br>
+                    <span class="highlight">English skills?</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Listen, speak, and grow your vocabulary with interactive
+                    exercises designed to make learning English natural and fun.
+                </p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Activities</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Phrases</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-number">Free</div>
+                        <div class="stat-label">Always</div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <!--Botón que lleve a speakingMain.html-->
-        <button onclick="window.location.href='speakingMain/html/speakingMain.html'" class="practice-button">Practice Speaking</button>
-        <!--Botón que lleve a vocabularyGame.html-->
-        <button onclick="window.location.href='vocabularyGame/html/vocabularyGame.html'" class="practice-button">Practice Vocabulary</button>
+
+            <!-- Right Column -->
+            <div class="hero-right">
+                <div class="hexagon"></div>
+                <div class="hero-image-glow"></div>
+                <img id="skewingImage" src="index/img/learn.png" alt="Learn English illustration" />
+            </div>
+        </section>
+
+        <!-- Activities Hub -->
+        <section class="activities-section">
+
+            <div class="activities-intro">
+                <h2 class="activities-heading">Choose your activity</h2>
+                <p class="activities-subheading">8 research-backed exercises — each targeting a different aspect of language acquisition.</p>
+            </div>
+
+            <!-- Group A: Speaking & Listening -->
+            <div class="activity-group">
+                <div class="group-label">
+                    <span class="group-badge">🎤 Speaking &amp; Listening</span>
+                </div>
+                <div class="activity-grid activity-grid--3">
+                    <a href="speaking/html/speaking.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎙️</div>
+                            <h3>Speaking Practice</h3>
+                            <p>Use your microphone to speak and get instant feedback on your pronunciation.</p>
+                        </div>
+                    </a>
+                    <a href="dictation/html/dictation.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">✍️</div>
+                            <h3>Dictation</h3>
+                            <p>Listen carefully and type what you hear — trains listening and spelling simultaneously.</p>
+                        </div>
+                    </a>
+                    <a href="speaking/html/speaking.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔀</div>
+                            <h3>Mixed Review</h3>
+                            <p>All topics shuffled together. Interleaved practice produces 40–60% better long-term retention.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Group B: Vocabulary & Memory -->
+            <div class="activity-group">
+                <div class="group-label">
+                    <span class="group-badge">📖 Vocabulary &amp; Memory</span>
+                </div>
+                <div class="activity-grid activity-grid--5">
+                    <a href="vocabulary/html/vocabulary.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">📚</div>
+                            <h3>Vocabulary</h3>
+                            <p>Master 100+ words with smart flashcards that adapt using spaced repetition.</p>
+                        </div>
+                    </a>
+                    <a href="quiz/html/quiz.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🧠</div>
+                            <h3>Vocabulary Quiz</h3>
+                            <p>Multiple choice questions that force active recall — the testing effect builds stronger long-term memory.</p>
+                        </div>
+                    </a>
+                    <a href="cloze/html/cloze.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔤</div>
+                            <h3>Cloze Test</h3>
+                            <p>Fill in the missing word. Generating words yourself builds 40% stronger memory than reading them.</p>
+                        </div>
+                    </a>
+                    <a href="translation/html/translation.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🔄</div>
+                            <h3>Reverse Translation</h3>
+                            <p>Read Spanish, write English. Active L1→L2 production deepens grammar and vocabulary retention.</p>
+                        </div>
+                    </a>
+                    <a href="scramble/html/scramble.html" class="feature-card-link">
+                        <div class="feature-card">
+                            <div class="feature-icon">🧩</div>
+                            <h3>Word Scramble</h3>
+                            <p>Tap scrambled words into the right order. Trains English word order naturally.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="activities-footer">
+                <a href="progress/html/progress.html" class="progress-link">
+                    📊 View My Progress <span class="link-arrow">→</span>
+                </a>
+            </div>
+
+        </section>
     </main>
 
-    <script src="index/js/index.js"></script>
-</body>
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <i class="fa fa-github github-logo"></i>
+            </a>
+        </div>
+    </footer>
 
-<footer>
-    <div class="footer-content">
-        <p>© 2024 Developed by Jesús Orihuela.</p>
-        <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank">
-            <i class="fa fa-github github-logo"></i>
-        </a>
-    </div>
-</footer>
+    <script src="index/js/index.js"></script>
+    <script src="shared/js/theme.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(reg => {
+            reg.addEventListener('updatefound', () => {
+              const nw = reg.installing;
+              if (!nw) return;
+              nw.addEventListener('statechange', () => {
+                if (nw.state === 'activated' && navigator.serviceWorker.controller) location.reload();
+              });
+            });
+          });
+        let _refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!_refreshing) { _refreshing = true; location.reload(); }
+        });
+      }
+    </script>
+</body>
 
 </html>
