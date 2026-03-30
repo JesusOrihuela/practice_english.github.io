@@ -31,12 +31,12 @@ function buildTopicGrid() {
     btn.setAttribute('aria-label', topic.label + ' speaking practice');
 
     const isMixed = topic.id === 'mixed';
-    const imgSrc  = !isMixed ? '../img/' + topic.id + '.jpg' : null;
+    const imgSrc  = !isMixed ? '../img/' + topic.id + '.webp' : null;
 
     btn.innerHTML =
       '<div class="img-topic-card__img-wrap">' +
       (imgSrc
-        ? '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy">'
+        ? '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">'
         : '<div class="speak-mixed-gradient"><span aria-hidden="true">🔀</span></div>') +
       '<div class="img-topic-card__overlay"></div>' +
       '</div>' +

@@ -13,6 +13,9 @@
   flex: 1;
 }
 
+/* ---- Topic Section ---- */
+#topic-section { width: 100%; }
+
 /* ---- Topic Picker Header ---- */
 .topic-picker-header {
   text-align: center;
