@@ -67,10 +67,10 @@ function buildTopicGrid() {
     btn.dataset.theme = topic.key;
     btn.style.animationDelay = (i * 0.06) + 's';
     btn.setAttribute('aria-label', topic.label + ' dictation');
-    const imgSrc = '../img/' + topic.key + '.jpg';
+    const imgSrc = '../img/' + topic.key + '.webp';
     btn.innerHTML =
       '<div class="img-topic-card__img-wrap">' +
-      '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy">' +
+      '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">' +
       '<div class="img-topic-card__overlay"></div>' +
       '</div>' +
       '<div class="img-topic-card__body">' +
