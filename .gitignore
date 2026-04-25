@@ -1,6 +1,5 @@
 # ── Development tools ─────────────────────────────────────────
-tools/node_modules/
-tools/package-lock.json
+tools/
 
 # ── Audio files (pre-generated, ~390 MB) ──────────────────────
 # These are generated locally with: node tools/generate-audio.mjs
@@ -15,6 +14,7 @@ tools/package-lock.json
 
 # ── Claude Code ───────────────────────────────────────────────
 .claude/
+CLAUDE.md
 
 # ── OS ────────────────────────────────────────────────────────
 .DS_Store

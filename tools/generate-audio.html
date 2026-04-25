@@ -72,7 +72,7 @@
 <div class="card">
   <h2>1 — Output Folder</h2>
   <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
-    Select the <code style="color:#818cf8">speaking/audio/</code> folder in your project.
+    Select the <code style="color:#818cf8">shared/audio/</code> folder in your project.
     Files will be written directly to disk — no downloads needed.
   </p>
   <div class="btn-row">
@@ -105,7 +105,11 @@
 
 <!-- Step 4: Topics -->
 <div class="card">
-  <h2>4 — Topics</h2>
+  <h2>4 — Sources</h2>
+  <p style="font-size:0.85rem;color:#94a3b8;margin-bottom:1rem;">
+    Phrase topics generate <code style="color:#818cf8">{topic}/{i}_{voice}.wav</code>.
+    Vocabulary generates <code style="color:#818cf8">vocab/{i}_{voice}.wav</code> from <code style="color:#818cf8">words.json</code>.
+  </p>
   <div class="topic-grid" id="topic-grid"></div>
 </div>
 
@@ -141,7 +145,6 @@ import { KokoroTTS } from 'https://esm.sh/kokoro-js@1.2.1';
 const VOICE_CATALOG = [
   { id: 'af_heart',    label: 'Heart',    accent: 'American F', grade: 'A',   default: true  },
   { id: 'af_bella',    label: 'Bella',    accent: 'American F', grade: 'A-',  default: true  },
-  { id: 'af_nicole',   label: 'Nicole',   accent: 'American F', grade: 'B-',  default: true  },
   { id: 'af_sarah',    label: 'Sarah',    accent: 'American F', grade: 'B-',  default: false },
   { id: 'af_sky',      label: 'Sky',      accent: 'American F', grade: 'B-',  default: false },
   { id: 'am_michael',  label: 'Michael',  accent: 'American M', grade: 'B-',  default: true  },
@@ -151,9 +154,20 @@ const VOICE_CATALOG = [
   { id: 'bm_george',   label: 'George',   accent: 'British M',  grade: 'C+',  default: false },
 ];
 
-const TOPICS = [
-  'greetings', 'traveling', 'technology', 'restaurant',
-  'kitchen', 'supermarket', 'entertainment', 'accountability', 'gym',
+// Sources: phrase topics + vocabulary
+// type: 'phrases' reads {id}.json → phrases[]
+// type: 'vocab'   reads words.json → words[], output folder = 'vocab'
+const SOURCES = [
+  { id: 'greetings',      label: 'Greetings',      type: 'phrases' },
+  { id: 'traveling',      label: 'Traveling',       type: 'phrases' },
+  { id: 'technology',     label: 'Technology',      type: 'phrases' },
+  { id: 'restaurant',     label: 'Restaurant',      type: 'phrases' },
+  { id: 'kitchen',        label: 'Kitchen',         type: 'phrases' },
+  { id: 'supermarket',    label: 'Supermarket',     type: 'phrases' },
+  { id: 'entertainment',  label: 'Entertainment',   type: 'phrases' },
+  { id: 'accountability', label: 'Accountability',  type: 'phrases' },
+  { id: 'gym',            label: 'Gym',             type: 'phrases' },
+  { id: 'vocab',          label: '📚 Vocabulary',   type: 'vocab'   },
 ];
 
 // ---- Build voice UI ----
@@ -172,11 +186,11 @@ VOICE_CATALOG.forEach(v => {
 
 // ---- Build topic UI ----
 const topicGrid = document.getElementById('topic-grid');
-TOPICS.forEach(t => {
+SOURCES.forEach(s => {
   const item = document.createElement('div');
   item.className = 'topic-item';
-  item.innerHTML = `<input type="checkbox" id="t-${t}" value="${t}" checked>
-    <label for="t-${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</label>`;
+  item.innerHTML = `<input type="checkbox" id="t-${s.id}" value="${s.id}" checked>
+    <label for="t-${s.id}">${s.label}</label>`;
   topicGrid.appendChild(item);
 });
 
@@ -209,13 +223,14 @@ document.getElementById('btn-stop').addEventListener('click', () => {
 
 // ---- Generate ----
 document.getElementById('btn-generate').addEventListener('click', async () => {
-  const voices  = [...document.querySelectorAll('#voice-grid input:checked')].map(el => el.value);
-  const topics  = [...document.querySelectorAll('#topic-grid input:checked')].map(el => el.value);
-  const speed   = parseFloat(speedSlider.value);
+  const voices      = [...document.querySelectorAll('#voice-grid input:checked')].map(el => el.value);
+  const selectedIds = [...document.querySelectorAll('#topic-grid input:checked')].map(el => el.value);
+  const sources     = SOURCES.filter(s => selectedIds.includes(s.id));
+  const speed       = parseFloat(speedSlider.value);
 
-  if (!voices.length) { alert('Select at least one voice.'); return; }
-  if (!topics.length) { alert('Select at least one topic.'); return; }
-  if (!outputDir)     { alert('Select an output folder first.'); return; }
+  if (!voices.length)  { alert('Select at least one voice.'); return; }
+  if (!sources.length) { alert('Select at least one source.'); return; }
+  if (!outputDir)      { alert('Select an output folder first.'); return; }
 
   stopped = false;
   document.getElementById('btn-generate').disabled = true;
@@ -249,43 +264,53 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
   setStatus('running', 'Generating…');
 
   // Count total work
-  const phraseCounts = {};
-  for (const topic of topics) {
+  const sourceCounts = {};
+  for (const src of sources) {
     try {
-      const data = await fetch('../speaking/json/' + topic + '.json').then(r => r.json());
-      phraseCounts[topic] = (data.phrases || []).length;
-    } catch { phraseCounts[topic] = 0; }
+      if (src.type === 'vocab') {
+        const data = await fetch('../shared/json/words.json').then(r => r.json());
+        sourceCounts[src.id] = (data.words || []).length;
+      } else {
+        const data = await fetch('../shared/json/' + src.id + '.json').then(r => r.json());
+        sourceCounts[src.id] = (data.phrases || []).length;
+      }
+    } catch { sourceCounts[src.id] = 0; }
   }
-  const totalFiles = topics.reduce((s, t) => s + phraseCounts[t] * voices.length, 0);
+  const totalFiles = sources.reduce((s, src) => s + sourceCounts[src.id] * voices.length, 0);
   let done = 0, skipped = 0, generated = 0, errors = 0;
 
   updateProgress(0, totalFiles, 'Starting…');
 
   const summaryData = {};
 
-  for (const topic of topics) {
+  for (const src of sources) {
     if (stopped) break;
 
-    let data;
+    let texts;
     try {
-      data = await fetch('../speaking/json/' + topic + '.json').then(r => r.json());
+      if (src.type === 'vocab') {
+        const data = await fetch('../shared/json/words.json').then(r => r.json());
+        texts = (data.words || []).map(w => w.word);
+      } else {
+        const data = await fetch('../shared/json/' + src.id + '.json').then(r => r.json());
+        texts = data.phrases || [];
+      }
     } catch {
-      log(`[${topic}] Failed to load JSON`, 'err'); errors++;
+      log(`[${src.id}] Failed to load JSON`, 'err'); errors++;
       continue;
     }
-    const phrases = data.phrases || [];
 
-    // Ensure topic subdirectory
+    // Ensure subdirectory (phrase topics use topic name, vocab uses 'vocab')
     let topicDir;
     try {
-      topicDir = await outputDir.getDirectoryHandle(topic, { create: true });
+      topicDir = await outputDir.getDirectoryHandle(src.id, { create: true });
     } catch (e) {
-      log(`[${topic}] Cannot create folder: ${e.message}`, 'err'); continue;
+      log(`[${src.id}] Cannot create folder: ${e.message}`, 'err'); continue;
     }
 
-    summaryData[topic] = { phrases: phrases.length, gen: 0, skip: 0 };
+    summaryData[src.id] = { phrases: texts.length, gen: 0, skip: 0 };
 
-    for (let i = 0; i < phrases.length; i++) {
+    for (let i = 0; i < texts.length; i++) {
       if (stopped) break;
 
       for (const voiceId of voices) {
@@ -297,17 +322,18 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
         let exists = false;
         try { await topicDir.getFileHandle(fileName); exists = true; } catch {}
         if (exists) {
-          log(`skip  ${topic}/${fileName}`, 'skip');
-          summaryData[topic].skip++;
+          log(`skip  ${src.id}/${fileName}`, 'skip');
+          summaryData[src.id].skip++;
           done++; skipped++;
-          updateProgress(done, totalFiles, `${topic}/${fileName}`);
+          updateProgress(done, totalFiles, `${src.id}/${fileName}`);
           continue;
         }
 
         // Generate
         try {
-          log(`gen   ${topic}/${fileName} — "${phrases[i].slice(0, 48)}…"`, 'info');
-          const audio = await tts.generate(phrases[i], { voice: voiceId, speed });
+          const preview = texts[i].slice(0, 48);
+          log(`gen   ${src.id}/${fileName} — "${preview}"`, 'info');
+          const audio = await tts.generate(texts[i], { voice: voiceId, speed });
           const wav = pcmToWav(audio.audio, audio.sampling_rate);
 
           const fh = await topicDir.getFileHandle(fileName, { create: true });
@@ -316,14 +342,14 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
           await wr.close();
 
           log(`  ✓ ${fileName}`, 'ok');
-          summaryData[topic].gen++;
+          summaryData[src.id].gen++;
           done++; generated++;
         } catch (e) {
-          log(`  ✗ ${topic}/${fileName}: ${e.message}`, 'err');
+          log(`  ✗ ${src.id}/${fileName}: ${e.message}`, 'err');
           errors++; done++;
         }
 
-        updateProgress(done, totalFiles, `${topic}/${fileName}`);
+        updateProgress(done, totalFiles, `${src.id}/${fileName}`);
       }
     }
   }
@@ -347,8 +373,11 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
     for (const [topic, info] of Object.entries(summaryData)) {
       const div = document.createElement('div');
       div.className = 'summary-item';
-      div.innerHTML = `<div class="s-topic">${topic}</div>
-        <div class="s-count">${info.phrases} phrases × ${voices.length} voices</div>
+      const srcObj = SOURCES.find(s => s.id === topic);
+      const label = srcObj ? srcObj.label : topic;
+      const unit = srcObj && srcObj.type === 'vocab' ? 'words' : 'phrases';
+      div.innerHTML = `<div class="s-topic">${label}</div>
+        <div class="s-count">${info.phrases} ${unit} × ${voices.length} voices</div>
         <div style="font-size:0.75rem;color:#64748b;">${info.gen} new · ${info.skip} skipped</div>`;
       sg.appendChild(div);
     }

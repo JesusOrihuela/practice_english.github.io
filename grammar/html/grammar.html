@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar — Practice English</title>
+    <meta name="description" content="Learn English grammar through context, noticing, and production. Research-based 5-phase exercises with SRS.">
+    <meta property="og:title" content="Grammar — Practice English">
+    <meta property="og:description" content="Learn English grammar through context, noticing, and production. Research-based 5-phase exercises with SRS.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Research-based 5-phase grammar exercises with spaced repetition — learn through context.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/grammar.css">
+    <style>:root { --activity-clr: #7C3AED; --activity-clr-light: #EDE9FE; }</style>
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
+    <meta name="theme-color" content="#7C3AED">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="PracticeEng">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
+        </a>
+    </header>
+
+    <nav class="mode-switcher" aria-label="Practice modes">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Translate</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn active">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
+    </nav>
+
+    <main class="grammar-page" id="main-content">
+
+        <!-- ══════════════════════════════════════════
+             SCREEN 1 — Category Picker
+        ══════════════════════════════════════════ -->
+        <div id="screen-categories">
+            <div class="grammar-header">
+                <h1>Grammar <span>Workshop</span></h1>
+                <p>Learn English grammar through real context and active practice.</p>
+            </div>
+
+            <!-- Phase flow strip — sets expectations before topic is chosen -->
+            <div class="grammar-flow-strip" aria-label="How each exercise works: 5 phases">
+                <div class="gf-step"><span class="gf-num">1</span><span class="gf-name">Context</span></div>
+                <span class="gf-sep" aria-hidden="true">›</span>
+                <div class="gf-step"><span class="gf-num">2</span><span class="gf-name">Notice</span></div>
+                <span class="gf-sep" aria-hidden="true">›</span>
+                <div class="gf-step"><span class="gf-num">3</span><span class="gf-name">Rule</span></div>
+                <span class="gf-sep" aria-hidden="true">›</span>
+                <div class="gf-step"><span class="gf-num">4</span><span class="gf-name">Comprehension</span></div>
+                <span class="gf-sep" aria-hidden="true">›</span>
+                <div class="gf-step"><span class="gf-num">5</span><span class="gf-name">Production</span></div>
+            </div>
+
+            <div class="category-grid" id="category-grid">
+                <!-- Filled by JS -->
+            </div>
+            <div class="mixed-review-section hidden" id="mixed-review-section">
+                <button class="mixed-review-btn" id="mixed-review-btn" aria-label="Start interleaved review of all studied rules">🔀 Mixed Review</button>
+                <p class="mixed-review-hint">Practice rules from different categories in one session — better long-term retention.</p>
+            </div>
+            <div class="mixed-done-banner hidden" id="mixed-done-banner" role="status" aria-live="polite">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             SCREEN 2 — Rule List (within a category)
+        ══════════════════════════════════════════ -->
+        <div id="screen-rules" class="hidden">
+            <div class="session-info-bar">
+                <button class="back-btn" id="back-to-categories">← Categories</button>
+                <span id="rule-category-label" class="category-label-badge"></span>
+            </div>
+            <div class="rule-list" id="rule-list">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             SCREEN 3 — Exercise (5 phases)
+        ══════════════════════════════════════════ -->
+        <div id="screen-exercise" class="hidden">
+
+            <!-- Session bar -->
+            <div class="session-info-bar">
+                <button class="back-btn" id="back-to-rules">← Rules</button>
+                <span id="exercise-rule-title" class="rule-title-badge"></span>
+                <span id="exercise-cefr-badge" class="cefr-badge"></span>
+            </div>
+
+            <!-- Phase progress indicator -->
+            <div class="phase-progress" id="phase-progress" aria-label="Exercise phases">
+                <div class="phase-dot" data-phase="0" aria-label="Phase 1: Context"></div>
+                <div class="phase-dot" data-phase="1" aria-label="Phase 2: Notice"></div>
+                <div class="phase-dot" data-phase="2" aria-label="Phase 3: Rule"></div>
+                <div class="phase-dot" data-phase="3" aria-label="Phase 4: Comprehension"></div>
+                <div class="phase-dot" data-phase="4" aria-label="Phase 5: Production"></div>
+            </div>
+
+            <!-- ── PHASE 1: Context Input ── -->
+            <section id="phase-context" class="phase-section hidden" aria-label="Phase 1: Context">
+                <div class="phase-label">
+                    <span class="phase-num">1</span>
+                    <span class="phase-name">Context</span>
+                    <span class="phase-hint">Read the dialogue. Notice the highlighted parts.</span>
+                </div>
+                <div class="dialogue-card" id="dialogue-card">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="phase-actions">
+                    <button class="primary-btn" id="context-next-btn">What do you notice? →</button>
+                </div>
+            </section>
+
+            <!-- ── PHASE 2: Noticing ── -->
+            <section id="phase-noticing" class="phase-section hidden" aria-label="Phase 2: Noticing">
+                <div class="phase-label">
+                    <span class="phase-num">2</span>
+                    <span class="phase-name">Noticing</span>
+<parameter name="new_string">                    <span class="phase-name">Noticing</span>
+                    <span class="phase-hint">Write your answer before continuing.</span>
+                </div>
+                <div class="noticing-card" id="noticing-card">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="phase-actions noticing-actions">
+                    <span class="noticing-progress" id="noticing-progress" aria-live="polite"></span>
+                    <button class="secondary-btn" id="noticing-show-btn" disabled>Show explanation</button>
+                </div>
+            </section>
+
+            <!-- ── PHASE 3: Rule Confirmation ── -->
+            <section id="phase-rule" class="phase-section hidden" aria-label="Phase 3: Rule">
+                <div class="phase-label">
+                    <span class="phase-num">3</span>
+                    <span class="phase-name">The Rule</span>
+                    <span class="phase-hint">Confirm what you noticed.</span>
+                </div>
+                <div class="rule-card" id="rule-card">
+                    <!-- Filled by JS -->
+                </div>
+                <div class="phase-actions">
+                    <button class="primary-btn" id="rule-next-btn">Practice recognition →</button>
+                </div>
+            </section>
+
+            <!-- ── PHASE 4: Structured Input ── -->
+            <section id="phase-structured" class="phase-section hidden" aria-label="Phase 4: Structured Input">
+                <div class="phase-label">
+                    <span class="phase-num">4</span>
+                    <span class="phase-name">Comprehension</span>
+                    <span class="phase-hint">Choose the correct option.</span>
+                </div>
+                <div class="structured-counter" id="structured-counter" role="status" aria-live="polite"></div>
+                <div class="structured-card" id="structured-card">
+                    <!-- Filled by JS -->
+                </div>
+            </section>
+
+            <!-- ── PHASE 5: FITB Production ── -->
+            <section id="phase-production" class="phase-section hidden" aria-label="Phase 5: Production">
+                <div class="phase-label">
+                    <span class="phase-num">5</span>
+                    <span class="phase-name">Production</span>
+                    <span class="phase-hint">Write the correct form in the blank.</span>
+                </div>
+                <div class="production-counter" id="production-counter" role="status" aria-live="polite"></div>
+                <div class="production-card" id="production-card">
+                    <!-- Filled by JS -->
+                </div>
+            </section>
+
+            <!-- ── Complete / Rating ── -->
+            <section id="phase-complete" class="phase-section hidden" aria-label="Exercise complete">
+                <div class="complete-card" id="complete-card">
+                    <div class="complete-icon">🎉</div>
+                    <h2 class="complete-title">Exercise complete!</h2>
+                    <p class="complete-score" id="complete-score"></p>
+
+                    <button class="primary-btn auto-save-btn" id="rate-auto">Continue →</button>
+                    <!-- Related phrases from Speaking/other activities -->
+                    <div id="related-phrases" class="related-phrases hidden" role="region" aria-label="Related practice phrases"></div>
+                </div>
+            </section>
+
+        </div><!-- /screen-exercise -->
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/text-utils.js"></script>
+    <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/grammar-chip.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+    <script src="../js/grammar.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
+    <script src="../../shared/js/sw-register.js"></script>
+</body>
+
+</html>

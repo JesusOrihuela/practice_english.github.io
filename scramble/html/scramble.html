@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Scramble — Practice English</title>
     <meta name="description" content="Rebuild scrambled English sentences by tapping words into place. Syntactic reconstruction trains word order and grammar without translation.">
+    <meta property="og:title" content="Word Scramble — Practice English">
+    <meta property="og:description" content="Rebuild scrambled English sentences by tapping words into place. Syntactic reconstruction trains word order and grammar without translation.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Rebuild scrambled sentences — trains English word order and grammar without translation.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -40,6 +46,8 @@
         <a href="../../scramble/html/scramble.html" class="mode-btn active">🧩 <span class="btn-label">Scramble</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
     </nav>
 
@@ -63,24 +71,31 @@
             <!-- Session bar -->
             <div class="session-info-bar">
                 <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="scramble-counter" role="status" aria-live="polite">0 / 0 learned</span>
+                <span id="scramble-counter" class="session-counter" role="status" aria-live="polite">0 / 0 learned</span>
                 <span class="streak-badge" id="scramble-streak">🔥 0 day streak</span>
             </div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="scramble-title">Build the <span>Sentence</span></h1>
             <p class="scramble-subtitle">Tap words to add them. Tap placed words to remove them.</p>
 
             <!-- Spanish hint -->
             <div class="hint-card" id="hint-card">
-                <span class="hint-label" aria-label="Spanish hint"><span aria-hidden="true">🇪🇸</span> Hint</span>
+                <span class="hint-label" aria-label="Spanish translation hint">Hint</span>
                 <span class="hint-text" id="hint-text">—</span>
             </div>
 
             <!-- Construction area (where user builds the sentence) -->
             <div class="construction-zone">
-                <p class="zone-label">Your sentence</p>
-                <div class="construction-area" id="construction-area" role="region" aria-label="Built sentence" aria-live="polite">
-                    <span class="placeholder-text" id="placeholder">Tap words below to start…</span>
+                <div class="zone-label-row">
+                    <p class="zone-label">Your sentence</p>
+                    <button class="clear-btn" id="clear-btn" aria-label="Clear sentence">↩ Clear</button>
+                </div>
+                <div class="construction-row">
+                    <div class="construction-area" id="construction-area" role="region" aria-label="Built sentence" aria-live="polite">
+                        <span class="placeholder-text" id="placeholder">Tap words below to start…</span>
+                    </div>
+                    <button class="check-btn" id="check-btn">Check ✓</button>
                 </div>
             </div>
 
@@ -90,27 +105,16 @@
                 <div class="word-bank" id="word-bank" role="group" aria-label="Available words"></div>
             </div>
 
-            <!-- Check / Clear buttons -->
-            <div class="action-row">
-                <button class="clear-btn" id="clear-btn">↩ Clear</button>
-                <button class="check-btn" id="check-btn">Check ✓</button>
-            </div>
 
             <!-- Feedback -->
             <div class="scramble-feedback hidden" id="scramble-feedback" role="status" aria-live="polite">
                 <p class="feedback-result" id="feedback-result"></p>
-                <p class="feedback-answer" id="feedback-answer"></p>
+                <div id="scramble-diff"></div>
             </div>
 
-            <!-- Rating area -->
-            <div class="rating-area hidden" id="rating-area">
-                <p class="rating-label">How well did you know it?</p>
-                <div class="rating-buttons">
-                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
-                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
-                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
-                </div>
-            </div>
+            <!-- Next / Try Again (shown after answer) -->
+            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next phrase">Next →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Try this phrase again">↩ Try Again</button>
 
         </div>
 
@@ -126,8 +130,17 @@
     </footer>
 
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/topics.js"></script>
+    <script src="../../shared/js/text-utils.js"></script>
+    <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/topic-grid.js"></script>
+    <script src="../../shared/js/notifications.js"></script>
+    <script src="../../shared/js/phrase-browser.js"></script>
+    <script src="../../shared/js/feedback.js"></script>
     <script src="../js/scramble.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
     <script src="../../shared/js/sw-register.js"></script>
 </body>
 

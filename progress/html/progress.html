@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Progress — Practice English</title>
     <meta name="description" content="Track your English learning progress — streaks, vocabulary mastered, phrases practiced, and activity history all in one place.">
+    <meta property="og:title" content="My Progress — Practice English">
+    <meta property="og:description" content="Track your English learning progress — streaks, vocabulary mastered, phrases practiced, and activity history all in one place.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Your English learning streaks, vocabulary mastered, and activity history at a glance.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -40,6 +46,8 @@
         <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn active">📊 <span class="btn-label">Progress</span></a>
     </nav>
 
@@ -58,6 +66,7 @@
                 <div class="stat-icon">🔥</div>
                 <div class="stat-value" id="stat-streak">0</div>
                 <div class="stat-label">Day Streak</div>
+                <div class="stat-sublabel" id="stat-best-streak"></div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">📚</div>
@@ -76,6 +85,15 @@
             </div>
         </div>
 
+        <!-- Hard Cards — moved up, most pedagogically actionable -->
+        <div class="section-block section-block--danger" id="hard-cards-block">
+            <h2 class="section-title section-title--danger">⚠️ Hard Cards</h2>
+            <p class="section-subtitle">The phrases you've missed most — practice these to break through.</p>
+            <div id="hard-cards-list" role="list">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
         <!-- Activity Heatmap (last 60 days) -->
         <div class="section-block">
             <h2 class="section-title">Activity — Last 60 Days</h2>
@@ -90,37 +108,104 @@
             </div>
         </div>
 
-        <!-- Speaking Topics Progress -->
-        <div class="section-block">
-            <h2 class="section-title">Speaking Practice — Topics</h2>
+        <!-- Weekly Accuracy Chart (collapsible) -->
+        <details class="section-block" id="weekly-accuracy-block">
+            <summary class="section-title">Accuracy — Last 4 Weeks</summary>
+            <div class="weekly-accuracy-chart" id="weekly-accuracy-chart" role="img" aria-label="Weekly accuracy bar chart">
+                <!-- Filled by JS -->
+            </div>
+        </details>
+
+        <!-- Speaking Topics Progress (collapsible) -->
+        <details class="section-block">
+            <summary class="section-title">Speaking Practice — Topics</summary>
             <div class="topics-progress" id="topics-progress">
                 <!-- Filled by JS -->
             </div>
-        </div>
+        </details>
 
-        <!-- Vocabulary Mastery -->
-        <div class="section-block">
-            <h2 class="section-title">Vocabulary Mastery</h2>
+        <!-- Vocabulary Mastery (collapsible) -->
+        <details class="section-block">
+            <summary class="section-title">Vocabulary Mastery</summary>
             <div class="vocab-breakdown" id="vocab-breakdown">
                 <!-- Filled by JS -->
             </div>
-        </div>
+        </details>
 
-        <!-- Other Activities Progress -->
-        <div class="section-block">
-            <h2 class="section-title">Other Activities</h2>
+        <!-- Card Interval Distribution (collapsible) -->
+        <details class="section-block" id="dist-block">
+            <summary class="section-title">Card Distribution</summary>
+            <p class="section-subtitle">How mature are your SRS cards right now?</p>
+            <div class="dist-stats">
+                <div class="dist-stat dist-stat--learning">
+                    <span class="dist-stat__value" id="dist-learning">0</span>
+                    <span class="dist-stat__label">Learning</span>
+                    <span class="dist-stat__range">≤ 7 days</span>
+                </div>
+                <div class="dist-stat dist-stat--consolidating">
+                    <span class="dist-stat__value" id="dist-consolidating">0</span>
+                    <span class="dist-stat__label">Consolidating</span>
+                    <span class="dist-stat__range">8–21 days</span>
+                </div>
+                <div class="dist-stat dist-stat--mastered">
+                    <span class="dist-stat__value" id="dist-mastered">0</span>
+                    <span class="dist-stat__label">Mastered</span>
+                    <span class="dist-stat__range">&gt; 21 days</span>
+                </div>
+            </div>
+            <div class="dist-bar" role="presentation">
+                <div class="dist-bar__seg dist-bar__seg--learning"   id="dist-bar-learning"      style="width:0%"></div>
+                <div class="dist-bar__seg dist-bar__seg--consolidating" id="dist-bar-consolidating" style="width:0%"></div>
+                <div class="dist-bar__seg dist-bar__seg--mastered"   id="dist-bar-mastered"      style="width:0%"></div>
+            </div>
+        </details>
+
+        <!-- Other Activities Progress (collapsible) -->
+        <details class="section-block">
+            <summary class="section-title">Other Activities</summary>
             <div class="topics-progress" id="activities-breakdown">
                 <!-- Filled by JS -->
             </div>
-        </div>
+        </details>
 
-        <!-- Recent Sessions -->
-        <div class="section-block">
-            <h2 class="section-title">Recent Sessions</h2>
+        <!-- Accuracy by Activity (collapsible) -->
+        <details class="section-block" id="accuracy-block">
+            <summary class="section-title">Accuracy by Activity</summary>
+            <div id="accuracy-breakdown">
+                <!-- Filled by JS -->
+            </div>
+        </details>
+
+        <!-- Milestones (collapsible) -->
+        <details class="section-block">
+            <summary class="section-title">🏅 Achievements</summary>
+            <div id="milestones-grid" class="milestones-grid">
+                <!-- Filled by JS -->
+            </div>
+        </details>
+
+        <!-- Reminders (collapsible) -->
+        <details class="section-block" id="notif-block">
+            <summary class="section-title">🔔 Reminders</summary>
+            <p class="section-subtitle">Daily reminder when you have due cards or your streak is at risk.</p>
+            <div id="notif-status" class="notif-status" role="status" aria-live="polite"></div>
+            <div class="notif-controls">
+                <button class="notif-toggle" id="notif-toggle" aria-pressed="false">🔕 Enable reminders</button>
+                <div class="notif-time-row hidden" id="notif-time-row">
+                    <label for="notif-time" class="notif-time-label">Remind me at</label>
+                    <input type="time" id="notif-time" class="notif-time-input" value="20:00">
+                </div>
+            </div>
+            <p class="notif-hint" id="notif-hint"></p>
+        </details>
+
+        <!-- Recent Sessions (collapsible) -->
+        <details class="section-block">
+            <summary class="section-title">Recent Sessions</summary>
             <div class="sessions-list" id="sessions-list">
                 <!-- Filled by JS -->
             </div>
-        </div>
+        </details>
 
     </main>
 
@@ -134,8 +219,13 @@
     </footer>
 
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/topics.js"></script>
+    <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/notifications.js"></script>
     <script src="../js/progress-page.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
     <script src="../../shared/js/sw-register.js"></script>
 </body>
 

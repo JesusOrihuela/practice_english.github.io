@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speaking Practice — Practice English</title>
     <meta name="description" content="Choose a topic and practice your English pronunciation. Get instant feedback with speech recognition — 9 topics, 500+ real-life phrases.">
+    <meta property="og:title" content="Speaking Practice — Practice English">
+    <meta property="og:description" content="Choose a topic and practice your English pronunciation. Get instant feedback with speech recognition — 9 topics, 500+ real-life phrases.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Practice English pronunciation with 9 topics and real-time speech recognition feedback.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -40,37 +46,41 @@
         <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
     </nav>
 
     <main class="speaking-page" id="main-content">
 
         <!-- Topic Picker -->
-        <div id="topic-section">
+        <div id="topic-picker">
             <div class="topic-picker-header">
                 <h1>Speaking <span>Practice</span></h1>
                 <p>Choose a topic and start practicing your pronunciation with real-time feedback.</p>
             </div>
+
             <div class="img-topic-grid" id="topic-grid">
                 <!-- Filled by JS -->
             </div>
         </div>
 
         <!-- Exercise Area -->
-        <div id="exercise-section" class="hidden">
+        <div id="exercise-area" class="hidden">
 
             <!-- Session info bar -->
             <div class="session-info-bar">
                 <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="session-counter" role="status" aria-live="polite">Loading…</span>
+                <span id="session-counter" class="session-counter" role="status" aria-live="polite">Loading…</span>
                 <span class="streak-badge" id="streak-badge" role="status" aria-live="polite"><span aria-hidden="true">🔥</span> 0 day streak</span>
             </div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="listening-title">How is it <span>pronounced?</span></h1>
             <p class="listening-subtitle">Listen carefully, then speak the phrase out loud.</p>
 
             <!-- Phrase Card -->
-            <div class="phrase-card">
+            <div class="phrase-card" id="phrase-card">
                 <div id="Phrase">Loading phrase…</div>
                 <div id="Traduction"></div>
             </div>
@@ -89,24 +99,27 @@
                 <button id="text-submit" aria-label="Submit typed phrase">Check ✓</button>
             </div>
 
-            <!-- Feedback -->
-            <div id="recognizedText" role="status" aria-live="polite"></div>
+            <!-- Recording status -->
+            <p id="recognizedText" aria-live="polite"></p>
 
-            <!-- Rating Buttons (shown after each attempt) -->
-            <div class="rating-area hidden" id="rating-area">
-                <p class="rating-label">How well did you do?</p>
-                <div class="rating-buttons">
-                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
-                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
-                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+            <!-- Feedback card (shown after evaluation) -->
+            <div id="speaking-feedback" class="speaking-feedback hidden" role="status" aria-live="polite">
+                <p class="feedback-result" id="speaking-feedback-result"></p>
+                <div id="speaking-diff"></div>
+            </div>
+
+            <!-- Grammar chip (shown after correct answer) -->
+            <div class="post-feedback-row">
+                <div id="grammar-chip-wrap" class="grammar-chip-wrap hidden">
+                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Open Grammar Workshop for this rule">
+                        📐 <span id="grammar-chip-label"></span> →
+                    </a>
                 </div>
             </div>
 
             <!-- Secondary Actions: Try Again + Next -->
-            <div class="button-container">
-                <button id="tryAgainButton" disabled aria-label="Try speaking again">↩ Try Again</button>
-                <button id="tryAnotherButton" disabled aria-label="Move to next phrase">Next Phrase →</button>
-            </div>
+            <button id="tryAnotherButton" class="next-btn hidden" disabled aria-label="Move to next phrase">Next →</button>
+            <button id="tryAgainButton" class="try-again-btn hidden" disabled aria-label="Try speaking again">↩ Try Again</button>
 
         </div>
 
@@ -122,11 +135,21 @@
     </footer>
 
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/topics.js"></script>
+    <script src="../../shared/js/text-utils.js"></script>
+    <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/topic-grid.js"></script>
+    <script src="../../shared/js/download-panel.js"></script>
     <script src="../../shared/js/tts.js"></script>
     <script src="../../shared/js/audio-player.js"></script>
+    <script src="../../shared/js/grammar-chip.js"></script>
+    <script src="../../shared/js/phrase-browser.js"></script>
+    <script src="../../shared/js/feedback.js"></script>
     <script src="../js/speaking.js"></script>
     <script src="../../shared/js/js-confetti.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
     <script src="../../shared/js/sw-register.js"></script>
 </body>
 

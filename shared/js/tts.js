@@ -5,14 +5,19 @@
 
    Usage:
      AppTTS.speak('Hello world')
-     AppTTS.speak('Slower phrase', { speed: 0.85, voice: 'bf_emma' })
+     AppTTS.speak('Slower phrase', { speed: TTS_SPEED_SLOW, voice: 'bf_emma' })
      AppTTS.cancel()
-     AppTTS.prefetch('Next phrase', { voice: 'af_bella' })
+     AppTTS.prefetch('Next phrase', { voice: TTS_DEFAULT_VOICE })
    ============================================================ */
 const AppTTS = (() => {
   const _workerUrl = document.currentScript
     ? new URL('tts-worker.js', document.currentScript.src).href
     : null;
+
+  // Default playback parameters
+  const TTS_DEFAULT_VOICE = 'af_bella'; // American female; alternate with 'bf_emma' for variety
+  const TTS_DEFAULT_SPEED = 1.0;        // normal pace
+  const TTS_SPEED_SLOW    = 0.85;       // slower pace for dictation / first-listen contexts
 
   let _worker  = null;
   let _msgId   = 0;
@@ -30,8 +35,8 @@ const AppTTS = (() => {
 
   // ---- IndexedDB audio cache -------------------------------------
 
-  const _DB_NAME    = 'pe-tts-audio';
-  const _DB_STORE   = 'phrases';
+  const DB_NAME    = 'pe-tts-audio';
+  const DB_STORE   = 'phrases';
   let   _db         = null;
   let   _dbPromise  = null;
 
@@ -39,8 +44,8 @@ const AppTTS = (() => {
     if (_db) return Promise.resolve(_db);
     if (_dbPromise) return _dbPromise;
     _dbPromise = new Promise((resolve) => {
-      const req = indexedDB.open(_DB_NAME, 1);
-      req.onupgradeneeded = (e) => e.target.result.createObjectStore(_DB_STORE);
+      const req = indexedDB.open(DB_NAME, 1);
+      req.onupgradeneeded = (e) => e.target.result.createObjectStore(DB_STORE);
       req.onsuccess  = (e) => { _db = e.target.result; resolve(_db); };
       req.onerror    = ()  => resolve(null); // DB unavailable — degrade gracefully
     });
@@ -51,7 +56,7 @@ const AppTTS = (() => {
     return _openDB().then(db => {
       if (!db) return null;
       return new Promise((resolve) => {
-        const req = db.transaction(_DB_STORE, 'readonly').objectStore(_DB_STORE).get(key);
+        const req = db.transaction(DB_STORE, 'readonly').objectStore(DB_STORE).get(key);
         req.onsuccess = () => resolve(req.result || null);
         req.onerror   = () => resolve(null);
       });
@@ -61,86 +66,14 @@ const AppTTS = (() => {
   function _dbPut(key, audio, sr) {
     _openDB().then(db => {
       if (!db) return;
-      const tx  = db.transaction(_DB_STORE, 'readwrite');
-      tx.objectStore(_DB_STORE).put({ audio, sr }, key);
+      const tx  = db.transaction(DB_STORE, 'readwrite');
+      tx.objectStore(DB_STORE).put({ audio, sr }, key);
     }).catch(() => {});
   }
 
   // ---- Download Progress Panel -----------------------------------
 
-  let _panel = null, _barEl = null, _hideTimer = null, _safetyTimer = null;
-
-  function _getPanelContainer() {
-    let c = document.getElementById('pe-download-panels');
-    if (!c) {
-      c = document.createElement('div');
-      c.id = 'pe-download-panels';
-      Object.assign(c.style, {
-        position: 'fixed', bottom: '1.25rem', right: '1.25rem',
-        display: 'flex', flexDirection: 'column-reverse', gap: '0.5rem',
-        zIndex: '9999', pointerEvents: 'none',
-      });
-      document.body.appendChild(c);
-    }
-    return c;
-  }
-
-  function _hidePanel() {
-    clearTimeout(_safetyTimer);
-    if (!_panel) return;
-    _panel.style.opacity = '0';
-    _panel.style.transform = 'translateY(6px)';
-  }
-
-  function _ensurePanel() {
-    if (_panel) return;
-    _panel = document.createElement('div');
-    Object.assign(_panel.style, {
-      width: '240px', background: 'var(--clr-surface, #fff)',
-      color: 'var(--clr-text, #1e293b)', border: '1px solid var(--clr-border, #e2e8f0)',
-      borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.8rem',
-      boxShadow: '0 4px 16px rgba(0,0,0,.12)',
-      opacity: '0', transform: 'translateY(6px)', transition: 'opacity .3s, transform .3s',
-    });
-    _panel.setAttribute('role', 'status');
-    _panel.setAttribute('aria-live', 'polite');
-    const title = document.createElement('div');
-    Object.assign(title.style, { fontWeight: '600', marginBottom: '0.5rem' });
-    title.textContent = '🔊 Loading voice model…';
-    _panel.appendChild(title);
-    const track = document.createElement('div');
-    Object.assign(track.style, { background: 'var(--clr-border, #e2e8f0)', borderRadius: '99px', height: '5px', overflow: 'hidden' });
-    _barEl = document.createElement('div');
-    Object.assign(_barEl.style, { background: 'var(--clr-primary, #2563eb)', height: '100%', width: '0%', borderRadius: '99px', transition: 'width .6s ease' });
-    track.appendChild(_barEl);
-    _panel.appendChild(track);
-    _getPanelContainer().appendChild(_panel);
-  }
-
-  function _showPanel() {
-    if (localStorage.getItem('pe_tts_cached')) return;
-    clearTimeout(_hideTimer);
-    _ensurePanel();
-    // Safety: auto-hide after 12 s in case 'ready' never fires
-    clearTimeout(_safetyTimer);
-    _safetyTimer = setTimeout(_hidePanel, 12000);
-    requestAnimationFrame(() => { _panel.style.opacity = '1'; _panel.style.transform = 'translateY(0)'; });
-  }
-
-  function _updatePanel(pct) {
-    _showPanel();
-    if (_barEl) _barEl.style.width = Math.min(pct, 100) + '%';
-  }
-
-  function _completePanel() {
-    localStorage.setItem('pe_tts_cached', '1');
-    clearTimeout(_safetyTimer);
-    if (!_panel) return;
-    const title = _panel.querySelector('div');
-    if (title) title.textContent = '🔊 Voice model ready ✓';
-    if (_barEl) _barEl.style.width = '100%';
-    _hideTimer = setTimeout(_hidePanel, 2000);
-  }
+  const _dp = AppDownloadPanel.create('🔊 Loading voice model…', '🔊 Voice model ready ✓', 'pe_tts_cached');
 
   // ---- Worker ----------------------------------------------------
 
@@ -150,12 +83,12 @@ const AppTTS = (() => {
     _worker = new Worker(_workerUrl, { type: 'module' });
     _worker.onmessage = ({ data }) => {
       if (data.type === 'progress') {
-        if (data.status === 'initiate') _showPanel();
+        if (data.status === 'initiate') _dp.show();
         else if (data.status === 'progress' && data.progress != null)
-          _updatePanel(data.progress);
+          _dp.update(data.progress);
         return;
       }
-      if (data.type === 'ready') { _completePanel(); return; }
+      if (data.type === 'ready') { _dp.complete(); return; }
       const cb = _queue.get(data.id);
       if (!cb) return;
       _queue.delete(data.id);
@@ -163,7 +96,9 @@ const AppTTS = (() => {
       else cb(new Error(data.message || 'TTS error'));
     };
     _worker.onerror = (e) => {
-      _hidePanel();
+      _dp.hide();
+      _worker = null;      // allow _getWorker() to spawn a fresh worker on the next request
+      _inProgress.clear(); // drop stale in-progress keys so _generate() doesn't reuse dead promises
       _queue.forEach(cb => cb(new Error('TTS worker failed')));
       _queue.clear();
     };
@@ -201,6 +136,8 @@ const AppTTS = (() => {
     return voice + ':' + speed + ':' + text;
   }
 
+  const _TTS_TIMEOUT_MS = 30000;
+
   function _generate(key, text, voice, speed) {
     // Reuse an in-progress generation for the same key — never run Kokoro twice for same phrase
     if (_inProgress.has(key)) return _inProgress.get(key);
@@ -210,8 +147,16 @@ const AppTTS = (() => {
 
     const promise = new Promise((resolve, reject) => {
       const id = ++_msgId;
+
+      // Safety timeout: if the worker never responds, reject instead of hanging forever
+      const timeoutId = setTimeout(() => {
+        if (!_queue.has(id)) return;
+        _queue.delete(id);
+        reject(new Error('TTS timeout'));
+      }, _TTS_TIMEOUT_MS);
+
       _queue.set(id, (err, audio, sr) => {
-        _inProgress.delete(key);
+        clearTimeout(timeoutId);
         if (err) { reject(err); return; }
         const result = { audio, sr };
         _memCache.set(key, result);  // memory cache
@@ -219,7 +164,7 @@ const AppTTS = (() => {
         resolve(result);
       });
       worker.postMessage({ id, text, voice, speed });
-    });
+    }).finally(() => _inProgress.delete(key)); // always clean up, regardless of outcome
 
     _inProgress.set(key, promise);
     return promise;
@@ -236,8 +181,8 @@ const AppTTS = (() => {
     // Stop current playback
     if (_currentSource) { try { _currentSource.stop(); } catch (_) {} _currentSource = null; }
 
-    const voice = (opts && opts.voice) || 'af_bella';
-    const speed = (opts && opts.speed) || 1.0;
+    const voice = (opts && opts.voice) || TTS_DEFAULT_VOICE;
+    const speed = (opts && opts.speed) || TTS_DEFAULT_SPEED;
     const key   = _cacheKey(voice, speed, text);
 
     // 1 — Memory cache (current session, prefetch result)
@@ -263,8 +208,8 @@ const AppTTS = (() => {
   async function prefetch(text, opts) {
     if (!text) return;
 
-    const voice = (opts && opts.voice) || 'af_bella';
-    const speed = (opts && opts.speed) || 1.0;
+    const voice = (opts && opts.voice) || TTS_DEFAULT_VOICE;
+    const speed = (opts && opts.speed) || TTS_DEFAULT_SPEED;
     const key   = _cacheKey(voice, speed, text);
 
     if (_memCache.has(key) || _inProgress.has(key)) return;
@@ -293,5 +238,5 @@ const AppTTS = (() => {
     }, { once: true });
   }
 
-  return { speak, cancel, warmup, prefetch };
+  return { speak, cancel, warmup, prefetch, TTS_DEFAULT_VOICE, TTS_DEFAULT_SPEED, TTS_SPEED_SLOW };
 })();

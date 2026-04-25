@@ -3,40 +3,52 @@
    Research basis: Generation Effect (Slamecka & Graf 1978)
    ============================================================ */
 
-const TOPICS = [
-  { id: 'greetings',      label: 'Greetings',      emoji: '👋' },
-  { id: 'traveling',      label: 'Traveling',       emoji: '✈️' },
-  { id: 'technology',     label: 'Technology',      emoji: '💻' },
-  { id: 'restaurant',     label: 'Restaurant',      emoji: '🍽️' },
-  { id: 'kitchen',        label: 'Kitchen',         emoji: '🍳' },
-  { id: 'supermarket',    label: 'Supermarket',     emoji: '🛒' },
-  { id: 'entertainment',  label: 'Entertainment',   emoji: '🎬' },
-  { id: 'accountability', label: 'Accountability',  emoji: '🎯' },
-  { id: 'gym',            label: 'Gym',             emoji: '💪' },
-];
 
 
-const STOP_WORDS = new Set([
-  'a','an','the','in','on','at','to','of','is','are','was','were','be','been',
-  'have','has','had','do','does','did','will','would','could','should','may',
-  'might','must','shall','and','or','but','if','so','yet','for','nor',
-  'i','you','he','she','we','they','me','him','her','us','them',
-  'my','your','his','its','our','their','this','that','these','those',
-  'with','from','by','as','not','no','up','out','it','its'
-]);
+
+const LAST_KEY = 'pe_last_cloze';
+let _openPhraseBrowser = null;
+
+// ---- Answer equivalence ----
+let _groupMap = null; // Map<word, Set<all_equivalent_forms>> — built from word-equivalents.json
+
+function _equivalentMatch(guess, answer) {
+  if (!_groupMap) return false;
+  const gSet = _groupMap.get(guess);
+  const aSet = _groupMap.get(answer);
+  if (gSet && gSet.has(answer)) return true;
+  if (aSet && aSet.has(guess))  return true;
+  return false;
+}
+
 
 let currentTopic = '';
-let phrases = [], translations = [], cardIds = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [];
 let currentIndex = 0;
 let currentBlank = null;  // { blank, blankClean, blankedPhrase, fullPhrase }
 let answered = false;
+let _lastCorrect = false;
 
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', () => {
-  buildTopicGrid();
+  AppTopicGrid.build({ badge: 'Fill-in', ariaLabelSuffix: 'fill-in-the-blank', srsPrefix: 'cloze_', onSelect: startTopic });
 
-  document.getElementById('back-btn').addEventListener('click', showTopicPicker);
+  AppData.get('word-equivalents')
+    .then(data => {
+      const { groupMap } = AppText.buildEquivalenceMaps(data.groups || []);
+      _groupMap = groupMap;
+    })
+    .catch(() => {});
+
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (_openPhraseBrowser) {
+      document.getElementById('exercise-area').classList.add('hidden');
+      _openPhraseBrowser();
+    } else {
+      showTopicPicker();
+    }
+  });
 
   document.getElementById('check-btn').addEventListener('click', checkAnswer);
   document.getElementById('cloze-input').addEventListener('keydown', e => {
@@ -47,108 +59,107 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentBlank) playTTS(currentBlank.fullPhrase);
   });
 
-  document.getElementById('rate-hard').addEventListener('click', () => rateAndNext(1));
-  document.getElementById('rate-ok').addEventListener('click',   () => rateAndNext(3));
-  document.getElementById('rate-easy').addEventListener('click', () => rateAndNext(5));
+  document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
+  document.getElementById('try-again-btn').addEventListener('click', () => {
+    answered = false;
+    document.getElementById('next-btn').classList.add('hidden');
+    document.getElementById('try-again-btn').classList.add('hidden');
+    showPhrase(currentIndex);
+  });
 
-  AppTTS.warmup();
+  AppAudio.setBase('../../shared/audio/');
+  AppAudio.warmup();
 });
 
-// ---- Topic Grid ----
-
-function buildTopicGrid() {
-  const grid = document.getElementById('topic-grid');
-  grid.className = 'img-topic-grid';
-  TOPICS.forEach((topic, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'img-topic-card';
-    btn.dataset.theme = topic.id;
-    btn.style.animationDelay = (i * 0.06) + 's';
-    btn.setAttribute('aria-label', topic.label + ' fill-in-the-blank');
-    const imgSrc = '../img/' + topic.id + '.webp';
-    btn.innerHTML =
-      '<div class="img-topic-card__img-wrap">' +
-      '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">' +
-      '<div class="img-topic-card__overlay"></div>' +
-      '</div>' +
-      '<div class="img-topic-card__body">' +
-      '<div class="img-topic-card__info">' +
-      '<span class="img-topic-card__title">' + topic.label + '</span>' +
-      '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
-      '</div>' +
-      '<span class="img-topic-card__badge">Fill-in</span>' +
-      '</div>';
-    btn.addEventListener('click', () => startTopic(topic.id));
-    grid.appendChild(btn);
-
-    fetch('../../speaking/json/' + topic.id + '.json')
-      .then(r => r.json())
-      .then(data => {
-        const total = data.phrases ? data.phrases.length : 0;
-        const s = Progress.getTopicStats('cloze_' + topic.id, total);
-        const el = document.getElementById('tp-' + topic.id);
-        if (el) el.textContent = s.seen + ' / ' + total + ' learned';
-      })
-      .catch(() => {});
-  });
-}
 
 function showTopicPicker() {
   document.getElementById('topic-picker').classList.remove('hidden');
   document.getElementById('exercise-area').classList.add('hidden');
+  AppTopicGrid.build({ badge: 'Fill-in', srsPrefix: 'cloze_', onSelect: startTopic });
+}
+
+function _showLoadError(topicId) {
+  const old = document.getElementById('fetch-error-banner');
+  if (old) old.remove();
+
+  const banner = document.createElement('div');
+  banner.id = 'fetch-error-banner';
+  banner.setAttribute('role', 'alert');
+  banner.setAttribute('aria-live', 'assertive');
+  Object.assign(banner.style, {
+    background: 'var(--clr-danger-light)', color: 'var(--clr-danger)',
+    border: '1px solid var(--clr-danger)', borderRadius: 'var(--radius-md)',
+    padding: '12px 16px', marginBottom: '12px',
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+    fontSize: '0.88rem', fontWeight: '600',
+  });
+
+  const txt = document.createElement('span');
+  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+
+  const btn = document.createElement('button');
+  btn.textContent = 'Retry →';
+  Object.assign(btn.style, {
+    background: 'var(--clr-danger)', color: '#fff', border: 'none',
+    borderRadius: 'var(--radius-full)', padding: '6px 14px',
+    fontFamily: 'inherit', fontSize: '0.82rem', fontWeight: '700',
+    cursor: 'pointer', flexShrink: '0',
+  });
+  btn.addEventListener('click', () => { banner.remove(); startTopic(topicId); });
+
+  banner.appendChild(txt);
+  banner.appendChild(btn);
+  const picker = document.getElementById('topic-picker');
+  if (picker) picker.insertBefore(banner, picker.firstChild);
 }
 
 // ---- Load Topic ----
 
 function startTopic(topicId) {
+  localStorage.setItem(LAST_KEY, topicId);
   currentTopic = topicId;
-  fetch('../../speaking/json/' + topicId + '.json')
-    .then(r => r.json())
+  AppData.get(topicId)
     .then(data => {
       phrases      = data.phrases;
       translations = data.traductions || [];
+      grammarNotes = data.grammar || [];
       cardIds      = phrases.map((_, i) => 'cloze_' + topicId + '_' + i);
-      currentIndex = Progress.getNextIndex(cardIds, -1);
 
-      document.getElementById('topic-picker').classList.add('hidden');
-      document.getElementById('exercise-area').classList.remove('hidden');
-
-      const streak = Progress.getStreak();
-      document.getElementById('cloze-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
-
-      showPhrase(currentIndex);
-      updateCounter();
+      const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
+      const _pbArgs = {
+        items: phrases,
+        cardIds,
+        topicLabel: topicObj ? topicObj.label : topicId,
+        pickerEl: document.getElementById('topic-picker'),
+        traductions: data.traductions || null,
+        onStart: idx => _beginExercise(idx),
+      };
+      _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
+      _openPhraseBrowser();
     })
-    .catch(err => {
-      alert('Error loading topic. Please try again.');
-      console.error(err);
-    });
+    .catch(() => _showLoadError(topicId));
+}
+
+function _beginExercise(idx) {
+  document.getElementById('topic-picker').classList.add('hidden');
+  document.getElementById('exercise-area').classList.remove('hidden');
+  const streak = Progress.getStreak();
+  document.getElementById('cloze-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  showPhrase(idx);
+  updateCounter();
 }
 
 // ---- Cloze Display ----
 
 function selectBlankWord(phrase) {
-  const tokens = phrase.split(' ');
-  const candidates = tokens.map((w, i) => {
-    const clean = w.toLowerCase().replace(/[^a-z'-]/g, '');
-    return { word: w, idx: i, clean };
-  }).filter(t => t.clean.length > 2 && !STOP_WORDS.has(t.clean));
-
-  if (candidates.length === 0) return null;
-
-  // Prefer words from the middle of the phrase (more contextually meaningful)
-  const preferred = candidates.slice(0, Math.min(candidates.length, 3));
-  const pick = preferred[Math.floor(Math.random() * preferred.length)];
-
-  const blankedPhrase = tokens.map((w, i) => i === pick.idx ? '___' : w).join(' ');
-  // Strip trailing punctuation from the blank word for comparison
-  const blankClean = pick.clean.replace(/[^a-z'-]/g, '');
-
+  const p = AppCloze.pick(phrase);
+  if (!p) return null;
   return {
-    blank: pick.word.replace(/[^a-zA-Z'-]/g, ''),
-    blankClean,
-    blankedPhrase,
-    fullPhrase: phrase
+    blank:        p.word.replace(/[^a-zA-Z'-]/g, ''),
+    blankClean:   p.clean,
+    blankDisplay: p.word,
+    blankedPhrase: p.tokens.map((w, i) => i === p.idx ? '___' : w).join(' '),
+    fullPhrase:   phrase,
   };
 }
 
@@ -164,7 +175,7 @@ function showPhrase(startIndex) {
     tried.add(currentIndex);
     currentBlank = selectBlankWord(phrases[currentIndex]);
     if (!currentBlank) {
-      currentIndex = Progress.getNextIndex(cardIds, currentIndex);
+      currentIndex = (currentIndex + 1) % cardIds.length;
     }
   }
   if (!currentBlank) {
@@ -180,10 +191,13 @@ function showPhrase(startIndex) {
   document.getElementById('cloze-input').disabled         = false;
   document.getElementById('check-btn').disabled           = false;
   document.getElementById('cloze-feedback').classList.add('hidden');
-  document.getElementById('rating-area').classList.add('hidden');
+  document.getElementById('cloze-diff').textContent = '';
+  document.getElementById('grammar-chip-wrap').classList.add('hidden');
+  document.getElementById('next-btn').classList.add('hidden');
+  document.getElementById('try-again-btn').classList.add('hidden');
   document.getElementById('phrase-card').className        = 'phrase-card';
 
-  document.getElementById('cloze-input').focus();
+  document.getElementById('cloze-input')?.focus();
 }
 
 // ---- Answer Check ----
@@ -198,42 +212,60 @@ function checkAnswer() {
   input.disabled    = true;
   document.getElementById('check-btn').disabled = true;
 
-  const guess = raw.toLowerCase().replace(/[^a-z'-]/g, '');
-  const isCorrect = guess === currentBlank.blankClean;
+  const guess = raw.toLowerCase().replace(/['']/g, "'").replace(/[^a-z'\- ]/g, '').replace(/\s+/g, ' ').trim();
+  const isCorrect = guess === currentBlank.blankClean || _equivalentMatch(guess, currentBlank.blankClean);
+  _lastCorrect = isCorrect;
+
+  // Save progress immediately — so navigating away without pressing Next still records the result
+  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  Progress.recordSession('cloze_' + currentTopic, isCorrect ? 1 : 0, 1);
+  if (isCorrect) updateCounter();
 
   const resultEl  = document.getElementById('feedback-result');
-  const fullEl    = document.getElementById('feedback-full');
+  const diffEl    = document.getElementById('cloze-diff');
   const card      = document.getElementById('phrase-card');
   const feedback  = document.getElementById('cloze-feedback');
 
-  if (isCorrect) {
-    resultEl.textContent = '✓ Correct! The word was "' + currentBlank.blank + '"';
-    resultEl.className   = 'feedback-result correct';
-    card.classList.add('phrase-card--correct');
-  } else {
-    resultEl.textContent = '✗ The answer was "' + currentBlank.blank + '"';
-    resultEl.className   = 'feedback-result incorrect';
-    card.classList.add('phrase-card--incorrect');
+  resultEl.textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+  resultEl.className   = 'feedback-result ' + (isCorrect ? 'correct' : 'incorrect');
+  card.classList.add(isCorrect ? 'phrase-card--correct' : 'phrase-card--incorrect');
+
+  diffEl.textContent = '';
+  diffEl.appendChild(AppFeedback.buildCloze(currentBlank.blankedPhrase, raw, currentBlank.blankDisplay, isCorrect));
+
+  const chipWrap = document.getElementById('grammar-chip-wrap');
+  if (chipWrap) {
+    const tip = isCorrect ? grammarNotes[currentIndex] : null;
+    if (tip) {
+      const { label, ruleId } = extractGrammarInfo(tip);
+      if (ruleId) {
+        document.getElementById('grammar-chip-label').textContent = label;
+        document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
+        chipWrap.classList.remove('hidden');
+      } else {
+        chipWrap.classList.add('hidden');
+      }
+    } else {
+      chipWrap.classList.add('hidden');
+    }
   }
 
-  fullEl.textContent = currentBlank.fullPhrase;
-  feedback.classList.remove('hidden');
-  document.getElementById('rating-area').classList.remove('hidden');
-  document.getElementById('rate-hard').focus();
+  feedback.className = 'cloze-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+  document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
+  document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 }
 
 // ---- Rating & Advance ----
 
 function rateAndNext(quality) {
-  Progress.rate(cardIds[currentIndex], quality);
-  Progress.recordSession(currentTopic, quality >= 3 ? 1 : 0, 1);
-
+  // Progress already saved in checkAnswer — just advance
   updateCounter();
 
   const streak = Progress.getStreak();
   document.getElementById('cloze-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
 
-  currentIndex = Progress.getNextIndex(cardIds, currentIndex);
+  currentIndex = (currentIndex + 1) % phrases.length;
   showPhrase(currentIndex);
 }
 
@@ -243,11 +275,18 @@ function updateCounter() {
   const stats = Progress.getTopicStats('cloze_' + currentTopic, phrases.length);
   const el = document.getElementById('cloze-counter');
   if (el) el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
+  const fill = document.getElementById('session-progress-fill');
+  if (fill) fill.style.width = pct + '%';
+  const bar = document.getElementById('session-progress-bar');
+  if (bar) bar.setAttribute('aria-valuenow', pct);
 }
 
-// ---- TTS Hint (Kokoro via AppTTS) ----
+// ---- Audio playback ----
 
 function playTTS(text) {
   if (!text) return;
-  AppTTS.speak(text);
+  AppAudio.play(currentTopic, currentIndex, text);
 }
+
+// extractGrammarInfo is in shared/js/grammar-chip.js

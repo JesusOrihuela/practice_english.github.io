@@ -14,7 +14,7 @@
 }
 
 /* ---- Topic Section ---- */
-#topic-section { width: 100%; }
+#topic-picker { width: 100%; }
 
 /* ---- Topic Picker Header ---- */
 .topic-picker-header {
@@ -40,19 +40,9 @@
   margin: 0 auto;
 }
 
-/* ---- Mixed Review gradient cover ---- */
-.speak-mixed-gradient {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #DB2777 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-}
 
 /* ---- Exercise Section ---- */
-#exercise-section {
+#exercise-area {
   width: 100%;
   max-width: 640px;
   display: flex;
@@ -100,6 +90,9 @@
   transition: box-shadow var(--transition), border-left-color var(--transition);
 }
 
+.phrase-card--correct   { border-left-color: var(--clr-success); }
+.phrase-card--incorrect { border-left-color: var(--clr-danger); }
+
 .phrase-card:hover {
   box-shadow: var(--shadow-lg);
 }
@@ -145,11 +138,6 @@
   animation: fadeIn 0.5s ease-out 0.4s forwards;
 }
 
-.button-container:last-of-type {
-  margin-top: 16px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-out 0.6s forwards;
-}
 
 /* Listen button */
 #listenButton {
@@ -215,7 +203,7 @@
   animation: fadeIn 0.5s ease-out 0.45s forwards;
 }
 
-.text-fallback.hidden { display: none; }
+
 
 #text-input {
   flex: 1;
@@ -254,120 +242,61 @@
 
 #text-submit:hover { filter: brightness(1.1); transform: scale(1.03); }
 
-/* ---- Feedback Area ---- */
+/* ---- Recording Status ---- */
 #recognizedText {
   width: 100%;
-  min-height: 56px;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   font-style: italic;
   color: var(--clr-text-muted);
-  padding: 16px 24px;
-  background: var(--clr-surface-2);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius-lg);
-  margin-top: 32px;
-  margin-bottom: 20px;
+  padding: 12px 0 4px;
+  margin-top: 16px;
   opacity: 0;
   animation: fadeIn 0.5s ease-out 0.5s forwards;
-  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  transition: color var(--transition);
 }
 
-#recognizedText.correct::before {
-  content: "✓ ";
-  font-style: normal;
-  font-weight: 800;
-}
+#recognizedText.vad-active { color: var(--clr-success); font-style: normal; font-weight: 700; }
+#recognizedText.incorrect  { color: var(--clr-danger);  font-style: normal; font-weight: 600; }
 
-#recognizedText.incorrect::before {
-  content: "✗ ";
-  font-style: normal;
-  font-weight: 800;
-}
-
-#recognizedText.correct  {
-  background: var(--clr-success-light);
-  border-color: var(--clr-success);
-  color: var(--clr-success);
-}
-
-#recognizedText.incorrect {
-  background: var(--clr-danger-light);
-  border-color: var(--clr-danger);
-  color: var(--clr-danger);
-}
-
-/* The top accent line on the rating area */
-.rating-area::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--clr-primary-light), var(--clr-primary), var(--clr-primary-light));
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-}
-
-/* ---- Secondary Buttons ---- */
-#tryAgainButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 11px 22px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--clr-primary);
+/* ---- Feedback Card ---- */
+.speaking-feedback {
+  width: 100%;
+  padding: 16px 20px;
   background: var(--clr-surface);
-  border: 2px solid var(--clr-primary-light);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition-bounce);
-  min-width: 148px;
-  justify-content: center;
+  border: 1px solid var(--clr-border);
+  border-left: 4px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  margin-top: 8px;
+  margin-bottom: 16px;
+  animation: fadeInScale 0.3s ease-out both;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-#tryAgainButton:hover {
-  background: var(--clr-primary-light);
-  border-color: var(--clr-primary);
-  transform: translateY(-2px);
+.speaking-feedback.correct       { background: var(--clr-success-light); border-left-color: var(--clr-success); }
+.speaking-feedback.incorrect     { background: var(--clr-danger-light);  border-left-color: var(--clr-danger); }
+.speaking-feedback.not-understood { background: #FFFBEB; border-left-color: #D97706; min-height: 64px; justify-content: center; align-items: flex-start; }
+
+.speaking-feedback .feedback-result { font-size: 1rem; font-weight: 800; margin: 0; }
+.speaking-feedback .feedback-result.correct       { color: var(--clr-success); }
+.speaking-feedback .feedback-result.incorrect     { color: var(--clr-danger); }
+.speaking-feedback .feedback-result.not-understood { color: #92400E; margin-bottom: 0; }
+
+/* .uf-* classes live in generalities.css (shared via AppFeedback) */
+
+/* ---- Standalone Next / Try Again ---- */
+#tryAnotherButton,
+#tryAgainButton {
+  width: 100%;
+  margin-top: 4px;
+  animation: fadeInScale 0.3s ease-out both;
 }
 
-#tryAnotherButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 11px 22px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
-  border: 2px solid transparent;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(37,99,235,0.22);
-  transition: transform var(--transition-bounce), box-shadow var(--transition), filter var(--transition);
-  min-width: 148px;
-  justify-content: center;
-}
-
-#tryAnotherButton:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 22px rgba(37,99,235,0.34);
-  filter: brightness(1.07);
-}
-
-#tryAgainButton:disabled, #tryAnotherButton:disabled {
-  color: var(--clr-text-light);
-  background: var(--clr-surface-2);
-  border-color: var(--clr-border);
-  cursor: not-allowed;
-  transform: none;
-  opacity: 0.6;
-  box-shadow: none;
-  filter: none;
-}
+#tryAnotherButton { padding: 14px; }
+#tryAgainButton   { padding: 12px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
@@ -375,7 +304,5 @@
   .phrase-card { padding: 28px 20px; }
   #Phrase { font-size: 1.3rem; }
   #listenButton, #speakButton { min-width: 140px; padding: 12px 20px; }
-  #tryAgainButton, #tryAnotherButton { min-width: 130px; }
-  .rating-btn { padding: 9px 16px; font-size: 0.85rem; }
   .text-fallback { flex-direction: column; }
 }

@@ -14,7 +14,7 @@
 
 /* ---- Topic Picker ---- */
 #topic-picker { width: 100%; }
-#topic-picker.hidden { display: none; }
+
 
 .dict-header {
   text-align: center;
@@ -90,17 +90,8 @@
 
 /* ---- Exercise Area ---- */
 #exercise-area { width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: center; gap: 0; }
-#exercise-area.hidden { display: none; }
 
-#dict-counter {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--clr-text-muted);
-  background: var(--clr-surface-2);
-  border: 1px solid var(--clr-border);
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-}
+
 
 /* ---- Title ---- */
 .dict-title {
@@ -141,11 +132,11 @@
   font-size: 1.05rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+  background: linear-gradient(135deg, var(--clr-accent) 0%, var(--clr-accent-dark) 100%);
   border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
-  box-shadow: var(--shadow-primary);
+  box-shadow: var(--shadow-accent);
   transition: transform var(--transition-bounce), box-shadow var(--transition);
   position: relative;
   overflow: hidden;
@@ -169,25 +160,9 @@
   transition: 0s;
 }
 
-.play-btn:hover  { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 32px rgba(37,99,235,0.38); }
+.play-btn:hover  { transform: translateY(-2px) scale(1.02); box-shadow: 0 12px 32px rgba(245,158,11,0.38); }
 .play-btn:active { transform: scale(0.97); }
 .play-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; box-shadow: none; }
-
-.replay-btn {
-  padding: 11px 20px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--clr-text);
-  background: var(--clr-surface);
-  border: 2px solid var(--clr-border);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition-bounce);
-}
-
-.replay-btn:hover  { background: var(--clr-primary-light); border-color: var(--clr-primary); transform: translateY(-2px); }
-.replay-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 
 /* ---- Text Input ---- */
 .dict-input-wrapper {
@@ -225,7 +200,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(135deg, var(--clr-success) 0%, #047857 100%);
+  background: #03595F;
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -233,98 +208,43 @@
   transition: transform var(--transition-bounce), filter var(--transition);
 }
 
-#check-btn:hover  { transform: scale(1.04); filter: brightness(1.08); }
+#check-btn:hover:not(:disabled)  { transform: scale(1.04); filter: brightness(1.08); }
 #check-btn:active { transform: scale(0.97); }
+#check-btn:disabled { opacity: 0.55; cursor: not-allowed; transform: none; filter: none; }
 
-/* ---- Feedback (diff view) ---- */
+/* ---- Feedback ---- */
 .dict-feedback {
   width: 100%;
-  padding: 18px 20px 18px 24px;
+  padding: 16px 20px;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-left: 4px solid var(--clr-border);
   border-radius: var(--radius-lg);
   margin-bottom: 16px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  line-height: 1.6;
-  word-break: break-word;
   animation: fadeInScale 0.3s ease-out both;
 }
 
-.dict-feedback.hidden { display: none; }
+.dict-feedback.correct  { background: var(--clr-success-light); border-left-color: var(--clr-success); }
+.dict-feedback.incorrect { background: var(--clr-danger-light);  border-left-color: var(--clr-danger); }
 
-.dict-feedback.correct {
-  background: var(--clr-success-light);
-  border-color: var(--clr-success-light);
-  border-left-color: var(--clr-success);
+.feedback-result { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
+.feedback-result.correct   { color: var(--clr-success); }
+.feedback-result.incorrect { color: var(--clr-danger); }
+
+/* ---- Grammar chip spacing ---- */
+.grammar-chip-wrap { margin-top: 8px; margin-bottom: 8px; }
+
+/* ---- Standalone Next / Try Again ---- */
+#exercise-area .next-btn,
+#exercise-area .try-again-btn {
+  width: 100%;
+  margin-top: 16px;
+  animation: fadeInScale 0.3s ease-out both;
 }
 
-.dict-feedback.incorrect {
-  background: var(--clr-danger-light);
-  border-color: var(--clr-danger-light);
-  border-left-color: var(--clr-danger);
-}
+#exercise-area .next-btn     { padding: 14px; }
+#exercise-area .try-again-btn { padding: 12px; }
 
-/* Word-level diff coloring */
-.word-ok {
-  color: var(--clr-success);
-  position: relative;
-}
-
-/* Subtle checkmark on correct words */
-.word-ok::after {
-  content: '';
-  display: inline-block;
-}
-
-.word-wrong   { color: var(--clr-danger); text-decoration: line-through; }
-.word-missing { color: var(--clr-text-muted); font-style: italic; }
-
-/* ---- Reveal Button ---- */
-.reveal-btn {
-  padding: 9px 20px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--clr-text-muted);
-  background: var(--clr-surface-2);
-  border: 1px solid var(--clr-border);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  margin-bottom: 16px;
-  transition: background var(--transition), color var(--transition);
-}
-
-.reveal-btn:hover { background: var(--clr-border); color: var(--clr-text); }
-.reveal-btn.hidden { display: none; }
-
-/* ---- Rating Area — page-specific gradient accent ---- */
-.rating-area::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--clr-danger), var(--clr-primary), var(--clr-success));
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-}
-
-/* ---- Skip Button ---- */
-.skip-btn {
-  padding: 9px 22px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--clr-text-muted);
-  background: var(--clr-surface);
-  border: 2px solid var(--clr-border);
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: background var(--transition), border-color var(--transition), transform var(--transition-bounce);
-}
-
-.skip-btn:hover   { background: var(--clr-surface-2); border-color: var(--clr-border-hover); transform: translateY(-1px); }
-.skip-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {

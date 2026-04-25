@@ -14,7 +14,7 @@
 }
 
 #exercise-area { width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; }
-#exercise-area.hidden { display: none; }
+
 
 /* ---- Header ---- */
 .cloze-header {
@@ -76,15 +76,6 @@
 .topic-emoji { font-size: 1.8rem; line-height: 1; }
 .topic-label { font-size: 0.82rem; font-weight: 700; color: var(--clr-text); }
 
-#cloze-counter {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--clr-text-muted);
-  background: var(--clr-surface-2);
-  border: 1px solid var(--clr-border);
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-}
 
 /* ---- Page Title ---- */
 .cloze-title {
@@ -208,7 +199,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
+  background: #03595F;
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -225,41 +216,34 @@
   padding: 16px 20px;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
+  border-left: 4px solid var(--clr-border);
   border-radius: var(--radius-lg);
   margin-bottom: 16px;
   animation: fadeInScale 0.3s ease-out both;
 }
 
-.cloze-feedback.hidden { display: none; }
+.cloze-feedback.correct   { background: var(--clr-success-light); border-left-color: var(--clr-success); }
+.cloze-feedback.incorrect  { background: var(--clr-danger-light);  border-left-color: var(--clr-danger); }
 
-.feedback-result {
-  font-size: 1rem;
-  font-weight: 800;
-  margin-bottom: 8px;
-}
 
-.feedback-result.correct  { color: var(--clr-success); }
+
+.feedback-result { font-size: 1rem; font-weight: 800; margin-bottom: 8px; }
+.feedback-result.correct   { color: var(--clr-success); }
 .feedback-result.incorrect { color: var(--clr-danger); }
 
-.feedback-full {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--clr-text);
-  font-style: italic;
-  margin: 0;
-  border-left: 3px solid var(--clr-primary-light);
-  padding-left: 10px;
+/* ---- Grammar chip spacing ---- */
+.grammar-chip-wrap { margin-top: 0; margin-bottom: 12px; }
+
+/* ---- Next / Try Again standalone buttons ---- */
+#exercise-area .next-btn,
+#exercise-area .try-again-btn {
+  width: 100%;
+  margin-top: 4px;
+  animation: fadeInScale 0.3s ease-out both;
 }
 
-/* ---- Rating Area — page-specific gradient accent ---- */
-.rating-area::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--clr-primary-light), var(--clr-primary), var(--clr-primary-light));
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
-}
+#exercise-area .next-btn    { padding: 14px; }
+#exercise-area .try-again-btn { padding: 12px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {

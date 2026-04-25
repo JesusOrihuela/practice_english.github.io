@@ -1,0 +1,990 @@
+/* ============================================================
+   grammar.js — Grammar Workshop
+   5-phase exercise: Context → Noticing → Rule → Structured Input → FITB Production
+   Research: Schmidt 1990, VanPatten 2004, Erlam 2003, Lyster & Ranta 1997
+
+   Card ID format: grammar_{category}_{ruleId}
+     — ruleId is a stable semantic string (e.g. "present_simple"), NOT a sequential
+       integer. This is intentional: grammar rules can be reordered or extended without
+       orphaning SRS history, unlike phrase-based activities that use numeric indices.
+     — Consequence: Progress.getTopicStats() cannot be used here (it assumes 0…N
+       sequential indices). All SRS reads use Progress.getAllCards() + manual filter.
+     — parseCardId() in progress-page.js has a dedicated branch for this format.
+   ============================================================ */
+
+/* ── State ── */
+let allRules     = [];
+let categories   = [];
+let currentRule  = null;
+let phase        = 0;          // 0-4 = phases; 5 = complete
+let siIndex      = 0;          // structured input item index
+let prodIndex    = 0;          // production item index
+let prodCorrect      = 0;      // count of correct FITB answers
+let prodAnswered     = false;  // whether current FITB was answered
+let currentAutoQuality = 3;   // SRS quality calculated from accuracy (1/3/5)
+let noticingAnswers   = [];   // user's Phase 2 answers, shown in Phase 3
+
+/* ── Mixed Review State ── */
+let mixedReviewMode  = false;
+let mixedCardIds     = [];   // flat array of 'grammar_{cat}_{id}' strings
+let mixedCardRules   = [];   // parallel rule objects
+let mixedReviewIdx   = 0;
+let mixedReviewed    = 0;
+
+const PHASE_IDS = [
+  'phase-context',
+  'phase-noticing',
+  'phase-rule',
+  'phase-structured',
+  'phase-production',
+  'phase-complete',
+];
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+  document.getElementById('back-to-categories').addEventListener('click', () => {
+    mixedReviewMode = false;
+    showCategories();
+  });
+  document.getElementById('back-to-rules').addEventListener('click', () => {
+    if (mixedReviewMode) {
+      mixedReviewMode = false;
+      showCategories();
+    } else {
+      showRules(currentRule?.category);
+    }
+  });
+  document.getElementById('mixed-review-btn').addEventListener('click', startMixedReview);
+
+  document.getElementById('context-next-btn').addEventListener('click', () => goToPhase(1));
+  document.getElementById('noticing-show-btn').addEventListener('click', () => {
+    // Capture answers before the textareas leave the DOM view
+    noticingAnswers = Array.from(
+      document.querySelectorAll('#noticing-card .noticing-input')
+    ).map(t => t.value.trim());
+    goToPhase(2);
+  });
+  document.getElementById('rule-next-btn').addEventListener('click', () => goToPhase(3));
+
+  document.getElementById('rate-auto').addEventListener('click', () => finishAndRate(currentAutoQuality));
+
+  loadData();
+});
+
+/* ── Data Loading ── */
+function loadData() {
+  AppData.get('grammar-rules')
+    .then(data => {
+      allRules   = data.rules   || [];
+      categories = data.categories || [];
+
+      // Deep-link: grammar.html?rule=<ruleId> → jump straight to that rule
+      const urlRule = new URLSearchParams(window.location.search).get('rule');
+      if (urlRule) {
+        const deepRule = allRules.find(r => r.id === urlRule);
+        if (deepRule) { startExercise(deepRule); return; }
+      }
+
+      buildCategoryGrid();
+    })
+    .catch(() => {
+      document.getElementById('category-grid').innerHTML =
+        '<p style="color:var(--clr-danger);text-align:center">Error loading grammar data.</p>';
+    });
+}
+
+/* ══════════════════════════════════════════════════════
+   SCREEN 1 — Category Grid
+══════════════════════════════════════════════════════ */
+
+function buildCategoryGrid() {
+  const grid = document.getElementById('category-grid');
+  grid.innerHTML = '';
+
+  categories.forEach(cat => {
+    const rulesInCat = allRules.filter(r => r.category === cat.id);
+    const cardIds    = rulesInCat.map(r => 'grammar_' + cat.id + '_' + r.id);
+    const seen       = cardIds.filter(id => {
+      const cards = Progress.getAllCards();
+      return cards && cards[id] && cards[id].reps > 0;
+    }).length;
+
+    const btn = document.createElement('button');
+    btn.className = 'category-card';
+    btn.style.setProperty('--cat-color', cat.color);
+    btn.setAttribute('aria-label', cat.label + ' — ' + cat.label_es);
+    btn.innerHTML =
+      '<span class="category-emoji">' + cat.emoji + '</span>' +
+      '<span class="category-label">' + cat.label + '</span>' +
+      '<span class="category-label-es">' + cat.label_es + '</span>' +
+      '<span class="category-progress">' + seen + ' / ' + rulesInCat.length + '</span>';
+
+    btn.addEventListener('click', () => showRules(cat.id));
+    grid.appendChild(btn);
+  });
+
+  // Show "Revisión Mixta" button only when at least 2 rules from different categories are studied
+  const allCards    = Progress.getAllCards();
+  const studiedIds  = allRules.filter(r => {
+    const cid = 'grammar_' + r.category + '_' + r.id;
+    return allCards && allCards[cid] && allCards[cid].reps > 0;
+  });
+  const section = document.getElementById('mixed-review-section');
+  if (section) section.classList.toggle('hidden', studiedIds.length < 2);
+
+  showScreen('screen-categories');
+}
+
+function showCategories() {
+  buildCategoryGrid();
+}
+
+/* ══════════════════════════════════════════════════════
+   SCREEN 2 — Rule List
+══════════════════════════════════════════════════════ */
+
+function showRules(categoryId) {
+  const cat = categories.find(c => c.id === categoryId);
+  if (!cat) return;
+
+  document.getElementById('rule-category-label').textContent = cat.emoji + ' ' + cat.label_es;
+
+  const rulesInCat = allRules.filter(r => r.category === categoryId);
+  const list = document.getElementById('rule-list');
+  list.innerHTML = '';
+
+  if (rulesInCat.length === 0) {
+    list.innerHTML =
+      '<div class="empty-state">' +
+        '<span class="empty-state__icon">🚧</span>' +
+        '<p class="empty-state__msg">Coming soon</p>' +
+        '<p class="empty-state__sub">We\'re preparing content for this category.</p>' +
+      '</div>';
+    showScreen('screen-rules');
+    return;
+  }
+
+  rulesInCat.forEach(rule => {
+    const cardId  = 'grammar_' + categoryId + '_' + rule.id;
+    const cards   = Progress.getAllCards();
+    const card    = cards && cards[cardId];
+    const isDone  = card && card.reps > 0;
+
+    const btn = document.createElement('button');
+    btn.className = 'rule-row';
+    btn.setAttribute('aria-label', rule.title + ' — ' + rule.title_es);
+
+    const statusHtml = isDone
+      ? '<span class="rule-row__status rule-row__status--done">✓ Done</span>'
+      : '<span class="rule-row__status">→</span>';
+
+    btn.innerHTML =
+      '<span class="rule-row__cefr cefr-' + rule.cefr + '">' + rule.cefr + '</span>' +
+      '<span class="rule-row__text">' +
+        '<span class="rule-row__title">' + rule.title + '</span>' +
+        '<span class="rule-row__title-es">' + rule.title_es + '</span>' +
+      '</span>' +
+      statusHtml;
+
+    btn.addEventListener('click', () => startExercise(rule));
+    list.appendChild(btn);
+  });
+
+  showScreen('screen-rules');
+}
+
+/* ══════════════════════════════════════════════════════
+   SCREEN 3 — Exercise (5 phases)
+══════════════════════════════════════════════════════ */
+
+function startExercise(rule) {
+  currentRule  = rule;
+  phase           = 0;
+  siIndex         = 0;
+  prodIndex       = 0;
+  prodCorrect     = 0;
+  prodAnswered    = false;
+  noticingAnswers = [];
+
+  // Set header badges
+  document.getElementById('exercise-rule-title').textContent = rule.title;
+  const cefrBadge = document.getElementById('exercise-cefr-badge');
+  cefrBadge.textContent = rule.cefr;
+  cefrBadge.className   = 'cefr-badge cefr-' + rule.cefr;
+
+  const cardId  = 'grammar_' + rule.category + '_' + rule.id;
+  const reentry = getReentryPhase(cardId);
+
+  showScreen('screen-exercise');
+
+  // Show / hide re-entry banner
+  setReentryBanner(reentry === REENTRY_PHASE);
+
+  if (reentry === REENTRY_PHASE) {
+    // Skip context / noticing / rule — user has seen them.
+    // Phase dots 0-2 rendered as done, jump straight to Structured Input.
+    phase = REENTRY_PHASE;          // set before updatePhaseDots
+    updatePhaseDots();
+    goToPhase(REENTRY_PHASE);       // builds phase 4
+  } else {
+    buildPhase1();
+    buildPhase2();
+    goToPhase(0);
+  }
+}
+
+/* ── Phase Transitions ── */
+function goToPhase(p) {
+  phase = p;
+  updatePhaseDots();
+
+  // Hide all phases
+  PHASE_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('hidden');
+  });
+
+  const target = document.getElementById(PHASE_IDS[p]);
+  if (target) target.classList.remove('hidden');
+
+  // Build on-demand phases
+  if (p === 2) { buildPhase3(); }
+  if (p === 3) { buildPhase4(); }
+  if (p === 4) { buildPhase5(); }
+  if (p === 5) { buildPhaseComplete(); }
+}
+
+function updatePhaseDots() {
+  document.querySelectorAll('.phase-dot').forEach(dot => {
+    const dp = parseInt(dot.dataset.phase, 10);
+    dot.classList.toggle('phase-dot--active', dp === phase);
+    // Mark as done: either naturally passed, or skipped via re-entry
+    dot.classList.toggle('phase-dot--done', dp < phase && phase <= 4);
+  });
+}
+
+/* ══════════════════════════════════════════
+   PHASE 1 — Context Dialogue
+══════════════════════════════════════════ */
+function buildPhase1() {
+  const card = document.getElementById('dialogue-card');
+  card.innerHTML = '';
+
+  (currentRule.context_dialogue || []).forEach(turn => {
+    const div = document.createElement('div');
+    div.className = 'dialogue-turn' + (turn.highlight ? ' dialogue-turn--highlight' : '');
+
+    const spk = document.createElement('span');
+    spk.className   = 'dialogue-speaker';
+    spk.textContent = turn.speaker;
+
+    const txt = document.createElement('span');
+    txt.className  = 'dialogue-text';
+    // **word** → <span class="dialogue-target"> for target structure highlighting
+    txt.innerHTML = parseDialogueText(escapeHTML(turn.text));
+
+    div.appendChild(spk);
+    div.appendChild(txt);
+    card.appendChild(div);
+  });
+}
+
+/* ══════════════════════════════════════════
+   PHASE 2 — Noticing Questions (interactive)
+══════════════════════════════════════════ */
+const MIN_NOTICING_CHARS = 3; // minimum chars per answer to count as engaged
+
+function buildPhase2() {
+  const card    = document.getElementById('noticing-card');
+  const btn     = document.getElementById('noticing-show-btn');
+  const progEl  = document.getElementById('noticing-progress');
+  card.innerHTML = '';
+
+  // Reset button state for this rule
+  btn.disabled = true;
+
+  const prompts = currentRule.noticing_prompts || [];
+  const inputs  = [];
+
+  prompts.forEach((prompt, i) => {
+    // Question row
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'noticing-question';
+
+    const num = document.createElement('span');
+    num.className   = 'noticing-num';
+    num.textContent = i + 1;
+
+    const promptText = typeof prompt === 'object' ? prompt.q : prompt;
+    const promptHint = typeof prompt === 'object' ? (prompt.placeholder || '') : '';
+
+    const txt = document.createElement('span');
+    txt.className   = 'noticing-text';
+    txt.textContent = promptText;
+
+    questionDiv.appendChild(num);
+    questionDiv.appendChild(txt);
+    card.appendChild(questionDiv);
+
+    // Answer input
+    const textarea = document.createElement('textarea');
+    textarea.className   = 'noticing-input';
+    textarea.rows        = 2;
+    textarea.placeholder = promptHint || 'Write your observation…';
+    textarea.setAttribute('aria-label', 'Answer to question ' + (i + 1));
+    card.appendChild(textarea);
+    inputs.push(textarea);
+
+    // Update gate on every keystroke
+    textarea.addEventListener('input', () => checkNoticingGate(inputs, btn, progEl, prompts.length));
+  });
+
+  // Initial progress label
+  updateNoticingProgress(progEl, 0, prompts.length);
+}
+
+function checkNoticingGate(inputs, btn, progEl, total) {
+  const answered = inputs.filter(inp => inp.value.trim().length >= MIN_NOTICING_CHARS).length;
+  updateNoticingProgress(progEl, answered, total);
+  btn.disabled = answered < total;
+}
+
+function updateNoticingProgress(el, answered, total) {
+  if (!el) return;
+  if (answered === 0) {
+    el.textContent = 'Answer all ' + total + ' questions to continue';
+    el.className   = 'noticing-progress';
+  } else if (answered < total) {
+    el.textContent = answered + ' / ' + total + ' respondidas';
+    el.className   = 'noticing-progress noticing-progress--partial';
+  } else {
+    el.textContent = '✓ Listo';
+    el.className   = 'noticing-progress noticing-progress--done';
+  }
+}
+
+/* ══════════════════════════════════════════
+   PHASE 3 — Rule Explanation (+ noticing contrast)
+══════════════════════════════════════════ */
+function buildPhase3() {
+  const card = document.getElementById('rule-card');
+  card.innerHTML = '';
+
+  // ── "Tu hipótesis" block — only when the user has answers ──
+  const prompts = currentRule.noticing_prompts || [];
+  const hasAnswers = noticingAnswers.some(a => a.length > 0);
+
+  if (hasAnswers && prompts.length > 0) {
+    const hypothesisBlock = document.createElement('div');
+    hypothesisBlock.className = 'rule-hypothesis';
+
+    const heading = document.createElement('p');
+    heading.className = 'rule-hypothesis__heading';
+    heading.textContent = 'Your hypothesis';
+    hypothesisBlock.appendChild(heading);
+
+    prompts.forEach((prompt, i) => {
+      const answer = noticingAnswers[i] || '';
+      if (!answer) return;
+
+      const item = document.createElement('div');
+      item.className = 'rule-hypothesis__item';
+
+      const qEl = document.createElement('span');
+      qEl.className = 'rule-hypothesis__q';
+      qEl.textContent = (typeof prompt === 'object' ? prompt.q : prompt);
+
+      const aEl = document.createElement('blockquote');
+      aEl.className = 'rule-hypothesis__a';
+      aEl.textContent = answer;
+
+      item.appendChild(qEl);
+      item.appendChild(aEl);
+      hypothesisBlock.appendChild(item);
+    });
+
+    card.appendChild(hypothesisBlock);
+
+    const divider = document.createElement('div');
+    divider.className = 'rule-divider';
+    divider.setAttribute('aria-hidden', 'true');
+    card.appendChild(divider);
+  }
+
+  // ── Rule explanation ──
+  const explanationEl = document.createElement('div');
+  explanationEl.className = 'rule-explanation';
+  explanationEl.innerHTML = parseMarkdown(escapeHTML(currentRule.explanation || ''));
+  card.appendChild(explanationEl);
+}
+
+/* ══════════════════════════════════════════
+   PHASE 4 — Structured Input (comprehension)
+══════════════════════════════════════════ */
+function buildPhase4() {
+  siIndex = 0;
+  showStructuredItem(0);
+}
+
+function showStructuredItem(idx) {
+  const items = currentRule.structured_input || [];
+  const total = items.length;
+
+  if (idx >= total) {
+    goToPhase(4);  // goToPhase(4) calls buildPhase5()
+    return;
+  }
+
+  document.getElementById('structured-counter').textContent =
+    'Question ' + (idx + 1) + ' of ' + total;
+
+  const item = items[idx];
+  const card = document.getElementById('structured-card');
+  card.innerHTML = '';
+
+  const sentEl = document.createElement('div');
+  sentEl.className = 'structured-sentence';
+  sentEl.innerHTML = parseInlineMarkdown(escapeHTML(item.sentence));
+  card.appendChild(sentEl);
+
+  const qEl = document.createElement('div');
+  qEl.className   = 'structured-question';
+  qEl.textContent = item.question;
+  card.appendChild(qEl);
+
+  const optsEl = document.createElement('div');
+  optsEl.className = 'structured-options';
+
+  const LETTERS = ['A', 'B', 'C', 'D'];
+  item.options.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML =
+      '<span class="option-letter">' + LETTERS[i] + '</span>' +
+      escapeHTML(opt);
+
+    btn.addEventListener('click', () => {
+      if (btn.disabled) return;
+      // Disable all
+      optsEl.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; });
+
+      const isCorrect = i === item.correct;
+      btn.classList.add(isCorrect ? 'option-btn--correct' : 'option-btn--wrong');
+      if (!isCorrect) {
+        optsEl.querySelectorAll('.option-btn')[item.correct].classList.add('option-btn--correct');
+      }
+
+      // Show feedback
+      const fb = document.createElement('div');
+      fb.className = 'structured-feedback' + (isCorrect ? '' : ' structured-feedback--wrong');
+      fb.textContent = item.feedback;
+      card.appendChild(fb);
+
+      const advance = () => {
+        siIndex++;
+        if (siIndex >= (currentRule.structured_input || []).length) {
+          goToPhase(4);
+        } else {
+          showStructuredItem(siIndex);
+        }
+      };
+
+      if (isCorrect) {
+        // Auto-advance on correct — user needs less time to read confirmatory feedback
+        setTimeout(advance, 1800);
+      } else {
+        // Manual advance on wrong — learner must read why before moving on
+        const nextBtn = document.createElement('button');
+        nextBtn.className   = 'structured-next-btn';
+        nextBtn.textContent = 'Got it, continue →';
+        nextBtn.addEventListener('click', advance);
+        card.appendChild(nextBtn);
+      }
+    });
+
+    optsEl.appendChild(btn);
+  });
+
+  card.appendChild(optsEl);
+}
+
+/* ══════════════════════════════════════════
+   PHASE 5 — FITB Production
+══════════════════════════════════════════ */
+function buildPhase5() {
+  prodIndex    = 0;
+  prodCorrect  = 0;
+  prodAnswered = false;
+  showProductionItem(0);
+}
+
+function showProductionItem(idx) {
+  const items = currentRule.quiz || [];
+  const total = items.length;
+
+  if (idx >= total) {
+    goToPhase(5); // goToPhase(5) calls buildPhaseComplete()
+    return;
+  }
+
+  document.getElementById('production-counter').textContent =
+    'Item ' + (idx + 1) + ' of ' + total;
+
+  const item = items[idx];
+  const card = document.getElementById('production-card');
+  card.innerHTML = '';
+  prodAnswered = false;
+
+  // Sentence with blank highlighted
+  const sentEl = document.createElement('div');
+  sentEl.className = 'production-sentence';
+  sentEl.innerHTML = escapeHTML(item.sentence).replace(/_+/g,
+    '<span class="blank">___</span>'
+  );
+  card.appendChild(sentEl);
+
+  // Input row
+  const rowEl = document.createElement('div');
+  rowEl.className = 'production-input-row';
+
+  const input = document.createElement('input');
+  input.type        = 'text';
+  input.className   = 'production-input';
+  input.placeholder = 'Write the correct form…';
+  input.autocomplete = 'off';
+  input.spellcheck  = false;
+  input.setAttribute('aria-label', 'Your answer');
+
+  const checkBtn = document.createElement('button');
+  checkBtn.className   = 'production-check-btn';
+  checkBtn.textContent = 'Check ✓';
+
+  rowEl.appendChild(input);
+  rowEl.appendChild(checkBtn);
+  card.appendChild(rowEl);
+
+  // Feedback area
+  const fbEl = document.createElement('div');
+  fbEl.className = 'production-feedback';
+  card.appendChild(fbEl);
+
+  // Next button
+  const nextBtn = document.createElement('button');
+  nextBtn.className   = 'production-next-btn';
+  nextBtn.textContent = idx + 1 < total ? 'Next →' : 'See results →';
+  card.appendChild(nextBtn);
+
+  // Focus
+  input.focus();
+
+  // Submit logic
+  const submit = () => {
+    if (prodAnswered) return;
+    const raw = input.value.trim();
+    if (!raw) return;
+    prodAnswered = true;
+
+    input.disabled    = true;
+    checkBtn.disabled = true;
+
+    const accepted = (item.accepted || [item.answer]).map(a => AppText.normalise(a));
+    const isCorrect = accepted.includes(AppText.normalise(raw));
+
+    if (isCorrect) {
+      prodCorrect++;
+      input.classList.add('production-input--correct');
+      fbEl.className = 'production-feedback production-feedback--correct visible';
+      fbEl.innerHTML =
+        '<span class="feedback-answer">✓ ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
+        (item.contrast
+          ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
+          : '');
+    } else {
+      input.classList.add('production-input--wrong');
+      fbEl.className = 'production-feedback production-feedback--wrong visible';
+      fbEl.innerHTML =
+        '<span class="feedback-answer">Answer: ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
+        (item.contrast
+          ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
+          : '');
+    }
+
+    nextBtn.classList.add('visible');
+    nextBtn.focus();
+  };
+
+  checkBtn.addEventListener('click', submit);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+
+  nextBtn.addEventListener('click', () => {
+    prodIndex++;
+    showProductionItem(prodIndex);
+  });
+}
+
+/* ══════════════════════════════════════════
+   PHASE 6 — Complete / Rating
+══════════════════════════════════════════ */
+/* Maps FITB accuracy to SM-2 quality score:
+   ≥80% → 5 (Easy)  |  50–79% → 3 (OK)  |  <50% → 1 (Hard) */
+function accuracyToQuality(correct, total) {
+  if (total === 0) return 3;
+  const pct = correct / total;
+  if (pct >= 0.8) return 5;
+  if (pct >= 0.5) return 3;
+  return 1;
+}
+
+const QUALITY_META = {
+  5: { emoji: '😄', label: 'Easy', cls: 'badge--easy',   hint: 'next review in ~1 week' },
+  3: { emoji: '🙂', label: 'OK',   cls: 'badge--ok',     hint: 'next review in ~3 days' },
+  1: { emoji: '😰', label: 'Hard', cls: 'badge--hard',   hint: 'next review tomorrow'   },
+};
+
+function buildPhaseComplete() {
+  const cardId     = 'grammar_' + currentRule.category + '_' + currentRule.id;
+  const total      = (currentRule.quiz || []).length;
+  const pct        = total > 0 ? Math.round((prodCorrect / total) * 100) : 0;
+  const wasReentry = getReentryPhase(cardId) === REENTRY_PHASE;
+
+  // Calculate and store auto quality
+  currentAutoQuality = accuracyToQuality(prodCorrect, total);
+  const meta = QUALITY_META[currentAutoQuality];
+
+  // Score line
+  document.getElementById('complete-score').textContent =
+    prodCorrect + ' / ' + total + ' correct (' + pct + '%)';
+
+  // Icon + title
+  const iconEl  = document.querySelector('.complete-icon');
+  const titleEl = document.querySelector('.complete-title');
+  if (prodCorrect === total) {
+    iconEl.textContent  = wasReentry ? '🏆' : '🎉';
+    titleEl.textContent = wasReentry ? 'Rule mastered!' : 'Exercise complete!';
+  } else {
+    iconEl.textContent  = '💪';
+    titleEl.textContent = 'Keep practising';
+  }
+
+  // Focus continue button
+  document.getElementById('rate-auto')?.focus();
+
+  buildRelatedPhrases(currentRule);
+}
+
+function buildRelatedPhrases(rule) {
+  var container = document.getElementById('related-phrases');
+  if (!container) return;
+  container.innerHTML = '';
+  container.classList.add('hidden');
+
+  var keywords = rule.title.toLowerCase().split(/\s+/).filter(function(w){ return w.length > 3; });
+  if (keywords.length === 0) return;
+
+  var topicMeta = [
+    { id: 'greetings',      label: 'Greetings' },
+    { id: 'traveling',      label: 'Travelling' },
+    { id: 'technology',     label: 'Technology' },
+    { id: 'restaurant',     label: 'Restaurant' },
+    { id: 'kitchen',        label: 'Kitchen' },
+    { id: 'supermarket',    label: 'Supermarket' },
+    { id: 'entertainment',  label: 'Entertainment' },
+    { id: 'accountability', label: 'Work & Goals' },
+    { id: 'gym',            label: 'Gym' },
+  ];
+
+  var fetches = topicMeta.map(function(tm) {
+    return AppData.get(tm.id)
+      .then(function(d){ return { meta: tm, data: d }; })
+      .catch(function(){ return null; });
+  });
+
+  Promise.all(fetches).then(function(results) {
+    var matches = [];
+    for (var t = 0; t < results.length && matches.length < 3; t++) {
+      var res = results[t];
+      if (!res) continue;
+      var phrases = res.data.phrases || [];
+      var tips    = res.data.grammar  || [];
+      for (var i = 0; i < phrases.length && matches.length < 3; i++) {
+        if (!tips[i]) continue;
+        var tipLower = tips[i].toLowerCase();
+        var hit = keywords.some(function(kw){ return tipLower.indexOf(kw) !== -1; });
+        if (hit) matches.push({ phrase: phrases[i], topicId: res.meta.id, topicLabel: res.meta.label });
+      }
+    }
+    if (matches.length === 0) return;
+
+    container.classList.remove('hidden');
+
+    var heading = document.createElement('p');
+    heading.className = 'related-heading';
+    heading.textContent = '💬 Real phrases using this rule — practise in context';
+    container.appendChild(heading);
+
+    var activities = [
+      { key: 'pe_last_cloze',        href: '../../cloze/html/cloze.html',            label: '🔤 Cloze' },
+      { key: 'pe_last_translation',  href: '../../translation/html/translation.html', label: '🔄 Translate' },
+      { key: 'pe_last_speaking',     href: '../../speaking/html/speaking.html',       label: '🎙️ Speak' },
+    ];
+
+    matches.forEach(function(m) {
+      var item = document.createElement('div');
+      item.className = 'related-phrase-item';
+
+      var phraseEl = document.createElement('span');
+      phraseEl.className = 'related-phrase-text';
+      phraseEl.textContent = m.phrase;
+
+      var topicEl = document.createElement('span');
+      topicEl.className = 'related-topic-label';
+      topicEl.textContent = m.topicLabel;
+
+      var linksEl = document.createElement('div');
+      linksEl.className = 'related-activity-links';
+
+      activities.forEach(function(act) {
+        var link = document.createElement('a');
+        link.className = 'related-practice-btn';
+        link.href = act.href;
+        link.textContent = act.label;
+        link.addEventListener('click', function() {
+          localStorage.setItem(act.key, m.topicId);
+        });
+        linksEl.appendChild(link);
+      });
+
+      item.appendChild(phraseEl);
+      item.appendChild(topicEl);
+      item.appendChild(linksEl);
+      container.appendChild(item);
+    });
+  });
+}
+
+/* ══════════════════════════════════════════
+   Mixed Review (Interleaved Practice)
+   Taylor & Rohrer 2010 — 40-60% better retention vs. blocked practice
+══════════════════════════════════════════ */
+
+function startMixedReview() {
+  const data = Progress.getAllCards();
+  mixedCardIds   = [];
+  mixedCardRules = [];
+
+  allRules.forEach(rule => {
+    const cardId = 'grammar_' + rule.category + '_' + rule.id;
+    if (data && data[cardId] && data[cardId].reps > 0) {
+      mixedCardIds.push(cardId);
+      mixedCardRules.push(rule);
+    }
+  });
+
+  if (mixedCardIds.length === 0) {
+    showEmptyMixed();
+    return;
+  }
+
+  // Force re-entry at Structured Input (Phase 3) for all cards — skip intro phases
+  mixedCardIds.forEach(id => localStorage.setItem('pe_reentry_' + id, String(REENTRY_PHASE)));
+
+  mixedReviewMode = true;
+  mixedReviewed   = 0;
+  mixedReviewIdx  = 0;
+
+  // Update back button label for mixed mode
+  document.getElementById('back-to-rules').textContent = '← Categories';
+
+  startExercise(mixedCardRules[mixedReviewIdx]);
+}
+
+function advanceMixedReview() {
+  mixedReviewed++;
+  const cap = Math.min(10, mixedCardIds.length);
+  if (mixedReviewed >= cap) {
+    mixedReviewMode = false;
+    showMixedDone(mixedReviewed);
+    return;
+  }
+  mixedReviewIdx = (mixedReviewIdx + 1) % mixedCardIds.length;
+  startExercise(mixedCardRules[mixedReviewIdx]);
+}
+
+function showEmptyMixed() {
+  const banner = document.getElementById('mixed-done-banner');
+  if (banner) {
+    banner.innerHTML =
+      '<p class="mixed-done-msg">Complete at least 2 rules to unlock Mixed Review.</p>';
+    banner.classList.remove('hidden');
+    setTimeout(() => banner.classList.add('hidden'), 4000);
+  }
+}
+
+function showMixedDone(count) {
+  showScreen('screen-categories');
+  // Re-build grid so progress counts are up to date
+  buildCategoryGrid();
+  const banner = document.getElementById('mixed-done-banner');
+  if (banner) {
+    banner.innerHTML =
+      '<span class="mixed-done-icon">🔀</span>' +
+      '<p class="mixed-done-msg">Mixed Review complete! <strong>' + count + ' rules</strong> reviewed across different categories.</p>';
+    banner.classList.remove('hidden');
+    setTimeout(() => banner.classList.add('hidden'), 5000);
+  }
+  // Reset back button label
+  document.getElementById('back-to-rules').textContent = '← Rules';
+}
+
+function finishAndRate(quality) {
+  const cardId = 'grammar_' + currentRule.category + '_' + currentRule.id;
+  const total  = (currentRule.quiz || []).length;
+
+  // Re-entry logic: any wrong answer → re-queue from phase 4
+  // Perfect score OR Easy rating → clear re-entry (rule mastered)
+  if (prodCorrect < total && quality < 5) {
+    setReentryPhase(cardId);
+  } else {
+    clearReentryPhase(cardId);
+  }
+
+  Progress.rate(cardId, quality);
+  Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
+
+  if (mixedReviewMode) {
+    advanceMixedReview();
+  } else {
+    showRules(currentRule.category);
+  }
+}
+
+/* ══════════════════════════════════════════
+   Re-entry Banner
+══════════════════════════════════════════ */
+function setReentryBanner(visible) {
+  let banner = document.getElementById('reentry-banner');
+  if (!banner) {
+    banner = document.createElement('div');
+    banner.id        = 'reentry-banner';
+    banner.className = 'reentry-banner hidden';
+    banner.setAttribute('role', 'status');
+    banner.innerHTML =
+      '<span class="reentry-icon">🔁</span>' +
+      '<span>Resuming from <strong>Comprehension + Production</strong> — context and rule already seen</span>';
+    // Insert after phase-progress bar
+    const prog = document.getElementById('phase-progress');
+    if (prog) prog.insertAdjacentElement('afterend', banner);
+  }
+  banner.classList.toggle('hidden', !visible);
+}
+
+/* ══════════════════════════════════════════
+   Screen switching
+══════════════════════════════════════════ */
+function showScreen(id) {
+  ['screen-categories', 'screen-rules', 'screen-exercise'].forEach(s => {
+    document.getElementById(s).classList.toggle('hidden', s !== id);
+  });
+}
+
+/* ══════════════════════════════════════════
+   Re-entry — persist which phase to start from
+   Key: 'pe_reentry_' + cardId → '3' (phase index for Structured Input)
+   Set when production ends with errors; cleared on perfect score or Easy rating.
+══════════════════════════════════════════ */
+const REENTRY_PHASE = 3; // index of Structured Input in PHASE_IDS
+
+function getReentryPhase(cardId) {
+  const v = localStorage.getItem('pe_reentry_' + cardId);
+  return v ? parseInt(v, 10) : 0;
+}
+
+function setReentryPhase(cardId) {
+  localStorage.setItem('pe_reentry_' + cardId, String(REENTRY_PHASE));
+}
+
+function clearReentryPhase(cardId) {
+  localStorage.removeItem('pe_reentry_' + cardId);
+}
+
+/* ══════════════════════════════════════════
+   Utilities
+══════════════════════════════════════════ */
+
+function escapeHTML(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/**
+ * Converts **bold**, *italic*, and `code` spans to HTML.
+ * Input must already be HTML-escaped.
+ * Use for short inline strings (sentences, feedback).
+ */
+function parseInlineMarkdown(s) {
+  return s
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/`(.+?)`/g, '<code>$1</code>');
+}
+
+/**
+ * Converts multi-line markdown to HTML, supporting:
+ *   - Paragraphs (blank-line separated)
+ *   - Bullet lists (lines starting with "- ")
+ *   - Blockquotes (lines starting with "&gt;" after escapeHTML)
+ *   - All inline formatting from parseInlineMarkdown
+ * Input must already be HTML-escaped.
+ * Use for explanation text in Phase 3.
+ */
+function parseMarkdown(s) {
+  const lines = s.split('\n');
+  const out = [];
+  let inList = false;
+  let paraLines = [];
+
+  const flushPara = () => {
+    if (paraLines.length) {
+      out.push('<p>' + paraLines.join('<br>') + '</p>');
+      paraLines = [];
+    }
+  };
+
+  for (const line of lines) {
+    if (line === '') {
+      if (inList) { out.push('</ul>'); inList = false; }
+      flushPara();
+    } else if (line.startsWith('- ')) {
+      flushPara();
+      if (!inList) { out.push('<ul>'); inList = true; }
+      out.push('<li>' + parseInlineMarkdown(line.slice(2)) + '</li>');
+    } else if (line.startsWith('&gt;')) {
+      if (inList) { out.push('</ul>'); inList = false; }
+      flushPara();
+      out.push('<blockquote class="rule-tip">' +
+        parseInlineMarkdown(line.replace(/^&gt;\s*/, '')) +
+        '</blockquote>');
+    } else {
+      if (inList) { out.push('</ul>'); inList = false; }
+      paraLines.push(parseInlineMarkdown(line));
+    }
+  }
+  if (inList) out.push('</ul>');
+  flushPara();
+  return out.join('');
+}
+
+/**
+ * Converts **text** markers in dialogue turns into
+ * visually highlighted .dialogue-target spans.
+ * Used exclusively in buildPhase1() for input enhancement.
+ * Input must already be HTML-escaped.
+ */
+function parseDialogueText(s) {
+  return s.replace(/\*\*(.+?)\*\*/g,
+    '<span class="dialogue-target">$1</span>'
+  );
+}

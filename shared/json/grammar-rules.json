@@ -1,0 +1,3774 @@
+{
+  "categories": [
+    {
+      "id": "tenses",
+      "label": "Tenses",
+      "label_es": "Tiempos Verbales",
+      "emoji": "⏰",
+      "color": "#2563EB"
+    },
+    {
+      "id": "articles",
+      "label": "Articles",
+      "label_es": "Artículos",
+      "emoji": "📖",
+      "color": "#7C3AED"
+    },
+    {
+      "id": "prepositions",
+      "label": "Prepositions",
+      "label_es": "Preposiciones",
+      "emoji": "📍",
+      "color": "#059669"
+    },
+    {
+      "id": "modals",
+      "label": "Modal Verbs",
+      "label_es": "Verbos Modales",
+      "emoji": "⚡",
+      "color": "#D97706"
+    },
+    {
+      "id": "conditionals",
+      "label": "Conditionals",
+      "label_es": "Condicionales",
+      "emoji": "🔀",
+      "color": "#DC2626"
+    },
+    {
+      "id": "phrasal",
+      "label": "Phrasal Verbs",
+      "label_es": "Verbos Frasales",
+      "emoji": "🔗",
+      "color": "#0891B2"
+    },
+    {
+      "id": "passive",
+      "label": "Passive Voice",
+      "label_es": "Voz Pasiva",
+      "emoji": "🔄",
+      "color": "#7C3AED"
+    },
+    {
+      "id": "questions",
+      "label": "Questions",
+      "label_es": "Preguntas",
+      "emoji": "❓",
+      "color": "#059669"
+    },
+    {
+      "id": "comparatives",
+      "label": "Comparatives",
+      "label_es": "Comparativos",
+      "emoji": "📊",
+      "color": "#2563EB"
+    },
+    {
+      "id": "verb_patterns",
+      "label": "Verb Patterns",
+      "label_es": "Patrones Verbales",
+      "emoji": "🎯",
+      "color": "#D97706"
+    }
+  ],
+  "rules": [
+    {
+      "id": "present_simple_habits",
+      "category": "tenses",
+      "cefr": "A2",
+      "title": "Present Simple",
+      "title_es": "Presente Simple — Hábitos y estados",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Ana",
+          "text": "What time do you wake up on weekdays?",
+          "highlight": false
+        },
+        {
+          "speaker": "Tom",
+          "text": "I **wake up** at 6:30. I **go** for a run before breakfast.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "Every day? That sounds exhausting!",
+          "highlight": false
+        },
+        {
+          "speaker": "Tom",
+          "text": "Well, my body **works** better when I exercise. I **feel** more focused.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "I understand. I **drink** coffee first — I **need** it to function.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué tienen en común los verbos resaltados: wake up, go, works, feel, drink, need?",
+        "¿Hablan de algo que pasa en este momento o de algo que pasa regularmente?",
+        "¿Qué pasa con el verbo cuando el sujeto es he/she/it? Busca 'works' y 'feel' — ¿qué diferencia ves?"
+      ],
+      "explanation": "El **Present Simple** describe **hábitos, rutinas y estados permanentes** — cosas que son verdad en general, no solo ahora mismo. Se forma con el verbo base: *I wake up, they go*. Con he/she/it, añades **-s** o **-es**: *he works, she goes*. Para negaciones: *don't / doesn't + verbo base*.",
+      "structured_input": [
+        {
+          "sentence": "She teaches English at a university.",
+          "question": "¿Qué comunica esta oración?",
+          "options": [
+            "Está enseñando en este momento",
+            "Esa es su profesión habitual",
+            "Enseñó inglés en el pasado",
+            "Va a enseñar pronto"
+          ],
+          "correct": 1,
+          "feedback": "Correcto — 'teaches' (Present Simple) indica su profesión habitual, no lo que hace en este instante."
+        },
+        {
+          "sentence": "Water boils at 100 degrees Celsius.",
+          "question": "¿Por qué se usa Present Simple aquí?",
+          "options": [
+            "Es algo que está pasando ahora",
+            "Es un hecho científico permanente",
+            "Es un plan futuro",
+            "Es una experiencia pasada"
+          ],
+          "correct": 1,
+          "feedback": "El Present Simple expresa verdades permanentes y hechos científicos que siempre son válidos."
+        },
+        {
+          "sentence": "I don't drink alcohol. I prefer juice.",
+          "question": "¿Qué nos dice sobre esta persona?",
+          "options": [
+            "No bebió alcohol hoy",
+            "No está bebiendo ahora",
+            "Nunca o raramente bebe alcohol — es su norma",
+            "Dejó de beber recientemente"
+          ],
+          "correct": 2,
+          "feedback": "Don't drink en Present Simple expresa un hábito general o preferencia permanente, no una acción puntual."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "He ___ (work) at a hospital. He's a doctor.",
+          "answer": "works",
+          "accepted": [
+            "works"
+          ],
+          "feedback_why": "Con he/she/it el Present Simple añade -s: work → works.",
+          "contrast": "Con I/you/we/they no hay -s: 'I work at a hospital.'"
+        },
+        {
+          "sentence": "She ___ (not eat) meat. She's vegetarian.",
+          "answer": "doesn't eat",
+          "accepted": [
+            "doesn't eat",
+            "does not eat"
+          ],
+          "feedback_why": "La negación con he/she/it usa doesn't + verbo base. El verbo NO lleva -s.",
+          "contrast": "Con I/you/we/they: 'They don't eat meat.'"
+        },
+        {
+          "sentence": "The sun ___ (rise) in the east.",
+          "answer": "rises",
+          "accepted": [
+            "rises"
+          ],
+          "feedback_why": "Hecho científico permanente → Present Simple. The sun = tercera persona → rises.",
+          "contrast": "Si hablaras del amanecer de hoy en progreso: 'The sun is rising right now.'"
+        },
+        {
+          "sentence": "We ___ (have) class every Monday.",
+          "answer": "have",
+          "accepted": [
+            "have"
+          ],
+          "feedback_why": "Con we no se añade -s. Además, 'have' es irregular — nunca 'haves'.",
+          "contrast": "Pero: 'She has class every Monday.' (tercera persona singular)"
+        },
+        {
+          "sentence": "___ you ___ (speak) any other languages?",
+          "answer": "Do / speak",
+          "accepted": [
+            "Do speak",
+            "Do you speak"
+          ],
+          "feedback_why": "Las preguntas en Present Simple usan do/does. Con you → do + sujeto + verbo base.",
+          "contrast": "Con she: 'Does she speak any other languages?'"
+        }
+      ]
+    },
+    {
+      "id": "present_continuous_now",
+      "category": "tenses",
+      "cefr": "A2",
+      "title": "Present Continuous",
+      "title_es": "Presente Continuo — Acciones en progreso",
+      "prerequisites": [
+        "present_simple_habits"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Mia",
+          "text": "Hey, are you busy right now?",
+          "highlight": false
+        },
+        {
+          "speaker": "Jake",
+          "text": "Kind of — **I'm working** on a report. What's up?",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "The team **is waiting** for you in the meeting room.",
+          "highlight": true
+        },
+        {
+          "speaker": "Jake",
+          "text": "Oh no! **I'm coming**, **I'm coming**. **I'm just saving** my file.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "Hurry! **They're starting** without you.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué tienen en común: I'm working, is waiting, I'm coming, they're starting?",
+        "¿Estas acciones son hábitos o están pasando exactamente ahora, en este momento?",
+        "¿Cuál es la estructura? ¿Qué dos partes forman estos verbos?"
+      ],
+      "explanation": "El **Present Continuous** describe acciones que están ocurriendo **en este momento** o en un período temporal cercano. Se forma con **am/is/are + verbo-ing**: *I'm working, she's waiting, they're starting*. Contrasta con el Present Simple: 'I work here' (hábito) vs 'I'm working now' (ahora mismo).",
+      "structured_input": [
+        {
+          "sentence": "Look! The children are playing in the garden.",
+          "question": "¿Qué implica 'Look!' sobre cuándo ocurre la acción?",
+          "options": [
+            "Los niños juegan todos los días",
+            "Los niños están jugando en este instante",
+            "Los niños jugaban antes",
+            "Los niños van a jugar pronto"
+          ],
+          "correct": 1,
+          "feedback": "\"Look!\" confirma que observamos algo que ocurre ahora mismo → Present Continuous."
+        },
+        {
+          "sentence": "I'm reading a great book this week.",
+          "question": "¿Significa esto que está leyendo en este segundo exacto?",
+          "options": [
+            "Sí, está leyendo el libro ahora mismo",
+            "No necesariamente — es una actividad en curso esta semana",
+            "Es un hábito de toda la vida",
+            "Terminó de leer el libro"
+          ],
+          "correct": 1,
+          "feedback": "El Present Continuous también cubre períodos temporales actuales ('this week', 'this month'), no solo el instante exacto."
+        },
+        {
+          "sentence": "Why are you wearing a suit today? You never wear suits.",
+          "question": "¿Qué contraste gramatical hay en esta oración?",
+          "options": [
+            "Dos Present Continuous",
+            "Present Continuous (ahora) vs Present Simple (nunca/siempre)",
+            "Dos Present Simple",
+            "Present Simple vs Past Simple"
+          ],
+          "correct": 1,
+          "feedback": "Are you wearing = ahora, hoy (temporal). Never wear = hábito permanente. Es el contraste clásico entre ambos tiempos."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Shhh! The baby ___ (sleep). Don't make noise.",
+          "answer": "is sleeping",
+          "accepted": [
+            "is sleeping",
+            "'s sleeping"
+          ],
+          "feedback_why": "Acción que ocurre justo ahora → am/is/are + -ing. The baby = tercera persona singular → is sleeping.",
+          "contrast": "Present Simple sería: 'The baby sleeps 12 hours a day.' (hábito general)"
+        },
+        {
+          "sentence": "Why ___ you ___ (cry)? What happened?",
+          "answer": "are / crying",
+          "accepted": [
+            "are crying"
+          ],
+          "feedback_why": "La pregunta del estado actual → are you + verbo-ing. Nótese que el auxiliar (are) va antes del sujeto.",
+          "contrast": "En Present Simple: 'Why do you cry at sad movies?' (hábito)"
+        },
+        {
+          "sentence": "I can't talk right now — I ___ (drive).",
+          "answer": "am driving",
+          "accepted": [
+            "am driving",
+            "'m driving"
+          ],
+          "feedback_why": "Right now indica acción en progreso → am (primera persona) + driving.",
+          "contrast": "Hábito: 'I drive to work every day.'"
+        },
+        {
+          "sentence": "They ___ (not watch) TV. They ___ (study) for exams.",
+          "answer": "aren't watching / are studying",
+          "accepted": [
+            "aren't watching / are studying",
+            "are not watching / are studying"
+          ],
+          "feedback_why": "Dos acciones en progreso en este momento. La negativa usa aren't/isn't/am not + -ing.",
+          "contrast": "Hábito: 'They don't watch TV during exam week.' (política general)"
+        },
+        {
+          "sentence": "She ___ (get) better every day. The doctor is happy.",
+          "answer": "is getting",
+          "accepted": [
+            "is getting",
+            "'s getting"
+          ],
+          "feedback_why": "Proceso temporal en curso ('every day' aquí señala progreso gradual) → Present Continuous.",
+          "contrast": "Con Present Simple el significado cambia: 'She gets better after sleeping' (hábito/generalización)."
+        }
+      ]
+    },
+    {
+      "id": "simple_past",
+      "category": "tenses",
+      "cefr": "A2",
+      "title": "Simple Past",
+      "title_es": "Pasado Simple — Acciones completadas",
+      "prerequisites": [
+        "present_simple_habits"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Sam",
+          "text": "How was your weekend?",
+          "highlight": false
+        },
+        {
+          "speaker": "Lily",
+          "text": "Amazing! I **went** to a concert on Friday. The band **played** for three hours.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sam",
+          "text": "Nice! **Did** you **go** with friends?",
+          "highlight": true
+        },
+        {
+          "speaker": "Lily",
+          "text": "Yes, I **went** with my sister. We **got** there early and **found** great seats.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sam",
+          "text": "I **stayed** home. I **didn't do** anything fun.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué palabras de tiempo indican que estas acciones ya terminaron?",
+        "¿Cuál es la diferencia entre 'went' y 'played'? ¿Siguen el mismo patrón?",
+        "¿Cómo se forma la pregunta y la negativa? Busca 'Did you go' y 'didn't do'."
+      ],
+      "explanation": "El **Simple Past** describe acciones completadas en un momento específico del pasado. Los verbos regulares añaden **-ed**: *play → played*. Los irregulares cambian su forma: *go → went, get → got, find → found*. Para preguntas y negaciones se usa **did/didn't + verbo base**: *Did you go? I didn't do.*",
+      "structured_input": [
+        {
+          "sentence": "She called me three times yesterday.",
+          "question": "¿Qué indica 'yesterday' sobre la acción?",
+          "options": [
+            "La acción ocurre ahora",
+            "La acción está en progreso",
+            "La acción ocurrió y terminó ayer",
+            "La acción ocurrirá mañana"
+          ],
+          "correct": 2,
+          "feedback": "'Yesterday' es un marcador temporal del pasado. La acción (call) es puntual y completada."
+        },
+        {
+          "sentence": "I didn't sleep well last night.",
+          "question": "¿Cuál es la estructura de la negación en Simple Past?",
+          "options": [
+            "didn't + verbo-ed",
+            "wasn't + verbo-ing",
+            "didn't + verbo base",
+            "don't + verbo"
+          ],
+          "correct": 2,
+          "feedback": "La negativa del Simple Past siempre usa didn't + verbo BASE (sin -ed). Nunca 'didn't slept'."
+        },
+        {
+          "sentence": "They met in college and got married five years later.",
+          "question": "¿Por qué se usa Simple Past y no Present Perfect aquí?",
+          "options": [
+            "Porque son eventos recientes",
+            "Porque son experiencias sin tiempo específico",
+            "Porque son eventos con tiempo específico y completados",
+            "Porque el hablante no sabe cuándo pasó"
+          ],
+          "correct": 2,
+          "feedback": "Simple Past = evento con tiempo definido ('in college', 'five years later'). Present Perfect sería para experiencias sin tiempo."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I ___ (see) a great movie last night.",
+          "answer": "saw",
+          "accepted": [
+            "saw"
+          ],
+          "feedback_why": "See es irregular: see → saw. 'Last night' confirma que es Simple Past.",
+          "contrast": "Present Perfect (sin tiempo específico): 'I have seen that movie.' (experiencia de vida)"
+        },
+        {
+          "sentence": "She ___ (not / come) to the party. She was sick.",
+          "answer": "didn't come",
+          "accepted": [
+            "didn't come",
+            "did not come"
+          ],
+          "feedback_why": "Negativa Simple Past = didn't + verbo BASE. Nunca 'didn't came'.",
+          "contrast": "Afirmativa: 'She came to the party.' Con -d/-ed o forma irregular."
+        },
+        {
+          "sentence": "___ he ___ (call) you back after the meeting?",
+          "answer": "Did / call",
+          "accepted": [
+            "Did call",
+            "Did he call"
+          ],
+          "feedback_why": "Preguntas en Simple Past = Did + sujeto + verbo BASE. El verbo no cambia.",
+          "contrast": "Afirmativa: 'He called you back.' Negativa: 'He didn't call you back.'"
+        },
+        {
+          "sentence": "We ___ (travel) to Mexico last summer and ___ (love) it.",
+          "answer": "travelled / loved",
+          "accepted": [
+            "traveled / loved",
+            "travelled / loved"
+          ],
+          "feedback_why": "Verbos regulares: travel + -led, love + -d. Ambas acciones son pasado Simple.",
+          "contrast": "Con verbos irregulares el cambio es diferente: go → went, eat → ate."
+        },
+        {
+          "sentence": "The class ___ (start) late because the teacher ___ (lose) her notes.",
+          "answer": "started / lost",
+          "accepted": [
+            "started / lost"
+          ],
+          "feedback_why": "start es regular (-ed), lose es irregular (lose → lost). Dos eventos del pasado en secuencia.",
+          "contrast": "Si usas Simple Past continuo: 'The teacher was looking for her notes when class started.' (proceso interrumpido)"
+        }
+      ]
+    },
+    {
+      "id": "past_continuous",
+      "category": "tenses",
+      "cefr": "B1",
+      "title": "Past Continuous",
+      "title_es": "Pasado Continuo — Acciones en progreso",
+      "prerequisites": [
+        "simple_past"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Ana",
+          "text": "I called you at 8 last night. Why didn't you answer?",
+          "highlight": false
+        },
+        {
+          "speaker": "Tom",
+          "text": "Sorry! I **was cooking** dinner and I didn't hear my phone.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "No worries. What **were** you **making**?",
+          "highlight": true
+        },
+        {
+          "speaker": "Tom",
+          "text": "Pasta. It **was taking** forever. The water **wasn't boiling** fast enough.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "Ha! While you **were cooking**, I **was waiting** for your call.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué estructura tienen todos los verbos resaltados? Busca el patrón was/were + verbo.",
+        "¿Por qué se usa 'was cooking' y no 'cooked'? ¿Qué diferencia hay en significado?",
+        "¿Cómo funciona 'while' en la última línea? ¿Qué indica sobre las dos acciones?"
+      ],
+      "explanation": "El **Past Continuous** describe una acción que **estaba en progreso** en un momento del pasado. Se forma con **was/were + verbo-ing**: *I was cooking, they were waiting*. Se usa para: (1) una acción interrumpida por otra (*I was cooking when you called*), (2) dos acciones simultáneas con *while* (*While I was cooking, she was waiting*), y (3) describir el contexto de una historia (*It was raining and the wind was blowing*).",
+      "structured_input": [
+        {
+          "sentence": "She was reading when the lights went out.",
+          "question": "¿Cuál es la acción que estaba en progreso cuando ocurrió otra?",
+          "options": [
+            "'went out' — ocurrió mientras la otra seguía",
+            "'was reading' — estaba en progreso cuando llegó la interrupción",
+            "Ambas estaban en progreso al mismo tiempo",
+            "Ninguna, ambas ya habían terminado"
+          ],
+          "correct": 1,
+          "feedback": "'Was reading' es la acción en progreso (Past Continuous). 'Went out' es la interrupción (Simple Past). Este es el patrón más clásico del Past Continuous."
+        },
+        {
+          "sentence": "While they were playing football, it started to rain.",
+          "question": "¿Cuál es la función de 'while' aquí?",
+          "options": [
+            "Indica una acción completada antes de otra",
+            "Introduce la acción en progreso que fue interrumpida",
+            "Muestra que las dos acciones son habituales",
+            "Conecta dos acciones completadas"
+          ],
+          "correct": 1,
+          "feedback": "'While + Past Continuous' introduce la acción de fondo en progreso. La acción interrumpida ('started to rain') va en Simple Past."
+        },
+        {
+          "sentence": "I wasn't listening, so I missed the announcement.",
+          "question": "¿Qué forma se usa para la negación del Past Continuous?",
+          "options": [
+            "didn't + verbo-ing",
+            "wasn't/weren't + verbo-ing",
+            "not + was + verbo",
+            "wasn't + verbo base"
+          ],
+          "correct": 1,
+          "feedback": "La negación es wasn't/weren't + verbo-ing. Nunca 'didn't listening' — 'didn't' es para Simple Past."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I ___ (study) when my roommate came home.",
+          "blanks": [
+            {
+              "answer": [
+                "was studying"
+              ],
+              "hint": "was/were + verbo-ing"
+            }
+          ]
+        },
+        {
+          "sentence": "While she ___ (drive) to work, she heard the news on the radio.",
+          "blanks": [
+            {
+              "answer": [
+                "was driving"
+              ],
+              "hint": "was/were + verbo-ing"
+            }
+          ]
+        },
+        {
+          "sentence": "They ___ (not/watch) TV — they were doing homework.",
+          "blanks": [
+            {
+              "answer": [
+                "weren't watching",
+                "were not watching"
+              ],
+              "hint": "weren't + verbo-ing"
+            }
+          ]
+        },
+        {
+          "sentence": "___ you ___ (wait) long when the taxi arrived?",
+          "blanks": [
+            {
+              "answer": [
+                "Were",
+                "waiting"
+              ],
+              "hint": "Were + sujeto + verbo-ing?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "present_perfect_experience",
+      "category": "tenses",
+      "cefr": "B1",
+      "title": "Present Perfect",
+      "title_es": "Present Perfect — Experiencias y resultados presentes",
+      "prerequisites": [
+        "simple_past"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Host",
+          "text": "**Have** you ever **been** to South America?",
+          "highlight": true
+        },
+        {
+          "speaker": "Eva",
+          "text": "Yes! **I've visited** Brazil and Colombia. They're incredible.",
+          "highlight": true
+        },
+        {
+          "speaker": "Host",
+          "text": "What about Argentina?",
+          "highlight": false
+        },
+        {
+          "speaker": "Eva",
+          "text": "No, **I've never been** there, but **I've always wanted** to go.",
+          "highlight": true
+        },
+        {
+          "speaker": "Host",
+          "text": "I know, I know. **I've just booked** a trip there for March. I'm so excited.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Cuándo exactamente fue Eva a Brasil o Colombia? ¿Se menciona el año, el mes?",
+        "¿Qué palabras aparecen junto a estos verbos? Busca: ever, never, just, always.",
+        "¿Cuál es la estructura? Identifica los dos componentes del verbo en cada caso resaltado."
+      ],
+      "explanation": "El **Present Perfect** conecta el pasado con el presente: habla de **experiencias de vida** (sin tiempo específico), **resultados que aún importan ahora**, o acciones **muy recientes** con consecuencia presente. Estructura: **have/has + participio pasado**. Señales frecuentes: *ever, never, just, already, yet, recently*. Contrasta con el Simple Past, que usa un tiempo específico.",
+      "structured_input": [
+        {
+          "sentence": "I've lost my keys. Can you help me look?",
+          "question": "¿Por qué se usa Present Perfect aquí y no Simple Past?",
+          "options": [
+            "Fue hace mucho tiempo",
+            "El resultado (no tener las llaves) importa AHORA",
+            "Ocurrió en un momento específico",
+            "Es un hábito recurrente"
+          ],
+          "correct": 1,
+          "feedback": "Present Perfect señala que la pérdida tiene consecuencia presente — 'I don't have my keys right now'. El foco está en el resultado actual."
+        },
+        {
+          "sentence": "Have you ever tried sushi?",
+          "question": "¿A qué período de tiempo se refiere 'ever' aquí?",
+          "options": [
+            "A un día específico del pasado",
+            "A toda la vida del hablante hasta ahora",
+            "A la semana pasada",
+            "Al futuro próximo"
+          ],
+          "correct": 1,
+          "feedback": "'Ever' en Present Perfect = en cualquier momento de tu vida hasta hoy. No hay un tiempo específico."
+        },
+        {
+          "sentence": "She has just arrived. She's still at the door.",
+          "question": "¿Qué indica 'just' en Present Perfect?",
+          "options": [
+            "Hace mucho tiempo",
+            "En un momento específico del pasado",
+            "Hace muy poco, el resultado es inmediato",
+            "Una acción repetida"
+          ],
+          "correct": 2,
+          "feedback": "'Just' + Present Perfect = hace muy poco. 'She's still at the door' confirma que el resultado es inmediato y actual."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I ___ never ___ (try) Indian food. Is it spicy?",
+          "answer": "have / tried",
+          "accepted": [
+            "have tried",
+            "have never tried"
+          ],
+          "feedback_why": "Experiencia de vida con 'never' → Present Perfect. have + participio: try → tried.",
+          "contrast": "Si dijeras cuándo: 'I didn't try Indian food last night.' → Simple Past con tiempo específico."
+        },
+        {
+          "sentence": "She ___ (already / finish) the report. You can read it now.",
+          "answer": "has already finished",
+          "accepted": [
+            "has already finished",
+            "has finished"
+          ],
+          "feedback_why": "Already + Present Perfect = tarea completada antes de lo esperado. has (3ª persona) + participio: finish → finished.",
+          "contrast": "'She finished the report yesterday' → Simple Past (tiempo específico: yesterday)."
+        },
+        {
+          "sentence": "___ you ___ (see) that new film yet?",
+          "answer": "Have / seen",
+          "accepted": [
+            "Have seen",
+            "Have you seen"
+          ],
+          "feedback_why": "Yet en preguntas pregunta si la experiencia ha ocurrido hasta ahora. Have + seen (participio irregular de see).",
+          "contrast": "Simple Past: 'Did you see that film last Friday?' — pregunta por un momento específico."
+        },
+        {
+          "sentence": "They ___ (live) in this city for ten years.",
+          "answer": "have lived",
+          "accepted": [
+            "have lived",
+            "have been living"
+          ],
+          "feedback_why": "Situación que empezó en el pasado y continúa hasta ahora → Present Perfect. 'For ten years' marca la duración.",
+          "contrast": "'They lived in Paris for two years.' → Simple Past (ya no viven allí — acción completada)."
+        },
+        {
+          "sentence": "I ___ (just / get) home. I'm exhausted.",
+          "answer": "have just got",
+          "accepted": [
+            "have just got",
+            "have just gotten",
+            "'ve just got",
+            "'ve just gotten"
+          ],
+          "feedback_why": "Just + Present Perfect = acción muy reciente con resultado presente (estoy exhausto ahora). have + participio de get.",
+          "contrast": "Simple Past: 'I got home late last night.' → tiempo específico, sin conexión con el presente."
+        }
+      ]
+    },
+    {
+      "id": "future_will_going_to",
+      "category": "tenses",
+      "cefr": "B1",
+      "title": "will vs. going to",
+      "title_es": "Futuro: will vs. going to",
+      "prerequisites": [
+        "present_simple_habits",
+        "present_continuous_now"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Lena",
+          "text": "Look at those clouds! It's **going to** rain.",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "You think so? Maybe **I'll take** an umbrella just in case.",
+          "highlight": true
+        },
+        {
+          "speaker": "Lena",
+          "text": "Actually, **I'm going to drive** today. Do you want a ride?",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "Yes please! **I'll meet** you at the lobby at 8.",
+          "highlight": true
+        },
+        {
+          "speaker": "Lena",
+          "text": "Perfect. **I'm going to stop** for coffee first though.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Hay dos formas de expresar futuro aquí. ¿Cuáles son? ¿Qué estructura tiene cada una?",
+        "Lena dice 'It's going to rain' mirando las nubes. Dan dice 'I'll take an umbrella'. ¿Cuál es la diferencia en cómo llegaron a esa conclusión?",
+        "'I'm going to drive today' y 'I'll meet you at 8' — ¿cuál parece una decisión ya planificada y cuál una decisión espontánea?"
+      ],
+      "explanation": "**Going to** = planes ya decididos con evidencia o intención previa (*I'm going to drive* — ya lo había decidido) y predicciones con evidencia visible (*It's going to rain* — veo las nubes). **Will** = decisiones espontáneas tomadas en el momento (*I'll take an umbrella* — acabo de decidirlo) y predicciones sin evidencia concreta (*I think it will be cold*).",
+      "structured_input": [
+        {
+          "sentence": "A: 'We need someone to present tomorrow.' B: 'I'll do it.'",
+          "question": "¿Por qué usa 'will' y no 'going to' aquí?",
+          "options": [
+            "Porque es una predicción con evidencia",
+            "Porque es una decisión tomada en ese instante, en respuesta a la situación",
+            "Porque es un plan ya hecho con antelación",
+            "Porque es un hecho científico"
+          ],
+          "correct": 1,
+          "feedback": "Will = decisión espontánea. B no tenía este plan antes — lo decide al escuchar la pregunta."
+        },
+        {
+          "sentence": "She's going to have a baby in July.",
+          "question": "¿Qué tipo de futuro es este?",
+          "options": [
+            "Decisión espontánea",
+            "Predicción sin evidencia",
+            "Plan o hecho ya establecido/confirmado",
+            "Promesa formal"
+          ],
+          "correct": 2,
+          "feedback": "Going to = plan/hecho ya establecido. Un embarazo es una realidad confirmada, no una decisión de este momento."
+        },
+        {
+          "sentence": "I think technology will change education dramatically.",
+          "question": "¿Por qué 'will' y no 'going to'?",
+          "options": [
+            "Es una decisión espontánea",
+            "Es una opinión/predicción personal sin evidencia inmediata visible",
+            "Es un plan personal",
+            "Es una acción que empieza ahora"
+          ],
+          "correct": 1,
+          "feedback": "Will = predicción basada en opinión ('I think'). No hay evidencia visible — es una expectativa personal sobre el futuro."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "A: 'The phone is ringing.' B: 'I ___ (answer) it.'",
+          "answer": "I'll answer",
+          "accepted": [
+            "I'll answer",
+            "I will answer"
+          ],
+          "feedback_why": "Decisión tomada en el momento → will. B no tenía planeado responder el teléfono antes.",
+          "contrast": "Going to sería: 'I'm going to answer it' (si ya se había ofrecido antes de escuchar el teléfono)."
+        },
+        {
+          "sentence": "Watch out! That box ___ (fall)!",
+          "answer": "is going to fall",
+          "accepted": [
+            "is going to fall",
+            "'s going to fall"
+          ],
+          "feedback_why": "Predicción con evidencia visible/inmediata → going to. Vemos la caja en peligro AHORA.",
+          "contrast": "'It will probably fall' suena raro aquí porque tenemos evidencia directa. Will sería para predicciones sin evidencia visible."
+        },
+        {
+          "sentence": "We ___ (visit) my grandparents next weekend. It's already planned.",
+          "answer": "are going to visit",
+          "accepted": [
+            "are going to visit",
+            "'re going to visit"
+          ],
+          "feedback_why": "Plan previo ya establecido → going to. 'Already planned' lo confirma.",
+          "contrast": "'We'll visit them sometime' = intención vaga sin plan concreto → will."
+        },
+        {
+          "sentence": "I think it ___ (be) a close game tonight.",
+          "answer": "will be",
+          "accepted": [
+            "will be",
+            "'ll be"
+          ],
+          "feedback_why": "Predicción personal basada en opinión ('I think'), sin evidencia visible → will.",
+          "contrast": "Going to requeriría evidencia: 'Look at both teams — it's going to be a close game.'"
+        },
+        {
+          "sentence": "A: 'We're out of milk.' B: 'Don't worry, I ___ (get) some on my way home.'",
+          "answer": "I'll get",
+          "accepted": [
+            "I'll get",
+            "I will get"
+          ],
+          "feedback_why": "Respuesta espontánea a la situación — decisión tomada en este momento → will.",
+          "contrast": "Going to: 'I'm going to get milk today' — si ya lo tenías planeado antes de esta conversación."
+        }
+      ]
+    },
+    {
+      "id": "past_perfect",
+      "category": "tenses",
+      "cefr": "B2",
+      "title": "Past Perfect",
+      "title_es": "Past Perfect — Pasado antes del pasado",
+      "prerequisites": [
+        "simple_past",
+        "present_perfect_experience"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Nora",
+          "text": "When I arrived at the cinema, the film **had already started**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mike",
+          "text": "Oh no! **Had** you **bought** the tickets in advance?",
+          "highlight": true
+        },
+        {
+          "speaker": "Nora",
+          "text": "Yes, **I had booked** them online two days before.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mike",
+          "text": "At least you **hadn't wasted** your money. You could still watch most of it.",
+          "highlight": true
+        },
+        {
+          "speaker": "Nora",
+          "text": "True. But I wish I **had left** earlier. The traffic was terrible.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Hay dos 'capas' de pasado en estas oraciones. Ejemplo: 'When I arrived... the film had already started.' ¿Cuál de las dos acciones ocurrió primero?",
+        "¿Cuál es la estructura de 'had already started', 'had booked', 'hadn't wasted'?",
+        "¿En qué se diferencia el Past Perfect del Present Perfect? Compara: 'I have booked' vs 'I had booked'."
+      ],
+      "explanation": "El **Past Perfect** (had + participio) expresa una acción que ocurrió **antes de otro momento o acción en el pasado**. Es el 'pasado del pasado'. Se usa especialmente para aclarar el orden de eventos: *When I arrived (Simple Past), the film had already started (Past Perfect — ocurrió primero)*. También aparece con *wish, if only* para expresar arrepentimiento sobre el pasado.",
+      "structured_input": [
+        {
+          "sentence": "She was nervous because she had never spoken in public before.",
+          "question": "¿Cuál acción ocurrió primero cronológicamente?",
+          "options": [
+            "Estar nerviosa",
+            "Nunca haber hablado en público (antes de ese momento)",
+            "Ambas al mismo tiempo",
+            "Hablar en público ese día"
+          ],
+          "correct": 1,
+          "feedback": "Had never spoken = experiencia (o falta de ella) ANTERIOR al momento pasado de estar nerviosa. Past Perfect siempre marca anterioridad."
+        },
+        {
+          "sentence": "By the time the ambulance arrived, the patient had already recovered.",
+          "question": "¿Qué comunica 'had already recovered'?",
+          "options": [
+            "El paciente se recuperó después de la llegada",
+            "El paciente se estaba recuperando cuando llegaron",
+            "El paciente se recuperó antes de que llegara la ambulancia",
+            "El paciente nunca se recuperó"
+          ],
+          "correct": 2,
+          "feedback": "'By the time' + Simple Past establece el punto de referencia. Past Perfect = acción completada antes de ese punto."
+        },
+        {
+          "sentence": "I wish I had studied harder for the exam.",
+          "question": "¿Qué expresa 'I wish + had + participio'?",
+          "options": [
+            "Un plan para el futuro",
+            "Una condición posible ahora",
+            "Arrepentimiento sobre algo en el pasado (ya no se puede cambiar)",
+            "Una predicción sobre el pasado"
+          ],
+          "correct": 2,
+          "feedback": "Wish + Past Perfect = arrepentimiento sobre el pasado. La situación ya no se puede cambiar — el examen ya ocurrió."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "When we got to the restaurant, all the tables ___ (already / take).",
+          "answer": "had already been taken",
+          "accepted": [
+            "had already been taken",
+            "had been taken"
+          ],
+          "feedback_why": "Acción completada antes de llegar → Past Perfect. Las mesas se ocuparon ANTES de que llegaran.",
+          "contrast": "Simple Past: 'All the tables were taken when we got there' (mismo significado, pero sin énfasis en la anterioridad)."
+        },
+        {
+          "sentence": "She ___ (not / eat) anything all day, so she was starving.",
+          "answer": "hadn't eaten",
+          "accepted": [
+            "hadn't eaten",
+            "had not eaten"
+          ],
+          "feedback_why": "El hambre (Simple Past: was starving) fue resultado de no comer ANTES. hadn't + participio.",
+          "contrast": "Con Present Perfect: 'She hasn't eaten anything today.' — sin conexión con otro evento pasado."
+        },
+        {
+          "sentence": "I recognized her because we ___ (meet) before.",
+          "answer": "had met",
+          "accepted": [
+            "had met"
+          ],
+          "feedback_why": "El conocerse (Past Perfect) ocurrió ANTES del momento de reconocerla. meet → met (irregular).",
+          "contrast": "Simple Past: 'We met at a conference last year.' — si describes cuándo fue la primera vez."
+        },
+        {
+          "sentence": "By the time he called, I ___ (already / leave) the office.",
+          "answer": "had already left",
+          "accepts": [
+            "had already left"
+          ],
+          "accepted": [
+            "had already left"
+          ],
+          "feedback_why": "By the time + Simple Past señala el punto de referencia. Left (leave → left) completado antes → Past Perfect.",
+          "contrast": "'I left the office before he called.' — misma idea con before, sin Past Perfect obligatorio."
+        },
+        {
+          "sentence": "I wish I ___ (take) that job offer. It was a great opportunity.",
+          "answer": "had taken",
+          "accepted": [
+            "had taken"
+          ],
+          "feedback_why": "Wish + Past Perfect = arrepentimiento por una decisión pasada que ya no se puede cambiar.",
+          "contrast": "'I wish I could take that job.' — situación hipotética actual (presente), no pasado."
+        }
+      ]
+    },
+    {
+      "id": "article_a_an",
+      "category": "articles",
+      "cefr": "A2",
+      "title": "A / An",
+      "title_es": "Artículos indefinidos: a / an",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Kai",
+          "text": "What do you do for **a** living?",
+          "highlight": true
+        },
+        {
+          "speaker": "Bea",
+          "text": "I'm **an** architect. I work for **a** small firm downtown.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kai",
+          "text": "**An** architect — how interesting! Is it **a** difficult career?",
+          "highlight": true
+        },
+        {
+          "speaker": "Bea",
+          "text": "It has **an** intense academic side, but also **a** very creative one.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kai",
+          "text": "I'd love to design **a** house someday. Just as **a** hobby, of course.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿En qué casos se usa 'a' y en qué casos 'an'? Mira las palabras que siguen a cada artículo.",
+        "¿Qué tienen en común: architect, architect, intense? ¿Y a living, small, difficult, house?",
+        "¿Se usan a/an con cosas específicas conocidas o con cosas mencionadas por primera vez/en general?"
+      ],
+      "explanation": "**A** y **an** son artículos indefinidos — introducen algo **no específico** o **mencionado por primera vez**. La diferencia es puramente fonética: **an** antes de sonido vocálico (a,e,i,o,u al inicio de la palabra siguiente), **a** antes de consonante. Ojo: depende del **sonido**, no de la letra — 'an hour' (h muda, suena vocal), 'a university' (suena 'yu', consonante).",
+      "structured_input": [
+        {
+          "sentence": "She bought a European car and an umbrella.",
+          "question": "¿Por qué 'a European' si European empieza con vocal?",
+          "options": [
+            "Es un error gramatical",
+            "European empieza con sonido consonántico 'yu' (como 'you')",
+            "Se puede usar tanto a como an aquí",
+            "Porque European es un adjetivo"
+          ],
+          "correct": 1,
+          "feedback": "La regla es por SONIDO, no por letra. 'European' se pronuncia 'yu-ro-pean' — empieza con sonido consonántico → a European."
+        },
+        {
+          "sentence": "He's an honest man with an MBA.",
+          "question": "¿Por qué 'an honest' y 'an MBA'?",
+          "options": [
+            "H y M son vocales",
+            "Honest tiene h muda (suena 'onest'); MBA se lee 'em-bi-ei' empezando con sonido 'e'",
+            "Es incorrecto — debería ser 'a honest man'",
+            "Cuando hay un adjetivo siempre se usa an"
+          ],
+          "correct": 1,
+          "feedback": "Honest: la H es muda → suena como vocal → an. MBA: se pronuncia letra por letra 'em-bee-ay' → empieza con sonido 'e' → an MBA."
+        },
+        {
+          "sentence": "I need a doctor. I have a terrible headache.",
+          "question": "¿Qué comunican 'a doctor' y 'a headache' en este contexto?",
+          "options": [
+            "Un médico específico que ya conoces",
+            "Cualquier médico (no uno en particular); un dolor de cabeza como concepto",
+            "El médico de cabecera",
+            "Un dolor de cabeza especial"
+          ],
+          "correct": 1,
+          "feedback": "A/an = indefinido. No es UN médico específico — cualquier médico servirá. El headache tampoco es un concepto específico conocido por el oyente."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "She's ___ engineer at ___ international company.",
+          "answer": "an / an",
+          "accepted": [
+            "an / an"
+          ],
+          "feedback_why": "'Engineer' empieza con vocal 'e' → an. 'International' empieza con vocal 'i' → an.",
+          "contrast": "'A company' sería correcto si la palabra siguiente empezara con consonante, ej: 'a national company'."
+        },
+        {
+          "sentence": "It took ___ hour to get there by ___ bus.",
+          "answer": "an / a",
+          "accepted": [
+            "an / a"
+          ],
+          "feedback_why": "'Hour' tiene H muda → suena 'our' (vocal) → an hour. 'Bus' empieza con consonante 'b' → a bus.",
+          "contrast": "'A hour' es uno de los errores más comunes. Recuerda: el artículo depende del sonido, no de la letra."
+        },
+        {
+          "sentence": "He wants to be ___ actor or ___ musician.",
+          "answer": "an / a",
+          "accepted": [
+            "an / a"
+          ],
+          "feedback_why": "'Actor' empieza con vocal 'a' → an. 'Musician' empieza con consonante 'm' → a.",
+          "contrast": "Nótese que a/an también se usan con profesiones y roles — no solo con objetos."
+        },
+        {
+          "sentence": "I have ___ idea that might solve ___ problem.",
+          "answer": "an / a",
+          "accepted": [
+            "an / a"
+          ],
+          "feedback_why": "'Idea' empieza con vocal 'i' → an. 'Problem' empieza con consonante 'p' → a. Ambos son mencionados por primera vez.",
+          "contrast": "Si ya sabemos de qué problema hablamos: 'I have an idea that might solve THE problem.'"
+        },
+        {
+          "sentence": "There was ___ unusual smell coming from ___ old building.",
+          "answer": "an / an",
+          "accepted": [
+            "an / an"
+          ],
+          "feedback_why": "'Unusual' empieza con vocal 'u' → an. 'Old' empieza con vocal 'o' → an.",
+          "contrast": "'A unique building' — unique suena 'yu-neek' (consonante) → a unique. Misma regla que European."
+        }
+      ]
+    },
+    {
+      "id": "article_the",
+      "category": "articles",
+      "cefr": "A2",
+      "title": "The",
+      "title_es": "Artículo definido: the",
+      "prerequisites": [
+        "article_a_an"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Rex",
+          "text": "Did you watch **the** match last night?",
+          "highlight": true
+        },
+        {
+          "speaker": "Fran",
+          "text": "Yes! **The** final score was incredible — 3 to 2 in **the** last minute.",
+          "highlight": true
+        },
+        {
+          "speaker": "Rex",
+          "text": "**The** goalkeeper saved two penalties. He was amazing.",
+          "highlight": true
+        },
+        {
+          "speaker": "Fran",
+          "text": "I think **the** team deserves to be in **the** final.",
+          "highlight": true
+        },
+        {
+          "speaker": "Rex",
+          "text": "Agreed. **The** stadium was packed — 80,000 people!",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Por qué se dice 'the match' y no 'a match'? ¿Ambos hablantes saben de qué partido hablan?",
+        "¿Cuándo se usa 'the' aquí? ¿Qué tienen en común: the match, the goalkeeper, the team, the stadium?",
+        "¿Cuántas veces se menciona 'the match'? ¿Qué pasaría si se usara 'a match' la segunda vez?"
+      ],
+      "explanation": "**The** se usa cuando tanto el hablante como el oyente saben exactamente de **qué cosa específica** se habla. Los casos principales: (1) ya se mencionó antes (*a cat... the cat*), (2) hay solo uno en el contexto (*the goalkeeper* — el equipo tiene uno), (3) es único en el mundo (*the sun, the moon*), (4) se especifica (*the car in the garage*), (5) en frases superlativas (*the best, the first*).",
+      "structured_input": [
+        {
+          "sentence": "I saw a dog and a cat. The dog was friendly, but the cat ran away.",
+          "question": "¿Por qué cambia de 'a dog' a 'the dog'?",
+          "options": [
+            "Porque dog empieza con consonante",
+            "Porque en la segunda mención, ya sabemos de qué perro se habla",
+            "Porque es un error — debería ser 'a dog' siempre",
+            "Porque es un perro famoso"
+          ],
+          "correct": 1,
+          "feedback": "Primera mención → a (indefinido, desconocido). Segunda mención → the (ya sabemos exactamente de qué perro/gato hablamos)."
+        },
+        {
+          "sentence": "Can you close the door, please?",
+          "question": "¿Por qué 'the door' si no se mencionó antes?",
+          "options": [
+            "Error gramatical — debería ser 'a door'",
+            "Contexto compartido — hay una sola puerta relevante en la situación (la de esta habitación)",
+            "The door es más formal",
+            "Porque la puerta es famosa"
+          ],
+          "correct": 1,
+          "feedback": "No hace falta mencionar antes cuando el contexto hace la referencia obvia. Ambos saben de qué puerta se habla — la de la habitación donde están."
+        },
+        {
+          "sentence": "The president announced new policies today.",
+          "question": "¿Por qué 'The president' sin haberlo mencionado antes?",
+          "options": [
+            "Error — debería ser 'A president'",
+            "Hay solo un presidente del país en cuestión — la referencia es única y compartida",
+            "Porque el presidente es conocido personalmente",
+            "The se usa siempre con títulos"
+          ],
+          "correct": 1,
+          "feedback": "Cuando hay un solo referente posible en un contexto (el presidente de un país), se usa the aunque no se haya mencionado antes."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I bought a new laptop. ___ laptop has a great keyboard.",
+          "answer": "The",
+          "accepted": [
+            "The",
+            "the"
+          ],
+          "feedback_why": "Segunda mención → ya sabemos de qué laptop se habla → the.",
+          "contrast": "'A laptop has a great keyboard' significaría que estás hablando de laptops en general, no de la que compraste."
+        },
+        {
+          "sentence": "She's ___ best student in the class.",
+          "answer": "the",
+          "accepted": [
+            "the",
+            "The"
+          ],
+          "feedback_why": "Superlativo → siempre the. 'The best, the worst, the most, the first, the last...'",
+          "contrast": "'A best student' no existe. Los superlativos siempre usan the."
+        },
+        {
+          "sentence": "Can you turn off ___ light? I want to sleep.",
+          "answer": "the",
+          "accepted": [
+            "the",
+            "The"
+          ],
+          "feedback_why": "Contexto compartido — ambos saben de qué luz se habla (la de la habitación). Referencia única en el contexto.",
+          "contrast": "'A light' implicaría que hay varias y cualquiera sirve, o que es la primera vez que se menciona."
+        },
+        {
+          "sentence": "___ Earth is ___ only planet in our solar system with liquid water.",
+          "answer": "The / the",
+          "accepted": [
+            "The / the",
+            "the / the"
+          ],
+          "feedback_why": "The Earth = único planeta con ese nombre. The only = único (referencia única) — siempre con the.",
+          "contrast": "Sin artículo: 'Earth' (sin the) también es correcto en inglés moderno cuando te refieres al planeta como concepto."
+        },
+        {
+          "sentence": "I spoke to ___ manager. She said ___ problem would be fixed today.",
+          "answer": "the / the",
+          "accepted": [
+            "the / the"
+          ],
+          "feedback_why": "The manager = hay uno en el contexto (el manager de esa empresa/tienda). The problem = el problema del que ya se estaba hablando.",
+          "contrast": "'A manager' implicaría que habló con cualquier manager, no el específico de esa situación."
+        }
+      ]
+    },
+    {
+      "id": "article_zero",
+      "category": "articles",
+      "cefr": "B1",
+      "title": "Zero Article",
+      "title_es": "Artículo cero — Cuándo NO usar artículo",
+      "prerequisites": [
+        "article_a_an",
+        "article_the"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Zoe",
+          "text": "Do you like **music**? I love **jazz** and **classical music**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Alex",
+          "text": "I love **music** in general. I also play **guitar**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Zoe",
+          "text": "Wow! Did you study **music** at **university**?",
+          "highlight": true
+        },
+        {
+          "speaker": "Alex",
+          "text": "No, I'm self-taught. I learned by watching videos on the **internet**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Zoe",
+          "text": "**Life** is full of surprises. I hope to learn **piano** someday too.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Encuentra todas las palabras sin artículo en el diálogo. ¿Qué tipo de palabras son?",
+        "¿Por qué no se dice 'the music' o 'a music' cuando Zoe dice 'I love jazz'?",
+        "Compara: 'I play guitar' vs 'The guitar is in my room.' ¿Qué diferencia el uso de the aquí?"
+      ],
+      "explanation": "El **artículo cero** (sin artículo) se usa principalmente con: (1) **sustantivos incontables en general** (*music, love, water, information*), (2) **sustantivos contables en plural que generalizan** (*books are expensive, dogs are loyal*), (3) **nombres propios** (*Spain, Maria, London*), (4) **instituciones en función** (*go to school, be in hospital*), (5) **comidas e idiomas** (*I eat breakfast, she speaks French*).",
+      "structured_input": [
+        {
+          "sentence": "Children need love and stability to grow well.",
+          "question": "¿Por qué no hay artículo delante de 'love' y 'stability'?",
+          "options": [
+            "Es un error — debería ser 'the love'",
+            "Son sustantivos incontables usados en sentido general, sin especificar",
+            "Porque son adjetivos",
+            "Porque empiezan con consonante"
+          ],
+          "correct": 1,
+          "feedback": "Love y stability son incontables abstractos en sentido general — artículo cero. 'The love' señalaría un amor específico ya conocido, lo cual no es la intención aquí."
+        },
+        {
+          "sentence": "She goes to church every Sunday. The church is near her house.",
+          "question": "¿Por qué 'goes to church' pero 'The church is near'?",
+          "options": [
+            "Error en la segunda oración",
+            "La primera usa la institución en su función (práctica religiosa); la segunda se refiere al edificio específico",
+            "Church es contable en la primera e incontable en la segunda",
+            "No hay diferencia real"
+          ],
+          "correct": 1,
+          "feedback": "Go to church = asistir como práctica religiosa (artículo cero, función institucional). The church = el edificio concreto cerca de su casa (artículo definido, referencia específica)."
+        },
+        {
+          "sentence": "Dogs make great pets. However, the dog next door barks all night.",
+          "question": "¿Qué diferencia hay entre 'Dogs' y 'the dog'?",
+          "options": [
+            "Dogs = plural, the dog = singular — sin diferencia de significado",
+            "Dogs = generalización sobre los perros en general; the dog = un perro específico ya conocido",
+            "The dog es más formal",
+            "Dogs se usa en el pasado"
+          ],
+          "correct": 1,
+          "feedback": "Plural sin artículo = generalización (los perros como especie). The dog = ese perro concreto de al lado, que ambos conocen."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I had ___ breakfast at 7 and then went to ___ work.",
+          "answer": "Ø (no article) / Ø (no article)",
+          "accepted": [
+            "breakfast / work",
+            "no article / no article",
+            "— / —",
+            ""
+          ],
+          "feedback_why": "Breakfast = comida en general, sin artículo. Go to work = función/actividad laboral, sin artículo (como go to school, go to bed).",
+          "contrast": "THE breakfast I had today was amazing (el desayuno específico). THE work in this office is demanding (el trabajo en ese lugar específico)."
+        },
+        {
+          "sentence": "___ honesty is the best policy.",
+          "answer": "Ø (no article)",
+          "accepted": [
+            "Honesty",
+            "honesty",
+            "no article",
+            ""
+          ],
+          "feedback_why": "Honesty = concepto abstracto incontable en sentido general → artículo cero.",
+          "contrast": "'The honesty of his answer surprised everyone.' — aquí honesty es específica (la honestidad de ESA respuesta)."
+        },
+        {
+          "sentence": "She speaks ___ Spanish and ___ French fluently.",
+          "answer": "Ø / Ø",
+          "accepted": [
+            "Spanish / French",
+            "no article / no article",
+            "— / —",
+            ""
+          ],
+          "feedback_why": "Los idiomas no llevan artículo: speak Spanish, learn English, study French.",
+          "contrast": "'The Spanish spoken in Argentina has its own accent.' — aquí Spanish está especificado por la cláusula relativa → the."
+        },
+        {
+          "sentence": "He's in ___ hospital recovering from surgery.",
+          "answer": "Ø (no article)",
+          "accepted": [
+            "hospital",
+            "no article",
+            ""
+          ],
+          "feedback_why": "In hospital = estar ingresado como paciente (función institucional). Sin artículo en inglés británico.",
+          "contrast": "'I left my bag in the hospital.' — el edificio específico, no la función → the hospital."
+        },
+        {
+          "sentence": "___ teachers in this school work incredibly hard.",
+          "answer": "The",
+          "accepted": [
+            "The",
+            "the"
+          ],
+          "feedback_why": "Los profesores de ESTE colegio (específicos, ya definidos por 'in this school') → the. No es una generalización sobre todos los profesores.",
+          "contrast": "Teachers work hard (sin the) = generalización sobre los profesores en general."
+        }
+      ]
+    },
+    {
+      "id": "modal_can_ability",
+      "category": "modals",
+      "cefr": "A2",
+      "title": "can / can't",
+      "title_es": "can / can't — Habilidad y posibilidad",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Leo",
+          "text": "**Can** you help me move this sofa?",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "Sure! I **can** move that easily — I go to the gym.",
+          "highlight": true
+        },
+        {
+          "speaker": "Leo",
+          "text": "**Can** your brother come too? We **can't** do it alone.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "He **can't** today — he's working. But my sister **can**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Leo",
+          "text": "Perfect. Three people **can** definitely manage it.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Cómo cambia el verbo después de can/can't? ¿Le añades -s con he/she/it?",
+        "¿Cómo se forma la pregunta con can? Compara con la estructura de preguntas normales (do/does).",
+        "¿Cuándo se usa can en estas oraciones — para habilidad ('ser capaz de') o para pedir/dar permiso/posibilidad?"
+      ],
+      "explanation": "**Can** expresa **habilidad** (*she can swim*), **posibilidad** (*we can meet tomorrow*) y **permiso informal** (*can I use your phone?*). **Can't** = no puede / no es posible. Estructura muy simple: **can/can't + verbo base** — sin cambios con ningún sujeto (nunca 'cans' o 'canned'). Preguntas: **Can + sujeto + verbo?** — sin do/does.",
+      "structured_input": [
+        {
+          "sentence": "She can speak four languages.",
+          "question": "¿Qué expresa 'can' aquí?",
+          "options": [
+            "Permiso para hablar",
+            "Habilidad adquirida",
+            "Acción en progreso",
+            "Obligación"
+          ],
+          "correct": 1,
+          "feedback": "Can + habilidad = ser capaz de hacer algo. Hablar idiomas es una habilidad adquirida → can."
+        },
+        {
+          "sentence": "Can I open the window? It's hot in here.",
+          "question": "¿Qué uso de can es este?",
+          "options": [
+            "Habilidad física",
+            "Solicitar permiso informal",
+            "Dar una orden",
+            "Expresar obligación"
+          ],
+          "correct": 1,
+          "feedback": "Can I...? = petición informal de permiso. Es el uso más cotidiano para pedir permiso en inglés informal."
+        },
+        {
+          "sentence": "I can't find my wallet anywhere.",
+          "question": "¿Qué expresa can't aquí?",
+          "options": [
+            "No tiene permiso para buscar",
+            "No tiene la habilidad física de buscar",
+            "Imposibilidad / incapacidad en esta situación",
+            "Obligación de no buscar"
+          ],
+          "correct": 2,
+          "feedback": "Can't = imposibilidad situacional — no es que no tenga habilidad, sino que la acción no está resultando posible en este momento."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "He ___ play the piano really well. He's been practicing for years.",
+          "answer": "can",
+          "accepted": [
+            "can"
+          ],
+          "feedback_why": "Habilidad adquirida → can. Nunca 'cans' aunque sea tercera persona.",
+          "contrast": "'He could play piano as a child.' — could = pasado de can (habilidad en el pasado)."
+        },
+        {
+          "sentence": "I ___ hear you — there's too much noise here.",
+          "answer": "can't",
+          "accepted": [
+            "can't",
+            "cannot",
+            "can not"
+          ],
+          "feedback_why": "Imposibilidad situacional → can't. No es que no tenga oídos, sino que las circunstancias lo impiden.",
+          "contrast": "'I don't hear you' sería incorrecto aquí — para estados sensoriales en progreso se prefiere can't con verbos de percepción."
+        },
+        {
+          "sentence": "___ you swim? I need a swimming partner.",
+          "answer": "Can",
+          "accepted": [
+            "Can"
+          ],
+          "feedback_why": "Pregunta sobre habilidad → Can + sujeto + verbo base. No se usa do/does con modales.",
+          "contrast": "'Do you swim?' también existe pero pregunta sobre hábito ('¿Nadas?'), no habilidad."
+        },
+        {
+          "sentence": "We ___ meet on Thursday or Friday — both days work for me.",
+          "answer": "can",
+          "accepted": [
+            "can"
+          ],
+          "feedback_why": "Posibilidad/disponibilidad → can. Ambos días son posibles.",
+          "contrast": "'We could meet...' también es correcto y suena ligeramente más tentativo/cortés."
+        },
+        {
+          "sentence": "Sorry, you ___ park here. It's a no-parking zone.",
+          "answer": "can't",
+          "accepted": [
+            "can't",
+            "cannot"
+          ],
+          "feedback_why": "Prohibición/no permitido → can't. Similar a 'you're not allowed to'.",
+          "contrast": "'You shouldn't park here' = consejo (es mala idea). 'You can't park here' = está prohibido."
+        }
+      ]
+    },
+    {
+      "id": "modal_should_advice",
+      "category": "modals",
+      "cefr": "A2",
+      "title": "should / shouldn't",
+      "title_es": "should / shouldn't — Consejo y recomendación",
+      "prerequisites": [
+        "modal_can_ability"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Dr. Patel",
+          "text": "You **should** drink more water — at least 2 liters a day.",
+          "highlight": true
+        },
+        {
+          "speaker": "Pat",
+          "text": "I know, I know. I **should** exercise more too.",
+          "highlight": true
+        },
+        {
+          "speaker": "Dr. Patel",
+          "text": "You **shouldn't** sit at your desk for more than an hour without a break.",
+          "highlight": true
+        },
+        {
+          "speaker": "Pat",
+          "text": "**Should** I take vitamins? My energy levels are low.",
+          "highlight": true
+        },
+        {
+          "speaker": "Dr. Patel",
+          "text": "You **should** get a blood test first. We **shouldn't** guess.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Cuál es la diferencia entre 'should' y 'must'? ¿El médico está dando órdenes o recomendaciones?",
+        "¿Cómo se forma la negativa? ¿Y la pregunta?",
+        "¿Cambia 'should' con distintos sujetos? Busca: I should, You should, We shouldn't."
+      ],
+      "explanation": "**Should** expresa **consejo, recomendación y opinión** sobre lo que es bueno o correcto hacer. Es más suave que *must* — sugiere, no ordena. Estructura: **should/shouldn't + verbo base** (igual con todos los sujetos). Preguntas: **Should + sujeto + verbo?** Se usa para dar consejos, expresar expectativas y hacer recomendaciones.",
+      "structured_input": [
+        {
+          "sentence": "You should apologize to her. What you said was unkind.",
+          "question": "¿Qué expresa 'should' aquí?",
+          "options": [
+            "Obligación legal",
+            "Habilidad",
+            "Recomendación / es lo correcto moralmente",
+            "Permiso"
+          ],
+          "correct": 2,
+          "feedback": "Should = consejo / lo que es lo correcto hacer. No es una orden — la persona puede elegir no hacerlo."
+        },
+        {
+          "sentence": "Students shouldn't use their phones during class.",
+          "question": "¿Qué transmite shouldn't aquí?",
+          "options": [
+            "Está legalmente prohibido",
+            "No es posible físicamente",
+            "No es recomendable / va contra las normas esperadas",
+            "No tienen habilidad para hacerlo"
+          ],
+          "correct": 2,
+          "feedback": "Shouldn't = no es apropiado / recomendable. Más suave que 'must not' (prohibición estricta)."
+        },
+        {
+          "sentence": "Should we book the hotel in advance?",
+          "question": "¿Qué función tiene Should en esta pregunta?",
+          "options": [
+            "Pide permiso",
+            "Pregunta si es recomendable / la mejor decisión",
+            "Pregunta sobre habilidad",
+            "Pide información sobre el pasado"
+          ],
+          "correct": 1,
+          "feedback": "Should + pregunta = pedir una recomendación o consejo sobre qué es mejor hacer."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "You look tired. You ___ go to bed earlier.",
+          "answer": "should",
+          "accepted": [
+            "should"
+          ],
+          "feedback_why": "Consejo amistoso → should. El hablante recomienda algo pero no obliga.",
+          "contrast": "'You must go to bed earlier.' sonaría como una orden de autoridad. Should es más amable y apropiado entre amigos."
+        },
+        {
+          "sentence": "He ___ eat so much sugar. It's bad for his health.",
+          "answer": "shouldn't",
+          "accepted": [
+            "shouldn't",
+            "should not"
+          ],
+          "feedback_why": "Recomendación negativa — lo que NO es bueno hacer → shouldn't.",
+          "contrast": "'He can't eat sugar' = tiene prohibición médica o física imposibilidad. Shouldn't = simplemente no es recomendable."
+        },
+        {
+          "sentence": "___ I call him now or is it too late?",
+          "answer": "Should",
+          "accepted": [
+            "Should"
+          ],
+          "feedback_why": "Pregunta pidiendo consejo/recomendación → Should + sujeto + verbo.",
+          "contrast": "'Can I call him?' = ¿tengo permiso? 'Should I call him?' = ¿es buena idea?"
+        },
+        {
+          "sentence": "You've been working for 5 hours. You ___ take a break.",
+          "answer": "should",
+          "accepted": [
+            "should"
+          ],
+          "feedback_why": "Recomendación para el bienestar → should. El hablante considera que sería bueno/saludable.",
+          "contrast": "Con must: 'You must take a break' — sonaría como una regla o exigencia, no un consejo."
+        },
+        {
+          "sentence": "Children ___ play outside more and spend less time on screens.",
+          "answer": "should",
+          "accepted": [
+            "should"
+          ],
+          "feedback_why": "Opinión/recomendación general sobre lo que es beneficioso → should.",
+          "contrast": "'Children must play outside' suena a obligación impuesta. Should expresa una opinión sobre lo que es bueno."
+        }
+      ]
+    },
+    {
+      "id": "modal_must_obligation",
+      "category": "modals",
+      "cefr": "B1",
+      "title": "must / have to",
+      "title_es": "must / have to — Obligación y necesidad",
+      "prerequisites": [
+        "modal_should_advice"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Boss",
+          "text": "All staff **must** complete the safety training by Friday.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ali",
+          "text": "Understood. Do we **have to** do it online or can we do it in person?",
+          "highlight": true
+        },
+        {
+          "speaker": "Boss",
+          "text": "You **have to** do it online — the in-person sessions are full.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ali",
+          "text": "And what about the new employees? They **must** register first, right?",
+          "highlight": true
+        },
+        {
+          "speaker": "Boss",
+          "text": "Exactly. They **have to** create an account before accessing the platform.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Puedes encontrar dos formas de expresar obligación aquí? ¿Cuáles son?",
+        "¿Quién decide la obligación cuando se usa 'must'? ¿Y cuando se usa 'have to'?",
+        "Must solo existe en presente — ¿cómo expresarías 'I had to...' en pasado?"
+      ],
+      "explanation": "**Must** y **have to** expresan obligación. **Must** = obligación que viene del hablante mismo (regla interna, convicción propia) o de una autoridad directa: *You must stop* (yo te lo exijo). **Have to** = obligación externa, regla del sistema: *I have to wear a uniform* (es la norma de la empresa, no mi decisión). En la práctica diaria se usan casi indistintamente, pero esta es la distinción formal. **Must not** = prohibición. **Don't have to** = NO es obligatorio (muy diferente a must not).",
+      "structured_input": [
+        {
+          "sentence": "You must not share your password with anyone.",
+          "question": "¿Qué expresa 'must not' aquí?",
+          "options": [
+            "No es necesario hacerlo",
+            "Está prohibido / no tienes permiso",
+            "Es una recomendación",
+            "Es imposible"
+          ],
+          "correct": 1,
+          "feedback": "Must not = prohibición. Es muy diferente a 'don't have to' (no es necesario). Must not = no puedes / no debes hacerlo bajo ninguna circunstancia."
+        },
+        {
+          "sentence": "You don't have to wear a tie. It's casual Friday.",
+          "question": "¿Qué expresa 'don't have to' aquí?",
+          "options": [
+            "Está prohibido usar corbata",
+            "No es obligatorio — puedes elegir",
+            "Es muy recomendable no usar corbata",
+            "No es posible usar corbata"
+          ],
+          "correct": 1,
+          "feedback": "Don't have to = no es obligatorio, pero puedes hacerlo si quieres. Totalmente diferente a must not (prohibición)."
+        },
+        {
+          "sentence": "I must call my mother — I haven't spoken to her in weeks.",
+          "question": "¿Quién genera la obligación de llamar?",
+          "options": [
+            "Una regla externa (ley o empresa)",
+            "El hablante mismo — es su propia decisión/obligación moral",
+            "Su jefe se lo exige",
+            "Es una predicción"
+          ],
+          "correct": 1,
+          "feedback": "Must = obligación sentida internamente. El hablante no está obligado por una regla externa — es su propio sentido de responsabilidad."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Passengers ___ fasten their seatbelts before takeoff.",
+          "answer": "must",
+          "accepted": [
+            "must",
+            "have to"
+          ],
+          "feedback_why": "Regla de seguridad de aerolínea (obligación externa) → have to o must. En contexto de anuncio oficial → must suena más autoritario.",
+          "contrast": "'Passengers should fasten seatbelts' = recomendación, no regla estricta. Must/have to = obligatorio."
+        },
+        {
+          "sentence": "You ___ worry about the cost. I'll pay for everything.",
+          "answer": "don't have to",
+          "accepted": [
+            "don't have to",
+            "needn't"
+          ],
+          "feedback_why": "No es necesario que se preocupe → don't have to (ausencia de obligación). El hablante quita la obligación.",
+          "contrast": "'You mustn't worry' = no debes preocuparte (más como un consejo fuerte). 'Don't have to' = no es necesario, es opcional."
+        },
+        {
+          "sentence": "In some countries, you ___ drive on the left side of the road.",
+          "answer": "have to",
+          "accepted": [
+            "have to",
+            "must"
+          ],
+          "feedback_why": "Ley externa del país → have to. Es una obligación impuesta por el sistema legal, no por el hablante.",
+          "contrast": "'You should drive carefully' = recomendación. 'You have to drive on the left' = obligación legal."
+        },
+        {
+          "sentence": "You ___ be quiet in a library.",
+          "answer": "must",
+          "accepted": [
+            "must",
+            "have to"
+          ],
+          "feedback_why": "Norma social/del lugar → must (regla de conducta establecida). Both must/have to are acceptable.",
+          "contrast": "'You should be quiet' = es lo correcto, pero más suave. Must implica una norma más estricta."
+        },
+        {
+          "sentence": "She ___ book in advance — she can just show up.",
+          "answer": "doesn't have to",
+          "accepted": [
+            "doesn't have to",
+            "does not have to"
+          ],
+          "feedback_why": "No es obligatorio reservar → doesn't have to (negativa de have to para tercera persona).",
+          "contrast": "'She mustn't book in advance' significaría que está PROHIBIDO reservar — lo opuesto."
+        }
+      ]
+    },
+    {
+      "id": "conditional_zero",
+      "category": "conditionals",
+      "cefr": "A2",
+      "title": "Zero Conditional",
+      "title_es": "Condicional Cero — Hechos y verdades generales",
+      "prerequisites": [
+        "present_simple_habits"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Prof",
+          "text": "**If you mix** red and blue, **you get** purple. That's basic color theory.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kim",
+          "text": "And **if you freeze** water, **it becomes** solid, right?",
+          "highlight": true
+        },
+        {
+          "speaker": "Prof",
+          "text": "Exactly. **If the temperature drops** below zero, **water freezes**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kim",
+          "text": "What about plants? What happens **if they don't get** sunlight?",
+          "highlight": true
+        },
+        {
+          "speaker": "Prof",
+          "text": "**If plants don't receive** light, **they die**. It's essential for photosynthesis.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué tiempo verbal se usa en la parte 'if' y en el resultado? ¿Son iguales o diferentes?",
+        "¿Estos resultados son posibles, probables, o son siempre verdad?",
+        "¿Se puede invertir el orden — poner el resultado primero? Prueba con una de las frases."
+      ],
+      "explanation": "El **condicional cero** expresa **hechos universales, verdades científicas y resultados automáticos** — cosas que SIEMPRE pasan cuando se da la condición. Estructura: **If + Present Simple, Present Simple**. También funciona con 'when' en lugar de 'if': *When water reaches 100°C, it boils.* Las dos partes pueden invertirse sin cambiar el significado.",
+      "structured_input": [
+        {
+          "sentence": "If you don't water plants, they die.",
+          "question": "¿Por qué se usa el condicional cero aquí?",
+          "options": [
+            "Es una situación hipotética poco probable",
+            "Es una verdad universal y automática",
+            "Es un plan para el futuro",
+            "Es una experiencia personal pasada"
+          ],
+          "correct": 1,
+          "feedback": "Las plantas SIEMPRE mueren sin agua — es una ley natural, no una posibilidad. Por eso zero conditional."
+        },
+        {
+          "sentence": "When I'm nervous, I talk too fast.",
+          "question": "¿Qué tipo de verdad expresa esta oración?",
+          "options": [
+            "Una ley científica",
+            "Un resultado automático/habitual personal",
+            "Una condición imaginaria",
+            "Un evento pasado"
+          ],
+          "correct": 1,
+          "feedback": "El zero conditional también funciona para hábitos automáticos personales — no solo para leyes científicas."
+        },
+        {
+          "sentence": "If you press this button, the light turns on.",
+          "question": "¿Se puede cambiar el orden de la oración?",
+          "options": [
+            "No, 'if' siempre va al principio",
+            "Sí: 'The light turns on if you press this button' — mismo significado",
+            "Solo si cambias el tiempo verbal",
+            "Sí, pero cambia el significado"
+          ],
+          "correct": 1,
+          "feedback": "En el zero conditional (y todos los condicionales), las dos partes son invertibles. Solo cambia una coma cuando 'if' va al principio."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "If you heat metal, it ___ (expand).",
+          "answer": "expands",
+          "accepted": [
+            "expands"
+          ],
+          "feedback_why": "Ley física — resultado automático → Zero conditional → Present Simple en ambas partes. He/she/it/metal → expands.",
+          "contrast": "First conditional: 'If you heat this metal, it will expand' — implica que es una posibilidad futura, no una ley universal."
+        },
+        {
+          "sentence": "If I ___ (not / sleep) enough, I feel terrible the next day.",
+          "answer": "don't sleep",
+          "accepted": [
+            "don't sleep"
+          ],
+          "feedback_why": "Hábito automático personal → Zero conditional → Present Simple en ambas partes. Negativa: don't + verbo base.",
+          "contrast": "'If I didn't sleep enough, I would feel terrible' = Second conditional — situación hipotética, no real."
+        },
+        {
+          "sentence": "Babies ___ (cry) if they are hungry. It's their only way to communicate.",
+          "answer": "cry",
+          "accepted": [
+            "cry"
+          ],
+          "feedback_why": "Hecho universal sobre bebés → Zero conditional. Resultado en Present Simple: babies (plural) → cry sin -s.",
+          "contrast": "Zero conditional con when: 'When babies are hungry, they cry.' Mismo significado."
+        },
+        {
+          "sentence": "If you ___ (not / wear) sunscreen, your skin burns.",
+          "answer": "don't wear",
+          "accepted": [
+            "don't wear"
+          ],
+          "feedback_why": "Causa-efecto universal/automático → Zero conditional. Cláusula 'if' en negativo presente.",
+          "contrast": "First conditional: 'If you don't wear sunscreen, you'll burn' — más enfocado en esta situación concreta futura."
+        },
+        {
+          "sentence": "The screen ___ (go) black if the battery ___ (die).",
+          "answer": "goes / dies",
+          "accepted": [
+            "goes / dies"
+          ],
+          "feedback_why": "Ambas partes en Present Simple. The screen (singular) → goes. The battery (singular) → dies.",
+          "contrast": "No necesitas will ni would en el zero conditional — las dos partes son siempre Present Simple."
+        }
+      ]
+    },
+    {
+      "id": "conditional_first",
+      "category": "conditionals",
+      "cefr": "B1",
+      "title": "First Conditional",
+      "title_es": "Primer Condicional — Situaciones reales y posibles",
+      "prerequisites": [
+        "conditional_zero",
+        "future_will_going_to"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Tara",
+          "text": "**If we leave** now, **we'll catch** the train.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ben",
+          "text": "I just need five more minutes. **If I'm late**, **I'll take** a taxi.",
+          "highlight": true
+        },
+        {
+          "speaker": "Tara",
+          "text": "**If you take** a taxi, **it'll cost** a fortune at this hour!",
+          "highlight": true
+        },
+        {
+          "speaker": "Ben",
+          "text": "You're right. **If we miss** the train, what **will** we do?",
+          "highlight": true
+        },
+        {
+          "speaker": "Tara",
+          "text": "**We'll** figure something out. But we **won't miss** it **if we leave** NOW.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué tiempo verbal aparece en la parte 'if' y cuál en el resultado?",
+        "¿Estas situaciones son reales y posibles, o completamente imaginarias?",
+        "¿Puedes encontrar un caso donde 'will' NO aparece en la parte 'if'? ¿Por qué crees que es así?"
+      ],
+      "explanation": "El **primer condicional** describe situaciones **reales y posibles** en el futuro — no es hipotético, podría ocurrir. Estructura: **If + Present Simple, will + verbo base**. La parte 'if' usa Present Simple (nunca will en esa parte) aunque se habla del futuro. El resultado usa will/won't. Se puede usar otras formas en el resultado: can, should, might, imperativo.",
+      "structured_input": [
+        {
+          "sentence": "If it rains tomorrow, we'll cancel the picnic.",
+          "question": "¿Por qué se usa Present Simple después de 'if' y no 'will rain'?",
+          "options": [
+            "Porque it es singular",
+            "Regla gramatical: la cláusula if del primer condicional siempre usa Present Simple, nunca will",
+            "Porque es una predicción",
+            "Porque ya sabemos que va a llover"
+          ],
+          "correct": 1,
+          "feedback": "Regla fundamental: NUNCA will en la cláusula 'if'. Present Simple expresa la condición futura. Will va solo en el resultado."
+        },
+        {
+          "sentence": "If you finish early, you can leave.",
+          "question": "¿Es obligatorio usar 'will' en el resultado del primer condicional?",
+          "options": [
+            "Sí, siempre will",
+            "No, también se pueden usar: can, might, should, o un imperativo",
+            "Solo si el sujeto es you",
+            "Solo en preguntas"
+          ],
+          "correct": 1,
+          "feedback": "El resultado admite variación: will (certeza), can (posibilidad/permiso), might (menor certeza), should (consejo), o imperativo (instrucción)."
+        },
+        {
+          "sentence": "She'll get the job if she performs well in the interview.",
+          "question": "¿Es posible o imposible que ella consiga el trabajo?",
+          "options": [
+            "Es imposible — es solo una fantasía",
+            "Es posible y real — depende de su rendimiento en la entrevista",
+            "Ya ocurrió en el pasado",
+            "Es una certeza — seguro que lo conseguirá"
+          ],
+          "correct": 1,
+          "feedback": "Primer condicional = situación posible y real en el futuro. Si tiene buen rendimiento (condición real y posible), conseguirá el trabajo."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "If she ___ (study) hard, she'll pass the exam.",
+          "answer": "studies",
+          "accepted": [
+            "studies"
+          ],
+          "feedback_why": "Cláusula 'if' → Present Simple. She = tercera persona → studies (con -s).",
+          "contrast": "NUNCA: 'If she will study...' — will no se usa en la cláusula if del primer condicional."
+        },
+        {
+          "sentence": "They ___ (miss) the bus if they don't hurry.",
+          "answer": "will miss",
+          "accepted": [
+            "will miss",
+            "'ll miss"
+          ],
+          "feedback_why": "Resultado del primer condicional → will + verbo base. Consecuencia real y posible.",
+          "contrast": "Second conditional: 'They would miss the bus if they didn't hurry' — hipotético, como si ya no fuera a apresurarse."
+        },
+        {
+          "sentence": "If I ___ (not / finish) this report today, my boss will be angry.",
+          "answer": "don't finish",
+          "accepted": [
+            "don't finish"
+          ],
+          "feedback_why": "Negativa en cláusula if → don't/doesn't + verbo base (Present Simple negativo).",
+          "contrast": "'If I won't finish' = incorrecto en inglés. La cláusula if siempre usa Present Simple."
+        },
+        {
+          "sentence": "What ___ you ___ (do) if you win the lottery?",
+          "answer": "will / do",
+          "accepted": [
+            "will do",
+            "will you do"
+          ],
+          "feedback_why": "Pregunta con primer condicional. Lo interesante: winning the lottery es posible aunque improbable → first conditional.",
+          "contrast": "Si sientes que es muy improbable/hipotético: 'What would you do if you won the lottery?' → second conditional."
+        },
+        {
+          "sentence": "Call me if you ___ (need) anything.",
+          "answer": "need",
+          "accepted": [
+            "need"
+          ],
+          "feedback_why": "Imperativo (call me) + if + Present Simple = variante del primer condicional con instrucción en el resultado.",
+          "contrast": "'Call me if you will need' = incorrecto. Siempre Present Simple tras if."
+        }
+      ]
+    },
+    {
+      "id": "conditional_second",
+      "category": "conditionals",
+      "cefr": "B1",
+      "title": "Second Conditional",
+      "title_es": "Segundo Condicional — Situaciones hipotéticas",
+      "prerequisites": [
+        "conditional_first"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Jay",
+          "text": "**If I were** rich, **I would travel** the world.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sue",
+          "text": "**I would buy** a house by the beach **if I had** the money.",
+          "highlight": true
+        },
+        {
+          "speaker": "Jay",
+          "text": "What **would** you **do** **if you could** live anywhere?",
+          "highlight": true
+        },
+        {
+          "speaker": "Sue",
+          "text": "**I would move** to New Zealand. **If I lived** there, **I'd learn** to surf.",
+          "highlight": true
+        },
+        {
+          "speaker": "Jay",
+          "text": "**If I were** you, **I'd start** saving now. Dreams can become reality!",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Estas situaciones son reales o imaginarias? ¿Jay es rico ahora mismo?",
+        "¿Qué tiempo verbal aparece después de 'if'? ¿Y en el resultado?",
+        "Fíjate en 'If I were rich' — ¿no debería ser 'was' si hablamos de I? ¿Por qué 'were'?"
+      ],
+      "explanation": "El **segundo condicional** habla de situaciones **hipotéticas, imaginarias o improbables** en el presente/futuro. Estructura: **If + Past Simple, would + verbo base**. El Past Simple en la cláusula 'if' no habla del pasado — es una forma de 'distancia' de la realidad. Con el verbo *be*, el inglés formal usa **were** para todos los sujetos: *If I were you, If she were...* (aunque *was* es aceptado informalmente).",
+      "structured_input": [
+        {
+          "sentence": "If I knew the answer, I would tell you.",
+          "question": "¿Sabe la persona la respuesta?",
+          "options": [
+            "Sí, la sabe",
+            "No la sabe — es una situación hipotética contraria a la realidad",
+            "La va a saber pronto",
+            "La supo antes"
+          ],
+          "correct": 1,
+          "feedback": "Segundo condicional = contrario a la realidad actual. 'If I knew' implica que NO sé la respuesta ahora mismo."
+        },
+        {
+          "sentence": "If I were you, I would apologize immediately.",
+          "question": "¿Por qué 'were' y no 'was'?",
+          "options": [
+            "I es plural",
+            "En el segundo condicional, 'were' se usa con todos los sujetos (especialmente 'I/he/she') en el inglés formal",
+            "Es un error gramatical",
+            "Porque 'you' afecta la forma"
+          ],
+          "correct": 1,
+          "feedback": "'If I were you' es una expresión fija para dar consejos hipotéticos. 'Were' es la forma formal del subjuntivo para be — se usa con todos los sujetos en el segundo condicional."
+        },
+        {
+          "sentence": "She would exercise more if she had more free time.",
+          "question": "¿Tiene ella tiempo libre actualmente?",
+          "options": [
+            "Sí, tiene mucho",
+            "No, o tiene muy poco — el condicional describe su realidad opuesta",
+            "No se sabe",
+            "Sí, pero decide no ejercitar"
+          ],
+          "correct": 1,
+          "feedback": "Segundo condicional = situación contraria a la realidad. 'If she had more free time' implica que actualmente NO tiene suficiente tiempo libre."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "If I ___ (be) taller, I would play basketball professionally.",
+          "answer": "were",
+          "accepted": [
+            "were",
+            "was"
+          ],
+          "feedback_why": "Segundo condicional con 'be' → were (formal) o was (informal). Situación hipotética — el hablante no es alto.",
+          "contrast": "First conditional: 'If I am tall enough, I will try out for the team.' — posibilidad real."
+        },
+        {
+          "sentence": "She ___ (travel) more if she didn't have so many responsibilities.",
+          "answer": "would travel",
+          "accepted": [
+            "would travel",
+            "'d travel"
+          ],
+          "feedback_why": "Resultado del segundo condicional → would + verbo base. Situación hipotética (tiene muchas responsabilidades ahora).",
+          "contrast": "First: 'She will travel more if she gets fewer responsibilities.' — situación posible y real."
+        },
+        {
+          "sentence": "What ___ you ___ (do) if you lost your job tomorrow?",
+          "answer": "would / do",
+          "accepted": [
+            "would do",
+            "would you do"
+          ],
+          "feedback_why": "Pregunta con segundo condicional. Lost = Past Simple en cláusula if. Would + verbo base en resultado.",
+          "contrast": "First conditional: 'What will you do if you lose your job?' — si lo consideras una posibilidad real."
+        },
+        {
+          "sentence": "If he ___ (have) more confidence, he ___ (apply) for the promotion.",
+          "answer": "had / would apply",
+          "accepted": [
+            "had / would apply"
+          ],
+          "feedback_why": "Ambas partes del segundo condicional. No tiene confianza ahora (contrario a la realidad) → had... would apply.",
+          "contrast": "Describe la realidad actual de otra forma: 'He doesn't apply because he lacks confidence.'"
+        },
+        {
+          "sentence": "I ___ (not / buy) that house if I ___ (be) in your position.",
+          "answer": "wouldn't buy / were",
+          "accepted": [
+            "wouldn't buy / were",
+            "wouldn't buy / was"
+          ],
+          "feedback_why": "'If I were you' = consejo hipotético clásico. Wouldn't = would + not para la negativa.",
+          "contrast": "Esta estructura 'If I were you, I would/wouldn't...' es la forma más común de dar consejos en inglés."
+        }
+      ]
+    },
+    {
+      "id": "conditional_third",
+      "category": "conditionals",
+      "cefr": "B2",
+      "title": "Third Conditional",
+      "title_es": "Tercer Condicional — El pasado que no fue",
+      "prerequisites": [
+        "conditional_second",
+        "past_perfect"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Rio",
+          "text": "**If I had studied** medicine, **I would have become** a doctor.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ada",
+          "text": "You could have been a great doctor! Why didn't you?",
+          "highlight": false
+        },
+        {
+          "speaker": "Rio",
+          "text": "My parents couldn't afford it. **If they had had** more money, **things would have been** different.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ada",
+          "text": "**If I hadn't taken** that gap year, **I wouldn't have met** my husband.",
+          "highlight": true
+        },
+        {
+          "speaker": "Rio",
+          "text": "Funny how life works. **If things had gone** differently, we **might not be** friends today!",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Estas situaciones ocurrieron realmente? ¿Rio se hizo médico?",
+        "¿Qué tiempo verbal aparece en la parte 'if'? ¿Y en el resultado? Son más complejos que en el segundo condicional.",
+        "Fíjate en 'might not be friends' — ¿por qué 'might' y no 'would'? ¿Qué diferencia hay?"
+      ],
+      "explanation": "El **tercer condicional** habla de una **situación pasada diferente** — algo que NO ocurrió y su resultado imaginario. Es el condicional del arrepentimiento y la especulación sobre el pasado. Estructura: **If + Past Perfect (had + participio), would have + participio**. El resultado puede variar: *would/could/might have + participio*. Completamente contrario a la realidad pasada.",
+      "structured_input": [
+        {
+          "sentence": "If she had arrived on time, she would have got the job.",
+          "question": "¿Llegó ella a tiempo?",
+          "options": [
+            "Sí, llegó puntual",
+            "No, llegó tarde — y por eso no consiguió el trabajo",
+            "No se sabe",
+            "Llegó temprano"
+          ],
+          "correct": 1,
+          "feedback": "Tercer condicional = contrario al pasado real. 'If she had arrived' implica que NO llegó a tiempo. La consecuencia: no consiguió el trabajo."
+        },
+        {
+          "sentence": "We wouldn't have got lost if we had used a map.",
+          "question": "¿Se perdieron realmente?",
+          "options": [
+            "No, no se perdieron",
+            "Sí, se perdieron — no usaron mapa",
+            "Usaron el mapa pero aun así se perdieron",
+            "El mapa no habría ayudado"
+          ],
+          "correct": 1,
+          "feedback": "Wouldn't have got lost = se perdieron en realidad. Didn't use a map = la causa real. Tercer condicional analiza lo que habría pasado con otra decisión."
+        },
+        {
+          "sentence": "If you had told me earlier, I might have been able to help.",
+          "question": "¿Qué expresa 'might have been able' en lugar de 'would have been able'?",
+          "options": [
+            "Es un error — debería ser would",
+            "Menos certeza — quizás habría podido ayudar, pero no es seguro",
+            "Más certeza que would",
+            "Indica que sí ayudó finalmente"
+          ],
+          "correct": 1,
+          "feedback": "Would = certeza. Might = posibilidad (quizás). Could = capacidad. El resultado del tercer condicional admite estos matices de probabilidad."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "If you ___ (invite) me, I would have come to the party.",
+          "answer": "had invited",
+          "accepted": [
+            "had invited"
+          ],
+          "feedback_why": "Pasado hipotético → If + Past Perfect (had + participio). No te invitaron → no fuiste.",
+          "contrast": "Second conditional: 'If you invited me, I would come.' — hipotético presente/futuro, no pasado."
+        },
+        {
+          "sentence": "She ___ (not / fail) the test if she had studied.",
+          "answer": "wouldn't have failed",
+          "accepted": [
+            "wouldn't have failed",
+            "would not have failed"
+          ],
+          "feedback_why": "Resultado negativo del tercer condicional → wouldn't have + participio. No estudió → suspenso (realidad).",
+          "contrast": "'She wouldn't fail' = segundo condicional presente. 'Wouldn't have failed' = tercer condicional pasado."
+        },
+        {
+          "sentence": "If they ___ (leave) earlier, they ___ (catch) the train.",
+          "answer": "had left / would have caught",
+          "accepted": [
+            "had left / would have caught"
+          ],
+          "feedback_why": "Ambas partes del tercer condicional. had left (Past Perfect) + would have caught (would have + participio).",
+          "contrast": "'They left late and missed the train' — describe la realidad. El third conditional especula sobre el alternativo."
+        },
+        {
+          "sentence": "I ___ (be) a better player if I ___ (practice) more as a child.",
+          "answer": "would have been / had practised",
+          "accepted": [
+            "would have been / had practiced",
+            "would have been / had practised"
+          ],
+          "feedback_why": "Arrepentimiento sobre el pasado → tercer condicional. Resultado: would have been. Condición: had practiced/practised.",
+          "contrast": "I wish I had practiced more. — otra forma de expresar el mismo arrepentimiento."
+        },
+        {
+          "sentence": "If the weather hadn't been so bad, we ___ (go) to the beach.",
+          "answer": "would have gone",
+          "accepted": [
+            "would have gone",
+            "could have gone",
+            "might have gone"
+          ],
+          "feedback_why": "El tiempo fue malo → no fueron a la playa (realidad). Would/could/might have gone = resultado hipotético pasado.",
+          "contrast": "Could have gone = habrían tenido la opción. Might have gone = quizás habrían ido. Would have gone = habrían ido (mayor certeza)."
+        }
+      ]
+    },
+    {
+      "id": "passive_present_simple",
+      "category": "passive",
+      "cefr": "B1",
+      "title": "Passive Voice — Present Simple",
+      "title_es": "Voz Pasiva — Presente Simple",
+      "prerequisites": [
+        "present_simple_habits"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Tour",
+          "text": "This bridge was designed in 1889. It **is visited** by millions of tourists every year.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kim",
+          "text": "Amazing! **Is it maintained** by the city government?",
+          "highlight": true
+        },
+        {
+          "speaker": "Tour",
+          "text": "Yes, it **is inspected** regularly and **is repainted** every five years.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kim",
+          "text": "What language **is spoken** in this region?",
+          "highlight": true
+        },
+        {
+          "speaker": "Tour",
+          "text": "French **is spoken** here, but English **is widely understood** too.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "En 'it is visited by millions of tourists' — ¿quién visita (el agente) y quién recibe la acción (el puente)?",
+        "¿Cuál es la estructura de estos verbos? ¿Qué patrón ves en: is visited, is maintained, is spoken?",
+        "¿Cuándo crees que es útil usar la voz pasiva en lugar de la activa?"
+      ],
+      "explanation": "La **voz pasiva** pone el foco en **la acción o el objeto afectado**, no en quien la realiza. Se usa cuando el agente es desconocido, obvio o sin importancia. Presente Simple pasivo: **am/is/are + participio pasado**. El agente (quien hace la acción) se puede añadir con **by**: *The bridge is maintained by the city.* Se omite by cuando el agente es obvio o irrelevante.",
+      "structured_input": [
+        {
+          "sentence": "Coffee is grown in Brazil and Colombia.",
+          "question": "¿Por qué es más natural la voz pasiva aquí?",
+          "options": [
+            "Para enfatizar quién lo cultiva",
+            "Porque el café es el tema, y quién lo cultiva (agricultores en general) no es relevante",
+            "Porque es más corto",
+            "Para hablar del pasado"
+          ],
+          "correct": 1,
+          "feedback": "El café es el tema de la conversación. Quién lo cultiva (agricultores en general) es irrelevante o evidente — pasiva es lo natural."
+        },
+        {
+          "sentence": "The report is checked by the manager before it is sent.",
+          "question": "¿Qué función tiene 'by the manager' aquí?",
+          "options": [
+            "Es obligatorio en toda pasiva",
+            "Especifica quién realiza la acción cuando esa información es relevante",
+            "Reemplaza al sujeto",
+            "Indica el tiempo de la acción"
+          ],
+          "correct": 1,
+          "feedback": "By + agente = opcional. Se usa cuando es importante saber quién hace la acción. Si es obvio o no importa, se omite."
+        },
+        {
+          "sentence": "Mistakes are made. Nobody is perfect.",
+          "question": "¿Por qué se usa la pasiva en 'Mistakes are made'?",
+          "options": [
+            "Porque mistakes es plural",
+            "El agente (todos, la gente en general) es vago/universal — la pasiva evita especificar",
+            "Porque es más formal",
+            "Porque es una ley"
+          ],
+          "correct": 1,
+          "feedback": "Pasiva con agente vago o universal ('todos cometemos errores') — es más natural que 'People make mistakes' en este contexto filosófico."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "English ___ (speak) all over the world.",
+          "answer": "is spoken",
+          "accepted": [
+            "is spoken"
+          ],
+          "feedback_why": "English (singular) → is + participio pasado de speak (spoken). Voz pasiva Present Simple.",
+          "contrast": "Activa: 'People speak English all over the world.' — énfasis en la gente, no en el idioma."
+        },
+        {
+          "sentence": "These products ___ (make) in Germany.",
+          "answer": "are made",
+          "accepted": [
+            "are made"
+          ],
+          "feedback_why": "These products (plural) → are + participio pasado de make (made).",
+          "contrast": "Activa: 'Germany makes these products' / 'They make these products in Germany.'"
+        },
+        {
+          "sentence": "The office ___ (clean) every evening by the cleaning staff.",
+          "answer": "is cleaned",
+          "accepted": [
+            "is cleaned"
+          ],
+          "feedback_why": "The office (singular) → is + cleaned (participio de clean: regular, -ed). By cleaning staff = agente especificado.",
+          "contrast": "La forma activa: 'The cleaning staff clean the office every evening.' — posible, pero si hablas de la oficina como tema, pasiva es más natural."
+        },
+        {
+          "sentence": "___ English ___ (teach) here?",
+          "answer": "Is / taught",
+          "accepted": [
+            "Is taught",
+            "Is English taught"
+          ],
+          "feedback_why": "Pregunta en pasiva: am/is/are + sujeto + participio? Is (singular) + taught (participio de teach: irregular).",
+          "contrast": "Activa: 'Do they teach English here?' — natural también, pero la pasiva evita especificar quién enseña."
+        },
+        {
+          "sentence": "The results ___ (not / know) yet.",
+          "answer": "are not known",
+          "accepted": [
+            "are not known",
+            "aren't known"
+          ],
+          "feedback_why": "Negativa: am/is/are + not + participio. Results (plural) → are not known.",
+          "contrast": "'We don't know the results yet.' — activa también es correcta y muy usada."
+        }
+      ]
+    },
+    {
+      "id": "questions_wh",
+      "category": "questions",
+      "cefr": "A2",
+      "title": "Wh- Questions",
+      "title_es": "Preguntas con Wh- — Información específica",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "HR",
+          "text": "**What** is your name, and **where** are you from originally?",
+          "highlight": true
+        },
+        {
+          "speaker": "Nina",
+          "text": "Nina Rodríguez. I'm from Mexico City, but I live in Madrid now.",
+          "highlight": false
+        },
+        {
+          "speaker": "HR",
+          "text": "Great. **Why** did you apply for this position?",
+          "highlight": true
+        },
+        {
+          "speaker": "Nina",
+          "text": "I want to grow in marketing. I've always loved creative work.",
+          "highlight": false
+        },
+        {
+          "speaker": "HR",
+          "text": "**How long** have you worked in the industry, and **which** companies have you worked for?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué palabras de pregunta aparecen? ¿Qué tipo de información pide cada una?",
+        "¿Cuál es el orden de las palabras después de la palabra Wh-? ¿Va el auxiliar antes o después del sujeto?",
+        "Compara: 'Why did you apply?' — ¿qué pasaría si dijeras 'Why you applied?' ¿Suena natural?"
+      ],
+      "explanation": "Las **preguntas Wh-** piden información específica. Palabras interrogativas: **what** (qué), **where** (dónde), **when** (cuándo), **why** (por qué), **who** (quién), **how** (cómo), **which** (cuál), **how long/much/many/often**. Estructura: **Wh- + auxiliar (do/did/is/are/have...) + sujeto + verbo**. Cuando who/what ES el sujeto, no se invierte: *Who called you?* (who = sujeto).",
+      "structured_input": [
+        {
+          "sentence": "What does she do for a living?",
+          "question": "¿Cuál es el orden correcto de los elementos en esta pregunta?",
+          "options": [
+            "What + sujeto + verbo principal",
+            "What + auxiliar (does) + sujeto (she) + verbo base (do)",
+            "What + verbo + sujeto",
+            "What + she + does"
+          ],
+          "correct": 1,
+          "feedback": "Wh- + auxiliar + sujeto + verbo base. Does = auxiliar para tercera persona presente. 'Do' al final es el verbo principal (profesión/actividad)."
+        },
+        {
+          "sentence": "Who told you about the meeting?",
+          "question": "¿Por qué no hay auxiliar (did) en esta pregunta?",
+          "options": [
+            "Es un error gramatical",
+            "When who/what es el sujeto, no se necesita auxiliar ni inversión",
+            "Porque es informal",
+            "Porque 'told' ya es el auxiliar"
+          ],
+          "correct": 1,
+          "feedback": "'Who' es el sujeto de la oración — quien realizó la acción. Cuando Wh- = sujeto, el orden es normal: Who + verbo (sin do/did)."
+        },
+        {
+          "sentence": "How long have you been waiting?",
+          "question": "¿Qué información pide 'How long'?",
+          "options": [
+            "La distancia",
+            "La duración de una acción",
+            "La razón",
+            "La frecuencia"
+          ],
+          "correct": 1,
+          "feedback": "How long = duración ('¿Cuánto tiempo llevas esperando?'). Otras combinaciones: how often (frecuencia), how much (cantidad incontable), how many (cantidad contable)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ do you usually go to bed?",
+          "answer": "What time / When",
+          "accepted": [
+            "What time",
+            "When"
+          ],
+          "feedback_why": "Para preguntar la hora → What time. 'When' también es posible pero menos específico.",
+          "contrast": "'What time is it?' (ahora mismo) vs 'What time do you go to bed?' (hábito/rutina)."
+        },
+        {
+          "sentence": "___ did she leave the party so early?",
+          "answer": "Why",
+          "accepted": [
+            "Why"
+          ],
+          "feedback_why": "Why = razón o motivo. Pregunta por la causa de su salida temprana.",
+          "contrast": "'When did she leave?' = hora. 'Why did she leave?' = razón. 'How did she leave?' = medio de transporte."
+        },
+        {
+          "sentence": "___ of these two options do you prefer?",
+          "answer": "Which",
+          "accepted": [
+            "Which"
+          ],
+          "feedback_why": "Which = cuál/cuál de... → se usa cuando hay opciones limitadas/definidas.",
+          "contrast": "'What do you prefer?' = pregunta abierta sin opciones limitadas. 'Which' implica elegir de un conjunto específico."
+        },
+        {
+          "sentence": "___ has been helping you with the project?",
+          "answer": "Who",
+          "accepted": [
+            "Who"
+          ],
+          "feedback_why": "Who pregunta por personas. Aquí WHO es el sujeto → sin auxiliar, orden normal: Who + has been helping.",
+          "contrast": "'Who did you help?' = WHO es objeto (tú ayudaste a alguien). 'Who helped you?' = WHO es sujeto (alguien te ayudó)."
+        },
+        {
+          "sentence": "___ long have you been studying English?",
+          "answer": "How",
+          "accepted": [
+            "How"
+          ],
+          "feedback_why": "How long = duración → 'How' inicia la expresión. Have you been studying = Present Perfect Continuous.",
+          "contrast": "How often = frecuencia, How many = cantidad contable, How much = cantidad incontable, How far = distancia."
+        }
+      ]
+    },
+    {
+      "id": "comparatives_short",
+      "category": "comparatives",
+      "cefr": "A2",
+      "title": "Comparatives",
+      "title_es": "Comparativos — Comparar dos cosas",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Pia",
+          "text": "This laptop is **cheaper than** the MacBook, but is it **better**?",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "Well, the MacBook is **faster** and **lighter than** this one.",
+          "highlight": true
+        },
+        {
+          "speaker": "Pia",
+          "text": "But this one has a **bigger** screen. That's **more important** to me.",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "True. And the battery lasts **longer**. I think it's **more practical** for you.",
+          "highlight": true
+        },
+        {
+          "speaker": "Pia",
+          "text": "The price is much **lower** too. I think this is the **smarter** choice.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué patrón ves en los comparativos? Algunos terminan en -er y otros usan 'more'. ¿Cuándo se usa cada uno?",
+        "¿Qué palabra conecta los dos elementos que se comparan?",
+        "¿Por qué 'bigger' tiene doble 'g'? ¿Y 'cheaper' no? ¿Qué regla ortográfica ves?"
+      ],
+      "explanation": "Para comparar dos cosas: adjetivos **cortos** (1-2 sílabas) añaden **-er + than**: *fast → faster than, big → bigger than, cheap → cheaper than*. Adjetivos **largos** (3+ sílabas) usan **more + adjetivo + than**: *more practical, more important*. Irregulares: *good → better, bad → worse, far → farther/further*. Regla ortográfica: consonante-vocal-consonante → dobla la consonante: *big → bigger, hot → hotter*.",
+      "structured_input": [
+        {
+          "sentence": "The new phone is more expensive than the old model.",
+          "question": "¿Por qué 'more expensive' y no 'expensiver'?",
+          "options": [
+            "Error — 'expensiver' es correcto",
+            "'Expensive' tiene 3 sílabas → siempre more + adjetivo",
+            "Porque empieza con vocal",
+            "Porque es un adjetivo negativo"
+          ],
+          "correct": 1,
+          "feedback": "Adjetivos de 3+ sílabas (ex-pen-sive) → more + adjetivo. Adjetivos cortos (1-2 sílabas) → -er. Nunca 'more fast' o 'quicker than more'."
+        },
+        {
+          "sentence": "She's a better cook than her brother.",
+          "question": "¿Cuál es el comparativo regular de 'good'?",
+          "options": [
+            "Gooder",
+            "More good",
+            "Better",
+            "Best"
+          ],
+          "correct": 2,
+          "feedback": "Good → better (irregular). Bad → worse. Far → farther/further. These must be memorized."
+        },
+        {
+          "sentence": "The red car is much faster than the blue one.",
+          "question": "¿Qué función tiene 'much' en 'much faster'?",
+          "options": [
+            "Es el comparativo de 'many'",
+            "Intensifica el comparativo — la diferencia es grande",
+            "Es opcional sin significado",
+            "Reemplaza 'than'"
+          ],
+          "correct": 1,
+          "feedback": "Much/a lot + comparativo = diferencia significativa ('mucho más rápido'). A little/slightly + comparativo = diferencia pequeña ('un poco más rápido')."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "My new apartment is ___ (big) ___ my old one.",
+          "answer": "bigger than",
+          "accepted": [
+            "bigger than"
+          ],
+          "feedback_why": "Big = corto, consonante-vocal-consonante → dobla 'g': bigger. Comparativo + than.",
+          "contrast": "'More big' = incorrecto. Los adjetivos cortos siempre usan -er, nunca more."
+        },
+        {
+          "sentence": "This exercise is ___ (difficult) ___ the previous one.",
+          "answer": "more difficult than",
+          "accepted": [
+            "more difficult than"
+          ],
+          "feedback_why": "Difficult = 3 sílabas → more + adjetivo + than. Nunca 'difficulter'.",
+          "contrast": "Adjetivos de 2 sílabas que terminan en -y cambian: happy → happier (no more happy)."
+        },
+        {
+          "sentence": "She speaks English ___ (fluently) ___ her sister.",
+          "answer": "more fluently than",
+          "accepted": [
+            "more fluently than"
+          ],
+          "feedback_why": "Fluently es un adverbio largo → more + adverbio + than. Los adverbios largos siempre usan more.",
+          "contrast": "Adverbios cortos: fast → faster, hard → harder, early → earlier."
+        },
+        {
+          "sentence": "The situation is getting ___ (bad).",
+          "answer": "worse",
+          "accepted": [
+            "worse"
+          ],
+          "feedback_why": "Bad → worse (irregular). Sin 'than' cuando no se compara explícitamente con algo.",
+          "contrast": "Bad → worse → worst. Good → better → best. Far → farther/further → farthest/furthest."
+        },
+        {
+          "sentence": "This road is ___ (narrow) ___ it looks on the map.",
+          "answer": "narrower than",
+          "accepted": [
+            "narrower than"
+          ],
+          "feedback_why": "Narrow = 2 sílabas terminadas en vocal-consonante → solo -er. Narrower than.",
+          "contrast": "'More narrow' también se acepta pero 'narrower' es más natural."
+        }
+      ]
+    },
+    {
+      "id": "verb_gerund",
+      "category": "verb_patterns",
+      "cefr": "B1",
+      "title": "Verb + Gerund (-ing)",
+      "title_es": "Verbo + Gerundio — Verbos que van seguidos de -ing",
+      "prerequisites": [
+        "present_continuous_now"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Cole",
+          "text": "I **enjoy cooking** for friends. It's very relaxing.",
+          "highlight": true
+        },
+        {
+          "speaker": "Amy",
+          "text": "Really? I **avoid cooking** as much as possible. I don't **mind eating** out.",
+          "highlight": true
+        },
+        {
+          "speaker": "Cole",
+          "text": "Have you **considered taking** a cooking class? You might enjoy it.",
+          "highlight": true
+        },
+        {
+          "speaker": "Amy",
+          "text": "I've thought about it, but I **keep putting** it off.",
+          "highlight": true
+        },
+        {
+          "speaker": "Cole",
+          "text": "**Stop making** excuses! You'd finish it in a few weeks. I'd **suggest starting** with pasta.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "¿Qué tienen en común: enjoy cooking, avoid cooking, mind eating, consider taking, keep putting, stop making, suggest starting?",
+        "Todos estos verbos van seguidos de otra acción. ¿La segunda acción usa infinitivo (to cook) o gerundio (-ing)?",
+        "¿Puedes pensar en verbos similares en español? ¿El patrón es igual?"
+      ],
+      "explanation": "Algunos verbos en inglés siempre van seguidos de **gerundio (-ing)**, nunca de infinitivo. Los más importantes: **enjoy, avoid, mind, keep, stop, finish, consider, suggest, recommend, practice, miss, imagine, deny, risk, admit, postpone/put off**. Truco nemotécnico: muchos de estos verbos expresan acciones mentales sobre algo ya 'en curso' o una postura ante algo existente.",
+      "structured_input": [
+        {
+          "sentence": "She admitted taking the money.",
+          "question": "¿Por qué 'taking' y no 'to take' después de 'admitted'?",
+          "options": [
+            "Porque -ing es siempre más correcto",
+            "Admit es un verbo que siempre va seguido de gerundio",
+            "Porque es pasado",
+            "Porque 'the money' es objeto"
+          ],
+          "correct": 1,
+          "feedback": "Admit = verbo que requiere gerundio. 'She admitted to take' sería incorrecto. La lista de verbos + gerundio debe memorizarse."
+        },
+        {
+          "sentence": "Have you considered moving to a different city?",
+          "question": "¿Qué significa 'consider + gerundio'?",
+          "options": [
+            "Acabar de hacer algo",
+            "Pensar seriamente en la posibilidad de hacer algo",
+            "Hacer algo repetidamente",
+            "Intentar hacer algo"
+          ],
+          "correct": 1,
+          "feedback": "Consider + -ing = contemplar la posibilidad. 'Have you considered moving?' = ¿Has pensado en la posibilidad de mudarte?"
+        },
+        {
+          "sentence": "I don't mind waiting if you need more time.",
+          "question": "¿Qué expresa 'don't mind + gerundio'?",
+          "options": [
+            "Le molesta mucho esperar",
+            "Le parece bien / no le molesta esperar",
+            "Quiere esperar",
+            "No puede esperar"
+          ],
+          "correct": 1,
+          "feedback": "Mind + -ing = molestarle algo. Don't mind + -ing = no le molesta, es aceptable. 'Do you mind waiting?' = ¿te importa/molesta esperar?"
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I really enjoy ___ (listen) to jazz in the evenings.",
+          "answer": "listening",
+          "accepted": [
+            "listening"
+          ],
+          "feedback_why": "Enjoy siempre va seguido de gerundio (-ing). Nunca 'enjoy to listen'.",
+          "contrast": "'I really like to listen' = like admite tanto infinitivo como gerundio (con matices de significado ligeramente diferentes)."
+        },
+        {
+          "sentence": "She keeps ___ (make) the same mistake.",
+          "answer": "making",
+          "accepted": [
+            "making"
+          ],
+          "feedback_why": "Keep + -ing = continuar haciendo algo de forma repetida. Siempre gerundio.",
+          "contrast": "'Keep' solo puede ir con gerundio en este sentido. 'Keep to do' es incorrecto."
+        },
+        {
+          "sentence": "Have you finished ___ (write) the report?",
+          "answer": "writing",
+          "accepted": [
+            "writing"
+          ],
+          "feedback_why": "Finish siempre + gerundio. 'Have you finished to write' sería incorrecto.",
+          "contrast": "'I need to finish writing the report.' — need va con infinitivo, pero finish sigue pidiendo gerundio."
+        },
+        {
+          "sentence": "They recommended ___ (take) the coastal route.",
+          "answer": "taking",
+          "accepted": [
+            "taking"
+          ],
+          "feedback_why": "Recommend + gerundio. 'They recommended to take' es incorrecto en inglés nativo.",
+          "contrast": "'They advised us to take the coastal route.' — advise sí va con infinitivo (advise + objeto + to + verbo)."
+        },
+        {
+          "sentence": "Stop ___ (worry)! Everything will be fine.",
+          "answer": "worrying",
+          "accepted": [
+            "worrying"
+          ],
+          "feedback_why": "Stop + gerundio = dejar de hacer algo. worry + -ing = worrying (consonante final doble cuando es c-v-c tónico... no aplica aquí, simplemente -ing).",
+          "contrast": "'Stop to worry' tendría otro significado: parar (en un viaje) con el propósito de preocuparse — absurdo en este contexto. Stop + to-inf = parar para hacer algo nuevo."
+        }
+      ]
+    },
+    {
+      "id": "verb_infinitive",
+      "category": "verb_patterns",
+      "cefr": "B1",
+      "title": "Verb + Infinitive (to)",
+      "title_es": "Verbo + Infinitivo — Verbos que van seguidos de to + infinitivo",
+      "prerequisites": [
+        "verb_gerund"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Marc",
+          "text": "I **want to apply** for that scholarship. Do you think I should?",
+          "highlight": true
+        },
+        {
+          "speaker": "Liv",
+          "text": "Definitely! You **need to prepare** a strong application though.",
+          "highlight": true
+        },
+        {
+          "speaker": "Marc",
+          "text": "I've **decided to ask** Professor Hall for a recommendation letter.",
+          "highlight": true
+        },
+        {
+          "speaker": "Liv",
+          "text": "Good idea. And don't **forget to include** your research projects.",
+          "highlight": true
+        },
+        {
+          "speaker": "Marc",
+          "text": "Right. I also **hope to get** an interview. I'd **love to study** abroad.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Todos los verbos resaltados van seguidos de 'to + verbo'. ¿Cuáles son?",
+        "¿Qué diferencia hay con los verbos de la lección anterior (gerundio)? ¿Puedes sustituir 'want to apply' por 'want applying'?",
+        "¿Hay algún patrón temático en estos verbos? ¿Hablan más del futuro/intención o de actividades actuales/pasadas?"
+      ],
+      "explanation": "Algunos verbos siempre van seguidos de **to + infinitivo**. Los más comunes: **want, need, decide, hope, plan, expect, agree, refuse, manage, offer, promise, forget, learn, choose, seem, tend, afford, fail, pretend**. Muchos de estos expresan intención, decisión, o actitud hacia una acción futura. A diferencia del gerundio (que mira hacia lo que ya existe/pasado), el infinitivo a menudo mira hacia el futuro.",
+      "structured_input": [
+        {
+          "sentence": "She agreed to help with the event.",
+          "question": "¿Cuál es la estructura después de 'agree'?",
+          "options": [
+            "agree + -ing",
+            "agree + that",
+            "agree + to + infinitivo",
+            "agree + objeto + to"
+          ],
+          "correct": 2,
+          "feedback": "Agree siempre va con to + infinitivo. 'She agreed helping' = incorrecto. Otros verbos similares: promise, refuse, offer, decide."
+        },
+        {
+          "sentence": "They managed to solve the problem in time.",
+          "question": "¿Qué significa 'managed to + infinitivo'?",
+          "options": [
+            "Intentaron hacer algo",
+            "Lograron/consiguieron hacer algo (con esfuerzo)",
+            "Evitaron hacer algo",
+            "Planearon hacer algo"
+          ],
+          "correct": 1,
+          "feedback": "Manage to + infinitivo = lograr/conseguir hacer algo (implica que no era fácil). 'They managed to solve it' = lograron resolverlo finalmente."
+        },
+        {
+          "sentence": "I can't afford to buy a new car right now.",
+          "question": "¿Qué expresa 'afford to' aquí?",
+          "options": [
+            "Tener miedo de hacer algo",
+            "Tener los recursos (dinero, tiempo) para hacer algo",
+            "Necesitar hacer algo",
+            "Querer hacer algo"
+          ],
+          "correct": 1,
+          "feedback": "Afford to = tener suficiente dinero/tiempo para hacer algo. 'Can't afford to' = no tener los medios para."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "She decided ___ (change) her career after the pandemic.",
+          "answer": "to change",
+          "accepted": [
+            "to change"
+          ],
+          "feedback_why": "Decide siempre + to + infinitivo. Expresa una decisión consciente sobre el futuro.",
+          "contrast": "'She decided changing her career' = incorrecto. Decide nunca va con gerundio."
+        },
+        {
+          "sentence": "I forgot ___ (lock) the door. I have to go back.",
+          "answer": "to lock",
+          "accepted": [
+            "to lock"
+          ],
+          "feedback_why": "Forget + to-infinitivo = olvidar hacer algo (la acción no se hizo). 'I forgot to lock' = no lo cerré con llave.",
+          "contrast": "'I forgot locking the door.' = olvidé el recuerdo de haber cerrado la puerta (la acción sí ocurrió). Forget/remember cambian de significado con gerundio vs infinitivo."
+        },
+        {
+          "sentence": "Do you think he'll manage ___ (finish) on time?",
+          "answer": "to finish",
+          "accepted": [
+            "to finish"
+          ],
+          "feedback_why": "Manage + to + infinitivo = conseguir/lograr. Siempre infinitivo.",
+          "contrast": "'Manage finishing' = incorrecto. Manage only takes to-infinitive."
+        },
+        {
+          "sentence": "We can't afford ___ (make) any more mistakes.",
+          "answer": "to make",
+          "accepted": [
+            "to make"
+          ],
+          "feedback_why": "Afford + to + infinitivo. Aquí en sentido figurado: no nos podemos permitir el lujo de.",
+          "contrast": "Afford siempre infinitivo. 'Can't afford making mistakes' = incorrecto."
+        },
+        {
+          "sentence": "She promised ___ (call) when she arrived.",
+          "answer": "to call",
+          "accepted": [
+            "to call"
+          ],
+          "feedback_why": "Promise + to + infinitivo. Promesa sobre acción futura → infinitivo.",
+          "contrast": "'She promised calling' = incorrecto. Promise, agree, refuse, offer siempre van con to + infinitivo."
+        }
+      ]
+    },
+    {
+      "id": "prepositions_time",
+      "category": "prepositions",
+      "cefr": "A2",
+      "title": "Prepositions of Time: at, on, in",
+      "title_es": "Preposiciones de tiempo: at, on, in",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Mia",
+          "text": "The meeting is **on** Monday **at** 9 a.m.",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "Can we move it to Tuesday? I have a dentist appointment **in** the morning.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "Sure. What about **at** 10?",
+          "highlight": true
+        },
+        {
+          "speaker": "Dan",
+          "text": "Perfect. And the deadline is **in** March, right?",
+          "highlight": true
+        },
+        {
+          "speaker": "Mia",
+          "text": "Yes, **on** the 15th. We have plenty of time.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which preposition is used before a time of day (e.g., 9 a.m.)? Write an example from the dialogue.",
+          "placeholder": "e.g., at 9 a.m."
+        },
+        {
+          "q": "Which preposition goes before days (Monday, Tuesday) and dates (the 15th)?",
+          "placeholder": "e.g., on Monday"
+        },
+        {
+          "q": "Which preposition is used before months and parts of the day (morning, evening)?",
+          "placeholder": "e.g., in March"
+        }
+      ],
+      "explanation": "Use **at** for specific times: *at 9 a.m., at noon, at midnight*.\nUse **on** for days and dates: *on Monday, on the 15th, on Christmas Day*.\nUse **in** for months, years, seasons, and parts of the day: *in March, in 2024, in winter, in the morning*.\n\n> **Quick rule:** at = clock, on = calendar day, in = longer period.",
+      "structured_input": [
+        {
+          "sentence": "I was born ___ 1998.",
+          "question": "Which preposition correctly fills the blank?",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "by"
+          ],
+          "correct": 2,
+          "feedback": "Use **in** before years: *in 1998*."
+        },
+        {
+          "sentence": "The party starts ___ 8 p.m. ___ Saturday.",
+          "question": "Which pair of prepositions is correct?",
+          "options": [
+            "in / on",
+            "at / on",
+            "on / at",
+            "in / at"
+          ],
+          "correct": 1,
+          "feedback": "**at** for a clock time, **on** for a day of the week."
+        },
+        {
+          "sentence": "She usually goes to the gym ___ the afternoon.",
+          "question": "Which preposition is correct?",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "during"
+          ],
+          "correct": 2,
+          "feedback": "Use **in** for parts of the day: *in the afternoon*. Exception: at night."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "The conference is ___ Monday morning.",
+          "answer": "on",
+          "accepted": [
+            "on"
+          ],
+          "feedback_why": "Use **on** before days of the week.",
+          "contrast": "Say *on Monday* (day) but *in the morning* (part of day)."
+        },
+        {
+          "sentence": "I always drink tea ___ night.",
+          "answer": "at",
+          "accepted": [
+            "at"
+          ],
+          "feedback_why": "**at night** is a fixed expression — the only part-of-day that uses *at*, not *in*.",
+          "contrast": "Compare: *in the morning / afternoon / evening* but **at night**."
+        },
+        {
+          "sentence": "We met ___ 2019.",
+          "answer": "in",
+          "accepted": [
+            "in"
+          ],
+          "feedback_why": "Use **in** before years and months.",
+          "contrast": "*in 2019, in November* — both use **in** because they are longer time periods."
+        },
+        {
+          "sentence": "The deadline is ___ the 30th.",
+          "answer": "on",
+          "accepted": [
+            "on"
+          ],
+          "feedback_why": "Use **on** before specific dates.",
+          "contrast": "*on the 30th* (date) vs *in March* (month)."
+        },
+        {
+          "sentence": "The train leaves ___ exactly noon.",
+          "answer": "at",
+          "accepted": [
+            "at"
+          ],
+          "feedback_why": "Use **at** for exact clock times and reference points like noon and midnight.",
+          "contrast": "*at noon, at midnight, at 3 o'clock* — all use **at**."
+        }
+      ]
+    },
+    {
+      "id": "prepositions_place",
+      "category": "prepositions",
+      "cefr": "A2",
+      "title": "Prepositions of Place: at, on, in",
+      "title_es": "Preposiciones de lugar: at, on, in",
+      "prerequisites": [
+        "prepositions_time"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Leo",
+          "text": "Where are you? I'm **at** the coffee shop on Main Street.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sara",
+          "text": "I'm still **at** home. I'll be there in ten minutes.",
+          "highlight": true
+        },
+        {
+          "speaker": "Leo",
+          "text": "I'm sitting **at** the table **in** the corner, **on** the left side.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sara",
+          "text": "Got it. Is there a parking lot **in** the building?",
+          "highlight": true
+        },
+        {
+          "speaker": "Leo",
+          "text": "Yes, it's **on** the ground floor.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Leo says he is 'at the coffee shop' and 'at the table'. What kind of locations use 'at'?",
+          "placeholder": "Think: specific places, points..."
+        },
+        {
+          "q": "Which preposition appears before 'the corner' and 'the building'? What does it suggest about these spaces?",
+          "placeholder": "e.g., enclosed spaces..."
+        },
+        {
+          "q": "How is 'on' used for location in this dialogue? Write the example.",
+          "placeholder": "e.g., on the ground floor"
+        }
+      ],
+      "explanation": "Use **at** for specific points or locations: *at the door, at the station, at work, at home*.\nUse **in** for enclosed spaces or areas: *in the room, in the city, in the building, in the corner*.\nUse **on** for surfaces and floors: *on the table, on the wall, on the second floor, on the left*.\n\n> **Tip:** at = point, in = enclosed, on = surface.",
+      "structured_input": [
+        {
+          "sentence": "There is a supermarket ___ the corner.",
+          "question": "Which preposition is correct?",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "by"
+          ],
+          "correct": 1,
+          "feedback": "Use **at** for a specific point or location like a corner."
+        },
+        {
+          "sentence": "She left her keys ___ the table.",
+          "question": "Which preposition is correct?",
+          "options": [
+            "at",
+            "in",
+            "on",
+            "above"
+          ],
+          "correct": 2,
+          "feedback": "Use **on** for surfaces: the keys are resting on the table's surface."
+        },
+        {
+          "sentence": "The meeting room is ___ the third floor.",
+          "question": "Which preposition is correct?",
+          "options": [
+            "in",
+            "at",
+            "on",
+            "to"
+          ],
+          "correct": 2,
+          "feedback": "Use **on** for floors of a building: *on the third floor*."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I'll meet you ___ the entrance.",
+          "answer": "at",
+          "accepted": [
+            "at"
+          ],
+          "feedback_why": "Use **at** for a specific meeting point or location.",
+          "contrast": "*at the entrance* (a point) vs *in the building* (enclosed space)."
+        },
+        {
+          "sentence": "She lives ___ a small village.",
+          "answer": "in",
+          "accepted": [
+            "in"
+          ],
+          "feedback_why": "Use **in** for enclosed or contained areas: villages, cities, regions.",
+          "contrast": "*in a village, in Madrid, in the south* — all enclosed areas use **in**."
+        },
+        {
+          "sentence": "Your coat is ___ the chair.",
+          "answer": "on",
+          "accepted": [
+            "on"
+          ],
+          "feedback_why": "The coat rests on the surface of the chair — use **on**.",
+          "contrast": "*on the chair* (surface) vs *in the closet* (enclosed)."
+        },
+        {
+          "sentence": "He works ___ a hospital.",
+          "answer": "in",
+          "accepted": [
+            "in"
+          ],
+          "feedback_why": "Use **in** for buildings and institutions when referring to the space inside.",
+          "contrast": "*in the hospital* (inside) vs *at the hospital* (at that location/address)."
+        },
+        {
+          "sentence": "There is a photo ___ the wall.",
+          "answer": "on",
+          "accepted": [
+            "on"
+          ],
+          "feedback_why": "The photo is attached to the surface of the wall — use **on**.",
+          "contrast": "*on the wall* (surface) vs *in the room* (enclosed area)."
+        }
+      ]
+    },
+    {
+      "id": "prepositions_after_verbs",
+      "category": "prepositions",
+      "cefr": "B1",
+      "title": "Verb + Preposition Collocations",
+      "title_es": "Colocaciones: verbo + preposicion",
+      "prerequisites": [
+        "prepositions_place"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Ana",
+          "text": "I've been thinking **about** changing careers.",
+          "highlight": true
+        },
+        {
+          "speaker": "Tom",
+          "text": "Really? What are you interested **in**?",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "I've always dreamed **of** working in design. But I'm worried **about** starting over.",
+          "highlight": true
+        },
+        {
+          "speaker": "Tom",
+          "text": "I believe **in** you. You should apply **for** that design course.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "You're right. I'll stop waiting **for** the perfect moment and just do it.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Find three different verb + preposition combinations in the dialogue. Write them here.",
+          "placeholder": "e.g., think about, ..."
+        },
+        {
+          "q": "The adjective 'interested' uses 'in'. Can you think of two more adjectives or verbs that also take 'in'?",
+          "placeholder": "e.g., interested in, believe in..."
+        },
+        {
+          "q": "Both 'dream of' and 'worry about' are followed by -ing. What pattern do you notice about the structure verb + preposition + verb?",
+          "placeholder": "The second verb is in..."
+        }
+      ],
+      "explanation": "Many verbs and adjectives take a fixed preposition — you need to learn these as collocations:\n\n**Common verb + preposition pairs:**\n- think **about** / dream **of** / worry **about**\n- apply **for** / wait **for** / ask **for**\n- believe **in** / succeed **in** / specialise **in**\n- depend **on** / rely **on**\n- listen **to** / belong **to** / apologise **to** someone\n\n> There is no single grammatical rule — these must be memorised as fixed expressions. After a preposition, a verb takes the **-ing** form: *think about going, dream of working*.",
+      "structured_input": [
+        {
+          "sentence": "She is really good ___ public speaking.",
+          "question": "Which preposition collocates with 'good'?",
+          "options": [
+            "in",
+            "at",
+            "for",
+            "with"
+          ],
+          "correct": 1,
+          "feedback": "**good at** something is a fixed collocation. *She is good at tennis.*"
+        },
+        {
+          "sentence": "They decided to apply ___ the job.",
+          "question": "Which preposition correctly follows 'apply'?",
+          "options": [
+            "to",
+            "at",
+            "for",
+            "about"
+          ],
+          "correct": 2,
+          "feedback": "**apply for** a job/grant/position. *She applied for the scholarship.*"
+        },
+        {
+          "sentence": "I really believe ___ second chances.",
+          "question": "Which preposition follows 'believe' when talking about principles or ideas?",
+          "options": [
+            "about",
+            "in",
+            "on",
+            "for"
+          ],
+          "correct": 1,
+          "feedback": "**believe in** something = to have faith in it. *I believe in hard work.*"
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "She's been thinking ___ moving abroad.",
+          "answer": "about",
+          "accepted": [
+            "about"
+          ],
+          "feedback_why": "**think about** something is the standard collocation for considering an idea.",
+          "contrast": "You can also *think of* something, but *think about* is more common for ongoing consideration."
+        },
+        {
+          "sentence": "He apologised ___ being late.",
+          "answer": "for",
+          "accepted": [
+            "for"
+          ],
+          "feedback_why": "**apologise for** doing something. The preposition 'for' introduces the reason.",
+          "contrast": "*apologise for* an action vs *apologise to* a person: 'He apologised to his boss for being late.'"
+        },
+        {
+          "sentence": "I'm not very good ___ cooking.",
+          "answer": "at",
+          "accepted": [
+            "at"
+          ],
+          "feedback_why": "**good at** is a fixed collocation. It cannot be replaced by another preposition.",
+          "contrast": "*good at* (skill) vs *good for* (beneficial): 'Exercise is good for you.'"
+        },
+        {
+          "sentence": "Can I rely ___ you to be there on time?",
+          "answer": "on",
+          "accepted": [
+            "on"
+          ],
+          "feedback_why": "**rely on** someone/something = to depend on them. Fixed collocation.",
+          "contrast": "*rely on* vs *depend on* — both mean the same and take **on**."
+        },
+        {
+          "sentence": "They're waiting ___ the results.",
+          "answer": "for",
+          "accepted": [
+            "for"
+          ],
+          "feedback_why": "**wait for** something/someone is the standard collocation.",
+          "contrast": "Compare: *wait for* (expecting) vs *wait on* (serve): 'The waiter waited on the customers.'"
+        }
+      ]
+    },
+    {
+      "id": "phrasal_common",
+      "category": "phrasal",
+      "cefr": "B1",
+      "title": "Common Phrasal Verbs",
+      "title_es": "Verbos frasales comunes",
+      "prerequisites": [],
+      "context_dialogue": [
+        {
+          "speaker": "Jake",
+          "text": "Can you **turn down** the music? I'm trying to work.",
+          "highlight": true
+        },
+        {
+          "speaker": "Amy",
+          "text": "Sure! I didn't realise it was so loud. I'll **turn it down** right now.",
+          "highlight": true
+        },
+        {
+          "speaker": "Jake",
+          "text": "Thanks. Also, did you **find out** about the Wi-Fi password?",
+          "highlight": true
+        },
+        {
+          "speaker": "Amy",
+          "text": "Not yet. I'll **look it up** online. Or we can just ask the receptionist.",
+          "highlight": true
+        },
+        {
+          "speaker": "Jake",
+          "text": "Good idea. I have to **log in** to the work server before noon.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What is the difference between 'turn down the music' and 'turn it down'? What changes when a pronoun is used?",
+          "placeholder": "The object goes..."
+        },
+        {
+          "q": "'Find out' and 'look up' both mean to discover information. Can you think of a one-word verb with the same meaning?",
+          "placeholder": "e.g., discover, research..."
+        },
+        {
+          "q": "Write two phrasal verbs from the dialogue that use the particle 'down'. What does 'down' add to the meaning?",
+          "placeholder": "e.g., turn down = reduce..."
+        }
+      ],
+      "explanation": "A **phrasal verb** is a verb + particle (preposition or adverb) that creates a new meaning:\n- **turn down** = reduce / refuse\n- **find out** = discover\n- **look up** = search for information\n- **log in** = connect to a system\n\n**Word order with object pronouns:**\nWith separable phrasal verbs, pronouns go *between* the verb and particle:\n- Correct: *Turn it down.* / *Turn down the music.*\n- Wrong: *Turn down it.*\n\n> If the object is a pronoun (it, them, him), it **must** go in the middle.",
+      "structured_input": [
+        {
+          "sentence": "She ___ the offer because the salary was too low.",
+          "question": "Which phrasal verb means 'refused'?",
+          "options": [
+            "turned down",
+            "turned up",
+            "looked up",
+            "gave up"
+          ],
+          "correct": 0,
+          "feedback": "**Turn down** an offer = refuse it. *She turned down the job offer.*"
+        },
+        {
+          "sentence": "I need to ___ the meeting time — can you check the email?",
+          "question": "Which phrasal verb means 'discover'?",
+          "options": [
+            "look for",
+            "find out",
+            "give up",
+            "bring up"
+          ],
+          "correct": 1,
+          "feedback": "**Find out** = discover information. *Find out the time / find out what happened.*"
+        },
+        {
+          "sentence": "I don't know what this word means. I'll ___ in the dictionary.",
+          "question": "Which option is grammatically correct (pronoun placement)?",
+          "options": [
+            "look up it",
+            "look it up",
+            "it look up",
+            "up look it"
+          ],
+          "correct": 1,
+          "feedback": "With pronouns, the object goes between verb and particle: **look it up**, not *look up it*."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "He ___ smoking after his doctor's advice.",
+          "answer": "gave up",
+          "accepted": [
+            "gave up"
+          ],
+          "feedback_why": "**Give up** = stop doing something (a habit or activity).",
+          "contrast": "*give up* (stop a habit) vs *turn down* (refuse an offer)."
+        },
+        {
+          "sentence": "Can you ___ the volume? I can barely hear it.",
+          "answer": "turn up",
+          "accepted": [
+            "turn up"
+          ],
+          "feedback_why": "**Turn up** = increase the volume or level. Opposite of *turn down*.",
+          "contrast": "*turn up* (increase) vs *turn down* (reduce or refuse)."
+        },
+        {
+          "sentence": "She ___ a great cafe near the office.",
+          "answer": "came across",
+          "accepted": [
+            "came across",
+            "found"
+          ],
+          "feedback_why": "**Come across** = find or meet by chance. *I came across a great article.*",
+          "contrast": "*come across* (by chance) vs *look for* (intentional search)."
+        },
+        {
+          "sentence": "Don't forget to ___ before you leave the computer.",
+          "answer": "log out",
+          "accepted": [
+            "log out",
+            "log off"
+          ],
+          "feedback_why": "**Log out / log off** = end a computer session. Opposite of *log in*.",
+          "contrast": "*log in* (start session) vs *log out* (end session)."
+        },
+        {
+          "sentence": "The meeting was ___ because the manager was ill.",
+          "answer": "put off",
+          "accepted": [
+            "put off"
+          ],
+          "feedback_why": "**Put off** = postpone or delay something.",
+          "contrast": "*put off* (delay) vs *call off* (cancel completely)."
+        }
+      ]
+    },
+    {
+      "id": "phrasal_separable",
+      "category": "phrasal",
+      "cefr": "B1",
+      "title": "Separable vs Inseparable Phrasal Verbs",
+      "title_es": "Verbos frasales separables e inseparables",
+      "prerequisites": [
+        "phrasal_common"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Lena",
+          "text": "I need to **fill in** this form. Can you help me?",
+          "highlight": true
+        },
+        {
+          "speaker": "Mark",
+          "text": "Sure. Just **fill it in** and I'll check it afterward.",
+          "highlight": true
+        },
+        {
+          "speaker": "Lena",
+          "text": "Thanks. Also, we need to **deal with** the complaint from the client.",
+          "highlight": true
+        },
+        {
+          "speaker": "Mark",
+          "text": "I'll **look into** it today. We can't just **put it off**.",
+          "highlight": true
+        },
+        {
+          "speaker": "Lena",
+          "text": "Agreed. Let's **go over** the report together at three.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Compare 'fill in this form' and 'fill it in'. What rule applies when a pronoun replaces the noun?",
+          "placeholder": "The pronoun goes..."
+        },
+        {
+          "q": "The dialogue says 'deal with the complaint' and 'look into it'. Can we say 'deal the complaint with' or 'look it into'? Why not?",
+          "placeholder": "Because these verbs are..."
+        },
+        {
+          "q": "Which phrasal verbs in the dialogue do you think are inseparable (cannot be split)? List them.",
+          "placeholder": "e.g., look into, ..."
+        }
+      ],
+      "explanation": "**Separable** phrasal verbs can have their object in the middle or at the end:\n- *fill in the form* / *fill the form in* / *fill it in* — all correct\n- Wrong: *fill in it* — pronoun must go in the middle\n\n**Inseparable** phrasal verbs always keep the verb and particle together:\n- *look into the problem* — correct\n- *deal with the complaint* — correct\n- Wrong: *look the problem into* / *deal the complaint with*\n\n**Common inseparable:** *look into, deal with, come across, go over, run into, look after*\n\n> **Memory tip:** If the particle is a preposition (into, with, after), the verb is almost always inseparable.",
+      "structured_input": [
+        {
+          "sentence": "She _____ the children while their parents were away.",
+          "question": "Which phrasal verb means 'took care of'?",
+          "options": [
+            "looked after",
+            "looked after them",
+            "looked them after",
+            "looked into"
+          ],
+          "correct": 0,
+          "feedback": "**Look after** = take care of. It is inseparable: *look after the children*, never *look the children after*."
+        },
+        {
+          "sentence": "I ran ___ my old teacher at the supermarket.",
+          "question": "Which particle completes this inseparable phrasal verb?",
+          "options": [
+            "up",
+            "into",
+            "across",
+            "over"
+          ],
+          "correct": 1,
+          "feedback": "**Run into** someone = meet them unexpectedly. It is inseparable."
+        },
+        {
+          "sentence": "Can you _____ this document before the meeting?",
+          "question": "Which option correctly uses a separable phrasal verb meaning 'review'?",
+          "options": [
+            "go over it",
+            "go it over",
+            "over go it",
+            "it go over"
+          ],
+          "correct": 0,
+          "feedback": "**Go over** = review. With pronouns: *go over it* is the natural form."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "She ___ her younger brother every day after school.",
+          "answer": "looked after",
+          "accepted": [
+            "looked after"
+          ],
+          "feedback_why": "**Look after** = care for someone. This is an inseparable phrasal verb.",
+          "contrast": "*look after* (care for) vs *look into* (investigate)."
+        },
+        {
+          "sentence": "Please ___ the contract carefully before you sign.",
+          "answer": "go over",
+          "accepted": [
+            "go over"
+          ],
+          "feedback_why": "**Go over** = review or check something carefully.",
+          "contrast": "*go over* (review) vs *go through* (examine step by step)."
+        },
+        {
+          "sentence": "The manager ___ the problem immediately.",
+          "answer": "looked into",
+          "accepted": [
+            "looked into"
+          ],
+          "feedback_why": "**Look into** = investigate or examine. It is inseparable.",
+          "contrast": "*look into* (investigate) vs *look after* (care for)."
+        },
+        {
+          "sentence": "He ___ an old friend at the airport.",
+          "answer": "ran into",
+          "accepted": [
+            "ran into"
+          ],
+          "feedback_why": "**Run into** = meet someone by chance. It is inseparable.",
+          "contrast": "*run into* (meet by chance) vs *come across* (find by chance)."
+        },
+        {
+          "sentence": "I need to ___ this application form.",
+          "answer": "fill in",
+          "accepted": [
+            "fill in",
+            "fill out"
+          ],
+          "feedback_why": "**Fill in / fill out** = complete a form. Both are separable: *fill it in* or *fill in the form*.",
+          "contrast": "*fill in* and *fill out* are interchangeable. With pronouns: *fill it in*, not *fill in it*."
+        }
+      ]
+    },
+    {
+      "id": "phrasal_idiomatic",
+      "category": "phrasal",
+      "cefr": "B2",
+      "title": "Idiomatic Phrasal Verbs",
+      "title_es": "Verbos frasales idiomaticos",
+      "prerequisites": [
+        "phrasal_separable"
+      ],
+      "context_dialogue": [
+        {
+          "speaker": "Eva",
+          "text": "I tried to **bring up** the budget issue in the meeting, but no one listened.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sam",
+          "text": "That topic always **comes up** at the worst times.",
+          "highlight": true
+        },
+        {
+          "speaker": "Eva",
+          "text": "I know. I didn't want to **fall out** with my boss over it, so I just let it go.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sam",
+          "text": "Smart. Sometimes you have to **put up with** things you don't like.",
+          "highlight": true
+        },
+        {
+          "speaker": "Eva",
+          "text": "True. But if it happens again, I'm going to **stand up for** myself.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "'Bring up' means to introduce a topic. Can you think of another meaning of 'bring up'?",
+          "placeholder": "e.g., raise a child..."
+        },
+        {
+          "q": "'Put up with' has three parts: put + up + with. What does the whole phrase mean? Can you split it?",
+          "placeholder": "It means... and it is inseparable..."
+        },
+        {
+          "q": "What is the difference in meaning between 'let it go' (line 3) and 'stand up for' (line 5)?",
+          "placeholder": "Let it go = ..., stand up for = ..."
+        }
+      ],
+      "explanation": "Some phrasal verbs are **idiomatic** — their meaning cannot be guessed from the individual words:\n\n- **bring up** = introduce a topic / raise a child\n- **come up** = appear / be mentioned\n- **fall out** (with sb) = have an argument and stop being friendly\n- **let go** = release / stop worrying about something\n- **put up with** = tolerate something unpleasant\n- **stand up for** = defend or support yourself or others\n\n> **Three-word phrasal verbs** like *put up with* and *stand up for* are always inseparable.",
+      "structured_input": [
+        {
+          "sentence": "She's incredibly patient — she can ___ a lot of stress.",
+          "question": "Which phrasal verb means 'tolerate'?",
+          "options": [
+            "put up with",
+            "stand up for",
+            "fall out with",
+            "come up with"
+          ],
+          "correct": 0,
+          "feedback": "**Put up with** = tolerate. It's a three-part inseparable phrasal verb."
+        },
+        {
+          "sentence": "He always ___ his colleagues when they're treated unfairly.",
+          "question": "Which phrasal verb means 'defends'?",
+          "options": [
+            "stands up for",
+            "puts up with",
+            "brings up",
+            "lets go"
+          ],
+          "correct": 0,
+          "feedback": "**Stand up for** = defend or support someone or a principle."
+        },
+        {
+          "sentence": "An interesting problem ___ during the meeting.",
+          "question": "Which phrasal verb means 'appeared or was mentioned'?",
+          "options": [
+            "came up",
+            "brought up",
+            "fell out",
+            "turned up"
+          ],
+          "correct": 0,
+          "feedback": "**Come up** = appear or be mentioned (of a topic, problem, or issue)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I don't want to ___ with my flatmate over something so trivial.",
+          "answer": "fall out",
+          "accepted": [
+            "fall out"
+          ],
+          "feedback_why": "**Fall out (with someone)** = have an argument that damages the relationship.",
+          "contrast": "*fall out with* (argue and drift apart) vs *fall out* (physically fall) — context makes it clear."
+        },
+        {
+          "sentence": "Don't worry about what happened — just ___ and move on.",
+          "answer": "let it go",
+          "accepted": [
+            "let it go",
+            "let go"
+          ],
+          "feedback_why": "**Let it go** = stop holding onto a worry, grudge, or mistake.",
+          "contrast": "*let it go* (stop worrying) vs *let go of* (physically release something)."
+        },
+        {
+          "sentence": "She ___ her three children alone after her husband left.",
+          "answer": "brought up",
+          "accepted": [
+            "brought up"
+          ],
+          "feedback_why": "**Bring up** children = raise them. This is a separable, idiomatic use.",
+          "contrast": "*bring up* a child (raise) vs *bring up* a topic (introduce) — same verb, two meanings."
+        },
+        {
+          "sentence": "You should always ___ what you believe in.",
+          "answer": "stand up for",
+          "accepted": [
+            "stand up for"
+          ],
+          "feedback_why": "**Stand up for** something or someone = defend it or them. Always three words.",
+          "contrast": "*stand up for* (defend) vs *stand up to* (resist/confront): 'He stood up to his bullies.'"
+        },
+        {
+          "sentence": "I cannot ___ the noise from the construction next door any longer.",
+          "answer": "put up with",
+          "accepted": [
+            "put up with"
+          ],
+          "feedback_why": "**Put up with** = tolerate something unpleasant. Always three words, always inseparable.",
+          "contrast": "*put up with* (tolerate) vs *put up* (erect/hang): 'We put up a shelf.'"
+        }
+      ]
+    }
+  ]
+}
