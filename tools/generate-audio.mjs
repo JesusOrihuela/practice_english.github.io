@@ -1,174 +1,200 @@
 /**
- * generate-audio.mjs — Audio sync tool for PracticeEnglish
+ * generate-audio.mjs — PracticeEnglish Audio Generator
+ * ======================================================
+ * Checks ALL audio sources and generates any missing WAV files using
+ * Kokoro-82M TTS. Existing files are always skipped — safe to re-run
+ * at any time, including after adding or editing phrases.
  *
- * Checks which WAV files are missing for every topic × voice,
- * reports what needs to be generated, then generates only the missing ones.
- * Safe to re-run at any time — existing files are never overwritten.
+ * SOURCES covered:
+ *   Phrase topics  → shared/audio/{topic}/{i}_{voice}.wav
+ *   Vocab general  → shared/audio/vocab/{i}_{voice}.wav
+ *   Vocab topics   → shared/audio/vocab_{topic}/{i}_{voice}.wav
  *
- * Usage (from repo root):
- *   node tools/generate-audio.mjs           → check + generate missing
- *   node tools/generate-audio.mjs --check   → check only, no generation
+ * USAGE (run from the tools/ directory):
+ *   node generate-audio.mjs                  # check + generate everything
+ *   node generate-audio.mjs --check          # dry-run: only report missing files
+ *   node generate-audio.mjs --topic greetings          # single phrase topic
+ *   node generate-audio.mjs --topic vocab              # general vocab only
+ *   node generate-audio.mjs --topic vocab_greetings    # topic vocab only
+ *
+ * VOICES generated (edit VOICES below to change):
+ *   af_heart · af_bella · bf_emma · am_michael
+ *
+ * REQUIREMENTS:
+ *   - Node.js ≥ 18
+ *   - kokoro-js installed (npm install in tools/)
+ *   - Run from the tools/ directory so relative paths resolve correctly
  */
 
-import { KokoroTTS }  from 'kokoro-js';
-import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'fs';
+import { KokoroTTS } from 'kokoro-js';
+import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'fs';
 import { resolve, dirname } from 'path';
-import { fileURLToPath }    from 'url';
+import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT      = resolve(__dirname, '..');
-const CHECK_ONLY = process.argv.includes('--check');
 
-// ── Configuration ────────────────────────────────────────────────────────────
+// ── Configuration ──────────────────────────────────────────────────────────
 
-const TOPICS = [
+const VOICES = ['af_heart', 'af_bella', 'bf_emma', 'am_michael'];
+const MODEL  = 'onnx-community/Kokoro-82M-ONNX';
+const DTYPE  = 'fp32';   // 'q8' is faster but lower quality
+const SPEED  = 0.95;
+
+/** All phrase topic IDs (each maps to shared/json/{id}.json) */
+const PHRASE_TOPICS = [
   'greetings', 'traveling', 'technology', 'restaurant',
   'kitchen', 'supermarket', 'entertainment', 'accountability', 'gym',
 ];
 
-const VOICES = [
-  { id: 'af_heart',   speed: 0.95 },
-  { id: 'af_bella',   speed: 0.95 },
-  { id: 'af_nicole',  speed: 0.95 },
-  { id: 'bf_emma',    speed: 0.95 },
-  { id: 'am_michael', speed: 0.95 },
+/** All vocabulary topic IDs (each maps to shared/json/words-{id}.json) */
+const VOCAB_TOPICS = [
+  'accountability', 'entertainment', 'greetings', 'gym',
+  'kitchen', 'restaurant', 'supermarket', 'technology', 'traveling',
 ];
 
-const AUDIO_DIR = resolve(ROOT, 'speaking-exercises', 'audio');
-const JSON_DIR  = resolve(ROOT, 'speaking-exercises', 'json');
+// ── Parse CLI arguments ────────────────────────────────────────────────────
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+const args      = process.argv.slice(2);
+const checkOnly = args.includes('--check');
+const topicArg  = args.includes('--topic') ? args[args.indexOf('--topic') + 1] : null;
 
-const clr = {
-  reset:  '\x1b[0m',
-  green:  '\x1b[32m',
-  yellow: '\x1b[33m',
-  red:    '\x1b[31m',
-  cyan:   '\x1b[36m',
-  bold:   '\x1b[1m',
-  dim:    '\x1b[2m',
-};
-const c = (col, s) => col + s + clr.reset;
+// ── Build source list ──────────────────────────────────────────────────────
 
-function loadPhrases(topic) {
-  const path = resolve(JSON_DIR, topic + '.json');
-  if (!existsSync(path)) return [];
-  return JSON.parse(readFileSync(path, 'utf8')).phrases || [];
+/**
+ * Each source has:
+ *   id       — unique key used for --topic filter
+ *   jsonPath — path to the JSON file
+ *   outDir   — directory where WAV files are written
+ *   getText  — function(item) → string to synthesize
+ *   getItems — function(data) → array of items
+ */
+const ALL_SOURCES = [
+  // Phrase topics
+  ...PHRASE_TOPICS.map(id => ({
+    id,
+    jsonPath: resolve(__dirname, `../shared/json/${id}.json`),
+    outDir:   resolve(__dirname, `../shared/audio/${id}`),
+    getItems: data => data.phrases || [],
+    getText:  item => item,
+  })),
+
+  // General vocabulary
+  {
+    id:       'vocab',
+    jsonPath: resolve(__dirname, '../shared/json/words.json'),
+    outDir:   resolve(__dirname, '../shared/audio/vocab'),
+    getItems: data => data.words || [],
+    getText:  item => item.word,
+  },
+
+  // Topic-specific vocabulary
+  ...VOCAB_TOPICS.map(id => ({
+    id:       `vocab_${id}`,
+    jsonPath: resolve(__dirname, `../shared/json/words-${id}.json`),
+    outDir:   resolve(__dirname, `../shared/audio/vocab_${id}`),
+    getItems: data => data.words || [],
+    getText:  item => item.word,
+  })),
+];
+
+// Apply --topic filter
+const sources = topicArg
+  ? ALL_SOURCES.filter(s => s.id === topicArg)
+  : ALL_SOURCES;
+
+if (sources.length === 0) {
+  console.error(`Unknown topic: "${topicArg}". Valid IDs:\n  ${ALL_SOURCES.map(s => s.id).join('\n  ')}`);
+  process.exit(1);
 }
 
-function pcmToWav(float32, sampleRate) {
-  const samples = float32.length;
-  const buf = Buffer.alloc(44 + samples * 2);
-  buf.write('RIFF', 0, 'ascii'); buf.writeUInt32LE(36 + samples * 2, 4);
-  buf.write('WAVE', 8, 'ascii'); buf.write('fmt ', 12, 'ascii');
-  buf.writeUInt32LE(16, 16); buf.writeUInt16LE(1, 20); buf.writeUInt16LE(1, 22);
-  buf.writeUInt32LE(sampleRate, 24); buf.writeUInt32LE(sampleRate * 2, 28);
-  buf.writeUInt16LE(2, 32); buf.writeUInt16LE(16, 34);
-  buf.write('data', 36, 'ascii'); buf.writeUInt32LE(samples * 2, 40);
-  for (let i = 0; i < samples; i++)
-    buf.writeInt16LE(Math.max(-32768, Math.min(32767, float32[i] * 32767 | 0)), 44 + i * 2);
-  return buf;
-}
+// ── Collect missing tasks ──────────────────────────────────────────────────
 
-// ── Step 1: Check ─────────────────────────────────────────────────────────────
+const tasks = [];
+let totalExpected = 0;
 
-console.log('\n' + c(clr.bold, '🔊  PracticeEnglish — Audio Sync'));
-console.log(c(clr.dim, '─'.repeat(52)));
+for (const src of sources) {
+  if (!existsSync(src.jsonPath)) {
+    console.warn(`  [skip] JSON not found: ${src.jsonPath}`);
+    continue;
+  }
 
-// Collect missing files grouped by topic
-const missing = {};   // topic → [{ index, voiceId, speed, phrase }]
-let totalPhrases = 0, totalExpected = 0, totalMissing = 0;
+  const data  = JSON.parse(readFileSync(src.jsonPath, 'utf8'));
+  const items = src.getItems(data);
 
-for (const topic of TOPICS) {
-  const phrases = loadPhrases(topic);
-  totalPhrases  += phrases.length;
-  totalExpected += phrases.length * VOICES.length;
+  mkdirSync(src.outDir, { recursive: true });
 
-  for (let i = 0; i < phrases.length; i++) {
-    for (const { id: voiceId, speed } of VOICES) {
-      const file = resolve(AUDIO_DIR, topic, `${i}_${voiceId}.wav`);
-      if (!existsSync(file)) {
-        if (!missing[topic]) missing[topic] = [];
-        missing[topic].push({ index: i, voiceId, speed, phrase: phrases[i] });
-        totalMissing++;
+  for (let i = 0; i < items.length; i++) {
+    for (const voice of VOICES) {
+      totalExpected++;
+      const outPath = resolve(src.outDir, `${i}_${voice}.wav`);
+      if (!existsSync(outPath)) {
+        tasks.push({ src: src.id, i, voice, text: src.getText(items[i]), outPath });
       }
     }
   }
 }
 
-const totalPresent = totalExpected - totalMissing;
+// ── Report ─────────────────────────────────────────────────────────────────
 
-// Print report
-console.log(`\nTopics  : ${TOPICS.length}   Voices: ${VOICES.map(v => v.id).join(', ')}`);
-console.log(`Expected: ${totalExpected} files  (${totalPhrases} phrases × ${VOICES.length} voices)\n`);
+const existing = totalExpected - tasks.length;
+console.log(`\nAudio check complete`);
+console.log(`  Expected : ${totalExpected} files (${sources.length} source(s) × ${VOICES.length} voices)`);
+console.log(`  Existing : ${existing}`);
+console.log(`  Missing  : ${tasks.length}`);
 
-if (totalMissing === 0) {
-  console.log(c(clr.green, `✓ All ${totalExpected} audio files present — nothing to generate.\n`));
+if (tasks.length === 0) {
+  console.log('\nAll audio files are up to date.');
   process.exit(0);
 }
 
-// Per-topic breakdown
-for (const topic of TOPICS) {
-  const phraseCount   = loadPhrases(topic).length;
-  const topicExpected = phraseCount * VOICES.length;
-  const topicMissing  = (missing[topic] || []).length;
-  const topicPresent  = topicExpected - topicMissing;
-  const bar = topicMissing === 0
-    ? c(clr.green, '✓')
-    : c(clr.yellow, `✗ ${topicMissing} missing`);
-  console.log(`  ${topic.padEnd(16)} ${String(topicPresent).padStart(4)}/${topicExpected}  ${bar}`);
-}
-
-console.log(c(clr.dim, '\n' + '─'.repeat(52)));
-console.log(`  Present : ${c(clr.green,  String(totalPresent))} files`);
-console.log(`  Missing : ${c(clr.yellow, String(totalMissing))} files`);
-console.log(c(clr.dim, '─'.repeat(52)));
-
-if (CHECK_ONLY) {
-  console.log(c(clr.cyan, '\nRun without --check to generate missing files.\n'));
+if (checkOnly) {
+  console.log('\nMissing files:');
+  for (const t of tasks) {
+    console.log(`  ${t.src}/${t.i}_${t.voice}.wav  — "${t.text.slice(0, 60)}"`);
+  }
+  console.log('\n(dry-run — pass without --check to generate)');
   process.exit(0);
 }
 
-// ── Step 2: Generate missing ───────────────────────────────────────────────
+// ── Generate ───────────────────────────────────────────────────────────────
 
-console.log(c(clr.cyan, `\nLoading Kokoro-82M (q8)…`));
+console.log(`\nLoading Kokoro-82M (dtype=${DTYPE})…`);
+const tts = await KokoroTTS.from_pretrained(MODEL, { dtype: DTYPE });
+console.log('Model ready.\n');
 
-const tts = await KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-ONNX', {
-  dtype: 'q8', device: 'cpu',
-});
-console.log(c(clr.green, 'Model ready ✓') + '\n');
+/** Encode Float32 PCM → 16-bit WAV Buffer */
+function encodeWav(samples, sampleRate) {
+  const numSamples = samples.length;
+  const byteCount  = numSamples * 2;
+  const buf        = Buffer.alloc(44 + byteCount);
+  buf.write('RIFF', 0); buf.writeUInt32LE(36 + byteCount, 4); buf.write('WAVE', 8);
+  buf.write('fmt ', 12); buf.writeUInt32LE(16, 16); buf.writeUInt16LE(1, 20); buf.writeUInt16LE(1, 22);
+  buf.writeUInt32LE(sampleRate, 24); buf.writeUInt32LE(sampleRate * 2, 28);
+  buf.writeUInt16LE(2, 32); buf.writeUInt16LE(16, 34);
+  buf.write('data', 36); buf.writeUInt32LE(byteCount, 40);
+  for (let i = 0; i < numSamples; i++) {
+    const s = Math.max(-1, Math.min(1, samples[i]));
+    buf.writeInt16LE(Math.round(s * 32767), 44 + i * 2);
+  }
+  return buf;
+}
 
-let done = 0, generated = 0, errors = 0;
-const startTime = Date.now();
+let generated = 0;
+let errors    = 0;
 
-for (const topic of Object.keys(missing)) {
-  mkdirSync(resolve(AUDIO_DIR, topic), { recursive: true });
-  console.log(c(clr.bold, `── ${topic.toUpperCase()} (${missing[topic].length} missing)`));
-
-  for (const { index, voiceId, speed, phrase } of missing[topic]) {
-    const fileName = `${index}_${voiceId}.wav`;
-    const filePath = resolve(AUDIO_DIR, topic, fileName);
-    done++;
-    const pct = (done / totalMissing * 100).toFixed(0).padStart(3);
-
-    try {
-      process.stdout.write(`  [${pct}%] ${fileName}  — generating…`);
-      const audio = await tts.generate(phrase, { voice: voiceId, speed });
-      const wav   = pcmToWav(audio.audio, audio.sampling_rate);
-      writeFileSync(filePath, wav);
-      process.stdout.write(`\r  [${pct}%] ${fileName}  — ${c(clr.green, `✓ ${wav.length >> 10} KB`)}   \n`);
-      generated++;
-    } catch (e) {
-      process.stdout.write(`\r  [${pct}%] ${fileName}  — ${c(clr.red, '✗ ' + e.message)}\n`);
-      errors++;
-    }
+for (const { src, i, voice, text, outPath } of tasks) {
+  const label = `[${generated + errors + 1}/${tasks.length}] ${src}/${i}_${voice}.wav`;
+  process.stdout.write(`${label} — "${text.slice(0, 50)}"… `);
+  try {
+    const result = await tts.generate(text, { voice, speed: SPEED });
+    writeFileSync(outPath, encodeWav(result.audio, result.sampling_rate));
+    console.log('✓');
+    generated++;
+  } catch (e) {
+    console.log(`✗  ${e.message}`);
+    errors++;
   }
 }
 
-const elapsed = ((Date.now() - startTime) / 1000).toFixed(0);
-console.log('\n' + c(clr.dim, '─'.repeat(52)));
-if (errors === 0) {
-  console.log(c(clr.green, `✓ Done in ${elapsed}s — ${generated} files generated.\n`));
-} else {
-  console.log(c(clr.yellow, `Done in ${elapsed}s — ${generated} generated, ${errors} errors.\n`));
-}
+console.log(`\nDone — ${generated} generated, ${errors} errors, ${existing} already existed.`);
+if (errors > 0) process.exit(1);

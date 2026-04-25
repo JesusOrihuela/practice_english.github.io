@@ -3,17 +3,10 @@
    Research basis: CALP Syntactic Reconstruction (Cummins 2000)
    ============================================================ */
 
-const TOPICS = [
-  { id: 'greetings',      label: 'Greetings',      emoji: '👋' },
-  { id: 'traveling',      label: 'Traveling',       emoji: '✈️' },
-  { id: 'technology',     label: 'Technology',      emoji: '💻' },
-  { id: 'restaurant',     label: 'Restaurant',      emoji: '🍽️' },
-  { id: 'kitchen',        label: 'Kitchen',         emoji: '🍳' },
-  { id: 'supermarket',    label: 'Supermarket',     emoji: '🛒' },
-  { id: 'entertainment',  label: 'Entertainment',   emoji: '🎬' },
-  { id: 'accountability', label: 'Accountability',  emoji: '🎯' },
-  { id: 'gym',            label: 'Gym',             emoji: '💪' },
-];
+
+const LAST_KEY = 'pe_last_scramble';
+let _openPhraseBrowser = null;
+
 
 let currentTopic = '';
 let phrases = [], translations = [], cardIds = [];
@@ -21,73 +14,98 @@ let currentIndex = 0;
 let shuffledTiles = [];   // [{ tileId, word }]
 let builtSentence = [];   // array of tileIds in order
 let answered = false;
+let _lastCorrect = false;
+let contractionMap = {};
 
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', () => {
-  buildTopicGrid();
+  AppData.get('word-equivalents')
+    .then(data => {
+      const { flatMap } = AppText.buildEquivalenceMaps(data.groups || []);
+      contractionMap = flatMap;
+    })
+    .catch(() => {}); // non-critical — comparison still works without it
 
-  document.getElementById('back-btn').addEventListener('click', showTopicPicker);
+  AppTopicGrid.build({ badge: 'Scramble', ariaLabelSuffix: 'word scramble', srsPrefix: 'scramble_', onSelect: startTopic });
+
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (_openPhraseBrowser) {
+      document.getElementById('exercise-area').classList.add('hidden');
+      _openPhraseBrowser();
+    } else {
+      showTopicPicker();
+    }
+  });
   document.getElementById('clear-btn').addEventListener('click', clearSentence);
   document.getElementById('check-btn').addEventListener('click', checkAnswer);
 
-  document.getElementById('rate-hard').addEventListener('click', () => rateAndNext(1));
-  document.getElementById('rate-ok').addEventListener('click',   () => rateAndNext(3));
-  document.getElementById('rate-easy').addEventListener('click', () => rateAndNext(5));
+  // Delegated tile listeners — set up once, survive every renderTiles() call
+  document.getElementById('word-bank').addEventListener('click', e => {
+    const btn = e.target.closest('.word-tile');
+    if (btn && !answered) addTile(btn.dataset.tileId);
+  });
+  document.getElementById('construction-area').addEventListener('click', e => {
+    const btn = e.target.closest('.word-tile');
+    if (btn && !answered) removeTile(btn.dataset.tileId);
+  });
+
+  document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
+  document.getElementById('try-again-btn').addEventListener('click', () => {
+    showPhrase(currentIndex);
+  });
+
 });
 
-// ---- Topic Grid ----
-
-function buildTopicGrid() {
-  const grid = document.getElementById('topic-grid');
-  grid.className = 'img-topic-grid';
-  TOPICS.forEach((topic, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'img-topic-card';
-    btn.dataset.theme = topic.id;
-    btn.style.animationDelay = (i * 0.06) + 's';
-    btn.setAttribute('aria-label', topic.label + ' word scramble');
-    const imgSrc = '../img/' + topic.id + '.webp';
-    btn.innerHTML =
-      '<div class="img-topic-card__img-wrap">' +
-      '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">' +
-      '<div class="img-topic-card__overlay"></div>' +
-      '</div>' +
-      '<div class="img-topic-card__body">' +
-      '<div class="img-topic-card__info">' +
-      '<span class="img-topic-card__title">' + topic.label + '</span>' +
-      '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
-      '</div>' +
-      '<span class="img-topic-card__badge">Scramble</span>' +
-      '</div>';
-    btn.addEventListener('click', () => startTopic(topic.id));
-    grid.appendChild(btn);
-
-    fetch('../../speaking/json/' + topic.id + '.json')
-      .then(r => r.json())
-      .then(data => {
-        const total = data.phrases ? data.phrases.length : 0;
-        const s = Progress.getTopicStats('scramble_' + topic.id, total);
-        const el = document.getElementById('tp-' + topic.id);
-        if (el) el.textContent = s.seen + ' / ' + total + ' learned';
-      })
-      .catch(() => {});
-  });
-}
 
 function showTopicPicker() {
   document.getElementById('topic-picker').classList.remove('hidden');
   document.getElementById('exercise-area').classList.add('hidden');
+  AppTopicGrid.build({ badge: 'Scramble', srsPrefix: 'scramble_', onSelect: startTopic });
+}
+
+function _showLoadError(topicId) {
+  const old = document.getElementById('fetch-error-banner');
+  if (old) old.remove();
+
+  const banner = document.createElement('div');
+  banner.id = 'fetch-error-banner';
+  banner.setAttribute('role', 'alert');
+  banner.setAttribute('aria-live', 'assertive');
+  Object.assign(banner.style, {
+    background: 'var(--clr-danger-light)', color: 'var(--clr-danger)',
+    border: '1px solid var(--clr-danger)', borderRadius: 'var(--radius-md)',
+    padding: '12px 16px', marginBottom: '12px',
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+    fontSize: '0.88rem', fontWeight: '600',
+  });
+
+  const txt = document.createElement('span');
+  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+
+  const btn = document.createElement('button');
+  btn.textContent = 'Retry →';
+  Object.assign(btn.style, {
+    background: 'var(--clr-danger)', color: '#fff', border: 'none',
+    borderRadius: 'var(--radius-full)', padding: '6px 14px',
+    fontFamily: 'inherit', fontSize: '0.82rem', fontWeight: '700',
+    cursor: 'pointer', flexShrink: '0',
+  });
+  btn.addEventListener('click', () => { banner.remove(); startTopic(topicId); });
+
+  banner.appendChild(txt);
+  banner.appendChild(btn);
+  const picker = document.getElementById('topic-picker');
+  if (picker) picker.insertBefore(banner, picker.firstChild);
 }
 
 // ---- Load Topic ----
 
 function startTopic(topicId) {
+  localStorage.setItem(LAST_KEY, topicId);
   currentTopic = topicId;
-  fetch('../../speaking/json/' + topicId + '.json')
-    .then(r => r.json())
+  AppData.get(topicId)
     .then(data => {
-      // Filter phrases with more than 2 words (trivial phrases aren't useful to scramble)
       const valid = data.phrases
         .map((p, i) => ({ phrase: p, translation: (data.traductions || [])[i] || '', idx: i }))
         .filter(pair => pair.phrase.split(' ').length > 2);
@@ -99,23 +117,31 @@ function startTopic(topicId) {
 
       phrases      = valid.map(p => p.phrase);
       translations = valid.map(p => p.translation);
-      cardIds      = valid.map((_, seqIdx) => 'scramble_' + topicId + '_' + seqIdx);
+      cardIds      = valid.map(p => 'scramble_' + topicId + '_' + p.idx);
 
-      currentIndex = Progress.getNextIndex(cardIds, -1);
-
-      document.getElementById('topic-picker').classList.add('hidden');
-      document.getElementById('exercise-area').classList.remove('hidden');
-
-      const streak = Progress.getStreak();
-      document.getElementById('scramble-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
-
-      showPhrase(currentIndex);
-      updateCounter();
+      const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
+      const _pbArgs = {
+        items: phrases,
+        cardIds,
+        topicLabel: topicObj ? topicObj.label : topicId,
+        pickerEl: document.getElementById('topic-picker'),
+        traductions: data.traductions || null,
+        onStart: idx => _beginExercise(idx),
+      };
+      _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
+      _openPhraseBrowser();
     })
-    .catch(err => {
-      alert('Error loading topic. Please try again.');
-      console.error(err);
-    });
+    .catch(() => _showLoadError(topicId));
+}
+
+function _beginExercise(idx) {
+  currentIndex = idx;
+  document.getElementById('topic-picker').classList.add('hidden');
+  document.getElementById('exercise-area').classList.remove('hidden');
+  const streak = Progress.getStreak();
+  document.getElementById('scramble-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  showPhrase(currentIndex);
+  updateCounter();
 }
 
 // ---- Scramble Display ----
@@ -148,7 +174,10 @@ function showPhrase(index) {
 
   document.getElementById('hint-text').textContent = translations[index] || '';
   document.getElementById('scramble-feedback').classList.add('hidden');
-  document.getElementById('rating-area').classList.add('hidden');
+  document.getElementById('scramble-diff').textContent = '';
+  document.getElementById('next-btn').classList.add('hidden');
+  document.getElementById('try-again-btn').classList.add('hidden');
+  document.getElementById('construction-area').classList.remove('construction-area--answered');
   document.getElementById('check-btn').disabled = false;
   document.getElementById('clear-btn').disabled = false;
 
@@ -168,11 +197,7 @@ function renderTiles() {
 
   // Word bank: tiles not yet placed
   const remaining = shuffledTiles.filter(t => !builtSentence.includes(t.tileId));
-  remaining.forEach(tile => {
-    const btn = createTileBtn(tile, false);
-    btn.addEventListener('click', () => { if (!answered) addTile(tile.tileId); });
-    bankEl.appendChild(btn);
-  });
+  remaining.forEach(tile => bankEl.appendChild(createTileBtn(tile, false)));
 
   // Construction area: tiles already placed
   if (builtSentence.length === 0) {
@@ -183,10 +208,7 @@ function renderTiles() {
   } else {
     builtSentence.forEach(tileId => {
       const tile = shuffledTiles.find(t => t.tileId === tileId);
-      if (!tile) return;
-      const btn = createTileBtn(tile, true);
-      btn.addEventListener('click', () => { if (!answered) removeTile(tileId); });
-      buildEl.appendChild(btn);
+      if (tile) buildEl.appendChild(createTileBtn(tile, true));
     });
   }
 }
@@ -195,6 +217,7 @@ function createTileBtn(tile, placed) {
   const btn = document.createElement('button');
   btn.className = 'word-tile' + (placed ? ' placed' : '');
   btn.textContent = tile.word;
+  btn.dataset.tileId = tile.tileId;
   btn.setAttribute('aria-label', (placed ? 'Remove: ' : 'Add: ') + tile.word);
   return btn;
 }
@@ -216,9 +239,6 @@ function clearSentence() {
 
 // ---- Answer Check ----
 
-function normalise(s) {
-  return s.toLowerCase().replace(/[^a-z0-9\s']/g, '').replace(/\s+/g, ' ').trim();
-}
 
 function checkAnswer() {
   if (answered) return;
@@ -230,59 +250,77 @@ function checkAnswer() {
 
   // Mark placed tiles correct/incorrect by position
   const correctWords = phrases[currentIndex].split(' ');
-  const builtWords   = builtSentence.map(id => shuffledTiles.find(t => t.tileId === id).word);
+  const builtWords   = builtSentence.map(id => { const t = shuffledTiles.find(x => x.tileId === id); return t ? t.word : ''; });
 
   const buildEl = document.getElementById('construction-area');
   buildEl.innerHTML = '';
-  builtWords.forEach((w, i) => {
-    const isCorrect = normalise(w) === normalise(correctWords[i] || '');
-    const span = document.createElement('span');
-    span.className = 'word-tile placed ' + (isCorrect ? 'tile-correct' : 'tile-incorrect');
-    span.setAttribute('aria-label', w + (isCorrect ? ' — correct position' : ' — wrong position'));
-    span.textContent = w;
-    buildEl.appendChild(span);
+  buildEl.classList.add('construction-area--answered');
+  builtWords.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'word-tile placed';
+    btn.textContent = w;
+    btn.disabled = true;
+    buildEl.appendChild(btn);
   });
 
-  const isCorrect = normalise(builtWords.join(' ')) === normalise(phrases[currentIndex]);
+  const isCorrect = AppText.normalise(builtWords.join(' '), contractionMap) === AppText.normalise(phrases[currentIndex], contractionMap);
+  _lastCorrect = isCorrect;
 
-  const resultEl  = document.getElementById('feedback-result');
-  const answerEl  = document.getElementById('feedback-answer');
-  const feedback  = document.getElementById('scramble-feedback');
+  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  Progress.recordSession('scramble_' + currentTopic, isCorrect ? 1 : 0, 1);
+  if (isCorrect) updateCounter();
 
-  if (isCorrect) {
-    resultEl.textContent = '✓ Correct!';
-    resultEl.className   = 'feedback-result correct';
-    answerEl.textContent = '';
-  } else {
-    resultEl.textContent = '✗ Correct order:';
-    resultEl.className   = 'feedback-result incorrect';
-    answerEl.textContent = phrases[currentIndex];
-  }
+  const resultEl = document.getElementById('feedback-result');
+  const diffEl   = document.getElementById('scramble-diff');
+  const feedback = document.getElementById('scramble-feedback');
 
-  feedback.classList.remove('hidden');
-  document.getElementById('rating-area').classList.remove('hidden');
-  document.getElementById('rate-hard').focus();
+  resultEl.textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+  resultEl.className   = 'feedback-result ' + (isCorrect ? 'correct' : 'incorrect');
+
+  diffEl.textContent = '';
+  diffEl.appendChild(
+    isCorrect
+      ? AppFeedback.buildCorrect(phrases[currentIndex])
+      : AppFeedback.buildDiff(builtWords.join(' '), phrases[currentIndex], contractionMap)
+  );
+
+  feedback.className = 'scramble-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+  document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
+  document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 }
 
 // ---- Rating & Advance ----
 
-function rateAndNext(quality) {
-  Progress.rate(cardIds[currentIndex], quality);
-  Progress.recordSession(currentTopic, quality >= 3 ? 1 : 0, 1);
+// Compute seen/total directly from cardIds so non-sequential original indices
+// (p.idx anchoring) are counted correctly. Progress.getTopicStats() assumes
+// sequential indices 0…total-1 which breaks when short phrases are filtered out.
+function _getCardStats() {
+  const cards = Progress.getAllCards();
+  const seen  = cardIds.filter(id => { const c = cards[id]; return c && c.reps > 0; }).length;
+  return { seen, total: cardIds.length };
+}
 
+function rateAndNext(quality) {
+  // Progress already saved in checkAnswer — just advance
   updateCounter();
 
   const streak = Progress.getStreak();
   document.getElementById('scramble-streak').innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
 
-  currentIndex = Progress.getNextIndex(cardIds, currentIndex);
+  currentIndex = (currentIndex + 1) % phrases.length;
   showPhrase(currentIndex);
 }
 
 // ---- Counter ----
 
 function updateCounter() {
-  const stats = Progress.getTopicStats('scramble_' + currentTopic, phrases.length);
+  const stats = _getCardStats();
   const el = document.getElementById('scramble-counter');
   if (el) el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
+  const fill = document.getElementById('session-progress-fill');
+  if (fill) fill.style.width = pct + '%';
+  const bar = document.getElementById('session-progress-bar');
+  if (bar) bar.setAttribute('aria-valuenow', pct);
 }

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vocabulary Trainer — Practice English</title>
     <meta name="description" content="Build your English vocabulary with smart spaced-repetition flashcards. 100+ words categorised by difficulty — easy, medium, and hard.">
+    <meta property="og:title" content="Vocabulary Trainer — Practice English">
+    <meta property="og:description" content="Build your English vocabulary with smart spaced-repetition flashcards. 100+ words categorised by difficulty — easy, medium, and hard.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Spaced-repetition flashcards for 100+ English words sorted by difficulty.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -21,7 +27,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#vocab-wrapper">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
@@ -41,10 +47,12 @@
         <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
     </nav>
 
-    <div id="vocab-wrapper">
+    <main id="main-content">
 
         <!-- Topic Picker (shown first) -->
         <div id="topic-picker">
@@ -59,11 +67,12 @@
         <div id="vocab-content" class="hidden">
 
             <!-- Stats Bar -->
-            <div class="vocab-stats-bar">
+            <div class="session-info-bar">
                 <button class="back-btn" id="back-btn" aria-label="Back to topic picker">← Topics</button>
-                <span id="cards-remaining" role="status" aria-live="polite">Loading…</span>
+                <span id="cards-remaining" class="session-counter" role="status" aria-live="polite">Loading…</span>
                 <span class="streak-badge" id="vocab-streak"><span aria-hidden="true">🔥</span> 0 day streak</span>
             </div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <!-- Flashcard -->
             <div class="flashcard-scene" id="flashcard-scene" role="button" tabindex="0" aria-label="Flashcard — press Enter or Space to flip">
@@ -71,43 +80,42 @@
 
                     <!-- Front: word -->
                     <div class="flashcard-face flashcard-front">
-                        <span class="word-category" id="word-category">Adjective</span>
+                        <div class="fc-front-top">
+                            <span class="word-category" id="word-category"></span>
+                        </div>
                         <div class="word-text" id="word-text">—</div>
-                        <p class="flip-hint">Tap to reveal meaning</p>
+                        <button class="listen-btn" id="listen-btn" aria-label="Listen to pronunciation">🔊 Listen</button>
+                        <div class="flip-hint">Reveal meaning</div>
                     </div>
 
                     <!-- Back: definition + example + translation -->
                     <div class="flashcard-face flashcard-back">
-                        <span class="word-category" id="word-category-back">Adjective</span>
-                        <div class="word-definition" id="word-definition"></div>
-                        <div class="word-example" id="word-example"></div>
-                        <div class="word-translation" id="word-translation"></div>
+                        <div class="fc-back-word" id="fc-back-word"></div>
+                        <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Listen to pronunciation">🔊 Listen</button>
+                        <div class="fc-definition-block">
+                            <span class="fc-label">Definition</span>
+                            <div class="word-definition" id="word-definition"></div>
+                        </div>
+                        <div class="fc-divider"></div>
+                        <div class="fc-example-block">
+                            <span class="fc-label">Example</span>
+                            <div class="word-example" id="word-example"></div>
+                        </div>
+                        <div class="fc-translation-block">
+                            <span class="fc-label">Spanish</span>
+                            <div class="word-translation" id="word-translation"></div>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-            <!-- Rating Buttons (appear after flip) -->
-            <div class="rating-area hidden" id="rating-area">
-                <p class="rating-label">How well did you know this word?</p>
-                <div class="rating-buttons">
-                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
-                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
-                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
-                </div>
-            </div>
-
-            <!-- Session Complete -->
-            <div class="session-done hidden" id="session-done">
-                <div class="done-icon">🎉</div>
-                <h2>Session Complete!</h2>
-                <p id="done-message">You reviewed all cards for today.</p>
-                <button id="continue-btn" class="continue-btn">Review More →</button>
-            </div>
+            <!-- Next button (appear after flip) -->
+            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next word">Next →</button>
 
         </div>
 
-    </div>
+    </main>
 
     <footer>
         <div class="footer-content">
@@ -119,8 +127,17 @@
     </footer>
 
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/download-panel.js"></script>
+    <script src="../../shared/js/tts.js"></script>
+    <script src="../../shared/js/audio-player.js"></script>
+    <script src="../../shared/js/topics.js"></script>
+    <script src="../../shared/js/topic-grid.js"></script>
+    <script src="../../shared/js/notifications.js"></script>
+    <script src="../../shared/js/phrase-browser.js"></script>
     <script src="../js/vocabulary.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
     <script src="../../shared/js/sw-register.js"></script>
 </body>
 

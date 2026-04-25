@@ -10,9 +10,31 @@ const APP_CACHE = 'pe-app';    // HTML/JS/CSS/JSON: network-first, cached for of
 const isImage = url =>
   url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i) !== null;
 
-// Install: activate immediately, no pre-caching required
+// Minimum files required to render index.html offline.
+// Fetched atomically during install — if any returns non-200 the install
+// fails and the browser retries, so this list must only contain real paths.
+const SHELL = [
+  './',                               // root navigation (GET /)
+  './index.html',                     // direct navigation + offline fallback target
+  './manifest.json',
+  './index/css/generalities.css',
+  './index/css/index.css',
+  './shared/js/progress.js',
+  './shared/js/network-status.js',
+  './shared/js/theme.js',
+  './shared/js/milestones.js',
+  './shared/js/notifications.js',
+  './index/js/index.js',
+];
+
+// Install: pre-cache the app shell so the first offline visit works,
+// then activate immediately (skipWaiting after caching, not before).
 self.addEventListener('install', event => {
-  event.waitUntil(self.skipWaiting());
+  event.waitUntil(
+    caches.open(APP_CACHE)
+      .then(cache => cache.addAll(SHELL))
+      .then(() => self.skipWaiting())
+  );
 });
 
 // Activate: delete any old versioned caches (pe-v1 … pe-v9), then claim clients
@@ -25,6 +47,24 @@ self.addEventListener('activate', event => {
           .map(k => caches.delete(k))
       ))
       .then(() => self.clients.claim())
+  );
+});
+
+// Notification tap: focus existing window or open a new one
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  const url = (event.notification.data && event.notification.data.url)
+    ? './' + event.notification.data.url
+    : './index.html';
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clientList => {
+      for (const client of clientList) {
+        if (client.url.endsWith(url.replace('./', '')) && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      if (clients.openWindow) return clients.openWindow(url);
+    })
   );
 });
 

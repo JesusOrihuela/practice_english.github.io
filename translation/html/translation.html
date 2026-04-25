@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reverse Translation — Practice English</title>
     <meta name="description" content="Translate from Spanish to English. Active L1→L2 production builds deeper grammatical knowledge than target-only drills.">
+    <meta property="og:title" content="Reverse Translation — Practice English">
+    <meta property="og:description" content="Translate from Spanish to English. Active L1→L2 production builds deeper grammatical knowledge than target-only drills.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="Translate Spanish to English — active production builds deeper grammatical knowledge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
@@ -40,6 +46,8 @@
         <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn">📊 <span class="btn-label">Progress</span></a>
     </nav>
 
@@ -63,16 +71,17 @@
             <!-- Session bar -->
             <div class="session-info-bar">
                 <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="trans-counter" role="status" aria-live="polite">0 / 0 learned</span>
+                <span id="trans-counter" class="session-counter" role="status" aria-live="polite">0 / 0 learned</span>
                 <span class="streak-badge" id="trans-streak">🔥 0 day streak</span>
             </div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="trans-title">Translate to <span>English</span></h1>
             <p class="trans-subtitle">Read the phrase in Spanish and write the English version.</p>
 
             <!-- Spanish phrase card -->
             <div class="phrase-card" id="phrase-card">
-                <div class="lang-badge">🇪🇸 Spanish</div>
+                <div class="lang-badge" id="lang-badge" aria-label="Spanish to English"></div>
                 <div class="spanish-phrase" id="spanish-phrase">—</div>
             </div>
 
@@ -85,22 +94,30 @@
                 <button id="check-btn" class="check-btn">Check ✓</button>
             </div>
 
-            <!-- Feedback: diff view -->
+            <!-- Feedback -->
             <div class="trans-feedback hidden" id="trans-feedback" role="status" aria-live="polite">
                 <p class="feedback-result" id="feedback-result"></p>
-                <div class="feedback-diff" id="feedback-diff"></div>
-                <button class="listen-btn hidden" id="listen-btn">🔊 Hear it</button>
-            </div>
-
-            <!-- Rating area -->
-            <div class="rating-area hidden" id="rating-area">
-                <p class="rating-label">How well did you know it?</p>
-                <div class="rating-buttons">
-                    <button class="rating-btn hard" id="rate-hard" aria-label="Hard — show again soon">😰 Hard</button>
-                    <button class="rating-btn ok"   id="rate-ok"   aria-label="OK — show in a few days">🙂 OK</button>
-                    <button class="rating-btn easy" id="rate-easy" aria-label="Easy — show next week">😄 Easy</button>
+                <div id="trans-diff"></div>
+                <div class="feedback-divider hidden" id="feedback-divider"></div>
+                <div class="feedback-note hidden" id="feedback-grammar-tip">
+                    <span class="feedback-note-icon">💡</span>
+                    <span class="feedback-note-text" id="feedback-grammar-tip-text"></span>
                 </div>
             </div>
+
+            <!-- Grammar chip + Listen (shown after answer) -->
+            <div class="post-feedback-row">
+                <div id="grammar-chip-wrap" class="grammar-chip-wrap hidden">
+                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Open Grammar Workshop for this rule">
+                        📐 <span id="grammar-chip-label"></span> →
+                    </a>
+                </div>
+                <button class="listen-btn hidden" id="listen-btn">🔊 Listen</button>
+            </div>
+
+            <!-- Next / Try Again -->
+            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next phrase">Next →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Try this phrase again">↩ Try Again</button>
 
         </div>
 
@@ -115,10 +132,23 @@
         </div>
     </footer>
 
+    <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../shared/js/topics.js"></script>
+    <script src="../../shared/js/text-utils.js"></script>
+    <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/topic-grid.js"></script>
+    <script src="../../shared/js/download-panel.js"></script>
     <script src="../../shared/js/tts.js"></script>
+    <script src="../../shared/js/audio-player.js"></script>
+    <script src="../../shared/js/grammar-chip.js"></script>
+    <script src="../../shared/js/notifications.js"></script>
+    <script src="../../shared/js/phrase-browser.js"></script>
+    <script src="../../shared/js/feedback.js"></script>
     <script src="../js/translation.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>
+    <script src="../../shared/js/milestones.js"></script>
     <script src="../../shared/js/sw-register.js"></script>
 </body>
 

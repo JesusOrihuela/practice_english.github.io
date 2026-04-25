@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Test — Practice English</title>
+    <meta name="description" content="Find your English level (CEFR A1–B2) with 10 questions and start with the content that fits you best.">
+    <meta property="og:title" content="Placement Test — Practice English">
+    <meta property="og:description" content="Find your English level (CEFR A1–B2) with 10 questions and start with the content that fits you best.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Practice English">
+    <meta name="twitter:description" content="10 questions to find your English level (CEFR A1–B2) and start with the right content.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../index/css/generalities.css">
+    <link rel="stylesheet" href="../css/placement.css">
+    <link rel="icon" href="../../index/img/ico/favicon.ico">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <a href="../../index.html" aria-label="Practice English — Home">
+            <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
+        </a>
+    </header>
+
+    <main class="placement-page" id="main-content">
+
+        <!-- ══ SCREEN 1: Intro ══ -->
+        <div id="screen-intro">
+            <div class="placement-card">
+                <div class="placement-icon" aria-hidden="true">🎯</div>
+                <h1 class="placement-title">Initial Placement Test</h1>
+                <p class="placement-subtitle">
+                    10 questions to find your English level (A1–B2) and suggest the best starting point for you.
+                </p>
+                <div class="placement-info-pills" aria-label="Test details">
+                    <span class="info-pill">⏱️ ~2 minutes</span>
+                    <span class="info-pill">❓ 10 questions</span>
+                    <span class="info-pill">📊 CEFR result</span>
+                </div>
+                <div class="placement-actions">
+                    <button id="start-btn" class="ptest-btn ptest-btn--primary">Start the test →</button>
+                    <button id="skip-btn" class="ptest-btn ptest-btn--ghost">Skip — start from scratch</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══ SCREEN 2: Quiz ══ -->
+        <div id="screen-quiz" class="hidden">
+            <div class="placement-quiz-wrap">
+
+                <!-- Progress bar -->
+                <div class="placement-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="placement-progress">
+                    <div class="placement-progress-fill" id="placement-progress-fill"></div>
+                </div>
+
+                <!-- Counter + level badge -->
+                <div class="quiz-meta">
+                    <span class="placement-counter" id="placement-counter" aria-live="polite">Question 1 of 10</span>
+                    <span class="placement-level-badge" id="placement-level-badge">A1</span>
+                </div>
+
+                <!-- Question -->
+                <div class="question-card">
+                    <p class="question-text" id="question-text"></p>
+                    <div class="options-grid" id="options-grid" role="list"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ══ SCREEN 3: Results ══ -->
+        <div id="screen-result" class="hidden">
+            <div class="result-card">
+                <div class="result-emoji" id="result-emoji" aria-hidden="true"></div>
+                <h2 class="result-level-label" id="result-level-label"></h2>
+                <p class="result-score" id="result-score" role="status" aria-live="polite"></p>
+                <p class="result-message" id="result-message"></p>
+
+                <div class="result-suggestions-label">Recommended activities for your level:</div>
+                <div class="result-suggestions" id="result-suggestions"></div>
+
+                <a href="../../index.html" class="ptest-btn ptest-btn--primary result-cta" id="result-cta">
+                    Start practising →
+                </a>
+                <button id="retake-btn" class="ptest-btn ptest-btn--ghost">Retake the test</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+    </script>
+    <script src="../js/placement.js"></script>
+    <script src="../../shared/js/network-status.js"></script>
+    <script src="../../shared/js/theme.js"></script>
+</body>
+
+</html>

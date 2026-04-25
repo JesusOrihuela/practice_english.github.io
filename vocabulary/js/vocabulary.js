@@ -2,18 +2,10 @@
    vocabulary.js — Flashcard Vocabulary Trainer with SRS
    ============================================================ */
 
-const TOPICS = [
-  { id: 'general',        label: 'General',        emoji: '📖' },
-  { id: 'greetings',      label: 'Greetings',      emoji: '👋' },
-  { id: 'traveling',      label: 'Traveling',      emoji: '✈️' },
-  { id: 'technology',     label: 'Technology',     emoji: '💻' },
-  { id: 'restaurant',     label: 'Restaurant',     emoji: '🍽️' },
-  { id: 'kitchen',        label: 'Kitchen',        emoji: '🍳' },
-  { id: 'supermarket',    label: 'Supermarket',    emoji: '🛒' },
-  { id: 'entertainment',  label: 'Entertainment',  emoji: '🎬' },
-  { id: 'accountability', label: 'Accountability', emoji: '🎯' },
-  { id: 'gym',            label: 'Gym',            emoji: '💪' },
-];
+const LAST_KEY = 'pe_last_vocabulary';
+
+let _openPhraseBrowser = null;
+
 
 let currentTopicId  = '';
 let vocabTopicKey   = '';  // SRS prefix
@@ -21,14 +13,41 @@ let words           = [];
 let cardIds         = [];
 let currentIndex    = 0;
 let isFlipped       = false;
-let sessionReviewed = 0;
 
 // ---- Init ----
 
-document.addEventListener('DOMContentLoaded', () => {
-  buildTopicGrid();
+function _vocabGridOpts() {
+  return {
+    badge: 'Flashcard',
+    topics: AppTopics.VOCAB_TOPICS,
+    getSrsKey: t => t.id === 'general' ? 'vocab' : 'vocab_' + t.id,
+    getItemCount: t => {
+      const path = t.id === 'general' ? '../../shared/json/words.json' : '../../shared/json/words-' + t.id + '.json';
+      return fetch(path).then(r => r.json()).then(d => d.words ? d.words.length : 0);
+    },
+    onSelect: startTopic,
+  };
+}
 
-  document.getElementById('back-btn').addEventListener('click', showTopicPicker);
+document.addEventListener('DOMContentLoaded', () => {
+  AppTopicGrid.build(_vocabGridOpts());
+
+  function _playCurrentWord(e) {
+    e.stopPropagation(); // prevent card flip
+    const word = words[currentIndex];
+    if (word) AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, currentIndex, word.word);
+  }
+  document.getElementById('listen-btn').addEventListener('click', _playCurrentWord);
+  document.getElementById('listen-btn-back').addEventListener('click', _playCurrentWord);
+
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (_openPhraseBrowser) {
+      document.getElementById('vocab-content').classList.add('hidden');
+      _openPhraseBrowser();
+    } else {
+      showTopicPicker();
+    }
+  });
 
   document.getElementById('flashcard-scene').addEventListener('click', () => {
     if (!isFlipped) flipCard();
@@ -41,97 +60,92 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.getElementById('rate-hard').addEventListener('click', () => rateAndNext(1));
-  document.getElementById('rate-ok').addEventListener('click',   () => rateAndNext(3));
-  document.getElementById('rate-easy').addEventListener('click', () => rateAndNext(5));
+  document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
 
-  document.getElementById('continue-btn').addEventListener('click', () => {
-    document.getElementById('session-done').classList.add('hidden');
-    document.getElementById('flashcard-scene').classList.remove('hidden');
-    sessionReviewed = 0;
-    currentIndex = Progress.getNextIndex(cardIds, -1);
-    showCard(currentIndex);
-    updateStatsBar();
-  });
+  AppAudio.setBase('../../shared/audio/');
+  AppAudio.warmup();
 });
 
 // ---- Topic Picker ----
 
-function buildTopicGrid() {
-  const grid = document.getElementById('topic-grid');
-  grid.className = 'img-topic-grid';
-  TOPICS.forEach((topic, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'img-topic-card';
-    btn.dataset.theme = topic.id;
-    btn.style.animationDelay = (i * 0.06) + 's';
-    btn.setAttribute('aria-label', topic.label + ' vocabulary flashcards');
-    const imgSrc = '../img/' + topic.id + '.webp';
-    btn.innerHTML =
-      '<div class="img-topic-card__img-wrap">' +
-      '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">' +
-      '<div class="img-topic-card__overlay"></div>' +
-      '</div>' +
-      '<div class="img-topic-card__body">' +
-      '<div class="img-topic-card__info">' +
-      '<span class="img-topic-card__title">' + topic.label + '</span>' +
-      '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
-      '</div>' +
-      '<span class="img-topic-card__badge">Flashcard</span>' +
-      '</div>';
-    btn.addEventListener('click', () => startTopic(topic.id));
-    grid.appendChild(btn);
-
-    const jsonPath = topic.id === 'general'
-      ? '../../vocabulary/json/words.json'
-      : '../../vocabulary/json/words-' + topic.id + '.json';
-    const prefix = topic.id === 'general' ? 'vocab' : 'vocab_' + topic.id;
-    fetch(jsonPath)
-      .then(r => r.json())
-      .then(data => {
-        const total = data.words ? data.words.length : 0;
-        const s = Progress.getTopicStats(prefix, total);
-        const el = document.getElementById('tp-' + topic.id);
-        if (el) el.textContent = s.seen + ' / ' + total + ' learned';
-      })
-      .catch(() => {});
-  });
-}
-
 function showTopicPicker() {
   document.getElementById('topic-picker').classList.remove('hidden');
   document.getElementById('vocab-content').classList.add('hidden');
+  AppTopicGrid.build(_vocabGridOpts());
+}
+
+function _showLoadError(topicId) {
+  const old = document.getElementById('fetch-error-banner');
+  if (old) old.remove();
+
+  const banner = document.createElement('div');
+  banner.id = 'fetch-error-banner';
+  banner.setAttribute('role', 'alert');
+  banner.setAttribute('aria-live', 'assertive');
+  Object.assign(banner.style, {
+    background: 'var(--clr-danger-light)', color: 'var(--clr-danger)',
+    border: '1px solid var(--clr-danger)', borderRadius: 'var(--radius-md)',
+    padding: '12px 16px', marginBottom: '12px',
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+    fontSize: '0.88rem', fontWeight: '600',
+  });
+
+  const txt = document.createElement('span');
+  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+
+  const btn = document.createElement('button');
+  btn.textContent = 'Retry →';
+  Object.assign(btn.style, {
+    background: 'var(--clr-danger)', color: '#fff', border: 'none',
+    borderRadius: 'var(--radius-full)', padding: '6px 14px',
+    fontFamily: 'inherit', fontSize: '0.82rem', fontWeight: '700',
+    cursor: 'pointer', flexShrink: '0',
+  });
+  btn.addEventListener('click', () => { banner.remove(); startTopic(topicId); });
+
+  banner.appendChild(txt);
+  banner.appendChild(btn);
+  const picker = document.getElementById('topic-picker');
+  if (picker) picker.insertBefore(banner, picker.firstChild);
 }
 
 function startTopic(topicId) {
+  localStorage.setItem(LAST_KEY, topicId);
   currentTopicId = topicId;
-  // Preserve original SRS IDs for 'general' to avoid breaking existing progress
   vocabTopicKey  = topicId === 'general' ? 'vocab' : 'vocab_' + topicId;
   const jsonPath = topicId === 'general'
-    ? '../json/words.json'
-    : '../json/words-' + topicId + '.json';
+    ? '../../shared/json/words.json'
+    : '../../shared/json/words-' + topicId + '.json';
 
   fetch(jsonPath)
     .then(r => r.json())
     .then(data => {
       words   = data.words;
       cardIds = words.map((_, i) => vocabTopicKey + '_' + i);
-      currentIndex = Progress.getNextIndex(cardIds, -1);
 
-      document.getElementById('topic-picker').classList.add('hidden');
-      document.getElementById('vocab-content').classList.remove('hidden');
-
-      const streak = Progress.getStreak();
-      const el = document.getElementById('vocab-streak');
-      if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
-
-      showCard(currentIndex);
-      updateStatsBar();
+      const topicObj = (AppTopics.VOCAB_TOPICS || []).find(t => t.id === topicId);
+      const _pbArgs = {
+        items: words,
+        cardIds,
+        topicLabel: topicObj ? topicObj.label : topicId,
+        pickerEl: document.getElementById('topic-picker'),
+        onStart: idx => _beginExercise(idx),
+      };
+      _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
+      _openPhraseBrowser();
     })
-    .catch(err => {
-      document.getElementById('word-text').textContent = 'Error loading words.';
-      console.error(err);
-    });
+    .catch(() => _showLoadError(topicId));
+}
+
+function _beginExercise(idx) {
+  currentIndex = idx;
+  document.getElementById('topic-picker').classList.add('hidden');
+  document.getElementById('vocab-content').classList.remove('hidden');
+  const streak = Progress.getStreak();
+  const el = document.getElementById('vocab-streak');
+  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  showCard(currentIndex);
+  updateStatsBar();
 }
 
 // ---- Card Display ----
@@ -141,39 +155,35 @@ function showCard(index) {
   if (!word) return;
   isFlipped = false;
   document.getElementById('flashcard').classList.remove('flipped');
-  document.getElementById('word-category').textContent     = word.category || '';
-  document.getElementById('word-text').textContent         = word.word;
-  document.getElementById('word-category-back').textContent = word.category || '';
-  document.getElementById('word-definition').textContent   = word.definition;
-  document.getElementById('word-example').textContent      = '"' + word.example + '"';
-  document.getElementById('word-translation').textContent  = word.translation;
-  document.getElementById('rating-area').classList.add('hidden');
+
+  // Front
+  document.getElementById('word-category').textContent  = word.category || '';
+  document.getElementById('word-text').textContent = word.word;
+
+  // Back
+  document.getElementById('fc-back-word').textContent    = word.word;
+  document.getElementById('word-definition').textContent = word.definition;
+  document.getElementById('word-example').textContent    = word.example;
+  document.getElementById('word-translation').textContent = word.translation;
+
+  document.getElementById('next-btn').classList.add('hidden');
 }
 
 function flipCard() {
   isFlipped = true;
   document.getElementById('flashcard').classList.add('flipped');
   setTimeout(() => {
-    document.getElementById('rating-area').classList.remove('hidden');
+    document.getElementById('next-btn').classList.remove('hidden');
   }, 350);
 }
 
 function rateAndNext(quality) {
   Progress.rate(cardIds[currentIndex], quality);
   Progress.recordSession(vocabTopicKey, quality >= 3 ? 1 : 0, 1);
-  sessionReviewed++;
 
   updateStatsBar();
 
-  const nextIdx = Progress.getNextIndex(cardIds, currentIndex);
-  const session = getSessionStats();
-
-  if (sessionReviewed >= Math.min(20, words.length) && session.due === 0 && session.newCards === 0) {
-    showSessionDone();
-    return;
-  }
-
-  currentIndex = nextIdx;
+  currentIndex = (currentIndex + 1) % words.length;
   showCard(currentIndex);
 
   const scene = document.getElementById('flashcard-scene');
@@ -186,38 +196,14 @@ function rateAndNext(quality) {
 
 // ---- Utilities ----
 
-function getSessionStats() {
-  const data = Progress.getAllCards();
-  const now  = Date.now();
-  let newCards = 0, due = 0;
-  cardIds.forEach(id => {
-    const card = data[id];
-    if (!card || card.reps === 0) newCards++;
-    else if (card.due <= now) due++;
-  });
-  return { newCards, due };
-}
-
 function updateStatsBar() {
-  const stats     = Progress.getTopicStats(vocabTopicKey, words.length);
-  const el        = document.getElementById('cards-remaining');
-  if (!el) return;
-  const session   = getSessionStats();
-  const remaining = session.newCards + session.due;
-  el.textContent  = remaining > 0
-    ? remaining + ' cards due  ·  ' + stats.seen + ' / ' + stats.total + ' learned'
-    : stats.seen + ' / ' + stats.total + ' learned  ·  all caught up!';
-}
-
-function showSessionDone() {
   const stats = Progress.getTopicStats(vocabTopicKey, words.length);
-  document.getElementById('flashcard-scene').classList.add('hidden');
-  document.getElementById('rating-area').classList.add('hidden');
-  const msg = document.getElementById('done-message');
-  if (msg) {
-    msg.textContent = 'You reviewed ' + sessionReviewed + ' cards. '
-      + stats.seen + ' of ' + stats.total + ' words learned so far. Keep it up!';
-  }
-  document.getElementById('session-done').classList.remove('hidden');
-  sessionReviewed = 0;
+  const el    = document.getElementById('cards-remaining');
+  if (!el) return;
+  el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
+  const fill = document.getElementById('session-progress-fill');
+  if (fill) fill.style.width = pct + '%';
+  const bar = document.getElementById('session-progress-bar');
+  if (bar) bar.setAttribute('aria-valuenow', pct);
 }

@@ -54,14 +54,20 @@ Progress.getAllCards()                   // → raw localStorage card map
 ```
 
 **Card ID convention** (CRITICAL — inconsistency breaks per-activity SRS):
-| Activity | ID format |
-|---|---|
-| Speaking | `{topic}_{i}` (e.g. `greetings_0`) |
-| Dictation | `dict_{topic}_{i}` |
-| Cloze | `cloze_{topic}_{i}` |
-| Translation | `trans_{topic}_{i}` |
-| Scramble | `scramble_{topic}_{i}` |
-| Quiz | `quiz_vocab_{i}` |
+| Activity | ID format | Index type |
+|---|---|---|
+| Speaking | `{topic}_{i}` (e.g. `greetings_0`) | original phrase index |
+| Dictation | `dict_{topic}_{i}` | original phrase index |
+| Cloze | `cloze_{topic}_{i}` | original phrase index |
+| Translation | `trans_{topic}_{i}` | original phrase index (filtered phrases use p.idx, not seqIdx) |
+| Scramble | `scramble_{topic}_{i}` | original phrase index (filtered phrases use p.idx, not seqIdx) |
+| Quiz (general) | `quiz_vocab_{i}` | sequential word index |
+| Quiz (topic) | `quiz_{topic}_{i}` | sequential word index |
+| Vocabulary (general) | `vocab_{i}` | sequential word index |
+| Vocabulary (topic) | `vocab_{topic}_{i}` | sequential word index |
+| Grammar | `grammar_{category}_{ruleId}` | **stable string rule ID, not numeric** — cannot use `getTopicStats()`; use `getAllCards()` + manual filter |
+
+`{i}` is always the **original array index** in the source JSON, even when phrases are filtered before display. Never use the post-filter sequential index — it shifts when content changes.
 
 ### TTS — `shared/js/tts.js` (global `AppTTS`)
 ```js
@@ -81,17 +87,51 @@ Used only in `speaking/js/speaking.js` — MediaRecorder → Float32Array @ 16kH
 
 ## Topic data (JSON)
 
-All phrase topics live in `speaking/json/{topic}.json`:
+All phrase topics live in `shared/json/{topic}.json` (single source of truth used by every activity):
 ```json
 {
-  "phrases": ["Hello, how are you?", ...],
-  "traductions": ["Hola, ¿cómo estás?", ...]
+  "phrases":     ["Hello, how are you?", ...],
+  "traductions": ["Hola, ¿cómo estás?", ...],
+  "grammar":     [null, "Tip about phrase 1", null, ...]
 }
 ```
+- `phrases` — English phrases (used by speaking, dictation, cloze, scramble, translation as answer)
+- `traductions` — Spanish translations (used by translation as the prompt, optional hint in speaking)
+- `grammar` — Array of grammar tips (same length as `phrases`, `null` where no tip applies). Populated in `greetings.json` (16 notes) as Stage 3 pilot; all other topics have `null`-filled arrays ready.
+
 Available topics: `greetings`, `traveling`, `technology`, `restaurant`, `kitchen`, `supermarket`, `entertainment`, `accountability`, `gym`.
 
 Vocabulary data: `vocabulary/json/words.json`.
-Contractions map: `speaking/json/contractions.json`.
+Contractions map: `shared/json/contractions.json` (contraction→expansion map; useful for any exercise that normalizes text input or compares spoken/typed answers).
+
+**Audio files** live in `shared/audio/{topic}/{index}_{voice}.wav`. Index matches the phrase index in the JSON.
+Any activity that plays audio calls `AppAudio.setBase('../../shared/audio/')` (path relative to the activity HTML page).
+
+### Audio generation — `tools/generate-audio.mjs`
+
+Single unified script. Checks every audio source and generates only missing files (always safe to re-run).
+
+```bash
+# Run from tools/
+node generate-audio.mjs                     # generate everything missing
+node generate-audio.mjs --check            # dry-run: report missing files only
+node generate-audio.mjs --topic greetings  # single phrase topic
+node generate-audio.mjs --topic vocab      # general vocabulary only
+node generate-audio.mjs --topic vocab_gym  # topic-specific vocabulary
+```
+
+**Sources covered:**
+| Source ID | JSON file | Output folder |
+|---|---|---|
+| `greetings`, `traveling`, … (9 topics) | `shared/json/{topic}.json` | `shared/audio/{topic}/` |
+| `vocab` | `shared/json/words.json` | `shared/audio/vocab/` |
+| `vocab_{topic}` (9 topics) | `shared/json/words-{topic}.json` | `shared/audio/vocab_{topic}/` |
+
+Voices generated: `af_heart`, `af_bella`, `bf_emma`, `am_michael` (edit `VOICES` in the script to change).
+
+**When to run:** any time you add, edit, or remove phrases from a JSON file. After editing, run `--check` first to see exactly which files are affected, then run without `--check` to generate.
+
+The browser-based `tools/generate-audio.html` also exists for one-off generation without Node.js.
 
 ---
 
@@ -104,14 +144,9 @@ Contractions map: `speaking/json/contractions.json`.
 
 ---
 
-## Service worker — ALWAYS bump when adding files
+## Service worker
 
-When adding new HTML/CSS/JS/JSON files, bump `CACHE_NAME` in `service-worker.js` and add the new paths to `STATIC_ASSETS`. Current version: `pe-v5`.
-
-```js
-// service-worker.js
-const CACHE_NAME = 'pe-v5'; // → increment to pe-v6, pe-v7, etc.
-```
+The service worker uses a **network-first** strategy for all HTML/JS/CSS/JSON files — no static asset list to maintain. New files are automatically cached on first fetch. No version bumping needed when adding new files.
 
 ---
 
@@ -135,6 +170,67 @@ const CACHE_NAME = 'pe-v5'; // → increment to pe-v6, pe-v7, etc.
 <script src="../../shared/js/tts.js"></script>        <!-- before activity script -->
 <script src="js/{activity}.js"></script>               <!-- last -->
 ```
+
+---
+
+## Feedback diff system — `shared/js/feedback.js` (global `AppFeedback`)
+
+All exercises that check a typed/spoken answer use this shared module for rendering feedback. **Never build custom diff DOM in an activity script.**
+
+### API
+
+```js
+// Incorrect state: shows YOUR ANSWER (with errors) + CORRECT ANSWER rows
+AppFeedback.buildDiff(userText, correctText, contractionMap)  // → DocumentFragment
+
+// Correct state: shows YOUR ANSWER row (all words green)
+AppFeedback.buildCorrect(correctText)  // → DocumentFragment
+
+// Cloze: full phrase with blank word colored; adds CORRECT ANSWER row if wrong
+AppFeedback.buildCloze(blankedPhrase, userWord, correctWord, isCorrect)  // → DocumentFragment
+
+// Quiz: chosen vs correct definition as whole blocks (no word-level diff)
+AppFeedback.buildQuiz(chosenDefinition, correctDefinition, isCorrect)  // → DocumentFragment
+```
+
+Inject into a `<div id="*-diff">` placeholder:
+```js
+const diffEl = document.getElementById('my-diff');
+diffEl.textContent = '';
+diffEl.appendChild(AppFeedback.buildDiff(raw, expected, contractionMap));
+```
+
+### Visual output
+
+- **YOUR ANSWER** row — words with per-word colored bubble:
+  - `.uf-word-ok` — green bg, italic (matched)
+  - `.uf-word-err` — red bg, strikethrough, italic (wrong word)
+  - `.uf-word-miss` — muted gray, italic (missing — only shown in CORRECT ANSWER row)
+- **CORRECT ANSWER** row — shown only when incorrect; all words in `.uf-word-ok`
+- `.uf-label` (fixed `width: 130px`, right-aligned, `border-right`) creates the vertical separator bar
+- `.uf-words` wraps the bubbles so long phrases wrap without indenting under the label
+
+### Extra info after feedback (divider + note)
+
+When an exercise needs to show additional context (grammar tip, example sentence) below the diff:
+1. Place `<div class="feedback-divider hidden" id="feedback-divider"></div>` after the diff container
+2. Add a `.feedback-note` block with `.feedback-note-icon` + `.feedback-note-text` spans
+3. In JS: remove `hidden` from both elements when content is available
+
+```html
+<div class="feedback-divider hidden" id="feedback-divider"></div>
+<div class="feedback-note hidden" id="my-note">
+  <span class="feedback-note-icon">💡</span>
+  <span class="feedback-note-text" id="my-note-text"></span>
+</div>
+```
+
+**Current users:** Translation (grammar tip via `💡`), Quiz (example sentence via `💬`).
+
+All `.uf-*`, `.feedback-divider`, and `.feedback-note` styles live in `index/css/generalities.css`.
+
+### Display rule (CRITICAL)
+`buildDiff` / `buildCorrect` display **original (non-normalized) tokens** — words keep capitalization, punctuation, contractions. Normalization is used **only internally for comparison**. Never pass pre-normalized strings to these functions.
 
 ---
 

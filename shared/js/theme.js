@@ -15,4 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Auto-update footer copyright year
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Scroll active nav button into view so it's never hidden off-screen on mobile
+  const nav    = document.querySelector('.mode-switcher');
+  const active = nav && nav.querySelector('.mode-btn.active');
+  if (active) active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'instant' });
 });

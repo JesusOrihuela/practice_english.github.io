@@ -6,76 +6,14 @@
 
 /* ---- Topic Picker ---- */
 
-const TOPICS = [
-  { id: 'greetings',      label: 'Greetings'      },
-  { id: 'traveling',      label: 'Traveling'      },
-  { id: 'technology',     label: 'Technology'     },
-  { id: 'restaurant',     label: 'Restaurant'     },
-  { id: 'kitchen',        label: 'Kitchen'        },
-  { id: 'supermarket',    label: 'Supermarket'    },
-  { id: 'entertainment',  label: 'Entertainment'  },
-  { id: 'accountability', label: 'Accountability' },
-  { id: 'gym',            label: 'Gym'            },
-  { id: 'mixed',          label: 'Mixed Review'   },
-];
-
-function buildTopicGrid() {
-  const grid = document.getElementById('topic-grid');
-  if (!grid) return;
-
-  TOPICS.forEach((topic, i) => {
-    const btn = document.createElement('button');
-    btn.className = 'img-topic-card';
-    btn.dataset.theme = topic.id;
-    btn.style.animationDelay = (i * 0.06) + 's';
-    btn.setAttribute('aria-label', topic.label + ' speaking practice');
-
-    const isMixed = topic.id === 'mixed';
-    const imgSrc  = !isMixed ? '../img/' + topic.id + '.webp' : null;
-
-    btn.innerHTML =
-      '<div class="img-topic-card__img-wrap">' +
-      (imgSrc
-        ? '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">'
-        : '<div class="speak-mixed-gradient"><span aria-hidden="true">🔀</span></div>') +
-      '<div class="img-topic-card__overlay"></div>' +
-      '</div>' +
-      '<div class="img-topic-card__body">' +
-      '<div class="img-topic-card__info">' +
-      '<span class="img-topic-card__title">' + topic.label + '</span>' +
-      '<span class="img-topic-card__progress" id="tp-' + topic.id + '">' +
-      (isMixed ? 'All 9 topics' : '') +
-      '</span>' +
-      '</div>' +
-      '<span class="img-topic-card__badge">' + (isMixed ? 'All Topics' : 'Speaking') + '</span>' +
-      '</div>';
-
-    btn.addEventListener('click', () => {
-      startTopic(isMixed ? '__mixed__' : topic.id);
-    });
-
-    grid.appendChild(btn);
-
-    if (!isMixed) {
-      fetch('../json/' + topic.id + '.json')
-        .then(r => r.json())
-        .then(data => {
-          const total = data.phrases ? data.phrases.length : 0;
-          const s = Progress.getTopicStats(topic.id, total);
-          const el = document.getElementById('tp-' + topic.id);
-          if (el) el.textContent = s.seen + ' / ' + total + ' learned';
-        })
-        .catch(() => {});
-    }
-  });
-}
+const LAST_KEY = 'pe_last_speaking';
+let _openPhraseBrowser = null;
 
 /* ---- Exercise State ---- */
 
-let listenButton, speakButton, tryAnotherButton, tryAgainButton, message;
 let jsConfetti;
-let contractionsData = null;
-let phrases = [], translations = [], cardIds = [];
+let contractionMap = {};
+let phrases = [], translations = [], grammarTips = [], cardIds = [];
 let currentIndex = 0;
 let currentTheme = '';
 let sessionCorrect = 0, sessionTotal = 0;
@@ -93,34 +31,41 @@ let _sttWorker       = null;
 let _isRecording     = false;
 let _mediaRecorder   = null;
 let _recordingChunks = [];
+let _sttTimeoutId    = null;
+let _vadIntervalId   = null;
+let _vadAudioCtx     = null;
+const _STT_TIMEOUT_MS = 30000;
 
-fetch('../json/contractions.json')
-  .then(r => r.json())
-  .then(d => { contractionsData = d.contractions; })
+AppData.get('word-equivalents')
+  .then(data => {
+    const { flatMap } = AppText.buildEquivalenceMaps(data.groups || []);
+    contractionMap = flatMap;
+  })
   .catch(() => {});
 
 document.addEventListener('DOMContentLoaded', () => {
   jsConfetti = new JSConfetti();
-
-  listenButton     = document.getElementById('listenButton');
-  speakButton      = document.getElementById('speakButton');
-  tryAnotherButton = document.getElementById('tryAnotherButton');
-  tryAgainButton   = document.getElementById('tryAgainButton');
-  message          = document.getElementById('recognizedText');
 
   const textFallback = document.getElementById('text-fallback');
   const textInput    = document.getElementById('text-input');
   const textSubmit   = document.getElementById('text-submit');
 
   if (!HAS_STT) {
-    speakButton.style.display = 'none';
+    document.getElementById('speakButton').style.display = 'none';
     if (textFallback) textFallback.classList.remove('hidden');
   }
 
-  document.getElementById('back-btn').addEventListener('click', showTopicPicker);
+  document.getElementById('back-btn').addEventListener('click', () => {
+    if (_openPhraseBrowser) {
+      document.getElementById('exercise-area').classList.add('hidden');
+      _openPhraseBrowser();
+    } else {
+      showTopicPicker();
+    }
+  });
 
-  listenButton.addEventListener('click', playTTS);
-  speakButton.addEventListener('click', toggleRecording);
+  document.getElementById('listenButton').addEventListener('click', playTTS);
+  document.getElementById('speakButton').addEventListener('click', toggleRecording);
 
   if (textSubmit) {
     textSubmit.addEventListener('click', () => {
@@ -130,20 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
     textInput.addEventListener('keydown', e => { if (e.key === 'Enter') textSubmit.click(); });
   }
 
-  tryAgainButton.addEventListener('click', resetAttempt);
-  tryAnotherButton.addEventListener('click', () => {
-    if (!attemptDone) Progress.rate(cardIds[currentIndex], 1);
-    Progress.recordSession(currentTheme, 0, 1);
+  document.getElementById('tryAgainButton').addEventListener('click', resetAttempt);
+  document.getElementById('tryAnotherButton').addEventListener('click', () => {
+    // Progress.rate already saved in displayResult — just record session and advance
+    Progress.recordSession(currentTheme, sessionCorrect, sessionTotal);
     nextPhrase();
   });
 
-  document.getElementById('rate-hard').addEventListener('click', () => rateAndNext(1));
-  document.getElementById('rate-ok').addEventListener('click',   () => rateAndNext(3));
-  document.getElementById('rate-easy').addEventListener('click', () => rateAndNext(5));
-
-  buildTopicGrid();
+  AppTopicGrid.build({ badge: 'Speaking', ariaLabelSuffix: 'speaking practice', srsPrefix: '', onSelect: startTopic });
   AppTTS.warmup();
-  AppAudio.setBase('../audio/');
+  AppAudio.setBase('../../shared/audio/');
   AppAudio.warmup();
   if (HAS_STT) _getSttWorker();
 });
@@ -151,91 +92,94 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ---- Navigation ---- */
 
 function startTopic(id) {
+  localStorage.setItem(LAST_KEY, id);
   currentTheme = id;
   phrases = []; translations = []; cardIds = [];
   sessionCorrect = 0; sessionTotal = 0;
+  loadPhrases(id);
+}
 
-  document.getElementById('topic-section').classList.add('hidden');
-  document.getElementById('exercise-section').classList.remove('hidden');
+function showTopicPicker() {
+  if (_isRecording) _stopRecording();
+  AppAudio.cancel();
+  AppTTS.cancel();
+  document.getElementById('exercise-area').classList.add('hidden');
+  document.getElementById('topic-picker').classList.remove('hidden');
+  currentTheme = '';
+  AppTopicGrid.build({ badge: 'Speaking', ariaLabelSuffix: 'speaking practice', srsPrefix: '', onSelect: startTopic });
+}
 
+/* ---- Data Loading ---- */
+
+function _showLoadError(topicId) {
+  showTopicPicker(); // return to picker — exercise-area may have been shown already
+
+  const old = document.getElementById('fetch-error-banner');
+  if (old) old.remove();
+
+  const banner = document.createElement('div');
+  banner.id = 'fetch-error-banner';
+  banner.setAttribute('role', 'alert');
+  banner.setAttribute('aria-live', 'assertive');
+  Object.assign(banner.style, {
+    background: 'var(--clr-danger-light)', color: 'var(--clr-danger)',
+    border: '1px solid var(--clr-danger)', borderRadius: 'var(--radius-md)',
+    padding: '12px 16px', marginBottom: '12px',
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
+    fontSize: '0.88rem', fontWeight: '600',
+  });
+
+  const txt = document.createElement('span');
+  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+
+  const btn = document.createElement('button');
+  btn.textContent = 'Retry →';
+  Object.assign(btn.style, {
+    background: 'var(--clr-danger)', color: '#fff', border: 'none',
+    borderRadius: 'var(--radius-full)', padding: '6px 14px',
+    fontFamily: 'inherit', fontSize: '0.82rem', fontWeight: '700',
+    cursor: 'pointer', flexShrink: '0',
+  });
+  btn.addEventListener('click', () => { banner.remove(); startTopic(topicId); });
+
+  banner.appendChild(txt);
+  banner.appendChild(btn);
+  const section = document.getElementById('topic-picker');
+  if (section) section.insertBefore(banner, section.firstChild);
+}
+
+function loadPhrases(topicId) {
+  AppData.get(topicId)
+    .then(data => {
+      phrases      = data.phrases;
+      translations = data.traductions || [];
+      grammarTips  = data.grammar || [];
+      cardIds      = phrases.map((_, i) => topicId + '_' + i);
+
+      const topicObj = AppTopics.PHRASE_TOPICS.find(t => t.id === topicId);
+      const _pbArgs = {
+        items: phrases,
+        cardIds,
+        topicLabel: topicObj ? topicObj.label : topicId,
+        pickerEl: document.getElementById('topic-picker'),
+        traductions: data.traductions || null,
+        onStart: idx => _beginExercise(idx),
+      };
+      _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
+      _openPhraseBrowser();
+    })
+    .catch(() => _showLoadError(currentTheme));
+}
+
+function _beginExercise(idx) {
+  currentIndex = idx;
+  document.getElementById('topic-picker').classList.add('hidden');
+  document.getElementById('exercise-area').classList.remove('hidden');
   const streakBadge = document.getElementById('streak-badge');
   if (streakBadge) {
     const streak = Progress.getStreak();
     streakBadge.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
   }
-
-  if (id === '__mixed__') {
-    loadMixedPhrases();
-  } else {
-    loadPhrases('../json/' + id + '.json');
-  }
-}
-
-function showTopicPicker() {
-  if (_isRecording) _stopRecording();
-  document.getElementById('exercise-section').classList.add('hidden');
-  document.getElementById('topic-section').classList.remove('hidden');
-  currentTheme = '';
-
-  // Refresh progress counts on topic cards
-  TOPICS.forEach(topic => {
-    if (topic.id === 'mixed') return;
-    fetch('../json/' + topic.id + '.json')
-      .then(r => r.json())
-      .then(data => {
-        const total = data.phrases ? data.phrases.length : 0;
-        const s = Progress.getTopicStats(topic.id, total);
-        const el = document.getElementById('tp-' + topic.id);
-        if (el) el.textContent = s.seen + ' / ' + total + ' learned';
-      })
-      .catch(() => {});
-  });
-}
-
-/* ---- Data Loading ---- */
-
-function loadPhrases(jsonFile) {
-  fetch(jsonFile)
-    .then(r => r.json())
-    .then(data => {
-      phrases      = data.phrases;
-      translations = data.traductions || [];
-      cardIds      = phrases.map((_, i) => currentTheme + '_' + i);
-      currentIndex = Progress.getNextIndex(cardIds, -1);
-      showPhrase(currentIndex);
-      updateSessionCounter();
-    })
-    .catch(err => {
-      if (message) message.textContent = 'Error loading phrases. Please go back and try again.';
-      console.error(err);
-    });
-}
-
-const MIXED_TOPICS = ['greetings','traveling','technology','restaurant','kitchen','supermarket','entertainment','accountability','gym'];
-
-async function loadMixedPhrases() {
-  const allPhrases = [], allTranslations = [], allIds = [];
-  try {
-    const results = await Promise.all(
-      MIXED_TOPICS.map(t => fetch('../json/' + t + '.json').then(r => r.json()))
-    );
-    results.forEach((data, idx) => {
-      const topic = MIXED_TOPICS[idx];
-      data.phrases.forEach((p, i) => {
-        allPhrases.push(p);
-        allTranslations.push((data.traductions || [])[i] || '');
-        allIds.push(topic + '_' + i);
-      });
-    });
-  } catch (err) {
-    if (message) message.textContent = 'Error loading phrases. Please go back and try again.';
-    console.error(err);
-    return;
-  }
-  phrases      = allPhrases;
-  translations = allTranslations;
-  cardIds      = allIds;
-  currentIndex = Progress.getNextIndex(cardIds, -1);
   showPhrase(currentIndex);
   updateSessionCounter();
 }
@@ -244,55 +188,75 @@ function showPhrase(index) {
   document.getElementById('Phrase').textContent     = phrases[index] || '';
   document.getElementById('Traduction').textContent = translations[index] || '';
   attemptDone = false;
+  const wrap = document.getElementById('grammar-chip-wrap');
+  if (wrap) wrap.classList.add('hidden');
   resetAttempt();
 }
+
+function updateGrammarChip(index) {
+  const wrap = document.getElementById('grammar-chip-wrap');
+  if (!wrap) return;
+  const tip = grammarTips[index] || null;
+  if (!tip) { wrap.classList.add('hidden'); return; }
+  const { label, ruleId } = extractGrammarInfo(tip);
+  // Only show the chip when there is a direct link to a specific grammar rule.
+  // Going to the Grammar main page without context is not useful.
+  if (!ruleId) { wrap.classList.add('hidden'); return; }
+  document.getElementById('grammar-chip-label').textContent = label;
+  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
+  wrap.classList.remove('hidden');
+}
+
+// extractGrammarInfo is in shared/js/grammar-chip.js
 
 function updateSessionCounter() {
   const el = document.getElementById('session-counter');
   if (!el || phrases.length === 0) return;
-  if (currentTheme === '__mixed__') {
-    const data = Progress.getAllCards();
-    const seen = cardIds.filter(id => data[id] && data[id].reps > 0).length;
-    el.textContent = seen + ' / ' + cardIds.length + ' phrases learned';
-  } else {
-    const stats = Progress.getTopicStats(currentTheme, phrases.length);
-    el.textContent = stats.seen + ' / ' + stats.total + ' phrases learned';
-  }
+  const stats = Progress.getTopicStats(currentTheme, phrases.length);
+  el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
+  const fill = document.getElementById('session-progress-fill');
+  if (fill) fill.style.width = pct + '%';
+  const bar = document.getElementById('session-progress-bar');
+  if (bar) bar.setAttribute('aria-valuenow', pct);
 }
 
 /* ---- Attempt Flow ---- */
 
 function resetAttempt() {
-  listenButton.disabled = false;
+  document.getElementById('listenButton').disabled = false;
   if (HAS_STT) {
-    speakButton.disabled  = false;
-    speakButton.textContent = '🎙️ Speak';
-    speakButton.setAttribute('aria-label', 'Speak the phrase aloud');
+    document.getElementById('speakButton').disabled  = false;
+    document.getElementById('speakButton').textContent = '🎙️ Speak';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
   }
-  tryAgainButton.disabled   = true;
-  tryAnotherButton.disabled = true;
-  if (message) { message.textContent = "Press the button when you're ready to talk"; message.className = ''; }
-  document.getElementById('rating-area').classList.add('hidden');
+  document.getElementById('tryAgainButton').classList.add('hidden');
+  document.getElementById('tryAgainButton').disabled = true;
+  document.getElementById('tryAnotherButton').classList.add('hidden');
+  document.getElementById('tryAnotherButton').disabled = true;
+  document.getElementById('recognizedText').textContent = "Press the button when you're ready to talk";
+  document.getElementById('recognizedText').className = '';
+  const card = document.getElementById('phrase-card');
+  if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
+  const fb = document.getElementById('speaking-feedback');
+  if (fb) { fb.classList.add('hidden'); fb.className = 'speaking-feedback hidden'; }
+  const fbr = document.getElementById('speaking-feedback-result');
+  if (fbr) { fbr.textContent = ''; fbr.className = 'feedback-result'; }
+  const sd = document.getElementById('speaking-diff');
+  if (sd) { sd.textContent = ''; sd.classList.remove('hidden'); }
   const ti = document.getElementById('text-input');
   if (ti) ti.disabled = false;
 }
 
 function showRatingArea() {
-  tryAgainButton.disabled   = false;
-  tryAnotherButton.disabled = false;
-  document.getElementById('rating-area').classList.remove('hidden');
-}
-
-function rateAndNext(quality) {
-  Progress.rate(cardIds[currentIndex], quality);
-  Progress.recordSession(currentTheme, sessionCorrect, sessionTotal);
-  nextPhrase();
+  const ta = document.getElementById('tryAgainButton');
+  ta.classList.remove('hidden');
+  ta.disabled = false;
+  // tryAnotherButton is managed per-result: shown only on correct answer or STT/mic error
 }
 
 function nextPhrase() {
-  sessionCorrect = 0;
-  sessionTotal   = 0;
-  currentIndex   = Progress.getNextIndex(cardIds, currentIndex);
+  currentIndex = (currentIndex + 1) % phrases.length;
   showPhrase(currentIndex);
   updateSessionCounter();
 
@@ -306,29 +270,25 @@ function nextPhrase() {
 /* ---- TTS (Kokoro via AppTTS) ---- */
 
 function _audioRef() {
-  // In mixed mode, cardIds[i] = 'greetings_5' → use real topic + original index
-  if (currentTheme === '__mixed__' && cardIds[currentIndex]) {
-    const parts = cardIds[currentIndex].split('_');
-    const idx   = parseInt(parts.pop(), 10);
-    return { topic: parts.join('_'), index: idx };
-  }
   return { topic: currentTheme, index: currentIndex };
 }
+
+function _getSpeed() { return 1; }
 
 function playTTS() {
   const phraseText = document.getElementById('Phrase').textContent;
   if (!phraseText) return;
 
-  listenButton.disabled = true;
-  if (HAS_STT) speakButton.disabled = true;
+  document.getElementById('listenButton').disabled = true;
+  if (HAS_STT) document.getElementById('speakButton').disabled = true;
 
   const { topic, index } = _audioRef();
-  AppAudio.play(topic, index, phraseText).then(() => {
-    listenButton.disabled = false;
-    if (HAS_STT && !_isRecording) speakButton.disabled = false;
+  AppAudio.play(topic, index, phraseText, _getSpeed()).then(() => {
+    document.getElementById('listenButton').disabled = false;
+    if (HAS_STT && !_isRecording) document.getElementById('speakButton').disabled = false;
   }).catch(() => {
-    listenButton.disabled = false;
-    if (HAS_STT && !_isRecording) speakButton.disabled = false;
+    document.getElementById('listenButton').disabled = false;
+    if (HAS_STT && !_isRecording) document.getElementById('speakButton').disabled = false;
   });
 }
 
@@ -364,82 +324,18 @@ function _getSttWorker() {
 
 /* ---- STT Download Progress Panel ---- */
 
-let _sttPanel = null, _sttBarEl = null, _sttHideTimer = null, _sttSafetyTimer = null;
-
-function _getPanelContainer() {
-  let c = document.getElementById('pe-download-panels');
-  if (!c) {
-    c = document.createElement('div');
-    c.id = 'pe-download-panels';
-    Object.assign(c.style, {
-      position: 'fixed', bottom: '1.25rem', right: '1.25rem',
-      display: 'flex', flexDirection: 'column-reverse', gap: '0.5rem',
-      zIndex: '9999', pointerEvents: 'none',
-    });
-    document.body.appendChild(c);
-  }
-  return c;
-}
-
-function _hideSttPanel() {
-  clearTimeout(_sttSafetyTimer);
-  if (!_sttPanel) return;
-  _sttPanel.style.opacity = '0';
-  _sttPanel.style.transform = 'translateY(6px)';
-}
-
-function _ensureSttPanel() {
-  if (_sttPanel) return;
-  _sttPanel = document.createElement('div');
-  Object.assign(_sttPanel.style, {
-    width: '240px', background: 'var(--clr-surface, #fff)',
-    color: 'var(--clr-text, #1e293b)', border: '1px solid var(--clr-border, #e2e8f0)',
-    borderRadius: '0.6rem', padding: '0.75rem 1rem', fontSize: '0.8rem',
-    boxShadow: '0 4px 16px rgba(0,0,0,.12)',
-    opacity: '0', transform: 'translateY(6px)',
-    transition: 'opacity .3s, transform .3s',
-  });
-  _sttPanel.setAttribute('role', 'status');
-  _sttPanel.setAttribute('aria-live', 'polite');
-  const title = document.createElement('div');
-  Object.assign(title.style, { fontWeight: '600', marginBottom: '0.5rem' });
-  title.textContent = '🎙️ Loading speech model…';
-  _sttPanel.appendChild(title);
-  const track = document.createElement('div');
-  Object.assign(track.style, { background: 'var(--clr-border, #e2e8f0)', borderRadius: '99px', height: '5px', overflow: 'hidden' });
-  _sttBarEl = document.createElement('div');
-  Object.assign(_sttBarEl.style, { background: 'var(--clr-primary, #2563eb)', height: '100%', width: '0%', borderRadius: '99px', transition: 'width .6s ease' });
-  track.appendChild(_sttBarEl);
-  _sttPanel.appendChild(track);
-  _getPanelContainer().appendChild(_sttPanel);
-}
-
-function _showSttPanel() {
-  if (localStorage.getItem('pe_stt_cached')) return;
-  clearTimeout(_sttHideTimer);
-  _ensureSttPanel();
-  clearTimeout(_sttSafetyTimer);
-  _sttSafetyTimer = setTimeout(_hideSttPanel, 12000);
-  requestAnimationFrame(() => { _sttPanel.style.opacity = '1'; _sttPanel.style.transform = 'translateY(0)'; });
-}
+const _sttDp = AppDownloadPanel.create('🎙️ Loading speech model…', '🎙️ Speech model ready ✓', 'pe_stt_cached');
 
 function _onSttProgress(p) {
   if (p.status === 'initiate') {
-    _showSttPanel();
+    _sttDp.show();
   } else if (p.status === 'progress' && p.progress != null) {
-    _showSttPanel();
-    if (_sttBarEl) _sttBarEl.style.width = Math.min(p.progress, 100) + '%';
+    _sttDp.update(p.progress);
   }
 }
 
 function _onSttReady() {
-  localStorage.setItem('pe_stt_cached', '1');
-  clearTimeout(_sttSafetyTimer);
-  if (!_sttPanel) return;
-  const title = _sttPanel.querySelector('div');
-  if (title) title.textContent = '🎙️ Speech model ready ✓';
-  if (_sttBarEl) _sttBarEl.style.width = '100%';
-  _sttHideTimer = setTimeout(_hideSttPanel, 2000);
+  _sttDp.complete();
 }
 
 function toggleRecording() {
@@ -448,6 +344,7 @@ function toggleRecording() {
 }
 
 async function _startRecording() {
+  clearTimeout(_sttTimeoutId); // cancel any leftover timeout from a previous attempt
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     _mediaRecorder   = new MediaRecorder(stream);
@@ -457,19 +354,64 @@ async function _startRecording() {
     _mediaRecorder.start();
     _isRecording = true;
 
-    listenButton.disabled = true;
-    speakButton.textContent = '⏹ Stop';
-    speakButton.setAttribute('aria-label', 'Stop recording');
-    if (message) { message.textContent = '🎙 Recording… tap Stop when done'; message.className = ''; }
+    document.getElementById('listenButton').disabled = true;
+    document.getElementById('speakButton').textContent = '⏹ Stop';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Stop recording');
+    { document.getElementById('recognizedText').textContent = '🎙 Recording… tap Stop when done'; document.getElementById('recognizedText').className = ''; }
+
+    // VAD: auto-stop after 1.5 s of silence following detected speech
+    try {
+      _vadAudioCtx = new AudioContext();
+      const src      = _vadAudioCtx.createMediaStreamSource(stream);
+      const analyser = _vadAudioCtx.createAnalyser();
+      analyser.fftSize = 512;
+      src.connect(analyser);
+      const buf = new Uint8Array(analyser.frequencyBinCount);
+      let speechDetected = false;
+      let silenceStart   = null;
+      const THRESHOLD  = 15;    // peak amplitude above 128 (0–128 scale)
+      const SILENCE_MS = 2500;  // ms of silence after speech → auto-stop
+
+      _vadIntervalId = setInterval(() => {
+        if (!_isRecording) { clearInterval(_vadIntervalId); _vadIntervalId = null; return; }
+        analyser.getByteTimeDomainData(buf);
+        let peak = 0;
+        for (let k = 0; k < buf.length; k++) {
+          const v = Math.abs(buf[k] - 128);
+          if (v > peak) peak = v;
+        }
+        if (peak > THRESHOLD) {
+          speechDetected = true;
+          silenceStart   = null;
+          { document.getElementById('recognizedText').textContent = '🎙 Listening…'; document.getElementById('recognizedText').className = 'vad-active'; }
+        } else if (speechDetected) {
+          if (!silenceStart) silenceStart = Date.now();
+          { document.getElementById('recognizedText').textContent = '🎙 Recording… tap Stop when done'; document.getElementById('recognizedText').className = ''; }
+          if (Date.now() - silenceStart >= SILENCE_MS) {
+            clearInterval(_vadIntervalId);
+            _vadIntervalId = null;
+            _stopRecording();
+          }
+        }
+      }, 80);
+    } catch (_) { /* VAD is optional — fall through to manual stop */ }
+
   } catch (e) {
     const msgs = {
       NotAllowedError : 'Microphone access blocked. Allow it in your browser settings.',
       NotFoundError   : 'No microphone found. Please connect one and try again.',
     };
-    if (message) {
-      message.textContent = msgs[e.name] || 'Could not access microphone. Please try again.';
-      message.className = 'incorrect';
-    }
+    const errMsg = msgs[e.name] || 'Could not access microphone. Please try again.';
+    document.getElementById('recognizedText').textContent = '';
+    document.getElementById('recognizedText').className = '';
+    const _fbr = document.getElementById('speaking-feedback-result');
+    if (_fbr) { _fbr.textContent = '✗ Error'; _fbr.className = 'feedback-result incorrect'; }
+    const _sd = document.getElementById('speaking-diff');
+    if (_sd) _sd.textContent = errMsg;
+    const _fb = document.getElementById('speaking-feedback');
+    if (_fb) { _fb.className = 'speaking-feedback incorrect'; _fb.classList.remove('hidden'); }
+    const _tb = document.getElementById('tryAnotherButton');
+    _tb.classList.remove('hidden'); _tb.disabled = false;
     showRatingArea();
   }
 }
@@ -478,9 +420,13 @@ function _stopRecording() {
   if (!_mediaRecorder || _mediaRecorder.state === 'inactive') return;
   _isRecording = false;
 
-  speakButton.disabled  = true;
-  speakButton.textContent = '⏳ Transcribing…';
-  speakButton.setAttribute('aria-label', 'Transcribing your speech');
+  // Clean up VAD
+  clearInterval(_vadIntervalId); _vadIntervalId = null;
+  if (_vadAudioCtx) { _vadAudioCtx.close().catch(() => {}); _vadAudioCtx = null; }
+
+  document.getElementById('speakButton').disabled  = true;
+  document.getElementById('speakButton').textContent = '⏳ Transcribing…';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Transcribing your speech');
 
   _mediaRecorder.onstop = async () => {
     _mediaRecorder.stream.getTracks().forEach(t => t.stop());
@@ -495,6 +441,11 @@ function _stopRecording() {
       const worker = _getSttWorker();
       if (!worker) { _onSttError('Speech recognition not available.'); return; }
       worker.postMessage({ id: Date.now(), audio }, [audio.buffer]);
+
+      // Safety timeout: if Whisper hangs and never responds, unblock the UI
+      _sttTimeoutId = setTimeout(() => {
+        _onSttError('Transcription timed out. Please try again.');
+      }, _STT_TIMEOUT_MS);
     } catch (e) {
       _onSttError(e.message);
     }
@@ -503,23 +454,72 @@ function _stopRecording() {
   _mediaRecorder.stop();
 }
 
+function _isBlankAudio(text) {
+  if (!text || !text.trim()) return true;
+  const t = text.trim();
+  // Whisper placeholder tokens for silence/noise
+  if (/^\[.*\]$/.test(t)) return true;
+  // Single word or very short — likely noise artifact
+  if (t.replace(/[^a-z]/gi, '').length < 3) return true;
+  return false;
+}
+
 function _onTranscript(text) {
-  speakButton.disabled  = false;
-  speakButton.textContent = '🎙️ Speak';
-  speakButton.setAttribute('aria-label', 'Speak the phrase aloud');
+  clearTimeout(_sttTimeoutId);
+  document.getElementById('speakButton').disabled  = false;
+  document.getElementById('speakButton').textContent = '🎙️ Speak';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+
+  if (_isBlankAudio(text)) {
+    _showNotUnderstood();
+    return;
+  }
+
   displayResult(text, 0);
 }
 
-function _onSttError(errMsg) {
-  _isRecording = false;
-  listenButton.disabled = false;
-  speakButton.disabled  = false;
-  speakButton.textContent = '🎙️ Speak';
-  speakButton.setAttribute('aria-label', 'Speak the phrase aloud');
-  if (message) {
-    message.textContent = errMsg || 'An error occurred. Please try again.';
-    message.className = 'incorrect';
+function _showNotUnderstood() {
+  document.getElementById('recognizedText').textContent = '';
+  document.getElementById('recognizedText').className   = '';
+
+  // Show neutral warning — no diff, no SRS penalty, no incorrect state
+  const fb  = document.getElementById('speaking-feedback');
+  const fbr = document.getElementById('speaking-feedback-result');
+  const sd  = document.getElementById('speaking-diff');
+  const card = document.getElementById('phrase-card');
+
+  if (fbr) { fbr.textContent = '👂 Couldn\'t understand you!'; fbr.className = 'feedback-result not-understood'; }
+  if (sd)  { sd.textContent = ''; sd.classList.add('hidden'); }
+  if (fb)  { fb.className = 'speaking-feedback not-understood'; fb.classList.remove('hidden'); }
+  if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
+
+  // Re-enable speak/listen so user can try again immediately
+  document.getElementById('listenButton').disabled = false;
+  if (HAS_STT) {
+    document.getElementById('speakButton').disabled   = false;
+    document.getElementById('speakButton').textContent = '🎙️ Speak';
   }
+  document.getElementById('tryAgainButton').classList.remove('hidden');
+  document.getElementById('tryAgainButton').disabled = false;
+}
+
+function _onSttError(errMsg) {
+  clearTimeout(_sttTimeoutId);
+  _isRecording = false;
+  document.getElementById('listenButton').disabled = false;
+  document.getElementById('speakButton').disabled  = false;
+  document.getElementById('speakButton').textContent = '🎙️ Speak';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+  document.getElementById('recognizedText').textContent = '';
+  document.getElementById('recognizedText').className = '';
+  const fbr = document.getElementById('speaking-feedback-result');
+  if (fbr) { fbr.textContent = '✗ Error'; fbr.className = 'feedback-result incorrect'; }
+  const sd = document.getElementById('speaking-diff');
+  if (sd) sd.textContent = errMsg || 'An error occurred. Please try again.';
+  const fb = document.getElementById('speaking-feedback');
+  if (fb) { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
+  document.getElementById('tryAnotherButton').classList.remove('hidden');
+  document.getElementById('tryAnotherButton').disabled = false;
   showRatingArea();
 }
 
@@ -527,38 +527,50 @@ function _onSttError(errMsg) {
 
 function displayResult(text, confidence) {
   const originalPhrase = document.getElementById('Phrase').textContent.trim();
-  const clean = s => expandContractions(s).toLowerCase()
-    .replace(/[.,\/#!$%^&*;:{}=\-_~()?!]/g, '')
-    .replace(/\s+/g, ' ').trim();
-  const isCorrect = clean(text) === clean(originalPhrase);
+  const isCorrect = AppText.normalise(text, contractionMap) === AppText.normalise(originalPhrase, contractionMap);
 
   attemptDone = true;
   sessionTotal++;
 
+  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+
+  const fbr = document.getElementById('speaking-feedback-result');
+  const sd  = document.getElementById('speaking-diff');
+  const fb  = document.getElementById('speaking-feedback');
+
+  const card = document.getElementById('phrase-card');
   if (isCorrect) {
     sessionCorrect++;
-    let msg = 'Correct!';
     let confettiCount = 100;
-    if (confidence >= 0.975)     { msg = 'Excellent! \uD83C\uDF89'; confettiCount = 800; }
-    else if (confidence >= 0.95) { msg = 'Great! \uD83D\uDE04';     confettiCount = 350; }
-    else if (confidence >= 0.9)  { msg = 'Good! \uD83D\uDE42';      confettiCount = 120; }
-    else if (confidence > 0)     { msg = 'Correct! Keep it up \uD83D\uDC4D'; confettiCount = 50; }
-    if (confidence > 0) msg += '  \u00b7  ' + (confidence * 100).toFixed(0) + '% confidence';
-    message.textContent = msg;
-    message.className   = 'correct';
+    if (confidence >= 0.975)     { confettiCount = 800; }
+    else if (confidence >= 0.95) { confettiCount = 350; }
+    else if (confidence >= 0.9)  { confettiCount = 120; }
+    else if (confidence > 0)     { confettiCount = 50; }
+    document.getElementById('recognizedText').textContent = '';
+    document.getElementById('recognizedText').className   = '';
+    if (fbr)  { fbr.textContent = '✓ Correct!'; fbr.className = 'feedback-result correct'; }
+    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildCorrect(originalPhrase)); }
+    if (fb)   { fb.className = 'speaking-feedback correct'; fb.classList.remove('hidden'); }
+    if (card) { card.classList.add('phrase-card--correct'); }
     jsConfetti.addConfetti({ confettiNumber: confettiCount });
+    const tb = document.getElementById('tryAnotherButton');
+    tb.classList.remove('hidden'); tb.disabled = false;
+    updateGrammarChip(currentIndex);
   } else {
-    let shown = text.replace(/\bi\b/g, 'I');
-    shown = shown.charAt(0).toUpperCase() + shown.slice(1);
-    message.textContent = 'I heard: "' + shown + '"';
-    message.className   = 'incorrect';
+    document.getElementById('recognizedText').textContent = '';
+    document.getElementById('recognizedText').className   = '';
+    if (fbr)  { fbr.textContent = '✗ Incorrect'; fbr.className = 'feedback-result incorrect'; }
+    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildDiff(text, originalPhrase, contractionMap)); }
+    if (fb)   { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
+    if (card) { card.classList.add('phrase-card--incorrect'); }
+    // document.getElementById('tryAnotherButton') stays disabled — user must Try Again
   }
 
-  listenButton.disabled = true;
+  document.getElementById('listenButton').disabled = false; // keep enabled so learner can replay for comparison
   if (HAS_STT) {
-    speakButton.disabled  = true;
-    speakButton.textContent = '🎙️ Speak';
-    speakButton.setAttribute('aria-label', 'Speak the phrase aloud');
+    document.getElementById('speakButton').disabled  = true;
+    document.getElementById('speakButton').textContent = '🎙️ Speak';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
   }
   const ti = document.getElementById('text-input');
   if (ti) ti.disabled = true;
@@ -566,12 +578,5 @@ function displayResult(text, confidence) {
   showRatingArea();
 }
 
-/* ---- Contractions ---- */
+/* ---- Word-level Diff — delegated to AppFeedback (shared/js/feedback.js) ---- */
 
-function expandContractions(text) {
-  if (!contractionsData) return text;
-  contractionsData.forEach(c => {
-    text = text.replace(new RegExp(c.original, 'gi'), c.expanded);
-  });
-  return text;
-}
