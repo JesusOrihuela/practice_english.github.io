@@ -23,7 +23,7 @@ function _equivalentMatch(guess, answer) {
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], audioIndices = [];
 let currentIndex = 0;
 let currentBlank = null;  // { blank, blankClean, blankedPhrase, fullPhrase }
 let answered = false;
@@ -32,7 +32,20 @@ let _lastCorrect = false;
 // ---- Init ----
 
 document.addEventListener('DOMContentLoaded', () => {
-  AppTopicGrid.build({ badge: 'Fill-in', ariaLabelSuffix: 'fill-in-the-blank', srsPrefix: 'cloze_', onSelect: startTopic });
+  const _urlTopic = new URLSearchParams(location.search).get('topic');
+  const _pathMode = new URLSearchParams(location.search).get('path') === '1';
+  const _pathCard = new URLSearchParams(location.search).get('card');
+
+  if (_pathMode) {
+    document.getElementById('back-btn').classList.add('hidden');
+    if (typeof PathSession !== 'undefined') PathSession.start();
+  }
+
+  if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
+    startTopic(_urlTopic, _pathMode, _pathCard);
+  } else {
+    AppTopicGrid.build({ badge: 'Fill-in', ariaLabelSuffix: 'fill-in-the-blank', srsPrefix: 'cloze_', onSelect: startTopic });
+  }
 
   AppData.get('word-equivalents')
     .then(data => {
@@ -66,6 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('try-again-btn').classList.add('hidden');
     showPhrase(currentIndex);
   });
+
+  if (_pathMode) {
+    const _backLink = document.createElement('a');
+    _backLink.id = 'back-to-path';
+    _backLink.href = '../../my-learning/html/my-learning.html';
+    _backLink.className = 'back-to-path-link hidden';
+    _backLink.textContent = '← Back to path';
+    _backLink.addEventListener('click', function () {
+      if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
+    });
+    document.getElementById('exercise-area').appendChild(_backLink);
+  }
 
   AppAudio.setBase('../../shared/audio/');
   AppAudio.warmup();
@@ -115,15 +140,27 @@ function _showLoadError(topicId) {
 
 // ---- Load Topic ----
 
-function startTopic(topicId) {
+let _pathModeActive = false;
+let _pathCardId     = null;
+
+function startTopic(topicId, pathMode, pathCard) {
+  _pathModeActive = !!pathMode;
+  _pathCardId     = pathCard || null;
   localStorage.setItem(LAST_KEY, topicId);
   currentTopic = topicId;
   AppData.get(topicId)
     .then(data => {
-      phrases      = data.phrases;
-      translations = data.traductions || [];
-      grammarNotes = data.grammar || [];
-      cardIds      = phrases.map((_, i) => 'cloze_' + topicId + '_' + i);
+      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _tagged = (data.phrases || []).map((p, i) => ({
+        phrase: p.phrase, translation: p.translation || '',
+        grammar: p.grammar || null, cefr: p.cefr || null, id: p.id, origIdx: i,
+      })).sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+      phrases      = _tagged.map(x => x.phrase);
+      translations = _tagged.map(x => x.translation);
+      grammarNotes = _tagged.map(x => x.grammar);
+      cefrLevels   = _tagged.map(x => x.cefr);
+      cardIds      = _tagged.map(x => 'cloze_' + x.id);
+      audioIndices = _tagged.map(x => x.origIdx);
 
       const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
@@ -131,16 +168,25 @@ function startTopic(topicId) {
         cardIds,
         topicLabel: topicObj ? topicObj.label : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: data.traductions || null,
+        traductions: _tagged.map(x => x.translation),
+        cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
-      _openPhraseBrowser();
+      if (_pathModeActive) {
+        _beginExercise(0);
+      } else {
+        _openPhraseBrowser();
+      }
     })
     .catch(() => _showLoadError(topicId));
 }
 
 function _beginExercise(idx) {
+  if (_pathModeActive && _pathCardId) {
+    const cardIdx = cardIds.indexOf(_pathCardId);
+    if (cardIdx !== -1) idx = cardIdx;
+  }
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('exercise-area').classList.remove('hidden');
   const streak = Progress.getStreak();
@@ -195,9 +241,26 @@ function showPhrase(startIndex) {
   document.getElementById('grammar-chip-wrap').classList.add('hidden');
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('try-again-btn').classList.add('hidden');
+  document.getElementById('back-to-path')?.classList.add('hidden');
   document.getElementById('phrase-card').className        = 'phrase-card';
 
+  _showCefrBadge(cefrLevels[currentIndex], 'phrase-card');
   document.getElementById('cloze-input')?.focus();
+}
+
+function _showCefrBadge(level, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  let badge = container.querySelector('.cefr-phrase-badge');
+  if (!badge) {
+    badge = document.createElement('span');
+    container.style.position = 'relative';
+    container.appendChild(badge);
+  }
+  if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
+  badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
+  badge.textContent = level;
+  badge.setAttribute('aria-label', 'CEFR level ' + level);
 }
 
 // ---- Answer Check ----
@@ -253,13 +316,24 @@ function checkAnswer() {
   feedback.className = 'cloze-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
+
 }
 
 // ---- Rating & Advance ----
 
 function rateAndNext(quality) {
   // Progress already saved in checkAnswer — just advance
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const nextHref = PathSession.advance();
+    if (nextHref) {
+      window.location.href = '../../' + nextHref;
+    } else {
+      _showPathSessionComplete();
+    }
+    return;
+  }
   updateCounter();
 
   const streak = Progress.getStreak();
@@ -269,11 +343,40 @@ function rateAndNext(quality) {
   showPhrase(currentIndex);
 }
 
+function _showPathSessionComplete() {
+  AppAudio.cancel();
+  const prog = typeof PathSession !== 'undefined' ? PathSession.getProgress() : null;
+  const reviewCount = prog ? Math.max(0, prog.total - (prog.newCount || 0)) : 0;
+  const newCount    = prog ? (prog.newCount || 0) : 0;
+  document.body.innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
+      '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">Session complete!</h1>' +
+      '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
+        (reviewCount > 0 ? reviewCount + ' review' + (reviewCount > 1 ? 's' : '') : '') +
+        (reviewCount > 0 && newCount > 0 ? ' and ' : '') +
+        (newCount > 0 ? newCount + ' new card' + (newCount > 1 ? 's' : '') : '') +
+        ' done today.' +
+      '</p>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+    '</div>';
+}
+
 // ---- Counter ----
 
 function updateCounter() {
-  const stats = Progress.getTopicStats('cloze_' + currentTopic, phrases.length);
   const el = document.getElementById('cloze-counter');
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const prog = PathSession.getProgress();
+    if (el) el.textContent = 'Exercise ' + prog.current + ' of ' + prog.total;
+    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
+    const fill = document.getElementById('session-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+    const bar = document.getElementById('session-progress-bar');
+    if (bar) bar.setAttribute('aria-valuenow', pct);
+    return;
+  }
+  const stats = Progress.getStatsForCards(cardIds);
   if (el) el.textContent = stats.seen + ' / ' + stats.total + ' learned';
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
@@ -286,7 +389,7 @@ function updateCounter() {
 
 function playTTS(text) {
   if (!text) return;
-  AppAudio.play(currentTopic, currentIndex, text);
+  AppAudio.play(currentTopic, audioIndices[currentIndex] ?? currentIndex, text);
 }
 
 // extractGrammarInfo is in shared/js/grammar-chip.js

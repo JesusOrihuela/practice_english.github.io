@@ -79,8 +79,26 @@
         </section>
 
 
+        <!-- ── Learning Path ── -->
+        <section class="path-section" id="path-section">
+          <div class="path-intro">
+            <h2 class="path-heading">Your Learning Path</h2>
+            <p class="path-subheading">Your daily session — guided by spaced repetition.</p>
+          </div>
+          <div class="path-card">
+            <div class="path-session-cta" id="path-session-cta"><!-- JS --></div>
+            <div class="path-card__trail">
+              <button class="path-scroll-btn path-scroll-btn--left hidden" id="path-scroll-left" aria-label="Scroll left">‹</button>
+              <div class="path-nodes" id="path-nodes" role="list"><!-- JS --></div>
+              <button class="path-scroll-btn path-scroll-btn--right hidden" id="path-scroll-right" aria-label="Scroll right">›</button>
+              <div class="path-nodes-fade path-nodes-fade--left hidden" aria-hidden="true"></div>
+              <div class="path-nodes-fade path-nodes-fade--right" aria-hidden="true"></div>
+            </div>
+          </div>
+        </section>
+
         <!-- Activities Hub -->
-        <section class="activities-section">
+        <section class="activities-section" id="all-activities">
 
             <div class="activities-intro">
                 <h2 class="activities-heading">Choose your activity</h2>
@@ -179,11 +197,6 @@
             </div>
 
 
-            <div class="activities-footer">
-                <a href="progress/html/progress.html" class="progress-link">
-                    📊 View My Progress <span class="link-arrow">→</span>
-                </a>
-            </div>
 
         </section>
     </main>
@@ -192,7 +205,6 @@
     <div id="ob-overlay" class="ob-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="ob-title">
         <div class="ob-modal">
 
-            <div class="ob-header-stripe" aria-hidden="true"></div>
             <button class="ob-close" id="ob-close" aria-label="Close">✕</button>
 
             <div class="ob-inner">
@@ -246,6 +258,7 @@
             </div>
 
             </div><!-- /ob-inner -->
+            <div class="ob-footer-stripe" aria-hidden="true"></div>
         </div>
     </div>
 
@@ -463,8 +476,8 @@
       })();
     </script>
     <script src="shared/js/progress.js"></script>
-    <script>
-    </script>
+    <script src="shared/js/path.js"></script>
+    <script src="shared/js/path-session.js"></script>
     <script src="shared/js/milestones.js"></script>
     <script src="shared/js/notifications.js"></script>
     <script src="index/js/index.js"></script>

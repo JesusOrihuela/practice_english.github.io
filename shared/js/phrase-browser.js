@@ -20,7 +20,7 @@ const PhraseBrowser = (() => {
     return s.slice(0, max - 1).replace(/\s+\S*$/, '') + '\u2026';
   }
 
-  function show({ items, cardIds, topicLabel, pickerEl, traductions, onStart }) {
+  function show({ items, cardIds, topicLabel, pickerEl, traductions, cefrLevels, onStart }) {
     const cards     = Progress.getAllCards();
     const total     = cardIds.length;
     const seenCount = cardIds.filter(id => { const c = cards[id]; return c && c.reps > 0; }).length;
@@ -118,6 +118,15 @@ const PhraseBrowser = (() => {
         sub.setAttribute('aria-hidden', 'true');
         sub.textContent = subText;
         chip.appendChild(sub);
+      }
+
+      if (cefrLevels && cefrLevels[i]) {
+        const lvl = cefrLevels[i];
+        const badge = document.createElement('span');
+        badge.className = 'pb-chip-cefr cefr-badge cefr-badge--' + lvl.toLowerCase();
+        badge.setAttribute('aria-hidden', 'true');
+        badge.textContent = lvl;
+        chip.appendChild(badge);
       }
 
       chip.addEventListener('click', () => { close(); window.scrollTo(0, 0); onStart(i); });

@@ -1,19 +1,154 @@
 {
   "words": [
-    { "word": "aisle",        "definition": "A long passage between rows of shelves in a store",                      "translation": "pasillo",              "example": "The breakfast cereals are in aisle seven.",                                 "category": "Noun",      "difficulty": "easy"   },
-    { "word": "checkout",     "definition": "The place in a store where customers pay for their purchases",           "translation": "caja registradora",    "example": "There was a long queue at the self-service checkout.",                       "category": "Noun",      "difficulty": "easy"   },
-    { "word": "coupon",       "definition": "A voucher that entitles the holder to a discount on a product",         "translation": "cupón",                "example": "I used a coupon to save two dollars on my breakfast cereal.",               "category": "Noun",      "difficulty": "easy"   },
-    { "word": "discount",     "definition": "A reduction from the normal selling price of a product",                "translation": "descuento",            "example": "This store offers a ten percent discount for students.",                     "category": "Noun",      "difficulty": "easy"   },
-    { "word": "receipt",      "definition": "A printed document confirming that a payment has been made",            "translation": "recibo / ticket",      "example": "Keep your receipt in case you need to return the item.",                     "category": "Noun",      "difficulty": "easy"   },
-    { "word": "cashier",      "definition": "A person whose job is to take payments at a store",                     "translation": "cajero / cajera",      "example": "The cashier scanned all my items and put them in a bag.",                   "category": "Noun",      "difficulty": "easy"   },
-    { "word": "expiration",   "definition": "The date after which a product should no longer be used or sold",       "translation": "fecha de caducidad",   "example": "Always check the expiration date before buying dairy products.",             "category": "Noun",      "difficulty": "medium" },
-    { "word": "organic",      "definition": "Produced without the use of artificial chemicals or pesticides",        "translation": "orgánico / ecológico", "example": "Organic vegetables tend to cost more than conventionally grown ones.",       "category": "Adjective", "difficulty": "medium" },
-    { "word": "quantity",     "definition": "The amount or number of something that is available or required",       "translation": "cantidad",             "example": "Please enter the exact quantity you would like to order.",                   "category": "Noun",      "difficulty": "medium" },
-    { "word": "promotion",    "definition": "A special offer that sells products at a reduced price for a limited time", "translation": "promoción / oferta", "example": "The supermarket is running a buy-one-get-one promotion this week.",       "category": "Noun",      "difficulty": "medium" },
-    { "word": "loyalty",      "definition": "A points programme that rewards customers for repeated purchases",      "translation": "fidelización",         "example": "Scan your loyalty card at checkout to earn points on every purchase.",       "category": "Noun",      "difficulty": "medium" },
-    { "word": "bulk",         "definition": "Buying a large quantity of something at once, usually at a lower price", "translation": "al por mayor / a granel", "example": "It is much cheaper to buy rice and pasta in bulk.",                   "category": "Adjective", "difficulty": "hard"   },
-    { "word": "generic",      "definition": "A product sold without a brand name, often cheaper than branded versions", "translation": "genérico / marca blanca", "example": "Generic painkillers contain the same active ingredient as branded ones.", "category": "Adjective", "difficulty": "hard"   },
-    { "word": "perishable",   "definition": "Describing food or goods that will spoil or decay quickly",             "translation": "perecedero",           "example": "Keep all perishable items refrigerated at the correct temperature.",          "category": "Adjective", "difficulty": "hard"   },
-    { "word": "wholesale",    "definition": "The sale of goods in large quantities at low prices, usually to retailers", "translation": "mayorista / al por mayor", "example": "The restaurant buys its produce at wholesale prices to save money.", "category": "Noun",      "difficulty": "hard"   }
+    {
+      "word": "aisle",
+      "definition": "A long passage between rows of shelves in a store",
+      "translation": "pasillo",
+      "example": "The breakfast cereals are in aisle seven.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "aisle"
+    },
+    {
+      "word": "checkout",
+      "definition": "The place in a store where customers pay for their purchases",
+      "translation": "caja registradora",
+      "example": "There was a long queue at the self-service checkout.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "checkout"
+    },
+    {
+      "word": "coupon",
+      "definition": "A voucher that entitles the holder to a discount on a product",
+      "translation": "cupón",
+      "example": "I used a coupon to save two dollars on my breakfast cereal.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "coupon"
+    },
+    {
+      "word": "discount",
+      "definition": "A reduction from the normal selling price of a product",
+      "translation": "descuento",
+      "example": "This store offers a ten percent discount for students.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "discount"
+    },
+    {
+      "word": "receipt",
+      "definition": "A printed document confirming that a payment has been made",
+      "translation": "recibo / ticket",
+      "example": "Keep your receipt in case you need to return the item.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "receipt"
+    },
+    {
+      "word": "cashier",
+      "definition": "A person whose job is to take payments at a store",
+      "translation": "cajero / cajera",
+      "example": "The cashier scanned all my items and put them in a bag.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "cashier"
+    },
+    {
+      "word": "expiration",
+      "definition": "The date after which a product should no longer be used or sold",
+      "translation": "fecha de caducidad",
+      "example": "Always check the expiration date before buying dairy products.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "expiration"
+    },
+    {
+      "word": "organic",
+      "definition": "Produced without the use of artificial chemicals or pesticides",
+      "translation": "orgánico / ecológico",
+      "example": "Organic vegetables tend to cost more than conventionally grown ones.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "organic"
+    },
+    {
+      "word": "quantity",
+      "definition": "The amount or number of something that is available or required",
+      "translation": "cantidad",
+      "example": "Please enter the exact quantity you would like to order.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "quantity"
+    },
+    {
+      "word": "promotion",
+      "definition": "A special offer that sells products at a reduced price for a limited time",
+      "translation": "promoción / oferta",
+      "example": "The supermarket is running a buy-one-get-one promotion this week.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "promotion"
+    },
+    {
+      "word": "loyalty",
+      "definition": "A points programme that rewards customers for repeated purchases",
+      "translation": "fidelización",
+      "example": "Scan your loyalty card at checkout to earn points on every purchase.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "loyalty"
+    },
+    {
+      "word": "bulk",
+      "definition": "Buying a large quantity of something at once, usually at a lower price",
+      "translation": "al por mayor / a granel",
+      "example": "It is much cheaper to buy rice and pasta in bulk.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "bulk"
+    },
+    {
+      "word": "generic",
+      "definition": "A product sold without a brand name, often cheaper than branded versions",
+      "translation": "genérico / marca blanca",
+      "example": "Generic painkillers contain the same active ingredient as branded ones.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "generic"
+    },
+    {
+      "word": "perishable",
+      "definition": "Describing food or goods that will spoil or decay quickly",
+      "translation": "perecedero",
+      "example": "Keep all perishable items refrigerated at the correct temperature.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "perishable"
+    },
+    {
+      "word": "wholesale",
+      "definition": "The sale of goods in large quantities at low prices, usually to retailers",
+      "translation": "mayorista / al por mayor",
+      "example": "The restaurant buys its produce at wholesale prices to save money.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "wholesale"
+    }
   ]
 }

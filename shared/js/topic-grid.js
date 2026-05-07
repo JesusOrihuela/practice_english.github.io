@@ -2,6 +2,11 @@
    topic-grid.js — Shared image-card topic picker
    Used by: speaking, dictation, cloze, translation, scramble,
             quiz, vocabulary
+
+   Topic ordering (3A — guide + freedom):
+     1. Topics the user has already started (any card with reps ≥ 1) — active first
+     2. Topics not yet started — in original path order
+   Within each group the original order is preserved.
    ============================================================ */
 
 const AppTopicGrid = (() => {
@@ -17,9 +22,11 @@ const AppTopicGrid = (() => {
    * @param {Function} [opts.getItemCount]    - (topic) => Promise<number>; defaults to AppData phrase count
    */
   function build({ badge, srsPrefix, onSelect, topics, getSrsKey, getItemCount }) {
-    const topicList    = topics        || AppTopics.PHRASE_TOPICS;
-    const resolveSrsKey   = getSrsKey  || (t => srsPrefix + t.id);
-    const resolveCount    = getItemCount || (t => AppData.get(t.id).then(data => data.phrases ? data.phrases.length : 0));
+    const topicList  = topics       || AppTopics.PHRASE_TOPICS;
+    const resolveSrsKey  = getSrsKey || (t => srsPrefix + t.id);
+    const resolveCount   = getItemCount || (t => AppData.get(t.id).then(data => data.phrases ? data.phrases.length : 0));
+
+    const cards = Progress.getAllCards();
 
     const grid = document.getElementById('topic-grid');
     if (!grid) return;
@@ -31,9 +38,6 @@ const AppTopicGrid = (() => {
       btn.className = 'img-topic-card';
       btn.dataset.theme = topic.id;
       btn.style.animationDelay = (i * 0.06) + 's';
-      // No aria-label: the button's accessible name is computed from its visible
-      // children (title + progress counter + badge), which already describe the action.
-      // An explicit aria-label would override and hide the progress text from screen readers.
       const imgSrc = '../img/' + topic.id + '.webp';
       btn.innerHTML =
         '<div class="img-topic-card__img-wrap">' +
@@ -52,9 +56,10 @@ const AppTopicGrid = (() => {
 
       resolveCount(topic)
         .then(total => {
-          const s = Progress.getTopicStats(resolveSrsKey(topic), total);
+          const keyPrefix = resolveSrsKey(topic) + '_';
+          const seen = Object.keys(cards).filter(k => k.startsWith(keyPrefix) && cards[k].reps > 0).length;
           const el = document.getElementById('tp-' + topic.id);
-          if (el) el.textContent = s.seen + ' / ' + total + ' learned';
+          if (el) el.textContent = seen + ' / ' + total + ' learned';
         })
         .catch(() => {});
     });

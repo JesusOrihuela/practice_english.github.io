@@ -29,6 +29,37 @@
       }
     },
     {
+      id: 'all_activities',
+      emoji: '🎯',
+      title: 'All-Round Learner',
+      desc: 'You tried all 5 activity types. Every skill counts!',
+      check: function (cards) {
+        var hasSpeaking  = Object.entries(cards).some(function (kv) {
+          var k = kv[0];
+          return !k.startsWith('_') && !SPEAKING_PREFIX.test(k) && !k.startsWith('quiz_') && !k.startsWith('vocab') && kv[1].reps >= 1;
+        });
+        var hasDict     = Object.keys(cards).some(function (k) { return k.startsWith('dict_')     && cards[k].reps >= 1; });
+        var hasCloze    = Object.keys(cards).some(function (k) { return k.startsWith('cloze_')    && cards[k].reps >= 1; });
+        var hasScramble = Object.keys(cards).some(function (k) { return k.startsWith('scramble_') && cards[k].reps >= 1; });
+        var hasTrans    = Object.keys(cards).some(function (k) { return k.startsWith('trans_')    && cards[k].reps >= 1; });
+        return hasSpeaking && hasDict && hasCloze && hasScramble && hasTrans;
+      }
+    },
+    {
+      id: 'topic_unlocked',
+      emoji: '🗝️',
+      title: 'Pathfinder',
+      desc: 'You practiced enough to move on to a new topic. The path opens up!',
+      check: function (cards) {
+        var next = ['restaurant_', 'supermarket_', 'kitchen_', 'traveling_', 'entertainment_', 'gym_', 'technology_', 'accountability_'];
+        return Object.entries(cards).some(function (kv) {
+          var k = kv[0];
+          if (k.startsWith('_')) return false;
+          return next.some(function (t) { return k.startsWith(t); }) && kv[1].reps >= 1;
+        });
+      }
+    },
+    {
       id: 'speaking_50',
       emoji: '🗣️',
       title: '50 Speaking Phrases',
@@ -37,6 +68,15 @@
         return Object.entries(cards).filter(function (kv) {
           return !kv[0].startsWith('_') && !SPEAKING_PREFIX.test(kv[0]) && kv[1].reps >= 1;
         }).length >= 50;
+      }
+    },
+    {
+      id: 'perfect_session',
+      emoji: '✨',
+      title: 'Flawless',
+      desc: 'Perfect score in a session with 5 or more cards. Impressive!',
+      check: function (cards, sessions) {
+        return sessions.some(function (s) { return s.total >= 5 && s.correct === s.total; });
       }
     },
     {
@@ -58,12 +98,46 @@
       check: function (cards, sessions, streak) { return streak.current >= 7; }
     },
     {
-      id: 'consolidated_100',
-      emoji: '💡',
-      title: '100 Consolidated Cards',
-      desc: '100 phrases memorized long-term (interval > 7 days).',
+      id: 'first_mastered',
+      emoji: '⭐',
+      title: 'First Card Mastered',
+      desc: 'You reached full mastery on a phrase — consistent and accurate!',
       check: function (cards) {
-        return Object.values(cards).filter(function (c) { return (c.interval || 0) > 7; }).length >= 100;
+        return Object.keys(cards).some(function (key) {
+          if (key.startsWith('_')) return false;
+          return typeof Progress !== 'undefined' && Progress.getMastery(key) === 'mastered';
+        });
+      }
+    },
+    {
+      id: 'mastered_50',
+      emoji: '💡',
+      title: '50 Cards Mastered',
+      desc: '50 phrases at full mastery — your English is sticking!',
+      check: function (cards) {
+        if (typeof Progress === 'undefined') return false;
+        return Object.keys(cards).filter(function (key) {
+          return !key.startsWith('_') && Progress.getMastery(key) === 'mastered';
+        }).length >= 50;
+      }
+    },
+    {
+      id: 'streak_30',
+      emoji: '💎',
+      title: 'Iron Habit',
+      desc: '30 days of consistent practice. English is part of your life now.',
+      check: function (cards, sessions, streak) { return streak.best >= 30; }
+    },
+    {
+      id: 'mastered_100',
+      emoji: '🌟',
+      title: 'Language Champion',
+      desc: '100 cards at full mastery. You\'re building real fluency.',
+      check: function (cards) {
+        if (typeof Progress === 'undefined') return false;
+        return Object.keys(cards).filter(function (key) {
+          return !key.startsWith('_') && Progress.getMastery(key) === 'mastered';
+        }).length >= 100;
       }
     }
   ];

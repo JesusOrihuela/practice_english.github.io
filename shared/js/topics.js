@@ -10,14 +10,14 @@
 const AppTopics = (() => {
   const PHRASE_TOPICS = [
     { id: 'greetings',      label: 'Greetings',      emoji: '👋' },
-    { id: 'traveling',      label: 'Traveling',       emoji: '✈️' },
-    { id: 'technology',     label: 'Technology',      emoji: '💻' },
     { id: 'restaurant',     label: 'Restaurant',      emoji: '🍽️' },
-    { id: 'kitchen',        label: 'Kitchen',         emoji: '🍳' },
     { id: 'supermarket',    label: 'Supermarket',     emoji: '🛒' },
+    { id: 'kitchen',        label: 'Kitchen',         emoji: '🍳' },
+    { id: 'traveling',      label: 'Traveling',       emoji: '✈️' },
     { id: 'entertainment',  label: 'Entertainment',   emoji: '🎬' },
-    { id: 'accountability', label: 'Accountability',  emoji: '🎯' },
     { id: 'gym',            label: 'Gym',             emoji: '💪' },
+    { id: 'technology',     label: 'Technology',      emoji: '💻' },
+    { id: 'accountability', label: 'Accountability',  emoji: '🎯' },
   ];
 
   const VOCAB_TOPICS = [

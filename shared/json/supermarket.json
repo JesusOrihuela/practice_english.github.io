@@ -1,137 +1,313 @@
 {
   "phrases": [
-    "Have you made the grocery list yet?",
-    "I need to buy milk, bread and eggs",
-    "Don't forget to buy fruits and vegetables for the week",
-    "This supermarket is very expensive, let's go to another one",
-    "There is an offer on the detergent, let's buy two",
-    "Can you help me carry the grocery bags?",
-    "I don't have cash, can I pay with a card?",
-    "Where are the cookies?",
-    "I can't find the yogurt brand I like",
-    "How much does a kilo of meat cost?",
-    "Where is the cleaning products section?",
-    "I need to buy a new toothbrush",
-    "Is this product vegan?",
-    "Do you know which pasta brand is the best?",
-    "Is there any offer on cereals?",
-    "There is a long line at the cash registers",
-    "Can you help me reach that product on the shelf?",
-    "I can't find an employee to help me",
-    "What time does the supermarket close?",
-    "Where are the shopping carts?",
-    "Is there a bathroom nearby?",
-    "This supermarket has a very useful app",
-    "I received a discount coupon in my email",
-    "I like to use the self-service to pay for the purchase",
-    "I don't like this supermarket, it's very messy",
-    "I prefer to go to the market, there is more variety of products",
-    "You have to go to the supermarket earlier to avoid the lines",
-    "I will need a purchase ticket",
-    "Are these grapes organic?",
-    "Do you have fresh chicken?",
-    "I don't know which fish to buy",
-    "The strawberries are very expensive",
-    "I'm looking for a cake for a birthday party",
-    "Can you give me the receipt, please?",
-    "Where is the gluten-free products section?",
-    "Do you have almond milk?",
-    "Where is the personal hygiene products section?",
-    "Where is the cleaning products section?",
-    "Where is the bakery section?",
-    "Can you give me a bag, please?",
-    "I am here to make a return",
-    "I don't like this supermarket, the prices are very high",
-    "I didn't find the product I was looking for"
-  ],
-  "traductions": [
-    "¿Ya hiciste la lista del supermercado?",
-    "Necesito comprar leche, pan y huevos",
-    "¿No te olvides de comprar las frutas y verduras para la semana?",
-    "Este supermercado está muy caro, vamos a otro",
-    "Hay una oferta en el detergente, vamos a comprar dos",
-    "¿Me ayudas a llevar las bolsas del supermercado?",
-    "No tengo efectivo, ¿puedo pagar con tarjeta?",
-    "¿Dónde están las galletas?",
-    "No encuentro la marca de yogurt que me gusta",
-    "¿Cuánto cuesta el kilo de carne?",
-    "¿Dónde está la sección de productos de limpieza?",
-    "Necesito comprar un nuevo cepillo de dientes",
-    "¿Este producto es vegano?",
-    "¿Sabes qué marca de pasta es la mejor?",
-    "¿Hay alguna oferta en los cereales?",
-    "Hay mucha fila en las cajas",
-    "¿Me puedes ayudar a alcanzar ese producto de la estantería?",
-    "No puedo encontrar a un empleado para que me ayude",
-    "¿A qué hora cierra el supermercado?",
-    "¿Dónde están los carritos de compra?",
-    "¿Hay un baño cerca?",
-    "Este supermercado tiene una aplicación muy útil",
-    "Recibí un cupón de descuento en mi correo electrónico",
-    "Me gusta usar el autoservicio para pagar la compra",
-    "No me gusta este supermercado, está muy desordenado",
-    "Prefiero ir al mercado, hay más variedad de productos",
-    "Hay que ir al supermercado más temprano para evitar las colas",
-    "Voy a requerir ticket de compra",
-    "¿Estas uvas son ecológicas?",
-    "¿Tienen pollo fresco?",
-    "No sé qué pescado comprar",
-    "Las fresas están muy caras",
-    "Busco un pastel para una fiesta de cumpleaños",
-    "¿Me puede dar la factura, por favor?",
-    "¿Dónde está la sección de productos sin gluten?",
-    "¿Tienen leche de almendras?",
-    "¿Dónde está la sección de productos de higiene personal?",
-    "¿Dónde está la sección de productos de productos de limpieza?",
-    "¿Dónde se encuentra la sección de panadería?",
-    "¿Me puede dar una bolsa, por favor?",
-    "Vengo a hacer una devolución",
-    "No me gusta este supermercado, los precios son muy altos",
-    "No encontré el producto que buscaba"
-  ],
-  "grammar": [
-    "Modal 'could': polite request or possibility",
-    null,
-    null,
-    null,
-    "Phrasal verb: 'pick up' = collect or buy casually",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Present perfect: recent action with present relevance",
-    null,
-    null,
-    "Modal 'should': advice or recommendation",
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Passive voice: focus on the action, not the doer",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Simple past: completed action in the past",
-    null,
-    null
+    {
+      "id": "supermarket_have_you_made_the_grocery_list",
+      "phrase": "Have you made the grocery list yet?",
+      "translation": "¿Ya hiciste la lista del supermercado?",
+      "cefr": "A2",
+      "grammar": "Modal 'could': polite request or possibility",
+      "alternatives": ["Have you made the shopping list yet?"]
+    },
+    {
+      "id": "supermarket_i_need_to_buy_milk_bread",
+      "phrase": "I need to buy milk, bread and eggs",
+      "translation": "Necesito comprar leche, pan y huevos",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_dont_forget_to_buy_fruits_and",
+      "phrase": "Don't forget to buy fruits and vegetables for the week",
+      "translation": "¿No te olvides de comprar las frutas y verduras para la semana?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_this_supermarket_is_very_expensive_lets",
+      "phrase": "This supermarket is very expensive, let's go to another one",
+      "translation": "Este supermercado está muy caro, vamos a otro",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["This supermarket is very expensive, let's go to a different one"]
+    },
+    {
+      "id": "supermarket_there_is_an_offer_on_the",
+      "phrase": "There is an offer on the detergent, let's buy two",
+      "translation": "Hay una oferta en el detergente, vamos a comprar dos",
+      "cefr": "A2",
+      "grammar": "Phrasal verb: 'pick up' = collect or buy casually"
+    },
+    {
+      "id": "supermarket_can_you_help_me_carry_the",
+      "phrase": "Can you help me carry the grocery bags?",
+      "translation": "¿Me ayudas a llevar las bolsas del supermercado?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you help me carry the grocery bags?"]
+    },
+    {
+      "id": "supermarket_i_dont_have_cash_can_i",
+      "phrase": "I don't have cash, can I pay with a card?",
+      "translation": "No tengo efectivo, ¿puedo pagar con tarjeta?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["I don't have cash, could I pay with a card?", "I don't have any cash, can I pay with a card?"]
+    },
+    {
+      "id": "supermarket_where_are_the_cookies",
+      "phrase": "Where are the cookies?",
+      "translation": "¿Dónde están las galletas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_cant_find_the_yogurt_brand",
+      "phrase": "I can't find the yogurt brand I like",
+      "translation": "No encuentro la marca de yogurt que me gusta",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_how_much_does_a_kilo_of",
+      "phrase": "How much does a kilo of meat cost?",
+      "translation": "¿Cuánto cuesta el kilo de carne?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_is_the_cleaning_products_section",
+      "phrase": "Where is the cleaning products section?",
+      "translation": "¿Dónde está la sección de productos de limpieza?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_need_to_buy_a_new",
+      "phrase": "I need to buy a new toothbrush",
+      "translation": "Necesito comprar un nuevo cepillo de dientes",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_is_this_product_vegan",
+      "phrase": "Is this product vegan?",
+      "translation": "¿Este producto es vegano?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_do_you_know_which_pasta_brand",
+      "phrase": "Do you know which pasta brand is the best?",
+      "translation": "¿Sabes qué marca de pasta es la mejor?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_is_there_any_offer_on_cereals",
+      "phrase": "Is there any offer on cereals?",
+      "translation": "¿Hay alguna oferta en los cereales?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_there_is_a_long_line_at",
+      "phrase": "There is a long line at the cash registers",
+      "translation": "Hay mucha fila en las cajas",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_can_you_help_me_reach_that",
+      "phrase": "Can you help me reach that product on the shelf?",
+      "translation": "¿Me puedes ayudar a alcanzar ese producto de la estantería?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you help me reach that product on the shelf?"]
+    },
+    {
+      "id": "supermarket_i_cant_find_an_employee_to",
+      "phrase": "I can't find an employee to help me",
+      "translation": "No puedo encontrar a un empleado para que me ayude",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_what_time_does_the_supermarket_close",
+      "phrase": "What time does the supermarket close?",
+      "translation": "¿A qué hora cierra el supermercado?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_are_the_shopping_carts",
+      "phrase": "Where are the shopping carts?",
+      "translation": "¿Dónde están los carritos de compra?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Where are the trolleys?"]
+    },
+    {
+      "id": "supermarket_is_there_a_bathroom_nearby",
+      "phrase": "Is there a bathroom nearby?",
+      "translation": "¿Hay un baño cerca?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_this_supermarket_has_a_very_useful",
+      "phrase": "This supermarket has a very useful app",
+      "translation": "Este supermercado tiene una aplicación muy útil",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_received_a_discount_coupon_in",
+      "phrase": "I received a discount coupon in my email",
+      "translation": "Recibí un cupón de descuento en mi correo electrónico",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_like_to_use_the_selfservice",
+      "phrase": "I like to use the self-service to pay for the purchase",
+      "translation": "Me gusta usar el autoservicio para pagar la compra",
+      "cefr": "A2",
+      "grammar": "Present perfect: recent action with present relevance"
+    },
+    {
+      "id": "supermarket_i_dont_like_this_supermarket_its",
+      "phrase": "I don't like this supermarket, it's very messy",
+      "translation": "No me gusta este supermercado, está muy desordenado",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_prefer_to_go_to_the",
+      "phrase": "I prefer to go to the market, there is more variety of products",
+      "translation": "Prefiero ir al mercado, hay más variedad de productos",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_you_have_to_go_to_the",
+      "phrase": "You have to go to the supermarket earlier to avoid the lines",
+      "translation": "Hay que ir al supermercado más temprano para evitar las colas",
+      "cefr": "A2",
+      "grammar": "Modal 'should': advice or recommendation"
+    },
+    {
+      "id": "supermarket_i_will_need_a_purchase_ticket",
+      "phrase": "I will need a purchase ticket",
+      "translation": "Voy a requerir ticket de compra",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_are_these_grapes_organic",
+      "phrase": "Are these grapes organic?",
+      "translation": "¿Estas uvas son ecológicas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_do_you_have_fresh_chicken",
+      "phrase": "Do you have fresh chicken?",
+      "translation": "¿Tienen pollo fresco?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_dont_know_which_fish_to",
+      "phrase": "I don't know which fish to buy",
+      "translation": "No sé qué pescado comprar",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_the_strawberries_are_very_expensive",
+      "phrase": "The strawberries are very expensive",
+      "translation": "Las fresas están muy caras",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_im_looking_for_a_cake_for",
+      "phrase": "I'm looking for a cake for a birthday party",
+      "translation": "Busco un pastel para una fiesta de cumpleaños",
+      "cefr": "A1",
+      "grammar": "Passive voice: focus on the action, not the doer"
+    },
+    {
+      "id": "supermarket_can_you_give_me_the_receipt",
+      "phrase": "Can you give me the receipt, please?",
+      "translation": "¿Me puede dar la factura, por favor?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you give me the receipt, please?"]
+    },
+    {
+      "id": "supermarket_where_is_the_glutenfree_products_section",
+      "phrase": "Where is the gluten-free products section?",
+      "translation": "¿Dónde está la sección de productos sin gluten?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_do_you_have_almond_milk",
+      "phrase": "Do you have almond milk?",
+      "translation": "¿Tienen leche de almendras?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_is_the_personal_hygiene_products",
+      "phrase": "Where is the personal hygiene products section?",
+      "translation": "¿Dónde está la sección de productos de higiene personal?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_is_the_cleaning_products_section_2",
+      "phrase": "Where is the cleaning products section?",
+      "translation": "¿Dónde está la sección de productos de productos de limpieza?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_is_the_bakery_section",
+      "phrase": "Where is the bakery section?",
+      "translation": "¿Dónde se encuentra la sección de panadería?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_can_you_give_me_a_bag",
+      "phrase": "Can you give me a bag, please?",
+      "translation": "¿Me puede dar una bolsa, por favor?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you give me a bag, please?"]
+    },
+    {
+      "id": "supermarket_i_am_here_to_make_a",
+      "phrase": "I am here to make a return",
+      "translation": "Vengo a hacer una devolución",
+      "cefr": "A2",
+      "grammar": "Simple past: completed action in the past"
+    },
+    {
+      "id": "supermarket_i_dont_like_this_supermarket_the",
+      "phrase": "I don't like this supermarket, the prices are very high",
+      "translation": "No me gusta este supermercado, los precios son muy altos",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_i_didnt_find_the_product_i",
+      "phrase": "I didn't find the product I was looking for",
+      "translation": "No encontré el producto que buscaba",
+      "cefr": "A2",
+      "grammar": null
+    }
   ]
 }

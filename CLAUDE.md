@@ -61,13 +61,13 @@ Progress.getAllCards()                   // → raw localStorage card map
 | Cloze | `cloze_{topic}_{i}` | original phrase index |
 | Translation | `trans_{topic}_{i}` | original phrase index (filtered phrases use p.idx, not seqIdx) |
 | Scramble | `scramble_{topic}_{i}` | original phrase index (filtered phrases use p.idx, not seqIdx) |
-| Quiz (general) | `quiz_vocab_{i}` | sequential word index |
-| Quiz (topic) | `quiz_{topic}_{i}` | sequential word index |
-| Vocabulary (general) | `vocab_{i}` | sequential word index |
-| Vocabulary (topic) | `vocab_{topic}_{i}` | sequential word index |
-| Grammar | `grammar_{category}_{ruleId}` | **stable string rule ID, not numeric** — cannot use `getTopicStats()`; use `getAllCards()` + manual filter |
+| Quiz (general) | `quiz_vocab_{wordId}` | stable word slug, e.g. `quiz_vocab_abundant` |
+| Quiz (topic) | `quiz_{topic}_{wordId}` | stable word slug, e.g. `quiz_greetings_introduction` |
+| Vocabulary (general) | `vocab_{wordId}` | stable word slug, e.g. `vocab_abundant` |
+| Vocabulary (topic) | `vocab_{topic}_{wordId}` | stable word slug, e.g. `vocab_greetings_introduction` |
+| Grammar | `grammar_{category}_{ruleId}` | **stable string rule ID** — use `getAllCards()` + manual filter |
 
-`{i}` is always the **original array index** in the source JSON, even when phrases are filtered before display. Never use the post-filter sequential index — it shifts when content changes.
+Card IDs are stable string slugs (v3 schema). Use `Progress.getStatsForCards(cardIds)` instead of `getTopicStats()`. Legacy numeric IDs are auto-migrated on first load by `_migrateCardIds()` in progress.js.
 
 ### TTS — `shared/js/tts.js` (global `AppTTS`)
 ```js
@@ -90,14 +90,27 @@ Used only in `speaking/js/speaking.js` — MediaRecorder → Float32Array @ 16kH
 All phrase topics live in `shared/json/{topic}.json` (single source of truth used by every activity):
 ```json
 {
-  "phrases":     ["Hello, how are you?", ...],
-  "traductions": ["Hola, ¿cómo estás?", ...],
-  "grammar":     [null, "Tip about phrase 1", null, ...]
+  "phrases": [
+    { "id": "greetings_hello_how_are_you_today", "phrase": "Hello, how are you today?", "translation": "Hola, ¿cómo estás hoy?", "cefr": "A1", "grammar": null },
+    ...
+  ]
 }
 ```
-- `phrases` — English phrases (used by speaking, dictation, cloze, scramble, translation as answer)
-- `traductions` — Spanish translations (used by translation as the prompt, optional hint in speaking)
-- `grammar` — Array of grammar tips (same length as `phrases`, `null` where no tip applies). Populated in `greetings.json` (16 notes) as Stage 3 pilot; all other topics have `null`-filled arrays ready.
+Each phrase object has:
+- `id` — stable string slug used as card ID (speaking) or prefixed for other activities
+- `phrase` — English text (what the user speaks/types/hears)
+- `translation` — Spanish text (prompt for translation, optional hint in speaking)
+- `cefr` — `"A1"` | `"A2"` | `"B1"` | `"B2"` | `null` — used for CEFR badge and sorting
+- `grammar` — grammar tip string or `null`
+
+**When reading phrase data in activities:**
+```js
+const _tagged = (data.phrases || []).map(p => ({
+  phrase: p.phrase, translation: p.translation || '',
+  grammar: p.grammar || null, cefr: p.cefr || null, id: p.id,
+})).sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+cardIds = _tagged.map(x => actPrefix + x.id);  // speaking: x.id; others: 'dict_' + x.id, etc.
+```
 
 Available topics: `greetings`, `traveling`, `technology`, `restaurant`, `kitchen`, `supermarket`, `entertainment`, `accountability`, `gym`.
 

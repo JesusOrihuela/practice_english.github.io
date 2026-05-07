@@ -1,281 +1,650 @@
 {
   "phrases": [
-    "Do we have enough eggs for the recipe?",
-    "Pass me the cutting board",
-    "Where do we keep the measuring cups?",
-    "Can you pass me the spatula?",
-    "Do we have any olive oil left?",
-    "Pass me the salt from the pantry",
-    "We need to replace the baking powder",
-    "The mixer is in the cabinet",
-    "The baking sheets are on the top shelf",
-    "Do we have any fresh herbs?",
-    "Can you check if the oven is preheated?",
-    "Baking soda will help the dough rise",
-    "Do we have parchment paper to line the baking sheet?",
-    "Help me peel the carrots and potatoes",
-    "We need to wash the cheese grater",
-    "Do we have vanilla extract for the cake?",
-    "Could you rinse the vegetables with cold water?",
-    "The knives need sharpening",
-    "We need to take the meat out of the freezer in advance",
-    "The spices and condiments are in the cabinet next to the sink",
-    "Do we have aluminum foil to wrap up the leftovers?",
-    "We need to finely chop the onions",
-    "Can you pass me the colander to drain the pasta?",
-    "We need to buy unsalted butter",
-    "Could you help me open this jar, please?",
-    "The recipe calls for brown sugar instead of white sugar",
-    "The rolling pin to flatten the dough is in the drawer",
-    "What's the difference between a pot and a pan?",
-    "Do we have breadcrumbs to coat the chicken?",
-    "Where do we keep the plastic wrap to cover the leftovers?",
-    "The milk has curdled",
-    "This sauce has expired",
-    "We don't have the necessary ingredients to make the recipe",
-    "Reducing the sauce will take time",
-    "Marinade is a commonly used seasoning in cooking",
-    "The salad will need oil, vinegar, and salt",
-    "Could you help me sift the flour?",
-    "Put the leftovers in plastic containers",
-    "There's leftover broth for the soup",
-    "Be careful with the hot pot",
-    "The soup needs more salt",
-    "Have you already cut the vegetables?",
-    "Add a little sugar to the sauce to balance the flavor",
-    "We need to preheat the oven",
-    "Take the food out of the refrigerator",
-    "Tonight we're making homemade pizza",
-    "I'm going to make chicken and rice, it's my favorite recipe",
-    "I need a tablespoon of butter for this recipe",
-    "Could you chop the vegetables into small pieces, please?",
-    "The pan is too hot; lower the heat a bit",
-    "Where are the clean dishes?",
-    "Wash the fruit before cutting it",
-    "To make flan, you have to caramelize the sugar",
-    "To make flan, you have to put the mold in a water bath",
-    "To cook chicken better, you have to truss its legs",
-    "Let the pizza dough rest before stretching it",
-    "Season the chicken with salt, pepper, and garlic",
-    "While I remove the fish bones, could you preheat the oven?",
-    "The stove doesn't seem to be working",
-    "We need to skim the broth before serving it",
-    "Bread the fish with breadcrumbs and egg",
-    "The sauce needs more salt",
-    "Peel the potatoes and then slice them",
-    "Steam the vegetables",
-    "Grill the meat",
-    "Boil the pasta in hot water",
-    "Fry the potatoes in hot oil",
-    "We need to broil the cheese to make the lasagna golden",
-    "The best side dish for fish is rice",
-    "The best side dish for meat is salad",
-    "The best side dish for pasta is sauce",
-    "The best side dish for chicken is mashed potatoes",
-    "Before cooking pasta, we have to wait for the water to boil",
-    "Dry the sink after washing the dishes",
-    "Lower the temperature of the freezer",
-    "I prefer to use the electric oven over the microwave to heat up the food",
-    "The glasses are hanging on the shelf",
-    "The blender is in the cabinet",
-    "The mixer is in the drawer",
-    "The coffee maker is on the shelf",
-    "The toaster is on the table",
-    "The sandwich maker is in the cabinet",
-    "The pot is on the stove",
-    "The pan is in the sink because I used it yesterday",
-    "The casserole dish is in the oven",
-    "The grill is on the patio",
-    "The forks and knives are in the drawer",
-    "We need to wash the spoons",
-    "The cutting board is in the drawer",
-    "The glasses and cups are in the cabinet",
-    "The fruit bowl is on the table"
-  ],
-  "traductions": [
-    "¿Tenemos suficientes huevos para la receta?",
-    "Pasame la tabla de cortar",
-    "¿Dónde guardamos las tazas de medir?",
-    "¿Me pasas la espátula?",
-    "¿Nos queda aceite de oliva?",
-    "¿Pásame la sal de la despensa?",
-    "Hay que sustituir la levadura en polvo",
-    "La batidora está en el armario",
-    "Las bandejas para hornear están en la repisa de arriba",
-    "¿Tenemos hierbas frescas?",
-    "¿Puedes comprobar si el horno está precalentado?",
-    "El bicarbonato de sodio nos ayudará a hacer que la masa suba",
-    "¿Tenemos papel pergamino para forrar la bandeja del horno?",
-    "Ayúdame a pelar las zanahorias y las papas",
-    "Hay que lavar el rallador para el queso",
-    "¿Tenemos extracto de vainilla para la tarta?",
-    "¿Podrías enjuagar las verduras con agua fría?",
-    "A los cuchillos les falta filo",
-    "Hay que sacar la carne del congelador con anticipación",
-    "Las especias y los condimentos estpan en el gabinete junto al fregadero",
-    "¿Tenemos papel de aluminio para envolver las sobras?",
-    "Hay que picar las cebollas finamente",
-    "¿Puedes pasarme el escurridor para escurrir la pasta?",
-    "Hay que comprar mantequilla sin sal?",
-    "¿Podrías ayudarme a abrir este tarro, por favor?",
-    "En la receta se utiliza azúcar morena en lugar de azúcar blanca",
-    "El rodillo para aplanar la masa está en el cajón",
-    "¿Cuál es la diferencia entre una cacerola y una sartén?",
-    "¿Tenemos pan rallado para rebozar el pollo?",
-    "¿Dónde guardamos el envoltorio de plástico para cubrir las sobras?",
-    "La leche se cortó",
-    "Esta salsa está caducada",
-    "No tenemos los ingredientes necesarios para hacer la receta",
-    "La reducción de la salsa llevará tiempo",
-    "El escabeche es un adobo muy utilizado en la cocina",
-    "La ensalada va a llevar aceite, vinagre y sal",
-    "¿Podrías ayudarme a tamizar la harina?",
-    "Pon las sobras en recipientes de plástico",
-    "Sobró caldo para la sopa",
-    "Ten cuidado con la olla caliente",
-    "Le falta sal a la sopa",
-    "¿Ya cortaste las verduras?",
-    "Agrega un poco de azúcar a la salsa para equilibrar el sabor",
-    "Hay que precalentar el horno",
-    "Saca la comida del refrigerador",
-    "Esta noche cocinamos la pizza casera",
-    "Voy a preparar arroz con pollo, es mi receta favorita",
-    "Necesito una cucharada de mantequilla para esta receta",
-    "¿Podrías cortar las verduras en trozos pequeños, por favor?",
-    "El sartén está demasiado caliente; baja un poco el fuego",
-    "¿Dónde están los platos limpios?",
-    "Lava las frutas antes de cortarlas",
-    "Para hacer el flan hay que caramelizar el azúcar",
-    "Para hacer el flan hay que poner el molde en baño maría",
-    "Para cocinar mejor el pollo hay que bridar sus patas",
-    "Hay que dejar reposar la masa de la pizza antes de estirarla",
-    "Condimenta el pollo con sal, pimienta y ajo",
-    "Mientras le quito las espinas al pescado, ¿puedes precalentar el horno?",
-    "La estufa no parece estar funcionando",
-    "Hay que desgrasar el caldo antes de servirlo",
-    "Empaniza el pescado con pan rallado y huevo",
-    "Al fondo para la salsa le falta sal",
-    "Se pelan las papas y luego se cortan en rodajas",
-    "Las verduras se cocinan al vapor",
-    "La carne se cocina a la parrilla",
-    "La pasta se cuece en agua hirviendo",
-    "Las papas se fríen en aceite caliente",
-    "Hay que gratinar el queso para que la lasaña quede dorada",
-    "La mejor guarnizicón para el pescado es el arroz",
-    "La mejor guarnición para la carne es la ensalada",
-    "La mejor guarnición para la pasta es la salsa",
-    "La mejor guarnición para el pollo es el puré de papa",
-    "Antes cocer pasta tenemos que esperar a que el agua empiece a hervir",
-    "Seca el fregadero después de lavar los platos",
-    "Baja la temperatura del congelador",
-    "Prefiero usar el horno eléctrico al microondas para calentar la comida",
-    "Las copas están colgadas en el estante",
-    "La licuadora está en el gabinete",
-    "La batidora está en el cajón",
-    "La cafetera está en la repisa",
-    "La tostadora está en la mesa",
-    "La sandwichera está en el armario",
-    "La olla está en la estufa",
-    "La sartén está en el fregadero por que la usé ayer",
-    "La cacerola está en el horno",
-    "La parrilla está en el patio",
-    "Los tenedores y cuchillos están en el cajón",
-    "Hay que lavar las cucharas",
-    "La tabla de cortar está en el cajón",
-    "Los vasos y tasas están en el gabinete",
-    "El frutero está en la mesa"
-  ],
-  "grammar": [
-    null,
-    "Modal 'could': polite request or possibility",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Present continuous: action happening right now",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Simple past: completed action in the past",
-    null,
-    null,
-    "Phrasal verb: 'run out of' = have no more of something",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Modal 'should': advice or recommendation",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Passive voice: focus on the action, not the doer",
-    null,
-    null,
-    "Present perfect: recent action with present relevance",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Modal 'need to': necessity or obligation",
-    null,
-    "Contraction: 'let's' = let us — suggestion formula",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    {
+      "id": "kitchen_do_we_have_enough_eggs_for",
+      "phrase": "Do we have enough eggs for the recipe?",
+      "translation": "¿Tenemos suficientes huevos para la receta?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_pass_me_the_cutting_board",
+      "phrase": "Pass me the cutting board",
+      "translation": "Pasame la tabla de cortar",
+      "cefr": "A1",
+      "grammar": "Modal 'could': polite request or possibility"
+    },
+    {
+      "id": "kitchen_where_do_we_keep_the_measuring",
+      "phrase": "Where do we keep the measuring cups?",
+      "translation": "¿Dónde guardamos las tazas de medir?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_can_you_pass_me_the_spatula",
+      "phrase": "Can you pass me the spatula?",
+      "translation": "¿Me pasas la espátula?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you pass me the spatula?"]
+    },
+    {
+      "id": "kitchen_do_we_have_any_olive_oil",
+      "phrase": "Do we have any olive oil left?",
+      "translation": "¿Nos queda aceite de oliva?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_pass_me_the_salt_from_the",
+      "phrase": "Pass me the salt from the pantry",
+      "translation": "¿Pásame la sal de la despensa?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_replace_the_baking",
+      "phrase": "We need to replace the baking powder",
+      "translation": "Hay que sustituir la levadura en polvo",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_mixer_is_in_the_cabinet",
+      "phrase": "The mixer is in the cabinet",
+      "translation": "La batidora está en el armario",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_baking_sheets_are_on_the",
+      "phrase": "The baking sheets are on the top shelf",
+      "translation": "Las bandejas para hornear están en la repisa de arriba",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_do_we_have_any_fresh_herbs",
+      "phrase": "Do we have any fresh herbs?",
+      "translation": "¿Tenemos hierbas frescas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_can_you_check_if_the_oven",
+      "phrase": "Can you check if the oven is preheated?",
+      "translation": "¿Puedes comprobar si el horno está precalentado?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_baking_soda_will_help_the_dough",
+      "phrase": "Baking soda will help the dough rise",
+      "translation": "El bicarbonato de sodio nos ayudará a hacer que la masa suba",
+      "cefr": "A2",
+      "grammar": "Present continuous: action happening right now"
+    },
+    {
+      "id": "kitchen_do_we_have_parchment_paper_to",
+      "phrase": "Do we have parchment paper to line the baking sheet?",
+      "translation": "¿Tenemos papel pergamino para forrar la bandeja del horno?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_help_me_peel_the_carrots_and",
+      "phrase": "Help me peel the carrots and potatoes",
+      "translation": "Ayúdame a pelar las zanahorias y las papas",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_wash_the_cheese",
+      "phrase": "We need to wash the cheese grater",
+      "translation": "Hay que lavar el rallador para el queso",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_do_we_have_vanilla_extract_for",
+      "phrase": "Do we have vanilla extract for the cake?",
+      "translation": "¿Tenemos extracto de vainilla para la tarta?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_could_you_rinse_the_vegetables_with",
+      "phrase": "Could you rinse the vegetables with cold water?",
+      "translation": "¿Podrías enjuagar las verduras con agua fría?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Can you rinse the vegetables with cold water?"]
+    },
+    {
+      "id": "kitchen_the_knives_need_sharpening",
+      "phrase": "The knives need sharpening",
+      "translation": "A los cuchillos les falta filo",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_take_the_meat",
+      "phrase": "We need to take the meat out of the freezer in advance",
+      "translation": "Hay que sacar la carne del congelador con anticipación",
+      "cefr": "A2",
+      "grammar": "Simple past: completed action in the past"
+    },
+    {
+      "id": "kitchen_the_spices_and_condiments_are_in",
+      "phrase": "The spices and condiments are in the cabinet next to the sink",
+      "translation": "Las especias y los condimentos estpan en el gabinete junto al fregadero",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_do_we_have_aluminum_foil_to",
+      "phrase": "Do we have aluminum foil to wrap up the leftovers?",
+      "translation": "¿Tenemos papel de aluminio para envolver las sobras?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Do we have aluminium foil to wrap up the leftovers?"]
+    },
+    {
+      "id": "kitchen_we_need_to_finely_chop_the",
+      "phrase": "We need to finely chop the onions",
+      "translation": "Hay que picar las cebollas finamente",
+      "cefr": "A2",
+      "grammar": "Phrasal verb: 'run out of' = have no more of something"
+    },
+    {
+      "id": "kitchen_can_you_pass_me_the_colander",
+      "phrase": "Can you pass me the colander to drain the pasta?",
+      "translation": "¿Puedes pasarme el escurridor para escurrir la pasta?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could you pass me the colander to drain the pasta?"]
+    },
+    {
+      "id": "kitchen_we_need_to_buy_unsalted_butter",
+      "phrase": "We need to buy unsalted butter",
+      "translation": "Hay que comprar mantequilla sin sal?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_could_you_help_me_open_this",
+      "phrase": "Could you help me open this jar, please?",
+      "translation": "¿Podrías ayudarme a abrir este tarro, por favor?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Can you help me open this jar, please?"]
+    },
+    {
+      "id": "kitchen_the_recipe_calls_for_brown_sugar",
+      "phrase": "The recipe calls for brown sugar instead of white sugar",
+      "translation": "En la receta se utiliza azúcar morena en lugar de azúcar blanca",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_rolling_pin_to_flatten_the",
+      "phrase": "The rolling pin to flatten the dough is in the drawer",
+      "translation": "El rodillo para aplanar la masa está en el cajón",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_whats_the_difference_between_a_pot",
+      "phrase": "What's the difference between a pot and a pan?",
+      "translation": "¿Cuál es la diferencia entre una cacerola y una sartén?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_do_we_have_breadcrumbs_to_coat",
+      "phrase": "Do we have breadcrumbs to coat the chicken?",
+      "translation": "¿Tenemos pan rallado para rebozar el pollo?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_where_do_we_keep_the_plastic",
+      "phrase": "Where do we keep the plastic wrap to cover the leftovers?",
+      "translation": "¿Dónde guardamos el envoltorio de plástico para cubrir las sobras?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_milk_has_curdled",
+      "phrase": "The milk has curdled",
+      "translation": "La leche se cortó",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_this_sauce_has_expired",
+      "phrase": "This sauce has expired",
+      "translation": "Esta salsa está caducada",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_dont_have_the_necessary_ingredients",
+      "phrase": "We don't have the necessary ingredients to make the recipe",
+      "translation": "No tenemos los ingredientes necesarios para hacer la receta",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_reducing_the_sauce_will_take_time",
+      "phrase": "Reducing the sauce will take time",
+      "translation": "La reducción de la salsa llevará tiempo",
+      "cefr": "A2",
+      "grammar": "Modal 'should': advice or recommendation"
+    },
+    {
+      "id": "kitchen_marinade_is_a_commonly_used_seasoning",
+      "phrase": "Marinade is a commonly used seasoning in cooking",
+      "translation": "El escabeche es un adobo muy utilizado en la cocina",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_salad_will_need_oil_vinegar",
+      "phrase": "The salad will need oil, vinegar, and salt",
+      "translation": "La ensalada va a llevar aceite, vinagre y sal",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_could_you_help_me_sift_the",
+      "phrase": "Could you help me sift the flour?",
+      "translation": "¿Podrías ayudarme a tamizar la harina?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Can you help me sift the flour?"]
+    },
+    {
+      "id": "kitchen_put_the_leftovers_in_plastic_containers",
+      "phrase": "Put the leftovers in plastic containers",
+      "translation": "Pon las sobras en recipientes de plástico",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_theres_leftover_broth_for_the_soup",
+      "phrase": "There's leftover broth for the soup",
+      "translation": "Sobró caldo para la sopa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_be_careful_with_the_hot_pot",
+      "phrase": "Be careful with the hot pot",
+      "translation": "Ten cuidado con la olla caliente",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_soup_needs_more_salt",
+      "phrase": "The soup needs more salt",
+      "translation": "Le falta sal a la sopa",
+      "cefr": "A1",
+      "grammar": "Passive voice: focus on the action, not the doer"
+    },
+    {
+      "id": "kitchen_have_you_already_cut_the_vegetables",
+      "phrase": "Have you already cut the vegetables?",
+      "translation": "¿Ya cortaste las verduras?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_add_a_little_sugar_to_the",
+      "phrase": "Add a little sugar to the sauce to balance the flavor",
+      "translation": "Agrega un poco de azúcar a la salsa para equilibrar el sabor",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_preheat_the_oven",
+      "phrase": "We need to preheat the oven",
+      "translation": "Hay que precalentar el horno",
+      "cefr": "A1",
+      "grammar": "Present perfect: recent action with present relevance"
+    },
+    {
+      "id": "kitchen_take_the_food_out_of_the",
+      "phrase": "Take the food out of the refrigerator",
+      "translation": "Saca la comida del refrigerador",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Take the food out of the fridge"]
+    },
+    {
+      "id": "kitchen_tonight_were_making_homemade_pizza",
+      "phrase": "Tonight we're making homemade pizza",
+      "translation": "Esta noche cocinamos la pizza casera",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_im_going_to_make_chicken_and",
+      "phrase": "I'm going to make chicken and rice, it's my favorite recipe",
+      "translation": "Voy a preparar arroz con pollo, es mi receta favorita",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_i_need_a_tablespoon_of_butter",
+      "phrase": "I need a tablespoon of butter for this recipe",
+      "translation": "Necesito una cucharada de mantequilla para esta receta",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_could_you_chop_the_vegetables_into",
+      "phrase": "Could you chop the vegetables into small pieces, please?",
+      "translation": "¿Podrías cortar las verduras en trozos pequeños, por favor?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Can you chop the vegetables into small pieces, please?"]
+    },
+    {
+      "id": "kitchen_the_pan_is_too_hot_lower",
+      "phrase": "The pan is too hot; lower the heat a bit",
+      "translation": "El sartén está demasiado caliente; baja un poco el fuego",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_where_are_the_clean_dishes",
+      "phrase": "Where are the clean dishes?",
+      "translation": "¿Dónde están los platos limpios?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_wash_the_fruit_before_cutting_it",
+      "phrase": "Wash the fruit before cutting it",
+      "translation": "Lava las frutas antes de cortarlas",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_to_make_flan_you_have_to",
+      "phrase": "To make flan, you have to caramelize the sugar",
+      "translation": "Para hacer el flan hay que caramelizar el azúcar",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_to_make_flan_you_have_to_2",
+      "phrase": "To make flan, you have to put the mold in a water bath",
+      "translation": "Para hacer el flan hay que poner el molde en baño maría",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_to_cook_chicken_better_you_have",
+      "phrase": "To cook chicken better, you have to truss its legs",
+      "translation": "Para cocinar mejor el pollo hay que bridar sus patas",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_let_the_pizza_dough_rest_before",
+      "phrase": "Let the pizza dough rest before stretching it",
+      "translation": "Hay que dejar reposar la masa de la pizza antes de estirarla",
+      "cefr": "A2",
+      "grammar": "Modal 'need to': necessity or obligation"
+    },
+    {
+      "id": "kitchen_season_the_chicken_with_salt_pepper",
+      "phrase": "Season the chicken with salt, pepper, and garlic",
+      "translation": "Condimenta el pollo con sal, pimienta y ajo",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_while_i_remove_the_fish_bones",
+      "phrase": "While I remove the fish bones, could you preheat the oven?",
+      "translation": "Mientras le quito las espinas al pescado, ¿puedes precalentar el horno?",
+      "cefr": "A2",
+      "grammar": "Contraction: 'let's' = let us — suggestion formula",
+      "alternatives": ["While I remove the fish bones, can you preheat the oven?"]
+    },
+    {
+      "id": "kitchen_the_stove_doesnt_seem_to_be",
+      "phrase": "The stove doesn't seem to be working",
+      "translation": "La estufa no parece estar funcionando",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_skim_the_broth",
+      "phrase": "We need to skim the broth before serving it",
+      "translation": "Hay que desgrasar el caldo antes de servirlo",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_bread_the_fish_with_breadcrumbs_and",
+      "phrase": "Bread the fish with breadcrumbs and egg",
+      "translation": "Empaniza el pescado con pan rallado y huevo",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_sauce_needs_more_salt",
+      "phrase": "The sauce needs more salt",
+      "translation": "Al fondo para la salsa le falta sal",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_peel_the_potatoes_and_then_slice",
+      "phrase": "Peel the potatoes and then slice them",
+      "translation": "Se pelan las papas y luego se cortan en rodajas",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_steam_the_vegetables",
+      "phrase": "Steam the vegetables",
+      "translation": "Las verduras se cocinan al vapor",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_grill_the_meat",
+      "phrase": "Grill the meat",
+      "translation": "La carne se cocina a la parrilla",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_boil_the_pasta_in_hot_water",
+      "phrase": "Boil the pasta in hot water",
+      "translation": "La pasta se cuece en agua hirviendo",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_fry_the_potatoes_in_hot_oil",
+      "phrase": "Fry the potatoes in hot oil",
+      "translation": "Las papas se fríen en aceite caliente",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_broil_the_cheese",
+      "phrase": "We need to broil the cheese to make the lasagna golden",
+      "translation": "Hay que gratinar el queso para que la lasaña quede dorada",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_best_side_dish_for_fish",
+      "phrase": "The best side dish for fish is rice",
+      "translation": "La mejor guarnizicón para el pescado es el arroz",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_best_side_dish_for_meat",
+      "phrase": "The best side dish for meat is salad",
+      "translation": "La mejor guarnición para la carne es la ensalada",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_best_side_dish_for_pasta",
+      "phrase": "The best side dish for pasta is sauce",
+      "translation": "La mejor guarnición para la pasta es la salsa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_best_side_dish_for_chicken",
+      "phrase": "The best side dish for chicken is mashed potatoes",
+      "translation": "La mejor guarnición para el pollo es el puré de papa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_before_cooking_pasta_we_have_to",
+      "phrase": "Before cooking pasta, we have to wait for the water to boil",
+      "translation": "Antes cocer pasta tenemos que esperar a que el agua empiece a hervir",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_dry_the_sink_after_washing_the",
+      "phrase": "Dry the sink after washing the dishes",
+      "translation": "Seca el fregadero después de lavar los platos",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_lower_the_temperature_of_the_freezer",
+      "phrase": "Lower the temperature of the freezer",
+      "translation": "Baja la temperatura del congelador",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_i_prefer_to_use_the_electric",
+      "phrase": "I prefer to use the electric oven over the microwave to heat up the food",
+      "translation": "Prefiero usar el horno eléctrico al microondas para calentar la comida",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_glasses_are_hanging_on_the",
+      "phrase": "The glasses are hanging on the shelf",
+      "translation": "Las copas están colgadas en el estante",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_blender_is_in_the_cabinet",
+      "phrase": "The blender is in the cabinet",
+      "translation": "La licuadora está en el gabinete",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_mixer_is_in_the_drawer",
+      "phrase": "The mixer is in the drawer",
+      "translation": "La batidora está en el cajón",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_coffee_maker_is_on_the",
+      "phrase": "The coffee maker is on the shelf",
+      "translation": "La cafetera está en la repisa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_toaster_is_on_the_table",
+      "phrase": "The toaster is on the table",
+      "translation": "La tostadora está en la mesa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_sandwich_maker_is_in_the",
+      "phrase": "The sandwich maker is in the cabinet",
+      "translation": "La sandwichera está en el armario",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_pot_is_on_the_stove",
+      "phrase": "The pot is on the stove",
+      "translation": "La olla está en la estufa",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_pan_is_in_the_sink",
+      "phrase": "The pan is in the sink because I used it yesterday",
+      "translation": "La sartén está en el fregadero por que la usé ayer",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_casserole_dish_is_in_the",
+      "phrase": "The casserole dish is in the oven",
+      "translation": "La cacerola está en el horno",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_grill_is_on_the_patio",
+      "phrase": "The grill is on the patio",
+      "translation": "La parrilla está en el patio",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_forks_and_knives_are_in",
+      "phrase": "The forks and knives are in the drawer",
+      "translation": "Los tenedores y cuchillos están en el cajón",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_we_need_to_wash_the_spoons",
+      "phrase": "We need to wash the spoons",
+      "translation": "Hay que lavar las cucharas",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_cutting_board_is_in_the",
+      "phrase": "The cutting board is in the drawer",
+      "translation": "La tabla de cortar está en el cajón",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_glasses_and_cups_are_in",
+      "phrase": "The glasses and cups are in the cabinet",
+      "translation": "Los vasos y tasas están en el gabinete",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_the_fruit_bowl_is_on_the",
+      "phrase": "The fruit bowl is on the table",
+      "translation": "El frutero está en la mesa",
+      "cefr": "A1",
+      "grammar": null
+    }
   ]
 }

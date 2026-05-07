@@ -1,203 +1,467 @@
 {
   "phrases": [
-    "Could you send me that document by email?",
-    "I need to charge my phone, do you have a charger?",
-    "Can you help me set up my new printer?",
-    "What is the WiFi password?",
-    "Wait, my computer is updating",
-    "Tomorrow we are going to have a video call with the family",
-    "Do you know how I can transfer photos from my phone to the computer?",
-    "Can you copy me on that email?",
-    "Send me that file via WhatsApp",
-    "Can you share your location?",
-    "I need to back up my data",
-    "Is there a way to block this number?",
-    "How do I delete this app from my phone?",
-    "I forgot my password",
-    "Is there an app to scan documents?",
-    "Do you have a cable you can lend me?",
-    "How do I save this file to the cloud?",
-    "I want to buy a camera, what is the best option?",
-    "Can I turn off notifications for this app?",
-    "How do I take a screenshot on my phone?",
-    "Make sure your internet connection is stable",
-    "I recommend using a strong and unique password for each account",
-    "Can I connect the speaker to Bluetooth?",
-    "I suggest you use a VPN to protect your privacy online",
-    "Where is the TV remote control?",
-    "We need to buy more ink for the printer",
-    "I really liked this image, I'm going to set it as my wallpaper",
-    "Have you seen my message in the group?",
-    "Check your spam, the email might have arrived there",
-    "Do you have coverage in this place?",
-    "The battery of my smartwatch doesn't last at all",
-    "I can't connect my device to Bluetooth",
-    "I need a new USB cable",
-    "The WiFi is not working, can you restart it?",
-    "Be careful with that link, it could be a virus",
-    "The app works better than the website",
-    "Let's look for an internet tutorial to solve this",
-    "What cell phone do you recommend?",
-    "Scan this QR code for more information",
-    "Tag me in the photo you posted",
-    "I can't open this file, what format is it in?",
-    "I need to download this program for my work",
-    "How can I recover a deleted file?",
-    "You should look it up on the internet, you'll probably find the answer",
-    "I accidentally deleted the conversation, can you forward me the message?",
-    "Don't trust all the information you find on the internet",
-    "Do you know how to use Photoshop to edit this image?",
-    "I can't open this PDF file, do I need a special program?",
-    "I'm looking for software to record my computer screen",
-    "What is this formula in Excel for?",
-    "This PowerPoint presentation is very boring, we need to improve it",
-    "The information is in the attached file",
-    "I want to increase the brightness of the screen",
-    "Turn on the scanner, I need to digitize this document",
-    "You should buy a better mouse and keyboard",
-    "These wireless headphones are very comfortable",
-    "The virtual assistant has been failing",
-    "The battery of this phone could be better",
-    "I love the camera on this phone",
-    "How can I change the language of the computer keyboard?",
-    "I don't know where the portable battery is",
-    "Look for the file in the downloads folder",
-    "Are you sure you are connected to the internet?",
-    "Please turn on the printer",
-    "How do you do this in Excel?"
-  ],
-  "traductions": [
-    "¿Podrías enviarme ese documento por correo electrónico?",
-    "Necesito cargar mi teléfono, ¿tienes un cargador?",
-    "¿Puedes ayudarme a configurar mi nueva impresora?",
-    "¿Cuál es la contraseña del WiFi?",
-    "Espera, mi computadora está actualizando",
-    "Mañana vamos a hacer una videollamada con la familia",
-    "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?",
-    "¿Puedes copiarme en ese email?",
-    "Envíame ese archivo por WhatsApp",
-    "¿Puedes compartir tu ubicación?",
-    "Necesito hacer una copia de seguridad de mis datos",
-    "¿Hay alguna forma de bloquear este número?",
-    "¿Cómo elimino esta aplicación de mi teléfono?",
-    "Olvidé mi contraseña",
-    "¿Existe una app para escanear documentos?",
-    "¿Tienes un cable que puedas prestarme?",
-    "¿Cómo guardo este archivo en la nube?",
-    "Quiero comprar una cámara, ¿cuál es la mejor opción?",
-    "¿Puedo desactivar las notificaciones de esta app?",
-    "¿Cómo hago una captura de pantalla en mi celular?",
-    "Verifica que tu conexión a internet sea estable",
-    "Te recomiendo usar una contraseña segura y única para cada cuenta",
-    "¿Puedo conectar la bocina al Bluetooth?",
-    "Te sugiero que uses una VPN para proteger tu privacidad en línea",
-    "¿Dónde está el control remoto de la televisión?",
-    "Hay que comprar más tinta para la impresora",
-    "Esta imagen me gustó mucho, la voy a poner de fondo de pantalla",
-    "¿Ya viste mi mensaje en el grupo?",
-    "Revisa tu spam, tal vez llegó ahí el correo",
-    "¿Tienes cobertura en este lugar?",
-    "La batería de mi reloj inteligente no dura nada",
-    "No puedo conectar mi dispositivo al Bluetooth",
-    "Nececito un nuevo cable USB",
-    "No funciona el WiFi, ¿lo puedes reiniciar?",
-    "Cuidado con ese enlace, podría ser un virus",
-    "La aplicación funciona mejor que el sitio web",
-    "Busquemos un tutorial en internet para solucionar esto",
-    "¿Qué celular me recomiendas?",
-    "Escanea este código QR para obtener más información",
-    "Etiquetame en la foto que subiste",
-    "No puedo abrir este archivo, ¿en qué formato está?",
-    "Necesito descargar este programa para mi trabajo",
-    "¿Cómo puedo recuperar un archivo borrado?",
-    "Deberías buscarlo en internet, seguro encuentras la respuesta",
-    "Eliminé accidentalmente la conversación, ¿puedes reenviarme el mensaje?",
-    "No confíes en toda la información que encuentras en internet",
-    "¿Sabes cómo usar Photoshop para editar esta imagen?",
-    "No puedo abrir este archivo PDF, ¿necesito un programa especial?",
-    "Estoy buscando un software para grabar la pantalla de mi computadora",
-    "¿Para qué sirve esta fórmula en Excel?",
-    "Esta presentación de PowerPoint está muy aburrida, hay que mejorarla",
-    "La información está en el archivo adjunto",
-    "Quiero subir el brillo de la pantalla",
-    "Prende el escaner, necesito digitalizar este documento",
-    "Deberías comprar un mejor ratón y teclado",
-    "Estos audífonos inalámbricos son muy cómodos",
-    "El asistente virtual ha estado fallando",
-    "La batería de este celular podría ser mejor",
-    "Me encanta la cámara de este teléfono",
-    "¿Cómo puedo cambiar el idioma del teclado de la computadora?",
-    "No sé dónde está la batería portatil",
-    "Busca el archivo en la carpeta de descargas",
-    "¿Estás seguro que estas conectado al internet?",
-    "Por favor, prende la impresora",
-    "¿Cómo se hace esto en Excel?"
-  ],
-  "grammar": [
-    "Present simple: habitual action or general fact",
-    null,
-    null,
-    null,
-    "Modal 'can': ability or permission",
-    "Present continuous: action happening right now",
-    null,
-    null,
-    null,
-    null,
-    "Simple past: completed action in the past",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Present perfect: experience with no specific time",
-    "Modal 'should': advice or recommendation",
-    null,
-    "Phrasal verb: 'set up' = configure or install",
-    null,
-    null,
-    null,
-    "Passive voice: focus on the action, not the doer",
-    "Modal 'might': weak possibility",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Contraction: 'it's' = it is",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Modal 'could': polite request or possibility",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    {
+      "id": "technology_could_you_send_me_that_document",
+      "phrase": "Could you send me that document by email?",
+      "translation": "¿Podrías enviarme ese documento por correo electrónico?",
+      "cefr": "A1",
+      "grammar": "Present simple: habitual action or general fact",
+      "alternatives": ["Can you send me that document by email?"]
+    },
+    {
+      "id": "technology_i_need_to_charge_my_phone",
+      "phrase": "I need to charge my phone, do you have a charger?",
+      "translation": "Necesito cargar mi teléfono, ¿tienes un cargador?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_can_you_help_me_set_up",
+      "phrase": "Can you help me set up my new printer?",
+      "translation": "¿Puedes ayudarme a configurar mi nueva impresora?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could you help me set up my new printer?"]
+    },
+    {
+      "id": "technology_what_is_the_wifi_password",
+      "phrase": "What is the WiFi password?",
+      "translation": "¿Cuál es la contraseña del WiFi?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_wait_my_computer_is_updating",
+      "phrase": "Wait, my computer is updating",
+      "translation": "Espera, mi computadora está actualizando",
+      "cefr": "A1",
+      "grammar": "Modal 'can': ability or permission"
+    },
+    {
+      "id": "technology_tomorrow_we_are_going_to_have",
+      "phrase": "Tomorrow we are going to have a video call with the family",
+      "translation": "Mañana vamos a hacer una videollamada con la familia",
+      "cefr": "A1",
+      "grammar": "Present continuous: action happening right now",
+      "alternatives": ["Tomorrow we're going to have a video call with the family"]
+    },
+    {
+      "id": "technology_do_you_know_how_i_can",
+      "phrase": "Do you know how I can transfer photos from my phone to the computer?",
+      "translation": "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Do you know how I can transfer photos from my phone to my computer?"]
+    },
+    {
+      "id": "technology_can_you_copy_me_on_that",
+      "phrase": "Can you copy me on that email?",
+      "translation": "¿Puedes copiarme en ese email?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_send_me_that_file_via_whatsapp",
+      "phrase": "Send me that file via WhatsApp",
+      "translation": "Envíame ese archivo por WhatsApp",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_can_you_share_your_location",
+      "phrase": "Can you share your location?",
+      "translation": "¿Puedes compartir tu ubicación?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Could you share your location?"]
+    },
+    {
+      "id": "technology_i_need_to_back_up_my",
+      "phrase": "I need to back up my data",
+      "translation": "Necesito hacer una copia de seguridad de mis datos",
+      "cefr": "A2",
+      "grammar": "Simple past: completed action in the past"
+    },
+    {
+      "id": "technology_is_there_a_way_to_block",
+      "phrase": "Is there a way to block this number?",
+      "translation": "¿Hay alguna forma de bloquear este número?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_how_do_i_delete_this_app",
+      "phrase": "How do I delete this app from my phone?",
+      "translation": "¿Cómo elimino esta aplicación de mi teléfono?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["How do I remove this app from my phone?"]
+    },
+    {
+      "id": "technology_i_forgot_my_password",
+      "phrase": "I forgot my password",
+      "translation": "Olvidé mi contraseña",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_is_there_an_app_to_scan",
+      "phrase": "Is there an app to scan documents?",
+      "translation": "¿Existe una app para escanear documentos?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_do_you_have_a_cable_you",
+      "phrase": "Do you have a cable you can lend me?",
+      "translation": "¿Tienes un cable que puedas prestarme?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_how_do_i_save_this_file",
+      "phrase": "How do I save this file to the cloud?",
+      "translation": "¿Cómo guardo este archivo en la nube?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_want_to_buy_a_camera",
+      "phrase": "I want to buy a camera, what is the best option?",
+      "translation": "Quiero comprar una cámara, ¿cuál es la mejor opción?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_can_i_turn_off_notifications_for",
+      "phrase": "Can I turn off notifications for this app?",
+      "translation": "¿Puedo desactivar las notificaciones de esta app?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could I turn off notifications for this app?"]
+    },
+    {
+      "id": "technology_how_do_i_take_a_screenshot",
+      "phrase": "How do I take a screenshot on my phone?",
+      "translation": "¿Cómo hago una captura de pantalla en mi celular?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_make_sure_your_internet_connection_is",
+      "phrase": "Make sure your internet connection is stable",
+      "translation": "Verifica que tu conexión a internet sea estable",
+      "cefr": "A2",
+      "grammar": "Present perfect: experience with no specific time"
+    },
+    {
+      "id": "technology_i_recommend_using_a_strong_and",
+      "phrase": "I recommend using a strong and unique password for each account",
+      "translation": "Te recomiendo usar una contraseña segura y única para cada cuenta",
+      "cefr": "A2",
+      "grammar": "Modal 'should': advice or recommendation"
+    },
+    {
+      "id": "technology_can_i_connect_the_speaker_to",
+      "phrase": "Can I connect the speaker to Bluetooth?",
+      "translation": "¿Puedo conectar la bocina al Bluetooth?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_suggest_you_use_a_vpn",
+      "phrase": "I suggest you use a VPN to protect your privacy online",
+      "translation": "Te sugiero que uses una VPN para proteger tu privacidad en línea",
+      "cefr": "B1",
+      "grammar": "Phrasal verb: 'set up' = configure or install"
+    },
+    {
+      "id": "technology_where_is_the_tv_remote_control",
+      "phrase": "Where is the TV remote control?",
+      "translation": "¿Dónde está el control remoto de la televisión?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_we_need_to_buy_more_ink",
+      "phrase": "We need to buy more ink for the printer",
+      "translation": "Hay que comprar más tinta para la impresora",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_really_liked_this_image_im",
+      "phrase": "I really liked this image, I'm going to set it as my wallpaper",
+      "translation": "Esta imagen me gustó mucho, la voy a poner de fondo de pantalla",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_have_you_seen_my_message_in",
+      "phrase": "Have you seen my message in the group?",
+      "translation": "¿Ya viste mi mensaje en el grupo?",
+      "cefr": "A2",
+      "grammar": "Passive voice: focus on the action, not the doer"
+    },
+    {
+      "id": "technology_check_your_spam_the_email_might",
+      "phrase": "Check your spam, the email might have arrived there",
+      "translation": "Revisa tu spam, tal vez llegó ahí el correo",
+      "cefr": "B1",
+      "grammar": "Modal 'might': weak possibility"
+    },
+    {
+      "id": "technology_do_you_have_coverage_in_this",
+      "phrase": "Do you have coverage in this place?",
+      "translation": "¿Tienes cobertura en este lugar?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_battery_of_my_smartwatch_doesnt",
+      "phrase": "The battery of my smartwatch doesn't last at all",
+      "translation": "La batería de mi reloj inteligente no dura nada",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_cant_connect_my_device_to",
+      "phrase": "I can't connect my device to Bluetooth",
+      "translation": "No puedo conectar mi dispositivo al Bluetooth",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_need_a_new_usb_cable",
+      "phrase": "I need a new USB cable",
+      "translation": "Nececito un nuevo cable USB",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_wifi_is_not_working_can",
+      "phrase": "The WiFi is not working, can you restart it?",
+      "translation": "No funciona el WiFi, ¿lo puedes reiniciar?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["The WiFi is not working, could you restart it?"]
+    },
+    {
+      "id": "technology_be_careful_with_that_link_it",
+      "phrase": "Be careful with that link, it could be a virus",
+      "translation": "Cuidado con ese enlace, podría ser un virus",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_app_works_better_than_the",
+      "phrase": "The app works better than the website",
+      "translation": "La aplicación funciona mejor que el sitio web",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_lets_look_for_an_internet_tutorial",
+      "phrase": "Let's look for an internet tutorial to solve this",
+      "translation": "Busquemos un tutorial en internet para solucionar esto",
+      "cefr": "A2",
+      "grammar": "Contraction: 'it's' = it is"
+    },
+    {
+      "id": "technology_what_cell_phone_do_you_recommend",
+      "phrase": "What cell phone do you recommend?",
+      "translation": "¿Qué celular me recomiendas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_scan_this_qr_code_for_more",
+      "phrase": "Scan this QR code for more information",
+      "translation": "Escanea este código QR para obtener más información",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_tag_me_in_the_photo_you",
+      "phrase": "Tag me in the photo you posted",
+      "translation": "Etiquetame en la foto que subiste",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_cant_open_this_file_what",
+      "phrase": "I can't open this file, what format is it in?",
+      "translation": "No puedo abrir este archivo, ¿en qué formato está?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_need_to_download_this_program",
+      "phrase": "I need to download this program for my work",
+      "translation": "Necesito descargar este programa para mi trabajo",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_how_can_i_recover_a_deleted",
+      "phrase": "How can I recover a deleted file?",
+      "translation": "¿Cómo puedo recuperar un archivo borrado?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "technology_you_should_look_it_up_on",
+      "phrase": "You should look it up on the internet, you'll probably find the answer",
+      "translation": "Deberías buscarlo en internet, seguro encuentras la respuesta",
+      "cefr": "A2",
+      "grammar": "Modal 'could': polite request or possibility"
+    },
+    {
+      "id": "technology_i_accidentally_deleted_the_conversation_can",
+      "phrase": "I accidentally deleted the conversation, can you forward me the message?",
+      "translation": "Eliminé accidentalmente la conversación, ¿puedes reenviarme el mensaje?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "technology_dont_trust_all_the_information_you",
+      "phrase": "Don't trust all the information you find on the internet",
+      "translation": "No confíes en toda la información que encuentras en internet",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_do_you_know_how_to_use",
+      "phrase": "Do you know how to use Photoshop to edit this image?",
+      "translation": "¿Sabes cómo usar Photoshop para editar esta imagen?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_cant_open_this_pdf_file",
+      "phrase": "I can't open this PDF file, do I need a special program?",
+      "translation": "No puedo abrir este archivo PDF, ¿necesito un programa especial?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_im_looking_for_software_to_record",
+      "phrase": "I'm looking for software to record my computer screen",
+      "translation": "Estoy buscando un software para grabar la pantalla de mi computadora",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "technology_what_is_this_formula_in_excel",
+      "phrase": "What is this formula in Excel for?",
+      "translation": "¿Para qué sirve esta fórmula en Excel?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_this_powerpoint_presentation_is_very_boring",
+      "phrase": "This PowerPoint presentation is very boring, we need to improve it",
+      "translation": "Esta presentación de PowerPoint está muy aburrida, hay que mejorarla",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_information_is_in_the_attached",
+      "phrase": "The information is in the attached file",
+      "translation": "La información está en el archivo adjunto",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_want_to_increase_the_brightness",
+      "phrase": "I want to increase the brightness of the screen",
+      "translation": "Quiero subir el brillo de la pantalla",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_turn_on_the_scanner_i_need",
+      "phrase": "Turn on the scanner, I need to digitize this document",
+      "translation": "Prende el escaner, necesito digitalizar este documento",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "technology_you_should_buy_a_better_mouse",
+      "phrase": "You should buy a better mouse and keyboard",
+      "translation": "Deberías comprar un mejor ratón y teclado",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_these_wireless_headphones_are_very_comfortable",
+      "phrase": "These wireless headphones are very comfortable",
+      "translation": "Estos audífonos inalámbricos son muy cómodos",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_virtual_assistant_has_been_failing",
+      "phrase": "The virtual assistant has been failing",
+      "translation": "El asistente virtual ha estado fallando",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "technology_the_battery_of_this_phone_could",
+      "phrase": "The battery of this phone could be better",
+      "translation": "La batería de este celular podría ser mejor",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_love_the_camera_on_this",
+      "phrase": "I love the camera on this phone",
+      "translation": "Me encanta la cámara de este teléfono",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_how_can_i_change_the_language",
+      "phrase": "How can I change the language of the computer keyboard?",
+      "translation": "¿Cómo puedo cambiar el idioma del teclado de la computadora?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_i_dont_know_where_the_portable",
+      "phrase": "I don't know where the portable battery is",
+      "translation": "No sé dónde está la batería portatil",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_look_for_the_file_in_the",
+      "phrase": "Look for the file in the downloads folder",
+      "translation": "Busca el archivo en la carpeta de descargas",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "technology_are_you_sure_you_are_connected",
+      "phrase": "Are you sure you are connected to the internet?",
+      "translation": "¿Estás seguro que estas conectado al internet?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_please_turn_on_the_printer",
+      "phrase": "Please turn on the printer",
+      "translation": "Por favor, prende la impresora",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "technology_how_do_you_do_this_in",
+      "phrase": "How do you do this in Excel?",
+      "translation": "¿Cómo se hace esto en Excel?",
+      "cefr": "A1",
+      "grammar": null
+    }
   ]
 }

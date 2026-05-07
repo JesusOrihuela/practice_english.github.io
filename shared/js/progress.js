@@ -1,75 +1,145 @@
 /* ============================================================
-   progress.js — Spaced Repetition System (SRS)
+   progress.js — SM-2 Spaced Repetition Engine
    Based on SM-2 (Wozniak 1990) with two intentional divergences:
-     1. EF ceiling raised from 2.5 → 3.0 (standard caps at 2.5).
-        Rationale: conversational phrases are short and high-frequency;
-        a higher ceiling lets genuinely easy material space out faster,
-        reducing review fatigue without hurting retention.
-     2. Easy bonus multiplier of ×1.3 on interval (not in original SM-2).
-        Rationale: same as above — rewards consistent recall more
-        aggressively than the base algorithm.
+     1. EF ceiling raised from 2.5 → 3.0
+     2. Easy bonus multiplier of ×1.3 on interval
+
+   Storage key: pe_progress  (auto-migrated from pe_srs on first load)
+   Card format: { interval, ease, reps, lapses, due }
+     interval — days until next review
+     ease     — ease factor (SM-2)
+     reps     — total correct-or-attempted reviews
+     lapses   — number of Hard answers
+     due      — timestamp (ms) when next review is due
+
+   Visual mastery states (derived, never stored):
+     new       → reps === 0
+     learning  → interval ≤ 3
+     practiced → interval 4–14
+     mastered  → interval > 14
    ============================================================ */
 
 const Progress = (() => {
-  const STORE_KEY      = 'pe_srs';
-  const SCHEMA_VERSION = 1;
+  const STORE_KEY      = 'pe_progress';
+  const LEGACY_KEY     = 'pe_srs';
+  const SCHEMA_VERSION = 3;   // v3: positional cardIds → stable string IDs
 
-  // ---- SM-2 algorithm parameters -----------------------------------------
-  const EF_DEFAULT      = 2.5;  // initial ease factor for every new card
-  const EF_MIN          = 1.3;  // ease factor floor (SM-2 standard)
-  const EF_MAX          = 3.0;  // ease factor ceiling (SM-2 standard is 2.5 — see file header)
-  const EF_HARD_PENALTY = 0.2;  // ease deducted on Hard response (SM-2 standard is 0.3; softer here to reduce frustration on short conversational phrases)
-  const EF_OK_PENALTY   = 0.14; // ease deducted on OK response (SM-2 spec)
-  const EF_EASY_BOOST   = 0.1;  // ease added on Easy response
-  const EF_EASY_BONUS   = 1.3;  // interval multiplier on Easy responses (see file header)
-  // ------------------------------------------------------------------------
+  // ── SM-2 algorithm parameters ─────────────────────────────────────────
+  const EF_DEFAULT      = 2.5;
+  const EF_MIN          = 1.3;
+  const EF_MAX          = 3.0;
+  const EF_HARD_PENALTY = 0.2;
+  const EF_OK_PENALTY   = 0.14;
+  const EF_EASY_BOOST   = 0.1;
+  const EF_EASY_BONUS   = 1.3;
 
-  // ---- Schema migrations -------------------------------------------------
-  // Add entries here when the stored structure changes.
-  // Each entry runs when storedVersion <= from and SCHEMA_VERSION > from.
-  // Example:
-  //   { from: 1, run(data) { /* rename / transform fields */ return data; } }
-  const _migrations = [
-    // v0 → v1: first versioned release — no structural changes, stamp only.
-  ];
+  // ── Migration from pe_srs (old key) ───────────────────────────────────
 
-  function _migrate(data, storedVersion) {
-    let d = data;
-    for (const m of _migrations) {
-      if (storedVersion <= m.from) d = m.run(d);
-    }
-    return d;
-  }
-
-  // -----------------------------------------------------------------------
-
-  function _load() {
+  function _migrateLegacy() {
     try {
-      const raw = localStorage.getItem(STORE_KEY);
-      if (!raw) return { _v: SCHEMA_VERSION };
-      const data = JSON.parse(raw);
-      if (!data || typeof data !== 'object' || Array.isArray(data)) return { _v: SCHEMA_VERSION };
+      const raw = localStorage.getItem(LEGACY_KEY);
+      if (!raw) return null;
+      const old = JSON.parse(raw);
+      if (!old || typeof old !== 'object') return null;
 
-      const storedVersion = typeof data._v === 'number' ? data._v : 0;
-      if (storedVersion === SCHEMA_VERSION) {
-        return data;
-      }
+      const data = { _v: SCHEMA_VERSION, cards: {} };
+      if (old._sessions) data._sessions = old._sessions;
+      if (old._streak)   data._streak   = old._streak;
 
-      if (storedVersion < SCHEMA_VERSION) {
-        // Migrate forward and persist immediately so stale data isn't reprocessed
-        const migrated = _migrate(data, storedVersion);
-        migrated._v = SCHEMA_VERSION;
-        _save(migrated);
-        return migrated;
-      }
+      // Convert each SM-2 card — structure is identical, just add due=0 (immediately due)
+      Object.keys(old).forEach(key => {
+        if (key.startsWith('_')) return;
+        const v = old[key];
+        if (!v || typeof v !== 'object') return;
+        const reps     = typeof v.reps     === 'number' ? v.reps     : 0;
+        const interval = typeof v.interval === 'number' ? v.interval : 0;
+        const ease     = typeof v.ease     === 'number' ? v.ease     : EF_DEFAULT;
+        const lapses   = typeof v.lapses   === 'number' ? v.lapses   : 0;
+        data.cards[key] = { interval, ease, reps, lapses, due: 0 };
+      });
 
-      // storedVersion > SCHEMA_VERSION: app downgrade — read as-is.
-      // getAllCards() sanitizer handles any unknown / missing fields safely.
+      // Carry over placement level
+      const level = localStorage.getItem('pe_placement_level');
+      if (level) data.level = level;
+
+      localStorage.setItem(STORE_KEY, JSON.stringify(data));
+      localStorage.removeItem(LEGACY_KEY);
       return data;
     } catch (e) {
-      return { _v: SCHEMA_VERSION };
+      return null;
     }
   }
+
+  // ── Migration v2→v3: positional cardIds → stable string IDs ────────────
+  // Compact lookup table: topic → [phraseId at origIdx 0, 1, 2, …]
+  // Generated by tools/migrate-stable-ids.mjs — do not edit by hand.
+  const _ID_MAP = {"phrases":{"greetings":["greetings_hello_how_are_you_today","greetings_good_morning_its_nice_to_see","greetings_hi_there_hows_your_day_going","greetings_good_afternoon_how_have_you_been","greetings_hey_hows_everything_with_you","greetings_morning_hope_youre_doing_well","greetings_good_evening_hows_your_day","greetings_hey_hows_life_treating_you","greetings_hi_its_good_to_catch","greetings_hello_how_have_you_been","greetings_hi_there_hope_youre_having_a","greetings_hey_whats_new_with_you","greetings_good_morning_hows_everything_going","greetings_hi_how_are_you_holding","greetings_hey_there_hows_your_week","greetings_hello_hope_youre_doing_fine","greetings_hi_its_been_a_while","greetings_good_afternoon_hows_life_treating","greetings_hey_nice_to_see_you","greetings_it_was_great_seeing_you","greetings_take_care_of_yourself","greetings_have_a_wonderful_day","greetings_see_you_around","greetings_it_was_lovely_to_meet","greetings_dont_be_a_stranger","greetings_we_should_do_this_again","greetings_it_was_a_pleasure_hope","greetings_say_hi_to_everyone_for","greetings_take_care_and_stay_in","greetings_it_was_so_good_catching","greetings_nice_to_meet_you_im","greetings_i_could_be_better","greetings_hows_your_day_been","greetings_ive_had_a_great_day","greetings_hows_your_week_been","greetings_ive_had_better_days","greetings_im_sad","greetings_im_happy","greetings_im_excited","greetings_im_bored","greetings_im_tired","greetings_im_angry","greetings_im_surprised","greetings_im_confused","greetings_im_worried","greetings_im_nervous","greetings_im_scared","greetings_im_relaxed","greetings_im_stressed","greetings_im_busy","greetings_why_are_you_sad","greetings_why_are_you_so_happy","greetings_why_are_you_excited","greetings_why_are_you_bored","greetings_why_are_you_tired","greetings_why_are_you_angry","greetings_why_are_you_surprised","greetings_why_are_you_confused","greetings_why_are_you_worried","greetings_why_are_you_nervous","greetings_why_are_you_scared","greetings_why_are_you_relaxed","greetings_why_are_you_stressed","greetings_whats_on_your_mind","greetings_is_there_anything_i_can"],"restaurant":["restaurant_can_we_see_the_menu","restaurant_do_you_have_any_vegetarian","restaurant_what_do_you_recommend_as_a","restaurant_could_you_tell_me_about_todays","restaurant_is_this_dish_spicy","restaurant_could_i_have_this_dish_without","restaurant_do_you_offer_gluten_free_alternatives","restaurant_how_long_will_the_food","restaurant_could_i_have_a_glass","restaurant_is_it_possible_to_split","restaurant_do_you_have_any_desserts","restaurant_could_i_have_some_extra_napkins","restaurant_is_the_tip_included_in","restaurant_can_i_get_a_refill","restaurant_do_you_have_any_recommendations","restaurant_do_you_offer_any_childrens_menus","restaurant_could_i_have_some_bread","restaurant_is_there_a_minimum_order","restaurant_can_i_make_a_reservation","restaurant_could_i_have_some_more_ice","restaurant_do_you_offer_any_discounts","restaurant_is_there_a_corkage_fee","restaurant_could_i_have_my_steak_cooked","restaurant_is_there_a_limit_to","restaurant_do_you_have_any_recommendations_for_appetizers","restaurant_could_i_have_some_extra_sauce","restaurant_is_it_possible_to_have","restaurant_could_you_recommend_a_good","restaurant_do_you_have_any_outdoor","restaurant_could_i_have_the_bill","restaurant_is_there_a_happy_hour","restaurant_do_you_offer_any_low_calorie","restaurant_could_you_help_me_pronounce","restaurant_is_there_a_time_limit","restaurant_do_you_have_any_options","restaurant_could_i_have_my_coffee","restaurant_is_there_a_dress_code","restaurant_do_you_have_any_recommendations_for_cocktails","restaurant_could_i_have_the_check","restaurant_is_there_a_charge_for","restaurant_do_you_offer_any_birthday","restaurant_could_i_order_a_side","restaurant_is_there_a_fee_for","restaurant_do_you_have_a_dog","restaurant_could_i_have_my_burger","restaurant_is_there_a_childrens_menu","restaurant_could_you_please_pack_the","restaurant_do_you_have_any_non_alcoholic","restaurant_could_i_have_my_salad","restaurant_is_there_a_service_charge","restaurant_could_you_recommend_a_dish","restaurant_do_you_have_any_specials","restaurant_could_you_turn_down_the","restaurant_is_it_possible_to_make","restaurant_could_i_have_some_extra_cheese"],"supermarket":["supermarket_have_you_made_the_grocery","supermarket_i_need_to_buy_milk","supermarket_dont_forget_to_buy_fruits","supermarket_this_supermarket_is_very_expensive","supermarket_there_is_an_offer_on","supermarket_can_you_help_me_carry","supermarket_i_dont_have_cash_can","supermarket_where_are_the_cookies","supermarket_i_cant_find_the_yogurt","supermarket_how_much_does_a_kilo","supermarket_where_is_the_cleaning_products","supermarket_i_need_to_buy_a_new","supermarket_is_this_product_vegan","supermarket_do_you_know_which_pasta","supermarket_is_there_any_offer_on","supermarket_there_is_a_long_line","supermarket_can_you_help_me_reach","supermarket_i_cant_find_an_employee","supermarket_what_time_does_the_supermarket","supermarket_where_are_the_shopping_carts","supermarket_is_there_a_bathroom_nearby","supermarket_this_supermarket_has_a_very","supermarket_i_received_a_discount_coupon","supermarket_i_like_to_use_the","supermarket_i_dont_like_this_supermarket_its","supermarket_i_prefer_to_go_to","supermarket_you_have_to_go_to","supermarket_i_will_need_a_purchase","supermarket_are_these_grapes_organic","supermarket_do_you_have_fresh_chicken","supermarket_i_dont_know_which_fish","supermarket_the_strawberries_are_very_expensive","supermarket_im_looking_for_a_cake","supermarket_can_you_give_me_the","supermarket_where_is_the_gluten_free","supermarket_do_you_have_almond_milk","supermarket_where_is_the_personal_hygiene","supermarket_where_is_the_cleaning_products_2","supermarket_where_is_the_bakery_section","supermarket_can_you_give_me_a","supermarket_i_am_here_to_make","supermarket_i_dont_like_this_supermarket_the","supermarket_i_didnt_find_the_product"],"kitchen":["kitchen_do_we_have_enough_eggs","kitchen_pass_me_the_cutting_board","kitchen_where_do_we_keep_the","kitchen_can_you_pass_me_the","kitchen_do_we_have_any_olive","kitchen_pass_me_the_salt_from","kitchen_we_need_to_replace_the_baking","kitchen_the_mixer_is_in_the","kitchen_the_baking_sheets_are_on","kitchen_do_we_have_any_fresh","kitchen_can_you_check_if_the","kitchen_baking_soda_will_help_the","kitchen_do_we_have_parchment_paper_to","kitchen_help_me_peel_the_carrots","kitchen_we_need_to_wash_the","kitchen_do_we_have_vanilla_extract_for","kitchen_could_you_rinse_the_vegetables_with","kitchen_the_knives_need_sharpening","kitchen_we_need_to_take_the","kitchen_the_spices_and_condiments_are_in","kitchen_do_we_have_aluminum_foil_to","kitchen_we_need_to_finely_chop","kitchen_can_you_pass_me_the_colander","kitchen_we_need_to_buy_unsalted","kitchen_could_you_help_me_open","kitchen_the_recipe_calls_for_brown","kitchen_the_rolling_pin_to_flatten","kitchen_whats_the_difference_between_a_pot","kitchen_do_we_have_breadcrumbs_to","kitchen_where_do_we_keep_the_plastic","kitchen_the_milk_has_curdled","kitchen_this_sauce_has_expired","kitchen_we_dont_have_the_necessary","kitchen_reducing_the_sauce_will_take","kitchen_marinade_is_a_commonly_used","kitchen_the_salad_will_need_oil","kitchen_could_you_help_me_sift","kitchen_put_the_leftovers_in_plastic","kitchen_theres_leftover_broth_for_the","kitchen_be_careful_with_the_hot","kitchen_the_soup_needs_more_salt","kitchen_have_you_already_cut_the","kitchen_add_a_little_sugar_to","kitchen_we_need_to_preheat_the","kitchen_take_the_food_out_of","kitchen_tonight_were_making_homemade_pizza","kitchen_im_going_to_make_chicken","kitchen_i_need_a_tablespoon_of","kitchen_could_you_chop_the_vegetables_into","kitchen_the_pan_is_too_hot","kitchen_where_are_the_clean_dishes","kitchen_wash_the_fruit_before_cutting","kitchen_to_make_flan_you_have_caramelize","kitchen_to_make_flan_you_have_put","kitchen_to_cook_chicken_better_you","kitchen_let_the_pizza_dough_rest","kitchen_season_the_chicken_with_salt","kitchen_while_i_remove_the_fish","kitchen_the_stove_doesnt_seem_to","kitchen_we_need_to_skim_the","kitchen_bread_the_fish_with_breadcrumbs","kitchen_the_sauce_needs_more_salt","kitchen_peel_the_potatoes_and_then","kitchen_steam_the_vegetables","kitchen_grill_the_meat","kitchen_boil_the_pasta_in_hot","kitchen_fry_the_potatoes_in_hot","kitchen_we_need_to_broil_the","kitchen_the_best_side_dish_for_fish","kitchen_the_best_side_dish_for_meat","kitchen_the_best_side_dish_for_pasta","kitchen_the_best_side_dish_for_chicken","kitchen_before_cooking_pasta_we_have","kitchen_dry_the_sink_after_washing","kitchen_lower_the_temperature_of_the","kitchen_i_prefer_to_use_the","kitchen_the_glasses_are_hanging_on","kitchen_the_blender_is_in_the","kitchen_the_mixer_is_in_the_2","kitchen_the_coffee_maker_is_on","kitchen_the_toaster_is_on_the","kitchen_the_sandwich_maker_is_in","kitchen_the_pot_is_on_the","kitchen_the_pan_is_in_the","kitchen_the_casserole_dish_is_in","kitchen_the_grill_is_on_the","kitchen_the_forks_and_knives_are","kitchen_we_need_to_wash_the_2","kitchen_the_cutting_board_is_in","kitchen_the_glasses_and_cups_are","kitchen_the_fruit_bowl_is_on"],"traveling":["traveling_could_you_help_me_book","traveling_is_there_availability_for_a","traveling_i_confirm_my_reservation_for_tomorrow","traveling_i_will_make_an_additional","traveling_is_breakfast_included","traveling_the_do_not_disturb_sign","traveling_do_you_have_airport_shuttle","traveling_could_you_provide_extra_towels_in","traveling_what_services_does_the_hotel","traveling_could_you_give_me_a_non","traveling_is_there_a_minibar_in","traveling_could_you_recommend_a_good_restaurant","traveling_what_is_the_hotels_wifi","traveling_is_there_a_gym_in","traveling_could_you_help_me_with","traveling_is_there_a_safe_in","traveling_could_you_provide_an_extra_pillow","traveling_what_time_does_the_hotel","traveling_i_prefer_a_room_with","traveling_is_there_an_atm_in","traveling_order_a_taxi_for_tomorrow","traveling_what_is_the_late_checkout","traveling_is_there_24_hour_room","traveling_what_is_the_hotel_s","traveling_where_can_i_get_a_map","traveling_could_you_recommend_a_nearby_tourist","traveling_what_time_is_checkin","traveling_what_time_is_checkout","traveling_what_transportation_options_are_there","traveling_what_is_the_distance_from","traveling_i_have_a_city_tour","traveling_what_is_the_additional_price","traveling_what_do_i_have_access","traveling_where_can_i_exchange_currency","traveling_what_is_the_hotels_pet","traveling_is_there_a_place_to","traveling_i_looked_up_recommended_restaurants","traveling_what_is_the_early_checkin","traveling_is_there_a_spa_or","traveling_i_dont_know_where_to","traveling_we_can_only_go_to","traveling_are_drinks_included","traveling_what_time_is_our_flight","traveling_i_need_to_check_my","traveling_the_waiting_room_is_on","traveling_i_prefer_a_window_seat","traveling_i_need_to_buy_a_ticket","traveling_what_time_does_our_boat","traveling_carryon_luggage_must_be_a","traveling_where_is_the_taxi_stand","traveling_what_time_does_our_boat_2","traveling_how_do_i_get_to","traveling_can_i_pay_with_a","traveling_where_is_the_nearest_bus","traveling_what_is_the_taxi_fare","traveling_where_can_i_rent","traveling_do_you_have_power_adapters","traveling_is_there_a_pool_in","traveling_what_is_the_refund_policy","traveling_what_is_the_closest_restaurant","traveling_i_would_like_to_book"],"entertainment":["entertainment_that_youtube_channel_is_very","entertainment_i_dont_know_how_to","entertainment_im_looking_for_a_new_series","entertainment_this_movie_is_very_good","entertainment_this_video_game_is_very","entertainment_have_you_seen_the_new_horror","entertainment_i_didnt_like_the_ending","entertainment_i_want_to_go_to_the","entertainment_this_actor_is_very_good","entertainment_that_movie_is_a_classic","entertainment_there_is_a_new_movie","entertainment_are_you_watching_the_new","entertainment_i_didnt_like_the_last","entertainment_have_you_seen_the_latest","entertainment_i_dont_like_that_series","entertainment_what_series_do_you_recommend","entertainment_do_you_want_to_play","entertainment_im_looking_for_a_new_game","entertainment_have_you_seen_the_new_movie","entertainment_the_new_video_game_console","entertainment_i_prefer_to_watch_movies","entertainment_what_kind_of_video_games","entertainment_there_is_a_new_film","entertainment_i_would_like_to_go_amusement","entertainment_we_should_go_to_a_concert","entertainment_i_would_like_to_go_museum","entertainment_do_you_want_to_go","entertainment_the_photography_exhibition_seemed_very","entertainment_the_play_was_very_moving","entertainment_i_didnt_think_i_would","entertainment_i_love_listening_to_podcasts","entertainment_i_dont_know_what_podcast","entertainment_this_song_reminds_me_of","entertainment_there_is_a_new_concert","entertainment_skip_that_song","entertainment_i_really_like_that_song","entertainment_thats_my_favorite_song","entertainment_the_new_album_by_that","entertainment_did_you_see_the_game","entertainment_i_watch_the_games_every","entertainment_do_you_already_have_plans","entertainment_this_book_has_a_great","entertainment_i_like_to_read_books","entertainment_what_book_are_you_reading","entertainment_my_favorite_book_is_the","entertainment_the_end_of_the_book"],"gym":["gym_can_you_show_me_how","gym_what_is_the_correct_form","gym_increase_the_elevation_of_the","gym_increase_the_speed_of_the","gym_how_many_repetitions_should_i","gym_could_you_demonstrate_how_to_do","gym_can_you_recommend_an_appropriate_weight","gym_is_there_a_warm_up","gym_how_do_i_adjust_the","gym_can_you_give_me_some","gym_what_exercises_do_you_recommend","gym_could_you_tell_me_if","gym_today_is_leg_day","gym_tomorrow_will_be_arm_day","gym_is_it_okay_if_i_work","gym_could_you_explain_the_benefits_of","gym_what_is_the_proper_breathing","gym_do_you_have_any_suggestions_for","gym_should_i_follow_any_kind","gym_we_all_must_properly_disinfect","gym_could_you_recommend_a_stretching_routine","gym_do_you_have_any_advice","gym_can_you_show_me_how_adjust","gym_what_routine_should_i_follow","gym_what_is_the_best_way","gym_how_much_cardio_time_do","gym_is_there_a_specific_order","gym_what_is_the_correct_posture","gym_how_much_rest_time_do","gym_do_you_have_any_tips","gym_could_you_demonstrate_how_to_use","gym_is_it_okay_if_i_use","gym_im_going_to_do_cardio","gym_i_dont_know_how_to_use","gym_where_can_i_find_towels","gym_could_you_help_me_create","gym_what_type_of_membership_do","gym_is_there_a_personal_trainer","gym_are_group_classes_available","gym_how_can_i_book_a","gym_what_is_the_gyms_schedule","gym_what_muscles_are_worked_with","gym_i_feel_a_pain_in","gym_the_gyms_music_is_too","gym_im_motivated","gym_could_you_inform_me_about","gym_that_effort_was_worth_it","gym_is_there_an_alternative_for","gym_i_need_to_work_on_my_endurance","gym_i_need_to_rest_a_bit","gym_how_long_should_i_rest","gym_i_would_like_to_work","gym_this_exercise_will_help_me","gym_this_routine_is_designed_to","gym_keep_your_back_straight","gym_breathe_deeply","gym_push_with_your_heels_not","gym_keep_your_elbows_close_to","gym_dont_lift_your_shoulders_towards","gym_keep_your_abs_contracted","gym_dont_arch_your_back","gym_maintain_a_steady_pace","gym_breathe_deeply_and_through_your","gym_dont_forget_to_hydrate","gym_eat_healthily_to_get_better","gym_rest_enough_for_your_body","gym_dont_overdo_it_with_the","gym_they_are_cleaning_the_locker"],"technology":["technology_could_you_send_me_that","technology_i_need_to_charge_my","technology_can_you_help_me_set","technology_what_is_the_wifi_password","technology_wait_my_computer_is_updating","technology_tomorrow_we_are_going_to","technology_do_you_know_how_i","technology_can_you_copy_me_on","technology_send_me_that_file_via","technology_can_you_share_your_location","technology_i_need_to_back_up","technology_is_there_a_way_to","technology_how_do_i_delete_this","technology_i_forgot_my_password","technology_is_there_an_app_to","technology_do_you_have_a_cable","technology_how_do_i_save_this","technology_i_want_to_buy_a","technology_can_i_turn_off_notifications","technology_how_do_i_take_a","technology_make_sure_your_internet_connection","technology_i_recommend_using_a_strong","technology_can_i_connect_the_speaker","technology_i_suggest_you_use_a","technology_where_is_the_tv_remote","technology_we_need_to_buy_more","technology_i_really_liked_this_image","technology_have_you_seen_my_message","technology_check_your_spam_the_email","technology_do_you_have_coverage_in","technology_the_battery_of_my_smartwatch","technology_i_cant_connect_my_device","technology_i_need_a_new_usb","technology_the_wifi_is_not_working","technology_be_careful_with_that_link","technology_the_app_works_better_than","technology_lets_look_for_an_internet","technology_what_cell_phone_do_you","technology_scan_this_qr_code_for","technology_tag_me_in_the_photo","technology_i_cant_open_this_file","technology_i_need_to_download_this","technology_how_can_i_recover_a","technology_you_should_look_it_up","technology_i_accidentally_deleted_the_conversation","technology_dont_trust_all_the_information","technology_do_you_know_how_to","technology_i_cant_open_this_pdf","technology_im_looking_for_software_to","technology_what_is_this_formula_in","technology_this_powerpoint_presentation_is_very","technology_the_information_is_in_the","technology_i_want_to_increase_the","technology_turn_on_the_scanner_i","technology_you_should_buy_a_better","technology_these_wireless_headphones_are_very","technology_the_virtual_assistant_has_been","technology_the_battery_of_this_phone","technology_i_love_the_camera_on","technology_how_can_i_change_the","technology_i_dont_know_where_the","technology_look_for_the_file_in","technology_are_you_sure_you_are","technology_please_turn_on_the_printer","technology_how_do_you_do_this"],"accountability":["accountability_lets_start_the_meeting","accountability_the_financial_reports_have_been","accountability_we_need_to_adjust_the","accountability_the_sales_figures_have_increased","accountability_we_are_facing_a_cash","accountability_we_need_to_audit_the","accountability_the_tax_returns_are_pending","accountability_the_inventory_needs_to_be","accountability_we_have_a_new_client","accountability_we_are_closing_the_fiscal","accountability_we_need_to_reconcile_the","accountability_the_payroll_is_paid","accountability_the_balance_sheet_is_ready","accountability_the_financial_statements_are_up","accountability_accounting_staff_will_be_here","accountability_the_accountant_needs_additional_information","accountability_everything_went_well_during_the","accountability_the_financial_forecast_is_positive","accountability_have_the_contracts_with_the","accountability_when_is_the_meeting_scheduled","accountability_it_is_important_to_consider","accountability_when_was_the_budget_review","accountability_what_are_the_projections_for","accountability_the_sales_projection_for_the","accountability_accounts_payable_has_already_closed","accountability_the_accounting_department_has_already","accountability_the_human_resources_department_has","accountability_accounting_records_for_the_tax","accountability_the_presentation_of_the_financial","accountability_all_the_money_a_person","accountability_salary_is_paid_in_cash","accountability_salary_is_paid_weekly_biweekly","accountability_the_purchasing_department_will_receive","accountability_has_the_intern_already_registered","accountability_the_balance_sheet_shows_the","accountability_i_think_this_is_a","accountability_the_company_had_higher_sales","accountability_if_the_company_buys_new","accountability_the_inventory_that_arrived_yesterday","accountability_what_was_the_net_profit","accountability_what_was_the_gross_loss","accountability_a_companys_fiscal_year_does","accountability_the_companys_income_in_the"]},"vocab":{"general":{"quizBase":"quiz_vocab","vocabBase":"vocab","ids":["abundant","accomplish","accurate","acquire","adapt","adequate","admire","advocate","ambitious","analyze","anxious","appropriate","assess","assume","benefit","broad","capable","challenge","clarify","collaborate","commit","complex","concise","confident","consistent","contribute","crucial","curious","debate","dedicate","demonstrate","determine","diverse","efficient","elaborate","emerge","emphasize","enormous","essential","establish","evaluate","evident","evolve","exceptional","explore","flexible","flourish","focus","fortunate","generate","genuine","grateful","highlight","humble","identify","implement","improve","indicate","inevitable","influence","innovative","inspire","interpret","investigate","logical","maintain","minimize","motivate","navigate","necessary","obvious","opportunity","overcome","passionate","persevere","persuade","potential","precise","prioritize","profound","realistic","recognize","relevant","remarkable","resilient","responsible","significant","strategy","struggle","sufficient","sustainable","transparent","unique","utilize","valuable","vast","versatile","vision","vulnerable","worthwhile"]},"greetings":{"quizBase":"quiz_greetings","vocabBase":"vocab_greetings","ids":["introduction","farewell","acquaintance","salutation","handshake","compliment","nickname","conversation","courtesy","etiquette","gesture","rapport","icebreaker","warmth","hospitality"]},"restaurant":{"quizBase":"quiz_restaurant","vocabBase":"vocab_restaurant","ids":["appetizer","entree","reservation","cuisine","ambiance","gratuity","sommelier","palate","garnish","savor","delicacy","culinary","condiment","portion","bistro"]},"supermarket":{"quizBase":"quiz_supermarket","vocabBase":"vocab_supermarket","ids":["organic","discount","aisle","checkout","loyalty","expiration","wholesale","perishable","generic","seasonal","bulk","refund","inventory","coupon","barcode"]},"kitchen":{"quizBase":"quiz_kitchen","vocabBase":"vocab_kitchen","ids":["saut","simmer","marinate","blanch","julienne","zest","baste","deglaze","fold","whisk","caramelize","emulsify","braise","render","poach"]},"traveling":{"quizBase":"quiz_traveling","vocabBase":"vocab_traveling","ids":["itinerary","accommodation","layover","excursion","passport","visa","departure","destination","landmark","souvenir","currency","customs","boarding","amenity","concierge"]},"entertainment":{"quizBase":"quiz_entertainment","vocabBase":"vocab_entertainment","ids":["sequel","soundtrack","genre","premiere","choreography","narrative","critic","plot","improvise","cameo","anthology","cinematography","adaptation","cliffhanger","intermission"]},"gym":{"quizBase":"quiz_gym","vocabBase":"vocab_gym","ids":["resistance","repetition","endurance","flexibility","cardiovascular","posture","metabolism","hypertrophy","recovery","mobility","agility","stamina","coordination","plateau","biomechanics"]},"technology":{"quizBase":"quiz_technology","vocabBase":"vocab_technology","ids":["algorithm","encryption","bandwidth","interface","malware","firmware","latency","scalability","authentication","blockchain","cybersecurity","repository","virtualization","connectivity","synchronization"]},"accountability":{"quizBase":"quiz_accountability","vocabBase":"vocab_accountability","ids":["liability","auditing","compliance","transparency","governance","reconciliation","depreciation","amortization","fiduciary","embezzlement","insolvency","liquidation","arbitration","indemnity","collateral"]}}};
+
+  const _PHRASE_ACTS = ['', 'dict_', 'cloze_', 'trans_', 'scramble_'];
+
+  function _migrateCardIds(data) {
+    if (!data || !data.cards) return data;
+    const cards    = data.cards;
+    const newCards = {};
+    let   changed  = 0;
+
+    Object.keys(cards).forEach(key => {
+      if (key.startsWith('_') || key.startsWith('grammar_')) {
+        newCards[key] = cards[key]; return;
+      }
+
+      // Try to match old positional phrase key: {actPrefix?}{topic}_{number}
+      const phraseTopics = Object.keys(_ID_MAP.phrases);
+      let mapped = false;
+
+      for (const act of _PHRASE_ACTS) {
+        for (const topic of phraseTopics) {
+          const prefix = act + topic + '_';
+          if (!key.startsWith(prefix)) continue;
+          const rest = key.slice(prefix.length);
+          if (!/^\d+$/.test(rest)) continue;  // not numeric → already new format
+          const idx = parseInt(rest, 10);
+          const ids = _ID_MAP.phrases[topic];
+          if (idx >= ids.length) { newCards[key] = cards[key]; mapped = true; break; }
+          const newKey = act + ids[idx];
+          newCards[newKey] = cards[key];
+          if (newKey !== key) changed++;
+          mapped = true; break;
+        }
+        if (mapped) break;
+      }
+
+      if (!mapped) {
+        // Try vocab key: {quizBase|vocabBase}_{number}
+        const vocabEntries = Object.values(_ID_MAP.vocab);
+        for (const entry of vocabEntries) {
+          for (const base of [entry.quizBase, entry.vocabBase]) {
+            const prefix = base + '_';
+            if (!key.startsWith(prefix)) continue;
+            const rest = key.slice(prefix.length);
+            if (!/^\d+$/.test(rest)) continue;
+            const idx = parseInt(rest, 10);
+            if (idx >= entry.ids.length) { newCards[key] = cards[key]; mapped = true; break; }
+            const newKey = base + '_' + entry.ids[idx];
+            newCards[newKey] = cards[key];
+            if (newKey !== key) changed++;
+            mapped = true; break;
+          }
+          if (mapped) break;
+        }
+      }
+
+      if (!mapped) newCards[key] = cards[key];
+    });
+
+    if (changed > 0) {
+      data.cards = newCards;
+      data._v = 3;
+    }
+    return data;
+  }
+
+  // ── Persistence ───────────────────────────────────────────────────────
 
   let _quotaWarned = false;
 
@@ -90,8 +160,30 @@ const Progress = (() => {
     setTimeout(() => t.remove(), 8000);
   }
 
+  function _load() {
+    try {
+      const raw = localStorage.getItem(STORE_KEY);
+      if (!raw) {
+        const migrated = _migrateLegacy();
+        if (migrated) return migrated;
+        return { _v: SCHEMA_VERSION, cards: {} };
+      }
+      const data = JSON.parse(raw);
+      if (!data || typeof data !== 'object') return { _v: SCHEMA_VERSION, cards: {} };
+      if (!data.cards) data.cards = {};
+      if (!data._v || data._v < 3) {
+        const upgraded = _migrateCardIds(data);
+        _save(upgraded);
+        return upgraded;
+      }
+      return data;
+    } catch (e) {
+      return { _v: SCHEMA_VERSION, cards: {} };
+    }
+  }
+
   function _save(data) {
-    data._v = SCHEMA_VERSION; // always stamp on write
+    data._v = SCHEMA_VERSION;
     try { localStorage.setItem(STORE_KEY, JSON.stringify(data)); }
     catch (e) {
       if (e instanceof DOMException && (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')) {
@@ -100,81 +192,119 @@ const Progress = (() => {
     }
   }
 
-  /**
-   * Return a card's current SRS state. If the card has never been rated,
-   * returns a fresh default object (interval 0, EF_DEFAULT ease, 0 reps).
-   * @param {string} id - Unique card ID (e.g. 'greetings_0').
-   * @returns {{ interval: number, ease: number, reps: number, lapses: number }}
-   */
-  function getCard(id) {
-    const data = _load();
-    return data[id] || { interval: 0, ease: EF_DEFAULT, reps: 0, lapses: 0 };
+  // ── Card helpers ──────────────────────────────────────────────────────
+
+  function _emptyCard() {
+    return { interval: 0, ease: EF_DEFAULT, reps: 0, lapses: 0, due: 0 };
   }
 
+  function getCard(id) {
+    const data = _load();
+    return data.cards[id] || _emptyCard();
+  }
+
+  // ── SM-2 rating ───────────────────────────────────────────────────────
+
   /**
-   * Rate a card after review and advance its SRS schedule.
-   * @param {string} id      - Unique card ID.
-   * @param {1|3|5}  quality - Recall quality: 1 = Hard, 3 = OK, 5 = Easy.
+   * Rate a card after review and advance its SM-2 schedule.
+   * quality: 1 = Hard/wrong, 3 = OK/correct, 5 = Easy/correct
    */
   function rate(id, quality) {
     const data = _load();
-    const card = data[id] || { interval: 0, ease: EF_DEFAULT, reps: 0, lapses: 0 };
+    const card = data.cards[id] || _emptyCard();
 
     if (quality === 1) {
-      // Hard/lapse: reset interval, lower ease, restart graduation sequence
       card.interval = 1;
-      card.ease = Math.max(EF_MIN, card.ease - EF_HARD_PENALTY);
-      card.lapses = (card.lapses || 0) + 1;
-      card.reps = 0; // restart so next correct answer begins at 1-day interval
+      card.ease     = Math.max(EF_MIN, card.ease - EF_HARD_PENALTY);
+      card.lapses   = (card.lapses || 0) + 1;
+      card.reps     = 0;
     } else if (quality === 3) {
-      // OK: standard SM-2 progression + EF penalty per SM-2 spec
-      if (card.reps === 0) card.interval = 1;
+      if (card.reps === 0)      card.interval = 1;
       else if (card.reps === 1) card.interval = 3;
-      else card.interval = Math.max(1, Math.round(card.interval * card.ease));
+      else                      card.interval = Math.max(1, Math.round(card.interval * card.ease));
       card.ease = Math.max(EF_MIN, card.ease - EF_OK_PENALTY);
     } else {
-      // Easy: boosted progression
-      if (card.reps === 0) card.interval = 3;
+      if (card.reps === 0)      card.interval = 3;
       else if (card.reps === 1) card.interval = 5;
-      else card.interval = Math.max(1, Math.round(card.interval * card.ease * EF_EASY_BONUS));
+      else                      card.interval = Math.max(1, Math.round(card.interval * card.ease * EF_EASY_BONUS));
       card.ease = Math.min(EF_MAX, card.ease + EF_EASY_BOOST);
     }
 
-    // Gradual lapse decay: each correct review reduces the lapse count by 1.
-    // A card that lapsed N times needs N more correct answers to leave "Hard Cards".
     if (quality >= 3) card.lapses = Math.max(0, (card.lapses || 0) - 1);
 
     card.reps = (card.reps || 0) + 1;
-    data[id] = card;
+    card.due  = Date.now() + card.interval * 86_400_000;
+
+    data.cards[id] = card;
     _save(data);
   }
 
+  // ── Visual mastery API ────────────────────────────────────────────────
 
   /**
-   * Return review statistics for a topic.
-   * @param {string} topic - SRS key prefix (e.g. 'greetings', 'cloze_restaurant').
-   * @param {number} total - Total number of cards in the topic.
-   * @returns {{ seen: number, total: number }}
-   *   seen  — cards rated at least once
-   *   total — same as the input total
+   * Translate SM-2 interval → human-readable mastery state.
+   * @param {string} id
+   * @returns {'new'|'learning'|'practiced'|'mastered'}
    */
-  function getTopicStats(topic, total) {
-    const data = _load();
-    let seen = 0;
-    for (let i = 0; i < total; i++) {
-      const card = data[`${topic}_${i}`];
-      if (card && card.reps > 0) seen++;
-    }
-    return { seen, total };
+  function getMastery(id) {
+    const card = getCard(id);
+    if (card.reps === 0)       return 'new';
+    if (card.interval <= 3)    return 'learning';
+    if (card.interval <= 14)   return 'practiced';
+    return 'mastered';
   }
 
+  // ── Scheduling ────────────────────────────────────────────────────────
+
   /**
-   * Append a session record and update the daily streak.
-   * Keeps the last 100 session records to bound localStorage growth.
-   * @param {string} topic   - SRS key prefix for the activity/topic.
-   * @param {number} correct - Number of correct responses in the session.
-   * @param {number} total   - Total responses attempted in the session.
+   * Return the index of the next card to review from cardIds.
+   * Priority: due cards (due ≤ now) first, then new cards, then future cards.
+   * @param {string[]} cardIds
+   * @param {number}   excludeIdx — index to skip (just-reviewed card)
+   * @returns {number}
    */
+  function getNextIndex(cardIds, excludeIdx) {
+    const data = _load();
+    const now  = Date.now();
+    let bestIdx   = -1;
+    let bestScore = Infinity;
+
+    for (let i = 0; i < cardIds.length; i++) {
+      if (i === excludeIdx) continue;
+      const card = data.cards[cardIds[i]];
+      const reps = card ? card.reps : 0;
+      const due  = card && card.due ? card.due : 0;
+
+      // Score: 0 = due now (no card yet), 1 = overdue, 2+ = future
+      // Within overdue: smaller interval = more urgent
+      let score;
+      if (reps === 0)      score = 50_000 + i;          // new: show after overdue, stable order
+      else if (due <= now) score = card.interval;        // overdue: most urgent first
+      else                 score = 100_000 + (due - now) / 86_400_000; // future: soonest first
+
+      if (score < bestScore) { bestScore = score; bestIdx = i; }
+    }
+
+    return bestIdx === -1 ? 0 : bestIdx;
+  }
+
+  // ── Level ─────────────────────────────────────────────────────────────
+
+  function setLevel(level) {
+    const data = _load();
+    data.level = level;
+    _save(data);
+    localStorage.setItem('pe_placement_level', level);
+  }
+
+  function getLevel() {
+    const data = _load();
+    if (data.level) return data.level;
+    return localStorage.getItem('pe_placement_level') || 'A1';
+  }
+
+  // ── Sessions & streak ─────────────────────────────────────────────────
+
   function recordSession(topic, correct, total) {
     const data = _load();
     if (!data._sessions) data._sessions = [];
@@ -186,7 +316,6 @@ const Progress = (() => {
     });
     if (data._sessions.length > 100) data._sessions.shift();
 
-    // Update streak (local-time dates so midnight in user's timezone resets the streak correctly)
     const today = new Date().toLocaleDateString('sv');
     const yd = new Date(); yd.setDate(yd.getDate() - 1);
     const yesterday = yd.toLocaleDateString('sv');
@@ -194,65 +323,95 @@ const Progress = (() => {
     const s = data._streak;
     if (s.last !== today) {
       s.current = (s.last === yesterday) ? s.current + 1 : 1;
-      s.last = today;
-      s.best = Math.max(s.best, s.current);
+      s.last    = today;
+      s.best    = Math.max(s.best, s.current);
     }
     _save(data);
   }
 
-  /**
-   * Return the current study streak.
-   * @returns {{ current: number, last: string, best: number }}
-   *   current — consecutive days studied up to and including today
-   *   last    — ISO-style date string (YYYY-MM-DD) of the last study day
-   *   best    — all-time longest streak
-   */
   function getStreak() {
     return _load()._streak || { current: 0, last: '', best: 0 };
   }
 
-  /**
-   * Return the raw session history array (up to the last 100 entries).
-   * Each entry: { date: string, topic: string, correct: number, total: number }
-   * @returns {Array<{ date: string, topic: string, correct: number, total: number }>}
-   */
   function getSessions() {
     return _load()._sessions || [];
   }
 
+  // ── getAllCards ────────────────────────────────────────────────────────
+
   /**
-   * Returns a snapshot of all SRS card data keyed by cardId.
-   * Sanitizes each card: non-object values are dropped; missing or
-   * non-finite numeric fields fall back to safe defaults so callers
-   * can always read .reps, .interval, .ease, .lapses safely.
+   * Returns all card data.
+   * Exposes full SM-2 fields + aliases used by older callers:
+   *   reps    — correct for all activity files and phrase-browser
+   *   lapses  — used by grammar.js checks
    */
   function getAllCards() {
     const data = _load();
-    const DEFAULTS = { interval: 0, ease: EF_DEFAULT, reps: 0, lapses: 0 };
-    const out = {};
+    const out  = {};
 
-    for (const key of Object.keys(data)) {
-      // Preserve internal meta-keys (_sessions, _streak, …) exactly as stored
-      if (key.startsWith('_')) { out[key] = data[key]; continue; }
+    if (data._sessions) out._sessions = data._sessions;
+    if (data._streak)   out._streak   = data._streak;
 
-      const v = data[key];
-      // Drop corrupted entries (null, string, array, …)
-      if (!v || typeof v !== 'object' || Array.isArray(v)) continue;
-
-      // Apply field-level defaults for any missing or non-finite numeric value
-      const num = (field) =>
-        typeof v[field] === 'number' && isFinite(v[field]) ? v[field] : DEFAULTS[field];
-
+    Object.keys(data.cards).forEach(key => {
+      const v = data.cards[key];
+      if (!v || typeof v !== 'object') return;
       out[key] = {
-        interval: num('interval'),
-        ease:     num('ease'),
-        reps:     num('reps'),
-        lapses:   num('lapses'),
+        interval: typeof v.interval === 'number' ? v.interval : 0,
+        ease:     typeof v.ease     === 'number' ? v.ease     : EF_DEFAULT,
+        reps:     typeof v.reps     === 'number' ? v.reps     : 0,
+        lapses:   typeof v.lapses   === 'number' ? v.lapses   : 0,
+        due:      typeof v.due      === 'number' ? v.due      : 0,
       };
-    }
+    });
 
     return out;
   }
 
-  return { getCard, rate, getTopicStats, recordSession, getStreak, getSessions, getAllCards };
+  // ── Stable-ID helpers (v3+) ──────────────────────────────────────────
+
+  /**
+   * Return the stable phraseIds for a topic (from the embedded ID map).
+   * e.g. getPhraseIds('greetings') → ['greetings_hello_how_are_you_today', ...]
+   */
+  function getPhraseIds(topicId) {
+    return (_ID_MAP.phrases[topicId] || []).slice();
+  }
+
+  /**
+   * Return the stable wordIds for a vocab topic.
+   * e.g. getVocabIds('general') → ['abundant', 'accomplish', ...]
+   *      getVocabIds('greetings') → ['introduction', 'farewell', ...]
+   */
+  function getVocabIds(topicId) {
+    const entry = _ID_MAP.vocab[topicId];
+    return (entry && entry.ids) ? entry.ids.slice() : [];
+  }
+
+  /**
+   * Count seen cards from an explicit list of card IDs.
+   * 'seen' = reps ≥ 1.
+   * @param {string[]} ids
+   * @returns {{ seen: number, total: number }}
+   */
+  function getStatsForCards(ids) {
+    const data = _load();
+    const seen = ids.filter(id => { const c = data.cards[id]; return c && c.reps > 0; }).length;
+    return { seen, total: ids.length };
+  }
+
+  return {
+    getCard,
+    rate,
+    getMastery,
+    getNextIndex,
+    getPhraseIds,
+    getVocabIds,
+    getStatsForCards,
+    setLevel,
+    getLevel,
+    recordSession,
+    getStreak,
+    getSessions,
+    getAllCards,
+  };
 })();

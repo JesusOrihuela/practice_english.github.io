@@ -1,19 +1,154 @@
 {
   "words": [
-    { "word": "introduction",  "definition": "The act of formally presenting yourself or another person to someone",   "translation": "presentación",       "example": "She made a confident introduction at the start of the meeting.",              "category": "Noun",      "difficulty": "easy"   },
-    { "word": "casual",        "definition": "Relaxed and informal in style or manner",                                "translation": "informal / casual",   "example": "We had a casual conversation over coffee in the break room.",                  "category": "Adjective", "difficulty": "easy"   },
-    { "word": "formal",        "definition": "Following established rules of behaviour and etiquette",                "translation": "formal",              "example": "The job interview required formal attire and professional language.",           "category": "Adjective", "difficulty": "easy"   },
-    { "word": "farewell",      "definition": "An act of saying goodbye, often in a meaningful or ceremonial way",     "translation": "despedida",           "example": "We organised a farewell party for our colleague before she moved abroad.",      "category": "Noun",      "difficulty": "medium" },
-    { "word": "compliment",    "definition": "A polite expression of admiration or praise directed at someone",       "translation": "cumplido",            "example": "She gave me a lovely compliment on my presentation skills.",                   "category": "Noun",      "difficulty": "medium" },
-    { "word": "pleasant",      "definition": "Giving a feeling of enjoyment, comfort, or satisfaction",               "translation": "agradable",           "example": "We had a very pleasant conversation at the welcome reception.",                "category": "Adjective", "difficulty": "easy"   },
-    { "word": "brief",         "definition": "Lasting only a short time; using few words",                            "translation": "breve",               "example": "We had a brief chat in the corridor before the class started.",                "category": "Adjective", "difficulty": "easy"   },
-    { "word": "acquaintance",  "definition": "A person you know slightly but not well enough to call a close friend", "translation": "conocido / conocida", "example": "She is just an acquaintance; we met once at a conference.",                  "category": "Noun",      "difficulty": "medium" },
-    { "word": "sincerely",     "definition": "In a way that is honest, genuine, and free from pretence",              "translation": "sinceramente",        "example": "He thanked her sincerely for all the support she had given him.",              "category": "Adverb",    "difficulty": "medium" },
-    { "word": "acknowledge",   "definition": "To show that you have noticed or recognised someone",                   "translation": "reconocer / saludar", "example": "Always acknowledge people when they greet you, even if you are busy.",        "category": "Verb",      "difficulty": "medium" },
-    { "word": "approachable",  "definition": "Friendly, open, and easy to talk to",                                   "translation": "accesible / tratable", "example": "The new manager is very approachable and always has time to listen.",       "category": "Adjective", "difficulty": "medium" },
-    { "word": "etiquette",     "definition": "The accepted rules of polite behaviour in a society or profession",     "translation": "etiqueta / protocolo", "example": "Knowing proper business etiquette is essential at international events.",   "category": "Noun",      "difficulty": "hard"   },
-    { "word": "cordial",       "definition": "Warm, friendly, and pleasantly polite in manner",                       "translation": "cordial",             "example": "The host greeted every guest with a cordial smile and a firm handshake.",     "category": "Adjective", "difficulty": "hard"   },
-    { "word": "pleasantry",    "definition": "A polite or friendly remark exchanged in a social conversation",        "translation": "cortesía amable",     "example": "We exchanged a few pleasantries before getting down to business.",            "category": "Noun",      "difficulty": "hard"   },
-    { "word": "reciprocate",   "definition": "To respond to an action by doing the same thing in return",             "translation": "corresponder",        "example": "If someone greets you warmly, it is polite to reciprocate.",                  "category": "Verb",      "difficulty": "hard"   }
+    {
+      "word": "introduction",
+      "definition": "The act of formally presenting yourself or another person to someone",
+      "translation": "presentación",
+      "example": "She made a confident introduction at the start of the meeting.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "introduction"
+    },
+    {
+      "word": "casual",
+      "definition": "Relaxed and informal in style or manner",
+      "translation": "informal / casual",
+      "example": "We had a casual conversation over coffee in the break room.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "casual"
+    },
+    {
+      "word": "formal",
+      "definition": "Following established rules of behaviour and etiquette",
+      "translation": "formal",
+      "example": "The job interview required formal attire and professional language.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "formal"
+    },
+    {
+      "word": "farewell",
+      "definition": "An act of saying goodbye, often in a meaningful or ceremonial way",
+      "translation": "despedida",
+      "example": "We organised a farewell party for our colleague before she moved abroad.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "farewell"
+    },
+    {
+      "word": "compliment",
+      "definition": "A polite expression of admiration or praise directed at someone",
+      "translation": "cumplido",
+      "example": "She gave me a lovely compliment on my presentation skills.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "compliment"
+    },
+    {
+      "word": "pleasant",
+      "definition": "Giving a feeling of enjoyment, comfort, or satisfaction",
+      "translation": "agradable",
+      "example": "We had a very pleasant conversation at the welcome reception.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "pleasant"
+    },
+    {
+      "word": "brief",
+      "definition": "Lasting only a short time; using few words",
+      "translation": "breve",
+      "example": "We had a brief chat in the corridor before the class started.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "brief"
+    },
+    {
+      "word": "acquaintance",
+      "definition": "A person you know slightly but not well enough to call a close friend",
+      "translation": "conocido / conocida",
+      "example": "She is just an acquaintance; we met once at a conference.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "acquaintance"
+    },
+    {
+      "word": "sincerely",
+      "definition": "In a way that is honest, genuine, and free from pretence",
+      "translation": "sinceramente",
+      "example": "He thanked her sincerely for all the support she had given him.",
+      "category": "Adverb",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "sincerely"
+    },
+    {
+      "word": "acknowledge",
+      "definition": "To show that you have noticed or recognised someone",
+      "translation": "reconocer / saludar",
+      "example": "Always acknowledge people when they greet you, even if you are busy.",
+      "category": "Verb",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "acknowledge"
+    },
+    {
+      "word": "approachable",
+      "definition": "Friendly, open, and easy to talk to",
+      "translation": "accesible / tratable",
+      "example": "The new manager is very approachable and always has time to listen.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "approachable"
+    },
+    {
+      "word": "etiquette",
+      "definition": "The accepted rules of polite behaviour in a society or profession",
+      "translation": "etiqueta / protocolo",
+      "example": "Knowing proper business etiquette is essential at international events.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "etiquette"
+    },
+    {
+      "word": "cordial",
+      "definition": "Warm, friendly, and pleasantly polite in manner",
+      "translation": "cordial",
+      "example": "The host greeted every guest with a cordial smile and a firm handshake.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "cordial"
+    },
+    {
+      "word": "pleasantry",
+      "definition": "A polite or friendly remark exchanged in a social conversation",
+      "translation": "cortesía amable",
+      "example": "We exchanged a few pleasantries before getting down to business.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "pleasantry"
+    },
+    {
+      "word": "reciprocate",
+      "definition": "To respond to an action by doing the same thing in return",
+      "translation": "corresponder",
+      "example": "If someone greets you warmly, it is polite to reciprocate.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "reciprocate"
+    }
   ]
 }

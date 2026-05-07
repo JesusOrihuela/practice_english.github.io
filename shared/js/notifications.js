@@ -48,6 +48,35 @@
     });
   }
 
+  // Known topic IDs in CEFR order (mirrors path.js — no import needed)
+  var TOPIC_IDS = [
+    'greetings', 'restaurant', 'supermarket', 'kitchen', 'traveling',
+    'entertainment', 'gym', 'technology', 'accountability',
+  ];
+
+  var TOPIC_LABELS = {
+    greetings: 'Greetings', restaurant: 'Restaurant', supermarket: 'Supermarket',
+    kitchen: 'Kitchen', traveling: 'Traveling', entertainment: 'Entertainment',
+    gym: 'Gym', technology: 'Technology', accountability: 'Accountability',
+  };
+
+  // Activity prefixes to strip when extracting topic from card key
+  var ACTIVITY_PREFIXES = ['dict_', 'cloze_', 'scramble_', 'trans_', 'quiz_', 'vocab_'];
+
+  function _topicFromKey(key) {
+    var k = key;
+    for (var i = 0; i < ACTIVITY_PREFIXES.length; i++) {
+      if (k.startsWith(ACTIVITY_PREFIXES[i])) {
+        k = k.slice(ACTIVITY_PREFIXES[i].length);
+        break;
+      }
+    }
+    for (var j = 0; j < TOPIC_IDS.length; j++) {
+      if (k.startsWith(TOPIC_IDS[j] + '_')) return TOPIC_IDS[j];
+    }
+    return null;
+  }
+
   // Returns the notification payload to show, or null if nothing to remind about.
   function buildPayload() {
     if (typeof Progress === 'undefined') return null;
@@ -57,6 +86,46 @@
     var sessions = typeof Progress.getSessions === 'function' ? Progress.getSessions() : [];
     var practicedToday = sessions.some(function (s) { return s.date === today; });
 
+    // ── Priority 1: due SRS cards (most actionable) ──
+    var now   = Date.now();
+    var cards = Progress.getAllCards();
+    var dueCounts = {};  // topicId → count
+
+    Object.keys(cards).forEach(function (key) {
+      if (key.startsWith('_') || key.startsWith('grammar_')) return;
+      var card = cards[key];
+      if (!card || card.reps === 0 || card.due > now) return;
+      var topic = _topicFromKey(key);
+      if (!topic) return;
+      dueCounts[topic] = (dueCounts[topic] || 0) + 1;
+    });
+
+    // Pick the topic with the most due cards
+    var topDueTopic = null;
+    var topDueCount = 0;
+    TOPIC_IDS.forEach(function (tid) {
+      if ((dueCounts[tid] || 0) > topDueCount) {
+        topDueCount = dueCounts[tid];
+        topDueTopic = tid;
+      }
+    });
+
+    if (topDueTopic && topDueCount > 0) {
+      var totalDue = Object.keys(dueCounts).reduce(function (s, k) { return s + dueCounts[k]; }, 0);
+      var bodyText = topDueCount + ' card' + (topDueCount > 1 ? 's' : '') + ' due in ' + TOPIC_LABELS[topDueTopic];
+      if (totalDue > topDueCount) {
+        bodyText += ' (+ ' + (totalDue - topDueCount) + ' more across other topics)';
+      }
+      bodyText += ' — review now.';
+      return {
+        title: '📚 Cards waiting for review',
+        body:  bodyText,
+        tag:   'srs-due',
+        url:   'speaking/html/speaking.html?topic=' + topDueTopic,
+      };
+    }
+
+    // ── Priority 2: streak at risk ──
     if (streak.current >= 2 && !practicedToday) {
       return {
         title: '🔥 Streak at risk',
@@ -124,7 +193,7 @@
     var strong = document.createElement('strong');
     strong.textContent = '🔔 Get a daily reminder?';
     var desc = document.createElement('span');
-    desc.textContent = "So you don't lose your streak.";
+    desc.textContent = "We'll tell you exactly which cards are due.";
     textEl.appendChild(strong);
     textEl.appendChild(desc);
 
@@ -138,7 +207,7 @@
       localStorage.setItem(KEY_ASKED, '1');
       requestPermission(function (result) {
         if (result === 'granted') {
-          prompt.innerHTML = '<span class="done-notif-confirmed">✓ Reminders on — we\'ll ping you at 20:00 when cards are due.</span>';
+          prompt.innerHTML = '<span class="done-notif-confirmed">✓ Reminders on — we\'ll tell you exactly which cards are due each day.</span>';
         } else {
           prompt.innerHTML = '<span class="done-notif-confirmed">Notifications blocked in browser settings.</span>';
         }
