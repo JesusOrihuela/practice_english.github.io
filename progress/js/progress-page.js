@@ -1,13 +1,10 @@
 /* ============================================================
    progress-page.js — Progress Dashboard Logic
-   All data comes from Progress (shared/js/progress.js) via localStorage.
+   All data comes from Progress (shared/js/progress.js) and
+   AppPath (shared/js/path.js) via localStorage.
    ============================================================ */
 
-const TOPICS = AppTopics.PHRASE_TOPICS;
-
-// In-page fetch cache — deduplicates concurrent requests and avoids re-fetching
-// the same JSON twice within a page load (e.g. vocab data used by both
-// renderVocabBreakdown and renderHardCards).
+// In-page fetch cache — deduplicates concurrent requests
 const _fetchCache = new Map();
 function _fetchJSON(url) {
   if (!_fetchCache.has(url)) {
@@ -20,62 +17,272 @@ function _fetchJSON(url) {
   return _fetchCache.get(url);
 }
 
+// Prefix hrefs from AppPath (root-relative) to work from progress/html/
+function _pHref(href) { return '../../' + href; }
+
 document.addEventListener('DOMContentLoaded', async () => {
   renderNotificationSettings();
   renderHeroStats();
   renderHeatmap();
-  renderWeeklyAccuracy();
-  await renderTopicsProgress();
-  await renderVocabBreakdown();
-  renderIntervalDistribution();
-  renderActivitiesBreakdown();
-  renderAccuracyByActivity();
   renderMilestones();
-  await renderHardCards();
-  renderRecentSessions();
+  await renderExerciseMatrix();
 });
 
 // ---- Hero Stats ----
 
 function renderHeroStats() {
-  const streak   = Progress.getStreak();
-  const sessions = Progress.getSessions();
-  const srsData  = Progress.getAllCards();
+  const streak = Progress.getStreak();
+  const cards  = Progress.getAllCards();
 
-  // Vocabulary words learned (vocab_* cards with reps >= 1)
-  let vocabLearned = 0;
-  Object.keys(srsData).forEach(key => {
-    if (key.startsWith('vocab_') && srsData[key].reps >= 1) vocabLearned++;
+  let masteredCount = 0;
+  Object.keys(cards).forEach(key => {
+    if (!key.startsWith('_') && Progress.getMastery(key) === 'mastered') masteredCount++;
   });
 
-  // Phrases practiced (non-vocab, non-system keys with reps >= 1)
-  let phrasesLearned = 0;
-  Object.keys(srsData).forEach(key => {
-    if (!key.startsWith('vocab_') && !key.startsWith('_') && srsData[key].reps >= 1) phrasesLearned++;
-  });
-
-  document.getElementById('stat-streak').textContent  = streak.current;
-  document.getElementById('stat-vocab').textContent   = vocabLearned;
-  document.getElementById('stat-phrases').textContent = phrasesLearned;
-  document.getElementById('stat-sessions').textContent = sessions.length;
+  document.getElementById('stat-streak').textContent   = streak.current;
+  document.getElementById('stat-mastered').textContent = masteredCount; // total added later by renderExerciseMatrix
   const bestEl = document.getElementById('stat-best-streak');
-  if (bestEl && streak.best > 1) bestEl.textContent = 'Best: ' + streak.best;
+  if (bestEl && streak.best > streak.current) bestEl.textContent = '· Best: ' + streak.best;
+}
+
+// ---- Exercise Overview Accordion ----
+
+// Returns { mastered, learning, total } for one topic × activity.
+// learning = seen but not yet mastered.
+function _getActStats(topicId, actId, allCards, phraseIds, vocabIds, grammarRules) {
+  var PHRASE_PFX = { speaking: '', cloze: 'cloze_', dictation: 'dict_', translation: 'trans_', scramble: 'scramble_' };
+  var ids;
+
+  if (actId === 'grammar') {
+    ids = grammarRules
+      .filter(function (r) { return Array.isArray(r.topics) && r.topics.includes(topicId); })
+      .map(function (r) { return 'grammar_' + r.category + '_' + r.id; });
+  } else if (actId === 'vocabulary') {
+    ids = vocabIds.map(function (id) { return 'vocab_' + topicId + '_' + id; });
+  } else if (actId === 'quiz') {
+    ids = vocabIds.map(function (id) { return 'quiz_' + topicId + '_' + id; });
+  } else if (actId in PHRASE_PFX) {
+    ids = phraseIds.map(function (id) { return PHRASE_PFX[actId] + id; });
+  } else {
+    return null;
+  }
+
+  if (!ids || ids.length === 0) return null;
+
+  var mastered = 0, seen = 0;
+  ids.forEach(function (cardId) {
+    var c = allCards[cardId];
+    if (c && c.reps > 0) {
+      seen++;
+      if (Progress.getMastery(cardId) === 'mastered') mastered++;
+    }
+  });
+  return { mastered: mastered, learning: seen - mastered, total: ids.length };
+}
+
+// Builds the inner HTML for a 3-segment bar (mastered | learning | not-started).
+// The "not started" segment is implicit — it's the bar background showing through.
+function _segBar(mastered, learning, total) {
+  if (!total) return '';
+  var mPct = Math.round((mastered  / total) * 100);
+  var lPct = Math.round((learning  / total) * 100);
+  var out  = '';
+  if (mPct > 0) out += '<div class="ex-seg--mastered" style="width:' + mPct + '%"></div>';
+  if (lPct > 0) out += '<div class="ex-seg--learning" style="width:' + lPct + '%"></div>';
+  return out;
+}
+
+async function renderExerciseMatrix() {
+  const container = document.getElementById('ex-matrix');
+  if (!container || typeof AppPath === 'undefined') return;
+
+  const grammarData = await _fetchJSON('../../shared/json/grammar-rules.json').catch(() => ({ rules: [] }));
+  AppPath.setGrammarRules(grammarData.rules || []);
+  const grammarRules = grammarData.rules || [];
+  const allCards = Progress.getAllCards();
+
+  // Update Cards Mastered stat with full total (phrases×5 + vocab×2 + grammar per topic)
+  (function() {
+    let masteredCount = 0, totalCount = 0;
+    Object.keys(allCards).forEach(function(key) {
+      if (!key.startsWith('_') && Progress.getMastery(key) === 'mastered') masteredCount++;
+    });
+    AppPath.getTopicStatuses().forEach(function(topic) {
+      totalCount += Progress.getPhraseIds(topic.id).length * 5;
+      totalCount += Progress.getVocabIds(topic.id).length * 2;
+      totalCount += grammarRules.filter(function(r) { return Array.isArray(r.topics) && r.topics.includes(topic.id); }).length;
+    });
+    const el = document.getElementById('stat-mastered');
+    if (el) el.textContent = masteredCount + ' / ' + totalCount;
+  })();
+
+  const ACT_ORDER = [
+    { id: 'speaking',    emoji: '🎙️', label: 'Speaking'  },
+    { id: 'dictation',   emoji: '✍️', label: 'Dictation' },
+    { id: 'vocabulary',  emoji: '📚', label: 'Vocab'     },
+    { id: 'cloze',       emoji: '🔤', label: 'Cloze'     },
+    { id: 'translation', emoji: '🔄', label: 'Translate' },
+    { id: 'scramble',    emoji: '🧩', label: 'Scramble'  },
+    { id: 'quiz',        emoji: '🧠', label: 'Quiz'      },
+    { id: 'grammar',     emoji: '📐', label: 'Grammar'   },
+  ];
+
+  container.innerHTML = '';
+
+  // ── Header row ────────────────────────────────────────────
+  const hdrRow = document.createElement('div');
+  hdrRow.className = 'ex-grid-row ex-grid-row--header';
+  hdrRow.setAttribute('role', 'row');
+  // Empty corner cell
+  const corner = document.createElement('div');
+  corner.setAttribute('role', 'columnheader');
+  hdrRow.appendChild(corner);
+  ACT_ORDER.forEach(function (a) {
+    const th = document.createElement('div');
+    th.className = 'ex-grid-th';
+    th.setAttribute('role', 'columnheader');
+    th.setAttribute('aria-label', a.label);
+    th.innerHTML = '<span aria-hidden="true">' + a.emoji + '</span><span class="ex-grid-th-label">' + a.label + '</span>';
+    hdrRow.appendChild(th);
+  });
+  container.appendChild(hdrRow);
+
+  // ── Topic rows ────────────────────────────────────────────
+  AppPath.getTopicStatuses().forEach(function (topic) {
+    const phraseIds = Progress.getPhraseIds(topic.id);
+    const vocabIds  = Progress.getVocabIds(topic.id);
+
+    const row = document.createElement('div');
+    row.className = 'ex-grid-row';
+    row.setAttribute('role', 'row');
+
+    // Topic label cell
+    const th = document.createElement('div');
+    th.className = 'ex-grid-topic';
+    th.setAttribute('role', 'rowheader');
+    th.innerHTML =
+      '<span class="ex-grid-topic-emoji" aria-hidden="true">' + topic.emoji + '</span>' +
+      '<span class="ex-grid-topic-name">' + _esc(topic.label) + '</span>' +
+      '<span class="prog-lvl--' + topic.level.toLowerCase() + ' ex-grid-topic-lvl">' + topic.level + '</span>';
+    row.appendChild(th);
+
+    // One cell per activity
+    ACT_ORDER.forEach(function (act) {
+      const td = document.createElement('div');
+      td.className = 'ex-grid-cell';
+      td.setAttribute('role', 'cell');
+
+      const stats = _getActStats(topic.id, act.id, allCards, phraseIds, vocabIds, grammarRules);
+
+      if (!stats) {
+        td.innerHTML = '<div class="ex-seg-bar ex-seg-bar--na"></div><span class="ex-cell-na">n/a</span>';
+        td.title = act.label + ' — not applicable for this topic';
+        row.appendChild(td);
+        return;
+      }
+
+      var ns = stats.total - stats.mastered - stats.learning;
+      td.title = act.label + ': ' + stats.mastered + ' mastered · ' + stats.learning + ' learning · ' + ns + ' not started';
+      td.setAttribute('aria-label', td.title);
+      td.innerHTML =
+        '<div class="ex-seg-bar">' + _segBar(stats.mastered, stats.learning, stats.total) + '</div>' +
+        '<div class="ex-cell-counts">' +
+          '<span class="ex-count--n">' + ns + '</span>' +
+          '<span class="ex-count-sep">·</span>' +
+          '<span class="ex-count--l">' + stats.learning + '</span>' +
+          '<span class="ex-count-sep">·</span>' +
+          '<span class="ex-count--m">' + stats.mastered + '</span>' +
+        '</div>';
+
+      row.appendChild(td);
+    });
+
+    container.appendChild(row);
+  });
+
+  // ── Legend ────────────────────────────────────────────────
+  const legend = document.createElement('div');
+  legend.className = 'ex-acc-legend';
+  legend.setAttribute('aria-hidden', 'true');
+  [
+    { cls: 'ex-seg--new',      countCls: 'ex-count--n', label: 'Not started'  },
+    { cls: 'ex-seg--learning', countCls: 'ex-count--l', label: 'In progress'  },
+    { cls: 'ex-seg--mastered', countCls: 'ex-count--m', label: 'Mastered'     },
+  ].forEach(function (li) {
+    const el = document.createElement('div');
+    el.className = 'ex-acc-legend-item';
+    el.innerHTML =
+      '<div class="ex-acc-legend-swatch ' + li.cls + '"></div>' +
+      '<span class="' + li.countCls + '">' + li.label + '</span>';
+    legend.appendChild(el);
+  });
+  document.getElementById('exercises-block').appendChild(legend);
+}
+
+// ---- Skill Pillars ----
+
+function renderSkillPillars() {
+  if (typeof AppPath === 'undefined') return;
+  const container = document.getElementById('skill-pillars');
+  if (!container) return;
+
+  const cards = Progress.getAllCards();
+
+  const SKILLS = [
+    { label: '🎙️ Speaking',   prefix: '',         color: '#2563eb' },
+    { label: '✍️ Dictation',   prefix: 'dict_',    color: '#d97706' },
+    { label: '🔤 Cloze',       prefix: 'cloze_',   color: '#059669' },
+    { label: '🔄 Translation', prefix: 'trans_',   color: '#7c3aed' },
+  ];
+
+  const TOPIC_IDS = AppPath.TOPICS.map(t => t.id);
+
+  container.innerHTML = '';
+
+  SKILLS.forEach(skill => {
+    let masteredCount = 0;
+    let totalCount    = 0;
+
+    TOPIC_IDS.forEach(tid => {
+      const prefix = skill.prefix + tid;
+      Object.keys(cards).forEach(key => {
+        if (!key.startsWith(prefix + '_')) return;
+        totalCount++;
+        if (Progress.getMastery(key) === 'mastered') masteredCount++;
+      });
+    });
+
+    if (totalCount === 0) return;
+
+    const pct = Math.round((masteredCount / totalCount) * 100);
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML =
+      '<span class="skill-label">' + skill.label + '</span>' +
+      '<div class="skill-bar-track" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + _esc(skill.label) + '">' +
+        '<div class="skill-bar-fill" style="width:' + pct + '%;background:' + skill.color + '"></div>' +
+      '</div>' +
+      '<span class="skill-pct">' + masteredCount + ' / ' + totalCount + '</span>';
+    container.appendChild(row);
+  });
+
+  if (container.children.length === 0) {
+    container.innerHTML = '<p class="empty-state">Start practicing to see your skill progress here!</p>';
+  }
 }
 
 // ---- Activity Heatmap (last 60 days) ----
 
 function renderHeatmap() {
-  const sessions = Progress.getSessions();
+  const sessions  = Progress.getSessions();
   const container = document.getElementById('heatmap');
   if (!container) return;
 
-  // Count sessions per date
   const counts = {};
   sessions.forEach(s => {
     counts[s.date] = (counts[s.date] || 0) + 1;
   });
 
-  // Generate last 60 days
   const today = new Date();
   for (let i = 59; i >= 0; i--) {
     const d = new Date(today);
@@ -91,429 +298,34 @@ function renderHeatmap() {
   }
 }
 
-// ---- Topics Progress ----
-
-async function renderTopicsProgress() {
-  const container = document.getElementById('topics-progress');
-  if (!container) return;
-
-  const totals = await Promise.all(
-    TOPICS.map(topic =>
-      AppData.get(topic.id)
-        .then(data => data.phrases ? data.phrases.length : 0)
-        .catch(() => 0)
-    )
-  );
-
-  TOPICS.forEach((topic, idx) => {
-    const total = totals[idx];
-    const stats = Progress.getTopicStats(topic.id, total);
-    const pct   = total > 0 ? Math.round((stats.seen / stats.total) * 100) : 0;
-
-    const row = document.createElement('div');
-    row.className = 'topic-row';
-    row.innerHTML =
-      '<span class="topic-name">' + topic.label + '</span>' +
-      '<div class="topic-bar-track"><div class="topic-bar-fill" style="width:' + pct + '%"></div></div>' +
-      '<span class="topic-pct">' + (total > 0 ? stats.seen + '/' + stats.total : '—') + '</span>';
-    container.appendChild(row);
-  });
-}
-
-// ---- Vocabulary Breakdown by Difficulty ----
-
-async function renderVocabBreakdown() {
-  const container = document.getElementById('vocab-breakdown');
-  if (!container) return;
-
-  let words = [];
-  try {
-    const data = await _fetchJSON('../../vocabulary/json/words.json');
-    words = data.words || [];
-  } catch (e) { return; }
-
-  const srsData = Progress.getAllCards();
-
-  const diffs = ['easy', 'medium', 'hard'];
-  const labels = { easy: 'Easy', medium: 'Medium', hard: 'Hard' };
-
-  for (const diff of diffs) {
-    const total  = words.filter(w => w.difficulty === diff).length;
-    const learned = words.filter((w, i) => {
-      if (w.difficulty !== diff) return false;
-      const card = srsData['vocab_' + i];
-      return card && card.reps >= 1;
-    }).length;
-
-    const pct = total > 0 ? Math.round((learned / total) * 100) : 0;
-
-    const row = document.createElement('div');
-    row.className = 'vocab-row';
-    row.innerHTML =
-      '<span class="vocab-diff ' + diff + '">' + labels[diff] + '</span>' +
-      '<div class="vocab-bar-track"><div class="vocab-bar-fill ' + diff + '" style="width:' + pct + '%"></div></div>' +
-      '<span class="vocab-count">' + learned + ' / ' + total + '</span>';
-    container.appendChild(row);
-  }
-}
-
-// ---- Other Activities Breakdown (Quiz, Cloze, Translation, Scramble) ----
-
-function renderActivitiesBreakdown() {
-  const container = document.getElementById('activities-breakdown');
-  if (!container) return;
-
-  const srsData = Progress.getAllCards();
-
-  const activities = [
-    { prefix: 'quiz_vocab', label: '🧠 Vocabulary Quiz' },
-    { prefix: 'cloze_',     label: '🔤 Cloze' },
-    { prefix: 'trans_',     label: '🔄 Translation' },
-    { prefix: 'scramble_',  label: '🧩 Scramble' },
-  ];
-
-  let anyData = false;
-  activities.forEach(act => {
-    const keys  = Object.keys(srsData).filter(k => k.startsWith(act.prefix));
-    const seen  = keys.filter(k => srsData[k].reps >= 1).length;
-    const total = keys.length;
-    if (total === 0) return;
-    anyData = true;
-
-    const pct = Math.round((seen / total) * 100);
-    const row = document.createElement('div');
-    row.className = 'topic-row';
-    row.innerHTML =
-      '<span class="topic-name">' + act.label + '</span>' +
-      '<div class="topic-bar-track"><div class="topic-bar-fill" style="width:' + pct + '%"></div></div>' +
-      '<span class="topic-pct">' + seen + '/' + total + '</span>';
-    container.appendChild(row);
-  });
-
-  if (!anyData) {
-    container.innerHTML = '<p class="empty-state">No activity yet — try Quiz, Cloze, Translation, or Scramble!</p>';
-  }
-}
-
-// ---- Weekly Accuracy Chart ----
-
-function renderWeeklyAccuracy() {
-  const sessions = Progress.getSessions();
-  const container = document.getElementById('weekly-accuracy-chart');
-  if (!container) return;
-
-  const nowMs = Date.now();
-  const DAY   = 86400000;
-  const weeks = [
-    { label: '4w ago', correct: 0, total: 0 },
-    { label: '3w ago', correct: 0, total: 0 },
-    { label: '2w ago', correct: 0, total: 0 },
-    { label: 'This week', correct: 0, total: 0 },
-  ];
-
-  sessions.forEach(s => {
-    const daysAgo = Math.floor((nowMs - new Date(s.date + 'T00:00:00').getTime()) / DAY);
-    const idx = 3 - Math.min(3, Math.floor(daysAgo / 7));
-    if (idx >= 0) {
-      weeks[idx].correct += s.correct || 0;
-      weeks[idx].total   += s.total   || 0;
-    }
-  });
-
-  if (!weeks.some(w => w.total > 0)) {
-    document.getElementById('weekly-accuracy-block').classList.add('hidden');
-    return;
-  }
-
-  container.innerHTML = '';
-  weeks.forEach(w => {
-    const pct = w.total > 0 ? Math.round((w.correct / w.total) * 100) : null;
-    const col = document.createElement('div');
-    col.className = 'wac-col';
-    col.innerHTML =
-      '<div class="wac-bar-wrap">' +
-        '<span class="wac-pct-label">' + (pct !== null ? pct + '%' : '—') + '</span>' +
-        '<div class="wac-bar-track">' +
-          '<div class="wac-bar-fill" style="height:' + (pct || 0) + '%"></div>' +
-        '</div>' +
-      '</div>' +
-      '<span class="wac-label">' + escapeHTML(w.label) + '</span>';
-    container.appendChild(col);
-  });
-}
-
-// ---- Interval Distribution ----
-
-function renderIntervalDistribution() {
-  const cards = Progress.getAllCards();
-  let learning = 0, consolidating = 0, mastered = 0;
-
-  Object.entries(cards).forEach(([id, c]) => {
-    if (id.startsWith('_') || c.reps === 0) return;
-    if (c.interval <= 7)       learning++;
-    else if (c.interval <= 21) consolidating++;
-    else                       mastered++;
-  });
-
-  const total = learning + consolidating + mastered;
-  if (total === 0) {
-    document.getElementById('dist-block').classList.add('hidden');
-    return;
-  }
-
-  document.getElementById('dist-learning').textContent      = learning;
-  document.getElementById('dist-consolidating').textContent = consolidating;
-  document.getElementById('dist-mastered').textContent      = mastered;
-
-  document.getElementById('dist-bar-learning').style.width      = Math.round(learning      / total * 100) + '%';
-  document.getElementById('dist-bar-consolidating').style.width = Math.round(consolidating / total * 100) + '%';
-  document.getElementById('dist-bar-mastered').style.width      = Math.round(mastered      / total * 100) + '%';
-}
-
-// ---- Accuracy by Activity ----
-
-function renderAccuracyByActivity() {
-  const container = document.getElementById('accuracy-breakdown');
-  if (!container) return;
-
-  const sessions = Progress.getSessions();
-  if (sessions.length === 0) {
-    document.getElementById('accuracy-block').classList.add('hidden');
-    return;
-  }
-
-  const EMOJIS = {
-    Speaking: '🎙️', Dictation: '✍️', Cloze: '🔤',
-    Translation: '🔄', Scramble: '🧩', Quiz: '🧠',
-    Vocabulary: '📚', Grammar: '📐',
-  };
-
-  const groups = {};
-  sessions.forEach(s => {
-    let act = 'Speaking';
-    if      (s.topic.startsWith('dict_'))     act = 'Dictation';
-    else if (s.topic.startsWith('cloze_'))    act = 'Cloze';
-    else if (s.topic.startsWith('trans_'))    act = 'Translation';
-    else if (s.topic.startsWith('scramble_')) act = 'Scramble';
-    else if (s.topic.startsWith('quiz_'))     act = 'Quiz';
-    else if (s.topic.startsWith('vocab'))     act = 'Vocabulary';
-    else if (s.topic.startsWith('grammar'))   act = 'Grammar';
-
-    if (!groups[act]) groups[act] = { correct: 0, total: 0 };
-    groups[act].correct += s.correct || 0;
-    groups[act].total   += s.total   || 0;
-  });
-
-  const entries = Object.entries(groups)
-    .filter(([, g]) => g.total > 0)
-    .sort((a, b) => b[1].total - a[1].total);
-
-  if (entries.length === 0) {
-    document.getElementById('accuracy-block').classList.add('hidden');
-    return;
-  }
-
-  container.innerHTML = '';
-  entries.forEach(([act, g]) => {
-    const pct = Math.round((g.correct / g.total) * 100);
-    const row = document.createElement('div');
-    row.className = 'acc-row';
-    row.innerHTML =
-      '<span class="acc-name">' + (EMOJIS[act] || '') + ' ' + escapeHTML(act) + '</span>' +
-      '<div class="acc-bar-track"><div class="acc-bar-fill" style="width:' + pct + '%"></div></div>' +
-      '<span class="acc-pct">' + pct + '%</span>' +
-      '<span class="acc-total">' + g.total + ' cards</span>';
-    container.appendChild(row);
-  });
-}
-
 // ---- Milestones ----
 
 function renderMilestones() {
   const container = document.getElementById('milestones-grid');
   if (!container || typeof MilestoneSystem === 'undefined') return;
 
-  const achieved  = MilestoneSystem.getAchieved();
+  const achieved   = MilestoneSystem.getAchieved();
   const milestones = MilestoneSystem.MILESTONES;
 
   container.innerHTML = '';
   milestones.forEach(m => {
     const done = achieved.indexOf(m.id) !== -1;
-    const el = document.createElement('div');
+    const el   = document.createElement('div');
     el.className = 'milestone-badge' + (done ? ' milestone-badge--done' : ' milestone-badge--locked');
     el.setAttribute('aria-label', m.title + (done ? ' — achieved' : ' — locked'));
     el.innerHTML =
       '<span class="milestone-badge__emoji">' + (done ? m.emoji : '🔒') + '</span>' +
-      '<span class="milestone-badge__title">' + escapeHTML(m.title) + '</span>' +
-      '<span class="milestone-badge__desc">' + escapeHTML(m.desc) + '</span>';
+      '<span class="milestone-badge__title">' + _esc(m.title) + '</span>' +
+      '<span class="milestone-badge__desc">' + _esc(m.desc) + '</span>';
     container.appendChild(el);
   });
 }
-
-// ---- Hard Cards ----
-
-function parseCardId(id) {
-  // Grammar: grammar_{cat}_{ruleId}
-  if (id.startsWith('grammar_')) {
-    const ruleId = id.slice('grammar_'.length);
-    return { activity: 'Grammar', emoji: '📐', url: '../../grammar/html/grammar.html',
-             phraseLabel: ruleId.replace(/_/g, ' '), jsonFile: null };
-  }
-
-  // Quiz (general vocabulary): quiz_vocab_{index}
-  // Must be checked before the generic quiz_ branch below.
-  if (id.startsWith('quiz_vocab_')) {
-    const index = parseInt(id.slice('quiz_vocab_'.length));
-    return { activity: 'Quiz', emoji: '🧠', url: '../../quiz/html/quiz.html',
-             topic: 'words', topicLabel: 'Vocabulary', index,
-             jsonFile: '../../vocabulary/json/words.json', isVocab: true };
-  }
-
-  // Quiz (topic vocabulary): quiz_{topic}_{index}
-  // Previously fell through to the speaking fallback, returning a wrong activity/topic/URL.
-  if (id.startsWith('quiz_')) {
-    const rest  = id.slice('quiz_'.length);
-    const lastU = rest.lastIndexOf('_');
-    if (lastU !== -1) {
-      const topic      = rest.slice(0, lastU);
-      const index      = parseInt(rest.slice(lastU + 1));
-      const topicLabel = topic.charAt(0).toUpperCase() + topic.slice(1);
-      return { activity: 'Quiz', emoji: '🧠', url: '../../quiz/html/quiz.html',
-               topic, topicLabel, index,
-               jsonFile: '../../vocabulary/json/words-' + topic + '.json', isVocab: true };
-    }
-  }
-
-  // Vocabulary (general):  vocab_{index}        — rest has no underscore
-  // Vocabulary (topic):    vocab_{topic}_{index} — rest has at least one underscore
-  if (id.startsWith('vocab_')) {
-    const rest  = id.slice('vocab_'.length);
-    const lastU = rest.lastIndexOf('_');
-    if (lastU === -1) {
-      // General vocabulary — rest is just the numeric index
-      return { activity: 'Vocabulary', emoji: '📚', url: '../../vocabulary/html/vocabulary.html',
-               topic: 'words', topicLabel: 'Vocabulary', index: parseInt(rest),
-               jsonFile: '../../vocabulary/json/words.json', isVocab: true };
-    }
-    const topic      = rest.slice(0, lastU);
-    const index      = parseInt(rest.slice(lastU + 1));
-    const topicLabel = topic.charAt(0).toUpperCase() + topic.slice(1);
-    return { activity: 'Vocabulary', emoji: '📚', url: '../../vocabulary/html/vocabulary.html',
-             topic, topicLabel, index,
-             jsonFile: '../../vocabulary/json/words-' + topic + '.json', isVocab: true };
-  }
-
-  // Phrase-based activities: {prefix}{topic}_{index}
-  const PREFIXES = [
-    { prefix: 'dict_',     activity: 'Dictation',  emoji: '✍️',  url: '../../dictation/html/dictation.html' },
-    { prefix: 'cloze_',    activity: 'Cloze',       emoji: '🔤', url: '../../cloze/html/cloze.html' },
-    { prefix: 'trans_',    activity: 'Translation', emoji: '🔄', url: '../../translation/html/translation.html' },
-    { prefix: 'scramble_', activity: 'Scramble',    emoji: '🧩', url: '../../scramble/html/scramble.html' },
-  ];
-  for (const p of PREFIXES) {
-    if (id.startsWith(p.prefix)) {
-      const rest       = id.slice(p.prefix.length);
-      const lastU      = rest.lastIndexOf('_');
-      const topic      = rest.slice(0, lastU);
-      const index      = parseInt(rest.slice(lastU + 1));
-      const topicLabel = topic.charAt(0).toUpperCase() + topic.slice(1);
-      return { ...p, topic, topicLabel, index, jsonFile: '../../shared/json/' + topic + '.json' };
-    }
-  }
-
-  // Speaking: {topic}_{index} (no activity prefix)
-  const lastU      = id.lastIndexOf('_');
-  const topic      = id.slice(0, lastU);
-  const index      = parseInt(id.slice(lastU + 1));
-  const topicLabel = topic.charAt(0).toUpperCase() + topic.slice(1);
-  return { activity: 'Speaking', emoji: '🎙️', url: '../../speaking/html/speaking.html',
-           topic, topicLabel, index, jsonFile: '../../shared/json/' + topic + '.json' };
-}
-
-async function renderHardCards() {
-  const container = document.getElementById('hard-cards-list');
-  if (!container) return;
-
-  const srsData = Progress.getAllCards();
-
-  const hardCards = Object.entries(srsData)
-    .filter(([id, c]) => !id.startsWith('_') && (c.lapses || 0) > 0)
-    .sort((a, b) => b[1].lapses - a[1].lapses)
-    .slice(0, 10)
-    .map(([id, c]) => ({ id, lapses: c.lapses, ...parseCardId(id) }));
-
-  if (hardCards.length === 0) {
-    document.getElementById('hard-cards-block').classList.add('hidden');
-    return;
-  }
-
-  // Batch-fetch all unique JSON files needed (hits _fetchCache for any already loaded)
-  const jsonFiles = [...new Set(hardCards.map(c => c.jsonFile).filter(Boolean))];
-  const jsonCache = {};
-  await Promise.all(jsonFiles.map(file =>
-    _fetchJSON(file).then(data => { jsonCache[file] = data; }).catch(() => {})
-  ));
-
-  // Resolve phrase text for each card
-  hardCards.forEach(card => {
-    if (card.phraseLabel) return; // grammar — already has label
-    const data = jsonCache[card.jsonFile];
-    if (!data) { card.phraseLabel = card.id; return; }
-    // Vocabulary JSONs (words.json, words-{topic}.json) use { words: [...] };
-    // phrase-based JSONs (shared/json/{topic}.json) use { phrases: [...] }.
-    if (card.isVocab) {
-      const w = (data.words || [])[card.index];
-      card.phraseLabel = w ? w.word + (w.translation ? ' — ' + w.translation : '') : card.id;
-    } else {
-      card.phraseLabel = (data.phrases || [])[card.index] || card.id;
-    }
-  });
-
-  // Group by activity for the "practice" CTA per group
-  const groups = {};
-  hardCards.forEach(card => {
-    const key = card.activity + '|' + card.url;
-    if (!groups[key]) groups[key] = { activity: card.activity, emoji: card.emoji, url: card.url, count: 0 };
-    groups[key].count++;
-  });
-
-  // Render list
-  container.innerHTML = '';
-  hardCards.forEach(card => {
-    const item = document.createElement('div');
-    item.className = 'hard-card-item';
-    item.setAttribute('role', 'listitem');
-    item.innerHTML =
-      '<div class="hard-card-phrase">' + escapeHTML(card.phraseLabel) + '</div>' +
-      '<div class="hard-card-meta">' +
-        '<span class="hard-card-badge">' + card.emoji + ' ' + card.activity +
-          (card.topicLabel ? ' · ' + card.topicLabel : '') + '</span>' +
-        '<span class="hard-card-lapses">' + card.lapses + (card.lapses === 1 ? ' miss' : ' misses') + '</span>' +
-      '</div>';
-    container.appendChild(item);
-  });
-
-  // Render grouped CTAs
-  const ctaWrap = document.createElement('div');
-  ctaWrap.className = 'hard-card-ctas';
-  Object.values(groups).forEach(g => {
-    const a = document.createElement('a');
-    a.href = g.url;
-    a.className = 'hard-card-cta';
-    a.textContent = g.emoji + ' Practice ' + g.activity + ' (' + g.count + ') →';
-    ctaWrap.appendChild(a);
-  });
-  container.appendChild(ctaWrap);
-}
-
-// ---- Utilities ----
 
 // ---- Notification Settings ----
 
 function renderNotificationSettings() {
   const NS = window.NotificationSystem;
 
-  // Hide section if Notification API not available (very old browsers / iOS Safari < 16.4)
   if (!NS || !('Notification' in window)) {
     const block = document.getElementById('notif-block');
     if (block) block.classList.add('hidden');
@@ -544,14 +356,12 @@ function renderNotificationSettings() {
       const payload = NS.buildPayload();
       statusEl.textContent = '✓ Active — daily reminder at ' + NS.getReminderTime();
       statusEl.className   = 'notif-status notif-status--on';
-      hintEl.textContent   = payload
-        ? 'Right now: "' + payload.body + '"'
-        : 'No pending reminders — you\'re all caught up!';
-      toggle.disabled = false;
+      hintEl.textContent   = payload ? 'Right now: "' + payload.body + '"' : 'No pending reminders — you\'re all caught up!';
+      toggle.disabled      = false;
     } else {
       statusEl.textContent = '';
       statusEl.className   = 'notif-status';
-      hintEl.textContent   = 'Fires once per day when you open the app, if you have due cards or your streak is at risk.';
+      hintEl.textContent   = 'Fires once per day when you open the app, if your streak is at risk.';
       toggle.disabled      = false;
     }
   }
@@ -575,33 +385,17 @@ function renderNotificationSettings() {
   updateUI();
 }
 
-function escapeHTML(s) {
+// ---- Utilities ----
+
+function _esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-// ---- Recent Sessions ----
-
-function renderRecentSessions() {
-  const container = document.getElementById('sessions-list');
-  if (!container) return;
-
-  const sessions = Progress.getSessions().slice().reverse().slice(0, 12);
-
-  if (sessions.length === 0) {
-    container.innerHTML = '<p class="empty-state">No sessions yet — start practicing to see your history here!</p>';
-    return;
-  }
-
-  sessions.forEach(s => {
-    const topicLabel = escapeHTML(s.topic.charAt(0).toUpperCase() + s.topic.slice(1));
-    const score = s.total > 0 ? Math.round((s.correct / s.total) * 100) + '% correct' : 'Completed';
-
-    const item = document.createElement('div');
-    item.className = 'session-item';
-    item.innerHTML =
-      '<span class="session-topic">' + topicLabel + '</span>' +
-      '<span class="session-date">' + escapeHTML(s.date) + '</span>' +
-      '<span class="session-score">' + escapeHTML(score) + '</span>';
-    container.appendChild(item);
-  });
+function _formatNextDue(ts) {
+  const diffMs  = ts - Date.now();
+  const diffHrs = diffMs / 3_600_000;
+  if (diffHrs < 1)  return '⏱ Next review: soon';
+  if (diffHrs < 24) return '⏱ Next review: later today';
+  const days = Math.ceil(diffHrs / 24);
+  return '⏱ Next review: in ' + days + (days === 1 ? ' day' : ' days');
 }

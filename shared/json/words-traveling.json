@@ -1,19 +1,154 @@
 {
   "words": [
-    { "word": "itinerary",     "definition": "A planned route or schedule of events for a trip",                      "translation": "itinerario",           "example": "The tour guide handed out the itinerary for our three-day trip.",             "category": "Noun",      "difficulty": "medium" },
-    { "word": "destination",   "definition": "The place to which someone or something is travelling",                 "translation": "destino",              "example": "Paris is one of the most visited tourist destinations in the world.",          "category": "Noun",      "difficulty": "easy"   },
-    { "word": "accommodation", "definition": "A place where travellers can stay, such as a hotel or hostel",         "translation": "alojamiento",          "example": "We booked accommodation close to the city centre for three nights.",           "category": "Noun",      "difficulty": "medium" },
-    { "word": "customs",       "definition": "The official inspection of luggage and goods at a border crossing",    "translation": "aduana",               "example": "We had to declare all food items when passing through customs.",               "category": "Noun",      "difficulty": "medium" },
-    { "word": "boarding",      "definition": "The process of getting onto a plane, ship, or other vehicle",          "translation": "embarque",             "example": "Boarding begins forty-five minutes before the scheduled departure.",           "category": "Noun",      "difficulty": "easy"   },
-    { "word": "layover",       "definition": "A stop or waiting period between two connecting flights",               "translation": "escala",               "example": "We have a three-hour layover in Amsterdam before our final flight.",           "category": "Noun",      "difficulty": "medium" },
-    { "word": "currency",      "definition": "The system of money used in a particular country or region",           "translation": "divisa / moneda",      "example": "Make sure to exchange your currency before arriving at your destination.",    "category": "Noun",      "difficulty": "easy"   },
-    { "word": "transit",       "definition": "Travelling through a place on the way to another destination",         "translation": "tránsito / escala",    "example": "Passengers in transit do not need to collect their checked luggage.",         "category": "Noun",      "difficulty": "medium" },
-    { "word": "landmark",      "definition": "A well-known or easily recognised building, structure, or feature",    "translation": "monumento / hito",     "example": "The Eiffel Tower is one of Paris's most iconic landmarks.",                   "category": "Noun",      "difficulty": "easy"   },
-    { "word": "fare",          "definition": "The price charged for a journey by public transport",                   "translation": "tarifa",               "example": "The bus fare has increased significantly since last year.",                   "category": "Noun",      "difficulty": "easy"   },
-    { "word": "jet lag",       "definition": "Tiredness and confusion caused by travelling across multiple time zones", "translation": "desfase horario",    "example": "After the twelve-hour flight, I suffered badly from jet lag.",               "category": "Noun",      "difficulty": "medium" },
-    { "word": "excursion",     "definition": "A short trip or journey made for pleasure, usually as part of a holiday", "translation": "excursión",         "example": "We went on a guided boat excursion along the coast.",                        "category": "Noun",      "difficulty": "medium" },
-    { "word": "turbulence",    "definition": "Irregular and violent movement of air that causes a plane to shake",   "translation": "turbulencia",          "example": "We experienced moderate turbulence over the Atlantic Ocean.",                 "category": "Noun",      "difficulty": "medium" },
-    { "word": "expatriate",    "definition": "A person who lives and works in a country other than their own",       "translation": "expatriado",           "example": "There is a large expatriate community living and working in Dubai.",          "category": "Noun",      "difficulty": "hard"   },
-    { "word": "emigrate",      "definition": "To leave your own country permanently in order to live in another",    "translation": "emigrar",              "example": "They decided to emigrate to Canada in search of better opportunities.",       "category": "Verb",      "difficulty": "hard"   }
+    {
+      "word": "itinerary",
+      "definition": "A planned route or schedule of events for a trip",
+      "translation": "itinerario",
+      "example": "The tour guide handed out the itinerary for our three-day trip.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "itinerary"
+    },
+    {
+      "word": "destination",
+      "definition": "The place to which someone or something is travelling",
+      "translation": "destino",
+      "example": "Paris is one of the most visited tourist destinations in the world.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "destination"
+    },
+    {
+      "word": "accommodation",
+      "definition": "A place where travellers can stay, such as a hotel or hostel",
+      "translation": "alojamiento",
+      "example": "We booked accommodation close to the city centre for three nights.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "accommodation"
+    },
+    {
+      "word": "customs",
+      "definition": "The official inspection of luggage and goods at a border crossing",
+      "translation": "aduana",
+      "example": "We had to declare all food items when passing through customs.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "customs"
+    },
+    {
+      "word": "boarding",
+      "definition": "The process of getting onto a plane, ship, or other vehicle",
+      "translation": "embarque",
+      "example": "Boarding begins forty-five minutes before the scheduled departure.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "boarding"
+    },
+    {
+      "word": "layover",
+      "definition": "A stop or waiting period between two connecting flights",
+      "translation": "escala",
+      "example": "We have a three-hour layover in Amsterdam before our final flight.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "layover"
+    },
+    {
+      "word": "currency",
+      "definition": "The system of money used in a particular country or region",
+      "translation": "divisa / moneda",
+      "example": "Make sure to exchange your currency before arriving at your destination.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "currency"
+    },
+    {
+      "word": "transit",
+      "definition": "Travelling through a place on the way to another destination",
+      "translation": "tránsito / escala",
+      "example": "Passengers in transit do not need to collect their checked luggage.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "transit"
+    },
+    {
+      "word": "landmark",
+      "definition": "A well-known or easily recognised building, structure, or feature",
+      "translation": "monumento / hito",
+      "example": "The Eiffel Tower is one of Paris's most iconic landmarks.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "landmark"
+    },
+    {
+      "word": "fare",
+      "definition": "The price charged for a journey by public transport",
+      "translation": "tarifa",
+      "example": "The bus fare has increased significantly since last year.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "cefr": "A2",
+      "id": "fare"
+    },
+    {
+      "word": "jet lag",
+      "definition": "Tiredness and confusion caused by travelling across multiple time zones",
+      "translation": "desfase horario",
+      "example": "After the twelve-hour flight, I suffered badly from jet lag.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "jet_lag"
+    },
+    {
+      "word": "excursion",
+      "definition": "A short trip or journey made for pleasure, usually as part of a holiday",
+      "translation": "excursión",
+      "example": "We went on a guided boat excursion along the coast.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "excursion"
+    },
+    {
+      "word": "turbulence",
+      "definition": "Irregular and violent movement of air that causes a plane to shake",
+      "translation": "turbulencia",
+      "example": "We experienced moderate turbulence over the Atlantic Ocean.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "cefr": "B1",
+      "id": "turbulence"
+    },
+    {
+      "word": "expatriate",
+      "definition": "A person who lives and works in a country other than their own",
+      "translation": "expatriado",
+      "example": "There is a large expatriate community living and working in Dubai.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "expatriate"
+    },
+    {
+      "word": "emigrate",
+      "definition": "To leave your own country permanently in order to live in another",
+      "translation": "emigrar",
+      "example": "They decided to emigrate to Canada in search of better opportunities.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "cefr": "B2",
+      "id": "emigrate"
+    }
   ]
 }

@@ -330,7 +330,6 @@
 .feature-card {
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
-  border-top: 3px solid transparent;
   border-radius: var(--radius-lg);
   padding: 22px 20px;
   display: flex;
@@ -351,7 +350,6 @@
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(37,99,235,0.06);
   border-color: var(--clr-primary-light);
-  border-top-color: var(--clr-primary);
 }
 
 /* Feature card icon container */
@@ -395,6 +393,468 @@
   line-height: 1.3;
 }
 
+
+
+/* ═══════════════════════════════════════════════════════════
+   Learning Path Section
+   ═══════════════════════════════════════════════════════════ */
+
+.cefr-bar { display: none; }
+
+.path-section {
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 16px;
+  animation: fadeIn 0.8s 0.4s ease-out both;
+}
+
+.path-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.path-heading {
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+  font-weight: 800;
+  color: var(--clr-text);
+  margin-bottom: 5px;
+}
+
+.path-subheading {
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  font-weight: 500;
+}
+
+/* ── CEFR badges ── */
+.cefr-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 7px;
+  border-radius: var(--radius-full);
+}
+
+.cefr-badge--a1 { background: #dcfce7; color: #16a34a; }
+.cefr-badge--a2 { background: #dbeafe; color: #2563eb; }
+.cefr-badge--b1 { background: #fef3c7; color: #d97706; }
+.cefr-badge--b2 { background: #ede9fe; color: #7c3aed; }
+
+/* ── Unified path card ── */
+.path-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+/* ── Session CTA — compact HUD header ── */
+.path-session-cta {
+  border-bottom: 1px solid var(--clr-border);
+  overflow: hidden;
+}
+
+/* Progress bar strip (active sessions only) */
+.path-cta__bar {
+  height: 4px;
+  background: var(--clr-border);
+}
+.path-cta__bar-fill {
+  height: 100%;
+  background: var(--clr-path);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.6s ease;
+  /* Always show at least a small sliver so the bar looks intentional at card 1 */
+  min-width: 12px;
+}
+
+/* Content row */
+.path-cta__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 18px;
+  min-height: 48px;
+}
+
+.path-cta__stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Friendly title + subtitle body */
+.path-cta__body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.path-cta__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  line-height: 1.2;
+}
+
+.path-cta__sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  line-height: 1.3;
+}
+
+/* Big card count — "3/13" */
+.path-cta__count {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--clr-text);
+  line-height: 1;
+}
+.path-cta__total {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  margin-left: 1px;
+}
+
+/* Time estimate */
+.path-cta__time {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  white-space: nowrap;
+}
+
+/* Review / New chips */
+.path-cta__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.path-cta__chip--review {
+  background: #fef3c7;
+  color: #b45309;
+}
+.path-cta__chip--new {
+  background: var(--clr-path-light);
+  color: var(--clr-path-dark);
+}
+[data-theme="dark"] .path-cta__chip--review { background: rgba(217,119,6,0.18); color: #fbbf24; }
+[data-theme="dark"] .path-cta__chip--new    { background: rgba(201,146,10,0.18); color: #e8b84b; }
+
+.path-cta__btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--clr-path);
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition-bounce);
+}
+.path-cta__btn:hover {
+  background: var(--clr-path-dark);
+  transform: translateY(-1px);
+}
+
+.path-cta__done {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-success);
+}
+
+/* ══════════════════════════════════════
+   Horizontal trail
+   ══════════════════════════════════════ */
+
+/* Trail scroll area inside the card */
+.path-card__trail {
+  position: relative;
+  /* top border already provided by .path-session-cta border-bottom */
+}
+
+/* Horizontal scroll container */
+.path-nodes {
+  overflow-x: auto;
+  overflow-y: visible;
+  scrollbar-width: none;
+  padding: 16px 40px;
+}
+.path-nodes::-webkit-scrollbar { display: none; }
+
+/* Scroll arrow buttons */
+.path-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-border);
+  background: var(--clr-surface);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--clr-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), box-shadow var(--transition);
+  padding: 0;
+}
+.path-scroll-btn:hover { background: var(--clr-primary-light, #eff6ff); }
+.path-scroll-btn--left  { left: 8px; }
+.path-scroll-btn--right { right: 8px; }
+
+/* Fade overlays — left and right */
+.path-nodes-fade {
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 56px;
+  pointer-events: none;
+}
+.path-nodes-fade--right {
+  right: 0;
+  background: linear-gradient(to right, transparent, var(--clr-surface));
+}
+.path-nodes-fade--left {
+  left: 0;
+  background: linear-gradient(to left, transparent, var(--clr-surface));
+}
+
+/* The trail row */
+.path-trail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0;
+  min-width: max-content;
+}
+
+/* Horizontal connector — width/margin-top/transform set per-connector by JS for zigzag */
+.path-connector {
+  height: 3px;
+  background: var(--clr-border);
+  border-radius: 2px;
+  flex-shrink: 0;
+  transition: background 0.3s;
+  align-self: flex-start;
+  transform-origin: left center;
+  /* fallback for non-zigzag contexts */
+  width: 48px;
+  margin-top: 60px;
+}
+
+.path-connector--done {
+  background: var(--clr-success, #16a34a);
+}
+
+/* ── Node wrapper ── */
+.path-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  flex-shrink: 0;
+  /* 28px pin zone + 4px gap before bubble */
+  padding-top: 32px;
+  /* Reserve space below label so the absolute NEW badge doesn't overlap sibling nodes */
+  padding-bottom: 20px;
+  /* Always render above connectors so the bubble is never obscured */
+  z-index: 1;
+}
+
+/* No horizontal zigzag — the flow reads left → right naturally */
+.path-node--left,
+.path-node--right { transform: none; }
+
+/* ── Bubble ── */
+.path-node__bubble {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: var(--clr-surface);
+  border: 3px solid var(--clr-border);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s;
+  flex-shrink: 0;
+  cursor: default;
+  user-select: none;
+}
+
+/* done */
+.path-node--done .path-node__bubble {
+  background: var(--clr-success, #16a34a);
+  border-color: var(--clr-success, #16a34a);
+  color: #fff;
+}
+
+/* active */
+.path-node--active .path-node__bubble {
+  background: var(--clr-path);
+  border-color: var(--clr-path);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 5px rgba(201,146,10,0.22), 0 4px 14px rgba(201,146,10,0.30);
+  animation: path-pulse 2s ease-in-out infinite;
+}
+
+.path-node--active .path-node__bubble:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 7px rgba(201,146,10,0.28), 0 6px 18px rgba(201,146,10,0.38);
+}
+
+/* pending */
+.path-node--pending .path-node__bubble {
+  opacity: 0.5;
+}
+
+
+@keyframes path-pulse {
+  0%, 100% { box-shadow: 0 0 0 5px rgba(201,146,10,0.22), 0 4px 14px rgba(201,146,10,0.30); }
+  50%       { box-shadow: 0 0 0 9px rgba(201,146,10,0.10), 0 6px 20px rgba(201,146,10,0.18); }
+}
+
+/* ── Check mark ── */
+.path-node__check {
+  font-size: 1.4rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* ── Activity label (below bubble) ── */
+.path-node__label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  text-align: center;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.path-node--done .path-node__label   { color: var(--clr-success, #16a34a); }
+.path-node--active .path-node__label { color: var(--clr-path); font-weight: 800; }
+
+/* ── Topic pin — always present; invisible spacer when topic unchanged ── */
+.path-node__topic {
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 2px 8px;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  pointer-events: none;
+  line-height: 1.3;
+}
+
+
+/* ── NEW badge — absolutely positioned so it never affects node height ── */
+.path-node__new-badge,
+.path-node__review-badge {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.52rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  padding: 2px 6px;
+  white-space: nowrap;
+  opacity: 1 !important;
+}
+
+.path-node__new-badge {
+  color: #fff;
+  background: var(--clr-path);
+}
+
+.path-node__review-badge {
+  color: #92400e;
+  background: #fde68a;
+}
+
+[data-theme="dark"] .path-node__review-badge {
+  color: #fbbf24;
+  background: rgba(217,119,6,0.22);
+}
+
+/* ── Freestyle link ── */
+.path-freestyle {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.path-freestyle-link {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--clr-border);
+  transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.path-freestyle-link:hover {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary-light);
+  background: var(--clr-primary-light);
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .path-cta__row { flex-wrap: wrap; gap: 8px; }
+  .path-nodes { padding: 14px 24px; }
+  .path-node__bubble { width: 52px; height: 52px; font-size: 1.4rem; }
+  .path-connector { width: 32px; }
+}
+
+/* ── Dark mode ── */
+[data-theme="dark"] .cefr-badge--a1 { background: rgba(22,163,74,0.18); }
+[data-theme="dark"] .cefr-badge--a2 { background: rgba(37,99,235,0.18); }
+[data-theme="dark"] .cefr-badge--b1 { background: rgba(217,119,6,0.18); }
+[data-theme="dark"] .cefr-badge--b2 { background: rgba(124,58,237,0.18); }
+[data-theme="dark"] .path-nodes-fade {
+  background: linear-gradient(to right, transparent, var(--clr-card, var(--clr-surface)));
+}
+[data-theme="dark"] .path-node--active .path-node__bubble {
+  box-shadow: 0 0 0 5px rgba(201,146,10,0.30), 0 4px 14px rgba(201,146,10,0.45);
+}
 
 
 /* ---- Progress Link ---- */
@@ -489,6 +949,7 @@
   align-items: center;
   justify-content: center;
   padding: 16px;
+  box-sizing: border-box;
   animation: obFadeIn 0.25s ease-out both;
 }
 
@@ -542,8 +1003,8 @@
 
 .ob-close:hover { background: rgba(0,0,0,0.12); color: var(--clr-text); }
 
-/* ---- Header stripe ---- */
-.ob-header-stripe {
+/* ---- Footer stripe ---- */
+.ob-footer-stripe {
   height: 6px;
   background: linear-gradient(90deg, var(--clr-primary), #7C3AED);
   width: 100%;
@@ -839,6 +1300,6 @@
 
 /* ---- Mobile ---- */
 @media (max-width: 480px) {
-  .ob-modal { padding: 28px 20px 22px; }
+  .ob-inner { padding: 24px 20px 22px; }
   .ob-title { font-size: 1.05rem; }
 }

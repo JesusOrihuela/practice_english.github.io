@@ -1,212 +1,492 @@
 {
   "phrases": [
-    "Can you show me how to properly use this machine?",
-    "What is the correct form for doing this exercise?",
-    "Increase the elevation of the treadmill",
-    "Increase the speed of the treadmill",
-    "How many repetitions should I do for this exercise?",
-    "Could you demonstrate how to do a squat correctly?",
-    "Can you recommend an appropriate weight to start with?",
-    "Is there a warm-up I should follow?",
-    "How do I adjust the seat height on this machine?",
-    "Can you give me some tips to improve my technique on this exercise?",
-    "What exercises do you recommend for strengthening my lower back?",
-    "Could you tell me if I'm doing this exercise correctly?",
-    "Today is leg day",
-    "Tomorrow will be arm day",
-    "Is it okay if I work with this machine after you?",
-    "Could you explain the benefits of using weights?",
-    "What is the proper breathing technique for this exercise?",
-    "Do you have any suggestions for increasing the intensity of my workout?",
-    "Should I follow any kind of routine to finish my workout?",
-    "We all must properly disinfect the equipment after using it",
-    "Could you recommend a stretching routine?",
-    "Do you have any advice for preventing injuries?",
-    "Can you show me how to adjust the resistance on this machine?",
-    "What routine should I follow?",
-    "What is the best way to work the abdominal muscles?",
-    "How much cardio time do I have today?",
-    "Is there a specific order I should follow when using the machines?",
-    "What is the correct posture for using this machine?",
-    "How much rest time do you recommend between sets for this exercise?",
-    "Do you have any tips for improving my balance?",
-    "Could you demonstrate how to use resistance bands?",
-    "Is it okay if I use this bench for my next set?",
-    "I'm going to do cardio and weights",
-    "I don't know how to use this machine",
-    "Where can I find towels?",
-    "Could you help me create a personalized training routine?",
-    "What type of membership do you offer?",
-    "Is there a personal trainer available?",
-    "Are group classes available?",
-    "How can I book a class?",
-    "What is the gym's schedule?",
-    "What muscles are worked with this machine?",
-    "I feel a pain in my calf",
-    "The gym's music is too loud",
-    "I'm motivated!",
-    "Could you inform me about the membership plans you offer?",
-    "That effort was worth it",
-    "Is there an alternative for that exercise?",
-    "I need to work on my endurance",
-    "I need to rest a bit",
-    "How long should I rest between training sessions?",
-    "I would like to work on leg strength",
-    "This exercise will help me strengthen my biceps",
-    "This routine is designed to work on the triceps",
-    "Keep your back straight",
-    "Breathe deeply",
-    "Push with your heels, not with the tips of your toes",
-    "Keep your elbows close to your body",
-    "Don't lift your shoulders towards your ears",
-    "Keep your abs contracted",
-    "Don't arch your back",
-    "Maintain a steady pace",
-    "Breathe deeply and through your nose",
-    "Don't forget to hydrate",
-    "Eat healthily to get better results",
-    "Rest enough for your body to recover",
-    "Don't overdo it with the weight",
-    "They are cleaning the locker rooms"
-  ],
-  "traductions": [
-    "¿Puedes mostrarme cómo usar correctamente esta máquina?",
-    "¿Cuál es la forma correcta para hacer este ejercicio?",
-    "Aumenta la elevación de la caminadora",
-    "Aumenta la velocidad de la caminadora",
-    "¿Cuántas repeticiones debería hacer para este ejercicio?",
-    "¿Podrías demostrarme cómo hacer una sentadilla correctamente?",
-    "¿Puedes recomendarme un peso adecuado para empezar?",
-    "¿Hay algún calentamiento que debería seguir?",
-    "¿Cómo ajusto la altura del asiento en esta máquina?",
-    "¿Puedes darme algunos consejos para mejorar mi técnica en este ejercicio?",
-    "¿Qué ejercicios recomiendas para fortalecer mi espalda baja?",
-    "¿Podrías decirme si estoy haciendo este ejercicio correctamente?",
-    "Hoy es día de pierna",
-    "Mañana tocará fortalecer los brazos",
-    "¿Está bien si trabajo con esta máquina después de ti?",
-    "¿Podrías explicarme los beneficios de usar pesas?",
-    "¿Cuál es la técnica de respiración adecuada para este ejercicio?",
-    "¿Tienes alguna sugerencia para aumentar la intensidad de mi entrenamiento?",
-    "¿Debería seguir algún tipo de rutina para acabar mi entrenamiento?",
-    "Todos debemos desinfectar correctamente el equipo después de usarlo",
-    "¿Podrías recomendarme una rutina de estiramientos?",
-    "¿Tienes algún consejo para prevenir lesiones?",
-    "¿Puedes mostrarme cómo ajustar la resistencia en esta máquina?",
-    "¿Qué rutina debo seguir?",
-    "¿Cuál es la mejor manera de trabajar los músculos abdominales?",
-    "¿Cuánto tiempo de cardio me corresponde hoy?",
-    "¿Hay un orden específico que debería seguir al usar las máquinas?",
-    "¿Cuál es la postura correcta para usar esta máquina?",
-    "¿Cuánto tiempo de descanso recomiendas entre series para este ejercicio?",
-    "¿Tienes algunos consejos para mejorar mi equilibrio?",
-    "¿Podrías demostrarme cómo usar las bandas de resistencia?",
-    "¿Está bien si uso este banco para mi próxima serie?",
-    "Voy a hacer cardio y pesas",
-    "No sé cómo usar esta máquina",
-    "¿Dónde puedo encontrar toallas?",
-    "¿Podrías ayudarme a crear una rutina de entrenamiento personalizada?",
-    "¿Qué tipo de membresía ofrecen?",
-    "¿Hay algún entrenador personal disponible?",
-    "¿Hay clases grupales disponibles?",
-    "¿Cómo puedo reservar una clase?",
-    "¿Cuál es el horario del gimnasio?",
-    "¿Qué músculos se trabajan con esta máquina?",
-    "Siento un dolor en la pantorrilla",
-    "La música del gimnasio está demasiado alta",
-    "¡Estoy motivado!",
-    "¿Me podrían informar sobre los planes de membresía que ofrecen?",
-    "Ese esfuerzo valió la pena",
-    "¿Hay alguna alternativa para ese ejercicio?",
-    "Tengo que trabajar en mi resistencia",
-    "Tengo que descansar un poco",
-    "¿Cuánto tiempo debo descansar entre sesiones de entrenamiento?",
-    "Me gustaría trabajar en la fuerza de piernas",
-    "Este ejercicio me ayudará a fortalecer los biceps",
-    "Esta rutina está diseñada para trabajar en los triceps",
-    "Mantén la espalda recta",
-    "Respira profundo",
-    "Empuja con los talones, no con las puntas de los pies",
-    "Mantén los codos cerca del cuerpo",
-    "No levantes los hombros hacia las orejas",
-    "Mantén los abdominales contraídos",
-    "No arquees la espalda",
-    "Mantén un ritmo constante",
-    "Respira profundo y por la nariz",
-    "No te olvides de hidratarte",
-    "Alimentase de forma saludable para obtener mejores resultados",
-    "Descansa lo suficiente para que tu cuerpo se recupere",
-    "No te excedas con el peso",
-    "Están aseando los vestidores"
-  ],
-  "grammar": [
-    "Modal 'need to': necessity or obligation",
-    "Present simple: habitual action or general fact",
-    null,
-    null,
-    null,
-    "Modal 'should': advice or recommendation",
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Present perfect: recent action with present relevance",
-    null,
-    null,
-    "Modal 'can': ability or permission",
-    null,
-    null,
-    null,
-    null,
-    "Phrasal verb: 'warm up' = prepare the body for exercise",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Simple past: completed action in the past",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Passive voice: focus on the action, not the doer",
-    null,
-    "Contraction: 'don't' = do not",
-    null,
-    "Modal 'could': polite request or possibility",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Present continuous: action happening right now",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    {
+      "id": "gym_can_you_show_me_how_to",
+      "phrase": "Can you show me how to properly use this machine?",
+      "translation": "¿Puedes mostrarme cómo usar correctamente esta máquina?",
+      "cefr": "A2",
+      "grammar": "Modal 'need to': necessity or obligation",
+      "alternatives": ["Could you show me how to properly use this machine?"]
+    },
+    {
+      "id": "gym_what_is_the_correct_form_for",
+      "phrase": "What is the correct form for doing this exercise?",
+      "translation": "¿Cuál es la forma correcta para hacer este ejercicio?",
+      "cefr": "A2",
+      "grammar": "Present simple: habitual action or general fact"
+    },
+    {
+      "id": "gym_increase_the_elevation_of_the_treadmill",
+      "phrase": "Increase the elevation of the treadmill",
+      "translation": "Aumenta la elevación de la caminadora",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_increase_the_speed_of_the_treadmill",
+      "phrase": "Increase the speed of the treadmill",
+      "translation": "Aumenta la velocidad de la caminadora",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_how_many_repetitions_should_i_do",
+      "phrase": "How many repetitions should I do for this exercise?",
+      "translation": "¿Cuántas repeticiones debería hacer para este ejercicio?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_could_you_demonstrate_how_to_do",
+      "phrase": "Could you demonstrate how to do a squat correctly?",
+      "translation": "¿Podrías demostrarme cómo hacer una sentadilla correctamente?",
+      "cefr": "A2",
+      "grammar": "Modal 'should': advice or recommendation",
+      "alternatives": ["Can you demonstrate how to do a squat correctly?"]
+    },
+    {
+      "id": "gym_can_you_recommend_an_appropriate_weight",
+      "phrase": "Can you recommend an appropriate weight to start with?",
+      "translation": "¿Puedes recomendarme un peso adecuado para empezar?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could you recommend an appropriate weight to start with?"]
+    },
+    {
+      "id": "gym_is_there_a_warmup_i_should",
+      "phrase": "Is there a warm-up I should follow?",
+      "translation": "¿Hay algún calentamiento que debería seguir?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_how_do_i_adjust_the_seat",
+      "phrase": "How do I adjust the seat height on this machine?",
+      "translation": "¿Cómo ajusto la altura del asiento en esta máquina?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_can_you_give_me_some_tips",
+      "phrase": "Can you give me some tips to improve my technique on this exercise?",
+      "translation": "¿Puedes darme algunos consejos para mejorar mi técnica en este ejercicio?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could you give me some tips to improve my technique on this exercise?"]
+    },
+    {
+      "id": "gym_what_exercises_do_you_recommend_for",
+      "phrase": "What exercises do you recommend for strengthening my lower back?",
+      "translation": "¿Qué ejercicios recomiendas para fortalecer mi espalda baja?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_could_you_tell_me_if_im",
+      "phrase": "Could you tell me if I'm doing this exercise correctly?",
+      "translation": "¿Podrías decirme si estoy haciendo este ejercicio correctamente?",
+      "cefr": "A2",
+      "grammar": "Present perfect: recent action with present relevance",
+      "alternatives": ["Can you tell me if I'm doing this exercise correctly?"]
+    },
+    {
+      "id": "gym_today_is_leg_day",
+      "phrase": "Today is leg day",
+      "translation": "Hoy es día de pierna",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_tomorrow_will_be_arm_day",
+      "phrase": "Tomorrow will be arm day",
+      "translation": "Mañana tocará fortalecer los brazos",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_is_it_okay_if_i_work",
+      "phrase": "Is it okay if I work with this machine after you?",
+      "translation": "¿Está bien si trabajo con esta máquina después de ti?",
+      "cefr": "A2",
+      "grammar": "Modal 'can': ability or permission"
+    },
+    {
+      "id": "gym_could_you_explain_the_benefits_of",
+      "phrase": "Could you explain the benefits of using weights?",
+      "translation": "¿Podrías explicarme los beneficios de usar pesas?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Can you explain the benefits of using weights?"]
+    },
+    {
+      "id": "gym_what_is_the_proper_breathing_technique",
+      "phrase": "What is the proper breathing technique for this exercise?",
+      "translation": "¿Cuál es la técnica de respiración adecuada para este ejercicio?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_do_you_have_any_suggestions_for",
+      "phrase": "Do you have any suggestions for increasing the intensity of my workout?",
+      "translation": "¿Tienes alguna sugerencia para aumentar la intensidad de mi entrenamiento?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_should_i_follow_any_kind_of",
+      "phrase": "Should I follow any kind of routine to finish my workout?",
+      "translation": "¿Debería seguir algún tipo de rutina para acabar mi entrenamiento?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_we_all_must_properly_disinfect_the",
+      "phrase": "We all must properly disinfect the equipment after using it",
+      "translation": "Todos debemos desinfectar correctamente el equipo después de usarlo",
+      "cefr": "B1",
+      "grammar": "Phrasal verb: 'warm up' = prepare the body for exercise"
+    },
+    {
+      "id": "gym_could_you_recommend_a_stretching_routine",
+      "phrase": "Could you recommend a stretching routine?",
+      "translation": "¿Podrías recomendarme una rutina de estiramientos?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Can you recommend a stretching routine?"]
+    },
+    {
+      "id": "gym_do_you_have_any_advice_for",
+      "phrase": "Do you have any advice for preventing injuries?",
+      "translation": "¿Tienes algún consejo para prevenir lesiones?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_can_you_show_me_how_to_2",
+      "phrase": "Can you show me how to adjust the resistance on this machine?",
+      "translation": "¿Puedes mostrarme cómo ajustar la resistencia en esta máquina?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Could you show me how to adjust the resistance on this machine?"]
+    },
+    {
+      "id": "gym_what_routine_should_i_follow",
+      "phrase": "What routine should I follow?",
+      "translation": "¿Qué rutina debo seguir?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_what_is_the_best_way_to",
+      "phrase": "What is the best way to work the abdominal muscles?",
+      "translation": "¿Cuál es la mejor manera de trabajar los músculos abdominales?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_how_much_cardio_time_do_i",
+      "phrase": "How much cardio time do I have today?",
+      "translation": "¿Cuánto tiempo de cardio me corresponde hoy?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_is_there_a_specific_order_i",
+      "phrase": "Is there a specific order I should follow when using the machines?",
+      "translation": "¿Hay un orden específico que debería seguir al usar las máquinas?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_what_is_the_correct_posture_for",
+      "phrase": "What is the correct posture for using this machine?",
+      "translation": "¿Cuál es la postura correcta para usar esta máquina?",
+      "cefr": "A2",
+      "grammar": "Simple past: completed action in the past"
+    },
+    {
+      "id": "gym_how_much_rest_time_do_you",
+      "phrase": "How much rest time do you recommend between sets for this exercise?",
+      "translation": "¿Cuánto tiempo de descanso recomiendas entre series para este ejercicio?",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_do_you_have_any_tips_for",
+      "phrase": "Do you have any tips for improving my balance?",
+      "translation": "¿Tienes algunos consejos para mejorar mi equilibrio?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_could_you_demonstrate_how_to_use",
+      "phrase": "Could you demonstrate how to use resistance bands?",
+      "translation": "¿Podrías demostrarme cómo usar las bandas de resistencia?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Can you demonstrate how to use resistance bands?"]
+    },
+    {
+      "id": "gym_is_it_okay_if_i_use",
+      "phrase": "Is it okay if I use this bench for my next set?",
+      "translation": "¿Está bien si uso este banco para mi próxima serie?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_im_going_to_do_cardio_and",
+      "phrase": "I'm going to do cardio and weights",
+      "translation": "Voy a hacer cardio y pesas",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_i_dont_know_how_to_use",
+      "phrase": "I don't know how to use this machine",
+      "translation": "No sé cómo usar esta máquina",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_where_can_i_find_towels",
+      "phrase": "Where can I find towels?",
+      "translation": "¿Dónde puedo encontrar toallas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_could_you_help_me_create_a",
+      "phrase": "Could you help me create a personalized training routine?",
+      "translation": "¿Podrías ayudarme a crear una rutina de entrenamiento personalizada?",
+      "cefr": "B1",
+      "grammar": null,
+      "alternatives": ["Can you help me create a personalized training routine?"]
+    },
+    {
+      "id": "gym_what_type_of_membership_do_you",
+      "phrase": "What type of membership do you offer?",
+      "translation": "¿Qué tipo de membresía ofrecen?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_is_there_a_personal_trainer_available",
+      "phrase": "Is there a personal trainer available?",
+      "translation": "¿Hay algún entrenador personal disponible?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_are_group_classes_available",
+      "phrase": "Are group classes available?",
+      "translation": "¿Hay clases grupales disponibles?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_how_can_i_book_a_class",
+      "phrase": "How can I book a class?",
+      "translation": "¿Cómo puedo reservar una clase?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_what_is_the_gyms_schedule",
+      "phrase": "What is the gym's schedule?",
+      "translation": "¿Cuál es el horario del gimnasio?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_what_muscles_are_worked_with_this",
+      "phrase": "What muscles are worked with this machine?",
+      "translation": "¿Qué músculos se trabajan con esta máquina?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_i_feel_a_pain_in_my",
+      "phrase": "I feel a pain in my calf",
+      "translation": "Siento un dolor en la pantorrilla",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_the_gyms_music_is_too_loud",
+      "phrase": "The gym's music is too loud",
+      "translation": "La música del gimnasio está demasiado alta",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_im_motivated",
+      "phrase": "I'm motivated!",
+      "translation": "¡Estoy motivado!",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_could_you_inform_me_about_the",
+      "phrase": "Could you inform me about the membership plans you offer?",
+      "translation": "¿Me podrían informar sobre los planes de membresía que ofrecen?",
+      "cefr": "B1",
+      "grammar": null,
+      "alternatives": ["Can you inform me about the membership plans you offer?"]
+    },
+    {
+      "id": "gym_that_effort_was_worth_it",
+      "phrase": "That effort was worth it",
+      "translation": "Ese esfuerzo valió la pena",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_is_there_an_alternative_for_that",
+      "phrase": "Is there an alternative for that exercise?",
+      "translation": "¿Hay alguna alternativa para ese ejercicio?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_i_need_to_work_on_my",
+      "phrase": "I need to work on my endurance",
+      "translation": "Tengo que trabajar en mi resistencia",
+      "cefr": "B1",
+      "grammar": "Passive voice: focus on the action, not the doer"
+    },
+    {
+      "id": "gym_i_need_to_rest_a_bit",
+      "phrase": "I need to rest a bit",
+      "translation": "Tengo que descansar un poco",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_how_long_should_i_rest_between",
+      "phrase": "How long should I rest between training sessions?",
+      "translation": "¿Cuánto tiempo debo descansar entre sesiones de entrenamiento?",
+      "cefr": "A2",
+      "grammar": "Contraction: 'don't' = do not"
+    },
+    {
+      "id": "gym_i_would_like_to_work_on",
+      "phrase": "I would like to work on leg strength",
+      "translation": "Me gustaría trabajar en la fuerza de piernas",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["I'd like to work on leg strength"]
+    },
+    {
+      "id": "gym_this_exercise_will_help_me_strengthen",
+      "phrase": "This exercise will help me strengthen my biceps",
+      "translation": "Este ejercicio me ayudará a fortalecer los biceps",
+      "cefr": "A2",
+      "grammar": "Modal 'could': polite request or possibility"
+    },
+    {
+      "id": "gym_this_routine_is_designed_to_work",
+      "phrase": "This routine is designed to work on the triceps",
+      "translation": "Esta rutina está diseñada para trabajar en los triceps",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_keep_your_back_straight",
+      "phrase": "Keep your back straight",
+      "translation": "Mantén la espalda recta",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_breathe_deeply",
+      "phrase": "Breathe deeply",
+      "translation": "Respira profundo",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_push_with_your_heels_not_with",
+      "phrase": "Push with your heels, not with the tips of your toes",
+      "translation": "Empuja con los talones, no con las puntas de los pies",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_keep_your_elbows_close_to_your",
+      "phrase": "Keep your elbows close to your body",
+      "translation": "Mantén los codos cerca del cuerpo",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_dont_lift_your_shoulders_towards_your",
+      "phrase": "Don't lift your shoulders towards your ears",
+      "translation": "No levantes los hombros hacia las orejas",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_keep_your_abs_contracted",
+      "phrase": "Keep your abs contracted",
+      "translation": "Mantén los abdominales contraídos",
+      "cefr": "B1",
+      "grammar": "Present continuous: action happening right now"
+    },
+    {
+      "id": "gym_dont_arch_your_back",
+      "phrase": "Don't arch your back",
+      "translation": "No arquees la espalda",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_maintain_a_steady_pace",
+      "phrase": "Maintain a steady pace",
+      "translation": "Mantén un ritmo constante",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_breathe_deeply_and_through_your_nose",
+      "phrase": "Breathe deeply and through your nose",
+      "translation": "Respira profundo y por la nariz",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_dont_forget_to_hydrate",
+      "phrase": "Don't forget to hydrate",
+      "translation": "No te olvides de hidratarte",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "gym_eat_healthily_to_get_better_results",
+      "phrase": "Eat healthily to get better results",
+      "translation": "Alimentase de forma saludable para obtener mejores resultados",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_rest_enough_for_your_body_to",
+      "phrase": "Rest enough for your body to recover",
+      "translation": "Descansa lo suficiente para que tu cuerpo se recupere",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "gym_dont_overdo_it_with_the_weight",
+      "phrase": "Don't overdo it with the weight",
+      "translation": "No te excedas con el peso",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "gym_they_are_cleaning_the_locker_rooms",
+      "phrase": "They are cleaning the locker rooms",
+      "translation": "Están aseando los vestidores",
+      "cefr": "A2",
+      "grammar": null
+    }
   ]
 }

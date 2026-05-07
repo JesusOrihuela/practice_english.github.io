@@ -12,6 +12,9 @@
   --clr-accent:          #F59E0B;
   --clr-accent-dark:     #D97706;
   --clr-accent-light:    #FEF3C7;
+  --clr-path:            #C9920A;
+  --clr-path-dark:       #A57508;
+  --clr-path-light:      #FDF3DC;
   --clr-success:         #059669;
   --clr-success-light:   #D1FAE5;
   --clr-danger:          #DC2626;
@@ -512,13 +515,53 @@ footer {
 
 .mode-btn:hover {
   background: rgba(37,99,235,0.08);
-  color: var(--clr-primary);
+  color: #2563EB;
 }
 
 .mode-btn.active {
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
   color: #fff;
   box-shadow: 0 2px 8px rgba(37,99,235,0.30);
+}
+
+.mode-btn.active--path {
+  background: linear-gradient(135deg, var(--clr-path) 0%, var(--clr-path-dark) 100%);
+  box-shadow: 0 2px 8px rgba(201,146,10,0.35);
+}
+
+.mode-btn.active--path:hover {
+  background: linear-gradient(135deg, var(--clr-path-dark) 0%, var(--clr-path) 100%);
+  color: #fff;
+}
+
+/* Path mode — override primary color tokens so all activity UI turns gold */
+body.path-mode {
+  --clr-primary:       var(--clr-path);
+  --clr-primary-dark:  var(--clr-path-dark);
+  --clr-primary-hover: var(--clr-path-dark);
+  --clr-primary-light: var(--clr-path-light);
+}
+
+.mode-btn[data-nav="my-learning"]:hover {
+  background: rgba(201,146,10,0.10);
+  color: var(--clr-path);
+}
+
+/* Neutral buttons (home, settings) — silver/gray hover & active */
+.mode-btn.mode-home:hover,
+.mode-btn[data-nav="settings"]:hover {
+  background: rgba(94,107,122,0.10);
+  color: var(--clr-text-muted);
+}
+
+.mode-btn[data-nav="settings"].active {
+  background: linear-gradient(135deg, #6B7280 0%, #4B5563 100%);
+  box-shadow: 0 2px 8px rgba(75,85,99,0.35);
+}
+
+.mode-btn[data-nav="settings"].active:hover {
+  background: linear-gradient(135deg, #4B5563 0%, #6B7280 100%);
+  color: #fff;
 }
 
 /* Separator between nav groups */
@@ -548,17 +591,15 @@ footer {
 .btn-label { display: inline; }
 
 @media (max-width: 640px) {
-  /* Single scrolling row — prevents two-row overflow on narrow screens */
   .mode-switcher {
     flex-wrap: nowrap;
-    overflow-x: auto;
-    justify-content: flex-start;
-    scrollbar-width: none;           /* Firefox */
-    /* Right-edge fade signals overflow to the user */
-    -webkit-mask-image: linear-gradient(to right, black 88%, transparent 100%);
-    mask-image: linear-gradient(to right, black 88%, transparent 100%);
+    justify-content: center;
+    gap: 1px;
+    padding: 5px 8px;
   }
-  .mode-switcher::-webkit-scrollbar { display: none; }  /* Chrome/Safari */
+
+  /* Hide home button — redundant on mobile, saves space */
+  .mode-home { display: none; }
 
   /* Visually hide label text but keep it available to screen readers */
   .btn-label {
@@ -570,7 +611,7 @@ footer {
     white-space: nowrap;
     border: 0;
   }
-  .mode-btn { padding: 6px 9px; }
+  .mode-btn { padding: 5px 7px; font-size: 0.82rem; }
   .mode-sep { display: none; }
 }
 
@@ -1028,6 +1069,13 @@ footer {
   order: 3;
 }
 
+/* CEFR level badge inside phrase/word browser chips */
+.pb-chip-cefr {
+  flex-shrink: 0;
+  order: 3;
+  padding: 1px 6px;
+}
+
 /* CTA footer */
 .pb-cta {
   padding-top: 4px;
@@ -1149,6 +1197,19 @@ footer {
 
 .feedback-note-icon { flex-shrink: 0; font-style: normal; }
 .feedback-note-text { font-style: italic; }
+
+/* ---- Back-to-path link (shown after answer in activities) ---- */
+.back-to-path-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  text-decoration: none;
+  opacity: 0.65;
+  transition: opacity 0.2s, color 0.2s;
+}
+.back-to-path-link:hover { opacity: 1; color: var(--clr-primary); }
 
 /* ---- Flag stacks (AppFlags — shared/js/flags.js) ---- */
 .flag-stack {
@@ -1323,3 +1384,33 @@ footer {
 [data-theme="dark"] .milestone-toast {
   background: var(--clr-surface);
 }
+
+/* ── CEFR phrase badge — used in all activities ── */
+.cefr-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+  user-select: none;
+}
+.cefr-badge--a1 { background: #dcfce7; color: #16a34a; }
+.cefr-badge--a2 { background: #dbeafe; color: #2563eb; }
+.cefr-badge--b1 { background: #fef3c7; color: #d97706; }
+.cefr-badge--b2 { background: #ede9fe; color: #7c3aed; }
+[data-theme="dark"] .cefr-badge--a1 { background: rgba(22,163,74,0.18);   color: #4ade80; }
+[data-theme="dark"] .cefr-badge--a2 { background: rgba(37,99,235,0.18);   color: #93c5fd; }
+[data-theme="dark"] .cefr-badge--b1 { background: rgba(217,119,6,0.18);   color: #fcd34d; }
+[data-theme="dark"] .cefr-badge--b2 { background: rgba(124,58,237,0.18);  color: #c4b5fd; }
+
+/* Badge injected into exercise cards — floats top-right of card header */
+.cefr-phrase-badge {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  pointer-events: none;
+}
+

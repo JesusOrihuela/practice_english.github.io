@@ -10,7 +10,7 @@ let _openPhraseBrowser = null;
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], audioIndices = [], phraseAlternatives = [];
 let currentIndex = 0;
 let answered = false;
 let _lastCorrect = false;
@@ -37,7 +37,20 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(() => {}); // non-critical — comparison still works without it
 
-  AppTopicGrid.build({ badge: 'Translate', ariaLabelSuffix: 'translation', srsPrefix: 'trans_', onSelect: startTopic });
+  const _urlTopic = new URLSearchParams(location.search).get('topic');
+  const _pathMode = new URLSearchParams(location.search).get('path') === '1';
+  const _pathCard = new URLSearchParams(location.search).get('card');
+
+  if (_pathMode) {
+    document.getElementById('back-btn').classList.add('hidden');
+    if (typeof PathSession !== 'undefined') PathSession.start();
+  }
+
+  if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
+    startTopic(_urlTopic, _pathMode, _pathCard);
+  } else {
+    AppTopicGrid.build({ badge: 'Translate', ariaLabelSuffix: 'translation', srsPrefix: 'trans_', onSelect: startTopic });
+  }
 
   document.getElementById('back-btn').addEventListener('click', () => {
     if (_openPhraseBrowser) {
@@ -63,6 +76,18 @@ document.addEventListener('DOMContentLoaded', () => {
     answered = false;
     showPhrase(currentIndex);
   });
+
+  if (_pathMode) {
+    const _backLink = document.createElement('a');
+    _backLink.id = 'back-to-path';
+    _backLink.href = '../../my-learning/html/my-learning.html';
+    _backLink.className = 'back-to-path-link hidden';
+    _backLink.textContent = '← Back to path';
+    _backLink.addEventListener('click', function () {
+      if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
+    });
+    document.getElementById('exercise-area').appendChild(_backLink);
+  }
 
   AppAudio.setBase('../../shared/audio/');
   AppAudio.warmup();
@@ -112,19 +137,29 @@ function _showLoadError(topicId) {
 
 // ---- Load Topic ----
 
-function startTopic(topicId) {
+let _pathModeActive = false;
+let _pathCardId     = null;
+
+function startTopic(topicId, pathMode, pathCard) {
+  _pathModeActive = !!pathMode;
+  _pathCardId     = pathCard || null;
   localStorage.setItem(LAST_KEY, topicId);
   currentTopic = topicId;
   AppData.get(topicId)
     .then(data => {
-      const validPairs = data.phrases
-        .map((p, i) => ({ phrase: p, translation: (data.traductions || [])[i] || '', idx: i }))
-        .filter(pair => pair.translation.trim().length > 0);
+      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const validPairs = (data.phrases || [])
+        .map((p, i) => ({ phrase: p.phrase, translation: p.translation || '', cefr: p.cefr || null, grammar: p.grammar || null, id: p.id, origIdx: i, alternatives: p.alternatives || [] }))
+        .filter(p => p.translation.trim().length > 0)
+        .sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
 
-      phrases      = validPairs.map(p => p.phrase);
-      translations = validPairs.map(p => p.translation);
-      grammarNotes = validPairs.map(p => (data.grammar || [])[p.idx] || null);
-      cardIds      = validPairs.map(p => 'trans_' + topicId + '_' + p.idx);
+      phrases            = validPairs.map(p => p.phrase);
+      translations       = validPairs.map(p => p.translation);
+      grammarNotes       = validPairs.map(p => p.grammar);
+      cefrLevels         = validPairs.map(p => p.cefr);
+      cardIds            = validPairs.map(p => 'trans_' + p.id);
+      audioIndices       = validPairs.map(p => p.origIdx);
+      phraseAlternatives = validPairs.map(p => p.alternatives);
 
       if (phrases.length === 0) {
         alert('No translations available for this topic.');
@@ -137,16 +172,25 @@ function startTopic(topicId) {
         cardIds,
         topicLabel: topicObj ? topicObj.label : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: data.traductions || null,
+        traductions: validPairs.map(p => p.translation),
+        cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
-      _openPhraseBrowser();
+      if (_pathModeActive) {
+        _beginExercise(0);
+      } else {
+        _openPhraseBrowser();
+      }
     })
     .catch(() => _showLoadError(topicId));
 }
 
 function _beginExercise(idx) {
+  if (_pathModeActive && _pathCardId) {
+    const cardIdx = cardIds.indexOf(_pathCardId);
+    if (cardIdx !== -1) idx = cardIdx;
+  }
   currentIndex = idx;
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('exercise-area').classList.remove('hidden');
@@ -175,9 +219,26 @@ function showPhrase(index) {
   document.getElementById('listen-btn').classList.add('hidden');
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('try-again-btn').classList.add('hidden');
+  document.getElementById('back-to-path')?.classList.add('hidden');
   document.getElementById('phrase-card').className = 'phrase-card';
+  _showCefrBadge(cefrLevels[index], 'phrase-card');
 
   document.getElementById('trans-input')?.focus();
+}
+
+function _showCefrBadge(level, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  let badge = container.querySelector('.cefr-phrase-badge');
+  if (!badge) {
+    badge = document.createElement('span');
+    container.style.position = 'relative';
+    container.appendChild(badge);
+  }
+  if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
+  badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
+  badge.textContent = level;
+  badge.setAttribute('aria-label', 'CEFR level ' + level);
 }
 
 // ---- Answer Check ----
@@ -193,7 +254,9 @@ function checkAnswer() {
   document.getElementById('check-btn').disabled = true;
 
   const expected  = phrases[currentIndex];
-  const isCorrect = AppText.normalise(raw, contractionMap) === AppText.normalise(expected, contractionMap);
+  const _norm = s => AppText.normalise(s, contractionMap);
+  const isCorrect = _norm(raw) === _norm(expected)
+    || (phraseAlternatives[currentIndex] || []).some(alt => _norm(raw) === _norm(alt));
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
@@ -213,7 +276,7 @@ function checkAnswer() {
   diffEl.appendChild(
     isCorrect
       ? AppFeedback.buildCorrect(expected)
-      : AppFeedback.buildDiff(raw, expected, contractionMap)
+      : AppFeedback.buildDiff(raw, AppText.closestPhrase(raw, [expected, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)
   );
 
   feedback.className = 'trans-feedback ' + (isCorrect ? 'correct' : 'incorrect');
@@ -246,14 +309,13 @@ function checkAnswer() {
   feedback.classList.remove('hidden');
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
+
 }
 
 // ---- Rating & Advance ----
 
-// Compute seen/total directly from cardIds so non-sequential original indices
-// (p.idx anchoring) are counted correctly. Progress.getTopicStats() assumes
-// sequential indices 0…total-1 which breaks when some phrases lack translations.
 function _getCardStats() {
   const cards = Progress.getAllCards();
   const seen  = cardIds.filter(id => { const c = cards[id]; return c && c.reps > 0; }).length;
@@ -262,6 +324,15 @@ function _getCardStats() {
 
 function rateAndNext(quality) {
   // Progress already saved in checkAnswer — just advance
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const nextHref = PathSession.advance();
+    if (nextHref) {
+      window.location.href = '../../' + nextHref;
+    } else {
+      _showPathSessionComplete();
+    }
+    return;
+  }
   updateCounter();
 
   const streak = Progress.getStreak();
@@ -271,11 +342,40 @@ function rateAndNext(quality) {
   showPhrase(currentIndex);
 }
 
+function _showPathSessionComplete() {
+  AppAudio.cancel();
+  const prog = typeof PathSession !== 'undefined' ? PathSession.getProgress() : null;
+  const reviewCount = prog ? Math.max(0, prog.total - (prog.newCount || 0)) : 0;
+  const newCount    = prog ? (prog.newCount || 0) : 0;
+  document.body.innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
+      '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">Session complete!</h1>' +
+      '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
+        (reviewCount > 0 ? reviewCount + ' review' + (reviewCount > 1 ? 's' : '') : '') +
+        (reviewCount > 0 && newCount > 0 ? ' and ' : '') +
+        (newCount > 0 ? newCount + ' new card' + (newCount > 1 ? 's' : '') : '') +
+        ' done today.' +
+      '</p>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+    '</div>';
+}
+
 // ---- Counter ----
 
 function updateCounter() {
-  const stats = _getCardStats();
   const el = document.getElementById('trans-counter');
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const prog = PathSession.getProgress();
+    if (el) el.textContent = 'Exercise ' + prog.current + ' of ' + prog.total;
+    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
+    const fill = document.getElementById('session-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+    const bar = document.getElementById('session-progress-bar');
+    if (bar) bar.setAttribute('aria-valuenow', pct);
+    return;
+  }
+  const stats = _getCardStats();
   if (el) el.textContent = stats.seen + ' / ' + stats.total + ' learned';
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
@@ -288,7 +388,7 @@ function updateCounter() {
 
 function playTTS(text) {
   if (!text) return;
-  AppAudio.play(currentTopic, currentIndex, text);
+  AppAudio.play(currentTopic, audioIndices[currentIndex] ?? currentIndex, text);
 }
 
 // extractGrammarInfo is in shared/js/grammar-chip.js

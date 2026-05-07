@@ -8,12 +8,29 @@ const AppText = (() => {
 
   /**
    * Expand contractions in a lowercase string.
+   * First pass: single-token expansion via regex (e.g. "don't" → "do not").
+   * Second pass: multi-word phrase expansion (e.g. "it is" → "it's") using
+   * patterns collected in map._multi by buildEquivalenceMaps().
    * @param {string} s   - Already-lowercased input.
-   * @param {Object} map - { "don't": "do not", … } lookup table.
+   * @param {Object} map - { "don't": "do not", … } lookup table, optionally
+   *                       with a _multi array of { pattern, canonical } entries.
    */
   function expandContractions(s, map) {
     if (!map) return s;
-    return s.replace(/[a-z][a-z']*[a-z]/g, token => map[token] || token);
+    // First pass: single-token expansion
+    let result = s.replace(/[a-z][a-z']*[a-z]/g, token => map[token] || token);
+    // Second pass: multi-word phrase expansion (longest patterns first)
+    const multi = map._multi;
+    if (multi && multi.length > 0) {
+      for (const { pattern, canonical } of multi) {
+        // Replace whole-word occurrences only (not in the middle of a word)
+        result = result.replace(
+          new RegExp('(^|\\s)' + pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=\\s|$)', 'g'),
+          (_, prefix) => prefix + canonical
+        );
+      }
+    }
+    return result;
   }
 
   /**
@@ -64,24 +81,55 @@ const AppText = (() => {
   function buildEquivalenceMaps(groups) {
     const flatMap  = {};
     const groupMap = new Map();
+    const _multi   = []; // multi-word patterns for phrase-level expansion
 
     for (const group of groups) {
       const canonical = group[0].toLowerCase().replace(/['']/g, "'");
       const set = new Set(group.map(w => w.toLowerCase().replace(/['']/g, "'")));
 
       for (const form of set) {
-        // flatMap: only single-token forms (no spaces) for expandContractions
-        if (!form.includes(' ')) flatMap[form] = canonical;
+        if (!form.includes(' ')) {
+          // flatMap: single-token forms for expandContractions first pass
+          flatMap[form] = canonical;
+        } else if (!canonical.includes(' ')) {
+          // _multi: multi-word form → single-token canonical mapping
+          _multi.push({ pattern: form, canonical });
+        }
         // groupMap: all forms, including multi-word
         if (!groupMap.has(form)) groupMap.set(form, new Set());
         for (const v of set) groupMap.get(form).add(v);
       }
     }
 
+    // Sort by descending length so longer patterns are tried first
+    _multi.sort((a, b) => b.pattern.length - a.pattern.length);
+    flatMap._multi = _multi;
+
     return { flatMap, groupMap };
   }
 
-  return { expandContractions, normalise, normaliseSingle, buildEquivalenceMaps };
+  /**
+   * From a list of candidate phrases (main + alternatives), return the one
+   * with the most normalized words in common with the user's raw input.
+   * Used to pick the best reference phrase for the diff display.
+   * @param {string}   raw        - Raw user input.
+   * @param {string[]} candidates - [mainPhrase, ...alternatives]
+   * @param {Object}  [map]       - Contraction map.
+   */
+  function closestPhrase(raw, candidates, map) {
+    if (!candidates || candidates.length === 0) return '';
+    if (candidates.length === 1) return candidates[0];
+    const normWords = normalise(raw, map).split(' ');
+    let best = candidates[0], bestScore = -1;
+    for (const c of candidates) {
+      const cSet = new Set(normalise(c, map).split(' '));
+      const score = normWords.filter(w => cSet.has(w)).length;
+      if (score > bestScore) { bestScore = score; best = c; }
+    }
+    return best;
+  }
+
+  return { expandContractions, normalise, normaliseSingle, buildEquivalenceMaps, closestPhrase };
 })();
 
 /* ============================================================

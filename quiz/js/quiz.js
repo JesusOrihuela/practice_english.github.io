@@ -32,7 +32,20 @@ function _quizGridOpts() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  AppTopicGrid.build(_quizGridOpts());
+  const _urlTopic = new URLSearchParams(location.search).get('topic');
+  const _pathMode = new URLSearchParams(location.search).get('path') === '1';
+  const _pathCard = new URLSearchParams(location.search).get('card');
+
+  if (_pathMode) {
+    document.getElementById('back-btn').classList.add('hidden');
+    if (typeof PathSession !== 'undefined') PathSession.start();
+  }
+
+  if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
+    startTopic(_urlTopic, _pathMode, _pathCard);
+  } else {
+    AppTopicGrid.build(_quizGridOpts());
+  }
 
   document.getElementById('back-btn').addEventListener('click', () => {
     if (_openPhraseBrowser) {
@@ -47,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('try-again-btn').classList.add('hidden');
     showQuestion(currentIndex);
   });
+
+  if (_pathMode) {
+    const _backLink = document.createElement('a');
+    _backLink.id = 'back-to-path';
+    _backLink.href = '../../my-learning/html/my-learning.html';
+    _backLink.className = 'back-to-path-link hidden';
+    _backLink.textContent = '← Back to path';
+    _backLink.addEventListener('click', function () {
+      if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
+    });
+    document.getElementById('quiz-content').appendChild(_backLink);
+  }
 });
 
 // ---- Topic Picker ----
@@ -92,7 +117,12 @@ function _showLoadError(topicId) {
   if (picker) picker.insertBefore(banner, picker.firstChild);
 }
 
-function startTopic(topicId) {
+let _pathModeActive = false;
+let _pathCardId     = null;
+
+function startTopic(topicId, pathMode, pathCard) {
+  _pathModeActive = !!pathMode;
+  _pathCardId     = pathCard || null;
   localStorage.setItem(LAST_KEY, topicId);
   currentTopicId = topicId;
   quizTopicKey   = topicId === 'general' ? 'quiz_vocab' : 'quiz_' + topicId;
@@ -103,8 +133,11 @@ function startTopic(topicId) {
   fetch(jsonPath)
     .then(r => r.json())
     .then(data => {
-      words   = data.words;
-      cardIds = words.map((_, i) => quizTopicKey + '_' + i);
+      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _tagged = (data.words || []).map(w => ({ ...w }))
+        .sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+      words   = _tagged;
+      cardIds = _tagged.map(x => quizTopicKey + '_' + x.id);
 
       const topicObj = (AppTopics.VOCAB_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
@@ -112,15 +145,24 @@ function startTopic(topicId) {
         cardIds,
         topicLabel: topicObj ? topicObj.label : topicId,
         pickerEl: document.getElementById('topic-picker'),
+        cefrLevels: _tagged.map(x => x.cefr || null),
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
-      _openPhraseBrowser();
+      if (_pathModeActive) {
+        _beginExercise(0);
+      } else {
+        _openPhraseBrowser();
+      }
     })
     .catch(() => _showLoadError(topicId));
 }
 
 function _beginExercise(idx) {
+  if (_pathModeActive && _pathCardId) {
+    const cardIdx = cardIds.indexOf(_pathCardId);
+    if (cardIdx !== -1) idx = cardIdx;
+  }
   currentIndex = idx;
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('quiz-content').classList.remove('hidden');
@@ -148,11 +190,27 @@ function showQuestion(index) {
   document.getElementById('feedback-example-text').textContent = '';
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('try-again-btn').classList.add('hidden');
+  document.getElementById('back-to-path')?.classList.add('hidden');
 
+  _showCefrBadge(word.cefr, 'word-card');
   const choices = buildChoices(index);
   renderChoices(choices, index);
-  const firstChoice = document.querySelector('#choices-grid .choice-btn');
-  if (firstChoice) firstChoice.focus();
+  // Don't auto-focus first option — it triggers a visible border that looks like a selection
+}
+
+function _showCefrBadge(level, containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  let badge = container.querySelector('.cefr-phrase-badge');
+  if (!badge) {
+    badge = document.createElement('span');
+    container.style.position = 'relative';
+    container.appendChild(badge);
+  }
+  if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
+  badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
+  badge.textContent = level;
+  badge.setAttribute('aria-label', 'CEFR level ' + level);
 }
 
 function buildChoices(correctIdx) {
@@ -225,11 +283,22 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   feedbackEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   document.getElementById('next-btn').classList.toggle('hidden', !isCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', isCorrect);
+  document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(isCorrect ? 'next-btn' : 'try-again-btn')?.focus();
+
 }
 
 function rateAndNext(quality) {
   // Progress already saved in handleAnswer — just advance
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const nextHref = PathSession.advance();
+    if (nextHref) {
+      window.location.href = '../../' + nextHref;
+    } else {
+      _showPathSessionComplete();
+    }
+    return;
+  }
   updateCounter();
 
   currentIndex = (currentIndex + 1) % words.length;
@@ -240,11 +309,39 @@ function rateAndNext(quality) {
   if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
 }
 
+function _showPathSessionComplete() {
+  const prog = typeof PathSession !== 'undefined' ? PathSession.getProgress() : null;
+  const reviewCount = prog ? Math.max(0, prog.total - (prog.newCount || 0)) : 0;
+  const newCount    = prog ? (prog.newCount || 0) : 0;
+  document.body.innerHTML =
+    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
+      '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">Session complete!</h1>' +
+      '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
+        (reviewCount > 0 ? reviewCount + ' review' + (reviewCount > 1 ? 's' : '') : '') +
+        (reviewCount > 0 && newCount > 0 ? ' and ' : '') +
+        (newCount > 0 ? newCount + ' new card' + (newCount > 1 ? 's' : '') : '') +
+        ' done today.' +
+      '</p>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+    '</div>';
+}
+
 // ---- Utilities ----
 
 function updateCounter() {
-  const stats = Progress.getTopicStats(quizTopicKey, words.length);
   const el = document.getElementById('quiz-counter');
+  if (_pathModeActive && typeof PathSession !== 'undefined') {
+    const prog = PathSession.getProgress();
+    if (el) el.textContent = 'Exercise ' + prog.current + ' of ' + prog.total;
+    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
+    const fill = document.getElementById('session-progress-fill');
+    if (fill) fill.style.width = pct + '%';
+    const bar = document.getElementById('session-progress-bar');
+    if (bar) bar.setAttribute('aria-valuenow', pct);
+    return;
+  }
+  const stats = Progress.getStatsForCards(cardIds);
   if (el) el.textContent = stats.seen + ' / ' + stats.total + ' learned';
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');

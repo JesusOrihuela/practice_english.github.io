@@ -1,146 +1,338 @@
 {
   "phrases": [
-    "That Youtube channel is very good, you should subscribe",
-    "I don't know how to use Instagram, can you help me?",
-    "I'm looking for a new series to watch, can you recommend one?",
-    "This movie is very good, you should watch it",
-    "This video game is very difficult, I haven't been able to finish it",
-    "Have you seen the new horror movie?",
-    "I didn't like the ending of that movie",
-    "I want to go to the movies this weekend, what movie do you want to see?",
-    "This actor is very good, I like all his movies",
-    "That movie is a classic, you have to watch it",
-    "There is a new movie by my favorite director, I have to watch it",
-    "Are you watching the new Netflix series?",
-    "I didn't like the last season of that series, it disappointed me",
-    "Have you seen the latest episode of the series?",
-    "I don't like that series, I don't understand why it's so popular",
-    "What series do you recommend me to watch?",
-    "Do you want to play a video game with me?",
-    "I'm looking for a new game to play, can you recommend one?",
-    "Have you seen the new movie trailer?",
-    "The new video game console is very expensive",
-    "I prefer to watch movies in the cinema than at home",
-    "What kind of video games do you like?",
-    "There is a new film festival in the city, shall we go?",
-    "I would like to go to an amusement park, do you dare?",
-    "We should go to a concert this year",
-    "I would like to go to the new museum that opened in the city",
-    "Do you want to go to an art exhibition with me?",
-    "The photography exhibition seemed very interesting to me",
-    "The play was very moving",
-    "I didn't think I would like the opera so much",
-    "I love listening to podcasts while I exercise",
-    "I don't know what podcast to listen to, can you recommend one?",
-    "This song reminds me of a special moment in my life",
-    "There is a new concert by my favorite band, I have to go",
-    "Skip that song",
-    "I really like that song, I listen to it all the time",
-    "That's my favorite song",
-    "The new album by that band I didn't like as much as the previous ones",
-    "Did you see the game yesterday?",
-    "I watch the games every Saturday",
-    "Do you already have plans for the weekend?",
-    "This book has a great plot",
-    "I like to read books before going to sleep, it helps me relax",
-    "What book are you reading now?",
-    "My favorite book is the one with the red cover",
-    "The end of the book was very predictable"
-  ],
-  "traductions": [
-    "Ese canal de Youtube es muy bueno, deberías suscribirte",
-    "No sé cómo usar Instagram, ¿me ayudas?",
-    "Estoy buscando una nueva serie para ver, ¿me recomiendas alguna?",
-    "Esta película está muy buena, deberías verla",
-    "Este videojuego es muy difícil, no puedo lo he podido terminar",
-    "¿Ya viste la nueva película de terror?",
-    "No me gustó el final de esa película",
-    "Quiero ir al cine este fin de semana, ¿qué película quieres ver?",
-    "Este actor es muy bueno, me gustan todas sus películas",
-    "Esa película es un clásico, tienes que verla",
-    "Hay una nueva película de mi director favorito, tengo que verla",
-    "¿Estás viendo la nueva serie de Netflix?",
-    "No me gustó la última temporada de esa serie, me decepcionó",
-    "¿Ya viste el último capítulo de la serie?",
-    "No me gusta esa serie, no entiendo por qué es tan popular",
-    "¿Qué serie me recomiendas ver?",
-    "¿Quieres jugar un videojuego conmigo?",
-    "Estoy buscando un nuevo juego para jugar, ¿me recomiendas alguno?",
-    "¿Ya viste el nuevo tráiler de la película?",
-    "La nueva consola de videojuegos es muy cara",
-    "Prefiero ver películas en el cine que en casa",
-    "¿Qué tipo de videojuegos te gustan?",
-    "Hay un nuevo festival de cine en la ciudad, ¿vamos?",
-    "Me gustaría ir a un parque de atracciones, ¿te animas?",
-    "Deberíamos ir a un concierto este año",
-    "Me gustaría ir al nuevo museo que abrieron en la ciudad",
-    "¿Quieres ir a una exposición de arte conmigo?",
-    "La exposición de fotografías me pareció muy interesante",
-    "La obra de teatro fue muy conmovedora",
-    "No pensé que me gustaría tanto la ópera",
-    "Me encanta escuchar podcasts mientras hago ejercicio",
-    "No sé qué podcast escuchar, ¿me recomiendas alguno?",
-    "Esta canción me recuerda a un momento especial de mi vida",
-    "Hay un nuevo concierto de mi banda favorita, tengo que ir",
-    "Sáltate esa canción",
-    "Esa canción me gusta mucho, la escucho todo el tiempo",
-    "Esa es mi canción favorita",
-    "El nuevo álbum de esa banda no me gustó tanto como los anteriores",
-    "¿Viste el partido de ayer?",
-    "Veo los partidos cada sábado",
-    "¿Ya tienes planes para el fin de semana?",
-    "Este libro tiene una gran trama",
-    "Me gusta leer libros antes de dormir, me ayuda a relajarme",
-    "¿Qué libro estás leyendo ahora?",
-    "Mi libro favorito es el de la portada roja",
-    "El final del libro fue muy predecible"
-  ],
-  "grammar": [
-    "Present simple: habitual action or general fact",
-    null,
-    null,
-    null,
-    "Modal 'would': polite offer or conditional",
-    "Contraction: 'haven't' = have not",
-    "Present perfect: experience with no specific time",
-    null,
-    null,
-    null,
-    null,
-    "Phrasal verb: 'come out' = be released (film, music)",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Simple past: completed action in the past",
-    null,
-    null,
-    null,
-    null,
-    null,
-    "Modal 'could': polite request or possibility",
-    null,
-    null,
-    "Passive voice: focus on the action, not the doer",
-    null,
-    null,
-    null,
-    "Present continuous: action happening right now",
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null
+    {
+      "id": "entertainment_that_youtube_channel_is_very_good",
+      "phrase": "That Youtube channel is very good, you should subscribe",
+      "translation": "Ese canal de Youtube es muy bueno, deberías suscribirte",
+      "cefr": "A2",
+      "grammar": "Present simple: habitual action or general fact"
+    },
+    {
+      "id": "entertainment_i_dont_know_how_to_use",
+      "phrase": "I don't know how to use Instagram, can you help me?",
+      "translation": "No sé cómo usar Instagram, ¿me ayudas?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_im_looking_for_a_new_series",
+      "phrase": "I'm looking for a new series to watch, can you recommend one?",
+      "translation": "Estoy buscando una nueva serie para ver, ¿me recomiendas alguna?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["I'm looking for a new series to watch, could you recommend one?"]
+    },
+    {
+      "id": "entertainment_this_movie_is_very_good_you",
+      "phrase": "This movie is very good, you should watch it",
+      "translation": "Esta película está muy buena, deberías verla",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["This film is very good, you should watch it"]
+    },
+    {
+      "id": "entertainment_this_video_game_is_very_difficult",
+      "phrase": "This video game is very difficult, I haven't been able to finish it",
+      "translation": "Este videojuego es muy difícil, no puedo lo he podido terminar",
+      "cefr": "A2",
+      "grammar": "Modal 'would': polite offer or conditional"
+    },
+    {
+      "id": "entertainment_have_you_seen_the_new_horror",
+      "phrase": "Have you seen the new horror movie?",
+      "translation": "¿Ya viste la nueva película de terror?",
+      "cefr": "A2",
+      "grammar": "Contraction: 'haven't' = have not",
+      "alternatives": ["Have you seen the new horror film?"]
+    },
+    {
+      "id": "entertainment_i_didnt_like_the_ending_of",
+      "phrase": "I didn't like the ending of that movie",
+      "translation": "No me gustó el final de esa película",
+      "cefr": "A1",
+      "grammar": "Present perfect: experience with no specific time"
+    },
+    {
+      "id": "entertainment_i_want_to_go_to_the",
+      "phrase": "I want to go to the movies this weekend, what movie do you want to see?",
+      "translation": "Quiero ir al cine este fin de semana, ¿qué película quieres ver?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["I want to go to the cinema this weekend, what movie do you want to see?", "I want to go to the movies this weekend, what film do you want to see?"]
+    },
+    {
+      "id": "entertainment_this_actor_is_very_good_i",
+      "phrase": "This actor is very good, I like all his movies",
+      "translation": "Este actor es muy bueno, me gustan todas sus películas",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_that_movie_is_a_classic_you",
+      "phrase": "That movie is a classic, you have to watch it",
+      "translation": "Esa película es un clásico, tienes que verla",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["That film is a classic, you have to watch it"]
+    },
+    {
+      "id": "entertainment_there_is_a_new_movie_by",
+      "phrase": "There is a new movie by my favorite director, I have to watch it",
+      "translation": "Hay una nueva película de mi director favorito, tengo que verla",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["There is a new film by my favorite director, I have to watch it"]
+    },
+    {
+      "id": "entertainment_are_you_watching_the_new_netflix",
+      "phrase": "Are you watching the new Netflix series?",
+      "translation": "¿Estás viendo la nueva serie de Netflix?",
+      "cefr": "A1",
+      "grammar": "Phrasal verb: 'come out' = be released (film, music)"
+    },
+    {
+      "id": "entertainment_i_didnt_like_the_last_season",
+      "phrase": "I didn't like the last season of that series, it disappointed me",
+      "translation": "No me gustó la última temporada de esa serie, me decepcionó",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_have_you_seen_the_latest_episode",
+      "phrase": "Have you seen the latest episode of the series?",
+      "translation": "¿Ya viste el último capítulo de la serie?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_dont_like_that_series_i",
+      "phrase": "I don't like that series, I don't understand why it's so popular",
+      "translation": "No me gusta esa serie, no entiendo por qué es tan popular",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_what_series_do_you_recommend_me",
+      "phrase": "What series do you recommend me to watch?",
+      "translation": "¿Qué serie me recomiendas ver?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_do_you_want_to_play_a",
+      "phrase": "Do you want to play a video game with me?",
+      "translation": "¿Quieres jugar un videojuego conmigo?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_im_looking_for_a_new_game",
+      "phrase": "I'm looking for a new game to play, can you recommend one?",
+      "translation": "Estoy buscando un nuevo juego para jugar, ¿me recomiendas alguno?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_have_you_seen_the_new_movie",
+      "phrase": "Have you seen the new movie trailer?",
+      "translation": "¿Ya viste el nuevo tráiler de la película?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["Have you seen the new film trailer?"]
+    },
+    {
+      "id": "entertainment_the_new_video_game_console_is",
+      "phrase": "The new video game console is very expensive",
+      "translation": "La nueva consola de videojuegos es muy cara",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_prefer_to_watch_movies_in",
+      "phrase": "I prefer to watch movies in the cinema than at home",
+      "translation": "Prefiero ver películas en el cine que en casa",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["I prefer to watch films in the cinema than at home", "I prefer to watch movies at the cinema than at home"]
+    },
+    {
+      "id": "entertainment_what_kind_of_video_games_do",
+      "phrase": "What kind of video games do you like?",
+      "translation": "¿Qué tipo de videojuegos te gustan?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_there_is_a_new_film_festival",
+      "phrase": "There is a new film festival in the city, shall we go?",
+      "translation": "Hay un nuevo festival de cine en la ciudad, ¿vamos?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_would_like_to_go_to",
+      "phrase": "I would like to go to an amusement park, do you dare?",
+      "translation": "Me gustaría ir a un parque de atracciones, ¿te animas?",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["I'd like to go to an amusement park, do you dare?"]
+    },
+    {
+      "id": "entertainment_we_should_go_to_a_concert",
+      "phrase": "We should go to a concert this year",
+      "translation": "Deberíamos ir a un concierto este año",
+      "cefr": "A2",
+      "grammar": "Simple past: completed action in the past",
+      "alternatives": ["We ought to go to a concert this year"]
+    },
+    {
+      "id": "entertainment_i_would_like_to_go_to_2",
+      "phrase": "I would like to go to the new museum that opened in the city",
+      "translation": "Me gustaría ir al nuevo museo que abrieron en la ciudad",
+      "cefr": "A2",
+      "grammar": null,
+      "alternatives": ["I'd like to go to the new museum that opened in the city"]
+    },
+    {
+      "id": "entertainment_do_you_want_to_go_to",
+      "phrase": "Do you want to go to an art exhibition with me?",
+      "translation": "¿Quieres ir a una exposición de arte conmigo?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_the_photography_exhibition_seemed_very_interesting",
+      "phrase": "The photography exhibition seemed very interesting to me",
+      "translation": "La exposición de fotografías me pareció muy interesante",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_the_play_was_very_moving",
+      "phrase": "The play was very moving",
+      "translation": "La obra de teatro fue muy conmovedora",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_didnt_think_i_would_like",
+      "phrase": "I didn't think I would like the opera so much",
+      "translation": "No pensé que me gustaría tanto la ópera",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_love_listening_to_podcasts_while",
+      "phrase": "I love listening to podcasts while I exercise",
+      "translation": "Me encanta escuchar podcasts mientras hago ejercicio",
+      "cefr": "A2",
+      "grammar": "Modal 'could': polite request or possibility"
+    },
+    {
+      "id": "entertainment_i_dont_know_what_podcast_to",
+      "phrase": "I don't know what podcast to listen to, can you recommend one?",
+      "translation": "No sé qué podcast escuchar, ¿me recomiendas alguno?",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_this_song_reminds_me_of_a",
+      "phrase": "This song reminds me of a special moment in my life",
+      "translation": "Esta canción me recuerda a un momento especial de mi vida",
+      "cefr": "B1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_there_is_a_new_concert_by",
+      "phrase": "There is a new concert by my favorite band, I have to go",
+      "translation": "Hay un nuevo concierto de mi banda favorita, tengo que ir",
+      "cefr": "A2",
+      "grammar": "Passive voice: focus on the action, not the doer"
+    },
+    {
+      "id": "entertainment_skip_that_song",
+      "phrase": "Skip that song",
+      "translation": "Sáltate esa canción",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_really_like_that_song_i",
+      "phrase": "I really like that song, I listen to it all the time",
+      "translation": "Esa canción me gusta mucho, la escucho todo el tiempo",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_thats_my_favorite_song",
+      "phrase": "That's my favorite song",
+      "translation": "Esa es mi canción favorita",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_the_new_album_by_that_band",
+      "phrase": "The new album by that band I didn't like as much as the previous ones",
+      "translation": "El nuevo álbum de esa banda no me gustó tanto como los anteriores",
+      "cefr": "B1",
+      "grammar": "Present continuous: action happening right now"
+    },
+    {
+      "id": "entertainment_did_you_see_the_game_yesterday",
+      "phrase": "Did you see the game yesterday?",
+      "translation": "¿Viste el partido de ayer?",
+      "cefr": "A1",
+      "grammar": null,
+      "alternatives": ["Did you watch the game yesterday?"]
+    },
+    {
+      "id": "entertainment_i_watch_the_games_every_saturday",
+      "phrase": "I watch the games every Saturday",
+      "translation": "Veo los partidos cada sábado",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_do_you_already_have_plans_for",
+      "phrase": "Do you already have plans for the weekend?",
+      "translation": "¿Ya tienes planes para el fin de semana?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_this_book_has_a_great_plot",
+      "phrase": "This book has a great plot",
+      "translation": "Este libro tiene una gran trama",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_i_like_to_read_books_before",
+      "phrase": "I like to read books before going to sleep, it helps me relax",
+      "translation": "Me gusta leer libros antes de dormir, me ayuda a relajarme",
+      "cefr": "A2",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_what_book_are_you_reading_now",
+      "phrase": "What book are you reading now?",
+      "translation": "¿Qué libro estás leyendo ahora?",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_my_favorite_book_is_the_one",
+      "phrase": "My favorite book is the one with the red cover",
+      "translation": "Mi libro favorito es el de la portada roja",
+      "cefr": "A1",
+      "grammar": null
+    },
+    {
+      "id": "entertainment_the_end_of_the_book_was",
+      "phrase": "The end of the book was very predictable",
+      "translation": "El final del libro fue muy predecible",
+      "cefr": "A2",
+      "grammar": null
+    }
   ]
 }

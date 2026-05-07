@@ -6,9 +6,8 @@
    Card ID format: grammar_{category}_{ruleId}
      — ruleId is a stable semantic string (e.g. "present_simple"), NOT a sequential
        integer. This is intentional: grammar rules can be reordered or extended without
-       orphaning SRS history, unlike phrase-based activities that use numeric indices.
-     — Consequence: Progress.getTopicStats() cannot be used here (it assumes 0…N
-       sequential indices). All SRS reads use Progress.getAllCards() + manual filter.
+       orphaning SRS history.
+     — All SRS reads use Progress.getAllCards() + manual filter.
      — parseCardId() in progress-page.js has a dedicated branch for this format.
    ============================================================ */
 
@@ -16,12 +15,17 @@
 let allRules     = [];
 let categories   = [];
 let currentRule  = null;
+
+/* ── Path mode (set once on load) ── */
+const _pathMode  = new URLSearchParams(window.location.search).get('path') === '1';
+const _pathTopic = new URLSearchParams(window.location.search).get('topic') || null;
 let phase        = 0;          // 0-4 = phases; 5 = complete
 let siIndex      = 0;          // structured input item index
 let prodIndex    = 0;          // production item index
 let prodCorrect      = 0;      // count of correct FITB answers
 let prodAnswered     = false;  // whether current FITB was answered
 let currentAutoQuality = 3;   // SRS quality calculated from accuracy (1/3/5)
+let _progressSaved   = false;  // true once Progress.rate has been called for the current rule
 let noticingAnswers   = [];   // user's Phase 2 answers, shown in Phase 3
 
 /* ── Mixed Review State ── */
@@ -80,11 +84,30 @@ function loadData() {
       allRules   = data.rules   || [];
       categories = data.categories || [];
 
+      // Path mode: ?path=1 — hide navigation, handle advance via PathSession
+      if (_pathMode) {
+        document.getElementById('back-to-categories').classList.add('hidden');
+        document.getElementById('back-to-rules').classList.add('hidden');
+        const mixedSection = document.getElementById('mixed-review-section');
+        if (mixedSection) mixedSection.classList.add('hidden');
+      }
+
       // Deep-link: grammar.html?rule=<ruleId> → jump straight to that rule
       const urlRule = new URLSearchParams(window.location.search).get('rule');
       if (urlRule) {
         const deepRule = allRules.find(r => r.id === urlRule);
         if (deepRule) { startExercise(deepRule); return; }
+      }
+
+      // Topic filter: grammar.html?topic=<topicId> → show only rules for that topic
+      if (_pathTopic && !urlRule) {
+        const topicRules = allRules.filter(r =>
+          Array.isArray(r.topics) && r.topics.includes(_pathTopic)
+        );
+        if (topicRules.length > 0) {
+          _showTopicRules(topicRules);
+          return;
+        }
       }
 
       buildCategoryGrid();
@@ -139,6 +162,33 @@ function buildCategoryGrid() {
 
 function showCategories() {
   buildCategoryGrid();
+}
+
+/* ── Topic-filtered rule list (used when ?topic= is set) ── */
+function _showTopicRules(rules) {
+  const list = document.getElementById('rule-list');
+  if (!list) return;
+  list.innerHTML = '';
+
+  const header = document.getElementById('rules-category-label');
+  if (header) header.textContent = 'Grammar for this topic';
+
+  rules.forEach(rule => {
+    const cardId = 'grammar_' + rule.category + '_' + rule.id;
+    const card   = Progress.getAllCards()[cardId];
+    const seen   = card && card.reps > 0;
+
+    const btn = document.createElement('button');
+    btn.className = 'rule-row' + (seen ? ' rule-row--seen' : '');
+    btn.setAttribute('aria-label', rule.title);
+    btn.innerHTML =
+      '<span class="rule-row__title">' + rule.title + '</span>' +
+      (seen ? '<span class="rule-row__seen-badge">Studied</span>' : '<span class="rule-row__new-badge">New</span>');
+    btn.addEventListener('click', () => startExercise(rule));
+    list.appendChild(btn);
+  });
+
+  showScreen('screen-rules');
 }
 
 /* ══════════════════════════════════════════════════════
@@ -207,6 +257,7 @@ function startExercise(rule) {
   prodCorrect     = 0;
   prodAnswered    = false;
   noticingAnswers = [];
+  _progressSaved  = false;
 
   // Set header badges
   document.getElementById('exercise-rule-title').textContent = rule.title;
@@ -491,17 +542,12 @@ function showStructuredItem(idx) {
         }
       };
 
-      if (isCorrect) {
-        // Auto-advance on correct — user needs less time to read confirmatory feedback
-        setTimeout(advance, 1800);
-      } else {
-        // Manual advance on wrong — learner must read why before moving on
-        const nextBtn = document.createElement('button');
-        nextBtn.className   = 'structured-next-btn';
-        nextBtn.textContent = 'Got it, continue →';
-        nextBtn.addEventListener('click', advance);
-        card.appendChild(nextBtn);
-      }
+      const nextBtn = document.createElement('button');
+      nextBtn.className   = 'structured-next-btn';
+      nextBtn.textContent = 'Next →';
+      nextBtn.addEventListener('click', advance);
+      card.appendChild(nextBtn);
+      nextBtn.focus();
     });
 
     optsEl.appendChild(btn);
@@ -537,33 +583,46 @@ function showProductionItem(idx) {
   card.innerHTML = '';
   prodAnswered = false;
 
-  // Sentence with blank highlighted
+  // Detect number of blanks — multi-blank needs inline inputs
+  const blankParts  = item.sentence.split(/_+/);
+  const blankCount  = blankParts.length - 1;
+  const answerParts = (item.answer || '').split(' / ');
+
+  // Always render inputs inline inside the sentence text
   const sentEl = document.createElement('div');
-  sentEl.className = 'production-sentence';
-  sentEl.innerHTML = escapeHTML(item.sentence).replace(/_+/g,
-    '<span class="blank">___</span>'
-  );
+  sentEl.className = 'production-sentence production-sentence--multi';
+
+  const inputs = [];
+
+  blankParts.forEach((part, i) => {
+    if (part) {
+      const span = document.createElement('span');
+      span.textContent = part;
+      sentEl.appendChild(span);
+    }
+    if (i < blankCount) {
+      const inp = document.createElement('input');
+      inp.type         = 'text';
+      inp.className    = 'production-input production-input--inline';
+      inp.autocomplete = 'off';
+      inp.spellcheck   = false;
+      inp.setAttribute('aria-label', 'Blank ' + (i + 1));
+      const hint = answerParts[i] || '';
+      inp.style.width  = Math.max(52, hint.length * 11 + 16) + 'px';
+      inputs.push(inp);
+      sentEl.appendChild(inp);
+    }
+  });
   card.appendChild(sentEl);
 
-  // Input row
-  const rowEl = document.createElement('div');
-  rowEl.className = 'production-input-row';
-
-  const input = document.createElement('input');
-  input.type        = 'text';
-  input.className   = 'production-input';
-  input.placeholder = 'Write the correct form…';
-  input.autocomplete = 'off';
-  input.spellcheck  = false;
-  input.setAttribute('aria-label', 'Your answer');
-
+  // Check button in its own row below the sentence
   const checkBtn = document.createElement('button');
   checkBtn.className   = 'production-check-btn';
   checkBtn.textContent = 'Check ✓';
-
-  rowEl.appendChild(input);
-  rowEl.appendChild(checkBtn);
-  card.appendChild(rowEl);
+  const btnRow = document.createElement('div');
+  btnRow.className = 'production-input-row production-input-row--check-only';
+  btnRow.appendChild(checkBtn);
+  card.appendChild(btnRow);
 
   // Feedback area
   const fbEl = document.createElement('div');
@@ -576,17 +635,17 @@ function showProductionItem(idx) {
   nextBtn.textContent = idx + 1 < total ? 'Next →' : 'See results →';
   card.appendChild(nextBtn);
 
-  // Focus
-  input.focus();
+  // Focus first input
+  if (inputs.length > 0) inputs[0].focus();
 
   // Submit logic
   const submit = () => {
     if (prodAnswered) return;
-    const raw = input.value.trim();
+    const raw = inputs.map(i => i.value.trim()).filter(Boolean).join(' ');
     if (!raw) return;
     prodAnswered = true;
 
-    input.disabled    = true;
+    inputs.forEach(i => { i.disabled = true; });
     checkBtn.disabled = true;
 
     const accepted = (item.accepted || [item.answer]).map(a => AppText.normalise(a));
@@ -594,7 +653,7 @@ function showProductionItem(idx) {
 
     if (isCorrect) {
       prodCorrect++;
-      input.classList.add('production-input--correct');
+      inputs.forEach(i => i.classList.add('production-input--correct'));
       fbEl.className = 'production-feedback production-feedback--correct visible';
       fbEl.innerHTML =
         '<span class="feedback-answer">✓ ' + escapeHTML(item.answer) + '</span>' +
@@ -603,7 +662,7 @@ function showProductionItem(idx) {
           ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
           : '');
     } else {
-      input.classList.add('production-input--wrong');
+      inputs.forEach(i => i.classList.add('production-input--wrong'));
       fbEl.className = 'production-feedback production-feedback--wrong visible';
       fbEl.innerHTML =
         '<span class="feedback-answer">Answer: ' + escapeHTML(item.answer) + '</span>' +
@@ -618,7 +677,7 @@ function showProductionItem(idx) {
   };
 
   checkBtn.addEventListener('click', submit);
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+  inputs.forEach(inp => inp.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); }));
 
   nextBtn.addEventListener('click', () => {
     prodIndex++;
@@ -655,6 +714,18 @@ function buildPhaseComplete() {
   currentAutoQuality = accuracyToQuality(prodCorrect, total);
   const meta = QUALITY_META[currentAutoQuality];
 
+  // Record progress immediately so it's saved even if the user never taps Continue
+  if (!_progressSaved) {
+    _progressSaved = true;
+    if (prodCorrect < total && currentAutoQuality < 5) {
+      setReentryPhase(cardId);
+    } else {
+      clearReentryPhase(cardId);
+    }
+    Progress.rate(cardId, currentAutoQuality);
+    Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
+  }
+
   // Score line
   document.getElementById('complete-score').textContent =
     prodCorrect + ' / ' + total + ' correct (' + pct + '%)';
@@ -672,6 +743,18 @@ function buildPhaseComplete() {
 
   // Focus continue button
   document.getElementById('rate-auto')?.focus();
+
+  // Back-to-path link (path mode only)
+  const _completeCard = document.getElementById('complete-card');
+  const _existingBack = document.getElementById('grammar-back-to-path');
+  if (_pathMode && _completeCard && !_existingBack) {
+    const _backLink = document.createElement('a');
+    _backLink.id = 'grammar-back-to-path';
+    _backLink.href = '../../my-learning/html/my-learning.html';
+    _backLink.className = 'back-to-path-link';
+    _backLink.textContent = '← Back to path';
+    _completeCard.appendChild(_backLink);
+  }
 
   buildRelatedPhrases(currentRule);
 }
@@ -709,12 +792,12 @@ function buildRelatedPhrases(rule) {
       var res = results[t];
       if (!res) continue;
       var phrases = res.data.phrases || [];
-      var tips    = res.data.grammar  || [];
       for (var i = 0; i < phrases.length && matches.length < 3; i++) {
-        if (!tips[i]) continue;
-        var tipLower = tips[i].toLowerCase();
+        var tip = phrases[i].grammar || null;
+        if (!tip) continue;
+        var tipLower = tip.toLowerCase();
         var hit = keywords.some(function(kw){ return tipLower.indexOf(kw) !== -1; });
-        if (hit) matches.push({ phrase: phrases[i], topicId: res.meta.id, topicLabel: res.meta.label });
+        if (hit) matches.push({ phrase: phrases[i].phrase, topicId: res.meta.id, topicLabel: res.meta.label });
       }
     }
     if (matches.length === 0) return;
@@ -844,22 +927,46 @@ function finishAndRate(quality) {
   const cardId = 'grammar_' + currentRule.category + '_' + currentRule.id;
   const total  = (currentRule.quiz || []).length;
 
-  // Re-entry logic: any wrong answer → re-queue from phase 4
-  // Perfect score OR Easy rating → clear re-entry (rule mastered)
-  if (prodCorrect < total && quality < 5) {
-    setReentryPhase(cardId);
-  } else {
-    clearReentryPhase(cardId);
+  // Progress already saved in buildPhaseComplete(); only re-rate if quality differs
+  if (!_progressSaved) {
+    _progressSaved = true;
+    if (prodCorrect < total && quality < 5) {
+      setReentryPhase(cardId);
+    } else {
+      clearReentryPhase(cardId);
+    }
+    Progress.rate(cardId, quality);
+    Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
   }
 
-  Progress.rate(cardId, quality);
-  Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
+  if (_pathMode && typeof PathSession !== 'undefined') {
+    const nextHref = PathSession.advance();
+    if (nextHref) {
+      window.location.href = '../../' + nextHref;
+    } else {
+      _showPathSessionComplete();
+    }
+    return;
+  }
 
   if (mixedReviewMode) {
     advanceMixedReview();
   } else {
     showRules(currentRule.category);
   }
+}
+
+function _showPathSessionComplete() {
+  const summary = typeof PathSession !== 'undefined' ? PathSession.getTodaySummary() : null;
+  const screen  = document.getElementById('screen-exercise');
+  if (!screen) { window.location.href = '../../my-learning/html/my-learning.html'; return; }
+  screen.innerHTML =
+    '<div class="path-session-complete">' +
+      '<div class="path-session-complete__icon">🎉</div>' +
+      '<h2 class="path-session-complete__title">Session complete!</h2>' +
+      (summary ? '<p class="path-session-complete__sub">You reviewed ' + summary.reviewCount + ' cards and learned ' + summary.newCount + ' new ones today.</p>' : '') +
+      '<a href="../../my-learning/html/my-learning.html" class="path-session-complete__btn">My Learning →</a>' +
+    '</div>';
 }
 
 /* ══════════════════════════════════════════

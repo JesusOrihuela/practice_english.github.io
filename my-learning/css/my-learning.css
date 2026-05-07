@@ -1,0 +1,334 @@
+/* ============================================================
+   my-learning.css — My Learning Path page
+   ============================================================ */
+
+.ml-page {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Header ── */
+.ml-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ml-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  color: var(--clr-text);
+  line-height: 1.15;
+}
+
+.ml-header h1 span {
+  color: var(--clr-primary);
+}
+
+.ml-streak {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-accent-dark, #b45309);
+  background: var(--clr-accent-light, #fef3c7);
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Session CTA card ── */
+.ml-session-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.ml-cta__bar {
+  height: 4px;
+  background: var(--clr-border);
+}
+
+.ml-cta__bar-fill {
+  height: 100%;
+  background: var(--clr-path);
+  border-radius: 0 2px 2px 0;
+  transition: width 0.6s ease;
+  min-width: 12px;
+}
+
+.ml-cta__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  min-height: 56px;
+}
+
+.ml-cta__stats {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ml-cta__body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.ml-cta__title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--clr-text);
+  line-height: 1.2;
+}
+
+.ml-cta__sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  line-height: 1.3;
+}
+
+.ml-cta__count {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--clr-text);
+  line-height: 1;
+}
+
+.ml-cta__total {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+}
+
+.ml-cta__time {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  white-space: nowrap;
+}
+
+.ml-cta__chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.ml-cta__chip--review { background: #fef3c7; color: #b45309; }
+.ml-cta__chip--new    { background: var(--clr-path-light); color: var(--clr-path-dark); }
+
+[data-theme="dark"] .ml-cta__chip--review { background: rgba(217,119,6,0.18);   color: #fbbf24; }
+[data-theme="dark"] .ml-cta__chip--new    { background: rgba(201,146,10,0.18);  color: #e8b84b; }
+
+.ml-cta__btn {
+  display: inline-block;
+  padding: 9px 22px;
+  background: var(--clr-path);
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition), transform var(--transition-bounce);
+}
+
+.ml-cta__btn:hover {
+  background: var(--clr-path-dark);
+  transform: translateY(-1px);
+}
+
+.ml-cta__done {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-success);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Trail section
+   ══════════════════════════════════════════════════════════ */
+.ml-trail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ml-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ml-trail-wrap { width: 100%; }
+
+/* ── Snake trail container ──
+   Absolute positioning: JS places every node and connector at exact coordinates. */
+.ml-trail--snake {
+  position: relative;
+  width: 100%;
+  /* height set by JS */
+}
+
+/* ── Diagonal connector ── */
+.ml-h-conn {
+  position: absolute;
+  height: 3px;
+  background: var(--clr-border);
+  border-radius: 2px;
+  transition: background 0.3s;
+  transform-origin: left center;
+  /* left, top, width, transform set by JS */
+}
+.ml-h-conn--done { background: var(--clr-success, #16a34a); }
+
+/* ── Node ── */
+.ml-snode {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* left, top, width set by JS */
+}
+
+/* Topic pin — always shown on every node */
+.ml-snode__topic {
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-bg);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 1px 6px;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  /* Sits above bubble; gap: 10px on .ml-snode keeps clear of active glow */
+}
+
+/* Bubble */
+.ml-snode__bubble {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  background: var(--clr-surface);
+  border: 3px solid var(--clr-border);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s;
+  cursor: default;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.ml-snode--done .ml-snode__bubble {
+  background: var(--clr-success, #16a34a);
+  border-color: var(--clr-success, #16a34a);
+  color: #fff;
+}
+.ml-snode--active .ml-snode__bubble {
+  background: var(--clr-path);
+  border-color: var(--clr-path);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 0 6px rgba(201,146,10,0.22), 0 4px 16px rgba(201,146,10,0.32);
+  animation: ml-snake-pulse 2s ease-in-out infinite;
+}
+.ml-snode--active .ml-snode__bubble:hover { transform: scale(1.06); }
+.ml-snode--pending .ml-snode__bubble { opacity: 0.45; }
+
+@keyframes ml-snake-pulse {
+  0%, 100% { box-shadow: 0 0 0 6px rgba(201,146,10,0.22), 0 4px 16px rgba(201,146,10,0.30); }
+  50%       { box-shadow: 0 0 0 10px rgba(201,146,10,0.10), 0 6px 22px rgba(201,146,10,0.18); }
+}
+
+.ml-snode__check { font-size: 1.4rem; font-weight: 900; line-height: 1; }
+
+/* Groups label + badge with no gap between them */
+.ml-snode__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.ml-snode__label-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ml-snode__label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.ml-snode--done .ml-snode__label   { color: var(--clr-success, #16a34a); }
+.ml-snode--active .ml-snode__label { color: var(--clr-path); font-weight: 800; }
+
+.ml-snode__new-badge,
+.ml-snode__review-badge {
+  font-size: 0.52rem;
+  font-weight: 800;
+  border-radius: var(--radius-full);
+  padding: 2px 6px;
+  white-space: nowrap;
+  /* Always full opacity — badge must be readable even on pending (faded) nodes */
+  opacity: 1 !important;
+}
+
+.ml-snode__new-badge {
+  color: #fff;
+  background: var(--clr-path);
+}
+
+.ml-snode__review-badge {
+  color: #92400e;
+  background: #fde68a;
+}
+
+[data-theme="dark"] .ml-snode__review-badge {
+  color: #fbbf24;
+  background: rgba(217,119,6,0.22);
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .ml-page { padding: 24px 16px 48px; }
+  .ml-snode__bubble { width: 56px; height: 56px; font-size: 1.4rem; }
+}
