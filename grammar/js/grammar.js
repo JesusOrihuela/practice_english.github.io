@@ -28,13 +28,6 @@ let currentAutoQuality = 3;   // SRS quality calculated from accuracy (1/3/5)
 let _progressSaved   = false;  // true once Progress.rate has been called for the current rule
 let noticingAnswers   = [];   // user's Phase 2 answers, shown in Phase 3
 
-/* ── Mixed Review State ── */
-let mixedReviewMode  = false;
-let mixedCardIds     = [];   // flat array of 'grammar_{cat}_{id}' strings
-let mixedCardRules   = [];   // parallel rule objects
-let mixedReviewIdx   = 0;
-let mixedReviewed    = 0;
-
 const PHASE_IDS = [
   'phase-context',
   'phase-noticing',
@@ -49,18 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 
   document.getElementById('back-to-categories').addEventListener('click', () => {
-    mixedReviewMode = false;
     showCategories();
   });
   document.getElementById('back-to-rules').addEventListener('click', () => {
-    if (mixedReviewMode) {
-      mixedReviewMode = false;
-      showCategories();
-    } else {
-      showRules(currentRule?.category);
-    }
+    showRules(currentRule?.category);
   });
-  document.getElementById('mixed-review-btn').addEventListener('click', startMixedReview);
 
   document.getElementById('context-next-btn').addEventListener('click', () => goToPhase(1));
   document.getElementById('noticing-show-btn').addEventListener('click', () => {
@@ -88,8 +74,6 @@ function loadData() {
       if (_pathMode) {
         document.getElementById('back-to-categories').classList.add('hidden');
         document.getElementById('back-to-rules').classList.add('hidden');
-        const mixedSection = document.getElementById('mixed-review-section');
-        if (mixedSection) mixedSection.classList.add('hidden');
       }
 
       // Deep-link: grammar.html?rule=<ruleId> → jump straight to that rule
@@ -147,15 +131,6 @@ function buildCategoryGrid() {
     btn.addEventListener('click', () => showRules(cat.id));
     grid.appendChild(btn);
   });
-
-  // Show "Revisión Mixta" button only when at least 2 rules from different categories are studied
-  const allCards    = Progress.getAllCards();
-  const studiedIds  = allRules.filter(r => {
-    const cid = 'grammar_' + r.category + '_' + r.id;
-    return allCards && allCards[cid] && allCards[cid].reps > 0;
-  });
-  const section = document.getElementById('mixed-review-section');
-  if (section) section.classList.toggle('hidden', studiedIds.length < 2);
 
   showScreen('screen-categories');
 }
@@ -712,7 +687,6 @@ function buildPhaseComplete() {
 
   // Calculate and store auto quality
   currentAutoQuality = accuracyToQuality(prodCorrect, total);
-  const meta = QUALITY_META[currentAutoQuality];
 
   // Record progress immediately so it's saved even if the user never taps Continue
   if (!_progressSaved) {
@@ -723,6 +697,7 @@ function buildPhaseComplete() {
       clearReentryPhase(cardId);
     }
     Progress.rate(cardId, currentAutoQuality);
+    if (typeof AppProficiency !== 'undefined') AppProficiency.update(currentRule.cefr, currentAutoQuality >= 3, 'grammar');
     Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
   }
 
@@ -849,79 +824,6 @@ function buildRelatedPhrases(rule) {
   });
 }
 
-/* ══════════════════════════════════════════
-   Mixed Review (Interleaved Practice)
-   Taylor & Rohrer 2010 — 40-60% better retention vs. blocked practice
-══════════════════════════════════════════ */
-
-function startMixedReview() {
-  const data = Progress.getAllCards();
-  mixedCardIds   = [];
-  mixedCardRules = [];
-
-  allRules.forEach(rule => {
-    const cardId = 'grammar_' + rule.category + '_' + rule.id;
-    if (data && data[cardId] && data[cardId].reps > 0) {
-      mixedCardIds.push(cardId);
-      mixedCardRules.push(rule);
-    }
-  });
-
-  if (mixedCardIds.length === 0) {
-    showEmptyMixed();
-    return;
-  }
-
-  // Force re-entry at Structured Input (Phase 3) for all cards — skip intro phases
-  mixedCardIds.forEach(id => localStorage.setItem('pe_reentry_' + id, String(REENTRY_PHASE)));
-
-  mixedReviewMode = true;
-  mixedReviewed   = 0;
-  mixedReviewIdx  = 0;
-
-  // Update back button label for mixed mode
-  document.getElementById('back-to-rules').textContent = '← Categories';
-
-  startExercise(mixedCardRules[mixedReviewIdx]);
-}
-
-function advanceMixedReview() {
-  mixedReviewed++;
-  const cap = Math.min(10, mixedCardIds.length);
-  if (mixedReviewed >= cap) {
-    mixedReviewMode = false;
-    showMixedDone(mixedReviewed);
-    return;
-  }
-  mixedReviewIdx = (mixedReviewIdx + 1) % mixedCardIds.length;
-  startExercise(mixedCardRules[mixedReviewIdx]);
-}
-
-function showEmptyMixed() {
-  const banner = document.getElementById('mixed-done-banner');
-  if (banner) {
-    banner.innerHTML =
-      '<p class="mixed-done-msg">Complete at least 2 rules to unlock Mixed Review.</p>';
-    banner.classList.remove('hidden');
-    setTimeout(() => banner.classList.add('hidden'), 4000);
-  }
-}
-
-function showMixedDone(count) {
-  showScreen('screen-categories');
-  // Re-build grid so progress counts are up to date
-  buildCategoryGrid();
-  const banner = document.getElementById('mixed-done-banner');
-  if (banner) {
-    banner.innerHTML =
-      '<span class="mixed-done-icon">🔀</span>' +
-      '<p class="mixed-done-msg">Mixed Review complete! <strong>' + count + ' rules</strong> reviewed across different categories.</p>';
-    banner.classList.remove('hidden');
-    setTimeout(() => banner.classList.add('hidden'), 5000);
-  }
-  // Reset back button label
-  document.getElementById('back-to-rules').textContent = '← Rules';
-}
 
 function finishAndRate(quality) {
   const cardId = 'grammar_' + currentRule.category + '_' + currentRule.id;
@@ -949,11 +851,7 @@ function finishAndRate(quality) {
     return;
   }
 
-  if (mixedReviewMode) {
-    advanceMixedReview();
-  } else {
-    showRules(currentRule.category);
-  }
+  showRules(currentRule.category);
 }
 
 function _showPathSessionComplete() {

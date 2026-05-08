@@ -253,6 +253,7 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.cefr, isCorrect, 'quiz');
   Progress.recordSession(quizTopicKey, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
 

@@ -260,6 +260,7 @@ function checkAnswer() {
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'translation');
   Progress.recordSession('trans_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
 

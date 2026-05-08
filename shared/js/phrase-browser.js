@@ -27,6 +27,9 @@ const PhraseBrowser = (() => {
     const isWordList = total > 0 && typeof items[0] === 'object';
     const pct = total > 0 ? Math.round((seenCount / total) * 100) : 0;
 
+    /* Reset scroll before any DOM change so focus() below lands in-view */
+    window.scrollTo(0, 0);
+
     /* Hide the picker, build our section */
     if (pickerEl) pickerEl.classList.add('hidden');
 
@@ -133,26 +136,16 @@ const PhraseBrowser = (() => {
       grid.appendChild(chip);
     });
 
-    /* ── CTA footer ── */
-    const cta = document.createElement('div');
-    cta.className = 'pb-cta';
-
-    const startBtn = document.createElement('button');
-    startBtn.className = 'pb-start-btn';
-    startBtn.textContent = 'Start from beginning \u2192';
-    cta.appendChild(startBtn);
-
     /* ── Assemble ── */
     section.appendChild(bar);
     section.appendChild(track);
     section.appendChild(grid);
-    section.appendChild(cta);
 
     const main = document.querySelector('main');
     if (main) main.appendChild(section);
     else document.body.appendChild(section);
 
-    backBtn.focus();
+    backBtn.focus({ preventScroll: true });
 
     function close() {
       section.remove();
@@ -160,7 +153,6 @@ const PhraseBrowser = (() => {
     }
 
     backBtn.addEventListener('click', close);
-    startBtn.addEventListener('click', () => { section.remove(); window.scrollTo(0, 0); onStart(0); });
   }
 
   return { show };

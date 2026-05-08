@@ -1149,61 +1149,6 @@ blockquote.rule-tip {
   margin-bottom: 10px;
 }
 
-/* ── Mixed Review Section ── */
-.mixed-review-section {
-  width: 100%;
-  max-width: 560px;
-  margin: 28px auto 0;
-  text-align: center;
-}
-
-.mixed-review-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 28px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, #7C3AED 0%, #2563EB 100%);
-  border: none;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: filter var(--transition), transform var(--transition);
-  box-shadow: 0 4px 14px rgba(124,58,237,0.3);
-}
-.mixed-review-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
-
-.mixed-review-hint {
-  margin-top: 8px;
-  font-size: 0.82rem;
-  color: var(--clr-text-muted);
-  font-weight: 500;
-}
-
-/* ── Mixed Review Done Banner ── */
-.mixed-done-banner {
-  width: 100%;
-  max-width: 560px;
-  margin: 20px auto 0;
-  padding: 14px 20px;
-  background: var(--activity-clr-light, #EDE9FE);
-  border: 1.5px solid var(--activity-clr, #7C3AED);
-  border-radius: var(--radius-lg, 12px);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  animation: fadeIn 0.4s ease-out both;
-}
-.mixed-done-icon { font-size: 1.3rem; }
-.mixed-done-msg {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--clr-text);
-  margin: 0;
-}
-
 
 /* ── Related Phrases (complete card — bridge to other activities) ── */
 .related-phrases {

@@ -72,7 +72,7 @@
 }
 
 .stat-value {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--clr-primary);
   line-height: 1;
@@ -126,6 +126,35 @@
   margin-top: -12px;
   margin-bottom: 14px;
   font-weight: 500;
+}
+
+/* ---- Topic Preference Bubbles ---- */
+.prog-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prog-bubble {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--clr-border);
+  background: var(--clr-card);
+  color: var(--clr-text);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+}
+
+.prog-bubble:hover { border-color: var(--clr-primary); }
+
+.prog-bubble--on {
+  background: var(--clr-primary);
+  border-color: var(--clr-primary);
+  color: #fff;
+  transform: scale(1.04);
 }
 
 /* ---- CEFR Bar ---- */
@@ -634,7 +663,7 @@ details.section-block:not([open]) > summary.section-title {
 
 @media (max-width: 480px) {
   .stats-row { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .stat-value { font-size: 2rem; }
+  .stat-value { font-size: 1.6rem; }
   .prog-cefr-bar { grid-template-columns: repeat(2, 1fr); }
   /* Hide pills on very small screens, keep the bar */
   .prog-pnode { grid-template-columns: 28px 1fr auto; }

@@ -238,8 +238,10 @@ function flipCard() {
 }
 
 function rateAndNext(quality) {
-  Progress.rate(cardIds[currentIndex], quality);
-  Progress.recordSession(vocabTopicKey, quality >= 3 ? 1 : 0, 1);
+  const _isCorrect = quality >= 3;
+  Progress.rate(cardIds[currentIndex], _isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.cefr, _isCorrect, 'vocabulary');
+  Progress.recordSession(vocabTopicKey, _isCorrect ? 1 : 0, 1);
 
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const nextHref = PathSession.advance();

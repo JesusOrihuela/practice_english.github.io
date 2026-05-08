@@ -1076,27 +1076,6 @@ body.path-mode {
   padding: 1px 6px;
 }
 
-/* CTA footer */
-.pb-cta {
-  padding-top: 4px;
-}
-
-.pb-start-btn {
-  display: block;
-  width: 100%;
-  padding: 13px;
-  background: var(--activity-clr, var(--clr-primary));
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-lg);
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: opacity var(--transition), box-shadow var(--transition);
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--activity-clr, var(--clr-primary)) 35%, transparent);
-}
-.pb-start-btn:hover { opacity: 0.9; box-shadow: 0 6px 20px color-mix(in srgb, var(--activity-clr, var(--clr-primary)) 45%, transparent); }
 
 /* ---- Reduced Motion (Accessibility) ---- */
 @media (prefers-reduced-motion: reduce) {
