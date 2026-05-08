@@ -60,7 +60,7 @@
         <div id="topic-picker">
             <div class="cloze-header">
                 <h1>Cloze <span>Test</span></h1>
-                <p>Fill in the missing word. The more you recall, the better you remember.</p>
+                <p>Escribe la palabra que falta. Cuanto más recuerdas, mejor retienes.</p>
             </div>
             <div class="topic-grid" id="topic-grid">
                 <!-- Filled by JS -->
@@ -72,14 +72,14 @@
 
             <!-- Session bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="cloze-counter" class="session-counter" role="status" aria-live="polite">0 / 0 learned</span>
-                <span class="streak-badge" id="cloze-streak">🔥 0 day streak</span>
+                <button class="back-btn" id="back-btn">← Temas</button>
+                <span id="cloze-counter" class="session-counter" role="status" aria-live="polite">0 / 0 aprendidas</span>
+                <span class="streak-badge" id="cloze-streak">🔥 racha de 0 día</span>
             </div>
             <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="cloze-title">Fill the <span>Blank</span></h1>
-            <p class="cloze-subtitle">Type the missing word, then press Enter or Check.</p>
+            <p class="cloze-subtitle">Escribe la palabra que falta, luego presiona Enter o Verificar.</p>
 
             <!-- Phrase card with blank -->
             <div class="phrase-card" id="phrase-card">
@@ -88,15 +88,15 @@
             </div>
 
             <!-- Listen button (optional hint) -->
-            <button class="listen-btn" id="listen-btn" aria-label="Listen to the full phrase">🔊 Listen</button>
+            <button class="listen-btn" id="listen-btn" aria-label="Escuchar la frase completa">🔊 Escuchar</button>
 
             <!-- Input row -->
             <div class="cloze-input-row">
                 <input type="text" id="cloze-input"
-                       placeholder="Type the missing word…"
+                       placeholder="Escribe la palabra que falta…"
                        autocomplete="off" spellcheck="false" autocorrect="off"
                        aria-label="Missing word">
-                <button id="check-btn" class="check-btn">Check ✓</button>
+                <button id="check-btn" class="check-btn">Verificar ✓</button>
             </div>
 
             <!-- Feedback -->
@@ -111,8 +111,8 @@
             </div>
 
             <!-- Next / Try Again (shown after answer) -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next question">Next →</button>
-            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Try this question again">↩ Try Again</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente pregunta">Siguiente →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta pregunta de nuevo">↩ Intentar de nuevo</button>
 
         </div>
 

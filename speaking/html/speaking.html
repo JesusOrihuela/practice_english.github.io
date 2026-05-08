@@ -59,7 +59,7 @@
         <div id="topic-picker">
             <div class="topic-picker-header">
                 <h1>Speaking <span>Practice</span></h1>
-                <p>Choose a topic and start practicing your pronunciation with real-time feedback.</p>
+                <p>Elige un tema y comienza a practicar tu pronunciación con retroalimentación en tiempo real.</p>
             </div>
 
             <div class="img-topic-grid" id="topic-grid">
@@ -72,14 +72,14 @@
 
             <!-- Session info bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="session-counter" class="session-counter" role="status" aria-live="polite">Loading…</span>
-                <span class="streak-badge" id="streak-badge" role="status" aria-live="polite"><span aria-hidden="true">🔥</span> 0 day streak</span>
+                <button class="back-btn" id="back-btn">← Temas</button>
+                <span id="session-counter" class="session-counter" role="status" aria-live="polite">Cargando…</span>
+                <span class="streak-badge" id="streak-badge" role="status" aria-live="polite"><span aria-hidden="true">🔥</span> racha de 0 día</span>
             </div>
             <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="listening-title">How is it <span>pronounced?</span></h1>
-            <p class="listening-subtitle">Listen carefully, then speak the phrase out loud.</p>
+            <p class="listening-subtitle">Escucha con atención y luego pronuncia la frase en voz alta.</p>
 
             <!-- Phrase Card -->
             <div class="phrase-card" id="phrase-card">
@@ -89,16 +89,16 @@
 
             <!-- Primary Actions: Listen + Speak -->
             <div class="button-container">
-                <button id="listenButton" aria-label="Listen to the phrase">🔊 Listen</button>
-                <button id="speakButton" aria-label="Speak the phrase aloud">🎙️ Speak</button>
+                <button id="listenButton" aria-label="Escuchar la frase">🔊 Escuchar</button>
+                <button id="speakButton" aria-label="Habla la frase en voz alta">🎙️ Hablar</button>
             </div>
 
             <!-- Text fallback (shown when STT unavailable) -->
             <div class="text-fallback hidden" id="text-fallback">
-                <label for="text-input" class="visually-hidden">Type the phrase here</label>
-                <input type="text" id="text-input" placeholder="Type the phrase here and press Enter…"
+                <label for="text-input" class="visually-hidden">Escribe la frase aquí</label>
+                <input type="text" id="text-input" placeholder="Escribe la frase aquí y presiona Enter…"
                        autocomplete="off" spellcheck="false">
-                <button id="text-submit" aria-label="Submit typed phrase">Check ✓</button>
+                <button id="text-submit" aria-label="Enviar frase escrita">Verificar ✓</button>
             </div>
 
             <!-- Recording status -->
@@ -120,8 +120,8 @@
             </div>
 
             <!-- Secondary Actions: Try Again + Next -->
-            <button id="tryAnotherButton" class="next-btn hidden" disabled aria-label="Move to next phrase">Next →</button>
-            <button id="tryAgainButton" class="try-again-btn hidden" disabled aria-label="Try speaking again">↩ Try Again</button>
+            <button id="tryAnotherButton" class="next-btn hidden" disabled aria-label="Ir a la siguiente frase">Siguiente →</button>
+            <button id="tryAgainButton" class="try-again-btn hidden" disabled aria-label="Intentar hablar de nuevo">↩ Intentar de nuevo</button>
 
         </div>
 

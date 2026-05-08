@@ -59,7 +59,7 @@ const AppTopicGrid = (() => {
           const keyPrefix = resolveSrsKey(topic) + '_';
           const seen = Object.keys(cards).filter(k => k.startsWith(keyPrefix) && cards[k].reps > 0).length;
           const el = document.getElementById('tp-' + topic.id);
-          if (el) el.textContent = seen + ' / ' + total + ' learned';
+          if (el) el.textContent = seen + ' / ' + total + ' aprendidas';
         })
         .catch(() => {});
     });

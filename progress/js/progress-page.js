@@ -67,7 +67,7 @@ function renderHeroStats() {
   document.getElementById('stat-streak').textContent   = streak.current;
   document.getElementById('stat-mastered').textContent = masteredCount; // total added later by renderExerciseMatrix
   const bestEl = document.getElementById('stat-best-streak');
-  if (bestEl && streak.best > streak.current) bestEl.textContent = '· Best: ' + streak.best;
+  if (bestEl && streak.best > streak.current) bestEl.textContent = '· Récord: ' + streak.best;
 }
 
 // ---- Exercise Overview Accordion ----
@@ -201,13 +201,13 @@ async function renderExerciseMatrix() {
 
       if (!stats) {
         td.innerHTML = '<div class="ex-seg-bar ex-seg-bar--na"></div><span class="ex-cell-na">n/a</span>';
-        td.title = act.label + ' — not applicable for this topic';
+        td.title = act.label + ' — no aplica para este tema';
         row.appendChild(td);
         return;
       }
 
       var ns = stats.total - stats.mastered - stats.learning;
-      td.title = act.label + ': ' + stats.mastered + ' mastered · ' + stats.learning + ' learning · ' + ns + ' not started';
+      td.title = act.label + ': ' + stats.mastered + ' dominadas · ' + stats.learning + ' en progreso · ' + ns + ' sin iniciar';
       td.setAttribute('aria-label', td.title);
       td.innerHTML =
         '<div class="ex-seg-bar">' + _segBar(stats.mastered, stats.learning, stats.total) + '</div>' +
@@ -230,9 +230,9 @@ async function renderExerciseMatrix() {
   legend.className = 'ex-acc-legend';
   legend.setAttribute('aria-hidden', 'true');
   [
-    { cls: 'ex-seg--new',      countCls: 'ex-count--n', label: 'Not started'  },
-    { cls: 'ex-seg--learning', countCls: 'ex-count--l', label: 'In progress'  },
-    { cls: 'ex-seg--mastered', countCls: 'ex-count--m', label: 'Mastered'     },
+    { cls: 'ex-seg--new',      countCls: 'ex-count--n', label: 'Sin iniciar'  },
+    { cls: 'ex-seg--learning', countCls: 'ex-count--l', label: 'En progreso'  },
+    { cls: 'ex-seg--mastered', countCls: 'ex-count--m', label: 'Dominado'     },
   ].forEach(function (li) {
     const el = document.createElement('div');
     el.className = 'ex-acc-legend-item';
@@ -292,7 +292,7 @@ function renderSkillPillars() {
   });
 
   if (container.children.length === 0) {
-    container.innerHTML = '<p class="empty-state">Start practicing to see your skill progress here!</p>';
+    container.innerHTML = '<p class="empty-state">¡Empieza a practicar para ver tu progreso aquí!</p>';
   }
 }
 
@@ -369,24 +369,24 @@ function renderNotificationSettings() {
     const on      = granted && NS.isEnabled();
 
     toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
-    toggle.textContent = on ? '🔔 Reminders on' : '🔕 Enable reminders';
+    toggle.textContent = on ? '🔔 Desactivar recordatorios' : '🔕 Activar recordatorios';
     timeRow.classList.toggle('hidden', !on);
 
     if (Notification.permission === 'denied') {
-      statusEl.textContent = 'Notifications blocked in browser settings.';
+      statusEl.textContent = 'Notificaciones bloqueadas en la configuración del navegador.';
       statusEl.className   = 'notif-status notif-status--off';
-      hintEl.textContent   = 'To enable, allow notifications for this site in your browser settings.';
+      hintEl.textContent   = 'Para activarlas, permite notificaciones de este sitio en la configuración de tu navegador.';
       toggle.disabled      = true;
     } else if (on) {
       const payload = NS.buildPayload();
-      statusEl.textContent = '✓ Active — daily reminder at ' + NS.getReminderTime();
+      statusEl.textContent = '✓ Activo — recordatorio diario a las ' + NS.getReminderTime();
       statusEl.className   = 'notif-status notif-status--on';
-      hintEl.textContent   = payload ? 'Right now: "' + payload.body + '"' : 'No pending reminders — you\'re all caught up!';
+      hintEl.textContent   = payload ? 'Ahora mismo: "' + payload.body + '"' : 'Sin recordatorios pendientes — ¡estás al día!';
       toggle.disabled      = false;
     } else {
       statusEl.textContent = '';
       statusEl.className   = 'notif-status';
-      hintEl.textContent   = 'Fires once per day when you open the app, if your streak is at risk.';
+      hintEl.textContent   = 'Se activa una vez al día cuando abres la app, si tu racha está en riesgo.';
       toggle.disabled      = false;
     }
   }
@@ -419,8 +419,8 @@ function _esc(s) {
 function _formatNextDue(ts) {
   const diffMs  = ts - Date.now();
   const diffHrs = diffMs / 3_600_000;
-  if (diffHrs < 1)  return '⏱ Next review: soon';
-  if (diffHrs < 24) return '⏱ Next review: later today';
+  if (diffHrs < 1)  return '⏱ Próximo repaso: pronto';
+  if (diffHrs < 24) return '⏱ Próximo repaso: más tarde hoy';
   const days = Math.ceil(diffHrs / 24);
-  return '⏱ Next review: in ' + days + (days === 1 ? ' day' : ' days');
+  return '⏱ Próximo repaso: en ' + days + (days === 1 ? ' día' : ' días');
 }

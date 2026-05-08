@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Back to path';
+    _backLink.textContent = '← Volver a la ruta';
     _backLink.addEventListener('click', function () {
       if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -161,10 +161,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
 
   const btn = document.createElement('button');
-  btn.textContent = 'Retry →';
+  btn.textContent = 'Reintentar →';
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -226,7 +226,7 @@ function _beginExercise(idx) {
   const streakBadge = document.getElementById('streak-badge');
   if (streakBadge) {
     const streak = Progress.getStreak();
-    streakBadge.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+    streakBadge.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
   }
   showPhrase(currentIndex);
   updateSessionCounter();
@@ -278,7 +278,7 @@ function updateSessionCounter() {
   if (!el || phrases.length === 0) return;
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    el.textContent = 'Exercise ' + prog.current + ' of ' + prog.total;
+    el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -287,7 +287,7 @@ function updateSessionCounter() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';
@@ -301,14 +301,14 @@ function resetAttempt() {
   document.getElementById('listenButton').disabled = false;
   if (HAS_STT) {
     document.getElementById('speakButton').disabled  = false;
-    document.getElementById('speakButton').textContent = '🎙️ Speak';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+    document.getElementById('speakButton').textContent = '🎙️ Hablar';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
   }
   document.getElementById('tryAgainButton').classList.add('hidden');
   document.getElementById('tryAgainButton').disabled = true;
   document.getElementById('tryAnotherButton').classList.add('hidden');
   document.getElementById('tryAnotherButton').disabled = true;
-  document.getElementById('recognizedText').textContent = "Press the button when you're ready to talk";
+  document.getElementById('recognizedText').textContent = "Presiona el botón cuando estés listo para hablar";
   document.getElementById('recognizedText').className = '';
   const card = document.getElementById('phrase-card');
   if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
@@ -348,7 +348,7 @@ function nextPhrase() {
   if (listenBtn) listenBtn.focus();
   const streak = Progress.getStreak();
   const el = document.getElementById('streak-badge');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
 }
 
 function _showPathSessionComplete() {
@@ -361,14 +361,14 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">Session complete!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completa!</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' review' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' and ' : '') +
-        (newCount > 0 ? newCount + ' new card' + (newCount > 1 ? 's' : '') : '') +
-        ' done today.' +
+        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
+        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
+        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
+        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">Mi Aprendizaje →</a>' +
     '</div>';
 }
 
@@ -460,9 +460,9 @@ async function _startRecording() {
     _isRecording = true;
 
     document.getElementById('listenButton').disabled = true;
-    document.getElementById('speakButton').textContent = '⏹ Stop';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Stop recording');
-    { document.getElementById('recognizedText').textContent = '🎙 Recording… tap Stop when done'; document.getElementById('recognizedText').className = ''; }
+    document.getElementById('speakButton').textContent = '⏹ Detener';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Detener grabación');
+    { document.getElementById('recognizedText').textContent = '🎙 Grabando… toca Detener cuando termines'; document.getElementById('recognizedText').className = ''; }
 
     // VAD: auto-stop after 1.5 s of silence following detected speech
     try {
@@ -488,10 +488,10 @@ async function _startRecording() {
         if (peak > THRESHOLD) {
           speechDetected = true;
           silenceStart   = null;
-          { document.getElementById('recognizedText').textContent = '🎙 Listening…'; document.getElementById('recognizedText').className = 'vad-active'; }
+          { document.getElementById('recognizedText').textContent = '🎙 Escuchando…'; document.getElementById('recognizedText').className = 'vad-active'; }
         } else if (speechDetected) {
           if (!silenceStart) silenceStart = Date.now();
-          { document.getElementById('recognizedText').textContent = '🎙 Recording… tap Stop when done'; document.getElementById('recognizedText').className = ''; }
+          { document.getElementById('recognizedText').textContent = '🎙 Grabando… toca Detener cuando termines'; document.getElementById('recognizedText').className = ''; }
           if (Date.now() - silenceStart >= SILENCE_MS) {
             clearInterval(_vadIntervalId);
             _vadIntervalId = null;
@@ -530,8 +530,8 @@ function _stopRecording() {
   if (_vadAudioCtx) { _vadAudioCtx.close().catch(() => {}); _vadAudioCtx = null; }
 
   document.getElementById('speakButton').disabled  = true;
-  document.getElementById('speakButton').textContent = '⏳ Transcribing…';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Transcribing your speech');
+  document.getElementById('speakButton').textContent = '⏳ Transcribiendo…';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Transcribiendo tu voz');
 
   _mediaRecorder.onstop = async () => {
     _mediaRecorder.stream.getTracks().forEach(t => t.stop());
@@ -572,8 +572,8 @@ function _isBlankAudio(text) {
 function _onTranscript(text) {
   clearTimeout(_sttTimeoutId);
   document.getElementById('speakButton').disabled  = false;
-  document.getElementById('speakButton').textContent = '🎙️ Speak';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+  document.getElementById('speakButton').textContent = '🎙️ Hablar';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
 
   if (_isBlankAudio(text)) {
     _showNotUnderstood();
@@ -593,7 +593,7 @@ function _showNotUnderstood() {
   const sd  = document.getElementById('speaking-diff');
   const card = document.getElementById('phrase-card');
 
-  if (fbr) { fbr.textContent = '👂 Couldn\'t understand you!'; fbr.className = 'feedback-result not-understood'; }
+  if (fbr) { fbr.textContent = '👂 ¡No pude entenderte!'; fbr.className = 'feedback-result not-understood'; }
   if (sd)  { sd.textContent = ''; sd.classList.add('hidden'); }
   if (fb)  { fb.className = 'speaking-feedback not-understood'; fb.classList.remove('hidden'); }
   if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
@@ -602,7 +602,7 @@ function _showNotUnderstood() {
   document.getElementById('listenButton').disabled = false;
   if (HAS_STT) {
     document.getElementById('speakButton').disabled   = false;
-    document.getElementById('speakButton').textContent = '🎙️ Speak';
+    document.getElementById('speakButton').textContent = '🎙️ Hablar';
   }
   document.getElementById('tryAgainButton').classList.remove('hidden');
   document.getElementById('tryAgainButton').disabled = false;
@@ -613,8 +613,8 @@ function _onSttError(errMsg) {
   _isRecording = false;
   document.getElementById('listenButton').disabled = false;
   document.getElementById('speakButton').disabled  = false;
-  document.getElementById('speakButton').textContent = '🎙️ Speak';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+  document.getElementById('speakButton').textContent = '🎙️ Hablar';
+  document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
   document.getElementById('recognizedText').textContent = '';
   document.getElementById('recognizedText').className = '';
   const fbr = document.getElementById('speaking-feedback-result');
@@ -657,7 +657,7 @@ function displayResult(text, confidence) {
     else if (confidence > 0)     { confettiCount = 50; }
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
-    if (fbr)  { fbr.textContent = '✓ Correct!'; fbr.className = 'feedback-result correct'; }
+    if (fbr)  { fbr.textContent = '✓ ¡Correcto!'; fbr.className = 'feedback-result correct'; }
     if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildCorrect(originalPhrase)); }
     if (fb)   { fb.className = 'speaking-feedback correct'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--correct'); }
@@ -668,7 +668,7 @@ function displayResult(text, confidence) {
   } else {
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
-    if (fbr)  { fbr.textContent = '✗ Incorrect'; fbr.className = 'feedback-result incorrect'; }
+    if (fbr)  { fbr.textContent = '✗ Incorrecto'; fbr.className = 'feedback-result incorrect'; }
     if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildDiff(text, AppText.closestPhrase(text, [originalPhrase, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)); }
     if (fb)   { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--incorrect'); }
@@ -678,8 +678,8 @@ function displayResult(text, confidence) {
   document.getElementById('listenButton').disabled = false; // keep enabled so learner can replay for comparison
   if (HAS_STT) {
     document.getElementById('speakButton').disabled  = true;
-    document.getElementById('speakButton').textContent = '🎙️ Speak';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Speak the phrase aloud');
+    document.getElementById('speakButton').textContent = '🎙️ Hablar';
+    document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
   }
   const ti = document.getElementById('text-input');
   if (ti) ti.disabled = true;

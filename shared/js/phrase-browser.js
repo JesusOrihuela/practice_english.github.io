@@ -44,7 +44,7 @@ const PhraseBrowser = (() => {
 
     const backBtn = document.createElement('button');
     backBtn.className = 'back-btn';
-    backBtn.textContent = '\u2190 Topics';
+    backBtn.textContent = '\u2190 Temas';
     backBtn.setAttribute('aria-label', 'Back to topic picker');
 
     const barMeta = document.createElement('div');
@@ -56,7 +56,7 @@ const PhraseBrowser = (() => {
 
     const barCount = document.createElement('span');
     barCount.className = 'pb-bar-count';
-    barCount.textContent = seenCount + '\u202f/\u202f' + total + ' practiced';
+    barCount.textContent = seenCount + '\u202f/\u202f' + total + ' aprendidas';
 
     barMeta.appendChild(barTitle);
     barMeta.appendChild(barCount);
@@ -70,7 +70,7 @@ const PhraseBrowser = (() => {
     track.setAttribute('aria-valuenow', seenCount);
     track.setAttribute('aria-valuemin', '0');
     track.setAttribute('aria-valuemax', total);
-    track.setAttribute('aria-label', pct + '% of ' + topicLabel + ' practiced');
+    track.setAttribute('aria-label', pct + '% de ' + topicLabel + ' aprendidas');
     const fill = document.createElement('div');
     fill.className = 'pb-track-fill';
     fill.style.width = pct + '%';
@@ -96,7 +96,7 @@ const PhraseBrowser = (() => {
       const chip = document.createElement('button');
       chip.className = 'pb-chip' + (seen ? ' pb-chip--seen' : '');
       chip.setAttribute('role', 'listitem');
-      chip.setAttribute('aria-label', (isWordList ? 'Word' : 'Phrase') + ' ' + (i + 1) + ': ' + mainText + (seen ? ' (practiced)' : ''));
+      chip.setAttribute('aria-label', (isWordList ? 'Palabra' : 'Frase') + ' ' + (i + 1) + ': ' + mainText + (seen ? ' (aprendida)' : ''));
 
       const num = document.createElement('span');
       num.className = 'pb-chip-num';

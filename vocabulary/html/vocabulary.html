@@ -60,7 +60,7 @@
         <div id="topic-picker">
             <div class="topic-picker-header">
                 <h1>Vocabulary <span>Trainer</span></h1>
-                <p>Choose a topic, flip each card to reveal the meaning, then rate how well you know it.</p>
+                <p>Elige un tema, voltea cada tarjeta para ver su significado y califica qué tan bien la conoces.</p>
             </div>
             <div class="topic-grid" id="topic-grid"></div>
         </div>
@@ -70,9 +70,9 @@
 
             <!-- Stats Bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn" aria-label="Back to topic picker">← Topics</button>
-                <span id="cards-remaining" class="session-counter" role="status" aria-live="polite">Loading…</span>
-                <span class="streak-badge" id="vocab-streak"><span aria-hidden="true">🔥</span> 0 day streak</span>
+                <button class="back-btn" id="back-btn" aria-label="Volver al selector de temas">← Temas</button>
+                <span id="cards-remaining" class="session-counter" role="status" aria-live="polite">Cargando…</span>
+                <span class="streak-badge" id="vocab-streak"><span aria-hidden="true">🔥</span> racha de 0 día(s)</span>
             </div>
             <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
@@ -86,25 +86,25 @@
                             <span class="word-category" id="word-category"></span>
                         </div>
                         <div class="word-text" id="word-text">—</div>
-                        <button class="listen-btn" id="listen-btn" aria-label="Listen to pronunciation">🔊 Listen</button>
-                        <div class="flip-hint">Reveal meaning</div>
+                        <button class="listen-btn" id="listen-btn" aria-label="Escuchar pronunciación">🔊 Escuchar</button>
+                        <div class="flip-hint">Ver significado</div>
                     </div>
 
                     <!-- Back: definition + example + translation -->
                     <div class="flashcard-face flashcard-back">
                         <div class="fc-back-word" id="fc-back-word"></div>
-                        <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Listen to pronunciation">🔊 Listen</button>
+                        <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Escuchar pronunciación">🔊 Escuchar</button>
                         <div class="fc-definition-block">
-                            <span class="fc-label">Definition</span>
+                            <span class="fc-label">Definición</span>
                             <div class="word-definition" id="word-definition"></div>
                         </div>
                         <div class="fc-divider"></div>
                         <div class="fc-example-block">
-                            <span class="fc-label">Example</span>
+                            <span class="fc-label">Ejemplo</span>
                             <div class="word-example" id="word-example"></div>
                         </div>
                         <div class="fc-translation-block">
-                            <span class="fc-label">Spanish</span>
+                            <span class="fc-label">Español</span>
                             <div class="word-translation" id="word-translation"></div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@
             </div>
 
             <!-- Next button (appear after flip) -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next word">Next →</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente palabra">Siguiente →</button>
 
         </div>
 

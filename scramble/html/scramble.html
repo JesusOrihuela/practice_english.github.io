@@ -60,7 +60,7 @@
         <div id="topic-picker">
             <div class="scramble-header">
                 <h1>Word <span>Scramble</span></h1>
-                <p>Tap words to put the sentence in the right order. No clues — your brain does the work.</p>
+                <p>Toca las palabras para agregarlas. Toca las colocadas para quitarlas.</p>
             </div>
             <div class="topic-grid" id="topic-grid">
                 <!-- Filled by JS -->
@@ -72,38 +72,38 @@
 
             <!-- Session bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="scramble-counter" class="session-counter" role="status" aria-live="polite">0 / 0 learned</span>
-                <span class="streak-badge" id="scramble-streak">🔥 0 day streak</span>
+                <button class="back-btn" id="back-btn">← Temas</button>
+                <span id="scramble-counter" class="session-counter" role="status" aria-live="polite">0 / 0 aprendidas</span>
+                <span class="streak-badge" id="scramble-streak">🔥 racha de 0 día(s)</span>
             </div>
             <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="scramble-title">Build the <span>Sentence</span></h1>
-            <p class="scramble-subtitle">Tap words to add them. Tap placed words to remove them.</p>
+            <p class="scramble-subtitle">Toca las palabras para agregarlas. Toca las colocadas para quitarlas.</p>
 
             <!-- Spanish hint -->
             <div class="hint-card" id="hint-card">
-                <span class="hint-label" aria-label="Spanish translation hint">Hint</span>
+                <span class="hint-label" aria-label="Pista de traducción en español">Pista</span>
                 <span class="hint-text" id="hint-text">—</span>
             </div>
 
             <!-- Construction area (where user builds the sentence) -->
             <div class="construction-zone">
                 <div class="zone-label-row">
-                    <p class="zone-label">Your sentence</p>
-                    <button class="clear-btn" id="clear-btn" aria-label="Clear sentence">↩ Clear</button>
+                    <p class="zone-label">Tu oración</p>
+                    <button class="clear-btn" id="clear-btn" aria-label="Borrar oración">↩ Borrar</button>
                 </div>
                 <div class="construction-row">
                     <div class="construction-area" id="construction-area" role="region" aria-label="Built sentence" aria-live="polite">
-                        <span class="placeholder-text" id="placeholder">Tap words below to start…</span>
+                        <span class="placeholder-text" id="placeholder">Toca las palabras de abajo para empezar…</span>
                     </div>
-                    <button class="check-btn" id="check-btn">Check ✓</button>
+                    <button class="check-btn" id="check-btn">Verificar ✓</button>
                 </div>
             </div>
 
             <!-- Word bank (scrambled tiles to pick from) -->
             <div class="word-bank-zone">
-                <p class="zone-label">Word bank</p>
+                <p class="zone-label">Banco de palabras</p>
                 <div class="word-bank" id="word-bank" role="group" aria-label="Available words"></div>
             </div>
 
@@ -115,8 +115,8 @@
             </div>
 
             <!-- Next / Try Again (shown after answer) -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next phrase">Next →</button>
-            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Try this phrase again">↩ Try Again</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente frase">Siguiente →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta frase de nuevo">↩ Intentar de nuevo</button>
 
         </div>
 

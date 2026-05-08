@@ -13,15 +13,15 @@
     {
       id: 'first_streak',
       emoji: '🌱',
-      title: 'First Day Streak',
-      desc: 'You came back — that\'s the hardest part.',
+      title: 'Primera Racha',
+      desc: 'Volviste — esa es la parte más difícil.',
       check: function (cards, sessions, streak) { return streak.current >= 1; }
     },
     {
       id: 'phrases_10',
       emoji: '📖',
-      title: '10 Phrases Learned',
-      desc: 'You\'ve started building your English.',
+      title: '10 Frases Aprendidas',
+      desc: 'Has empezado a construir tu inglés.',
       check: function (cards) {
         return Object.entries(cards).filter(function (kv) {
           return !kv[0].startsWith('_') && kv[1].reps >= 1;
@@ -31,8 +31,8 @@
     {
       id: 'all_activities',
       emoji: '🎯',
-      title: 'All-Round Learner',
-      desc: 'You tried all 5 activity types. Every skill counts!',
+      title: 'Aprendiz Completo',
+      desc: 'Probaste los 5 tipos de actividad. ¡Cada habilidad cuenta!',
       check: function (cards) {
         var hasSpeaking  = Object.entries(cards).some(function (kv) {
           var k = kv[0];
@@ -48,8 +48,8 @@
     {
       id: 'topic_unlocked',
       emoji: '🗝️',
-      title: 'Pathfinder',
-      desc: 'You practiced enough to move on to a new topic. The path opens up!',
+      title: 'Explorador',
+      desc: 'Practicaste suficiente para avanzar a un nuevo tema. ¡El camino se abre!',
       check: function (cards) {
         var next = ['restaurant_', 'supermarket_', 'kitchen_', 'traveling_', 'entertainment_', 'gym_', 'technology_', 'accountability_'];
         return Object.entries(cards).some(function (kv) {
@@ -62,8 +62,8 @@
     {
       id: 'speaking_50',
       emoji: '🗣️',
-      title: '50 Speaking Phrases',
-      desc: 'Your speaking confidence is growing fast.',
+      title: '50 Frases de Speaking',
+      desc: 'Tu confianza al hablar crece rápidamente.',
       check: function (cards) {
         return Object.entries(cards).filter(function (kv) {
           return !kv[0].startsWith('_') && !SPEAKING_PREFIX.test(kv[0]) && kv[1].reps >= 1;
@@ -73,8 +73,8 @@
     {
       id: 'perfect_session',
       emoji: '✨',
-      title: 'Flawless',
-      desc: 'Perfect score in a session with 5 or more cards. Impressive!',
+      title: 'Perfecto',
+      desc: 'Puntuación perfecta en una sesión con 5 o más tarjetas. ¡Impresionante!',
       check: function (cards, sessions) {
         return sessions.some(function (s) { return s.total >= 5 && s.correct === s.total; });
       }
@@ -82,8 +82,8 @@
     {
       id: 'grammar_first',
       emoji: '🏆',
-      title: 'First Grammar Rule',
-      desc: 'You completed your first Grammar Workshop rule.',
+      title: 'Primera Regla de Gramática',
+      desc: 'Completaste tu primera regla del Grammar Workshop.',
       check: function (cards) {
         return Object.entries(cards).some(function (kv) {
           return kv[0].startsWith('grammar_') && kv[1].reps >= 1;
@@ -93,15 +93,15 @@
     {
       id: 'streak_7',
       emoji: '🔥',
-      title: '7-Day Streak',
-      desc: 'One week of consistent practice — habit formed!',
+      title: 'Racha de 7 Días',
+      desc: 'Una semana de práctica constante — ¡hábito formado!',
       check: function (cards, sessions, streak) { return streak.current >= 7; }
     },
     {
       id: 'first_mastered',
       emoji: '⭐',
-      title: 'First Card Mastered',
-      desc: 'You reached full mastery on a phrase — consistent and accurate!',
+      title: 'Primera Tarjeta Dominada',
+      desc: 'Alcanzaste dominio total en una frase — ¡constante y preciso!',
       check: function (cards) {
         return Object.keys(cards).some(function (key) {
           if (key.startsWith('_')) return false;
@@ -112,8 +112,8 @@
     {
       id: 'mastered_50',
       emoji: '💡',
-      title: '50 Cards Mastered',
-      desc: '50 phrases at full mastery — your English is sticking!',
+      title: '50 Tarjetas Dominadas',
+      desc: '50 frases con dominio total — ¡tu inglés se está fijando!',
       check: function (cards) {
         if (typeof Progress === 'undefined') return false;
         return Object.keys(cards).filter(function (key) {
@@ -124,15 +124,15 @@
     {
       id: 'streak_30',
       emoji: '💎',
-      title: 'Iron Habit',
-      desc: '30 days of consistent practice. English is part of your life now.',
+      title: 'Hábito de Hierro',
+      desc: '30 días de práctica constante. El inglés ya es parte de tu vida.',
       check: function (cards, sessions, streak) { return streak.best >= 30; }
     },
     {
       id: 'mastered_100',
       emoji: '🌟',
-      title: 'Language Champion',
-      desc: '100 cards at full mastery. You\'re building real fluency.',
+      title: 'Campeón del Idioma',
+      desc: '100 tarjetas con dominio total. Estás construyendo fluidez real.',
       check: function (cards) {
         if (typeof Progress === 'undefined') return false;
         return Object.keys(cards).filter(function (key) {
@@ -175,14 +175,14 @@
     var shareBtn = document.createElement('button');
     shareBtn.className = 'milestone-toast__share';
     shareBtn.id = 'mt-share';
-    shareBtn.setAttribute('aria-label', 'Share achievement');
+    shareBtn.setAttribute('aria-label', 'Compartir logro');
     shareBtn.title = 'Share';
     shareBtn.textContent = '📤';
 
     var closeBtn = document.createElement('button');
     closeBtn.className = 'milestone-toast__close';
     closeBtn.id = 'mt-close';
-    closeBtn.setAttribute('aria-label', 'Dismiss');
+    closeBtn.setAttribute('aria-label', 'Cerrar');
     closeBtn.textContent = '✕';
 
     body.appendChild(title);
@@ -232,7 +232,7 @@
 
   function shareAchievement() {
     if (!current) return;
-    var text = 'I just unlocked "' + current.title + '" on PracticeEnglish! ' + current.emoji + ' practiceenglish.app';
+    var text = '¡Acabo de desbloquear "' + current.title + '" en PracticeEnglish! ' + current.emoji + ' practiceenglish.app';
     if (navigator.share) {
       navigator.share({ text: text }).catch(function () {});
     } else {
