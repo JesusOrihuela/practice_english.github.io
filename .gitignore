@@ -1,11 +1,10 @@
 # ── Development tools ─────────────────────────────────────────
 tools/
 
-# ── Audio files (pre-generated, ~390 MB) ──────────────────────
-# These are generated locally with: node tools/generate-audio.mjs
-# Excluding them keeps the repo lightweight. The app falls back to
-# Kokoro TTS (in-browser) for any phrase without a pre-generated file.
-# speaking/audio/
+# ── Audio files (pre-generated, ~399 MB) ──────────────────────
+# Generated locally with: node tools/generate-audio.mjs
+# Included in the repo so users get instant playback without downloading the TTS model.
+# shared/audio/
 
 # ── Editor & IDE ──────────────────────────────────────────────
 .vscode/
