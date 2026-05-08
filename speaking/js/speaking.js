@@ -641,6 +641,7 @@ function displayResult(text, confidence) {
   sessionTotal++;
 
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'speaking');
 
   const fbr = document.getElementById('speaking-feedback-result');
   const sd  = document.getElementById('speaking-diff');

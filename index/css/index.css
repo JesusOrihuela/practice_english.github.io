@@ -1103,6 +1103,34 @@
 
 .ob-ghost-btn:hover { color: var(--clr-text); }
 
+/* ---- Topic preference bubbles (Step 3) ---- */
+.ob-topic-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 4px 0 20px;
+}
+.ob-bubble {
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1.5px solid var(--clr-border);
+  background: var(--clr-card);
+  color: var(--clr-text);
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+}
+.ob-bubble:hover { border-color: var(--activity-clr, #7C3AED); }
+.ob-bubble--on {
+  background: var(--activity-clr, #7C3AED);
+  border-color: var(--activity-clr, #7C3AED);
+  color: #fff;
+  transform: scale(1.04);
+}
+
 /* ---- Quiz step: left-aligned layout ---- */
 .ob-step--quiz { align-items: stretch; text-align: left; }
 

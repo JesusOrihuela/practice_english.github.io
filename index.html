@@ -214,6 +214,7 @@
                 <span class="ob-dot active"></span>
                 <span class="ob-dot"></span>
                 <span class="ob-dot"></span>
+                <span class="ob-dot"></span>
             </div>
 
             <!-- ── Step 0: How it works ── -->
@@ -227,8 +228,16 @@
                 <button class="ob-primary-btn" id="ob-next-0">Find my level →</button>
             </div>
 
-            <!-- ── Step 1: Placement Quiz ── -->
-            <div class="ob-step ob-step--quiz hidden" id="ob-step-1">
+            <!-- ── Step 1: Topic Preferences ── -->
+            <div class="ob-step hidden" id="ob-step-1">
+                <h2 class="ob-title">What interests you?</h2>
+                <p class="ob-body ob-body--sm">Pick the topics you care about most. You'll see them more often in your path — you can always change this later.</p>
+                <div class="ob-topic-bubbles" id="ob-topic-bubbles"></div>
+                <button class="ob-primary-btn" id="ob-topics-done" type="button">Find my level →</button>
+            </div>
+
+            <!-- ── Step 2: Placement Quiz ── -->
+            <div class="ob-step ob-step--quiz hidden" id="ob-step-2">
                 <div class="ob-quiz-meta" id="ob-quiz-meta">
                     <span class="ob-quiz-counter" id="ob-quiz-counter" aria-live="polite">Question 1 of 10</span>
                     <span class="ob-quiz-lvbadge" id="ob-quiz-lvbadge">A1</span>
@@ -247,14 +256,14 @@
                 </div>
             </div>
 
-            <!-- ── Step 2: Route + CTA ── -->
-            <div class="ob-step hidden" id="ob-step-2">
-                <div class="ob-result-badge" id="ob-result-badge"></div>
-                <h2 class="ob-title">Your path</h2>
-                <p class="ob-body ob-body--sm" id="ob-route-tagline"></p>
-                <div class="ob-route" id="ob-route"></div>
-                <a class="ob-primary-btn ob-cta" id="ob-cta" href="#">Start now →</a>
-                <button class="ob-ghost-btn" id="ob-explore">Explore on my own</button>
+
+            <!-- ── Step 3: Welcome ── -->
+            <div class="ob-step hidden" id="ob-step-3">
+                <div class="ob-hero-icon">🎉</div>
+                <h2 class="ob-title">You're all set!</h2>
+                <p class="ob-body ob-body--sm" id="ob-welcome-msg"></p>
+                <button class="ob-primary-btn" id="ob-go-path" type="button">🗺️ Go to My Learning</button>
+                <button class="ob-ghost-btn" id="ob-go-free" type="button">Explore on my own →</button>
             </div>
 
             </div><!-- /ob-inner -->
@@ -271,6 +280,8 @@
         </div>
     </footer>
 
+    <script src="shared/js/proficiency.js"></script>
+    <script src="shared/js/topics.js"></script>
     <script>
       /* ── Onboarding Modal + Embedded Placement Quiz ── */
       (function () {
@@ -300,52 +311,6 @@
                       '"She suggested that he study more."', '"She suggested that he studied more."'], answer: 2 },
         ];
 
-        var LEVEL_CFG = {
-          A1: { label: 'A1 — Beginner',     color: '#16a34a', bg: '#dcfce7', emoji: '🌱' },
-          A2: { label: 'A2 — Elementary',   color: '#2563eb', bg: '#dbeafe', emoji: '📗' },
-          B1: { label: 'B1 — Intermediate', color: '#d97706', bg: '#fef3c7', emoji: '📘' },
-          B2: { label: 'B2 — Advanced',     color: '#7c3aed', bg: '#ede9fe', emoji: '🎓' },
-        };
-
-        var ROUTES = {
-          A1: {
-            tagline: 'Start with listening and speaking — the most natural path.',
-            steps: [
-              { e: '🎙️', name: 'Speaking',  desc: 'Speak real phrases aloud with your microphone' },
-              { e: '✍️', name: 'Dictation', desc: 'Listen and write what you hear' },
-              { e: '🔤', name: 'Cloze',     desc: 'Fill in the correct word to complete the phrase' },
-            ],
-            cta: 'speaking/html/speaking.html', ctaLabel: '▶ Start with Speaking',
-          },
-          A2: {
-            tagline: 'Build vocabulary fast — then start producing your own sentences.',
-            steps: [
-              { e: '🎙️', name: 'Speaking',   desc: 'Speak real phrases aloud with your microphone' },
-              { e: '🔤', name: 'Cloze Test', desc: 'Fill in the correct word to complete the phrase' },
-              { e: '🧠', name: 'Vocab Quiz', desc: 'Force active recall with multiple choice' },
-            ],
-            cta: 'speaking/html/speaking.html', ctaLabel: '▶ Start with Speaking',
-          },
-          B1: {
-            tagline: 'Activate your output — translate, reconstruct, and study grammar.',
-            steps: [
-              { e: '🔄', name: 'Translation', desc: 'Spanish → English: active production' },
-              { e: '🧩', name: 'Scramble',    desc: 'Put words in the correct order' },
-              { e: '📐', name: 'Grammar',     desc: 'Context → Rule → Production (5 phases)' },
-            ],
-            cta: 'translation/html/translation.html', ctaLabel: '▶ Start with Translation',
-          },
-          B2: {
-            tagline: 'Maximum desirable difficulty — produce, listen, and master.',
-            steps: [
-              { e: '🎙️', name: 'Speaking',    desc: 'Speak real phrases aloud — no crutches' },
-              { e: '🎧', name: 'Dictation',   desc: 'Listen and reconstruct what you hear' },
-              { e: '🔄', name: 'Translation', desc: 'Full Spanish → English production under pressure' },
-            ],
-            cta: 'speaking/html/speaking.html', ctaLabel: '▶ Start with Speaking',
-          },
-        };
-
         var overlay = document.getElementById('ob-overlay');
         var quizIdx = 0, quizScore = 0, quizAnswered = false;
 
@@ -356,6 +321,7 @@
 
         function dismiss() {
           localStorage.setItem('pe_onboarded', '1');
+          if (typeof AppProficiency !== 'undefined') AppProficiency.initDefault();
           overlay.classList.add('ob-out');
           setTimeout(function () { overlay.classList.add('hidden'); }, 280);
         }
@@ -375,27 +341,15 @@
           return 'B2';
         }
 
-        function renderRoute(level) {
-          var lc = LEVEL_CFG[level], r = ROUTES[level];
-          var badge = document.getElementById('ob-result-badge');
-          badge.textContent = lc.emoji + '  ' + lc.label;
-          badge.style.background = lc.bg;
-          badge.style.color = lc.color;
-          document.getElementById('ob-route-tagline').textContent = r.tagline;
-          var el = document.getElementById('ob-route');
-          el.innerHTML = r.steps.map(function (s, i) {
-            return '<div class="ob-route-step">' +
-              '<span class="ob-route-num">' + (i + 1) + '</span>' +
-              '<span class="ob-route-emoji">' + s.e + '</span>' +
-              '<div class="ob-route-info"><strong>' + s.name + '</strong><span>' + s.desc + '</span></div>' +
-              '</div>' +
-              (i < r.steps.length - 1 ? '<div class="ob-route-arrow" aria-hidden="true">↓</div>' : '');
-          }).join('');
-          var cta = document.getElementById('ob-cta');
-          cta.href = r.cta;
-          cta.textContent = r.ctaLabel;
+        var LEVEL_LABEL = { A1: 'A1 — Beginner', A2: 'A2 — Elementary', B1: 'B1 — Intermediate', B2: 'B2 — Advanced' };
+
+        function _finishPlacement(level) {
           localStorage.setItem('pe_placement_done', 'done');
           localStorage.setItem('pe_placement_level', level);
+          if (typeof AppProficiency !== 'undefined') AppProficiency.initFromManual(level);
+          var msg = document.getElementById('ob-welcome-msg');
+          if (msg) msg.textContent = 'Your level is ' + (LEVEL_LABEL[level] || level) + '. Your personalized path is ready — start guided practice or explore freely.';
+          goStep(3);
         }
 
         function showQuestion(i) {
@@ -425,6 +379,7 @@
           var q = QUESTIONS[quizIdx];
           var correct = idx === q.answer;
           if (correct) quizScore++;
+          if (typeof AppProficiency !== 'undefined') AppProficiency.update(q.level, correct, 'quiz', true);
           document.querySelectorAll('.ob-opt-btn').forEach(function (b, i) {
             b.disabled = true;
             if (i === q.answer) b.classList.add('ob-opt-btn--correct');
@@ -436,9 +391,7 @@
               showQuestion(quizIdx);
             } else {
               document.getElementById('ob-quiz-fill').style.width = '100%';
-              var level = scoreToLevel(quizScore);
-              renderRoute(level);
-              setTimeout(function () { goStep(2); }, 400);
+              _finishPlacement(scoreToLevel(quizScore));
             }
           }, 850);
         }
@@ -450,9 +403,31 @@
         });
 
         document.getElementById('ob-next-0').addEventListener('click', function () {
+          renderTopicBubbles();
+          goStep(1);
+        });
+
+        function renderTopicBubbles() {
+          var container = document.getElementById('ob-topic-bubbles');
+          if (container.children.length) return;
+          (typeof AppTopics !== 'undefined' ? AppTopics.PHRASE_TOPICS : []).forEach(function (t) {
+            var btn = document.createElement('button');
+            btn.className = 'ob-bubble';
+            btn.type = 'button';
+            btn.textContent = t.emoji + ' ' + t.label;
+            btn.dataset.id = t.id;
+            btn.addEventListener('click', function () { btn.classList.toggle('ob-bubble--on'); });
+            container.appendChild(btn);
+          });
+        }
+
+        document.getElementById('ob-topics-done').addEventListener('click', function () {
+          var on = Array.from(document.querySelectorAll('#ob-topic-bubbles .ob-bubble--on'))
+                       .map(function (b) { return b.dataset.id; });
+          localStorage.setItem('pe_topic_preferences', JSON.stringify(on));
           quizIdx = 0; quizScore = 0;
           showQuestion(0);
-          goStep(1);
+          goStep(2);
         });
 
         document.getElementById('ob-quiz-skip').addEventListener('click', function () {
@@ -463,14 +438,14 @@
         });
 
         document.querySelectorAll('.ob-manual-btn').forEach(function (btn) {
-          btn.addEventListener('click', function () {
-            renderRoute(btn.dataset.level);
-            goStep(2);
-          });
+          btn.addEventListener('click', function () { _finishPlacement(btn.dataset.level); });
         });
 
-        document.getElementById('ob-cta').addEventListener('click', dismiss);
-        document.getElementById('ob-explore').addEventListener('click', dismiss);
+        document.getElementById('ob-go-path').addEventListener('click', function () {
+          dismiss();
+          window.location.href = 'my-learning/html/my-learning.html';
+        });
+        document.getElementById('ob-go-free').addEventListener('click', dismiss);
 
         setTimeout(show, 700);
       })();

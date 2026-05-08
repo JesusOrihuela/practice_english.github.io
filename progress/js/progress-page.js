@@ -23,10 +23,35 @@ function _pHref(href) { return '../../' + href; }
 document.addEventListener('DOMContentLoaded', async () => {
   renderNotificationSettings();
   renderHeroStats();
+  renderTopicPrefs();
   renderHeatmap();
   renderMilestones();
   await renderExerciseMatrix();
 });
+
+// ---- Topic Preferences ----
+
+function renderTopicPrefs() {
+  const container = document.getElementById('prog-prefs-bubbles');
+  if (!container || typeof AppTopics === 'undefined') return;
+  const saved = new Set(JSON.parse(localStorage.getItem('pe_topic_preferences') || '[]'));
+  AppTopics.PHRASE_TOPICS.forEach(t => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'prog-bubble' + (saved.has(t.id) ? ' prog-bubble--on' : '');
+    btn.textContent = t.emoji + ' ' + t.label;
+    btn.dataset.id = t.id;
+    btn.setAttribute('aria-pressed', saved.has(t.id) ? 'true' : 'false');
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('prog-bubble--on');
+      const isOn = btn.classList.contains('prog-bubble--on');
+      btn.setAttribute('aria-pressed', isOn ? 'true' : 'false');
+      const on = Array.from(container.querySelectorAll('.prog-bubble--on')).map(b => b.dataset.id);
+      localStorage.setItem('pe_topic_preferences', JSON.stringify(on));
+    });
+    container.appendChild(btn);
+  });
+}
 
 // ---- Hero Stats ----
 

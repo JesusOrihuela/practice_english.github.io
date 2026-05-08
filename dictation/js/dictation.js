@@ -284,6 +284,7 @@ function checkAnswer() {
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'dictation');
   Progress.recordSession(DICT_PREFIX + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
   const feedback = document.getElementById('dict-feedback');

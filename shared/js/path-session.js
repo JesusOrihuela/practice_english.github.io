@@ -150,6 +150,12 @@ const PathSession = (() => {
     const newCards = [];
     let newOrder   = 0;
 
+    // Proficiency-aware new card ordering
+    const _CEFR_MID_PS = { A1: 0.083, A2: 0.250, B1: 0.417, B2: 0.583, C1: 0.750, C2: 0.917 };
+    const _userProf    = (typeof AppProficiency !== 'undefined') ? AppProficiency.get() : 0.167;
+    const _prefRaw     = localStorage.getItem('pe_topic_preferences');
+    const _prefSet     = new Set(_prefRaw ? JSON.parse(_prefRaw) : []);
+
     topics.forEach(function (t) {
       const topicId   = t.id;
       const phraseIds = Progress.getPhraseIds(topicId);
@@ -182,7 +188,8 @@ const PathSession = (() => {
             if (card.due <= now)
               reviews.push({ cardId: cardId, topic: topicId, activityId: actId, due: card.due });
           } else if (!card || card.reps === 0) {
-            newCards.push({ cardId: cardId, topic: topicId, activityId: actId, order: newOrder++ });
+            newCards.push({ cardId: cardId, topic: topicId, activityId: actId, order: newOrder++,
+              cefrScore: _CEFR_MID_PS[t.level] || 0.417 });
           }
         });
       });
@@ -210,6 +217,14 @@ const PathSession = (() => {
     const skippedReviews = reviews.length - selectedReviews.length;
 
     // Fill new cards round-robin with remaining time, up to NEW_LIMIT
+    // Sort by proximity to user's proficiency so each activity slot picks the
+    // most relevant card first — cards far from user level stay at the end of
+    // each activity list and are only selected when closer ones run out.
+    newCards.sort(function (a, b) {
+      var wA = _prefSet.size > 0 && _prefSet.has(a.topic) ? 0.5 : 1.0;
+      var wB = _prefSet.size > 0 && _prefSet.has(b.topic) ? 0.5 : 1.0;
+      return Math.abs(a.cefrScore - _userProf) * wA - Math.abs(b.cefrScore - _userProf) * wB;
+    });
     const newBudgetSecs = budgetSecs - reviewSecs;
     const newByAct = {};
     ACT_ORDER.forEach(function (a) { newByAct[a] = []; });

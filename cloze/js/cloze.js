@@ -281,6 +281,7 @@ function checkAnswer() {
 
   // Save progress immediately — so navigating away without pressing Next still records the result
   Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'cloze');
   Progress.recordSession('cloze_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
 
