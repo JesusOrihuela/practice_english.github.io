@@ -112,13 +112,13 @@
 
     if (topDueTopic && topDueCount > 0) {
       var totalDue = Object.keys(dueCounts).reduce(function (s, k) { return s + dueCounts[k]; }, 0);
-      var bodyText = topDueCount + ' card' + (topDueCount > 1 ? 's' : '') + ' due in ' + TOPIC_LABELS[topDueTopic];
+      var bodyText = topDueCount + ' tarjeta' + (topDueCount > 1 ? 's' : '') + ' pendiente' + (topDueCount > 1 ? 's' : '') + ' en ' + TOPIC_LABELS[topDueTopic];
       if (totalDue > topDueCount) {
-        bodyText += ' (+ ' + (totalDue - topDueCount) + ' more across other topics)';
+        bodyText += ' (+ ' + (totalDue - topDueCount) + ' más en otros temas)';
       }
-      bodyText += ' — review now.';
+      bodyText += ' — repasa ahora.';
       return {
-        title: '📚 Cards waiting for review',
+        title: '📚 Tarjetas pendientes de repaso',
         body:  bodyText,
         tag:   'srs-due',
         url:   'speaking/html/speaking.html?topic=' + topDueTopic,
@@ -128,8 +128,8 @@
     // ── Priority 2: streak at risk ──
     if (streak.current >= 2 && !practicedToday) {
       return {
-        title: '🔥 Streak at risk',
-        body:  streak.current + '-day streak! Practice today to keep it going.',
+        title: '🔥 Racha en riesgo',
+        body:  '¡Racha de ' + streak.current + ' días! Practica hoy para mantenerla.',
         tag:   'streak-risk',
         url:   'speaking/html/speaking.html',
       };
@@ -191,9 +191,9 @@
     var textEl = document.createElement('div');
     textEl.className = 'done-notif-text';
     var strong = document.createElement('strong');
-    strong.textContent = '🔔 Get a daily reminder?';
+    strong.textContent = '🔔 ¿Quieres un recordatorio diario?';
     var desc = document.createElement('span');
-    desc.textContent = "We'll tell you exactly which cards are due.";
+    desc.textContent = 'Te diremos exactamente qué tarjetas tienes pendientes.';
     textEl.appendChild(strong);
     textEl.appendChild(desc);
 
@@ -202,21 +202,21 @@
 
     var yesBtn = document.createElement('button');
     yesBtn.className = 'done-notif-yes';
-    yesBtn.textContent = 'Yes, remind me';
+    yesBtn.textContent = 'Sí, recuérdame';
     yesBtn.addEventListener('click', function () {
       localStorage.setItem(KEY_ASKED, '1');
       requestPermission(function (result) {
         if (result === 'granted') {
-          prompt.innerHTML = '<span class="done-notif-confirmed">✓ Reminders on — we\'ll tell you exactly which cards are due each day.</span>';
+          prompt.innerHTML = '<span class="done-notif-confirmed">✓ Recordatorios activados — te avisaremos qué tarjetas tienes pendientes cada día.</span>';
         } else {
-          prompt.innerHTML = '<span class="done-notif-confirmed">Notifications blocked in browser settings.</span>';
+          prompt.innerHTML = '<span class="done-notif-confirmed">Notificaciones bloqueadas en la configuración del navegador.</span>';
         }
       });
     });
 
     var noBtn = document.createElement('button');
     noBtn.className = 'done-notif-no';
-    noBtn.textContent = 'Not now';
+    noBtn.textContent = 'Ahora no';
     noBtn.addEventListener('click', function () {
       localStorage.setItem(KEY_ASKED, '1');
       prompt.remove();

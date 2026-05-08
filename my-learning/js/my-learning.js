@@ -8,13 +8,13 @@ const _ACT_EMOJI = {
   cloze: '🔤', dictation: '✍️', translation: '🔄', scramble: '🧩',
 };
 const _ACT_LABEL = {
-  speaking: 'Speaking', grammar: 'Grammar', vocabulary: 'Vocab', quiz: 'Quiz',
-  cloze: 'Fill-in', dictation: 'Dictation', translation: 'Translate', scramble: 'Scramble',
+  speaking: 'Speaking', grammar: 'Grammar', vocabulary: 'Vocabulary', quiz: 'Quiz',
+  cloze: 'Cloze', dictation: 'Dictation', translation: 'Translation', scramble: 'Scramble',
 };
 const _TOPIC_LABEL = {
-  greetings: '👋 Greetings', restaurant: '🍽️ Restaurant', supermarket: '🛒 Supermarket',
-  kitchen: '🍳 Kitchen', traveling: '✈️ Traveling', entertainment: '🎬 Entertainment',
-  gym: '💪 Gym', technology: '💻 Technology', accountability: '📋 Accountability',
+  greetings: '👋 Saludos', restaurant: '🍽️ Restaurante', supermarket: '🛒 Supermercado',
+  kitchen: '🍳 Cocina', traveling: '✈️ Viajes', entertainment: '🎬 Entretenimiento',
+  gym: '💪 Gimnasio', technology: '💻 Tecnología', accountability: '📋 Responsabilidad',
 };
 
 function _esc(s) {
@@ -42,17 +42,17 @@ function _renderStreak() {
   const el = document.getElementById('ml-streak');
   if (!el || typeof Progress === 'undefined') return;
   const streak = Progress.getStreak();
-  if (streak.current > 0) el.textContent = '🔥 ' + streak.current + ' day streak';
+  if (streak.current > 0) el.textContent = '🔥 racha de ' + streak.current + ' día' + (streak.current !== 1 ? 's' : '');
 }
 
 // ── CTA ──────────────────────────────────────────────────────
 
 function _ctaSubtitle(summary) {
   var parts = [];
-  if (summary.reviewCount > 0)    parts.push(summary.reviewCount + ' to review');
-  if (summary.newCount > 0)       parts.push(summary.newCount + ' new exercise' + (summary.newCount !== 1 ? 's' : ''));
+  if (summary.reviewCount > 0)    parts.push(summary.reviewCount + ' para repasar');
+  if (summary.newCount > 0)       parts.push(summary.newCount + ' ejercicio' + (summary.newCount !== 1 ? 's' : '') + ' nuevo' + (summary.newCount !== 1 ? 's' : ''));
   if (summary.estimatedMinutes)   parts.push('~' + summary.estimatedMinutes + ' min');
-  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' deferred');
+  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' diferidos');
   return parts.join(' · ');
 }
 
@@ -74,12 +74,12 @@ function _renderCta() {
       '<div class="ml-cta__bar"><div class="ml-cta__bar-fill" style="width:' + Math.max(pct,5) + '%"></div></div>' +
       '<div class="ml-cta__row">' +
         '<div class="ml-cta__body">' +
-          '<div class="ml-cta__title">Keep it up! 💪</div>' +
-          '<div class="ml-cta__sub">Exercise ' + prog.current + ' of ' + prog.total +
-            (remMins ? ' · ~' + remMins + ' min left' : '') + '</div>' +
+          '<div class="ml-cta__title">¡Sigue así! 💪</div>' +
+          '<div class="ml-cta__sub">Ejercicio ' + prog.current + ' de ' + prog.total +
+            (remMins ? ' · ~' + remMins + ' min restantes' : '') + '</div>' +
         '</div>' +
-        (href ? '<a href="../../' + _esc(href) + '" class="ml-cta__btn">Continue →</a>'
-              : '<span class="ml-cta__done">✓ Done for today</span>') +
+        (href ? '<a href="../../' + _esc(href) + '" class="ml-cta__btn">Continuar →</a>'
+              : '<span class="ml-cta__done">✓ Listo por hoy</span>') +
       '</div>';
     return;
   }
@@ -87,8 +87,8 @@ function _renderCta() {
   if (session && session.started && session.position >= session.queue.length) {
     el.innerHTML =
       '<div class="ml-cta__row"><div class="ml-cta__body">' +
-        '<div class="ml-cta__title">🎉 Great work today!</div>' +
-        '<div class="ml-cta__sub">Come back tomorrow to keep your streak going</div>' +
+        '<div class="ml-cta__title">🎉 ¡Excelente trabajo hoy!</div>' +
+        '<div class="ml-cta__sub">Vuelve mañana para mantener tu racha</div>' +
       '</div></div>';
     return;
   }
@@ -96,8 +96,8 @@ function _renderCta() {
   if (!summary.hasAnything) {
     el.innerHTML =
       '<div class="ml-cta__row"><div class="ml-cta__body">' +
-        '<div class="ml-cta__title">✓ You\'re all caught up!</div>' +
-        '<div class="ml-cta__sub">Come back tomorrow for new exercises</div>' +
+        '<div class="ml-cta__title">✓ ¡Estás al día!</div>' +
+        '<div class="ml-cta__sub">Vuelve mañana para nuevos ejercicios</div>' +
       '</div></div>';
     return;
   }
@@ -105,10 +105,10 @@ function _renderCta() {
   el.innerHTML =
     '<div class="ml-cta__row">' +
       '<div class="ml-cta__body">' +
-        '<div class="ml-cta__title">Ready for today\'s session?</div>' +
+        '<div class="ml-cta__title">¿Listo para la sesión de hoy?</div>' +
         '<div class="ml-cta__sub">' + _ctaSubtitle(summary) + '</div>' +
       '</div>' +
-      '<button class="ml-cta__btn" id="ml-start-btn">Start →</button>' +
+      '<button class="ml-cta__btn" id="ml-start-btn">Empezar →</button>' +
     '</div>';
 
   document.getElementById('ml-start-btn').addEventListener('click', function () {
@@ -139,10 +139,10 @@ function _renderTrail() {
   }
 
   if (session && session.queue.length > 0) {
-    if (titleEl) titleEl.textContent = 'Today\'s Session';
+    if (titleEl) titleEl.textContent = 'Sesión de Hoy';
     _buildSnakeTrail(container, session.queue, session.position);
   } else {
-    if (titleEl) titleEl.textContent = 'Nothing due today';
+    if (titleEl) titleEl.textContent = 'Nada pendiente hoy';
   }
 }
 
@@ -241,7 +241,7 @@ function _buildSnakeTrail(container, queue, position) {
     bubble.className = 'ml-snode__bubble';
     if (isActive && item.href) {
       bubble.href = '../../' + item.href;
-      bubble.setAttribute('aria-label', 'Continue: ' + (_ACT_LABEL[item.activityId] || item.activityId));
+      bubble.setAttribute('aria-label', 'Continuar: ' + (_ACT_LABEL[item.activityId] || item.activityId));
     }
     if (isDone) {
       bubble.innerHTML = '<span class="ml-snode__check">✓</span>';
@@ -260,12 +260,12 @@ function _buildSnakeTrail(container, queue, position) {
     if (!isDone && item.isNew) {
       var badge = document.createElement('span');
       badge.className = 'ml-snode__new-badge';
-      badge.textContent = '✨ New';
+      badge.textContent = '✨ Nuevo';
       info.appendChild(badge);
     } else if (!isDone && !item.isNew) {
       var rbadge = document.createElement('span');
       rbadge.className = 'ml-snode__review-badge';
-      rbadge.textContent = '🔁 Review';
+      rbadge.textContent = '🔁 Repasar';
       info.appendChild(rbadge);
     }
     node.appendChild(info);

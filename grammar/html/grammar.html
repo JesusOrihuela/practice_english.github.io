@@ -61,7 +61,7 @@
         <div id="screen-categories">
             <div class="grammar-header">
                 <h1>Grammar <span>Workshop</span></h1>
-                <p>Learn English grammar through real context and active practice.</p>
+                <p>Aprende gramática inglesa a través de contexto real y práctica activa.</p>
             </div>
 
             <div class="category-grid" id="category-grid">
@@ -74,7 +74,7 @@
         ══════════════════════════════════════════ -->
         <div id="screen-rules" class="hidden">
             <div class="session-info-bar">
-                <button class="back-btn" id="back-to-categories">← Categories</button>
+                <button class="back-btn" id="back-to-categories">← Categorías</button>
                 <span id="rule-category-label" class="category-label-badge"></span>
             </div>
             <div class="rule-list" id="rule-list">
@@ -89,77 +89,76 @@
 
             <!-- Session bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-to-rules">← Rules</button>
+                <button class="back-btn" id="back-to-rules">← Reglas</button>
                 <span id="exercise-rule-title" class="rule-title-badge"></span>
                 <span id="exercise-cefr-badge" class="cefr-badge"></span>
             </div>
 
             <!-- Phase progress indicator -->
             <div class="phase-progress" id="phase-progress" aria-label="Exercise phases" role="status">
-                <div class="phase-dot" data-phase="0" data-label="Context" aria-label="Phase 1: Context"><span class="phase-dot-num">1</span><span class="phase-dot-label">Context</span></div>
+                <div class="phase-dot" data-phase="0" data-label="Contexto" aria-label="Fase 1: Contexto"><span class="phase-dot-num">1</span><span class="phase-dot-label">Contexto</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="1" data-label="Notice" aria-label="Phase 2: Notice"><span class="phase-dot-num">2</span><span class="phase-dot-label">Notice</span></div>
+                <div class="phase-dot" data-phase="1" data-label="Observa" aria-label="Fase 2: Observa"><span class="phase-dot-num">2</span><span class="phase-dot-label">Observa</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="2" data-label="Rule" aria-label="Phase 3: Rule"><span class="phase-dot-num">3</span><span class="phase-dot-label">Rule</span></div>
+                <div class="phase-dot" data-phase="2" data-label="La Regla" aria-label="Fase 3: La Regla"><span class="phase-dot-num">3</span><span class="phase-dot-label">La Regla</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="3" data-label="Comprehension" aria-label="Phase 4: Comprehension"><span class="phase-dot-num">4</span><span class="phase-dot-label">Comprehension</span></div>
+                <div class="phase-dot" data-phase="3" data-label="Comprensión" aria-label="Fase 4: Comprensión"><span class="phase-dot-num">4</span><span class="phase-dot-label">Comprensión</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="4" data-label="Production" aria-label="Phase 5: Production"><span class="phase-dot-num">5</span><span class="phase-dot-label">Production</span></div>
+                <div class="phase-dot" data-phase="4" data-label="Producción" aria-label="Fase 5: Producción"><span class="phase-dot-num">5</span><span class="phase-dot-label">Producción</span></div>
             </div>
 
             <!-- ── PHASE 1: Context Input ── -->
-            <section id="phase-context" class="phase-section hidden" aria-label="Phase 1: Context">
+            <section id="phase-context" class="phase-section hidden" aria-label="Fase 1: Contexto">
                 <div class="phase-label">
                     <span class="phase-num">1</span>
-                    <span class="phase-name">Context</span>
-                    <span class="phase-hint">Read the dialogue. Notice the highlighted parts.</span>
+                    <span class="phase-name">Contexto</span>
+                    <span class="phase-hint">Lee el diálogo. Observa las partes resaltadas.</span>
                 </div>
                 <div class="dialogue-card" id="dialogue-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions">
-                    <button class="primary-btn" id="context-next-btn">What do you notice? →</button>
+                    <button class="primary-btn" id="context-next-btn">¿Qué observas? →</button>
                 </div>
             </section>
 
             <!-- ── PHASE 2: Noticing ── -->
-            <section id="phase-noticing" class="phase-section hidden" aria-label="Phase 2: Noticing">
+            <section id="phase-noticing" class="phase-section hidden" aria-label="Fase 2: Observa">
                 <div class="phase-label">
                     <span class="phase-num">2</span>
-                    <span class="phase-name">Noticing</span>
-<parameter name="new_string">                    <span class="phase-name">Noticing</span>
-                    <span class="phase-hint">Write your answer before continuing.</span>
+                    <span class="phase-name">Observa</span>
+                    <span class="phase-hint">Escribe tu respuesta antes de continuar.</span>
                 </div>
                 <div class="noticing-card" id="noticing-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions noticing-actions">
                     <span class="noticing-progress" id="noticing-progress" aria-live="polite"></span>
-                    <button class="secondary-btn" id="noticing-show-btn" disabled>Show explanation</button>
+                    <button class="secondary-btn" id="noticing-show-btn" disabled>Ver explicación</button>
                 </div>
             </section>
 
             <!-- ── PHASE 3: Rule Confirmation ── -->
-            <section id="phase-rule" class="phase-section hidden" aria-label="Phase 3: Rule">
+            <section id="phase-rule" class="phase-section hidden" aria-label="Fase 3: La Regla">
                 <div class="phase-label">
                     <span class="phase-num">3</span>
-                    <span class="phase-name">The Rule</span>
-                    <span class="phase-hint">Confirm what you noticed.</span>
+                    <span class="phase-name">La Regla</span>
+                    <span class="phase-hint">Confirma lo que observaste.</span>
                 </div>
                 <div class="rule-card" id="rule-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions">
-                    <button class="primary-btn" id="rule-next-btn">Practice recognition →</button>
+                    <button class="primary-btn" id="rule-next-btn">Practicar reconocimiento →</button>
                 </div>
             </section>
 
             <!-- ── PHASE 4: Structured Input ── -->
-            <section id="phase-structured" class="phase-section hidden" aria-label="Phase 4: Structured Input">
+            <section id="phase-structured" class="phase-section hidden" aria-label="Fase 4: Comprensión">
                 <div class="phase-label">
                     <span class="phase-num">4</span>
-                    <span class="phase-name">Comprehension</span>
-                    <span class="phase-hint">Choose the correct option.</span>
+                    <span class="phase-name">Comprensión</span>
+                    <span class="phase-hint">Elige la opción correcta.</span>
                 </div>
                 <div class="structured-counter" id="structured-counter" role="status" aria-live="polite"></div>
                 <div class="structured-card" id="structured-card">
@@ -168,11 +167,11 @@
             </section>
 
             <!-- ── PHASE 5: FITB Production ── -->
-            <section id="phase-production" class="phase-section hidden" aria-label="Phase 5: Production">
+            <section id="phase-production" class="phase-section hidden" aria-label="Fase 5: Producción">
                 <div class="phase-label">
                     <span class="phase-num">5</span>
-                    <span class="phase-name">Production</span>
-                    <span class="phase-hint">Write the correct form in the blank.</span>
+                    <span class="phase-name">Producción</span>
+                    <span class="phase-hint">Escribe la forma correcta en el espacio.</span>
                 </div>
                 <div class="production-counter" id="production-counter" role="status" aria-live="polite"></div>
                 <div class="production-card" id="production-card">
@@ -181,13 +180,13 @@
             </section>
 
             <!-- ── Complete / Rating ── -->
-            <section id="phase-complete" class="phase-section hidden" aria-label="Exercise complete">
+            <section id="phase-complete" class="phase-section hidden" aria-label="Ejercicio completado">
                 <div class="complete-card" id="complete-card">
                     <div class="complete-icon">🎉</div>
-                    <h2 class="complete-title">Exercise complete!</h2>
+                    <h2 class="complete-title">¡Ejercicio completado!</h2>
                     <p class="complete-score" id="complete-score"></p>
 
-                    <button class="primary-btn auto-save-btn" id="rate-auto">Continue →</button>
+                    <button class="primary-btn auto-save-btn" id="rate-auto">Continuar →</button>
                     <!-- Related phrases from Speaking/other activities -->
                     <div id="related-phrases" class="related-phrases hidden" role="region" aria-label="Related practice phrases"></div>
                 </div>

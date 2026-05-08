@@ -98,7 +98,7 @@ function loadData() {
     })
     .catch(() => {
       document.getElementById('category-grid').innerHTML =
-        '<p style="color:var(--clr-danger);text-align:center">Error loading grammar data.</p>';
+        '<p style="color:var(--clr-danger);text-align:center">Error al cargar los datos de gramática.</p>';
     });
 }
 
@@ -126,7 +126,7 @@ function buildCategoryGrid() {
       '<span class="category-emoji">' + cat.emoji + '</span>' +
       '<span class="category-label">' + cat.label + '</span>' +
       '<span class="category-label-es">' + cat.label_es + '</span>' +
-      '<span class="category-progress">' + seen + ' / ' + rulesInCat.length + '</span>';
+      '<span class="category-progress">' + seen + ' / ' + rulesInCat.length + ' aprendidas</span>';
 
     btn.addEventListener('click', () => showRules(cat.id));
     grid.appendChild(btn);
@@ -158,7 +158,7 @@ function _showTopicRules(rules) {
     btn.setAttribute('aria-label', rule.title);
     btn.innerHTML =
       '<span class="rule-row__title">' + rule.title + '</span>' +
-      (seen ? '<span class="rule-row__seen-badge">Studied</span>' : '<span class="rule-row__new-badge">New</span>');
+      (seen ? '<span class="rule-row__seen-badge">Estudiado</span>' : '<span class="rule-row__new-badge">Nuevo</span>');
     btn.addEventListener('click', () => startExercise(rule));
     list.appendChild(btn);
   });
@@ -184,8 +184,8 @@ function showRules(categoryId) {
     list.innerHTML =
       '<div class="empty-state">' +
         '<span class="empty-state__icon">🚧</span>' +
-        '<p class="empty-state__msg">Coming soon</p>' +
-        '<p class="empty-state__sub">We\'re preparing content for this category.</p>' +
+        '<p class="empty-state__msg">Próximamente</p>' +
+        '<p class="empty-state__sub">Estamos preparando contenido para esta categoría.</p>' +
       '</div>';
     showScreen('screen-rules');
     return;
@@ -202,7 +202,7 @@ function showRules(categoryId) {
     btn.setAttribute('aria-label', rule.title + ' — ' + rule.title_es);
 
     const statusHtml = isDone
-      ? '<span class="rule-row__status rule-row__status--done">✓ Done</span>'
+      ? '<span class="rule-row__status rule-row__status--done">✓ Hecho</span>'
       : '<span class="rule-row__status">→</span>';
 
     btn.innerHTML =
@@ -358,7 +358,7 @@ function buildPhase2() {
     const textarea = document.createElement('textarea');
     textarea.className   = 'noticing-input';
     textarea.rows        = 2;
-    textarea.placeholder = promptHint || 'Write your observation…';
+    textarea.placeholder = promptHint || 'Escribe tu observación…';
     textarea.setAttribute('aria-label', 'Answer to question ' + (i + 1));
     card.appendChild(textarea);
     inputs.push(textarea);
@@ -380,7 +380,7 @@ function checkNoticingGate(inputs, btn, progEl, total) {
 function updateNoticingProgress(el, answered, total) {
   if (!el) return;
   if (answered === 0) {
-    el.textContent = 'Answer all ' + total + ' questions to continue';
+    el.textContent = 'Responde las ' + total + ' preguntas para continuar';
     el.className   = 'noticing-progress';
   } else if (answered < total) {
     el.textContent = answered + ' / ' + total + ' respondidas';
@@ -408,7 +408,7 @@ function buildPhase3() {
 
     const heading = document.createElement('p');
     heading.className = 'rule-hypothesis__heading';
-    heading.textContent = 'Your hypothesis';
+    heading.textContent = 'Tu hipótesis';
     hypothesisBlock.appendChild(heading);
 
     prompts.forEach((prompt, i) => {
@@ -464,7 +464,7 @@ function showStructuredItem(idx) {
   }
 
   document.getElementById('structured-counter').textContent =
-    'Question ' + (idx + 1) + ' of ' + total;
+    'Ejercicio ' + (idx + 1) + ' de ' + total;
 
   const item = items[idx];
   const card = document.getElementById('structured-card');
@@ -519,7 +519,7 @@ function showStructuredItem(idx) {
 
       const nextBtn = document.createElement('button');
       nextBtn.className   = 'structured-next-btn';
-      nextBtn.textContent = 'Next →';
+      nextBtn.textContent = 'Siguiente →';
       nextBtn.addEventListener('click', advance);
       card.appendChild(nextBtn);
       nextBtn.focus();
@@ -551,7 +551,7 @@ function showProductionItem(idx) {
   }
 
   document.getElementById('production-counter').textContent =
-    'Item ' + (idx + 1) + ' of ' + total;
+    'Ejercicio ' + (idx + 1) + ' de ' + total;
 
   const item = items[idx];
   const card = document.getElementById('production-card');
@@ -593,7 +593,7 @@ function showProductionItem(idx) {
   // Check button in its own row below the sentence
   const checkBtn = document.createElement('button');
   checkBtn.className   = 'production-check-btn';
-  checkBtn.textContent = 'Check ✓';
+  checkBtn.textContent = 'Verificar ✓';
   const btnRow = document.createElement('div');
   btnRow.className = 'production-input-row production-input-row--check-only';
   btnRow.appendChild(checkBtn);
@@ -607,7 +607,7 @@ function showProductionItem(idx) {
   // Next button
   const nextBtn = document.createElement('button');
   nextBtn.className   = 'production-next-btn';
-  nextBtn.textContent = idx + 1 < total ? 'Next →' : 'See results →';
+  nextBtn.textContent = idx + 1 < total ? 'Siguiente →' : 'Ver resultados →';
   card.appendChild(nextBtn);
 
   // Focus first input
@@ -631,7 +631,7 @@ function showProductionItem(idx) {
       inputs.forEach(i => i.classList.add('production-input--correct'));
       fbEl.className = 'production-feedback production-feedback--correct visible';
       fbEl.innerHTML =
-        '<span class="feedback-answer">✓ ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-answer">✓ ¡Correcto! ' + escapeHTML(item.answer) + '</span>' +
         '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
         (item.contrast
           ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
@@ -640,7 +640,7 @@ function showProductionItem(idx) {
       inputs.forEach(i => i.classList.add('production-input--wrong'));
       fbEl.className = 'production-feedback production-feedback--wrong visible';
       fbEl.innerHTML =
-        '<span class="feedback-answer">Answer: ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-answer">✗ Incorrecto — Respuesta: ' + escapeHTML(item.answer) + '</span>' +
         '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
         (item.contrast
           ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
@@ -703,17 +703,17 @@ function buildPhaseComplete() {
 
   // Score line
   document.getElementById('complete-score').textContent =
-    prodCorrect + ' / ' + total + ' correct (' + pct + '%)';
+    prodCorrect + ' / ' + total + ' correctas (' + pct + '%)';
 
   // Icon + title
   const iconEl  = document.querySelector('.complete-icon');
   const titleEl = document.querySelector('.complete-title');
   if (prodCorrect === total) {
     iconEl.textContent  = wasReentry ? '🏆' : '🎉';
-    titleEl.textContent = wasReentry ? 'Rule mastered!' : 'Exercise complete!';
+    titleEl.textContent = wasReentry ? '¡Regla dominada!' : '¡Ejercicio completado!';
   } else {
     iconEl.textContent  = '💪';
-    titleEl.textContent = 'Keep practising';
+    titleEl.textContent = 'Sigue practicando';
   }
 
   // Focus continue button
@@ -727,7 +727,7 @@ function buildPhaseComplete() {
     _backLink.id = 'grammar-back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link';
-    _backLink.textContent = '← Back to path';
+    _backLink.textContent = '← Volver a la ruta';
     _completeCard.appendChild(_backLink);
   }
 
@@ -781,13 +781,13 @@ function buildRelatedPhrases(rule) {
 
     var heading = document.createElement('p');
     heading.className = 'related-heading';
-    heading.textContent = '💬 Real phrases using this rule — practise in context';
+    heading.textContent = '💬 Frases reales usando esta regla — practica en contexto';
     container.appendChild(heading);
 
     var activities = [
       { key: 'pe_last_cloze',        href: '../../cloze/html/cloze.html',            label: '🔤 Cloze' },
-      { key: 'pe_last_translation',  href: '../../translation/html/translation.html', label: '🔄 Translate' },
-      { key: 'pe_last_speaking',     href: '../../speaking/html/speaking.html',       label: '🎙️ Speak' },
+      { key: 'pe_last_translation',  href: '../../translation/html/translation.html', label: '🔄 Traducir' },
+      { key: 'pe_last_speaking',     href: '../../speaking/html/speaking.html',       label: '🎙️ Hablar' },
     ];
 
     matches.forEach(function(m) {
@@ -861,9 +861,9 @@ function _showPathSessionComplete() {
   screen.innerHTML =
     '<div class="path-session-complete">' +
       '<div class="path-session-complete__icon">🎉</div>' +
-      '<h2 class="path-session-complete__title">Session complete!</h2>' +
-      (summary ? '<p class="path-session-complete__sub">You reviewed ' + summary.reviewCount + ' cards and learned ' + summary.newCount + ' new ones today.</p>' : '') +
-      '<a href="../../my-learning/html/my-learning.html" class="path-session-complete__btn">My Learning →</a>' +
+      '<h2 class="path-session-complete__title">¡Sesión completada!</h2>' +
+      (summary ? '<p class="path-session-complete__sub">Repasaste ' + summary.reviewCount + ' tarjetas y aprendiste ' + summary.newCount + ' nuevas hoy.</p>' : '') +
+      '<a href="../../my-learning/html/my-learning.html" class="path-session-complete__btn">Mi Ruta de Aprendizaje →</a>' +
     '</div>';
 }
 
@@ -879,7 +879,7 @@ function setReentryBanner(visible) {
     banner.setAttribute('role', 'status');
     banner.innerHTML =
       '<span class="reentry-icon">🔁</span>' +
-      '<span>Resuming from <strong>Comprehension + Production</strong> — context and rule already seen</span>';
+      '<span>Reanudando desde <strong>Comprensión + Producción</strong> — contexto y regla ya vistos</span>';
     // Insert after phase-progress bar
     const prog = document.getElementById('phase-progress');
     if (prog) prog.insertAdjacentElement('afterend', banner);

@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Back to path';
+    _backLink.textContent = '← Volver a la ruta';
     _backLink.addEventListener('click', function () {
       if (isFlipped && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -116,10 +116,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error loading topic. Check your connection.';
+  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
 
   const btn = document.createElement('button');
-  btn.textContent = 'Retry →';
+  btn.textContent = 'Reintentar →';
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -185,7 +185,7 @@ function _beginExercise(idx) {
   document.getElementById('vocab-content').classList.remove('hidden');
   const streak = Progress.getStreak();
   const el = document.getElementById('vocab-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
   showCard(currentIndex);
   updateStatsBar();
 }
@@ -263,7 +263,7 @@ function rateAndNext(quality) {
 
   const streak = Progress.getStreak();
   const el = document.getElementById('vocab-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + streak.current + ' day streak';
+  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
 }
 
 function _showPathSessionComplete() {
@@ -274,12 +274,12 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">Session complete!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completada!</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' review' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' and ' : '') +
-        (newCount > 0 ? newCount + ' new card' + (newCount > 1 ? 's' : '') : '') +
-        ' done today.' +
+        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
+        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
+        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
+        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
       '</p>' +
       '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
     '</div>';
@@ -292,7 +292,7 @@ function updateStatsBar() {
   if (!el) return;
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    el.textContent = 'Exercise ' + prog.current + ' of ' + prog.total;
+    el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -301,7 +301,7 @@ function updateStatsBar() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = stats.seen + ' / ' + stats.total + ' learned';
+  el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';

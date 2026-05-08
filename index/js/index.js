@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 function _ctaSubtitle(summary) {
   var parts = [];
-  if (summary.reviewCount > 0) parts.push(summary.reviewCount + ' to review');
-  if (summary.newCount > 0)    parts.push(summary.newCount + ' new exercise' + (summary.newCount !== 1 ? 's' : ''));
+  if (summary.reviewCount > 0) parts.push(summary.reviewCount + ' para repasar');
+  if (summary.newCount > 0)    parts.push(summary.newCount + ' ejercicio' + (summary.newCount !== 1 ? 's' : '') + ' nuevo' + (summary.newCount !== 1 ? 's' : ''));
   if (summary.estimatedMinutes) parts.push('~' + summary.estimatedMinutes + ' min');
-  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' deferred');
+  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' diferidos');
   return parts.join(' · ');
 }
 
@@ -59,12 +59,12 @@ function _renderSessionCta() {
       '<div class="path-cta__bar"><div class="path-cta__bar-fill" style="width:' + Math.max(pct, 5) + '%"></div></div>' +
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">Keep it up! 💪</div>' +
-          '<div class="path-cta__sub">Exercise ' + prog.current + ' of ' + prog.total + (remMins ? ' · ~' + remMins + ' min left' : '') + '</div>' +
+          '<div class="path-cta__title">¡Sigue así! 💪</div>' +
+          '<div class="path-cta__sub">Ejercicio ' + prog.current + ' de ' + prog.total + (remMins ? ' · ~' + remMins + ' min restantes' : '') + '</div>' +
         '</div>' +
         (href
-          ? '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Continue →</a>'
-          : '<span class="path-cta__done">✓ Done</span>') +
+          ? '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Continuar →</a>'
+          : '<span class="path-cta__done">✓ Listo por hoy</span>') +
       '</div>';
     return;
   }
@@ -73,8 +73,8 @@ function _renderSessionCta() {
     el.innerHTML =
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">🎉 Great work today!</div>' +
-          '<div class="path-cta__sub">Come back tomorrow to keep your streak going</div>' +
+          '<div class="path-cta__title">🎉 ¡Excelente trabajo hoy!</div>' +
+          '<div class="path-cta__sub">Vuelve mañana para mantener tu racha</div>' +
         '</div>' +
       '</div>';
     return;
@@ -84,8 +84,8 @@ function _renderSessionCta() {
     el.innerHTML =
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">✓ You\'re all caught up!</div>' +
-          '<div class="path-cta__sub">Come back tomorrow for new exercises</div>' +
+          '<div class="path-cta__title">✓ ¡Estás al día!</div>' +
+          '<div class="path-cta__sub">Vuelve mañana para nuevos ejercicios</div>' +
         '</div>' +
       '</div>';
     return;
@@ -94,10 +94,10 @@ function _renderSessionCta() {
   el.innerHTML =
     '<div class="path-cta__row">' +
       '<div class="path-cta__body">' +
-        '<div class="path-cta__title">Ready for today\'s session?</div>' +
+        '<div class="path-cta__title">¿Listo para la sesión de hoy?</div>' +
         '<div class="path-cta__sub">' + _ctaSubtitle(summary) + '</div>' +
       '</div>' +
-      '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Start →</a>' +
+      '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Empezar →</a>' +
     '</div>';
 }
 
@@ -114,9 +114,9 @@ const _ACT_LABEL = {
   cloze: 'Fill-in', dictation: 'Dictation', translation: 'Translate', scramble: 'Scramble',
 };
 const _TOPIC_LABEL = {
-  greetings: '👋 Greetings', restaurant: '🍽️ Restaurant', supermarket: '🛒 Supermarket',
-  kitchen: '🍳 Kitchen', traveling: '✈️ Traveling', entertainment: '🎬 Entertainment',
-  gym: '💪 Gym', technology: '💻 Technology', accountability: '📋 Accountability',
+  greetings: '👋 Saludos', restaurant: '🍽️ Restaurante', supermarket: '🛒 Supermercado',
+  kitchen: '🍳 Cocina', traveling: '✈️ Viajes', entertainment: '🎬 Entretenimiento',
+  gym: '💪 Gimnasio', technology: '💻 Tecnología', accountability: '📋 Responsabilidad',
 };
 
 function _renderSessionTrail() {
@@ -198,7 +198,7 @@ function _buildTrailNodes(container, queue, position) {
     bubble.className = 'path-node__bubble';
     if (isActive && item.href) {
       bubble.href = item.href;
-      bubble.setAttribute('aria-label', 'Go to: ' + (_ACT_LABEL[item.activityId] || item.activityId));
+      bubble.setAttribute('aria-label', 'Ir a: ' + (_ACT_LABEL[item.activityId] || item.activityId));
     }
     bubble.setAttribute('aria-hidden', isActive ? 'false' : 'true');
 
@@ -219,12 +219,12 @@ function _buildTrailNodes(container, queue, position) {
     if (!isDone && item.isNew) {
       const badge = document.createElement('span');
       badge.className = 'path-node__new-badge';
-      badge.textContent = '✨ New';
+      badge.textContent = '✨ Nuevo';
       node.appendChild(badge);
     } else if (!isDone && !item.isNew) {
       const rbadge = document.createElement('span');
       rbadge.className = 'path-node__review-badge';
-      rbadge.textContent = '🔁 Review';
+      rbadge.textContent = '🔁 Repasar';
       node.appendChild(rbadge);
     }
 

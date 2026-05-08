@@ -60,7 +60,7 @@
         <div id="topic-picker">
             <div class="trans-header">
                 <h1>Reverse <span>Translation</span></h1>
-                <p>Read the Spanish phrase and type the English equivalent. Active production builds stronger memory.</p>
+                <p>Lee la frase en español y escribe la versión en inglés. La producción activa construye una memoria más sólida.</p>
             </div>
             <div class="topic-grid" id="topic-grid">
                 <!-- Filled by JS -->
@@ -72,14 +72,14 @@
 
             <!-- Session bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn">← Topics</button>
-                <span id="trans-counter" class="session-counter" role="status" aria-live="polite">0 / 0 learned</span>
-                <span class="streak-badge" id="trans-streak">🔥 0 day streak</span>
+                <button class="back-btn" id="back-btn">← Temas</button>
+                <span id="trans-counter" class="session-counter" role="status" aria-live="polite">0 / 0 aprendidas</span>
+                <span class="streak-badge" id="trans-streak">🔥 racha de 0 día(s)</span>
             </div>
             <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="trans-title">Translate to <span>English</span></h1>
-            <p class="trans-subtitle">Read the phrase in Spanish and write the English version.</p>
+            <p class="trans-subtitle">Lee la frase en español y escribe la versión en inglés.</p>
 
             <!-- Spanish phrase card -->
             <div class="phrase-card" id="phrase-card">
@@ -90,10 +90,10 @@
             <!-- Text input -->
             <div class="trans-input-row">
                 <input type="text" id="trans-input"
-                       placeholder="Type the English phrase…"
+                       placeholder="Escribe la frase en inglés…"
                        autocomplete="off" spellcheck="false" autocorrect="off"
                        aria-label="English translation">
-                <button id="check-btn" class="check-btn">Check ✓</button>
+                <button id="check-btn" class="check-btn">Verificar ✓</button>
             </div>
 
             <!-- Feedback -->
@@ -114,12 +114,12 @@
                         📐 <span id="grammar-chip-label"></span> →
                     </a>
                 </div>
-                <button class="listen-btn hidden" id="listen-btn">🔊 Listen</button>
+                <button class="listen-btn hidden" id="listen-btn">🔊 Escuchar</button>
             </div>
 
             <!-- Next / Try Again -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continue to next phrase">Next →</button>
-            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Try this phrase again">↩ Try Again</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente frase">Siguiente →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta frase de nuevo">↩ Intentar de nuevo</button>
 
         </div>
 
