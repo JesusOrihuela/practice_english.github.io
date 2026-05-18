@@ -6,7 +6,6 @@
 
 
 
-const LAST_KEY = 'pe_last_cloze';
 let _openPhraseBrowser = null;
 
 // ---- Answer equivalence ----
@@ -85,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _backLink.addEventListener('click', function () {
       if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -120,10 +119,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
+  txt.textContent = AppLang.t('error_loading');
 
   const btn = document.createElement('button');
-  btn.textContent = 'Reintentar →';
+  btn.textContent = AppLang.t('retry');
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -143,22 +142,22 @@ function _showLoadError(topicId) {
 let _pathModeActive = false;
 let _pathCardId     = null;
 
+
 function startTopic(topicId, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
-  localStorage.setItem(LAST_KEY, topicId);
   currentTopic = topicId;
   AppData.get(topicId)
     .then(data => {
-      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _order = CEFR_ORDER;
       const _tagged = (data.phrases || []).map((p, i) => ({
-        phrase: p.phrase, translation: p.translation || '',
-        grammar: p.grammar || null, cefr: p.cefr || null, id: p.id, origIdx: i,
-      })).sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+        phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '',
+        grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i,
+      })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
       phrases      = _tagged.map(x => x.phrase);
       translations = _tagged.map(x => x.translation);
       grammarNotes = _tagged.map(x => x.grammar);
-      cefrLevels   = _tagged.map(x => x.cefr);
+      cefrLevels   = _tagged.map(x => x.level);
       cardIds      = _tagged.map(x => 'cloze_' + x.id);
       audioIndices = _tagged.map(x => x.origIdx);
 
@@ -190,7 +189,7 @@ function _beginExercise(idx) {
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('exercise-area').classList.remove('hidden');
   const streak = Progress.getStreak();
-  document.getElementById('cloze-streak').innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  document.getElementById('cloze-streak').textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
   showPhrase(idx);
   updateCounter();
 }
@@ -226,8 +225,15 @@ function showPhrase(startIndex) {
   }
   if (!currentBlank) {
     // Edge case: no blankable phrase in the entire topic — show error and go back
-    alert('No fill-in-the-blank exercises are available for this topic.');
     showTopicPicker();
+    const _picker = document.getElementById('topic-picker');
+    if (_picker) {
+      const _msg = document.createElement('p');
+      _msg.style.cssText = 'color:var(--clr-danger);font-size:0.9rem;margin:0 0 12px;text-align:center;';
+      _msg.textContent = AppLang.t('no_cloze_exercises');
+      _picker.prepend(_msg);
+      setTimeout(() => _msg.remove(), 4000);
+    }
     return;
   }
 
@@ -280,7 +286,7 @@ function checkAnswer() {
   _lastCorrect = isCorrect;
 
   // Save progress immediately — so navigating away without pressing Next still records the result
-  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'cloze');
   Progress.recordSession('cloze_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
@@ -290,7 +296,7 @@ function checkAnswer() {
   const card      = document.getElementById('phrase-card');
   const feedback  = document.getElementById('cloze-feedback');
 
-  resultEl.textContent = isCorrect ? '✓ ¡Correcto!' : '✗ Incorrecto';
+  resultEl.textContent = isCorrect ? AppLang.t('feedback_correct') : AppLang.t('feedback_incorrect');
   resultEl.className   = 'feedback-result ' + (isCorrect ? 'correct' : 'incorrect');
   card.classList.add(isCorrect ? 'phrase-card--correct' : 'phrase-card--incorrect');
 
@@ -338,7 +344,7 @@ function rateAndNext(quality) {
   updateCounter();
 
   const streak = Progress.getStreak();
-  document.getElementById('cloze-streak').innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  document.getElementById('cloze-streak').textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 
   currentIndex = (currentIndex + 1) % phrases.length;
   showPhrase(currentIndex);
@@ -352,14 +358,11 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completa!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
-        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
-        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
+        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">Mi Aprendizaje →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
     '</div>';
 }
 
@@ -369,7 +372,7 @@ function updateCounter() {
   const el = document.getElementById('cloze-counter');
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    if (el) el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
+    if (el) el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -378,7 +381,7 @@ function updateCounter() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  if (el) el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
+  if (el) el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';

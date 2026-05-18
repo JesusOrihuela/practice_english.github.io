@@ -1,0 +1,215 @@
+{
+  "phrases": [
+    {
+      "id": "theater_art_exhibition_invite",
+      "phrase": "Do you want to go to an art exhibition with me?",
+      "translations": { "es": "¿Quieres ir a una exposición de arte conmigo?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "theater_photography_exhibition",
+      "phrase": "The photography exhibition was very interesting",
+      "translations": { "es": "La exposición de fotografías fue muy interesante" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "theater_moving_play",
+      "phrase": "The play was very moving",
+      "translations": { "es": "La obra de teatro fue muy conmovedora" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "theater_visit_new_museum",
+      "phrase": "I would like to go to the new museum that opened in the city",
+      "translations": { "es": "Me gustaría ir al nuevo museo que abrieron en la ciudad" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["I'd like to go to the new museum that opened in the city"]
+    },
+    {
+      "id": "theater_opera_surprised",
+      "phrase": "I didn't think I would enjoy the opera so much",
+      "translations": { "es": "No pensé que la ópera me gustaría tanto" },
+      "level": "B1",
+      "grammar": "Reported thought with 'I didn't think I would': expressing a past prediction that turned out wrong"
+    },
+    {
+      "id": "theater_buy_tickets_tonight",
+      "phrase": "I'd like to buy tickets for tonight's show.",
+      "translations": { "es": "Me gustaría comprar entradas para el espectáculo de esta noche." },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "theater_where_is_theater",
+      "phrase": "Where can I find the theater?",
+      "translations": { "es": "¿Dónde puedo encontrar el teatro?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "theater_what_time_performance",
+      "phrase": "What time does the performance start?",
+      "translations": { "es": "¿A qué hora empieza la función?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "theater_enjoy_going_theater",
+      "phrase": "I really enjoy going to the theater.",
+      "translations": { "es": "Realmente disfruto ir al teatro." },
+      "level": "A1",
+      "grammar": "'Enjoy + gerund' — 'enjoy' is always followed by the -ing form of a verb"
+    },
+    {
+      "id": "theater_actors_incredible_performance",
+      "phrase": "The actors were incredible — I didn't expect such a strong performance.",
+      "translations": { "es": "Los actores estaban increíbles. No esperaba una actuación tan poderosa." },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "theater_tickets_saturday",
+      "phrase": "Do you have any tickets left for Saturday's performance?",
+      "translations": { "es": "¿Quedan entradas para la función del sábado?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "theater_intermission_refreshments",
+      "phrase": "The intermission is a good opportunity to get refreshments and discuss the play.",
+      "translations": { "es": "El intermedio es una buena oportunidad para tomar algo y hablar sobre la obra." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "theater_moved_by_grief_portrayal",
+      "phrase": "I was deeply moved by the actor's portrayal of grief in the second act.",
+      "translations": { "es": "Me conmovió profundamente la interpretación del actor sobre el duelo en el segundo acto." },
+      "level": "B1",
+      "grammar": "Passive: 'was moved by' — emotional response caused by an external source"
+    },
+    {
+      "id": "theater_contemporary_art_museum",
+      "phrase": "Have you been to the new exhibition at the contemporary art museum?",
+      "translations": { "es": "¿Has ido a la nueva exposición del museo de arte contemporáneo?" },
+      "level": "B1",
+      "grammar": "Present perfect: 'have you been to' for a life experience up to the present moment"
+    },
+    {
+      "id": "theater_arrive_early_installation",
+      "phrase": "I'd recommend arriving early to see the installation before the crowd arrives.",
+      "translations": { "es": "Recomendaría llegar temprano para ver la instalación antes de que llegue la gente." },
+      "level": "B1",
+      "grammar": "'Recommend + gerund' — 'recommend' is followed by the -ing form as its object"
+    },
+    {
+      "id": "theater_staging_final_scene",
+      "phrase": "The director's staging of the final scene was unconventional but remarkably effective.",
+      "translations": { "es": "La puesta en escena del director en la escena final fue poco convencional pero notablemente efectiva." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "theater_museum_retrospective_evolution",
+      "phrase": "The museum's retrospective traces thirty years of the artist's creative evolution.",
+      "translations": { "es": "La retrospectiva del museo rastrea treinta años de la evolución creativa del artista." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "theater_script_overambitious_themes",
+      "phrase": "I found the script overambitious — it tried to address too many themes at once.",
+      "translations": { "es": "Encontré el guion demasiado ambicioso: intentó abordar demasiados temas a la vez." },
+      "level": "B2",
+      "grammar": "'I found + object + adjective' for expressing a personal critical assessment"
+    },
+    {
+      "id": "theater_physical_performance_no_dialogue",
+      "phrase": "The lead actor's physical performance was remarkable, almost entirely without dialogue.",
+      "translations": { "es": "La actuación física del actor principal fue notable, casi completamente sin diálogo." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "theater_set_design_bleak_story",
+      "phrase": "The set design was intentionally sparse, perfectly matching the bleakness of the story.",
+      "translations": { "es": "El diseño de escenografía era intencionalmente austero, combinando perfectamente con la crudeza de la historia." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "theater_subverts_expectations_first_scene",
+      "phrase": "What makes this production stand out is how the director subverts audience expectations from the very first scene.",
+      "translations": { "es": "Lo que hace destacar esta producción es cómo el director subvierte las expectativas del público desde la primera escena." },
+      "level": "C1",
+      "grammar": "'What makes X stand out' — a cleft-like structure to emphasize the distinguishing quality"
+    },
+    {
+      "id": "theater_exhibition_cultural_ownership",
+      "phrase": "The exhibition raises uncomfortable questions about cultural ownership and the repatriation of artifacts.",
+      "translations": { "es": "La exposición plantea incómodas preguntas sobre la propiedad cultural y la repatriación de artefactos." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "theater_playwright_social_critique_domestic",
+      "phrase": "The playwright manages to embed social critique within what appears to be a domestic drama.",
+      "translations": { "es": "El dramaturgo logra insertar crítica social dentro de lo que parece ser un drama doméstico." },
+      "level": "C1",
+      "grammar": "'Within what appears to be' — embedded relative clause with 'appear to be' for formal hedging"
+    },
+    {
+      "id": "theater_lighting_sound_immersive",
+      "phrase": "The choreography of lighting and sound design creates an immersive experience rarely achieved in live theater.",
+      "translations": { "es": "La coreografía de iluminación y diseño de sonido crea una experiencia inmersiva raramente lograda en el teatro en vivo." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "theater_ambiguous_ending_interpretations",
+      "phrase": "The play's ambiguous ending invites multiple interpretations, which is precisely what makes it so memorable.",
+      "translations": { "es": "El final ambiguo de la obra invita a múltiples interpretaciones, lo cual es precisamente lo que la hace tan memorable." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "theater_psychological_disintegration_tour_de_force",
+      "phrase": "The staging of the protagonist's psychological disintegration through fragmented dialogue is a tour de force.",
+      "translations": { "es": "La puesta en escena de la desintegración psicológica del protagonista a través del diálogo fragmentado es un tour de force." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "theater_installation_commodification_audience",
+      "phrase": "The installation interrogates the commodification of art by placing the audience in the role of both consumer and consumed.",
+      "translations": { "es": "La instalación cuestiona la mercantilización del arte al colocar al público en el rol de consumidor y consumido a la vez." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "theater_classical_text_contemporary_aesthetics",
+      "phrase": "The dramaturgy juxtaposes classical text with contemporary visual aesthetics to productive effect.",
+      "translations": { "es": "La dramaturgia yuxtapone texto clásico con estética visual contemporánea con resultados productivos." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "theater_brechtian_alienation_identification",
+      "phrase": "The production's fidelity to Brechtian alienation prevents the audience from achieving emotional identification with the characters.",
+      "translations": { "es": "La fidelidad de la producción al distanciamiento brechtiano impide que el público logre identificación emocional con los personajes." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "theater_curatorial_thesis_uneven_works",
+      "phrase": "The curator's thematic thesis is compelling but ultimately undermined by the uneven quality of the works selected.",
+      "translations": { "es": "La tesis temática del curador es convincente, pero en última instancia queda socavada por la calidad desigual de las obras seleccionadas." },
+      "level": "C2",
+      "grammar": null
+    }
+  ]
+}

@@ -3,308 +3,494 @@
     {
       "id": "accountability_lets_start_the_meeting",
       "phrase": "Let's start the meeting",
-      "translation": "Empecemos la reunión",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Modal 'need to': necessity or obligation",
-      "alternatives": ["Let's begin the meeting"]
+      "alternatives": [
+        "Let's begin the meeting"
+      ],
+      "translations": {
+        "es": "Empecemos la reunión"
+      }
     },
     {
       "id": "accountability_the_financial_reports_have_been_reviewed",
       "phrase": "The financial reports have been reviewed",
-      "translation": "Se han revisado los informes financieros",
-      "cefr": "B1",
-      "grammar": "Present perfect: recent action with present relevance"
+      "level": "B1",
+      "grammar": "Present perfect: recent action with present relevance",
+      "translations": {
+        "es": "Se han revisado los informes financieros"
+      }
     },
     {
       "id": "accountability_we_need_to_adjust_the_budget",
       "phrase": "We need to adjust the budget",
-      "translation": "Necesitamos ajustar el presupuesto",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["We need to modify the budget"]
+      "alternatives": [
+        "We need to modify the budget"
+      ],
+      "translations": {
+        "es": "Necesitamos ajustar el presupuesto"
+      }
     },
     {
       "id": "accountability_the_sales_figures_have_increased",
       "phrase": "The sales figures have increased",
-      "translation": "Las cifras de ventas han aumentado",
-      "cefr": "B1",
-      "grammar": "Modal 'should': advice or recommendation"
+      "level": "B1",
+      "grammar": "Modal 'should': advice or recommendation",
+      "translations": {
+        "es": "Las cifras de ventas han aumentado"
+      }
     },
     {
       "id": "accountability_we_are_facing_a_cash_flow",
       "phrase": "We are facing a cash flow problem",
-      "translation": "Estamos enfrentando un problema de flujo de efectivo",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Estamos enfrentando un problema de flujo de efectivo"
+      }
     },
     {
       "id": "accountability_we_need_to_audit_the_accounts",
       "phrase": "We need to audit the accounts",
-      "translation": "Necesitamos auditar las cuentas",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Necesitamos auditar las cuentas"
+      }
     },
     {
       "id": "accountability_the_tax_returns_are_pending",
       "phrase": "The tax returns are pending",
-      "translation": "Las declaraciones de impuestos están pendientes",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Las declaraciones de impuestos están pendientes"
+      }
     },
     {
       "id": "accountability_the_inventory_needs_to_be_updated",
       "phrase": "The inventory needs to be updated",
-      "translation": "El inventario necesita ser actualizado",
-      "cefr": "B1",
-      "grammar": "Phrasal verb: 'follow up' = check on progress"
+      "level": "B1",
+      "grammar": "Phrasal verb: 'follow up' = check on progress",
+      "translations": {
+        "es": "El inventario necesita ser actualizado"
+      }
     },
     {
       "id": "accountability_we_have_a_new_client",
       "phrase": "We have a new client",
-      "translation": "Tenemos un nuevo cliente",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["We have a new customer"]
+      "alternatives": [
+        "We have a new customer"
+      ],
+      "translations": {
+        "es": "Tenemos un nuevo cliente"
+      }
     },
     {
       "id": "accountability_we_are_closing_the_fiscal_year",
       "phrase": "We are closing the fiscal year",
-      "translation": "Estamos cerrando el año fiscal",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Estamos cerrando el año fiscal"
+      }
     },
     {
       "id": "accountability_we_need_to_reconcile_the_bank",
       "phrase": "We need to reconcile the bank accounts",
-      "translation": "Necesitamos conciliar las cuentas bancarias",
-      "cefr": "B2",
-      "grammar": null
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Necesitamos conciliar las cuentas bancarias"
+      }
     },
     {
       "id": "accountability_the_payroll_is_paid",
       "phrase": "The payroll is paid",
-      "translation": "La nómina está pagada",
-      "cefr": "B1",
-      "grammar": "Simple past: completed action in the past"
+      "level": "B1",
+      "grammar": "Simple past: completed action in the past",
+      "translations": {
+        "es": "La nómina está pagada"
+      }
     },
     {
       "id": "accountability_the_balance_sheet_is_ready",
       "phrase": "The balance sheet is ready",
-      "translation": "El balance general está listo",
-      "cefr": "B1",
+      "level": "B1",
       "grammar": null,
-      "alternatives": ["The balance sheet is done"]
+      "alternatives": [
+        "The balance sheet is done"
+      ],
+      "translations": {
+        "es": "El balance general está listo"
+      }
     },
     {
       "id": "accountability_the_financial_statements_are_up_to",
       "phrase": "The financial statements are up to date",
-      "translation": "Los estados financieros están al día",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Los estados financieros están al día"
+      }
     },
     {
       "id": "accountability_accounting_staff_will_be_here_tomorrow",
       "phrase": "Accounting staff will be here tomorrow",
-      "translation": "Mañana viene personal del despacho contable",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Mañana viene personal del despacho contable"
+      }
     },
     {
       "id": "accountability_the_accountant_needs_additional_information",
       "phrase": "The accountant needs additional information",
-      "translation": "El contador necesita información adicional",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "El contador necesita información adicional"
+      }
     },
     {
       "id": "accountability_everything_went_well_during_the_tax",
       "phrase": "Everything went well during the tax audit",
-      "translation": "Todo salió bien durante la auditoría fiscal",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Todo salió bien durante la auditoría fiscal"
+      }
     },
     {
       "id": "accountability_the_financial_forecast_is_positive",
       "phrase": "The financial forecast is positive",
-      "translation": "El pronóstico financiero es positivo",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El pronóstico financiero es positivo"
+      }
     },
     {
       "id": "accountability_have_the_contracts_with_the_suppliers",
       "phrase": "Have the contracts with the suppliers been signed?",
-      "translation": "¿Ya se firmaron los contratos con los proveedores?",
-      "cefr": "B1",
-      "grammar": "Passive voice: focus on the action, not the doer"
+      "level": "B1",
+      "grammar": "Passive voice: focus on the action, not the doer",
+      "translations": {
+        "es": "¿Ya se firmaron los contratos con los proveedores?"
+      }
     },
     {
       "id": "accountability_when_is_the_meeting_scheduled",
       "phrase": "When is the meeting scheduled?",
-      "translation": "¿Cuándo está programada la reunión?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["When is the meeting planned?"]
+      "alternatives": [
+        "When is the meeting planned?"
+      ],
+      "translations": {
+        "es": "¿Cuándo está programada la reunión?"
+      }
     },
     {
       "id": "accountability_it_is_important_to_consider_the",
       "phrase": "It is important to consider the new market trends",
-      "translation": "Es importante considerar las nuevas tendencias del mercado",
-      "cefr": "B1",
-      "grammar": "Modal 'could': polite request or possibility"
+      "level": "B1",
+      "grammar": "Modal 'could': polite request or possibility",
+      "translations": {
+        "es": "Es importante considerar las nuevas tendencias del mercado"
+      }
     },
     {
       "id": "accountability_when_was_the_budget_review_scheduled",
       "phrase": "When was the budget review scheduled?",
-      "translation": "¿Cuándo se programó la revisión presupuestaria?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuándo se programó la revisión presupuestaria?"
+      }
     },
     {
       "id": "accountability_what_are_the_projections_for_the",
       "phrase": "What are the projections for the new fiscal year?",
-      "translation": "¿Cuáles son las proyecciones para el nuevo año fiscal?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuáles son las proyecciones para el nuevo año fiscal?"
+      }
     },
     {
       "id": "accountability_the_sales_projection_for_the_next",
       "phrase": "The sales projection for the next quarter will be made",
-      "translation": "Se realizará la proyección de ventas del siguiente trimestre",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Se realizará la proyección de ventas del siguiente trimestre"
+      }
     },
     {
       "id": "accountability_accounts_payable_has_already_closed_its",
       "phrase": "Accounts Payable has already closed its accounting records for this month",
-      "translation": "Cuentas por Pagar ya cerró sus registros contables para este mes",
-      "cefr": "B2",
-      "grammar": null
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Cuentas por Pagar ya cerró sus registros contables para este mes"
+      }
     },
     {
       "id": "accountability_the_accounting_department_has_already_delivered",
       "phrase": "The Accounting department has already delivered the financial reports",
-      "translation": "El departamento de Contabilidad ya entregó los reportes financieros",
-      "cefr": "B1",
-      "grammar": "Contraction: 'I've' = I have"
+      "level": "B1",
+      "grammar": "Contraction: 'I've' = I have",
+      "translations": {
+        "es": "El departamento de Contabilidad ya entregó los reportes financieros"
+      }
     },
     {
       "id": "accountability_the_human_resources_department_has_already",
       "phrase": "The Human Resources department has already delivered the payroll reports",
-      "translation": "El departamento de Recursos Humanos ya entregó los reportes de nómina",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El departamento de Recursos Humanos ya entregó los reportes de nómina"
+      }
     },
     {
       "id": "accountability_accounting_records_for_the_tax_return",
       "phrase": "Accounting records for the tax return will be closed tomorrow",
-      "translation": "Mañana se cierran registros contables para la declaración de impuestos",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Mañana se cierran registros contables para la declaración de impuestos"
+      }
     },
     {
       "id": "accountability_the_presentation_of_the_financial_reports",
       "phrase": "The presentation of the financial reports was successful",
-      "translation": "La presentación de los informes financieros fue exitosa",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "La presentación de los informes financieros fue exitosa"
+      }
     },
     {
       "id": "accountability_all_the_money_a_person_receives",
       "phrase": "All the money a person receives as payment is called salary",
-      "translation": "Todo el dinero que una persona recibe como pago se llama salario",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Todo el dinero que una persona recibe como pago se llama salario"
+      }
     },
     {
       "id": "accountability_salary_is_paid_in_cash_check",
       "phrase": "Salary is paid in cash, check or bank deposit",
-      "translation": "El salario se paga en efectivo, cheque o depósito bancario",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El salario se paga en efectivo, cheque o depósito bancario"
+      }
     },
     {
       "id": "accountability_salary_is_paid_weekly_biweekly_or",
       "phrase": "Salary is paid weekly, biweekly or monthly",
-      "translation": "El salario se paga semanal, quincenal o mensualmente",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El salario se paga semanal, quincenal o mensualmente"
+      }
     },
     {
       "id": "accountability_the_purchasing_department_will_receive_a",
       "phrase": "The purchasing department will receive a bonus for meeting goals",
-      "translation": "El departamento de compras recibirá bono por cumplimiento de metas",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El departamento de compras recibirá bono por cumplimiento de metas"
+      }
     },
     {
       "id": "accountability_has_the_intern_already_registered_with",
       "phrase": "Has the intern already registered with Social Security?",
-      "translation": "¿El practicante ya hizo su registro en el Seguro Social?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿El practicante ya hizo su registro en el Seguro Social?"
+      }
     },
     {
       "id": "accountability_the_balance_sheet_shows_the_assets",
       "phrase": "The balance sheet shows the assets, liabilities and equity of the company",
-      "translation": "El balance general muestra los activos, pasivos y capital de la empresa",
-      "cefr": "B2",
-      "grammar": null
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "El balance general muestra los activos, pasivos y capital de la empresa"
+      }
     },
     {
       "id": "accountability_i_think_this_is_a_good",
       "phrase": "I think this is a good investment, it pays a very good annual interest",
-      "translation": "Creo que esta es una buena inversión, paga un muy buen interés anual",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Creo que esta es una buena inversión, paga un muy buen interés anual"
+      }
     },
     {
       "id": "accountability_the_company_had_higher_sales_and",
       "phrase": "The company had higher sales and an increase in profits",
-      "translation": "La compañía tuvo mayores ventas y un aumento en las ganancias",
-      "cefr": "B1",
-      "grammar": "Present continuous: action happening right now"
+      "level": "B1",
+      "grammar": "Present continuous: action happening right now",
+      "translations": {
+        "es": "La compañía tuvo mayores ventas y un aumento en las ganancias"
+      }
     },
     {
       "id": "accountability_if_the_company_buys_new_assets",
       "phrase": "If the company buys new assets, you debit banks and credit assets",
-      "translation": "Si la empresa compra nuevos activos, abonas a bancos y cargas a activos",
-      "cefr": "B2",
-      "grammar": null
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Si la empresa compra nuevos activos, abonas a bancos y cargas a activos"
+      }
     },
     {
       "id": "accountability_the_inventory_that_arrived_yesterday_is",
       "phrase": "The inventory that arrived yesterday is ready for sale",
-      "translation": "El inventario que llegó ayer está listo para la venta",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El inventario que llegó ayer está listo para la venta"
+      }
     },
     {
       "id": "accountability_what_was_the_net_profit_from",
       "phrase": "What was the net profit from sales last quarter?",
-      "translation": "¿Cuál fue la ganancia neta de las ventas del trimestre pasado?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuál fue la ganancia neta de las ventas del trimestre pasado?"
+      }
     },
     {
       "id": "accountability_what_was_the_gross_loss_from",
       "phrase": "What was the gross loss from sales last bimester?",
-      "translation": "¿Cuál fue la pérdida bruta de las ventas del bimestre pasado?",
-      "cefr": "B2",
-      "grammar": null
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuál fue la pérdida bruta de las ventas del bimestre pasado?"
+      }
     },
     {
       "id": "accountability_a_companys_fiscal_year_does_not",
       "phrase": "A company's fiscal year does not have to start in January like the calendar year",
-      "translation": "El año fiscal de una empresa no tiene que comenzar en enero como el año calendario",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El año fiscal de una empresa no tiene que comenzar en enero como el año calendario"
+      }
     },
     {
       "id": "accountability_the_companys_income_in_the_past",
       "phrase": "The company's income in the past year is shown on the balance sheet",
-      "translation": "Los ingresos de la empresa en el año pasado se muestran en el balance general",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Los ingresos de la empresa en el año pasado se muestran en el balance general"
+      }
+    },
+    {
+      "id": "accountability_the_variance_between_projected_and",
+      "phrase": "The variance between projected and actual revenue must be thoroughly analyzed",
+      "level": "C1",
+      "grammar": "Passive + modal: 'must be analyzed' = formal obligation (impersonal register)",
+      "translations": {
+        "es": "La variación entre los ingresos proyectados y los reales debe analizarse a fondo"
+      }
+    },
+    {
+      "id": "accountability_we_should_hedge_our_foreign",
+      "phrase": "We should hedge our foreign currency exposure to mitigate exchange rate risk",
+      "level": "C1",
+      "grammar": "Modal 'should': professional recommendation in formal context",
+      "translations": {
+        "es": "Deberíamos cubrir nuestra exposición en moneda extranjera para mitigar el riesgo cambiario"
+      }
+    },
+    {
+      "id": "accountability_the_audit_committee_has_raised",
+      "phrase": "The audit committee has raised concerns about our internal controls",
+      "level": "C1",
+      "grammar": "Present perfect: recent action with ongoing organizational relevance",
+      "translations": {
+        "es": "El comité de auditoría ha expresado preocupaciones sobre nuestros controles internos"
+      }
+    },
+    {
+      "id": "accountability_depreciation_must_be_calculated_using",
+      "phrase": "Depreciation must be calculated using the straight-line method for fixed assets",
+      "level": "C1",
+      "grammar": "Passive + modal: formal procedural instruction",
+      "translations": {
+        "es": "La depreciación debe calcularse usando el método de línea recta para activos fijos"
+      }
+    },
+    {
+      "id": "accountability_the_accounts_receivable_turnover_ratio",
+      "phrase": "The accounts receivable turnover ratio indicates how efficiently we collect outstanding debts",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "El índice de rotación de cuentas por cobrar indica qué tan eficientemente cobramos las deudas pendientes"
+      }
+    },
+    {
+      "id": "accountability_the_consolidated_financial_statements_reflect",
+      "phrase": "The consolidated financial statements reflect the elimination of intercompany transactions",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "Los estados financieros consolidados reflejan la eliminación de transacciones intercompañía"
+      }
+    },
+    {
+      "id": "accountability_revenue_recognition_must_comply_with",
+      "phrase": "Revenue recognition must comply with the applicable accounting standards under IFRS",
+      "level": "C2",
+      "grammar": "Modal + active: 'must comply with' = mandatory regulatory requirement",
+      "translations": {
+        "es": "El reconocimiento de ingresos debe cumplir con las normas contables aplicables bajo NIIF"
+      }
+    },
+    {
+      "id": "accountability_the_impairment_of_goodwill_has",
+      "phrase": "The impairment of goodwill has been recognized in line with the current valuation",
+      "level": "C2",
+      "grammar": "Present perfect passive: formal reporting of a completed accounting action",
+      "translations": {
+        "es": "El deterioro del crédito mercantil ha sido reconocido conforme a la valuación vigente"
+      }
+    },
+    {
+      "id": "accountability_any_contingent_liability_must_be",
+      "phrase": "Any contingent liability must be disclosed in the notes to the financial statements",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "Cualquier pasivo contingente debe revelarse en las notas a los estados financieros"
+      }
+    },
+    {
+      "id": "accountability_the_weighted_average_cost_of",
+      "phrase": "The weighted average cost of capital serves as the benchmark for evaluating investment returns",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El costo de capital promedio ponderado sirve como referencia para evaluar los rendimientos de inversión"
+      }
     }
   ]
 }

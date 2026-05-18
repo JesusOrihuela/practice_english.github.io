@@ -45,11 +45,8 @@ const AppTopicGrid = (() => {
           '<div class="img-topic-card__overlay"></div>' +
         '</div>' +
         '<div class="img-topic-card__body">' +
-          '<div class="img-topic-card__info">' +
-            '<span class="img-topic-card__title">' + topic.label + '</span>' +
-            '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
-          '</div>' +
-          '<span class="img-topic-card__badge">' + badge + '</span>' +
+          '<span class="img-topic-card__title">' + topic.label + '</span>' +
+          '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
         '</div>';
       btn.addEventListener('click', () => onSelect(topic.id));
       grid.appendChild(btn);
@@ -59,7 +56,9 @@ const AppTopicGrid = (() => {
           const keyPrefix = resolveSrsKey(topic) + '_';
           const seen = Object.keys(cards).filter(k => k.startsWith(keyPrefix) && cards[k].reps > 0).length;
           const el = document.getElementById('tp-' + topic.id);
-          if (el) el.textContent = seen + ' / ' + total + ' aprendidas';
+          if (el) el.textContent = typeof AppLang !== 'undefined'
+            ? AppLang.t('topic_learned', { seen, total })
+            : seen + ' / ' + total + ' Aprendidas';
         })
         .catch(() => {});
     });

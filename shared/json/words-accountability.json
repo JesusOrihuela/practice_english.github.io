@@ -3,152 +3,302 @@
     {
       "word": "deadline",
       "definition": "The latest time by which a task or piece of work must be completed",
-      "translation": "fecha límite / plazo",
       "example": "We need to submit the full report before the deadline on Friday.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "deadline"
+      "level": "A2",
+      "id": "deadline",
+      "translations": {
+        "es": "fecha límite / plazo"
+      }
     },
     {
       "word": "commitment",
       "definition": "A firm promise or obligation to carry out a particular course of action",
-      "translation": "compromiso",
       "example": "She showed outstanding commitment to finishing the project on time.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "commitment"
+      "level": "B1",
+      "id": "commitment",
+      "translations": {
+        "es": "compromiso"
+      }
     },
     {
       "word": "milestone",
       "definition": "A significant event or stage that marks progress in a project",
-      "translation": "hito",
       "example": "Completing the first chapter was an important milestone for the team.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "milestone"
+      "level": "B1",
+      "id": "milestone",
+      "translations": {
+        "es": "hito"
+      }
     },
     {
       "word": "feedback",
       "definition": "Information or comments given to help someone improve their work",
-      "translation": "retroalimentación",
       "example": "My manager gave me very useful feedback on my quarterly presentation.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "feedback"
+      "level": "A2",
+      "id": "feedback",
+      "translations": {
+        "es": "retroalimentación"
+      }
     },
     {
       "word": "objective",
       "definition": "A specific goal or result that you are working towards",
-      "translation": "objetivo",
       "example": "Our main objective this quarter is to reduce operational costs by 15%.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "objective"
+      "level": "B1",
+      "id": "objective",
+      "translations": {
+        "es": "objetivo"
+      }
     },
     {
       "word": "priority",
       "definition": "Something that is more important than other things and should be done first",
-      "translation": "prioridad",
       "example": "Getting enough rest should be a top priority during a busy project.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "priority"
+      "level": "A2",
+      "id": "priority",
+      "translations": {
+        "es": "prioridad"
+      }
     },
     {
       "word": "delegate",
       "definition": "To give a task or responsibility to someone else who has the right skills",
-      "translation": "delegar",
       "example": "Effective managers know how to delegate tasks without micromanaging.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "delegate"
+      "level": "B1",
+      "id": "delegate",
+      "translations": {
+        "es": "delegar"
+      }
     },
     {
       "word": "outcome",
       "definition": "The final result or consequence that follows from an action or process",
-      "translation": "resultado",
       "example": "The outcome of the negotiation was far better than anyone had expected.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "outcome"
+      "level": "B1",
+      "id": "outcome",
+      "translations": {
+        "es": "resultado"
+      }
     },
     {
       "word": "follow-up",
       "definition": "A further action taken after an earlier one to check progress or results",
-      "translation": "seguimiento",
       "example": "I will send a follow-up email to confirm the details of our meeting.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "follow_up"
+      "level": "A2",
+      "id": "follow_up",
+      "translations": {
+        "es": "seguimiento"
+      }
     },
     {
       "word": "accountable",
       "definition": "Responsible for your own actions and expected to explain or justify them",
-      "translation": "responsable",
       "example": "Each team member is accountable for their own individual results.",
       "category": "Adjective",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "accountable"
+      "level": "B1",
+      "id": "accountable",
+      "translations": {
+        "es": "responsable"
+      }
     },
     {
       "word": "transparent",
       "definition": "Open and honest, sharing information clearly without hiding anything",
-      "translation": "transparente",
       "example": "Good leaders should always be transparent about their key decisions.",
       "category": "Adjective",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "transparent"
+      "level": "B1",
+      "id": "transparent",
+      "translations": {
+        "es": "transparente"
+      }
     },
     {
       "word": "initiative",
       "definition": "The ability to start new tasks independently, without being told to",
-      "translation": "iniciativa",
       "example": "He took the initiative to reorganise the team meetings.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "initiative"
+      "level": "B2",
+      "id": "initiative",
+      "translations": {
+        "es": "iniciativa"
+      }
     },
     {
       "word": "procrastinate",
       "definition": "To delay or postpone doing something that needs to be done",
-      "translation": "procrastinar",
       "example": "Try not to procrastinate; break large tasks into smaller, manageable steps.",
       "category": "Verb",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "procrastinate"
+      "level": "B2",
+      "id": "procrastinate",
+      "translations": {
+        "es": "procrastinar"
+      }
     },
     {
       "word": "benchmark",
       "definition": "A standard or reference point used to measure or assess performance",
-      "translation": "punto de referencia",
       "example": "Use last year's sales figures as a benchmark for this year's targets.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "benchmark"
+      "level": "B2",
+      "id": "benchmark",
+      "translations": {
+        "es": "punto de referencia"
+      }
     },
     {
       "word": "proactive",
       "definition": "Taking action to prevent problems rather than simply reacting to them",
-      "translation": "proactivo",
       "example": "Being proactive about your health can help prevent many future problems.",
       "category": "Adjective",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "proactive"
+      "level": "B2",
+      "id": "proactive",
+      "translations": {
+        "es": "proactivo"
+      }
+    },
+    {
+      "word": "accountability",
+      "definition": "The quality of being responsible for your decisions and actions, and expected to explain them to others",
+      "example": "A culture of accountability ensures that everyone owns their results, not just their tasks.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "accountability_concept",
+      "translations": {
+        "es": "rendición de cuentas"
+      }
+    },
+    {
+      "word": "discrepancy",
+      "definition": "A difference between two figures or statements that should match or agree",
+      "example": "The auditor found a discrepancy between the reported and actual inventory numbers.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "discrepancy",
+      "translations": {
+        "es": "discrepancia"
+      }
+    },
+    {
+      "word": "compliance",
+      "definition": "The act of following rules, regulations, or standards set by an authority or organization",
+      "example": "The company hired a compliance officer to ensure all processes meet legal requirements.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "compliance",
+      "translations": {
+        "es": "cumplimiento normativo"
+      }
+    },
+    {
+      "word": "variance",
+      "definition": "The difference between a planned or expected amount and the actual amount recorded",
+      "example": "A budget variance of 15% triggered an internal review of spending.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "variance",
+      "translations": {
+        "es": "varianza / desviación"
+      }
+    },
+    {
+      "word": "accrual",
+      "definition": "A method of recording income or expenses when earned or incurred, regardless of when payment is made",
+      "example": "Under the accrual method, revenue is recognized when a service is delivered, not when invoiced.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "accrual",
+      "translations": {
+        "es": "devengo / acumulación contable"
+      }
+    },
+    {
+      "word": "liability",
+      "definition": "A financial obligation or debt that an individual or organization owes to another party",
+      "example": "The lawsuit created a significant liability on the company's balance sheet.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "liability",
+      "translations": {
+        "es": "pasivo / responsabilidad legal"
+      }
+    },
+    {
+      "word": "fiduciary",
+      "definition": "Relating to the legal duty to act in another party's best interest when managing their assets",
+      "example": "As a fiduciary, the fund manager is legally required to prioritize the client's interests.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "fiduciary",
+      "translations": {
+        "es": "fiduciario"
+      }
+    },
+    {
+      "word": "amortization",
+      "definition": "The process of gradually reducing a debt or spreading the cost of an asset over time",
+      "example": "The loan's amortization schedule shows equal monthly payments spread over twenty years.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "amortization",
+      "translations": {
+        "es": "amortización"
+      }
+    },
+    {
+      "word": "solvency",
+      "definition": "The financial condition of having enough assets or income to pay all debts and obligations",
+      "example": "Analysts questioned the firm's solvency after three consecutive quarters of losses.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "solvency",
+      "translations": {
+        "es": "solvencia"
+      }
+    },
+    {
+      "word": "contingency",
+      "definition": "A provision or reserve set aside to cover unexpected future events or financial needs",
+      "example": "The project budget includes a ten-percent contingency for unforeseen costs.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "contingency",
+      "translations": {
+        "es": "contingencia / reserva"
+      }
     }
   ]
 }

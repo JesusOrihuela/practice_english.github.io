@@ -199,7 +199,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
-  background: #03595F;
+  background: var(--clr-check-btn);
   border: none;
   border-radius: var(--radius-md);
   cursor: pointer;

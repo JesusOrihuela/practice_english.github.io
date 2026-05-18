@@ -23,26 +23,30 @@ const AppPath = (() => {
 
   // ── CEFR-ordered topic list ─────────────────────────────────────────────
   const TOPICS = [
-    { id: 'greetings',      level: 'A1', emoji: '👋', label: 'Greetings',      order: 1 },
-    { id: 'restaurant',     level: 'A1', emoji: '🍽️', label: 'Restaurant',     order: 2 },
-    { id: 'supermarket',    level: 'A2', emoji: '🛒', label: 'Supermarket',    order: 3 },
-    { id: 'kitchen',        level: 'A2', emoji: '🍳', label: 'Kitchen',        order: 4 },
-    { id: 'traveling',      level: 'A2', emoji: '✈️', label: 'Traveling',      order: 5 },
-    { id: 'entertainment',  level: 'B1', emoji: '🎬', label: 'Entertainment',  order: 6 },
-    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gym',            order: 7 },
-    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Technology',     order: 8 },
-    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Accountability', order: 9 },
+    { id: 'greetings',      level: 'A1', emoji: '👋', label: 'Saludos',           order: 1  },
+    { id: 'restaurant',     level: 'A1', emoji: '🍽️', label: 'Restaurante',       order: 2  },
+    { id: 'supermarket',    level: 'A2', emoji: '🛒', label: 'Supermercado',      order: 3  },
+    { id: 'kitchen',        level: 'A2', emoji: '🍳', label: 'Cocina',            order: 4  },
+    { id: 'transportation', level: 'A2', emoji: '🚌', label: 'Transporte',        order: 5  },
+    { id: 'airport',        level: 'A2', emoji: '✈️', label: 'Aeropuerto',        order: 6  },
+    { id: 'accommodation',  level: 'A2', emoji: '🏨', label: 'Alojamiento',       order: 7  },
+    { id: 'movies',         level: 'A2', emoji: '🎬', label: 'Películas & Series',order: 8  },
+    { id: 'music',          level: 'A2', emoji: '🎵', label: 'Música',            order: 9  },
+    { id: 'theater',        level: 'B1', emoji: '🎭', label: 'Teatro & Arte',     order: 10 },
+    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gimnasio',          order: 11 },
+    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        order: 12 },
+    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Contabilidad',      order: 13 },
   ];
 
   // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─
-  const GRAMMAR_TOTAL = 28;
+  const GRAMMAR_TOTAL = 35;
 
   // ── Activity definitions ─────────────────────────────────────────────────
   const ACTIVITIES = [
     {
       id: 'speaking',
       emoji: '🎙️',
-      label: 'Speaking',
+      label: 'Pronunciación',
       skill: 'speaking',
       href: topicId => `speaking/html/speaking.html?topic=${topicId}`,
       actPrefix: '',
@@ -50,7 +54,7 @@ const AppPath = (() => {
     {
       id: 'dictation',
       emoji: '✍️',
-      label: 'Dictation',
+      label: 'Dictado',
       skill: 'listening',
       href: topicId => `dictation/html/dictation.html?topic=${topicId}`,
       actPrefix: 'dict_',
@@ -66,7 +70,7 @@ const AppPath = (() => {
     {
       id: 'scramble',
       emoji: '🧩',
-      label: 'Scramble',
+      label: 'Secuencia',
       skill: 'writing',
       href: topicId => `scramble/html/scramble.html?topic=${topicId}`,
       actPrefix: 'scramble_',
@@ -74,7 +78,7 @@ const AppPath = (() => {
     {
       id: 'translation',
       emoji: '🔄',
-      label: 'Translation',
+      label: 'Traducción',
       skill: 'writing',
       href: topicId => `translation/html/translation.html?topic=${topicId}`,
       actPrefix: 'trans_',
@@ -94,7 +98,7 @@ const AppPath = (() => {
     {
       id: 'vocabulary',
       emoji: '📚',
-      label: 'Vocabulary',
+      label: 'Vocabulario',
       href: topicId => `vocabulary/html/vocabulary.html?topic=${topicId}`,
       cardPrefix: topicId => 'vocab_' + topicId,
       total: 15,
@@ -109,14 +113,26 @@ const AppPath = (() => {
   }
 
   /**
+   * Grammar rules available at the user's current CEFR level.
+   * A rule with level null is always included (shown to all users).
+   * Falls back to all rules if AppProficiency is unavailable.
+   */
+  function _leveledGrammarRules() {
+    if (typeof AppProficiency === 'undefined') return _grammarRules;
+    const userOrd = CEFR_ORDER[AppProficiency.getLabel()] ?? 5;
+    return _grammarRules.filter(r => (CEFR_ORDER[r.level] ?? 0) <= userOrd);
+  }
+
+  /**
    * Grammar rules relevant to a topic (matched by topics[] field in the rule).
    * Each rule declares which topics it belongs to — content-mapped, not just CEFR.
    * @returns {{ total, seen, due, titles, href }} or null if no rules loaded
    */
   function getTopicGrammarInfo(topicId) {
-    if (_grammarRules.length === 0) return null;
+    const leveled = _leveledGrammarRules();
+    if (leveled.length === 0) return null;
 
-    const relevant = _grammarRules.filter(r =>
+    const relevant = leveled.filter(r =>
       Array.isArray(r.topics) && r.topics.includes(topicId)
     );
     if (relevant.length === 0) return null;
@@ -212,14 +228,31 @@ const AppPath = (() => {
 
   /**
    * Status of every topic:  'active' | 'ahead' | 'complete'
+   *
+   * Placement bootstrap: if the user has a placement level saved and has
+   * never practiced Speaking in any topic, unlock all topics up to that
+   * CEFR level so Mi Aprendizaje starts at the right place.
+   * Once any Speaking card is seen the normal guide threshold takes over.
    */
   function getTopicStatuses() {
+    const _cefrOrder = CEFR_ORDER;
+
+    const _placementLevel = localStorage.getItem(AppLangPair.storageKey('pe_placement_level')); // 'A1'|'A2'|'B1'|'B2'|null
+
+    // Bootstrap only applies when the user has zero Speaking practice across all topics.
+    const _noPractice = _placementLevel
+      ? TOPICS.every(t => _speakingSeenFraction(t.id) === 0)
+      : false;
+
     return TOPICS.map((topic, idx) => {
       const masteryPct = getTopicMastery(topic.id);
 
       let status;
       if (idx === 0) {
         status = masteryPct >= COMPLETE_THRESHOLD * 100 ? 'complete' : 'active';
+      } else if (_noPractice && (_cefrOrder[topic.level] ?? 99) <= (_cefrOrder[_placementLevel] ?? -1)) {
+        // Placement bootstrap: topic is within the detected level — unlock it.
+        status = 'active';
       } else {
         const prevTopic = TOPICS[idx - 1];
         if (_speakingSeenFraction(prevTopic.id) >= GUIDE_THRESHOLD) {
@@ -235,10 +268,10 @@ const AppPath = (() => {
 
   /**
    * CEFR-level average mastery percentages.
-   * @returns {{ A1, A2, B1, B2 }}  each 0–100
+   * @returns {{ A1, A2, B1, B2, C1, C2 }}  each 0–100 (only levels present in TOPICS will have values)
    */
   function getLevelProgress() {
-    const levels = { A1: [], A2: [], B1: [], B2: [] };
+    const levels = Object.fromEntries(Object.keys(CEFR_ORDER).map(k => [k, []]));
     TOPICS.forEach(t => levels[t.level].push(getTopicMastery(t.id)));
     const out = {};
     Object.keys(levels).forEach(lvl => {
@@ -349,7 +382,7 @@ const AppPath = (() => {
       }
       if (Progress.getMastery(key) === 'mastered') mastered++;
     });
-    return { seen, due, nextDue, mastered, total: GRAMMAR_TOTAL };
+    return { seen, due, nextDue, mastered, total: _leveledGrammarRules().length };
   }
 
   /**
@@ -390,7 +423,7 @@ const AppPath = (() => {
     const withDue = allDueCounts.filter(d => d.due > 0);
     if (withDue.length > 0) {
       withDue.sort((a, b) => b.due - a.due);
-      return withDue[0].act.href;
+      return withDue[0].act.href(topicId);
     }
 
     // Fall back: primary activities by mastery state, then secondary
@@ -416,7 +449,7 @@ const AppPath = (() => {
   function getAheadHint(topicId) {
     const idx = TOPICS.findIndex(t => t.id === topicId);
     if (idx <= 0) return '';
-    return `Recommended after ${TOPICS[idx - 1].label}`;
+    return `Recomendado después de ${TOPICS[idx - 1].label}`;
   }
 
   /**
@@ -438,7 +471,7 @@ const AppPath = (() => {
     const vocabIds     = Progress.getVocabIds(topicId);
     const cards        = Progress.getAllCards();
     const now          = Date.now();
-    const grammarRules = _grammarRules.filter(r =>
+    const grammarRules = _leveledGrammarRules().filter(r =>
       Array.isArray(r.topics) && r.topics.includes(topicId)
     );
 
@@ -475,25 +508,25 @@ const AppPath = (() => {
     });
 
     const RAW = [
-      { actId: 'speaking',    emoji: '🎙️', label: 'Speaking',
+      { actId: 'speaking',    emoji: '🎙️', label: 'Pronunciación',
         href: spkAct.href(topicId),
         ..._stats(function (id) { return spkAct.actPrefix + id; }, phraseIds) },
-      { actId: 'vocabulary',  emoji: '📚', label: 'Vocabulary',
+      { actId: 'vocabulary',  emoji: '📚', label: 'Vocabulario',
         href: vocabAct.href(topicId), ...vocabStats },
       { actId: 'cloze',       emoji: '🔤', label: 'Cloze',
         href: clozeAct.href(topicId),
         ..._stats(function (id) { return clozeAct.actPrefix + id; }, phraseIds) },
-      { actId: 'dictation',   emoji: '✍️', label: 'Dictation',
+      { actId: 'dictation',   emoji: '✍️', label: 'Dictado',
         href: dictAct.href(topicId),
         ..._stats(function (id) { return dictAct.actPrefix + id; }, phraseIds) },
-      { actId: 'translation', emoji: '🔄', label: 'Translation',
+      { actId: 'translation', emoji: '🔄', label: 'Traducción',
         href: transAct.href(topicId),
         ..._stats(function (id) { return transAct.actPrefix + id; }, phraseIds) },
-      { actId: 'scramble',    emoji: '🧩', label: 'Scramble',
+      { actId: 'scramble',    emoji: '🧩', label: 'Secuencia',
         href: scrAct.href(topicId),
         ..._stats(function (id) { return scrAct.actPrefix + id; }, phraseIds) },
     ].concat(grammarRules.length > 0
-      ? [{ actId: 'grammar', emoji: '📐', label: 'Grammar',
+      ? [{ actId: 'grammar', emoji: '📐', label: 'Gramática',
            href: 'grammar/html/grammar.html',
            mastered: gMastered, due: gDue, total: grammarRules.length }]
       : []);
@@ -528,6 +561,6 @@ const AppPath = (() => {
     getAheadHint,
     getAheadHref,
     getTopicStepStates,
-    _getGrammarRules: function () { return _grammarRules; },
+    _getGrammarRules: function () { return _leveledGrammarRules(); },
   };
 })();

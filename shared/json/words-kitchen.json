@@ -3,152 +3,282 @@
     {
       "word": "recipe",
       "definition": "A set of instructions for preparing a particular dish",
-      "translation": "receta",
       "example": "This is my grandmother's secret recipe for apple pie.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "recipe"
+      "level": "A2",
+      "id": "recipe",
+      "translations": {
+        "es": "receta"
+      }
     },
     {
       "word": "ingredient",
       "definition": "One of the foods or substances used to make a dish",
-      "translation": "ingrediente",
       "example": "You only need a few fresh ingredients to make this meal.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "ingredient"
+      "level": "A2",
+      "id": "ingredient",
+      "translations": {
+        "es": "ingrediente"
+      }
     },
     {
       "word": "boil",
       "definition": "To heat a liquid until it produces large bubbles at 100°C",
-      "translation": "hervir",
       "example": "Boil the pasta for ten minutes until it is al dente.",
       "category": "Verb",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "boil"
+      "level": "A2",
+      "id": "boil",
+      "translations": {
+        "es": "hervir"
+      }
     },
     {
       "word": "blend",
       "definition": "To mix ingredients smoothly, often in a blender",
-      "translation": "mezclar / licuar",
       "example": "Blend the fruits together to make a thick smoothie.",
       "category": "Verb",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "blend"
+      "level": "A2",
+      "id": "blend",
+      "translations": {
+        "es": "mezclar / licuar"
+      }
     },
     {
       "word": "preheat",
       "definition": "To heat an oven to the required temperature before cooking begins",
-      "translation": "precalentar",
       "example": "Preheat the oven to 180°C before putting in the cake.",
       "category": "Verb",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "preheat"
+      "level": "A2",
+      "id": "preheat",
+      "translations": {
+        "es": "precalentar"
+      }
     },
     {
       "word": "whisk",
       "definition": "To beat eggs, cream, or a sauce quickly to add air and make it light",
-      "translation": "batir",
       "example": "Whisk the eggs until they are light and fluffy.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "whisk"
+      "level": "B1",
+      "id": "whisk",
+      "translations": {
+        "es": "batir"
+      }
     },
     {
       "word": "dice",
       "definition": "To cut food into small, evenly sized cube-shaped pieces",
-      "translation": "cortar en cubos",
       "example": "Dice the onion and garlic finely before adding them to the pan.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "dice"
+      "level": "B1",
+      "id": "dice",
+      "translations": {
+        "es": "cortar en cubos"
+      }
     },
     {
       "word": "marinate",
       "definition": "To soak food in a seasoned liquid before cooking to add flavour",
-      "translation": "marinar",
       "example": "Marinate the chicken in lemon juice and herbs for two hours.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "marinate"
+      "level": "B1",
+      "id": "marinate",
+      "translations": {
+        "es": "marinar"
+      }
     },
     {
       "word": "grate",
       "definition": "To shred food into small thin pieces by rubbing it against a grater",
-      "translation": "rallar",
       "example": "Grate the cheese over the pasta just before serving.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "grate"
+      "level": "B1",
+      "id": "grate",
+      "translations": {
+        "es": "rallar"
+      }
     },
     {
       "word": "batter",
       "definition": "A liquid mixture of flour, eggs, and milk used for coating or baking",
-      "translation": "masa líquida",
       "example": "Dip the fish pieces in the batter before frying them.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "batter"
+      "level": "B1",
+      "id": "batter",
+      "translations": {
+        "es": "masa líquida"
+      }
     },
     {
       "word": "utensil",
       "definition": "A tool or implement used for cooking or eating",
-      "translation": "utensilio",
       "example": "Make sure all cooking utensils are clean before you start.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "utensil"
+      "level": "B1",
+      "id": "utensil",
+      "translations": {
+        "es": "utensilio"
+      }
     },
     {
       "word": "simmer",
       "definition": "To cook food gently in liquid just below boiling point",
-      "translation": "cocer a fuego lento",
       "example": "Let the soup simmer on low heat for about twenty minutes.",
       "category": "Verb",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "simmer"
+      "level": "B1",
+      "id": "simmer",
+      "translations": {
+        "es": "cocer a fuego lento"
+      }
     },
     {
       "word": "sauté",
       "definition": "To fry food quickly in a little oil or butter over high heat",
-      "translation": "saltear",
       "example": "Sauté the mushrooms in butter for about two minutes.",
       "category": "Verb",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "saut"
+      "level": "B2",
+      "id": "saut",
+      "translations": {
+        "es": "saltear"
+      }
     },
     {
       "word": "knead",
       "definition": "To work dough firmly with your hands by pushing and folding",
-      "translation": "amasar",
       "example": "Knead the bread dough for ten minutes until it is smooth and elastic.",
       "category": "Verb",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "knead"
+      "level": "B2",
+      "id": "knead",
+      "translations": {
+        "es": "amasar"
+      }
     },
     {
       "word": "broil",
       "definition": "To cook food directly under intense overhead heat in an oven",
-      "translation": "asar al grill",
       "example": "Broil the fish fillets for about five minutes on each side.",
       "category": "Verb",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "broil"
+      "level": "B2",
+      "id": "broil",
+      "translations": {
+        "es": "asar al grill"
+      }
+    },
+    {
+      "id": "deglaze",
+      "word": "deglaze",
+      "definition": "To add liquid to a hot pan to dissolve caramelized residue and incorporate it into a sauce",
+      "example": "Deglaze the pan with cognac and scrape up all the browned bits.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "desglasar" }
+    },
+    {
+      "id": "emulsify",
+      "word": "emulsify",
+      "definition": "To combine two normally unmixable liquids into a stable, uniform mixture",
+      "example": "Mustard helps emulsify the dressing, keeping the oil and vinegar combined.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "emulsionar" }
+    },
+    {
+      "id": "braise",
+      "word": "braise",
+      "definition": "To cook food slowly in a small amount of liquid in a covered pot, combining searing and steaming",
+      "example": "Braise the short ribs for three hours until the meat falls off the bone.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "brasear / estofar" }
+    },
+    {
+      "id": "render",
+      "word": "render",
+      "definition": "To melt and release the fat from meat by cooking it slowly over low to medium heat",
+      "example": "Render the duck fat slowly before raising the heat to crisp the skin.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "derretir / fundir la grasa" }
+    },
+    {
+      "id": "blanch",
+      "word": "blanch",
+      "definition": "To plunge food briefly into boiling water then immediately into cold water to stop cooking",
+      "example": "Blanch the green beans for two minutes to preserve their color and crunch.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "blanquear / escaldar" }
+    },
+    {
+      "id": "spherification",
+      "word": "spherification",
+      "definition": "A molecular gastronomy technique that encapsulates a liquid inside a thin gel membrane to form edible spheres",
+      "example": "The chef used spherification to create olive oil pearls that burst in the mouth.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "esferificación" }
+    },
+    {
+      "id": "temper",
+      "word": "temper",
+      "definition": "To stabilize melted chocolate by carefully controlling its temperature to form the correct cocoa butter crystals",
+      "example": "If you don't temper the chocolate properly, it will look dull and have a crumbly texture.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "temperar (el chocolate)" }
+    },
+    {
+      "id": "sous_vide",
+      "word": "sous-vide",
+      "definition": "A cooking method in which food is vacuum-sealed and cooked at a precisely controlled low temperature in a water bath",
+      "example": "Cooking salmon sous-vide at 50°C for 30 minutes produces an impossibly silky texture.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "sous-vide / cocción al vacío" }
+    },
+    {
+      "id": "maillard",
+      "word": "Maillard reaction",
+      "definition": "The chemical browning that occurs when amino acids and sugars are heated above 140°C, producing complex roasted flavors",
+      "example": "Understanding the Maillard reaction explains why searing meat before braising develops so much more flavor.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "reacción de Maillard" }
+    },
+    {
+      "id": "mise_en_place",
+      "word": "mise en place",
+      "definition": "The culinary practice of preparing, measuring, and organizing all ingredients before beginning to cook",
+      "example": "Professional chefs rely on strict mise en place to cook efficiently under pressure.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "mise en place / puesta a punto" }
     }
   ]
 }

@@ -75,7 +75,7 @@
     {
       "id": "present_simple_habits",
       "category": "tenses",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Present Simple",
       "title_es": "Presente Simple — Hábitos y estados",
       "prerequisites": [],
@@ -207,7 +207,7 @@
     {
       "id": "present_continuous_now",
       "category": "tenses",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Present Continuous",
       "title_es": "Presente Continuo — Acciones en progreso",
       "prerequisites": [
@@ -337,13 +337,13 @@
       ],
       "topics": [
         "kitchen",
-        "entertainment"
+        "movies"
       ]
     },
     {
       "id": "simple_past",
       "category": "tenses",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Simple Past",
       "title_es": "Pasado Simple — Acciones completadas",
       "prerequisites": [
@@ -471,14 +471,14 @@
         }
       ],
       "topics": [
-        "traveling",
-        "entertainment"
+        "airport",
+        "movies"
       ]
     },
     {
       "id": "past_continuous",
       "category": "tenses",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Past Continuous",
       "title_es": "Pasado Continuo — Acciones en progreso",
       "prerequisites": [
@@ -604,14 +604,14 @@
         }
       ],
       "topics": [
-        "traveling",
-        "entertainment"
+        "transportation",
+        "movies"
       ]
     },
     {
       "id": "present_perfect_experience",
       "category": "tenses",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Present Perfect",
       "title_es": "Present Perfect — Experiencias y resultados presentes",
       "prerequisites": [
@@ -744,13 +744,13 @@
       ],
       "topics": [
         "accountability",
-        "entertainment"
+        "theater"
       ]
     },
     {
       "id": "future_will_going_to",
       "category": "tenses",
-      "cefr": "B1",
+      "level": "B1",
       "title": "will vs. going to",
       "title_es": "Futuro: will vs. going to",
       "prerequisites": [
@@ -882,13 +882,13 @@
       ],
       "topics": [
         "accountability",
-        "traveling"
+        "airport"
       ]
     },
     {
       "id": "past_perfect",
       "category": "tenses",
-      "cefr": "B2",
+      "level": "B2",
       "title": "Past Perfect",
       "title_es": "Past Perfect — Pasado antes del pasado",
       "prerequisites": [
@@ -1025,7 +1025,7 @@
     {
       "id": "article_a_an",
       "category": "articles",
-      "cefr": "A2",
+      "level": "A2",
       "title": "A / An",
       "title_es": "Artículos indefinidos: a / an",
       "prerequisites": [],
@@ -1155,7 +1155,7 @@
     {
       "id": "article_the",
       "category": "articles",
-      "cefr": "A2",
+      "level": "A2",
       "title": "The",
       "title_es": "Artículo definido: the",
       "prerequisites": [
@@ -1291,7 +1291,7 @@
     {
       "id": "article_zero",
       "category": "articles",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Zero Article",
       "title_es": "Artículo cero — Cuándo NO usar artículo",
       "prerequisites": [
@@ -1436,7 +1436,7 @@
     {
       "id": "modal_can_ability",
       "category": "modals",
-      "cefr": "A2",
+      "level": "A2",
       "title": "can / can't",
       "title_es": "can / can't — Habilidad y posibilidad",
       "prerequisites": [],
@@ -1563,13 +1563,13 @@
       ],
       "topics": [
         "greetings",
-        "traveling"
+        "transportation"
       ]
     },
     {
       "id": "modal_should_advice",
       "category": "modals",
-      "cefr": "A2",
+      "level": "A2",
       "title": "should / shouldn't",
       "title_es": "should / shouldn't — Consejo y recomendación",
       "prerequisites": [
@@ -1702,7 +1702,7 @@
     {
       "id": "modal_must_obligation",
       "category": "modals",
-      "cefr": "B1",
+      "level": "B1",
       "title": "must / have to",
       "title_es": "must / have to — Obligación y necesidad",
       "prerequisites": [
@@ -1839,7 +1839,7 @@
     {
       "id": "conditional_zero",
       "category": "conditionals",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Zero Conditional",
       "title_es": "Condicional Cero — Hechos y verdades generales",
       "prerequisites": [
@@ -1971,7 +1971,7 @@
     {
       "id": "conditional_first",
       "category": "conditionals",
-      "cefr": "B1",
+      "level": "B1",
       "title": "First Conditional",
       "title_es": "Primer Condicional — Situaciones reales y posibles",
       "prerequisites": [
@@ -2106,7 +2106,7 @@
     {
       "id": "conditional_second",
       "category": "conditionals",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Second Conditional",
       "title_es": "Segundo Condicional — Situaciones hipotéticas",
       "prerequisites": [
@@ -2241,7 +2241,7 @@
     {
       "id": "conditional_third",
       "category": "conditionals",
-      "cefr": "B2",
+      "level": "B2",
       "title": "Third Conditional",
       "title_es": "Tercer Condicional — El pasado que no fue",
       "prerequisites": [
@@ -2377,7 +2377,7 @@
     {
       "id": "passive_present_simple",
       "category": "passive",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Passive Voice — Present Simple",
       "title_es": "Voz Pasiva — Presente Simple",
       "prerequisites": [
@@ -2504,13 +2504,15 @@
         }
       ],
       "topics": [
-        "technology"
+        "technology",
+        "theater",
+        "airport"
       ]
     },
     {
       "id": "questions_wh",
       "category": "questions",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Wh- Questions",
       "title_es": "Preguntas con Wh- — Información específica",
       "prerequisites": [],
@@ -2641,7 +2643,7 @@
     {
       "id": "comparatives_short",
       "category": "comparatives",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Comparatives",
       "title_es": "Comparativos — Comparar dos cosas",
       "prerequisites": [],
@@ -2765,13 +2767,13 @@
       ],
       "topics": [
         "supermarket",
-        "entertainment"
+        "movies"
       ]
     },
     {
       "id": "verb_gerund",
       "category": "verb_patterns",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Verb + Gerund (-ing)",
       "title_es": "Verbo + Gerundio — Verbos que van seguidos de -ing",
       "prerequisites": [
@@ -2897,13 +2899,15 @@
       ],
       "topics": [
         "technology",
-        "accountability"
+        "accountability",
+        "theater",
+        "kitchen"
       ]
     },
     {
       "id": "verb_infinitive",
       "category": "verb_patterns",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Verb + Infinitive (to)",
       "title_es": "Verbo + Infinitivo — Verbos que van seguidos de to + infinitivo",
       "prerequisites": [
@@ -3035,7 +3039,7 @@
     {
       "id": "prepositions_time",
       "category": "prepositions",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Prepositions of Time: at, on, in",
       "title_es": "Preposiciones de tiempo: at, on, in",
       "prerequisites": [],
@@ -3167,14 +3171,14 @@
         }
       ],
       "topics": [
-        "traveling",
-        "kitchen"
+        "kitchen",
+        "transportation"
       ]
     },
     {
       "id": "prepositions_place",
       "category": "prepositions",
-      "cefr": "A2",
+      "level": "A2",
       "title": "Prepositions of Place: at, on, in",
       "title_es": "Preposiciones de lugar: at, on, in",
       "prerequisites": [
@@ -3308,14 +3312,14 @@
         }
       ],
       "topics": [
-        "traveling",
-        "kitchen"
+        "kitchen",
+        "airport"
       ]
     },
     {
       "id": "prepositions_after_verbs",
       "category": "prepositions",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Verb + Preposition Collocations",
       "title_es": "Colocaciones: verbo + preposicion",
       "prerequisites": [
@@ -3456,7 +3460,7 @@
     {
       "id": "phrasal_common",
       "category": "phrasal",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Common Phrasal Verbs",
       "title_es": "Verbos frasales comunes",
       "prerequisites": [],
@@ -3591,13 +3595,13 @@
       ],
       "topics": [
         "technology",
-        "entertainment"
+        "movies"
       ]
     },
     {
       "id": "phrasal_separable",
       "category": "phrasal",
-      "cefr": "B1",
+      "level": "B1",
       "title": "Separable vs Inseparable Phrasal Verbs",
       "title_es": "Verbos frasales separables e inseparables",
       "prerequisites": [
@@ -3738,7 +3742,7 @@
     {
       "id": "phrasal_idiomatic",
       "category": "phrasal",
-      "cefr": "B2",
+      "level": "B2",
       "title": "Idiomatic Phrasal Verbs",
       "title_es": "Verbos frasales idiomaticos",
       "prerequisites": [
@@ -3873,8 +3877,191 @@
         }
       ],
       "topics": [
-        "entertainment",
+        "accountability",
+        "movies"
+      ]
+    },
+    {
+      "id": "inversion_negative_adverbials",
+      "category": "advanced_syntax",
+      "level": "C1",
+      "title": "Inversion after negative adverbials",
+      "explanation": "When a sentence begins with a negative or restrictive adverbial (Never, Not only, Hardly, Seldom), the subject and auxiliary verb are inverted. This structure is formal and creates strong emphasis.",
+      "examples": [
+        {
+          "en": "Never have I seen such dedication.",
+          "es": "Nunca he visto tanta dedicación."
+        },
+        {
+          "en": "Not only did she finish early, but she also helped others.",
+          "es": "No solo terminó antes, sino que también ayudó a los demás."
+        },
+        {
+          "en": "Hardly had the meeting ended when the news broke.",
+          "es": "Apenas había terminado la reunión cuando llegó la noticia."
+        }
+      ],
+      "tips": "This structure is formal and literary. It emphasizes the adverbial and creates a dramatic effect. Common in written English, speeches, and formal presentations.",
+      "topics": [
+        "accountability",
+        "theater"
+      ]
+    },
+    {
+      "id": "mixed_conditionals",
+      "category": "conditionals",
+      "level": "C1",
+      "title": "Mixed conditionals",
+      "explanation": "Mixed conditionals combine elements from different conditional types. The most common: past condition + present result (if + past perfect, would + infinitive), used when a past event has a consequence in the present.",
+      "examples": [
+        {
+          "en": "If I had studied medicine, I would be a doctor now.",
+          "es": "Si hubiera estudiado medicina, ahora sería médico."
+        },
+        {
+          "en": "If she had taken the job, she wouldn’t be struggling financially today.",
+          "es": "Si hubiera aceptado el trabajo, hoy no tendría dificultades económicas."
+        }
+      ],
+      "tips": "Mixed conditionals express regret about the past and its present consequences. The if-clause uses past perfect; the result clause uses would + base verb.",
+      "topics": [
+        "accountability",
+        "kitchen"
+      ]
+    },
+    {
+      "id": "subjunctive_formal",
+      "category": "advanced_syntax",
+      "level": "C1",
+      "title": "Formal subjunctive",
+      "explanation": "The formal subjunctive uses the base form of a verb after expressions of necessity, demand, or recommendation: It is essential that, require that, suggest that, insist that. The base form is used regardless of person.",
+      "examples": [
+        {
+          "en": "It is essential that every member submit the report on time.",
+          "es": "Es esencial que cada miembro entregue el informe a tiempo."
+        },
+        {
+          "en": "The protocol requires that the senior representative speak first.",
+          "es": "El protocolo requiere que el representante de mayor rango hable primero."
+        },
+        {
+          "en": "I suggest that we reconsider the budget before proceeding.",
+          "es": "Sugiero que reconsideremos el presupuesto antes de continuar."
+        }
+      ],
+      "tips": "Use the base form: he submit (not he submits). More common in American English; British English often uses should + infinitive instead.",
+      "topics": [
+        "greetings",
+        "supermarket",
+        "airport",
         "accountability"
+      ]
+    },
+    {
+      "id": "nominalization",
+      "category": "advanced_syntax",
+      "level": "C1",
+      "title": "Nominalization",
+      "explanation": "Nominalization turns verbs or adjectives into nouns: to decide -> the decision; to analyze -> the analysis; accurate -> accuracy. It makes language more formal and concise.",
+      "examples": [
+        {
+          "en": "The committee made a decision to postpone the vote.",
+          "es": "El comité tomó una decisión de posponer la votación."
+        },
+        {
+          "en": "The organization conducted an investigation into the matter.",
+          "es": "La organización realizó una investigación sobre el asunto."
+        },
+        {
+          "en": "There was significant improvement in the quarterly results.",
+          "es": "Hubo una mejora significativa en los resultados trimestrales."
+        }
+      ],
+      "tips": "Nominalizations are common in academic, legal, and business writing. They allow complex ideas to be packaged as noun phrases. Overuse can make text heavy and impersonal.",
+      "topics": [
+        "accountability",
+        "technology",
+        "theater"
+      ]
+    },
+    {
+      "id": "cleft_sentences",
+      "category": "advanced_syntax",
+      "level": "C2",
+      "title": "Cleft sentences",
+      "explanation": "Cleft sentences split a simple sentence into two clauses to emphasize one element. It-clefts: It is/was + focus + that/who. Wh-clefts: What + clause + is/was + focus.",
+      "examples": [
+        {
+          "en": "It was the director’s staging that made the production so memorable.",
+          "es": "Fue la puesta en escena del director lo que hizo la producción tan memorable."
+        },
+        {
+          "en": "What surprised me most was the ambiguous ending.",
+          "es": "Lo que más me sorprendió fue el final ambiguo."
+        },
+        {
+          "en": "It is with great honor that we welcome the distinguished delegates.",
+          "es": "Es con gran honor que damos la bienvenida a los distinguidos delegados."
+        }
+      ],
+      "tips": "It-clefts emphasize nouns, pronouns, or adverbials. Wh-clefts (pseudo-clefts) often emphasize verbs or entire clauses. Both are formal and rhetorical.",
+      "topics": [
+        "greetings",
+        "theater",
+        "movies"
+      ]
+    },
+    {
+      "id": "ellipsis_substitution",
+      "category": "advanced_syntax",
+      "level": "C2",
+      "title": "Ellipsis and substitution",
+      "explanation": "Ellipsis omits words understood from context. Substitution replaces a clause with do so, one, or that. Both make language economical and natural.",
+      "examples": [
+        {
+          "en": "Will you attend the conference? — I might do.",
+          "es": "¿Asistirás a la conferencia? — Es posible."
+        },
+        {
+          "en": "She wanted to leave early, and so did he.",
+          "es": "Ella quería salir temprano, y él también."
+        },
+        {
+          "en": "Some delegates arrived by train; others did so by plane.",
+          "es": "Algunos delegados llegaron en tren; otros lo hicieron en avión."
+        }
+      ],
+      "tips": "Do so substitutes a verb phrase when the subject differs. I might do (British English) omits the repeated verb phrase. Common in formal spoken and written English.",
+      "topics": [
+        "greetings",
+        "accountability"
+      ]
+    },
+    {
+      "id": "discourse_markers_advanced",
+      "category": "advanced_syntax",
+      "level": "C2",
+      "title": "Advanced discourse markers",
+      "explanation": "Advanced discourse markers signal contrast, concession, condition, or scope. Examples: Nevertheless, Notwithstanding, Insofar as, Whereas, Inasmuch as, By the same token.",
+      "examples": [
+        {
+          "en": "The results were promising; nevertheless, further testing is required.",
+          "es": "Los resultados fueron prometedores; no obstante, se requieren más pruebas."
+        },
+        {
+          "en": "Insofar as the evidence is reliable, the conclusion holds.",
+          "es": "En la medida en que la evidencia es fiable, la conclusión se sostiene."
+        },
+        {
+          "en": "Whereas the first clause deals with liability, the second addresses compensation.",
+          "es": "Mientras la primera cláusula trata sobre responsabilidad, la segunda aborda la compensación."
+        }
+      ],
+      "tips": "These markers are confined to formal writing, legal documents, and academic prose. Overusing them in speech sounds unnatural. Master their precise meaning before using them.",
+      "topics": [
+        "accountability",
+        "theater",
+        "technology"
       ]
     }
   ]

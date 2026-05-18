@@ -3,410 +3,676 @@
     {
       "id": "restaurant_can_we_see_the_menu_please",
       "phrase": "Can we see the menu, please?",
-      "translation": "¿Podemos ver el menú, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Modal 'would': polite request — standard restaurant formula",
-      "alternatives": ["Could we see the menu, please?"]
+      "alternatives": [
+        "Could we see the menu, please?"
+      ],
+      "translations": {
+        "es": "¿Podemos ver el menú, por favor?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_vegetarian_options",
       "phrase": "Do you have any vegetarian options?",
-      "translation": "¿Tienen alguna opción vegetariana?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen alguna opción vegetariana?"
+      }
     },
     {
       "id": "restaurant_what_do_you_recommend_as_a",
       "phrase": "What do you recommend as a specialty of the house?",
-      "translation": "¿Qué recomienda como especialidad de la casa?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Qué recomienda como especialidad de la casa?"
+      }
     },
     {
       "id": "restaurant_could_you_tell_me_about_todays",
       "phrase": "Could you tell me about today's specials?",
-      "translation": "¿Podría hablarme de las especialidades de hoy?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can you tell me about today's specials?"]
+      "alternatives": [
+        "Can you tell me about today's specials?"
+      ],
+      "translations": {
+        "es": "¿Podría hablarme de las especialidades de hoy?"
+      }
     },
     {
       "id": "restaurant_is_this_dish_spicy",
       "phrase": "Is this dish spicy?",
-      "translation": "¿Este plato es picante?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Este plato es picante?"
+      }
     },
     {
       "id": "restaurant_could_i_have_this_dish_without",
       "phrase": "Could I have this dish without onions, please?",
-      "translation": "¿Podría pedir este plato sin cebolla, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Present simple: habitual action or general fact",
-      "alternatives": ["Can I have this dish without onions, please?"]
+      "alternatives": [
+        "Can I have this dish without onions, please?"
+      ],
+      "translations": {
+        "es": "¿Podría pedir este plato sin cebolla, por favor?"
+      }
     },
     {
       "id": "restaurant_do_you_offer_glutenfree_alternatives",
       "phrase": "Do you offer gluten-free alternatives?",
-      "translation": "¿Ofrecen alternativas sin gluten?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Ofrecen alternativas sin gluten?"
+      }
     },
     {
       "id": "restaurant_how_long_will_the_food_take",
       "phrase": "How long will the food take to arrive?",
-      "translation": "¿Cuánto tardará en llegar la comida?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuánto tardará en llegar la comida?"
+      }
     },
     {
       "id": "restaurant_could_i_have_a_glass_of",
       "phrase": "Could I have a glass of water, please?",
-      "translation": "¿Me da un vaso de agua, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have a glass of water, please?"]
+      "alternatives": [
+        "Can I have a glass of water, please?"
+      ],
+      "translations": {
+        "es": "¿Me da un vaso de agua, por favor?"
+      }
     },
     {
       "id": "restaurant_is_it_possible_to_split_the",
       "phrase": "Is it possible to split the bill?",
-      "translation": "¿Es posible dividir la cuenta?",
-      "cefr": "A2",
-      "grammar": "Modal 'can': ability or permission"
+      "level": "A2",
+      "grammar": "Modal 'can': ability or permission",
+      "translations": {
+        "es": "¿Es posible dividir la cuenta?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_desserts_available",
       "phrase": "Do you have any desserts available?",
-      "translation": "¿Tienen postres disponibles?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen postres disponibles?"
+      }
     },
     {
       "id": "restaurant_could_i_have_some_extra_napkins",
       "phrase": "Could I have some extra napkins, please?",
-      "translation": "¿Podría darme más servilletas, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have some extra napkins, please?"]
+      "alternatives": [
+        "Can I have some extra napkins, please?"
+      ],
+      "translations": {
+        "es": "¿Podría darme más servilletas, por favor?"
+      }
     },
     {
       "id": "restaurant_is_the_tip_included_in_the",
       "phrase": "Is the tip included in the bill?",
-      "translation": "¿La propina está incluida en la cuenta?",
-      "cefr": "A2",
-      "grammar": "Contraction: 'I'd' = I would"
+      "level": "A2",
+      "grammar": "Contraction: 'I'd' = I would",
+      "translations": {
+        "es": "¿La propina está incluida en la cuenta?"
+      }
     },
     {
       "id": "restaurant_can_i_get_a_refill_on",
       "phrase": "Can I get a refill on my drink?",
-      "translation": "¿Pueden rellenarme la bebida?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Could I get a refill on my drink?"]
+      "alternatives": [
+        "Could I get a refill on my drink?"
+      ],
+      "translations": {
+        "es": "¿Pueden rellenarme la bebida?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_recommendations_for",
       "phrase": "Do you have any recommendations for wine pairings?",
-      "translation": "¿Tiene alguna recomendación para el maridaje de vinos?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tiene alguna recomendación para el maridaje de vinos?"
+      }
     },
     {
       "id": "restaurant_do_you_offer_any_childrens_menus",
       "phrase": "Do you offer any children's menus?",
-      "translation": "¿Ofrecen menús infantiles?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Ofrecen menús infantiles?"
+      }
     },
     {
       "id": "restaurant_could_i_have_some_bread_while",
       "phrase": "Could I have some bread while we wait?",
-      "translation": "¿Me traen pan mientras esperamos?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have some bread while we wait?"]
+      "alternatives": [
+        "Can I have some bread while we wait?"
+      ],
+      "translations": {
+        "es": "¿Me traen pan mientras esperamos?"
+      }
     },
     {
       "id": "restaurant_is_there_a_minimum_order_for",
       "phrase": "Is there a minimum order for delivery?",
-      "translation": "¿Hay un pedido mínimo para entrega a domicilio?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay un pedido mínimo para entrega a domicilio?"
+      }
     },
     {
       "id": "restaurant_can_i_make_a_reservation_for",
       "phrase": "Can I make a reservation for two for tonight?",
-      "translation": "¿Puedo hacer una reserva para dos para esta noche?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could I make a reservation for two for tonight?"]
+      "alternatives": [
+        "Could I make a reservation for two for tonight?"
+      ],
+      "translations": {
+        "es": "¿Puedo hacer una reserva para dos para esta noche?"
+      }
     },
     {
       "id": "restaurant_could_i_have_some_more_ice",
       "phrase": "Could I have some more ice in my drink, please?",
-      "translation": "¿Podría poner más hielo en mi bebida, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have some more ice in my drink, please?"]
+      "alternatives": [
+        "Can I have some more ice in my drink, please?"
+      ],
+      "translations": {
+        "es": "¿Podría poner más hielo en mi bebida, por favor?"
+      }
     },
     {
       "id": "restaurant_do_you_offer_any_discounts_for",
       "phrase": "Do you offer any discounts for large groups?",
-      "translation": "¿Ofrecen algún descuento para grupos grandes?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Ofrecen algún descuento para grupos grandes?"
+      }
     },
     {
       "id": "restaurant_is_there_a_corkage_fee_if",
       "phrase": "Is there a corkage fee if I bring my own wine?",
-      "translation": "¿Hay que pagar un descorche si traigo mi propio vino?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay que pagar un descorche si traigo mi propio vino?"
+      }
     },
     {
       "id": "restaurant_could_i_have_my_steak_cooked",
       "phrase": "Could I have my steak cooked medium, please?",
-      "translation": "¿Podría tener mi filete a término medio, por favor?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Passive voice: focus on the action, not the doer",
-      "alternatives": ["Can I have my steak cooked medium, please?"]
+      "alternatives": [
+        "Can I have my steak cooked medium, please?"
+      ],
+      "translations": {
+        "es": "¿Podría tener mi filete a término medio, por favor?"
+      }
     },
     {
       "id": "restaurant_is_there_a_limit_to_the",
       "phrase": "Is there a limit to the number of people for a reservation?",
-      "translation": "¿Hay un límite de personas para una reserva?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay un límite de personas para una reserva?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_recommendations_for_2",
       "phrase": "Do you have any recommendations for appetizers?",
-      "translation": "¿Tiene alguna recomendación para los aperitivos?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tiene alguna recomendación para los aperitivos?"
+      }
     },
     {
       "id": "restaurant_could_i_have_some_extra_sauce",
       "phrase": "Could I have some extra sauce on the side?",
-      "translation": "¿Podría servirme un poco más de salsa?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can I have some extra sauce on the side?"]
+      "alternatives": [
+        "Can I have some extra sauce on the side?"
+      ],
+      "translations": {
+        "es": "¿Podría servirme un poco más de salsa?"
+      }
     },
     {
       "id": "restaurant_is_it_possible_to_have_my",
       "phrase": "Is it possible to have my meal packed to go?",
-      "translation": "¿Es posible que me envíen la comida para llevar?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Es posible que me envíen la comida para llevar?"
+      }
     },
     {
       "id": "restaurant_could_you_recommend_a_good_wine",
       "phrase": "Could you recommend a good wine within a reasonable price range?",
-      "translation": "¿Podría recomendarme un buen vino a un precio razonable?",
-      "cefr": "B1",
+      "level": "B1",
       "grammar": null,
-      "alternatives": ["Can you recommend a good wine within a reasonable price range?"]
+      "alternatives": [
+        "Can you recommend a good wine within a reasonable price range?"
+      ],
+      "translations": {
+        "es": "¿Podría recomendarme un buen vino a un precio razonable?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_outdoor_seating",
       "phrase": "Do you have any outdoor seating available?",
-      "translation": "¿Disponen de asientos al aire libre?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Disponen de asientos al aire libre?"
+      }
     },
     {
       "id": "restaurant_could_i_have_the_bill_please",
       "phrase": "Could I have the bill, please?",
-      "translation": "¿Podría darme la cuenta, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have the bill, please?", "Could I have the check, please?", "Can I have the check, please?"]
+      "alternatives": [
+        "Can I have the bill, please?",
+        "Could I have the check, please?",
+        "Can I have the check, please?"
+      ],
+      "translations": {
+        "es": "¿Podría darme la cuenta, por favor?"
+      }
     },
     {
       "id": "restaurant_is_there_a_happy_hour_special",
       "phrase": "Is there a happy hour special?",
-      "translation": "¿Hay alguna hora feliz especial?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay alguna hora feliz especial?"
+      }
     },
     {
       "id": "restaurant_do_you_offer_any_lowcalorie_options",
       "phrase": "Do you offer any low-calorie options?",
-      "translation": "¿Ofrecen alguna opción baja en calorías?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Ofrecen alguna opción baja en calorías?"
+      }
     },
     {
       "id": "restaurant_could_you_help_me_pronounce_this",
       "phrase": "Could you help me pronounce this dish?",
-      "translation": "¿Podría ayudarme a pronunciar este plato?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can you help me pronounce this dish?"]
+      "alternatives": [
+        "Can you help me pronounce this dish?"
+      ],
+      "translations": {
+        "es": "¿Podría ayudarme a pronunciar este plato?"
+      }
     },
     {
       "id": "restaurant_is_there_a_time_limit_for",
       "phrase": "Is there a time limit for dining?",
-      "translation": "¿Hay un límite de tiempo para cenar?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay un límite de tiempo para cenar?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_options_for",
       "phrase": "Do you have any options for people with food allergies?",
-      "translation": "¿Tienen alguna opción para personas con alergias alimentarias?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen alguna opción para personas con alergias alimentarias?"
+      }
     },
     {
       "id": "restaurant_could_i_have_my_coffee_with",
       "phrase": "Could I have my coffee with almond milk, please?",
-      "translation": "¿Podría tomar mi café con leche de almendras, por favor?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can I have my coffee with almond milk, please?"]
+      "alternatives": [
+        "Can I have my coffee with almond milk, please?"
+      ],
+      "translations": {
+        "es": "¿Podría tomar mi café con leche de almendras, por favor?"
+      }
     },
     {
       "id": "restaurant_is_there_a_dress_code_for",
       "phrase": "Is there a dress code for dining here?",
-      "translation": "¿Hay algún código de vestimenta para cenar aquí?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay algún código de vestimenta para cenar aquí?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_recommendations_for_3",
       "phrase": "Do you have any recommendations for cocktails?",
-      "translation": "¿Tiene alguna recomendación de cócteles?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tiene alguna recomendación de cócteles?"
+      }
     },
     {
       "id": "restaurant_could_i_have_the_check_split",
       "phrase": "Could I have the check split evenly between us?",
-      "translation": "¿Podría dividir la cuenta entre los dos?",
-      "cefr": "B1",
+      "level": "B1",
       "grammar": "Present perfect: recent action with present relevance",
-      "alternatives": ["Can I have the check split evenly between us?", "Could I have the bill split evenly between us?"]
+      "alternatives": [
+        "Can I have the check split evenly between us?",
+        "Could I have the bill split evenly between us?"
+      ],
+      "translations": {
+        "es": "¿Podría dividir la cuenta entre los dos?"
+      }
     },
     {
       "id": "restaurant_is_there_a_charge_for_substitutions",
       "phrase": "Is there a charge for substitutions?",
-      "translation": "¿Hay que pagar por las sustituciones?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay que pagar por las sustituciones?"
+      }
     },
     {
       "id": "restaurant_do_you_offer_any_birthday_specials",
       "phrase": "Do you offer any birthday specials?",
-      "translation": "¿Ofrecen algún especial de cumpleaños?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Ofrecen algún especial de cumpleaños?"
+      }
     },
     {
       "id": "restaurant_could_i_order_a_side_of",
       "phrase": "Could I order a side of fries with my meal?",
-      "translation": "¿Puedo pedir una guarnición de patatas fritas con mi comida?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can I order a side of fries with my meal?", "Could I order a side of chips with my meal?", "Can I order a side of chips with my meal?"]
+      "alternatives": [
+        "Can I order a side of fries with my meal?",
+        "Could I order a side of chips with my meal?",
+        "Can I order a side of chips with my meal?"
+      ],
+      "translations": {
+        "es": "¿Puedo pedir una guarnición de patatas fritas con mi comida?"
+      }
     },
     {
       "id": "restaurant_is_there_a_fee_for_using",
       "phrase": "Is there a fee for using a credit card?",
-      "translation": "¿Hay que pagar por usar tarjeta de crédito?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay que pagar por usar tarjeta de crédito?"
+      }
     },
     {
       "id": "restaurant_do_you_have_a_dogfriendly_patio",
       "phrase": "Do you have a dog-friendly patio?",
-      "translation": "¿Tienen un patio apto para perros?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen un patio apto para perros?"
+      }
     },
     {
       "id": "restaurant_could_i_have_my_burger_cooked",
       "phrase": "Could I have my burger cooked well-done?",
-      "translation": "¿Puedo pedir mi hamburguesa bien cocida?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can I have my burger cooked well-done?"]
+      "alternatives": [
+        "Can I have my burger cooked well-done?"
+      ],
+      "translations": {
+        "es": "¿Puedo pedir mi hamburguesa bien cocida?"
+      }
     },
     {
       "id": "restaurant_is_there_a_childrens_menu_available",
       "phrase": "Is there a children's menu available?",
-      "translation": "¿Hay menú infantil?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay menú infantil?"
+      }
     },
     {
       "id": "restaurant_could_you_please_pack_the_leftovers",
       "phrase": "Could you please pack the leftovers in separate containers?",
-      "translation": "¿Podría envasar las sobras en recipientes separados?",
-      "cefr": "B1",
+      "level": "B1",
       "grammar": null,
-      "alternatives": ["Can you please pack the leftovers in separate containers?"]
+      "alternatives": [
+        "Can you please pack the leftovers in separate containers?"
+      ],
+      "translations": {
+        "es": "¿Podría envasar las sobras en recipientes separados?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_nonalcoholic_cocktails",
       "phrase": "Do you have any non-alcoholic cocktails?",
-      "translation": "¿Tienen cócteles sin alcohol?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen cócteles sin alcohol?"
+      }
     },
     {
       "id": "restaurant_could_i_have_my_salad_with",
       "phrase": "Could I have my salad with the dressing on the side?",
-      "translation": "¿Podría servirme la ensalada con el aderezo aparte?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can I have my salad with the dressing on the side?"]
+      "alternatives": [
+        "Can I have my salad with the dressing on the side?"
+      ],
+      "translations": {
+        "es": "¿Podría servirme la ensalada con el aderezo aparte?"
+      }
     },
     {
       "id": "restaurant_is_there_a_service_charge_for",
       "phrase": "Is there a service charge for large parties?",
-      "translation": "¿Hay un cargo por servicio para fiestas grandes?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay un cargo por servicio para fiestas grandes?"
+      }
     },
     {
       "id": "restaurant_could_you_recommend_a_dish_for",
       "phrase": "Could you recommend a dish for someone who is gluten intolerant?",
-      "translation": "¿Podría recomendarme un plato para alguien con intolerancia al gluten?",
-      "cefr": "B1",
+      "level": "B1",
       "grammar": null,
-      "alternatives": ["Can you recommend a dish for someone who is gluten intolerant?"]
+      "alternatives": [
+        "Can you recommend a dish for someone who is gluten intolerant?"
+      ],
+      "translations": {
+        "es": "¿Podría recomendarme un plato para alguien con intolerancia al gluten?"
+      }
     },
     {
       "id": "restaurant_do_you_have_any_specials_for",
       "phrase": "Do you have any specials for holidays?",
-      "translation": "¿Tienen algún especial para días festivos?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen algún especial para días festivos?"
+      }
     },
     {
       "id": "restaurant_could_you_turn_down_the_music",
       "phrase": "Could you turn down the music a bit, please?",
-      "translation": "¿Podría bajar un poco la música, por favor?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Can you turn down the music a bit, please?"]
+      "alternatives": [
+        "Can you turn down the music a bit, please?"
+      ],
+      "translations": {
+        "es": "¿Podría bajar un poco la música, por favor?"
+      }
     },
     {
       "id": "restaurant_is_it_possible_to_make_a",
       "phrase": "Is it possible to make a reservation for later tonight?",
-      "translation": "¿Es posible hacer una reserva para esta noche?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Es posible hacer una reserva para esta noche?"
+      }
     },
     {
       "id": "restaurant_could_i_have_some_extra_cheese",
       "phrase": "Could I have some extra cheese on my pasta, please?",
-      "translation": "¿Podría ponerle más queso a mi pasta, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Can I have some extra cheese on my pasta, please?"]
+      "alternatives": [
+        "Can I have some extra cheese on my pasta, please?"
+      ],
+      "translations": {
+        "es": "¿Podría ponerle más queso a mi pasta, por favor?"
+      }
+    },
+    {
+      "id": "restaurant_allergy_chef_ingredients",
+      "phrase": "We have a food allergy at the table — could the chef confirm the ingredients in this dish?",
+      "translations": { "es": "Tenemos una alergia alimentaria en la mesa. ¿Podría el chef confirmar los ingredientes de este plato?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_steak_wrong_doneness",
+      "phrase": "I ordered medium-rare, but this steak appears to be well-done — could you send it back?",
+      "translations": { "es": "Pedí el filete poco hecho, pero parece estar muy cocido. ¿Podrían llevárselo de vuelta?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_wine_wrong_selection",
+      "phrase": "The wine we were served doesn't match what we selected — could you check the bottle?",
+      "translations": { "es": "El vino que nos sirvieron no coincide con lo que seleccionamos. ¿Podrían verificar la botella?" },
+      "level": "B2",
+      "grammar": "Passive: 'we were served' — focuses on the experience rather than who served them"
+    },
+    {
+      "id": "restaurant_compliment_chef_risotto",
+      "phrase": "I'd like to compliment the chef on the risotto — the seasoning was absolutely perfect.",
+      "translations": { "es": "Me gustaría elogiar al chef por el risotto. El sazonado estaba absolutamente perfecto." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_same_table_window",
+      "phrase": "Could we have the same table we had last time? It was near the window.",
+      "translations": { "es": "¿Podríamos tener la misma mesa que la última vez? Estaba cerca de la ventana." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_tasting_menu_chef_selections",
+      "phrase": "I'd like to explore the tasting menu option — are there chef's selections available this evening?",
+      "translations": { "es": "Me gustaría explorar la opción del menú degustación. ¿Hay selecciones del chef disponibles esta noche?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_wine_acidity_fish_pairing",
+      "phrase": "Could you describe the wine's profile? I'm looking for something with good acidity to pair with the fish.",
+      "translations": { "es": "¿Podría describir el perfil del vino? Busco algo con buena acidez para maridar con el pescado." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_personalized_dessert_occasion",
+      "phrase": "We're celebrating a special occasion — could you arrange for a personalized dessert?",
+      "translations": { "es": "Estamos celebrando una ocasión especial. ¿Podrían preparar un postre personalizado?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_price_discrepancy_charged",
+      "phrase": "The service was excellent, but I noticed a discrepancy between the menu price and what we were charged.",
+      "translations": { "es": "El servicio fue excelente, pero noté una discrepancia entre el precio del menú y lo que nos cobraron." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_private_dining_business",
+      "phrase": "I'd like to reserve a private dining area for a business dinner — do you have anything available?",
+      "translations": { "es": "Me gustaría reservar un área de comedor privado para una cena de negocios. ¿Tienen algo disponible?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_amuse_bouche_ambition_restraint",
+      "phrase": "The amuse-bouche set a remarkably ambitious tone — the kitchen clearly understands restraint.",
+      "translations": { "es": "El amuse-bouche estableció un tono notablemente ambicioso. La cocina claramente entiende la contención." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_wine_pairing_burgundy_premature",
+      "phrase": "The wine pairing was thoughtful, though the Burgundy felt slightly premature for the concentration of the main course.",
+      "translations": { "es": "El maridaje de vinos fue cuidadoso, aunque el Borgoña pareció ligeramente prematuro para la concentración del plato principal." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_tasting_menu_progression_redundancy",
+      "phrase": "The tasting menu's progression was exemplary — each course built logically on its predecessor without redundancy.",
+      "translations": { "es": "La progresión del menú degustación fue ejemplar: cada plato se construyó lógicamente sobre el anterior sin redundancia." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_sommelier_provenance_barolo",
+      "phrase": "Could I speak with the sommelier? I'd like to know the provenance and vintage of the Barolo before ordering.",
+      "translations": { "es": "¿Podría hablar con el sommelier? Me gustaría conocer la procedencia y la añada del Barolo antes de pedirlo." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "restaurant_attentiveness_discretion_equilibrium",
+      "phrase": "The service struck an ideal balance between attentiveness and discretion — a notoriously difficult equilibrium to maintain.",
+      "translations": { "es": "El servicio logró un equilibrio ideal entre atención y discreción, un punto notoriamente difícil de mantener." },
+      "level": "C2",
+      "grammar": null
     }
   ]
 }

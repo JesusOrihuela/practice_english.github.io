@@ -98,7 +98,7 @@ function loadData() {
     })
     .catch(() => {
       document.getElementById('category-grid').innerHTML =
-        '<p style="color:var(--clr-danger);text-align:center">Error al cargar los datos de gramática.</p>';
+        '<p style="color:var(--clr-danger);text-align:center">' + AppLang.t('grammar_data_error') + '</p>';
     });
 }
 
@@ -113,20 +113,17 @@ function buildCategoryGrid() {
   categories.forEach(cat => {
     const rulesInCat = allRules.filter(r => r.category === cat.id);
     const cardIds    = rulesInCat.map(r => 'grammar_' + cat.id + '_' + r.id);
-    const seen       = cardIds.filter(id => {
-      const cards = Progress.getAllCards();
-      return cards && cards[id] && cards[id].reps > 0;
-    }).length;
+    const _cards     = Progress.getAllCards();
+    const seen       = cardIds.filter(id => _cards && _cards[id] && _cards[id].reps > 0).length;
 
     const btn = document.createElement('button');
     btn.className = 'category-card';
     btn.style.setProperty('--cat-color', cat.color);
-    btn.setAttribute('aria-label', cat.label + ' — ' + cat.label_es);
+    btn.setAttribute('aria-label', cat.label_es);
     btn.innerHTML =
       '<span class="category-emoji">' + cat.emoji + '</span>' +
-      '<span class="category-label">' + cat.label + '</span>' +
-      '<span class="category-label-es">' + cat.label_es + '</span>' +
-      '<span class="category-progress">' + seen + ' / ' + rulesInCat.length + ' aprendidas</span>';
+      '<span class="category-label">' + cat.label_es + '</span>' +
+      '<span class="category-progress">' + AppLang.t('topic_learned', { seen, total: rulesInCat.length }) + '</span>';
 
     btn.addEventListener('click', () => showRules(cat.id));
     grid.appendChild(btn);
@@ -146,7 +143,7 @@ function _showTopicRules(rules) {
   list.innerHTML = '';
 
   const header = document.getElementById('rules-category-label');
-  if (header) header.textContent = 'Grammar for this topic';
+  if (header) header.textContent = AppLang.t('grammar_topic_label');
 
   rules.forEach(rule => {
     const cardId = 'grammar_' + rule.category + '_' + rule.id;
@@ -158,7 +155,7 @@ function _showTopicRules(rules) {
     btn.setAttribute('aria-label', rule.title);
     btn.innerHTML =
       '<span class="rule-row__title">' + rule.title + '</span>' +
-      (seen ? '<span class="rule-row__seen-badge">Estudiado</span>' : '<span class="rule-row__new-badge">Nuevo</span>');
+      (seen ? '<span class="rule-row__seen-badge">' + AppLang.t('badge_studied') + '</span>' : '<span class="rule-row__new-badge">' + AppLang.t('badge_new_plain') + '</span>');
     btn.addEventListener('click', () => startExercise(rule));
     list.appendChild(btn);
   });
@@ -184,8 +181,8 @@ function showRules(categoryId) {
     list.innerHTML =
       '<div class="empty-state">' +
         '<span class="empty-state__icon">🚧</span>' +
-        '<p class="empty-state__msg">Próximamente</p>' +
-        '<p class="empty-state__sub">Estamos preparando contenido para esta categoría.</p>' +
+        '<p class="empty-state__msg">' + AppLang.t('coming_soon') + '</p>' +
+        '<p class="empty-state__sub">' + AppLang.t('coming_soon_body') + '</p>' +
       '</div>';
     showScreen('screen-rules');
     return;
@@ -202,11 +199,11 @@ function showRules(categoryId) {
     btn.setAttribute('aria-label', rule.title + ' — ' + rule.title_es);
 
     const statusHtml = isDone
-      ? '<span class="rule-row__status rule-row__status--done">✓ Hecho</span>'
+      ? '<span class="rule-row__status rule-row__status--done">' + AppLang.t('done_status') + '</span>'
       : '<span class="rule-row__status">→</span>';
 
     btn.innerHTML =
-      '<span class="rule-row__cefr cefr-' + rule.cefr + '">' + rule.cefr + '</span>' +
+      '<span class="rule-row__cefr cefr-' + rule.level + '">' + rule.level + '</span>' +
       '<span class="rule-row__text">' +
         '<span class="rule-row__title">' + rule.title + '</span>' +
         '<span class="rule-row__title-es">' + rule.title_es + '</span>' +
@@ -237,8 +234,10 @@ function startExercise(rule) {
   // Set header badges
   document.getElementById('exercise-rule-title').textContent = rule.title;
   const cefrBadge = document.getElementById('exercise-cefr-badge');
-  cefrBadge.textContent = rule.cefr;
-  cefrBadge.className   = 'cefr-badge cefr-' + rule.cefr;
+  if (cefrBadge) {
+    cefrBadge.textContent = rule.level;
+    cefrBadge.className   = 'cefr-badge cefr-' + rule.level;
+  }
 
   const cardId  = 'grammar_' + rule.category + '_' + rule.id;
   const reentry = getReentryPhase(cardId);
@@ -296,7 +295,7 @@ function updatePhaseDots() {
 ══════════════════════════════════════════ */
 function buildPhase1() {
   const card = document.getElementById('dialogue-card');
-  card.innerHTML = '';
+  if (!card) return;
 
   (currentRule.context_dialogue || []).forEach(turn => {
     const div = document.createElement('div');
@@ -324,9 +323,9 @@ const MIN_NOTICING_CHARS = 3; // minimum chars per answer to count as engaged
 
 function buildPhase2() {
   const card    = document.getElementById('noticing-card');
+  if (!card) return;
   const btn     = document.getElementById('noticing-show-btn');
   const progEl  = document.getElementById('noticing-progress');
-  card.innerHTML = '';
 
   // Reset button state for this rule
   btn.disabled = true;
@@ -358,7 +357,7 @@ function buildPhase2() {
     const textarea = document.createElement('textarea');
     textarea.className   = 'noticing-input';
     textarea.rows        = 2;
-    textarea.placeholder = promptHint || 'Escribe tu observación…';
+    textarea.placeholder = promptHint || AppLang.t('noticing_placeholder');
     textarea.setAttribute('aria-label', 'Answer to question ' + (i + 1));
     card.appendChild(textarea);
     inputs.push(textarea);
@@ -380,13 +379,13 @@ function checkNoticingGate(inputs, btn, progEl, total) {
 function updateNoticingProgress(el, answered, total) {
   if (!el) return;
   if (answered === 0) {
-    el.textContent = 'Responde las ' + total + ' preguntas para continuar';
+    el.textContent = AppLang.t('answer_questions_n', { n: total });
     el.className   = 'noticing-progress';
   } else if (answered < total) {
-    el.textContent = answered + ' / ' + total + ' respondidas';
+    el.textContent = AppLang.t('answered_n', { done: answered, total });
     el.className   = 'noticing-progress noticing-progress--partial';
   } else {
-    el.textContent = '✓ Listo';
+    el.textContent = AppLang.t('ready_status');
     el.className   = 'noticing-progress noticing-progress--done';
   }
 }
@@ -396,7 +395,7 @@ function updateNoticingProgress(el, answered, total) {
 ══════════════════════════════════════════ */
 function buildPhase3() {
   const card = document.getElementById('rule-card');
-  card.innerHTML = '';
+  if (!card) return;
 
   // ── "Tu hipótesis" block — only when the user has answers ──
   const prompts = currentRule.noticing_prompts || [];
@@ -408,7 +407,7 @@ function buildPhase3() {
 
     const heading = document.createElement('p');
     heading.className = 'rule-hypothesis__heading';
-    heading.textContent = 'Tu hipótesis';
+    heading.textContent = AppLang.t('hypothesis');
     hypothesisBlock.appendChild(heading);
 
     prompts.forEach((prompt, i) => {
@@ -464,11 +463,11 @@ function showStructuredItem(idx) {
   }
 
   document.getElementById('structured-counter').textContent =
-    'Ejercicio ' + (idx + 1) + ' de ' + total;
+    AppLang.t('cta_exercise_n', { cur: idx + 1, total });
 
   const item = items[idx];
   const card = document.getElementById('structured-card');
-  card.innerHTML = '';
+  if (!card) return;
 
   const sentEl = document.createElement('div');
   sentEl.className = 'structured-sentence';
@@ -519,7 +518,7 @@ function showStructuredItem(idx) {
 
       const nextBtn = document.createElement('button');
       nextBtn.className   = 'structured-next-btn';
-      nextBtn.textContent = 'Siguiente →';
+      nextBtn.textContent = AppLang.t('btn_next');
       nextBtn.addEventListener('click', advance);
       card.appendChild(nextBtn);
       nextBtn.focus();
@@ -551,11 +550,11 @@ function showProductionItem(idx) {
   }
 
   document.getElementById('production-counter').textContent =
-    'Ejercicio ' + (idx + 1) + ' de ' + total;
+    AppLang.t('cta_exercise_n', { cur: idx + 1, total });
 
   const item = items[idx];
   const card = document.getElementById('production-card');
-  card.innerHTML = '';
+  if (!card) return;
   prodAnswered = false;
 
   // Detect number of blanks — multi-blank needs inline inputs
@@ -593,7 +592,7 @@ function showProductionItem(idx) {
   // Check button in its own row below the sentence
   const checkBtn = document.createElement('button');
   checkBtn.className   = 'production-check-btn';
-  checkBtn.textContent = 'Verificar ✓';
+  checkBtn.textContent = AppLang.t('btn_verify');
   const btnRow = document.createElement('div');
   btnRow.className = 'production-input-row production-input-row--check-only';
   btnRow.appendChild(checkBtn);
@@ -607,7 +606,7 @@ function showProductionItem(idx) {
   // Next button
   const nextBtn = document.createElement('button');
   nextBtn.className   = 'production-next-btn';
-  nextBtn.textContent = idx + 1 < total ? 'Siguiente →' : 'Ver resultados →';
+  nextBtn.textContent = idx + 1 < total ? AppLang.t('btn_next') : AppLang.t('btn_results');
   card.appendChild(nextBtn);
 
   // Focus first input
@@ -631,7 +630,7 @@ function showProductionItem(idx) {
       inputs.forEach(i => i.classList.add('production-input--correct'));
       fbEl.className = 'production-feedback production-feedback--correct visible';
       fbEl.innerHTML =
-        '<span class="feedback-answer">✓ ¡Correcto! ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-answer">' + AppLang.t('correct_answer_msg', { answer: escapeHTML(item.answer) }) + '</span>' +
         '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
         (item.contrast
           ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
@@ -640,7 +639,7 @@ function showProductionItem(idx) {
       inputs.forEach(i => i.classList.add('production-input--wrong'));
       fbEl.className = 'production-feedback production-feedback--wrong visible';
       fbEl.innerHTML =
-        '<span class="feedback-answer">✗ Incorrecto — Respuesta: ' + escapeHTML(item.answer) + '</span>' +
+        '<span class="feedback-answer">' + AppLang.t('incorrect_answer_msg', { answer: escapeHTML(item.answer) }) + '</span>' +
         '<span class="feedback-why">' + escapeHTML(item.feedback_why) + '</span>' +
         (item.contrast
           ? '<span class="feedback-contrast">' + escapeHTML(item.contrast) + '</span>'
@@ -697,23 +696,23 @@ function buildPhaseComplete() {
       clearReentryPhase(cardId);
     }
     Progress.rate(cardId, currentAutoQuality);
-    if (typeof AppProficiency !== 'undefined') AppProficiency.update(currentRule.cefr, currentAutoQuality >= 3, 'grammar');
+    if (typeof AppProficiency !== 'undefined') AppProficiency.update(currentRule.level, currentAutoQuality >= 3, 'grammar');
     Progress.recordSession('grammar_' + currentRule.category, prodCorrect, total);
   }
 
   // Score line
   document.getElementById('complete-score').textContent =
-    prodCorrect + ' / ' + total + ' correctas (' + pct + '%)';
+    AppLang.t('score_n', { correct: prodCorrect, total, pct });
 
   // Icon + title
   const iconEl  = document.querySelector('.complete-icon');
   const titleEl = document.querySelector('.complete-title');
   if (prodCorrect === total) {
     iconEl.textContent  = wasReentry ? '🏆' : '🎉';
-    titleEl.textContent = wasReentry ? '¡Regla dominada!' : '¡Ejercicio completado!';
+    titleEl.textContent = wasReentry ? AppLang.t('rule_mastered') : AppLang.t('exercise_complete');
   } else {
     iconEl.textContent  = '💪';
-    titleEl.textContent = 'Sigue practicando';
+    titleEl.textContent = AppLang.t('keep_practicing');
   }
 
   // Focus continue button
@@ -727,7 +726,7 @@ function buildPhaseComplete() {
     _backLink.id = 'grammar-back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _completeCard.appendChild(_backLink);
   }
 
@@ -745,14 +744,18 @@ function buildRelatedPhrases(rule) {
 
   var topicMeta = [
     { id: 'greetings',      label: 'Greetings' },
-    { id: 'traveling',      label: 'Travelling' },
-    { id: 'technology',     label: 'Technology' },
     { id: 'restaurant',     label: 'Restaurant' },
-    { id: 'kitchen',        label: 'Kitchen' },
     { id: 'supermarket',    label: 'Supermarket' },
-    { id: 'entertainment',  label: 'Entertainment' },
-    { id: 'accountability', label: 'Work & Goals' },
+    { id: 'kitchen',        label: 'Kitchen' },
+    { id: 'transportation', label: 'Transportation' },
+    { id: 'airport',        label: 'Airport' },
+    { id: 'accommodation',  label: 'Accommodation' },
+    { id: 'movies',         label: 'Movies & Series' },
+    { id: 'music',          label: 'Music' },
+    { id: 'theater',        label: 'Theater & Arts' },
     { id: 'gym',            label: 'Gym' },
+    { id: 'technology',     label: 'Technology' },
+    { id: 'accountability', label: 'Work & Goals' },
   ];
 
   var fetches = topicMeta.map(function(tm) {
@@ -781,13 +784,13 @@ function buildRelatedPhrases(rule) {
 
     var heading = document.createElement('p');
     heading.className = 'related-heading';
-    heading.textContent = '💬 Frases reales usando esta regla — practica en contexto';
+    heading.textContent = AppLang.t('related_phrases');
     container.appendChild(heading);
 
     var activities = [
-      { key: 'pe_last_cloze',        href: '../../cloze/html/cloze.html',            label: '🔤 Cloze' },
-      { key: 'pe_last_translation',  href: '../../translation/html/translation.html', label: '🔄 Traducir' },
-      { key: 'pe_last_speaking',     href: '../../speaking/html/speaking.html',       label: '🎙️ Hablar' },
+      { href: '../../cloze/html/cloze.html',            label: '🔤 ' + AppLang.t('act_cloze') },
+      { href: '../../translation/html/translation.html', label: AppLang.t('translate_btn') },
+      { href: '../../speaking/html/speaking.html',       label: AppLang.t('speak_btn') },
     ];
 
     matches.forEach(function(m) {
@@ -808,11 +811,8 @@ function buildRelatedPhrases(rule) {
       activities.forEach(function(act) {
         var link = document.createElement('a');
         link.className = 'related-practice-btn';
-        link.href = act.href;
+        link.href = act.href + '?topic=' + m.topicId;
         link.textContent = act.label;
-        link.addEventListener('click', function() {
-          localStorage.setItem(act.key, m.topicId);
-        });
         linksEl.appendChild(link);
       });
 
@@ -861,9 +861,9 @@ function _showPathSessionComplete() {
   screen.innerHTML =
     '<div class="path-session-complete">' +
       '<div class="path-session-complete__icon">🎉</div>' +
-      '<h2 class="path-session-complete__title">¡Sesión completada!</h2>' +
-      (summary ? '<p class="path-session-complete__sub">Repasaste ' + summary.reviewCount + ' tarjetas y aprendiste ' + summary.newCount + ' nuevas hoy.</p>' : '') +
-      '<a href="../../my-learning/html/my-learning.html" class="path-session-complete__btn">Mi Ruta de Aprendizaje →</a>' +
+      '<h2 class="path-session-complete__title">' + AppLang.t('session_complete') + '</h2>' +
+      (summary ? '<p class="path-session-complete__sub">' + AppLang.t('path_complete_summary', { review: summary.reviewCount, new: summary.newCount }) + '</p>' : '') +
+      '<a href="../../my-learning/html/my-learning.html" class="path-session-complete__btn">' + AppLang.t('my_learning_path_link') + '</a>' +
     '</div>';
 }
 
@@ -904,16 +904,16 @@ function showScreen(id) {
 const REENTRY_PHASE = 3; // index of Structured Input in PHASE_IDS
 
 function getReentryPhase(cardId) {
-  const v = localStorage.getItem('pe_reentry_' + cardId);
+  const v = localStorage.getItem(AppLangPair.storageKey('pe_reentry_' + cardId));
   return v ? parseInt(v, 10) : 0;
 }
 
 function setReentryPhase(cardId) {
-  localStorage.setItem('pe_reentry_' + cardId, String(REENTRY_PHASE));
+  localStorage.setItem(AppLangPair.storageKey('pe_reentry_' + cardId), String(REENTRY_PHASE));
 }
 
 function clearReentryPhase(cardId) {
-  localStorage.removeItem('pe_reentry_' + cardId);
+  localStorage.removeItem(AppLangPair.storageKey('pe_reentry_' + cardId));
 }
 
 /* ══════════════════════════════════════════

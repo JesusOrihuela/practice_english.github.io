@@ -6,7 +6,6 @@
 
 /* ---- Topic Picker ---- */
 
-const LAST_KEY = 'pe_last_speaking';
 let _openPhraseBrowser = null;
 
 /* ---- Exercise State ---- */
@@ -102,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _backLink.addEventListener('click', function () {
       if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -120,10 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
 let _pathModeActive = false;
 let _pathCardId     = null;
 
+
 function startTopic(id, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
-  localStorage.setItem(LAST_KEY, id);
   currentTheme = id;
   phrases = []; translations = []; cardIds = [];
   sessionCorrect = 0; sessionTotal = 0;
@@ -161,10 +160,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
+  txt.textContent = AppLang.t('error_loading');
 
   const btn = document.createElement('button');
-  btn.textContent = 'Reintentar →';
+  btn.textContent = AppLang.t('retry');
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -182,15 +181,15 @@ function _showLoadError(topicId) {
 function loadPhrases(topicId) {
   AppData.get(topicId)
     .then(data => {
-      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _order = CEFR_ORDER;
       const _tagged = (data.phrases || []).map((p, i) => ({
-        phrase: p.phrase, translation: p.translation || '',
-        grammar: p.grammar || null, cefr: p.cefr || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
-      })).sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+        phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '',
+        grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
+      })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
       phrases            = _tagged.map(x => x.phrase);
       translations       = _tagged.map(x => x.translation);
       grammarTips        = _tagged.map(x => x.grammar);
-      cefrLevels         = _tagged.map(x => x.cefr);
+      cefrLevels         = _tagged.map(x => x.level);
       cardIds            = _tagged.map(x => x.id);
       audioIndices       = _tagged.map(x => x.origIdx);
       phraseAlternatives = _tagged.map(x => x.alternatives);
@@ -226,7 +225,7 @@ function _beginExercise(idx) {
   const streakBadge = document.getElementById('streak-badge');
   if (streakBadge) {
     const streak = Progress.getStreak();
-    streakBadge.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+    streakBadge.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
   }
   showPhrase(currentIndex);
   updateSessionCounter();
@@ -278,7 +277,7 @@ function updateSessionCounter() {
   if (!el || phrases.length === 0) return;
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
+    el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -287,7 +286,7 @@ function updateSessionCounter() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
+  el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';
@@ -301,14 +300,14 @@ function resetAttempt() {
   document.getElementById('listenButton').disabled = false;
   if (HAS_STT) {
     document.getElementById('speakButton').disabled  = false;
-    document.getElementById('speakButton').textContent = '🎙️ Hablar';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
+    document.getElementById('speakButton').textContent = AppLang.t('speak_btn');
+    document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('speak_btn_label'));
   }
   document.getElementById('tryAgainButton').classList.add('hidden');
   document.getElementById('tryAgainButton').disabled = true;
   document.getElementById('tryAnotherButton').classList.add('hidden');
   document.getElementById('tryAnotherButton').disabled = true;
-  document.getElementById('recognizedText').textContent = "Presiona el botón cuando estés listo para hablar";
+  document.getElementById('recognizedText').textContent = AppLang.t('speak_prompt');
   document.getElementById('recognizedText').className = '';
   const card = document.getElementById('phrase-card');
   if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
@@ -348,7 +347,7 @@ function nextPhrase() {
   if (listenBtn) listenBtn.focus();
   const streak = Progress.getStreak();
   const el = document.getElementById('streak-badge');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 }
 
 function _showPathSessionComplete() {
@@ -361,14 +360,11 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completa!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
-        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
-        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
+        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">Mi Aprendizaje →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
     '</div>';
 }
 
@@ -420,8 +416,7 @@ function _getSttWorker() {
 
   _sttWorker.onerror = (e) => {
     const detail = [e.message, e.filename && ('at ' + e.filename + ':' + e.lineno)].filter(Boolean).join(' ');
-    console.error('[AppSTT] Worker failed to load:', detail || e);
-    _onSttError('Speech recognition model could not load. Check your connection and try again.');
+_onSttError(AppLang.t('stt_load_error'));
   };
 
   return _sttWorker;
@@ -429,7 +424,7 @@ function _getSttWorker() {
 
 /* ---- STT Download Progress Panel ---- */
 
-const _sttDp = AppDownloadPanel.create('🎙️ Loading speech model…', '🎙️ Speech model ready ✓', 'pe_stt_cached');
+const _sttDp = AppDownloadPanel.create(AppLang.t('stt_loading'), AppLang.t('stt_ready'), 'pe_stt_cached');
 
 function _onSttProgress(p) {
   if (p.status === 'initiate') {
@@ -460,9 +455,9 @@ async function _startRecording() {
     _isRecording = true;
 
     document.getElementById('listenButton').disabled = true;
-    document.getElementById('speakButton').textContent = '⏹ Detener';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Detener grabación');
-    { document.getElementById('recognizedText').textContent = '🎙 Grabando… toca Detener cuando termines'; document.getElementById('recognizedText').className = ''; }
+    document.getElementById('speakButton').textContent = AppLang.t('stop_recording');
+    document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('stop_recording_label'));
+    { document.getElementById('recognizedText').textContent = AppLang.t('recording_prompt'); document.getElementById('recognizedText').className = ''; }
 
     // VAD: auto-stop after 1.5 s of silence following detected speech
     try {
@@ -488,10 +483,10 @@ async function _startRecording() {
         if (peak > THRESHOLD) {
           speechDetected = true;
           silenceStart   = null;
-          { document.getElementById('recognizedText').textContent = '🎙 Escuchando…'; document.getElementById('recognizedText').className = 'vad-active'; }
+          { document.getElementById('recognizedText').textContent = AppLang.t('listening_prompt'); document.getElementById('recognizedText').className = 'vad-active'; }
         } else if (speechDetected) {
           if (!silenceStart) silenceStart = Date.now();
-          { document.getElementById('recognizedText').textContent = '🎙 Grabando… toca Detener cuando termines'; document.getElementById('recognizedText').className = ''; }
+          { document.getElementById('recognizedText').textContent = AppLang.t('recording_prompt'); document.getElementById('recognizedText').className = ''; }
           if (Date.now() - silenceStart >= SILENCE_MS) {
             clearInterval(_vadIntervalId);
             _vadIntervalId = null;
@@ -503,10 +498,10 @@ async function _startRecording() {
 
   } catch (e) {
     const msgs = {
-      NotAllowedError : 'Microphone access blocked. Allow it in your browser settings.',
-      NotFoundError   : 'No microphone found. Please connect one and try again.',
+      NotAllowedError : AppLang.t('mic_blocked'),
+      NotFoundError   : AppLang.t('mic_not_found'),
     };
-    const errMsg = msgs[e.name] || 'Could not access microphone. Please try again.';
+    const errMsg = msgs[e.name] || AppLang.t('mic_error');
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className = '';
     const _fbr = document.getElementById('speaking-feedback-result');
@@ -530,8 +525,8 @@ function _stopRecording() {
   if (_vadAudioCtx) { _vadAudioCtx.close().catch(() => {}); _vadAudioCtx = null; }
 
   document.getElementById('speakButton').disabled  = true;
-  document.getElementById('speakButton').textContent = '⏳ Transcribiendo…';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Transcribiendo tu voz');
+  document.getElementById('speakButton').textContent = AppLang.t('transcribing');
+  document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('transcribing_label'));
 
   _mediaRecorder.onstop = async () => {
     _mediaRecorder.stream.getTracks().forEach(t => t.stop());
@@ -549,7 +544,7 @@ function _stopRecording() {
 
       // Safety timeout: if Whisper hangs and never responds, unblock the UI
       _sttTimeoutId = setTimeout(() => {
-        _onSttError('Transcription timed out. Please try again.');
+        _onSttError(AppLang.t('transcription_timeout'));
       }, _STT_TIMEOUT_MS);
     } catch (e) {
       _onSttError(e.message);
@@ -572,8 +567,8 @@ function _isBlankAudio(text) {
 function _onTranscript(text) {
   clearTimeout(_sttTimeoutId);
   document.getElementById('speakButton').disabled  = false;
-  document.getElementById('speakButton').textContent = '🎙️ Hablar';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
+  document.getElementById('speakButton').textContent = AppLang.t('speak_btn');
+  document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('speak_btn_label'));
 
   if (_isBlankAudio(text)) {
     _showNotUnderstood();
@@ -593,7 +588,7 @@ function _showNotUnderstood() {
   const sd  = document.getElementById('speaking-diff');
   const card = document.getElementById('phrase-card');
 
-  if (fbr) { fbr.textContent = '👂 ¡No pude entenderte!'; fbr.className = 'feedback-result not-understood'; }
+  if (fbr) { fbr.textContent = AppLang.t('not_understood'); fbr.className = 'feedback-result not-understood'; }
   if (sd)  { sd.textContent = ''; sd.classList.add('hidden'); }
   if (fb)  { fb.className = 'speaking-feedback not-understood'; fb.classList.remove('hidden'); }
   if (card) { card.classList.remove('phrase-card--correct', 'phrase-card--incorrect'); }
@@ -602,7 +597,7 @@ function _showNotUnderstood() {
   document.getElementById('listenButton').disabled = false;
   if (HAS_STT) {
     document.getElementById('speakButton').disabled   = false;
-    document.getElementById('speakButton').textContent = '🎙️ Hablar';
+    document.getElementById('speakButton').textContent = AppLang.t('speak_btn');
   }
   document.getElementById('tryAgainButton').classList.remove('hidden');
   document.getElementById('tryAgainButton').disabled = false;
@@ -613,14 +608,14 @@ function _onSttError(errMsg) {
   _isRecording = false;
   document.getElementById('listenButton').disabled = false;
   document.getElementById('speakButton').disabled  = false;
-  document.getElementById('speakButton').textContent = '🎙️ Hablar';
-  document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
+  document.getElementById('speakButton').textContent = AppLang.t('speak_btn');
+  document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('speak_btn_label'));
   document.getElementById('recognizedText').textContent = '';
   document.getElementById('recognizedText').className = '';
   const fbr = document.getElementById('speaking-feedback-result');
   if (fbr) { fbr.textContent = '✗ Error'; fbr.className = 'feedback-result incorrect'; }
   const sd = document.getElementById('speaking-diff');
-  if (sd) sd.textContent = errMsg || 'An error occurred. Please try again.';
+  if (sd) sd.textContent = errMsg || AppLang.t('generic_error');
   const fb = document.getElementById('speaking-feedback');
   if (fb) { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
   document.getElementById('tryAnotherButton').classList.remove('hidden');
@@ -640,7 +635,7 @@ function displayResult(text, confidence) {
   _lastCorrect = isCorrect;
   sessionTotal++;
 
-  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'speaking');
 
   const fbr = document.getElementById('speaking-feedback-result');
@@ -657,7 +652,7 @@ function displayResult(text, confidence) {
     else if (confidence > 0)     { confettiCount = 50; }
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
-    if (fbr)  { fbr.textContent = '✓ ¡Correcto!'; fbr.className = 'feedback-result correct'; }
+    if (fbr)  { fbr.textContent = AppLang.t('feedback_correct'); fbr.className = 'feedback-result correct'; }
     if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildCorrect(originalPhrase)); }
     if (fb)   { fb.className = 'speaking-feedback correct'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--correct'); }
@@ -668,7 +663,7 @@ function displayResult(text, confidence) {
   } else {
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
-    if (fbr)  { fbr.textContent = '✗ Incorrecto'; fbr.className = 'feedback-result incorrect'; }
+    if (fbr)  { fbr.textContent = AppLang.t('feedback_incorrect'); fbr.className = 'feedback-result incorrect'; }
     if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildDiff(text, AppText.closestPhrase(text, [originalPhrase, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)); }
     if (fb)   { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--incorrect'); }
@@ -678,8 +673,8 @@ function displayResult(text, confidence) {
   document.getElementById('listenButton').disabled = false; // keep enabled so learner can replay for comparison
   if (HAS_STT) {
     document.getElementById('speakButton').disabled  = true;
-    document.getElementById('speakButton').textContent = '🎙️ Hablar';
-    document.getElementById('speakButton').setAttribute('aria-label', 'Habla la frase en voz alta');
+    document.getElementById('speakButton').textContent = AppLang.t('speak_btn');
+    document.getElementById('speakButton').setAttribute('aria-label', AppLang.t('speak_btn_label'));
   }
   const ti = document.getElementById('text-input');
   if (ti) ti.disabled = true;

@@ -3,310 +3,553 @@
     {
       "id": "supermarket_have_you_made_the_grocery_list",
       "phrase": "Have you made the grocery list yet?",
-      "translation": "¿Ya hiciste la lista del supermercado?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Modal 'could': polite request or possibility",
-      "alternatives": ["Have you made the shopping list yet?"]
+      "alternatives": [
+        "Have you made the shopping list yet?"
+      ],
+      "translations": {
+        "es": "¿Ya hiciste la lista del supermercado?"
+      }
     },
     {
       "id": "supermarket_i_need_to_buy_milk_bread",
       "phrase": "I need to buy milk, bread and eggs",
-      "translation": "Necesito comprar leche, pan y huevos",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Necesito comprar leche, pan y huevos"
+      }
     },
     {
       "id": "supermarket_dont_forget_to_buy_fruits_and",
       "phrase": "Don't forget to buy fruits and vegetables for the week",
-      "translation": "¿No te olvides de comprar las frutas y verduras para la semana?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿No te olvides de comprar las frutas y verduras para la semana?"
+      }
     },
     {
       "id": "supermarket_this_supermarket_is_very_expensive_lets",
       "phrase": "This supermarket is very expensive, let's go to another one",
-      "translation": "Este supermercado está muy caro, vamos a otro",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["This supermarket is very expensive, let's go to a different one"]
+      "alternatives": [
+        "This supermarket is very expensive, let's go to a different one"
+      ],
+      "translations": {
+        "es": "Este supermercado está muy caro, vamos a otro"
+      }
     },
     {
       "id": "supermarket_there_is_an_offer_on_the",
       "phrase": "There is an offer on the detergent, let's buy two",
-      "translation": "Hay una oferta en el detergente, vamos a comprar dos",
-      "cefr": "A2",
-      "grammar": "Phrasal verb: 'pick up' = collect or buy casually"
+      "level": "A2",
+      "grammar": "Phrasal verb: 'pick up' = collect or buy casually",
+      "translations": {
+        "es": "Hay una oferta en el detergente, vamos a comprar dos"
+      }
     },
     {
       "id": "supermarket_can_you_help_me_carry_the",
       "phrase": "Can you help me carry the grocery bags?",
-      "translation": "¿Me ayudas a llevar las bolsas del supermercado?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could you help me carry the grocery bags?"]
+      "alternatives": [
+        "Could you help me carry the grocery bags?"
+      ],
+      "translations": {
+        "es": "¿Me ayudas a llevar las bolsas del supermercado?"
+      }
     },
     {
       "id": "supermarket_i_dont_have_cash_can_i",
       "phrase": "I don't have cash, can I pay with a card?",
-      "translation": "No tengo efectivo, ¿puedo pagar con tarjeta?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["I don't have cash, could I pay with a card?", "I don't have any cash, can I pay with a card?"]
+      "alternatives": [
+        "I don't have cash, could I pay with a card?",
+        "I don't have any cash, can I pay with a card?"
+      ],
+      "translations": {
+        "es": "No tengo efectivo, ¿puedo pagar con tarjeta?"
+      }
     },
     {
       "id": "supermarket_where_are_the_cookies",
       "phrase": "Where are the cookies?",
-      "translation": "¿Dónde están las galletas?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde están las galletas?"
+      }
     },
     {
       "id": "supermarket_i_cant_find_the_yogurt_brand",
       "phrase": "I can't find the yogurt brand I like",
-      "translation": "No encuentro la marca de yogurt que me gusta",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No encuentro la marca de yogurt que me gusta"
+      }
     },
     {
       "id": "supermarket_how_much_does_a_kilo_of",
       "phrase": "How much does a kilo of meat cost?",
-      "translation": "¿Cuánto cuesta el kilo de carne?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuánto cuesta el kilo de carne?"
+      }
     },
     {
       "id": "supermarket_where_is_the_cleaning_products_section",
       "phrase": "Where is the cleaning products section?",
-      "translation": "¿Dónde está la sección de productos de limpieza?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde está la sección de productos de limpieza?"
+      }
     },
     {
       "id": "supermarket_i_need_to_buy_a_new",
       "phrase": "I need to buy a new toothbrush",
-      "translation": "Necesito comprar un nuevo cepillo de dientes",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Necesito comprar un nuevo cepillo de dientes"
+      }
     },
     {
       "id": "supermarket_is_this_product_vegan",
       "phrase": "Is this product vegan?",
-      "translation": "¿Este producto es vegano?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Este producto es vegano?"
+      }
     },
     {
       "id": "supermarket_do_you_know_which_pasta_brand",
       "phrase": "Do you know which pasta brand is the best?",
-      "translation": "¿Sabes qué marca de pasta es la mejor?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Sabes qué marca de pasta es la mejor?"
+      }
     },
     {
       "id": "supermarket_is_there_any_offer_on_cereals",
       "phrase": "Is there any offer on cereals?",
-      "translation": "¿Hay alguna oferta en los cereales?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay alguna oferta en los cereales?"
+      }
     },
     {
       "id": "supermarket_there_is_a_long_line_at",
       "phrase": "There is a long line at the cash registers",
-      "translation": "Hay mucha fila en las cajas",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Hay mucha fila en las cajas"
+      }
     },
     {
       "id": "supermarket_can_you_help_me_reach_that",
       "phrase": "Can you help me reach that product on the shelf?",
-      "translation": "¿Me puedes ayudar a alcanzar ese producto de la estantería?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could you help me reach that product on the shelf?"]
+      "alternatives": [
+        "Could you help me reach that product on the shelf?"
+      ],
+      "translations": {
+        "es": "¿Me puedes ayudar a alcanzar ese producto de la estantería?"
+      }
     },
     {
       "id": "supermarket_i_cant_find_an_employee_to",
       "phrase": "I can't find an employee to help me",
-      "translation": "No puedo encontrar a un empleado para que me ayude",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No puedo encontrar a un empleado para que me ayude"
+      }
     },
     {
       "id": "supermarket_what_time_does_the_supermarket_close",
       "phrase": "What time does the supermarket close?",
-      "translation": "¿A qué hora cierra el supermercado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿A qué hora cierra el supermercado?"
+      }
     },
     {
       "id": "supermarket_where_are_the_shopping_carts",
       "phrase": "Where are the shopping carts?",
-      "translation": "¿Dónde están los carritos de compra?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Where are the trolleys?"]
+      "alternatives": [
+        "Where are the trolleys?"
+      ],
+      "translations": {
+        "es": "¿Dónde están los carritos de compra?"
+      }
     },
     {
       "id": "supermarket_is_there_a_bathroom_nearby",
       "phrase": "Is there a bathroom nearby?",
-      "translation": "¿Hay un baño cerca?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay un baño cerca?"
+      }
     },
     {
       "id": "supermarket_this_supermarket_has_a_very_useful",
       "phrase": "This supermarket has a very useful app",
-      "translation": "Este supermercado tiene una aplicación muy útil",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Este supermercado tiene una aplicación muy útil"
+      }
     },
     {
       "id": "supermarket_i_received_a_discount_coupon_in",
       "phrase": "I received a discount coupon in my email",
-      "translation": "Recibí un cupón de descuento en mi correo electrónico",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Recibí un cupón de descuento en mi correo electrónico"
+      }
     },
     {
       "id": "supermarket_i_like_to_use_the_selfservice",
       "phrase": "I like to use the self-service to pay for the purchase",
-      "translation": "Me gusta usar el autoservicio para pagar la compra",
-      "cefr": "A2",
-      "grammar": "Present perfect: recent action with present relevance"
+      "level": "A2",
+      "grammar": "Present perfect: recent action with present relevance",
+      "translations": {
+        "es": "Me gusta usar el autoservicio para pagar la compra"
+      }
     },
     {
       "id": "supermarket_i_dont_like_this_supermarket_its",
       "phrase": "I don't like this supermarket, it's very messy",
-      "translation": "No me gusta este supermercado, está muy desordenado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No me gusta este supermercado, está muy desordenado"
+      }
     },
     {
       "id": "supermarket_i_prefer_to_go_to_the",
       "phrase": "I prefer to go to the market, there is more variety of products",
-      "translation": "Prefiero ir al mercado, hay más variedad de productos",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Prefiero ir al mercado, hay más variedad de productos"
+      }
     },
     {
       "id": "supermarket_you_have_to_go_to_the",
       "phrase": "You have to go to the supermarket earlier to avoid the lines",
-      "translation": "Hay que ir al supermercado más temprano para evitar las colas",
-      "cefr": "A2",
-      "grammar": "Modal 'should': advice or recommendation"
+      "level": "A2",
+      "grammar": "Modal 'should': advice or recommendation",
+      "translations": {
+        "es": "Hay que ir al supermercado más temprano para evitar las colas"
+      }
     },
     {
       "id": "supermarket_i_will_need_a_purchase_ticket",
       "phrase": "I will need a purchase ticket",
-      "translation": "Voy a requerir ticket de compra",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Voy a requerir ticket de compra"
+      }
     },
     {
       "id": "supermarket_are_these_grapes_organic",
       "phrase": "Are these grapes organic?",
-      "translation": "¿Estas uvas son ecológicas?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Estas uvas son ecológicas?"
+      }
     },
     {
       "id": "supermarket_do_you_have_fresh_chicken",
       "phrase": "Do you have fresh chicken?",
-      "translation": "¿Tienen pollo fresco?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen pollo fresco?"
+      }
     },
     {
       "id": "supermarket_i_dont_know_which_fish_to",
       "phrase": "I don't know which fish to buy",
-      "translation": "No sé qué pescado comprar",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No sé qué pescado comprar"
+      }
     },
     {
       "id": "supermarket_the_strawberries_are_very_expensive",
       "phrase": "The strawberries are very expensive",
-      "translation": "Las fresas están muy caras",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Las fresas están muy caras"
+      }
     },
     {
       "id": "supermarket_im_looking_for_a_cake_for",
       "phrase": "I'm looking for a cake for a birthday party",
-      "translation": "Busco un pastel para una fiesta de cumpleaños",
-      "cefr": "A1",
-      "grammar": "Passive voice: focus on the action, not the doer"
+      "level": "A1",
+      "grammar": "Passive voice: focus on the action, not the doer",
+      "translations": {
+        "es": "Busco un pastel para una fiesta de cumpleaños"
+      }
     },
     {
       "id": "supermarket_can_you_give_me_the_receipt",
       "phrase": "Can you give me the receipt, please?",
-      "translation": "¿Me puede dar la factura, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could you give me the receipt, please?"]
+      "alternatives": [
+        "Could you give me the receipt, please?"
+      ],
+      "translations": {
+        "es": "¿Me puede dar la factura, por favor?"
+      }
     },
     {
       "id": "supermarket_where_is_the_glutenfree_products_section",
       "phrase": "Where is the gluten-free products section?",
-      "translation": "¿Dónde está la sección de productos sin gluten?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde está la sección de productos sin gluten?"
+      }
     },
     {
       "id": "supermarket_do_you_have_almond_milk",
       "phrase": "Do you have almond milk?",
-      "translation": "¿Tienen leche de almendras?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienen leche de almendras?"
+      }
     },
     {
       "id": "supermarket_where_is_the_personal_hygiene_products",
       "phrase": "Where is the personal hygiene products section?",
-      "translation": "¿Dónde está la sección de productos de higiene personal?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde está la sección de productos de higiene personal?"
+      }
     },
     {
       "id": "supermarket_where_is_the_cleaning_products_section_2",
       "phrase": "Where is the cleaning products section?",
-      "translation": "¿Dónde está la sección de productos de productos de limpieza?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde está la sección de productos de productos de limpieza?"
+      }
     },
     {
       "id": "supermarket_where_is_the_bakery_section",
       "phrase": "Where is the bakery section?",
-      "translation": "¿Dónde se encuentra la sección de panadería?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde se encuentra la sección de panadería?"
+      }
     },
     {
       "id": "supermarket_can_you_give_me_a_bag",
       "phrase": "Can you give me a bag, please?",
-      "translation": "¿Me puede dar una bolsa, por favor?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could you give me a bag, please?"]
+      "alternatives": [
+        "Could you give me a bag, please?"
+      ],
+      "translations": {
+        "es": "¿Me puede dar una bolsa, por favor?"
+      }
     },
     {
       "id": "supermarket_i_am_here_to_make_a",
       "phrase": "I am here to make a return",
-      "translation": "Vengo a hacer una devolución",
-      "cefr": "A2",
-      "grammar": "Simple past: completed action in the past"
+      "level": "A2",
+      "grammar": "Simple past: completed action in the past",
+      "translations": {
+        "es": "Vengo a hacer una devolución"
+      }
     },
     {
       "id": "supermarket_i_dont_like_this_supermarket_the",
       "phrase": "I don't like this supermarket, the prices are very high",
-      "translation": "No me gusta este supermercado, los precios son muy altos",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No me gusta este supermercado, los precios son muy altos"
+      }
     },
     {
       "id": "supermarket_i_didnt_find_the_product_i",
       "phrase": "I didn't find the product I was looking for",
-      "translation": "No encontré el producto que buscaba",
-      "cefr": "A2",
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "No encontré el producto que buscaba"
+      }
+    },
+    {
+      "id": "supermarket_do_you_have_larger_size",
+      "phrase": "Do you have this product in a larger size?",
+      "translations": { "es": "¿Tiene este producto en un tamaño más grande?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_store_brand_less_expensive",
+      "phrase": "Is there a store brand option that's less expensive?",
+      "translations": { "es": "¿Hay una opción de marca propia que sea más económica?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_speak_to_manager_mislabeled",
+      "phrase": "I'd like to speak to the manager about a product that was mislabeled.",
+      "translations": { "es": "Me gustaría hablar con el gerente sobre un producto que tenía la etiqueta incorrecta." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_where_are_gluten_free_products",
+      "phrase": "Could you tell me where I can find gluten-free products?",
+      "translations": { "es": "¿Me podría decir dónde puedo encontrar los productos sin gluten?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_shelf_price_doesnt_match_register",
+      "phrase": "The price on the shelf doesn't match what showed up at the register.",
+      "translations": { "es": "El precio en el estante no coincide con lo que apareció en la caja registradora." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_nut_allergy_processed_facility",
+      "phrase": "I have a severe nut allergy — could you confirm whether this product was processed in a facility that handles nuts?",
+      "translations": { "es": "Tengo alergia grave a los frutos secos — ¿podría confirmar si este producto fue procesado en una instalación que maneja nueces?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_return_seal_broken_spoiled",
+      "phrase": "I'd like to return this item — the seal was broken when I purchased it and the product appears to have spoiled prematurely.",
+      "translations": { "es": "Quisiera devolver este artículo — el sello estaba roto cuando lo compré y el producto parece haberse estropeado antes de tiempo." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_check_stockroom_out_of_shelf",
+      "phrase": "Could you check whether you have any more of this in the stockroom? It's been out on the shelf for two days.",
+      "translations": { "es": "¿Podría revisar si hay más en el almacén? Lleva dos días sin estar en el estante." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_overcharged_promotional_price_not_applied",
+      "phrase": "I was overcharged at the register — the promotional price wasn't applied despite the label showing the discount.",
+      "translations": { "es": "Me cobraron de más en la caja — no se aplicó el precio promocional aunque la etiqueta mostraba el descuento." },
+      "level": "B2",
+      "grammar": "Passive: 'I was overcharged' — the subject received an action done by the cashier or system"
+    },
+    {
+      "id": "supermarket_customer_service_lodge_complaint",
+      "phrase": "Is there a customer service desk where I can lodge a formal complaint about the quality of this product?",
+      "translations": { "es": "¿Hay un servicio al cliente donde pueda presentar una queja formal sobre la calidad de este producto?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_deli_cross_contamination_intolerance",
+      "phrase": "I'd like to raise a concern about the handling of loose items in the deli section — cross-contamination is a serious risk for customers with intolerances.",
+      "translations": { "es": "Me gustaría plantear una preocupación sobre el manejo de productos sueltos en la sección de charcutería — la contaminación cruzada es un riesgo serio para clientes con intolerancias." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_best_before_use_by_mislead",
+      "phrase": "Your labeling doesn't clearly distinguish between 'best before' and 'use by' dates, which could mislead consumers.",
+      "translations": { "es": "El etiquetado no distingue claramente entre la fecha de 'consumo preferente' y la de 'caducidad', lo que podría inducir a error a los consumidores." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_sourcing_policy_free_range_certification",
+      "phrase": "Could I speak with management regarding your sourcing policy for meat products — specifically whether they carry any free-range certifications?",
+      "translations": { "es": "¿Podría hablar con la gerencia sobre su política de abastecimiento de productos cárnicos — específicamente si tienen alguna certificación de crianza en libertad?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_escalate_staff_assurance_not_honored",
+      "phrase": "I'd appreciate it if you could escalate this issue — I was assured by a member of staff that the promotional price would be honored, and that assurance wasn't upheld.",
+      "translations": { "es": "Le agradecería que escalara este problema — un miembro del personal me aseguró que se respetaría el precio promocional, y ese compromiso no se cumplió." },
+      "level": "C1",
+      "grammar": "'I'd appreciate it if you could' — polite conditional for formal requests; 'upheld' = maintained, honored"
+    },
+    {
+      "id": "supermarket_online_listing_out_of_stock_delivery",
+      "phrase": "Your online listing shows this item as available in store, but it has been out of stock for over a week — I'd like to know when you expect the next delivery.",
+      "translations": { "es": "Su listado en línea muestra este artículo como disponible en tienda, pero lleva más de una semana sin existencias — me gustaría saber cuándo esperan la próxima entrega." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_fair_trade_certifications_suppliers",
+      "phrase": "I'd like to understand your procurement standards for fair-trade products — specifically which third-party certifications you require from suppliers.",
+      "translations": { "es": "Me gustaría entender sus estándares de compra para productos de comercio justo — específicamente qué certificaciones de terceros exigen a sus proveedores." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_cold_chain_thaw_refreeze_food_safety",
+      "phrase": "The cold chain appears to have been compromised — there is evidence of partial thawing and refreezing that would render this product unsafe under food safety regulations.",
+      "translations": { "es": "Parece que la cadena de frío se ha visto comprometida — hay evidencia de descongelación y recongelación parcial que haría que este producto no sea seguro según la normativa de inocuidad alimentaria." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_traceability_protocols_supply_chain",
+      "phrase": "Could you provide documentation on the traceability protocols for this product? I'm researching supply chain transparency practices in retail.",
+      "translations": { "es": "¿Podría facilitar documentación sobre los protocolos de trazabilidad de este producto? Estoy investigando las prácticas de transparencia en la cadena de suministro minorista." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_sustainability_report_food_waste_measures",
+      "phrase": "Your sustainability report mentions a commitment to reducing food waste by thirty percent — I'd like to know what concrete measures are being implemented at the store level.",
+      "translations": { "es": "Su informe de sostenibilidad menciona un compromiso de reducir el desperdicio alimentario en un treinta por ciento — me gustaría saber qué medidas concretas se están implementando a nivel de tienda." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "supermarket_food_safety_inspector_temperature_logs",
+      "phrase": "I'm a food safety inspector conducting a routine compliance check — I'd like to review your temperature logs for the refrigerated units over the past seventy-two hours.",
+      "translations": { "es": "Soy inspector de seguridad alimentaria realizando una verificación de cumplimiento rutinaria — me gustaría revisar los registros de temperatura de sus unidades refrigeradas de las últimas setenta y dos horas." },
+      "level": "C2",
       "grammar": null
     }
   ]

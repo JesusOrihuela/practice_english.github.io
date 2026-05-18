@@ -3,7 +3,6 @@
    Research basis: Testing Effect (Roediger & Karpicke 2006)
    ============================================================ */
 
-const LAST_KEY = 'pe_last_quiz';
 
 let _openPhraseBrowser = null;
 
@@ -15,6 +14,13 @@ let cardIds          = [];
 let currentIndex     = 0;
 let answered         = false;
 let _lastCorrect     = false;
+let _translationMode = false; // true for A1/A2: options show Spanish translation
+
+function _quizText(word) {
+  return _translationMode
+    ? (word.translations?.es || word.definition)
+    : word.definition;
+}
 
 // ---- Init ----
 
@@ -24,8 +30,8 @@ function _quizGridOpts() {
     topics: AppTopics.VOCAB_TOPICS,
     getSrsKey: t => t.id === 'general' ? 'quiz_vocab' : 'quiz_' + t.id,
     getItemCount: t => {
-      const path = t.id === 'general' ? '../../shared/json/words.json' : '../../shared/json/words-' + t.id + '.json';
-      return fetch(path).then(r => r.json()).then(d => d.words ? d.words.length : 0);
+      const key = t.id === 'general' ? 'words' : 'words-' + t.id;
+      return AppData.get(key).then(d => d.words ? d.words.length : 0);
     },
     onSelect: startTopic,
   };
@@ -41,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof PathSession !== 'undefined') PathSession.start();
   }
 
-  if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
+  if (_urlTopic && AppTopics.VOCAB_TOPICS.some(t => t.id === _urlTopic)) {
     startTopic(_urlTopic, _pathMode, _pathCard);
   } else {
     AppTopicGrid.build(_quizGridOpts());
@@ -66,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _backLink.addEventListener('click', function () {
       if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -99,10 +105,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
+  txt.textContent = AppLang.t('error_loading');
 
   const btn = document.createElement('button');
-  btn.textContent = 'Reintentar →';
+  btn.textContent = AppLang.t('retry');
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -123,19 +129,15 @@ let _pathCardId     = null;
 function startTopic(topicId, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
-  localStorage.setItem(LAST_KEY, topicId);
   currentTopicId = topicId;
   quizTopicKey   = topicId === 'general' ? 'quiz_vocab' : 'quiz_' + topicId;
-  const jsonPath = topicId === 'general'
-    ? '../../shared/json/words.json'
-    : '../../shared/json/words-' + topicId + '.json';
+  const dataKey = topicId === 'general' ? 'words' : 'words-' + topicId;
 
-  fetch(jsonPath)
-    .then(r => r.json())
+  AppData.get(dataKey)
     .then(data => {
-      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _order = CEFR_ORDER;
       const _tagged = (data.words || []).map(w => ({ ...w }))
-        .sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+        .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
       words   = _tagged;
       cardIds = _tagged.map(x => quizTopicKey + '_' + x.id);
 
@@ -145,7 +147,7 @@ function startTopic(topicId, pathMode, pathCard) {
         cardIds,
         topicLabel: topicObj ? topicObj.label : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        cefrLevels: _tagged.map(x => x.cefr || null),
+        cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -168,7 +170,7 @@ function _beginExercise(idx) {
   document.getElementById('quiz-content').classList.remove('hidden');
   const streak = Progress.getStreak();
   const el = document.getElementById('quiz-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
   showQuestion(currentIndex);
   updateCounter();
 }
@@ -179,7 +181,8 @@ function showQuestion(index) {
   const word = words[index];
   if (!word) return;
 
-  answered = false;
+  answered         = false;
+  _translationMode = (CEFR_ORDER[word.level] ?? 99) <= 1; // A1=0, A2=1 → translation mode
 
   document.getElementById('quiz-word').textContent     = word.word;
   document.getElementById('quiz-category').textContent = word.category || '';
@@ -192,7 +195,7 @@ function showQuestion(index) {
   document.getElementById('try-again-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
 
-  _showCefrBadge(word.cefr, 'word-card');
+  _showCefrBadge(word.level, 'word-card');
   const choices = buildChoices(index);
   renderChoices(choices, index);
   // Don't auto-focus first option — it triggers a visible border that looks like a selection
@@ -239,7 +242,7 @@ function renderChoices(choices, correctIdx) {
   choices.forEach(choice => {
     const btn = document.createElement('button');
     btn.className = 'choice-btn';
-    btn.textContent = choice.definition;
+    btn.textContent = _quizText(choice);
     btn.addEventListener('click', () => handleAnswer(choice.isCorrect, choice, correctIdx));
     grid.appendChild(btn);
   });
@@ -252,17 +255,17 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   answered = true;
   _lastCorrect = isCorrect;
 
-  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
-  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.cefr, isCorrect, 'quiz');
+  Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.level, isCorrect, 'quiz');
   Progress.recordSession(quizTopicKey, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
 
   const btns = document.querySelectorAll('.choice-btn');
   btns.forEach(btn => {
     btn.disabled = true;
-    if (btn.textContent === words[correctIdx].definition) {
+    if (btn.textContent === _quizText(words[correctIdx])) {
       btn.classList.add('correct');
-    } else if (btn.textContent === chosenWord.definition && !isCorrect) {
+    } else if (btn.textContent === _quizText(chosenWord) && !isCorrect) {
       btn.classList.add('incorrect');
     }
   });
@@ -273,12 +276,12 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   const exampleEl  = document.getElementById('feedback-example-text');
   const wordCard   = document.getElementById('word-card');
 
-  resultEl.textContent = isCorrect ? '✓ ¡Correcto!' : '✗ Incorrecto';
+  resultEl.textContent = isCorrect ? AppLang.t('feedback_correct') : AppLang.t('feedback_incorrect');
   resultEl.className   = 'feedback-result ' + (isCorrect ? 'correct' : 'incorrect');
   wordCard.classList.add(isCorrect ? 'word-card--correct' : 'word-card--incorrect');
 
   diffEl.textContent = '';
-  diffEl.appendChild(AppFeedback.buildQuiz(chosenWord.definition, words[correctIdx].definition, isCorrect));
+  diffEl.appendChild(AppFeedback.buildQuiz(_quizText(chosenWord), _quizText(words[correctIdx]), isCorrect));
 
   exampleEl.textContent = '"' + words[correctIdx].example + '"';
   feedbackEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
@@ -307,7 +310,7 @@ function rateAndNext(quality) {
 
   const streak = Progress.getStreak();
   const el = document.getElementById('quiz-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 }
 
 function _showPathSessionComplete() {
@@ -317,14 +320,11 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completada!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
-        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
-        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
+        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
     '</div>';
 }
 
@@ -334,7 +334,7 @@ function updateCounter() {
   const el = document.getElementById('quiz-counter');
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    if (el) el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
+    if (el) el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -343,7 +343,7 @@ function updateCounter() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  if (el) el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
+  if (el) el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';

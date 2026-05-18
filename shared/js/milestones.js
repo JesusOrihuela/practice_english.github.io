@@ -51,7 +51,7 @@
       title: 'Explorador',
       desc: 'Practicaste suficiente para avanzar a un nuevo tema. ¡El camino se abre!',
       check: function (cards) {
-        var next = ['restaurant_', 'supermarket_', 'kitchen_', 'traveling_', 'entertainment_', 'gym_', 'technology_', 'accountability_'];
+        var next = ['restaurant_', 'supermarket_', 'kitchen_', 'transportation_', 'airport_', 'accommodation_', 'movies_', 'music_', 'theater_', 'gym_', 'technology_', 'accountability_'];
         return Object.entries(cards).some(function (kv) {
           var k = kv[0];
           if (k.startsWith('_')) return false;
@@ -175,14 +175,14 @@
     var shareBtn = document.createElement('button');
     shareBtn.className = 'milestone-toast__share';
     shareBtn.id = 'mt-share';
-    shareBtn.setAttribute('aria-label', 'Compartir logro');
-    shareBtn.title = 'Share';
+    shareBtn.setAttribute('aria-label', AppLang.t('milestone_share'));
+    shareBtn.title = AppLang.t('milestone_share');
     shareBtn.textContent = '📤';
 
     var closeBtn = document.createElement('button');
     closeBtn.className = 'milestone-toast__close';
     closeBtn.id = 'mt-close';
-    closeBtn.setAttribute('aria-label', 'Cerrar');
+    closeBtn.setAttribute('aria-label', AppLang.t('close_btn'));
     closeBtn.textContent = '✕';
 
     body.appendChild(title);
@@ -245,7 +245,7 @@
   function checkMilestones() {
     if (typeof Progress === 'undefined') return;
     var achieved = [];
-    try { achieved = JSON.parse(localStorage.getItem('pe_milestones') || '[]'); } catch (e) {}
+    try { achieved = JSON.parse(localStorage.getItem(AppLangPair.storageKey('pe_milestones')) || '[]'); } catch (e) {}
 
     var cards   = Progress.getAllCards();
     var sessions = Progress.getSessions();
@@ -263,7 +263,7 @@
     });
 
     if (newOnes.length === 0) return;
-    localStorage.setItem('pe_milestones', JSON.stringify(achieved));
+    localStorage.setItem(AppLangPair.storageKey('pe_milestones'), JSON.stringify(achieved));
     newOnes.forEach(function (m) { queue.push(m); });
     showNext();
   }
@@ -273,7 +273,7 @@
   window.MilestoneSystem = {
     MILESTONES: MILESTONES,
     getAchieved: function () {
-      try { return JSON.parse(localStorage.getItem('pe_milestones') || '[]'); } catch (e) { return []; }
+      try { return JSON.parse(localStorage.getItem(AppLangPair.storageKey('pe_milestones')) || '[]'); } catch (e) { return []; }
     }
   };
 

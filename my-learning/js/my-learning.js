@@ -7,15 +7,11 @@ const _ACT_EMOJI = {
   speaking: '🎙️', grammar: '📐', vocabulary: '📚', quiz: '🧠',
   cloze: '🔤', dictation: '✍️', translation: '🔄', scramble: '🧩',
 };
-const _ACT_LABEL = {
-  speaking: 'Speaking', grammar: 'Grammar', vocabulary: 'Vocabulary', quiz: 'Quiz',
-  cloze: 'Cloze', dictation: 'Dictation', translation: 'Translation', scramble: 'Scramble',
-};
-const _TOPIC_LABEL = {
-  greetings: '👋 Saludos', restaurant: '🍽️ Restaurante', supermarket: '🛒 Supermercado',
-  kitchen: '🍳 Cocina', traveling: '✈️ Viajes', entertainment: '🎬 Entretenimiento',
-  gym: '💪 Gimnasio', technology: '💻 Tecnología', accountability: '📋 Responsabilidad',
-};
+function _topicLabel(id) {
+  var t = (AppTopics.PHRASE_TOPICS || []).find(function (x) { return x.id === id; })
+       || (AppTopics.VOCAB_TOPICS  || []).find(function (x) { return x.id === id; });
+  return t ? t.emoji + ' ' + t.label : id;
+}
 
 function _esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -27,8 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   if (typeof AppPath === 'undefined' || typeof Progress === 'undefined') return;
 
-  const grammarData = await fetch('../../shared/json/grammar-rules.json')
-    .then(r => r.json()).catch(() => ({ rules: [] }));
+  const grammarData = await AppData.get('grammar-rules').catch(() => ({ rules: [] }));
   AppPath.setGrammarRules(grammarData.rules || []);
 
   _renderStreak();
@@ -42,17 +37,17 @@ function _renderStreak() {
   const el = document.getElementById('ml-streak');
   if (!el || typeof Progress === 'undefined') return;
   const streak = Progress.getStreak();
-  if (streak.current > 0) el.textContent = '🔥 racha de ' + streak.current + ' día' + (streak.current !== 1 ? 's' : '');
+  if (streak.current > 0) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 }
 
 // ── CTA ──────────────────────────────────────────────────────
 
 function _ctaSubtitle(summary) {
   var parts = [];
-  if (summary.reviewCount > 0)    parts.push(summary.reviewCount + ' para repasar');
-  if (summary.newCount > 0)       parts.push(summary.newCount + ' ejercicio' + (summary.newCount !== 1 ? 's' : '') + ' nuevo' + (summary.newCount !== 1 ? 's' : ''));
-  if (summary.estimatedMinutes)   parts.push('~' + summary.estimatedMinutes + ' min');
-  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' diferidos');
+  if (summary.reviewCount > 0)    parts.push(AppLang.t('cta_review', { n: summary.reviewCount }));
+  if (summary.newCount > 0)       parts.push(AppLang.t(summary.newCount === 1 ? 'cta_new_one' : 'cta_new_many', { n: summary.newCount }));
+  if (summary.estimatedMinutes)   parts.push(AppLang.t('cta_min_left', { n: summary.estimatedMinutes }));
+  if (summary.skippedReviews > 0) parts.push(AppLang.t('cta_deferred', { n: summary.skippedReviews }));
   return parts.join(' · ');
 }
 
@@ -74,12 +69,12 @@ function _renderCta() {
       '<div class="ml-cta__bar"><div class="ml-cta__bar-fill" style="width:' + Math.max(pct,5) + '%"></div></div>' +
       '<div class="ml-cta__row">' +
         '<div class="ml-cta__body">' +
-          '<div class="ml-cta__title">¡Sigue así! 💪</div>' +
-          '<div class="ml-cta__sub">Ejercicio ' + prog.current + ' de ' + prog.total +
-            (remMins ? ' · ~' + remMins + ' min restantes' : '') + '</div>' +
+          '<div class="ml-cta__title">' + AppLang.t('cta_keep_going') + '</div>' +
+          '<div class="ml-cta__sub">' + AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total }) +
+            (remMins ? ' · ' + AppLang.t('cta_min_left', { n: remMins }) : '') + '</div>' +
         '</div>' +
-        (href ? '<a href="../../' + _esc(href) + '" class="ml-cta__btn">Continuar →</a>'
-              : '<span class="ml-cta__done">✓ Listo por hoy</span>') +
+        (href ? '<a href="../../' + _esc(href) + '" class="ml-cta__btn">' + AppLang.t('cta_continue') + '</a>'
+              : '<span class="ml-cta__done">' + AppLang.t('done_today_status') + '</span>') +
       '</div>';
     return;
   }
@@ -87,8 +82,8 @@ function _renderCta() {
   if (session && session.started && session.position >= session.queue.length) {
     el.innerHTML =
       '<div class="ml-cta__row"><div class="ml-cta__body">' +
-        '<div class="ml-cta__title">🎉 ¡Excelente trabajo hoy!</div>' +
-        '<div class="ml-cta__sub">Vuelve mañana para mantener tu racha</div>' +
+        '<div class="ml-cta__title">' + AppLang.t('cta_done_today') + '</div>' +
+        '<div class="ml-cta__sub">' + AppLang.t('cta_tomorrow') + '</div>' +
       '</div></div>';
     return;
   }
@@ -96,8 +91,8 @@ function _renderCta() {
   if (!summary.hasAnything) {
     el.innerHTML =
       '<div class="ml-cta__row"><div class="ml-cta__body">' +
-        '<div class="ml-cta__title">✓ ¡Estás al día!</div>' +
-        '<div class="ml-cta__sub">Vuelve mañana para nuevos ejercicios</div>' +
+        '<div class="ml-cta__title">' + AppLang.t('cta_up_to_date') + '</div>' +
+        '<div class="ml-cta__sub">' + AppLang.t('cta_come_back_new') + '</div>' +
       '</div></div>';
     return;
   }
@@ -105,10 +100,10 @@ function _renderCta() {
   el.innerHTML =
     '<div class="ml-cta__row">' +
       '<div class="ml-cta__body">' +
-        '<div class="ml-cta__title">¿Listo para la sesión de hoy?</div>' +
+        '<div class="ml-cta__title">' + AppLang.t('cta_ready') + '</div>' +
         '<div class="ml-cta__sub">' + _ctaSubtitle(summary) + '</div>' +
       '</div>' +
-      '<button class="ml-cta__btn" id="ml-start-btn">Empezar →</button>' +
+      '<button class="ml-cta__btn" id="ml-start-btn">' + AppLang.t('cta_start') + '</button>' +
     '</div>';
 
   document.getElementById('ml-start-btn').addEventListener('click', function () {
@@ -139,10 +134,10 @@ function _renderTrail() {
   }
 
   if (session && session.queue.length > 0) {
-    if (titleEl) titleEl.textContent = 'Sesión de Hoy';
+    if (titleEl) titleEl.textContent = AppLang.t('trail_today');
     _buildSnakeTrail(container, session.queue, session.position);
   } else {
-    if (titleEl) titleEl.textContent = 'Nada pendiente hoy';
+    if (titleEl) titleEl.textContent = AppLang.t('trail_empty');
   }
 }
 
@@ -167,10 +162,10 @@ var _GAP       = 10;              // gap between pin and bubble (CSS gap: 10px)
 var _HALF_BUB  = 32;              // half of 64px bubble
 var _BCTL      = _PIN_H + _GAP + _HALF_BUB;  // node top → bubble center ≈ 56px
 
-function _colX(col, cW) {
-  if (col === 0) return _NODE_W / 2;
+function _colX(col, cW, nodeW) {
+  if (col === 0) return nodeW / 2;
   if (col === 1) return cW / 2;
-  return cW - _NODE_W / 2;
+  return cW - nodeW / 2;
 }
 
 function _buildSnakeTrail(container, queue, position) {
@@ -179,20 +174,25 @@ function _buildSnakeTrail(container, queue, position) {
   var cW = container.offsetWidth || 440;
   var n  = queue.length;
 
+  // Responsive: 2 columns (left/right) on narrow screens, 3 on wide
+  var twoCol   = cW < 480;
+  var colPhase = twoCol ? [0, 2, 0, 2] : [0, 1, 2, 1];
+  var nodeW    = 130;
+
   // Container height: last node top + pin + gap + bubble + label + badge + padding
   var nodeFullH = _PIN_H + _GAP + 64 + 6 + 16 + 20 + 8; // ≈ 128px
   container.style.height = ((n - 1) * _STEP + nodeFullH) + 'px';
 
   queue.forEach(function (item, i) {
-    var col     = _COL_PHASE[i % 4];
-    var xCenter = _colX(col, cW);
+    var col     = colPhase[i % 4];
+    var xCenter = _colX(col, cW, nodeW);
     var yTop    = i * _STEP;
     var yBubble = yTop + _BCTL;
 
     // ── Connector from previous node to this one ─────────────
     if (i > 0) {
-      var prevCol     = _COL_PHASE[(i - 1) % 4];
-      var prevXCenter = _colX(prevCol, cW);
+      var prevCol     = colPhase[(i - 1) % 4];
+      var prevXCenter = _colX(prevCol, cW, nodeW);
       var prevYBubble = (i - 1) * _STEP + _BCTL;
       var dx          = xCenter - prevXCenter;
       var dy          = _STEP;
@@ -225,15 +225,15 @@ function _buildSnakeTrail(container, queue, position) {
     var node = document.createElement('div');
     node.className = 'ml-snode' +
       (isDone ? ' ml-snode--done' : isActive ? ' ml-snode--active' : ' ml-snode--pending');
-    node.style.left  = (xCenter - _NODE_W / 2) + 'px';
+    node.style.left  = (xCenter - nodeW / 2) + 'px';
     node.style.top   = yTop + 'px';
-    node.style.width = _NODE_W + 'px';
+    node.style.width = nodeW + 'px';
     node.setAttribute('role', 'listitem');
 
     // Topic pin
     var tp = document.createElement('div');
     tp.className = 'ml-snode__topic';
-    tp.textContent = _TOPIC_LABEL[item.topic] || item.topic;
+    tp.textContent = _topicLabel(item.topic);
     node.appendChild(tp);
 
     // Bubble
@@ -241,7 +241,7 @@ function _buildSnakeTrail(container, queue, position) {
     bubble.className = 'ml-snode__bubble';
     if (isActive && item.href) {
       bubble.href = '../../' + item.href;
-      bubble.setAttribute('aria-label', 'Continuar: ' + (_ACT_LABEL[item.activityId] || item.activityId));
+      bubble.setAttribute('aria-label', AppLang.t('aria_continue', { label: AppLang.t('act_' + item.activityId) || item.activityId }));
     }
     if (isDone) {
       bubble.innerHTML = '<span class="ml-snode__check">✓</span>';
@@ -255,17 +255,17 @@ function _buildSnakeTrail(container, queue, position) {
     info.className = 'ml-snode__info';
     var lbl = document.createElement('span');
     lbl.className = 'ml-snode__label';
-    lbl.textContent = _ACT_LABEL[item.activityId] || item.activityId;
+    lbl.textContent = AppLang.t('act_' + item.activityId) || item.activityId;
     info.appendChild(lbl);
     if (!isDone && item.isNew) {
       var badge = document.createElement('span');
       badge.className = 'ml-snode__new-badge';
-      badge.textContent = '✨ Nuevo';
+      badge.textContent = AppLang.t('badge_new');
       info.appendChild(badge);
     } else if (!isDone && !item.isNew) {
       var rbadge = document.createElement('span');
       rbadge.className = 'ml-snode__review-badge';
-      rbadge.textContent = '🔁 Repasar';
+      rbadge.textContent = AppLang.t('badge_review');
       info.appendChild(rbadge);
     }
     node.appendChild(info);

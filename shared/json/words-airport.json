@@ -1,0 +1,304 @@
+{
+  "words": [
+    {
+      "id": "flight",
+      "word": "flight",
+      "definition": "A journey made by airplane",
+      "example": "Our flight to Miami leaves at seven in the morning.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "vuelo" }
+    },
+    {
+      "id": "passport",
+      "word": "passport",
+      "definition": "An official document that identifies you and allows you to travel between countries",
+      "example": "You cannot board the plane without a valid passport.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "pasaporte" }
+    },
+    {
+      "id": "gate",
+      "word": "gate",
+      "definition": "The area in an airport where passengers wait before boarding their specific flight",
+      "example": "Please proceed to gate B14 — boarding starts in twenty minutes.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "puerta de embarque" }
+    },
+    {
+      "id": "luggage",
+      "word": "luggage",
+      "definition": "Bags and suitcases you take with you when traveling",
+      "example": "Please put your luggage on the scale before checking in.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "equipaje" }
+    },
+    {
+      "id": "ticket",
+      "word": "ticket",
+      "definition": "A document or digital confirmation that allows you to board a specific flight",
+      "example": "I saved my e-ticket on my phone so I wouldn't lose it.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "boleto / billete" }
+    },
+    {
+      "id": "boarding",
+      "word": "boarding",
+      "definition": "The process of getting onto a plane at the airport gate before departure",
+      "example": "Boarding begins forty-five minutes before the scheduled departure.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "embarque / abordaje" }
+    },
+    {
+      "id": "check_in",
+      "word": "check-in",
+      "definition": "The process of registering your arrival at an airport and receiving your boarding pass",
+      "example": "Online check-in opens 24 hours before the flight departs.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "registro / check-in" }
+    },
+    {
+      "id": "delay",
+      "word": "delay",
+      "definition": "A period of time by which something is late or postponed",
+      "example": "The delay was caused by bad weather at the destination airport.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "retraso / demora" }
+    },
+    {
+      "id": "currency",
+      "word": "currency",
+      "definition": "The official money used in a particular country",
+      "example": "Make sure to exchange your currency before arriving at your destination.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "divisa / moneda" }
+    },
+    {
+      "id": "destination",
+      "word": "destination",
+      "definition": "The place where someone is going or where something is being sent",
+      "example": "Paris is one of the most visited tourist destinations in the world.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "destino" }
+    },
+    {
+      "id": "customs",
+      "word": "customs",
+      "definition": "The official process at a border where authorities check what you are bringing into a country",
+      "example": "You must declare any food or plant products when going through customs.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "aduana" }
+    },
+    {
+      "id": "layover",
+      "word": "layover",
+      "definition": "A stop at an intermediate airport where you wait before continuing to your final destination",
+      "example": "We had a six-hour layover in Amsterdam before our connecting flight.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "escala" }
+    },
+    {
+      "id": "transit",
+      "word": "transit",
+      "definition": "Passing through an airport or country on the way to your final destination without officially entering",
+      "example": "Passengers in transit do not need to collect their bags between flights.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "tránsito" }
+    },
+    {
+      "id": "turbulence",
+      "word": "turbulence",
+      "definition": "Sudden, rough movements of an aircraft caused by irregular air currents",
+      "example": "The pilot asked everyone to fasten their seatbelts due to turbulence.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "turbulencia" }
+    },
+    {
+      "id": "jet_lag",
+      "word": "jet lag",
+      "definition": "Extreme tiredness and difficulty sleeping caused by flying across multiple time zones",
+      "example": "It took her three days to recover from jet lag after flying to Tokyo.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "desfase horario / jet lag" }
+    },
+    {
+      "id": "immigration",
+      "word": "immigration",
+      "definition": "The official process at an airport where authorities check your passport and visa when you enter a country",
+      "example": "Immigration queues can be very long at busy international airports.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "inmigración / control migratorio" }
+    },
+    {
+      "id": "baggage_claim",
+      "word": "baggage claim",
+      "definition": "The area in an airport where passengers collect their checked bags after landing",
+      "example": "Our bags should arrive at baggage claim carousel 4.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "recogida de equipaje" }
+    },
+    {
+      "id": "overbooked",
+      "word": "overbooked",
+      "definition": "When an airline has sold more seats than are physically available on a flight",
+      "example": "Because the flight was overbooked, a passenger was asked to take the next one in exchange for a voucher.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "sobrevendido / con exceso de reservas" }
+    },
+    {
+      "id": "upgrade",
+      "word": "upgrade",
+      "definition": "A change to a higher class of service on a flight, such as from economy to business class",
+      "example": "She used her frequent flyer miles to request an upgrade to business class.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "mejora de clase / upgrade" }
+    },
+    {
+      "id": "voucher",
+      "word": "voucher",
+      "definition": "A document issued by an airline as compensation, typically for a meal, hotel stay, or future flight",
+      "example": "Each affected passenger received a meal voucher for the airport restaurant.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "vale / bono de compensación" }
+    },
+    {
+      "id": "duty_free",
+      "word": "duty-free",
+      "definition": "Describes goods sold at airports exempt from standard taxes, available to international travelers only",
+      "example": "She bought perfume and chocolate at the duty-free shop before boarding.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "libre de impuestos / duty-free" }
+    },
+    {
+      "id": "biometrics",
+      "word": "biometrics",
+      "definition": "Technology that identifies people using unique physical features such as fingerprints or facial scans",
+      "example": "The new e-gates use biometrics to verify travelers' identities in seconds.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "biometría" }
+    },
+    {
+      "id": "prohibited",
+      "word": "prohibited",
+      "definition": "Officially forbidden; not allowed to be brought onto an aircraft or into a country",
+      "example": "Liquids over 100 ml are prohibited in carry-on luggage at most airports.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "prohibido" }
+    },
+    {
+      "id": "carrier",
+      "word": "carrier",
+      "definition": "An airline company that operates passenger or cargo flights",
+      "example": "The route is serviced by three different carriers, including one budget airline.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "aerolínea / transportista" }
+    },
+    {
+      "id": "overbooking",
+      "word": "overbooking",
+      "definition": "The practice of selling more seats than available, used as insurance against passenger no-shows",
+      "example": "Overbooking is common in the airline industry but can leave confirmed passengers without a seat.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "sobreventa / overbooking" }
+    },
+    {
+      "id": "repatriation",
+      "word": "repatriation",
+      "definition": "The process of returning a person to their home country, often after an emergency or legal process",
+      "example": "Stranded travelers awaited repatriation flights after the sudden closure of the border.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "repatriación" }
+    },
+    {
+      "id": "asylum",
+      "word": "asylum",
+      "definition": "Protection granted by a country to someone who has fled their home country fearing persecution",
+      "example": "She requested asylum at the airport, citing political persecution in her home country.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "asilo" }
+    },
+    {
+      "id": "contraband",
+      "word": "contraband",
+      "definition": "Goods that are illegally imported or exported, typically seized by customs authorities",
+      "example": "The sniffer dog detected contraband hidden inside a checked suitcase.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "contrabando" }
+    },
+    {
+      "id": "manifest",
+      "word": "manifest",
+      "definition": "An official list of passengers or cargo on an aircraft, reviewed by the crew before departure",
+      "example": "The captain reviewed the passenger manifest to confirm everyone was on board.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "lista de pasajeros / manifiesto" }
+    },
+    {
+      "id": "force_majeure",
+      "word": "force majeure",
+      "definition": "An unforeseeable event such as a natural disaster that prevents someone from fulfilling a contract",
+      "example": "The airline refused to pay compensation, citing force majeure due to the volcanic eruption.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "fuerza mayor" }
+    }
+  ]
+}

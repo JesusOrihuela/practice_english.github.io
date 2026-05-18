@@ -14,7 +14,7 @@
 
 const PathSession = (() => {
 
-  const SS_KEY        = 'pe_path_session';
+  const SS_KEY        = AppLangPair.storageKey('pe_path_session');
   const MAX_MINUTES   = 20; // hard cap on total session length
   const NEW_LIMIT     = 10; // max new cards even if time budget allows more
   const MIN_NEW       = 3;  // always include at least this many new cards (even on heavy review days)
@@ -153,7 +153,7 @@ const PathSession = (() => {
     // Proficiency-aware new card ordering
     const _CEFR_MID_PS = { A1: 0.083, A2: 0.250, B1: 0.417, B2: 0.583, C1: 0.750, C2: 0.917 };
     const _userProf    = (typeof AppProficiency !== 'undefined') ? AppProficiency.get() : 0.167;
-    const _prefRaw     = localStorage.getItem('pe_topic_preferences');
+    const _prefRaw     = localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences'));
     const _prefSet     = new Set(_prefRaw ? JSON.parse(_prefRaw) : []);
 
     topics.forEach(function (t) {
@@ -338,8 +338,9 @@ const PathSession = (() => {
 
   function getProgress() {
     const s = getSession();
-    if (!s) return { current: 0, total: 0 };
-    return { current: s.position + 1, total: s.queue.length };
+    if (!s) return { current: 0, total: 0, newCount: 0 };
+    const newCount = s.queue.slice(0, s.position + 1).filter(function (i) { return i.isNew; }).length;
+    return { current: s.position + 1, total: s.queue.length, newCount: newCount };
   }
 
   function getTodaySummary() {
@@ -376,17 +377,26 @@ const PathSession = (() => {
     try { localStorage.removeItem(SS_KEY); } catch (e) {}
   }
 
+  // SM-2 quality from exercise result: 1=Hard (wrong), 3=OK (new/correct), 5=Easy (review/correct)
+  function getQualityFromResult(isCorrect) {
+    if (!isCorrect) return 1;
+    const item = getCurrentItem();
+    if (item && !item.isNew) return 5;
+    return 3;
+  }
+
   return {
-    buildAndSave:      buildAndSave,
-    start:             start,
-    getSession:        getSession,
-    getCurrentItem:    getCurrentItem,
-    advance:           advance,
-    getProgress:       getProgress,
-    getTodaySummary:   getTodaySummary,
-    getRemainingMinutes: getRemainingMinutes,
-    isActive:          isActive,
-    clear:             clear,
+    buildAndSave:         buildAndSave,
+    start:                start,
+    getSession:           getSession,
+    getCurrentItem:       getCurrentItem,
+    advance:              advance,
+    getProgress:          getProgress,
+    getTodaySummary:      getTodaySummary,
+    getRemainingMinutes:  getRemainingMinutes,
+    isActive:             isActive,
+    clear:                clear,
+    getQualityFromResult: getQualityFromResult,
   };
 
 })();

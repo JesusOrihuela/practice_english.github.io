@@ -1,0 +1,294 @@
+{
+  "words": [
+    {
+      "id": "song",
+      "word": "song",
+      "definition": "A short piece of music with words, meant to be sung",
+      "example": "She played her favorite song on repeat all morning.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "canción" }
+    },
+    {
+      "id": "singer",
+      "word": "singer",
+      "definition": "A person who performs music by using their voice",
+      "example": "My favorite singer is performing live in the city next month.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "cantante" }
+    },
+    {
+      "id": "concert",
+      "word": "concert",
+      "definition": "A live musical performance given in front of an audience",
+      "example": "We bought tickets to a concert at the outdoor amphitheater.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "concierto" }
+    },
+    {
+      "id": "playlist",
+      "word": "playlist",
+      "definition": "A list of songs grouped together to be played in order",
+      "example": "She made a playlist for the road trip with all her favorite songs.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "lista de reproducción / playlist" }
+    },
+    {
+      "id": "band",
+      "word": "band",
+      "definition": "A group of musicians who play and perform together",
+      "example": "The band has been touring Europe for three months.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "banda / grupo musical" }
+    },
+    {
+      "id": "album",
+      "word": "album",
+      "definition": "A collection of songs released together as a single record or digital release",
+      "example": "Their latest album became the best-selling record of the year.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "álbum / disco" }
+    },
+    {
+      "id": "lyrics",
+      "word": "lyrics",
+      "definition": "The words of a song",
+      "example": "I looked up the lyrics online because I couldn't understand what he was saying.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "letra (de una canción)" }
+    },
+    {
+      "id": "instrument",
+      "word": "instrument",
+      "definition": "A device used to make musical sounds, such as a guitar, piano, or drum",
+      "example": "Learning a musical instrument requires daily practice and patience.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "instrumento musical" }
+    },
+    {
+      "id": "beat",
+      "word": "beat",
+      "definition": "The regular rhythm in music that you can tap your foot to",
+      "example": "The song has such a catchy beat that you can't help dancing.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "ritmo / beat" }
+    },
+    {
+      "id": "genre",
+      "word": "genre",
+      "definition": "A style or category of music, such as jazz, pop, or classical",
+      "example": "What genre of music do you prefer — rock or pop?",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "género musical" }
+    },
+    {
+      "id": "chorus",
+      "word": "chorus",
+      "definition": "The repeated section of a song that usually contains the main message and melody",
+      "example": "Everyone in the crowd sang along to the chorus of the hit song.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "coro / estribillo" }
+    },
+    {
+      "id": "melody",
+      "word": "melody",
+      "definition": "A sequence of musical notes that form a recognizable tune",
+      "example": "The melody was so catchy that I couldn't get it out of my head.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "melodía" }
+    },
+    {
+      "id": "acoustic",
+      "word": "acoustic",
+      "definition": "Describes music played with natural, non-electronic instruments",
+      "example": "He played an acoustic version of his biggest hit at the intimate venue.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "acústico" }
+    },
+    {
+      "id": "tour",
+      "word": "tour",
+      "definition": "A series of concerts or performances in different cities or countries",
+      "example": "The band announced a world tour to promote their new album.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "gira" }
+    },
+    {
+      "id": "pitch",
+      "word": "pitch",
+      "definition": "How high or low a musical note sounds",
+      "example": "She has perfect pitch — she can identify any musical note without a reference.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "tono / altura tonal" }
+    },
+    {
+      "id": "setlist",
+      "word": "setlist",
+      "definition": "The planned order of songs that a musician or band will perform at a concert",
+      "example": "The band's setlist included all their classics plus three new songs.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "lista de canciones del concierto" }
+    },
+    {
+      "id": "venue",
+      "word": "venue",
+      "definition": "The place where a concert or performance takes place",
+      "example": "The venue holds over ten thousand people and has incredible acoustics.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "recinto / sala de conciertos" }
+    },
+    {
+      "id": "remix",
+      "word": "remix",
+      "definition": "A new version of a song in which the original recording is edited or rearranged",
+      "example": "The DJ's remix of that 90s hit was even more popular than the original.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "remix / remezcla" }
+    },
+    {
+      "id": "virtuoso",
+      "word": "virtuoso",
+      "definition": "A musician with exceptional technical skill and mastery of their instrument",
+      "example": "The young pianist is considered a virtuoso — she performed Chopin at age eleven.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "virtuoso" }
+    },
+    {
+      "id": "improvisation",
+      "word": "improvisation",
+      "definition": "The spontaneous creation of music in the moment, without prior preparation or notation",
+      "example": "Jazz is built on improvisation — musicians respond to each other in real time.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "improvisación" }
+    },
+    {
+      "id": "dissonance",
+      "word": "dissonance",
+      "definition": "A combination of musical notes that clash or feel unresolved, creating tension",
+      "example": "The composer used dissonance deliberately to evoke unease and conflict.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "disonancia" }
+    },
+    {
+      "id": "arrangement",
+      "word": "arrangement",
+      "definition": "An adaptation of a piece of music for different instruments or voices from the original",
+      "example": "The orchestral arrangement of the pop song transformed it into something entirely new.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "arreglo musical" }
+    },
+    {
+      "id": "timbre",
+      "word": "timbre",
+      "definition": "The distinctive quality of a musical sound that allows you to tell instruments or voices apart",
+      "example": "Her timbre is instantly recognizable — no other singer sounds quite like her.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "timbre (sonoro)" }
+    },
+    {
+      "id": "counterpoint",
+      "word": "counterpoint",
+      "definition": "A musical technique in which two or more independent melodies are played at the same time",
+      "example": "Bach's use of counterpoint in his fugues is still studied in conservatories worldwide.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "contrapunto" }
+    },
+    {
+      "id": "polyrhythm",
+      "word": "polyrhythm",
+      "definition": "The simultaneous use of two or more conflicting rhythmic patterns in music",
+      "example": "West African drumming traditions are built on complex polyrhythmic structures.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "polirritmia" }
+    },
+    {
+      "id": "leitmotif",
+      "word": "leitmotif",
+      "definition": "A recurring musical theme associated with a particular character, idea, or emotion in a composition",
+      "example": "Wagner developed the leitmotif technique to represent characters without words.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "leitmotiv" }
+    },
+    {
+      "id": "atonal",
+      "word": "atonal",
+      "definition": "Describes music that avoids a tonal center or key, creating an unsettled, disorienting sound",
+      "example": "Schoenberg's atonal compositions divided audiences between admiration and confusion.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "atonal" }
+    },
+    {
+      "id": "syncopation",
+      "word": "syncopation",
+      "definition": "A rhythmic pattern in which the emphasis falls on normally weak or off beats, giving music a swing or bounce",
+      "example": "The jazz pianist's syncopation gave even a simple melody a compelling sense of forward momentum.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "síncopa" }
+    },
+    {
+      "id": "appropriation",
+      "word": "appropriation",
+      "definition": "The adoption of elements from one musical culture or tradition into another, sometimes raising ethical questions",
+      "example": "The debate over cultural appropriation in music continues to divide critics and artists alike.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "apropiación (cultural)" }
+    }
+  ]
+}

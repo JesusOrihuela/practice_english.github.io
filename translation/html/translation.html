@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse Translation — Practice English</title>
+    <title>Traducción Inversa — Practice English</title>
     <meta name="description" content="Translate from Spanish to English. Active L1→L2 production builds deeper grammatical knowledge than target-only drills.">
-    <meta property="og:title" content="Reverse Translation — Practice English">
+    <meta property="og:title" content="Traducción Inversa — Practice English">
     <meta property="og:description" content="Translate from Spanish to English. Active L1→L2 production builds deeper grammatical knowledge than target-only drills.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -27,28 +27,29 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
         </a>
     </header>
 
-    <nav class="mode-switcher" aria-label="Practice modes">
-        <a href="../../index.html" class="mode-btn mode-home" aria-label="Home">🏠</a>
+    <nav class="mode-switcher" aria-label="Modos de práctica">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio">🏠</a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">My Learning</span></a>
+        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">Mi Aprendizaje</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Speaking</span></a>
-        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictation</span></a>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Pronunciación</span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictado</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulary</span></a>
         <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
-        <a href="../../translation/html/translation.html" class="mode-btn active">🔄 <span class="btn-label">Translate</span></a>
-        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Scramble</span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn active">🔄 <span class="btn-label">Traducción</span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Secuencia</span></a>
+        <span class="mode-sep" aria-hidden="true"></span>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulario</span></a>
         <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Grammar</span></a>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Gramática</span></a>
         <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn" data-nav="settings">⚙️</a>
     </nav>
@@ -59,7 +60,7 @@
         <!-- Topic Picker -->
         <div id="topic-picker">
             <div class="trans-header">
-                <h1>Reverse <span>Translation</span></h1>
+                <h1>Traducción <span>Inversa</span></h1>
                 <p>Lee la frase en español y escribe la versión en inglés. La producción activa construye una memoria más sólida.</p>
             </div>
             <div class="topic-grid" id="topic-grid">
@@ -74,12 +75,12 @@
             <div class="session-info-bar">
                 <button class="back-btn" id="back-btn">← Temas</button>
                 <span id="trans-counter" class="session-counter" role="status" aria-live="polite">0 / 0 aprendidas</span>
-                <span class="streak-badge" id="trans-streak">🔥 racha de 0 día(s)</span>
+                <span class="streak-badge" id="trans-streak">🔥 Racha de 0 día(s)</span>
             </div>
-            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Session progress"><div class="session-progress-fill" id="session-progress-fill"></div></div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de la sesión"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
-            <h1 class="trans-title">Translate to <span>English</span></h1>
-            <p class="trans-subtitle">Lee la frase en español y escribe la versión en inglés.</p>
+            <h1 class="trans-title"></h1>
+            <p class="trans-subtitle"></p>
 
             <!-- Spanish phrase card -->
             <div class="phrase-card" id="phrase-card">
@@ -110,7 +111,7 @@
             <!-- Grammar chip + Listen (shown after answer) -->
             <div class="post-feedback-row">
                 <div id="grammar-chip-wrap" class="grammar-chip-wrap hidden">
-                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Open Grammar Workshop for this rule">
+                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Abrir Taller de Gramática para esta regla">
                         📐 <span id="grammar-chip-label"></span> →
                     </a>
                 </div>
@@ -127,16 +128,21 @@
 
     <footer>
         <div class="footer-content">
-            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <p>© <span id="footer-year">2025</span> Desarrollado por Jesús Orihuela</p>
             <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" opacity="0.8" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
         </div>
     </footer>
 
     <script src="../../shared/js/flags.js"></script>
+    <script src="../../shared/js/cefr.js"></script>
+    <script src="../../shared/js/lang-pair.js"></script>
     <script src="../../shared/js/proficiency.js"></script>
     <script src="../../shared/js/progress.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
     <script src="../../shared/js/topics.js"></script>
     <script src="../../shared/js/text-utils.js"></script>
     <script src="../../shared/js/topic-data.js"></script>

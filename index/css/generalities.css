@@ -7,7 +7,6 @@
 :root {
   --clr-primary:         #2563EB;
   --clr-primary-dark:    #1D4ED8;
-  --clr-primary-hover:   #1E40AF;
   --clr-primary-light:   #DBEAFE;
   --clr-accent:          #F59E0B;
   --clr-accent-dark:     #D97706;
@@ -15,6 +14,7 @@
   --clr-path:            #C9920A;
   --clr-path-dark:       #A57508;
   --clr-path-light:      #FDF3DC;
+  --clr-check-btn:       #03595F;
   --clr-success:         #059669;
   --clr-success-light:   #D1FAE5;
   --clr-danger:          #DC2626;
@@ -47,7 +47,6 @@
   --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   --header-h: 68px;
   --max-w:    1200px;
-  --clr-surface-glass: rgba(250,251,252,0.8);
   --gradient-hero: linear-gradient(135deg, #EBEEF2 0%, #F1F3F5 50%, #ECEEF2 100%);
 }
 
@@ -116,6 +115,10 @@ header {
   padding: 0 24px;
 }
 
+@media (max-width: 600px) {
+  header { justify-content: flex-start; }
+}
+
 header a { display: flex; align-items: center; text-decoration: none; }
 
 header img {
@@ -125,6 +128,33 @@ header img {
 }
 
 header img:hover { transform: scale(1.05); }
+
+/* ── Language pair badge (injected by lang-pair.js) ── */
+.lp-badge {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 6px 10px;
+  text-decoration: none;
+  line-height: 1;
+  transition: background var(--transition), border-color var(--transition);
+  cursor: pointer;
+}
+.lp-badge:hover {
+  background: var(--clr-bg);
+  border-color: var(--clr-primary);
+}
+.lp-badge__sep {
+  font-size: 0.6rem;
+  color: var(--clr-text-muted);
+  margin: 0 2px;
+}
 
 /* ---- Footer ---- */
 footer {
@@ -148,12 +178,12 @@ footer {
 
 .github-logo {
   font-size: 22px;
-  color: #fff;
-  opacity: 0.8;
-  transition: opacity var(--transition), transform var(--transition);
+  display: inline-flex;
+  transition: transform var(--transition);
 }
 
-.github-logo:hover { opacity: 1; transform: scale(1.15); }
+.github-logo:hover svg { opacity: 1; }
+.github-logo:hover { transform: scale(1.15); }
 
 /* ---- Scrollbar ---- */
 ::-webkit-scrollbar { width: 7px; }
@@ -291,8 +321,6 @@ footer {
   overflow: hidden;
   animation: fadeInScale 0.35s ease-out both;
 }
-
-
 
 .rating-label {
   font-size: 0.82rem;
@@ -477,7 +505,6 @@ footer {
   padding: 4px 2px;
 }
 
-
 /* ---- Shared Component: Activity Mode Nav ---- */
 .mode-switcher {
   display: flex;
@@ -538,7 +565,6 @@ footer {
 body.path-mode {
   --clr-primary:       var(--clr-path);
   --clr-primary-dark:  var(--clr-path-dark);
-  --clr-primary-hover: var(--clr-path-dark);
   --clr-primary-light: var(--clr-path-light);
 }
 
@@ -615,127 +641,6 @@ body.path-mode {
   .mode-sep { display: none; }
 }
 
-/* ---- Shared Component: Image Topic Cards (all activities except Speaking) ---- */
-.img-topic-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.img-topic-card {
-  background: var(--clr-surface);
-  border: 1px solid var(--clr-border);
-  border-left: 4px solid var(--topic-clr, var(--clr-primary));
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  text-align: left;
-  font-family: 'Raleway', sans-serif;
-  padding: 0;
-  opacity: 0;
-  animation: slideUp 0.5s ease-out forwards;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.img-topic-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-xl);
-}
-
-/* Staggered entry */
-.img-topic-card:nth-child(1)  { animation-delay: 0.04s; }
-.img-topic-card:nth-child(2)  { animation-delay: 0.08s; }
-.img-topic-card:nth-child(3)  { animation-delay: 0.12s; }
-.img-topic-card:nth-child(4)  { animation-delay: 0.16s; }
-.img-topic-card:nth-child(5)  { animation-delay: 0.20s; }
-.img-topic-card:nth-child(6)  { animation-delay: 0.24s; }
-.img-topic-card:nth-child(7)  { animation-delay: 0.28s; }
-.img-topic-card:nth-child(8)  { animation-delay: 0.32s; }
-.img-topic-card:nth-child(9)  { animation-delay: 0.36s; }
-.img-topic-card:nth-child(10) { animation-delay: 0.40s; }
-
-/* Per-topic accent colors — shared with speaking activity */
-.img-topic-card[data-theme="greetings"]      { --topic-clr: #2563EB; }
-.img-topic-card[data-theme="traveling"]      { --topic-clr: #0D9488; }
-.img-topic-card[data-theme="technology"]     { --topic-clr: #7C3AED; }
-.img-topic-card[data-theme="restaurant"]     { --topic-clr: #EA580C; }
-.img-topic-card[data-theme="kitchen"]        { --topic-clr: #15803D; }
-.img-topic-card[data-theme="supermarket"]    { --topic-clr: #0891B2; }
-.img-topic-card[data-theme="entertainment"]  { --topic-clr: #DB2777; }
-.img-topic-card[data-theme="accountability"] { --topic-clr: #4338CA; }
-.img-topic-card[data-theme="gym"]            { --topic-clr: #DC2626; }
-.img-topic-card[data-theme="general"]        { --topic-clr: #64748B; }
-
-.img-topic-card__img-wrap {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  background: var(--topic-clr, var(--clr-primary));
-}
-
-.img-topic-card__img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.img-topic-card:hover .img-topic-card__img { transform: scale(1.06); }
-
-.img-topic-card__overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.52) 100%);
-}
-
-.img-topic-card__body {
-  padding: 14px 16px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.img-topic-card__info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.img-topic-card__title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--clr-text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.img-topic-card__progress {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--clr-text-muted);
-}
-
-.img-topic-card__badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-  flex-shrink: 0;
-  background: var(--activity-clr-light, var(--clr-primary-light));
-  color: var(--activity-clr, var(--clr-primary));
-}
-
-@media (max-width: 480px) {
-  .img-topic-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
 
 /* ---- Shared Component: Topic Grid (used by Cloze, Quiz, Vocabulary) ---- */
 .topic-grid {
@@ -836,16 +741,20 @@ body.path-mode {
 .img-topic-card:active { transform: scale(0.97); }
 
 /* Per-topic accent colors */
-.img-topic-card[data-theme="greetings"]      { --topic-clr: #2563EB; }
-.img-topic-card[data-theme="traveling"]      { --topic-clr: #0D9488; }
-.img-topic-card[data-theme="technology"]     { --topic-clr: #7C3AED; }
-.img-topic-card[data-theme="restaurant"]     { --topic-clr: #EA580C; }
-.img-topic-card[data-theme="kitchen"]        { --topic-clr: #15803D; }
-.img-topic-card[data-theme="supermarket"]    { --topic-clr: #0891B2; }
-.img-topic-card[data-theme="entertainment"]  { --topic-clr: #DB2777; }
-.img-topic-card[data-theme="accountability"] { --topic-clr: #4338CA; }
-.img-topic-card[data-theme="gym"]            { --topic-clr: #DC2626; }
-.img-topic-card[data-theme="general"]        { --topic-clr: #64748B; }
+.img-topic-card[data-theme="greetings"]       { --topic-clr: #2563EB; }
+.img-topic-card[data-theme="restaurant"]      { --topic-clr: #EA580C; }
+.img-topic-card[data-theme="supermarket"]     { --topic-clr: #0891B2; }
+.img-topic-card[data-theme="kitchen"]         { --topic-clr: #15803D; }
+.img-topic-card[data-theme="transportation"]  { --topic-clr: #0D9488; }
+.img-topic-card[data-theme="airport"]         { --topic-clr: #0369A1; }
+.img-topic-card[data-theme="accommodation"]   { --topic-clr: #7C5CBF; }
+.img-topic-card[data-theme="movies"]          { --topic-clr: #C0392B; }
+.img-topic-card[data-theme="music"]           { --topic-clr: #0E7490; }
+.img-topic-card[data-theme="theater"]         { --topic-clr: #B45309; }
+.img-topic-card[data-theme="gym"]             { --topic-clr: #DC2626; }
+.img-topic-card[data-theme="technology"]      { --topic-clr: #7C3AED; }
+.img-topic-card[data-theme="accountability"]  { --topic-clr: #4338CA; }
+.img-topic-card[data-theme="general"]         { --topic-clr: #64748B; }
 
 .img-topic-card__img-wrap {
   position: relative;
@@ -873,16 +782,8 @@ body.path-mode {
 .img-topic-card__body {
   padding: 12px 16px 14px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-}
-
-.img-topic-card__info {
-  display: flex;
   flex-direction: column;
   gap: 2px;
-  min-width: 0;
 }
 
 .img-topic-card__title {
@@ -900,21 +801,9 @@ body.path-mode {
   color: var(--clr-text-muted);
 }
 
-.img-topic-card__badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 4px 10px;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-  flex-shrink: 0;
-  background: var(--activity-clr-light, var(--clr-primary-light));
-  color: var(--activity-clr, var(--clr-primary));
-}
-
 @media (max-width: 480px) {
   .img-topic-grid { grid-template-columns: 1fr; gap: 12px; }
 }
-
 
 /* ---- Phrase Browser ---- */
 .pb-section {
@@ -1075,7 +964,6 @@ body.path-mode {
   order: 3;
   padding: 1px 6px;
 }
-
 
 /* ---- Reduced Motion (Accessibility) ---- */
 @media (prefers-reduced-motion: reduce) {
@@ -1360,10 +1248,6 @@ body.path-mode {
   color: var(--clr-primary);
 }
 
-[data-theme="dark"] .milestone-toast {
-  background: var(--clr-surface);
-}
-
 /* ── CEFR phrase badge — used in all activities ── */
 .cefr-badge {
   display: inline-flex;
@@ -1380,10 +1264,8 @@ body.path-mode {
 .cefr-badge--a2 { background: #dbeafe; color: #2563eb; }
 .cefr-badge--b1 { background: #fef3c7; color: #d97706; }
 .cefr-badge--b2 { background: #ede9fe; color: #7c3aed; }
-[data-theme="dark"] .cefr-badge--a1 { background: rgba(22,163,74,0.18);   color: #4ade80; }
-[data-theme="dark"] .cefr-badge--a2 { background: rgba(37,99,235,0.18);   color: #93c5fd; }
-[data-theme="dark"] .cefr-badge--b1 { background: rgba(217,119,6,0.18);   color: #fcd34d; }
-[data-theme="dark"] .cefr-badge--b2 { background: rgba(124,58,237,0.18);  color: #c4b5fd; }
+.cefr-badge--c1 { background: #cffafe; color: #0891b2; }
+.cefr-badge--c2 { background: #ffe4e6; color: #be123c; }
 
 /* Badge injected into exercise cards — floats top-right of card header */
 .cefr-phrase-badge {

@@ -73,7 +73,7 @@ const AppTTS = (() => {
 
   // ---- Download Progress Panel -----------------------------------
 
-  const _dp = AppDownloadPanel.create('🔊 Loading voice model…', '🔊 Voice model ready ✓', 'pe_tts_cached');
+  const _dp = AppDownloadPanel.create(AppLang.t('tts_loading'), AppLang.t('tts_ready'), 'pe_tts_cached');
 
   // ---- Worker ----------------------------------------------------
 

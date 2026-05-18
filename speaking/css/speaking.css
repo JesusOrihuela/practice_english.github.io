@@ -33,7 +33,7 @@
 .topic-picker-header h1 span { color: var(--clr-primary); }
 
 .topic-picker-header p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--clr-text-muted);
   font-weight: 500;
   max-width: 480px;
