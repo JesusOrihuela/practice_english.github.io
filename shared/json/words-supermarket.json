@@ -3,152 +3,282 @@
     {
       "word": "aisle",
       "definition": "A long passage between rows of shelves in a store",
-      "translation": "pasillo",
       "example": "The breakfast cereals are in aisle seven.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "aisle"
+      "level": "A2",
+      "id": "aisle",
+      "translations": {
+        "es": "pasillo"
+      }
     },
     {
       "word": "checkout",
       "definition": "The place in a store where customers pay for their purchases",
-      "translation": "caja registradora",
       "example": "There was a long queue at the self-service checkout.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "checkout"
+      "level": "A2",
+      "id": "checkout",
+      "translations": {
+        "es": "caja registradora"
+      }
     },
     {
       "word": "coupon",
       "definition": "A voucher that entitles the holder to a discount on a product",
-      "translation": "cupón",
       "example": "I used a coupon to save two dollars on my breakfast cereal.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "coupon"
+      "level": "A2",
+      "id": "coupon",
+      "translations": {
+        "es": "cupón"
+      }
     },
     {
       "word": "discount",
       "definition": "A reduction from the normal selling price of a product",
-      "translation": "descuento",
       "example": "This store offers a ten percent discount for students.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "discount"
+      "level": "A2",
+      "id": "discount",
+      "translations": {
+        "es": "descuento"
+      }
     },
     {
       "word": "receipt",
       "definition": "A printed document confirming that a payment has been made",
-      "translation": "recibo / ticket",
       "example": "Keep your receipt in case you need to return the item.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "receipt"
+      "level": "A2",
+      "id": "receipt",
+      "translations": {
+        "es": "recibo / ticket"
+      }
     },
     {
       "word": "cashier",
       "definition": "A person whose job is to take payments at a store",
-      "translation": "cajero / cajera",
       "example": "The cashier scanned all my items and put them in a bag.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "cashier"
+      "level": "A2",
+      "id": "cashier",
+      "translations": {
+        "es": "cajero / cajera"
+      }
     },
     {
       "word": "expiration",
       "definition": "The date after which a product should no longer be used or sold",
-      "translation": "fecha de caducidad",
       "example": "Always check the expiration date before buying dairy products.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "expiration"
+      "level": "B1",
+      "id": "expiration",
+      "translations": {
+        "es": "fecha de caducidad"
+      }
     },
     {
       "word": "organic",
       "definition": "Produced without the use of artificial chemicals or pesticides",
-      "translation": "orgánico / ecológico",
       "example": "Organic vegetables tend to cost more than conventionally grown ones.",
       "category": "Adjective",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "organic"
+      "level": "B1",
+      "id": "organic",
+      "translations": {
+        "es": "orgánico / ecológico"
+      }
     },
     {
       "word": "quantity",
       "definition": "The amount or number of something that is available or required",
-      "translation": "cantidad",
       "example": "Please enter the exact quantity you would like to order.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "quantity"
+      "level": "B1",
+      "id": "quantity",
+      "translations": {
+        "es": "cantidad"
+      }
     },
     {
       "word": "promotion",
       "definition": "A special offer that sells products at a reduced price for a limited time",
-      "translation": "promoción / oferta",
       "example": "The supermarket is running a buy-one-get-one promotion this week.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "promotion"
+      "level": "B1",
+      "id": "promotion",
+      "translations": {
+        "es": "promoción / oferta"
+      }
     },
     {
       "word": "loyalty",
       "definition": "A points programme that rewards customers for repeated purchases",
-      "translation": "fidelización",
       "example": "Scan your loyalty card at checkout to earn points on every purchase.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "loyalty"
+      "level": "B1",
+      "id": "loyalty",
+      "translations": {
+        "es": "fidelización"
+      }
     },
     {
       "word": "bulk",
       "definition": "Buying a large quantity of something at once, usually at a lower price",
-      "translation": "al por mayor / a granel",
       "example": "It is much cheaper to buy rice and pasta in bulk.",
       "category": "Adjective",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "bulk"
+      "level": "B2",
+      "id": "bulk",
+      "translations": {
+        "es": "al por mayor / a granel"
+      }
     },
     {
       "word": "generic",
       "definition": "A product sold without a brand name, often cheaper than branded versions",
-      "translation": "genérico / marca blanca",
       "example": "Generic painkillers contain the same active ingredient as branded ones.",
       "category": "Adjective",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "generic"
+      "level": "B2",
+      "id": "generic",
+      "translations": {
+        "es": "genérico / marca blanca"
+      }
     },
     {
       "word": "perishable",
       "definition": "Describing food or goods that will spoil or decay quickly",
-      "translation": "perecedero",
       "example": "Keep all perishable items refrigerated at the correct temperature.",
       "category": "Adjective",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "perishable"
+      "level": "B2",
+      "id": "perishable",
+      "translations": {
+        "es": "perecedero"
+      }
     },
     {
       "word": "wholesale",
       "definition": "The sale of goods in large quantities at low prices, usually to retailers",
-      "translation": "mayorista / al por mayor",
       "example": "The restaurant buys its produce at wholesale prices to save money.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "wholesale"
+      "level": "B2",
+      "id": "wholesale",
+      "translations": {
+        "es": "mayorista / al por mayor"
+      }
+    },
+    {
+      "id": "allergen",
+      "word": "allergen",
+      "definition": "A substance that triggers an allergic reaction, legally required to be declared on food labels",
+      "example": "The packaging must list all fourteen major allergens in accordance with food labeling law.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "alérgeno" }
+    },
+    {
+      "id": "traceability",
+      "word": "traceability",
+      "definition": "The ability to track the origin and complete journey of a product through the supply chain",
+      "example": "Retailers must guarantee traceability from farm to shelf for all fresh produce.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "trazabilidad" }
+    },
+    {
+      "id": "markup",
+      "word": "markup",
+      "definition": "The amount added to the cost price of goods to cover expenses and generate profit",
+      "example": "The supermarket's markup on premium organic lines is significantly higher than on standard products.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "margen / sobrecoste" }
+    },
+    {
+      "id": "recall",
+      "word": "recall",
+      "definition": "The official withdrawal of a product from sale because of a safety or quality defect",
+      "example": "The manufacturer issued a recall after a contamination risk was identified in the batch.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "retirada del mercado" }
+    },
+    {
+      "id": "supplier",
+      "word": "supplier",
+      "definition": "A company or individual that provides goods to a retailer or business for resale or use",
+      "example": "The supermarket works with over two hundred approved suppliers across multiple countries.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "proveedor" }
+    },
+    {
+      "id": "procurement",
+      "word": "procurement",
+      "definition": "The formal process by which a business sources and purchases goods or services from external suppliers",
+      "example": "The procurement team negotiates long-term contracts to secure stable pricing from key suppliers.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "aprovisionamiento / compras" }
+    },
+    {
+      "id": "cold_chain",
+      "word": "cold chain",
+      "definition": "The uninterrupted temperature-controlled logistics system that preserves perishable goods from producer to consumer",
+      "example": "A break in the cold chain during transport can compromise the safety of frozen or chilled products.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "cadena de frío" }
+    },
+    {
+      "id": "shrinkage",
+      "word": "shrinkage",
+      "definition": "The unexplained loss of retail inventory, typically due to theft, damage, or administrative error",
+      "example": "The store introduced new security measures after shrinkage rates rose significantly last quarter.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "merma / pérdida de inventario" }
+    },
+    {
+      "id": "supply_chain",
+      "word": "supply chain",
+      "definition": "The entire network of producers, processors, distributors, and retailers involved in delivering a product to the consumer",
+      "example": "Disruptions to the global supply chain caused widespread shortages and price increases.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "cadena de suministro" }
+    },
+    {
+      "id": "adulteration",
+      "word": "adulteration",
+      "definition": "The illegal practice of adding inferior or harmful substances to food products, compromising their purity or safety",
+      "example": "The food fraud investigation revealed widespread adulteration of imported honey with cheaper syrups.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "adulteración" }
     }
   ]
 }

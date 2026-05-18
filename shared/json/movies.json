@@ -1,0 +1,277 @@
+{
+  "phrases": [
+    {
+      "id": "movies_bad_ending",
+      "phrase": "I didn't like the ending of that movie",
+      "translations": { "es": "No me gustó el final de esa película" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "movies_go_cinema_weekend",
+      "phrase": "I want to go to the movies this weekend, what movie do you want to see?",
+      "translations": { "es": "Quiero ir al cine este fin de semana, ¿qué película quieres ver?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": [
+        "I want to go to the cinema this weekend, what movie do you want to see?",
+        "I want to go to the movies this weekend, what film do you want to see?"
+      ]
+    },
+    {
+      "id": "movies_good_actor",
+      "phrase": "This actor is very good, I like all his movies",
+      "translations": { "es": "Este actor es muy bueno, me gustan todas sus películas" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "movies_watching_netflix_series",
+      "phrase": "Are you watching the new Netflix series?",
+      "translations": { "es": "¿Estás viendo la nueva serie de Netflix?" },
+      "level": "A1",
+      "grammar": "Present continuous: action happening right now or around now"
+    },
+    {
+      "id": "movies_good_movie_recommend",
+      "phrase": "This movie is very good, you should watch it",
+      "translations": { "es": "Esta película está muy buena, deberías verla" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["This film is very good, you should watch it"]
+    },
+    {
+      "id": "movies_seen_horror_movie",
+      "phrase": "Have you seen the new horror movie?",
+      "translations": { "es": "¿Ya viste la nueva película de terror?" },
+      "level": "A2",
+      "grammar": "Present perfect: asking about experience with no specific time",
+      "alternatives": ["Have you seen the new horror film?"]
+    },
+    {
+      "id": "movies_looking_new_series",
+      "phrase": "I'm looking for a new series to watch, can you recommend one?",
+      "translations": { "es": "Estoy buscando una nueva serie para ver, ¿me recomiendas alguna?" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["I'm looking for a new series to watch, could you recommend one?"]
+    },
+    {
+      "id": "movies_classic_movie",
+      "phrase": "That movie is a classic, you have to watch it",
+      "translations": { "es": "Esa película es un clásico, tienes que verla" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["That film is a classic, you have to watch it"]
+    },
+    {
+      "id": "movies_new_director_movie",
+      "phrase": "There is a new movie by my favorite director, I have to watch it",
+      "translations": { "es": "Hay una nueva película de mi director favorito, tengo que verla" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["There is a new film by my favorite director, I have to watch it"]
+    },
+    {
+      "id": "movies_disappointed_last_season",
+      "phrase": "I didn't like the last season of that series, it disappointed me",
+      "translations": { "es": "No me gustó la última temporada de esa serie, me decepcionó" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "movies_seen_latest_episode",
+      "phrase": "Have you seen the latest episode of the series?",
+      "translations": { "es": "¿Ya viste el último episodio de la serie?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "movies_dont_understand_popularity",
+      "phrase": "I don't like that series, I don't understand why it's so popular",
+      "translations": { "es": "No me gusta esa serie, no entiendo por qué es tan popular" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "movies_series_recommendation",
+      "phrase": "What series do you recommend me to watch?",
+      "translations": { "es": "¿Qué serie me recomiendas ver?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "movies_seen_new_trailer",
+      "phrase": "Have you seen the new movie trailer?",
+      "translations": { "es": "¿Ya viste el nuevo tráiler de la película?" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["Have you seen the new film trailer?"]
+    },
+    {
+      "id": "movies_prefer_cinema_home",
+      "phrase": "I prefer to watch movies in the cinema than at home",
+      "translations": { "es": "Prefiero ver películas en el cine que en casa" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": [
+        "I prefer to watch films in the cinema than at home",
+        "I prefer to watch movies at the cinema rather than at home"
+      ]
+    },
+    {
+      "id": "movies_film_festival_city",
+      "phrase": "There is a new film festival in the city, shall we go?",
+      "translations": { "es": "Hay un nuevo festival de cine en la ciudad, ¿vamos?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "movies_what_time_starts",
+      "phrase": "What time does the movie start?",
+      "translations": { "es": "¿A qué hora empieza la película?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "movies_documentary_streaming",
+      "phrase": "I heard that documentary is excellent — is it on any streaming platform?",
+      "translations": { "es": "He escuchado que ese documental es excelente. ¿Está en alguna plataforma de streaming?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "movies_special_effects_incredible",
+      "phrase": "The special effects in that movie were incredible — how did they do it?",
+      "translations": { "es": "Los efectos especiales de esa película eran increíbles. ¿Cómo lo hicieron?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "movies_binge_watching_cant_stop",
+      "phrase": "I've been watching this series all week and I just can't stop.",
+      "translations": { "es": "Llevo toda la semana viendo esta serie y simplemente no puedo parar." },
+      "level": "B1",
+      "grammar": "Present perfect continuous: 'I've been watching' for an ongoing action spanning up to now"
+    },
+    {
+      "id": "movies_midnight_premiere_sells_out",
+      "phrase": "Do you want to go to the midnight premiere? Tickets usually sell out fast.",
+      "translations": { "es": "¿Quieres ir al estreno de medianoche? Las entradas suelen agotarse rápido." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "movies_prefer_thrillers_not_action",
+      "phrase": "I'm not really into action movies — I prefer psychological thrillers.",
+      "translations": { "es": "En realidad no soy muy fan de las películas de acción. Prefiero los thrillers psicológicos." },
+      "level": "B1",
+      "grammar": "'Not really into' — informal expression for lack of interest in something"
+    },
+    {
+      "id": "movies_unexpected_twist_ending",
+      "phrase": "That film had an unexpected twist at the end that completely changed the story.",
+      "translations": { "es": "Esa película tenía un giro inesperado al final que cambió completamente la historia." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "movies_second_half_pacing_rushed",
+      "phrase": "The second half felt rushed compared to the slow build-up of the first act.",
+      "translations": { "es": "La segunda mitad se sintió apresurada en comparación con el desarrollo lento del primer acto." },
+      "level": "B2",
+      "grammar": "'Compared to' for drawing a contrast between two parts of something"
+    },
+    {
+      "id": "movies_book_adaptation_missing_scenes",
+      "phrase": "I was disappointed that the book adaptation left out so many key scenes.",
+      "translations": { "es": "Me decepcionó que la adaptación del libro omitiera tantas escenas clave." },
+      "level": "B2",
+      "grammar": "'That-clause' after 'disappointed' to explain the reason for the feeling"
+    },
+    {
+      "id": "movies_previous_film_more_compelling",
+      "phrase": "The director's previous film was far more compelling — this one felt formulaic.",
+      "translations": { "es": "La película anterior del director era mucho más convincente. Esta se sintió formuláica." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "movies_oscars_best_picture_overhyped",
+      "phrase": "It won Best Picture at the Oscars, but honestly I thought it was overhyped.",
+      "translations": { "es": "Ganó la Mejor Película en los Óscar, pero sinceramente creo que estaba sobrevalorada." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "movies_themes_identity_narrative",
+      "phrase": "The film explores themes of identity and belonging through a deceptively simple narrative.",
+      "translations": { "es": "La película explora temas de identidad y pertenencia a través de una narrativa engañosamente sencilla." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "movies_nonlinear_storytelling_effective",
+      "phrase": "I find the director's use of non-linear storytelling particularly effective in this piece.",
+      "translations": { "es": "Encuentro que el uso de la narrativa no lineal por parte del director es particularmente efectivo en esta obra." },
+      "level": "C1",
+      "grammar": "'I find + object + adjective' for expressing a personal critical assessment"
+    },
+    {
+      "id": "movies_performances_script_characters",
+      "phrase": "The performances were outstanding, but the script failed to develop the supporting characters.",
+      "translations": { "es": "Las actuaciones fueron sobresalientes, pero el guion no logró desarrollar a los personajes secundarios." },
+      "level": "C1",
+      "grammar": "'Failed to + infinitive' to express falling short of an expected task"
+    },
+    {
+      "id": "movies_unflinching_poverty_sentimentality",
+      "phrase": "It was praised for its unflinching portrayal of poverty, avoiding the usual Hollywood sentimentality.",
+      "translations": { "es": "Fue elogiada por su retrato sin concesiones de la pobreza, evitando la habitual sensiblería de Hollywood." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "movies_cinematography_worth_watching",
+      "phrase": "The cinematography alone makes it worth watching — every frame looks like a painting.",
+      "translations": { "es": "La cinematografía por sí sola vale la pena verla. Cada fotograma parece una pintura." },
+      "level": "C1",
+      "grammar": "'Makes it worth + gerund' — 'worth' followed by a verb in -ing form"
+    },
+    {
+      "id": "movies_deconstruct_genre_vigilante",
+      "phrase": "The film deconstructs the superhero genre by interrogating the moral ambiguity of vigilante justice.",
+      "translations": { "es": "La película deconstruye el género de superhéroes al cuestionar la ambigüedad moral de la justicia por mano propia." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "movies_subverts_conventions_critical_acclaim",
+      "phrase": "Its deliberate subversion of narrative conventions alienated mainstream audiences but earned critical acclaim.",
+      "translations": { "es": "Su deliberada subversión de las convenciones narrativas alejó al público mayoritario pero obtuvo reconocimiento crítico." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "movies_auteur_long_takes_body_of_work",
+      "phrase": "The director's auteur signature is unmistakable — the long takes and sparse dialogue are hallmarks of her work.",
+      "translations": { "es": "La firma autoral de la directora es inconfundible: los planos secuencia y el diálogo escaso son sellos de su obra." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "movies_polemic_consumerism_commercial",
+      "phrase": "The film functions as a critique of consumerism, embedding its argument within an ostensibly commercial genre.",
+      "translations": { "es": "La película funciona como una crítica al consumismo, insertando su argumento dentro de un género aparentemente comercial." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "movies_refuses_easy_moral_resolution",
+      "phrase": "What distinguishes it from its contemporaries is its refusal to provide an easy moral resolution.",
+      "translations": { "es": "Lo que la distingue de sus contemporáneas es su negativa a ofrecer una resolución moral sencilla." },
+      "level": "C2",
+      "grammar": "'What + verb' as subject — a cleft-like structure to emphasize the distinguishing feature"
+    }
+  ]
+}

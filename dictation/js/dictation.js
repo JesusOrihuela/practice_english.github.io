@@ -5,7 +5,6 @@
    ============================================================ */
 
 const DICT_PREFIX = 'dict_';
-const LAST_KEY = 'pe_last_dictation';
 
 let _openPhraseBrowser = null;
 
@@ -28,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Show streak
   const streak = Progress.getStreak();
   const streakEl = document.getElementById('dict-streak');
-  if (streakEl) streakEl.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  if (streakEl) streakEl.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 
   const _urlTopic = new URLSearchParams(location.search).get('topic');
   const _pathMode = new URLSearchParams(location.search).get('path') === '1';
@@ -66,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _backLink.addEventListener('click', function () {
       if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -94,10 +93,10 @@ function _showLoadError(topicKey) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
+  txt.textContent = AppLang.t('error_loading');
 
   const btn = document.createElement('button');
-  btn.textContent = 'Reintentar →';
+  btn.textContent = AppLang.t('retry');
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -118,7 +117,6 @@ let _pathCardId     = null;
 async function startTopic(topicKey, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
-  localStorage.setItem(LAST_KEY, topicKey);
   currentTopic = topicKey;
   let data;
   try {
@@ -127,13 +125,13 @@ async function startTopic(topicKey, pathMode, pathCard) {
     _showLoadError(topicKey);
     return;
   }
-  const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+  const _order = CEFR_ORDER;
   const _tagged = (data.phrases || []).map((p, i) => ({
-    phrase: p.phrase, translation: p.translation || '', grammar: p.grammar || null, cefr: p.cefr || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
-  })).sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+    phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '', grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
+  })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
   phrases            = _tagged.map(x => x.phrase);
   grammarTips        = _tagged.map(x => x.grammar);
-  cefrLevels         = _tagged.map(x => x.cefr);
+  cefrLevels         = _tagged.map(x => x.level);
   cardIds            = _tagged.map(x => DICT_PREFIX + x.id);
   audioIndices       = _tagged.map(x => x.origIdx);
   phraseAlternatives = _tagged.map(x => x.alternatives);
@@ -166,7 +164,7 @@ function _beginExercise(idx) {
   document.getElementById('exercise-area').classList.remove('hidden');
   const streak = Progress.getStreak();
   const streakEl = document.getElementById('dict-streak');
-  if (streakEl) streakEl.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  if (streakEl) streakEl.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
   loadPhrase(currentIndex);
   updateCounter();
 }
@@ -212,7 +210,7 @@ function updateCounter() {
   if (!el || phrases.length === 0) return;
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
+    el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -221,7 +219,7 @@ function updateCounter() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
+  el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';
@@ -283,7 +281,7 @@ function checkAnswer() {
     || (phraseAlternatives[currentIndex] || []).some(alt => _norm(input) === _norm(alt));
   _lastCorrect = isCorrect;
 
-  Progress.rate(cardIds[currentIndex], isCorrect ? 3 : 1);
+  Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'dictation');
   Progress.recordSession(DICT_PREFIX + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();
@@ -291,7 +289,7 @@ function checkAnswer() {
   const resultEl = document.getElementById('feedback-result');
   const diffEl   = document.getElementById('dict-diff');
 
-  resultEl.textContent = isCorrect ? '✓ ¡Correcto!' : '✗ Incorrecto';
+  resultEl.textContent = isCorrect ? AppLang.t('feedback_correct') : AppLang.t('feedback_incorrect');
   resultEl.className   = 'feedback-result ' + (isCorrect ? 'correct' : 'incorrect');
   diffEl.textContent   = '';
   diffEl.appendChild(
@@ -309,7 +307,7 @@ function checkAnswer() {
 
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
-  document.getElementById('back-to-path').classList.remove('hidden');
+  document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 
 }
@@ -343,7 +341,7 @@ function nextPhrase() {
 
   const streak = Progress.getStreak();
   const el = document.getElementById('dict-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día' + (streak.current === 1 ? '' : 's');
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 }
 
 function _showPathSessionComplete() {
@@ -354,14 +352,11 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completa!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
-        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
-        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
+        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">Mi Aprendizaje →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
     '</div>';
 }
 

@@ -2,7 +2,6 @@
    vocabulary.js — Flashcard Vocabulary Trainer with SRS
    ============================================================ */
 
-const LAST_KEY = 'pe_last_vocabulary';
 
 let _openPhraseBrowser = null;
 
@@ -22,8 +21,8 @@ function _vocabGridOpts() {
     topics: AppTopics.VOCAB_TOPICS,
     getSrsKey: t => t.id === 'general' ? 'vocab' : 'vocab_' + t.id,
     getItemCount: t => {
-      const path = t.id === 'general' ? '../../shared/json/words.json' : '../../shared/json/words-' + t.id + '.json';
-      return fetch(path).then(r => r.json()).then(d => d.words ? d.words.length : 0);
+      const key = t.id === 'general' ? 'words' : 'words-' + t.id;
+      return AppData.get(key).then(d => d.words ? d.words.length : 0);
     },
     onSelect: startTopic,
   };
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof PathSession !== 'undefined') PathSession.start();
   }
 
-  if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
+  if (_urlTopic && AppTopics.VOCAB_TOPICS.some(t => t.id === _urlTopic)) {
     startTopic(_urlTopic, _pathMode, _pathCard);
   } else {
     AppTopicGrid.build(_vocabGridOpts());
@@ -80,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     _backLink.id = 'back-to-path';
     _backLink.href = '../../my-learning/html/my-learning.html';
     _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = '← Volver a la ruta';
+    _backLink.textContent = AppLang.t('back_to_path');
     _backLink.addEventListener('click', function () {
       if (isFlipped && typeof PathSession !== 'undefined') PathSession.advance();
     });
@@ -116,10 +115,10 @@ function _showLoadError(topicId) {
   });
 
   const txt = document.createElement('span');
-  txt.textContent = '⚠️ Error al cargar el tema. Revisa tu conexión.';
+  txt.textContent = AppLang.t('error_loading');
 
   const btn = document.createElement('button');
-  btn.textContent = 'Reintentar →';
+  btn.textContent = AppLang.t('retry');
   Object.assign(btn.style, {
     background: 'var(--clr-danger)', color: '#fff', border: 'none',
     borderRadius: 'var(--radius-full)', padding: '6px 14px',
@@ -140,19 +139,15 @@ let _pathCardId     = null;
 function startTopic(topicId, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
-  localStorage.setItem(LAST_KEY, topicId);
   currentTopicId = topicId;
   vocabTopicKey  = topicId === 'general' ? 'vocab' : 'vocab_' + topicId;
-  const jsonPath = topicId === 'general'
-    ? '../../shared/json/words.json'
-    : '../../shared/json/words-' + topicId + '.json';
+  const dataKey = topicId === 'general' ? 'words' : 'words-' + topicId;
 
-  fetch(jsonPath)
-    .then(r => r.json())
+  AppData.get(dataKey)
     .then(data => {
-      const _order = { A1: 0, A2: 1, B1: 2, B2: 3 };
+      const _order = CEFR_ORDER;
       const _tagged = (data.words || []).map((w, i) => ({ ...w, _origIdx: i }))
-        .sort((a, b) => (_order[a.cefr] ?? 99) - (_order[b.cefr] ?? 99));
+        .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
       words   = _tagged;
       cardIds = _tagged.map(x => vocabTopicKey + '_' + x.id);
 
@@ -162,7 +157,7 @@ function startTopic(topicId, pathMode, pathCard) {
         cardIds,
         topicLabel: topicObj ? topicObj.label : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        cefrLevels: _tagged.map(x => x.cefr || null),
+        cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -185,7 +180,7 @@ function _beginExercise(idx) {
   document.getElementById('vocab-content').classList.remove('hidden');
   const streak = Progress.getStreak();
   const el = document.getElementById('vocab-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
   showCard(currentIndex);
   updateStatsBar();
 }
@@ -199,18 +194,20 @@ function showCard(index) {
   document.getElementById('flashcard').classList.remove('flipped');
 
   // Front
-  document.getElementById('word-category').textContent  = word.category || '';
+  const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
+  document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
   document.getElementById('word-text').textContent = word.word;
 
   // Back
   document.getElementById('fc-back-word').textContent    = word.word;
   document.getElementById('word-definition').textContent = word.definition;
   document.getElementById('word-example').textContent    = word.example;
-  document.getElementById('word-translation').textContent = word.translation;
+  document.getElementById('word-translation').textContent = word.translations?.[AppLangPair.getActive().source.code] || '';
 
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
-  _showCefrBadge(word.cefr, 'flashcard-scene');
+  _showCefrBadge(word.level, 'flashcard-front');
+  _showCefrBadge(word.level, 'flashcard-back');
 }
 
 function _showCefrBadge(level, containerId) {
@@ -239,8 +236,8 @@ function flipCard() {
 
 function rateAndNext(quality) {
   const _isCorrect = quality >= 3;
-  Progress.rate(cardIds[currentIndex], _isCorrect ? 3 : 1);
-  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.cefr, _isCorrect, 'vocabulary');
+  Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(_isCorrect));
+  if (typeof AppProficiency !== 'undefined') AppProficiency.update(words[currentIndex]?.level, _isCorrect, 'vocabulary');
   Progress.recordSession(vocabTopicKey, _isCorrect ? 1 : 0, 1);
 
   if (_pathModeActive && typeof PathSession !== 'undefined') {
@@ -263,7 +260,7 @@ function rateAndNext(quality) {
 
   const streak = Progress.getStreak();
   const el = document.getElementById('vocab-streak');
-  if (el) el.innerHTML = '<span aria-hidden="true">🔥</span> racha de ' + streak.current + ' día(s)';
+  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
 }
 
 function _showPathSessionComplete() {
@@ -274,14 +271,11 @@ function _showPathSessionComplete() {
   document.body.innerHTML =
     '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
       '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">¡Sesión completada!</h1>' +
+      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
       '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        (reviewCount > 0 ? reviewCount + ' repaso' + (reviewCount > 1 ? 's' : '') : '') +
-        (reviewCount > 0 && newCount > 0 ? ' y ' : '') +
-        (newCount > 0 ? newCount + ' tarjeta' + (newCount > 1 ? 's' : '') + ' nueva' + (newCount > 1 ? 's' : '') : '') +
-        ' completada' + ((reviewCount + newCount) > 1 ? 's' : '') + ' hoy.' +
+        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
       '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">My Learning →</a>' +
+      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
     '</div>';
 }
 
@@ -292,7 +286,7 @@ function updateStatsBar() {
   if (!el) return;
   if (_pathModeActive && typeof PathSession !== 'undefined') {
     const prog = PathSession.getProgress();
-    el.textContent = 'Ejercicio ' + prog.current + ' de ' + prog.total;
+    el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
     const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
     const fill = document.getElementById('session-progress-fill');
     if (fill) fill.style.width = pct + '%';
@@ -301,7 +295,7 @@ function updateStatsBar() {
     return;
   }
   const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = stats.seen + ' / ' + stats.total + ' aprendidas';
+  el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
   const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
   const fill = document.getElementById('session-progress-fill');
   if (fill) fill.style.width = pct + '%';

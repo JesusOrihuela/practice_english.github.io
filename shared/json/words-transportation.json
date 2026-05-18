@@ -1,0 +1,294 @@
+{
+  "words": [
+    {
+      "id": "bus",
+      "word": "bus",
+      "definition": "A large vehicle that carries passengers along a fixed route and stops at set points",
+      "example": "Take the bus from the city center — it stops right outside the museum.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "autobús / bus" }
+    },
+    {
+      "id": "taxi",
+      "word": "taxi",
+      "definition": "A car with a driver that you pay to take you to a specific place",
+      "example": "We took a taxi from the hotel to the train station.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "taxi" }
+    },
+    {
+      "id": "station",
+      "word": "station",
+      "definition": "A building where buses, trains, or subway services stop to let passengers on and off",
+      "example": "The train station is a ten-minute walk from the hotel.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "estación" }
+    },
+    {
+      "id": "stop",
+      "word": "stop",
+      "definition": "A place where a bus or train pauses to pick up or drop off passengers",
+      "example": "Get off at the third stop — the museum is right there.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "parada" }
+    },
+    {
+      "id": "metro",
+      "word": "metro",
+      "definition": "An underground or overground urban train system for city travel",
+      "example": "The metro is the fastest way to cross the city during rush hour.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "metro / subterráneo" }
+    },
+    {
+      "id": "fare",
+      "word": "fare",
+      "definition": "The price charged for a journey by public transport",
+      "example": "The bus fare has increased significantly since last year.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "tarifa / pasaje" }
+    },
+    {
+      "id": "route",
+      "word": "route",
+      "definition": "The path or course taken to travel from one place to another",
+      "example": "Which route do you recommend — the highway or the scenic road?",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "ruta" }
+    },
+    {
+      "id": "transfer",
+      "word": "transfer",
+      "definition": "A change from one vehicle or line to another during a journey",
+      "example": "You'll need to make a transfer at Central Station to reach the airport.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "trasbordo / traslado" }
+    },
+    {
+      "id": "schedule",
+      "word": "schedule",
+      "definition": "A list of times at which trains, buses, or other transport depart and arrive",
+      "example": "Check the bus schedule online before heading to the stop.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "horario" }
+    },
+    {
+      "id": "itinerary",
+      "word": "itinerary",
+      "definition": "A planned route or schedule of places and transport connections for a trip",
+      "example": "The tour guide handed out the itinerary for our three-day trip.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "itinerario" }
+    },
+    {
+      "id": "platform",
+      "word": "platform",
+      "definition": "The raised area next to the rails at a station where passengers board and exit trains",
+      "example": "Your train departs from platform 7 in five minutes.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "andén / plataforma" }
+    },
+    {
+      "id": "timetable",
+      "word": "timetable",
+      "definition": "A printed or online list showing departure and arrival times for public transport services",
+      "example": "The timetable shows two buses per hour on weekdays but fewer on weekends.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "horario / tabla de tiempos" }
+    },
+    {
+      "id": "carpool",
+      "word": "carpool",
+      "definition": "An arrangement where a group of people share a car and take turns driving, to save costs and reduce traffic",
+      "example": "We set up a carpool with three colleagues to avoid paying for parking every day.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "coche compartido / carpool" }
+    },
+    {
+      "id": "commute",
+      "word": "commute",
+      "definition": "The regular journey between home and work or school, typically made daily",
+      "example": "Her daily commute takes over an hour each way by train.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "trayecto diario al trabajo" }
+    },
+    {
+      "id": "congestion",
+      "word": "congestion",
+      "definition": "Heavy traffic that causes slow movement or delays on roads or transport networks",
+      "example": "Heavy congestion on the motorway added 45 minutes to the journey.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "congestión / tráfico" }
+    },
+    {
+      "id": "bypass",
+      "word": "bypass",
+      "definition": "A road that goes around a town or busy area, allowing traffic to avoid it",
+      "example": "Taking the bypass saved us twenty minutes compared to driving through the city.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "variante / desvío / circunvalación" }
+    },
+    {
+      "id": "interchange",
+      "word": "interchange",
+      "definition": "A junction where several roads, rail lines, or transit services meet and passengers can switch between them",
+      "example": "The city's main interchange connects the metro, bus, and regional rail services.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "intercambiador / nodo de transporte" }
+    },
+    {
+      "id": "ridesharing",
+      "word": "ridesharing",
+      "definition": "A service that connects passengers with drivers through a smartphone app",
+      "example": "Ridesharing apps have changed how people travel in cities around the world.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "transporte compartido / ridesharing" }
+    },
+    {
+      "id": "surcharge",
+      "word": "surcharge",
+      "definition": "An extra charge added to the basic fare, for example during peak hours or for luggage",
+      "example": "The taxi driver applied a surcharge for the journey during a public holiday.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "recargo / sobrecargo" }
+    },
+    {
+      "id": "infrastructure",
+      "word": "infrastructure",
+      "definition": "The physical systems and structures, such as roads and rail networks, that a transport system depends on",
+      "example": "Poor infrastructure is one of the main reasons public transport is unreliable in this region.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "infraestructura" }
+    },
+    {
+      "id": "accessibility",
+      "word": "accessibility",
+      "definition": "The degree to which transport services can be used by people with disabilities or limited mobility",
+      "example": "The new bus fleet was praised for its improved accessibility for wheelchair users.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "accesibilidad" }
+    },
+    {
+      "id": "subsidy",
+      "word": "subsidy",
+      "definition": "Money provided by a government to support public transport and keep fares affordable",
+      "example": "Without government subsidies, bus fares would be unaffordable for low-income passengers.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "subvención / subsidio" }
+    },
+    {
+      "id": "penalty",
+      "word": "penalty",
+      "definition": "A fine or charge imposed for breaking a transport rule, such as travelling without a ticket",
+      "example": "He received a penalty for failing to validate his ticket before boarding.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "multa / sanción" }
+    },
+    {
+      "id": "liability",
+      "word": "liability",
+      "definition": "Legal responsibility for damage or injury caused during a transport journey or rental",
+      "example": "The rental agreement clearly states the renter's liability for vehicle damage.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "responsabilidad legal / pasivo" }
+    },
+    {
+      "id": "deregulation",
+      "word": "deregulation",
+      "definition": "The removal of government rules and controls from an industry, allowing greater market competition",
+      "example": "The deregulation of the bus industry led to lower prices but less reliable services.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "desregulación" }
+    },
+    {
+      "id": "congestion_pricing",
+      "word": "congestion pricing",
+      "definition": "A system that charges drivers more to enter busy city areas at peak times to reduce traffic",
+      "example": "London's congestion pricing zone has cut central traffic by over 30 percent.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "tarifas por congestión / peaje urbano" }
+    },
+    {
+      "id": "intermodal",
+      "word": "intermodal",
+      "definition": "Involving more than one type of transport, such as trains, buses, and bikes, integrated into one journey",
+      "example": "The new intermodal hub connects rail, bus, and cycle lanes in a single terminal.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "intermodal" }
+    },
+    {
+      "id": "carbon_footprint",
+      "word": "carbon footprint",
+      "definition": "The total amount of greenhouse gases produced by an activity such as a journey or mode of transport",
+      "example": "Taking the train instead of flying dramatically reduces your carbon footprint.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "huella de carbono" }
+    },
+    {
+      "id": "franchise",
+      "word": "franchise",
+      "definition": "A contract granting a company the exclusive right to operate a public transport service on a specific route",
+      "example": "The government awarded a new franchise to operate the northern rail line.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "concesión / franquicia" }
+    }
+  ]
+}

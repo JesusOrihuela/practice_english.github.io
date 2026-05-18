@@ -2,10 +2,9 @@
    my-learning.css — My Learning Path page
    ============================================================ */
 
-
 .ml-page {
   width: 100%;
-  max-width: 520px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 32px 20px 64px;
   display: flex;
@@ -135,9 +134,6 @@
 .ml-cta__chip--review { background: #fef3c7; color: #b45309; }
 .ml-cta__chip--new    { background: var(--clr-path-light); color: var(--clr-path-dark); }
 
-[data-theme="dark"] .ml-cta__chip--review { background: rgba(217,119,6,0.18);   color: #fbbf24; }
-[data-theme="dark"] .ml-cta__chip--new    { background: rgba(201,146,10,0.18);  color: #e8b84b; }
-
 .ml-cta__btn {
   display: inline-block;
   padding: 9px 22px;
@@ -227,8 +223,7 @@
   white-space: nowrap;
   letter-spacing: 0.03em;
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
   text-align: center;
   /* Sits above bubble; gap: 10px on .ml-snode keeps clear of active glow */
 }
@@ -321,12 +316,6 @@
   color: #92400e;
   background: #fde68a;
 }
-
-[data-theme="dark"] .ml-snode__review-badge {
-  color: #fbbf24;
-  background: rgba(217,119,6,0.22);
-}
-
 
 /* ── Responsive ── */
 @media (max-width: 480px) {

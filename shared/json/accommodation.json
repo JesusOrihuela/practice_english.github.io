@@ -1,0 +1,367 @@
+{
+  "phrases": [
+    {
+      "id": "accommodation_breakfast_included",
+      "phrase": "Is breakfast included?",
+      "translations": { "es": "¿Está incluido el desayuno?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_extra_towels",
+      "phrase": "Could you provide extra towels in the room?",
+      "translations": { "es": "¿Podría proporcionar toallas adicionales en la habitación?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Can you provide extra towels in the room?"]
+    },
+    {
+      "id": "accommodation_hotel_services",
+      "phrase": "What services does the hotel have?",
+      "translations": { "es": "¿Qué servicios tiene el hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_minibar_room",
+      "phrase": "Is there a minibar in the room?",
+      "translations": { "es": "¿Hay minibar en la habitación?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_recommend_restaurant",
+      "phrase": "Could you recommend a good restaurant nearby?",
+      "translations": { "es": "¿Podría recomendarme un buen restaurante cercano?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Can you recommend a good restaurant nearby?"]
+    },
+    {
+      "id": "accommodation_wifi_password",
+      "phrase": "What is the WiFi password?",
+      "translations": { "es": "¿Cuál es la contraseña del WiFi?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_gym_hotel",
+      "phrase": "Is there a gym in the hotel?",
+      "translations": { "es": "¿Hay gimnasio en el hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_help_luggage",
+      "phrase": "Could you help me with my luggage?",
+      "translations": { "es": "¿Podría ayudarme con mi equipaje?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Can you help me with my luggage?"]
+    },
+    {
+      "id": "accommodation_safe_room",
+      "phrase": "Is there a safe in the room?",
+      "translations": { "es": "¿Hay caja fuerte en la habitación?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_extra_pillow",
+      "phrase": "Could you provide an extra pillow, please?",
+      "translations": { "es": "¿Podría proporcionarme una almohada extra, por favor?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Can you provide an extra pillow, please?"]
+    },
+    {
+      "id": "accommodation_restaurant_closing",
+      "phrase": "What time does the hotel restaurant close?",
+      "translations": { "es": "¿A qué hora cierra el restaurante del hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_atm_hotel",
+      "phrase": "Is there an ATM in the hotel?",
+      "translations": { "es": "¿Hay un cajero automático en el hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_pool_hotel",
+      "phrase": "Is there a pool in the hotel?",
+      "translations": { "es": "¿Hay piscina en el hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_checkin_time",
+      "phrase": "What time is check-in?",
+      "translations": { "es": "¿A qué hora es el check-in?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_checkout_time",
+      "phrase": "What time is check-out?",
+      "translations": { "es": "¿A qué hora es el check-out?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_closest_restaurant",
+      "phrase": "What is the closest restaurant to the hotel?",
+      "translations": { "es": "¿Cuál es el restaurante más cercano al hotel?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_drinks_included",
+      "phrase": "Are drinks included?",
+      "translations": { "es": "¿Las bebidas están incluidas?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_book_room_two_nights",
+      "phrase": "Could you help me book a hotel room for two nights?",
+      "translations": { "es": "¿Podrías ayudarme a reservar una habitación de hotel para dos noches?" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["Can you help me book a hotel room for two nights?"]
+    },
+    {
+      "id": "accommodation_single_room_availability",
+      "phrase": "Is there availability for a single room?",
+      "translations": { "es": "¿Hay disponibilidad para una habitación individual?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_confirm_reservation",
+      "phrase": "I would like to confirm my reservation for tomorrow night",
+      "translations": { "es": "Quisiera confirmar mi reserva para mañana por la noche" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_do_not_disturb",
+      "phrase": "The do not disturb sign is on",
+      "translations": { "es": "Está puesto el letrero de no molestar" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_airport_shuttle",
+      "phrase": "Do you have airport shuttle service?",
+      "translations": { "es": "¿Tienen servicio de transporte al aeropuerto?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_nonsmoking_room",
+      "phrase": "Could you give me a non-smoking room, please?",
+      "translations": { "es": "¿Podría darme una habitación para no fumadores, por favor?" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["Can you give me a non-smoking room, please?"]
+    },
+    {
+      "id": "accommodation_room_service_24h",
+      "phrase": "Is there 24-hour room service?",
+      "translations": { "es": "¿Hay servicio a la habitación las 24 horas?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_guest_access",
+      "phrase": "What do I have access to as a hotel guest?",
+      "translations": { "es": "¿A qué tengo acceso como huésped del hotel?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_store_luggage",
+      "phrase": "Is there a place to store luggage after check-out?",
+      "translations": { "es": "¿Hay algún lugar donde guardar el equipaje después del check-out?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_spa_service",
+      "phrase": "Is there a spa or massage service in the hotel?",
+      "translations": { "es": "¿Hay servicio de spa o masajes en el hotel?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_transport_options",
+      "phrase": "What transportation options are there to get to the hotel?",
+      "translations": { "es": "¿Qué opciones de transporte hay para llegar al hotel?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_room_sea_view",
+      "phrase": "I prefer a room with a sea view, even if it costs a bit more",
+      "translations": { "es": "Prefiero una habitación con vista al mar, aunque cueste un poco más" },
+      "level": "B1",
+      "grammar": "Concessive clause with 'even if': accepting a condition while maintaining a preference"
+    },
+    {
+      "id": "accommodation_late_checkout_policy",
+      "phrase": "What is the late check-out policy?",
+      "translations": { "es": "¿Cuál es la política de salida tardía?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_cancellation_policy",
+      "phrase": "What is the hotel's reservation cancellation policy?",
+      "translations": { "es": "¿Cuál es la política de cancelación de la reserva?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_pet_policy",
+      "phrase": "What is the hotel's pet policy?",
+      "translations": { "es": "¿Cuál es la política para mascotas del hotel?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_early_checkin_policy",
+      "phrase": "What is the early check-in policy?",
+      "translations": { "es": "¿Cuál es la política de early check-in?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_refund_policy",
+      "phrase": "What is the refund policy in case of cancellation?",
+      "translations": { "es": "¿Cuál es la política de reembolso en caso de cancelación?" },
+      "level": "B1",
+      "grammar": "Conditional noun phrase: 'in case of' + noun"
+    },
+    {
+      "id": "accommodation_power_adapters",
+      "phrase": "Do you have power adapters for international devices?",
+      "translations": { "es": "¿Tienen adaptadores de corriente para dispositivos internacionales?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_extend_stay_price",
+      "phrase": "What is the additional cost to extend my stay for one more night?",
+      "translations": { "es": "¿Cuál es el costo adicional por extender mi estadía una noche más?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_room_not_cleaned_discount",
+      "phrase": "My room wasn't cleaned during my stay — I'd like to request a partial refund.",
+      "translations": { "es": "Mi habitación no fue limpiada durante mi estadía. Me gustaría solicitar un reembolso parcial." },
+      "level": "B2",
+      "grammar": "Passive voice: 'wasn't cleaned' — the room is the focus, not who failed to clean it"
+    },
+    {
+      "id": "accommodation_unexplained_charge_bill",
+      "phrase": "I noticed a charge on my bill that I wasn't informed about at check-in.",
+      "translations": { "es": "Noté un cargo en mi factura del que no me informaron al momento del registro." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_early_checkin_early_flight",
+      "phrase": "Could you arrange an early check-in? My flight lands at six in the morning.",
+      "translations": { "es": "¿Podrían gestionar un check-in anticipado? Mi vuelo aterriza a las seis de la mañana." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_aircon_maintenance",
+      "phrase": "The air conditioning isn't working properly — could you send someone from maintenance?",
+      "translations": { "es": "El aire acondicionado no funciona bien. ¿Podrían enviar a alguien de mantenimiento?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_extend_stay_same_rate",
+      "phrase": "I'd like to extend my stay by two nights — is the same rate still available?",
+      "translations": { "es": "Me gustaría extender mi estadía dos noches más. ¿Sigue disponible la misma tarifa?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_corporate_rate_booking",
+      "phrase": "I'd like to discuss a corporate rate for future bookings on behalf of my company.",
+      "translations": { "es": "Me gustaría hablar sobre una tarifa corporativa para futuras reservas en nombre de mi empresa." },
+      "level": "C1",
+      "grammar": "'On behalf of' to indicate acting as a representative of someone else"
+    },
+    {
+      "id": "accommodation_room_doesnt_match_manager",
+      "phrase": "The room I was assigned doesn't match what I booked online — I'd like to speak with the manager.",
+      "translations": { "es": "La habitación que me asignaron no coincide con lo que reservé en línea. Me gustaría hablar con el gerente." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_formal_complaint_noise",
+      "phrase": "I need to file a formal complaint regarding the noise disturbance from the room above last night.",
+      "translations": { "es": "Necesito presentar una queja formal por el ruido proveniente de la habitación de arriba anoche." },
+      "level": "C1",
+      "grammar": "'Regarding' for formal reference; 'file a complaint' as a fixed collocation"
+    },
+    {
+      "id": "accommodation_itemize_bill_expense",
+      "phrase": "Could you itemize the bill? I need a detailed receipt for my company's expense report.",
+      "translations": { "es": "¿Podría desglosar la factura? Necesito un recibo detallado para el informe de gastos de mi empresa." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_retrieve_valuables_safe",
+      "phrase": "I placed a valuables declaration when I checked in — I'd like to retrieve the items from the safe.",
+      "translations": { "es": "Realicé una declaración de objetos de valor al registrarme. Me gustaría recuperar los artículos de la caja fuerte." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_force_majeure_cancellation",
+      "phrase": "Under your cancellation policy, I believe a force majeure exception applies to my refund request.",
+      "translations": { "es": "Según su política de cancelación, creo que aplica una excepción por fuerza mayor a mi solicitud de reembolso." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_room_misrepresented_listing",
+      "phrase": "The room was misrepresented in the listing — the photos showed a sea view that the room did not have.",
+      "translations": { "es": "La habitación fue descrita de forma engañosa en el anuncio: las fotos mostraban vista al mar, pero la habitación no la tenía." },
+      "level": "C2",
+      "grammar": "Passive voice: 'was misrepresented' to focus on the description, not who wrote it"
+    },
+    {
+      "id": "accommodation_longstay_discount_negotiation",
+      "phrase": "I'd like to negotiate a long-stay rate for a month-long reservation beginning next Monday.",
+      "translations": { "es": "Me gustaría negociar una tarifa por estancia prolongada para una reserva de un mes a partir del próximo lunes." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_damages_assessment_criteria",
+      "phrase": "The contract states that damages are assessed at the hotel's discretion — I'd like to understand the criteria.",
+      "translations": { "es": "El contrato indica que los daños se evalúan a discreción del hotel. Me gustaría entender los criterios." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "accommodation_loyalty_tier_benefits",
+      "phrase": "Could you confirm whether my loyalty status entitles me to complimentary breakfast and late checkout?",
+      "translations": { "es": "¿Podría confirmar si mi nivel de fidelidad me da derecho a desayuno gratuito y salida tardía?" },
+      "level": "C2",
+      "grammar": "Indirect question: 'whether + subject + verb' embedded in a polite main clause"
+    }
+  ]
+}

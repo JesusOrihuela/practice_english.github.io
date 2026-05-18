@@ -11,7 +11,7 @@
 const AppData = (() => {
   const _cache     = new Map();          // memory: in-flight Promises + resolved data
   const _BASE      = '../../shared/json/';
-  const _SS_PREFIX = 'pe_topic_v2_';     // v2: phrase objects {id,phrase,translation,cefr,grammar}
+  const _SS_PREFIX = 'pe_topic_v4_';     // v4: "cefr" field renamed to "level" in all JSON files
 
   function _ssGet(id) {
     try {

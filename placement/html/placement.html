@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Placement Test — Practice English</title>
-    <meta name="description" content="Find your English level (CEFR A1–B2) with 10 questions and start with the content that fits you best.">
+    <meta name="description" content="Find your English level (CEFR A1–C2) with 14 questions and start with the content that fits you best.">
     <meta property="og:title" content="Placement Test — Practice English">
-    <meta property="og:description" content="Find your English level (CEFR A1–B2) with 10 questions and start with the content that fits you best.">
+    <meta property="og:description" content="Find your English level (CEFR A1–C2) with 14 questions and start with the content that fits you best.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Practice English">
-    <meta name="twitter:description" content="10 questions to find your English level (CEFR A1–B2) and start with the right content.">
+    <meta name="twitter:description" content="14 questions to find your English level (CEFR A1–C2) and start with the right content.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
 
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
@@ -37,18 +37,18 @@
         <div id="screen-intro">
             <div class="placement-card">
                 <div class="placement-icon" aria-hidden="true">🎯</div>
-                <h1 class="placement-title">Initial Placement Test</h1>
+                <h1 class="placement-title">Prueba de Nivel</h1>
                 <p class="placement-subtitle">
-                    10 questions to find your English level (A1–B2) and suggest the best starting point for you.
+                    14 preguntas para encontrar tu nivel de inglés (A1–C2) y sugerirte el mejor punto de partida.
                 </p>
-                <div class="placement-info-pills" aria-label="Test details">
-                    <span class="info-pill">⏱️ ~2 minutes</span>
-                    <span class="info-pill">❓ 10 questions</span>
-                    <span class="info-pill">📊 CEFR result</span>
+                <div class="placement-info-pills" aria-label="Detalles de la prueba">
+                    <span class="info-pill">⏱️ ~3 minutos</span>
+                    <span class="info-pill">❓ 14 preguntas</span>
+                    <span class="info-pill">📊 Resultado CEFR</span>
                 </div>
                 <div class="placement-actions">
-                    <button id="start-btn" class="ptest-btn ptest-btn--primary">Start the test →</button>
-                    <button id="skip-btn" class="ptest-btn ptest-btn--ghost">Skip — start from scratch</button>
+                    <button id="start-btn" class="ptest-btn ptest-btn--primary">Comenzar →</button>
+                    <button id="skip-btn" class="ptest-btn ptest-btn--ghost">Saltar — empezar desde cero</button>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
 
                 <!-- Counter + level badge -->
                 <div class="quiz-meta">
-                    <span class="placement-counter" id="placement-counter" aria-live="polite">Question 1 of 10</span>
+                    <span class="placement-counter" id="placement-counter" aria-live="polite">Pregunta 1 de 14</span>
                     <span class="placement-level-badge" id="placement-level-badge">A1</span>
                 </div>
 
@@ -85,13 +85,13 @@
                 <p class="result-score" id="result-score" role="status" aria-live="polite"></p>
                 <p class="result-message" id="result-message"></p>
 
-                <div class="result-suggestions-label">Recommended activities for your level:</div>
+                <div class="result-suggestions-label">Actividades recomendadas para tu nivel:</div>
                 <div class="result-suggestions" id="result-suggestions"></div>
 
                 <a href="../../index.html" class="ptest-btn ptest-btn--primary result-cta" id="result-cta">
-                    Start practising →
+                    Empezar a practicar →
                 </a>
-                <button id="retake-btn" class="ptest-btn ptest-btn--ghost">Retake the test</button>
+                <button id="retake-btn" class="ptest-btn ptest-btn--ghost">Repetir la prueba</button>
             </div>
         </div>
 
@@ -99,13 +99,20 @@
 
     <footer>
         <div class="footer-content">
-            <p>© <span id="footer-year">2025</span> Developed by Jesús Orihuela</p>
+            <p>© <span id="footer-year">2025</span> Desarrollado por Jesús Orihuela</p>
         </div>
     </footer>
 
     <script>
         document.getElementById('footer-year').textContent = new Date().getFullYear();
     </script>
+    <script src="../../shared/js/flags.js"></script>
+    <script src="../../shared/js/cefr.js"></script>
+    <script src="../../shared/js/lang-pair.js"></script>
+    <script src="../../shared/js/proficiency.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
     <script src="../js/placement.js"></script>
     <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>

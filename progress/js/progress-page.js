@@ -21,6 +21,7 @@ function _fetchJSON(url) {
 function _pHref(href) { return '../../' + href; }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  renderLangPair();
   renderNotificationSettings();
   renderHeroStats();
   renderTopicPrefs();
@@ -29,12 +30,60 @@ document.addEventListener('DOMContentLoaded', async () => {
   await renderExerciseMatrix();
 });
 
+// ---- Language Pair ----
+
+function renderLangPair() {
+  const grid = document.getElementById('lang-pair-grid');
+  if (!grid || typeof AppLangPair === 'undefined') return;
+
+  const active = AppLangPair.getActive();
+  const all    = AppLangPair.getAll();
+
+  grid.innerHTML = '';
+
+  all.forEach(function (pair) {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'lp-card' + (pair.id === active.id ? ' lp-card--active' : '');
+    card.setAttribute('aria-pressed', pair.id === active.id ? 'true' : 'false');
+    card.setAttribute('aria-label', pair.label);
+
+    // Flag row
+    const flagRow = document.createElement('span');
+    flagRow.className = 'lp-card__flags';
+    if (typeof AppFlags !== 'undefined') {
+      flagRow.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+      const arrow = document.createElement('span');
+      arrow.className   = 'lp-card__arrow';
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.textContent = '→';
+      flagRow.appendChild(arrow);
+      flagRow.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+    }
+    card.appendChild(flagRow);
+
+    // Label
+    const lbl = document.createElement('span');
+    lbl.className   = 'lp-card__label';
+    lbl.textContent = pair.label;
+    card.appendChild(lbl);
+
+    card.addEventListener('click', function () {
+      AppLangPair.setActive(pair.id);
+      // Reload so all data re-initializes from the new pair's namespace
+      location.reload();
+    });
+
+    grid.appendChild(card);
+  });
+}
+
 // ---- Topic Preferences ----
 
 function renderTopicPrefs() {
   const container = document.getElementById('prog-prefs-bubbles');
   if (!container || typeof AppTopics === 'undefined') return;
-  const saved = new Set(JSON.parse(localStorage.getItem('pe_topic_preferences') || '[]'));
+  const saved = new Set(JSON.parse(localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences')) || '[]'));
   AppTopics.PHRASE_TOPICS.forEach(t => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -47,7 +96,7 @@ function renderTopicPrefs() {
       const isOn = btn.classList.contains('prog-bubble--on');
       btn.setAttribute('aria-pressed', isOn ? 'true' : 'false');
       const on = Array.from(container.querySelectorAll('.prog-bubble--on')).map(b => b.dataset.id);
-      localStorage.setItem('pe_topic_preferences', JSON.stringify(on));
+      localStorage.setItem(AppLangPair.storageKey('pe_topic_preferences'), JSON.stringify(on));
     });
     container.appendChild(btn);
   });
@@ -67,7 +116,7 @@ function renderHeroStats() {
   document.getElementById('stat-streak').textContent   = streak.current;
   document.getElementById('stat-mastered').textContent = masteredCount; // total added later by renderExerciseMatrix
   const bestEl = document.getElementById('stat-best-streak');
-  if (bestEl && streak.best > streak.current) bestEl.textContent = '· Récord: ' + streak.best;
+  if (bestEl && streak.best > streak.current) bestEl.textContent = AppLang.t('streak_best', { n: streak.best });
 }
 
 // ---- Exercise Overview Accordion ----
@@ -142,14 +191,14 @@ async function renderExerciseMatrix() {
   })();
 
   const ACT_ORDER = [
-    { id: 'speaking',    emoji: '🎙️', label: 'Speaking'  },
-    { id: 'dictation',   emoji: '✍️', label: 'Dictation' },
-    { id: 'vocabulary',  emoji: '📚', label: 'Vocab'     },
-    { id: 'cloze',       emoji: '🔤', label: 'Cloze'     },
-    { id: 'translation', emoji: '🔄', label: 'Translate' },
-    { id: 'scramble',    emoji: '🧩', label: 'Scramble'  },
-    { id: 'quiz',        emoji: '🧠', label: 'Quiz'      },
-    { id: 'grammar',     emoji: '📐', label: 'Grammar'   },
+    { id: 'speaking',    emoji: '🎙️', label: 'Pronunciación' },
+    { id: 'dictation',   emoji: '✍️', label: 'Dictado'       },
+    { id: 'vocabulary',  emoji: '📚', label: 'Vocabulario'   },
+    { id: 'cloze',       emoji: '🔤', label: 'Cloze'         },
+    { id: 'translation', emoji: '🔄', label: 'Traducción'    },
+    { id: 'scramble',    emoji: '🧩', label: 'Secuencia'     },
+    { id: 'quiz',        emoji: '🧠', label: 'Quiz'          },
+    { id: 'grammar',     emoji: '📐', label: 'Gramática'     },
   ];
 
   container.innerHTML = '';
@@ -187,8 +236,7 @@ async function renderExerciseMatrix() {
     th.setAttribute('role', 'rowheader');
     th.innerHTML =
       '<span class="ex-grid-topic-emoji" aria-hidden="true">' + topic.emoji + '</span>' +
-      '<span class="ex-grid-topic-name">' + _esc(topic.label) + '</span>' +
-      '<span class="prog-lvl--' + topic.level.toLowerCase() + ' ex-grid-topic-lvl">' + topic.level + '</span>';
+      '<span class="ex-grid-topic-name">' + _esc(topic.label) + '</span>';
     row.appendChild(th);
 
     // One cell per activity
@@ -201,13 +249,13 @@ async function renderExerciseMatrix() {
 
       if (!stats) {
         td.innerHTML = '<div class="ex-seg-bar ex-seg-bar--na"></div><span class="ex-cell-na">n/a</span>';
-        td.title = act.label + ' — no aplica para este tema';
+        td.title = AppLang.t('cell_na', { act: act.label });
         row.appendChild(td);
         return;
       }
 
       var ns = stats.total - stats.mastered - stats.learning;
-      td.title = act.label + ': ' + stats.mastered + ' dominadas · ' + stats.learning + ' en progreso · ' + ns + ' sin iniciar';
+      td.title = AppLang.t('cell_stats', { act: act.label, mastered: stats.mastered, learning: stats.learning, unseen: ns });
       td.setAttribute('aria-label', td.title);
       td.innerHTML =
         '<div class="ex-seg-bar">' + _segBar(stats.mastered, stats.learning, stats.total) + '</div>' +
@@ -242,58 +290,6 @@ async function renderExerciseMatrix() {
     legend.appendChild(el);
   });
   document.getElementById('exercises-block').appendChild(legend);
-}
-
-// ---- Skill Pillars ----
-
-function renderSkillPillars() {
-  if (typeof AppPath === 'undefined') return;
-  const container = document.getElementById('skill-pillars');
-  if (!container) return;
-
-  const cards = Progress.getAllCards();
-
-  const SKILLS = [
-    { label: '🎙️ Speaking',   prefix: '',         color: '#2563eb' },
-    { label: '✍️ Dictation',   prefix: 'dict_',    color: '#d97706' },
-    { label: '🔤 Cloze',       prefix: 'cloze_',   color: '#059669' },
-    { label: '🔄 Translation', prefix: 'trans_',   color: '#7c3aed' },
-  ];
-
-  const TOPIC_IDS = AppPath.TOPICS.map(t => t.id);
-
-  container.innerHTML = '';
-
-  SKILLS.forEach(skill => {
-    let masteredCount = 0;
-    let totalCount    = 0;
-
-    TOPIC_IDS.forEach(tid => {
-      const prefix = skill.prefix + tid;
-      Object.keys(cards).forEach(key => {
-        if (!key.startsWith(prefix + '_')) return;
-        totalCount++;
-        if (Progress.getMastery(key) === 'mastered') masteredCount++;
-      });
-    });
-
-    if (totalCount === 0) return;
-
-    const pct = Math.round((masteredCount / totalCount) * 100);
-    const row = document.createElement('div');
-    row.className = 'skill-row';
-    row.innerHTML =
-      '<span class="skill-label">' + skill.label + '</span>' +
-      '<div class="skill-bar-track" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="' + _esc(skill.label) + '">' +
-        '<div class="skill-bar-fill" style="width:' + pct + '%;background:' + skill.color + '"></div>' +
-      '</div>' +
-      '<span class="skill-pct">' + masteredCount + ' / ' + totalCount + '</span>';
-    container.appendChild(row);
-  });
-
-  if (container.children.length === 0) {
-    container.innerHTML = '<p class="empty-state">¡Empieza a practicar para ver tu progreso aquí!</p>';
-  }
 }
 
 // ---- Activity Heatmap (last 60 days) ----
@@ -369,24 +365,24 @@ function renderNotificationSettings() {
     const on      = granted && NS.isEnabled();
 
     toggle.setAttribute('aria-pressed', on ? 'true' : 'false');
-    toggle.textContent = on ? '🔔 Desactivar recordatorios' : '🔕 Activar recordatorios';
+    toggle.textContent = on ? AppLang.t('notif_on') : AppLang.t('notif_off');
     timeRow.classList.toggle('hidden', !on);
 
     if (Notification.permission === 'denied') {
-      statusEl.textContent = 'Notificaciones bloqueadas en la configuración del navegador.';
+      statusEl.textContent = AppLang.t('notif_blocked');
       statusEl.className   = 'notif-status notif-status--off';
-      hintEl.textContent   = 'Para activarlas, permite notificaciones de este sitio en la configuración de tu navegador.';
+      hintEl.textContent   = AppLang.t('notif_blocked_hint');
       toggle.disabled      = true;
     } else if (on) {
       const payload = NS.buildPayload();
-      statusEl.textContent = '✓ Activo — recordatorio diario a las ' + NS.getReminderTime();
+      statusEl.textContent = AppLang.t('notif_active', { time: NS.getReminderTime() });
       statusEl.className   = 'notif-status notif-status--on';
-      hintEl.textContent   = payload ? 'Ahora mismo: "' + payload.body + '"' : 'Sin recordatorios pendientes — ¡estás al día!';
+      hintEl.textContent   = payload ? AppLang.t('notif_current', { body: payload.body }) : AppLang.t('notif_no_pending');
       toggle.disabled      = false;
     } else {
       statusEl.textContent = '';
       statusEl.className   = 'notif-status';
-      hintEl.textContent   = 'Se activa una vez al día cuando abres la app, si tu racha está en riesgo.';
+      hintEl.textContent   = AppLang.t('notif_hint');
       toggle.disabled      = false;
     }
   }
@@ -416,11 +412,3 @@ function _esc(s) {
   return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function _formatNextDue(ts) {
-  const diffMs  = ts - Date.now();
-  const diffHrs = diffMs / 3_600_000;
-  if (diffHrs < 1)  return '⏱ Próximo repaso: pronto';
-  if (diffHrs < 24) return '⏱ Próximo repaso: más tarde hoy';
-  const days = Math.ceil(diffHrs / 24);
-  return '⏱ Próximo repaso: en ' + days + (days === 1 ? ' día' : ' días');
-}

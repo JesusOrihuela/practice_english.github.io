@@ -50,15 +50,17 @@
 
   // Known topic IDs in CEFR order (mirrors path.js — no import needed)
   var TOPIC_IDS = [
-    'greetings', 'restaurant', 'supermarket', 'kitchen', 'traveling',
-    'entertainment', 'gym', 'technology', 'accountability',
+    'greetings', 'restaurant', 'supermarket', 'kitchen',
+    'transportation', 'airport', 'accommodation',
+    'movies', 'music', 'theater',
+    'gym', 'technology', 'accountability',
   ];
 
-  var TOPIC_LABELS = {
-    greetings: 'Greetings', restaurant: 'Restaurant', supermarket: 'Supermarket',
-    kitchen: 'Kitchen', traveling: 'Traveling', entertainment: 'Entertainment',
-    gym: 'Gym', technology: 'Technology', accountability: 'Accountability',
-  };
+  function _topicLabel(id) {
+    var t = (typeof AppTopics !== 'undefined') &&
+            (AppTopics.PHRASE_TOPICS || []).find(function (x) { return x.id === id; });
+    return t ? t.label : id;
+  }
 
   // Activity prefixes to strip when extracting topic from card key
   var ACTIVITY_PREFIXES = ['dict_', 'cloze_', 'scramble_', 'trans_', 'quiz_', 'vocab_'];
@@ -112,13 +114,13 @@
 
     if (topDueTopic && topDueCount > 0) {
       var totalDue = Object.keys(dueCounts).reduce(function (s, k) { return s + dueCounts[k]; }, 0);
-      var bodyText = topDueCount + ' tarjeta' + (topDueCount > 1 ? 's' : '') + ' pendiente' + (topDueCount > 1 ? 's' : '') + ' en ' + TOPIC_LABELS[topDueTopic];
+      var s = topDueCount > 1 ? 's' : '';
+      var bodyText = AppLang.t('notif_body_due', { count: topDueCount, s: s, topic: _topicLabel(topDueTopic) });
       if (totalDue > topDueCount) {
-        bodyText += ' (+ ' + (totalDue - topDueCount) + ' más en otros temas)';
+        bodyText += ' ' + AppLang.t('notif_more_topics', { n: totalDue - topDueCount });
       }
-      bodyText += ' — repasa ahora.';
       return {
-        title: '📚 Tarjetas pendientes de repaso',
+        title: AppLang.t('notif_title_due'),
         body:  bodyText,
         tag:   'srs-due',
         url:   'speaking/html/speaking.html?topic=' + topDueTopic,
@@ -128,8 +130,8 @@
     // ── Priority 2: streak at risk ──
     if (streak.current >= 2 && !practicedToday) {
       return {
-        title: '🔥 Racha en riesgo',
-        body:  '¡Racha de ' + streak.current + ' días! Practica hoy para mantenerla.',
+        title: AppLang.t('notif_title_streak'),
+        body:  AppLang.t('notif_body_streak', { n: streak.current }),
         tag:   'streak-risk',
         url:   'speaking/html/speaking.html',
       };
@@ -191,9 +193,9 @@
     var textEl = document.createElement('div');
     textEl.className = 'done-notif-text';
     var strong = document.createElement('strong');
-    strong.textContent = '🔔 ¿Quieres un recordatorio diario?';
+    strong.textContent = AppLang.t('notif_prompt_title');
     var desc = document.createElement('span');
-    desc.textContent = 'Te diremos exactamente qué tarjetas tienes pendientes.';
+    desc.textContent = AppLang.t('notif_prompt_desc');
     textEl.appendChild(strong);
     textEl.appendChild(desc);
 
@@ -202,21 +204,21 @@
 
     var yesBtn = document.createElement('button');
     yesBtn.className = 'done-notif-yes';
-    yesBtn.textContent = 'Sí, recuérdame';
+    yesBtn.textContent = AppLang.t('notif_yes');
     yesBtn.addEventListener('click', function () {
       localStorage.setItem(KEY_ASKED, '1');
       requestPermission(function (result) {
         if (result === 'granted') {
-          prompt.innerHTML = '<span class="done-notif-confirmed">✓ Recordatorios activados — te avisaremos qué tarjetas tienes pendientes cada día.</span>';
+          prompt.innerHTML = '<span class="done-notif-confirmed">' + AppLang.t('notif_confirmed') + '</span>';
         } else {
-          prompt.innerHTML = '<span class="done-notif-confirmed">Notificaciones bloqueadas en la configuración del navegador.</span>';
+          prompt.innerHTML = '<span class="done-notif-confirmed">' + AppLang.t('notif_blocked') + '</span>';
         }
       });
     });
 
     var noBtn = document.createElement('button');
     noBtn.className = 'done-notif-no';
-    noBtn.textContent = 'Ahora no';
+    noBtn.textContent = AppLang.t('notif_no');
     noBtn.addEventListener('click', function () {
       localStorage.setItem(KEY_ASKED, '1');
       prompt.remove();

@@ -3,465 +3,737 @@
     {
       "id": "technology_could_you_send_me_that_document",
       "phrase": "Could you send me that document by email?",
-      "translation": "¿Podrías enviarme ese documento por correo electrónico?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Present simple: habitual action or general fact",
-      "alternatives": ["Can you send me that document by email?"]
+      "alternatives": [
+        "Can you send me that document by email?"
+      ],
+      "translations": {
+        "es": "¿Podrías enviarme ese documento por correo electrónico?"
+      }
     },
     {
       "id": "technology_i_need_to_charge_my_phone",
       "phrase": "I need to charge my phone, do you have a charger?",
-      "translation": "Necesito cargar mi teléfono, ¿tienes un cargador?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Necesito cargar mi teléfono, ¿tienes un cargador?"
+      }
     },
     {
       "id": "technology_can_you_help_me_set_up",
       "phrase": "Can you help me set up my new printer?",
-      "translation": "¿Puedes ayudarme a configurar mi nueva impresora?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Could you help me set up my new printer?"]
+      "alternatives": [
+        "Could you help me set up my new printer?"
+      ],
+      "translations": {
+        "es": "¿Puedes ayudarme a configurar mi nueva impresora?"
+      }
     },
     {
       "id": "technology_what_is_the_wifi_password",
       "phrase": "What is the WiFi password?",
-      "translation": "¿Cuál es la contraseña del WiFi?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cuál es la contraseña del WiFi?"
+      }
     },
     {
       "id": "technology_wait_my_computer_is_updating",
       "phrase": "Wait, my computer is updating",
-      "translation": "Espera, mi computadora está actualizando",
-      "cefr": "A1",
-      "grammar": "Modal 'can': ability or permission"
+      "level": "A1",
+      "grammar": "Modal 'can': ability or permission",
+      "translations": {
+        "es": "Espera, mi computadora está actualizando"
+      }
     },
     {
       "id": "technology_tomorrow_we_are_going_to_have",
       "phrase": "Tomorrow we are going to have a video call with the family",
-      "translation": "Mañana vamos a hacer una videollamada con la familia",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Present continuous: action happening right now",
-      "alternatives": ["Tomorrow we're going to have a video call with the family"]
+      "alternatives": [
+        "Tomorrow we're going to have a video call with the family"
+      ],
+      "translations": {
+        "es": "Mañana vamos a hacer una videollamada con la familia"
+      }
     },
     {
       "id": "technology_do_you_know_how_i_can",
       "phrase": "Do you know how I can transfer photos from my phone to the computer?",
-      "translation": "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Do you know how I can transfer photos from my phone to my computer?"]
+      "alternatives": [
+        "Do you know how I can transfer photos from my phone to my computer?"
+      ],
+      "translations": {
+        "es": "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?"
+      }
     },
     {
       "id": "technology_can_you_copy_me_on_that",
       "phrase": "Can you copy me on that email?",
-      "translation": "¿Puedes copiarme en ese email?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Puedes copiarme en ese email?"
+      }
     },
     {
       "id": "technology_send_me_that_file_via_whatsapp",
       "phrase": "Send me that file via WhatsApp",
-      "translation": "Envíame ese archivo por WhatsApp",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Envíame ese archivo por WhatsApp"
+      }
     },
     {
       "id": "technology_can_you_share_your_location",
       "phrase": "Can you share your location?",
-      "translation": "¿Puedes compartir tu ubicación?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Could you share your location?"]
+      "alternatives": [
+        "Could you share your location?"
+      ],
+      "translations": {
+        "es": "¿Puedes compartir tu ubicación?"
+      }
     },
     {
       "id": "technology_i_need_to_back_up_my",
       "phrase": "I need to back up my data",
-      "translation": "Necesito hacer una copia de seguridad de mis datos",
-      "cefr": "A2",
-      "grammar": "Simple past: completed action in the past"
+      "level": "A2",
+      "grammar": "Simple past: completed action in the past",
+      "translations": {
+        "es": "Necesito hacer una copia de seguridad de mis datos"
+      }
     },
     {
       "id": "technology_is_there_a_way_to_block",
       "phrase": "Is there a way to block this number?",
-      "translation": "¿Hay alguna forma de bloquear este número?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Hay alguna forma de bloquear este número?"
+      }
     },
     {
       "id": "technology_how_do_i_delete_this_app",
       "phrase": "How do I delete this app from my phone?",
-      "translation": "¿Cómo elimino esta aplicación de mi teléfono?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["How do I remove this app from my phone?"]
+      "alternatives": [
+        "How do I remove this app from my phone?"
+      ],
+      "translations": {
+        "es": "¿Cómo elimino esta aplicación de mi teléfono?"
+      }
     },
     {
       "id": "technology_i_forgot_my_password",
       "phrase": "I forgot my password",
-      "translation": "Olvidé mi contraseña",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Olvidé mi contraseña"
+      }
     },
     {
       "id": "technology_is_there_an_app_to_scan",
       "phrase": "Is there an app to scan documents?",
-      "translation": "¿Existe una app para escanear documentos?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Existe una app para escanear documentos?"
+      }
     },
     {
       "id": "technology_do_you_have_a_cable_you",
       "phrase": "Do you have a cable you can lend me?",
-      "translation": "¿Tienes un cable que puedas prestarme?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienes un cable que puedas prestarme?"
+      }
     },
     {
       "id": "technology_how_do_i_save_this_file",
       "phrase": "How do I save this file to the cloud?",
-      "translation": "¿Cómo guardo este archivo en la nube?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo guardo este archivo en la nube?"
+      }
     },
     {
       "id": "technology_i_want_to_buy_a_camera",
       "phrase": "I want to buy a camera, what is the best option?",
-      "translation": "Quiero comprar una cámara, ¿cuál es la mejor opción?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Quiero comprar una cámara, ¿cuál es la mejor opción?"
+      }
     },
     {
       "id": "technology_can_i_turn_off_notifications_for",
       "phrase": "Can I turn off notifications for this app?",
-      "translation": "¿Puedo desactivar las notificaciones de esta app?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Could I turn off notifications for this app?"]
+      "alternatives": [
+        "Could I turn off notifications for this app?"
+      ],
+      "translations": {
+        "es": "¿Puedo desactivar las notificaciones de esta app?"
+      }
     },
     {
       "id": "technology_how_do_i_take_a_screenshot",
       "phrase": "How do I take a screenshot on my phone?",
-      "translation": "¿Cómo hago una captura de pantalla en mi celular?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo hago una captura de pantalla en mi celular?"
+      }
     },
     {
       "id": "technology_make_sure_your_internet_connection_is",
       "phrase": "Make sure your internet connection is stable",
-      "translation": "Verifica que tu conexión a internet sea estable",
-      "cefr": "A2",
-      "grammar": "Present perfect: experience with no specific time"
+      "level": "A2",
+      "grammar": "Present perfect: experience with no specific time",
+      "translations": {
+        "es": "Verifica que tu conexión a internet sea estable"
+      }
     },
     {
       "id": "technology_i_recommend_using_a_strong_and",
       "phrase": "I recommend using a strong and unique password for each account",
-      "translation": "Te recomiendo usar una contraseña segura y única para cada cuenta",
-      "cefr": "A2",
-      "grammar": "Modal 'should': advice or recommendation"
+      "level": "A2",
+      "grammar": "Modal 'should': advice or recommendation",
+      "translations": {
+        "es": "Te recomiendo usar una contraseña segura y única para cada cuenta"
+      }
     },
     {
       "id": "technology_can_i_connect_the_speaker_to",
       "phrase": "Can I connect the speaker to Bluetooth?",
-      "translation": "¿Puedo conectar la bocina al Bluetooth?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Puedo conectar la bocina al Bluetooth?"
+      }
     },
     {
       "id": "technology_i_suggest_you_use_a_vpn",
       "phrase": "I suggest you use a VPN to protect your privacy online",
-      "translation": "Te sugiero que uses una VPN para proteger tu privacidad en línea",
-      "cefr": "B1",
-      "grammar": "Phrasal verb: 'set up' = configure or install"
+      "level": "B1",
+      "grammar": "Phrasal verb: 'set up' = configure or install",
+      "translations": {
+        "es": "Te sugiero que uses una VPN para proteger tu privacidad en línea"
+      }
     },
     {
       "id": "technology_where_is_the_tv_remote_control",
       "phrase": "Where is the TV remote control?",
-      "translation": "¿Dónde está el control remoto de la televisión?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Dónde está el control remoto de la televisión?"
+      }
     },
     {
       "id": "technology_we_need_to_buy_more_ink",
       "phrase": "We need to buy more ink for the printer",
-      "translation": "Hay que comprar más tinta para la impresora",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Hay que comprar más tinta para la impresora"
+      }
     },
     {
       "id": "technology_i_really_liked_this_image_im",
       "phrase": "I really liked this image, I'm going to set it as my wallpaper",
-      "translation": "Esta imagen me gustó mucho, la voy a poner de fondo de pantalla",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Esta imagen me gustó mucho, la voy a poner de fondo de pantalla"
+      }
     },
     {
       "id": "technology_have_you_seen_my_message_in",
       "phrase": "Have you seen my message in the group?",
-      "translation": "¿Ya viste mi mensaje en el grupo?",
-      "cefr": "A2",
-      "grammar": "Passive voice: focus on the action, not the doer"
+      "level": "A2",
+      "grammar": "Passive voice: focus on the action, not the doer",
+      "translations": {
+        "es": "¿Ya viste mi mensaje en el grupo?"
+      }
     },
     {
       "id": "technology_check_your_spam_the_email_might",
       "phrase": "Check your spam, the email might have arrived there",
-      "translation": "Revisa tu spam, tal vez llegó ahí el correo",
-      "cefr": "B1",
-      "grammar": "Modal 'might': weak possibility"
+      "level": "B1",
+      "grammar": "Modal 'might': weak possibility",
+      "translations": {
+        "es": "Revisa tu spam, tal vez llegó ahí el correo"
+      }
     },
     {
       "id": "technology_do_you_have_coverage_in_this",
       "phrase": "Do you have coverage in this place?",
-      "translation": "¿Tienes cobertura en este lugar?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Tienes cobertura en este lugar?"
+      }
     },
     {
       "id": "technology_the_battery_of_my_smartwatch_doesnt",
       "phrase": "The battery of my smartwatch doesn't last at all",
-      "translation": "La batería de mi reloj inteligente no dura nada",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "La batería de mi reloj inteligente no dura nada"
+      }
     },
     {
       "id": "technology_i_cant_connect_my_device_to",
       "phrase": "I can't connect my device to Bluetooth",
-      "translation": "No puedo conectar mi dispositivo al Bluetooth",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "No puedo conectar mi dispositivo al Bluetooth"
+      }
     },
     {
       "id": "technology_i_need_a_new_usb_cable",
       "phrase": "I need a new USB cable",
-      "translation": "Nececito un nuevo cable USB",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Nececito un nuevo cable USB"
+      }
     },
     {
       "id": "technology_the_wifi_is_not_working_can",
       "phrase": "The WiFi is not working, can you restart it?",
-      "translation": "No funciona el WiFi, ¿lo puedes reiniciar?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["The WiFi is not working, could you restart it?"]
+      "alternatives": [
+        "The WiFi is not working, could you restart it?"
+      ],
+      "translations": {
+        "es": "No funciona el WiFi, ¿lo puedes reiniciar?"
+      }
     },
     {
       "id": "technology_be_careful_with_that_link_it",
       "phrase": "Be careful with that link, it could be a virus",
-      "translation": "Cuidado con ese enlace, podría ser un virus",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Cuidado con ese enlace, podría ser un virus"
+      }
     },
     {
       "id": "technology_the_app_works_better_than_the",
       "phrase": "The app works better than the website",
-      "translation": "La aplicación funciona mejor que el sitio web",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "La aplicación funciona mejor que el sitio web"
+      }
     },
     {
       "id": "technology_lets_look_for_an_internet_tutorial",
       "phrase": "Let's look for an internet tutorial to solve this",
-      "translation": "Busquemos un tutorial en internet para solucionar esto",
-      "cefr": "A2",
-      "grammar": "Contraction: 'it's' = it is"
+      "level": "A2",
+      "grammar": "Contraction: 'it's' = it is",
+      "translations": {
+        "es": "Busquemos un tutorial en internet para solucionar esto"
+      }
     },
     {
       "id": "technology_what_cell_phone_do_you_recommend",
       "phrase": "What cell phone do you recommend?",
-      "translation": "¿Qué celular me recomiendas?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Qué celular me recomiendas?"
+      }
     },
     {
       "id": "technology_scan_this_qr_code_for_more",
       "phrase": "Scan this QR code for more information",
-      "translation": "Escanea este código QR para obtener más información",
-      "cefr": "A1",
-      "grammar": null
-    },
-    {
-      "id": "technology_tag_me_in_the_photo_you",
-      "phrase": "Tag me in the photo you posted",
-      "translation": "Etiquetame en la foto que subiste",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Escanea este código QR para obtener más información"
+      }
     },
     {
       "id": "technology_i_cant_open_this_file_what",
       "phrase": "I can't open this file, what format is it in?",
-      "translation": "No puedo abrir este archivo, ¿en qué formato está?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "No puedo abrir este archivo, ¿en qué formato está?"
+      }
     },
     {
       "id": "technology_i_need_to_download_this_program",
       "phrase": "I need to download this program for my work",
-      "translation": "Necesito descargar este programa para mi trabajo",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Necesito descargar este programa para mi trabajo"
+      }
     },
     {
       "id": "technology_how_can_i_recover_a_deleted",
       "phrase": "How can I recover a deleted file?",
-      "translation": "¿Cómo puedo recuperar un archivo borrado?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo puedo recuperar un archivo borrado?"
+      }
     },
     {
       "id": "technology_you_should_look_it_up_on",
       "phrase": "You should look it up on the internet, you'll probably find the answer",
-      "translation": "Deberías buscarlo en internet, seguro encuentras la respuesta",
-      "cefr": "A2",
-      "grammar": "Modal 'could': polite request or possibility"
+      "level": "A2",
+      "grammar": "Modal 'could': polite request or possibility",
+      "translations": {
+        "es": "Deberías buscarlo en internet, seguro encuentras la respuesta"
+      }
     },
     {
       "id": "technology_i_accidentally_deleted_the_conversation_can",
       "phrase": "I accidentally deleted the conversation, can you forward me the message?",
-      "translation": "Eliminé accidentalmente la conversación, ¿puedes reenviarme el mensaje?",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Eliminé accidentalmente la conversación, ¿puedes reenviarme el mensaje?"
+      }
     },
     {
       "id": "technology_dont_trust_all_the_information_you",
       "phrase": "Don't trust all the information you find on the internet",
-      "translation": "No confíes en toda la información que encuentras en internet",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "No confíes en toda la información que encuentras en internet"
+      }
     },
     {
       "id": "technology_do_you_know_how_to_use",
       "phrase": "Do you know how to use Photoshop to edit this image?",
-      "translation": "¿Sabes cómo usar Photoshop para editar esta imagen?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Sabes cómo usar Photoshop para editar esta imagen?"
+      }
     },
     {
       "id": "technology_i_cant_open_this_pdf_file",
       "phrase": "I can't open this PDF file, do I need a special program?",
-      "translation": "No puedo abrir este archivo PDF, ¿necesito un programa especial?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "No puedo abrir este archivo PDF, ¿necesito un programa especial?"
+      }
     },
     {
       "id": "technology_im_looking_for_software_to_record",
       "phrase": "I'm looking for software to record my computer screen",
-      "translation": "Estoy buscando un software para grabar la pantalla de mi computadora",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy buscando un software para grabar la pantalla de mi computadora"
+      }
     },
     {
       "id": "technology_what_is_this_formula_in_excel",
       "phrase": "What is this formula in Excel for?",
-      "translation": "¿Para qué sirve esta fórmula en Excel?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Para qué sirve esta fórmula en Excel?"
+      }
     },
     {
       "id": "technology_this_powerpoint_presentation_is_very_boring",
       "phrase": "This PowerPoint presentation is very boring, we need to improve it",
-      "translation": "Esta presentación de PowerPoint está muy aburrida, hay que mejorarla",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Esta presentación de PowerPoint está muy aburrida, hay que mejorarla"
+      }
     },
     {
       "id": "technology_the_information_is_in_the_attached",
       "phrase": "The information is in the attached file",
-      "translation": "La información está en el archivo adjunto",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "La información está en el archivo adjunto"
+      }
     },
     {
       "id": "technology_i_want_to_increase_the_brightness",
       "phrase": "I want to increase the brightness of the screen",
-      "translation": "Quiero subir el brillo de la pantalla",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Quiero subir el brillo de la pantalla"
+      }
     },
     {
       "id": "technology_turn_on_the_scanner_i_need",
       "phrase": "Turn on the scanner, I need to digitize this document",
-      "translation": "Prende el escaner, necesito digitalizar este documento",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "Prende el escaner, necesito digitalizar este documento"
+      }
     },
     {
       "id": "technology_you_should_buy_a_better_mouse",
       "phrase": "You should buy a better mouse and keyboard",
-      "translation": "Deberías comprar un mejor ratón y teclado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Deberías comprar un mejor ratón y teclado"
+      }
     },
     {
       "id": "technology_these_wireless_headphones_are_very_comfortable",
       "phrase": "These wireless headphones are very comfortable",
-      "translation": "Estos audífonos inalámbricos son muy cómodos",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Estos audífonos inalámbricos son muy cómodos"
+      }
     },
     {
       "id": "technology_the_virtual_assistant_has_been_failing",
       "phrase": "The virtual assistant has been failing",
-      "translation": "El asistente virtual ha estado fallando",
-      "cefr": "B1",
-      "grammar": null
+      "level": "B1",
+      "grammar": null,
+      "translations": {
+        "es": "El asistente virtual ha estado fallando"
+      }
     },
     {
       "id": "technology_the_battery_of_this_phone_could",
       "phrase": "The battery of this phone could be better",
-      "translation": "La batería de este celular podría ser mejor",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "La batería de este celular podría ser mejor"
+      }
     },
     {
       "id": "technology_i_love_the_camera_on_this",
       "phrase": "I love the camera on this phone",
-      "translation": "Me encanta la cámara de este teléfono",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Me encanta la cámara de este teléfono"
+      }
     },
     {
       "id": "technology_how_can_i_change_the_language",
       "phrase": "How can I change the language of the computer keyboard?",
-      "translation": "¿Cómo puedo cambiar el idioma del teclado de la computadora?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo puedo cambiar el idioma del teclado de la computadora?"
+      }
     },
     {
       "id": "technology_i_dont_know_where_the_portable",
       "phrase": "I don't know where the portable battery is",
-      "translation": "No sé dónde está la batería portatil",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "No sé dónde está la batería portatil"
+      }
     },
     {
       "id": "technology_look_for_the_file_in_the",
       "phrase": "Look for the file in the downloads folder",
-      "translation": "Busca el archivo en la carpeta de descargas",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Busca el archivo en la carpeta de descargas"
+      }
     },
     {
       "id": "technology_are_you_sure_you_are_connected",
       "phrase": "Are you sure you are connected to the internet?",
-      "translation": "¿Estás seguro que estas conectado al internet?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Estás seguro que estas conectado al internet?"
+      }
     },
     {
       "id": "technology_please_turn_on_the_printer",
       "phrase": "Please turn on the printer",
-      "translation": "Por favor, prende la impresora",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Por favor, prende la impresora"
+      }
     },
     {
       "id": "technology_how_do_you_do_this_in",
       "phrase": "How do you do this in Excel?",
-      "translation": "¿Cómo se hace esto en Excel?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo se hace esto en Excel?"
+      }
+    },
+    {
+      "id": "technology_my_phone_keeps_overheating_when",
+      "phrase": "My phone keeps overheating when I run multiple apps at the same time.",
+      "level": "B2",
+      "grammar": "'Keep + gerund' to describe a repeated or continuing problem",
+      "translations": {
+        "es": "Mi teléfono sigue sobrecalentándose cuando ejecuto varias aplicaciones al mismo tiempo."
+      }
+    },
+    {
+      "id": "technology_the_new_operating_system_update",
+      "phrase": "The new operating system update broke compatibility with several of my older apps.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "La nueva actualización del sistema operativo rompió la compatibilidad con varias de mis aplicaciones antiguas."
+      }
+    },
+    {
+      "id": "technology_i_enabled_twofactor_authentication_on",
+      "phrase": "I enabled two-factor authentication on all my accounts after the data breach.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Activé la autenticación de dos factores en todas mis cuentas después de la filtración de datos."
+      }
+    },
+    {
+      "id": "technology_the_streaming_quality_drops_when",
+      "phrase": "The streaming quality drops whenever someone else uses the internet at home.",
+      "level": "B2",
+      "grammar": "'Whenever' to express every time a condition is true",
+      "translations": {
+        "es": "La calidad del streaming baja cada vez que alguien más usa internet en casa."
+      }
+    },
+    {
+      "id": "technology_i_set_up_automatic_cloud_backups",
+      "phrase": "I set up automatic cloud backups so I never lose my photos or files.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Configuré copias de seguridad automáticas en la nube para no perder nunca mis fotos o archivos."
+      }
+    },
+    {
+      "id": "technology_my_privacy_settings_dont_seem",
+      "phrase": "My privacy settings don't seem to be working — my location is still being tracked.",
+      "level": "C1",
+      "grammar": "Passive continuous: 'is being tracked' for an ongoing background action",
+      "translations": {
+        "es": "Mis ajustes de privacidad no parecen funcionar: mi ubicación sigue siendo rastreada."
+      }
+    },
+    {
+      "id": "technology_i_received_a_phishing_email",
+      "phrase": "I received a phishing email pretending to be my bank, asking me to verify my account.",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "Recibí un correo de phishing haciéndose pasar por mi banco, pidiéndome que verificara mi cuenta."
+      }
+    },
+    {
+      "id": "technology_clearing_the_cache_usually_fixes",
+      "phrase": "Clearing the cache usually fixes loading issues, but the problem keeps coming back.",
+      "level": "C1",
+      "grammar": "Gerund as subject: using a verb in -ing form as the sentence subject",
+      "translations": {
+        "es": "Limpiar la caché suele solucionar los problemas de carga, pero el problema sigue volviendo."
+      }
+    },
+    {
+      "id": "technology_the_devices_firmware_needs_to",
+      "phrase": "The device's firmware needs to be updated to patch a known security vulnerability.",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "El firmware del dispositivo necesita actualizarse para corregir una vulnerabilidad de seguridad conocida."
+      }
+    },
+    {
+      "id": "technology_im_considering_switching_ecosystems_but",
+      "phrase": "I'm considering switching ecosystems, but transferring all my data is a big concern.",
+      "level": "C1",
+      "grammar": "'Consider + gerund' for weighing an option",
+      "translations": {
+        "es": "Estoy pensando en cambiar de ecosistema, pero transferir todos mis datos es una gran preocupación."
+      }
+    },
+    {
+      "id": "technology_the_company_acknowledged_a_data",
+      "phrase": "The company acknowledged a data breach but hasn't disclosed how many accounts were compromised.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "La empresa reconoció una filtración de datos pero no ha revelado cuántas cuentas fueron comprometidas."
+      }
+    },
+    {
+      "id": "technology_planned_obsolescence_means_manufacturers_intentionally",
+      "phrase": "Planned obsolescence means manufacturers intentionally shorten a device's lifespan to drive sales.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "La obsolescencia programada significa que los fabricantes acortan intencionalmente la vida útil de un dispositivo para impulsar las ventas."
+      }
+    },
+    {
+      "id": "technology_endtoend_encryption_ensures_that_not",
+      "phrase": "End-to-end encryption ensures that not even the service provider can read your messages.",
+      "level": "C2",
+      "grammar": "'Not even' for extreme emphasis",
+      "translations": {
+        "es": "El cifrado de extremo a extremo garantiza que ni siquiera el proveedor del servicio puede leer tus mensajes."
+      }
+    },
+    {
+      "id": "technology_cybersecurity_experts_recommend_using_a",
+      "phrase": "Cybersecurity experts recommend using a password manager rather than reusing passwords across platforms.",
+      "level": "C2",
+      "grammar": "'Rather than' to express a preference or recommended alternative",
+      "translations": {
+        "es": "Los expertos en ciberseguridad recomiendan usar un gestor de contraseñas en lugar de reutilizar contraseñas en distintas plataformas."
+      }
+    },
+    {
+      "id": "technology_the_legacy_system_is_no_longer",
+      "phrase": "The legacy system is no longer maintained, meaning any new vulnerability discovered won't be patched.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El sistema heredado ya no recibe mantenimiento, lo que significa que cualquier nueva vulnerabilidad descubierta no será corregida."
+      }
     }
   ]
 }

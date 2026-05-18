@@ -161,6 +161,8 @@
 .placement-level-badge.level-A2 { background: #dbeafe; color: #1d4ed8; }
 .placement-level-badge.level-B1 { background: #fef3c7; color: #d97706; }
 .placement-level-badge.level-B2 { background: #ede9fe; color: #7c3aed; }
+.placement-level-badge.level-C1 { background: #cffafe; color: #0891b2; }
+.placement-level-badge.level-C2 { background: #ffe4e6; color: #be123c; }
 
 .question-card {
   background: var(--clr-surface);

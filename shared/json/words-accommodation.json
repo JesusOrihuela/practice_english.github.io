@@ -1,0 +1,304 @@
+{
+  "words": [
+    {
+      "id": "hotel",
+      "word": "hotel",
+      "definition": "A building where people pay to stay in furnished rooms and use shared services",
+      "example": "We stayed at a hotel near the beach for our vacation.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "hotel" }
+    },
+    {
+      "id": "room",
+      "word": "room",
+      "definition": "A separate space in a hotel or building where you sleep and stay",
+      "example": "We requested a room with two beds for our family.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "habitación" }
+    },
+    {
+      "id": "reservation",
+      "word": "reservation",
+      "definition": "An arrangement made in advance to hold a hotel room for a specific period",
+      "example": "I made a reservation for two nights at a hotel near the airport.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "reserva" }
+    },
+    {
+      "id": "hostel",
+      "word": "hostel",
+      "definition": "A low-cost place to stay where you share a room and facilities with other travelers",
+      "example": "She stayed in a hostel to save money during her backpacking trip.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "hostal / albergue" }
+    },
+    {
+      "id": "key",
+      "word": "key",
+      "definition": "A card or metal piece used to open the door to your hotel room",
+      "example": "I left my room key at the front desk before going to the pool.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "llave / tarjeta llave" }
+    },
+    {
+      "id": "checkout",
+      "word": "checkout",
+      "definition": "The process of paying your bill and leaving the hotel at the end of your stay",
+      "example": "Checkout is at noon — please return your key to reception before then.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "salida / check-out" }
+    },
+    {
+      "id": "reception",
+      "word": "reception",
+      "definition": "The front desk of a hotel where guests check in, ask questions, and check out",
+      "example": "Go to reception if you need extra towels or a wake-up call.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "recepción" }
+    },
+    {
+      "id": "balcony",
+      "word": "balcony",
+      "definition": "An outdoor platform attached to a hotel room on an upper floor",
+      "example": "Our room had a balcony with a beautiful view of the sea.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "balcón" }
+    },
+    {
+      "id": "parking",
+      "word": "parking",
+      "definition": "A designated area at a hotel where guests can leave their vehicles",
+      "example": "Does the hotel offer free parking, or is there an additional charge?",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "estacionamiento / parking" }
+    },
+    {
+      "id": "towel",
+      "word": "towel",
+      "definition": "A piece of cloth provided by the hotel for drying yourself after a shower or bath",
+      "example": "We called reception to ask for extra towels for the room.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "toalla" }
+    },
+    {
+      "id": "accommodation",
+      "word": "accommodation",
+      "definition": "A place where travelers can stay, such as a hotel, hostel, or rental apartment",
+      "example": "We booked accommodation close to the city centre for three nights.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "alojamiento" }
+    },
+    {
+      "id": "amenities",
+      "word": "amenities",
+      "definition": "Facilities and features provided by a hotel, such as a pool, gym, or free Wi-Fi",
+      "example": "The hotel's amenities include a rooftop pool and a full-service spa.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "instalaciones / servicios" }
+    },
+    {
+      "id": "complimentary",
+      "word": "complimentary",
+      "definition": "Given free of charge, usually as a courtesy or bonus by a hotel",
+      "example": "The hotel offered complimentary breakfast to all guests on weekends.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "gratuito / de cortesía" }
+    },
+    {
+      "id": "suite",
+      "word": "suite",
+      "definition": "A set of connected rooms in a hotel, usually with a living area and bedroom",
+      "example": "They upgraded us to a suite on the top floor with a spectacular view.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "suite" }
+    },
+    {
+      "id": "housekeeping",
+      "word": "housekeeping",
+      "definition": "The hotel department responsible for cleaning rooms and maintaining common areas",
+      "example": "Please call housekeeping if you need clean towels or your room tidied.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "servicio de limpieza / habitaciones" }
+    },
+    {
+      "id": "tariff",
+      "word": "tariff",
+      "definition": "The official price list for hotel rooms and services",
+      "example": "The hotel's tariff varies by season, with peak rates in summer.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "tarifa / arancel" }
+    },
+    {
+      "id": "concierge",
+      "word": "concierge",
+      "definition": "A hotel staff member who helps guests with special requests, bookings, and local information",
+      "example": "The concierge arranged restaurant reservations and museum tickets for our trip.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "conserje" }
+    },
+    {
+      "id": "deposit",
+      "word": "deposit",
+      "definition": "An amount of money paid in advance as security, returned when no damage is found at checkout",
+      "example": "The hotel required a deposit of $100 on the credit card at check-in.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "depósito / fianza" }
+    },
+    {
+      "id": "occupancy",
+      "word": "occupancy",
+      "definition": "The state of a room or hotel being used by a guest; the rate at which rooms are filled",
+      "example": "The hotel reached full occupancy during the international conference.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "ocupación" }
+    },
+    {
+      "id": "refund",
+      "word": "refund",
+      "definition": "The return of money paid for a hotel booking, usually after a cancellation",
+      "example": "She requested a full refund after the hotel failed to provide the room she had booked.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "reembolso" }
+    },
+    {
+      "id": "invoice",
+      "word": "invoice",
+      "definition": "A formal document listing all charges for a hotel stay, often needed for business expense reports",
+      "example": "Please provide an itemized invoice — I need it for my company's accounting.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "factura" }
+    },
+    {
+      "id": "complaint",
+      "word": "complaint",
+      "definition": "A formal statement expressing dissatisfaction with a service or condition at a hotel",
+      "example": "She filed a formal complaint about the noise and received a discount on her bill.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "queja / reclamación" }
+    },
+    {
+      "id": "liability",
+      "word": "liability",
+      "definition": "Legal or financial responsibility for damage or loss during a hotel stay",
+      "example": "The hotel disclaimed liability for valuables left outside the safe.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "responsabilidad / pasivo" }
+    },
+    {
+      "id": "waiver",
+      "word": "waiver",
+      "definition": "A signed document in which a guest agrees not to hold the hotel responsible for certain events",
+      "example": "Guests signing the waiver acknowledge that the hotel is not liable for injuries in the gym.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "exención / renuncia de responsabilidad" }
+    },
+    {
+      "id": "corporate_rate",
+      "word": "corporate rate",
+      "definition": "A discounted hotel price negotiated for business travelers or company accounts",
+      "example": "Our company has a corporate rate with the hotel chain that saves us 20% per night.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "tarifa corporativa" }
+    },
+    {
+      "id": "indemnify",
+      "word": "indemnify",
+      "definition": "To compensate someone financially for loss or damage they have suffered",
+      "example": "The contract stipulates that the hotel will indemnify guests for losses caused by staff negligence.",
+      "category": "Verb",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "indemnizar" }
+    },
+    {
+      "id": "misrepresentation",
+      "word": "misrepresentation",
+      "definition": "A false or misleading description of a product or service, such as inaccurate photos in a listing",
+      "example": "She argued that the listing constituted misrepresentation and demanded a full refund.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "representación falsa / engaño publicitario" }
+    },
+    {
+      "id": "arbitration",
+      "word": "arbitration",
+      "definition": "A process of resolving a dispute outside of court, using a neutral third party",
+      "example": "The hotel's terms of service require disputes to be settled by arbitration.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "arbitraje" }
+    },
+    {
+      "id": "discretion",
+      "word": "discretion",
+      "definition": "The freedom or authority to decide what should be done in a particular situation",
+      "example": "Damage charges are assessed at the hotel's sole discretion, with no fixed schedule.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "discreción / potestad" }
+    },
+    {
+      "id": "remittance",
+      "word": "remittance",
+      "definition": "A payment sent to settle a bill or financial obligation, commonly used in formal correspondence",
+      "example": "Please arrange remittance within fourteen days of receipt of the invoice.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "remesa / pago / remisión de pago" }
+    }
+  ]
+}

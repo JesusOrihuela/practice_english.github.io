@@ -28,13 +28,19 @@ const AppDownloadPanel = (() => {
    * @returns {{ show, update, complete, hide }}
    */
   function create(loadingText, readyText, cacheKey) {
-    let panel = null, barEl = null, hideTimer = null, safetyTimer = null;
+    let panel = null, barEl = null, hideTimer = null, safetyTimer = null, _done = false;
 
     function hide() {
       clearTimeout(safetyTimer);
+      clearTimeout(hideTimer);
       if (!panel) return;
       panel.style.opacity = '0';
       panel.style.transform = 'translateY(6px)';
+      // Remove from DOM after the CSS transition finishes (300ms)
+      const el = panel;
+      panel = null;
+      barEl = null;
+      setTimeout(() => el.remove(), 350);
     }
 
     function _ensure() {
@@ -63,23 +69,27 @@ const AppDownloadPanel = (() => {
     }
 
     function show() {
-      if (cacheKey && localStorage.getItem(cacheKey)) return;
+      if (_done) return;                                        // already complete this session
+      if (cacheKey && localStorage.getItem(cacheKey)) return;  // cached from prior session
       clearTimeout(hideTimer);
       _ensure();
       clearTimeout(safetyTimer);
       safetyTimer = setTimeout(hide, 12000);
       requestAnimationFrame(() => {
+        if (!panel) return;
         panel.style.opacity = '1';
         panel.style.transform = 'translateY(0)';
       });
     }
 
     function update(pct) {
+      if (_done) return;
       show();
       if (barEl) barEl.style.width = Math.min(pct, 100) + '%';
     }
 
     function complete() {
+      _done = true;
       if (cacheKey) localStorage.setItem(cacheKey, '1');
       clearTimeout(safetyTimer);
       if (!panel) return;

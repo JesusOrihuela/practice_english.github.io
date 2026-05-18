@@ -17,27 +17,6 @@
 #vocab-content { width: 100%; max-width: 560px; display: flex; flex-direction: column; align-items: center; }
 
 
-/* ---- Page Header ---- */
-.vocab-header {
-  text-align: center;
-  margin-bottom: 20px;
-  animation: fadeIn 0.5s ease-out both;
-}
-
-.vocab-header h1 {
-  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-  font-weight: 800;
-  color: var(--clr-text);
-  margin-bottom: 6px;
-}
-
-.vocab-header h1 span { color: var(--clr-primary); }
-
-.vocab-header p {
-  font-size: 0.9rem;
-  color: var(--clr-text-muted);
-  font-weight: 500;
-}
 
 /* ---- Stats Bar ---- */
 
@@ -73,6 +52,7 @@
 
 /* Front face */
 .flashcard-front {
+  position: relative;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   padding: 48px 28px;
@@ -86,6 +66,7 @@
 
 /* Back face — grid-stacked, flipped 180° so it shows when parent rotates */
 .flashcard-back {
+  position: relative;
   transform: rotateY(180deg);
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);

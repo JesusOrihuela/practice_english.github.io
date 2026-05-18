@@ -1,0 +1,314 @@
+{
+  "words": [
+    {
+      "id": "movie",
+      "word": "movie",
+      "definition": "A story told through moving pictures, usually shown in a cinema or on a screen",
+      "example": "Let's go see a movie tonight — there's a new comedy showing.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "película" }
+    },
+    {
+      "id": "actor",
+      "word": "actor",
+      "definition": "A person who performs a role in a film or TV show",
+      "example": "My favorite actor won an award for his role in that drama.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "actor / actriz" }
+    },
+    {
+      "id": "cinema",
+      "word": "cinema",
+      "definition": "A building where films are shown to a paying audience on a large screen",
+      "example": "We bought tickets online and went to the cinema on Saturday night.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "cine" }
+    },
+    {
+      "id": "series",
+      "word": "series",
+      "definition": "A set of TV episodes that follow the same story or characters across multiple seasons",
+      "example": "I started a new crime series last night and I'm already hooked.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "serie" }
+    },
+    {
+      "id": "scene",
+      "word": "scene",
+      "definition": "A single part of a film or show that takes place in one location at one time",
+      "example": "The opening scene of the film is absolutely breathtaking.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "translations": { "es": "escena" }
+    },
+    {
+      "id": "streaming",
+      "word": "streaming",
+      "definition": "Watching or listening to digital media online without downloading it",
+      "example": "I watched the whole documentary series streaming on my phone.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "streaming" }
+    },
+    {
+      "id": "trailer",
+      "word": "trailer",
+      "definition": "A short promotional preview of a film or television series",
+      "example": "Have you seen the trailer for the new superhero film yet?",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "tráiler" }
+    },
+    {
+      "id": "plot",
+      "word": "plot",
+      "definition": "The sequence of events that make up the main story of a film or series",
+      "example": "The plot of the novel was full of surprising twists.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "trama / argumento" }
+    },
+    {
+      "id": "documentary",
+      "word": "documentary",
+      "definition": "A film or TV programme that presents facts about real events or people",
+      "example": "The documentary explores the long-term impact of climate change.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "documental" }
+    },
+    {
+      "id": "subscription",
+      "word": "subscription",
+      "definition": "An arrangement to pay regularly in exchange for access to a service",
+      "example": "I have a monthly subscription to a popular streaming platform.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "suscripción" }
+    },
+    {
+      "id": "binge_watch",
+      "word": "binge-watch",
+      "definition": "To watch many episodes of a series one after another in a short time",
+      "example": "I binge-watched the entire first season over the weekend.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "translations": { "es": "maratonear" }
+    },
+    {
+      "id": "genre",
+      "word": "genre",
+      "definition": "A category of films or series defined by a shared style or subject matter",
+      "example": "Mystery is her favourite film genre.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "género" }
+    },
+    {
+      "id": "sequel",
+      "word": "sequel",
+      "definition": "A film or series that continues the story of an earlier one",
+      "example": "The sequel was even more exciting than the original film.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "secuela" }
+    },
+    {
+      "id": "soundtrack",
+      "word": "soundtrack",
+      "definition": "The recorded music that plays during a film or television show",
+      "example": "The movie's powerful soundtrack won three international awards.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "banda sonora" }
+    },
+    {
+      "id": "premiere",
+      "word": "premiere",
+      "definition": "The first public showing of a new film, usually attended by the cast and crew",
+      "example": "The film's glamorous premiere was held in Los Angeles.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "estreno" }
+    },
+    {
+      "id": "cast",
+      "word": "cast",
+      "definition": "The complete group of actors appearing in a film or series",
+      "example": "The film has an incredible cast of internationally famous actors.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "translations": { "es": "reparto / elenco" }
+    },
+    {
+      "id": "protagonist",
+      "word": "protagonist",
+      "definition": "The main character of a story, film, or series",
+      "example": "The protagonist faces many moral dilemmas throughout the story.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "protagonista" }
+    },
+    {
+      "id": "acclaimed",
+      "word": "acclaimed",
+      "definition": "Praised enthusiastically and widely by critics and the public",
+      "example": "The director's latest film has been widely acclaimed by critics.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "aclamado" }
+    },
+    {
+      "id": "dialogue",
+      "word": "dialogue",
+      "definition": "The spoken words exchanged between characters in a film or script",
+      "example": "The sharp dialogue between the two leads made every scene crackle with tension.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "diálogo" }
+    },
+    {
+      "id": "blockbuster",
+      "word": "blockbuster",
+      "definition": "A film that is very commercially successful and attracts huge audiences",
+      "example": "The studio invested heavily in the blockbuster, hoping it would dominate the summer box office.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "taquillero / superproducción" }
+    },
+    {
+      "id": "subplot",
+      "word": "subplot",
+      "definition": "A secondary storyline that runs alongside and supports the main plot of a film",
+      "example": "The romantic subplot felt underdeveloped and distracted from the main story.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "translations": { "es": "trama secundaria" }
+    },
+    {
+      "id": "cinematography",
+      "word": "cinematography",
+      "definition": "The art and technique of filming a movie, including camera angles, lighting, and composition",
+      "example": "The film won an Oscar for Best Cinematography thanks to its stunning visual style.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "cinematografía" }
+    },
+    {
+      "id": "narrative",
+      "word": "narrative",
+      "definition": "The way a story is structured and told, including the order of events and the perspective chosen",
+      "example": "The film's non-linear narrative keeps the audience guessing until the final scene.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "narrativa" }
+    },
+    {
+      "id": "pacing",
+      "word": "pacing",
+      "definition": "The speed at which a film's story develops, affecting how tense or slow it feels",
+      "example": "Critics praised the slow pacing of the first act, which built tension effectively.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "ritmo narrativo" }
+    },
+    {
+      "id": "screenplay",
+      "word": "screenplay",
+      "definition": "The written script of a film, including dialogue, scene descriptions, and action",
+      "example": "She won the award for Best Original Screenplay at the film festival.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "guion" }
+    },
+    {
+      "id": "auteur",
+      "word": "auteur",
+      "definition": "A director whose personal artistic vision is strongly reflected throughout their films",
+      "example": "She is considered an auteur because every film she makes reflects her distinct style.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "autor / cineasta con estilo propio" }
+    },
+    {
+      "id": "allegory",
+      "word": "allegory",
+      "definition": "A story in which characters and events represent deeper moral or political meanings",
+      "example": "The film is widely read as an allegory for racial inequality in America.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "alegoría" }
+    },
+    {
+      "id": "subtext",
+      "word": "subtext",
+      "definition": "Hidden meanings or themes in a film that are implied but not stated directly",
+      "example": "The subtext of the film is a critique of capitalism disguised as a romantic comedy.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "subtexto" }
+    },
+    {
+      "id": "mise_en_scene",
+      "word": "mise-en-scène",
+      "definition": "All the visual elements arranged within a film frame, including sets, lighting, costumes, and actor placement",
+      "example": "The director's meticulous mise-en-scène makes every frame feel deliberately composed.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "puesta en escena" }
+    },
+    {
+      "id": "denouement",
+      "word": "dénouement",
+      "definition": "The final resolution of a story, where loose ends are tied up after the climax",
+      "example": "The film's dénouement was ambiguous, leaving audiences to interpret the ending themselves.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "desenlace" }
+    },
+    {
+      "id": "polemic",
+      "word": "polemic",
+      "definition": "A work that strongly argues against something, often a social or political system",
+      "example": "The documentary was seen as a polemic against the pharmaceutical industry.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "polémica / crítica apasionada" }
+    }
+  ]
+}

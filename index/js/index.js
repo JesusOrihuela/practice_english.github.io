@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   /* ── Learning Path ── */
   if (typeof AppPath === 'undefined' || typeof Progress === 'undefined') return;
 
-  const grammarData = await fetch('shared/json/grammar-rules.json').then(r => r.json()).catch(() => ({ rules: [] }));
+  const grammarData = await AppData.get('grammar-rules').catch(() => ({ rules: [] }));
   AppPath.setGrammarRules(grammarData.rules || []);
 
   _renderSessionCta();
@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 function _ctaSubtitle(summary) {
   var parts = [];
-  if (summary.reviewCount > 0) parts.push(summary.reviewCount + ' para repasar');
-  if (summary.newCount > 0)    parts.push(summary.newCount + ' ejercicio' + (summary.newCount !== 1 ? 's' : '') + ' nuevo' + (summary.newCount !== 1 ? 's' : ''));
-  if (summary.estimatedMinutes) parts.push('~' + summary.estimatedMinutes + ' min');
-  if (summary.skippedReviews > 0) parts.push('+' + summary.skippedReviews + ' diferidos');
+  if (summary.reviewCount > 0) parts.push(AppLang.t('cta_review', { n: summary.reviewCount }));
+  if (summary.newCount > 0)    parts.push(AppLang.t(summary.newCount === 1 ? 'cta_new_one' : 'cta_new_many', { n: summary.newCount }));
+  if (summary.estimatedMinutes) parts.push(AppLang.t('cta_min_left', { n: summary.estimatedMinutes }));
+  if (summary.skippedReviews > 0) parts.push(AppLang.t('cta_deferred', { n: summary.skippedReviews }));
   return parts.join(' · ');
 }
 
@@ -59,12 +59,12 @@ function _renderSessionCta() {
       '<div class="path-cta__bar"><div class="path-cta__bar-fill" style="width:' + Math.max(pct, 5) + '%"></div></div>' +
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">¡Sigue así! 💪</div>' +
-          '<div class="path-cta__sub">Ejercicio ' + prog.current + ' de ' + prog.total + (remMins ? ' · ~' + remMins + ' min restantes' : '') + '</div>' +
+          '<div class="path-cta__title">' + AppLang.t('cta_keep_going') + '</div>' +
+          '<div class="path-cta__sub">' + AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total }) + (remMins ? ' · ' + AppLang.t('cta_min_left', { n: remMins }) : '') + '</div>' +
         '</div>' +
         (href
-          ? '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Continuar →</a>'
-          : '<span class="path-cta__done">✓ Listo por hoy</span>') +
+          ? '<a href="my-learning/html/my-learning.html" class="path-cta__btn">' + AppLang.t('cta_continue') + '</a>'
+          : '<span class="path-cta__done">' + AppLang.t('done_today_status') + '</span>') +
       '</div>';
     return;
   }
@@ -73,8 +73,8 @@ function _renderSessionCta() {
     el.innerHTML =
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">🎉 ¡Excelente trabajo hoy!</div>' +
-          '<div class="path-cta__sub">Vuelve mañana para mantener tu racha</div>' +
+          '<div class="path-cta__title">' + AppLang.t('cta_done_today') + '</div>' +
+          '<div class="path-cta__sub">' + AppLang.t('cta_tomorrow') + '</div>' +
         '</div>' +
       '</div>';
     return;
@@ -84,8 +84,8 @@ function _renderSessionCta() {
     el.innerHTML =
       '<div class="path-cta__row">' +
         '<div class="path-cta__body">' +
-          '<div class="path-cta__title">✓ ¡Estás al día!</div>' +
-          '<div class="path-cta__sub">Vuelve mañana para nuevos ejercicios</div>' +
+          '<div class="path-cta__title">' + AppLang.t('cta_up_to_date') + '</div>' +
+          '<div class="path-cta__sub">' + AppLang.t('cta_come_back_new') + '</div>' +
         '</div>' +
       '</div>';
     return;
@@ -94,10 +94,10 @@ function _renderSessionCta() {
   el.innerHTML =
     '<div class="path-cta__row">' +
       '<div class="path-cta__body">' +
-        '<div class="path-cta__title">¿Listo para la sesión de hoy?</div>' +
+        '<div class="path-cta__title">' + AppLang.t('cta_ready') + '</div>' +
         '<div class="path-cta__sub">' + _ctaSubtitle(summary) + '</div>' +
       '</div>' +
-      '<a href="my-learning/html/my-learning.html" class="path-cta__btn">Empezar →</a>' +
+      '<a href="my-learning/html/my-learning.html" class="path-cta__btn">' + AppLang.t('cta_start') + '</a>' +
     '</div>';
 }
 
@@ -109,15 +109,12 @@ const _ACT_EMOJI = {
   speaking: '🎙️', grammar: '📐', vocabulary: '📚', quiz: '🧠',
   cloze: '🔤', dictation: '✍️', translation: '🔄', scramble: '🧩',
 };
-const _ACT_LABEL = {
-  speaking: 'Speaking', grammar: 'Grammar', vocabulary: 'Vocab', quiz: 'Quiz',
-  cloze: 'Fill-in', dictation: 'Dictation', translation: 'Translate', scramble: 'Scramble',
-};
-const _TOPIC_LABEL = {
-  greetings: '👋 Saludos', restaurant: '🍽️ Restaurante', supermarket: '🛒 Supermercado',
-  kitchen: '🍳 Cocina', traveling: '✈️ Viajes', entertainment: '🎬 Entretenimiento',
-  gym: '💪 Gimnasio', technology: '💻 Tecnología', accountability: '📋 Responsabilidad',
-};
+function _actLabel(id)   { return AppLang.t('act_' + id) || id; }
+function _topicLabel(id) {
+  const t = (AppTopics.PHRASE_TOPICS || []).find(function (x) { return x.id === id; })
+         || (AppTopics.VOCAB_TOPICS  || []).find(function (x) { return x.id === id; });
+  return t ? t.emoji + ' ' + t.label : id;
+}
 
 function _renderSessionTrail() {
   const container = document.getElementById('path-nodes');
@@ -190,7 +187,7 @@ function _buildTrailNodes(container, queue, position) {
     // Topic pin — always shown on every node
     const pin = document.createElement('div');
     pin.className = 'path-node__topic';
-    pin.textContent = _TOPIC_LABEL[item.topic] || item.topic;
+    pin.textContent = _topicLabel(item.topic);
     node.appendChild(pin);
 
     // Bubble — link when active, plain div otherwise
@@ -198,7 +195,7 @@ function _buildTrailNodes(container, queue, position) {
     bubble.className = 'path-node__bubble';
     if (isActive && item.href) {
       bubble.href = item.href;
-      bubble.setAttribute('aria-label', 'Ir a: ' + (_ACT_LABEL[item.activityId] || item.activityId));
+      bubble.setAttribute('aria-label', AppLang.t('aria_go_to', { label: _actLabel(item.activityId) }));
     }
     bubble.setAttribute('aria-hidden', isActive ? 'false' : 'true');
 
@@ -212,19 +209,19 @@ function _buildTrailNodes(container, queue, position) {
     // Activity label
     const label = document.createElement('div');
     label.className = 'path-node__label';
-    label.textContent = _ACT_LABEL[item.activityId] || item.activityId;
+    label.textContent = _actLabel(item.activityId);
     node.appendChild(label);
 
     // "NEW" / review badge
     if (!isDone && item.isNew) {
       const badge = document.createElement('span');
       badge.className = 'path-node__new-badge';
-      badge.textContent = '✨ Nuevo';
+      badge.textContent = AppLang.t('badge_new');
       node.appendChild(badge);
     } else if (!isDone && !item.isNew) {
       const rbadge = document.createElement('span');
       rbadge.className = 'path-node__review-badge';
-      rbadge.textContent = '🔁 Repasar';
+      rbadge.textContent = AppLang.t('badge_review');
       node.appendChild(rbadge);
     }
 

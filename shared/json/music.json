@@ -1,0 +1,215 @@
+{
+  "phrases": [
+    {
+      "id": "music_skip_song",
+      "phrase": "Skip that song",
+      "translations": { "es": "Sáltate esa canción" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "music_favorite_song_always",
+      "phrase": "I really like that song, I listen to it all the time",
+      "translations": { "es": "Esa canción me gusta mucho, la escucho todo el tiempo" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "music_favorite_song",
+      "phrase": "That's my favorite song",
+      "translations": { "es": "Esa es mi canción favorita" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "music_go_concert_year",
+      "phrase": "We should go to a concert this year",
+      "translations": { "es": "Deberíamos ir a un concierto este año" },
+      "level": "A2",
+      "grammar": "Modal 'should': advice or recommendation",
+      "alternatives": ["We ought to go to a concert this year"]
+    },
+    {
+      "id": "music_new_concert_band",
+      "phrase": "There is a new concert by my favorite band, I have to go",
+      "translations": { "es": "Hay un nuevo concierto de mi banda favorita, tengo que ir" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "music_podcasts_while_exercise",
+      "phrase": "I love listening to podcasts while I exercise",
+      "translations": { "es": "Me encanta escuchar podcasts mientras hago ejercicio" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "music_podcast_recommendation",
+      "phrase": "I don't know what podcast to listen to, can you recommend one?",
+      "translations": { "es": "No sé qué podcast escuchar, ¿me recomiendas alguno?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "music_song_special_memory",
+      "phrase": "This song reminds me of a special moment in my life",
+      "translations": { "es": "Esta canción me recuerda un momento especial de mi vida" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "music_new_album_disappointment",
+      "phrase": "The new album by that band didn't impress me as much as the previous ones",
+      "translations": { "es": "El nuevo álbum de esa banda no me impresionó tanto como los anteriores" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "music_what_kind_do_you_like",
+      "phrase": "What kind of music do you like?",
+      "translations": { "es": "¿Qué tipo de música te gusta?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "music_love_this_song_who_sings",
+      "phrase": "I love this song — who sings it?",
+      "translations": { "es": "Me encanta esta canción. ¿Quién la canta?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "music_add_song_playlist",
+      "phrase": "I'd like to add this song to my playlist.",
+      "translations": { "es": "Me gustaría añadir esta canción a mi lista de reproducción." },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "music_learning_guitar_six_months",
+      "phrase": "I've been learning to play the guitar for about six months now.",
+      "translations": { "es": "Llevo unos seis meses aprendiendo a tocar la guitarra." },
+      "level": "B1",
+      "grammar": "Present perfect continuous: 'I've been learning' for an ongoing activity that started in the past"
+    },
+    {
+      "id": "music_opening_act_surprised",
+      "phrase": "The opening act was surprisingly good — I hadn't heard of them before.",
+      "translations": { "es": "El grupo telonero estuvo sorprendentemente bien. No había escuchado de ellos antes." },
+      "level": "B1",
+      "grammar": "Past perfect: 'hadn't heard' for an action completed before another past event"
+    },
+    {
+      "id": "music_headphones_or_speakers",
+      "phrase": "Do you prefer listening to music through headphones or out loud on speakers?",
+      "translations": { "es": "¿Prefieres escuchar música con audífonos o en voz alta por altavoces?" },
+      "level": "B1",
+      "grammar": "'Prefer + gerund' for expressing a general preference"
+    },
+    {
+      "id": "music_live_better_than_studio",
+      "phrase": "The live performance was far better than the studio recording.",
+      "translations": { "es": "La actuación en vivo fue mucho mejor que la grabación de estudio." },
+      "level": "B2",
+      "grammar": "'Far better than' — using 'far' to intensify a comparative"
+    },
+    {
+      "id": "music_similar_genre_film",
+      "phrase": "I'm looking for music similar to what I heard in that film — do you know the genre?",
+      "translations": { "es": "Busco música similar a la que escuché en esa película. ¿Sabes qué género es?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "music_vocal_range_earlier_work",
+      "phrase": "The singer's vocal range in this album is remarkable compared to her earlier work.",
+      "translations": { "es": "El rango vocal de la cantante en este álbum es notable en comparación con su obra anterior." },
+      "level": "B2",
+      "grammar": "'Compared to' for drawing a contrast between two things"
+    },
+    {
+      "id": "music_festival_lineup_disappointing",
+      "phrase": "I think the festival lineup this year is disappointing — too many commercial acts.",
+      "translations": { "es": "Creo que el cartel del festival de este año es decepcionante. Hay demasiados artistas comerciales." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "music_classical_pianist_switched_jazz",
+      "phrase": "He started as a classical pianist before switching to jazz in his late twenties.",
+      "translations": { "es": "Comenzó como pianista clásico antes de pasarse al jazz a finales de sus veinte años." },
+      "level": "B2",
+      "grammar": "'Before + gerund': 'before switching' to sequence two stages of a career"
+    },
+    {
+      "id": "music_lyrics_political_commentary",
+      "phrase": "The lyrics are deceptively simple — there's a lot of political commentary beneath the surface.",
+      "translations": { "es": "Las letras son engañosamente sencillas. Hay mucho comentario político por debajo de la superficie." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "music_blends_traditional_contemporary",
+      "phrase": "What strikes me most is how seamlessly this album blends traditional and contemporary influences.",
+      "translations": { "es": "Lo que más me impacta es lo fluidamente que este álbum fusiona influencias tradicionales y contemporáneas." },
+      "level": "C1",
+      "grammar": "'What strikes me' — nominalized subject clause to emphasize what stands out"
+    },
+    {
+      "id": "music_indie_influence_underestimated",
+      "phrase": "I'd argue that this band's influence on indie music over the last decade has been widely underestimated.",
+      "translations": { "es": "Diría que la influencia de esta banda en la música indie durante la última década ha sido ampliamente subestimada." },
+      "level": "C1",
+      "grammar": "'I'd argue that' — hedged assertion using a conditional for academic register"
+    },
+    {
+      "id": "music_chord_progression_unsettling",
+      "phrase": "The chord progression is unconventional, which gives the track its distinctively unsettling quality.",
+      "translations": { "es": "La progresión de acordes es poco convencional, lo que le da a la pista su cualidad inquietante característica." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "music_reinterprets_makes_her_own",
+      "phrase": "She doesn't just perform the song — she reinterprets it in a way that makes it entirely her own.",
+      "translations": { "es": "No solo interpreta la canción: la reinterpreta de una forma que la convierte completamente en suya." },
+      "level": "C1",
+      "grammar": "'Makes it + possessive' — structure to express ownership of a creative interpretation"
+    },
+    {
+      "id": "music_departure_genre_conventions",
+      "phrase": "The album represents a marked departure from the genre conventions that defined the band's earlier output.",
+      "translations": { "es": "El álbum representa un marcado alejamiento de las convenciones del género que definieron la obra anterior de la banda." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "music_african_polyrhythms_western_harmony",
+      "phrase": "His synthesis of African polyrhythms and Western harmonic structures challenged prevailing definitions of jazz.",
+      "translations": { "es": "Su síntesis de polirritmia africana y estructuras armónicas occidentales desafió las definiciones predominantes del jazz." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "music_meditation_collective_memory",
+      "phrase": "The album reads as a meditation on collective memory, each track functioning as a distinct emotional register.",
+      "translations": { "es": "El álbum se lee como una meditación sobre la memoria colectiva, con cada pista funcionando como un registro emocional distinto." },
+      "level": "C2",
+      "grammar": "Absolute phrase: 'each track functioning' — a non-finite clause adding detail without a finite verb"
+    },
+    {
+      "id": "music_instrumentation_mirrors_lyrics",
+      "phrase": "Critics have noted that the instrumentation mirrors the lyrical content in ways that reward close listening.",
+      "translations": { "es": "Los críticos han señalado que la instrumentación refleja el contenido lírico de formas que recompensan una escucha atenta." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "music_folk_motifs_authenticity",
+      "phrase": "The composer's deliberate use of folk motifs gives the piece an authenticity that more polished productions often lack.",
+      "translations": { "es": "El uso deliberado de motivos folklóricos por parte del compositor le da a la pieza una autenticidad que las producciones más pulidas suelen carecer." },
+      "level": "C2",
+      "grammar": null
+    }
+  ]
+}

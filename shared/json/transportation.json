@@ -1,0 +1,224 @@
+{
+  "phrases": [
+    {
+      "id": "transportation_order_taxi_morning",
+      "phrase": "Order a taxi for tomorrow morning",
+      "translations": { "es": "Pide un taxi para mañana por la mañana" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Book a taxi for tomorrow morning", "Call a taxi for tomorrow morning"]
+    },
+    {
+      "id": "transportation_where_taxi_stand",
+      "phrase": "Where is the taxi stand?",
+      "translations": { "es": "¿Dónde está la parada de taxis?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_how_get_bus_stop",
+      "phrase": "How do I get to the bus stop from here?",
+      "translations": { "es": "¿Cómo llego a la parada de autobús desde aquí?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_nearest_bus_stop",
+      "phrase": "Where is the nearest bus stop?",
+      "translations": { "es": "¿Dónde está la parada de autobús más cercana?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_where_rent_bike",
+      "phrase": "Where can I rent a bike?",
+      "translations": { "es": "¿Dónde puedo alquilar una bicicleta?" },
+      "level": "A1",
+      "grammar": null,
+      "alternatives": ["Where can I hire a bike?"]
+    },
+    {
+      "id": "transportation_boat_arrive_port",
+      "phrase": "What time does our boat arrive at the port?",
+      "translations": { "es": "¿A qué hora llega nuestro barco al puerto?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_rental_car_location",
+      "phrase": "I don't know where to get a rental car",
+      "translations": { "es": "No sé dónde conseguir un carro de alquiler" },
+      "level": "A2",
+      "grammar": null,
+      "alternatives": ["I don't know where to rent a car"]
+    },
+    {
+      "id": "transportation_buy_train_ticket",
+      "phrase": "I need to buy a ticket for the high-speed train",
+      "translations": { "es": "Necesito comprar un boleto para el tren de alta velocidad" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_taxi_fare_city",
+      "phrase": "What is the taxi fare to the city center?",
+      "translations": { "es": "¿Cuál es la tarifa de un taxi al centro de la ciudad?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_payment_airport_transfer",
+      "phrase": "I will pay extra to include the transfer to the airport",
+      "translations": { "es": "Voy a pagar un adicional para incluir el traslado al aeropuerto" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_metro_faster_than_bus",
+      "phrase": "Is the metro faster than the bus at this time of day?",
+      "translations": { "es": "¿El metro es más rápido que el autobús a esta hora del día?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_subway_single_fare",
+      "phrase": "How much is a single-journey ticket for the subway?",
+      "translations": { "es": "¿Cuánto cuesta un boleto de viaje sencillo para el metro?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_weekly_travel_pass",
+      "phrase": "I'd like to buy a weekly travel pass for the city's public transportation.",
+      "translations": { "es": "Me gustaría comprar un pase semanal para el transporte público de la ciudad." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_bus_late_connection",
+      "phrase": "The bus is running late — is there a connection at the next stop?",
+      "translations": { "es": "El autobús llega tarde. ¿Hay conexión en la siguiente parada?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_call_cab_station",
+      "phrase": "Could you call me a cab? I need to be at the station in twenty minutes.",
+      "translations": { "es": "¿Podría pedirme un taxi? Necesito estar en la estación en veinte minutos." },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_missed_train_next_one",
+      "phrase": "I missed my train — when is the next one to the city center?",
+      "translations": { "es": "Perdí mi tren. ¿Cuándo es el siguiente al centro de la ciudad?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_metro_map_navigate",
+      "phrase": "I'm having trouble navigating the metro system — could you show me how to read the map?",
+      "translations": { "es": "Me cuesta orientarme en el metro. ¿Podría mostrarme cómo leer el mapa?" },
+      "level": "B2",
+      "grammar": "'I'm having trouble + gerund' for expressing difficulty with an ongoing action"
+    },
+    {
+      "id": "transportation_driver_overcharged_complaint",
+      "phrase": "The driver charged me more than the meter showed — I'd like to file a complaint.",
+      "translations": { "es": "El conductor me cobró más de lo que marcaba el taxímetro. Me gustaría presentar una queja." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_reduced_fare_students",
+      "phrase": "Is there a reduced fare for senior citizens or students on this route?",
+      "translations": { "es": "¿Hay una tarifa reducida para adultos mayores o estudiantes en esta ruta?" },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_bike_brakes_faulty",
+      "phrase": "The rental bike wasn't in the advertised condition — the brakes were faulty.",
+      "translations": { "es": "La bicicleta de alquiler no estaba en las condiciones descritas: los frenos fallaban." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_rideshare_late_arrival",
+      "phrase": "The app says the driver is seven minutes away, but I need to be there in five.",
+      "translations": { "es": "La aplicación dice que el conductor llegará en siete minutos, pero yo necesito estar allí en cinco." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_monthly_multimodal_pass",
+      "phrase": "I'd like a monthly pass that covers all modes of public transport in the city.",
+      "translations": { "es": "Me gustaría un abono mensual que cubra todos los medios de transporte público de la ciudad." },
+      "level": "C1",
+      "grammar": "'That' relative clause to describe the specific type of pass needed"
+    },
+    {
+      "id": "transportation_taxi_longer_route_fare",
+      "phrase": "The driver took a noticeably longer route — I believe the fare should be adjusted accordingly.",
+      "translations": { "es": "El conductor tomó una ruta notablemente más larga. Creo que la tarifa debería ajustarse en consecuencia." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_cycling_lane_shared_road",
+      "phrase": "Is there a dedicated cycling lane on this route, or do cyclists share the road with vehicles?",
+      "translations": { "es": "¿Hay un carril bici exclusivo en esta ruta, o los ciclistas comparten la vía con los vehículos?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_cancelled_train_refund",
+      "phrase": "The train was cancelled without prior notice — am I entitled to a full refund?",
+      "translations": { "es": "El tren fue cancelado sin aviso previo. ¿Tengo derecho a un reembolso completo?" },
+      "level": "C1",
+      "grammar": "Passive voice: 'was cancelled' — the cancellation is what matters, not who decided it"
+    },
+    {
+      "id": "transportation_accessible_wheelchair_vehicle",
+      "phrase": "I need to arrange accessible transport — do you have vehicles adapted for wheelchair users?",
+      "translations": { "es": "Necesito organizar un transporte accesible. ¿Tienen vehículos adaptados para usuarios de silla de ruedas?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "transportation_congestion_pricing_city_center",
+      "phrase": "The congestion pricing scheme has significantly reduced peak-hour traffic in the city center.",
+      "translations": { "es": "El sistema de tarifas por congestión ha reducido significativamente el tráfico en horas pico en el centro de la ciudad." },
+      "level": "C2",
+      "grammar": "Present perfect: 'has reduced' to describe a recent change with visible present results"
+    },
+    {
+      "id": "transportation_rental_liability_provisions",
+      "phrase": "I'd like to review the liability provisions in the rental agreement before signing.",
+      "translations": { "es": "Me gustaría revisar las cláusulas de responsabilidad en el contrato de alquiler antes de firmar." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_taxi_deregulation_standards",
+      "phrase": "The deregulation of the taxi industry has led to more competition but inconsistent service standards.",
+      "translations": { "es": "La desregulación de la industria del taxi ha generado mayor competencia, pero estándares de servicio inconsistentes." },
+      "level": "C2",
+      "grammar": "'Has led to' — present perfect to show a consequence of a past policy change still felt today"
+    },
+    {
+      "id": "transportation_intermodal_urban_emissions",
+      "phrase": "Integrated transport networks are increasingly essential to reducing urban carbon emissions.",
+      "translations": { "es": "Las redes de transporte integradas son cada vez más esenciales para reducir las emisiones de carbono urbanas." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "transportation_penalty_charge_signage",
+      "phrase": "I'd like to formally dispute this penalty charge — the parking restriction signage was inadequate.",
+      "translations": { "es": "Quisiera impugnar formalmente esta sanción: la señalización de la restricción de estacionamiento era insuficiente." },
+      "level": "C2",
+      "grammar": "'To formally dispute' — infinitive of purpose with adverb for formal register"
+    }
+  ]
+}

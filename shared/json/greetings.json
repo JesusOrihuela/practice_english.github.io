@@ -3,482 +3,790 @@
     {
       "id": "greetings_hello_how_are_you_today",
       "phrase": "Hello, how are you today?",
-      "translation": "Hola, ¿cómo estás hoy?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Hi, how are you today?", "Hey, how are you today?"]
+      "alternatives": [
+        "Hi, how are you today?",
+        "Hey, how are you today?"
+      ],
+      "translations": {
+        "es": "Hola, ¿cómo estás hoy?"
+      }
     },
     {
       "id": "greetings_good_morning_its_nice_to_see",
       "phrase": "Good morning, it's nice to see you",
-      "translation": "Buenos días, es un placer verte",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Contraction tip: 'it's' = 'it is'. Never use 'its' (possessive) for this.",
-      "alternatives": ["Good morning, it's great to see you", "Good morning, it's good to see you", "Good morning, it's a pleasure to see you"]
+      "alternatives": [
+        "Good morning, it's great to see you",
+        "Good morning, it's good to see you",
+        "Good morning, it's a pleasure to see you"
+      ],
+      "translations": {
+        "es": "Buenos días, es un placer verte"
+      }
     },
     {
       "id": "greetings_hi_there_hows_your_day_going",
       "phrase": "Hi there, how's your day going?",
-      "translation": "Hola, ¿cómo va tu día?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "'How's' = 'How is'. Present continuous ('going') describes an ongoing state.",
-      "alternatives": ["Hey there, how's your day going?", "Hello there, how's your day going?"]
+      "alternatives": [
+        "Hey there, how's your day going?",
+        "Hello there, how's your day going?"
+      ],
+      "translations": {
+        "es": "Hola, ¿cómo va tu día?"
+      }
     },
     {
       "id": "greetings_good_afternoon_how_have_you_been",
       "phrase": "Good afternoon, how have you been?",
-      "translation": "Buenas tardes, ¿cómo has estado?",
-      "cefr": "A2",
-      "grammar": "'How have you been?' uses the present perfect to ask about a period up to now — not just this moment."
+      "level": "A2",
+      "grammar": "'How have you been?' uses the present perfect to ask about a period up to now — not just this moment.",
+      "translations": {
+        "es": "Buenas tardes, ¿cómo has estado?"
+      }
     },
     {
       "id": "greetings_hey_hows_everything_with_you",
       "phrase": "Hey, how's everything with you?",
-      "translation": "Oye, ¿cómo te va?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Hi, how's everything with you?", "Hello, how's everything with you?"]
+      "alternatives": [
+        "Hi, how's everything with you?",
+        "Hello, how's everything with you?"
+      ],
+      "translations": {
+        "es": "Oye, ¿cómo te va?"
+      }
     },
     {
       "id": "greetings_morning_hope_youre_doing_well",
       "phrase": "Morning, hope you're doing well",
-      "translation": "Buenos días, espero que estés bien",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Subject drop in casual speech: 'Morning, hope you're well' omits 'Good' and 'I' — common in informal greetings.",
-      "alternatives": ["Morning, I hope you're doing well"]
+      "alternatives": [
+        "Morning, I hope you're doing well"
+      ],
+      "translations": {
+        "es": "Buenos días, espero que estés bien"
+      }
     },
     {
       "id": "greetings_good_evening_hows_your_day_been",
       "phrase": "Good evening, how's your day been?",
-      "translation": "Buenas noches, ¿cómo ha estado tu día?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Buenas noches, ¿cómo ha estado tu día?"
+      }
     },
     {
       "id": "greetings_hey_hows_life_treating_you",
       "phrase": "Hey, how's life treating you?",
-      "translation": "Oye, ¿cómo te trata la vida?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Idiomatic use: 'treat' here means 'to deal with / affect'. 'How is life treating you?' = 'Is life going well for you?'",
-      "alternatives": ["Hi, how's life treating you?", "Hello, how's life treating you?"]
+      "alternatives": [
+        "Hi, how's life treating you?",
+        "Hello, how's life treating you?"
+      ],
+      "translations": {
+        "es": "Oye, ¿cómo te trata la vida?"
+      }
     },
     {
       "id": "greetings_hi_its_good_to_catch_up",
       "phrase": "Hi, it's good to catch up with you",
-      "translation": "Hola, es bueno ponerse al día contigo",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Catch up' (phrasal verb) = to exchange news after time apart. Common collocations: 'catch up with someone', 'catch up on news'.",
-      "alternatives": ["Hey, it's good to catch up with you", "Hello, it's good to catch up with you"]
+      "alternatives": [
+        "Hey, it's good to catch up with you",
+        "Hello, it's good to catch up with you"
+      ],
+      "translations": {
+        "es": "Hola, es bueno ponerse al día contigo"
+      }
     },
     {
       "id": "greetings_hello_how_have_you_been_lately",
       "phrase": "Hello, how have you been lately?",
-      "translation": "Hola, ¿cómo has estado últimamente?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Hi, how have you been lately?", "Hey, how have you been lately?"]
+      "alternatives": [
+        "Hi, how have you been lately?",
+        "Hey, how have you been lately?"
+      ],
+      "translations": {
+        "es": "Hola, ¿cómo has estado últimamente?"
+      }
     },
     {
       "id": "greetings_hi_there_hope_youre_having_a",
       "phrase": "Hi there, hope you're having a good day",
-      "translation": "Hola, espero que estés teniendo un buen día",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Hey there, hope you're having a good day", "Hello there, hope you're having a good day"]
+      "alternatives": [
+        "Hey there, hope you're having a good day",
+        "Hello there, hope you're having a good day"
+      ],
+      "translations": {
+        "es": "Hola, espero que estés teniendo un buen día"
+      }
     },
     {
       "id": "greetings_hey_whats_new_with_you",
       "phrase": "Hey, what's new with you?",
-      "translation": "Oye, ¿qué hay de nuevo contigo?",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Hi, what's new with you?", "Hello, what's new with you?"]
+      "alternatives": [
+        "Hi, what's new with you?",
+        "Hello, what's new with you?"
+      ],
+      "translations": {
+        "es": "Oye, ¿qué hay de nuevo contigo?"
+      }
     },
     {
       "id": "greetings_good_morning_hows_everything_going",
       "phrase": "Good morning, how's everything going?",
-      "translation": "Buenos días, ¿cómo va todo?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Buenos días, ¿cómo va todo?"
+      }
     },
     {
       "id": "greetings_hi_how_are_you_holding_up",
       "phrase": "Hi, how are you holding up?",
-      "translation": "Hola, ¿cómo lo estás llevando?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Holding up' (phrasal verb) = coping, managing under pressure. Implies checking in with empathy.",
-      "alternatives": ["Hey, how are you holding up?", "Hello, how are you holding up?"]
+      "alternatives": [
+        "Hey, how are you holding up?",
+        "Hello, how are you holding up?"
+      ],
+      "translations": {
+        "es": "Hola, ¿cómo lo estás llevando?"
+      }
     },
     {
       "id": "greetings_hey_there_hows_your_week_been",
       "phrase": "Hey there, how's your week been?",
-      "translation": "Hola, ¿cómo ha estado tu semana?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Hi there, how's your week been?", "Hello there, how's your week been?"]
+      "alternatives": [
+        "Hi there, how's your week been?",
+        "Hello there, how's your week been?"
+      ],
+      "translations": {
+        "es": "Hola, ¿cómo ha estado tu semana?"
+      }
     },
     {
       "id": "greetings_hello_hope_youre_doing_fine",
       "phrase": "Hello, hope you're doing fine",
-      "translation": "Hola, espero que estés bien",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Hi, hope you're doing fine", "Hey, hope you're doing fine"]
+      "alternatives": [
+        "Hi, hope you're doing fine",
+        "Hey, hope you're doing fine"
+      ],
+      "translations": {
+        "es": "Hola, espero que estés bien"
+      }
     },
     {
       "id": "greetings_hi_its_been_a_while_how",
       "phrase": "Hi, it's been a while, how are you?",
-      "translation": "Hola, ha pasado un tiempo, ¿cómo estás?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'It's been a while' uses present perfect to connect the past to the present. Contrast: 'It was a while ago' (simple past — finished).",
-      "alternatives": ["Hey, it's been a while, how are you?", "Hello, it's been a while, how are you?"]
+      "alternatives": [
+        "Hey, it's been a while, how are you?",
+        "Hello, it's been a while, how are you?"
+      ],
+      "translations": {
+        "es": "Hola, ha pasado un tiempo, ¿cómo estás?"
+      }
     },
     {
       "id": "greetings_good_afternoon_hows_life_treating_you",
       "phrase": "Good afternoon, how's life treating you?",
-      "translation": "Buenas tardes, ¿cómo te trata la vida?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "Buenas tardes, ¿cómo te trata la vida?"
+      }
     },
     {
       "id": "greetings_hey_nice_to_see_you_again",
       "phrase": "Hey, nice to see you again, how have you been?",
-      "translation": "Oye, es bueno verte de nuevo, ¿cómo has estado?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Hi, nice to see you again, how have you been?", "Hello, nice to see you again, how have you been?"]
+      "alternatives": [
+        "Hi, nice to see you again, how have you been?",
+        "Hello, nice to see you again, how have you been?"
+      ],
+      "translations": {
+        "es": "Oye, es bueno verte de nuevo, ¿cómo has estado?"
+      }
     },
     {
       "id": "greetings_it_was_great_seeing_you",
       "phrase": "It was great seeing you!",
-      "translation": "¡Qué gusto verte!",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "Exclamatory sentence: 'It was great seeing you!' uses the gerund after 'seeing'. Compare: 'It was great to see you!' — both correct, gerund is slightly more casual.",
-      "alternatives": ["It was great to see you!", "It was good seeing you!", "It was wonderful seeing you!"]
+      "alternatives": [
+        "It was great to see you!",
+        "It was good seeing you!",
+        "It was wonderful seeing you!"
+      ],
+      "translations": {
+        "es": "¡Qué gusto verte!"
+      }
     },
     {
       "id": "greetings_take_care_of_yourself",
       "phrase": "Take care of yourself!",
-      "translation": "¡Cuídate mucho!",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "'Take care of yourself' uses a reflexive pronoun. 'Take care' alone is also common as a farewell.",
-      "alternatives": ["Take care!"]
+      "alternatives": [
+        "Take care!"
+      ],
+      "translations": {
+        "es": "¡Cuídate mucho!"
+      }
     },
     {
       "id": "greetings_have_a_wonderful_day",
       "phrase": "Have a wonderful day!",
-      "translation": "¡Que tengas un excelente día!",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": null,
-      "alternatives": ["Have a great day!", "Have a nice day!", "Have a good day!"]
+      "alternatives": [
+        "Have a great day!",
+        "Have a nice day!",
+        "Have a good day!"
+      ],
+      "translations": {
+        "es": "¡Que tengas un excelente día!"
+      }
     },
     {
       "id": "greetings_see_you_around",
       "phrase": "See you around!",
-      "translation": "¡Nos vemos por ahí!",
-      "cefr": "A1",
-      "grammar": "'See you around' implies you'll meet again without fixing a time. More casual than 'See you later' or 'See you soon'."
+      "level": "A1",
+      "grammar": "'See you around' implies you'll meet again without fixing a time. More casual than 'See you later' or 'See you soon'.",
+      "translations": {
+        "es": "¡Nos vemos por ahí!"
+      }
     },
     {
       "id": "greetings_it_was_lovely_to_meet_you",
       "phrase": "It was lovely to meet you",
-      "translation": "Fue un placer conocerte",
-      "cefr": "A1",
+      "level": "A1",
       "grammar": "Note the difference: 'Nice to meet you' (first time) vs 'Nice to see you' (you've met before). Mixing them is a common mistake.",
-      "alternatives": ["It was nice to meet you", "It was great to meet you", "It was a pleasure to meet you"]
+      "alternatives": [
+        "It was nice to meet you",
+        "It was great to meet you",
+        "It was a pleasure to meet you"
+      ],
+      "translations": {
+        "es": "Fue un placer conocerte"
+      }
     },
     {
       "id": "greetings_dont_be_a_stranger",
       "phrase": "Don't be a stranger!",
-      "translation": "¡No te pierdas!",
-      "cefr": "B1",
-      "grammar": "'Don't be a stranger' is an idiomatic farewell meaning 'keep in touch / visit again'. Not literal."
+      "level": "B1",
+      "grammar": "'Don't be a stranger' is an idiomatic farewell meaning 'keep in touch / visit again'. Not literal.",
+      "translations": {
+        "es": "¡No te pierdas!"
+      }
     },
     {
       "id": "greetings_we_should_do_this_again_sometime",
       "phrase": "We should do this again sometime",
-      "translation": "Deberíamos repetirlo pronto",
-      "cefr": "A2",
-      "grammar": "'We should do this again' — modal 'should' here is a suggestion, not an obligation. Very common in social farewells."
+      "level": "A2",
+      "grammar": "'We should do this again' — modal 'should' here is a suggestion, not an obligation. Very common in social farewells.",
+      "translations": {
+        "es": "Deberíamos repetirlo pronto"
+      }
     },
     {
       "id": "greetings_it_was_a_pleasure_hope_to",
       "phrase": "It was a pleasure, hope to see you again",
-      "translation": "Fue un placer, espero verte de nuevo",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["It was a pleasure, I hope to see you again"]
+      "alternatives": [
+        "It was a pleasure, I hope to see you again"
+      ],
+      "translations": {
+        "es": "Fue un placer, espero verte de nuevo"
+      }
     },
     {
       "id": "greetings_say_hi_to_everyone_for_me",
       "phrase": "Say hi to everyone for me",
-      "translation": "Salúdame a todos",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Say hi to everyone for me' — indirect greeting via a third person. 'Say hi', 'give my regards', 'send my love' vary in formality.",
-      "alternatives": ["Say hello to everyone for me"]
+      "alternatives": [
+        "Say hello to everyone for me"
+      ],
+      "translations": {
+        "es": "Salúdame a todos"
+      }
     },
     {
       "id": "greetings_take_care_and_stay_in_touch",
       "phrase": "Take care and stay in touch",
-      "translation": "Cuídate y mantengámonos en contacto",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Stay in touch' (phrasal verb) = keep communicating. Synonyms: 'keep in touch', 'keep me posted'.",
-      "alternatives": ["Take care and keep in touch"]
+      "alternatives": [
+        "Take care and keep in touch"
+      ],
+      "translations": {
+        "es": "Cuídate y mantengámonos en contacto"
+      }
     },
     {
       "id": "greetings_it_was_so_good_catching_up",
       "phrase": "It was so good catching up with you",
-      "translation": "Qué bueno fue ponernos al día",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Catch up' revisited: 'catching up' as a gerund after 'good'. Compare phrase 8: 'catch up with you'.",
-      "alternatives": ["It was so great catching up with you", "It was good catching up with you"]
+      "alternatives": [
+        "It was so great catching up with you",
+        "It was good catching up with you"
+      ],
+      "translations": {
+        "es": "Qué bueno fue ponernos al día"
+      }
     },
     {
       "id": "greetings_nice_to_meet_you_im_glad",
       "phrase": "Nice to meet you, I'm glad we connected",
-      "translation": "Mucho gusto, me alegra que nos hayamos conocido",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": null,
-      "alternatives": ["Nice to meet you, I'm glad we met"]
+      "alternatives": [
+        "Nice to meet you, I'm glad we met"
+      ],
+      "translations": {
+        "es": "Mucho gusto, me alegra que nos hayamos conocido"
+      }
     },
     {
       "id": "greetings_i_could_be_better",
       "phrase": "I could be better",
-      "translation": "Podría estar mejor",
-      "cefr": "A2",
-      "grammar": "'Could be better' is a polite understatement meaning 'I'm not great'. English often uses understatement to avoid being negative."
+      "level": "A2",
+      "grammar": "'Could be better' is a polite understatement meaning 'I'm not great'. English often uses understatement to avoid being negative.",
+      "translations": {
+        "es": "Podría estar mejor"
+      }
     },
     {
       "id": "greetings_hows_your_day_been",
       "phrase": "How's your day been?",
-      "translation": "¿Cómo te ha ido hoy?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo te ha ido hoy?"
+      }
     },
     {
       "id": "greetings_ive_had_a_great_day",
       "phrase": "I've had a great day",
-      "translation": "He tenido un gran día",
-      "cefr": "A2",
-      "grammar": "Present perfect 'I've had' links a past event to the present feeling. Contrast: 'I had a great day' (simple past, already over)."
+      "level": "A2",
+      "grammar": "Present perfect 'I've had' links a past event to the present feeling. Contrast: 'I had a great day' (simple past, already over).",
+      "translations": {
+        "es": "He tenido un gran día"
+      }
     },
     {
       "id": "greetings_hows_your_week_been",
       "phrase": "How's your week been?",
-      "translation": "¿Cómo ha estado tu semana?",
-      "cefr": "A2",
-      "grammar": null
+      "level": "A2",
+      "grammar": null,
+      "translations": {
+        "es": "¿Cómo ha estado tu semana?"
+      }
     },
     {
       "id": "greetings_ive_had_better_days",
       "phrase": "I've had better days",
-      "translation": "He tenido días mejores",
-      "cefr": "B1",
-      "grammar": "'I've had better days' is an idiomatic understatement = 'today was bad'. Very common polite complaint."
+      "level": "B1",
+      "grammar": "'I've had better days' is an idiomatic understatement = 'today was bad'. Very common polite complaint.",
+      "translations": {
+        "es": "He tenido días mejores"
+      }
     },
     {
       "id": "greetings_im_sad",
       "phrase": "I'm sad",
-      "translation": "Estoy triste",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy triste"
+      }
     },
     {
       "id": "greetings_im_happy",
       "phrase": "I'm happy",
-      "translation": "Estoy feliz",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy feliz"
+      }
     },
     {
       "id": "greetings_im_excited",
       "phrase": "I'm excited",
-      "translation": "Estoy emocionado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy emocionado"
+      }
     },
     {
       "id": "greetings_im_bored",
       "phrase": "I'm bored",
-      "translation": "Estoy aburrido",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy aburrido"
+      }
     },
     {
       "id": "greetings_im_tired",
       "phrase": "I'm tired",
-      "translation": "Estoy cansado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy cansado"
+      }
     },
     {
       "id": "greetings_im_angry",
       "phrase": "I'm angry",
-      "translation": "Estoy enojado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy enojado"
+      }
     },
     {
       "id": "greetings_im_surprised",
       "phrase": "I'm surprised",
-      "translation": "Estoy sorprendido",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy sorprendido"
+      }
     },
     {
       "id": "greetings_im_confused",
       "phrase": "I'm confused",
-      "translation": "Estoy confundido",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy confundido"
+      }
     },
     {
       "id": "greetings_im_worried",
       "phrase": "I'm worried",
-      "translation": "Estoy preocupado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy preocupado"
+      }
     },
     {
       "id": "greetings_im_nervous",
       "phrase": "I'm nervous",
-      "translation": "Estoy nervioso",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy nervioso"
+      }
     },
     {
       "id": "greetings_im_scared",
       "phrase": "I'm scared",
-      "translation": "Estoy asustado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy asustado"
+      }
     },
     {
       "id": "greetings_im_relaxed",
       "phrase": "I'm relaxed",
-      "translation": "Estoy relajado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy relajado"
+      }
     },
     {
       "id": "greetings_im_stressed",
       "phrase": "I'm stressed",
-      "translation": "Estoy estresado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy estresado"
+      }
     },
     {
       "id": "greetings_im_busy",
       "phrase": "I'm busy",
-      "translation": "Estoy ocupado",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "Estoy ocupado"
+      }
     },
     {
       "id": "greetings_why_are_you_sad",
       "phrase": "Why are you sad?",
-      "translation": "¿Por qué estás triste?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás triste?"
+      }
     },
     {
       "id": "greetings_why_are_you_so_happy",
       "phrase": "Why are you so happy?",
-      "translation": "¿Por qué estás tan feliz?",
-      "cefr": "A1",
-      "grammar": "'So' as an intensifier: 'Why are you SO happy?' adds emphasis. It can also signal mild surprise."
+      "level": "A1",
+      "grammar": "'So' as an intensifier: 'Why are you SO happy?' adds emphasis. It can also signal mild surprise.",
+      "translations": {
+        "es": "¿Por qué estás tan feliz?"
+      }
     },
     {
       "id": "greetings_why_are_you_excited",
       "phrase": "Why are you excited?",
-      "translation": "¿Por qué estás emocionado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás emocionado?"
+      }
     },
     {
       "id": "greetings_why_are_you_bored",
       "phrase": "Why are you bored?",
-      "translation": "¿Por qué estás aburrido?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás aburrido?"
+      }
     },
     {
       "id": "greetings_why_are_you_tired",
       "phrase": "Why are you tired?",
-      "translation": "¿Por qué estás cansado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás cansado?"
+      }
     },
     {
       "id": "greetings_why_are_you_angry",
       "phrase": "Why are you angry?",
-      "translation": "¿Por qué estás enojado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás enojado?"
+      }
     },
     {
       "id": "greetings_why_are_you_surprised",
       "phrase": "Why are you surprised?",
-      "translation": "¿Por qué estás sorprendido?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás sorprendido?"
+      }
     },
     {
       "id": "greetings_why_are_you_confused",
       "phrase": "Why are you confused?",
-      "translation": "¿Por qué estás confundido?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás confundido?"
+      }
     },
     {
       "id": "greetings_why_are_you_worried",
       "phrase": "Why are you worried?",
-      "translation": "¿Por qué estás preocupado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás preocupado?"
+      }
     },
     {
       "id": "greetings_why_are_you_nervous",
       "phrase": "Why are you nervous?",
-      "translation": "¿Por qué estás nervioso?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás nervioso?"
+      }
     },
     {
       "id": "greetings_why_are_you_scared",
       "phrase": "Why are you scared?",
-      "translation": "¿Por qué estás asustado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás asustado?"
+      }
     },
     {
       "id": "greetings_why_are_you_relaxed",
       "phrase": "Why are you relaxed?",
-      "translation": "¿Por qué estás relajado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás relajado?"
+      }
     },
     {
       "id": "greetings_why_are_you_stressed",
       "phrase": "Why are you stressed?",
-      "translation": "¿Por qué estás estresado?",
-      "cefr": "A1",
-      "grammar": null
+      "level": "A1",
+      "grammar": null,
+      "translations": {
+        "es": "¿Por qué estás estresado?"
+      }
     },
     {
       "id": "greetings_whats_on_your_mind",
       "phrase": "What's on your mind?",
-      "translation": "¿Qué te preocupa?",
-      "cefr": "A2",
-      "grammar": "'What's on your mind?' is an idiom meaning 'What are you thinking about / worried about?'"
+      "level": "A2",
+      "grammar": "'What's on your mind?' is an idiom meaning 'What are you thinking about / worried about?'",
+      "translations": {
+        "es": "¿Qué te preocupa?"
+      }
     },
     {
       "id": "greetings_is_there_anything_i_can_do",
       "phrase": "Is there anything I can do for you?",
-      "translation": "¿Hay algo que pueda hacer por tí?",
-      "cefr": "A2",
+      "level": "A2",
       "grammar": "'Is there anything I can do for you?' — formal offer of help. Informal version: 'Can I help you with anything?'",
-      "alternatives": ["Is there anything I can help you with?", "Can I do anything for you?"]
+      "alternatives": [
+        "Is there anything I can help you with?",
+        "Can I do anything for you?"
+      ],
+      "translations": {
+        "es": "¿Hay algo que pueda hacer por tí?"
+      }
+    },
+    {
+      "id": "greetings_introduce_myself_account_manager",
+      "phrase": "I'd like to take a moment to introduce myself — I'm the new account manager for your region.",
+      "translations": { "es": "Me gustaría presentarme — soy el nuevo gerente de cuentas para su región." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "greetings_pleasure_meeting_follow_up",
+      "phrase": "It was a pleasure meeting you today — I'll follow up by email with the details we discussed.",
+      "translations": { "es": "Fue un placer conocerle hoy — le enviaré un correo con los detalles que hablamos." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "greetings_allow_me_to_introduce_dr",
+      "phrase": "Please allow me to introduce Dr. Martínez, who will be leading the session this afternoon.",
+      "translations": { "es": "Permítame presentarle al Dr. Martínez, quien dirigirá la sesión de esta tarde." },
+      "level": "B2",
+      "grammar": "'Please allow me to introduce' — formal third-party introduction used in professional settings"
+    },
+    {
+      "id": "greetings_sincere_condolences_loss",
+      "phrase": "I wanted to reach out and offer my sincere condolences on your loss.",
+      "translations": { "es": "Quería comunicarme para ofrecerle mis más sinceras condolencias por su pérdida." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "greetings_welcome_aboard_team",
+      "phrase": "On behalf of the entire team, welcome aboard — we're thrilled to have you with us.",
+      "translations": { "es": "En nombre de todo el equipo, bienvenido — estamos encantados de tenerte con nosotros." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "greetings_trust_message_finds_you_well",
+      "phrase": "I trust this message finds you well — I'm writing to follow up on our conversation last week.",
+      "translations": { "es": "Espero que se encuentre bien — le escribo para continuar con nuestra conversación de la semana pasada." },
+      "level": "C1",
+      "grammar": "'I trust this message finds you well' — formal epistolary opener used in professional correspondence"
+    },
+    {
+      "id": "greetings_pleasure_introduce_keynote_speaker",
+      "phrase": "It would be my pleasure to introduce our keynote speaker, whose work has been instrumental in shaping this field.",
+      "translations": { "es": "Sería un placer presentar a nuestra conferenciante principal, cuyo trabajo ha sido fundamental en este campo." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "greetings_dont_believe_formally_introduced",
+      "phrase": "I don't believe we've been formally introduced — I'm here representing the European delegation.",
+      "translations": { "es": "Creo que no nos han presentado formalmente — estoy aquí representando a la delegación europea." },
+      "level": "C1",
+      "grammar": "'I don't believe we've been formally introduced' — a polished way to initiate a first introduction in a formal setting"
+    },
+    {
+      "id": "greetings_convey_delegation_graciously_received",
+      "phrase": "Allow me to convey, on behalf of the delegation, how delighted we are to be received so graciously.",
+      "translations": { "es": "Permítame expresar, en nombre de la delegación, lo encantados que estamos de ser recibidos con tanta generosidad." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "greetings_appreciate_time_demanding_schedule",
+      "phrase": "I appreciate you taking the time to meet with me — I know how demanding your schedule must be.",
+      "translations": { "es": "Le agradezco que haya encontrado tiempo para reunirse conmigo — sé lo exigente que debe ser su agenda." },
+      "level": "C1",
+      "grammar": "'I appreciate you taking the time' — gerund after 'appreciate' expresses formal gratitude"
+    },
+    {
+      "id": "greetings_honor_welcome_distinguished_delegates",
+      "phrase": "It is with great honor that we welcome the distinguished delegates to this commemorative gathering.",
+      "translations": { "es": "Es con gran honor que damos la bienvenida a los distinguidos delegados a esta reunión conmemorativa." },
+      "level": "C2",
+      "grammar": "'It is with great honor that' — cleft construction used in ceremonial or formal addresses"
+    },
+    {
+      "id": "greetings_cultural_awareness_not_merely_etiquette",
+      "phrase": "Cultural awareness in greetings is not merely etiquette — it signals respect for the values of those you engage with.",
+      "translations": { "es": "La conciencia cultural en los saludos no es solo protocolo — es una señal de respeto por los valores de quienes interactúas." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "greetings_protocol_introductions_senior_first",
+      "phrase": "The protocol for introductions in this context requires that the senior representative speak first.",
+      "translations": { "es": "El protocolo de presentaciones en este contexto exige que el representante de mayor rango hable primero." },
+      "level": "C2",
+      "grammar": "'requires that … speak' — formal subjunctive after verbs of requirement or mandate"
+    },
+    {
+      "id": "greetings_remiss_not_acknowledge_contribution",
+      "phrase": "I would be remiss not to acknowledge the immense contribution you have made to this institution over the years.",
+      "translations": { "es": "Sería una negligencia de mi parte no reconocer la inmensa contribución que ha aportado a esta institución a lo largo de los años." },
+      "level": "C2",
+      "grammar": "'I would be remiss not to' — formal expression of obligation to acknowledge or address something"
+    },
+    {
+      "id": "greetings_sincere_felicitations_promotion",
+      "phrase": "Please accept my most sincere felicitations on the occasion of your well-deserved promotion.",
+      "translations": { "es": "Por favor, acepte mis más sinceras felicitaciones con motivo de su tan merecido ascenso." },
+      "level": "C2",
+      "grammar": null
     }
   ]
 }

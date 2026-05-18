@@ -86,8 +86,8 @@ const AppFeedback = (() => {
 
     const wrap = document.createElement('div');
     wrap.className = 'uf-diff-wrap';
-    wrap.appendChild(_makeRow('Your Answer', yourWords));
-    wrap.appendChild(_makeRow('Correct Answer', expWords));
+    wrap.appendChild(_makeRow(AppLang.t('feedback_your_answer'), yourWords));
+    wrap.appendChild(_makeRow(AppLang.t('feedback_correct_answer'), expWords));
     return wrap;
   }
 
@@ -99,7 +99,7 @@ const AppFeedback = (() => {
 
     const wrap = document.createElement('div');
     wrap.className = 'uf-diff-wrap';
-    wrap.appendChild(_makeRow('Your Answer', words));
+    wrap.appendChild(_makeRow(AppLang.t('feedback_your_answer'), words));
     return wrap;
   }
 
@@ -120,9 +120,9 @@ const AppFeedback = (() => {
 
     const wrap = document.createElement('div');
     wrap.className = 'uf-diff-wrap';
-    wrap.appendChild(_makeRow('Your Answer', makeWords(userWord, isCorrect)));
+    wrap.appendChild(_makeRow(AppLang.t('feedback_your_answer'), makeWords(userWord, isCorrect)));
     if (!isCorrect) {
-      wrap.appendChild(_makeRow('Correct Answer', makeWords(correctWord, true)));
+      wrap.appendChild(_makeRow(AppLang.t('feedback_correct_answer'), makeWords(correctWord, true)));
     }
     return wrap;
   }
@@ -136,10 +136,10 @@ const AppFeedback = (() => {
     wrap.className = 'uf-diff-wrap';
 
     const yourWords = [{ cls: isCorrect ? 'uf-word-ok' : 'uf-word-err', text: chosenDef }];
-    wrap.appendChild(_makeRow('Your Answer', yourWords));
+    wrap.appendChild(_makeRow(AppLang.t('feedback_your_answer'), yourWords));
 
     if (!isCorrect) {
-      wrap.appendChild(_makeRow('Correct Answer', [{ cls: 'uf-word-ok', text: correctDef }]));
+      wrap.appendChild(_makeRow(AppLang.t('feedback_correct_answer'), [{ cls: 'uf-word-ok', text: correctDef }]));
     }
 
     return wrap;

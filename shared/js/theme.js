@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (el && window.Progress) {
     const s = Progress.getStreak();
     const count = s && s.current != null ? s.current : 0;
-    if (count > 0) el.innerHTML = '<span aria-hidden="true">🔥</span> ' + count + (count === 1 ? ' day' : ' days');
+    if (count > 0) el.textContent = AppLang.t(count === 1 ? 'streak_singular' : 'streak_plural', { n: count });
   }
 
   // Auto-update footer copyright year

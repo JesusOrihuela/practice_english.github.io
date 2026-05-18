@@ -36,7 +36,7 @@ const PhraseBrowser = (() => {
     const section = document.createElement('section');
     section.id = 'pb-section';
     section.className = 'pb-section';
-    section.setAttribute('aria-label', topicLabel + ' — ' + (isWordList ? 'word list' : 'phrase list'));
+    section.setAttribute('aria-label', topicLabel + ' — ' + AppLang.t(isWordList ? 'pb_word' : 'pb_phrase'));
 
     /* ── Top bar ── */
     const bar = document.createElement('div');
@@ -44,8 +44,8 @@ const PhraseBrowser = (() => {
 
     const backBtn = document.createElement('button');
     backBtn.className = 'back-btn';
-    backBtn.textContent = '\u2190 Temas';
-    backBtn.setAttribute('aria-label', 'Back to topic picker');
+    backBtn.textContent = AppLang.t('back_to_topics');
+    backBtn.setAttribute('aria-label', AppLang.t('back_to_topics'));
 
     const barMeta = document.createElement('div');
     barMeta.className = 'pb-bar-meta';
@@ -56,7 +56,9 @@ const PhraseBrowser = (() => {
 
     const barCount = document.createElement('span');
     barCount.className = 'pb-bar-count';
-    barCount.textContent = seenCount + '\u202f/\u202f' + total + ' aprendidas';
+    barCount.textContent = typeof AppLang !== 'undefined'
+      ? AppLang.t('topic_learned', { seen: seenCount, total })
+      : seenCount + '\u202f/\u202f' + total + ' Aprendidas';
 
     barMeta.appendChild(barTitle);
     barMeta.appendChild(barCount);
@@ -70,7 +72,7 @@ const PhraseBrowser = (() => {
     track.setAttribute('aria-valuenow', seenCount);
     track.setAttribute('aria-valuemin', '0');
     track.setAttribute('aria-valuemax', total);
-    track.setAttribute('aria-label', pct + '% de ' + topicLabel + ' aprendidas');
+    track.setAttribute('aria-label', AppLang.t('pb_pct_learned', { pct: pct, topic: topicLabel }));
     const fill = document.createElement('div');
     fill.className = 'pb-track-fill';
     fill.style.width = pct + '%';
@@ -85,8 +87,12 @@ const PhraseBrowser = (() => {
       const seen = !!(cards[cardIds[i]] && cards[cardIds[i]].reps > 0);
       let mainText, subText;
       if (isWordList) {
-        mainText = item.word;
-        subText  = item.category || null;
+        const _raw = item.word;
+        mainText = _raw ? _raw.charAt(0).toUpperCase() + _raw.slice(1) : _raw;
+        const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
+        subText  = item.category
+          ? (typeof AppLang !== 'undefined' ? AppLang.t(_POS[item.category] || item.category) : item.category)
+          : null;
       } else {
         const raw = (traductions && traductions[i]) ? traductions[i] : item;
         mainText = truncate(raw, 42);
@@ -96,7 +102,7 @@ const PhraseBrowser = (() => {
       const chip = document.createElement('button');
       chip.className = 'pb-chip' + (seen ? ' pb-chip--seen' : '');
       chip.setAttribute('role', 'listitem');
-      chip.setAttribute('aria-label', (isWordList ? 'Palabra' : 'Frase') + ' ' + (i + 1) + ': ' + mainText + (seen ? ' (aprendida)' : ''));
+      chip.setAttribute('aria-label', AppLang.t(isWordList ? 'pb_word' : 'pb_phrase') + ' ' + (i + 1) + ': ' + mainText + (seen ? ' ' + AppLang.t('pb_learned') : ''));
 
       const num = document.createElement('span');
       num.className = 'pb-chip-num';

@@ -3,152 +3,282 @@
     {
       "word": "appetizer",
       "definition": "A small dish served before the main course",
-      "translation": "aperitivo",
       "example": "We ordered some appetizers while waiting for our table.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "appetizer"
+      "level": "A2",
+      "id": "appetizer",
+      "translations": {
+        "es": "aperitivo"
+      }
     },
     {
       "word": "reservation",
       "definition": "An arrangement to have a table held at a restaurant",
-      "translation": "reserva",
       "example": "I made a reservation for two at eight o'clock.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "reservation"
+      "level": "A2",
+      "id": "reservation",
+      "translations": {
+        "es": "reserva"
+      }
     },
     {
       "word": "menu",
       "definition": "A list of dishes available in a restaurant",
-      "translation": "menú",
       "example": "Could we see the menu, please?",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "menu"
+      "level": "A2",
+      "id": "menu",
+      "translations": {
+        "es": "menú"
+      }
     },
     {
       "word": "waiter",
       "definition": "A person who serves food and drink at a restaurant",
-      "translation": "mesero / camarero",
       "example": "The waiter recommended the salmon dish.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "waiter"
+      "level": "A2",
+      "id": "waiter",
+      "translations": {
+        "es": "mesero / camarero"
+      }
     },
     {
       "word": "tip",
       "definition": "Extra money given to a service worker as a reward for good service",
-      "translation": "propina",
       "example": "We left a generous tip for the excellent service.",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "tip"
+      "level": "A2",
+      "id": "tip",
+      "translations": {
+        "es": "propina"
+      }
     },
     {
       "word": "bill",
       "definition": "A document showing the total amount owed for a meal",
-      "translation": "cuenta",
       "example": "Could we have the bill, please?",
       "category": "Noun",
       "difficulty": "easy",
-      "cefr": "A2",
-      "id": "bill"
+      "level": "A2",
+      "id": "bill",
+      "translations": {
+        "es": "cuenta"
+      }
     },
     {
       "word": "portion",
       "definition": "The amount of food served to one person",
-      "translation": "porción",
       "example": "The portions here are quite large.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "portion"
+      "level": "B1",
+      "id": "portion",
+      "translations": {
+        "es": "porción"
+      }
     },
     {
       "word": "cuisine",
       "definition": "A style of cooking associated with a country or region",
-      "translation": "gastronomía",
       "example": "Italian cuisine is famous for its pasta and pizza.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "cuisine"
+      "level": "B1",
+      "id": "cuisine",
+      "translations": {
+        "es": "gastronomía"
+      }
     },
     {
       "word": "entrée",
       "definition": "The main course of a meal",
-      "translation": "plato principal",
       "example": "For my entrée, I will have the grilled chicken.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "entr_e"
+      "level": "B1",
+      "id": "entr_e",
+      "translations": {
+        "es": "plato principal"
+      }
     },
     {
       "word": "dietary",
       "definition": "Relating to special food requirements or restrictions",
-      "translation": "dietético",
       "example": "Do you have any dietary restrictions I should know about?",
       "category": "Adjective",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "dietary"
+      "level": "B1",
+      "id": "dietary",
+      "translations": {
+        "es": "dietético"
+      }
     },
     {
       "word": "seasoning",
       "definition": "Salt, herbs, or spices added to food for extra flavour",
-      "translation": "condimento",
       "example": "The chef added more seasoning to bring out the flavour.",
       "category": "Noun",
       "difficulty": "medium",
-      "cefr": "B1",
-      "id": "seasoning"
+      "level": "B1",
+      "id": "seasoning",
+      "translations": {
+        "es": "condimento"
+      }
     },
     {
       "word": "garnish",
       "definition": "A small decoration of food placed on or around a dish",
-      "translation": "guarnición",
       "example": "The soup came with a garnish of fresh parsley.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "garnish"
+      "level": "B2",
+      "id": "garnish",
+      "translations": {
+        "es": "guarnición"
+      }
     },
     {
       "word": "ambiance",
       "definition": "The atmosphere or mood of a place",
-      "translation": "ambiente",
       "example": "The restaurant had a romantic ambiance with soft lighting.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "ambiance"
+      "level": "B2",
+      "id": "ambiance",
+      "translations": {
+        "es": "ambiente"
+      }
     },
     {
       "word": "sommelier",
       "definition": "A trained wine expert who helps guests choose wine",
-      "translation": "sommelier",
       "example": "The sommelier recommended a local red wine to pair with the steak.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "sommelier"
+      "level": "B2",
+      "id": "sommelier",
+      "translations": {
+        "es": "sommelier"
+      }
     },
     {
       "word": "delicacy",
       "definition": "A rare or expensive food considered a special treat",
-      "translation": "manjar",
       "example": "Oysters are considered a delicacy in many countries.",
       "category": "Noun",
       "difficulty": "hard",
-      "cefr": "B2",
-      "id": "delicacy"
+      "level": "B2",
+      "id": "delicacy",
+      "translations": {
+        "es": "manjar"
+      }
+    },
+    {
+      "id": "pairing",
+      "word": "pairing",
+      "definition": "The practice of selecting wines or beverages that complement the flavors of specific dishes",
+      "example": "The sommelier suggested a classic pairing of Burgundy with the duck confit.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "maridaje" }
+    },
+    {
+      "id": "palate",
+      "word": "palate",
+      "definition": "A person's capacity to appreciate and distinguish between different flavors",
+      "example": "He has a refined palate and can identify most grape varieties by taste alone.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "paladar" }
+    },
+    {
+      "id": "tasting_menu",
+      "word": "tasting menu",
+      "definition": "A multi-course dining experience featuring small portions of dishes selected by the chef",
+      "example": "We opted for the tasting menu to try the full range of the chef's seasonal creations.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "menú degustación" }
+    },
+    {
+      "id": "accompaniment",
+      "word": "accompaniment",
+      "definition": "A side dish or drink served alongside a main course to complement it",
+      "example": "The duck arrived with a cherry reduction and a seasonal vegetable accompaniment.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "acompañamiento" }
+    },
+    {
+      "id": "corkage",
+      "word": "corkage",
+      "definition": "A fee charged by a restaurant when guests bring their own wine or other alcoholic beverages",
+      "example": "The corkage fee was thirty dollars per bottle, which made it worthwhile to bring a special wine.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "translations": { "es": "descorche" }
+    },
+    {
+      "id": "terroir",
+      "word": "terroir",
+      "definition": "The combination of soil, climate, and geography of a specific place that gives wine its distinctive character",
+      "example": "The sommelier explained how the terroir of the Burgundy region shapes the wine's minerality.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "terruño / terroir" }
+    },
+    {
+      "id": "umami",
+      "word": "umami",
+      "definition": "The fifth basic taste — a savory, meaty depth of flavor found in aged cheeses, cured meats, and fermented foods",
+      "example": "Parmesan and anchovies are often added to dishes to intensify the umami profile.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "umami" }
+    },
+    {
+      "id": "gastronomy",
+      "word": "gastronomy",
+      "definition": "The art, culture, and science of fine food and its relationship to history and society",
+      "example": "The city has become a center of gastronomy, attracting chefs from around the world.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "gastronomía" }
+    },
+    {
+      "id": "oenology",
+      "word": "oenology",
+      "definition": "The scientific study of wine and winemaking, from fermentation to bottling",
+      "example": "She studied oenology in Bordeaux before joining a winery in the Napa Valley.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "enología" }
+    },
+    {
+      "id": "mouthfeel",
+      "word": "mouthfeel",
+      "definition": "The physical sensation of a food or drink in the mouth, including texture, weight, and consistency",
+      "example": "The critic praised the wine for its silky mouthfeel and long, complex finish.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "translations": { "es": "textura en boca / sensación en boca" }
     }
   ]
 }

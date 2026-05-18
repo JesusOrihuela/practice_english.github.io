@@ -29,7 +29,7 @@ window.AppProficiency = (() => {
     quiz:        0.80,
   };
 
-  const KEY    = 'pe_user_proficiency';
+  const KEY    = AppLangPair.storageKey('pe_user_proficiency');
   const LR     = 0.005;  // normal learning rate (~0.03–0.06 shift per session)
   const LR_QUIZ = 0.05;  // fast rate used during placement quiz (converges in ~10 answers)
 

@@ -1,0 +1,214 @@
+{
+  "phrases": [
+    {
+      "id": "airport_flight_departure_time",
+      "phrase": "What time is our flight?",
+      "translations": { "es": "¿A qué hora sale nuestro vuelo?" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "airport_check_luggage",
+      "phrase": "I need to check my luggage",
+      "translations": { "es": "Necesito facturar mi equipaje" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "airport_waiting_room_location",
+      "phrase": "The waiting room is on the ground floor",
+      "translations": { "es": "La sala de espera está en la planta baja" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "airport_prefer_window_seat",
+      "phrase": "I prefer a window seat",
+      "translations": { "es": "Prefiero un asiento junto a la ventana" },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "airport_boarding_pass_gate",
+      "phrase": "I need to show my boarding pass at the gate.",
+      "translations": { "es": "Necesito mostrar mi pase de abordar en la puerta." },
+      "level": "A1",
+      "grammar": null
+    },
+    {
+      "id": "airport_carryon_size_limit",
+      "phrase": "Carry-on luggage must be a specific size",
+      "translations": { "es": "El equipaje de mano debe ser de un tamaño específico" },
+      "level": "A2",
+      "grammar": "Modal 'must': strong obligation or rule"
+    },
+    {
+      "id": "airport_exchange_currency",
+      "phrase": "Where can I exchange currency?",
+      "translations": { "es": "¿Dónde puedo cambiar divisas?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "airport_which_terminal_departs",
+      "phrase": "Which terminal is my flight departing from?",
+      "translations": { "es": "¿Desde qué terminal sale mi vuelo?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "airport_how_early_arrive",
+      "phrase": "How early should I arrive at the airport before my flight?",
+      "translations": { "es": "¿Cuánto tiempo antes debo llegar al aeropuerto?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "airport_direct_or_connecting",
+      "phrase": "Is there a direct flight to New York, or do I have to connect?",
+      "translations": { "es": "¿Hay un vuelo directo a Nueva York, o tengo que hacer escala?" },
+      "level": "A2",
+      "grammar": null
+    },
+    {
+      "id": "airport_flight_delayed_voucher",
+      "phrase": "My flight has been delayed by two hours — can I get a food voucher?",
+      "translations": { "es": "Mi vuelo se retrasó dos horas. ¿Puedo recibir un vale de comida?" },
+      "level": "B1",
+      "grammar": "Present perfect passive: 'has been delayed' for a recent change affecting the speaker"
+    },
+    {
+      "id": "airport_request_seat_front",
+      "phrase": "I'd like to request a seat closer to the front of the plane, please.",
+      "translations": { "es": "Me gustaría pedir un asiento más cerca de la parte delantera del avión, por favor." },
+      "level": "B1",
+      "grammar": "'I'd like to + infinitive' for polite requests"
+    },
+    {
+      "id": "airport_carryon_over_limit",
+      "phrase": "My carry-on is slightly over the weight limit — what are my options?",
+      "translations": { "es": "Mi equipaje de mano excede un poco el límite de peso. ¿Cuáles son mis opciones?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "airport_baggage_claim_flight",
+      "phrase": "Could you tell me where the baggage claim area is for this flight?",
+      "translations": { "es": "¿Podría indicarme dónde está la cinta de equipaje para este vuelo?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "airport_connection_time_enough",
+      "phrase": "I'm on a connecting flight — do I have enough time to make it to the next gate?",
+      "translations": { "es": "Tengo una conexión. ¿Tengo tiempo suficiente para llegar a la siguiente puerta?" },
+      "level": "B1",
+      "grammar": null
+    },
+    {
+      "id": "airport_luggage_lost_claim",
+      "phrase": "My luggage didn't arrive on the carousel — I'd like to file a lost baggage report.",
+      "translations": { "es": "Mi equipaje no llegó a la cinta. Me gustaría presentar un reporte de equipaje perdido." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "airport_denied_boarding_compensation",
+      "phrase": "I was denied boarding due to overbooking — what compensation am I entitled to?",
+      "translations": { "es": "Me negaron el embarque por sobreventas. ¿A qué compensación tengo derecho?" },
+      "level": "B2",
+      "grammar": "Passive voice: 'was denied' to describe an action received by the subject"
+    },
+    {
+      "id": "airport_immigration_before_bags",
+      "phrase": "You have to go through immigration before you can collect your bags.",
+      "translations": { "es": "Debes pasar por inmigración antes de poder recoger tu equipaje." },
+      "level": "B2",
+      "grammar": "Modal 'have to' expressing a rule or required step"
+    },
+    {
+      "id": "airport_seat_changed_no_notice",
+      "phrase": "The airline changed my seat without notifying me — I'd like to speak to a supervisor.",
+      "translations": { "es": "La aerolínea cambió mi asiento sin avisarme. Me gustaría hablar con un supervisor." },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "airport_bag_made_connection",
+      "phrase": "Could you confirm whether my checked bag made it onto the connecting flight?",
+      "translations": { "es": "¿Podría confirmar si mi maleta documentada alcanzó el vuelo de conexión?" },
+      "level": "B2",
+      "grammar": "Indirect question: 'whether + subject + verb' inside a main clause"
+    },
+    {
+      "id": "airport_customs_declare_allowance",
+      "phrase": "I'd like to declare these goods — could you tell me the duty-free allowance?",
+      "translations": { "es": "Quisiera declarar estos artículos. ¿Podría indicarme el límite de franquicia?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "airport_passport_expiry_visa",
+      "phrase": "My passport expires in three months — is that sufficient for a tourist visa on arrival?",
+      "translations": { "es": "Mi pasaporte vence en tres meses. ¿Es suficiente para una visa de turista a la llegada?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "airport_transit_zone_restrictions",
+      "phrase": "I'm traveling on a transit visa exemption — what are the restrictions for leaving the transit zone?",
+      "translations": { "es": "Viajo con exención de visa de tránsito. ¿Cuáles son las restricciones para salir de la zona de tránsito?" },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "airport_upgrade_miles_business",
+      "phrase": "I'd like to use my frequent flyer miles to upgrade — is there availability in business class?",
+      "translations": { "es": "Me gustaría usar mis millas para hacer un upgrade. ¿Hay disponibilidad en clase ejecutiva?" },
+      "level": "C1",
+      "grammar": "'I'd like to + infinitive' for formal requests; 'is there' for availability checks"
+    },
+    {
+      "id": "airport_mishandled_bag_return",
+      "phrase": "The airline lost my bag on the outbound leg, and my return flight departs tomorrow.",
+      "translations": { "es": "La aerolínea perdió mi maleta en el trayecto de ida y mi vuelo de regreso sale mañana." },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "airport_eu_regulation_compensation",
+      "phrase": "Under EU Regulation 261/2004, I believe I'm entitled to compensation for this cancellation.",
+      "translations": { "es": "Según el Reglamento UE 261/2004, creo que tengo derecho a compensación por esta cancelación." },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "airport_secondary_screening_rights",
+      "phrase": "I've been flagged for secondary screening — could you explain the basis for this and my rights?",
+      "translations": { "es": "Me han seleccionado para una revisión adicional. ¿Podría explicarme el motivo y mis derechos?" },
+      "level": "C2",
+      "grammar": "Present perfect passive: 'I've been flagged' — someone in authority has flagged the speaker"
+    },
+    {
+      "id": "airport_partner_airline_baggage_liability",
+      "phrase": "The connecting flight was operated by a partner airline — does that affect liability for my delayed baggage?",
+      "translations": { "es": "El vuelo de conexión fue operado por una aerolínea asociada. ¿Eso afecta la responsabilidad por mi equipaje retrasado?" },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "airport_force_majeure_rebook",
+      "phrase": "Given the force majeure clause, is the airline still obligated to rebook me on an alternative carrier?",
+      "translations": { "es": "Dada la cláusula de fuerza mayor, ¿la aerolínea sigue obligada a reembarcarme en otra compañía?" },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "airport_asylum_request_procedure",
+      "phrase": "I wish to apply for asylum — could you direct me to the appropriate immigration officer?",
+      "translations": { "es": "Deseo solicitar asilo. ¿Podría dirigirme con el funcionario de inmigración correspondiente?" },
+      "level": "C2",
+      "grammar": "'I wish to + infinitive' — formal, more deliberate than 'I want to'"
+    }
+  ]
+}
