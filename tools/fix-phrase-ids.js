@@ -1,19 +1,28 @@
 // tools/fix-phrase-ids.js
 // Regenerates _ID_MAP in shared/js/progress.js from the actual JSON files.
 //
-// Run this script ANY TIME you add, edit, or remove phrases or vocabulary words
-// from any shared/json/*.json file. Forgetting to run it will silently break
-// the Mi Aprendizaje daily session builder (PathSession).
+// _ID_MAP structure:
+//   { phrases: { <pairId>: { <topic>: [phraseId, ...] } },
+//     vocab:   { <topic>:  { quizBase, vocabBase, ids: [wordId, ...] } } }
+//
+// Phrases are keyed by pair — content is independent per pair, so phrase IDs
+// may diverge (e.g. es-en/restaurant has 76 phrases, en-es/restaurant has 77).
+// Vocabulary is shared across pairs (a single bilingual dataset under common/vocab).
+//
+// Run this ANY TIME you add, edit, or remove phrases or vocabulary words. Forgetting
+// silently breaks the Mi Aprendizaje session builder (PathSession) for the affected pair.
 //
 // Usage:
 //   node tools/fix-phrase-ids.js
 //
-// Safe to run multiple times — only rewrites the file if IDs are actually stale.
+// Safe to run multiple times — only rewrites the file if the map actually changed.
 
 const fs = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
+
+const PAIRS = ['es-en', 'en-es'];
 
 const phraseTopics = [
   'greetings', 'restaurant', 'supermarket', 'kitchen',
@@ -29,134 +38,76 @@ const vocabTopics = [
   'gym', 'technology', 'accountability',
 ];
 
-// ── 1. Extract IDs from JSON files ───────────────────────────────────────────
+// ── 1. Build the map from JSON ───────────────────────────────────────────────
 
-// Phrase IDs are read from the es-en pair (the canonical set for _ID_MAP).
-// NOTE: pre-existing limitation — _ID_MAP is single-pair; per-pair phrase IDs
-// may diverge under content independence. Out of scope for the folder reorg.
-const phraseIds = {};
-for (const topic of phraseTopics) {
-  const filePath = path.join(root, 'shared', 'json', 'pairs', 'es-en', `${topic}.json`);
-  const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  const items = data.phrases || data;
-  phraseIds[topic] = items.map(p => p.id);
+// Phrases: per-pair (IDs can differ between pairs under content independence).
+const phrases = {};
+for (const pair of PAIRS) {
+  phrases[pair] = {};
+  for (const topic of phraseTopics) {
+    const filePath = path.join(root, 'shared', 'json', 'pairs', pair, `${topic}.json`);
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    phrases[pair][topic] = (data.phrases || data).map(p => p.id);
+  }
 }
 
-const vocabIds = {};
+// Vocabulary: shared across pairs (single dataset under common/vocab).
+const vocab = {};
 for (const topic of vocabTopics) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
   const filePath = path.join(root, 'shared', 'json', 'common', 'vocab', filename);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  const items = data.words || data;
-  vocabIds[topic] = items.map(w => w.id);
+  vocab[topic] = {
+    quizBase:  topic === 'general' ? 'quiz_vocab' : `quiz_${topic}`,
+    vocabBase: topic === 'general' ? 'vocab' : `vocab_${topic}`,
+    ids: (data.words || data).map(w => w.id),
+  };
 }
 
-// ── 2. Read progress.js ───────────────────────────────────────────────────────
+const idMap = { phrases, vocab };
+
+// ── 2. Replace the whole _ID_MAP block in progress.js ────────────────────────
 
 const progressPath = path.join(root, 'shared', 'js', 'progress.js');
-let src = fs.readFileSync(progressPath, 'utf8');
+const src = fs.readFileSync(progressPath, 'utf8');
 
-// ── 3. Replace each topic's array ────────────────────────────────────────────
-
-function replaceArray(src, key, newIds) {
-  // Match "key":[ or "key": [ and find the matching closing bracket
-  const keyMarker = src.includes(`"${key}": [`) ? `"${key}": [` : `"${key}":[`;
-  const startIdx = src.indexOf(keyMarker);
-  if (startIdx === -1) {
-    console.error(`  ✗ Could not find key: "${key}"`);
-    return src;
-  }
-
-  const openBracket = startIdx + keyMarker.length - 1;
-  let depth = 0;
-  let closeBracket = -1;
-  for (let i = openBracket; i < src.length; i++) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') {
-      depth--;
-      if (depth === 0) { closeBracket = i; break; }
-    }
-  }
-
-  if (closeBracket === -1) {
-    console.error(`  ✗ Could not find closing bracket for: "${key}"`);
-    return src;
-  }
-
-  return src.slice(0, openBracket) + JSON.stringify(newIds) + src.slice(closeBracket + 1);
+const _ID_MAP_RE = /const _ID_MAP = \{[\s\S]*?\};/;
+if (!_ID_MAP_RE.test(src)) {
+  console.error('  ✗ Could not locate the _ID_MAP block in progress.js');
+  process.exit(1);
 }
 
-let changed = false;
-const original = src;
+const newBlock = 'const _ID_MAP = ' + JSON.stringify(idMap) + ';';
+const newSrc = src.replace(_ID_MAP_RE, newBlock);
 
-for (const topic of phraseTopics) {
-  src = replaceArray(src, topic, phraseIds[topic]);
-}
-
-for (const topic of vocabTopics) {
-  // vocab IDs are nested under "ids" key, not the topic key directly
-  // Find the vocab topic block and replace its "ids" array
-  // The structure is: "topic":{"quizBase":"...","vocabBase":"...","ids":[...]}
-  // We use a unique marker: the quizBase string helps us find the right block
-  const quizBase = topic === 'general' ? 'quiz_vocab' : `quiz_${topic}`;
-  const marker = `"${quizBase}"`;
-  const blockStart = src.indexOf(marker);
-  if (blockStart === -1) {
-    console.error(`  ✗ Could not locate vocab block for: "${topic}"`);
-    continue;
-  }
-  // Within this block, find "ids":[
-  const idsMarker = src.indexOf('"ids":', blockStart);
-  if (idsMarker === -1) {
-    console.error(`  ✗ Could not find "ids" in vocab block for: "${topic}"`);
-    continue;
-  }
-  // Now find the opening bracket
-  const openIdx = src.indexOf('[', idsMarker);
-  // Find matching close
-  let depth = 0;
-  let closeIdx = -1;
-  for (let i = openIdx; i < src.length; i++) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') {
-      depth--;
-      if (depth === 0) { closeIdx = i; break; }
-    }
-  }
-  if (closeIdx === -1) {
-    console.error(`  ✗ Could not find closing bracket for vocab ids: "${topic}"`);
-    continue;
-  }
-  src = src.slice(0, openIdx) + JSON.stringify(vocabIds[topic]) + src.slice(closeIdx + 1);
-}
-
-// ── 4. Verify and write ───────────────────────────────────────────────────────
-
-if (src === original) {
+if (newSrc === src) {
   console.log('✓ _ID_MAP is already up to date — no changes needed.');
   process.exit(0);
 }
 
-fs.writeFileSync(progressPath, src, 'utf8');
+fs.writeFileSync(progressPath, newSrc, 'utf8');
 
-// Quick verification
-const mapMatch = src.match(/const _ID_MAP = ({[\s\S]*?});/);
-const _ID_MAP = JSON.parse(mapMatch[1]);
+// ── 3. Verify ─────────────────────────────────────────────────────────────────
 
+const written = JSON.parse(newSrc.match(/const _ID_MAP = (\{[\s\S]*?\});/)[1]);
 let allOk = true;
-for (const topic of phraseTopics) {
-  const ok = JSON.stringify(_ID_MAP.phrases[topic]) === JSON.stringify(phraseIds[topic]);
-  if (!ok) { allOk = false; console.error(`  ✗ phrases.${topic} mismatch after write`); }
+for (const pair of PAIRS) {
+  for (const topic of phraseTopics) {
+    if (JSON.stringify(written.phrases[pair][topic]) !== JSON.stringify(phrases[pair][topic])) {
+      allOk = false; console.error(`  ✗ phrases.${pair}.${topic} mismatch after write`);
+    }
+  }
 }
 for (const topic of vocabTopics) {
-  const ok = JSON.stringify(_ID_MAP.vocab[topic]?.ids) === JSON.stringify(vocabIds[topic]);
-  if (!ok) { allOk = false; console.error(`  ✗ vocab.${topic} mismatch after write`); }
+  if (JSON.stringify(written.vocab[topic].ids) !== JSON.stringify(vocab[topic].ids)) {
+    allOk = false; console.error(`  ✗ vocab.${topic} mismatch after write`);
+  }
 }
 
 if (allOk) {
-  const pCount = phraseTopics.reduce((s, t) => s + phraseIds[t].length, 0);
-  const vCount = vocabTopics.reduce((s, t) => s + vocabIds[t].length, 0);
-  console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs, ${vCount} vocab IDs across ${phraseTopics.length + vocabTopics.length} topics.`);
+  const pCount = PAIRS.reduce((s, p) => s + phraseTopics.reduce((a, t) => a + phrases[p][t].length, 0), 0);
+  const vCount = vocabTopics.reduce((s, t) => s + vocab[t].ids.length, 0);
+  console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs across ${PAIRS.length} pairs, ${vCount} vocab IDs.`);
 } else {
   console.error('❌ Verification failed — check output above.');
   process.exit(1);

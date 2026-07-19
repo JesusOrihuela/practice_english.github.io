@@ -183,29 +183,36 @@ function flattenAlts(data) {
  */
 const ALL_SOURCES = [];
 
-// ── English phrase sources (per-pair: es-en, target[0].text = English) ───────
-PHRASE_TOPICS.forEach(id => {
-  ALL_SOURCES.push({
-    id:         `es-en__${id}`,
-    jsonPath:   resolve(__dirname, `../shared/json/pairs/es-en/${id}.json`),
-    outDir:     resolve(__dirname, `../shared/audio/es-en/${id}`),
-    getItems:   data => data.phrases || [],
-    getText:    item => item.target?.[0]?.text || '',
-    getId:      item => item.id,
-    getIndex:   item => item.target?.[0]?.audioSlug || slugify(item.target?.[0]?.text || item.id),
-    voices:     VOICES_EN,
-    noManifest: true,
-  });
-  ALL_SOURCES.push({
-    id:         `es-en__${id}__alts`,
-    jsonPath:   resolve(__dirname, `../shared/json/pairs/es-en/${id}.json`),
-    outDir:     resolve(__dirname, `../shared/audio/es-en/${id}`),
-    getItems:   data => flattenAlts(data),
-    getText:    item => item.text,
-    getId:      item => item.id,
-    getIndex:   item => item.audioSlug,
-    voices:     VOICES_EN,
-    noManifest: true,
+// ── English phrase sources ───────────────────────────────────────────────────
+// English (Kokoro voices) is the target language only for these pairs. Add a
+// pair id here if a new pair whose target is English is introduced (e.g. fr-en);
+// no other change is needed.
+const EN_TARGET_PAIRS = ['es-en'];
+
+EN_TARGET_PAIRS.forEach(pair => {
+  PHRASE_TOPICS.forEach(id => {
+    ALL_SOURCES.push({
+      id:         `${pair}__${id}`,
+      jsonPath:   resolve(__dirname, `../shared/json/pairs/${pair}/${id}.json`),
+      outDir:     resolve(__dirname, `../shared/audio/${pair}/${id}`),
+      getItems:   data => data.phrases || [],
+      getText:    item => item.target?.[0]?.text || '',
+      getId:      item => item.id,
+      getIndex:   item => item.target?.[0]?.audioSlug || slugify(item.target?.[0]?.text || item.id),
+      voices:     VOICES_EN,
+      noManifest: true,
+    });
+    ALL_SOURCES.push({
+      id:         `${pair}__${id}__alts`,
+      jsonPath:   resolve(__dirname, `../shared/json/pairs/${pair}/${id}.json`),
+      outDir:     resolve(__dirname, `../shared/audio/${pair}/${id}`),
+      getItems:   data => flattenAlts(data),
+      getText:    item => item.text,
+      getId:      item => item.id,
+      getIndex:   item => item.audioSlug,
+      voices:     VOICES_EN,
+      noManifest: true,
+    });
   });
 });
 ALL_SOURCES.push({
@@ -245,7 +252,10 @@ for (const [langCode, voices] of Object.entries(LANG_VOICES)) {
   PHRASE_TOPICS.forEach(id => {
     ALL_SOURCES.push({
       id: `${id}${suffix}`,
-      jsonPath: resolve(__dirname, `../shared/json/pairs/es-en/${id}.json`),   // placeholder
+      // Inert stub — getItems returns [] so jsonPath is never read; it exists
+      // only so --topic matching and error messages stay helpful. The real
+      // generation for these languages is done by generate-audio-tgt.py.
+      jsonPath: resolve(__dirname, `../shared/json/pairs/en-${langCode}/${id}.json`),
       outDir:   resolve(__dirname, `../shared/audio/${id}`),
       getItems: () => [],
       getText:  () => '',
