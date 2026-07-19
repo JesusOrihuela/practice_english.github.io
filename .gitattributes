@@ -1,0 +1,11 @@
+# Normalize all text files to LF in the repository and working tree.
+# Prevents CRLF/LF churn across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Binary assets — never normalize (leave bytes untouched).
+*.wav binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
