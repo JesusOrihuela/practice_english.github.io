@@ -101,8 +101,8 @@ Adding a new language pair is data-only: create `shared/json/pairs/{pairId}/`, a
 
 ## License
 
-No license has been chosen yet, so standard copyright applies (all rights reserved) until one is added.
+Released under the [MIT License](LICENSE) — free to use, modify, and distribute with attribution.
 
 ---
 
-<sub>Built with vanilla web tech and on-device ML. Made with [Claude Code](https://claude.com/claude-code).</sub>
+<sub>Built with vanilla web tech and on-device ML.</sub>
