@@ -336,18 +336,28 @@
         // Validate Cache API before trusting the localStorage flag: if
         // transformers-cache was evicted, clear the stale flag so the
         // download panel shows on the next warmup.
-        if ('caches' in window) {
-          caches.open('transformers-cache')
-            .then(function (c) { return c.keys(); })
-            .then(function (keys) {
-              if (keys.length === 0) localStorage.removeItem('pe_stt_cached');
-              if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
-            })
-            .catch(function () {
-              if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
-            });
+        function _maybeStartSttWarmup() {
+          if ('caches' in window) {
+            caches.open('transformers-cache')
+              .then(function (c) { return c.keys(); })
+              .then(function (keys) {
+                if (keys.length === 0) localStorage.removeItem('pe_stt_cached');
+                if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+              })
+              .catch(function () {
+                if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+              });
+          } else {
+            if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+          }
+        }
+        // Defer the ~41 MB STT model preload until the page is interactive so it
+        // does not compete with first paint / LCP during the critical load window.
+        // The model still warms up in the background — just after the page is usable.
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(_maybeStartSttWarmup, { timeout: 4000 });
         } else {
-          if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+          window.addEventListener('load', function () { setTimeout(_maybeStartSttWarmup, 1500); });
         }
 
         if (localStorage.getItem(AppLangPair.storageKey('pe_onboarded'))) return;
