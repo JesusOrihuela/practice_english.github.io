@@ -75,7 +75,7 @@ const errors   = [];
 
 for (const pairId of PAIRS) {
   for (const topic of PHRASE_TOPICS) {
-    const jsonPath = resolve(JSON_DIR, pairId, `${topic}.json`);
+    const jsonPath = resolve(JSON_DIR, 'pairs', pairId, `${topic}.json`);
     if (!existsSync(jsonPath)) continue;
 
     let data;

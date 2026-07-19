@@ -190,7 +190,7 @@ def build_sources(lang_code):
     for topic in PHRASE_TOPICS:
         sources.append({
             'id':        f'{topic}{suffix}',
-            'json':      JSON / pair / f'{topic}.json',
+            'json':      JSON / 'pairs' / pair / f'{topic}.json',
             'out_dir':   AUDIO / pair / topic,
             'get_items': lambda d: d.get('phrases', []),
             'get_text':  lambda item: (item.get('target') or [{}])[0].get('text', ''),
@@ -204,7 +204,7 @@ def build_sources(lang_code):
     # General vocabulary — text = translations[lang_code] (vocab still shared)
     sources.append({
         'id':        f'vocab{suffix}',
-        'json':      JSON / 'words.json',
+        'json':      JSON / 'common' / 'vocab' / 'words.json',
         'out_dir':   AUDIO / 'vocab',
         'get_items': lambda d: d.get('words', []),
         'get_text':  lambda item, lc=lang_code: (
@@ -218,7 +218,7 @@ def build_sources(lang_code):
     for topic in VOCAB_TOPICS:
         sources.append({
             'id':        f'vocab_{topic}{suffix}',
-            'json':      JSON / f'words-{topic}.json',
+            'json':      JSON / 'common' / 'vocab' / f'words-{topic}.json',
             'out_dir':   AUDIO / f'vocab_{topic}',
             'get_items': lambda d: d.get('words', []),
             'get_text':  lambda item, lc=lang_code: (
@@ -232,7 +232,7 @@ def build_sources(lang_code):
     for topic in PHRASE_TOPICS:
         sources.append({
             'id':        f'{topic}{suffix}__alts',
-            'json':      JSON / pair / f'{topic}.json',
+            'json':      JSON / 'pairs' / pair / f'{topic}.json',
             'out_dir':   AUDIO / pair / topic,
             'get_items': lambda d: flatten_tgt_alts(d),
             'get_text':  lambda item: item.get('text', ''),

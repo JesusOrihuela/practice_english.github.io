@@ -9,7 +9,7 @@
  * USAGE (run from the tools/ directory):
  *   node audit.mjs               # full audit, including audio alignment
  *   node audit.mjs --quick       # skip audio alignment check (fast)
- *   node audit.mjs --file shared/json/es-en/greetings.json   # single file
+ *   node audit.mjs --file shared/json/pairs/es-en/greetings.json   # single file
  *
  * EXIT CODE: 0 = all clear, 1 = issues found.
  *
@@ -260,7 +260,7 @@ function checkRegionalTerms(text, file, id, field, rules, isAlternatives = false
 //         language-specific rules for source and target fields.
 
 function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
-  const file = `shared/json/${pairId}/${topic}.json`;
+  const file = `shared/json/pairs/${pairId}/${topic}.json`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -324,7 +324,7 @@ function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
 
 function auditVocabFile(topic, langRules) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  const file = `shared/json/${filename}`;
+  const file = `shared/json/common/vocab/${filename}`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -364,7 +364,7 @@ function auditVocabFile(topic, langRules) {
 // ─── GRAMMAR FILE AUDIT (per-pair path) ───────────────────────────────────────
 
 function auditGrammarFile(pairId, targetLang) {
-  const file = `shared/json/${pairId}/grammar-rules.json`;
+  const file = `shared/json/pairs/${pairId}/grammar-rules.json`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -427,7 +427,7 @@ function auditGrammarFile(pairId, targetLang) {
 // ─── PLACEMENT FILE AUDIT (per-pair) ─────────────────────────────────────────
 
 function auditPlacementFile(pairId) {
-  const file = `shared/json/${pairId}/placement.json`;
+  const file = `shared/json/pairs/${pairId}/placement.json`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -447,13 +447,13 @@ function auditPlacementFile(pairId) {
 // Checks ALL non-style forms (base + alts) in a single pass using audioSlug.
 
 function checkPhraseAudioAlignment(topic, pairId, targetLangCode) {
-  const jsonPath  = join(JSON_DIR, pairId, `${topic}.json`);
+  const jsonPath  = join(JSON_DIR, 'pairs', pairId, `${topic}.json`);
   const audioPath = join(AUDIO_DIR, pairId, topic);
   if (!existsSync(jsonPath) || !existsSync(audioPath)) return;
 
   const data    = JSON.parse(readFileSync(jsonPath, 'utf8'));
   const phrases = data.phrases ?? [];
-  const fileRef = `shared/json/${pairId}/${topic}.json`;
+  const fileRef = `shared/json/pairs/${pairId}/${topic}.json`;
 
   const leaderVoice = LANG_VOICE_LEADERS[targetLangCode];
   if (!leaderVoice) return;
@@ -500,13 +500,13 @@ function checkVocabAudioAlignment(topic) {
   const jsonFile    = topic === 'general' ? 'words.json' : `words-${topic}.json`;
   const audioSubdir = topic === 'general' ? 'vocab' : `vocab_${topic}`;
 
-  const jsonPath  = join(JSON_DIR, jsonFile);
+  const jsonPath  = join(JSON_DIR, 'common', 'vocab', jsonFile);
   const audioPath = join(AUDIO_DIR, audioSubdir);
   if (!existsSync(jsonPath) || !existsSync(audioPath)) return;
 
   const data    = JSON.parse(readFileSync(jsonPath, 'utf8'));
   const words   = data.words ?? [];
-  const fileRef = `shared/json/${jsonFile}`;
+  const fileRef = `shared/json/common/vocab/${jsonFile}`;
 
   for (const [langCode, leaderVoice] of Object.entries(LANG_VOICE_LEADERS)) {
     let found = 0;
@@ -537,7 +537,7 @@ const pairIds = PAIRS.map(p => p.id);
 
 if (fileArg) {
   // ── Single-file mode (used by the Claude Code PostToolUse hook) ──
-  // Detect pair from path (e.g. shared/json/es-en/greetings.json → 'es-en')
+  // Detect pair from path (e.g. shared/json/pairs/es-en/greetings.json → 'es-en')
   const normalised = fileArg.replace(/\\/g, '/');
   const pathParts  = normalised.split('/');
   const base       = basename(fileArg);

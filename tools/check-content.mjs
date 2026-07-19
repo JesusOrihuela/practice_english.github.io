@@ -52,7 +52,7 @@ function flag(pair, topic, id, field, rule, msg) {
 
 for (const pair of PAIRS) {
   for (const topic of TOPICS) {
-    const filepath = join(BASE, pair, `${topic}.json`);
+    const filepath = join(BASE, 'pairs', pair, `${topic}.json`);
     let data;
     try {
       data = JSON.parse(readFileSync(filepath, 'utf8'));

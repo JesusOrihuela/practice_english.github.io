@@ -352,10 +352,10 @@
 
         if (localStorage.getItem(AppLangPair.storageKey('pe_onboarded'))) return;
 
-        // ── Placement questions (from shared/json/placement-questions.json) ──
+        // ── Placement questions (from shared/json/common/placement-questions.json) ──
         // To add a new language pair: add a key matching the pair id in the JSON.
         var QUESTIONS = null;
-        fetch('shared/json/placement-questions.json')
+        fetch('shared/json/common/placement-questions.json')
           .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
           .then(function(data) {
             var pairId = AppLangPair.getActive().id;

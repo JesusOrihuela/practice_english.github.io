@@ -268,7 +268,7 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
   for (const src of sources) {
     try {
       if (src.type === 'vocab') {
-        const data = await fetch('../shared/json/words.json').then(r => r.json());
+        const data = await fetch('../shared/json/common/vocab/words.json').then(r => r.json());
         sourceCounts[src.id] = (data.words || []).length;
       } else {
         const data = await fetch('../shared/json/' + src.id + '.json').then(r => r.json());
@@ -289,7 +289,7 @@ document.getElementById('btn-generate').addEventListener('click', async () => {
     let texts;
     try {
       if (src.type === 'vocab') {
-        const data = await fetch('../shared/json/words.json').then(r => r.json());
+        const data = await fetch('../shared/json/common/vocab/words.json').then(r => r.json());
         texts = (data.words || []).map(w => w.word);
       } else {
         const data = await fetch('../shared/json/' + src.id + '.json').then(r => r.json());

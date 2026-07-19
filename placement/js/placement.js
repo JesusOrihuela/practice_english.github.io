@@ -5,7 +5,7 @@
    estimate CEFR bands need just ~10 well-selected items.
    ============================================================ */
 
-/* ---- Questions (loaded from shared/json/placement-questions.json) ----
+/* ---- Questions (loaded via AppData.get('placement') → shared/json/pairs/{pairId}/placement.json) ----
    Ordered A1 → C2 (2 per band, B1/B2 have 3). Correct answer index = .answer
    To add a new language pair: add a key matching the pair id in the JSON file.
    ---------------------------------------------------------------- */

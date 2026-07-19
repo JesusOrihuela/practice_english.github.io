@@ -15,15 +15,21 @@ const AppData = (() => {
 
   // IDs that are shared across all pairs (no pair prefix needed)
   const _SHARED = /^(word-equivalents|words)($|[-_])/;
+  // Vocabulary lives under common/vocab/; other shared files under common/
+  const _VOCAB  = /^words($|[-_])/;
 
   function _pairId() {
     return (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().id : 'es-en';
   }
 
-  // Build URL: shared files stay at root; pair-specific files go under {pairId}/
+  // Build URL:
+  //   words*            → common/vocab/   (shared bilingual vocabulary)
+  //   word-equivalents  → common/         (shared reference)
+  //   everything else   → pairs/{pairId}/ (pair-specific phrases, grammar, placement)
   function _url(id) {
-    if (_SHARED.test(id)) return _BASE + id + '.json';
-    return _BASE + _pairId() + '/' + id + '.json';
+    if (_VOCAB.test(id))  return _BASE + 'common/vocab/' + id + '.json';
+    if (_SHARED.test(id)) return _BASE + 'common/' + id + '.json';
+    return _BASE + 'pairs/' + _pairId() + '/' + id + '.json';
   }
 
   // Cache key includes pair for pair-specific files to prevent cross-pair collisions

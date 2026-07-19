@@ -31,9 +31,12 @@ const vocabTopics = [
 
 // ── 1. Extract IDs from JSON files ───────────────────────────────────────────
 
+// Phrase IDs are read from the es-en pair (the canonical set for _ID_MAP).
+// NOTE: pre-existing limitation — _ID_MAP is single-pair; per-pair phrase IDs
+// may diverge under content independence. Out of scope for the folder reorg.
 const phraseIds = {};
 for (const topic of phraseTopics) {
-  const filePath = path.join(root, 'shared', 'json', `${topic}.json`);
+  const filePath = path.join(root, 'shared', 'json', 'pairs', 'es-en', `${topic}.json`);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const items = data.phrases || data;
   phraseIds[topic] = items.map(p => p.id);
@@ -42,7 +45,7 @@ for (const topic of phraseTopics) {
 const vocabIds = {};
 for (const topic of vocabTopics) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  const filePath = path.join(root, 'shared', 'json', filename);
+  const filePath = path.join(root, 'shared', 'json', 'common', 'vocab', filename);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const items = data.words || data;
   vocabIds[topic] = items.map(w => w.id);
