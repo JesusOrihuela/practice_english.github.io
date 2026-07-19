@@ -1,0 +1,45 @@
+name: Content checks
+
+# Validates content quality on every push and pull request to main.
+# Runs the same audits used locally (check-content + audit) so broken
+# schema, anglicisms, punctuation, ID collisions, over-long slugs, etc.
+# are caught before they reach the published site.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: content-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      # Sparse checkout: the validators only read JSON + tool scripts, so we
+      # skip the ~400 MB of audio for a fast, cheap run.
+      - name: Checkout (JSON + tools only)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            shared/json
+            tools
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Both scripts use only Node built-ins — no npm install needed.
+      - name: Content rule checks (check-content.mjs)
+        run: node tools/check-content.mjs
+
+      - name: Content audit (audit.mjs --quick)
+        run: node tools/audit.mjs --quick
