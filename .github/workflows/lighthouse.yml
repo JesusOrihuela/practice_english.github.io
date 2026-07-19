@@ -22,6 +22,12 @@ jobs:
       github.event.deployment_status.environment == 'github-pages'
     runs-on: ubuntu-latest
     steps:
+      # Lighthouse audits the live URL, but LHCI needs a git checkout to read
+      # the commit hash it tags the report with (deployment_status runs don't
+      # check out by default). Shallow is enough.
+      - name: Checkout (git context for the report)
+        uses: actions/checkout@v4
+
       - name: Run Lighthouse (report-only)
         uses: treosh/lighthouse-ci-action@v12
         with:
