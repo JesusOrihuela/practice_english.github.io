@@ -287,19 +287,17 @@
         </div>
     </footer>
 
-    <script defer src="shared/js/flags.js"></script>
-    <script defer src="shared/js/cefr.js"></script>
-    <script defer src="shared/js/lang-pair.js"></script>
-    <script defer src="shared/js/proficiency.js"></script>
-    <script defer src="shared/js/topics.js"></script>
-    <script defer src="lang/ui.js"></script>
-    <script defer src="lang/target/en.js"></script>
-    <script defer src="shared/js/lang.js"></script>
+    <script src="shared/js/flags.js"></script>
+    <script src="shared/js/cefr.js"></script>
+    <script src="shared/js/lang-pair.js"></script>
+    <script src="shared/js/proficiency.js"></script>
+    <script src="shared/js/topics.js"></script>
+    <script src="lang/ui.js"></script>
+    <script src="lang/target/en.js"></script>
+    <script src="shared/js/lang.js"></script>
     <script>
       /* ── Pair Selection + Onboarding Modal + Embedded Placement Quiz ── */
-      /* Runs on DOMContentLoaded so the deferred scripts above (lang, pair,
-         etc.) are ready and nothing blocks first paint / LCP. */
-      document.addEventListener('DOMContentLoaded', function () {
+      (function () {
 
         // ── Group 0: Show pair picker on very first visit ─────────────
         if (!localStorage.getItem('pe_active_pair')) {
@@ -728,19 +726,18 @@
           var firstCard = picker.querySelector('.lp-picker-card');
           if (firstCard) setTimeout(function () { firstCard.focus(); }, 50);
         }
-      });
+      })();
     </script>
-    <script defer src="shared/js/progress.js"></script>
-    <script defer src="shared/js/topic-data.js"></script>
-    <script defer src="shared/js/path.js"></script>
-    <script defer src="shared/js/path-session.js"></script>
-    <script defer src="shared/js/milestones.js"></script>
-    <script defer src="shared/js/notifications.js"></script>
-    <script defer src="index/js/index.js"></script>
-    <script defer src="shared/js/network-status.js"></script>
-    <script defer src="shared/js/theme.js"></script>
+    <script src="shared/js/progress.js"></script>
+    <script src="shared/js/topic-data.js"></script>
+    <script src="shared/js/path.js"></script>
+    <script src="shared/js/path-session.js"></script>
+    <script src="shared/js/milestones.js"></script>
+    <script src="shared/js/notifications.js"></script>
+    <script src="index/js/index.js"></script>
+    <script src="shared/js/network-status.js"></script>
+    <script src="shared/js/theme.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js')
           .then(reg => {
@@ -759,7 +756,6 @@
         // Fire daily reminder if conditions are met (once per day, after configured time)
         if (window.NotificationSystem) window.NotificationSystem.checkAndNotify();
       }
-      });
     </script>
 </body>
 
