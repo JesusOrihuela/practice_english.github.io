@@ -16,11 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Load the font stylesheet without blocking render: fetch it early (preload),
          apply it as print (non-blocking) then switch to all on load. FCP/LCP no
-         longer wait on the font request; text renders in the fallback and swaps
-         (display=swap). <noscript> keeps it working without JS. -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"></noscript>
+         longer wait on the font request. display=optional means the browser uses
+         the fallback and does NOT swap if Raleway isn't ready immediately, so the
+         async load causes no layout shift (CLS). Raleway shows once cached (repeat
+         visits). <noscript> keeps it working without JS. -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional"></noscript>
     <link rel="stylesheet" href="index/css/generalities.css">
     <link rel="stylesheet" href="index/css/index.css">
     <link rel="icon" href="index/img/ico/favicon.ico">
