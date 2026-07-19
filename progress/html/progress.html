@@ -23,48 +23,56 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PracticeEng">
+
+    <!-- Language scripts: must be in <head> so LangUI is set before body renders -->
+    <script src="../../shared/js/lang-pair.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
+
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_to_main">Ir al contenido principal</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
         </a>
     </header>
 
-    <nav class="mode-switcher" aria-label="Modos de práctica">
+    <nav class="mode-switcher" aria-label="Modos de práctica" data-i18n-aria="nav_modes_aria">
         <span class="mode-streak" id="mode-streak"></span>
-        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio">🏠</a>
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio" data-i18n-aria="nav_home_aria">🏠</a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">Mi Aprendizaje</span></a>
+        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label" data-i18n="nav_my_learning"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Pronunciación</span></a>
-        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictado</span></a>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label" data-i18n="nav_speaking"></span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label" data-i18n="nav_dictation"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
-        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Traducción</span></a>
-        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Secuencia</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label" data-i18n="nav_cloze"></span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label" data-i18n="nav_translation"></span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label" data-i18n="nav_scramble"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulario</span></a>
-        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label" data-i18n="nav_vocabulary"></span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label" data-i18n="nav_quiz"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Gramática</span></a>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label" data-i18n="nav_grammar"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn active" data-nav="settings">⚙️</a>
+    <script>(function(){if(typeof AppLang==='undefined')return;document.querySelectorAll('.mode-switcher .btn-label[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n'),t=AppLang.t(k);if(t!==k)e.textContent=t;});}());</script>
     </nav>
 
     <main class="progress-page" id="main-content">
 
         <!-- Page Header -->
         <div class="prog-header">
-            <h1>Mi <span>Perfil</span></h1>
-            <p>Tus ejercicios y dominio de un vistazo.</p>
+            <h1 data-i18n="progress_page_h1">Mi <span>Perfil</span></h1>
+            <p data-i18n="progress_page_subtitle">Tus ejercicios y dominio de un vistazo.</p>
         </div>
 
         <!-- Language Pair Selector -->
         <div class="section-block" id="lang-pair">
-            <h2 class="section-title">🌐 Idioma</h2>
+            <h2 class="section-title" data-i18n="progress_lang_section">🌐 Idioma</h2>
             <div id="lang-pair-grid" class="lang-pair-grid"><!-- JS --></div>
         </div>
 
@@ -74,64 +82,91 @@
                 <div class="stat-icon">🔥</div>
                 <div class="stat-body">
                     <div class="stat-value" id="stat-streak">0</div>
-                    <div class="stat-label">Días de Racha <span class="stat-best" id="stat-best-streak"></span></div>
+                    <div class="stat-label"><span data-i18n="stat_streak_days">Días de Racha</span> <span class="stat-best" id="stat-best-streak"></span></div>
                 </div>
             </div>
             <div class="stat-card">
                 <div class="stat-icon">⭐</div>
                 <div class="stat-body">
                     <div class="stat-value" id="stat-mastered">0</div>
-                    <div class="stat-label">Tarjetas Dominadas</div>
+                    <div class="stat-label" data-i18n="stat_mastered_cards">Tarjetas Dominadas</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🗺️</div>
+                <div class="stat-body">
+                    <div class="stat-value" id="stat-topics">0</div>
+                    <div class="stat-label" data-i18n="stat_lessons_started">Lecciones Iniciadas</div>
                 </div>
             </div>
         </div>
 
         <!-- Exercise Overview -->
         <div class="section-block" id="exercises-block">
-            <h2 class="section-title">📊 Resumen de Ejercicios</h2>
+            <h2 class="section-title" data-i18n="progress_exercises_section">📊 Resumen de Ejercicios</h2>
 <div class="ex-matrix-wrap">
-                <div class="ex-matrix" id="ex-matrix" role="table" aria-label="Exercise progress by topic"><!-- JS --></div>
+                <div class="ex-matrix" id="ex-matrix" role="table" aria-label="Exercise progress by topic" data-i18n-aria="exercise_matrix_aria"><!-- JS --></div>
             </div>
         </div>
 
         <!-- Topic Preferences -->
         <div class="section-block" id="prefs-block">
-            <h2 class="section-title">🎯 Temas de Interés</h2>
-            <p class="section-subtitle">Los temas que elijas aparecerán con más frecuencia en tu ruta.</p>
+            <h2 class="section-title" data-i18n="progress_topics_section">🎯 Temas de Interés</h2>
+            <p class="section-subtitle" data-i18n="progress_topics_sub">Los temas que elijas aparecerán con más frecuencia en tu ruta.</p>
             <div class="prog-bubbles" id="prog-prefs-bubbles"></div>
         </div>
 
         <!-- Activity Heatmap (last 60 days) -->
         <div class="section-block">
-            <h2 class="section-title">Actividad — Últimos 60 Días</h2>
+            <h2 class="section-title" data-i18n="progress_heatmap_section">Actividad — Últimos 60 Días</h2>
             <div class="heatmap" id="heatmap"></div>
             <div class="heatmap-legend">
-                <span>Menos</span>
+                <span data-i18n="heatmap_less">Menos</span>
                 <div class="legend-dot l0"></div>
                 <div class="legend-dot l1"></div>
                 <div class="legend-dot l2"></div>
                 <div class="legend-dot l3"></div>
-                <span>Más</span>
+                <span data-i18n="heatmap_more">Más</span>
             </div>
         </div>
 
         <!-- Achievements -->
         <div class="section-block">
-            <h2 class="section-title">🏅 Logros</h2>
+            <h2 class="section-title" data-i18n="progress_achievements_section">🏅 Logros</h2>
             <div id="milestones-grid" class="milestones-grid">
                 <!-- Filled by JS -->
             </div>
         </div>
 
+        <!-- Backup -->
+        <div class="section-block" id="backup-block">
+            <h2 class="section-title" data-i18n="progress_backup_section">💾 Respaldo de Progreso</h2>
+            <p class="section-subtitle" data-i18n="progress_backup_sub">Guarda una copia de todo tu avance para no perderlo si el navegador limpia el almacenamiento.</p>
+            <div class="backup-actions">
+                <button class="backup-btn backup-btn--export" id="backup-export-btn" type="button">
+                    <span data-i18n="backup_export_btn">Exportar progreso</span>
+                </button>
+                <label class="backup-btn backup-btn--import" for="backup-import-input" role="button" tabindex="0">
+                    <span data-i18n="backup_import_btn">Importar backup</span>
+                </label>
+                <input type="file" id="backup-import-input" accept=".json" class="visually-hidden" aria-label="Importar archivo de backup">
+            </div>
+            <div class="backup-status" id="backup-status" role="status" aria-live="polite"></div>
+            <div class="backup-instructions">
+                <p data-i18n="backup_instructions_export">⬇️  Descarga un archivo .json con todo tu progreso.</p>
+                <p data-i18n="backup_instructions_import">⬆️  Para restaurar, selecciona el archivo .json que descargaste anteriormente.</p>
+            </div>
+        </div>
+
         <!-- Reminders -->
         <div class="section-block" id="notif-block">
-            <h2 class="section-title">🔔 Recordatorios</h2>
-            <p class="section-subtitle">Recordatorio diario cuando tu racha esté en riesgo.</p>
+            <h2 class="section-title" data-i18n="progress_reminders_section">🔔 Recordatorios</h2>
+            <p class="section-subtitle" data-i18n="progress_reminders_sub">Recordatorio diario cuando tu racha esté en riesgo.</p>
             <div id="notif-status" class="notif-status" role="status" aria-live="polite"></div>
             <div class="notif-controls">
                 <button class="notif-toggle" id="notif-toggle" aria-pressed="false">🔕 Activar recordatorios</button>
                 <div class="notif-time-row hidden" id="notif-time-row">
-                    <label for="notif-time" class="notif-time-label">Recuérdame a las</label>
+                    <label for="notif-time" class="notif-time-label" data-i18n="notif_time_label">Recuérdame a las</label>
                     <input type="time" id="notif-time" class="notif-time-input" value="20:00">
                 </div>
             </div>
@@ -151,16 +186,13 @@
 
     <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/cefr.js"></script>
-    <script src="../../shared/js/lang-pair.js"></script>
     <script src="../../shared/js/proficiency.js"></script>
     <script src="../../shared/js/progress.js"></script>
-    <script src="../../lang/ui.js"></script>
-    <script src="../../lang/target/en.js"></script>
-    <script src="../../shared/js/lang.js"></script>
     <script src="../../shared/js/path.js"></script>
     <script src="../../shared/js/topics.js"></script>
     <script src="../../shared/js/topic-data.js"></script>
     <script src="../../shared/js/notifications.js"></script>
+    <script src="../../shared/js/backup-reminder.js"></script>
     <script src="../js/progress-page.js"></script>
     <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>

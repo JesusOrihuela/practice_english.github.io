@@ -226,13 +226,13 @@
 
             <!-- ── Step 0: How it works ── -->
             <div class="ob-step" id="ob-step-0">
-                <div class="ob-hero-icon">🧠</div>
-                <h2 class="ob-title" id="ob-title">Aprende inglés con ciencia</h2>
+                <div class="ob-hero-icon">🗣️</div>
+                <h2 class="ob-title" id="ob-title">Tu inglés, en conversaciones reales</h2>
                 <p class="ob-body">
-                    Cada actividad usa <strong>repetición espaciada (SRS)</strong>: el sistema recuerda qué frases te resultan más difíciles y las muestra justo antes de que las olvides.<br><br>
-                    10 minutos al día con SRS superan 1 hora de estudio sin él.
+                    Practica pronunciación, escritura y comprensión con frases de la vida diaria — restaurantes, viajes, trabajo y más.<br><br>
+                    El sistema aprende contigo: te muestra exactamente lo que necesitas en el momento justo.
                 </p>
-                <button class="ob-primary-btn" id="ob-next-0">Encontrar mi nivel →</button>
+                <button class="ob-primary-btn" id="ob-next-0">Empezar →</button>
             </div>
 
             <!-- ── Step 1: Topic Preferences ── -->
@@ -292,48 +292,109 @@
     <script src="shared/js/lang-pair.js"></script>
     <script src="shared/js/proficiency.js"></script>
     <script src="shared/js/topics.js"></script>
+    <script src="lang/ui.js"></script>
+    <script src="lang/target/en.js"></script>
+    <script src="shared/js/lang.js"></script>
     <script>
-      /* ── Onboarding Modal + Embedded Placement Quiz ── */
+      /* ── Pair Selection + Onboarding Modal + Embedded Placement Quiz ── */
       (function () {
+
+        // ── Group 0: Show pair picker on very first visit ─────────────
+        if (!localStorage.getItem('pe_active_pair')) {
+          _initMainPageI18n(); // translate background using navigator.language
+          _showPairPicker();
+          return;
+        }
+
+        // ── Translate main page content for English-source pairs ──────
+        _initMainPageI18n();
+
+        // ── Background model preload ────────────────────────────────
+        // Start caching TTS + STT models as soon as the pair is confirmed.
+        // Guards on localStorage keys set by AppDownloadPanel.complete() — no
+        // Worker is created on repeat visits when models are already cached.
+        if (typeof AppTTS !== 'undefined' && !localStorage.getItem('pe_tts_cached')) {
+          AppTTS.warmup();
+        }
+        function _startSttWarmup() {
+          try {
+            var _sttDp = (typeof AppDownloadPanel !== 'undefined' && typeof AppLang !== 'undefined')
+              ? AppDownloadPanel.create(AppLang.t('stt_loading'), AppLang.t('stt_ready'), 'pe_stt_cached')
+              : null;
+            var _sttWu = new Worker('shared/js/stt-worker.js', { type: 'module' });
+            _sttWu.onmessage = function (e) {
+              if (!e.data) return;
+              if (e.data.type === 'progress' && e.data.progress != null && _sttDp) _sttDp.update(e.data.progress);
+              if (e.data.type === 'ready') {
+                if (_sttDp) _sttDp.complete(); else localStorage.setItem('pe_stt_cached', '1');
+                _sttWu.terminate();
+              }
+            };
+            _sttWu.onerror = function () { if (_sttDp) _sttDp.hide(); _sttWu.terminate(); };
+          } catch (e) {}
+        }
+        // Validate Cache API before trusting the localStorage flag: if
+        // transformers-cache was evicted, clear the stale flag so the
+        // download panel shows on the next warmup.
+        if ('caches' in window) {
+          caches.open('transformers-cache')
+            .then(function (c) { return c.keys(); })
+            .then(function (keys) {
+              if (keys.length === 0) localStorage.removeItem('pe_stt_cached');
+              if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+            })
+            .catch(function () {
+              if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+            });
+        } else {
+          if (!localStorage.getItem('pe_stt_cached')) _startSttWarmup();
+        }
+
         if (localStorage.getItem(AppLangPair.storageKey('pe_onboarded'))) return;
 
-        var QUESTIONS = [
-          { level: 'A1', q: '¿Qué significa "Good morning"?',
-            options: ['Buenos días', 'Buenas noches', 'Buenas tardes', 'Hasta luego'], answer: 0 },
-          { level: 'A1', q: 'Completa: "She ___ a doctor."',
-            options: ['are', 'am', 'be', 'is'], answer: 3 },
-          { level: 'A2', q: '¿Qué significa "grateful"?',
-            options: ['enojado', 'cansado', 'agradecido', 'confundido'], answer: 2 },
-          { level: 'A2', q: 'Completa: "We ___ dinner together last night."',
-            options: ['eats', 'eat', 'eating', 'had'], answer: 3 },
-          { level: 'B1', q: '¿Qué significa "efficient"?',
-            options: ['lento', 'antiguo', 'eficiente', 'confuso'], answer: 2 },
-          { level: 'B1', q: 'Completa: "I have never ___ sushi before."',
-            options: ['ate', 'eat', 'eating', 'tried'], answer: 3 },
-          { level: 'B1', q: '¿Qué significa "to elaborate on an idea"?',
-            options: ['ignorarla', 'simplificarla', 'desarrollarla con más detalle', 'repetirla'], answer: 2 },
-          { level: 'B2', q: 'Completa: "If I ___ more free time, I would travel more."',
-            options: ['have', 'had', 'has', 'having'], answer: 1 },
-          { level: 'B2', q: '¿Qué significa "to advocate for a cause"?',
-            options: ['criticar públicamente', 'defender activamente', 'ignorar completamente', 'estudiar en privado'], answer: 1 },
-          { level: 'B2', q: 'Elige la oración gramaticalmente correcta:',
-            options: ['"She suggested that he studies more."', '"She suggested that he would study more."',
-                      '"She suggested that he study more."', '"She suggested that he studied more."'], answer: 2 },
-          { level: 'C1', q: 'Completa: "Not only ___ the deadline, but the team also lost the client."',
-            options: ['they missed', 'did they miss', 'they did miss', 'missed they'], answer: 1 },
-          { level: 'C1', q: '¿Qué significa "to corroborate a statement"?',
-            options: ['contradecirla con evidencia', 'confirmarla con evidencia adicional', 'ignorarla por completo', 'reformularla en términos simples'], answer: 1 },
-          { level: 'C2', q: 'Elige la oración gramaticalmente correcta en inglés formal:',
-            options: ['"It is essential that he submits the report today."', '"It is essential that he submit the report today."',
-                      '"It is essential that he would submit the report today."', '"It is essential that he submitted the report today."'], answer: 1 },
-          { level: 'C2', q: '¿Qué significa "to prevaricate"?',
-            options: ['hablar con claridad y precisión', 'evitar decir la verdad directamente', 'anticiparse a las consecuencias', 'contradecirse de manera repetida'], answer: 1 },
-        ];
+        // ── Placement questions (from shared/json/placement-questions.json) ──
+        // To add a new language pair: add a key matching the pair id in the JSON.
+        var QUESTIONS = null;
+        fetch('shared/json/placement-questions.json')
+          .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
+          .then(function(data) {
+            var pairId = AppLangPair.getActive().id;
+            QUESTIONS = data[pairId] || data['es-en'] || [];
+          })
+          .catch(function() { QUESTIONS = []; });
 
         var overlay = document.getElementById('ob-overlay');
         var quizIdx = 0, quizScore = 0, quizAnswered = false;
 
         function show() {
+          var step0Title = document.querySelector('#ob-step-0 .ob-title');
+          var step0Body  = document.querySelector('#ob-step-0 .ob-body');
+          var step0Btn   = document.getElementById('ob-next-0');
+          if (step0Title) step0Title.textContent = AppLang.t('ob_title_how', { target: AppLangPair.getActive().target.localName, targetName: AppLangPair.getActive().target.name });
+          if (step0Body)  step0Body.innerHTML    = AppLang.t('ob_body_how');
+          if (step0Btn)   step0Btn.textContent   = AppLang.t('ob_btn_find_level');
+          var step1Title = document.querySelector('#ob-step-1 .ob-title');
+          var step1Body  = document.querySelector('#ob-step-1 .ob-body');
+          var step1Btn   = document.getElementById('ob-topics-done');
+          if (step1Title) step1Title.textContent = AppLang.t('ob_title_topics');
+          if (step1Body)  step1Body.textContent  = AppLang.t('ob_body_topics');
+          if (step1Btn)   step1Btn.textContent   = AppLang.t('ob_btn_topics_done');
+          var skipBtn = document.getElementById('ob-quiz-skip');
+          if (skipBtn) skipBtn.textContent = AppLang.t('ob_quiz_skip');
+          var manualLabel = document.querySelector('.ob-quiz-manual-label');
+          if (manualLabel) manualLabel.textContent = AppLang.t('ob_manual_label');
+          // Manual level buttons
+          document.querySelectorAll('.ob-manual-btn').forEach(function(btn) {
+            var lvl = btn.getAttribute('data-level');
+            var _LEVEL_KEYS = { A1: 'manual_level_beginner', B1: 'manual_level_intermediate', C1: 'manual_level_advanced' };
+            if (_LEVEL_KEYS[lvl]) btn.innerHTML = AppLang.t(_LEVEL_KEYS[lvl]);
+          });
+          var step3Title = document.querySelector('#ob-step-3 .ob-title');
+          var goPathBtn  = document.getElementById('ob-go-path');
+          var goFreeBtn  = document.getElementById('ob-go-free');
+          if (step3Title) step3Title.textContent = AppLang.t('ob_title_done');
+          if (goPathBtn)  goPathBtn.textContent  = AppLang.t('ob_btn_go_path');
+          if (goFreeBtn)  goFreeBtn.textContent  = AppLang.t('ob_btn_explore');
           overlay.classList.remove('hidden');
           document.getElementById('ob-close').focus();
         }
@@ -362,14 +423,19 @@
           return 'C2';
         }
 
-        var LEVEL_LABEL = { A1: 'A1 — Principiante', A2: 'A2 — Elemental', B1: 'B1 — Intermedio', B2: 'B2 — Avanzado', C1: 'C1 — Competente', C2: 'C2 — Maestría' };
+        var _isEnSrc = AppLangPair.getActive().source.code === 'en';
+        var LEVEL_LABEL = _isEnSrc
+          ? { A1: 'A1 — Beginner', A2: 'A2 — Elementary', B1: 'B1 — Intermediate', B2: 'B2 — Upper Intermediate', C1: 'C1 — Advanced', C2: 'C2 — Mastery' }
+          : { A1: 'A1 — Principiante', A2: 'A2 — Elemental', B1: 'B1 — Intermedio', B2: 'B2 — Avanzado', C1: 'C1 — Competente', C2: 'C2 — Maestría' };
 
         function _finishPlacement(level) {
           localStorage.setItem(AppLangPair.storageKey('pe_placement_done'), 'done');
           localStorage.setItem(AppLangPair.storageKey('pe_placement_level'), level);
           if (typeof AppProficiency !== 'undefined') AppProficiency.initFromManual(level);
           var msg = document.getElementById('ob-welcome-msg');
-          if (msg) msg.textContent = 'Tu nivel es ' + (LEVEL_LABEL[level] || level) + '. Tu ruta personalizada está lista — empieza la práctica guiada o explora libremente.';
+          if (msg) {
+            msg.textContent = AppLang.t('ob_welcome_msg', { level: LEVEL_LABEL[level] || level });
+          }
           goStep(3);
         }
 
@@ -378,7 +444,7 @@
           var pct = (i / QUESTIONS.length) * 100;
           document.getElementById('ob-quiz-fill').style.width = pct + '%';
           document.getElementById('ob-quiz-bar').setAttribute('aria-valuenow', Math.round(pct));
-          document.getElementById('ob-quiz-counter').textContent = 'Pregunta ' + (i + 1) + ' de ' + QUESTIONS.length;
+          document.getElementById('ob-quiz-counter').textContent = AppLang.t('placement_counter', { n: i + 1, total: QUESTIONS.length });
           document.getElementById('ob-quiz-lvbadge').textContent = q.level;
           document.getElementById('ob-quiz-q').textContent = q.q;
           var optsEl = document.getElementById('ob-quiz-opts');
@@ -435,7 +501,8 @@
             var btn = document.createElement('button');
             btn.className = 'ob-bubble';
             btn.type = 'button';
-            btn.textContent = t.emoji + ' ' + t.label;
+            var _label = (_isEnSrc && t.labelEn) ? t.labelEn : t.label;
+            btn.textContent = t.emoji + ' ' + _label;
             btn.dataset.id = t.id;
             btn.addEventListener('click', function () { btn.classList.toggle('ob-bubble--on'); });
             container.appendChild(btn);
@@ -469,12 +536,189 @@
         document.getElementById('ob-go-free').addEventListener('click', dismiss);
 
         setTimeout(show, 700);
+
+        // ── Main page i18n (translates static HTML for non-es source) ──
+        function _initMainPageI18n() {
+          if (typeof AppLang === 'undefined') return;
+          // Determine source language: active pair > navigator.language > 'en'
+          var _srcCode = localStorage.getItem('pe_active_pair') && typeof AppLangPair !== 'undefined'
+            ? AppLangPair.getActive().source.code
+            : (navigator.language || 'en').toLowerCase().split('-')[0];
+          if (_srcCode === 'es') return; // already Spanish — nothing to translate
+
+          function _set(sel, key, html) {
+            var el = document.querySelector(sel);
+            if (!el) return;
+            var txt = AppLang.t(key);
+            if (txt === key) return; // key not found — skip
+            if (html) el.innerHTML = txt; else el.textContent = txt;
+          }
+
+          // Hero section
+          var _hero = document.querySelector('.hero-title');
+          if (_hero) _hero.innerHTML = 'Ready to master<br><span class="highlight">a new language?</span>';
+          _set('.hero-subtitle', 'index_hero_sub');
+          var _statLabels = document.querySelectorAll('.hero-stats .stat .stat-label');
+          var _statKeys = ['index_stat_activities', 'index_stat_phrases', 'index_stat_free'];
+          _statLabels.forEach(function (el, i) {
+            if (_statKeys[i]) { var t = AppLang.t(_statKeys[i]); if (t !== _statKeys[i]) el.textContent = t; }
+          });
+          // "Gratis" is in .stat-number (text, not a number)
+          var _freeNum = document.querySelector('.hero-stats .stat:last-child .stat-number');
+          if (_freeNum) { var t = AppLang.t('index_stat_free_num'); if (t !== 'index_stat_free_num') _freeNum.textContent = t; }
+
+          // Learning path section
+          _set('.path-heading',    'index_path_heading');
+          _set('.path-subheading', 'index_path_sub');
+
+          // Activities section
+          _set('.activities-heading',    'index_activities_heading');
+          _set('.activities-subheading', 'index_activities_sub');
+
+          // Group badges (by first link href inside each group)
+          var _GROUP_MAP = {
+            'speaking':    'index_group_speaking',
+            'cloze':       'index_group_sentences',
+            'vocabulary':  'index_group_vocab',
+            'grammar':     'index_group_grammar',
+          };
+          document.querySelectorAll('.activity-group').forEach(function (group) {
+            var firstLink = group.querySelector('.feature-card-link');
+            if (!firstLink) return;
+            var m = (firstLink.getAttribute('href') || '').match(/([\w-]+)\/html\//);
+            if (!m) return;
+            var badge = group.querySelector('.group-badge');
+            if (badge) {
+              var txt = AppLang.t(_GROUP_MAP[m[1]] || '');
+              if (txt && txt !== (_GROUP_MAP[m[1]] || '')) badge.textContent = txt;
+            }
+          });
+
+          // Activity cards: h3, benefit tagline, description
+          document.querySelectorAll('.feature-card-link').forEach(function (link) {
+            var m = (link.getAttribute('href') || '').match(/([\w-]+)\/html\//);
+            if (!m) return;
+            var act = m[1];
+            var card = link.querySelector('.feature-card');
+            if (!card) return;
+
+            var h3 = card.querySelector('h3');
+            if (h3) { var t1 = AppLang.t('act_' + act); if (t1 !== 'act_' + act) h3.textContent = t1; }
+
+            var _idxPair = AppLangPair.getActive();
+            var _idxParams = { target: _idxPair.target.localName, source: _idxPair.source.localName, targetName: _idxPair.target.name, sourceName: _idxPair.source.name };
+            var benefit = card.querySelector('.card-benefit');
+            if (benefit) { var t2 = AppLang.t('index_card_' + act + '_benefit', _idxParams); if (t2 !== 'index_card_' + act + '_benefit') benefit.textContent = t2; }
+
+            var desc = card.querySelector('p');
+            if (desc) { var t3 = AppLang.t('index_card_' + act + '_desc', _idxParams); if (t3 !== 'index_card_' + act + '_desc') desc.textContent = t3; }
+          });
+        }
+
+        // ── Pair picker (shown when pe_active_pair === null) ──────────
+        function _showPairPicker() {
+          var _PICKER_UI = {
+            en: { title: 'What language do you want to learn?',       subtitle: 'Choose your learning path'            },
+            es: { title: '¿Qué idioma quieres aprender?',             subtitle: 'Elige tu ruta de aprendizaje'         },
+            fr: { title: 'Quelle langue veux-tu apprendre ?',         subtitle: 'Choisis ton parcours d\'apprentissage' },
+            pt: { title: 'Qual idioma você quer aprender?',           subtitle: 'Escolha seu caminho de aprendizagem'  },
+            de: { title: 'Welche Sprache möchtest du lernen?',        subtitle: 'Wähle deinen Lernpfad'                },
+            it: { title: 'Quale lingua vuoi imparare?',               subtitle: 'Scegli il tuo percorso'               },
+            nl: { title: 'Welke taal wil je leren?',                  subtitle: 'Kies je leertraject'                  },
+            pl: { title: 'Jakiego języka chcesz się nauczyć?',        subtitle: 'Wybierz swoją ścieżkę nauki'          },
+            cs: { title: 'Jaký jazyk se chceš naučit?',              subtitle: 'Zvol si svou vzdělávací cestu'         },
+            sv: { title: 'Vilket språk vill du lära dig?',            subtitle: 'Välj din inlärningsväg'               },
+            da: { title: 'Hvilket sprog vil du lære?',                subtitle: 'Vælg din læringssti'                  },
+            no: { title: 'Hvilket språk vil du lære?',                subtitle: 'Velg din læringsvei'                  },
+            fi: { title: 'Minkä kielen haluat oppia?',                subtitle: 'Valitse oppimispolkusi'               },
+            lv: { title: 'Kādu valodu tu gribi mācīties?',             subtitle: 'Izvēlies savu mācību ceļu'             },
+            lt: { title: 'Kokios kalbos nori išmokti?',                subtitle: 'Pasirink savo mokymosi kelią'          },
+            et: { title: 'Millist keelt soovid õppida?',               subtitle: 'Vali oma õpitee'                       },
+          };
+          var _navCode = (navigator.language || 'en').toLowerCase().split('-')[0];
+          var _lang  = _PICKER_UI[_navCode] ? _navCode : 'en';
+          var _s     = _PICKER_UI[_lang];
+          var _pairs = AppLangPair.getAll();
+
+          var picker = document.createElement('div');
+          picker.id  = 'lp-picker';
+          picker.className = 'ob-overlay';
+          picker.setAttribute('role', 'dialog');
+          picker.setAttribute('aria-modal', 'true');
+          picker.setAttribute('aria-label', _s.title);
+
+          var modal = document.createElement('div');
+          modal.className = 'ob-modal';
+
+          var inner = document.createElement('div');
+          inner.className = 'ob-inner';
+
+          var icon = document.createElement('div');
+          icon.className = 'ob-hero-icon';
+          icon.textContent = '🌍';
+          inner.appendChild(icon);
+
+          var title = document.createElement('h2');
+          title.className = 'ob-title';
+          title.id = 'ob-title';
+          title.textContent = _s.title;
+          inner.appendChild(title);
+
+          var sub = document.createElement('p');
+          sub.className = 'ob-body ob-body--sm';
+          sub.textContent = _s.subtitle;
+          inner.appendChild(sub);
+
+          var cards = document.createElement('div');
+          cards.className = 'lp-picker-cards';
+
+          _pairs.forEach(function (pair) {
+            var card = document.createElement('button');
+            card.type = 'button';
+            card.className = 'lp-picker-card';
+            card.setAttribute('aria-label', pair.label);
+            if (pair.source.code === _lang) card.classList.add('lp-picker-card--suggested');
+
+            if (typeof AppFlags !== 'undefined') {
+              card.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+              var arrow = document.createElement('span');
+              arrow.className = 'lp-picker-card__arrow';
+              arrow.setAttribute('aria-hidden', 'true');
+              arrow.textContent = '→';
+              card.appendChild(arrow);
+              card.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+            }
+
+            var label = document.createElement('span');
+            label.className = 'lp-picker-card__label';
+            label.textContent = pair.label;
+            card.appendChild(label);
+
+            card.addEventListener('click', function () {
+              AppLangPair.setActive(pair.id);
+              location.reload();
+            });
+
+            cards.appendChild(card);
+          });
+
+          inner.appendChild(cards);
+
+          var stripe = document.createElement('div');
+          stripe.className = 'ob-footer-stripe';
+          stripe.setAttribute('aria-hidden', 'true');
+
+          modal.appendChild(inner);
+          modal.appendChild(stripe);
+          picker.appendChild(modal);
+          document.body.appendChild(picker);
+
+          var firstCard = picker.querySelector('.lp-picker-card');
+          if (firstCard) setTimeout(function () { firstCard.focus(); }, 50);
+        }
       })();
     </script>
     <script src="shared/js/progress.js"></script>
-    <script src="lang/ui.js"></script>
-    <script src="lang/target/en.js"></script>
-    <script src="shared/js/lang.js"></script>
     <script src="shared/js/topic-data.js"></script>
     <script src="shared/js/path.js"></script>
     <script src="shared/js/path-session.js"></script>

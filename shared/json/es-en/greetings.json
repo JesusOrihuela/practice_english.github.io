@@ -1,0 +1,1524 @@
+{
+  "phrases": [
+    {
+      "id": "greetings_hello_how_are_you_today",
+      "source": "Hola, ¿cómo estás hoy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hello, how are you today?",
+          "audioSlug": "hello_how_are_you_today",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Hi, how are you today?",
+          "audioSlug": "hi_how_are_you_today",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, how are you today?",
+          "audioSlug": "hey_how_are_you_today",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_morning_its_nice_to_see",
+      "source": "Buenos días, es un placer verte.",
+      "level": "A1",
+      "grammar": "Use 'it's' (it is), not 'its' (possessive).",
+      "target": [
+        {
+          "text": "Good morning, it's nice to see you.",
+          "audioSlug": "good_morning_it_s_nice_to_see_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Good morning, it's great to see you.",
+          "audioSlug": "good_morning_it_s_great_to_see_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Good morning, it's good to see you.",
+          "audioSlug": "good_morning_it_s_good_to_see_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Good morning, it's a pleasure to see you.",
+          "audioSlug": "good_morning_it_s_a_pleasure_to_see_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_there_hows_your_day_going",
+      "source": "Hola, ¿cómo va tu día?",
+      "level": "A1",
+      "grammar": "'How's' = 'how is'; 'going' shows this is an ongoing action, not a fact.",
+      "target": [
+        {
+          "text": "Hi there, how's your day going?",
+          "audioSlug": "hi_there_how_s_your_day_going",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey there, how's your day going?",
+          "audioSlug": "hey_there_how_s_your_day_going",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello there, how's your day going?",
+          "audioSlug": "hello_there_how_s_your_day_going",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_afternoon_how_have_you_been",
+      "source": "Buenas tardes, ¿cómo has estado?",
+      "level": "A2",
+      "grammar": "Use the present perfect for a period up to now, not just this moment.",
+      "target": [
+        {
+          "text": "Good afternoon, how have you been?",
+          "audioSlug": "good_afternoon_how_have_you_been"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_hows_everything_with_you",
+      "source": "Oye, ¿cómo te va?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hey, how's everything with you?",
+          "audioSlug": "hey_how_s_everything_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hi, how's everything with you?",
+          "audioSlug": "hi_how_s_everything_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, how's everything with you?",
+          "audioSlug": "hello_how_s_everything_with_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_morning_hope_youre_doing_well",
+      "source": "Buenos días, espero que estés bien.",
+      "level": "A2",
+      "grammar": "Dropping 'Good' and 'I' makes it more informal: 'Morning, hope you're well.'",
+      "target": [
+        {
+          "text": "Morning, hope you're doing well.",
+          "audioSlug": "morning_hope_you_re_doing_well",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Morning, I hope you're doing well.",
+          "audioSlug": "morning_i_hope_you_re_doing_well",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_evening_hows_your_day_been",
+      "source": "Buenas noches, ¿cómo ha estado tu día?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good evening, how's your day been?",
+          "audioSlug": "good_evening_how_s_your_day_been"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_hows_life_treating_you",
+      "source": "Oye, ¿cómo te trata la vida?",
+      "level": "A2",
+      "grammar": "'Life treating you' is idiomatic for 'Is life going well for you?'",
+      "target": [
+        {
+          "text": "Hey, how's life treating you?",
+          "audioSlug": "hey_how_s_life_treating_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hi, how's life treating you?",
+          "audioSlug": "hi_how_s_life_treating_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, how's life treating you?",
+          "audioSlug": "hello_how_s_life_treating_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_its_good_to_catch_up",
+      "source": "Hola, es bueno ponerse al día contigo.",
+      "level": "A2",
+      "grammar": "'Catch up' means to share news after time apart; say 'catch up with someone'.",
+      "target": [
+        {
+          "text": "Hi, it's good to catch up with you.",
+          "audioSlug": "hi_it_s_good_to_catch_up_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, it's good to catch up with you.",
+          "audioSlug": "hey_it_s_good_to_catch_up_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, it's good to catch up with you.",
+          "audioSlug": "hello_it_s_good_to_catch_up_with_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hello_how_have_you_been_lately",
+      "source": "Hola, ¿cómo has estado últimamente?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hello, how have you been lately?",
+          "audioSlug": "hello_how_have_you_been_lately",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Hi, how have you been lately?",
+          "audioSlug": "hi_how_have_you_been_lately",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, how have you been lately?",
+          "audioSlug": "hey_how_have_you_been_lately",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_there_hope_youre_having_a",
+      "source": "Hola, espero que tengas un buen día.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hi there, hope you're having a good day.",
+          "audioSlug": "hi_there_hope_you_re_having_a_good_day",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey there, hope you're having a good day.",
+          "audioSlug": "hey_there_hope_you_re_having_a_good_day",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello there, hope you're having a good day.",
+          "audioSlug": "hello_there_hope_you_re_having_a_good_day",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_whats_new_with_you",
+      "source": "Oye, ¿qué hay de nuevo contigo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hey, what's new with you?",
+          "audioSlug": "hey_what_s_new_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hi, what's new with you?",
+          "audioSlug": "hi_what_s_new_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, what's new with you?",
+          "audioSlug": "hello_what_s_new_with_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_morning_hows_everything_going",
+      "source": "Buenos días, ¿cómo va todo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good morning, how's everything going?",
+          "audioSlug": "good_morning_how_s_everything_going"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_how_are_you_holding_up",
+      "source": "Hola, ¿cómo lo estás llevando?",
+      "level": "A2",
+      "grammar": "'Holding up' means coping under pressure, used to check in with empathy.",
+      "target": [
+        {
+          "text": "Hi, how are you holding up?",
+          "audioSlug": "hi_how_are_you_holding_up",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, how are you holding up?",
+          "audioSlug": "hey_how_are_you_holding_up",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, how are you holding up?",
+          "audioSlug": "hello_how_are_you_holding_up",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_there_hows_your_week_been",
+      "source": "Hola, ¿cómo ha estado tu semana?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hey there, how's your week been?",
+          "audioSlug": "hey_there_how_s_your_week_been",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hi there, how's your week been?",
+          "audioSlug": "hi_there_how_s_your_week_been",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello there, how's your week been?",
+          "audioSlug": "hello_there_how_s_your_week_been",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hello_hope_youre_doing_fine",
+      "source": "Hola, espero que estés bien.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hello, hope you're doing fine.",
+          "audioSlug": "hello_hope_you_re_doing_fine",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Hi, hope you're doing fine.",
+          "audioSlug": "hi_hope_you_re_doing_fine",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, hope you're doing fine.",
+          "audioSlug": "hey_hope_you_re_doing_fine",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_its_been_a_while_how",
+      "source": "Hola, ha pasado un tiempo, ¿cómo estás?",
+      "level": "A2",
+      "grammar": "Present perfect: 'It's been a while' connects the past gap to now.",
+      "target": [
+        {
+          "text": "Hi, it's been a while, how are you?",
+          "audioSlug": "hi_it_s_been_a_while_how_are_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hey, it's been a while, how are you?",
+          "audioSlug": "hey_it_s_been_a_while_how_are_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, it's been a while, how are you?",
+          "audioSlug": "hello_it_s_been_a_while_how_are_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_afternoon_hows_life_treating_you",
+      "source": "Buenas tardes, ¿cómo te trata la vida?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good afternoon, how's life treating you?",
+          "audioSlug": "good_afternoon_how_s_life_treating_you"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_nice_to_see_you_again",
+      "source": "Oye, es bueno verte de nuevo, ¿cómo has estado?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hey, nice to see you again, how have you been?",
+          "audioSlug": "hey_nice_to_see_you_again_how_have_you_been",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hi, nice to see you again, how have you been?",
+          "audioSlug": "hi_nice_to_see_you_again_how_have_you_been",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Hello, nice to see you again, how have you been?",
+          "audioSlug": "hello_nice_to_see_you_again_how_have_you_been",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_great_seeing_you",
+      "source": "¡Qué gusto verte!",
+      "level": "A2",
+      "grammar": "Both 'seeing you' and 'to see you' are correct; the gerund sounds slightly more casual.",
+      "target": [
+        {
+          "text": "It was great seeing you!",
+          "audioSlug": "it_was_great_seeing_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was great to see you!",
+          "audioSlug": "it_was_great_to_see_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was good seeing you!",
+          "audioSlug": "it_was_good_seeing_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was wonderful seeing you!",
+          "audioSlug": "it_was_wonderful_seeing_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_take_care_of_yourself",
+      "source": "¡Cuídate mucho!",
+      "level": "A1",
+      "grammar": "Use 'yourself' for emphasis; 'take care' alone is a shorter, equally common farewell.",
+      "target": [
+        {
+          "text": "Take care of yourself!",
+          "audioSlug": "take_care_of_yourself",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Take care!",
+          "audioSlug": "take_care",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_have_a_wonderful_day",
+      "source": "¡Que tengas un excelente día!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Have a wonderful day!",
+          "audioSlug": "have_a_wonderful_day",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Have a great day!",
+          "audioSlug": "have_a_great_day",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Have a nice day!",
+          "audioSlug": "have_a_nice_day",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Have a good day!",
+          "audioSlug": "have_a_good_day",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_see_you_around",
+      "source": "¡Nos vemos por ahí!",
+      "level": "A1",
+      "grammar": "'Around' means without a fixed time; more casual than 'see you later' or 'soon'.",
+      "target": [
+        {
+          "text": "See you around!",
+          "audioSlug": "see_you_around"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_lovely_to_meet_you",
+      "source": "Fue un placer conocerte.",
+      "level": "A1",
+      "grammar": "Use 'meet' for first encounters; use 'see' when you've met before.",
+      "target": [
+        {
+          "text": "It was lovely to meet you.",
+          "audioSlug": "it_was_lovely_to_meet_you",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "It was nice to meet you.",
+          "audioSlug": "it_was_nice_to_meet_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was great to meet you.",
+          "audioSlug": "it_was_great_to_meet_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was a pleasure to meet you.",
+          "audioSlug": "it_was_a_pleasure_to_meet_you",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_be_a_stranger",
+      "source": "¡No te pierdas!",
+      "level": "B1",
+      "grammar": "'Don't be a stranger' idiomatically means 'keep in touch and visit again'.",
+      "target": [
+        {
+          "text": "Don't be a stranger!",
+          "audioSlug": "don_t_be_a_stranger"
+        }
+      ]
+    },
+    {
+      "id": "greetings_we_should_do_this_again_sometime",
+      "source": "Deberíamos repetirlo pronto.",
+      "level": "A2",
+      "grammar": "Modal 'should' here is a suggestion, not an obligation, common in farewells.",
+      "target": [
+        {
+          "text": "We should do this again sometime.",
+          "audioSlug": "we_should_do_this_again_sometime"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_a_pleasure_hope_to",
+      "source": "Fue un placer, espero verte de nuevo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It was a pleasure, hope to see you again.",
+          "audioSlug": "it_was_a_pleasure_hope_to_see_you_again",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was a pleasure, I hope to see you again.",
+          "audioSlug": "it_was_a_pleasure_i_hope_to_see_you_again",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_say_hi_to_everyone_for_me",
+      "source": "Salúdame a todos.",
+      "level": "A2",
+      "grammar": "An indirect greeting sent through someone else; formality varies: 'hi', 'regards', 'love'.",
+      "target": [
+        {
+          "text": "Say hi to everyone for me.",
+          "audioSlug": "say_hi_to_everyone_for_me",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Say hello to everyone for me.",
+          "audioSlug": "say_hello_to_everyone_for_me",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_take_care_and_stay_in_touch",
+      "source": "Cuídate y mantengámonos en contacto.",
+      "level": "A2",
+      "grammar": "'Stay in touch' means keep communicating; also: 'keep in touch' or 'keep me posted'.",
+      "target": [
+        {
+          "text": "Take care and stay in touch.",
+          "audioSlug": "take_care_and_stay_in_touch",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Take care and keep in touch.",
+          "audioSlug": "take_care_and_keep_in_touch",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_so_good_catching_up",
+      "source": "Qué bueno fue ponernos al día.",
+      "level": "A2",
+      "grammar": "'Catching up' is the gerund of 'catch up', used after adjectives like 'good' or 'great'.",
+      "target": [
+        {
+          "text": "It was so good catching up with you.",
+          "audioSlug": "it_was_so_good_catching_up_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "It was good catching up with you.",
+          "audioSlug": "it_was_good_catching_up_with_you",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_nice_to_meet_you_im_glad",
+      "source": "Mucho gusto, me alegra que nos hayamos conocido.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nice to meet you, I'm glad we connected.",
+          "audioSlug": "nice_to_meet_you_i_m_glad_we_connected",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Nice to meet you, I'm glad we met.",
+          "audioSlug": "nice_to_meet_you_i_m_glad_we_met",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_i_could_be_better",
+      "source": "Podría estar mejor.",
+      "level": "A2",
+      "grammar": "'Could be better' is a polite understatement; English often avoids direct negative statements.",
+      "target": [
+        {
+          "text": "I could be better.",
+          "audioSlug": "i_could_be_better"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hows_your_day_been",
+      "source": "¿Cómo te ha ido hoy?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How's your day been?",
+          "audioSlug": "how_s_your_day_been"
+        }
+      ]
+    },
+    {
+      "id": "greetings_ive_had_a_great_day",
+      "source": "He tenido un gran día.",
+      "level": "A2",
+      "grammar": "Present perfect 'I've had' links past experience to your current feeling.",
+      "target": [
+        {
+          "text": "I've had a great day.",
+          "audioSlug": "i_ve_had_a_great_day"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hows_your_week_been",
+      "source": "¿Cómo ha estado tu semana?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How's your week been?",
+          "audioSlug": "how_s_your_week_been"
+        }
+      ]
+    },
+    {
+      "id": "greetings_ive_had_better_days",
+      "source": "He tenido días mejores.",
+      "level": "B1",
+      "grammar": "'Better days' is an understatement meaning today was bad; very common polite complaint.",
+      "target": [
+        {
+          "text": "I've had better days.",
+          "audioSlug": "i_ve_had_better_days"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_sad",
+      "source": "Estoy triste.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm sad.",
+          "audioSlug": "i_m_sad"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_happy",
+      "source": "Estoy feliz.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm happy.",
+          "audioSlug": "i_m_happy"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_excited",
+      "source": "Estoy emocionada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm excited.",
+          "audioSlug": "i_m_excited"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_bored",
+      "source": "Estoy aburrida.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm bored.",
+          "audioSlug": "i_m_bored"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_tired",
+      "source": "Estoy cansada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm tired.",
+          "audioSlug": "i_m_tired"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_angry",
+      "source": "Estoy enojada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm angry.",
+          "audioSlug": "i_m_angry"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_surprised",
+      "source": "Estoy sorprendida.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm surprised.",
+          "audioSlug": "i_m_surprised"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_confused",
+      "source": "Estoy confundida.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm confused.",
+          "audioSlug": "i_m_confused"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_worried",
+      "source": "Estoy preocupada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm worried.",
+          "audioSlug": "i_m_worried"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_nervous",
+      "source": "Estoy nerviosa.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm nervous.",
+          "audioSlug": "i_m_nervous"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_scared",
+      "source": "Estoy asustada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm scared.",
+          "audioSlug": "i_m_scared"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_relaxed",
+      "source": "Estoy relajada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm relaxed.",
+          "audioSlug": "i_m_relaxed"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_stressed",
+      "source": "Estoy estresada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm stressed.",
+          "audioSlug": "i_m_stressed"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_busy",
+      "source": "Estoy ocupada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm busy.",
+          "audioSlug": "i_m_busy"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_sad",
+      "source": "¿Por qué estás triste?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you sad?",
+          "audioSlug": "why_are_you_sad"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_so_happy",
+      "source": "¿Por qué estás tan feliz?",
+      "level": "A1",
+      "grammar": "'So' intensifies the adjective and signals mild surprise: 'Why are you SO happy?'",
+      "target": [
+        {
+          "text": "Why are you so happy?",
+          "audioSlug": "why_are_you_so_happy"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_excited",
+      "source": "¿Por qué estás emocionado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you excited?",
+          "audioSlug": "why_are_you_excited"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_bored",
+      "source": "¿Por qué estás aburrido?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you bored?",
+          "audioSlug": "why_are_you_bored"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_tired",
+      "source": "¿Por qué estás cansado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you tired?",
+          "audioSlug": "why_are_you_tired"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_angry",
+      "source": "¿Por qué estás enojado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you angry?",
+          "audioSlug": "why_are_you_angry"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_surprised",
+      "source": "¿Por qué estás sorprendido?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you surprised?",
+          "audioSlug": "why_are_you_surprised"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_confused",
+      "source": "¿Por qué estás confundido?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you confused?",
+          "audioSlug": "why_are_you_confused"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_worried",
+      "source": "¿Por qué estás preocupado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you worried?",
+          "audioSlug": "why_are_you_worried"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_nervous",
+      "source": "¿Por qué estás nervioso?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you nervous?",
+          "audioSlug": "why_are_you_nervous"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_scared",
+      "source": "¿Por qué estás asustado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you scared?",
+          "audioSlug": "why_are_you_scared"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_relaxed",
+      "source": "¿Por qué estás relajado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you relaxed?",
+          "audioSlug": "why_are_you_relaxed"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_stressed",
+      "source": "¿Por qué estás estresado?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Why are you stressed?",
+          "audioSlug": "why_are_you_stressed"
+        }
+      ]
+    },
+    {
+      "id": "greetings_whats_on_your_mind",
+      "source": "¿Qué te preocupa?",
+      "level": "A2",
+      "grammar": "'What's on your mind?' is an idiom for 'What are you thinking about?'",
+      "target": [
+        {
+          "text": "What's on your mind?",
+          "audioSlug": "what_s_on_your_mind"
+        }
+      ]
+    },
+    {
+      "id": "greetings_is_there_anything_i_can_do",
+      "source": "¿Hay algo que pueda hacer por ti?",
+      "level": "A2",
+      "grammar": "A polite offer of help; 'Can I help you?' is the less formal version.",
+      "target": [
+        {
+          "text": "Is there anything I can do for you?",
+          "audioSlug": "is_there_anything_i_can_do_for_you",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Is there anything I can help you with?",
+          "audioSlug": "is_there_anything_i_can_help_you_with",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can I do anything for you?",
+          "audioSlug": "can_i_do_anything_for_you",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_introduce_myself_account_manager",
+      "source": "Me gustaría presentarme. Soy la nueva gerente de cuentas para su región.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to introduce myself. I'm the new account manager for your region.",
+          "audioSlug": "i_d_like_to_introduce_myself_i_m_the_new_account_manager_for_your_region"
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasure_meeting_follow_up",
+      "source": "Fue un placer conocerle. Le enviaré un correo con los detalles que hablamos.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It was a pleasure meeting you. I'll follow up by email with the details.",
+          "audioSlug": "it_was_a_pleasure_meeting_you_i_ll_follow_up_by_email_with_the_details"
+        }
+      ]
+    },
+    {
+      "id": "greetings_allow_me_to_introduce_dr",
+      "source": "Permítame presentarle al Dr. Martínez, quien dirigirá la sesión de esta tarde.",
+      "level": "B2",
+      "grammar": "'Please allow me to introduce' is a formal third-party introduction phrase.",
+      "target": [
+        {
+          "text": "Please allow me to introduce Dr. Martínez, who will lead the session this afternoon.",
+          "audioSlug": "please_allow_me_to_introduce_dr_martinez_who_will_lead_the_session_this_afternoon"
+        }
+      ]
+    },
+    {
+      "id": "greetings_sincere_condolences_loss",
+      "source": "Quería comunicarme para ofrecerle mis más sinceras condolencias por su pérdida.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wanted to reach out and offer my sincere condolences on your loss.",
+          "audioSlug": "i_wanted_to_reach_out_and_offer_my_sincere_condolences_on_your_loss"
+        }
+      ]
+    },
+    {
+      "id": "greetings_welcome_aboard_team",
+      "source": "En nombre de todo el equipo, bienvenido. Estamos encantados de tenerte con nosotros.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "On behalf of the entire team, welcome aboard. We're thrilled to have you.",
+          "audioSlug": "on_behalf_of_the_entire_team_welcome_aboard_we_re_thrilled_to_have_you"
+        }
+      ]
+    },
+    {
+      "id": "greetings_trust_message_finds_you_well",
+      "source": "Espero que se encuentre bien. Le escribo para continuar con nuestra conversación de la semana pasada.",
+      "level": "C1",
+      "grammar": "'I trust this message finds you well' is a formal epistolary opener for professional correspondence.",
+      "target": [
+        {
+          "text": "I trust this message finds you well. I'm writing to follow up on last week's conversation.",
+          "audioSlug": "i_trust_this_message_finds_you_well_i_m_writing_to_follow_up_on_last_week_s_conversation"
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasure_introduce_keynote_speaker",
+      "source": "Es un placer presentar a nuestra conferenciante principal, cuyo trabajo ha dado forma a este campo.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is my pleasure to introduce our keynote speaker, whose work has shaped this field.",
+          "audioSlug": "it_is_my_pleasure_to_introduce_our_keynote_speaker_whose_work_has_shaped_this_field"
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_believe_formally_introduced",
+      "source": "Reconoces a alguien en una recepción formal, pero nadie los presentó. Tomas la iniciativa.",
+      "level": "C1",
+      "grammar": "'I don't believe we've been formally introduced' is a polished opener in formal settings.",
+      "target": [
+        {
+          "text": "I don't believe we've been formally introduced. I'm here representing the European delegation.",
+          "audioSlug": "i_don_t_believe_we_ve_been_formally_introduced_i_m_here_representing_the_european_delegation"
+        }
+      ]
+    },
+    {
+      "id": "greetings_convey_delegation_graciously_received",
+      "source": "En nombre de la delegación, permítame expresar lo encantados que estamos por esta recepción.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "On behalf of the delegation, allow me to convey how delighted we are by this reception.",
+          "audioSlug": "on_behalf_of_the_delegation_allow_me_to_convey_how_delighted_we_are_by_this_reception"
+        }
+      ]
+    },
+    {
+      "id": "greetings_appreciate_time_demanding_schedule",
+      "source": "Le agradezco que haya encontrado tiempo para reunirse conmigo, siendo tan exigente su agenda.",
+      "level": "C1",
+      "grammar": "After 'appreciate', use the gerund: 'I appreciate you taking the time'.",
+      "target": [
+        {
+          "text": "I appreciate you taking the time to meet with me, knowing how demanding your schedule is.",
+          "audioSlug": "i_appreciate_you_taking_the_time_to_meet_with_me_knowing_how_demanding_your_schedule_is"
+        }
+      ]
+    },
+    {
+      "id": "greetings_honor_welcome_distinguished_delegates",
+      "source": "Es con gran honor que damos la bienvenida a los distinguidos delegados a esta reunión conmemorativa.",
+      "level": "C2",
+      "grammar": "'It is with X that' is a cleft construction for emphasis in ceremonial addresses.",
+      "target": [
+        {
+          "text": "It is with great honor that we welcome the distinguished delegates to this commemorative gathering.",
+          "audioSlug": "it_is_with_great_honor_that_we_welcome_the_distinguished_delegates_to_this_commemorative_gathering"
+        }
+      ]
+    },
+    {
+      "id": "greetings_cultural_awareness_not_merely_etiquette",
+      "source": "La conciencia cultural en los saludos no es solo protocolo, es una señal de respeto por los valores de quienes te rodean.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cultural awareness in greetings is not merely etiquette but signals respect for those you engage with.",
+          "audioSlug": "cultural_awareness_in_greetings_is_not_merely_etiquette_but_signals_respect_for_those_you_engage_with"
+        }
+      ]
+    },
+    {
+      "id": "greetings_protocol_introductions_senior_first",
+      "source": "El protocolo de presentaciones en este contexto exige que el representante de mayor rango hable primero.",
+      "level": "C2",
+      "grammar": "Verbs like 'require' take the subjunctive: 'requires that … speak', not 'speaks'.",
+      "target": [
+        {
+          "text": "The protocol for introductions in this context requires that the senior representative speak first.",
+          "audioSlug": "the_protocol_for_introductions_in_this_context_requires_that_the_senior_representative_speak_first"
+        }
+      ]
+    },
+    {
+      "id": "greetings_remiss_not_acknowledge_contribution",
+      "source": "Sería una negligencia de mi parte no reconocer la inmensa contribución que ha aportado a esta institución.",
+      "level": "C2",
+      "grammar": "'Remiss' means negligent in duty; 'I would be remiss not to' = 'I must'.",
+      "target": [
+        {
+          "text": "I would be remiss not to acknowledge the immense contribution you have made to this institution.",
+          "audioSlug": "i_would_be_remiss_not_to_acknowledge_the_immense_contribution_you_have_made_to_this_institution"
+        }
+      ]
+    },
+    {
+      "id": "greetings_sincere_felicitations_promotion",
+      "source": "Por favor, acepte mis más sinceras felicitaciones con motivo de su tan merecido ascenso.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please accept my most sincere felicitations on the occasion of your well-deserved promotion.",
+          "audioSlug": "please_accept_my_most_sincere_felicitations_on_the_occasion_of_your_well_deserved_promotion"
+        }
+      ]
+    },
+    {
+      "id": "greetings_been_ages_how_keeping",
+      "source": "Hace siglos que no nos vemos. ¿Cómo has estado?",
+      "level": "B1",
+      "grammar": "'It's been ages' is an idiom for a long absence; the present perfect adds informality.",
+      "target": [
+        {
+          "text": "It's been ages! How have you been keeping?",
+          "audioSlug": "it_s_been_ages_how_have_you_been_keeping"
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_think_weve_met",
+      "source": "Creo que no nos conocemos. Soy [nombre].",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I don't think we've met before. I'm [name].",
+          "audioSlug": "i_don_t_think_we_ve_met_before_i_m_name"
+        }
+      ]
+    },
+    {
+      "id": "greetings_small_world_knew_each_other",
+      "source": "¡Qué pequeño es el mundo! No sabía que se conocían.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What a small world! I had no idea you knew each other!",
+          "audioSlug": "what_a_small_world_i_had_no_idea_you_knew_each_other"
+        }
+      ]
+    },
+    {
+      "id": "greetings_heard_so_much_face_to_name",
+      "source": "He escuchado mucho sobre ti. ¡Es genial conocerte por fin!",
+      "level": "B1",
+      "grammar": "Present perfect: 'I've heard' links past experience to the current introduction.",
+      "target": [
+        {
+          "text": "I've heard so much about you. It's great to finally meet you!",
+          "audioSlug": "i_ve_heard_so_much_about_you_it_s_great_to_finally_meet_you"
+        }
+      ]
+    },
+    {
+      "id": "greetings_let_me_introduce_colleague",
+      "source": "Déjame presentarte a un colega mío.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let me introduce you to a colleague of mine.",
+          "audioSlug": "let_me_introduce_you_to_a_colleague_of_mine"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hope_not_interrupting",
+      "source": "Espero no estar interrumpiendo. ¿Tienes un momento?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I hope I'm not interrupting. Do you have a moment?",
+          "audioSlug": "i_hope_i_m_not_interrupting_do_you_have_a_moment"
+        }
+      ]
+    },
+    {
+      "id": "greetings_great_catching_up_more_often",
+      "source": "Fue genial ponernos al día. Deberíamos hacer esto más seguido.",
+      "level": "B1",
+      "grammar": "'Catching up' is a gerund meaning reconnecting with someone after time apart.",
+      "target": [
+        {
+          "text": "It was great catching up. We should do this more often.",
+          "audioSlug": "it_was_great_catching_up_we_should_do_this_more_often"
+        }
+      ]
+    },
+    {
+      "id": "greetings_give_regards_family",
+      "source": "Saluda a tu familia de mi parte, por favor.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please give my regards to your family.",
+          "audioSlug": "please_give_my_regards_to_your_family"
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasant_surprise_not_expecting",
+      "source": "No esperaba verte aquí. ¡Qué agradable sorpresa!",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wasn't expecting to see you here. What a pleasant surprise!",
+          "audioSlug": "i_wasn_t_expecting_to_see_you_here_what_a_pleasant_surprise"
+        }
+      ]
+    },
+    {
+      "id": "greetings_lovely_see_you_looking_well",
+      "source": "Qué bueno verte tan bien.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It's lovely to see you looking so well.",
+          "audioSlug": "it_s_lovely_to_see_you_looking_so_well"
+        }
+      ]
+    },
+    {
+      "id": "greetings_find_yourself_city_give_call",
+      "source": "Si alguna vez te encuentras en la ciudad, no dudes en llamarme.",
+      "level": "B2",
+      "grammar": "'If you're ever' uses present simple for an open-ended, standing invitation.",
+      "target": [
+        {
+          "text": "If you're ever in the city, don't hesitate to give me a call.",
+          "audioSlug": "if_you_re_ever_in_the_city_don_t_hesitate_to_give_me_a_call"
+        }
+      ]
+    },
+    {
+      "id": "greetings_mutual_acquaintance_conference",
+      "source": "Creo que tenemos un conocido en común. ¿Conoces a [nombre] de la conferencia?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I believe we share a mutual acquaintance. You know [name] from the conference, I think?",
+          "audioSlug": "i_believe_we_share_a_mutual_acquaintance_you_know_name_from_the_conference_i_think"
+        }
+      ]
+    },
+    {
+      "id": "greetings_looking_forward_introduction_work_precedes",
+      "source": "Debo confesarlo, esperaba con entusiasmo este encuentro. Su reputación le precede.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I must confess, I've been looking forward to this introduction. Your reputation precedes you.",
+          "audioSlug": "i_must_confess_i_ve_been_looking_forward_to_this_introduction_your_reputation_precedes_you"
+        }
+      ]
+    }
+  ]
+}

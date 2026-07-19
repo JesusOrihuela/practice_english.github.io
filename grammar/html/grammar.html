@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grammar — Practice English</title>
+    <title>Gramática — Practice English</title>
     <meta name="description" content="Learn English grammar through context, noticing, and production. Research-based 5-phase exercises with SRS.">
     <meta property="og:title" content="Grammar — Practice English">
     <meta property="og:description" content="Learn English grammar through context, noticing, and production. Research-based 5-phase exercises with SRS.">
@@ -24,34 +24,42 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PracticeEng">
+
+    <!-- Language scripts: must be in <head> so LangUI is set before body renders -->
+    <script src="../../shared/js/lang-pair.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
+
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_to_main">Ir al contenido principal</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
         </a>
     </header>
 
-    <nav class="mode-switcher" aria-label="Modos de práctica">
-        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio">🏠</a>
+    <nav class="mode-switcher" aria-label="Modos de práctica" data-i18n-aria="nav_modes_aria">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio" data-i18n-aria="nav_home_aria">🏠</a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">Mi Aprendizaje</span></a>
+        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label" data-i18n="nav_my_learning"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Pronunciación</span></a>
-        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictado</span></a>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label" data-i18n="nav_speaking"></span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label" data-i18n="nav_dictation"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
-        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Traducción</span></a>
-        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Secuencia</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label" data-i18n="nav_cloze"></span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label" data-i18n="nav_translation"></span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label" data-i18n="nav_scramble"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulario</span></a>
-        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label" data-i18n="nav_vocabulary"></span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label" data-i18n="nav_quiz"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../grammar/html/grammar.html" class="mode-btn active">📐 <span class="btn-label">Gramática</span></a>
+        <a href="../../grammar/html/grammar.html" class="mode-btn active">📐 <span class="btn-label" data-i18n="nav_grammar"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn" data-nav="settings">⚙️</a>
+    <script>(function(){if(typeof AppLang==='undefined')return;document.querySelectorAll('.mode-switcher .btn-label[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n'),t=AppLang.t(k);if(t!==k)e.textContent=t;});}());</script>
     </nav>
 
     <main class="grammar-page" id="main-content">
@@ -62,7 +70,7 @@
         <div id="screen-categories">
             <div class="grammar-header">
                 <h1>Taller de <span>Gramática</span></h1>
-                <p>Aprende gramática inglesa a través de contexto real y práctica activa.</p>
+                <p data-i18n="grammar_picker_sub">Aprende gramática inglesa a través de contexto real y práctica activa.</p>
             </div>
 
             <div class="category-grid" id="category-grid">
@@ -96,70 +104,70 @@
             </div>
 
             <!-- Phase progress indicator -->
-            <div class="phase-progress" id="phase-progress" aria-label="Fases del ejercicio" role="status">
-                <div class="phase-dot" data-phase="0" data-label="Contexto" aria-label="Fase 1: Contexto"><span class="phase-dot-num">1</span><span class="phase-dot-label">Contexto</span></div>
+            <div class="phase-progress" id="phase-progress" aria-label="Fases del ejercicio" role="status" data-i18n-aria="phase_progress_aria">
+                <div class="phase-dot" data-phase="0" data-label="Contexto" aria-label="Fase 1: Contexto" data-i18n-aria="phase_0_aria"><span class="phase-dot-num">1</span><span class="phase-dot-label" data-i18n="phase_0_short">Contexto</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="1" data-label="Observa" aria-label="Fase 2: Observa"><span class="phase-dot-num">2</span><span class="phase-dot-label">Observa</span></div>
+                <div class="phase-dot" data-phase="1" data-label="Observa" aria-label="Fase 2: Observa" data-i18n-aria="phase_1_aria"><span class="phase-dot-num">2</span><span class="phase-dot-label" data-i18n="phase_1_short">Observa</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="2" data-label="La Regla" aria-label="Fase 3: La Regla"><span class="phase-dot-num">3</span><span class="phase-dot-label">La Regla</span></div>
+                <div class="phase-dot" data-phase="2" data-label="La Regla" aria-label="Fase 3: La Regla" data-i18n-aria="phase_2_aria"><span class="phase-dot-num">3</span><span class="phase-dot-label" data-i18n="phase_2_short">La Regla</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="3" data-label="Comprensión" aria-label="Fase 4: Comprensión"><span class="phase-dot-num">4</span><span class="phase-dot-label">Comprensión</span></div>
+                <div class="phase-dot" data-phase="3" data-label="Comprensión" aria-label="Fase 4: Comprensión" data-i18n-aria="phase_3_aria"><span class="phase-dot-num">4</span><span class="phase-dot-label" data-i18n="phase_3_short">Comprensión</span></div>
                 <div class="phase-sep" aria-hidden="true">›</div>
-                <div class="phase-dot" data-phase="4" data-label="Producción" aria-label="Fase 5: Producción"><span class="phase-dot-num">5</span><span class="phase-dot-label">Producción</span></div>
+                <div class="phase-dot" data-phase="4" data-label="Producción" aria-label="Fase 5: Producción" data-i18n-aria="phase_4_aria"><span class="phase-dot-num">5</span><span class="phase-dot-label" data-i18n="phase_4_short">Producción</span></div>
             </div>
 
             <!-- ── PHASE 1: Context Input ── -->
-            <section id="phase-context" class="phase-section hidden" aria-label="Fase 1: Contexto">
+            <section id="phase-context" class="phase-section hidden" aria-label="Fase 1: Contexto" data-i18n-aria="phase_0_aria">
                 <div class="phase-label">
                     <span class="phase-num">1</span>
-                    <span class="phase-name">Contexto</span>
-                    <span class="phase-hint">Lee el diálogo. Observa las partes resaltadas.</span>
+                    <span class="phase-name" data-i18n="phase_0_short">Contexto</span>
+                    <span class="phase-hint" data-i18n="phase_context_hint">Lee el diálogo. Observa las partes resaltadas.</span>
                 </div>
                 <div class="dialogue-card" id="dialogue-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions">
-                    <button class="primary-btn" id="context-next-btn">¿Qué observas? →</button>
+                    <button class="primary-btn" id="context-next-btn" data-i18n="context_next_btn">¿Qué observas? →</button>
                 </div>
             </section>
 
             <!-- ── PHASE 2: Noticing ── -->
-            <section id="phase-noticing" class="phase-section hidden" aria-label="Fase 2: Observa">
+            <section id="phase-noticing" class="phase-section hidden" aria-label="Fase 2: Observa" data-i18n-aria="phase_1_aria">
                 <div class="phase-label">
                     <span class="phase-num">2</span>
-                    <span class="phase-name">Observa</span>
-                    <span class="phase-hint">Escribe tu respuesta antes de continuar.</span>
+                    <span class="phase-name" data-i18n="phase_1_short">Observa</span>
+                    <span class="phase-hint" data-i18n="phase_noticing_hint">Escribe tu respuesta antes de continuar.</span>
                 </div>
                 <div class="noticing-card" id="noticing-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions noticing-actions">
                     <span class="noticing-progress" id="noticing-progress" aria-live="polite"></span>
-                    <button class="secondary-btn" id="noticing-show-btn" disabled>Ver explicación</button>
+                    <button class="secondary-btn" id="noticing-show-btn" disabled data-i18n="noticing_show_btn">Ver explicación</button>
                 </div>
             </section>
 
             <!-- ── PHASE 3: Rule Confirmation ── -->
-            <section id="phase-rule" class="phase-section hidden" aria-label="Fase 3: La Regla">
+            <section id="phase-rule" class="phase-section hidden" aria-label="Fase 3: La Regla" data-i18n-aria="phase_2_aria">
                 <div class="phase-label">
                     <span class="phase-num">3</span>
-                    <span class="phase-name">La Regla</span>
-                    <span class="phase-hint">Confirma lo que observaste.</span>
+                    <span class="phase-name" data-i18n="phase_2_short">La Regla</span>
+                    <span class="phase-hint" data-i18n="phase_rule_hint">Confirma lo que observaste.</span>
                 </div>
                 <div class="rule-card" id="rule-card">
                     <!-- Filled by JS -->
                 </div>
                 <div class="phase-actions">
-                    <button class="primary-btn" id="rule-next-btn">Practicar reconocimiento →</button>
+                    <button class="primary-btn" id="rule-next-btn" data-i18n="rule_next_btn">Practicar reconocimiento →</button>
                 </div>
             </section>
 
             <!-- ── PHASE 4: Structured Input ── -->
-            <section id="phase-structured" class="phase-section hidden" aria-label="Fase 4: Comprensión">
+            <section id="phase-structured" class="phase-section hidden" aria-label="Fase 4: Comprensión" data-i18n-aria="phase_3_aria">
                 <div class="phase-label">
                     <span class="phase-num">4</span>
-                    <span class="phase-name">Comprensión</span>
-                    <span class="phase-hint">Elige la opción correcta.</span>
+                    <span class="phase-name" data-i18n="phase_3_short">Comprensión</span>
+                    <span class="phase-hint" data-i18n="phase_structured_hint">Elige la opción correcta.</span>
                 </div>
                 <div class="structured-counter" id="structured-counter" role="status" aria-live="polite"></div>
                 <div class="structured-card" id="structured-card">
@@ -168,11 +176,11 @@
             </section>
 
             <!-- ── PHASE 5: FITB Production ── -->
-            <section id="phase-production" class="phase-section hidden" aria-label="Fase 5: Producción">
+            <section id="phase-production" class="phase-section hidden" aria-label="Fase 5: Producción" data-i18n-aria="phase_4_aria">
                 <div class="phase-label">
                     <span class="phase-num">5</span>
-                    <span class="phase-name">Producción</span>
-                    <span class="phase-hint">Escribe la forma correcta en el espacio.</span>
+                    <span class="phase-name" data-i18n="phase_4_short">Producción</span>
+                    <span class="phase-hint" data-i18n="phase_production_hint">Escribe la forma correcta en el espacio.</span>
                 </div>
                 <div class="production-counter" id="production-counter" role="status" aria-live="polite"></div>
                 <div class="production-card" id="production-card">
@@ -181,15 +189,15 @@
             </section>
 
             <!-- ── Complete / Rating ── -->
-            <section id="phase-complete" class="phase-section hidden" aria-label="Ejercicio completado">
+            <section id="phase-complete" class="phase-section hidden" aria-label="Ejercicio completado" data-i18n-aria="phase_complete_aria">
                 <div class="complete-card" id="complete-card">
                     <div class="complete-icon">🎉</div>
-                    <h2 class="complete-title">¡Ejercicio completado!</h2>
+                    <h2 class="complete-title" data-i18n="exercise_complete_h2">¡Ejercicio completado!</h2>
                     <p class="complete-score" id="complete-score"></p>
 
-                    <button class="primary-btn auto-save-btn" id="rate-auto">Continuar →</button>
+                    <button class="primary-btn auto-save-btn" id="rate-auto" data-i18n="grammar_continue_btn">Continuar →</button>
                     <!-- Related phrases from Speaking/other activities -->
-                    <div id="related-phrases" class="related-phrases hidden" role="region" aria-label="Frases de práctica relacionadas"></div>
+                    <div id="related-phrases" class="related-phrases hidden" role="region" aria-label="Frases de práctica relacionadas" data-i18n-aria="related_phrases_aria"></div>
                 </div>
             </section>
 
@@ -208,14 +216,11 @@
 
     <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/cefr.js"></script>
-    <script src="../../shared/js/lang-pair.js"></script>
     <script src="../../shared/js/proficiency.js"></script>
     <script src="../../shared/js/progress.js"></script>
-    <script src="../../lang/ui.js"></script>
-    <script src="../../lang/target/en.js"></script>
-    <script src="../../shared/js/lang.js"></script>
     <script src="../../shared/js/text-utils.js"></script>
     <script src="../../shared/js/topic-data.js"></script>
+    <script src="../../shared/js/topics.js"></script>
     <script src="../../shared/js/grammar-chip.js"></script>
     <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>

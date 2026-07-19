@@ -1,7 +1,11 @@
 /* ============================================================
-   stt-worker.js — Whisper-tiny.en STT (Web Worker, ESM)
+   stt-worker.js — Whisper-tiny STT (Web Worker, ESM)
+   Multilingual model with forced language per request.
    Lazy-loads the model on first request; reuses the singleton.
-   Input: Float32Array at 16 000 Hz (mono)
+   Input:  Float32Array at 16 000 Hz (mono)
+   Message format: { id, audio: Float32Array, language?: string }
+     language: full lowercase name, e.g. 'english' | 'spanish'
+               defaults to 'english' if omitted.
    ============================================================ */
 import { pipeline, env } from 'https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.3.3';
 
@@ -16,7 +20,7 @@ function getTranscriber() {
 
   _loadingPromise = pipeline(
     'automatic-speech-recognition',
-    'onnx-community/whisper-tiny.en',
+    'onnx-community/whisper-tiny',
     {
       dtype  : 'q8',
       device : 'wasm',
@@ -38,10 +42,13 @@ function getTranscriber() {
 getTranscriber();
 
 self.addEventListener('message', async ({ data }) => {
-  const { id, audio } = data;
+  const { id, audio, language } = data;
   try {
     const transcriber = await getTranscriber();
-    const result      = await transcriber(audio, { sampling_rate: 16000 });
+    const result      = await transcriber(audio, {
+      sampling_rate : 16000,
+      language      : language || 'english',
+    });
     self.postMessage({ id, type: 'done', text: result.text });
   } catch (err) {
     self.postMessage({ id, type: 'error', message: err.message });

@@ -8,7 +8,8 @@ let _openPhraseBrowser = null;
 
 
 let currentTopic = '';
-let phrases = [], translations = [], cardIds = [], cefrLevels = [];
+let phrases = [], translations = [], cardIds = [], cefrLevels = [], formPools = [];
+let _activeForm = null; // { text, audioSlug, labels?, ... } — picked form for the current scramble round
 let currentIndex = 0;
 let shuffledTiles = [];   // [{ tileId, word }]
 let builtSentence = [];   // array of tileIds in order
@@ -137,8 +138,13 @@ function startTopic(topicId, pathMode, pathCard) {
     .then(data => {
       const _order = CEFR_ORDER;
       const valid = (data.phrases || [])
-        .map(p => ({ phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '', level: p.level || null, id: p.id }))
-        .filter(p => p.phrase.split(' ').length > 2)
+        .map(p => ({
+          practiceText: p.target?.[0]?.text || '',
+          hintText:     p.source || '',
+          forms:        p.target || [],
+          level: p.level || null, id: p.id,
+        }))
+        .filter(p => p.practiceText.split(' ').length > 2)
         .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
 
       if (valid.length === 0) {
@@ -154,18 +160,19 @@ function startTopic(topicId, pathMode, pathCard) {
         return;
       }
 
-      phrases      = valid.map(p => p.phrase);
-      translations = valid.map(p => p.translation);
+      phrases      = valid.map(p => p.practiceText);
+      translations = valid.map(p => p.hintText);
       cefrLevels   = valid.map(p => p.level);
       cardIds      = valid.map(p => 'scramble_' + p.id);
+      formPools    = valid.map(p => p.forms);
 
       const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
         items: phrases,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: valid.map(p => p.translation),
+        traductions: valid.map(p => p.hintText),
         cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
@@ -216,10 +223,21 @@ function scrambleWords(phrase) {
   return shuffled;
 }
 
+function _buildPool(forms) {
+  // Only forms with audio; prefer those with > 2 words (degenerate scrambles are useless)
+  const withAudio  = forms.filter(f => f.audioSlug !== undefined);
+  const longEnough = withAudio.filter(f => f.text.split(' ').length > 2);
+  return longEnough.length > 0 ? longEnough : withAudio;
+}
+
 function showPhrase(index) {
   answered  = false;
   builtSentence = [];
-  shuffledTiles = scrambleWords(phrases[index]);
+
+  // Pick a random form with audio to scramble
+  const _pool = _buildPool(formPools[index] || []);
+  _activeForm   = _pool[Math.floor(Math.random() * _pool.length)];
+  shuffledTiles = scrambleWords(_activeForm.text);
 
   document.getElementById('hint-text').textContent = translations[index] || '';
   document.getElementById('scramble-feedback').classList.add('hidden');
@@ -249,7 +267,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 // ---- Tile Rendering ----
@@ -315,7 +333,7 @@ function checkAnswer() {
   document.getElementById('clear-btn').disabled = true;
 
   // Mark placed tiles correct/incorrect by position
-  const correctWords = phrases[currentIndex].split(' ');
+  const correctWords = (_activeForm ? _activeForm.text : phrases[currentIndex]).split(' ');
   const builtWords   = builtSentence.map(id => { const t = shuffledTiles.find(x => x.tileId === id); return t ? t.word : ''; });
 
   const buildEl = document.getElementById('construction-area');
@@ -329,7 +347,8 @@ function checkAnswer() {
     buildEl.appendChild(btn);
   });
 
-  const isCorrect = AppText.normalise(builtWords.join(' '), contractionMap) === AppText.normalise(phrases[currentIndex], contractionMap);
+  const _targetText = _activeForm ? _activeForm.text : phrases[currentIndex];
+  const isCorrect = AppText.normalise(builtWords.join(' '), contractionMap) === AppText.normalise(_targetText, contractionMap);
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
@@ -347,8 +366,8 @@ function checkAnswer() {
   diffEl.textContent = '';
   diffEl.appendChild(
     isCorrect
-      ? AppFeedback.buildCorrect(phrases[currentIndex])
-      : AppFeedback.buildDiff(builtWords.join(' '), phrases[currentIndex], contractionMap)
+      ? AppFeedback.buildCorrect(_targetText)
+      : AppFeedback.buildDiff(builtWords.join(' '), _targetText, contractionMap)
   );
 
   feedback.className = 'scramble-feedback ' + (isCorrect ? 'correct' : 'incorrect');

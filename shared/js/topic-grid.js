@@ -45,7 +45,7 @@ const AppTopicGrid = (() => {
           '<div class="img-topic-card__overlay"></div>' +
         '</div>' +
         '<div class="img-topic-card__body">' +
-          '<span class="img-topic-card__title">' + topic.label + '</span>' +
+          '<span class="img-topic-card__title">' + ((typeof AppTopics !== 'undefined') ? AppTopics.getLabel(topic) : topic.label) + '</span>' +
           '<span class="img-topic-card__progress" id="tp-' + topic.id + '"></span>' +
         '</div>';
       btn.addEventListener('click', () => onSelect(topic.id));
@@ -56,9 +56,7 @@ const AppTopicGrid = (() => {
           const keyPrefix = resolveSrsKey(topic) + '_';
           const seen = Object.keys(cards).filter(k => k.startsWith(keyPrefix) && cards[k].reps > 0).length;
           const el = document.getElementById('tp-' + topic.id);
-          if (el) el.textContent = typeof AppLang !== 'undefined'
-            ? AppLang.t('topic_learned', { seen, total })
-            : seen + ' / ' + total + ' Aprendidas';
+          if (el) el.textContent = AppLang.t('topic_learned', { seen, total });
         })
         .catch(() => {});
     });

@@ -1,0 +1,578 @@
+{
+  "phrases": [
+    {
+      "id": "theater_art_exhibition_invite",
+      "source": "¿Quieres ir a una exposición de arte conmigo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you want to go to an art exhibition with me?",
+          "audioSlug": "do_you_want_to_go_to_an_art_exhibition_with_me"
+        }
+      ]
+    },
+    {
+      "id": "theater_photography_exhibition",
+      "source": "La exposición de fotografías fue muy interesante.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The photography exhibition was very interesting.",
+          "audioSlug": "the_photography_exhibition_was_very_interesting"
+        }
+      ]
+    },
+    {
+      "id": "theater_moving_play",
+      "source": "La obra de teatro fue muy conmovedora.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The play was very moving.",
+          "audioSlug": "the_play_was_very_moving"
+        }
+      ]
+    },
+    {
+      "id": "theater_visit_new_museum",
+      "source": "Me gustaría ir al nuevo museo que abrieron en la ciudad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I would like to go to the new museum that opened in the city.",
+          "audioSlug": "i_would_like_to_go_to_the_new_museum_that_opened_in_the_city",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "I'd like to go to the new museum that opened in the city.",
+          "audioSlug": "i_d_like_to_go_to_the_new_museum_that_opened_in_the_city",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "theater_opera_surprised",
+      "source": "No pensé que la ópera me gustaría tanto.",
+      "level": "B1",
+      "grammar": "'Didn't think I would' expresses a past expectation that the actual experience proved wrong.",
+      "target": [
+        {
+          "text": "I didn't think I would enjoy the opera so much.",
+          "audioSlug": "i_didn_t_think_i_would_enjoy_the_opera_so_much"
+        }
+      ]
+    },
+    {
+      "id": "theater_buy_tickets_tonight",
+      "source": "Me gustaría comprar entradas para el espectáculo de esta noche.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to buy tickets for tonight's show.",
+          "audioSlug": "i_d_like_to_buy_tickets_for_tonight_s_show"
+        }
+      ]
+    },
+    {
+      "id": "theater_where_is_theater",
+      "source": "¿Dónde puedo encontrar el teatro?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where can I find the theater?",
+          "audioSlug": "where_can_i_find_the_theater"
+        }
+      ]
+    },
+    {
+      "id": "theater_what_time_performance",
+      "source": "¿A qué hora empieza la función?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time does the performance start?",
+          "audioSlug": "what_time_does_the_performance_start"
+        }
+      ]
+    },
+    {
+      "id": "theater_enjoy_going_theater",
+      "source": "Realmente disfruto ir al teatro.",
+      "level": "A2",
+      "grammar": "'Enjoy' always takes a gerund as its object: enjoy going, enjoy watching, enjoy reading.",
+      "target": [
+        {
+          "text": "I really enjoy going to the theater.",
+          "audioSlug": "i_really_enjoy_going_to_the_theater"
+        }
+      ]
+    },
+    {
+      "id": "theater_actors_incredible_performance",
+      "source": "Los actores estaban increíbles. No esperaba una actuación tan poderosa.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The actors were incredible. I didn't expect such a strong performance.",
+          "audioSlug": "the_actors_were_incredible_i_didn_t_expect_such_a_strong_performance"
+        }
+      ]
+    },
+    {
+      "id": "theater_tickets_saturday",
+      "source": "¿Quedan entradas para la función del sábado?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have any tickets left for Saturday's performance?",
+          "audioSlug": "do_you_have_any_tickets_left_for_saturday_s_performance"
+        }
+      ]
+    },
+    {
+      "id": "theater_intermission_refreshments",
+      "source": "El intermedio es una buena oportunidad para tomar algo y hablar sobre la obra.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The intermission is a chance to get refreshments and discuss the play.",
+          "audioSlug": "the_intermission_is_a_chance_to_get_refreshments_and_discuss_the_play"
+        }
+      ]
+    },
+    {
+      "id": "theater_moved_by_grief_portrayal",
+      "source": "Me conmovió profundamente la interpretación del actor sobre el duelo.",
+      "level": "B1",
+      "grammar": "Passive 'was moved by' describes an emotional response triggered by an external source.",
+      "target": [
+        {
+          "text": "I was deeply moved by the actor's portrayal of grief.",
+          "audioSlug": "i_was_deeply_moved_by_the_actor_s_portrayal_of_grief"
+        }
+      ]
+    },
+    {
+      "id": "theater_contemporary_art_museum",
+      "source": "¿Has ido a la nueva exposición del museo de arte contemporáneo?",
+      "level": "B1",
+      "grammar": "Present perfect 'have you been to' asks about experience without specifying when it happened.",
+      "target": [
+        {
+          "text": "Have you been to the new exhibition at the contemporary art museum?",
+          "audioSlug": "have_you_been_to_the_new_exhibition_at_the_contemporary_art_museum"
+        }
+      ]
+    },
+    {
+      "id": "theater_arrive_early_installation",
+      "source": "Recomendaría llegar temprano para ver la instalación antes de que llegue la gente.",
+      "level": "B1",
+      "grammar": "'Recommend' takes a gerund as its object: 'recommend arriving', 'recommend visiting'.",
+      "target": [
+        {
+          "text": "I'd recommend arriving early to see the installation before the crowd arrives.",
+          "audioSlug": "i_d_recommend_arriving_early_to_see_the_installation_before_the_crowd_arrives"
+        }
+      ]
+    },
+    {
+      "id": "theater_standing_ovation_deserved",
+      "source": "El reparto recibió una ovación de pie, completamente merecida después de una actuación así.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The cast received a standing ovation, absolutely deserved after a performance like that.",
+          "audioSlug": "the_cast_received_a_standing_ovation_absolutely_deserved_after_a_performance_like_that"
+        }
+      ]
+    },
+    {
+      "id": "theater_original_much_stronger_revival",
+      "source": "Vi ambas versiones, y la original era mucho más sólida que la nueva producción.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I saw both productions, the original was much stronger, the revival losing something essential.",
+          "audioSlug": "i_saw_both_productions_the_original_was_much_stronger_the_revival_losing_something_essential"
+        }
+      ]
+    },
+    {
+      "id": "theater_costumes_reflected_era",
+      "source": "El vestuario reflejaba perfectamente la época histórica sin parecer una pieza de museo.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The costumes perfectly reflected the historical era without feeling like a museum piece.",
+          "audioSlug": "the_costumes_perfectly_reflected_the_historical_era_without_feeling_like_a_museum_piece"
+        }
+      ]
+    },
+    {
+      "id": "theater_outdoor_atmosphere_different",
+      "source": "Hay algo especial en ver una obra al aire libre, la atmósfera es completamente diferente.",
+      "level": "B2",
+      "grammar": "'There's something special about + gerund' to describe an intangible quality",
+      "target": [
+        {
+          "text": "There's something special about watching a play outdoors, where the atmosphere is entirely different.",
+          "audioSlug": "there_s_something_special_about_watching_a_play_outdoors_where_the_atmosphere_is_entirely_different"
+        }
+      ]
+    },
+    {
+      "id": "theater_rehearsal_documentary_changed_experience",
+      "source": "Un documental sobre el proceso de ensayo cambió completamente cómo experimenté el espectáculo.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A documentary about the rehearsal process completely changed how I experienced the show.",
+          "audioSlug": "a_documentary_about_the_rehearsal_process_completely_changed_how_i_experienced_the_show"
+        }
+      ]
+    },
+    {
+      "id": "theater_exhibition_accessible_multiple_levels",
+      "source": "La exposición funcionaba en múltiples niveles, desde el disfrute casual hasta la lectura detallada de cada descripción.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The exhibition worked at multiple levels, from casual enjoyment to reading every caption carefully.",
+          "audioSlug": "the_exhibition_worked_at_multiple_levels_from_casual_enjoyment_to_reading_every_caption_carefully"
+        }
+      ]
+    },
+    {
+      "id": "theater_second_viewing_reveals_layers",
+      "source": "Al ver esta obra dos veces, la segunda reveló capas que había perdido por completo antes.",
+      "level": "B2",
+      "grammar": "Past perfect 'had missed' describes something that happened before the later event being narrated.",
+      "target": [
+        {
+          "text": "Seeing this play twice, the second viewing revealed layers I had completely missed before.",
+          "audioSlug": "seeing_this_play_twice_the_second_viewing_revealed_layers_i_had_completely_missed_before"
+        }
+      ]
+    },
+    {
+      "id": "theater_staging_final_scene",
+      "source": "La puesta en escena del director en la escena final fue poco convencional pero notablemente efectiva.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The director's staging of the final scene was unconventional but remarkably effective.",
+          "audioSlug": "the_director_s_staging_of_the_final_scene_was_unconventional_but_remarkably_effective"
+        }
+      ]
+    },
+    {
+      "id": "theater_museum_retrospective_evolution",
+      "source": "La retrospectiva del museo rastrea treinta años de la evolución creativa del artista.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The museum's retrospective traces thirty years of the artist's creative evolution.",
+          "audioSlug": "the_museum_s_retrospective_traces_thirty_years_of_the_artist_s_creative_evolution"
+        }
+      ]
+    },
+    {
+      "id": "theater_script_overambitious_themes",
+      "source": "Encontré el guion demasiado ambicioso, intentando abordar demasiados temas a la vez.",
+      "level": "B2",
+      "grammar": "'I found + object + adjective' for expressing a personal critical assessment",
+      "target": [
+        {
+          "text": "I found the script overambitious, trying to address too many themes at once.",
+          "audioSlug": "i_found_the_script_overambitious_trying_to_address_too_many_themes_at_once"
+        }
+      ]
+    },
+    {
+      "id": "theater_physical_performance_no_dialogue",
+      "source": "La actuación física del actor principal fue notable, casi completamente sin diálogo.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The lead actor's physical performance was remarkable, almost entirely without dialogue.",
+          "audioSlug": "the_lead_actor_s_physical_performance_was_remarkable_almost_entirely_without_dialogue"
+        }
+      ]
+    },
+    {
+      "id": "theater_set_design_bleak_story",
+      "source": "El diseño de escenografía era intencionalmente austero, combinando perfectamente con la crudeza de la historia.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The set design was intentionally sparse, perfectly matching the bleakness of the story.",
+          "audioSlug": "the_set_design_was_intentionally_sparse_perfectly_matching_the_bleakness_of_the_story"
+        }
+      ]
+    },
+    {
+      "id": "theater_monologue_extraordinary_restraint",
+      "source": "El monólogo del tercer acto exigía un alcance emocional extraordinario, interpretado con notable contención.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The third-act monologue demanded an extraordinary emotional range, delivered with remarkable restraint.",
+          "audioSlug": "the_third_act_monologue_demanded_an_extraordinary_emotional_range_delivered_with_remarkable_restraint"
+        }
+      ]
+    },
+    {
+      "id": "theater_contrasting_works_in_dialogue",
+      "source": "Los curadores pusieron obras contrastantes en diálogo, dejando que las tensiones entre ellas produzcan sentido.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The curators placed contrasting works in dialogue, letting the tensions between them generate meaning.",
+          "audioSlug": "the_curators_placed_contrasting_works_in_dialogue_letting_the_tensions_between_them_generate_meaning"
+        }
+      ]
+    },
+    {
+      "id": "theater_minimalism_fills_gaps_imaginatively",
+      "source": "El minimalismo de la producción obliga al público a llenar los vacíos imaginativamente, creando una experiencia profundamente personal.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The production's minimalism forces audiences to fill gaps imaginatively, creating a deeply personal experience.",
+          "audioSlug": "the_production_s_minimalism_forces_audiences_to_fill_gaps_imaginatively_creating_a_deeply_personal_experience"
+        }
+      ]
+    },
+    {
+      "id": "theater_revival_reframes_contemporary_lens",
+      "source": "Lo que hace relevante esta reposición es cómo reencuadra un texto clásico a través de una lente social contemporánea.",
+      "level": "C1",
+      "grammar": "'What makes X adjective' is a cleft structure that foregrounds the most important quality.",
+      "target": [
+        {
+          "text": "What makes this revival relevant is how it reframes a classic through a contemporary social lens.",
+          "audioSlug": "what_makes_this_revival_relevant_is_how_it_reframes_a_classic_through_a_contemporary_social_lens"
+        }
+      ]
+    },
+    {
+      "id": "theater_audience_complicit_watching",
+      "source": "El director implica deliberadamente al público, haciéndolo cómplice de lo que observa.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The director deliberately implicates the audience, making them complicit in what they watch.",
+          "audioSlug": "the_director_deliberately_implicates_the_audience_making_them_complicit_in_what_they_watch"
+        }
+      ]
+    },
+    {
+      "id": "theater_factory_space_amplifies_themes",
+      "source": "Actuar en una fábrica en desuso en lugar de un teatro convencional amplifica los temas de la obra.",
+      "level": "C1",
+      "grammar": "'Rather than' to contrast an unconventional choice with the expected alternative",
+      "target": [
+        {
+          "text": "Performing in a decommissioned factory rather than a conventional theater space amplifies the play's themes.",
+          "audioSlug": "performing_in_a_decommissioned_factory_rather_than_a_conventional_theater_space_amplifies_the_play_s_themes"
+        }
+      ]
+    },
+    {
+      "id": "theater_subverts_expectations_first_scene",
+      "source": "Lo que hace destacar esta producción es cómo el director subvierte las expectativas del público desde la primera escena.",
+      "level": "C1",
+      "grammar": "'What makes X stand out' is a cleft structure that foregrounds what distinguishes something.",
+      "target": [
+        {
+          "text": "What makes this production stand out is how the director subverts expectations from scene one.",
+          "audioSlug": "what_makes_this_production_stand_out_is_how_the_director_subverts_expectations_from_scene_one"
+        }
+      ]
+    },
+    {
+      "id": "theater_exhibition_cultural_ownership",
+      "source": "La exposición plantea incómodas preguntas sobre la propiedad cultural y la repatriación de artefactos.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The exhibition raises uncomfortable questions about cultural ownership and the repatriation of artifacts.",
+          "audioSlug": "the_exhibition_raises_uncomfortable_questions_about_cultural_ownership_and_the_repatriation_of_artifacts"
+        }
+      ]
+    },
+    {
+      "id": "theater_playwright_social_critique_domestic",
+      "source": "El dramaturgo logra insertar crítica social dentro de lo que parece ser un drama doméstico.",
+      "level": "C1",
+      "grammar": "'Appear to be' hedges formally: 'what appears to be X' means it seems like X.",
+      "target": [
+        {
+          "text": "The playwright manages to embed social critique within what appears to be a domestic drama.",
+          "audioSlug": "the_playwright_manages_to_embed_social_critique_within_what_appears_to_be_a_domestic_drama"
+        }
+      ]
+    },
+    {
+      "id": "theater_lighting_sound_immersive",
+      "source": "La coreografía de iluminación y diseño de sonido crea una experiencia inmersiva raramente lograda en el teatro en vivo.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The choreography of lighting and sound design creates an immersive experience rarely achieved in live theater.",
+          "audioSlug": "the_choreography_of_lighting_and_sound_design_creates_an_immersive_experience_rarely_achieved_in_live_theater"
+        }
+      ]
+    },
+    {
+      "id": "theater_ambiguous_ending_interpretations",
+      "source": "El final ambiguo de la obra invita a múltiples interpretaciones, lo cual es precisamente lo que la hace tan memorable.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The play's ambiguous ending invites multiple interpretations, which is precisely what makes it so memorable.",
+          "audioSlug": "the_play_s_ambiguous_ending_invites_multiple_interpretations_which_is_precisely_what_makes_it_so_memorable"
+        }
+      ]
+    },
+    {
+      "id": "theater_liminal_ritual_spectacle",
+      "source": "La actuación ocupa un espacio liminal entre ritual y espectáculo, negándose a comprometerse plenamente con ninguno de los dos.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The performance occupies a liminal space between ritual and spectacle, refusing to fully commit to either mode.",
+          "audioSlug": "the_performance_occupies_a_liminal_space_between_ritual_and_spectacle_refusing_to_fully_commit_to_either_mode"
+        }
+      ]
+    },
+    {
+      "id": "theater_postdramatic_body_space_primary",
+      "source": "Este es inconfundiblemente teatro posdramático, donde el texto es secundario y el cuerpo y el espacio son los canales expresivos primarios.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is unmistakably post-dramatic theater, where text is secondary and body and space are the primary expressive channels.",
+          "audioSlug": "this_is_unmistakably_post_dramatic_theater_where_text_is_secondary_and_body_and_space_are_the_primary_expressive_channels"
+        }
+      ]
+    },
+    {
+      "id": "theater_collective_catharsis_unreplicable",
+      "source": "En su mejor versión, el teatro logra una forma de catarsis colectiva que ninguna otra forma de arte puede replicar.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "At its best, theater achieves a form of collective catharsis that no other art form can replicate.",
+          "audioSlug": "at_its_best_theater_achieves_a_form_of_collective_catharsis_that_no_other_art_form_can_replicate"
+        }
+      ]
+    },
+    {
+      "id": "theater_gaze_instrument_of_power",
+      "source": "La instalación posiciona la mirada del espectador como instrumento de poder, donde ver es participar.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The installation positions the viewer's gaze as an instrument of power, where seeing is participating.",
+          "audioSlug": "the_installation_positions_the_viewer_s_gaze_as_an_instrument_of_power_where_seeing_is_participating"
+        }
+      ]
+    },
+    {
+      "id": "theater_psychological_disintegration_tour_de_force",
+      "source": "La puesta en escena de la desintegración psicológica del protagonista a través del diálogo fragmentado es un tour de force.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The staging of the protagonist's psychological disintegration through fragmented dialogue is a tour de force.",
+          "audioSlug": "the_staging_of_the_protagonist_s_psychological_disintegration_through_fragmented_dialogue_is_a_tour_de_force"
+        }
+      ]
+    },
+    {
+      "id": "theater_installation_commodification_audience",
+      "source": "La instalación cuestiona la mercantilización del arte, colocando al público como consumidor y consumido a la vez.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The installation interrogates the commodification of art, placing the audience as both consumer and consumed.",
+          "audioSlug": "the_installation_interrogates_the_commodification_of_art_placing_the_audience_as_both_consumer_and_consumed"
+        }
+      ]
+    },
+    {
+      "id": "theater_classical_text_contemporary_aesthetics",
+      "source": "La dramaturgia yuxtapone texto clásico con estética visual contemporánea con resultados productivos.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The dramaturgy juxtaposes classical text with contemporary visual aesthetics to productive effect.",
+          "audioSlug": "the_dramaturgy_juxtaposes_classical_text_with_contemporary_visual_aesthetics_to_productive_effect"
+        }
+      ]
+    },
+    {
+      "id": "theater_brechtian_alienation_identification",
+      "source": "La fidelidad de la producción al distanciamiento brechtiano impide que el público logre identificación emocional con los personajes.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The production's fidelity to Brechtian alienation prevents the audience from achieving emotional identification with the characters.",
+          "audioSlug": "the_production_s_fidelity_to_brechtian_alienation_prevents_the_audience_from_achieving_emotional_identification_with_the_characters"
+        }
+      ]
+    },
+    {
+      "id": "theater_curatorial_thesis_uneven_works",
+      "source": "La tesis temática del curador es convincente, pero en última instancia queda socavada por la calidad desigual de las obras seleccionadas.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The curator's thematic thesis is compelling but ultimately undermined by the uneven quality of the works selected.",
+          "audioSlug": "the_curator_s_thematic_thesis_is_compelling_but_ultimately_undermined_by_the_uneven_quality_of_the_works_selected"
+        }
+      ]
+    }
+  ]
+}

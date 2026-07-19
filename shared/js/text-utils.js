@@ -129,7 +129,18 @@ const AppText = (() => {
     return best;
   }
 
-  return { expandContractions, normalise, normaliseSingle, buildEquivalenceMaps, closestPhrase };
+  /**
+   * Normalise an alternative entry to a typed object.
+   * Strings (legacy format) become { text, type: 'style' }.
+   * Objects are returned as-is.
+   * @param {string|Object} alt
+   * @returns {{ text: string, type: string, hint?: string, region?: string, note?: string }}
+   */
+  function normaliseAlt(alt) {
+    return typeof alt === 'string' ? { text: alt, type: 'style' } : alt;
+  }
+
+  return { expandContractions, normalise, normaliseSingle, buildEquivalenceMaps, closestPhrase, normaliseAlt };
 })();
 
 /* ============================================================

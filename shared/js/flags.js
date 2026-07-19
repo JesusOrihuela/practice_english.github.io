@@ -43,6 +43,95 @@ const AppFlags = (() => {
       <rect x="9.5" width="3" height="15" fill="#C8102E"/>
       <rect y="6" width="22" height="3" fill="#C8102E"/>
     </svg>`,
+
+    fr: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#ED2939"/>
+      <rect width="14.67" height="15" fill="#fff"/>
+      <rect width="7.33" height="15" fill="#002395"/>
+    </svg>`,
+
+    de: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#FFCE00"/>
+      <rect width="22" height="10" fill="#DD0000"/>
+      <rect width="22" height="5" fill="#000"/>
+    </svg>`,
+
+    pt: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#FF0000"/>
+      <rect width="8.8" height="15" fill="#006600"/>
+    </svg>`,
+
+    br: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#009C3B"/>
+      <polygon points="11,1.5 20.5,7.5 11,13.5 1.5,7.5" fill="#FEDF00"/>
+      <circle cx="11" cy="7.5" r="3" fill="#003087"/>
+    </svg>`,
+
+    it: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#CE2B37"/>
+      <rect width="14.67" height="15" fill="#fff"/>
+      <rect width="7.33" height="15" fill="#009246"/>
+    </svg>`,
+
+    nl: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#21468B"/>
+      <rect width="22" height="10" fill="#fff"/>
+      <rect width="22" height="5" fill="#AE1C28"/>
+    </svg>`,
+
+    pl: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#DC143C"/>
+      <rect width="22" height="7.5" fill="#fff"/>
+    </svg>`,
+
+    se: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#006AA7"/>
+      <rect y="5.5" width="22" height="4" fill="#FECC02"/>
+      <rect x="6" width="4" height="15" fill="#FECC02"/>
+    </svg>`,
+
+    no: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#EF2B2D"/>
+      <rect y="5.5" width="22" height="4" fill="#fff"/>
+      <rect x="6" width="4" height="15" fill="#fff"/>
+      <rect y="6.5" width="22" height="2" fill="#002868"/>
+      <rect x="7" width="2" height="15" fill="#002868"/>
+    </svg>`,
+
+    dk: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#C60C30"/>
+      <rect y="5.5" width="22" height="4" fill="#fff"/>
+      <rect x="6" width="4" height="15" fill="#fff"/>
+    </svg>`,
+
+    fi: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#fff"/>
+      <rect y="5.5" width="22" height="4" fill="#003580"/>
+      <rect x="6" width="4" height="15" fill="#003580"/>
+    </svg>`,
+
+    cz: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#D7141A"/>
+      <rect width="22" height="7.5" fill="#fff"/>
+      <polygon points="0,0 10,7.5 0,15" fill="#11457E"/>
+    </svg>`,
+
+    lv: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#9E3039"/>
+      <rect y="6" width="22" height="3" fill="#fff"/>
+    </svg>`,
+
+    lt: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#C1272D"/>
+      <rect width="22" height="10" fill="#006A44"/>
+      <rect width="22" height="5" fill="#FDB913"/>
+    </svg>`,
+
+    ee: `<svg width="22" height="15" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
+      <rect width="22" height="15" fill="#fff"/>
+      <rect width="22" height="10" fill="#000"/>
+      <rect width="22" height="5" fill="#0072CE"/>
+    </svg>`,
   };
 
   /* ---------- Helpers ---------- */

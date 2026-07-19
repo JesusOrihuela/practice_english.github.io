@@ -17,9 +17,37 @@ let _lastCorrect     = false;
 let _translationMode = false; // true for A1/A2: options show Spanish translation
 
 function _quizText(word) {
+  const _qPair = AppLangPair.getActive();
+  if (_qPair.target.code !== 'en') {
+    // non-English target (e.g. en-es): use English definition as option text
+    return word.definition;
+  }
   return _translationMode
-    ? (word.translations?.es || word.definition)
+    ? (word.translations?.[_qPair.source.code] || word.definition)
     : word.definition;
+}
+
+function _isCognate(word) {
+  const _norm = s => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+  const en = _norm(word.word);
+  const _srcCode = AppLangPair.getActive().source.code;
+  const tgtLang  = _norm(word.translations?.[_srcCode] || '');
+  if (!en || !tgtLang) return false;
+  if (en === tgtLang) return true;
+  // Suffix pairs where English/Spanish share the same root
+  const _pairs = [
+    ['tion','cion'],['ty','dad'],['ous','o'],['ous','oso'],
+    ['ate','ar'],['ize','izar'],['ise','izar'],['al','al'],['ble','ble'],
+    ['ent','ente'],['ant','ante'],['ic','ico'],['ical','ico'],['ly','mente'],
+  ];
+  for (const [eSuf, sSuf] of _pairs) {
+    if (en.endsWith(eSuf) && tgtLang.endsWith(sSuf)) {
+      const eRoot = en.slice(0, -eSuf.length);
+      const sRoot = tgtLang.slice(0, -sSuf.length);
+      if (eRoot.length >= 3 && (eRoot === sRoot || sRoot.startsWith(eRoot) || eRoot.startsWith(sRoot))) return true;
+    }
+  }
+  return false;
 }
 
 // ---- Init ----
@@ -142,11 +170,13 @@ function startTopic(topicId, pathMode, pathCard) {
       cardIds = _tagged.map(x => quizTopicKey + '_' + x.id);
 
       const topicObj = (AppTopics.VOCAB_TOPICS || []).find(t => t.id === topicId);
+      const _tgtCode = AppLangPair.getActive().target.code;
       const _pbArgs = {
         items: words,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
+        traductions: _tgtCode !== 'en' ? _tagged.map(w => w.translations?.[_tgtCode] || w.word) : null,
         cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
@@ -182,10 +212,15 @@ function showQuestion(index) {
   if (!word) return;
 
   answered         = false;
-  _translationMode = (CEFR_ORDER[word.level] ?? 99) <= 1; // A1=0, A2=1 → translation mode
+  // Translation mode (A1/A2): show Spanish translation as options instead of English definition.
+  // Disabled for cognates — trivially obvious answers like "formal/formal" defeat the purpose.
+  _translationMode = !_isCognate(word) && (CEFR_ORDER[word.level] ?? 99) <= 1;
 
-  document.getElementById('quiz-word').textContent     = word.word;
-  document.getElementById('quiz-category').textContent = word.category || '';
+  const _quizPair   = AppLangPair.getActive();
+  const _isEnTarget = _quizPair.target.code === 'en';
+  document.getElementById('quiz-word').textContent     = _isEnTarget ? word.word : (word.translations?.[_quizPair.target.code] || word.word);
+  const _POS_Q = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
+  document.getElementById('quiz-category').textContent = word.category ? AppLang.t(_POS_Q[word.category] || word.category) : '';
   document.getElementById('word-card').className       = 'word-card';
 
   document.getElementById('quiz-feedback').classList.add('hidden');
@@ -213,7 +248,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 function buildChoices(correctIdx) {
@@ -283,7 +318,9 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   diffEl.textContent = '';
   diffEl.appendChild(AppFeedback.buildQuiz(_quizText(chosenWord), _quizText(words[correctIdx]), isCorrect));
 
-  exampleEl.textContent = '"' + words[correctIdx].example + '"';
+  const _exPair  = AppLangPair.getActive();
+  const _isEnTgt = _exPair.target.code === 'en';
+  exampleEl.textContent = '"' + (_isEnTgt ? words[correctIdx].example : (words[correctIdx]['example_' + _exPair.source.code] || words[correctIdx].example)) + '"';
   feedbackEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   document.getElementById('next-btn').classList.toggle('hidden', !isCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', isCorrect);

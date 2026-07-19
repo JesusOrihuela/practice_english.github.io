@@ -1,0 +1,772 @@
+{
+  "phrases": [
+    {
+      "id": "accommodation_breakfast_included",
+      "source": "¿Está incluido el desayuno?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is breakfast included?",
+          "audioSlug": "is_breakfast_included"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_extra_towels",
+      "source": "¿Podría proporcionar toallas adicionales en la habitación?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you provide extra towels in the room?",
+          "audioSlug": "could_you_provide_extra_towels_in_the_room",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you provide extra towels in the room?",
+          "audioSlug": "can_you_provide_extra_towels_in_the_room",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_hotel_services",
+      "source": "¿Qué servicios tiene el hotel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What services does the hotel have?",
+          "audioSlug": "what_services_does_the_hotel_have"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_minibar_room",
+      "source": "¿Hay minibar en la habitación?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a minibar in the room?",
+          "audioSlug": "is_there_a_minibar_in_the_room"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_recommend_restaurant",
+      "source": "¿Podría recomendarme un buen restaurante cercano?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you recommend a good restaurant nearby?",
+          "audioSlug": "could_you_recommend_a_good_restaurant_nearby",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you recommend a good restaurant nearby?",
+          "audioSlug": "can_you_recommend_a_good_restaurant_nearby",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_wifi_password",
+      "source": "¿Cuál es la contraseña del WiFi?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the WiFi password?",
+          "audioSlug": "what_is_the_wifi_password"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_gym_hotel",
+      "source": "¿Hay gimnasio en el hotel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a gym in the hotel?",
+          "audioSlug": "is_there_a_gym_in_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_help_luggage",
+      "source": "¿Podría ayudarme con mi equipaje?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you help me with my luggage?",
+          "audioSlug": "could_you_help_me_with_my_luggage",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you help me with my luggage?",
+          "audioSlug": "can_you_help_me_with_my_luggage",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_safe_room",
+      "source": "¿Hay caja fuerte en la habitación?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a safe in the room?",
+          "audioSlug": "is_there_a_safe_in_the_room"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_extra_pillow",
+      "source": "¿Podría proporcionarme una almohada extra, por favor?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you provide an extra pillow, please?",
+          "audioSlug": "could_you_provide_an_extra_pillow_please",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you provide an extra pillow, please?",
+          "audioSlug": "can_you_provide_an_extra_pillow_please",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_restaurant_closing",
+      "source": "¿A qué hora cierra el restaurante del hotel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time does the hotel restaurant close?",
+          "audioSlug": "what_time_does_the_hotel_restaurant_close"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_atm_hotel",
+      "source": "¿Hay un cajero automático en el hotel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there an ATM in the hotel?",
+          "audioSlug": "is_there_an_atm_in_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_pool_hotel",
+      "source": "¿Hay piscina en el hotel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a pool in the hotel?",
+          "audioSlug": "is_there_a_pool_in_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_checkin_time",
+      "source": "¿A qué hora es el registro?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time is check-in?",
+          "audioSlug": "what_time_is_check_in"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_checkout_time",
+      "source": "¿A qué hora es la salida?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time is check-out?",
+          "audioSlug": "what_time_is_check_out"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_closest_restaurant",
+      "source": "¿Cuál es el restaurante más cercano al hotel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the closest restaurant to the hotel?",
+          "audioSlug": "what_is_the_closest_restaurant_to_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_drinks_included",
+      "source": "¿Las bebidas están incluidas?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Are drinks included?",
+          "audioSlug": "are_drinks_included"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_book_room_two_nights",
+      "source": "¿Podrías ayudarme a reservar una habitación de hotel para dos noches?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you help me book a hotel room for two nights?",
+          "audioSlug": "could_you_help_me_book_a_hotel_room_for_two_nights",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you help me book a hotel room for two nights?",
+          "audioSlug": "can_you_help_me_book_a_hotel_room_for_two_nights",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_single_room_availability",
+      "source": "¿Hay disponibilidad para una habitación individual?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there availability for a single room?",
+          "audioSlug": "is_there_availability_for_a_single_room"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_confirm_reservation",
+      "source": "Quisiera confirmar mi reserva para mañana por la noche.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I would like to confirm my reservation for tomorrow night.",
+          "audioSlug": "i_would_like_to_confirm_my_reservation_for_tomorrow_night"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_do_not_disturb",
+      "source": "Está puesto el letrero de no molestar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The do not disturb sign is on.",
+          "audioSlug": "the_do_not_disturb_sign_is_on"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_airport_shuttle",
+      "source": "¿Tienen servicio de transporte al aeropuerto?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have airport shuttle service?",
+          "audioSlug": "do_you_have_airport_shuttle_service"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_nonsmoking_room",
+      "source": "¿Podría darme una habitación para no fumadores, por favor?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you give me a non-smoking room, please?",
+          "audioSlug": "could_you_give_me_a_non_smoking_room_please",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can you give me a non-smoking room, please?",
+          "audioSlug": "can_you_give_me_a_non_smoking_room_please",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_service_24h",
+      "source": "¿Hay servicio a la habitación las 24 horas?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there 24-hour room service?",
+          "audioSlug": "is_there_24_hour_room_service"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_guest_access",
+      "source": "¿A qué tengo acceso como huésped del hotel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What do I have access to as a hotel guest?",
+          "audioSlug": "what_do_i_have_access_to_as_a_hotel_guest"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_store_luggage",
+      "source": "¿Hay algún lugar donde guardar el equipaje después de la salida?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a place to store luggage after check-out?",
+          "audioSlug": "is_there_a_place_to_store_luggage_after_check_out"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_spa_service",
+      "source": "¿Hay servicio de spa o masajes en el hotel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a spa or massage service in the hotel?",
+          "audioSlug": "is_there_a_spa_or_massage_service_in_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_transport_options",
+      "source": "¿Qué opciones de transporte hay para llegar al hotel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What transportation options are there to get to the hotel?",
+          "audioSlug": "what_transportation_options_are_there_to_get_to_the_hotel"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_sea_view",
+      "source": "Preferiría una habitación con vista al mar, aunque cueste más.",
+      "level": "B1",
+      "grammar": "'Even if' shows you accept a possible cost but still hold your preference.",
+      "target": [
+        {
+          "text": "I'd prefer a sea-view room, even if it costs more.",
+          "audioSlug": "i_d_prefer_a_sea_view_room_even_if_it_costs_more"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_late_checkout_policy",
+      "source": "¿Cuál es la política de salida tardía?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the late check-out policy?",
+          "audioSlug": "what_is_the_late_check_out_policy"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_cancellation_policy",
+      "source": "¿Cuál es la política de cancelación de la reserva?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the hotel's reservation cancellation policy?",
+          "audioSlug": "what_is_the_hotel_s_reservation_cancellation_policy"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_pet_policy",
+      "source": "¿Cuál es la política para mascotas del hotel?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the hotel's pet policy?",
+          "audioSlug": "what_is_the_hotel_s_pet_policy"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_early_checkin_policy",
+      "source": "¿Cuál es la política de registro anticipado?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the early check-in policy?",
+          "audioSlug": "what_is_the_early_check_in_policy"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_refund_policy",
+      "source": "¿Cuál es la política de reembolso en caso de cancelación?",
+      "level": "B1",
+      "grammar": "'In case of' introduces a contingency and always takes a noun, not a clause.",
+      "target": [
+        {
+          "text": "What is the refund policy in case of cancellation?",
+          "audioSlug": "what_is_the_refund_policy_in_case_of_cancellation"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_power_adapters",
+      "source": "¿Tienen adaptadores de corriente para dispositivos internacionales?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have power adapters for international devices?",
+          "audioSlug": "do_you_have_power_adapters_for_international_devices"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_extend_stay_price",
+      "source": "¿Cuánto cuesta extender mi estadía una noche más?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the extra charge to extend my stay one night?",
+          "audioSlug": "what_is_the_extra_charge_to_extend_my_stay_one_night"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_noisy_neighbors_keep_it_down",
+      "source": "Los huéspedes de la habitación de al lado están haciendo mucho ruido. ¿Podría pedirles que bajen el volumen?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The guests next door are noisy. Could you ask them to keep it down?",
+          "audioSlug": "the_guests_next_door_are_noisy_could_you_ask_them_to_keep_it_down"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_service_wrong_order",
+      "source": "Mi pedido de servicio a la habitación llegó con los artículos equivocados. Me gustaría que me enviaran la comida correcta lo antes posible.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My room service arrived with the wrong items. Please send the correct meal up.",
+          "audioSlug": "my_room_service_arrived_with_the_wrong_items_please_send_the_correct_meal_up"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_upgrade_special_occasion",
+      "source": "¿Hay mejoras de habitación disponibles para mi estadía? Estoy celebrando una ocasión especial.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Are there any room upgrades available for my stay? I'm celebrating a special occasion.",
+          "audioSlug": "are_there_any_room_upgrades_available_for_my_stay_i_m_celebrating_a_special_occasion"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_group_discount_block",
+      "source": "Somos un grupo de doce personas. ¿Hay descuento para grupos o un bloque de habitaciones a tarifa reducida?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We're twelve guests. Is there a group discount or a block rate?",
+          "audioSlug": "we_re_twelve_guests_is_there_a_group_discount_or_a_block_rate"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_not_cleaned_discount",
+      "source": "Mi habitación no fue limpiada durante mi estadía. Me gustaría solicitar un reembolso parcial.",
+      "level": "B2",
+      "grammar": "Passive 'wasn't cleaned' focuses on the outcome, not who was responsible for it.",
+      "target": [
+        {
+          "text": "My room wasn't cleaned during my stay. I'd like to request a partial refund.",
+          "audioSlug": "my_room_wasn_t_cleaned_during_my_stay_i_d_like_to_request_a_partial_refund"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_unexplained_charge_bill",
+      "source": "Noté un cargo en mi factura del que no me informaron al momento del registro.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I noticed a charge on my bill that I wasn't informed about at check-in.",
+          "audioSlug": "i_noticed_a_charge_on_my_bill_that_i_wasn_t_informed_about_at_check_in"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_early_checkin_early_flight",
+      "source": "¿Podrían gestionar un registro anticipado? Mi vuelo aterriza a las seis de la mañana.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you arrange an early check-in? My flight lands at six in the morning.",
+          "audioSlug": "could_you_arrange_an_early_check_in_my_flight_lands_at_six_in_the_morning"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_aircon_maintenance",
+      "source": "El aire acondicionado no funciona bien. ¿Podrían enviar a alguien de mantenimiento?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The air conditioning isn't working properly. Could you send someone from maintenance?",
+          "audioSlug": "the_air_conditioning_isn_t_working_properly_could_you_send_someone_from_maintenance"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_extend_stay_same_rate",
+      "source": "¿Puedo extender mi estadía dos noches más a la misma tarifa?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I extend my stay two nights at the same rate?",
+          "audioSlug": "can_i_extend_my_stay_two_nights_at_the_same_rate"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_security_deposit_return",
+      "source": "¿Cuándo se devolverá el depósito de seguridad y qué deducciones son permitidas según el contrato?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "When will the security deposit be returned, and what deductions are permissible under the contract?",
+          "audioSlug": "when_will_the_security_deposit_be_returned_and_what_deductions_are_permissible_under_the_contract"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_accessible_level_access",
+      "source": "Necesito una habitación totalmente adaptada. ¿Podría confirmar cuáles tienen acceso sin barreras?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I require level-access facilities. Could you confirm which rooms are fully adapted?",
+          "audioSlug": "i_require_level_access_facilities_could_you_confirm_which_rooms_are_fully_adapted"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_vat_invoice_accounting",
+      "source": "¿Podría emitir la factura con el nombre de la empresa y el número de identificación fiscal? Debe ser válida para fines contables.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you issue the invoice with our business name and VAT number for accounting?",
+          "audioSlug": "could_you_issue_the_invoice_with_our_business_name_and_vat_number_for_accounting"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_corporate_rate_booking",
+      "source": "Me gustaría hablar sobre una tarifa corporativa para futuras reservas en nombre de mi empresa.",
+      "level": "C1",
+      "grammar": "'On behalf of' means acting in the name of someone else or a group.",
+      "target": [
+        {
+          "text": "I'd like to discuss a corporate rate for future bookings on behalf of my company.",
+          "audioSlug": "i_d_like_to_discuss_a_corporate_rate_for_future_bookings_on_behalf_of_my_company"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_doesnt_match_manager",
+      "source": "La habitación asignada no coincide con mi reserva. Me gustaría hablar con el gerente.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The room assigned to me doesn't match my booking. I'd like to speak with the manager.",
+          "audioSlug": "the_room_assigned_to_me_doesn_t_match_my_booking_i_d_like_to_speak_with_the_manager"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_formal_complaint_noise",
+      "source": "Necesito presentar una queja formal por el ruido proveniente de arriba anoche.",
+      "level": "C1",
+      "grammar": "'File a formal complaint' is the fixed phrase for officially reporting an issue.",
+      "target": [
+        {
+          "text": "I need to file a formal complaint about the noise disturbance from upstairs last night.",
+          "audioSlug": "i_need_to_file_a_formal_complaint_about_the_noise_disturbance_from_upstairs_last_night"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_itemize_bill_expense",
+      "source": "¿Podría desglosar la factura? Necesito un recibo detallado para el informe de gastos de mi empresa.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you itemize the bill? I need a detailed receipt for my company's expense report.",
+          "audioSlug": "could_you_itemize_the_bill_i_need_a_detailed_receipt_for_my_company_s_expense_report"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_retrieve_valuables_safe",
+      "source": "Presenté una declaración de objetos de valor al registrarme. Me gustaría recuperarlos de la caja fuerte.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I submitted a valuables declaration at check-in. I'd like to retrieve them from the safe.",
+          "audioSlug": "i_submitted_a_valuables_declaration_at_check_in_i_d_like_to_retrieve_them_from_the_safe"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_arbitration_clause_consumer_rights",
+      "source": "El contrato contiene una cláusula de arbitraje. Me gustaría aclarar si anula mis derechos estatutarios como consumidor.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The contract contains an arbitration clause. Does it supersede my statutory consumer rights?",
+          "audioSlug": "the_contract_contains_an_arbitration_clause_does_it_supersede_my_statutory_consumer_rights"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_force_majeure_cancellation",
+      "source": "Según su política de cancelación, creo que aplica una excepción por fuerza mayor a mi solicitud de reembolso.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Under your cancellation policy, I believe a force majeure exception applies to my refund request.",
+          "audioSlug": "under_your_cancellation_policy_i_believe_a_force_majeure_exception_applies_to_my_refund_request"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_room_misrepresented_listing",
+      "source": "La habitación fue descrita de forma engañosa en el anuncio, pues las fotos mostraban vista al mar pero la habitación no la tenía.",
+      "level": "C2",
+      "grammar": "Passive 'was misrepresented' focuses on the description, not who wrote it.",
+      "target": [
+        {
+          "text": "The room was misrepresented in the listing. The photos showed a sea view that didn't exist.",
+          "audioSlug": "the_room_was_misrepresented_in_the_listing_the_photos_showed_a_sea_view_that_didn_t_exist"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_longstay_discount_negotiation",
+      "source": "Me gustaría negociar una tarifa por estancia prolongada para una reserva de un mes a partir del próximo lunes.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to negotiate a long-stay rate for a month-long reservation beginning next Monday.",
+          "audioSlug": "i_d_like_to_negotiate_a_long_stay_rate_for_a_month_long_reservation_beginning_next_monday"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_damages_assessment_criteria",
+      "source": "El contrato indica que los daños se evalúan a discreción del hotel. Me gustaría entender los criterios.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The contract states that damages are assessed at the hotel's discretion. I'd like to understand the criteria.",
+          "audioSlug": "the_contract_states_that_damages_are_assessed_at_the_hotel_s_discretion_i_d_like_to_understand_the_criteria"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_loyalty_tier_benefits",
+      "source": "¿Podría confirmar si mi nivel de fidelidad me da derecho a desayuno gratuito y salida tardía?",
+      "level": "C2",
+      "grammar": "'Whether' introduces an embedded yes/no question in formal or polite requests.",
+      "target": [
+        {
+          "text": "Could you confirm whether my loyalty status entitles me to complimentary breakfast and late checkout?",
+          "audioSlug": "could_you_confirm_whether_my_loyalty_status_entitles_me_to_complimentary_breakfast_and_late_checkout"
+        }
+      ]
+    }
+  ]
+}

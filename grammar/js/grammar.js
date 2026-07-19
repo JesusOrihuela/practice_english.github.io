@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* ── Data Loading ── */
 function loadData() {
-  AppData.get('grammar-rules')
+  AppData.get(AppLangPair.grammarKey())
     .then(data => {
       allRules   = data.rules   || [];
       categories = data.categories || [];
@@ -106,6 +106,17 @@ function loadData() {
    SCREEN 1 — Category Grid
 ══════════════════════════════════════════════════════ */
 
+function _catLabel(cat) {
+  var _src = (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().source.code : 'es';
+  return cat['label_' + _src] || cat.label_en || cat.label_es;
+}
+
+function _ruleTitle(rule) {
+  var _src = (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().source.code : 'es';
+  return rule['title_' + _src] || rule.title_en || rule.title;
+}
+
+
 function buildCategoryGrid() {
   const grid = document.getElementById('category-grid');
   grid.innerHTML = '';
@@ -119,10 +130,10 @@ function buildCategoryGrid() {
     const btn = document.createElement('button');
     btn.className = 'category-card';
     btn.style.setProperty('--cat-color', cat.color);
-    btn.setAttribute('aria-label', cat.label_es);
+    btn.setAttribute('aria-label', _catLabel(cat));
     btn.innerHTML =
       '<span class="category-emoji">' + cat.emoji + '</span>' +
-      '<span class="category-label">' + cat.label_es + '</span>' +
+      '<span class="category-label">' + _catLabel(cat) + '</span>' +
       '<span class="category-progress">' + AppLang.t('topic_learned', { seen, total: rulesInCat.length }) + '</span>';
 
     btn.addEventListener('click', () => showRules(cat.id));
@@ -152,9 +163,9 @@ function _showTopicRules(rules) {
 
     const btn = document.createElement('button');
     btn.className = 'rule-row' + (seen ? ' rule-row--seen' : '');
-    btn.setAttribute('aria-label', rule.title);
+    btn.setAttribute('aria-label', _ruleTitle(rule));
     btn.innerHTML =
-      '<span class="rule-row__title">' + rule.title + '</span>' +
+      '<span class="rule-row__title">' + _ruleTitle(rule) + '</span>' +
       (seen ? '<span class="rule-row__seen-badge">' + AppLang.t('badge_studied') + '</span>' : '<span class="rule-row__new-badge">' + AppLang.t('badge_new_plain') + '</span>');
     btn.addEventListener('click', () => startExercise(rule));
     list.appendChild(btn);
@@ -171,7 +182,7 @@ function showRules(categoryId) {
   const cat = categories.find(c => c.id === categoryId);
   if (!cat) return;
 
-  document.getElementById('rule-category-label').textContent = cat.emoji + ' ' + cat.label_es;
+  document.getElementById('rule-category-label').textContent = cat.emoji + ' ' + _catLabel(cat);
 
   const rulesInCat = allRules.filter(r => r.category === categoryId);
   const list = document.getElementById('rule-list');
@@ -196,7 +207,7 @@ function showRules(categoryId) {
 
     const btn = document.createElement('button');
     btn.className = 'rule-row';
-    btn.setAttribute('aria-label', rule.title + ' — ' + rule.title_es);
+    btn.setAttribute('aria-label', _ruleTitle(rule));
 
     const statusHtml = isDone
       ? '<span class="rule-row__status rule-row__status--done">' + AppLang.t('done_status') + '</span>'
@@ -205,8 +216,7 @@ function showRules(categoryId) {
     btn.innerHTML =
       '<span class="rule-row__cefr cefr-' + rule.level + '">' + rule.level + '</span>' +
       '<span class="rule-row__text">' +
-        '<span class="rule-row__title">' + rule.title + '</span>' +
-        '<span class="rule-row__title-es">' + rule.title_es + '</span>' +
+        '<span class="rule-row__title">' + _ruleTitle(rule) + '</span>' +
       '</span>' +
       statusHtml;
 
@@ -232,7 +242,7 @@ function startExercise(rule) {
   _progressSaved  = false;
 
   // Set header badges
-  document.getElementById('exercise-rule-title').textContent = rule.title;
+  document.getElementById('exercise-rule-title').textContent = _ruleTitle(rule);
   const cefrBadge = document.getElementById('exercise-cefr-badge');
   if (cefrBadge) {
     cefrBadge.textContent = rule.level;
@@ -296,6 +306,7 @@ function updatePhaseDots() {
 function buildPhase1() {
   const card = document.getElementById('dialogue-card');
   if (!card) return;
+  card.innerHTML = '';
 
   (currentRule.context_dialogue || []).forEach(turn => {
     const div = document.createElement('div');
@@ -324,6 +335,7 @@ const MIN_NOTICING_CHARS = 3; // minimum chars per answer to count as engaged
 function buildPhase2() {
   const card    = document.getElementById('noticing-card');
   if (!card) return;
+  card.innerHTML = '';
   const btn     = document.getElementById('noticing-show-btn');
   const progEl  = document.getElementById('noticing-progress');
 
@@ -358,7 +370,7 @@ function buildPhase2() {
     textarea.className   = 'noticing-input';
     textarea.rows        = 2;
     textarea.placeholder = promptHint || AppLang.t('noticing_placeholder');
-    textarea.setAttribute('aria-label', 'Answer to question ' + (i + 1));
+    textarea.setAttribute('aria-label', AppLang.t('grammar_noticing_answer_n', { n: i + 1 }));
     card.appendChild(textarea);
     inputs.push(textarea);
 
@@ -396,6 +408,7 @@ function updateNoticingProgress(el, answered, total) {
 function buildPhase3() {
   const card = document.getElementById('rule-card');
   if (!card) return;
+  card.innerHTML = '';
 
   // ── "Tu hipótesis" block — only when the user has answers ──
   const prompts = currentRule.noticing_prompts || [];
@@ -468,6 +481,7 @@ function showStructuredItem(idx) {
   const item = items[idx];
   const card = document.getElementById('structured-card');
   if (!card) return;
+  card.innerHTML = '';
 
   const sentEl = document.createElement('div');
   sentEl.className = 'structured-sentence';
@@ -555,6 +569,8 @@ function showProductionItem(idx) {
   const item = items[idx];
   const card = document.getElementById('production-card');
   if (!card) return;
+  card.innerHTML = '';
+  if (!card) return;
   prodAnswered = false;
 
   // Detect number of blanks — multi-blank needs inline inputs
@@ -580,7 +596,7 @@ function showProductionItem(idx) {
       inp.className    = 'production-input production-input--inline';
       inp.autocomplete = 'off';
       inp.spellcheck   = false;
-      inp.setAttribute('aria-label', 'Blank ' + (i + 1));
+      inp.setAttribute('aria-label', AppLang.t('grammar_production_blank_n', { n: i + 1 }));
       const hint = answerParts[i] || '';
       inp.style.width  = Math.max(52, hint.length * 11 + 16) + 'px';
       inputs.push(inp);
@@ -742,21 +758,9 @@ function buildRelatedPhrases(rule) {
   var keywords = rule.title.toLowerCase().split(/\s+/).filter(function(w){ return w.length > 3; });
   if (keywords.length === 0) return;
 
-  var topicMeta = [
-    { id: 'greetings',      label: 'Greetings' },
-    { id: 'restaurant',     label: 'Restaurant' },
-    { id: 'supermarket',    label: 'Supermarket' },
-    { id: 'kitchen',        label: 'Kitchen' },
-    { id: 'transportation', label: 'Transportation' },
-    { id: 'airport',        label: 'Airport' },
-    { id: 'accommodation',  label: 'Accommodation' },
-    { id: 'movies',         label: 'Movies & Series' },
-    { id: 'music',          label: 'Music' },
-    { id: 'theater',        label: 'Theater & Arts' },
-    { id: 'gym',            label: 'Gym' },
-    { id: 'technology',     label: 'Technology' },
-    { id: 'accountability', label: 'Work & Goals' },
-  ];
+  var topicMeta = (typeof AppTopics !== 'undefined' ? AppTopics.PHRASE_TOPICS : []).map(function(t) {
+    return { id: t.id, label: (typeof AppTopics !== 'undefined') ? AppTopics.getLabel(t) : t.label };
+  });
 
   var fetches = topicMeta.map(function(tm) {
     return AppData.get(tm.id)
@@ -879,7 +883,7 @@ function setReentryBanner(visible) {
     banner.setAttribute('role', 'status');
     banner.innerHTML =
       '<span class="reentry-icon">🔁</span>' +
-      '<span>Reanudando desde <strong>Comprensión + Producción</strong> — contexto y regla ya vistos</span>';
+      '<span>' + AppLang.t('reentry_banner_msg') + '</span>';
     // Insert after phase-progress bar
     const prog = document.getElementById('phase-progress');
     if (prog) prog.insertAdjacentElement('afterend', banner);

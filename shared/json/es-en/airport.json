@@ -1,0 +1,484 @@
+{
+  "phrases": [
+    {
+      "id": "airport_flight_departure_time",
+      "source": "¿A qué hora sale nuestro vuelo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time is our flight?",
+          "audioSlug": "what_time_is_our_flight"
+        }
+      ]
+    },
+    {
+      "id": "airport_check_luggage",
+      "source": "Necesito facturar mi equipaje.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to check my luggage.",
+          "audioSlug": "i_need_to_check_my_luggage"
+        }
+      ]
+    },
+    {
+      "id": "airport_waiting_room_location",
+      "source": "La sala de espera está en la planta baja.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The waiting room is on the ground floor.",
+          "audioSlug": "the_waiting_room_is_on_the_ground_floor"
+        }
+      ]
+    },
+    {
+      "id": "airport_prefer_window_seat",
+      "source": "Prefiero un asiento junto a la ventana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I prefer a window seat.",
+          "audioSlug": "i_prefer_a_window_seat"
+        }
+      ]
+    },
+    {
+      "id": "airport_boarding_pass_gate",
+      "source": "Necesito mostrar mi pase de abordar en la puerta de embarque.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to show my boarding pass at the gate.",
+          "audioSlug": "i_need_to_show_my_boarding_pass_at_the_gate"
+        }
+      ]
+    },
+    {
+      "id": "airport_carryon_size_limit",
+      "source": "El equipaje de mano debe ser de un tamaño específico.",
+      "level": "A2",
+      "grammar": "Modal 'must': strong obligation or rule",
+      "target": [
+        {
+          "text": "Carry-on luggage must be a specific size.",
+          "audioSlug": "carry_on_luggage_must_be_a_specific_size"
+        }
+      ]
+    },
+    {
+      "id": "airport_exchange_currency",
+      "source": "¿Dónde puedo cambiar divisas?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where can I exchange currency?",
+          "audioSlug": "where_can_i_exchange_currency"
+        }
+      ]
+    },
+    {
+      "id": "airport_which_terminal_departs",
+      "source": "¿Desde qué terminal sale mi vuelo?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Which terminal is my flight departing from?",
+          "audioSlug": "which_terminal_is_my_flight_departing_from"
+        }
+      ]
+    },
+    {
+      "id": "airport_how_early_arrive",
+      "source": "¿Cuánto tiempo antes debo llegar al aeropuerto?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How early should I arrive at the airport before my flight?",
+          "audioSlug": "how_early_should_i_arrive_at_the_airport_before_my_flight"
+        }
+      ]
+    },
+    {
+      "id": "airport_direct_or_connecting",
+      "source": "¿Hay un vuelo directo a Nueva York, o tengo que hacer escala?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a direct flight to New York, or do I have to connect?",
+          "audioSlug": "is_there_a_direct_flight_to_new_york_or_do_i_have_to_connect"
+        }
+      ]
+    },
+    {
+      "id": "airport_flight_delayed_voucher",
+      "source": "Mi vuelo se ha retrasado. ¿Puedo recibir un vale de comida?",
+      "level": "B2",
+      "grammar": "Present perfect passive: 'has been delayed' for a recent change affecting the speaker",
+      "target": [
+        {
+          "text": "My flight has been delayed. Can I get a food voucher?",
+          "audioSlug": "my_flight_has_been_delayed_can_i_get_a_food_voucher"
+        }
+      ]
+    },
+    {
+      "id": "airport_request_seat_front",
+      "source": "Me gustaría un asiento más cerca de la parte delantera del avión, por favor.",
+      "level": "A2",
+      "grammar": "'I'd like + noun' or 'I'd like to + infinitive' both make polite requests.",
+      "target": [
+        {
+          "text": "I'd like a seat closer to the front of the plane, please.",
+          "audioSlug": "i_d_like_a_seat_closer_to_the_front_of_the_plane_please"
+        }
+      ]
+    },
+    {
+      "id": "airport_carryon_over_limit",
+      "source": "Mi equipaje de mano supera el límite de peso. ¿Cuáles son mis opciones?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My carry-on is over the weight limit. What are my options?",
+          "audioSlug": "my_carry_on_is_over_the_weight_limit_what_are_my_options"
+        }
+      ]
+    },
+    {
+      "id": "airport_baggage_claim_flight",
+      "source": "¿Dónde está la cinta de equipaje para este vuelo?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the baggage claim area for this flight?",
+          "audioSlug": "where_is_the_baggage_claim_area_for_this_flight"
+        }
+      ]
+    },
+    {
+      "id": "airport_connection_time_enough",
+      "source": "Tengo una conexión. ¿Hay tiempo para llegar a la siguiente puerta de embarque?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a connection. Is there time to reach the next gate?",
+          "audioSlug": "i_have_a_connection_is_there_time_to_reach_the_next_gate"
+        }
+      ]
+    },
+    {
+      "id": "airport_security_liquids_confiscated",
+      "source": "Me confiscaron el protector solar en seguridad. Los líquidos de más de 100 ml no se permiten en el equipaje de mano.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My sunscreen was confiscated at security. Liquids over 100ml aren't allowed in carry-on.",
+          "audioSlug": "my_sunscreen_was_confiscated_at_security_liquids_over_100ml_aren_t_allowed_in_carry_on"
+        }
+      ]
+    },
+    {
+      "id": "airport_priority_boarding_boarded_together",
+      "source": "Pagué por embarque prioritario, pero de todas formas todos abordaron al mismo tiempo.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I paid for priority boarding, but everyone boarded at the same time anyway.",
+          "audioSlug": "i_paid_for_priority_boarding_but_everyone_boarded_at_the_same_time_anyway"
+        }
+      ]
+    },
+    {
+      "id": "airport_cancelled_rebook_today",
+      "source": "Mi vuelo fue cancelado. Necesito que me asignen un lugar en el próximo vuelo disponible.",
+      "level": "B2",
+      "grammar": "'Need to be rebooked' requests an action to be performed on the speaker.",
+      "target": [
+        {
+          "text": "My flight was cancelled. I need to be rebooked on the next available flight.",
+          "audioSlug": "my_flight_was_cancelled_i_need_to_be_rebooked_on_the_next_available_flight"
+        }
+      ]
+    },
+    {
+      "id": "airport_forgot_boarding_pass_website",
+      "source": "Olvidé mi pase de abordar. ¿Puedo acceder en el sitio web de la aerolínea?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I forgot my boarding pass. Can I pull it up on the airline's website?",
+          "audioSlug": "i_forgot_my_boarding_pass_can_i_pull_it_up_on_the_airline_s_website"
+        }
+      ]
+    },
+    {
+      "id": "airport_luggage_lost_claim",
+      "source": "Mi equipaje no llegó. Me gustaría presentar un reporte de equipaje perdido.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My luggage didn't arrive. I'd like to file a lost baggage report.",
+          "audioSlug": "my_luggage_didn_t_arrive_i_d_like_to_file_a_lost_baggage_report"
+        }
+      ]
+    },
+    {
+      "id": "airport_denied_boarding_compensation",
+      "source": "Me negaron el embarque por sobreventas. ¿A qué compensación tengo derecho?",
+      "level": "B2",
+      "grammar": "Passive voice: 'was denied' to describe an action received by the subject",
+      "target": [
+        {
+          "text": "I was denied boarding due to overbooking. What compensation am I entitled to?",
+          "audioSlug": "i_was_denied_boarding_due_to_overbooking_what_compensation_am_i_entitled_to"
+        }
+      ]
+    },
+    {
+      "id": "airport_immigration_before_bags",
+      "source": "Debes pasar por inmigración antes de poder recoger tu equipaje.",
+      "level": "B2",
+      "grammar": "Modal 'have to' expressing a rule or required step",
+      "target": [
+        {
+          "text": "You have to go through immigration before you can collect your bags.",
+          "audioSlug": "you_have_to_go_through_immigration_before_you_can_collect_your_bags"
+        }
+      ]
+    },
+    {
+      "id": "airport_seat_changed_no_notice",
+      "source": "La aerolínea cambió mi asiento sin previo aviso. Me gustaría hablar con un supervisor.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The airline changed my seat without notice. I'd like to speak to a supervisor.",
+          "audioSlug": "the_airline_changed_my_seat_without_notice_i_d_like_to_speak_to_a_supervisor"
+        }
+      ]
+    },
+    {
+      "id": "airport_bag_made_connection",
+      "source": "¿Podría confirmar si mi maleta documentada alcanzó el vuelo de conexión?",
+      "level": "B2",
+      "grammar": "Indirect question: 'whether + subject + verb' inside a main clause",
+      "target": [
+        {
+          "text": "Could you confirm whether my checked bag made it onto the connecting flight?",
+          "audioSlug": "could_you_confirm_whether_my_checked_bag_made_it_onto_the_connecting_flight"
+        }
+      ]
+    },
+    {
+      "id": "airport_multi_entry_visa_duration",
+      "source": "Tengo una visa de entradas múltiples. ¿Cada entrada renueva el período de estancia permitido?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a multi-entry visa. Does each arrival reset the permitted duration of stay?",
+          "audioSlug": "i_have_a_multi_entry_visa_does_each_arrival_reset_the_permitted_duration_of_stay"
+        }
+      ]
+    },
+    {
+      "id": "airport_duty_exceeded_pay_here",
+      "source": "He superado el límite de franquicia. ¿Puedo pagar el arancel de importación aquí en el aeropuerto?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I've exceeded the duty-free allowance. Can I pay the import duty here at the airport?",
+          "audioSlug": "i_ve_exceeded_the_duty_free_allowance_can_i_pay_the_import_duty_here_at_the_airport"
+        }
+      ]
+    },
+    {
+      "id": "airport_unaccompanied_minor_procedure",
+      "source": "Mi hija viaja sola por primera vez. ¿Qué procedimientos aplican para los menores no acompañados?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My daughter is traveling alone for the first time. What procedures apply for unaccompanied minors?",
+          "audioSlug": "my_daughter_is_traveling_alone_for_the_first_time_what_procedures_apply_for_unaccompanied_minors"
+        }
+      ]
+    },
+    {
+      "id": "airport_seat_assignment_not_booked",
+      "source": "Reservé un asiento en la fila de salida, pero me asignaron uno de economía estándar. Me gustaría que se corrigiera.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I booked an exit-row seat but was assigned a standard economy seat. I'd like this corrected.",
+          "audioSlug": "i_booked_an_exit_row_seat_but_was_assigned_a_standard_economy_seat_i_d_like_this_corrected"
+        }
+      ]
+    },
+    {
+      "id": "airport_customs_declare_allowance",
+      "source": "Quisiera declarar estos artículos. ¿Podría indicarme el límite de franquicia?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to declare these goods. Could you tell me the duty-free allowance?",
+          "audioSlug": "i_d_like_to_declare_these_goods_could_you_tell_me_the_duty_free_allowance"
+        }
+      ]
+    },
+    {
+      "id": "airport_passport_expiry_visa",
+      "source": "Mi pasaporte vence en tres meses. ¿Es suficiente para una visa de turista a la llegada?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My passport expires in three months. Is that sufficient for a tourist visa on arrival?",
+          "audioSlug": "my_passport_expires_in_three_months_is_that_sufficient_for_a_tourist_visa_on_arrival"
+        }
+      ]
+    },
+    {
+      "id": "airport_transit_zone_restrictions",
+      "source": "Viajo con exención de visa de tránsito. ¿Cuáles son las restricciones para salir de la zona de tránsito?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm on a transit visa exemption. What are the restrictions for leaving the transit zone?",
+          "audioSlug": "i_m_on_a_transit_visa_exemption_what_are_the_restrictions_for_leaving_the_transit_zone"
+        }
+      ]
+    },
+    {
+      "id": "airport_upgrade_miles_business",
+      "source": "Me gustaría usar mis millas para un ascenso de categoría. ¿Hay disponibilidad en clase ejecutiva?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to use my frequent flyer miles to upgrade. Is there availability in business class?",
+          "audioSlug": "i_d_like_to_use_my_frequent_flyer_miles_to_upgrade_is_there_availability_in_business_class"
+        }
+      ]
+    },
+    {
+      "id": "airport_mishandled_bag_return",
+      "source": "La aerolínea perdió mi maleta en el trayecto de ida y mi vuelo de regreso sale mañana.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The airline lost my bag on the outbound leg, and my return flight departs tomorrow.",
+          "audioSlug": "the_airline_lost_my_bag_on_the_outbound_leg_and_my_return_flight_departs_tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "airport_refused_entry_return_carrier",
+      "source": "Me han negado la entrada. ¿Qué aerolínea está legalmente obligada a devolverme a mi punto de salida?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I've been refused entry. Which carrier is legally required to return me to my point of departure?",
+          "audioSlug": "i_ve_been_refused_entry_which_carrier_is_legally_required_to_return_me_to_my_point_of_departure"
+        }
+      ]
+    },
+    {
+      "id": "airport_carbon_offset_scheme",
+      "source": "¿La aerolínea ofrece un programa de compensación de carbono para los pasajeros que deseen mitigar sus emisiones?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Does the airline offer a carbon offset scheme for passengers who wish to mitigate their emissions?",
+          "audioSlug": "does_the_airline_offer_a_carbon_offset_scheme_for_passengers_who_wish_to_mitigate_their_emissions"
+        }
+      ]
+    },
+    {
+      "id": "airport_eu_regulation_compensation",
+      "source": "Según el Reglamento UE 261/2004, creo que tengo derecho a compensación por esta cancelación.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Under EU Regulation 261/2004, I believe I'm entitled to compensation for this cancellation.",
+          "audioSlug": "under_eu_regulation_261_2004_i_believe_i_m_entitled_to_compensation_for_this_cancellation"
+        }
+      ]
+    },
+    {
+      "id": "airport_secondary_screening_rights",
+      "source": "Me han seleccionado para una revisión adicional. ¿Podría explicarme el motivo y mis derechos?",
+      "level": "C2",
+      "grammar": "Present perfect passive focuses on the result of an action, not who performed it.",
+      "target": [
+        {
+          "text": "I've been flagged for secondary screening. Could you explain the basis for this and my rights?",
+          "audioSlug": "i_ve_been_flagged_for_secondary_screening_could_you_explain_the_basis_for_this_and_my_rights"
+        }
+      ]
+    },
+    {
+      "id": "airport_partner_airline_baggage_liability",
+      "source": "El vuelo de conexión fue operado por una aerolínea asociada. ¿Eso afecta la responsabilidad por mi equipaje retrasado?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The connecting flight was operated by a partner airline. Does that affect liability for my delayed baggage?",
+          "audioSlug": "the_connecting_flight_was_operated_by_a_partner_airline_does_that_affect_liability_for_my_delayed_baggage"
+        }
+      ]
+    },
+    {
+      "id": "airport_force_majeure_rebook",
+      "source": "Dada la cláusula de fuerza mayor, ¿la aerolínea sigue obligada a reembarcarme en otra compañía?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Given the force majeure clause, is the airline still obligated to rebook me on an alternative carrier?",
+          "audioSlug": "given_the_force_majeure_clause_is_the_airline_still_obligated_to_rebook_me_on_an_alternative_carrier"
+        }
+      ]
+    },
+    {
+      "id": "airport_asylum_request_procedure",
+      "source": "Deseo solicitar asilo. ¿Podría dirigirme con el funcionario de inmigración correspondiente?",
+      "level": "C2",
+      "grammar": "'Wish to + infinitive' is more formal and deliberate than 'want to + infinitive'.",
+      "target": [
+        {
+          "text": "I wish to apply for asylum. Could you direct me to the appropriate immigration officer?",
+          "audioSlug": "i_wish_to_apply_for_asylum_could_you_direct_me_to_the_appropriate_immigration_officer"
+        }
+      ]
+    }
+  ]
+}

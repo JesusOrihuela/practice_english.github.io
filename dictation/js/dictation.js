@@ -10,7 +10,9 @@ let _openPhraseBrowser = null;
 
 
 // ---- State ----
-let phrases = [], grammarTips = [], cardIds = [], cefrLevels = [], audioIndices = [], phraseAlternatives = [], currentIndex = 0;
+let phrases = [], grammarTips = [], cardIds = [], cefrLevels = [], formPools = [], currentIndex = 0;
+let _activeAudioSlug = '';   // audioSlug of the picked form for this round
+let _activePicked    = null; // { text, audioSlug, labels?, ... } — picked form for this round
 let currentTopic = '';
 let _lastCorrect = false;
 let hasChecked = false;
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   input.addEventListener('keydown', e => { if (e.key === 'Enter') checkAnswer(); });
 
   document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
-  document.getElementById('try-again-btn').addEventListener('click', () => loadPhrase(currentIndex));
+  document.getElementById('try-again-btn').addEventListener('click', () => loadPhrase(currentIndex, true));
 
   if (_pathMode) {
     const _backLink = document.createElement('a');
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('exercise-area').appendChild(_backLink);
   }
 
-  AppAudio.setBase('../../shared/audio/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
   AppAudio.warmup();
 });
 
@@ -126,23 +128,25 @@ async function startTopic(topicKey, pathMode, pathCard) {
     return;
   }
   const _order = CEFR_ORDER;
-  const _tagged = (data.phrases || []).map((p, i) => ({
-    phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '', grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
+  const _tagged = (data.phrases || []).map(p => ({
+    practiceText: p.target?.[0]?.text || '',
+    hintText:     p.source || '',
+    forms:        p.target || [],
+    grammar: p.grammar || null, level: p.level || null, id: p.id,
   })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
-  phrases            = _tagged.map(x => x.phrase);
-  grammarTips        = _tagged.map(x => x.grammar);
-  cefrLevels         = _tagged.map(x => x.level);
-  cardIds            = _tagged.map(x => DICT_PREFIX + x.id);
-  audioIndices       = _tagged.map(x => x.origIdx);
-  phraseAlternatives = _tagged.map(x => x.alternatives);
+  phrases     = _tagged.map(x => x.practiceText);
+  grammarTips = _tagged.map(x => x.grammar);
+  cefrLevels  = _tagged.map(x => x.level);
+  cardIds     = _tagged.map(x => DICT_PREFIX + x.id);
+  formPools   = _tagged.map(x => x.forms);
 
   const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicKey);
   const _pbArgs = {
     items: phrases,
     cardIds,
-    topicLabel: topicObj ? topicObj.label : topicKey,
+    topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicKey,
     pickerEl: document.getElementById('topic-picker'),
-    traductions: _tagged.map(x => x.translation),
+    traductions: _tagged.map(x => x.hintText),
     cefrLevels,
     onStart: idx => _beginExercise(idx),
   };
@@ -171,8 +175,20 @@ function _beginExercise(idx) {
 
 // ---- Phrase Management ----
 
-function loadPhrase(index) {
+function _buildPool(forms) {
+  return forms.filter(f => f.audioSlug !== undefined);
+}
+
+function loadPhrase(index, keepPicked = false) {
   hasChecked = false;
+
+  // Pick a random form with audio for this round.
+  // keepPicked=true on retry — preserve the same form so the user hears the same audio.
+  if (!keepPicked || !_activePicked) {
+    const _pool  = _buildPool(formPools[index] || []);
+    _activePicked    = _pool[Math.floor(Math.random() * _pool.length)];
+    _activeAudioSlug = _activePicked.audioSlug;
+  }
 
   document.getElementById('play-btn').disabled   = false;
   document.getElementById('dict-input').value    = '';
@@ -182,6 +198,8 @@ function loadPhrase(index) {
   document.getElementById('dict-feedback').className = 'dict-feedback hidden';
   document.getElementById('feedback-result').textContent = '';
   document.getElementById('dict-diff').textContent = '';
+  document.getElementById('alt-note')?.classList.add('hidden');
+  document.getElementById('alt-note-divider')?.classList.add('hidden');
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('try-again-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
@@ -202,7 +220,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 function updateCounter() {
@@ -236,13 +254,13 @@ function showTopicPicker() {
 // ---- TTS (Kokoro via AppTTS) ----
 
 function playAudio() {
-  const phrase = phrases[currentIndex];
+  const phrase = _activePicked ? _activePicked.text : phrases[currentIndex];
   if (!phrase) return;
 
   const playBtn = document.getElementById('play-btn');
 
   playBtn.disabled = true;
-  AppAudio.play(currentTopic, audioIndices[currentIndex] ?? currentIndex, phrase, 1).then(() => {
+  AppAudio.play(currentTopic, _activeAudioSlug, phrase, 1).then(() => {
     playBtn.disabled = false;
     document.getElementById('dict-input')?.focus();
   }).catch(() => {
@@ -255,6 +273,7 @@ function playAudio() {
 function updateGrammarChip(index) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (!wrap) return;
+  if (AppLangPair.getActive().target.code !== 'en') { wrap.classList.add('hidden'); return; }
   const tip = grammarTips[index] || null;
   if (!tip) { wrap.classList.add('hidden'); return; }
   const { label, ruleId } = extractGrammarInfo(tip);
@@ -276,9 +295,11 @@ function checkAnswer() {
   document.getElementById('dict-input').disabled = true;
   document.getElementById('check-btn').disabled  = true;
 
-  const _norm = s => AppText.normalise(s, contractionMap);
-  const isCorrect = _norm(input) === _norm(original)
-    || (phraseAlternatives[currentIndex] || []).some(alt => _norm(input) === _norm(alt));
+  const _norm    = s => AppText.normalise(s, contractionMap);
+  const forms    = formPools[currentIndex] || [];
+  const _expected = _activePicked ? _activePicked.text : original;
+  // Dictation: only the specific played form is acceptable — not any other variant.
+  const isCorrect = _norm(input) === _norm(_expected);
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
@@ -294,13 +315,33 @@ function checkAnswer() {
   diffEl.textContent   = '';
   diffEl.appendChild(
     isCorrect
-      ? AppFeedback.buildCorrect(original)
-      : AppFeedback.buildDiff(input, AppText.closestPhrase(input, [original, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)
+      ? AppFeedback.buildCorrect(_expected)
+      : AppFeedback.buildDiff(input, _expected, contractionMap)
   );
   feedback.className = 'dict-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   feedback.classList.remove('hidden');
 
   if (isCorrect) updateGrammarChip(currentIndex);
+
+  // Alternative chips (correct only)
+  const altNoteEl    = document.getElementById('alt-note');
+  const altDividerEl = document.getElementById('alt-note-divider');
+  if (isCorrect && altNoteEl) {
+    const altsToShow = forms.filter(f => _norm(f.text) !== _norm(_expected));
+    const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
+    if (frag) {
+      altNoteEl.textContent = '';
+      altNoteEl.appendChild(frag);
+      altNoteEl.classList.remove('hidden');
+      if (altDividerEl) altDividerEl.classList.remove('hidden');
+    } else {
+      altNoteEl.classList.add('hidden');
+      if (altDividerEl) altDividerEl.classList.add('hidden');
+    }
+  } else if (altNoteEl) {
+    altNoteEl.classList.add('hidden');
+    if (altDividerEl) altDividerEl.classList.add('hidden');
+  }
 
   // Re-enable audio after checking so learner can hear the correct phrase
   document.getElementById('play-btn').disabled = false;

@@ -19,11 +19,26 @@ const AppLangPair = (() => {
   // flags: [back, front] — matches AppFlags.stack(back, front) keys in flags.js.
   const PAIRS = [
     {
-      id:     'es-en',
-      source: { code: 'es', flags: ['es', 'mx'], name: 'Español',  localName: 'español' },
-      target: { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'inglés'  },
-      label:  'Español → English',
+      id:          'es-en',
+      source:      { code: 'es', flags: ['es', 'mx'], name: 'Español', localName: 'español' },
+      target:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'inglés'  },
+      label:       'Español → English',
+      ttsVoices:   ['af_heart', 'af_bella', 'bf_emma', 'am_michael'],
+      sttLanguage: 'english',
     },
+    {
+      id:          'en-es',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
+      target:      { code: 'es', flags: ['es', 'mx'], name: 'Español', localName: 'español' },
+      label:       'English → Español',
+      ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
+      sttLanguage: 'spanish',
+    },
+    // To add a new pair, insert an object here with id, source, target, label,
+    // ttsVoices (Kokoro voice names for the target language),
+    // sttLanguage (Whisper language name for the target language).
+    // Grammar rules are stored at shared/json/{pairId}/grammar-rules.json —
+    // AppData.get('grammar-rules') resolves to the active pair's file automatically.
   ];
 
   // ── Active pair ───────────────────────────────────────────────
@@ -46,6 +61,14 @@ const AppLangPair = (() => {
 
   function storageKey(base) {
     return base + '__' + getActive().id;
+  }
+
+  // ── Grammar file key ──────────────────────────────────────────
+  // Returns the AppData key for the active pair's grammar rules.
+  // AppData.get() resolves this to shared/json/{pairId}/grammar-rules.json.
+
+  function grammarKey() {
+    return 'grammar-rules';
   }
 
   // ── One-time data migration ───────────────────────────────────
@@ -97,7 +120,7 @@ const AppLangPair = (() => {
     var badge = document.createElement('a');
     badge.className  = 'lp-badge';
     badge.href       = _progressHref();
-    badge.setAttribute('aria-label', pair.label + ' — cambiar idioma');
+    badge.setAttribute('aria-label', pair.label + ' — cambiar idioma / change language');
     badge.setAttribute('title', pair.label);
 
     badge.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
@@ -114,6 +137,6 @@ const AppLangPair = (() => {
   document.addEventListener('DOMContentLoaded', _injectBadge);
 
   // ── Public API ────────────────────────────────────────────────
-  return { getActive, setActive, getAll, storageKey };
+  return { getActive, setActive, getAll, storageKey, grammarKey };
 
 })();

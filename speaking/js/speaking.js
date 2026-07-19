@@ -12,7 +12,9 @@ let _openPhraseBrowser = null;
 
 let jsConfetti;
 let contractionMap = {};
-let phrases = [], translations = [], grammarTips = [], cardIds = [], cefrLevels = [], audioIndices = [], phraseAlternatives = [];
+let phrases = [], translations = [], grammarTips = [], cardIds = [], cefrLevels = [], formPools = [];
+let _activeAudioSlug = '';   // audioSlug of the picked form for this round
+let _activePicked    = null; // { text, audioSlug, labels?, ... } — picked form for this round
 let currentIndex = 0;
 let currentTheme = '';
 let sessionCorrect = 0, sessionTotal = 0;
@@ -109,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   AppTTS.warmup();
-  AppAudio.setBase('../../shared/audio/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
   AppAudio.warmup();
   if (HAS_STT) _getSttWorker();
 });
@@ -124,7 +126,7 @@ function startTopic(id, pathMode, pathCard) {
   _pathModeActive = !!pathMode;
   _pathCardId     = pathCard || null;
   currentTheme = id;
-  phrases = []; translations = []; cardIds = [];
+  phrases = []; translations = []; cardIds = []; formPools = [];
   sessionCorrect = 0; sessionTotal = 0;
   loadPhrases(id);
 }
@@ -182,25 +184,26 @@ function loadPhrases(topicId) {
   AppData.get(topicId)
     .then(data => {
       const _order = CEFR_ORDER;
-      const _tagged = (data.phrases || []).map((p, i) => ({
-        phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '',
-        grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i, alternatives: p.alternatives || [],
+      const _tagged = (data.phrases || []).map(p => ({
+        practiceText: p.target?.[0]?.text || '',
+        hintText:     p.source || '',
+        forms:        p.target || [],
+        grammar: p.grammar || null, level: p.level || null, id: p.id,
       })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
-      phrases            = _tagged.map(x => x.phrase);
-      translations       = _tagged.map(x => x.translation);
-      grammarTips        = _tagged.map(x => x.grammar);
-      cefrLevels         = _tagged.map(x => x.level);
-      cardIds            = _tagged.map(x => x.id);
-      audioIndices       = _tagged.map(x => x.origIdx);
-      phraseAlternatives = _tagged.map(x => x.alternatives);
+      phrases      = _tagged.map(x => x.practiceText);
+      translations = _tagged.map(x => x.hintText);
+      grammarTips  = _tagged.map(x => x.grammar);
+      cefrLevels   = _tagged.map(x => x.level);
+      cardIds      = _tagged.map(x => x.id);
+      formPools    = _tagged.map(x => x.forms);
 
       const topicObj = AppTopics.PHRASE_TOPICS.find(t => t.id === topicId);
       const _pbArgs = {
         items: phrases,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: _tagged.map(x => x.translation),
+        traductions: _tagged.map(x => x.hintText),
         cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
@@ -231,8 +234,17 @@ function _beginExercise(idx) {
   updateSessionCounter();
 }
 
+function _buildPool(forms) {
+  return forms.filter(f => f.audioSlug !== undefined);
+}
+
 function showPhrase(index) {
-  document.getElementById('Phrase').textContent     = phrases[index] || '';
+  // Pick a random form with audio for this round
+  const _pool = _buildPool(formPools[index] || []);
+  _activePicked    = _pool[Math.floor(Math.random() * _pool.length)];
+  _activeAudioSlug = _activePicked.audioSlug;
+
+  document.getElementById('Phrase').textContent     = _activePicked.text;
   document.getElementById('Traduction').textContent = translations[index] || '';
   attemptDone = false;
   const wrap = document.getElementById('grammar-chip-wrap');
@@ -253,12 +265,14 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 function updateGrammarChip(index) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (!wrap) return;
+  // Grammar chips reference English grammar rules — not applicable for en-es
+  if (AppLangPair.getActive().target.code !== 'en') { wrap.classList.add('hidden'); return; }
   const tip = grammarTips[index] || null;
   if (!tip) { wrap.classList.add('hidden'); return; }
   const { label, ruleId } = extractGrammarInfo(tip);
@@ -317,6 +331,8 @@ function resetAttempt() {
   if (fbr) { fbr.textContent = ''; fbr.className = 'feedback-result'; }
   const sd = document.getElementById('speaking-diff');
   if (sd) { sd.textContent = ''; sd.classList.remove('hidden'); }
+  document.getElementById('alt-note')?.classList.add('hidden');
+  document.getElementById('alt-note-divider')?.classList.add('hidden');
   const ti = document.getElementById('text-input');
   if (ti) ti.disabled = false;
   document.getElementById('back-to-path')?.classList.add('hidden');
@@ -371,7 +387,7 @@ function _showPathSessionComplete() {
 /* ---- TTS (Kokoro via AppTTS) ---- */
 
 function _audioRef() {
-  return { topic: currentTheme, index: audioIndices[currentIndex] ?? currentIndex };
+  return { topic: currentTheme, slug: _activeAudioSlug };
 }
 
 function _getSpeed() { return 1; }
@@ -383,8 +399,8 @@ function playTTS() {
   document.getElementById('listenButton').disabled = true;
   if (HAS_STT) document.getElementById('speakButton').disabled = true;
 
-  const { topic, index } = _audioRef();
-  AppAudio.play(topic, index, phraseText, _getSpeed()).then(() => {
+  const { topic, slug } = _audioRef();
+  AppAudio.play(topic, slug, phraseText, _getSpeed()).then(() => {
     document.getElementById('listenButton').disabled = false;
     if (HAS_STT && !_isRecording) document.getElementById('speakButton').disabled = false;
   }).catch(() => {
@@ -539,8 +555,9 @@ function _stopRecording() {
       const audio   = decoded.getChannelData(0);
 
       const worker = _getSttWorker();
-      if (!worker) { _onSttError('Speech recognition not available.'); return; }
-      worker.postMessage({ id: Date.now(), audio }, [audio.buffer]);
+      if (!worker) { _onSttError(AppLang.t('stt_not_available')); return; }
+      const _sttLang = AppLangPair.getActive().sttLanguage || 'english';
+      worker.postMessage({ id: Date.now(), audio, language: _sttLang }, [audio.buffer]);
 
       // Safety timeout: if Whisper hangs and never responds, unblock the UI
       _sttTimeoutId = setTimeout(() => {
@@ -628,8 +645,9 @@ function _onSttError(errMsg) {
 function displayResult(text, confidence) {
   const originalPhrase = document.getElementById('Phrase').textContent.trim();
   const _norm = s => AppText.normalise(s, contractionMap);
-  const isCorrect = _norm(text) === _norm(originalPhrase)
-    || (phraseAlternatives[currentIndex] || []).some(alt => _norm(text) === _norm(alt));
+  const forms = formPools[currentIndex] || [];
+  // Speaking: only the specific displayed/played form is acceptable — not any other variant.
+  const isCorrect = _norm(text) === _norm(originalPhrase);
 
   attemptDone = true;
   _lastCorrect = isCorrect;
@@ -653,18 +671,35 @@ function displayResult(text, confidence) {
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
     if (fbr)  { fbr.textContent = AppLang.t('feedback_correct'); fbr.className = 'feedback-result correct'; }
-    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildCorrect(originalPhrase)); }
+    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildCorrect(_activePicked ? _activePicked.text : originalPhrase)); }
     if (fb)   { fb.className = 'speaking-feedback correct'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--correct'); }
     jsConfetti.addConfetti({ confettiNumber: confettiCount });
     const tb = document.getElementById('tryAnotherButton');
     tb.classList.remove('hidden'); tb.disabled = false;
     updateGrammarChip(currentIndex);
+
+    // Alternative chips
+    const altNoteEl    = document.getElementById('alt-note');
+    const altDividerEl = document.getElementById('alt-note-divider');
+    if (altNoteEl) {
+      const altsToShow = forms.filter(f => _norm(f.text) !== _norm(originalPhrase));
+      const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
+      if (frag) {
+        altNoteEl.textContent = '';
+        altNoteEl.appendChild(frag);
+        altNoteEl.classList.remove('hidden');
+        if (altDividerEl) altDividerEl.classList.remove('hidden');
+      } else {
+        altNoteEl.classList.add('hidden');
+        if (altDividerEl) altDividerEl.classList.add('hidden');
+      }
+    }
   } else {
     document.getElementById('recognizedText').textContent = '';
     document.getElementById('recognizedText').className   = '';
     if (fbr)  { fbr.textContent = AppLang.t('feedback_incorrect'); fbr.className = 'feedback-result incorrect'; }
-    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildDiff(text, AppText.closestPhrase(text, [originalPhrase, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)); }
+    if (sd)   { sd.textContent = ''; sd.appendChild(AppFeedback.buildDiff(text, AppText.closestPhrase(text, forms.map(f => f.text), contractionMap), contractionMap)); }
     if (fb)   { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
     if (card) { card.classList.add('phrase-card--incorrect'); }
     // document.getElementById('tryAnotherButton') stays disabled — user must Try Again

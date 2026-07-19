@@ -145,5 +145,86 @@ const AppFeedback = (() => {
     return wrap;
   }
 
-  return { buildDiff, buildCorrect, buildCloze, buildQuiz };
+  /* Alternative chips: shown after a correct answer when there are typed alternatives.
+     alts    — array of form objects from target[]; non-style forms have audioSlug + optional labels
+     t       — AppLang.t bound function
+     basePhraseIfAlt — non-null string when user answered with an alternative (not the base);
+                       causes an extra chip showing the base phrase.
+     Returns a DocumentFragment or null if there is nothing to show. */
+  function buildAltNote(alts, t, basePhraseIfAlt) {
+    // Priority by primary label dimension (lower = shown first)
+    const PRIORITY = { loanword: 0, region: 1, gender: 2, register: 3 };
+
+    function _altPriority(alt) {
+      const labs = alt.labels || {};
+      const keys = Object.keys(labs);
+      if (!keys.length) return 99;
+      return Math.min(...keys.map(k => PRIORITY[k] ?? 99));
+    }
+
+    const typed = (alts || [])
+      .filter(a => a.audioSlug !== undefined)
+      .sort((a, b) => _altPriority(a) - _altPriority(b));
+
+    if (typed.length === 0 && !basePhraseIfAlt) return null;
+
+    const frag = document.createDocumentFragment();
+
+    /* makeChip: phraseTexts is an array of strings (or a single string for basePhraseIfAlt). */
+    function makeChip(labelText, phraseTexts, extraClass) {
+      const texts = Array.isArray(phraseTexts) ? phraseTexts : [phraseTexts];
+      const chip = document.createElement('span');
+      chip.className = 'alt-chip' + (extraClass ? ' ' + extraClass : '');
+
+      if (labelText) {
+        const lbl = document.createElement('span');
+        lbl.className = 'alt-chip-label';
+        lbl.textContent = labelText;
+        chip.appendChild(lbl);
+      }
+
+      for (const phraseText of texts) {
+        const txt = document.createElement('span');
+        txt.className = 'alt-chip-text';
+        txt.textContent = phraseText;
+        chip.appendChild(txt);
+      }
+
+      return chip;
+    }
+
+    function labelFor(alt) {
+      const labs = alt.labels || {};
+      if (labs.gender !== undefined) {
+        if (labs.gender === 'masculino' || labs.gender === 'masculine') return t('alt_note_gender_m');
+        if (labs.gender === 'femenino' || labs.gender === 'feminine')   return t('alt_note_gender_f');
+        return t('alt_note_gender_n');
+      }
+      if (labs.region !== undefined) return t('alt_note_regional').replace('{region}', labs.region || '');
+      if (labs.loanword !== undefined) return t('alt_note_loanword');
+      if (labs.register !== undefined) {
+        return labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i');
+      }
+      return '';  // unlabeled form — chip shows text only
+    }
+
+    /* Group by label so forms sharing the same label appear as one chip. */
+    const groupMap = new Map(); // labelText → texts[]
+    for (const alt of typed) {
+      const label = labelFor(alt);
+      if (!groupMap.has(label)) groupMap.set(label, []);
+      groupMap.get(label).push(alt.text);
+    }
+    for (const [labelText, texts] of groupMap) {
+      frag.appendChild(makeChip(labelText, texts));
+    }
+
+    if (basePhraseIfAlt) {
+      frag.appendChild(makeChip(t('alt_note_base_shown'), basePhraseIfAlt, 'alt-chip--base'));
+    }
+
+    return frag;
+  }
+
+  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote };
 })();

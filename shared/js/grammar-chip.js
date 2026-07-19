@@ -46,5 +46,5 @@ function extractGrammarInfo(tip) {
   for (const [pat, label, ruleId] of LABELS) {
     if (pat.test(tip)) return { label, ruleId };
   }
-  return { label: 'Grammar note', ruleId: null };
+  return { label: AppLang.t('grammar_note_label'), ruleId: null };
 }

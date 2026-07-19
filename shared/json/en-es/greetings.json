@@ -1,0 +1,1400 @@
+{
+  "phrases": [
+    {
+      "id": "greetings_hello_how_are_you_today",
+      "source": "Hello, how are you today?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ¿cómo estás hoy?",
+          "audioSlug": "hola_como_estas_hoy"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_morning_its_nice_to_see",
+      "source": "Good morning, it's nice to see you.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenos días, es un placer verte.",
+          "audioSlug": "buenos_dias_es_un_placer_verte"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_there_hows_your_day_going",
+      "source": "Hi there, how's your day going?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ¿cómo va tu día?",
+          "audioSlug": "hola_como_va_tu_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_afternoon_how_have_you_been",
+      "source": "Good afternoon, how have you been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenas tardes, ¿cómo has estado?",
+          "audioSlug": "buenas_tardes_como_has_estado"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_hows_everything_with_you",
+      "source": "Hey, how's everything with you?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Oye, ¿cómo te va?",
+          "audioSlug": "oye_como_te_va"
+        }
+      ]
+    },
+    {
+      "id": "greetings_morning_hope_youre_doing_well",
+      "source": "Morning, hope you're doing well.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenos días, espero que estés bien.",
+          "audioSlug": "buenos_dias_espero_que_estes_bien"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_evening_hows_your_day_been",
+      "source": "Good evening, how's your day been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenas noches, ¿cómo ha estado tu día?",
+          "audioSlug": "buenas_noches_como_ha_estado_tu_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_hows_life_treating_you",
+      "source": "Hey, how's life treating you?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Oye, ¿cómo te trata la vida?",
+          "audioSlug": "oye_como_te_trata_la_vida"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_its_good_to_catch_up",
+      "source": "Hi, it's good to catch up with you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, es bueno ponerse al día contigo.",
+          "audioSlug": "hola_es_bueno_ponerse_al_dia_contigo"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hello_how_have_you_been_lately",
+      "source": "Hello, how have you been lately?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ¿cómo has estado últimamente?",
+          "audioSlug": "hola_como_has_estado_ultimamente"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_there_hope_youre_having_a",
+      "source": "Hi there, hope you're having a good day.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, espero que tengas un buen día.",
+          "audioSlug": "hola_espero_que_tengas_un_buen_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_whats_new_with_you",
+      "source": "Hey, what's new with you?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Oye, ¿qué hay de nuevo contigo?",
+          "audioSlug": "oye_que_hay_de_nuevo_contigo"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_morning_hows_everything_going",
+      "source": "Good morning, how's everything going?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenos días, ¿cómo va todo?",
+          "audioSlug": "buenos_dias_como_va_todo"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_how_are_you_holding_up",
+      "source": "Hi, how are you holding up?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ¿cómo lo estás llevando?",
+          "audioSlug": "hola_como_lo_estas_llevando"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_there_hows_your_week_been",
+      "source": "Hey there, how's your week been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ¿cómo ha estado tu semana?",
+          "audioSlug": "hola_como_ha_estado_tu_semana"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hello_hope_youre_doing_fine",
+      "source": "Hello, hope you're doing fine.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, espero que estés bien.",
+          "audioSlug": "hola_espero_que_estes_bien"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hi_its_been_a_while_how",
+      "source": "Hi, it's been a while, how are you?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, ha pasado un tiempo, ¿cómo estás?",
+          "audioSlug": "hola_ha_pasado_un_tiempo_como_estas"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_afternoon_hows_life_treating_you",
+      "source": "Good afternoon, how's life treating you?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenas tardes, ¿cómo te trata la vida?",
+          "audioSlug": "buenas_tardes_como_te_trata_la_vida"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hey_nice_to_see_you_again",
+      "source": "Hey, nice to see you again, how have you been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Oye, es bueno verte de nuevo, ¿cómo has estado?",
+          "audioSlug": "oye_es_bueno_verte_de_nuevo_como_has_estado"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_great_seeing_you",
+      "source": "It was great seeing you!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Qué gusto verte!",
+          "audioSlug": "que_gusto_verte"
+        }
+      ]
+    },
+    {
+      "id": "greetings_take_care_of_yourself",
+      "source": "Take care of yourself!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Cuídate mucho!",
+          "audioSlug": "cuidate_mucho"
+        }
+      ]
+    },
+    {
+      "id": "greetings_have_a_wonderful_day",
+      "source": "Have a wonderful day!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Que tengas un excelente día!",
+          "audioSlug": "que_tengas_un_excelente_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_see_you_around",
+      "source": "See you around!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Nos vemos por ahí!",
+          "audioSlug": "nos_vemos_por_ahi"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_lovely_to_meet_you",
+      "source": "It was lovely to meet you.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue un placer conocerte.",
+          "audioSlug": "fue_un_placer_conocerte"
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_be_a_stranger",
+      "source": "Don't be a stranger!",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡No desaparezcas!",
+          "audioSlug": "no_desaparezcas"
+        }
+      ]
+    },
+    {
+      "id": "greetings_we_should_do_this_again_sometime",
+      "source": "We should do this again sometime.",
+      "level": "B1",
+      "grammar": "'Deberíamos' usa el condicional de 'deber' para hacer una sugerencia educada.",
+      "target": [
+        {
+          "text": "Deberíamos repetirlo pronto.",
+          "audioSlug": "deberiamos_repetirlo_pronto"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_a_pleasure_hope_to",
+      "source": "It was a pleasure, hope to see you again.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue un placer, espero verte de nuevo.",
+          "audioSlug": "fue_un_placer_espero_verte_de_nuevo"
+        }
+      ]
+    },
+    {
+      "id": "greetings_say_hi_to_everyone_for_me",
+      "source": "Say hi to everyone for me.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salúdame a todos.",
+          "audioSlug": "saludame_a_todos"
+        }
+      ]
+    },
+    {
+      "id": "greetings_take_care_and_stay_in_touch",
+      "source": "Take care and stay in touch.",
+      "level": "B1",
+      "grammar": "'Mantengámonos' es el imperativo de nosotros con pronombre reflexivo enclítico.",
+      "target": [
+        {
+          "text": "Cuídate y mantengámonos en contacto.",
+          "audioSlug": "cuidate_y_mantengamonos_en_contacto"
+        }
+      ]
+    },
+    {
+      "id": "greetings_it_was_so_good_catching_up",
+      "source": "It was so good catching up with you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Qué bueno fue ponernos al día.",
+          "audioSlug": "que_bueno_fue_ponernos_al_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_nice_to_meet_you_im_glad",
+      "source": "Nice to meet you, I'm glad we connected.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mucho gusto, me alegra que nos hayamos conocido.",
+          "audioSlug": "mucho_gusto_me_alegra_que_nos_hayamos_conocido"
+        }
+      ]
+    },
+    {
+      "id": "greetings_i_could_be_better",
+      "source": "I could be better.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Podría estar mejor.",
+          "audioSlug": "podria_estar_mejor"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hows_your_day_been",
+      "source": "How's your day been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo te ha ido hoy?",
+          "audioSlug": "como_te_ha_ido_hoy"
+        }
+      ]
+    },
+    {
+      "id": "greetings_ive_had_a_great_day",
+      "source": "I've had a great day.",
+      "level": "B1",
+      "grammar": "'He tenido' es el pretérito perfecto; conecta el pasado reciente con el presente.",
+      "target": [
+        {
+          "text": "He tenido un gran día.",
+          "audioSlug": "he_tenido_un_gran_dia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_hows_your_week_been",
+      "source": "How's your week been?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo ha estado tu semana?",
+          "audioSlug": "como_ha_estado_tu_semana"
+        }
+      ]
+    },
+    {
+      "id": "greetings_ive_had_better_days",
+      "source": "I've had better days.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He tenido días mejores.",
+          "audioSlug": "he_tenido_dias_mejores"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_sad",
+      "source": "I'm sad.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy triste.",
+          "audioSlug": "estoy_triste"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_happy",
+      "source": "I'm happy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy feliz.",
+          "audioSlug": "estoy_feliz"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_excited",
+      "source": "I'm excited.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy emocionada.",
+          "audioSlug": "estoy_emocionada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy emocionado.",
+          "audioSlug": "estoy_emocionado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_bored",
+      "source": "I'm bored.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy aburrida.",
+          "audioSlug": "estoy_aburrida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy aburrido.",
+          "audioSlug": "estoy_aburrido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_tired",
+      "source": "I'm tired.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy cansada.",
+          "audioSlug": "estoy_cansada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy cansado.",
+          "audioSlug": "estoy_cansado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_angry",
+      "source": "I'm angry.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enojada.",
+          "audioSlug": "estoy_enojada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy enojado.",
+          "audioSlug": "estoy_enojado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_surprised",
+      "source": "I'm surprised.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy sorprendida.",
+          "audioSlug": "estoy_sorprendida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy sorprendido.",
+          "audioSlug": "estoy_sorprendido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_confused",
+      "source": "I'm confused.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy confundida.",
+          "audioSlug": "estoy_confundida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy confundido.",
+          "audioSlug": "estoy_confundido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_worried",
+      "source": "I'm worried.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy preocupada.",
+          "audioSlug": "estoy_preocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy preocupado.",
+          "audioSlug": "estoy_preocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_nervous",
+      "source": "I'm nervous.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy nerviosa.",
+          "audioSlug": "estoy_nerviosa",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy nervioso.",
+          "audioSlug": "estoy_nervioso",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_scared",
+      "source": "I'm scared.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy asustada.",
+          "audioSlug": "estoy_asustada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy asustado.",
+          "audioSlug": "estoy_asustado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_relaxed",
+      "source": "I'm relaxed.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy relajada.",
+          "audioSlug": "estoy_relajada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy relajado.",
+          "audioSlug": "estoy_relajado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_stressed",
+      "source": "I'm stressed.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy estresada.",
+          "audioSlug": "estoy_estresada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy estresado.",
+          "audioSlug": "estoy_estresado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_busy",
+      "source": "I'm busy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy ocupada.",
+          "audioSlug": "estoy_ocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy ocupado.",
+          "audioSlug": "estoy_ocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_sad",
+      "source": "Why are you sad?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás triste?",
+          "audioSlug": "por_que_estas_triste"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_so_happy",
+      "source": "Why are you so happy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás tan feliz?",
+          "audioSlug": "por_que_estas_tan_feliz"
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_excited",
+      "source": "Why are you excited?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás emocionado?",
+          "audioSlug": "por_que_estas_emocionado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás emocionada?",
+          "audioSlug": "por_que_estas_emocionada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_bored",
+      "source": "Why are you bored?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás aburrido?",
+          "audioSlug": "por_que_estas_aburrido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás aburrida?",
+          "audioSlug": "por_que_estas_aburrida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_tired",
+      "source": "Why are you tired?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás cansado?",
+          "audioSlug": "por_que_estas_cansado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás cansada?",
+          "audioSlug": "por_que_estas_cansada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_angry",
+      "source": "Why are you angry?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás enojado?",
+          "audioSlug": "por_que_estas_enojado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás enojada?",
+          "audioSlug": "por_que_estas_enojada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_surprised",
+      "source": "Why are you surprised?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás sorprendido?",
+          "audioSlug": "por_que_estas_sorprendido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás sorprendida?",
+          "audioSlug": "por_que_estas_sorprendida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_confused",
+      "source": "Why are you confused?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás confundido?",
+          "audioSlug": "por_que_estas_confundido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás confundida?",
+          "audioSlug": "por_que_estas_confundida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_worried",
+      "source": "Why are you worried?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás preocupado?",
+          "audioSlug": "por_que_estas_preocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás preocupada?",
+          "audioSlug": "por_que_estas_preocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_nervous",
+      "source": "Why are you nervous?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás nervioso?",
+          "audioSlug": "por_que_estas_nervioso",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás nerviosa?",
+          "audioSlug": "por_que_estas_nerviosa",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_scared",
+      "source": "Why are you scared?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás asustado?",
+          "audioSlug": "por_que_estas_asustado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás asustada?",
+          "audioSlug": "por_que_estas_asustada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_relaxed",
+      "source": "Why are you relaxed?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás relajado?",
+          "audioSlug": "por_que_estas_relajado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás relajada?",
+          "audioSlug": "por_que_estas_relajada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_why_are_you_stressed",
+      "source": "Why are you stressed?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás estresado?",
+          "audioSlug": "por_que_estas_estresado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás estresada?",
+          "audioSlug": "por_que_estas_estresada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_whats_on_your_mind",
+      "source": "What's on your mind?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué te preocupa?",
+          "audioSlug": "que_te_preocupa"
+        }
+      ]
+    },
+    {
+      "id": "greetings_is_there_anything_i_can_do",
+      "source": "Is there anything I can do for you?",
+      "level": "B1",
+      "grammar": "'Hay algo que + subjuntivo' expresa disponibilidad; el subjuntivo señala posibilidad abierta.",
+      "target": [
+        {
+          "text": "¿Hay algo que pueda hacer por ti?",
+          "audioSlug": "hay_algo_que_pueda_hacer_por_ti"
+        }
+      ]
+    },
+    {
+      "id": "greetings_introduce_myself_account_manager",
+      "source": "I'd like to introduce myself. I'm the new account manager for your region.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría presentarme, soy la nueva gerente de cuentas para su región.",
+          "audioSlug": "me_gustaria_presentarme_soy_la_nueva_gerente_de_cuentas_para_su_region",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Me gustaría presentarme, soy el nuevo gerente de cuentas para su región.",
+          "audioSlug": "me_gustaria_presentarme_soy_el_nuevo_gerente_de_cuentas_para_su_region",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasure_meeting_follow_up",
+      "source": "It was a pleasure meeting you. I'll follow up by email with the details.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue un placer conocerle y le enviaré un correo con los detalles.",
+          "audioSlug": "fue_un_placer_conocerle_y_le_enviare_un_correo_con_los_detalles"
+        }
+      ]
+    },
+    {
+      "id": "greetings_allow_me_to_introduce_dr",
+      "source": "Please allow me to introduce Dr. Martínez, who will lead the session this afternoon.",
+      "level": "B2",
+      "grammar": "'Permítame' es el imperativo formal (usted); más elevado que 'déjame presentarte'.",
+      "target": [
+        {
+          "text": "Permítame presentarle al Dr. Martínez, quien dirigirá la sesión de esta tarde.",
+          "audioSlug": "permitame_presentarle_al_dr_martinez_quien_dirigira_la_sesion_de_esta_tarde",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Permítame presentarle a la Dra. Martínez, quien dirigirá la sesión de esta tarde.",
+          "audioSlug": "permitame_presentarle_a_la_dra_martinez_quien_dirigira_la_sesion_de_esta_tarde",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_sincere_condolences_loss",
+      "source": "I wanted to reach out and offer my sincere condolences on your loss.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quería comunicarme para ofrecerle mis más sinceras condolencias por su pérdida.",
+          "audioSlug": "queria_comunicarme_para_ofrecerle_mis_mas_sinceras_condolencias_por_su_perdida"
+        }
+      ]
+    },
+    {
+      "id": "greetings_welcome_aboard_team",
+      "source": "On behalf of the entire team, welcome aboard. We're thrilled to have you.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En nombre de todo el equipo, bienvenido. Estamos encantados de tenerte con nosotros.",
+          "audioSlug": "en_nombre_de_todo_el_equipo_bienvenido_estamos_encantados_de_tenerte_con_nosotros",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "En nombre de todo el equipo, bienvenida. Estamos encantados de tenerte con nosotros.",
+          "audioSlug": "en_nombre_de_todo_el_equipo_bienvenida_estamos_encantados_de_tenerte_con_nosotros",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_trust_message_finds_you_well",
+      "source": "I trust this message finds you well. I'm writing to follow up on last week's conversation.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Espero que se encuentre bien y le escribo para retomar la conversación de la semana pasada.",
+          "audioSlug": "espero_que_se_encuentre_bien_y_le_escribo_para_retomar_la_conversacion_de_la_semana_pasada"
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasure_introduce_keynote_speaker",
+      "source": "It is my pleasure to introduce our keynote speaker, whose work has shaped this field.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un placer presentar a nuestro conferencista principal, cuyo trabajo ha dado forma a este campo.",
+          "audioSlug": "es_un_placer_presentar_a_nuestro_conferencista_principal_cuyo_trabajo_ha_dado_forma_a_este_campo",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Es un placer presentar a nuestra conferencista principal, cuyo trabajo ha dado forma a este campo.",
+          "audioSlug": "es_un_placer_presentar_a_nuestra_conferencista_principal_cuyo_trabajo_ha_dado_forma_a_este_campo",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_believe_formally_introduced",
+      "source": "I don't believe we've been formally introduced. I'm here representing the European delegation.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Creo que no nos han presentado formalmente, estoy aquí representando a la delegación europea.",
+          "audioSlug": "creo_que_no_nos_han_presentado_formalmente_estoy_aqui_representando_a_la_delegacion_europea"
+        }
+      ]
+    },
+    {
+      "id": "greetings_convey_delegation_graciously_received",
+      "source": "On behalf of the delegation, allow me to convey how delighted we are by this reception.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En nombre de la delegación, permítame expresar lo encantados que estamos por esta recepción.",
+          "audioSlug": "en_nombre_de_la_delegacion_permitame_expresar_lo_encantados_que_estamos_por_esta_recepcion"
+        }
+      ]
+    },
+    {
+      "id": "greetings_appreciate_time_demanding_schedule",
+      "source": "I appreciate you taking the time to meet with me, knowing how demanding your schedule is.",
+      "level": "C1",
+      "grammar": "'Le agradezco que haya + participio' usa el subjuntivo perfecto en registro formal.",
+      "target": [
+        {
+          "text": "Le agradezco que haya encontrado tiempo para reunirse conmigo, siendo tan exigente su agenda.",
+          "audioSlug": "le_agradezco_que_haya_encontrado_tiempo_para_reunirse_conmigo_siendo_tan_exigente_su_agenda"
+        }
+      ]
+    },
+    {
+      "id": "greetings_honor_welcome_distinguished_delegates",
+      "source": "It is with great honor that we welcome the distinguished delegates to this commemorative gathering.",
+      "level": "C2",
+      "grammar": "'Es con gran honor que' es una construcción hendida que enfatiza el elemento principal.",
+      "target": [
+        {
+          "text": "Es con gran honor que damos la bienvenida a los distinguidos delegados a esta reunión conmemorativa.",
+          "audioSlug": "es_con_gran_honor_que_damos_la_bienvenida_a_los_distinguidos_delegados_a_esta_reunion_conmemorativa"
+        }
+      ]
+    },
+    {
+      "id": "greetings_cultural_awareness_not_merely_etiquette",
+      "source": "Cultural awareness in greetings is not merely etiquette but signals respect for those you engage with.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La conciencia cultural no es solo protocolo, es una señal de respeto.",
+          "audioSlug": "la_conciencia_cultural_no_es_solo_protocolo_es_una_senal_de_respeto"
+        }
+      ]
+    },
+    {
+      "id": "greetings_protocol_introductions_senior_first",
+      "source": "The protocol for introductions in this context requires that the senior representative speak first.",
+      "level": "C2",
+      "grammar": "'Exige que + subjuntivo' expresa mandato formal; el verbo subordinado va en subjuntivo.",
+      "target": [
+        {
+          "text": "El protocolo de presentaciones en este contexto exige que el representante de mayor rango hable primero.",
+          "audioSlug": "el_protocolo_de_presentaciones_en_este_contexto_exige_que_el_representante_de_mayor_rango_hable_primero"
+        }
+      ]
+    },
+    {
+      "id": "greetings_remiss_not_acknowledge_contribution",
+      "source": "I would be remiss not to acknowledge the immense contribution you have made to this institution.",
+      "level": "C2",
+      "grammar": "'Sería una negligencia' usa el condicional para expresar obligación con matiz de autocrítica.",
+      "target": [
+        {
+          "text": "Sería una negligencia de mi parte no reconocer la inmensa contribución que ha aportado a esta institución.",
+          "audioSlug": "seria_una_negligencia_de_mi_parte_no_reconocer_la_inmensa_contribucion_que_ha_aportado_a_esta_institucion"
+        }
+      ]
+    },
+    {
+      "id": "greetings_sincere_felicitations_promotion",
+      "source": "Please accept my most sincere felicitations on the occasion of your well-deserved promotion.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Por favor, acepte mis más sinceras felicitaciones con motivo de su tan merecido ascenso.",
+          "audioSlug": "por_favor_acepte_mis_mas_sinceras_felicitaciones_con_motivo_de_su_tan_merecido_ascenso"
+        }
+      ]
+    },
+    {
+      "id": "greetings_been_ages_how_keeping",
+      "source": "It's been ages! How have you been keeping?",
+      "level": "B1",
+      "grammar": "'Hace + tiempo + que + presente' expresa tiempo transcurrido, sin pretérito perfecto.",
+      "target": [
+        {
+          "text": "Hace siglos que no nos vemos, ¿cómo has estado?",
+          "audioSlug": "hace_siglos_que_no_nos_vemos_como_has_estado"
+        }
+      ]
+    },
+    {
+      "id": "greetings_dont_think_weve_met",
+      "source": "I don't think we've met before. I'm [name].",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Creo que no nos conocemos, soy [nombre].",
+          "audioSlug": "creo_que_no_nos_conocemos_soy_nombre"
+        }
+      ]
+    },
+    {
+      "id": "greetings_small_world_knew_each_other",
+      "source": "What a small world! I had no idea you knew each other!",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Qué pequeño es el mundo, no sabía que se conocían!",
+          "audioSlug": "que_pequeno_es_el_mundo_no_sabia_que_se_conocian"
+        }
+      ]
+    },
+    {
+      "id": "greetings_heard_so_much_face_to_name",
+      "source": "I've heard so much about you. It's great to finally meet you!",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He escuchado mucho sobre ti, ¡es genial conocerte por fin!",
+          "audioSlug": "he_escuchado_mucho_sobre_ti_es_genial_conocerte_por_fin"
+        }
+      ]
+    },
+    {
+      "id": "greetings_let_me_introduce_colleague",
+      "source": "Let me introduce you to a colleague of mine.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Déjame presentarte a un colega mío.",
+          "audioSlug": "dejame_presentarte_a_un_colega_mio",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Déjame presentarte a una colega mía.",
+          "audioSlug": "dejame_presentarte_a_una_colega_mia",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "greetings_hope_not_interrupting",
+      "source": "I hope I'm not interrupting. Do you have a moment?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Espero no estar interrumpiendo, ¿tienes un momento?",
+          "audioSlug": "espero_no_estar_interrumpiendo_tienes_un_momento"
+        }
+      ]
+    },
+    {
+      "id": "greetings_great_catching_up_more_often",
+      "source": "It was great catching up. We should do this more often.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue genial ponernos al día, deberíamos hacer esto más seguido.",
+          "audioSlug": "fue_genial_ponernos_al_dia_deberiamos_hacer_esto_mas_seguido"
+        }
+      ]
+    },
+    {
+      "id": "greetings_give_regards_family",
+      "source": "Please give my regards to your family.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Saluda a tu familia de mi parte, por favor.",
+          "audioSlug": "saluda_a_tu_familia_de_mi_parte_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "greetings_pleasant_surprise_not_expecting",
+      "source": "I wasn't expecting to see you here. What a pleasant surprise!",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No esperaba verte aquí, ¡qué agradable sorpresa!",
+          "audioSlug": "no_esperaba_verte_aqui_que_agradable_sorpresa"
+        }
+      ]
+    },
+    {
+      "id": "greetings_lovely_see_you_looking_well",
+      "source": "It's lovely to see you looking so well.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Qué bueno verte tan bien.",
+          "audioSlug": "que_bueno_verte_tan_bien"
+        }
+      ]
+    },
+    {
+      "id": "greetings_find_yourself_city_give_call",
+      "source": "If you're ever in the city, don't hesitate to give me a call.",
+      "level": "B2",
+      "grammar": "'No dudes en + infinitivo' es una invitación cordial equivalente al inglés 'feel free to'.",
+      "target": [
+        {
+          "text": "Si alguna vez te encuentras en la ciudad, no dudes en llamarme.",
+          "audioSlug": "si_alguna_vez_te_encuentras_en_la_ciudad_no_dudes_en_llamarme"
+        }
+      ]
+    },
+    {
+      "id": "greetings_mutual_acquaintance_conference",
+      "source": "I believe we share a mutual acquaintance. You know [name] from the conference, I think?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Creo que tenemos un conocido en común, ¿conoces a [nombre] de la conferencia?",
+          "audioSlug": "creo_que_tenemos_un_conocido_en_comun_conoces_a_nombre_de_la_conferencia"
+        }
+      ]
+    },
+    {
+      "id": "greetings_looking_forward_introduction_work_precedes",
+      "source": "I must confess, I've been looking forward to this introduction. Your work precedes you.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debo confesarlo, esperaba este encuentro con entusiasmo, pues su trabajo lo precede.",
+          "audioSlug": "debo_confesarlo_esperaba_este_encuentro_con_entusiasmo_pues_su_trabajo_lo_precede"
+        }
+      ]
+    }
+  ]
+}

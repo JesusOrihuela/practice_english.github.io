@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   /* ── Learning Path ── */
   if (typeof AppPath === 'undefined' || typeof Progress === 'undefined') return;
 
-  const grammarData = await AppData.get('grammar-rules').catch(() => ({ rules: [] }));
+  const grammarData = await AppData.get(AppLangPair.grammarKey()).catch(() => ({ rules: [] }));
   AppPath.setGrammarRules(grammarData.rules || []);
 
   _renderSessionCta();
@@ -113,7 +113,8 @@ function _actLabel(id)   { return AppLang.t('act_' + id) || id; }
 function _topicLabel(id) {
   const t = (AppTopics.PHRASE_TOPICS || []).find(function (x) { return x.id === id; })
          || (AppTopics.VOCAB_TOPICS  || []).find(function (x) { return x.id === id; });
-  return t ? t.emoji + ' ' + t.label : id;
+  if (!t) return id;
+  return t.emoji + ' ' + AppTopics.getLabel(t);
 }
 
 function _renderSessionTrail() {

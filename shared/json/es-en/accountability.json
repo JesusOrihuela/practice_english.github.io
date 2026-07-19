@@ -1,0 +1,906 @@
+{
+  "phrases": [
+    {
+      "id": "accountability_lets_start_the_meeting",
+      "source": "Empecemos la reunión.",
+      "level": "A2",
+      "grammar": "'Let's + infinitive' is the standard way to make an inclusive suggestion.",
+      "target": [
+        {
+          "text": "Let's start the meeting.",
+          "audioSlug": "let_s_start_the_meeting",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Let's begin the meeting.",
+          "audioSlug": "let_s_begin_the_meeting",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_financial_reports_have_been_reviewed",
+      "source": "Se han revisado los informes financieros.",
+      "level": "B1",
+      "grammar": "Present perfect passive reports a completed action without specifying who performed it.",
+      "target": [
+        {
+          "text": "The financial reports have been reviewed.",
+          "audioSlug": "the_financial_reports_have_been_reviewed"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_need_to_adjust_the_budget",
+      "source": "Necesitamos ajustar el presupuesto.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We need to adjust the budget.",
+          "audioSlug": "we_need_to_adjust_the_budget",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "We need to modify the budget.",
+          "audioSlug": "we_need_to_modify_the_budget",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_sales_figures_have_increased",
+      "source": "Las cifras de ventas han aumentado.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The sales figures have increased.",
+          "audioSlug": "the_sales_figures_have_increased"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_are_facing_a_cash_flow",
+      "source": "Estamos enfrentando un problema de flujo de efectivo.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We are facing a cash flow problem.",
+          "audioSlug": "we_are_facing_a_cash_flow_problem"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_need_to_audit_the_accounts",
+      "source": "Necesitamos auditar las cuentas.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We need to audit the accounts.",
+          "audioSlug": "we_need_to_audit_the_accounts"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_tax_returns_are_pending",
+      "source": "Las declaraciones de impuestos están pendientes.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The tax returns are pending.",
+          "audioSlug": "the_tax_returns_are_pending"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_inventory_needs_to_be_updated",
+      "source": "El inventario debe actualizarse.",
+      "level": "B1",
+      "grammar": "'Needs to be + past participle' expresses a passive obligation for an impersonal task.",
+      "target": [
+        {
+          "text": "The inventory needs to be updated.",
+          "audioSlug": "the_inventory_needs_to_be_updated"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_have_a_new_client",
+      "source": "Tenemos un nuevo cliente.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We have a new client.",
+          "audioSlug": "we_have_a_new_client",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "We have a new customer.",
+          "audioSlug": "we_have_a_new_customer",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_are_closing_the_fiscal_year",
+      "source": "Estamos cerrando el año fiscal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We are closing the fiscal year.",
+          "audioSlug": "we_are_closing_the_fiscal_year"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_need_to_reconcile_the_bank",
+      "source": "Necesitamos conciliar las cuentas bancarias.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We need to reconcile the bank accounts.",
+          "audioSlug": "we_need_to_reconcile_the_bank_accounts"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_payroll_is_paid",
+      "source": "La nómina está pagada.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The payroll is paid.",
+          "audioSlug": "the_payroll_is_paid"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_balance_sheet_is_ready",
+      "source": "El balance general está listo.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The balance sheet is ready.",
+          "audioSlug": "the_balance_sheet_is_ready",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "The balance sheet is done.",
+          "audioSlug": "the_balance_sheet_is_done",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_financial_statements_are_up_to",
+      "source": "Los estados financieros están al día.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The financial statements are up to date.",
+          "audioSlug": "the_financial_statements_are_up_to_date"
+        }
+      ]
+    },
+    {
+      "id": "accountability_accounting_staff_will_be_here_tomorrow",
+      "source": "Mañana viene personal del despacho contable.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Accounting staff will be here tomorrow.",
+          "audioSlug": "accounting_staff_will_be_here_tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_accountant_needs_additional_information",
+      "source": "El contador necesita información adicional.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The accountant needs additional information.",
+          "audioSlug": "the_accountant_needs_additional_information"
+        }
+      ]
+    },
+    {
+      "id": "accountability_everything_went_well_during_the_tax",
+      "source": "Todo salió bien durante la auditoría fiscal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Everything went well during the tax audit.",
+          "audioSlug": "everything_went_well_during_the_tax_audit"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_financial_forecast_is_positive",
+      "source": "El pronóstico financiero es positivo.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The financial forecast is positive.",
+          "audioSlug": "the_financial_forecast_is_positive"
+        }
+      ]
+    },
+    {
+      "id": "accountability_have_the_contracts_with_the_suppliers",
+      "source": "¿Ya se firmaron los contratos con los proveedores?",
+      "level": "B1",
+      "grammar": "Passive 'have been signed' focuses on the action, not on who signed the contracts.",
+      "target": [
+        {
+          "text": "Have the contracts with the suppliers been signed?",
+          "audioSlug": "have_the_contracts_with_the_suppliers_been_signed"
+        }
+      ]
+    },
+    {
+      "id": "accountability_when_is_the_meeting_scheduled",
+      "source": "¿Cuándo está programada la reunión?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "When is the meeting scheduled?",
+          "audioSlug": "when_is_the_meeting_scheduled",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "When is the meeting planned?",
+          "audioSlug": "when_is_the_meeting_planned",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "accountability_it_is_important_to_consider_the",
+      "source": "Es importante considerar las nuevas tendencias del mercado.",
+      "level": "B1",
+      "grammar": "'It is + adjective + to-infinitive' is an impersonal way to make a recommendation.",
+      "target": [
+        {
+          "text": "It is important to consider the new market trends.",
+          "audioSlug": "it_is_important_to_consider_the_new_market_trends"
+        }
+      ]
+    },
+    {
+      "id": "accountability_when_was_the_budget_review_scheduled",
+      "source": "¿Cuándo se programó la revisión presupuestaria?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "When was the budget review scheduled?",
+          "audioSlug": "when_was_the_budget_review_scheduled"
+        }
+      ]
+    },
+    {
+      "id": "accountability_what_are_the_projections_for_the",
+      "source": "¿Cuáles son las proyecciones para el nuevo año fiscal?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What are the projections for the new fiscal year?",
+          "audioSlug": "what_are_the_projections_for_the_new_fiscal_year"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_sales_projection_for_the_next",
+      "source": "Se realizará la proyección de ventas del siguiente trimestre.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The sales projection for the next quarter will be made.",
+          "audioSlug": "the_sales_projection_for_the_next_quarter_will_be_made"
+        }
+      ]
+    },
+    {
+      "id": "accountability_accounts_payable_has_already_closed_its",
+      "source": "Cuentas por Pagar ya cerró sus registros contables para este mes.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Accounts Payable has already closed its accounting records for this month.",
+          "audioSlug": "accounts_payable_has_already_closed_its_accounting_records_for_this_month"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_accounting_department_has_already_delivered",
+      "source": "El departamento de Contabilidad ya entregó los reportes financieros.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The Accounting department has already delivered the financial reports.",
+          "audioSlug": "the_accounting_department_has_already_delivered_the_financial_reports"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_human_resources_department_has_already",
+      "source": "El departamento de Recursos Humanos ya entregó los reportes de nómina.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The Human Resources department has already delivered the payroll reports.",
+          "audioSlug": "the_human_resources_department_has_already_delivered_the_payroll_reports"
+        }
+      ]
+    },
+    {
+      "id": "accountability_accounting_records_for_the_tax_return",
+      "source": "Mañana se cierran registros contables para la declaración de impuestos.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Accounting records for the tax return will be closed tomorrow.",
+          "audioSlug": "accounting_records_for_the_tax_return_will_be_closed_tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_presentation_of_the_financial_reports",
+      "source": "La presentación de los informes financieros fue exitosa.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The presentation of the financial reports was successful.",
+          "audioSlug": "the_presentation_of_the_financial_reports_was_successful"
+        }
+      ]
+    },
+    {
+      "id": "accountability_all_the_money_a_person_receives",
+      "source": "Todo el dinero que una persona recibe como pago se llama salario.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "All the money a person receives as payment is called salary.",
+          "audioSlug": "all_the_money_a_person_receives_as_payment_is_called_salary"
+        }
+      ]
+    },
+    {
+      "id": "accountability_salary_is_paid_in_cash_check",
+      "source": "El salario se paga en efectivo, cheque o depósito bancario.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salary is paid in cash, check or bank deposit.",
+          "audioSlug": "salary_is_paid_in_cash_check_or_bank_deposit"
+        }
+      ]
+    },
+    {
+      "id": "accountability_salary_is_paid_weekly_biweekly_or",
+      "source": "El salario se paga semanal, quincenal o mensualmente.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salary is paid weekly, biweekly or monthly.",
+          "audioSlug": "salary_is_paid_weekly_biweekly_or_monthly"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_purchasing_department_will_receive_a",
+      "source": "El departamento de compras recibirá bono por cumplimiento de metas.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The purchasing department will receive a bonus for meeting goals.",
+          "audioSlug": "the_purchasing_department_will_receive_a_bonus_for_meeting_goals"
+        }
+      ]
+    },
+    {
+      "id": "accountability_has_the_intern_already_registered_with",
+      "source": "¿El practicante ya hizo su registro en el Seguro Social?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Has the intern already registered with Social Security?",
+          "audioSlug": "has_the_intern_already_registered_with_social_security"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_balance_sheet_shows_the_assets",
+      "source": "El balance general muestra los activos, pasivos y capital de la empresa.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The balance sheet shows the assets, liabilities and equity of the company.",
+          "audioSlug": "the_balance_sheet_shows_the_assets_liabilities_and_equity_of_the_company"
+        }
+      ]
+    },
+    {
+      "id": "accountability_i_think_this_is_a_good",
+      "source": "Creo que es una buena inversión. Paga un buen interés anual.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I think this is a good investment. It pays great annual interest.",
+          "audioSlug": "i_think_this_is_a_good_investment_it_pays_great_annual_interest"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_company_had_higher_sales_and",
+      "source": "La compañía tuvo mayores ventas y un aumento en las ganancias.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The company had higher sales and an increase in profits.",
+          "audioSlug": "the_company_had_higher_sales_and_an_increase_in_profits"
+        }
+      ]
+    },
+    {
+      "id": "accountability_if_the_company_buys_new_assets",
+      "source": "Si la empresa compra nuevos activos, debitas bancos y acreditas activos.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If the company buys new assets, you debit banks and credit assets.",
+          "audioSlug": "if_the_company_buys_new_assets_you_debit_banks_and_credit_assets"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_inventory_that_arrived_yesterday_is",
+      "source": "El inventario que llegó ayer está listo para la venta.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The inventory that arrived yesterday is ready for sale.",
+          "audioSlug": "the_inventory_that_arrived_yesterday_is_ready_for_sale"
+        }
+      ]
+    },
+    {
+      "id": "accountability_what_was_the_net_profit_from",
+      "source": "¿Cuál fue la ganancia neta de las ventas del trimestre pasado?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What was the net profit from sales last quarter?",
+          "audioSlug": "what_was_the_net_profit_from_sales_last_quarter"
+        }
+      ]
+    },
+    {
+      "id": "accountability_what_was_the_gross_loss_from",
+      "source": "¿Cuál fue la pérdida bruta de las ventas del bimestre pasado?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What was the gross loss from sales last bimester?",
+          "audioSlug": "what_was_the_gross_loss_from_sales_last_bimester"
+        }
+      ]
+    },
+    {
+      "id": "accountability_a_companys_fiscal_year_does_not",
+      "source": "El año fiscal de una empresa no tiene que comenzar en enero.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A company's fiscal year does not have to start in January.",
+          "audioSlug": "a_company_s_fiscal_year_does_not_have_to_start_in_january"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_companys_income_in_the_past",
+      "source": "Los ingresos del año pasado se muestran en el balance general.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Last year's income is shown on the balance sheet.",
+          "audioSlug": "last_year_s_income_is_shown_on_the_balance_sheet"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_variance_between_projected_and",
+      "source": "La variación entre los ingresos proyectados y los reales debe analizarse a fondo.",
+      "level": "C1",
+      "grammar": "Passive modal 'must be analyzed' states a formal obligation without naming who is responsible.",
+      "target": [
+        {
+          "text": "The variance between projected and actual revenue must be thoroughly analyzed.",
+          "audioSlug": "the_variance_between_projected_and_actual_revenue_must_be_thoroughly_analyzed"
+        }
+      ]
+    },
+    {
+      "id": "accountability_we_should_hedge_our_foreign",
+      "source": "Deberíamos cubrir nuestra exposición en moneda extranjera para mitigar el riesgo cambiario.",
+      "level": "C1",
+      "grammar": "'Should' marks a professional recommendation: stronger than 'could' but not a strict obligation.",
+      "target": [
+        {
+          "text": "We should hedge our foreign currency exposure to mitigate exchange rate risk.",
+          "audioSlug": "we_should_hedge_our_foreign_currency_exposure_to_mitigate_exchange_rate_risk"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_audit_committee_has_raised",
+      "source": "El comité de auditoría ha expresado preocupaciones sobre nuestros controles internos.",
+      "level": "C1",
+      "grammar": "Present perfect 'has raised' shows the concern is recent and still relevant now.",
+      "target": [
+        {
+          "text": "The audit committee has raised concerns about our internal controls.",
+          "audioSlug": "the_audit_committee_has_raised_concerns_about_our_internal_controls"
+        }
+      ]
+    },
+    {
+      "id": "accountability_depreciation_must_be_calculated_using",
+      "source": "La depreciación debe calcularse usando el método de línea recta para activos fijos.",
+      "level": "C1",
+      "grammar": "Passive modal 'must be calculated' gives an impersonal instruction about a required procedure.",
+      "target": [
+        {
+          "text": "Depreciation must be calculated using the straight-line method for fixed assets.",
+          "audioSlug": "depreciation_must_be_calculated_using_the_straight_line_method_for_fixed_assets"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_accounts_receivable_turnover_ratio",
+      "source": "El índice de rotación de cuentas por cobrar indica qué tan eficientemente cobramos las deudas pendientes.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The accounts receivable turnover ratio indicates how efficiently we collect outstanding debts.",
+          "audioSlug": "the_accounts_receivable_turnover_ratio_indicates_how_efficiently_we_collect_outstanding_debts"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_consolidated_financial_statements_reflect",
+      "source": "Los estados financieros consolidados reflejan la eliminación de transacciones intercompañía.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The consolidated financial statements reflect the elimination of intercompany transactions.",
+          "audioSlug": "the_consolidated_financial_statements_reflect_the_elimination_of_intercompany_transactions"
+        }
+      ]
+    },
+    {
+      "id": "accountability_revenue_recognition_must_comply_with",
+      "source": "El reconocimiento de ingresos debe cumplir con las normas contables aplicables bajo NIIF.",
+      "level": "C2",
+      "grammar": "'Must comply with' signals a non-negotiable legal or regulatory obligation.",
+      "target": [
+        {
+          "text": "Revenue recognition must comply with the applicable accounting standards under IFRS.",
+          "audioSlug": "revenue_recognition_must_comply_with_the_applicable_accounting_standards_under_ifrs"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_impairment_of_goodwill_has",
+      "source": "El deterioro del crédito mercantil ha sido reconocido conforme a la valuación vigente.",
+      "level": "C2",
+      "grammar": "Present perfect passive 'has been recognized' formally reports a completed accounting action.",
+      "target": [
+        {
+          "text": "The impairment of goodwill has been recognized in line with the current valuation.",
+          "audioSlug": "the_impairment_of_goodwill_has_been_recognized_in_line_with_the_current_valuation"
+        }
+      ]
+    },
+    {
+      "id": "accountability_any_contingent_liability_must_be",
+      "source": "Cualquier pasivo contingente debe revelarse en las notas a los estados financieros.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Any contingent liability must be disclosed in the notes to the financial statements.",
+          "audioSlug": "any_contingent_liability_must_be_disclosed_in_the_notes_to_the_financial_statements"
+        }
+      ]
+    },
+    {
+      "id": "accountability_the_weighted_average_cost_of",
+      "source": "El costo de capital promedio ponderado sirve como referencia para evaluar los rendimientos de inversión.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The weighted average cost of capital serves as the benchmark for evaluating investment returns.",
+          "audioSlug": "the_weighted_average_cost_of_capital_serves_as_the_benchmark_for_evaluating_investment_returns"
+        }
+      ]
+    },
+    {
+      "id": "accountability_operating_expenses_exceeded_budget",
+      "source": "Los gastos operativos superaron el presupuesto en un doce por ciento el trimestre pasado.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Operating expenses exceeded the budget by twelve percent last quarter.",
+          "audioSlug": "operating_expenses_exceeded_the_budget_by_twelve_percent_last_quarter"
+        }
+      ]
+    },
+    {
+      "id": "accountability_cost_benefit_analysis_before_approval",
+      "source": "¿Podrías hacer un análisis costo-beneficio rápido antes de aprobar el gasto?",
+      "level": "B2",
+      "grammar": "'Could you + infinitive' is the standard form for a polite professional request.",
+      "target": [
+        {
+          "text": "Could you run a quick cost-benefit analysis before we approve the expenditure?",
+          "audioSlug": "could_you_run_a_quick_cost_benefit_analysis_before_we_approve_the_expenditure"
+        }
+      ]
+    },
+    {
+      "id": "accountability_outstanding_invoices_month_end_close",
+      "source": "Las facturas pendientes deben recibir seguimiento antes del cierre de mes.",
+      "level": "B2",
+      "grammar": "'Need to be + past participle' expresses a passive obligation for a procedural task.",
+      "target": [
+        {
+          "text": "The outstanding invoices need to be followed up before the month-end close.",
+          "audioSlug": "the_outstanding_invoices_need_to_be_followed_up_before_the_month_end_close"
+        }
+      ]
+    },
+    {
+      "id": "accountability_write_off_bad_debt_quarter",
+      "source": "Tendremos que dar de baja la deuda incobrable antes de cerrar el trimestre.",
+      "level": "B2",
+      "grammar": "'Write off' means to remove an unrecoverable debt or asset from the accounting records.",
+      "target": [
+        {
+          "text": "We'll need to write off the bad debt before closing the quarter.",
+          "audioSlug": "we_ll_need_to_write_off_the_bad_debt_before_closing_the_quarter"
+        }
+      ]
+    },
+    {
+      "id": "accountability_gross_margin_declined_supply_chain",
+      "source": "El margen bruto ha disminuido debido al aumento en los costos de la cadena de suministro.",
+      "level": "B2",
+      "grammar": "Present perfect 'has declined' shows a recent trend with direct impact on current performance.",
+      "target": [
+        {
+          "text": "The gross margin has declined due to rising supply chain costs.",
+          "audioSlug": "the_gross_margin_has_declined_due_to_rising_supply_chain_costs"
+        }
+      ]
+    },
+    {
+      "id": "accountability_expense_receipts_submitted_reimbursement",
+      "source": "Por favor, asegúrate de que todos los comprobantes de gasto sean entregados antes del viernes para su reembolso.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please ensure all expense receipts are submitted by Friday for reimbursement.",
+          "audioSlug": "please_ensure_all_expense_receipts_are_submitted_by_friday_for_reimbursement"
+        }
+      ]
+    },
+    {
+      "id": "accountability_external_auditors_requesting_documentation",
+      "source": "Los auditores externos están solicitando documentación de los últimos tres años fiscales.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The external auditors are requesting documentation for the last three fiscal years.",
+          "audioSlug": "the_external_auditors_are_requesting_documentation_for_the_last_three_fiscal_years"
+        }
+      ]
+    },
+    {
+      "id": "accountability_liquidity_ratios_short_term_obligations",
+      "source": "Los índices de liquidez sugieren que la empresa podría tener dificultades para cumplir sus obligaciones a corto plazo.",
+      "level": "C1",
+      "grammar": "'May + infinitive' hedges a professional assessment, signaling possibility rather than certainty.",
+      "target": [
+        {
+          "text": "The liquidity ratios suggest the company may struggle to meet its short-term obligations.",
+          "audioSlug": "the_liquidity_ratios_suggest_the_company_may_struggle_to_meet_its_short_term_obligations"
+        }
+      ]
+    },
+    {
+      "id": "accountability_provision_litigation_claim",
+      "source": "Debemos constituir una provisión por la reclamación legal pendiente de resolución.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We need to set aside a provision for the litigation claim pending resolution.",
+          "audioSlug": "we_need_to_set_aside_a_provision_for_the_litigation_claim_pending_resolution"
+        }
+      ]
+    },
+    {
+      "id": "accountability_transfer_pricing_documented_tax_authorities",
+      "source": "La política de precios de transferencia debe documentarse para resistir el escrutinio de las autoridades fiscales.",
+      "level": "C1",
+      "grammar": "Passive 'must be documented' states a compliance obligation without naming who must act.",
+      "target": [
+        {
+          "text": "The transfer pricing policy must be documented to withstand scrutiny from tax authorities.",
+          "audioSlug": "the_transfer_pricing_policy_must_be_documented_to_withstand_scrutiny_from_tax_authorities"
+        }
+      ]
+    },
+    {
+      "id": "accountability_deferred_tax_assets_reassessed_tax_rate",
+      "source": "Nuestros activos por impuesto diferido han sido revaluados tras el cambio en la tasa del impuesto corporativo.",
+      "level": "C1",
+      "grammar": "Present perfect passive 'have been reassessed' formally reports a completed technical review.",
+      "target": [
+        {
+          "text": "Our deferred tax assets have been reassessed following the change in corporate tax rates.",
+          "audioSlug": "our_deferred_tax_assets_have_been_reassessed_following_the_change_in_corporate_tax_rates"
+        }
+      ]
+    },
+    {
+      "id": "accountability_going_concern_assumption_financial_statements",
+      "source": "El principio de empresa en marcha sustenta la elaboración de todos los estados financieros.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The going concern assumption underpins the preparation of all financial statements.",
+          "audioSlug": "the_going_concern_assumption_underpins_the_preparation_of_all_financial_statements"
+        }
+      ]
+    },
+    {
+      "id": "accountability_walk_through_reconciliation_management_statutory",
+      "source": "¿Podrías explicarme la conciliación entre las cuentas de gestión y las cifras estatutarias?",
+      "level": "C1",
+      "grammar": "'Walk through' means to guide someone step by step through a complex process.",
+      "target": [
+        {
+          "text": "Could you walk me through the reconciliation between the management accounts and the statutory figures?",
+          "audioSlug": "could_you_walk_me_through_the_reconciliation_between_the_management_accounts_and_the_statutory_figures"
+        }
+      ]
+    },
+    {
+      "id": "accountability_board_approved_share_buyback_shareholders",
+      "source": "La junta aprobó un programa de recompra de acciones para devolver valor a los accionistas.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The board approved a share buyback program to return value to shareholders.",
+          "audioSlug": "the_board_approved_a_share_buyback_program_to_return_value_to_shareholders"
+        }
+      ]
+    },
+    {
+      "id": "accountability_restatement_prior_period_accounting_standard",
+      "source": "La reexpresión de los comparativos de periodos anteriores fue requerida por la adopción de la nueva norma contable.",
+      "level": "C2",
+      "grammar": "'Was necessitated by' is formal passive voice, typical in regulatory compliance writing.",
+      "target": [
+        {
+          "text": "The restatement of prior-period comparatives was necessitated by the adoption of the new accounting standard.",
+          "audioSlug": "the_restatement_of_prior_period_comparatives_was_necessitated_by_the_adoption_of_the_new_accounting_standard"
+        }
+      ]
+    },
+    {
+      "id": "accountability_substance_over_form_economic_reality",
+      "source": "El principio de fondo sobre forma exige que las transacciones se reconozcan conforme a su realidad económica.",
+      "level": "C2",
+      "grammar": "The mandative subjunctive 'requires that + bare infinitive' is standard in formal and legal English.",
+      "target": [
+        {
+          "text": "The substance-over-form principle requires that transactions be recognized in accordance with their economic reality.",
+          "audioSlug": "the_substance_over_form_principle_requires_that_transactions_be_recognized_in_accordance_with_their_economic_reality"
+        }
+      ]
+    },
+    {
+      "id": "accountability_earnings_per_share_basic_diluted_disclosure",
+      "source": "Las ganancias por acción deben reportarse usando tanto las cifras básicas como las diluidas para garantizar la revelación completa.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Earnings per share must be reported using both basic and diluted figures to ensure full disclosure.",
+          "audioSlug": "earnings_per_share_must_be_reported_using_both_basic_and_diluted_figures_to_ensure_full_disclosure"
+        }
+      ]
+    },
+    {
+      "id": "accountability_materiality_threshold_consolidated_net_assets",
+      "source": "El umbral de materialidad se fijó en el dos por ciento de los activos netos consolidados para efectos de auditoría.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The materiality threshold was set at two percent of consolidated net assets for audit purposes.",
+          "audioSlug": "the_materiality_threshold_was_set_at_two_percent_of_consolidated_net_assets_for_audit_purposes"
+        }
+      ]
+    }
+  ]
+}

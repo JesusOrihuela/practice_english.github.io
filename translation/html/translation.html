@@ -24,34 +24,42 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PracticeEng">
+
+    <!-- Language scripts: must be in <head> so LangUI is set before body renders -->
+    <script src="../../shared/js/lang-pair.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
+
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_to_main">Ir al contenido principal</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
         </a>
     </header>
 
-    <nav class="mode-switcher" aria-label="Modos de práctica">
-        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio">🏠</a>
+    <nav class="mode-switcher" aria-label="Modos de práctica" data-i18n-aria="nav_modes_aria">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio" data-i18n-aria="nav_home_aria">🏠</a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">Mi Aprendizaje</span></a>
+        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label" data-i18n="nav_my_learning"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Pronunciación</span></a>
-        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictado</span></a>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label" data-i18n="nav_speaking"></span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label" data-i18n="nav_dictation"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
-        <a href="../../translation/html/translation.html" class="mode-btn active">🔄 <span class="btn-label">Traducción</span></a>
-        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Secuencia</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label" data-i18n="nav_cloze"></span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn active">🔄 <span class="btn-label" data-i18n="nav_translation"></span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label" data-i18n="nav_scramble"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label">Vocabulario</span></a>
-        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn">📚 <span class="btn-label" data-i18n="nav_vocabulary"></span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label" data-i18n="nav_quiz"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Gramática</span></a>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label" data-i18n="nav_grammar"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn" data-nav="settings">⚙️</a>
+    <script>(function(){if(typeof AppLang==='undefined')return;document.querySelectorAll('.mode-switcher .btn-label[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n'),t=AppLang.t(k);if(t!==k)e.textContent=t;});}());</script>
     </nav>
 
     <main class="translation-page" id="main-content">
@@ -61,7 +69,7 @@
         <div id="topic-picker">
             <div class="trans-header">
                 <h1>Traducción <span>Inversa</span></h1>
-                <p>Lee la frase en español y escribe la versión en inglés. La producción activa construye una memoria más sólida.</p>
+                <p data-i18n="translation_picker_sub">Lee la frase en español y escribe la versión en inglés. La producción activa construye una memoria más sólida.</p>
             </div>
             <div class="topic-grid" id="topic-grid">
                 <!-- Filled by JS -->
@@ -77,7 +85,7 @@
                 <span id="trans-counter" class="session-counter" role="status" aria-live="polite">0 / 0 aprendidas</span>
                 <span class="streak-badge" id="trans-streak">🔥 Racha de 0 día(s)</span>
             </div>
-            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de la sesión"><div class="session-progress-fill" id="session-progress-fill"></div></div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de la sesión" data-i18n-aria="session_progress_aria"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <h1 class="trans-title"></h1>
             <p class="trans-subtitle"></p>
@@ -93,7 +101,9 @@
                 <input type="text" id="trans-input"
                        placeholder="Escribe la frase en inglés…"
                        autocomplete="off" spellcheck="false" autocorrect="off"
-                       aria-label="English translation">
+                       aria-label="English translation"
+                       data-i18n-aria="translation_input_aria"
+                       data-i18n-placeholder="translation_input_ph">
                 <button id="check-btn" class="check-btn">Verificar ✓</button>
             </div>
 
@@ -106,12 +116,14 @@
                     <span class="feedback-note-icon">💡</span>
                     <span class="feedback-note-text" id="feedback-grammar-tip-text"></span>
                 </div>
+                <div class="feedback-divider hidden" id="alt-note-divider"></div>
+                <div class="alt-note hidden" id="alt-note"></div>
             </div>
 
             <!-- Grammar chip + Listen (shown after answer) -->
             <div class="post-feedback-row">
                 <div id="grammar-chip-wrap" class="grammar-chip-wrap hidden">
-                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Abrir Taller de Gramática para esta regla">
+                    <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Abrir Taller de Gramática para esta regla" data-i18n-aria="grammar_chip_aria">
                         📐 <span id="grammar-chip-label"></span> →
                     </a>
                 </div>
@@ -119,8 +131,8 @@
             </div>
 
             <!-- Next / Try Again -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente frase">Siguiente →</button>
-            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta frase de nuevo">↩ Intentar de nuevo</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente frase" data-i18n-aria="next_btn_aria">Siguiente →</button>
+            <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta frase de nuevo" data-i18n-aria="try_again_phrase_aria">↩ Intentar de nuevo</button>
 
         </div>
 
@@ -137,12 +149,8 @@
 
     <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/cefr.js"></script>
-    <script src="../../shared/js/lang-pair.js"></script>
     <script src="../../shared/js/proficiency.js"></script>
     <script src="../../shared/js/progress.js"></script>
-    <script src="../../lang/ui.js"></script>
-    <script src="../../lang/target/en.js"></script>
-    <script src="../../shared/js/lang.js"></script>
     <script src="../../shared/js/topics.js"></script>
     <script src="../../shared/js/text-utils.js"></script>
     <script src="../../shared/js/topic-data.js"></script>

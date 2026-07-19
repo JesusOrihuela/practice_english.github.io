@@ -9,11 +9,16 @@ let _openPhraseBrowser = null;
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], audioIndices = [], phraseAlternatives = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [];
 let currentIndex = 0;
 let answered = false;
 let _lastCorrect = false;
 let contractionMap = {};
+
+// Randomly selected expected form for the current phrase.
+// Populated in showPhrase(); used in checkAnswer() for display and chip filtering.
+let _currentExpected = '';
+let _currentAudioSlug = null; // audioSlug of the picked form
 
 // ---- Init ----
 
@@ -99,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('exercise-area').appendChild(_backLink);
   }
 
-  AppAudio.setBase('../../shared/audio/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
   AppAudio.warmup();
 });
 
@@ -159,17 +164,21 @@ function startTopic(topicId, pathMode, pathCard) {
     .then(data => {
       const _order = CEFR_ORDER;
       const validPairs = (data.phrases || [])
-        .map((p, i) => ({ phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '', level: p.level || null, grammar: p.grammar || null, id: p.id, origIdx: i, alternatives: p.alternatives || [] }))
-        .filter(p => p.translation.trim().length > 0)
+        .map(p => ({
+          practiceText: p.target?.[0]?.text || '',
+          hintText:     p.source || '',
+          forms:        p.target || [],
+          level: p.level || null, grammar: p.grammar || null, id: p.id,
+        }))
+        .filter(p => p.hintText.trim().length > 0)
         .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
 
-      phrases            = validPairs.map(p => p.phrase);
-      translations       = validPairs.map(p => p.translation);
-      grammarNotes       = validPairs.map(p => p.grammar);
-      cefrLevels         = validPairs.map(p => p.level);
-      cardIds            = validPairs.map(p => 'trans_' + p.id);
-      audioIndices       = validPairs.map(p => p.origIdx);
-      phraseAlternatives = validPairs.map(p => p.alternatives);
+      phrases      = validPairs.map(p => p.practiceText);
+      translations = validPairs.map(p => p.hintText);
+      grammarNotes = validPairs.map(p => p.grammar);
+      cefrLevels   = validPairs.map(p => p.level);
+      cardIds      = validPairs.map(p => 'trans_' + p.id);
+      formPools    = validPairs.map(p => p.forms);
 
       if (phrases.length === 0) {
         showTopicPicker();
@@ -188,9 +197,9 @@ function startTopic(topicId, pathMode, pathCard) {
       const _pbArgs = {
         items: phrases,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: validPairs.map(p => p.translation),
+        traductions: validPairs.map(p => p.hintText),
         cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
@@ -220,8 +229,18 @@ function _beginExercise(idx) {
 
 // ---- Display ----
 
+function _buildPool(forms) {
+  return forms.filter(f => f.audioSlug !== undefined);
+}
+
 function showPhrase(index) {
   answered = false;
+
+  // Pick a random form with audio to use as the expected answer
+  const _pool = _buildPool(formPools[index] || []);
+  const _picked = _pool[Math.floor(Math.random() * _pool.length)] || { text: '', audioSlug: null };
+  _currentExpected = _picked.text;
+  _currentAudioSlug = _picked.audioSlug ?? null;
 
   document.getElementById('spanish-phrase').textContent = translations[index] || '—';
   document.getElementById('trans-input').value           = '';
@@ -233,6 +252,8 @@ function showPhrase(index) {
   document.getElementById('feedback-grammar-tip').classList.add('hidden');
   const _tipText = document.getElementById('feedback-grammar-tip-text');
   if (_tipText) _tipText.textContent = '';
+  document.getElementById('alt-note')?.classList.add('hidden');
+  document.getElementById('alt-note-divider')?.classList.add('hidden');
   document.getElementById('grammar-chip-wrap').classList.add('hidden');
   document.getElementById('listen-btn').classList.add('hidden');
   document.getElementById('next-btn').classList.add('hidden');
@@ -256,7 +277,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 // ---- Answer Check ----
@@ -271,11 +292,15 @@ function checkAnswer() {
   input.disabled = true;
   document.getElementById('check-btn').disabled = true;
 
-  const expected  = phrases[currentIndex];
   const _norm = s => AppText.normalise(s, contractionMap);
-  const isCorrect = _norm(raw) === _norm(expected)
-    || (phraseAlternatives[currentIndex] || []).some(alt => _norm(raw) === _norm(alt));
+  const forms = formPools[currentIndex] || [];
+  const isCorrect = forms.some(f => _norm(raw) === _norm(f.text));
   _lastCorrect = isCorrect;
+
+  // Identify the specific form the user actually matched (may differ from _currentExpected for style variants)
+  const _matchedForm = isCorrect ? forms.find(f => _norm(f.text) === _norm(raw)) : null;
+  const _matchedText = _matchedForm?.text ?? _currentExpected;
+  if (_matchedForm?.audioSlug) _currentAudioSlug = _matchedForm.audioSlug;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'translation');
@@ -294,8 +319,8 @@ function checkAnswer() {
   diffEl.textContent = '';
   diffEl.appendChild(
     isCorrect
-      ? AppFeedback.buildCorrect(expected)
-      : AppFeedback.buildDiff(raw, AppText.closestPhrase(raw, [expected, ...(phraseAlternatives[currentIndex] || [])], contractionMap), contractionMap)
+      ? AppFeedback.buildCorrect(_matchedText)
+      : AppFeedback.buildDiff(raw, AppText.closestPhrase(raw, forms.map(f => f.text), contractionMap), contractionMap)
   );
 
   feedback.className = 'trans-feedback ' + (isCorrect ? 'correct' : 'incorrect');
@@ -322,6 +347,27 @@ function checkAnswer() {
     if (chipWrap)  chipWrap.classList.add('hidden');
     if (tipEl)     tipEl.classList.add('hidden');
     if (dividerEl) dividerEl.classList.add('hidden');
+  }
+
+  // Alternative chips (correct only) — typed alts excluding what the user actually wrote.
+  // If user matched a style variant, show _currentExpected as the "También" base chip.
+  const altNoteEl    = document.getElementById('alt-note');
+  const altDividerEl = document.getElementById('alt-note-divider');
+  if (isCorrect && altNoteEl) {
+    const altsToShow = forms.filter(f => _norm(f.text) !== _norm(_matchedText));
+    const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
+    if (frag) {
+      altNoteEl.textContent = '';
+      altNoteEl.appendChild(frag);
+      altNoteEl.classList.remove('hidden');
+      if (altDividerEl) altDividerEl.classList.remove('hidden');
+    } else {
+      altNoteEl.classList.add('hidden');
+      if (altDividerEl) altDividerEl.classList.add('hidden');
+    }
+  } else if (altNoteEl) {
+    altNoteEl.classList.add('hidden');
+    if (altDividerEl) altDividerEl.classList.add('hidden');
   }
 
   document.getElementById('listen-btn').classList.remove('hidden');
@@ -399,7 +445,7 @@ function updateCounter() {
 
 function playTTS(text) {
   if (!text) return;
-  AppAudio.play(currentTopic, audioIndices[currentIndex] ?? currentIndex, text);
+  AppAudio.play(currentTopic, _currentAudioSlug ?? '', text);
 }
 
 // extractGrammarInfo is in shared/js/grammar-chip.js

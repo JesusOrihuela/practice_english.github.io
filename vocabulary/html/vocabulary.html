@@ -24,10 +24,17 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="PracticeEng">
+
+    <!-- Language scripts: must be in <head> so LangUI is set before body renders -->
+    <script src="../../shared/js/lang-pair.js"></script>
+    <script src="../../lang/ui.js"></script>
+    <script src="../../lang/target/en.js"></script>
+    <script src="../../shared/js/lang.js"></script>
+
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_to_main">Ir al contenido principal</a>
     <header>
         <a href="../../index.html" aria-label="Practice English — Home">
             <img src="../../index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
@@ -35,24 +42,25 @@
 
     </header>
 
-    <nav class="mode-switcher" aria-label="Modos de práctica">
-        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio">🏠</a>
+    <nav class="mode-switcher" aria-label="Modos de práctica" data-i18n-aria="nav_modes_aria">
+        <a href="../../index.html" class="mode-btn mode-home" aria-label="Inicio" data-i18n-aria="nav_home_aria">🏠</a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label">Mi Aprendizaje</span></a>
+        <a href="../../my-learning/html/my-learning.html" class="mode-btn" data-nav="my-learning">🗺️ <span class="btn-label" data-i18n="nav_my_learning"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label">Pronunciación</span></a>
-        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label">Dictado</span></a>
+        <a href="../../speaking/html/speaking.html" class="mode-btn">🎙️ <span class="btn-label" data-i18n="nav_speaking"></span></a>
+        <a href="../../dictation/html/dictation.html" class="mode-btn">✍️ <span class="btn-label" data-i18n="nav_dictation"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label">Cloze</span></a>
-        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label">Traducción</span></a>
-        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label">Secuencia</span></a>
+        <a href="../../cloze/html/cloze.html" class="mode-btn">🔤 <span class="btn-label" data-i18n="nav_cloze"></span></a>
+        <a href="../../translation/html/translation.html" class="mode-btn">🔄 <span class="btn-label" data-i18n="nav_translation"></span></a>
+        <a href="../../scramble/html/scramble.html" class="mode-btn">🧩 <span class="btn-label" data-i18n="nav_scramble"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn active">📚 <span class="btn-label">Vocabulario</span></a>
-        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label">Quiz</span></a>
+        <a href="../../vocabulary/html/vocabulary.html" class="mode-btn active">📚 <span class="btn-label" data-i18n="nav_vocabulary"></span></a>
+        <a href="../../quiz/html/quiz.html" class="mode-btn">🧠 <span class="btn-label" data-i18n="nav_quiz"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
-        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label">Gramática</span></a>
+        <a href="../../grammar/html/grammar.html" class="mode-btn">📐 <span class="btn-label" data-i18n="nav_grammar"></span></a>
         <span class="mode-sep" aria-hidden="true"></span>
         <a href="../../progress/html/progress.html" class="mode-btn" data-nav="settings">⚙️</a>
+    <script>(function(){if(typeof AppLang==='undefined')return;document.querySelectorAll('.mode-switcher .btn-label[data-i18n]').forEach(function(e){var k=e.getAttribute('data-i18n'),t=AppLang.t(k);if(t!==k)e.textContent=t;});}());</script>
     </nav>
 
     <main id="main-content">
@@ -61,7 +69,7 @@
         <div id="topic-picker">
             <div class="topic-picker-header">
                 <h1>Vocabulario <span>Interactivo</span></h1>
-                <p>Elige un tema, voltea cada tarjeta para ver su significado y califica qué tan bien la conoces.</p>
+                <p data-i18n="vocab_picker_sub">Elige un tema, voltea cada tarjeta para ver su significado y califica qué tan bien la conoces.</p>
             </div>
             <div class="topic-grid" id="topic-grid"></div>
         </div>
@@ -71,14 +79,14 @@
 
             <!-- Stats Bar -->
             <div class="session-info-bar">
-                <button class="back-btn" id="back-btn" aria-label="Volver al selector de temas">← Temas</button>
+                <button class="back-btn" id="back-btn" aria-label="Volver al selector de temas" data-i18n-aria="back_to_topics_aria">← Temas</button>
                 <span id="cards-remaining" class="session-counter" role="status" aria-live="polite">Cargando…</span>
                 <span class="streak-badge" id="vocab-streak"><span aria-hidden="true">🔥</span> Racha de 0 día(s)</span>
             </div>
-            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de la sesión"><div class="session-progress-fill" id="session-progress-fill"></div></div>
+            <div class="session-progress-bar" id="session-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso de la sesión" data-i18n-aria="session_progress_aria"><div class="session-progress-fill" id="session-progress-fill"></div></div>
 
             <!-- Flashcard -->
-            <div class="flashcard-scene" id="flashcard-scene" role="button" tabindex="0" aria-label="Flashcard — press Enter or Space to flip">
+            <div class="flashcard-scene" id="flashcard-scene" role="button" tabindex="0" aria-label="Flashcard — press Enter or Space to flip" data-i18n-aria="flashcard_flip_aria">
                 <div class="flashcard" id="flashcard">
 
                     <!-- Front: word -->
@@ -87,25 +95,25 @@
                             <span class="word-category" id="word-category"></span>
                         </div>
                         <div class="word-text" id="word-text">—</div>
-                        <button class="listen-btn" id="listen-btn" aria-label="Escuchar pronunciación">🔊 Escuchar</button>
-                        <div class="flip-hint">Ver significado</div>
+                        <button class="listen-btn" id="listen-btn" aria-label="Escuchar pronunciación" data-i18n-aria="listen_pronunciation_aria">🔊 Escuchar</button>
+                        <div class="flip-hint" data-i18n="flip_hint">Ver significado</div>
                     </div>
 
                     <!-- Back: definition + example + translation -->
                     <div class="flashcard-face flashcard-back" id="flashcard-back">
                         <div class="fc-back-word" id="fc-back-word"></div>
-                        <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Escuchar pronunciación">🔊 Escuchar</button>
+                        <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Escuchar pronunciación" data-i18n-aria="listen_pronunciation_aria">🔊 Escuchar</button>
                         <div class="fc-definition-block">
-                            <span class="fc-label">Definición</span>
+                            <span class="fc-label" data-i18n="fc_definition_label">Definición</span>
                             <div class="word-definition" id="word-definition"></div>
                         </div>
                         <div class="fc-divider"></div>
                         <div class="fc-example-block">
-                            <span class="fc-label">Ejemplo</span>
+                            <span class="fc-label" data-i18n="fc_example_label">Ejemplo</span>
                             <div class="word-example" id="word-example"></div>
                         </div>
                         <div class="fc-translation-block">
-                            <span class="fc-label">Español</span>
+                            <span class="fc-label" data-i18n="fc_spanish_label">Español</span>
                             <div class="word-translation" id="word-translation"></div>
                         </div>
                     </div>
@@ -114,7 +122,7 @@
             </div>
 
             <!-- Next button (appear after flip) -->
-            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente palabra">Siguiente →</button>
+            <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente palabra" data-i18n-aria="next_word_aria">Siguiente →</button>
 
         </div>
 
@@ -131,12 +139,8 @@
 
     <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/cefr.js"></script>
-    <script src="../../shared/js/lang-pair.js"></script>
     <script src="../../shared/js/proficiency.js"></script>
     <script src="../../shared/js/progress.js"></script>
-    <script src="../../lang/ui.js"></script>
-    <script src="../../lang/target/en.js"></script>
-    <script src="../../shared/js/lang.js"></script>
     <script src="../../shared/js/download-panel.js"></script>
     <script src="../../shared/js/tts.js"></script>
     <script src="../../shared/js/audio-player.js"></script>

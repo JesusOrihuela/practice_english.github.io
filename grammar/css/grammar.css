@@ -465,10 +465,7 @@
   line-height: 1.55;
 }
 
-/* Non-highlighted turns: slightly muted so target structures stand out more */
-.dialogue-turn:not(.dialogue-turn--highlight) .dialogue-text {
-  color: var(--clr-text-muted);
-}
+/* All turns use full text color — the **word** chip provides sufficient contrast */
 
 .dialogue-target {
   background: linear-gradient(135deg, rgba(124,58,237,0.15) 0%, rgba(37,99,235,0.1) 100%);

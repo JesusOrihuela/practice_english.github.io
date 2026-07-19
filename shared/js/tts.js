@@ -15,9 +15,15 @@ const AppTTS = (() => {
     : null;
 
   // Default playback parameters
-  const TTS_DEFAULT_VOICE = 'af_bella'; // American female; alternate with 'bf_emma' for variety
-  const TTS_DEFAULT_SPEED = 1.0;        // normal pace
-  const TTS_SPEED_SLOW    = 0.85;       // slower pace for dictation / first-listen contexts
+  const TTS_DEFAULT_SPEED = 1.0;  // normal pace
+  const TTS_SPEED_SLOW    = 0.85; // slower pace for dictation / first-listen contexts
+
+  // Returns the default voice for the active language pair.
+  // Falls back to 'af_bella' when AppLangPair is not yet loaded.
+  function _defaultVoice() {
+    var pair = (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive() : null;
+    return (pair && pair.ttsVoices && pair.ttsVoices[0]) || 'af_bella';
+  }
 
   let _worker  = null;
   let _msgId   = 0;
@@ -181,7 +187,7 @@ const AppTTS = (() => {
     // Stop current playback
     if (_currentSource) { try { _currentSource.stop(); } catch (_) {} _currentSource = null; }
 
-    const voice = (opts && opts.voice) || TTS_DEFAULT_VOICE;
+    const voice = (opts && opts.voice) || _defaultVoice();
     const speed = (opts && opts.speed) || TTS_DEFAULT_SPEED;
     const key   = _cacheKey(voice, speed, text);
 
@@ -208,7 +214,7 @@ const AppTTS = (() => {
   async function prefetch(text, opts) {
     if (!text) return;
 
-    const voice = (opts && opts.voice) || TTS_DEFAULT_VOICE;
+    const voice = (opts && opts.voice) || _defaultVoice();
     const speed = (opts && opts.speed) || TTS_DEFAULT_SPEED;
     const key   = _cacheKey(voice, speed, text);
 
@@ -229,8 +235,8 @@ const AppTTS = (() => {
     _queue.clear();
   }
 
-  /** Pre-create the worker so model download begins immediately. */
-  function warmup() {
+  /** Inner warmup — assumes Cache API check already done. */
+  function _doWarmup() {
     _getWorker();
     _openDB(); // open DB connection early so first speak() is faster
     document.addEventListener('pointerdown', () => {
@@ -238,5 +244,22 @@ const AppTTS = (() => {
     }, { once: true });
   }
 
-  return { speak, cancel, warmup, prefetch, TTS_DEFAULT_VOICE, TTS_DEFAULT_SPEED, TTS_SPEED_SLOW };
+  /**
+   * Pre-create the worker so model download begins immediately.
+   * Validates the Cache API first: if transformers-cache is empty but
+   * pe_tts_cached is set (e.g. after browser cache eviction), clears the
+   * stale flag so the download panel shows correctly.
+   */
+  function warmup() {
+    if (!('caches' in window)) { _doWarmup(); return; }
+    caches.open('transformers-cache')
+      .then(function (c) { return c.keys(); })
+      .then(function (keys) {
+        if (keys.length === 0) localStorage.removeItem('pe_tts_cached');
+        _doWarmup();
+      })
+      .catch(function () { _doWarmup(); });
+  }
+
+  return { speak, cancel, warmup, prefetch, TTS_DEFAULT_SPEED, TTS_SPEED_SLOW };
 })();

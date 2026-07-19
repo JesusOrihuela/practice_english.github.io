@@ -1,0 +1,511 @@
+{
+  "phrases": [
+    {
+      "id": "transportation_order_taxi_morning",
+      "source": "Pide un taxi para mañana por la mañana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Order a taxi for tomorrow morning.",
+          "audioSlug": "order_a_taxi_for_tomorrow_morning",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Book a taxi for tomorrow morning.",
+          "audioSlug": "book_a_taxi_for_tomorrow_morning",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Call a taxi for tomorrow morning.",
+          "audioSlug": "call_a_taxi_for_tomorrow_morning",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transportation_where_taxi_stand",
+      "source": "¿Dónde está la parada de taxis?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the taxi stand?",
+          "audioSlug": "where_is_the_taxi_stand"
+        }
+      ]
+    },
+    {
+      "id": "transportation_how_get_bus_stop",
+      "source": "¿Cómo llego a la parada de autobús desde aquí?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How do I get to the bus stop from here?",
+          "audioSlug": "how_do_i_get_to_the_bus_stop_from_here"
+        }
+      ]
+    },
+    {
+      "id": "transportation_nearest_bus_stop",
+      "source": "¿Dónde está la parada de autobús más cercana?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the nearest bus stop?",
+          "audioSlug": "where_is_the_nearest_bus_stop"
+        }
+      ]
+    },
+    {
+      "id": "transportation_where_rent_bike",
+      "source": "¿Dónde puedo alquilar una bicicleta?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where can I rent a bike?",
+          "audioSlug": "where_can_i_rent_a_bike",
+          "labels": {
+            "region": "US"
+          }
+        },
+        {
+          "text": "Where can I hire a bike?",
+          "audioSlug": "where_can_i_hire_a_bike",
+          "labels": {
+            "region": "UK"
+          }
+        }
+      ]
+    },
+    {
+      "id": "transportation_boat_arrive_port",
+      "source": "¿A qué hora llega nuestro barco al puerto?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time does our boat arrive at the port?",
+          "audioSlug": "what_time_does_our_boat_arrive_at_the_port"
+        }
+      ]
+    },
+    {
+      "id": "transportation_rental_car_location",
+      "source": "No sé dónde conseguir un carro de alquiler.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I don't know where to rent a car.",
+          "audioSlug": "i_don_t_know_where_to_rent_a_car"
+        }
+      ]
+    },
+    {
+      "id": "transportation_buy_train_ticket",
+      "source": "Necesito comprar un boleto para el tren de alta velocidad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to buy a ticket for the high-speed train.",
+          "audioSlug": "i_need_to_buy_a_ticket_for_the_high_speed_train"
+        }
+      ]
+    },
+    {
+      "id": "transportation_taxi_fare_city",
+      "source": "¿Cuál es la tarifa de un taxi al centro de la ciudad?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is the taxi fare to the city center?",
+          "audioSlug": "what_is_the_taxi_fare_to_the_city_center"
+        }
+      ]
+    },
+    {
+      "id": "transportation_payment_airport_transfer",
+      "source": "Voy a pagar un adicional para incluir el traslado al aeropuerto.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I will pay extra to include the transfer to the airport.",
+          "audioSlug": "i_will_pay_extra_to_include_the_transfer_to_the_airport"
+        }
+      ]
+    },
+    {
+      "id": "transportation_metro_faster_than_bus",
+      "source": "¿El metro es más rápido que el autobús a esta hora del día?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is the metro faster than the bus at this time of day?",
+          "audioSlug": "is_the_metro_faster_than_the_bus_at_this_time_of_day"
+        }
+      ]
+    },
+    {
+      "id": "transportation_subway_single_fare",
+      "source": "¿Cuánto cuesta un boleto de viaje sencillo para el metro?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How much is a single-journey ticket for the subway?",
+          "audioSlug": "how_much_is_a_single_journey_ticket_for_the_subway"
+        }
+      ]
+    },
+    {
+      "id": "transportation_weekly_travel_pass",
+      "source": "Me gustaría comprar un pase semanal de transporte para la ciudad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to buy a weekly travel pass for the city.",
+          "audioSlug": "i_d_like_to_buy_a_weekly_travel_pass_for_the_city"
+        }
+      ]
+    },
+    {
+      "id": "transportation_bus_late_connection",
+      "source": "El autobús llega tarde. ¿Hay conexión en la siguiente parada?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The bus is late. Is there a connection at the next stop?",
+          "audioSlug": "the_bus_is_late_is_there_a_connection_at_the_next_stop"
+        }
+      ]
+    },
+    {
+      "id": "transportation_call_cab_station",
+      "source": "¿Podría llamarme un taxi? Tengo que salir en veinte minutos.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could you call me a cab? I must leave in twenty minutes.",
+          "audioSlug": "could_you_call_me_a_cab_i_must_leave_in_twenty_minutes"
+        }
+      ]
+    },
+    {
+      "id": "transportation_missed_train_next_one",
+      "source": "Perdí mi tren. ¿Cuándo sale el siguiente?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I missed my train. When does the next one leave?",
+          "audioSlug": "i_missed_my_train_when_does_the_next_one_leave"
+        }
+      ]
+    },
+    {
+      "id": "transportation_luggage_locker_station",
+      "source": "¿Puedo alquilar una consigna en la estación antes de que salga mi tren?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I rent a luggage locker at the station before my train?",
+          "audioSlug": "can_i_rent_a_luggage_locker_at_the_station_before_my_train"
+        }
+      ]
+    },
+    {
+      "id": "transportation_carpooling_cuts_commute_costs",
+      "source": "Mis colegas y yo hemos empezado a compartir carro para ir al trabajo, lo que reduce los costos del traslado.",
+      "level": "B2",
+      "grammar": "Present perfect 'have started + gerund' describes a recently established habit.",
+      "target": [
+        {
+          "text": "My colleagues and I have started carpooling to work, which cuts our commute costs.",
+          "audioSlug": "my_colleagues_and_i_have_started_carpooling_to_work_which_cuts_our_commute_costs"
+        }
+      ]
+    },
+    {
+      "id": "transportation_delayed_apply_compensation",
+      "source": "Mi tren se retrasó más de una hora. ¿Puedo solicitar una compensación?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My train was delayed by over an hour. Can I apply for compensation?",
+          "audioSlug": "my_train_was_delayed_by_over_an_hour_can_i_apply_for_compensation"
+        }
+      ]
+    },
+    {
+      "id": "transportation_avoid_peak_hours",
+      "source": "Trato de evitar viajar en horas pico porque el metro está insoportablemente lleno.",
+      "level": "B2",
+      "grammar": "'Try to + infinitive' for an intentional effort",
+      "target": [
+        {
+          "text": "I try to avoid traveling during peak hours because the metro is unbearably crowded.",
+          "audioSlug": "i_try_to_avoid_traveling_during_peak_hours_because_the_metro_is_unbearably_crowded"
+        }
+      ]
+    },
+    {
+      "id": "transportation_metro_map_navigate",
+      "source": "Tengo problemas con el mapa del metro. ¿Podría mostrarme cómo leerlo?",
+      "level": "B2",
+      "grammar": "'Struggle with' is a common alternative to 'have trouble with' for expressing difficulty.",
+      "target": [
+        {
+          "text": "I'm struggling with the metro map. Could you show me how to read it?",
+          "audioSlug": "i_m_struggling_with_the_metro_map_could_you_show_me_how_to_read_it"
+        }
+      ]
+    },
+    {
+      "id": "transportation_driver_overcharged_complaint",
+      "source": "El conductor me cobró de más respecto al taxímetro. Me gustaría presentar una queja.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The driver overcharged me compared to the meter. I'd like to file a complaint.",
+          "audioSlug": "the_driver_overcharged_me_compared_to_the_meter_i_d_like_to_file_a_complaint"
+        }
+      ]
+    },
+    {
+      "id": "transportation_reduced_fare_students",
+      "source": "¿Hay una tarifa reducida para adultos mayores o estudiantes en esta ruta?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a reduced fare for senior citizens or students on this route?",
+          "audioSlug": "is_there_a_reduced_fare_for_senior_citizens_or_students_on_this_route"
+        }
+      ]
+    },
+    {
+      "id": "transportation_bike_brakes_faulty",
+      "source": "La bicicleta de alquiler no estaba en las condiciones descritas. Los frenos fallaban.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The rental bike wasn't in the advertised condition. The brakes were faulty.",
+          "audioSlug": "the_rental_bike_wasn_t_in_the_advertised_condition_the_brakes_were_faulty"
+        }
+      ]
+    },
+    {
+      "id": "transportation_rideshare_late_arrival",
+      "source": "El conductor llega en siete minutos, pero yo necesito salir en cinco.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The driver is seven minutes away, but I need to leave in five.",
+          "audioSlug": "the_driver_is_seven_minutes_away_but_i_need_to_leave_in_five"
+        }
+      ]
+    },
+    {
+      "id": "transportation_ridesharing_liability_gray_area",
+      "source": "Las empresas de transporte por aplicación operan en una zona regulatoria gris en lo que respecta a la responsabilidad y el seguro de los conductores.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ridesharing companies operate in a regulatory gray area when it comes to driver liability and insurance.",
+          "audioSlug": "ridesharing_companies_operate_in_a_regulatory_gray_area_when_it_comes_to_driver_liability_and_insurance"
+        }
+      ]
+    },
+    {
+      "id": "transportation_accessibility_core_planning_principle",
+      "source": "El transporte accesible no es solo un requisito legal, sino un principio fundamental de la planificación urbana.",
+      "level": "C1",
+      "grammar": "'Not just... but' for reframing a minimum obligation as a broader principle",
+      "target": [
+        {
+          "text": "Accessible transport isn't just a legal requirement but a core principle of urban planning.",
+          "audioSlug": "accessible_transport_isn_t_just_a_legal_requirement_but_a_core_principle_of_urban_planning"
+        }
+      ]
+    },
+    {
+      "id": "transportation_no_cycle_lanes_dangerous",
+      "source": "La falta de carriles bici protegidos hace que ir al trabajo en bicicleta sea genuinamente peligroso para la mayoría de los ciclistas.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The lack of protected cycle lanes makes commuting by bike genuinely dangerous for most riders.",
+          "audioSlug": "the_lack_of_protected_cycle_lanes_makes_commuting_by_bike_genuinely_dangerous_for_most_riders"
+        }
+      ]
+    },
+    {
+      "id": "transportation_monthly_multimodal_pass",
+      "source": "Me gustaría un abono mensual que cubra todos los medios de transporte público de la ciudad.",
+      "level": "C1",
+      "grammar": "'That' relative clause to describe the specific type of pass needed",
+      "target": [
+        {
+          "text": "I'd like a monthly pass that covers all modes of public transport in the city.",
+          "audioSlug": "i_d_like_a_monthly_pass_that_covers_all_modes_of_public_transport_in_the_city"
+        }
+      ]
+    },
+    {
+      "id": "transportation_taxi_longer_route_fare",
+      "source": "El conductor tomó una ruta notablemente más larga. Creo que la tarifa debería ajustarse en consecuencia.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The driver took a noticeably longer route. I believe the fare should be adjusted accordingly.",
+          "audioSlug": "the_driver_took_a_noticeably_longer_route_i_believe_the_fare_should_be_adjusted_accordingly"
+        }
+      ]
+    },
+    {
+      "id": "transportation_cycling_lane_shared_road",
+      "source": "¿Hay un carril bici exclusivo en esta ruta, o los ciclistas comparten la vía?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there a dedicated cycling lane on this route, or do cyclists share the road?",
+          "audioSlug": "is_there_a_dedicated_cycling_lane_on_this_route_or_do_cyclists_share_the_road"
+        }
+      ]
+    },
+    {
+      "id": "transportation_cancelled_train_refund",
+      "source": "El tren fue cancelado sin aviso previo. ¿Tengo derecho a un reembolso completo?",
+      "level": "C1",
+      "grammar": "Passive 'was cancelled' focuses on the cancellation itself, not who decided it.",
+      "target": [
+        {
+          "text": "The train was cancelled without prior notice. Am I entitled to a full refund?",
+          "audioSlug": "the_train_was_cancelled_without_prior_notice_am_i_entitled_to_a_full_refund"
+        }
+      ]
+    },
+    {
+      "id": "transportation_accessible_wheelchair_vehicle",
+      "source": "Necesito organizar un transporte accesible. ¿Tienen vehículos adaptados para usuarios de silla de ruedas?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to arrange accessible transport. Do you have vehicles adapted for wheelchair users?",
+          "audioSlug": "i_need_to_arrange_accessible_transport_do_you_have_vehicles_adapted_for_wheelchair_users"
+        }
+      ]
+    },
+    {
+      "id": "transportation_modal_shift_policy_framework",
+      "source": "Lograr un cambio modal hacia el transporte público requiere un marco de políticas coherente, no solo inversión en infraestructura.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Achieving a modal shift to public transport requires a coherent policy framework, not just infrastructure investment.",
+          "audioSlug": "achieving_a_modal_shift_to_public_transport_requires_a_coherent_policy_framework_not_just_infrastructure_investment"
+        }
+      ]
+    },
+    {
+      "id": "transportation_last_mile_barrier_mobility",
+      "source": "El problema del 'último kilómetro' sigue siendo el mayor obstáculo para una movilidad urbana verdaderamente integrada.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The 'last mile' problem remains the greatest barrier to truly integrated urban mobility.",
+          "audioSlug": "the_last_mile_problem_remains_the_greatest_barrier_to_truly_integrated_urban_mobility"
+        }
+      ]
+    },
+    {
+      "id": "transportation_congestion_pricing_city_center",
+      "source": "El sistema de tarifas por congestión ha reducido significativamente el tráfico en horas pico en el centro de la ciudad.",
+      "level": "C2",
+      "grammar": "Present perfect: 'has reduced' to describe a recent change with visible present results",
+      "target": [
+        {
+          "text": "The congestion pricing scheme has significantly reduced peak-hour traffic in the city center.",
+          "audioSlug": "the_congestion_pricing_scheme_has_significantly_reduced_peak_hour_traffic_in_the_city_center"
+        }
+      ]
+    },
+    {
+      "id": "transportation_rental_liability_provisions",
+      "source": "Me gustaría revisar las cláusulas de responsabilidad en el contrato de alquiler antes de firmar.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to review the liability provisions in the rental agreement before signing.",
+          "audioSlug": "i_d_like_to_review_the_liability_provisions_in_the_rental_agreement_before_signing"
+        }
+      ]
+    },
+    {
+      "id": "transportation_taxi_deregulation_standards",
+      "source": "La desregulación de la industria del taxi ha generado mayor competencia, pero estándares de servicio inconsistentes.",
+      "level": "C2",
+      "grammar": "Present perfect 'has led to' shows a policy change whose consequences are still felt today.",
+      "target": [
+        {
+          "text": "The deregulation of the taxi industry has led to more competition but inconsistent service standards.",
+          "audioSlug": "the_deregulation_of_the_taxi_industry_has_led_to_more_competition_but_inconsistent_service_standards"
+        }
+      ]
+    },
+    {
+      "id": "transportation_intermodal_urban_emissions",
+      "source": "Las redes de transporte integradas son cada vez más esenciales para reducir las emisiones de carbono urbanas.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Integrated transport networks are increasingly essential to reducing urban carbon emissions.",
+          "audioSlug": "integrated_transport_networks_are_increasingly_essential_to_reducing_urban_carbon_emissions"
+        }
+      ]
+    },
+    {
+      "id": "transportation_penalty_charge_signage",
+      "source": "Quisiera impugnar formalmente esta sanción. La señalización de la restricción de estacionamiento era insuficiente.",
+      "level": "C2",
+      "grammar": "'To formally dispute' uses an adverb before the verb to add formality and precision.",
+      "target": [
+        {
+          "text": "I'd like to formally dispute this penalty charge. The parking restriction signage was inadequate.",
+          "audioSlug": "i_d_like_to_formally_dispute_this_penalty_charge_the_parking_restriction_signage_was_inadequate"
+        }
+      ]
+    }
+  ]
+}

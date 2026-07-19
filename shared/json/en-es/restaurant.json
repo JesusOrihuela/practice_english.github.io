@@ -1,0 +1,978 @@
+{
+  "phrases": [
+    {
+      "id": "restaurant_can_we_see_the_menu_please",
+      "source": "Can we see the menu, please?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podemos ver el menú, por favor?",
+          "audioSlug": "podemos_ver_el_menu_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_vegetarian_options",
+      "source": "Do you have any vegetarian options?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen alguna opción vegetariana?",
+          "audioSlug": "tienen_alguna_opcion_vegetariana"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_what_do_you_recommend_as_a",
+      "source": "What do you recommend as a specialty of the house?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué recomienda como especialidad de la casa?",
+          "audioSlug": "que_recomienda_como_especialidad_de_la_casa"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_tell_me_about_todays",
+      "source": "Could you tell me about today's specials?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría hablarme de las especialidades de hoy?",
+          "audioSlug": "podria_hablarme_de_las_especialidades_de_hoy"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_this_dish_spicy",
+      "source": "Is this dish spicy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Este plato es picante?",
+          "audioSlug": "este_plato_es_picante"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_this_dish_without",
+      "source": "Could I have this dish without onions, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría pedir este plato sin cebolla, por favor?",
+          "audioSlug": "podria_pedir_este_plato_sin_cebolla_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_offer_glutenfree_alternatives",
+      "source": "Do you offer gluten-free alternatives?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ofrecen alternativas sin gluten?",
+          "audioSlug": "ofrecen_alternativas_sin_gluten"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_how_long_will_the_food_take",
+      "source": "How long will the food take to arrive?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto tardará en llegar la comida?",
+          "audioSlug": "cuanto_tardara_en_llegar_la_comida"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_a_glass_of",
+      "source": "Could I have a glass of water, please?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me da un vaso de agua, por favor?",
+          "audioSlug": "me_da_un_vaso_de_agua_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_it_possible_to_split_the",
+      "source": "Is it possible to split the bill?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es posible dividir la cuenta?",
+          "audioSlug": "es_posible_dividir_la_cuenta"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_desserts_available",
+      "source": "Do you have any desserts available?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen postres disponibles?",
+          "audioSlug": "tienen_postres_disponibles"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_some_extra_napkins",
+      "source": "Could I have some extra napkins, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría darme más servilletas, por favor?",
+          "audioSlug": "podria_darme_mas_servilletas_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_the_tip_included_in_the",
+      "source": "Is the tip included in the bill?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿La propina está incluida en la cuenta?",
+          "audioSlug": "la_propina_esta_incluida_en_la_cuenta"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_can_i_get_a_refill_on",
+      "source": "Can I get a refill on my drink?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Pueden rellenarme la bebida?",
+          "audioSlug": "pueden_rellenarme_la_bebida"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_recommendations_for",
+      "source": "Do you have any recommendations for wine pairings?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tiene alguna recomendación para el maridaje de vinos?",
+          "audioSlug": "tiene_alguna_recomendacion_para_el_maridaje_de_vinos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_offer_any_childrens_menus",
+      "source": "Do you offer any children's menus?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ofrecen menús infantiles?",
+          "audioSlug": "ofrecen_menus_infantiles"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_some_bread_while",
+      "source": "Could I have some bread while we wait?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me traen pan mientras esperamos?",
+          "audioSlug": "me_traen_pan_mientras_esperamos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_minimum_order_for",
+      "source": "Is there a minimum order for delivery?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un pedido mínimo para entrega a domicilio?",
+          "audioSlug": "hay_un_pedido_minimo_para_entrega_a_domicilio"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_can_i_make_a_reservation_for",
+      "source": "Can I make a reservation for two for tonight?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo hacer una reserva para dos para esta noche?",
+          "audioSlug": "puedo_hacer_una_reserva_para_dos_para_esta_noche"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_some_more_ice",
+      "source": "Could I have some more ice in my drink, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría poner más hielo en mi bebida, por favor?",
+          "audioSlug": "podria_poner_mas_hielo_en_mi_bebida_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_offer_any_discounts_for",
+      "source": "Do you offer any discounts for large groups?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ofrecen algún descuento para grupos grandes?",
+          "audioSlug": "ofrecen_algun_descuento_para_grupos_grandes"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_corkage_fee_if",
+      "source": "Is there a corkage fee if I bring my own wine?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay que pagar un descorche si traigo mi propio vino?",
+          "audioSlug": "hay_que_pagar_un_descorche_si_traigo_mi_propio_vino"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_my_steak_cooked",
+      "source": "Could I have my steak cooked medium, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me trae el filete a término medio, por favor?",
+          "audioSlug": "me_trae_el_filete_a_termino_medio_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_limit_to_the",
+      "source": "Is there a limit to the number of people for a reservation?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un límite de personas para una reserva?",
+          "audioSlug": "hay_un_limite_de_personas_para_una_reserva"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_recommendations_for_appetizers",
+      "source": "Do you have any recommendations for appetizers?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tiene alguna recomendación para los aperitivos?",
+          "audioSlug": "tiene_alguna_recomendacion_para_los_aperitivos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_some_extra_sauce",
+      "source": "Could I have some extra sauce on the side?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría servirme un poco más de salsa?",
+          "audioSlug": "podria_servirme_un_poco_mas_de_salsa"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_it_possible_to_have_my",
+      "source": "Is it possible to have my meal packed to go?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es posible que me empaquen la comida para llevar?",
+          "audioSlug": "es_posible_que_me_empaquen_la_comida_para_llevar"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_recommend_a_good_wine",
+      "source": "Could you recommend a good wine within a reasonable price range?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría recomendarme un buen vino a un precio razonable?",
+          "audioSlug": "podria_recomendarme_un_buen_vino_a_un_precio_razonable"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_outdoor_seating",
+      "source": "Do you have any outdoor seating available?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Disponen de asientos al aire libre?",
+          "audioSlug": "disponen_de_asientos_al_aire_libre"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_the_bill_please",
+      "source": "Could I have the bill, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría darme la cuenta, por favor?",
+          "audioSlug": "podria_darme_la_cuenta_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_offer_any_lowcalorie_options",
+      "source": "Do you offer any low-calorie options?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ofrecen alguna opción baja en calorías?",
+          "audioSlug": "ofrecen_alguna_opcion_baja_en_calorias"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_help_me_pronounce_this",
+      "source": "Could you help me pronounce this dish?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría ayudarme a pronunciar este plato?",
+          "audioSlug": "podria_ayudarme_a_pronunciar_este_plato"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_time_limit_for",
+      "source": "Is there a time limit for dining?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un límite de tiempo para cenar?",
+          "audioSlug": "hay_un_limite_de_tiempo_para_cenar"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_options_for",
+      "source": "Do you have any options for people with food allergies?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen alguna opción para personas con alergias alimentarias?",
+          "audioSlug": "tienen_alguna_opcion_para_personas_con_alergias_alimentarias"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_my_coffee_with",
+      "source": "Could I have my coffee with almond milk, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría tomar mi café con leche de almendras, por favor?",
+          "audioSlug": "podria_tomar_mi_cafe_con_leche_de_almendras_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_dress_code_for",
+      "source": "Is there a dress code for dining here?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay algún código de vestimenta para cenar aquí?",
+          "audioSlug": "hay_algun_codigo_de_vestimenta_para_cenar_aqui"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_recommendations_for_cocktails",
+      "source": "Do you have any recommendations for cocktails?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tiene alguna recomendación de cócteles?",
+          "audioSlug": "tiene_alguna_recomendacion_de_cocteles"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_the_check_split",
+      "source": "Could I have the check split evenly between us?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría dividir la cuenta entre los dos?",
+          "audioSlug": "podria_dividir_la_cuenta_entre_los_dos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_charge_for_substitutions",
+      "source": "Is there a charge for substitutions?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay que pagar por las sustituciones?",
+          "audioSlug": "hay_que_pagar_por_las_sustituciones"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_offer_any_birthday_specials",
+      "source": "Do you offer any birthday specials?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ofrecen algún especial de cumpleaños?",
+          "audioSlug": "ofrecen_algun_especial_de_cumpleanos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_order_a_side_of",
+      "source": "Could I order a side of fries with my meal?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo pedir una guarnición de papas fritas con mi comida?",
+          "audioSlug": "puedo_pedir_una_guarnicion_de_papas_fritas_con_mi_comida",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "¿Puedo pedir una guarnición de patatas fritas con mi comida?",
+          "audioSlug": "puedo_pedir_una_guarnicion_de_patatas_fritas_con_mi_comida",
+          "labels": {
+            "region": "España"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_fee_for_using",
+      "source": "Is there a fee for using a credit card?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay que pagar por usar tarjeta de crédito?",
+          "audioSlug": "hay_que_pagar_por_usar_tarjeta_de_credito"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_a_dogfriendly_patio",
+      "source": "Do you have a dog-friendly patio?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen un patio apto para perros?",
+          "audioSlug": "tienen_un_patio_apto_para_perros"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_my_burger_cooked",
+      "source": "Could I have my burger cooked well-done?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo pedir mi hamburguesa bien cocida?",
+          "audioSlug": "puedo_pedir_mi_hamburguesa_bien_cocida"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_childrens_menu_available",
+      "source": "Is there a children's menu available?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay menú infantil?",
+          "audioSlug": "hay_menu_infantil"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_please_pack_the_leftovers",
+      "source": "Could you please pack the leftovers in separate containers?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría envasar las sobras en recipientes separados?",
+          "audioSlug": "podria_envasar_las_sobras_en_recipientes_separados"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_nonalcoholic_cocktails",
+      "source": "Do you have any non-alcoholic cocktails?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen cócteles sin alcohol?",
+          "audioSlug": "tienen_cocteles_sin_alcohol"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_my_salad_with",
+      "source": "Could I have my salad with the dressing on the side?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría servirme la ensalada con el aderezo aparte?",
+          "audioSlug": "podria_servirme_la_ensalada_con_el_aderezo_aparte"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_there_a_service_charge_for",
+      "source": "Is there a service charge for large parties?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un cargo por servicio para grupos numerosos?",
+          "audioSlug": "hay_un_cargo_por_servicio_para_grupos_numerosos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_recommend_a_dish_for",
+      "source": "Could you recommend a dish for someone who is gluten intolerant?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría recomendarme un plato para alguien con intolerancia al gluten?",
+          "audioSlug": "podria_recomendarme_un_plato_para_alguien_con_intolerancia_al_gluten"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_do_you_have_any_specials_for",
+      "source": "Do you have any specials for holidays?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen algún especial para días festivos?",
+          "audioSlug": "tienen_algun_especial_para_dias_festivos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_you_turn_down_the_music",
+      "source": "Could you turn down the music a bit, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría bajar un poco la música, por favor?",
+          "audioSlug": "podria_bajar_un_poco_la_musica_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_is_it_possible_to_make_a",
+      "source": "Is it possible to make a reservation for later tonight?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es posible hacer una reserva para esta noche?",
+          "audioSlug": "es_posible_hacer_una_reserva_para_esta_noche"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_could_i_have_some_extra_cheese",
+      "source": "Could I have some extra cheese on my pasta, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría ponerle más queso a mi pasta, por favor?",
+          "audioSlug": "podria_ponerle_mas_queso_a_mi_pasta_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_no_reservation_wait_time",
+      "source": "We have no reservation. How long is the wait for a table of four?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No tenemos reserva, ¿cuánto tiempo hay que esperar para una mesa de cuatro?",
+          "audioSlug": "no_tenemos_reserva_cuanto_tiempo_hay_que_esperar_para_una_mesa_de_cuatro"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_move_quieter_table",
+      "source": "Our table is a bit noisy. Could we move to a quieter spot?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nuestra mesa es un poco ruidosa, ¿podríamos movernos a un lugar más tranquilo?",
+          "audioSlug": "nuestra_mesa_es_un_poco_ruidosa_podriamos_movernos_a_un_lugar_mas_tranquilo"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_birthday_candle_dessert",
+      "source": "We're celebrating a birthday. Could you bring the dessert with a candle?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estamos celebrando un cumpleaños, ¿podrían traer el postre con una vela?",
+          "audioSlug": "estamos_celebrando_un_cumpleanos_podrian_traer_el_postre_con_una_vela"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_dish_not_matching_description",
+      "source": "This dish doesn't match the menu description. Could you clarify what's in it?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este plato no coincide con la descripción del menú, ¿podría aclarar qué lleva?",
+          "audioSlug": "este_plato_no_coincide_con_la_descripcion_del_menu_podria_aclarar_que_lleva"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_allergy_chef_ingredients",
+      "source": "There's a food allergy at our table. Could the chef confirm the ingredients?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay una alergia alimentaria en nuestra mesa, ¿podría el chef confirmar los ingredientes?",
+          "audioSlug": "hay_una_alergia_alimentaria_en_nuestra_mesa_podria_el_chef_confirmar_los_ingredientes",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Hay una alergia alimentaria en nuestra mesa, ¿podría la chef confirmar los ingredientes?",
+          "audioSlug": "hay_una_alergia_alimentaria_en_nuestra_mesa_podria_la_chef_confirmar_los_ingredientes",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant_steak_wrong_doneness",
+      "source": "I ordered medium-rare, but this steak is well-done. Could you send it back?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pedí el filete poco hecho, pero está muy hecho, ¿podrían llevárselo?",
+          "audioSlug": "pedi_el_filete_poco_hecho_pero_esta_muy_hecho_podrian_llevarselo"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_wine_wrong_selection",
+      "source": "The wine we were served doesn't match our selection. Could you check the bottle?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El vino que nos sirvieron no coincide con nuestra selección, ¿podrían verificar la botella?",
+          "audioSlug": "el_vino_que_nos_sirvieron_no_coincide_con_nuestra_seleccion_podrian_verificar_la_botella"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_compliment_chef_risotto",
+      "source": "I'd like to compliment the chef on the risotto. The seasoning was absolutely perfect.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría elogiar al chef por el risotto, la sazón estaba absolutamente perfecta.",
+          "audioSlug": "me_gustaria_elogiar_al_chef_por_el_risotto_la_sazon_estaba_absolutamente_perfecta",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Me gustaría elogiar a la chef por el risotto, la sazón estaba absolutamente perfecta.",
+          "audioSlug": "me_gustaria_elogiar_a_la_chef_por_el_risotto_la_sazon_estaba_absolutamente_perfecta",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant_same_table_window",
+      "source": "Could we have the same table as last time? It was near the window.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podríamos tener la misma mesa que la última vez, cerca de la ventana?",
+          "audioSlug": "podriamos_tener_la_misma_mesa_que_la_ultima_vez_cerca_de_la_ventana"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_ingredients_sourced_local_organic",
+      "source": "Could you tell me where the ingredients are sourced? I prefer locally grown, organic produce.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría decirme el origen de los ingredientes, pues prefiero productos locales y orgánicos?",
+          "audioSlug": "podria_decirme_el_origen_de_los_ingredientes_pues_prefiero_productos_locales_y_organicos"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_tasting_menu_lactose_adapt",
+      "source": "I'm lactose intolerant. Could the kitchen adapt any courses on the tasting menu?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy intolerante a la lactosa, ¿podría la cocina adaptar algún plato del menú degustación?",
+          "audioSlug": "soy_intolerante_a_la_lactosa_podria_la_cocina_adaptar_algun_plato_del_menu_degustacion"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_late_reservation_table_still_available",
+      "source": "We're under Thompson for eight o'clock. We're a bit late, is our table still held?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llegamos tarde a la reserva de las ocho, ¿la mesa sigue disponible?",
+          "audioSlug": "llegamos_tarde_a_la_reserva_de_las_ocho_la_mesa_sigue_disponible"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_tasting_menu_chef_selections",
+      "source": "I'd like to explore the tasting menu. Are there chef's selections available this evening?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría explorar el menú degustación, ¿hay selecciones del chef disponibles esta noche?",
+          "audioSlug": "me_gustaria_explorar_el_menu_degustacion_hay_selecciones_del_chef_disponibles_esta_noche",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Me gustaría explorar el menú degustación, ¿hay selecciones de la chef disponibles esta noche?",
+          "audioSlug": "me_gustaria_explorar_el_menu_degustacion_hay_selecciones_de_la_chef_disponibles_esta_noche",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant_wine_acidity_fish_pairing",
+      "source": "Could you describe the wine's profile? I want good acidity to pair with the fish.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría describir el perfil del vino, pues busco buena acidez para maridar con el pescado?",
+          "audioSlug": "podria_describir_el_perfil_del_vino_pues_busco_buena_acidez_para_maridar_con_el_pescado"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_personalized_dessert_occasion",
+      "source": "We're celebrating a special occasion. Could you arrange for a personalized dessert?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estamos celebrando una ocasión especial, ¿podrían preparar un postre personalizado?",
+          "audioSlug": "estamos_celebrando_una_ocasion_especial_podrian_preparar_un_postre_personalizado"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_price_discrepancy_charged",
+      "source": "The service was excellent, but there's a discrepancy between the menu price and our bill.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El servicio fue excelente, pero hay una discrepancia entre el precio del menú y nuestra cuenta.",
+          "audioSlug": "el_servicio_fue_excelente_pero_hay_una_discrepancia_entre_el_precio_del_menu_y_nuestra_cuenta"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_private_dining_business",
+      "source": "I'd like to reserve a private dining area for a business dinner. Is anything available?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría reservar un área privada para una cena de negocios, ¿tienen algo disponible?",
+          "audioSlug": "me_gustaria_reservar_un_area_privada_para_una_cena_de_negocios_tienen_algo_disponible"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_salt_umami_balance_dashi",
+      "source": "The broth was accomplished, but the salt-to-umami balance tipped toward the former, undermining the dashi's delicacy.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El caldo estaba logrado, pero el equilibrio sal-umami se inclinó hacia la primera, socavando la delicadeza del dashi.",
+          "audioSlug": "el_caldo_estaba_logrado_pero_el_equilibrio_sal_umami_se_inclino_hacia_la_primera_socavando_la_delicadeza_del_dashi"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_amuse_bouche_ambition_restraint",
+      "source": "The amuse-bouche set a remarkably ambitious tone, and the kitchen clearly understands restraint.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El amuse-bouche estableció un tono notablemente ambicioso, pues la cocina claramente entiende la contención.",
+          "audioSlug": "el_amuse_bouche_establecio_un_tono_notablemente_ambicioso_pues_la_cocina_claramente_entiende_la_contencion"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_wine_pairing_burgundy_premature",
+      "source": "The wine pairing was thoughtful, though the Burgundy felt slightly premature for the concentration of the main course.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El maridaje de vinos fue cuidadoso, aunque el Borgoña pareció ligeramente prematuro para la concentración del plato principal.",
+          "audioSlug": "el_maridaje_de_vinos_fue_cuidadoso_aunque_el_borgona_parecio_ligeramente_prematuro_para_la_concentracion_del_plato_principal"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_tasting_menu_progression_redundancy",
+      "source": "The tasting menu's progression was exemplary, each course building logically on its predecessor without redundancy.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La progresión del menú degustación fue ejemplar, pues cada plato se construyó lógicamente sobre el anterior sin redundancia.",
+          "audioSlug": "la_progresion_del_menu_degustacion_fue_ejemplar_pues_cada_plato_se_construyo_logicamente_sobre_el_anterior_sin_redundancia"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_sommelier_provenance_barolo",
+      "source": "Could I speak with the sommelier? I'd like to know the provenance and vintage of the Barolo.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podría hablar con el sommelier para conocer la procedencia y la añada del Barolo?",
+          "audioSlug": "podria_hablar_con_el_sommelier_para_conocer_la_procedencia_y_la_anada_del_barolo",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Podría hablar con la sommelier para conocer la procedencia y la añada del Barolo?",
+          "audioSlug": "podria_hablar_con_la_sommelier_para_conocer_la_procedencia_y_la_anada_del_barolo",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "restaurant_attentiveness_discretion_equilibrium",
+      "source": "The service struck an ideal balance between attentiveness and discretion, a notoriously difficult equilibrium to maintain.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El servicio logró un equilibrio ideal entre atención y discreción, un punto notoriamente difícil de mantener.",
+          "audioSlug": "el_servicio_logro_un_equilibrio_ideal_entre_atencion_y_discrecion_un_punto_notoriamente_dificil_de_mantener"
+        }
+      ]
+    }
+  ]
+}

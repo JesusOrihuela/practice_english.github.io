@@ -11,50 +11,71 @@
 const AppData = (() => {
   const _cache     = new Map();          // memory: in-flight Promises + resolved data
   const _BASE      = '../../shared/json/';
-  const _SS_PREFIX = 'pe_topic_v4_';     // v4: "cefr" field renamed to "level" in all JSON files
+  const _SS_PREFIX = 'pe_topic_v7_';     // v7: labels on all multi-form phrases; audioSlug on all forms including former style forms
+
+  // IDs that are shared across all pairs (no pair prefix needed)
+  const _SHARED = /^(word-equivalents|words)($|[-_])/;
+
+  function _pairId() {
+    return (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().id : 'es-en';
+  }
+
+  // Build URL: shared files stay at root; pair-specific files go under {pairId}/
+  function _url(id) {
+    if (_SHARED.test(id)) return _BASE + id + '.json';
+    return _BASE + _pairId() + '/' + id + '.json';
+  }
+
+  // Cache key includes pair for pair-specific files to prevent cross-pair collisions
+  function _cacheKey(id) {
+    if (_SHARED.test(id)) return _SS_PREFIX + id;
+    return _SS_PREFIX + _pairId() + '_' + id;
+  }
 
   function _ssGet(id) {
     try {
-      const raw = sessionStorage.getItem(_SS_PREFIX + id);
+      const raw = sessionStorage.getItem(_cacheKey(id));
       return raw ? JSON.parse(raw) : null;
     } catch (_) { return null; }
   }
 
   function _ssPut(id, data) {
-    try { sessionStorage.setItem(_SS_PREFIX + id, JSON.stringify(data)); }
+    try { sessionStorage.setItem(_cacheKey(id), JSON.stringify(data)); }
     catch (_) {}  // quota exceeded — degrade silently, memory cache still works
   }
 
   /**
-   * Load and cache a JSON file from shared/json/.
-   * @param {string} id - Filename without extension (e.g. 'greetings', 'contractions')
+   * Load and cache a JSON file from shared/json/{pairId}/ (or shared/json/ for shared files).
+   * @param {string} id - Filename without extension (e.g. 'greetings', 'word-equivalents')
    * @returns {Promise<Object>} Parsed JSON data
    */
   function get(id) {
+    const key = _cacheKey(id);
+
     // 1 — Memory cache (same page, also holds in-flight Promises for dedup)
-    if (_cache.has(id)) return Promise.resolve(_cache.get(id));
+    if (_cache.has(key)) return Promise.resolve(_cache.get(key));
 
     // 2 — sessionStorage (cross-page within the same tab — no network needed)
     const ss = _ssGet(id);
-    if (ss) { _cache.set(id, ss); return Promise.resolve(ss); }
+    if (ss) { _cache.set(key, ss); return Promise.resolve(ss); }
 
     // 3 — Network fetch
-    const p = fetch(_BASE + id + '.json')
+    const p = fetch(_url(id))
       .then(r => {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
       })
       .then(data => {
-        _cache.set(id, data);   // replace in-flight Promise with resolved value
+        _cache.set(key, data);  // replace in-flight Promise with resolved value
         _ssPut(id, data);       // persist for subsequent activity pages this session
         return data;
       })
       .catch(err => {
-        _cache.delete(id);      // evict so the caller can retry
+        _cache.delete(key);     // evict so the caller can retry
         throw err;
       });
 
-    _cache.set(id, p);          // store Promise to deduplicate concurrent requests
+    _cache.set(key, p);         // store Promise to deduplicate concurrent requests
     return p;
   }
 

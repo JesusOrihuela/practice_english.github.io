@@ -59,7 +59,7 @@
   function _topicLabel(id) {
     var t = (typeof AppTopics !== 'undefined') &&
             (AppTopics.PHRASE_TOPICS || []).find(function (x) { return x.id === id; });
-    return t ? t.label : id;
+    return t ? AppTopics.getLabel(t) : id;
   }
 
   // Activity prefixes to strip when extracting topic from card key
@@ -188,7 +188,7 @@
     var prompt = document.createElement('div');
     prompt.className = 'done-notif-prompt';
     prompt.setAttribute('role', 'region');
-    prompt.setAttribute('aria-label', 'Enable daily reminders');
+    prompt.setAttribute('aria-label', (typeof AppLang !== 'undefined' ? AppLang.t('notif_prompt_aria') : 'Enable daily reminders'));
 
     var textEl = document.createElement('div');
     textEl.className = 'done-notif-text';

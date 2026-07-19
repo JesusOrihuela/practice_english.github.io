@@ -1,0 +1,3748 @@
+{
+  "categories": [
+    {
+      "id": "ser_estar",
+      "label_es": "Ser vs. Estar",
+      "emoji": "⚖️",
+      "color": "#2563EB",
+      "label_en": "Uses of 'To Be'"
+    },
+    {
+      "id": "present_regular",
+      "label_es": "Presente regular",
+      "emoji": "🔄",
+      "color": "#059669",
+      "label_en": "Regular Present Tense"
+    },
+    {
+      "id": "gender",
+      "label_es": "Género y concordancia",
+      "emoji": "🔤",
+      "color": "#7C3AED",
+      "label_en": "Gender & Agreement"
+    },
+    {
+      "id": "preterite",
+      "label_es": "Pretérito indefinido",
+      "emoji": "⏮️",
+      "color": "#D97706",
+      "label_en": "Simple Past (Preterite)"
+    },
+    {
+      "id": "imperfect",
+      "label_es": "Pretérito imperfecto",
+      "emoji": "🕰️",
+      "color": "#DC2626",
+      "label_en": "Imperfect Past"
+    },
+    {
+      "id": "subjunctive",
+      "label_es": "Subjuntivo presente",
+      "emoji": "🌀",
+      "color": "#0891B2",
+      "label_en": "Present Subjunctive"
+    },
+    {
+      "id": "reflexive",
+      "label_es": "Verbos reflexivos",
+      "emoji": "🪞",
+      "color": "#9333EA",
+      "label_en": "Reflexive Verbs"
+    },
+    {
+      "id": "por_para",
+      "label_es": "Por vs. Para",
+      "emoji": "↔️",
+      "color": "#EA580C",
+      "label_en": "Uses of 'For'"
+    },
+    {
+      "id": "object_pronouns",
+      "label_es": "Pronombres OD/OI",
+      "emoji": "🔗",
+      "color": "#4F46E5",
+      "label_en": "Object Pronouns"
+    },
+    {
+      "id": "interrogatives",
+      "label_es": "Interrogativos",
+      "emoji": "❓",
+      "color": "#BE185D",
+      "label_en": "Question Words"
+    },
+    {
+      "id": "gustar_verbs",
+      "label_es": "Verbos tipo gustar",
+      "emoji": "❤️",
+      "color": "#E11D48",
+      "label_en": "Gustar-type Verbs"
+    },
+    {
+      "id": "stem_changing",
+      "label_es": "Verbos con cambio vocálico",
+      "emoji": "🔀",
+      "color": "#0D9488",
+      "label_en": "Stem-changing Verbs"
+    },
+    {
+      "id": "future",
+      "label_es": "Futuro simple",
+      "emoji": "🔭",
+      "color": "#2563EB",
+      "label_en": "Simple Future"
+    },
+    {
+      "id": "conditional",
+      "label_es": "Condicional simple",
+      "emoji": "🤔",
+      "color": "#7C3AED",
+      "label_en": "Conditional"
+    },
+    {
+      "id": "perfect_tenses",
+      "label_es": "Tiempos perfectos",
+      "emoji": "✅",
+      "color": "#059669",
+      "label_en": "Perfect Tenses"
+    },
+    {
+      "id": "passive",
+      "label_es": "Voz pasiva",
+      "emoji": "🔄",
+      "color": "#D97706",
+      "label_en": "Passive Voice"
+    },
+    {
+      "id": "relative_clauses",
+      "label_es": "Cláusulas de relativo",
+      "emoji": "🔗",
+      "color": "#0891B2",
+      "label_en": "Relative Clauses"
+    },
+    {
+      "id": "advanced_discourse",
+      "label_es": "Discurso avanzado",
+      "emoji": "🗣️",
+      "color": "#6D28D9",
+      "label_en": "Advanced Discourse"
+    }
+  ],
+  "rules": [
+    {
+      "id": "ser_identity",
+      "category": "ser_estar",
+      "level": "A1",
+      "title": "Ser — Identity and permanent traits",
+      "title_es": "Ser — Identidad y rasgos permanentes",
+      "explanation": "Use **ser** for characteristics that define who or what someone is: identity, origin, profession, nationality, and inherent personality traits. These are not expected to change. Formula: subject + ser conjugation + noun/adjective. Conjugations: soy, eres, es, somos, son. *(In Spain, vosotros uses sois.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Hola, ¿tú **eres** nueva en la oficina?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, **soy** diseñadora gráfica. Empecé esta semana.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué bien! Yo **soy** del departamento de marketing. ¿De dónde **eres**?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Soy** de Colombia, pero llevo tres años viviendo aquí.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué interesante! Mis colegas también **son** de América Latina.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which verb appears in all three sentences? What form does it take each time?",
+          "placeholder": "e.g. soy, es, somos..."
+        },
+        {
+          "q": "What type of information does this verb introduce — a job, an origin, a feeling, or a location?",
+          "placeholder": "e.g. profession, nationality..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Soy estudiante de español.",
+          "question": "What does this sentence tell us about the speaker?",
+          "options": [
+            "Their profession or role",
+            "Their current mood",
+            "Where they are right now",
+            "What they are doing"
+          ],
+          "correct": 0,
+          "feedback": "'Soy estudiante' uses ser to state the speaker's identity/role — a permanent characteristic, not a temporary state."
+        },
+        {
+          "sentence": "Ella es médica y trabaja en un hospital.",
+          "question": "Why is 'es' used here instead of 'está'?",
+          "options": [
+            "Because being a doctor is a defining characteristic, not a temporary state",
+            "Because she is currently at work",
+            "Because 'médica' is a location",
+            "Because the sentence is in the past"
+          ],
+          "correct": 0,
+          "feedback": "'Es médica' uses ser because a profession describes who someone is — it is a permanent trait, not a changeable condition."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ profesor de inglés.",
+          "answer": "soy",
+          "accepted": [
+            "soy"
+          ],
+          "feedback_why": "Use 'soy' (yo form of ser) to state your profession — a permanent identity trait.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ellos ___ de México.",
+          "answer": "son",
+          "accepted": [
+            "son"
+          ],
+          "feedback_why": "Use 'son' (ellos form of ser) to express origin or nationality.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Mi hermana ___ muy inteligente.",
+          "answer": "es",
+          "accepted": [
+            "es"
+          ],
+          "feedback_why": "Use 'es' (ella form of ser) for inherent personality or intellectual traits.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "To Be — Identity and permanent traits"
+    },
+    {
+      "id": "ser_time_events",
+      "category": "ser_estar",
+      "level": "A2",
+      "title": "Ser — Time, dates, and events",
+      "title_es": "Ser — Tiempo, fechas y eventos",
+      "explanation": "Use **ser** to talk about time, dates, days of the week, and scheduled events. Even though a time or date is transient, Spanish uses *ser* (not *estar*) for these contexts. Examples: ¿Qué hora es? — Son las tres. La reunión es mañana.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Qué hora **es**? Se me olvidó el teléfono.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Son** las tres y cuarto. ¿Por qué lo preguntas?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "La reunión **es** a las cuatro. Todavía tenemos tiempo.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Y el cumpleaños de Sofía? Creo que también **es** esta semana.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, **es** el jueves por la noche. ¿Vas a ir a la cena?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Claro, ya tengo el regalo listo. ¿A qué hora **es** exactamente?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which verb is used to express the day of the week and the time? Does that surprise you?",
+          "placeholder": "e.g. ser — es, son..."
+        },
+        {
+          "q": "What kinds of information appear after 'es' or 'son' in these sentences?",
+          "placeholder": "e.g. a day, a time, an event..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Hoy es lunes y mañana es martes.",
+          "question": "What is the role of 'es' in this sentence?",
+          "options": [
+            "It expresses what day of the week it is",
+            "It describes where someone is",
+            "It expresses a temporary feeling",
+            "It describes a physical condition"
+          ],
+          "correct": 0,
+          "feedback": "'Es' is the correct form of ser for expressing days of the week and dates in Spanish."
+        },
+        {
+          "sentence": "La fiesta es el sábado a las nueve.",
+          "question": "Why is 'es' used here instead of 'está'?",
+          "options": [
+            "Because 'es' (ser) is used for scheduled events and their time",
+            "Because the party is a temporary situation",
+            "Because 'estar' can only be used for people",
+            "Because 'es' expresses location"
+          ],
+          "correct": 0,
+          "feedback": "Scheduled events use ser, not estar. 'La fiesta es el sábado' = The party is (takes place) on Saturday."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "La clase ___ a las ocho de la mañana.",
+          "answer": "es",
+          "accepted": [
+            "es"
+          ],
+          "feedback_why": "Use ser ('es') for scheduled events and their time.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ las cinco en punto.",
+          "answer": "Son",
+          "accepted": [
+            "Son",
+            "son"
+          ],
+          "feedback_why": "Use 'son' (plural ser) when telling the time for 2 o'clock and beyond.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Qué hora ___?",
+          "answer": "es",
+          "accepted": [
+            "es"
+          ],
+          "feedback_why": "Use ser ('es') to ask what time it is.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "To Be — Time, dates, and events"
+    },
+    {
+      "id": "estar_location_states",
+      "category": "ser_estar",
+      "level": "A1",
+      "title": "Estar — Location and temporary states",
+      "title_es": "Estar — Ubicación y estados temporales",
+      "explanation": "Use **estar** for location (where something or someone is right now) and for temporary conditions or states that can change: emotions, health, and situational descriptions. Conjugations: estoy, estás, está, estamos, están. Key contrast: *ser* = inherent quality; *estar* = current state. *(In Spain, vosotros uses estáis.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Hola, ¿cómo **estás**? Te noto un poco cansada.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Estoy** agotada. Llevo tres días sin dormir bien.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Sabes dónde **está** la enfermería del edificio?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Creo que **está** en el segundo piso, junto a los ascensores.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Yo **estoy** bien hoy, pero ayer también **estaba** fatal.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which verb appears in all three examples? What forms does it take?",
+          "placeholder": "e.g. estar — estoy, estás, está..."
+        },
+        {
+          "q": "Do the descriptions after this verb feel permanent (always true) or temporary (could change)?",
+          "placeholder": "e.g. location, current feeling, temperature..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Estoy en la biblioteca ahora mismo.",
+          "question": "Why is 'estoy' used here instead of 'soy'?",
+          "options": [
+            "Because location — where someone is right now — uses estar",
+            "Because the speaker is describing their profession",
+            "Because 'ser' cannot be used with places",
+            "Because the sentence is about the future"
+          ],
+          "correct": 0,
+          "feedback": "Location uses estar. 'Estoy en la biblioteca' tells us where the speaker is right now — a temporary, changeable situation."
+        },
+        {
+          "sentence": "El café está caliente.",
+          "question": "What does 'está caliente' tell us about the coffee?",
+          "options": [
+            "The coffee is currently hot (a temporary condition)",
+            "The coffee is always hot (a permanent trait)",
+            "The coffee is located somewhere hot",
+            "The coffee belongs to someone"
+          ],
+          "correct": 0,
+          "feedback": "'Está caliente' uses estar because the temperature of the coffee is a temporary, changeable state — not a permanent characteristic."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿Dónde ___ el supermercado?",
+          "answer": "está",
+          "accepted": [
+            "está"
+          ],
+          "feedback_why": "Use estar ('está') to ask about location — where something is.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ muy contentos hoy.",
+          "answer": "estamos",
+          "accepted": [
+            "estamos"
+          ],
+          "feedback_why": "Use estar ('estamos') for a temporary emotional state — being happy today can change.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El restaurante ___ cerrado los domingos.",
+          "answer": "está",
+          "accepted": [
+            "está"
+          ],
+          "feedback_why": "Use estar ('está') for a situational or changeable condition like being closed.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "To Be — Location and temporary states"
+    },
+    {
+      "id": "present_ar_verbs",
+      "category": "present_regular",
+      "level": "A1",
+      "title": "Present tense — Regular -ar verbs",
+      "title_es": "Presente — Verbos regulares -ar",
+      "explanation": "Regular **-ar** verbs follow a predictable pattern in the present tense. Remove the **-ar** infinitive ending and add these endings: -o (yo), -as (tú), -a (él/ella/usted), -amos (nosotros), -an (ellos/ustedes). Example: hablar → hablo, hablas, habla, hablamos, hablan. *(In Spain, vosotros uses -áis: habláis.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿**Trabajas** mucho los fines de semana?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "No mucho. Los sábados **descanso** y los domingos **camino** por el parque.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué buena rutina! Yo **escucho** pódcasts mientras **cocino** el domingo.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Y **estudias** algún idioma? Yo **hablo** inglés y un poco de francés.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, **practico** italiano con una aplicación cada noche antes de dormir.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Look at the verbs in bold. What do they all have in common — what are the endings?",
+          "placeholder": "e.g. -o, -a, -amos..."
+        },
+        {
+          "q": "What is the infinitive form of each verb? How was the ending changed?",
+          "placeholder": "e.g. hablar → hablo (remove -ar, add -o)"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Yo hablo español un poco.",
+          "question": "Which ending does a regular -ar verb take for the 'yo' (I) form?",
+          "options": [
+            "-o (hablo)",
+            "-as (hablas)",
+            "-a (habla)",
+            "-amos (hablamos)"
+          ],
+          "correct": 0,
+          "feedback": "The yo form of regular -ar verbs ends in -o. Hablar → yo hablo."
+        },
+        {
+          "sentence": "Nosotros estudiamos inglés todos los días.",
+          "question": "What subject is 'estudiamos' used with?",
+          "options": [
+            "Nosotros (we)",
+            "Ellos (they)",
+            "Yo (I)",
+            "Tú (you)"
+          ],
+          "correct": 0,
+          "feedback": "The -amos ending belongs to nosotros (we). Estudiar → nosotros estudiamos."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ (trabajar) en un hospital.",
+          "answer": "trabajo",
+          "accepted": [
+            "trabajo"
+          ],
+          "feedback_why": "Yo form of 'trabajar': remove -ar, add -o → trabajo.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Tú ___ (hablar) inglés?",
+          "answer": "hablas",
+          "accepted": [
+            "hablas"
+          ],
+          "feedback_why": "Tú form of 'hablar': remove -ar, add -as → hablas.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ellos ___ (caminar) al parque por las tardes.",
+          "answer": "caminan",
+          "accepted": [
+            "caminan"
+          ],
+          "feedback_why": "Ellos form of 'caminar': remove -ar, add -an → caminan.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Present tense — Regular -ar verbs"
+    },
+    {
+      "id": "present_er_ir_verbs",
+      "category": "present_regular",
+      "level": "A1",
+      "title": "Present tense — Regular -er and -ir verbs",
+      "title_es": "Presente — Verbos regulares -er e -ir",
+      "explanation": "Regular **-er** verbs: remove -er and add -o, -es, -e, -emos, -en. Example: comer → como, comes, come, comemos, comen. Regular **-ir** verbs: remove -ir and add -o, -es, -e, -imos, -en. Example: vivir → vivo, vives, vive, vivimos, viven. Note that -er and -ir share most endings; they only differ in nosotros. *(In Spain, vosotros uses -éis for -er and -ís for -ir.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Dónde **vives** ahora? ¿Sigues en el mismo apartamento?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "No, **vivo** más cerca del trabajo ahora. ¿Y tú?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Yo **vivo** con mis padres todavía. **Como** en casa casi todos los días.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Qué bien. Yo **como** fuera muchas veces porque no tengo tiempo de cocinar.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Y **bebes** mucho café? Pareces cansado últimamente.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, **bebo** demasiado. Mis amigos también me lo **dicen** siempre.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What endings do you see on the verbs 'como', 'bebes', and 'vivimos'? How do they differ from -ar endings?",
+          "placeholder": "e.g. -o, -es, -imos (not -amos)"
+        },
+        {
+          "q": "What are the infinitives of these three verbs? Which belong to -er and which to -ir?",
+          "placeholder": "e.g. comer (-er), beber (-er), vivir (-ir)"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Yo como una manzana cada mañana.",
+          "question": "Which verb group does 'comer' belong to?",
+          "options": [
+            "-er verbs (comer, beber, leer)",
+            "-ar verbs (hablar, trabajar)",
+            "-ir verbs (vivir, escribir)",
+            "Irregular verbs"
+          ],
+          "correct": 0,
+          "feedback": "'Comer' is a regular -er verb. Yo form: remove -er, add -o → como."
+        },
+        {
+          "sentence": "Nosotros vivimos cerca del centro.",
+          "question": "How does the nosotros ending of a -ir verb differ from a -er verb?",
+          "options": [
+            "-ir → -imos (vivimos); -er → -emos (comemos)",
+            "-ir → -amos; -er → -emos",
+            "They are identical for nosotros",
+            "-ir → -éis; -er → -imos"
+          ],
+          "correct": 0,
+          "feedback": "The nosotros form is the key difference: -er verbs use -emos (comemos), -ir verbs use -imos (vivimos)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ (comer) ensalada para el almuerzo.",
+          "answer": "como",
+          "accepted": [
+            "como"
+          ],
+          "feedback_why": "Yo form of 'comer' (-er): remove -er, add -o → como.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Dónde ___ (vivir) tú?",
+          "answer": "vives",
+          "accepted": [
+            "vives"
+          ],
+          "feedback_why": "Tú form of 'vivir' (-ir): remove -ir, add -es → vives.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ellos ___ (beber) agua después del ejercicio.",
+          "answer": "beben",
+          "accepted": [
+            "beben"
+          ],
+          "feedback_why": "Ellos form of 'beber' (-er): remove -er, add -en → beben.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Present tense — Regular -er and -ir verbs"
+    },
+    {
+      "id": "gender_nouns_articles",
+      "category": "gender",
+      "level": "A1",
+      "title": "Noun gender and definite articles",
+      "title_es": "Género y artículos definidos",
+      "explanation": "Every Spanish noun is either **masculine** or **feminine**. This affects the articles and adjectives that go with it. Definite articles: **el** (masc. singular), **la** (fem. singular), **los** (masc. plural), **las** (fem. plural). Most nouns ending in **-o** are masculine (el libro); most ending in **-a** are feminine (la mesa). Many exceptions exist: el día, la mano, el problema.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Dónde pusiste **el** informe que imprimí esta mañana?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Está encima de **la** mesa, junto a la computadora.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Ah, gracias. ¿Y **los** bolígrafos? No encuentro ninguno.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Creo que **las** chicas del fondo se los llevaron al reunirse.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Siempre igual. **El** problema es que nunca vuelven **las** cosas al sitio.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What word comes before each noun? How does it change between 'libro', 'ciudad', and 'niños'?",
+          "placeholder": "e.g. el, la, los..."
+        },
+        {
+          "q": "Can you guess which nouns are masculine and which are feminine based on the article?",
+          "placeholder": "e.g. el → masculine, la → feminine..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "El libro está en la mesa.",
+          "question": "Which article is used with 'libro' and why?",
+          "options": [
+            "'El' — because 'libro' is masculine singular",
+            "'La' — because 'libro' ends in -o",
+            "'Los' — because there are multiple books",
+            "'Las' — because 'mesa' is feminine"
+          ],
+          "correct": 0,
+          "feedback": "'Libro' ends in -o and is masculine. The masculine singular definite article is 'el'."
+        },
+        {
+          "sentence": "Los niños juegan en el parque.",
+          "question": "Why is 'los' used before 'niños'?",
+          "options": [
+            "Because 'niños' is masculine plural",
+            "Because 'niños' is feminine plural",
+            "Because 'niños' is masculine singular",
+            "Because the sentence is negative"
+          ],
+          "correct": 0,
+          "feedback": "'Niños' (boys/children) is masculine plural. The masculine plural definite article is 'los'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ carro de mi padre es rojo.",
+          "answer": "El",
+          "accepted": [
+            "El",
+            "el"
+          ],
+          "feedback_why": "'Carro' (car) is masculine singular → use 'el'. En España se dice 'coche'; en Argentina, 'auto'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ casa tiene tres habitaciones.",
+          "answer": "La",
+          "accepted": [
+            "La",
+            "la"
+          ],
+          "feedback_why": "'Casa' (house) is feminine singular → use 'la'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ profesores explican muy bien.",
+          "answer": "Los",
+          "accepted": [
+            "Los",
+            "los"
+          ],
+          "feedback_why": "'Profesores' (teachers, masculine plural) → use 'los'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Noun gender and definite articles"
+    },
+    {
+      "id": "gender_adjective_agreement",
+      "category": "gender",
+      "level": "A2",
+      "title": "Adjective agreement in gender and number",
+      "title_es": "Concordancia de adjetivos",
+      "explanation": "In Spanish, adjectives must agree with the noun they describe in both **gender** (masculine/feminine) and **number** (singular/plural). Adjectives ending in **-o** change to **-a** for feminine and add **-s** for plural: alto → alta → altos → altas. Adjectives ending in **-e** or a consonant usually only change for number: grande → grandes; fácil → fáciles.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Cómo es tu nuevo compañero de apartamento? ¿Es simpático?",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, es muy **simpático** y también muy **ordenado**, lo cual me alegra mucho.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué suerte! El mío es bastante **desordenado** y tiene una moto **ruidosa**.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Ay, qué difícil. ¿Y la habitación es **grande** o **pequeña**?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Es **pequeña** pero tiene una ventana **grande** que da a la calle.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Look at 'alto/alta' and 'negro/negra'. How does the adjective ending change between masculine and feminine nouns?",
+          "placeholder": "e.g. -o (masculine) → -a (feminine)"
+        },
+        {
+          "q": "Look at 'difíciles'. What kind of change happens when the noun is plural?",
+          "placeholder": "e.g. add -s or -es for plural"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "El chico alto y la chica alta son hermanos.",
+          "question": "Why are both 'alto' and 'alta' used in the same sentence?",
+          "options": [
+            "Because 'alto' agrees with masculine 'chico' and 'alta' agrees with feminine 'chica'",
+            "Because one refers to height and the other to personality",
+            "Because one is singular and the other plural",
+            "Because they describe different actions"
+          ],
+          "correct": 0,
+          "feedback": "Spanish adjectives must match the gender of the noun. 'Chico' is masculine → alto; 'chica' is feminine → alta."
+        },
+        {
+          "sentence": "Los exámenes difíciles me ponen nervioso.",
+          "question": "Why is 'difíciles' (not 'difícil') used here?",
+          "options": [
+            "Because 'exámenes' is plural, so the adjective must be plural too",
+            "Because 'difíciles' is the feminine form",
+            "Because 'difícil' is only used with singular feminine nouns",
+            "Because the adjective follows the verb"
+          ],
+          "correct": 0,
+          "feedback": "'Exámenes' is plural, so the adjective becomes 'difíciles'. Adjectives ending in a consonant add -es for plural."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Mi hermana es muy _____. (inteligente)",
+          "answer": "inteligente",
+          "accepted": [
+            "inteligente"
+          ],
+          "feedback_why": "'Inteligente' ends in -e so it does not change for gender — it stays 'inteligente' for both masculine and feminine.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Los zapatos son _____. (negro/negra/negros/negras)",
+          "answer": "negros",
+          "accepted": [
+            "negros"
+          ],
+          "feedback_why": "'Zapatos' is masculine plural → the adjective must be masculine plural: 'negros'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella tiene una maleta _____. (pequeño/pequeña/pequeños/pequeñas)",
+          "answer": "pequeña",
+          "accepted": [
+            "pequeña"
+          ],
+          "feedback_why": "'Maleta' is feminine singular → the adjective must be feminine singular: 'pequeña'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Adjective agreement in gender and number"
+    },
+    {
+      "id": "preterite_regular",
+      "category": "preterite",
+      "level": "A2",
+      "title": "Pretérito indefinido — Regular verbs",
+      "title_es": "Pretérito indefinido — Verbos regulares",
+      "explanation": "The **pretérito indefinido** (simple past) expresses completed actions at a specific point in the past. Regular -ar endings: -é, -aste, -ó, -amos, -aron. Regular -er/-ir endings: -í, -iste, -ió, -imos, -ieron. *(In Spain, vosotros uses -asteis/-isteis: hablasteis, comisteis.)* Key time markers: ayer, anoche, la semana pasada, el año pasado, hace dos días.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Qué tal el fin de semana? ¿Hiciste algo especial?",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, el sábado **visité** a mis abuelos y el domingo **descansé** en casa.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué bien! Yo **salí** con unas amigas el viernes y **llegué** tarde a casa.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Y **comieron** en algún sitio bueno?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, **cenamos** en ese restaurante nuevo del centro. ¡**Pedí** el arroz con mariscos y estaba delicioso!",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What time markers (words like 'ayer', 'el año pasado') do you see? What tense do they suggest?",
+          "placeholder": "e.g. ayer = yesterday → completed past..."
+        },
+        {
+          "q": "Look at the verb endings: -í, -é, -ó. Which subject does each ending belong to?",
+          "placeholder": "e.g. -í = yo, -ó = él/ella..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Ayer comí pizza con mis amigos.",
+          "question": "Which ending is used for 'yo' in a regular -er verb in the preterite?",
+          "options": [
+            "-í (comí)",
+            "-é (comé)",
+            "-ó (comó)",
+            "-aba (comaba)"
+          ],
+          "correct": 0,
+          "feedback": "Regular -er/-ir verbs in the preterite use -í for yo. Comer → yo comí."
+        },
+        {
+          "sentence": "Ella llamó a su madre hace una hora.",
+          "question": "Which ending does a regular -ar verb take for 'él/ella' in the preterite?",
+          "options": [
+            "-ó (llamó)",
+            "-aba (llamaba)",
+            "-a (llama)",
+            "-aste (llamaste)"
+          ],
+          "correct": 0,
+          "feedback": "Regular -ar verbs use -ó for él/ella/usted in the preterite. Llamar → ella llamó."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Ayer yo ___ (hablar) con mi jefe.",
+          "answer": "hablé",
+          "accepted": [
+            "hablé"
+          ],
+          "feedback_why": "Yo preterite of 'hablar' (-ar): remove -ar, add -é → hablé.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella ___ (vivir) en París el año pasado.",
+          "answer": "vivió",
+          "accepted": [
+            "vivió"
+          ],
+          "feedback_why": "Ella preterite of 'vivir' (-ir): remove -ir, add -ió → vivió.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ (comer) en ese restaurante anoche.",
+          "answer": "comimos",
+          "accepted": [
+            "comimos"
+          ],
+          "feedback_why": "Nosotros preterite of 'comer' (-er): remove -er, add -imos → comimos.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Simple past — Regular verbs"
+    },
+    {
+      "id": "preterite_irregular",
+      "category": "preterite",
+      "level": "B1",
+      "title": "Pretérito indefinido — Common irregular verbs",
+      "title_es": "Pretérito indefinido — Verbos irregulares",
+      "explanation": "Several high-frequency verbs are irregular in the pretérito indefinido and must be memorized. Key irregulars: **ser/ir** → fui, fuiste, fue, fuimos, fueron (same forms!); *(In Spain, vosotros: fuisteis.)* **tener** → tuve, tuviste, tuvo; **hacer** → hice, hiciste, hizo; **venir** → vine, viniste, vino; **poder** → pude, pudiste, pudo; **querer** → quise, quisiste, quiso. These verbs have no accent marks.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿**Pudiste** ir al concierto el jueves pasado?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "No, no **pude**. **Tuve** que quedarme en el trabajo hasta muy tarde.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Qué lástima. Yo **fui** con mi hermana y **fue** increíble.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Qué **dijo** el cantante al final? Me contaron que **hizo** algo especial.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Sí! **Vino** un músico sorpresa al escenario y **tocaron** juntos dos canciones.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "The verbs 'fui', 'hizo', and 'pudiste' are all irregular past forms. Can you identify their infinitives?",
+          "placeholder": "e.g. fui → ir/ser, hizo → hacer, pudiste → poder"
+        },
+        {
+          "q": "Notice that these irregular preterite forms have no accent marks. How does that differ from regular preterites like 'hablé' or 'comí'?",
+          "placeholder": "e.g. regular yo forms have an accent; irregular ones do not"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Fui al médico ayer porque me sentía mal.",
+          "question": "What is the infinitive of 'fui' and which subject does it correspond to here?",
+          "options": [
+            "Ir or ser — yo (I went / I was)",
+            "Estar — yo (I was)",
+            "Hacer — yo (I made)",
+            "Tener — yo (I had)"
+          ],
+          "correct": 0,
+          "feedback": "'Fui' is the yo preterite of both 'ir' (to go) and 'ser' (to be). Context tells us it means 'I went' (ir) here."
+        },
+        {
+          "sentence": "Ella hizo la tarea antes de cenar.",
+          "question": "Why is 'hizo' used instead of 'hacó'?",
+          "options": [
+            "Because 'hacer' is irregular in the preterite — its stem changes to 'hiz-'",
+            "Because 'hizo' is the imperfect form of hacer",
+            "Because regular -er verbs use -ó in the preterite",
+            "Because ella requires the -aste ending"
+          ],
+          "correct": 0,
+          "feedback": "'Hacer' is irregular in the preterite. Stem: hic-/hiz-. Ella form: hizo (not *hacó). These forms carry no accent mark."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "El año pasado ___ (ir) a la universidad.",
+          "answer": "fui",
+          "accepted": [
+            "fui"
+          ],
+          "feedback_why": "Yo preterite of 'ir': fui (irregular — no accent mark).",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Qué ___ (hacer) tú el domingo?",
+          "answer": "hiciste",
+          "accepted": [
+            "hiciste"
+          ],
+          "feedback_why": "Tú preterite of 'hacer': hiciste (irregular stem hic-).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella no ___ (poder) venir a la cena.",
+          "answer": "pudo",
+          "accepted": [
+            "pudo"
+          ],
+          "feedback_why": "Ella preterite of 'poder': pudo (irregular stem pud-).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Simple past — Common irregular verbs"
+    },
+    {
+      "id": "imperfect_habits_descriptions",
+      "category": "imperfect",
+      "level": "B1",
+      "title": "Pretérito imperfecto — Past habits and descriptions",
+      "title_es": "Pretérito imperfecto — Hábitos y descripciones",
+      "explanation": "The **pretérito imperfecto** is used for: (1) habitual or repeated actions in the past ('used to'); (2) ongoing background descriptions in the past (age, appearance, weather, mental state). -ar endings: -aba, -abas, -aba, -ábamos, -aban. -er/-ir endings: -ía, -ías, -ía, -íamos, -ían. *(In Spain, vosotros uses -abais/-íais.)* Key markers: siempre, todos los días, de niño, antes, cuando era joven.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Cómo era tu barrio cuando eras pequeña?",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Era muy tranquilo. **Vivíamos** cerca del río y los niños **jugábamos** en la calle sin peligro.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Qué bonito. Mi familia **comía** junta todos los domingos. Lo echo de menos.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Yo también. Mi abuela siempre **hacía** una sopa increíble los inviernos.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Y tus padres **trabajaban** cerca de casa o **viajaban** mucho?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Mi madre **trabajaba** en el colegio del pueblo, así que siempre **estaba** en casa por las tardes.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What time markers like 'cuando era niño' or 'antes' appear? What do they tell you about the kind of past being described?",
+          "placeholder": "e.g. repeated habit, background description..."
+        },
+        {
+          "q": "Look at the imperfect endings: -ía, -íamos, -aba. How do these differ from the preterite endings you already know?",
+          "placeholder": "e.g. imperfect: -aba/-ía vs. preterite: -é/-ó"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Cuando era niño, vivía en una ciudad pequeña.",
+          "question": "Why is 'vivía' (imperfect) used here instead of the preterite 'vivió'?",
+          "options": [
+            "Because living somewhere as a child was an ongoing background state, not a single completed event",
+            "Because 'vivir' is irregular in the preterite",
+            "Because 'cuando' always triggers the preterite",
+            "Because the action happened only once"
+          ],
+          "correct": 0,
+          "feedback": "The imperfect describes ongoing states and habitual situations in the past. Living in a city during childhood was a continuous background condition."
+        },
+        {
+          "sentence": "Antes comíamos en familia todos los domingos.",
+          "question": "What does 'comíamos' express in this context?",
+          "options": [
+            "A habitual past action — something they used to do regularly",
+            "A single completed meal in the past",
+            "A future plan that was cancelled",
+            "An action happening right now"
+          ],
+          "correct": 0,
+          "feedback": "'Comíamos' (imperfect) expresses a repeated past habit. 'Antes' and 'todos los domingos' are strong markers of habitual imperfect usage."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "De niño, yo ___ (jugar) en el parque cada tarde.",
+          "answer": "jugaba",
+          "accepted": [
+            "jugaba"
+          ],
+          "feedback_why": "Yo imperfect of 'jugar' (-ar): jugaba. 'De niño' and 'cada tarde' signal habitual past.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ellos ___ (vivir) cerca de la playa cuando eran jóvenes.",
+          "answer": "vivían",
+          "accepted": [
+            "vivían"
+          ],
+          "feedback_why": "Ellos imperfect of 'vivir' (-ir): vivían. Ongoing background state in the past.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Antes ella siempre ___ (llegar) puntual al trabajo.",
+          "answer": "llegaba",
+          "accepted": [
+            "llegaba"
+          ],
+          "feedback_why": "Ella imperfect of 'llegar' (-ar): llegaba. 'Antes' and 'siempre' mark habitual past behavior.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Imperfect past — Habits and descriptions"
+    },
+    {
+      "id": "imperfect_vs_preterite",
+      "category": "imperfect",
+      "level": "B1",
+      "title": "Imperfecto vs. Indefinido — Contrast",
+      "title_es": "Imperfecto vs. Indefinido — Contraste",
+      "explanation": "In a narrative, the **imperfecto** sets the scene (background, ongoing state) while the **indefinido** describes the specific event that happened. Think of the imperfecto as the movie soundtrack playing in the background and the indefinido as the key events in the plot. Common pattern: 'Mientras + imperfecto... + indefinido' (While I was doing X... Y happened).",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Te enteraste de lo que pasó ayer en el metro?",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "No, cuéntame. Yo **viajaba** en autobús cuando **llegó** un mensaje tuyo.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Pues **llovía** muchísimo y el metro se paró. La gente **esperaba** en el andén sin información.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Qué caos. ¿Cuánto tiempo **estuvieron** ahí?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Casi una hora. Mientras todos **miraban** el celular, alguien **empezó** a tocar la guitarra.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¡No me lo puedo creer! ¿La gente **aplaudía** o **ignoraba** al músico?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In each sentence there are two past tense verbs. Which one describes the background/ongoing situation and which describes the event that interrupted it?",
+          "placeholder": "e.g. dormía = background; sonó = event"
+        },
+        {
+          "q": "What connecting words like 'mientras' and 'cuando' link the two verbs? What tense follows each?",
+          "placeholder": "e.g. mientras + imperfect... + preterite"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Mientras dormía, sonó el teléfono.",
+          "question": "Which verb is in the imperfect and what role does it play?",
+          "options": [
+            "'Dormía' (imperfect) — the ongoing background action that was interrupted",
+            "'Sonó' (imperfect) — the background noise",
+            "Both verbs are in the preterite",
+            "'Dormía' is the preterite and 'sonó' is the imperfect"
+          ],
+          "correct": 0,
+          "feedback": "'Dormía' (imperfect) is the ongoing background action. 'Sonó' (preterite) is the sudden, completed event that interrupted it."
+        },
+        {
+          "sentence": "Estudiaba inglés cuando conocí a mi mejor amigo.",
+          "question": "Why is 'conocí' in the preterite rather than the imperfect?",
+          "options": [
+            "Because meeting someone was a specific, completed event at a single point in time",
+            "Because 'conocer' is always irregular",
+            "Because 'cuando' always requires the imperfect",
+            "Because 'conocí' describes a repeated past habit"
+          ],
+          "correct": 0,
+          "feedback": "'Conocí' (preterite) marks the single, completed event — the moment of meeting. 'Estudiaba' (imperfect) is the ongoing background activity."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Mientras ___ (caminar/yo), vi un accidente.",
+          "answer": "caminaba",
+          "accepted": [
+            "caminaba"
+          ],
+          "feedback_why": "Background ongoing action with 'mientras' → imperfect: yo caminaba.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Cuando éramos niños, ___ (ir/nosotros) al mar cada verano.",
+          "answer": "íbamos",
+          "accepted": [
+            "íbamos"
+          ],
+          "feedback_why": "Habitual past action with 'cada verano' → imperfect: nosotros íbamos (irregular).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella ___ (leer) cuando entré en la habitación.",
+          "answer": "leía",
+          "accepted": [
+            "leía"
+          ],
+          "feedback_why": "Ongoing background action interrupted by 'entré' → imperfect: ella leía.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Imperfect vs. Simple past — Contrast"
+    },
+    {
+      "id": "subjunctive_present_wishes",
+      "category": "subjunctive",
+      "level": "B1",
+      "title": "Subjuntivo presente — Wishes and recommendations",
+      "title_es": "Subjuntivo presente — Deseos y recomendaciones",
+      "explanation": "The **present subjunctive** is used after expressions of desire, recommendation, and emotion that have two different subjects. Structure: main clause (indicative) + **que** + subordinate clause (subjunctive). Trigger verbs: querer que, esperar que, recomendar que, necesitar que, aconsejar que, pedir que. -ar subjunctive endings: -e, -es, -e, -emos, -en. -er/-ir: -a, -as, -a, -amos, -an. *(In Spain, vosotros uses -éis/-áis: lleguéis, comáis.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Mañana tengo la entrevista de trabajo. Estoy muy nerviosa.",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Espero que todo **salga** bien. Confía en ti misma.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Gracias. Mi madre quiere que **llegue** muy temprano y que **descanse** bien esta noche.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Tiene razón. También te recomiendo que **practiques** tus respuestas en voz alta.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, lo haré. Y quiero que me **des** tu opinión después, ¿de acuerdo?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Each sentence has two different subjects connected by 'que'. Which verb after 'que' is in the subjunctive?",
+          "placeholder": "e.g. vengas, descansemos, salga..."
+        },
+        {
+          "q": "What verb triggers the subjunctive in each sentence? What type of expression is it (desire, hope, recommendation...)?",
+          "placeholder": "e.g. quiero (desire), recomienda (recommendation), espero (hope)"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Quiero que vengas a mi fiesta.",
+          "question": "Why is 'vengas' (subjunctive) used instead of 'vienes' (indicative)?",
+          "options": [
+            "Because 'quiero que' expresses a wish and triggers the subjunctive when the subjects differ",
+            "Because 'vengas' is the only correct form of venir",
+            "Because the sentence is negative",
+            "Because 'que' always introduces the indicative"
+          ],
+          "correct": 0,
+          "feedback": "'Quiero que' (I want you to) triggers the present subjunctive when the subject of the main clause (yo) differs from the subject of the subordinate clause (tú)."
+        },
+        {
+          "sentence": "El médico recomienda que descansemos más.",
+          "question": "What is the subjunctive form of 'descansar' for 'nosotros'?",
+          "options": [
+            "descansemos",
+            "descansamos",
+            "descansábamos",
+            "descansemos (same spelling as indicative)"
+          ],
+          "correct": 0,
+          "feedback": "Nosotros subjunctive of 'descansar' (-ar): remove -ar, add -emos → descansemos. Note: -ar verbs use -e- vowel in subjunctive."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Quiero que tú ___ (llegar) a tiempo.",
+          "answer": "llegues",
+          "accepted": [
+            "llegues"
+          ],
+          "feedback_why": "Tú present subjunctive of 'llegar' (-ar): llegues. Triggered by 'quiero que'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El profesor pide que nosotros ___ (leer) el capítulo.",
+          "answer": "leamos",
+          "accepted": [
+            "leamos"
+          ],
+          "feedback_why": "Nosotros present subjunctive of 'leer' (-er): leamos. Triggered by 'pide que'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Espero que ella ___ (estar) bien.",
+          "answer": "esté",
+          "accepted": [
+            "esté"
+          ],
+          "feedback_why": "Ella present subjunctive of 'estar': esté (irregular subjunctive, with accent).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Present subjunctive — Wishes and recommendations"
+    },
+    {
+      "id": "reflexive_verbs_daily_routine",
+      "category": "reflexive",
+      "level": "A2",
+      "title": "Reflexive verbs — Daily routine",
+      "title_es": "Verbos reflexivos — Rutina diaria",
+      "explanation": "Reflexive verbs describe actions performed on or for oneself. They are formed with a reflexive pronoun (me, te, se, nos, os, se) placed before the conjugated verb. Common reflexive verbs for daily routines: levantarse (to get up), ducharse (to shower), vestirse (to get dressed), acostarse (to go to bed), despertarse (to wake up), llamarse (to be called). Infinitive form always ends in -se.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿A qué hora **te despiertas** normalmente para ir al trabajo?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Me despierto** a las seis y media. **Me ducho**, desayuno y salgo a las ocho.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué madrugador! Yo **me levanto** tardísimo, casi a las ocho.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Y a qué hora **te acuestas**? Yo **me acuesto** a las diez para poder madrugar.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Me acuesto casi a medianoche. Por eso siempre **me visto** con prisa por las mañanas.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Each verb has a small word before it (me, te, se). What are these words and how do they change with each subject?",
+          "placeholder": "e.g. me (yo), te (tú), se (él/ella)..."
+        },
+        {
+          "q": "What do all these actions have in common — who is performing and who is receiving the action?",
+          "placeholder": "e.g. the subject does the action to themselves"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Me despierto a las siete todos los días.",
+          "question": "What does the reflexive pronoun 'me' tell us in this sentence?",
+          "options": [
+            "That the subject (yo) wakes themselves up — the action is done to oneself",
+            "That someone else wakes the speaker up",
+            "That the action happened in the past",
+            "That the speaker is asking a question"
+          ],
+          "correct": 0,
+          "feedback": "'Me despierto' means I wake myself up. The reflexive pronoun 'me' shows the action is performed on the same person who does it."
+        },
+        {
+          "sentence": "¿A qué hora te acuestas normalmente?",
+          "question": "Which reflexive pronoun would you use if the subject were 'ella' instead of 'tú'?",
+          "options": [
+            "se (se acuesta)",
+            "te (te acuesta)",
+            "me (me acuesta)",
+            "nos (nos acuesta)"
+          ],
+          "correct": 0,
+          "feedback": "For él/ella/usted the reflexive pronoun is 'se'. So: ella se acuesta."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ (levantarse) a las seis de la mañana.",
+          "answer": "me levanto",
+          "accepted": [
+            "me levanto"
+          ],
+          "feedback_why": "Yo form of 'levantarse': reflexive pronoun 'me' + verb 'levanto' → me levanto.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Cómo ___ (llamarse) tu hermano?",
+          "answer": "se llama",
+          "accepted": [
+            "se llama"
+          ],
+          "feedback_why": "Él/ella form of 'llamarse': reflexive pronoun 'se' + verb 'llama' → se llama.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ellos ___ (acostarse) muy tarde los viernes.",
+          "answer": "se acuestan",
+          "accepted": [
+            "se acuestan"
+          ],
+          "feedback_why": "Ellos form of 'acostarse': reflexive pronoun 'se' + verb 'acuestan' (stem-changing o→ue) → se acuestan.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Reflexive verbs — Daily routine"
+    },
+    {
+      "id": "reflexive_verbs_emotions",
+      "category": "reflexive",
+      "level": "B1",
+      "title": "Reflexive verbs — Emotions and change of state",
+      "title_es": "Verbos reflexivos — Emociones y cambio de estado",
+      "explanation": "Many Spanish verbs use a reflexive pronoun to express emotional states or changes in state. These are not truly 'reflexive' in meaning but require reflexive pronouns: aburrirse (to get bored), cansarse (to get tired), alegrarse (to become happy), enfadarse (to get angry), preocuparse (to worry), ponerse (to become + adjective), quedarse (to stay/remain). Compare: aburrir (to bore someone) vs. aburrirse (to get bored).",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Últimamente **me aburro** mucho en casa. No sé qué hacer con el tiempo libre.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Por qué no aprendes algo nuevo? Yo **me alegro** mucho cuando descubro una afición.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Tienes razón. Aunque también **me canso** rápido si algo no me engancha desde el principio.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Eso me pasa con el deporte. **Me pongo** muy nervioso en competencias y acabo abandonando.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡A mí también! **Nos parecemos** más de lo que creía.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "These verbs express emotions or changes of state. What reflexive pronouns appear and which subjects do they match?",
+          "placeholder": "e.g. me (yo), se (ella), se (ellos)..."
+        },
+        {
+          "q": "How would 'aburrir' (to bore someone) differ from 'aburrirse' (to get bored)? Can you see the distinction in meaning?",
+          "placeholder": "e.g. La película me aburre vs. Me aburro en casa"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Me aburro cuando no tengo nada que hacer.",
+          "question": "What does 'me aburro' mean, and how does it differ from 'me aburre'?",
+          "options": [
+            "'Me aburro' = I get bored (I experience boredom); 'me aburre' = it bores me (something causes boredom)",
+            "They mean exactly the same thing",
+            "'Me aburro' = I am boring; 'me aburre' = I get bored",
+            "'Me aburro' is past tense; 'me aburre' is present"
+          ],
+          "correct": 0,
+          "feedback": "'Me aburro' (aburrirse) = I get bored / I feel bored. 'Me aburre' (aburrir) = it bores me — a different construction where something external causes the feeling."
+        },
+        {
+          "sentence": "Ella se pone nerviosa antes de los exámenes.",
+          "question": "What does 'ponerse + adjective' express?",
+          "options": [
+            "A change of state — becoming a certain way",
+            "A permanent personality trait",
+            "A physical location",
+            "A habitual action from the past"
+          ],
+          "correct": 0,
+          "feedback": "'Ponerse + adjective' expresses a change of state — becoming nervous, sad, happy, etc. It indicates a transition, not a permanent quality."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Él ___ (enfadarse) cuando alguien llega tarde.",
+          "answer": "se enfada",
+          "accepted": [
+            "se enfada"
+          ],
+          "feedback_why": "Él form of 'enfadarse': se enfada (he gets angry).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ (cansarse) después de correr diez kilómetros.",
+          "answer": "nos cansamos",
+          "accepted": [
+            "nos cansamos"
+          ],
+          "feedback_why": "Nosotros form of 'cansarse': nos cansamos (we get tired).",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Por qué ___ (preocuparse/tú) tanto?",
+          "answer": "te preocupas",
+          "accepted": [
+            "te preocupas"
+          ],
+          "feedback_why": "Tú form of 'preocuparse': te preocupas (you worry).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Reflexive verbs — Emotions and change of state"
+    },
+    {
+      "id": "por_cause_means_duration",
+      "category": "por_para",
+      "level": "B1",
+      "title": "Por — Cause, means, and duration",
+      "title_es": "Por — Causa, medio y duración",
+      "explanation": "**Por** is used to express: (1) **cause or reason** — why something happened (gracias por, por eso); (2) **means of communication or transport** — how something is done (por teléfono, por correo, por avión); (3) **duration** — how long something lasted (por dos horas, por tres años); (4) **exchange** — what something is traded for (te lo doy por diez euros).",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Gracias **por** haberme ayudado con la mudanza el fin de semana.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¡De nada! Oye, te llamé **por** teléfono ayer pero no contestaste.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Lo sé, perdona. Estuve sin cobertura **por** varias horas en el camino.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Entiendo. ¿Y ya tienes todo organizado en el apartamento nuevo?",
+          "highlight": false
+        },
+        {
+          "speaker": "MIA",
+          "text": "Casi. Estuve cargando cajas **por** toda la tarde. Estoy agotada.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "The word 'por' appears in all three sentences. What different meaning does it carry in each — cause, means, or duration?",
+          "placeholder": "e.g. por tu ayuda = cause/reason; por teléfono = means; por dos años = duration"
+        },
+        {
+          "q": "Can you think of an English equivalent for 'por' in each sentence? Notice it is not always 'for'.",
+          "placeholder": "e.g. thanks for..., by phone, for two years"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Gracias por tu ayuda, lo aprecio mucho.",
+          "question": "What function does 'por' serve in 'gracias por tu ayuda'?",
+          "options": [
+            "It expresses the reason or cause — you are grateful because of the help",
+            "It expresses the destination of the gratitude",
+            "It expresses duration — how long the help lasted",
+            "It expresses the means by which help was given"
+          ],
+          "correct": 0,
+          "feedback": "'Por' here indicates cause/reason — you are thankful because of (on account of) the help. This is the 'gracias por' fixed phrase."
+        },
+        {
+          "sentence": "Estudié español por dos años en la universidad.",
+          "question": "What does 'por dos años' express?",
+          "options": [
+            "Duration — how long the studying lasted",
+            "The reason why Spanish was studied",
+            "The means by which Spanish was studied",
+            "The destination where Spanish was studied"
+          ],
+          "correct": 0,
+          "feedback": "'Por + time expression' indicates duration — how long an action continued. Here it means 'for two years'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Te escribo ___ correo electrónico mañana.",
+          "answer": "por",
+          "accepted": [
+            "por"
+          ],
+          "feedback_why": "Use 'por' for the means of communication — writing by email.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Gracias ___ todo lo que hiciste.",
+          "answer": "por",
+          "accepted": [
+            "por"
+          ],
+          "feedback_why": "Use 'por' in 'gracias por' to express the reason for gratitude.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Viví en España ___ seis meses.",
+          "answer": "por",
+          "accepted": [
+            "por"
+          ],
+          "feedback_why": "Use 'por' with a time expression to indicate duration — for six months.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "For — Cause, means, and duration"
+    },
+    {
+      "id": "para_purpose_destination",
+      "category": "por_para",
+      "level": "B1",
+      "title": "Para — Purpose, destination, and deadline",
+      "title_es": "Para — Propósito, destino y plazo",
+      "explanation": "**Para** is used to express: (1) **purpose or goal** — what something is intended for (para + infinitive); (2) **recipient** — who something is for (este regalo es para ti); (3) **destination** — where someone or something is headed (salgo para Madrid); (4) **deadline** — by when something must be done (para el lunes). Para generally looks forward to a goal or endpoint.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Mañana vienes a la oficina o trabajas desde casa?",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Salgo **para** Madrid mañana temprano. Tengo una reunión importante allí.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Qué bien! ¿Viajes **para** conocer clientes nuevos?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, y también **para** presentar el nuevo proyecto. Llevo semanas preparándolo.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Te deseo mucho éxito. Le compré estos chocolates **para** el equipo de allí. ¿Los llevas?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¡Claro que sí! **Para** eso somos compañeros, ¿no?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What follows 'para' in each sentence — an infinitive, a person, or a place? What meaning does each usage express?",
+          "placeholder": "e.g. para + infinitive = purpose; para + person = recipient; para + place = destination"
+        },
+        {
+          "q": "Does 'para' feel like it points toward a future goal or endpoint? Compare this with 'por' which looks backward at causes.",
+          "placeholder": "e.g. para = forward-looking goal; por = backward-looking cause"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Estudio español para comunicarme con mis amigos.",
+          "question": "What role does 'para' play in this sentence?",
+          "options": [
+            "It expresses purpose — the reason (goal) for studying Spanish",
+            "It expresses the duration of studying",
+            "It expresses the means of communication",
+            "It expresses who gave the Spanish lessons"
+          ],
+          "correct": 0,
+          "feedback": "'Para + infinitive' expresses purpose or goal — studying Spanish in order to communicate. This is one of the most common uses of para."
+        },
+        {
+          "sentence": "Este regalo es para mi madre.",
+          "question": "What does 'para mi madre' express?",
+          "options": [
+            "The recipient — who the gift is intended for",
+            "The reason the gift was bought",
+            "The duration of the gift-giving",
+            "The place where the gift was purchased"
+          ],
+          "correct": 0,
+          "feedback": "'Para + person' expresses the recipient — who something is for or intended to benefit."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Compré flores ___ mi profesora.",
+          "answer": "para",
+          "accepted": [
+            "para"
+          ],
+          "feedback_why": "Use 'para' when expressing the recipient — who the flowers are for.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Necesitas estudiar más ___ aprobar el examen.",
+          "answer": "para",
+          "accepted": [
+            "para"
+          ],
+          "feedback_why": "Use 'para + infinitive' to express purpose or goal — in order to pass the exam.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El avión sale ___ Nueva York a las diez.",
+          "answer": "para",
+          "accepted": [
+            "para"
+          ],
+          "feedback_why": "Use 'para' for destination — the plane departs heading toward New York.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "For — Purpose, destination, and deadline"
+    },
+    {
+      "id": "direct_object_pronouns",
+      "category": "object_pronouns",
+      "level": "B1",
+      "title": "Direct object pronouns (OD)",
+      "title_es": "Pronombres de objeto directo (OD)",
+      "explanation": "Direct object pronouns (OD) replace the direct object of a verb — the person or thing directly receiving the action. Forms: me (me), te (you), lo/la (him/her/it/you formal), nos (us), los/las (them). *(In Spain, os is used for vosotros.)* Pronouns go **before** the conjugated verb: ¿Ves el libro? Sí, lo veo. With infinitives they can attach: Quiero leerlo / Lo quiero leer.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Has visto las llaves de la oficina? No **las** encuentro.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Creo que **las** dejaste en la mesa de la sala. Ahora **las** busco.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Gracias! Ah, ¿tienes el informe de ayer? Necesito revisarlo.",
+          "highlight": false
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, **lo** tengo aquí. Te **lo** paso por correo en un momento.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Perfecto. Y a ti, ¿**te** avisaron de la reunión del viernes?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, **me** avisaron esta mañana. No **me** esperaba que fuera tan pronto.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In each sentence a short pronoun (la, lo, me) replaces a noun. What noun does each pronoun replace?",
+          "placeholder": "e.g. la → María; lo → el libro; me → the speaker (yo)"
+        },
+        {
+          "q": "Where does the direct object pronoun appear relative to the conjugated verb — before or after?",
+          "placeholder": "e.g. before the verb: la vi, lo necesitas, me llaman"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Has visto a María? Sí, la vi ayer.",
+          "question": "Why is 'la' used instead of 'lo' to replace 'María'?",
+          "options": [
+            "Because María is feminine, so the pronoun must be feminine: 'la'",
+            "Because 'la' is used for masculine nouns",
+            "Because 'lo' is only used for things, not people",
+            "Because 'la' is the indirect object pronoun"
+          ],
+          "correct": 0,
+          "feedback": "Direct object pronouns agree in gender and number with the noun they replace. 'María' is feminine → 'la'."
+        },
+        {
+          "sentence": "Tengo el libro. ¿Lo necesitas?",
+          "question": "What does 'lo' replace in '¿Lo necesitas?'",
+          "options": [
+            "'El libro' — a masculine singular noun",
+            "'La biblioteca' — a feminine noun",
+            "The speaker (yo)",
+            "Nothing — 'lo' here means 'it' in English only"
+          ],
+          "correct": 0,
+          "feedback": "'Lo' replaces 'el libro'. 'Libro' is masculine singular → direct object pronoun 'lo'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿Tienes el pasaporte? Sí, ___ tengo.",
+          "answer": "lo",
+          "accepted": [
+            "lo"
+          ],
+          "feedback_why": "'Pasaporte' is masculine singular → direct object pronoun 'lo'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Ves a las chicas? No, no ___ veo.",
+          "answer": "las",
+          "accepted": [
+            "las"
+          ],
+          "feedback_why": "'Las chicas' is feminine plural → direct object pronoun 'las'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Mi madre ___ llama cada noche. (a mí)",
+          "answer": "me",
+          "accepted": [
+            "me"
+          ],
+          "feedback_why": "The direct object is 'me' (the speaker). First person singular direct object pronoun: 'me'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Direct object pronouns"
+    },
+    {
+      "id": "indirect_object_pronouns",
+      "category": "object_pronouns",
+      "level": "B1",
+      "title": "Indirect object pronouns (OI)",
+      "title_es": "Pronombres de objeto indirecto (OI)",
+      "explanation": "Indirect object pronouns (OI) indicate to whom or for whom an action is done. Forms: me, te, le, nos, les. *(In Spain, os is used for vosotros.)* They follow the same placement rules as OD pronouns (before conjugated verb, or attached to infinitive/gerund). When both OD and OI pronouns appear together, the OI comes first: **me lo** da (he gives it to me). Important: le/les become **se** before lo/la/los/las — never 'le lo'.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Ya **le** diste el mensaje a Roberto sobre el cambio de horario?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, **le** mandé un correo esta mañana. ¿Y a los del equipo de diseño?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "A ellos **les** dije en persona durante el desayuno. Se sorprendieron bastante.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿Y a ti **te** explicaron por qué cambiaron los horarios tan de repente?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "La jefa **nos** reunió ayer y **nos** explicó que hay un cliente nuevo con distinto huso horario.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In each sentence, who is the indirect object — to whom or for whom is the action done?",
+          "placeholder": "e.g. le → to her; me → to me; nos → to us"
+        },
+        {
+          "q": "Compare the indirect object pronoun forms (me, te, le, nos) with direct object pronouns. Which forms are the same and which are different?",
+          "placeholder": "e.g. me/te/nos are the same; lo/la/le are different"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Le di el regalo a ella ayer.",
+          "question": "What does 'le' refer to in this sentence?",
+          "options": [
+            "The indirect object — the person to whom the gift was given (ella)",
+            "The direct object — the gift itself",
+            "The subject — the person who gave the gift",
+            "The time — when the gift was given"
+          ],
+          "correct": 0,
+          "feedback": "'Le' is the indirect object pronoun (to her). 'El regalo' is the direct object. Spanish often uses 'le + a + person' for clarity or emphasis."
+        },
+        {
+          "sentence": "¿Me puedes explicar la tarea?",
+          "question": "What does 'me' represent in this question?",
+          "options": [
+            "The indirect object — the person to whom the explanation is given (yo)",
+            "The direct object — the homework",
+            "The subject — the person asking",
+            "A reflexive pronoun — the subject acts on itself"
+          ],
+          "correct": 0,
+          "feedback": "'Me' is the indirect object pronoun — you are asking someone to explain the homework to you (to me). 'La tarea' is the direct object."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ compré un regalo a mi madre.",
+          "answer": "Le",
+          "accepted": [
+            "Le",
+            "le"
+          ],
+          "feedback_why": "The indirect object is 'mi madre' (to/for my mother). Indirect object pronoun: 'le'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Puedes ___ dar este mensaje a ellos?",
+          "answer": "les",
+          "accepted": [
+            "les"
+          ],
+          "feedback_why": "The indirect object is 'ellos' (to them). Indirect object pronoun: 'les'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella ___ explicó el problema a nosotros.",
+          "answer": "nos",
+          "accepted": [
+            "nos"
+          ],
+          "feedback_why": "The indirect object is 'nosotros' (to us). Indirect object pronoun: 'nos'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Indirect object pronouns"
+    },
+    {
+      "id": "question_words",
+      "category": "interrogatives",
+      "level": "A1",
+      "title": "Question words — Interrogativos básicos",
+      "title_es": "Palabras interrogativas básicas",
+      "explanation": "Spanish interrogative words always carry a written accent mark to distinguish them from relative pronouns. Key question words: **¿Qué?** (What?), **¿Quién/Quiénes?** (Who?), **¿Dónde?** (Where?), **¿Cuándo?** (When?), **¿Cómo?** (How?), **¿Por qué?** (Why?), **¿Cuánto/a/os/as?** (How much/many?), **¿Cuál/Cuáles?** (Which?). Questions in Spanish always open with an inverted question mark ¿ and close with ?",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Perdona, ¿**cómo** se llama esta calle? Estoy un poco perdida.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Es la calle Mayor. ¿**Adónde** vas? Quizás te puedo orientar.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Busco la oficina de correos. ¿**Dónde** queda exactamente?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Está a dos manzanas. ¿**Cuándo** necesitas llegar? Porque cierra a las dos.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Son las doce. Voy bien. ¿**Cuánto** tarda en llegar caminando?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Unos diez minutos. Sigue recto y **¿quién** no te sabrá indicar mejor que yo?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Each sentence begins with a question word with an accent mark. What does each word ask about — identity, place, time, or manner?",
+          "placeholder": "e.g. cómo = how/manner; dónde = where/place; cuándo = when/time"
+        },
+        {
+          "q": "Notice the inverted question mark ¿ at the start. When does a Spanish question begin — at the question word or earlier in the sentence?",
+          "placeholder": "e.g. the ¿ marks where the question begins"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Cómo te llamas?",
+          "question": "What does '¿Cómo?' ask about?",
+          "options": [
+            "Manner or name — how something is done or called",
+            "Location — where something is",
+            "Time — when something happens",
+            "Quantity — how many there are"
+          ],
+          "correct": 0,
+          "feedback": "'¿Cómo?' asks about manner or how something is. '¿Cómo te llamas?' literally means 'How do you call yourself?' — asking for someone's name."
+        },
+        {
+          "sentence": "¿Dónde está la farmacia más cercana?",
+          "question": "Which question word would you use to ask about time instead of place?",
+          "options": [
+            "¿Cuándo? (When?)",
+            "¿Cómo? (How?)",
+            "¿Qué? (What?)",
+            "¿Quién? (Who?)"
+          ],
+          "correct": 0,
+          "feedback": "'¿Dónde?' asks about location (where). '¿Cuándo?' asks about time (when). All Spanish question words carry a written accent."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿___ es tu nombre?",
+          "answer": "Cuál",
+          "accepted": [
+            "Cuál",
+            "cuál"
+          ],
+          "feedback_why": "Use '¿Cuál?' before 'ser' without a following noun to ask 'which/what' when selecting from possibilities.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ vives tú?",
+          "answer": "Dónde",
+          "accepted": [
+            "Dónde",
+            "dónde"
+          ],
+          "feedback_why": "Use '¿Dónde?' to ask about location — where someone lives.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ cuesta este libro?",
+          "answer": "Cuánto",
+          "accepted": [
+            "Cuánto",
+            "cuánto"
+          ],
+          "feedback_why": "Use '¿Cuánto?' to ask about price or quantity — how much something costs.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Question words — Basic interrogatives"
+    },
+    {
+      "id": "question_cual_vs_que",
+      "category": "interrogatives",
+      "level": "A2",
+      "title": "¿Qué? vs. ¿Cuál/Cuáles? — Choosing the right word",
+      "title_es": "¿Qué? vs. ¿Cuál? — Elegir la palabra correcta",
+      "explanation": "**¿Qué?** asks for a definition or the nature of something ('What is X?'): ¿Qué es esto? (What is this?). **¿Cuál/Cuáles?** asks for a selection from a group ('Which one?'): ¿Cuál es tu número? (What is your number?). Key rule: before a noun, always use **¿Qué?** not ¿Cuál?: ¿Qué libro quieres? (Which book do you want?). Before ser (without a following noun), use ¿Cuál?: ¿Cuál es tu dirección?",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿**Qué** es el subjuntivo? No lo entiendo muy bien.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Es un modo verbal para expresar deseos y dudas. ¿**Cuál** es la parte que más te confunde?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "No sé cuándo usar «qué» y «cuál». Por ejemplo, ¿**qué** libro recomiendas para aprender gramática?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Eso depende de tu nivel. ¿**Cuál** es tu nivel actual, A2 o B1?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Creo que B1. Pero ¿**qué** diferencia hay entre los dos libros que me mencionaste?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Uno explica las reglas y el otro tiene ejercicios. ¿**Cuál** prefieres, teoría o práctica?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In '¿Qué es la paella?', the speaker is asking for a definition. In '¿Cuál es tu película favorita?', the speaker is choosing from options. Can you feel the difference?",
+          "placeholder": "e.g. qué = definition/nature; cuál = selection from a set"
+        },
+        {
+          "q": "Notice that '¿Qué idiomas hablas?' uses 'qué' directly before a noun ('idiomas'). What would be wrong with saying '¿Cuál idiomas hablas?'?",
+          "placeholder": "e.g. cuál cannot directly precede a noun"
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Qué es la paella?",
+          "question": "Why is '¿Qué?' used here instead of '¿Cuál?'?",
+          "options": [
+            "Because the speaker is asking for a definition or explanation of what paella is",
+            "Because '¿Cuál?' cannot be used with food",
+            "Because '¿Qué?' always comes before 'es'",
+            "Because paella is a singular noun"
+          ],
+          "correct": 0,
+          "feedback": "'¿Qué es...?' asks for a definition — what something is or means. '¿Cuál es...?' would imply choosing one from several options."
+        },
+        {
+          "sentence": "¿Cuál es tu película favorita?",
+          "question": "Why is '¿Cuál?' used here instead of '¿Qué?'?",
+          "options": [
+            "Because the speaker is asking which movie you select as your favorite from all the movies you know",
+            "Because '¿Qué?' cannot be used with 'película'",
+            "Because '¿Cuál?' always precedes a noun directly",
+            "Because the sentence asks for a definition"
+          ],
+          "correct": 0,
+          "feedback": "'¿Cuál es tu película favorita?' asks you to pick one from a set (all the films you have seen). When 'ser' is not followed by a noun, use '¿Cuál?'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿___ es la capital de España?",
+          "answer": "Cuál",
+          "accepted": [
+            "Cuál",
+            "cuál"
+          ],
+          "feedback_why": "Use '¿Cuál?' before 'ser' without a noun — asking to identify/select the capital city.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ deporte practicas?",
+          "answer": "Qué",
+          "accepted": [
+            "Qué",
+            "qué"
+          ],
+          "feedback_why": "Use '¿Qué?' directly before a noun ('deporte'). '¿Cuál?' cannot precede a noun directly.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ son tus zapatos? ¿Los negros o los marrones?",
+          "answer": "Cuáles",
+          "accepted": [
+            "Cuáles",
+            "cuáles"
+          ],
+          "feedback_why": "Use '¿Cuáles?' (plural) when selecting from options — which ones (of several) are yours?",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "What vs. Which — Choosing the right word"
+    },
+    {
+      "id": "gustar_structure",
+      "category": "gustar_verbs",
+      "level": "A2",
+      "title": "Gustar — Verb that works backwards",
+      "title_es": "Gustar — El verbo que funciona al revés",
+      "explanation": "**Gustar** and similar verbs (encantar, molestar, interesar, doler) work the opposite way from English. The thing you like is the **subject** of the verb; the person who likes it is the **indirect object**. Formula: (a + person) + indirect object pronoun + gustar (conjugated for the subject). Use **gusta** for singular nouns and infinitives; use **gustan** for plural nouns.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿**Te gustan** los tacos o **te gusta** más la pizza?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "A mí **me encantan** los tacos, pero a mi hermana **le gusta** más la pizza.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Y qué **les gusta** hacer a ustedes los fines de semana?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "A nosotros **nos gusta** cocinar juntos. **Nos encanta** experimentar con recetas nuevas.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'Me gustan los tacos', what is the grammatical subject that determines whether gustar is singular or plural?",
+          "placeholder": "e.g. the noun that follows..."
+        },
+        {
+          "q": "What is the difference between 'me gusta' and 'me encanta' in terms of intensity?",
+          "placeholder": "e.g. degree of feeling..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "A ella le gusta el café.",
+          "question": "Why is 'gusta' singular here?",
+          "options": [
+            "Because 'el café' is singular — it is the subject of the verb",
+            "Because 'ella' is singular",
+            "Because indirect object pronouns always take singular verbs",
+            "Because 'gusta' never changes form"
+          ],
+          "correct": 0,
+          "feedback": "In gustar constructions, the verb agrees with the thing liked ('el café' = singular), not the person who likes it."
+        },
+        {
+          "sentence": "No me gustan las reuniones largas.",
+          "question": "Why is 'gustan' plural?",
+          "options": [
+            "Because 'las reuniones largas' is plural — it is the subject",
+            "Because 'me' refers to multiple people",
+            "Because negative sentences always use plural",
+            "Because 'largas' makes the noun plural"
+          ],
+          "correct": 0,
+          "feedback": "'Las reuniones largas' is plural, so the verb becomes 'gustan'. The person (me) does not affect the conjugation."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "A mis padres ___ mucho las películas de acción.",
+          "answer": "les gustan",
+          "accepted": [
+            "les gustan"
+          ],
+          "feedback_why": "'Les' = indirect object pronoun for ellos (mis padres). 'Gustan' = plural to agree with 'las películas'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ interesa la música clásica? (tú)",
+          "answer": "Te",
+          "accepted": [
+            "Te",
+            "te"
+          ],
+          "feedback_why": "For 'tú', the indirect object pronoun is 'te'. The verb 'interesa' is already in the sentence.",
+          "contrast": ""
+        },
+        {
+          "sentence": "A mí no ___ las arañas. Son terroríficas.",
+          "answer": "me gustan",
+          "accepted": [
+            "me gustan"
+          ],
+          "feedback_why": "'Me gustan' because the subject 'las arañas' is plural. 'Me' = indirect object for 'a mí'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "restaurant",
+        "kitchen"
+      ],
+      "title_en": "Gustar — Verb that works backwards"
+    },
+    {
+      "id": "hay_existence",
+      "category": "gustar_verbs",
+      "level": "A2",
+      "title": "Hay — Expressing existence",
+      "title_es": "Hay — Expresar existencia",
+      "explanation": "**Hay** is the impersonal form of **haber** and means 'there is' or 'there are'. Unlike English, Spanish uses the same word for both singular and plural — **hay** never changes. Use it to state that something exists or is present. For questions, just add ¿…?: **¿Hay…?** Contrast: **estar** says *where* something is (location), **hay** says that it *exists*.",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "Perdona, ¿**hay** un supermercado cerca de aquí?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, **hay** uno a dos minutos caminando. Y también **hay** una farmacia en el mismo edificio.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Perfecto. ¿Y **hay** estacionamiento?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "No, no **hay** estacionamiento, pero **hay** muchas plazas de bicicletas.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Does 'hay' change form when the noun is plural (e.g. 'hay muchas plazas')? What does this tell you about the grammar?",
+          "placeholder": "e.g. hay is invariable because..."
+        },
+        {
+          "q": "How would you express 'the supermarket is nearby' using estar instead of hay? What is the difference in meaning?",
+          "placeholder": "e.g. El supermercado está..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Hay tres estudiantes en la clase.",
+          "question": "What does 'hay' express in this sentence?",
+          "options": [
+            "That three students exist / are present in the class",
+            "The location of specific students we already know about",
+            "That the students are sitting in the class",
+            "A permanent state of the classroom"
+          ],
+          "correct": 0,
+          "feedback": "'Hay' expresses existence — the fact that students are there. If we said 'Los estudiantes están en la clase', we would be pointing to specific, known students and saying where they are."
+        },
+        {
+          "sentence": "¿Hay leche en el refrigerador?",
+          "question": "Which answer correctly responds to this question?",
+          "options": [
+            "Sí, hay un poco.",
+            "Sí, está un poco.",
+            "Sí, es un poco.",
+            "Sí, tiene un poco."
+          ],
+          "correct": 0,
+          "feedback": "Respond with 'hay' to questions about existence. 'Está' would require a specific, known item (la leche está…)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "En este barrio ___ muchos restaurantes buenos.",
+          "answer": "hay",
+          "accepted": [
+            "hay"
+          ],
+          "feedback_why": "'Hay' = 'there are'. It does not change for singular/plural. Do not use 'están' — that would require definite reference to known restaurants.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ algún problema con el pedido?",
+          "answer": "Hay",
+          "accepted": [
+            "Hay",
+            "hay"
+          ],
+          "feedback_why": "'¿Hay algún problema?' = 'Is there any problem?' Use 'hay' for questions about existence.",
+          "contrast": ""
+        },
+        {
+          "sentence": "No ___ ninguna mesa libre en el restaurante.",
+          "answer": "hay",
+          "accepted": [
+            "hay"
+          ],
+          "feedback_why": "'No hay ninguna mesa' = 'There is no table available.' 'Hay' in negative sentences stays the same.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "restaurant",
+        "supermarket",
+        "accommodation"
+      ],
+      "title_en": "Hay — Expressing existence"
+    },
+    {
+      "id": "ser_estar_adjectives",
+      "category": "ser_estar",
+      "level": "B1",
+      "title": "Ser vs. Estar — Adjectives that change meaning",
+      "title_es": "Ser vs. Estar — Adjetivos que cambian de significado",
+      "explanation": "Some adjectives carry **different meanings** depending on whether they are used with **ser** or **estar**. With **ser** they describe a permanent characteristic or inherent nature; with **estar** they describe a temporary state or condition. Key pairs: *ser aburrido* (to be a boring person) vs *estar aburrido* (to feel bored); *ser listo* (to be clever) vs *estar listo* (to be ready); *ser malo* (to be evil/bad) vs *estar malo* (to be sick); *ser bueno* (to be a good person) vs *estar bueno* (to taste/look good); *ser seguro* (to be safe) vs *estar seguro* (to be sure/certain).",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "No quiero invitar a Carlos. **Es muy aburrido**, siempre habla de lo mismo.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Pero el otro día **estaba muy aburrido** en casa y me llamó para salir.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿**Estás seguro**? Porque **es seguro** que no quería verte a ti especialmente.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Oye, ¿y la paella de tu madre? Dicen que **está buenísima**. Tu madre **es muy buena** cocinera.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What is the difference between 'Es aburrido' and 'Está aburrido'? Give an example context for each.",
+          "placeholder": "e.g. 'es aburrido' describes a trait, 'está aburrido' describes..."
+        },
+        {
+          "q": "Explain the difference between 'Es bueno' and 'Está bueno' with a concrete example.",
+          "placeholder": "e.g. when talking about a person vs. food..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "El examen es muy difícil y los estudiantes están muy nerviosos.",
+          "question": "Why is 'es' used for the exam and 'están' for the students?",
+          "options": [
+            "'Es' describes the inherent nature of the exam; 'están' describes the temporary state of the students",
+            "'Es' is used for things and 'están' for people",
+            "'Es' is for the subject and 'están' for the object",
+            "'Es' is present tense and 'están' is past"
+          ],
+          "correct": 0,
+          "feedback": "Difficulty is an inherent characteristic of the exam → ser. Nervousness is a temporary emotional state → estar."
+        },
+        {
+          "sentence": "¿Estás listo? Ya son las ocho.",
+          "question": "What does 'estás listo' mean here?",
+          "options": [
+            "Are you ready? (in a prepared state)",
+            "Are you clever? (as a personality trait)",
+            "Are you finished? (as a completed action)",
+            "Are you sure? (as certainty)"
+          ],
+          "correct": 0,
+          "feedback": "'Estar listo' = to be ready/prepared (a temporary state). 'Ser listo' = to be clever (a personality trait)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Cuidado, ese cuchillo ___ muy afilado. (inherent property)",
+          "answer": "es",
+          "accepted": [
+            "es"
+          ],
+          "feedback_why": "Sharpness is an inherent characteristic of the knife → ser.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ malo el niño? Creo que tiene fiebre. (temporary state)",
+          "answer": "Está",
+          "accepted": [
+            "Está",
+            "está"
+          ],
+          "feedback_why": "'Estar malo' = to be sick (temporary). 'Ser malo' would mean he is a bad/evil person.",
+          "contrast": ""
+        },
+        {
+          "sentence": "No ___ seguro de la respuesta. Voy a revisar.",
+          "answer": "estoy",
+          "accepted": [
+            "estoy"
+          ],
+          "feedback_why": "'Estar seguro' = to be certain/sure (a mental state). 'Ser seguro' = to be safe (a characteristic of a place or thing).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Ser vs. Estar — Adjectives that change meaning"
+    },
+    {
+      "id": "stem_changing_eie",
+      "category": "stem_changing",
+      "level": "B1",
+      "title": "Stem-changing verbs — e→ie",
+      "title_es": "Verbos con cambio vocálico — e→ie",
+      "explanation": "Many Spanish verbs change their stem vowel **e → ie** in all forms **except** nosotros. This is sometimes called the 'boot' pattern because the stem-changed forms form a boot shape around the conjugation table. Common verbs: **querer** (quiero, quieres, quiere, queremos, quieren), **pensar** (pienso, piensas, piensa, pensamos, piensan), **entender**, **preferir**, **empezar**, **cerrar**, **perder**. The stem change does NOT occur in the preterite (regular -ar/-er) or imperfect. *(In Spain, vosotros also lacks the stem change: queréis, pensáis.)*",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "¿A qué hora **empieza** la reunión? **Prefiero** llegar un poco antes.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "**Empieza** a las diez, pero nosotros siempre **empezamos** cinco minutos tarde.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "No **entiendo** por qué. ¿No **piensan** que es una falta de respeto?",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Tienes razón. Yo también lo **pienso**, pero el jefe **prefiere** esperar a que llegue todo el mundo.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Look at 'empieza' and 'empezamos'. Which form has the stem change? What pattern do you notice about when the change occurs?",
+          "placeholder": "e.g. the change happens when the stress falls on..."
+        },
+        {
+          "q": "Why does the nosotros form NOT have the stem change?",
+          "placeholder": "e.g. the stress pattern in nosotros falls on..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Ellos prefieren el café solo.",
+          "question": "Which form of 'preferir' is used here and why does it have a stem change?",
+          "options": [
+            "Third person plural 'prefieren' — the stress falls on the stem, triggering e→ie",
+            "Third person plural 'prefieren' — all plural forms always change",
+            "Third person plural — the ending -en forces the vowel change",
+            "Third person plural — it is an irregular verb with no pattern"
+          ],
+          "correct": 0,
+          "feedback": "The stem change e→ie occurs when the syllable with the 'e' is stressed. In 'prefieren', stress falls on 'fie-', which contains the stem vowel."
+        },
+        {
+          "sentence": "Nosotros pensamos que es una buena idea.",
+          "question": "Why is 'pensamos' NOT 'piensamos'?",
+          "options": [
+            "In nosotros form, the stress falls on the ending (-amos), not the stem, so no change occurs",
+            "Pensar is regular in all nosotros forms",
+            "The stem change only applies to singular forms",
+            "Nosotros always uses the infinitive stem"
+          ],
+          "correct": 0,
+          "feedback": "The stress in 'pensamos' falls on '-a-' of the ending. When the stressed syllable is not in the stem, no vowel change happens."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿A qué hora ___ (cerrar) el banco hoy?",
+          "answer": "cierra",
+          "accepted": [
+            "cierra"
+          ],
+          "feedback_why": "Third person singular of 'cerrar': stress falls on the stem 'e', which changes to 'ie' → cierra.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Yo ___ (entender) un poco de italiano.",
+          "answer": "entiendo",
+          "accepted": [
+            "entiendo"
+          ],
+          "feedback_why": "First person singular of 'entender': en-TIEN-do. The stem 'e' changes to 'ie' under stress.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ (preferir) quedarnos en casa.",
+          "answer": "preferimos",
+          "accepted": [
+            "preferimos"
+          ],
+          "feedback_why": "Nosotros form does NOT change the stem: pre-fe-RI-mos. Stress is on the ending, not the stem.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Stem-changing verbs — e→ie"
+    },
+    {
+      "id": "futuro_simple",
+      "category": "future",
+      "level": "B2",
+      "title": "Simple Future — Plans and predictions",
+      "title_es": "Futuro simple — Planes y predicciones",
+      "explanation": "The **simple future** tense expresses what will happen, predictions, and promises. Unlike English, Spanish forms the future by adding endings directly to the **infinitive** (no auxiliary needed). Endings are the same for -ar, -er, -ir: **-é, -ás, -á, -emos, -éis, -án**. Irregular stems (common ones): **tener → tendr-**, **poder → podr-**, **querer → querr-**, **venir → vendr-**, **salir → saldr-**, **decir → dir-**, **hacer → har-**, **haber → habr-**. The future is also used to express probability in the present: *¿Dónde estará Juan?* (I wonder where Juan is).",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "El informe **estará** listo para el viernes. Lo **terminaré** esta tarde.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿**Podrás** enviármelo antes del mediodía? **Tendré** una reunión a las dos.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, te lo **mandaré** por correo. Y si hay cambios, te **avisaré** de inmediato.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Perfecto. Con los nuevos datos, el proyecto **saldrá** adelante seguro.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Compare 'terminaré' and 'tendrá'. Why does one add the ending to the full infinitive while the other uses a shortened stem?",
+          "placeholder": "e.g. 'terminar' is regular, but 'tener' has an irregular stem..."
+        },
+        {
+          "q": "'El informe estará listo' — is this a firm plan, a prediction, or a promise? How does context help you decide?",
+          "placeholder": "e.g. it functions as a prediction/promise because..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Mañana lloverá en toda la región.",
+          "question": "What is the infinitive form and stem used to form 'lloverá'?",
+          "options": [
+            "Infinitive 'llover' — regular future stem 'llover-' + -á",
+            "Infinitive 'lluviar' — irregular future stem",
+            "Infinitive 'llover' — the stem changes to 'lluvr-'",
+            "Infinitive 'llover' — uses preterite stem"
+          ],
+          "correct": 0,
+          "feedback": "'Llover' is a regular -er verb in the future tense: keep the full infinitive and add the future ending → lloverá."
+        },
+        {
+          "sentence": "¿Dónde estará mi cartera? La he buscado por todas partes.",
+          "question": "What special function does 'estará' serve here?",
+          "options": [
+            "It expresses probability or speculation in the present — 'I wonder where my wallet is'",
+            "It describes a future event that will happen",
+            "It is a conditional form mistaken for future",
+            "It expresses a command or obligation"
+          ],
+          "correct": 0,
+          "feedback": "The future tense can express present probability: 'Estará en el bolso' = 'It's probably in the bag' / 'I wonder if it's in the bag'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Nosotros ___ (salir) a cenar el sábado.",
+          "answer": "saldremos",
+          "accepted": [
+            "saldremos"
+          ],
+          "feedback_why": "'Salir' has irregular future stem 'saldr-'. Nosotros ending: -emos → saldremos.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ (tú / poder) ayudarme con esto?",
+          "answer": "Podrás",
+          "accepted": [
+            "Podrás",
+            "podrás"
+          ],
+          "feedback_why": "'Poder' → irregular future stem 'podr-'. Tú ending: -ás → podrás.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El concierto ___ (empezar) a las nueve en punto.",
+          "answer": "empezará",
+          "accepted": [
+            "empezará"
+          ],
+          "feedback_why": "'Empezar' is regular in the future: infinitive 'empezar-' + -á = empezará.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "theater",
+        "music"
+      ],
+      "title_en": "Simple Future — Plans and predictions"
+    },
+    {
+      "id": "condicional_simple",
+      "category": "conditional",
+      "level": "B2",
+      "title": "Conditional — Hypothetical situations",
+      "title_es": "Condicional simple — Situaciones hipotéticas",
+      "explanation": "The **conditional** tense expresses what **would** happen, polite requests, and hypothetical scenarios. It uses the same stems as the simple future (including irregulars), but with imperfect-style endings: **-ía, -ías, -ía, -íamos, -íais, -ían**. Key uses: (1) Hypothetical: *Si tuviera dinero, viajaría.* (2) Polite requests: *¿Podrías ayudarme?* (3) Probability in the past: *Serían las diez cuando llegó.* (4) Reported speech future: *Dijo que vendría.*",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "Si pudiera, **viviría** en España. **Comería** paella cada semana.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Y **trabajarías** allí también, o solo **estarías** de vacaciones permanentes?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Buscaría** trabajo en alguna empresa internacional. **Hablaría** español todo el día.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Suena bien. Yo también **querría** ir, pero no **podría** dejar mi trabajo ahora mismo.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Look at 'viviría', 'comería', and 'buscaría'. What do they all have in common structurally?",
+          "placeholder": "e.g. they all use the infinitive stem + ending..."
+        },
+        {
+          "q": "Compare 'vivirá' (future) and 'viviría' (conditional). How do they differ in meaning and ending?",
+          "placeholder": "e.g. future = will, conditional = would; ending differs..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Podrías pasarme la sal, por favor?",
+          "question": "What function does 'podrías' serve here?",
+          "options": [
+            "A polite request — using conditional softens the demand",
+            "A prediction about what you will be able to do",
+            "A hypothetical condition in an if-clause",
+            "A probability statement about the past"
+          ],
+          "correct": 0,
+          "feedback": "Conditional makes requests more polite: '¿Podrías…?' (Could you…?) is softer than '¿Puedes…?' (Can you…?)."
+        },
+        {
+          "sentence": "Dijo que llegaría antes de las ocho.",
+          "question": "Why is 'llegaría' (conditional) used instead of 'llegará' (future)?",
+          "options": [
+            "Because it reports what someone said they would do — future-in-the-past in reported speech",
+            "Because the action is hypothetical and may not happen",
+            "Because 'dijo' requires a conditional in the subordinate clause",
+            "Because llegará only works in direct speech"
+          ],
+          "correct": 0,
+          "feedback": "When reporting speech ('dijo que…'), a future idea becomes conditional: 'Llegaré' (direct) → 'dijo que llegaría' (reported)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Con más tiempo libre, yo ___ (aprender) a tocar la guitarra.",
+          "answer": "aprendería",
+          "accepted": [
+            "aprendería"
+          ],
+          "feedback_why": "Regular -er verb: 'aprender-' + conditional ending '-ía' = aprendería.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ (ustedes / poder) enviarme la factura por correo?",
+          "answer": "Podrían",
+          "accepted": [
+            "Podrían",
+            "podrían"
+          ],
+          "feedback_why": "'Poder' → irregular conditional stem 'podr-'. Ustedes ending: -ían → Podrían.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella dijo que ___ (venir) a la fiesta.",
+          "answer": "vendría",
+          "accepted": [
+            "vendría"
+          ],
+          "feedback_why": "Reported speech: 'Vendré' becomes 'vendría'. 'Venir' → irregular conditional stem 'vendr-' + -ía.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Conditional — Hypothetical situations"
+    },
+    {
+      "id": "preterito_perfecto",
+      "category": "perfect_tenses",
+      "level": "B2",
+      "title": "Present Perfect — Recent past with haber",
+      "title_es": "Pretérito perfecto — Pasado reciente con haber",
+      "explanation": "The **pretérito perfecto** combines the present tense of **haber** (he, has, ha, hemos, han) + the **past participle** (-ado for -ar verbs, -ido for -er/-ir verbs). It expresses actions connected to the present: recently completed events, life experiences, or actions within an uncompleted time period (hoy, esta semana, este año, ya, nunca, todavía). Key irregular participles: **visto** (ver), **hecho** (hacer), **dicho** (decir), **escrito** (escribir), **abierto** (abrir), **vuelto** (volver), **roto** (romper), **puesto** (poner), **muerto** (morir). *(Note: In most of Latin America, the preterite is preferred even for recently completed actions — 'Esta mañana tomé café.' The pretérito perfecto is more typical of Spain for recent events.)*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿**Has probado** alguna vez el ceviche? Yo lo **he comido** dos veces este mes.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "No, nunca lo **he probado**. Pero **he oído** que es delicioso.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¡Tienes que ir! El restaurante nuevo **ha abierto** esta semana y ya **he hecho** una reserva.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¡Qué bien! ¿Les **has dicho** a los demás? Todavía no **he visto** a nadie hoy.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What two components make up the pretérito perfecto? Find an example from the dialogue for each component.",
+          "placeholder": "e.g. auxiliary 'haber' conjugated + past participle..."
+        },
+        {
+          "q": "What time expressions in the dialogue signal that pretérito perfecto (not preterite) is being used?",
+          "placeholder": "e.g. 'este mes', 'todavía', 'nunca'..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Nunca he visitado Australia.",
+          "question": "Why is pretérito perfecto used and not simple preterite?",
+          "options": [
+            "Because it expresses a life experience (up to now) — the time period extends to the present",
+            "Because 'nunca' always requires pretérito perfecto",
+            "Because visiting Australia is a recent event",
+            "Because the action is still happening"
+          ],
+          "correct": 0,
+          "feedback": "'Nunca he visitado' describes an experience (or lack of it) from your whole life up to this moment. The pretérite 'No visité Australia' would imply a specific past trip that didn't happen at a defined time."
+        },
+        {
+          "sentence": "Esta mañana he tomado café con leche.",
+          "question": "Why is pretérito perfecto appropriate here?",
+          "options": [
+            "Because 'esta mañana' is an uncompleted time period — the morning may still be going on",
+            "Because drinking coffee is always a recent action",
+            "Because 'café' requires pretérito perfecto",
+            "Because the action happened exactly one time"
+          ],
+          "correct": 0,
+          "feedback": "'Esta mañana' (this morning) is a time period that includes the present moment. In Spain, pretérito perfecto is used for actions within still-current time periods."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿Ya ___ (tú / hacer) los deberes?",
+          "answer": "has hecho",
+          "accepted": [
+            "has hecho"
+          ],
+          "feedback_why": "Present perfect: 'has' (2nd person singular of haber) + 'hecho' (irregular past participle of hacer).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ (escribir) tres informes esta semana.",
+          "answer": "hemos escrito",
+          "accepted": [
+            "hemos escrito"
+          ],
+          "feedback_why": "'Hemos' (nosotros) + 'escrito' (irregular participle of escribir). 'Esta semana' = uncompleted period → pretérito perfecto.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ (ustedes / ver) la nueva serie de Netflix?",
+          "answer": "Han visto",
+          "accepted": [
+            "Han visto",
+            "han visto"
+          ],
+          "feedback_why": "'Han' (ustedes/ellos) + 'visto' (irregular participle of ver).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "movies",
+        "music"
+      ],
+      "title_en": "Present Perfect — Recent past with haber"
+    },
+    {
+      "id": "imperfecto_subjuntivo",
+      "category": "subjunctive",
+      "level": "C1",
+      "title": "Imperfect Subjunctive — Past hypotheticals",
+      "title_es": "Imperfecto de subjuntivo — Hipotéticos pasados",
+      "explanation": "The **imperfect subjunctive** (imperfecto de subjuntivo) is used in subordinate clauses when the main verb is in the past or conditional. It has two equivalent forms: **-ra** form (more common in Latin America and writing) and **-se** form (common in Spain). Formation: take the 3rd person plural preterite → remove **-ron** → add endings: **-ra/-se, -ras/-ses, -ra/-se, -ramos/-semos, -rais/-seis, -ran/-sen**. Key uses: (1) Hypothetical si-clauses: *Si tuviera tiempo, estudiaría más.* (2) Past wishes/doubts: *Quería que vinieras.* (3) Formal or polite requests: *Quisiera un café.*",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "Si **tuviera** más dinero, **compraría** una casa en el campo.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Yo también lo **haría** si **pudiera**. Mis padres querían que yo **estudiara** arquitectura.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿De verdad? ¿Y por qué no lo **hiciste**?",
+          "highlight": false
+        },
+        {
+          "speaker": "MIA",
+          "text": "Era difícil que **encontrara** trabajo en esa área aquí. Necesitaba que la situación **fuera** mejor.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'Si tuviera tiempo, estudiaría más', what is the relationship between the si-clause (imperfect subjunctive) and the main clause (conditional)?",
+          "placeholder": "e.g. the si-clause sets up a hypothetical condition, the conditional expresses..."
+        },
+        {
+          "q": "How do you form 'tuviera'? Start from the preterite of 'tener' and explain each step.",
+          "placeholder": "e.g. tener → preterite 3rd pl. 'tuvieron' → remove -ron → add -ra..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Si tuviéramos más tiempo, terminaríamos el proyecto hoy.",
+          "question": "What tense pair is used and what does it express?",
+          "options": [
+            "Imperfect subjunctive + conditional — a hypothetical/unlikely situation in the present or future",
+            "Present subjunctive + future — a probable condition",
+            "Imperfect subjunctive + imperfect — a past habitual action",
+            "Present indicative + conditional — a likely real condition"
+          ],
+          "correct": 0,
+          "feedback": "Si + imperfect subjunctive + conditional = a hypothetical condition (contrary to present fact or unlikely). It means 'If we had more time (which we don't), we would finish…'"
+        },
+        {
+          "sentence": "El director pedía que los empleados llegaran puntualmente.",
+          "question": "Why is 'llegaran' in the imperfect subjunctive?",
+          "options": [
+            "Because the main verb 'pedía' is in the imperfect — past tense triggers imperfect subjunctive in the subordinate clause",
+            "Because 'llegar' is an irregular verb that always uses subjunctive",
+            "Because 'pedir' always requires imperfect subjunctive",
+            "Because it refers to a habitual action in the past"
+          ],
+          "correct": 0,
+          "feedback": "The rule of 'sequence of tenses': when the main verb is in a past tense (pedía), the subordinate subjunctive must also be past (llegaran)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Si yo ___ (ser) el jefe, cambiaría muchas cosas.",
+          "answer": "fuera",
+          "accepted": [
+            "fuera",
+            "fuese"
+          ],
+          "feedback_why": "Si + imperfect subjunctive: 'ser' → 3rd pl preterite 'fueron' → remove -ron → fuera/fuese. Both forms are accepted.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Quería que tú ___ (venir) a la reunión.",
+          "answer": "vinieras",
+          "accepted": [
+            "vinieras",
+            "vinieses"
+          ],
+          "feedback_why": "'Quería' (past) → subordinate clause uses imperfect subjunctive. 'Venir' → 3rd pl preterite 'vinieron' → remove -ron → viniera. Tú = vinieras.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ (yo / querer) un café con leche, por favor. (polite formal request)",
+          "answer": "Quisiera",
+          "accepted": [
+            "Quisiera",
+            "quisiera"
+          ],
+          "feedback_why": "'Quisiera' (imperfect subjunctive of querer) is a set phrase for polite requests, equivalent to 'I would like'. Very common in formal/service contexts.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Imperfect Subjunctive — Past hypotheticals"
+    },
+    {
+      "id": "voz_pasiva",
+      "category": "passive",
+      "level": "C1",
+      "title": "Passive Voice — ser + participle and se pasiva",
+      "title_es": "Voz pasiva — ser + participio y se pasiva",
+      "explanation": "Spanish has two main passive constructions. (1) **Passive with ser**: subject + **ser** (conjugated for tense) + past participle (agrees in gender/number) + **por** + agent. Example: *El informe fue escrito por la directora.* (2) **Se pasiva**: **se** + 3rd person verb (singular or plural depending on subject). Example: *Se venden apartamentos.* The se-pasiva is more common in everyday speech when the agent is unknown or unimportant. The ser-passive is more formal and common in written language.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "¿Saben que el nuevo parque **fue inaugurado** ayer por el alcalde?",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, lo vi en las noticias. También **se anunciaron** nuevas rutas de metro.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "En este barrio **se construyen** muchos edificios últimamente. **Se espera** que los precios suban.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "La nueva ley **fue aprobada** por el parlamento la semana pasada. Todo **se está cambiando** muy rápido.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Compare 'fue inaugurado por el alcalde' and 'se anunciaron nuevas rutas'. What information does each structure include or omit?",
+          "placeholder": "e.g. the ser-passive includes the agent 'por', while se-pasiva..."
+        },
+        {
+          "q": "In 'Se construyen muchos edificios', why is the verb plural? What is the grammatical subject?",
+          "placeholder": "e.g. the subject is 'muchos edificios' which is plural, so..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "El contrato fue firmado por ambas partes.",
+          "question": "What is the structure of this passive sentence?",
+          "options": [
+            "Subject 'El contrato' + ser (past) + past participle 'firmado' + agent 'por ambas partes'",
+            "Subject 'ambas partes' + ser (past) + past participle + destination",
+            "Reflexive se + verb in passive form + agent",
+            "Impersonal se + verb + indirect object"
+          ],
+          "correct": 0,
+          "feedback": "'El contrato' is the subject (what was signed); 'fue' is ser in preterite; 'firmado' agrees with 'el contrato' (masculine singular); 'por ambas partes' names the agent."
+        },
+        {
+          "sentence": "Se habla español en más de 20 países.",
+          "question": "Why is 'habla' singular here?",
+          "options": [
+            "Because 'español' (the grammatical subject in se-pasiva) is singular",
+            "Because 'se' is always singular",
+            "Because the verb is impersonal and never changes",
+            "Because países is the indirect object, not the subject"
+          ],
+          "correct": 0,
+          "feedback": "In se-pasiva, the verb agrees with the grammatical subject. 'Español' is singular → 'se habla'. If it were 'Se hablan varios idiomas', 'idiomas' (plural) would require 'hablan'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Los documentos ___ (preparar) por el equipo legal.",
+          "answer": "fueron preparados",
+          "accepted": [
+            "fueron preparados"
+          ],
+          "feedback_why": "Ser-passive: 'fueron' (preterite of ser, 3rd pl) + 'preparados' (participle, masculine plural to agree with 'los documentos').",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ alquilan apartamentos en esta zona.",
+          "answer": "Se",
+          "accepted": [
+            "Se",
+            "se"
+          ],
+          "feedback_why": "Se-pasiva: 'Se alquilan apartamentos' = 'Apartments are rented / Apartments for rent'. 'Alquilan' is plural because 'apartamentos' is the subject.",
+          "contrast": ""
+        },
+        {
+          "sentence": "La novela ___ (escribir) en solo tres semanas por la autora.",
+          "answer": "fue escrita",
+          "accepted": [
+            "fue escrita"
+          ],
+          "feedback_why": "Ser-passive: 'fue' (singular, for 'la novela') + 'escrita' (feminine to agree with 'la novela').",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Passive Voice — ser + participle and se pasiva"
+    },
+    {
+      "id": "clausulas_relativo",
+      "category": "relative_clauses",
+      "level": "C1",
+      "title": "Relative Clauses — que, quien, el que, cuyo",
+      "title_es": "Cláusulas de relativo — que, quien, el que, cuyo",
+      "explanation": "Relative clauses modify a noun (the antecedent). Key pronouns: **que** — most common, for people and things; **quien/quienes** — only for people, usually in non-restrictive clauses or after prepositions; **el que / la que / los que / las que** — when you need gender/number agreement or after prepositions; **lo que** — refers to an idea or clause, not a noun; **cuyo/a/os/as** — possessive relative (whose), agrees with the noun it modifies, not the owner. Restrictive clauses (no comma) vs non-restrictive clauses (with comma, adds extra info).",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "El colega **con quien** trabajo es el **que** más sabe de finanzas.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "¿Es el chico **cuyo** padre trabaja en el banco? Le conocí en la conferencia.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Sí, exacto. **Lo que** más me impresiona es su capacidad de análisis.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "La empresa para **la que** trabajan tiene muy buena reputación, **lo que** es importante.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Why is 'quien' used in 'el colega con quien trabajo' instead of 'que'?",
+          "placeholder": "e.g. after prepositions (con, de, para...) with people, 'quien' is preferred over..."
+        },
+        {
+          "q": "In 'cuyo padre trabaja', why is it 'cuyo' and not 'cuyos' or 'cuya'?",
+          "placeholder": "e.g. 'cuyo' agrees with the noun it modifies, which is 'padre' = masculine singular..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "La empresa para la que trabajo tiene 500 empleados.",
+          "question": "Why is 'la que' used instead of just 'que'?",
+          "options": [
+            "Because 'para' (a preposition) requires a pronoun with an article; 'que' alone cannot follow prepositions",
+            "Because 'empresa' is feminine and requires a feminine relative pronoun",
+            "Because 'la que' always replaces 'que' in formal writing",
+            "Because 'para que' has a different meaning (purpose clause)"
+          ],
+          "correct": 0,
+          "feedback": "After prepositions (para, con, de, en…), you need 'el/la que' or 'quien' instead of bare 'que'. 'Para que' would mean 'so that' (purpose), which changes the meaning entirely."
+        },
+        {
+          "sentence": "Lo que dijiste ayer me hizo pensar mucho.",
+          "question": "What does 'lo que' refer to?",
+          "options": [
+            "The whole idea or thing that you said — referring to an action/concept rather than a specific noun",
+            "A masculine singular noun mentioned previously",
+            "The person who said something",
+            "The time when you said something"
+          ],
+          "correct": 0,
+          "feedback": "'Lo que' = 'what' / 'that which'. It refers to an abstract idea or action, not a specific noun. It is neuter and invariable."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "La persona ___ te recomendé es experta en marketing.",
+          "answer": "que",
+          "accepted": [
+            "que"
+          ],
+          "feedback_why": "'Que' is the standard relative pronoun for people when there is no preposition. Restrictive clause (no comma).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Es una empresa ___ empleados trabajan en más de 30 países.",
+          "answer": "cuyos",
+          "accepted": [
+            "cuyos"
+          ],
+          "feedback_why": "'Cuyo/a/os/as' expresses possession. Agrees with 'empleados' (masculine plural) → cuyos.",
+          "contrast": ""
+        },
+        {
+          "sentence": "No entiendo ___ quieres decir con eso.",
+          "answer": "lo que",
+          "accepted": [
+            "lo que"
+          ],
+          "feedback_why": "'Lo que' = 'what' referring to an abstract concept or idea, not a specific noun.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Relative Clauses — que, quien, el que, cuyo"
+    },
+    {
+      "id": "pluscuamperfecto",
+      "category": "perfect_tenses",
+      "level": "C1",
+      "title": "Pluperfect — The past before the past",
+      "title_es": "Pluscuamperfecto — El pasado anterior al pasado",
+      "explanation": "The **pluperfect** (pluscuamperfecto) expresses an action that was completed **before another past action**. It is formed with the imperfect of **haber** (había, habías, había, habíamos, habíais, habían) + the **past participle**. It corresponds to English 'had done'. Common use: narrating past events in sequence, explaining background by the time something else happened, and in subordinate clauses after 'cuando', 'después de que', 'como', 'porque' etc. with past context.",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Cuando llegué a la fiesta, la mayoría de la gente ya **se había marchado**.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿De verdad? Yo creía que **habías dicho** que empezaba a las nueve.",
+          "highlight": false
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, pero se retrasó. Para cuando me avisaron, ya **había perdido** el autobús.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Qué mala suerte. ¿Y la comida? ¿**Habían** ya **terminado** todo?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'cuando llegué, ya se había marchado' — which action happened first? How does the pluperfect mark this sequence?",
+          "placeholder": "e.g. 'había marchado' happened before 'llegué' because..."
+        },
+        {
+          "q": "What are the two components of 'había perdido'? What tense is each?",
+          "placeholder": "e.g. 'había' is imperfect of haber + 'perdido' is past participle of..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Cuando llegué al aeropuerto, el avión ya había despegado.",
+          "question": "Which event happened first — arriving at the airport or the plane departing?",
+          "options": [
+            "The plane departing — pluperfect signals it was already completed before arrival",
+            "Arriving at the airport — simple past always precedes pluperfect",
+            "Both happened at the same time — 'ya' signals simultaneity",
+            "Arriving at the airport — it was the cause of the plane's departure"
+          ],
+          "correct": 0,
+          "feedback": "Pluperfect = past before the past. 'Había despegado' (pluperfect) → happened before 'llegué' (simple past). The plane had already taken off when you arrived."
+        },
+        {
+          "sentence": "No había dormido bien porque había tomado demasiado café.",
+          "question": "What sequence of events does this sentence describe?",
+          "options": [
+            "Drinking too much coffee (first) → not sleeping well (second, later in the past)",
+            "Not sleeping well (first) → drinking coffee as a result",
+            "Both actions happening at the same time",
+            "A hypothetical situation that did not happen"
+          ],
+          "correct": 0,
+          "feedback": "Both verbs are in the pluperfect, giving them the same relative time level — they are both background past. The causal relationship (porque) tells us the coffee came first logically."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Cuando llamé, ya ___ (salir / ella).",
+          "answer": "había salido",
+          "accepted": [
+            "había salido"
+          ],
+          "feedback_why": "Pluperfect: 'había' (3rd singular of haber imperfect) + 'salido' (past participle of salir). She had already left when you called.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nos fuimos a casa porque ___ (terminar / el concierto).",
+          "answer": "había terminado",
+          "accepted": [
+            "había terminado"
+          ],
+          "feedback_why": "The concert ending happened before they left. Pluperfect: 'había terminado'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ (tú / ver) esa película antes de ayer?",
+          "answer": "Habías visto",
+          "accepted": [
+            "Habías visto",
+            "habías visto"
+          ],
+          "feedback_why": "'Habías' (imperfect of haber, 2nd singular) + 'visto' (irregular participle of ver).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "movies"
+      ],
+      "title_en": "Pluperfect — The past before the past"
+    },
+    {
+      "id": "futuro_perfecto",
+      "category": "perfect_tenses",
+      "level": "C2",
+      "title": "Future Perfect — Completed future actions",
+      "title_es": "Futuro perfecto — Acciones futuras completadas",
+      "explanation": "The **futuro perfecto** expresses an action that **will have been completed** by a certain point in the future, or it expresses **probability about the past**. Formed with: future of **haber** (habré, habrás, habrá, habremos, habréis, habrán) + **past participle**. Uses: (1) Action before a future reference: *Para el lunes, habré terminado el informe.* (2) Probable past: *Habrá salido ya.* (It has probably already left.) This dual use — future completion and past speculation — makes it a sophisticated tense.",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "Para fin de año, **habremos completado** los tres proyectos.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Espero que sí. Para entonces yo ya **habré acabado** el máster.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "¿No ha llegado todavía Ana? **Habrá** tenido algún problema en el metro.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, o **habrá** olvidado la reunión. Eso también le **habrá pasado** antes.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'Para fin de año, habremos completado', what does 'para fin de año' tell us about the temporal relationship between the future perfect action and the reference point?",
+          "placeholder": "e.g. 'para' sets a deadline — the action will be completed before or by..."
+        },
+        {
+          "q": "'Habrá tenido algún problema' — does this refer to something in the future or the past? How can you tell?",
+          "placeholder": "e.g. it refers to a present/past probability because the speaker is speculating about why..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Para cuando llegues, ya habremos comido.",
+          "question": "What two future events are described and which comes first?",
+          "options": [
+            "Eating comes first (habremos comido), then your arrival (llegues) — we will have already eaten by the time you arrive",
+            "Your arrival comes first, then eating",
+            "Both happen at the same time in the future",
+            "Eating is a hypothesis that depends on whether you arrive"
+          ],
+          "correct": 0,
+          "feedback": "Future perfect establishes a sequence: 'habremos comido' will be completed before 'llegues'. The present subjunctive 'llegues' is used in subordinate temporal clauses about the future."
+        },
+        {
+          "sentence": "No contesta. Habrá salido a comer.",
+          "question": "What function does 'habrá salido' serve here?",
+          "options": [
+            "Speculation about a past or present action — 'She has probably gone out to eat'",
+            "A definite prediction about the future",
+            "A conditional statement about eating",
+            "A command or obligation to go out"
+          ],
+          "correct": 0,
+          "feedback": "When future perfect is used without a future time reference, it expresses probability about the past or present: 'Habrá salido' = 'She's probably/must have gone out'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Para el próximo lunes, nosotros ___ (entregar) todos los documentos.",
+          "answer": "habremos entregado",
+          "accepted": [
+            "habremos entregado"
+          ],
+          "feedback_why": "Future perfect: 'habremos' (nosotros, future of haber) + 'entregado' (past participle of entregar).",
+          "contrast": ""
+        },
+        {
+          "sentence": "No encuentro las llaves. Las ___ (dejar / yo) en la oficina.",
+          "answer": "habré dejado",
+          "accepted": [
+            "habré dejado"
+          ],
+          "feedback_why": "Future perfect for past probability: 'habré dejado' = 'I must have left them / I've probably left them' at the office.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Cuántos libros ___ (leer / él) para el final del año?",
+          "answer": "habrá leído",
+          "accepted": [
+            "habrá leído"
+          ],
+          "feedback_why": "'Habrá' (3rd singular, future of haber) + 'leído' (past participle of leer, with written accent).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Future Perfect — Completed future actions"
+    },
+    {
+      "id": "subjuntivo_avanzado",
+      "category": "subjunctive",
+      "level": "C2",
+      "title": "Advanced Subjunctive — Sequence and nuance",
+      "title_es": "Subjuntivo avanzado — Concordancia y matices",
+      "explanation": "At C2 level, the subjunctive is used across all tenses with precision. Key advanced patterns: (1) **Concordancia de tiempos** (sequence of tenses): main clause tense determines which subjunctive tense follows — present/future → present subjunctive; past/conditional → imperfect subjunctive; perfect → perfect subjunctive. (2) **Subjuntivo en relativas**: with indefinite or negative antecedents — *Busco a alguien que hable chino.* (3) **Aunque + subjunctive** for hypothetical concession vs. indicative for known facts. (4) **Por + adj/adv + que + subjunctive**: *Por mucho que insistas, no cambiaré de opinión.*",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Necesitamos un candidato que **tenga** experiencia internacional y que **hable** tres idiomas.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**Aunque sea** difícil de encontrar, no vamos a bajar el listón. Por mucho que **cueste**, vale la pena.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Ojalá **hayamos tomado** la decisión correcta con el candidato anterior.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "Buscaremos hasta que **encontremos** a la persona idónea, **aunque nos lleve** meses.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'Busco a alguien que hable chino', why is 'hable' in the subjunctive? How would the meaning change if you used 'habla'?",
+          "placeholder": "e.g. subjunctive here because the person is hypothetical/unknown; indicative would mean..."
+        },
+        {
+          "q": "Compare 'aunque sea difícil' and 'aunque es difícil'. What is the difference in what the speaker assumes?",
+          "placeholder": "e.g. 'sea' (subjunctive) = I'm not sure it is; 'es' (indicative) = I know it is..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Quiero un apartamento que tenga terraza.",
+          "question": "Why is 'tenga' in the subjunctive?",
+          "options": [
+            "Because the apartment is hypothetical — no specific apartment has been identified yet",
+            "Because 'querer' always requires subjunctive",
+            "Because 'apartamento' is an indefinite noun",
+            "Because 'terraza' triggers subjunctive in subordinate clauses"
+          ],
+          "correct": 0,
+          "feedback": "When the antecedent is unknown/non-existent, use the subjunctive in the relative clause. You are describing desired characteristics, not a specific identified apartment."
+        },
+        {
+          "sentence": "Por más que estudies, si no descansas, no rendirás bien.",
+          "question": "What does 'por más que + subjunctive' express?",
+          "options": [
+            "A concessive clause — no matter how much you study, the result is still the same",
+            "A condition — if you study more, you will do well",
+            "A purpose clause — you study so that you can do well",
+            "A temporal clause — as you are studying more"
+          ],
+          "correct": 0,
+          "feedback": "'Por más que + subjunctive' = 'no matter how much'. It concedes the effort but denies that it changes the outcome. Equivalent patterns: por mucho que, por bien que, por más que."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Buscan empleados que ___ (tener) al menos cinco años de experiencia.",
+          "answer": "tengan",
+          "accepted": [
+            "tengan"
+          ],
+          "feedback_why": "Subjunctive in relative clause with indefinite antecedent: 'empleados que tengan...' — no specific employees identified yet.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Esperaba que ellos ___ (llegar) antes de la cena.",
+          "answer": "llegaran",
+          "accepted": [
+            "llegaran",
+            "llegasen"
+          ],
+          "feedback_why": "Sequence of tenses: 'esperaba' (imperfect) → imperfect subjunctive 'llegaran/llegasen'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ mucho que lo intentes, no podrás convencerle.",
+          "answer": "Por más",
+          "accepted": [
+            "Por más",
+            "Por mucho"
+          ],
+          "feedback_why": "'Por más/mucho que + subjunctive' = no matter how much. Fixed concessive structure.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Advanced Subjunctive — Sequence and nuance"
+    },
+    {
+      "id": "marcadores_discursivos",
+      "category": "advanced_discourse",
+      "level": "C2",
+      "title": "Discourse Markers — Connecting ideas in speech and writing",
+      "title_es": "Marcadores del discurso — Conectar ideas al hablar y escribir",
+      "explanation": "**Discourse markers** (marcadores del discurso) are words and phrases that organize, connect, and signal relationships between ideas. They work at the text level, not the sentence level. Key categories: **Addition**: además, asimismo, incluso, por añadidura. **Contrast**: sin embargo, no obstante, aunque, si bien, ahora bien, a pesar de (que). **Cause**: puesto que, dado que, ya que (explaining), debido a. **Consequence**: por lo tanto, por consiguiente, en consecuencia, de ahí que (+subj). **Reformulation**: es decir, o sea, en otras palabras, a saber. **Ordering**: en primer lugar, por un lado…por otro, finalmente, en definitiva. Register matters: 'sin embargo' and 'no obstante' are formal equivalents of 'pero'.",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "El proyecto tiene ventajas evidentes. **Sin embargo**, los costes son elevados. **Además**, el plazo es muy ajustado.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "**Dado que** los inversores ya han comprometido fondos, no podemos retirarnos. **Por consiguiente**, debemos seguir adelante.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "**En otras palabras**, no tenemos alternativa. **No obstante**, podríamos renegociar los plazos.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "**En definitiva**, la decisión es arriesgada pero necesaria. **De ahí que** el equipo esté tan preocupado.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "What is the difference between 'pero', 'sin embargo', and 'no obstante'? Can they always be substituted for each other?",
+          "placeholder": "e.g. 'pero' is informal, 'sin embargo' is formal; 'sin embargo' usually starts a new sentence while 'pero' connects within..."
+        },
+        {
+          "q": "Notice 'de ahí que el equipo esté'. Why is 'esté' in the subjunctive after 'de ahí que'?",
+          "placeholder": "e.g. 'de ahí que' expresses consequence and always triggers..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "No teníamos presupuesto. Por lo tanto, cancelamos el viaje.",
+          "question": "What logical relationship does 'por lo tanto' express?",
+          "options": [
+            "Consequence — the cancellation is the result of the budget problem",
+            "Contrast — despite the budget, they cancelled",
+            "Addition — an extra piece of information",
+            "Condition — if there is no budget, then they will cancel"
+          ],
+          "correct": 0,
+          "feedback": "'Por lo tanto' / 'por consiguiente' / 'en consecuencia' all express logical consequence. The first clause is the cause, the second is the result."
+        },
+        {
+          "sentence": "Puesto que ya conoces la situación, no hace falta explicarlo.",
+          "question": "What does 'puesto que' express?",
+          "options": [
+            "Cause/reason — since/because you already know the situation",
+            "Condition — if you know the situation",
+            "Contrast — although you know the situation",
+            "Concession — even though you know the situation"
+          ],
+          "correct": 0,
+          "feedback": "'Puesto que', 'dado que', 'ya que' all introduce a cause or reason (more formal than 'porque'). They present the reason as already known or obvious."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "La propuesta es interesante, ___ tiene varios puntos débiles.",
+          "answer": "sin embargo",
+          "accepted": [
+            "sin embargo",
+            "no obstante"
+          ],
+          "feedback_why": "Contrast connector: 'sin embargo' or 'no obstante' introduce a contrasting idea in formal register. Both accepted.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ que la economía mejora, podríamos invertir más.",
+          "answer": "Dado",
+          "accepted": [
+            "Dado",
+            "dado",
+            "Puesto",
+            "puesto"
+          ],
+          "feedback_why": "'Dado que' / 'Puesto que' = since / given that (causal). Formal alternatives to 'porque'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El sistema es complejo, ___ requiere formación especializada.",
+          "answer": "por consiguiente",
+          "accepted": [
+            "por consiguiente",
+            "por lo tanto",
+            "en consecuencia"
+          ],
+          "feedback_why": "Consequence connector. 'Por consiguiente', 'por lo tanto', and 'en consecuencia' all express that what follows is the result.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Discourse Markers — Connecting ideas in speech and writing"
+    },
+    {
+      "id": "estilo_indirecto",
+      "category": "advanced_discourse",
+      "level": "C2",
+      "title": "Reported Speech — Indirect style tense shifts",
+      "title_es": "Estilo indirecto — Cambios de tiempo en el discurso referido",
+      "explanation": "**Reported speech** (estilo indirecto) requires systematic tense shifts when the reporting verb is in the past. Present → imperfect; preterite → pluperfect; future → conditional; present subjunctive → imperfect subjunctive; imperative → imperfect subjunctive. Pronouns, time expressions, and place references also shift: 'ahora' → 'entonces', 'aquí' → 'allí', 'este' → 'ese/aquel', 'mañana' → 'al día siguiente', 'ayer' → 'el día anterior'. When the reporting verb is in the present, tenses do NOT shift.",
+      "context_dialogue": [
+        {
+          "speaker": "DAN",
+          "text": "Ana dijo «Llegaré mañana y traeré los documentos.»",
+          "highlight": false
+        },
+        {
+          "speaker": "MIA",
+          "text": "O sea, Ana dijo que **llegaría** al día siguiente y que **traería** los documentos.",
+          "highlight": true
+        },
+        {
+          "speaker": "DAN",
+          "text": "También nos pidió «**Preparen** la sala de reuniones.»",
+          "highlight": false
+        },
+        {
+          "speaker": "MIA",
+          "text": "Sí, nos pidió que **preparáramos** la sala de reuniones.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "'Llegaré mañana' becomes 'llegaría al día siguiente'. What two changes do you notice?",
+          "placeholder": "e.g. the tense shifts from future to conditional, and 'mañana' becomes..."
+        },
+        {
+          "q": "The imperative 'Preparen' becomes 'que preparáramos'. What tense is used and why?",
+          "placeholder": "e.g. imperfect subjunctive because the reporting verb 'pidió' is in the past, and imperatives become..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Dijo «Estoy cansado.» → Dijo que ___ cansado.",
+          "question": "Which tense replaces the present 'estoy' in reported speech with past reporting verb?",
+          "options": [
+            "Imperfect: 'estaba' — present shifts to imperfect in past reported speech",
+            "Preterite: 'estuvo' — present always shifts to preterite",
+            "Present subjunctive: 'esté' — dijo requires subjunctive",
+            "No change: 'está' — present tense never changes"
+          ],
+          "correct": 0,
+          "feedback": "Present (estoy) → imperfect (estaba) in past reported speech. 'Dijo que estaba cansado.'"
+        },
+        {
+          "sentence": "Prometió «No lo haré.» → Prometió que no lo ___.",
+          "question": "The future 'haré' shifts to which tense in reported speech?",
+          "options": [
+            "Conditional 'haría' — future shifts to conditional in past reported speech",
+            "Imperfect subjunctive 'hiciera' — future always shifts to imperfect subjunctive",
+            "Present 'hará' — the tense does not change",
+            "Pluperfect 'había hecho' — future is already past from the speaker's perspective"
+          ],
+          "correct": 0,
+          "feedback": "Future (haré) → conditional (haría) in past reported speech. 'Prometió que no lo haría.'"
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Dijo «Tengo hambre.» → Dijo que ___ hambre.",
+          "answer": "tenía",
+          "accepted": [
+            "tenía"
+          ],
+          "feedback_why": "Present 'tengo' → imperfect 'tenía' in past reported speech.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nos preguntó «¿Han terminado?» → Nos preguntó si ___ terminado.",
+          "answer": "habíamos",
+          "accepted": [
+            "habíamos"
+          ],
+          "feedback_why": "Present perfect 'han terminado' → pluperfect 'habíamos terminado' in past reported speech. Full answer: 'si habíamos terminado'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Me dijo «Llama mañana.» → Me dijo que ___ al día siguiente.",
+          "answer": "llamara",
+          "accepted": [
+            "llamara",
+            "llamase"
+          ],
+          "feedback_why": "Imperative 'llama' → imperfect subjunctive 'llamara/llamase' in reported speech. 'Mañana' → 'al día siguiente'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [],
+      "title_en": "Reported Speech — Indirect style tense shifts"
+    }
+  ]
+}

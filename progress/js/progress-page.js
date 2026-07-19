@@ -23,11 +23,20 @@ function _pHref(href) { return '../../' + href; }
 document.addEventListener('DOMContentLoaded', async () => {
   renderLangPair();
   renderNotificationSettings();
+  renderBackupSection();
   renderHeroStats();
   renderTopicPrefs();
   renderHeatmap();
   renderMilestones();
   await renderExerciseMatrix();
+
+  // Show backup reminder toast if the user hasn't exported in 30+ days
+  if (typeof AppBackupReminder !== 'undefined' && AppBackupReminder.shouldShow()) {
+    AppBackupReminder.show(function () {
+      var block = document.getElementById('backup-block');
+      if (block) block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 });
 
 // ---- Language Pair ----
@@ -88,7 +97,7 @@ function renderTopicPrefs() {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'prog-bubble' + (saved.has(t.id) ? ' prog-bubble--on' : '');
-    btn.textContent = t.emoji + ' ' + t.label;
+    btn.textContent = t.emoji + ' ' + AppTopics.getLabel(t);
     btn.dataset.id = t.id;
     btn.setAttribute('aria-pressed', saved.has(t.id) ? 'true' : 'false');
     btn.addEventListener('click', () => {
@@ -113,8 +122,30 @@ function renderHeroStats() {
     if (!key.startsWith('_') && Progress.getMastery(key) === 'mastered') masteredCount++;
   });
 
+  // Lessons started: count unique topic×activity combos + grammar rules started
+  let lessonsStarted = 0;
+  if (typeof AppTopics !== 'undefined') {
+    const _PHRASE_PFXS  = { speaking: '', dictation: 'dict_', cloze: 'cloze_', translation: 'trans_', scramble: 'scramble_' };
+    const _VOCAB_PFXS   = { vocabulary: 'vocab_', quiz: 'quiz_' };
+    const seenKeys = Object.keys(cards).filter(function (k) { return !k.startsWith('_') && cards[k] && cards[k].reps > 0; });
+
+    AppTopics.PHRASE_TOPICS.forEach(function (topic) {
+      // Phrase activities: check if any seen card starts with prefix + topicId + '_'
+      Object.values(_PHRASE_PFXS).forEach(function (pfx) {
+        if (seenKeys.some(function (k) { return k.startsWith(pfx + topic.id + '_'); })) lessonsStarted++;
+      });
+      // Word activities: vocab_ and quiz_ use topicId_ prefix too
+      Object.values(_VOCAB_PFXS).forEach(function (pfx) {
+        if (seenKeys.some(function (k) { return k.startsWith(pfx + topic.id + '_'); })) lessonsStarted++;
+      });
+    });
+    // Grammar: each started rule = 1 lesson
+    seenKeys.forEach(function (k) { if (k.startsWith('grammar_')) lessonsStarted++; });
+  }
+
   document.getElementById('stat-streak').textContent   = streak.current;
   document.getElementById('stat-mastered').textContent = masteredCount; // total added later by renderExerciseMatrix
+  document.getElementById('stat-topics').textContent   = lessonsStarted;
   const bestEl = document.getElementById('stat-best-streak');
   if (bestEl && streak.best > streak.current) bestEl.textContent = AppLang.t('streak_best', { n: streak.best });
 }
@@ -170,7 +201,7 @@ async function renderExerciseMatrix() {
   const container = document.getElementById('ex-matrix');
   if (!container || typeof AppPath === 'undefined') return;
 
-  const grammarData = await _fetchJSON('../../shared/json/grammar-rules.json').catch(() => ({ rules: [] }));
+  const grammarData = await AppData.get(AppLangPair.grammarKey()).catch(() => ({ rules: [] }));
   AppPath.setGrammarRules(grammarData.rules || []);
   const grammarRules = grammarData.rules || [];
   const allCards = Progress.getAllCards();
@@ -190,15 +221,19 @@ async function renderExerciseMatrix() {
     if (el) el.textContent = masteredCount + ' / ' + totalCount;
   })();
 
+  function _topicLabel(t) {
+    return AppTopics.getLabel(t);
+  }
+
   const ACT_ORDER = [
-    { id: 'speaking',    emoji: '🎙️', label: 'Pronunciación' },
-    { id: 'dictation',   emoji: '✍️', label: 'Dictado'       },
-    { id: 'vocabulary',  emoji: '📚', label: 'Vocabulario'   },
-    { id: 'cloze',       emoji: '🔤', label: 'Cloze'         },
-    { id: 'translation', emoji: '🔄', label: 'Traducción'    },
-    { id: 'scramble',    emoji: '🧩', label: 'Secuencia'     },
-    { id: 'quiz',        emoji: '🧠', label: 'Quiz'          },
-    { id: 'grammar',     emoji: '📐', label: 'Gramática'     },
+    { id: 'speaking',    emoji: '🎙️', label: AppLang.t('act_speaking')    },
+    { id: 'dictation',   emoji: '✍️', label: AppLang.t('act_dictation')   },
+    { id: 'vocabulary',  emoji: '📚', label: AppLang.t('act_vocabulary')  },
+    { id: 'cloze',       emoji: '🔤', label: AppLang.t('act_cloze')       },
+    { id: 'translation', emoji: '🔄', label: AppLang.t('act_translation') },
+    { id: 'scramble',    emoji: '🧩', label: AppLang.t('act_scramble')    },
+    { id: 'quiz',        emoji: '🧠', label: AppLang.t('act_quiz')        },
+    { id: 'grammar',     emoji: '📐', label: AppLang.t('act_grammar')     },
   ];
 
   container.innerHTML = '';
@@ -236,7 +271,7 @@ async function renderExerciseMatrix() {
     th.setAttribute('role', 'rowheader');
     th.innerHTML =
       '<span class="ex-grid-topic-emoji" aria-hidden="true">' + topic.emoji + '</span>' +
-      '<span class="ex-grid-topic-name">' + _esc(topic.label) + '</span>';
+      '<span class="ex-grid-topic-name">' + _esc(_topicLabel(topic)) + '</span>';
     row.appendChild(th);
 
     // One cell per activity
@@ -278,9 +313,9 @@ async function renderExerciseMatrix() {
   legend.className = 'ex-acc-legend';
   legend.setAttribute('aria-hidden', 'true');
   [
-    { cls: 'ex-seg--new',      countCls: 'ex-count--n', label: 'Sin iniciar'  },
-    { cls: 'ex-seg--learning', countCls: 'ex-count--l', label: 'En progreso'  },
-    { cls: 'ex-seg--mastered', countCls: 'ex-count--m', label: 'Dominado'     },
+    { cls: 'ex-seg--new',      countCls: 'ex-count--n', label: AppLang.t('progress_legend_unseen')   },
+    { cls: 'ex-seg--learning', countCls: 'ex-count--l', label: AppLang.t('progress_legend_learning') },
+    { cls: 'ex-seg--mastered', countCls: 'ex-count--m', label: AppLang.t('progress_legend_mastered') },
   ].forEach(function (li) {
     const el = document.createElement('div');
     el.className = 'ex-acc-legend-item';
@@ -314,7 +349,7 @@ function renderHeatmap() {
 
     const cell = document.createElement('div');
     cell.className = 'heatmap-cell ' + level;
-    cell.title = dateStr + (count > 0 ? ' — ' + count + ' session' + (count > 1 ? 's' : '') : '');
+    cell.title = dateStr + (count > 0 ? ' — ' + count + ' ' + (count > 1 ? AppLang.t('heatmap_session_plural') : AppLang.t('heatmap_session_singular')) : '');
     container.appendChild(cell);
   }
 }
@@ -330,14 +365,16 @@ function renderMilestones() {
 
   container.innerHTML = '';
   milestones.forEach(m => {
-    const done = achieved.indexOf(m.id) !== -1;
-    const el   = document.createElement('div');
+    const done    = achieved.indexOf(m.id) !== -1;
+    const el      = document.createElement('div');
+    const _mTitle = AppLang.t('milestone_' + m.id + '_title');
+    const _mDesc  = AppLang.t('milestone_' + m.id + '_desc');
     el.className = 'milestone-badge' + (done ? ' milestone-badge--done' : ' milestone-badge--locked');
-    el.setAttribute('aria-label', m.title + (done ? ' — achieved' : ' — locked'));
+    el.setAttribute('aria-label', _mTitle + (done ? ' — achieved' : ' — locked'));
     el.innerHTML =
       '<span class="milestone-badge__emoji">' + (done ? m.emoji : '🔒') + '</span>' +
-      '<span class="milestone-badge__title">' + _esc(m.title) + '</span>' +
-      '<span class="milestone-badge__desc">' + _esc(m.desc) + '</span>';
+      '<span class="milestone-badge__title">' + _esc(_mTitle) + '</span>' +
+      '<span class="milestone-badge__desc">' + _esc(_mDesc) + '</span>';
     container.appendChild(el);
   });
 }
@@ -404,6 +441,114 @@ function renderNotificationSettings() {
   });
 
   updateUI();
+}
+
+// ---- Backup (Export / Import) ----
+
+const _BACKUP_SKIP = new Set(['pe_tts_cached', 'pe_stt_cached', 'pe_last_export']);
+
+function _backupData() {
+  var data = { _exported_at: new Date().toISOString(), _version: 1 };
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+    if (key && key.startsWith('pe_') && !_BACKUP_SKIP.has(key)) {
+      data[key] = localStorage.getItem(key);
+    }
+  }
+  return data;
+}
+
+function _exportProgress() {
+  var json = JSON.stringify(_backupData(), null, 2);
+  var blob = new Blob([json], { type: 'application/json' });
+  var url  = URL.createObjectURL(blob);
+  var a    = document.createElement('a');
+  a.href     = url;
+  a.download = 'practice-english-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  localStorage.setItem('pe_last_export', String(Date.now()));
+  _updateBackupStatus();
+}
+
+function _importProgress(file) {
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    try {
+      var data = JSON.parse(e.target.result);
+      var keys = Object.keys(data).filter(function (k) { return k.startsWith('pe_'); });
+      if (keys.length === 0) throw new Error('no pe_ keys');
+      keys.forEach(function (k) { localStorage.setItem(k, data[k]); });
+      var statusEl = document.getElementById('backup-status');
+      if (statusEl) {
+        statusEl.textContent = AppLang.t('backup_import_success');
+        statusEl.className   = 'backup-status backup-status--ok';
+      }
+      setTimeout(function () { location.reload(); }, 1200);
+    } catch (_) {
+      var statusEl = document.getElementById('backup-status');
+      if (statusEl) {
+        statusEl.textContent = AppLang.t('backup_import_error');
+        statusEl.className   = 'backup-status backup-status--err';
+      }
+    }
+  };
+  reader.readAsText(file);
+}
+
+function _updateBackupStatus() {
+  var statusEl = document.getElementById('backup-status');
+  if (!statusEl) return;
+  var ts = parseInt(localStorage.getItem('pe_last_export') || '0', 10);
+  if (ts) {
+    var date = new Date(ts).toLocaleDateString();
+    statusEl.textContent = AppLang.t('backup_last_export', { date: date });
+    statusEl.className   = 'backup-status backup-status--ok';
+  } else {
+    statusEl.textContent = AppLang.t('backup_never_exported');
+    statusEl.className   = 'backup-status';
+  }
+}
+
+function renderBackupSection() {
+  var exportBtn   = document.getElementById('backup-export-btn');
+  var importInput = document.getElementById('backup-import-input');
+  var importLabel = exportBtn && exportBtn.parentNode && exportBtn.parentNode.querySelector('.backup-btn--import');
+
+  if (exportBtn) {
+    exportBtn.addEventListener('click', _exportProgress);
+  }
+
+  if (importInput) {
+    importInput.addEventListener('change', function () {
+      if (importInput.files && importInput.files[0]) {
+        _importProgress(importInput.files[0]);
+        importInput.value = ''; // reset so same file can be re-selected
+      }
+    });
+  }
+
+  // Allow keyboard activation of the import label (role=button)
+  if (importLabel) {
+    importLabel.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); importInput && importInput.click(); }
+    });
+  }
+
+  // Apply i18n to data-i18n nodes inside the section (nav.js runs later; this ensures immediate render)
+  var block = document.getElementById('backup-block');
+  if (block && typeof AppLang !== 'undefined') {
+    block.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      var v = AppLang.t(k);
+      if (v !== k) el.textContent = v;
+    });
+  }
+
+  _updateBackupStatus();
 }
 
 // ---- Utilities ----

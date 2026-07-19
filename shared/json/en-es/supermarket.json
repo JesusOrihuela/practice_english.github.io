@@ -1,0 +1,814 @@
+{
+  "phrases": [
+    {
+      "id": "supermarket_have_you_made_the_grocery_list",
+      "source": "Have you made the grocery list yet?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Ya hiciste la lista del supermercado?",
+          "audioSlug": "ya_hiciste_la_lista_del_supermercado"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_need_to_buy_milk_bread",
+      "source": "I need to buy milk, bread and eggs.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito comprar leche, pan y huevos.",
+          "audioSlug": "necesito_comprar_leche_pan_y_huevos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_dont_forget_to_buy_fruits_and",
+      "source": "Don't forget to buy fruits and vegetables for the week.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡No te olvides de comprar las frutas y verduras para la semana!",
+          "audioSlug": "no_te_olvides_de_comprar_las_frutas_y_verduras_para_la_semana"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_this_supermarket_is_very_expensive_lets",
+      "source": "This supermarket is very expensive, let's go to another one.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este supermercado está muy caro, vamos a otro.",
+          "audioSlug": "este_supermercado_esta_muy_caro_vamos_a_otro"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_there_is_an_offer_on_the",
+      "source": "There is an offer on the detergent, let's buy two.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay una oferta en el detergente, vamos a comprar dos.",
+          "audioSlug": "hay_una_oferta_en_el_detergente_vamos_a_comprar_dos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_you_help_me_carry_the",
+      "source": "Can you help me carry the grocery bags?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me ayudas a llevar las bolsas del supermercado?",
+          "audioSlug": "me_ayudas_a_llevar_las_bolsas_del_supermercado"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_dont_have_cash_can_i",
+      "source": "I don't have cash, can I pay with a card?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No tengo efectivo, ¿puedo pagar con tarjeta?",
+          "audioSlug": "no_tengo_efectivo_puedo_pagar_con_tarjeta"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_are_the_cookies",
+      "source": "Where are the cookies?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde están las galletas?",
+          "audioSlug": "donde_estan_las_galletas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_cant_find_the_yogurt_brand",
+      "source": "I can't find the yogurt brand I like.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No encuentro la marca de yogurt que me gusta.",
+          "audioSlug": "no_encuentro_la_marca_de_yogurt_que_me_gusta"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_how_much_does_a_kilo_of",
+      "source": "How much does a kilo of meat cost?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto cuesta el kilo de carne?",
+          "audioSlug": "cuanto_cuesta_el_kilo_de_carne"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_cleaning_products_section",
+      "source": "Where is the cleaning products section?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sección de productos de limpieza?",
+          "audioSlug": "donde_esta_la_seccion_de_productos_de_limpieza"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_buy_new_toothbrush",
+      "source": "I need to buy a new toothbrush.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito comprar un nuevo cepillo de dientes.",
+          "audioSlug": "necesito_comprar_un_nuevo_cepillo_de_dientes"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_is_this_product_vegan",
+      "source": "Is this product vegan?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Este producto es vegano?",
+          "audioSlug": "este_producto_es_vegano"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_do_you_know_which_pasta_brand",
+      "source": "Do you know which pasta brand is the best?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Sabes qué marca de pasta es la mejor?",
+          "audioSlug": "sabes_que_marca_de_pasta_es_la_mejor"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_is_there_any_offer_on_cereals",
+      "source": "Is there any offer on cereals?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay alguna oferta en los cereales?",
+          "audioSlug": "hay_alguna_oferta_en_los_cereales"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_there_is_a_long_line_at",
+      "source": "There is a long line at the cash registers.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay mucha fila en las cajas.",
+          "audioSlug": "hay_mucha_fila_en_las_cajas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_you_help_me_reach_that",
+      "source": "Can you help me reach that product on the shelf?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me puedes ayudar a alcanzar ese producto de la estantería?",
+          "audioSlug": "me_puedes_ayudar_a_alcanzar_ese_producto_de_la_estanteria"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_cant_find_an_employee_to",
+      "source": "I can't find an employee to help me.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No puedo encontrar a un empleado para que me ayude.",
+          "audioSlug": "no_puedo_encontrar_a_un_empleado_para_que_me_ayude",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "No puedo encontrar a una empleada para que me ayude.",
+          "audioSlug": "no_puedo_encontrar_a_una_empleada_para_que_me_ayude",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supermarket_what_time_does_the_supermarket_close",
+      "source": "What time does the supermarket close?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué hora cierra el supermercado?",
+          "audioSlug": "a_que_hora_cierra_el_supermercado"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_are_the_shopping_carts",
+      "source": "Where are the shopping carts?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde están los carritos de compra?",
+          "audioSlug": "donde_estan_los_carritos_de_compra"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_is_there_a_bathroom_nearby",
+      "source": "Is there a bathroom nearby?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un baño cerca?",
+          "audioSlug": "hay_un_bano_cerca"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_this_supermarket_has_a_very_useful",
+      "source": "This supermarket has a very useful app.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este supermercado tiene una aplicación muy útil.",
+          "audioSlug": "este_supermercado_tiene_una_aplicacion_muy_util"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_received_a_discount_coupon_in",
+      "source": "I received a discount coupon in my email.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Recibí un cupón de descuento en mi correo electrónico.",
+          "audioSlug": "recibi_un_cupon_de_descuento_en_mi_correo_electronico"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_like_to_use_the_selfservice",
+      "source": "I like to use the self-service to pay for the purchase.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta usar el autoservicio para pagar la compra.",
+          "audioSlug": "me_gusta_usar_el_autoservicio_para_pagar_la_compra"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_dont_like_this_supermarket_its",
+      "source": "I don't like this supermarket, it's very messy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me gusta este supermercado, está muy desordenado.",
+          "audioSlug": "no_me_gusta_este_supermercado_esta_muy_desordenado"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_prefer_to_go_to_the",
+      "source": "I prefer to go to the market, there is more variety of products.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero ir al mercado, hay más variedad de productos.",
+          "audioSlug": "prefiero_ir_al_mercado_hay_mas_variedad_de_productos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_you_have_to_go_to_the",
+      "source": "You have to go to the supermarket earlier to avoid the lines.",
+      "level": "A2",
+      "grammar": "'Hay que + infinitivo' expresa obligación impersonal; no tiene sujeto explícito.",
+      "target": [
+        {
+          "text": "Hay que ir al supermercado más temprano para evitar las colas.",
+          "audioSlug": "hay_que_ir_al_supermercado_mas_temprano_para_evitar_las_colas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_will_need_a_purchase_ticket",
+      "source": "I will need a purchase ticket.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy a necesitar un comprobante de compra.",
+          "audioSlug": "voy_a_necesitar_un_comprobante_de_compra"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_are_these_grapes_organic",
+      "source": "Are these grapes organic?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Estas uvas son orgánicas?",
+          "audioSlug": "estas_uvas_son_organicas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_do_you_have_fresh_chicken",
+      "source": "Do you have fresh chicken?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen pollo fresco?",
+          "audioSlug": "tienen_pollo_fresco"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_dont_know_which_fish_to",
+      "source": "I don't know which fish to buy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No sé qué pescado comprar.",
+          "audioSlug": "no_se_que_pescado_comprar"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_the_strawberries_are_very_expensive",
+      "source": "The strawberries are very expensive.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Las fresas están muy caras.",
+          "audioSlug": "las_fresas_estan_muy_caras"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_im_looking_for_a_cake_for",
+      "source": "I'm looking for a cake for a birthday party.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Busco un pastel para una fiesta de cumpleaños.",
+          "audioSlug": "busco_un_pastel_para_una_fiesta_de_cumpleanos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_you_give_me_the_receipt",
+      "source": "Can you give me the receipt, please?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me puede dar la factura, por favor?",
+          "audioSlug": "me_puede_dar_la_factura_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_glutenfree_products_section",
+      "source": "Where is the gluten-free products section?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sección de productos sin gluten?",
+          "audioSlug": "donde_esta_la_seccion_de_productos_sin_gluten"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_do_you_have_almond_milk",
+      "source": "Do you have almond milk?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen leche de almendras?",
+          "audioSlug": "tienen_leche_de_almendras"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_personal_hygiene_products",
+      "source": "Where is the personal hygiene products section?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sección de productos de higiene personal?",
+          "audioSlug": "donde_esta_la_seccion_de_productos_de_higiene_personal"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_bakery_section",
+      "source": "Where is the bakery section?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde se encuentra la sección de panadería?",
+          "audioSlug": "donde_se_encuentra_la_seccion_de_panaderia"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_you_give_me_a_bag",
+      "source": "Can you give me a bag, please?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me puede dar una bolsa, por favor?",
+          "audioSlug": "me_puede_dar_una_bolsa_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_am_here_to_make_a",
+      "source": "I am here to make a return.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vengo a hacer una devolución.",
+          "audioSlug": "vengo_a_hacer_una_devolucion"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_dont_like_this_supermarket_the",
+      "source": "I don't like this supermarket, the prices are very high.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me gusta este supermercado, los precios son muy altos.",
+          "audioSlug": "no_me_gusta_este_supermercado_los_precios_son_muy_altos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_i_didnt_find_the_product_i",
+      "source": "I didn't find the product I was looking for.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No encontré el producto que buscaba.",
+          "audioSlug": "no_encontre_el_producto_que_buscaba"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_do_you_have_larger_size",
+      "source": "Do you have this product in a larger size?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tiene este producto en un tamaño más grande?",
+          "audioSlug": "tiene_este_producto_en_un_tamano_mas_grande"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_store_brand_less_expensive",
+      "source": "Is there a store brand option that's less expensive?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay una opción de marca propia que sea más económica?",
+          "audioSlug": "hay_una_opcion_de_marca_propia_que_sea_mas_economica"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_speak_to_manager_mislabeled",
+      "source": "I'd like to speak to the manager about this mislabeled product.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría hablar con el gerente sobre este producto mal etiquetado.",
+          "audioSlug": "me_gustaria_hablar_con_el_gerente_sobre_este_producto_mal_etiquetado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Me gustaría hablar con la gerente sobre este producto mal etiquetado.",
+          "audioSlug": "me_gustaria_hablar_con_la_gerente_sobre_este_producto_mal_etiquetado",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_are_gluten_free_products",
+      "source": "Could you tell me where I can find gluten-free products?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me podría decir dónde puedo encontrar los productos sin gluten?",
+          "audioSlug": "me_podria_decir_donde_puedo_encontrar_los_productos_sin_gluten"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_shelf_price_doesnt_match_register",
+      "source": "The shelf price doesn't match what showed up at the register.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El precio del estante no coincide con lo que marca la caja.",
+          "audioSlug": "el_precio_del_estante_no_coincide_con_lo_que_marca_la_caja"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_nut_allergy_processed_facility",
+      "source": "I have a nut allergy. Was this product processed in a nut-handling facility?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo alergia a los frutos secos, ¿este producto se procesó con nueces?",
+          "audioSlug": "tengo_alergia_a_los_frutos_secos_este_producto_se_proceso_con_nueces"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_return_seal_broken_spoiled",
+      "source": "I'd like to return this. The seal was broken and the product has spoiled.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quisiera devolver esto porque el sello estaba roto y el producto se ha estropeado.",
+          "audioSlug": "quisiera_devolver_esto_porque_el_sello_estaba_roto_y_el_producto_se_ha_estropeado"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_check_stockroom_out_of_shelf",
+      "source": "Could you check the stockroom? This has been out of stock for two days.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este producto lleva dos días sin stock, ¿podría revisar el almacén?",
+          "audioSlug": "este_producto_lleva_dos_dias_sin_stock_podria_revisar_el_almacen"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_overcharged_promotional_price_not_applied",
+      "source": "I was overcharged. The promotional price wasn't applied, despite the label.",
+      "level": "B2",
+      "grammar": "'No se aplicó' usa la pasiva refleja; el agente no se menciona.",
+      "target": [
+        {
+          "text": "Me cobraron de más, no se aplicó el precio promocional pese a la etiqueta.",
+          "audioSlug": "me_cobraron_de_mas_no_se_aplico_el_precio_promocional_pese_a_la_etiqueta"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_customer_service_lodge_complaint",
+      "source": "Is there a customer service desk where I can lodge a formal complaint?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un servicio al cliente donde pueda presentar una queja formal?",
+          "audioSlug": "hay_un_servicio_al_cliente_donde_pueda_presentar_una_queja_formal"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_deli_cross_contamination_intolerance",
+      "source": "I'd like to raise a concern about cross-contamination risks in the deli for customers with intolerances.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me preocupa el riesgo de contaminación cruzada en la charcutería para clientes con intolerancias.",
+          "audioSlug": "me_preocupa_el_riesgo_de_contaminacion_cruzada_en_la_charcuteria_para_clientes_con_intolerancias"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_best_before_use_by_mislead",
+      "source": "Your labeling doesn't clearly distinguish between 'best before' and 'use by' dates, which could mislead consumers.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El etiquetado no distingue claramente entre 'consumo preferente' y 'caducidad', lo que confunde a los consumidores.",
+          "audioSlug": "el_etiquetado_no_distingue_claramente_entre_consumo_preferente_y_caducidad_lo_que_confunde_a_los_consumidores"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_sourcing_policy_free_range_certification",
+      "source": "Could I speak with management about your meat sourcing policy, specifically regarding free-range certifications?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo hablar con la gerencia sobre las certificaciones de crianza en libertad de su carne?",
+          "audioSlug": "puedo_hablar_con_la_gerencia_sobre_las_certificaciones_de_crianza_en_libertad_de_su_carne"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_escalate_staff_assurance_not_honored",
+      "source": "Please escalate this. I was assured the promotional price would be honored, but it wasn't.",
+      "level": "C1",
+      "grammar": "'Respetarían' usa el condicional para referir una promesa hecha en el pasado.",
+      "target": [
+        {
+          "text": "Por favor, escale esto, me aseguraron que respetarían el precio promocional, pero no fue así.",
+          "audioSlug": "por_favor_escale_esto_me_aseguraron_que_respetarian_el_precio_promocional_pero_no_fue_asi"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_online_listing_out_of_stock_delivery",
+      "source": "Your site shows this as available, but it's been out all week. When will you restock?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su sitio lo muestra como disponible, pero lleva toda la semana sin stock, ¿cuándo reponen?",
+          "audioSlug": "su_sitio_lo_muestra_como_disponible_pero_lleva_toda_la_semana_sin_stock_cuando_reponen"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_fair_trade_certifications_suppliers",
+      "source": "I'd like to understand your procurement standards for fair-trade products, specifically which third-party certifications you require from suppliers.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué certificaciones de terceros exigen a sus proveedores para los productos de comercio justo?",
+          "audioSlug": "que_certificaciones_de_terceros_exigen_a_sus_proveedores_para_los_productos_de_comercio_justo"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_cold_chain_thaw_refreeze_food_safety",
+      "source": "The cold chain may have been compromised. I see evidence of thawing and refreezing, violating food safety regulations.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cadena de frío puede haberse roto, pues veo señales de descongelación y recongelación que infringen la normativa.",
+          "audioSlug": "la_cadena_de_frio_puede_haberse_roto_pues_veo_senales_de_descongelacion_y_recongelacion_que_infringen_la_normativa"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_traceability_protocols_supply_chain",
+      "source": "Could you provide documentation on the traceability protocols for this product? I'm researching supply chain transparency in retail.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puede facilitar documentación sobre los protocolos de trazabilidad, pues investigo la transparencia en la cadena de suministro?",
+          "audioSlug": "puede_facilitar_documentacion_sobre_los_protocolos_de_trazabilidad_pues_investigo_la_transparencia_en_la_cadena_de_suministro"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_sustainability_report_food_waste_measures",
+      "source": "Your sustainability report targets thirty percent less food waste. What measures are being implemented here?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su informe dice que reducirán el desperdicio alimentario un treinta por ciento, ¿qué medidas aplican aquí?",
+          "audioSlug": "su_informe_dice_que_reduciran_el_desperdicio_alimentario_un_treinta_por_ciento_que_medidas_aplican_aqui"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_food_safety_inspector_temperature_logs",
+      "source": "I'm a food safety inspector here for a routine check. May I review your refrigerated units' temperature logs?",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy inspectora de inocuidad alimentaria, ¿puedo revisar los registros de temperatura de sus unidades refrigeradas?",
+          "audioSlug": "soy_inspectora_de_inocuidad_alimentaria_puedo_revisar_los_registros_de_temperatura_de_sus_unidades_refrigeradas",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Soy inspector de inocuidad alimentaria, ¿puedo revisar los registros de temperatura de sus unidades refrigeradas?",
+          "audioSlug": "soy_inspector_de_inocuidad_alimentaria_puedo_revisar_los_registros_de_temperatura_de_sus_unidades_refrigeradas",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "supermarket_price_match_cheaper_elsewhere",
+      "source": "Do you have a price-match policy? I found this item cheaper at another store.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen política de igualar precios, pues encontré este artículo más barato en otra tienda?",
+          "audioSlug": "tienen_politica_de_igualar_precios_pues_encontre_este_articulo_mas_barato_en_otra_tienda"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_loyalty_program_sign_up",
+      "source": "How do I sign up for the loyalty program? Can I use points immediately?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo me registro en el programa de fidelidad, puedo usar los puntos de inmediato?",
+          "audioSlug": "como_me_registro_en_el_programa_de_fidelidad_puedo_usar_los_puntos_de_inmediato"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_plastic_packaging_concern",
+      "source": "I'm concerned about excessive plastic packaging on your own-brand products. Are there plans to reduce it?",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me preocupa el exceso de plástico en sus productos de marca propia, ¿hay planes para reducirlo?",
+          "audioSlug": "me_preocupa_el_exceso_de_plastico_en_sus_productos_de_marca_propia_hay_planes_para_reducirlo"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,12 @@
       "level": "A2",
       "grammar": "Modal 'need to': necessity or obligation",
       "alternatives": [
-        "Could you show me how to properly use this machine?"
+        {
+          "text": "Could you show me how to properly use this machine?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 93
+        }
       ],
       "translations": {
         "es": "¿Puedes mostrarme cómo usar correctamente esta máquina?"
@@ -27,7 +32,7 @@
       "level": "A2",
       "grammar": null,
       "translations": {
-        "es": "Aumenta la elevación de la caminadora"
+        "es": "Aumenta la inclinación de la caminadora"
       }
     },
     {
@@ -54,7 +59,12 @@
       "level": "A2",
       "grammar": "Modal 'should': advice or recommendation",
       "alternatives": [
-        "Can you demonstrate how to do a squat correctly?"
+        {
+          "text": "Can you demonstrate how to do a squat correctly?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 94
+        }
       ],
       "translations": {
         "es": "¿Podrías demostrarme cómo hacer una sentadilla correctamente?"
@@ -66,7 +76,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could you recommend an appropriate weight to start with?"
+        {
+          "text": "Could you recommend an appropriate weight to start with?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 95
+        }
       ],
       "translations": {
         "es": "¿Puedes recomendarme un peso adecuado para empezar?"
@@ -96,7 +111,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could you give me some tips to improve my technique on this exercise?"
+        {
+          "text": "Could you give me some tips to improve my technique on this exercise?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 96
+        }
       ],
       "translations": {
         "es": "¿Puedes darme algunos consejos para mejorar mi técnica en este ejercicio?"
@@ -117,7 +137,12 @@
       "level": "A2",
       "grammar": "Present perfect: recent action with present relevance",
       "alternatives": [
-        "Can you tell me if I'm doing this exercise correctly?"
+        {
+          "text": "Can you tell me if I'm doing this exercise correctly?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 97
+        }
       ],
       "translations": {
         "es": "¿Podrías decirme si estoy haciendo este ejercicio correctamente?"
@@ -129,16 +154,16 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Hoy es día de pierna"
+        "es": "Hoy entreno piernas"
       }
     },
     {
-      "id": "gym_tomorrow_will_be_arm_day",
+      "id": "gym_tomorrow_is_arm_day",
       "phrase": "Tomorrow will be arm day",
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Mañana tocará fortalecer los brazos"
+        "es": "Mañana entreno brazos"
       }
     },
     {
@@ -147,7 +172,7 @@
       "level": "A2",
       "grammar": "Modal 'can': ability or permission",
       "translations": {
-        "es": "¿Está bien si trabajo con esta máquina después de ti?"
+        "es": "¿Está bien si uso esta máquina después de ti?"
       }
     },
     {
@@ -156,7 +181,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Can you explain the benefits of using weights?"
+        {
+          "text": "Can you explain the benefits of using weights?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 98
+        }
       ],
       "translations": {
         "es": "¿Podrías explicarme los beneficios de usar pesas?"
@@ -204,7 +234,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Can you recommend a stretching routine?"
+        {
+          "text": "Can you recommend a stretching routine?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 99
+        }
       ],
       "translations": {
         "es": "¿Podrías recomendarme una rutina de estiramientos?"
@@ -220,12 +255,17 @@
       }
     },
     {
-      "id": "gym_can_you_show_me_how_to_2",
+      "id": "gym_show_me_how_to_adjust_resistance",
       "phrase": "Can you show me how to adjust the resistance on this machine?",
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could you show me how to adjust the resistance on this machine?"
+        {
+          "text": "Could you show me how to adjust the resistance on this machine?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 100
+        }
       ],
       "translations": {
         "es": "¿Puedes mostrarme cómo ajustar la resistencia en esta máquina?"
@@ -300,7 +340,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Can you demonstrate how to use resistance bands?"
+        {
+          "text": "Can you demonstrate how to use resistance bands?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 101
+        }
       ],
       "translations": {
         "es": "¿Podrías demostrarme cómo usar las bandas de resistencia?"
@@ -348,7 +393,12 @@
       "level": "B1",
       "grammar": null,
       "alternatives": [
-        "Can you help me create a personalized training routine?"
+        {
+          "text": "Can you help me create a personalized training routine?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 102
+        }
       ],
       "translations": {
         "es": "¿Podrías ayudarme a crear una rutina de entrenamiento personalizada?"
@@ -370,6 +420,16 @@
       "grammar": null,
       "translations": {
         "es": "¿Hay algún entrenador personal disponible?"
+      },
+      "translations_alternatives": {
+        "es": [
+          {
+            "text": "¿Hay alguna entrenadora personal disponible?",
+            "type": "gender",
+            "hint": "femenino",
+            "audioIdx": 93
+          }
+        ]
       }
     },
     {
@@ -432,7 +492,17 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "¡Estoy motivado!"
+        "es": "¡Estoy motivada!"
+      },
+      "translations_alternatives": {
+        "es": [
+          {
+            "text": "¡Estoy motivado!",
+            "type": "gender",
+            "hint": "masculino",
+            "audioIdx": 94
+          }
+        ]
       }
     },
     {
@@ -441,7 +511,12 @@
       "level": "B1",
       "grammar": null,
       "alternatives": [
-        "Can you inform me about the membership plans you offer?"
+        {
+          "text": "Can you inform me about the membership plans you offer?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 103
+        }
       ],
       "translations": {
         "es": "¿Me podrían informar sobre los planes de membresía que ofrecen?"
@@ -498,7 +573,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "I'd like to work on leg strength"
+        {
+          "text": "I'd like to work on leg strength",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 104
+        }
       ],
       "translations": {
         "es": "Me gustaría trabajar en la fuerza de piernas"
@@ -510,7 +590,7 @@
       "level": "A2",
       "grammar": "Modal 'could': polite request or possibility",
       "translations": {
-        "es": "Este ejercicio me ayudará a fortalecer los biceps"
+        "es": "Este ejercicio me ayudará a fortalecer los bíceps"
       }
     },
     {
@@ -519,7 +599,7 @@
       "level": "B1",
       "grammar": null,
       "translations": {
-        "es": "Esta rutina está diseñada para trabajar en los triceps"
+        "es": "Esta rutina está diseñada para trabajar en los tríceps"
       }
     },
     {
@@ -618,7 +698,7 @@
       "level": "A2",
       "grammar": null,
       "translations": {
-        "es": "Alimentase de forma saludable para obtener mejores resultados"
+        "es": "Aliméntate de forma saludable para obtener mejores resultados"
       }
     },
     {
@@ -651,105 +731,245 @@
     {
       "id": "gym_shoulder_discomfort_overhead_press",
       "phrase": "I've been experiencing discomfort in my left shoulder whenever I do overhead presses.",
-      "translations": { "es": "He estado sintiendo molestia en el hombro izquierdo cada vez que hago press por encima de la cabeza." },
+      "translations": {
+        "es": "He estado sintiendo molestia en el hombro izquierdo cada vez que hago press por encima de la cabeza."
+      },
       "level": "B2",
       "grammar": "Present perfect continuous: 'I've been experiencing' for a recurring problem ongoing up to now"
     },
     {
       "id": "gym_cable_machine_seated_row",
-      "phrase": "Could you show me how to properly adjust the cable machine for a seated row?",
-      "translations": { "es": "¿Podrías mostrarme cómo ajustar correctamente la máquina de cable para el remo sentado?" },
+      "phrase": "Could you show me how to adjust the cable machine for a seated row?",
+      "translations": {
+        "es": "¿Podrías mostrarme cómo ajustar correctamente la máquina de cable para el remo sentado?"
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "gym_progress_plateaued_modify_program",
-      "phrase": "My progress has plateaued — I think I need to modify my training program.",
-      "translations": { "es": "Mi progreso se ha estancado. Creo que necesito modificar mi programa de entrenamiento." },
+      "phrase": "My progress has plateaued. I think I need to modify my training program.",
+      "translations": {
+        "es": "Mi progreso se ha estancado. Creo que necesito modificar mi programa de entrenamiento."
+      },
       "level": "B2",
       "grammar": "Present perfect: 'has plateaued' — a change that happened recently and is still the current state"
     },
     {
       "id": "gym_hiit_cardiovascular_endurance",
       "phrase": "I've started incorporating HIIT into my weekly routine to improve cardiovascular endurance.",
-      "translations": { "es": "He empezado a incorporar HIIT en mi rutina semanal para mejorar mi resistencia cardiovascular." },
+      "translations": {
+        "es": "He empezado a incorporar HIIT en mi rutina semanal para mejorar mi resistencia cardiovascular."
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "gym_knee_injury_high_impact_avoid",
-      "phrase": "I'm recovering from a knee injury, so I need to avoid any high-impact exercises for now.",
-      "translations": { "es": "Me estoy recuperando de una lesión de rodilla, así que necesito evitar cualquier ejercicio de alto impacto por ahora." },
+      "phrase": "I'm recovering from a knee injury, so I must avoid high-impact exercise for now.",
+      "translations": {
+        "es": "Me estoy recuperando de una lesión de rodilla, así que necesito evitar cualquier ejercicio de alto impacto por ahora."
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "gym_periodization_hypertrophy_strength",
       "phrase": "My coach recommended a periodization approach, alternating between hypertrophy and strength phases.",
-      "translations": { "es": "Mi entrenador me recomendó un enfoque de periodización, alternando entre fases de hipertrofia y de fuerza." },
+      "translations": {
+        "es": "Mi entrenador me recomendó un enfoque de periodización, alternando entre fases de hipertrofia y de fuerza."
+      },
+      "translations_alternatives": {
+        "es": [
+          {
+            "text": "Mi entrenadora me recomendó un enfoque de periodización, alternando entre fases de hipertrofia y de fuerza.",
+            "type": "gender",
+            "hint": "femenino",
+            "audioIdx": 95
+          }
+        ]
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "gym_macronutrients_protein_training_load",
       "phrase": "I've been tracking my macronutrient intake and adjusting my protein consumption based on training load.",
-      "translations": { "es": "He estado rastreando mi ingesta de macronutrientes y ajustando mi consumo de proteínas según la carga de entrenamiento." },
+      "translations": {
+        "es": "He estado rastreando mi ingesta de macronutrientes y ajustando mi consumo de proteínas según la carga de entrenamiento."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "gym_strength_imbalance_dominant_side",
       "phrase": "I'm trying to address a strength imbalance between my dominant and non-dominant side.",
-      "translations": { "es": "Estoy tratando de corregir un desequilibrio de fuerza entre mi lado dominante y el no dominante." },
+      "translations": {
+        "es": "Estoy tratando de corregir un desequilibrio de fuerza entre mi lado dominante y el no dominante."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "gym_overtraining_recovery_as_important",
-      "phrase": "Overtraining can be counterproductive — adequate recovery is just as important as the training itself.",
-      "translations": { "es": "El sobreentrenamiento puede ser contraproducente: la recuperación adecuada es tan importante como el entrenamiento en sí." },
+      "phrase": "Overtraining can be counterproductive, since adequate recovery is just as important as training itself.",
+      "translations": {
+        "es": "El sobreentrenamiento puede ser contraproducente: la recuperación adecuada es tan importante como el entrenamiento en sí."
+      },
       "level": "C1",
       "grammar": "'Just as + adjective + as' for expressing equal importance"
     },
     {
       "id": "gym_progressive_overload_adaptations",
       "phrase": "My training plan uses progressive overload, gradually increasing resistance to continue eliciting adaptations.",
-      "translations": { "es": "Mi plan de entrenamiento usa sobrecarga progresiva, aumentando gradualmente la resistencia para seguir provocando adaptaciones." },
+      "translations": {
+        "es": "Mi plan de entrenamiento usa sobrecarga progresiva, aumentando gradualmente la resistencia para seguir provocando adaptaciones."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "gym_concurrent_training_interference_strength",
       "phrase": "Combining endurance and resistance training may inhibit maximal strength gains through interference effects.",
-      "translations": { "es": "Combinar el entrenamiento de resistencia aeróbica y de fuerza puede inhibir las ganancias máximas de fuerza debido a efectos de interferencia." },
+      "translations": {
+        "es": "Combinar el entrenamiento de resistencia aeróbica y de fuerza puede inhibir las ganancias máximas de fuerza debido a efectos de interferencia."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "gym_blood_flow_restriction_rehabilitation",
       "phrase": "I've been using blood flow restriction training to stimulate hypertrophy at lower intensities during rehabilitation.",
-      "translations": { "es": "He estado usando el entrenamiento con restricción del flujo sanguíneo para estimular la hipertrofia a intensidades más bajas durante la rehabilitación." },
+      "translations": {
+        "es": "He estado usando el entrenamiento con restricción del flujo sanguíneo para estimular la hipertrofia a intensidades más bajas durante la rehabilitación."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "gym_specificity_training_adaptations",
-      "phrase": "The principle of specificity dictates that adaptations are most pronounced when exercises replicate the demands of the target activity.",
-      "translations": { "es": "El principio de especificidad dicta que las adaptaciones son más pronunciadas cuando los ejercicios replican las exigencias de la actividad objetivo." },
+      "phrase": "The principle of specificity dictates that adaptations are most pronounced when exercises replicate the target activity's demands.",
+      "translations": {
+        "es": "El principio de especificidad dicta que las adaptaciones son más pronunciadas cuando los ejercicios replican las exigencias de la actividad objetivo."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "gym_myofascial_release_motor_recruitment",
       "phrase": "Myofascial release can serve as a pre-activation protocol to improve motor recruitment before heavy compound movements.",
-      "translations": { "es": "La liberación miofascial puede servir como protocolo de preactivación para mejorar el reclutamiento motor antes de movimientos compuestos pesados." },
+      "translations": {
+        "es": "La liberación miofascial puede servir como protocolo de preactivación para mejorar el reclutamiento motor antes de movimientos compuestos pesados."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "gym_squat_hip_hinge_biomechanics",
       "phrase": "Understanding the biomechanical differences between a squat and a hip hinge is fundamental to injury-resistant lower body programming.",
-      "translations": { "es": "Entender las diferencias biomecánicas entre una sentadilla y una bisagra de cadera es fundamental para una programación de tren inferior resistente a lesiones." },
+      "translations": {
+        "es": "Entender las diferencias biomecánicas entre una sentadilla y una bisagra de cadera es fundamental para una programación de tren inferior resistente a lesiones."
+      },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "gym_doms_few_days_after_leg_day",
+      "phrase": "My legs are still sore two days after leg day. Is that normal?",
+      "translations": {
+        "es": "Me duelen las piernas dos días después del día de piernas. ¿Es normal?"
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "gym_pre_workout_meal_timing",
+      "phrase": "What should I eat before a workout, and how long before?",
+      "translations": {
+        "es": "¿Qué debería comer antes de entrenar y cuánto tiempo antes?"
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "gym_deload_week_overreaching",
+      "phrase": "My trainer suggested a deload week. I think I've been overreaching lately.",
+      "translations": {
+        "es": "Mi entrenador me sugirió una semana de descarga. Creo que he estado sobrepasando mis límites últimamente."
+      },
+      "translations_alternatives": {
+        "es": [
+          {
+            "text": "Mi entrenadora me sugirió una semana de descarga. Creo que he estado sobrepasando mis límites últimamente.",
+            "type": "gender",
+            "hint": "femenino",
+            "audioIdx": 96
+          }
+        ]
+      },
+      "level": "B2",
+      "grammar": "Present perfect continuous: 'I've been overreaching' for a recurring pattern up to the present"
+    },
+    {
+      "id": "gym_free_weights_vs_machines_stability",
+      "phrase": "I prefer free weights over machines because they require more core stability.",
+      "translations": {
+        "es": "Prefiero el peso libre a las máquinas porque requieren más estabilidad del tronco."
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "gym_heart_rate_zones_energy_systems",
+      "phrase": "Training in different heart rate zones lets you target specific energy systems, including zone 2.",
+      "translations": {
+        "es": "Entrenar en diferentes zonas de frecuencia cardíaca permite trabajar sistemas energéticos específicos, incluyendo la zona 2."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "gym_rpe_scale_autoregulation",
+      "phrase": "I've switched to the RPE scale to autoregulate intensity based on my actual recovery.",
+      "translations": {
+        "es": "Cambié a la escala RPE para autorregular la intensidad según mi recuperación real."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "gym_mobility_end_range_strength",
+      "phrase": "Mobility work isn't just stretching. It's about building strength and control at end-range positions.",
+      "translations": {
+        "es": "El trabajo de movilidad no es solo estirarse. Se trata de desarrollar fuerza y control en posiciones de rango final."
+      },
+      "level": "C1",
+      "grammar": "'Not just... it's about + gerund' — reframing a common misconception"
+    },
+    {
+      "id": "gym_sport_specific_transfer_performance",
+      "phrase": "My training must match my sport's demands if I want it to transfer to actual performance.",
+      "translations": {
+        "es": "Mi entrenamiento tiene que ser específico a las exigencias de mi deporte si quiero que se transfiera al rendimiento real."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "gym_neuromuscular_adaptations_early_gains",
+      "phrase": "Early strength gains in untrained individuals are largely attributable to neuromuscular adaptations rather than hypertrophy.",
+      "translations": {
+        "es": "Las ganancias de fuerza tempranas en personas no entrenadas se atribuyen en gran medida a adaptaciones neuromusculares más que a la hipertrofia."
+      },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "gym_mitochondrial_biogenesis_endurance",
+      "phrase": "Sustained endurance training induces mitochondrial biogenesis, increasing the cell's capacity for oxidative phosphorylation.",
+      "translations": {
+        "es": "El entrenamiento de resistencia sostenido induce la biogénesis mitocondrial, aumentando la capacidad celular para la fosforilación oxidativa."
+      },
       "level": "C2",
       "grammar": null
     }

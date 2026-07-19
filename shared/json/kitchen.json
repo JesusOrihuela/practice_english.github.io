@@ -15,7 +15,7 @@
       "level": "A1",
       "grammar": "Modal 'could': polite request or possibility",
       "translations": {
-        "es": "Pasame la tabla de cortar"
+        "es": "Pásame la tabla de cortar"
       }
     },
     {
@@ -33,7 +33,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "Could you pass me the spatula?"
+        {
+          "text": "Could you pass me the spatula?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 115
+        }
       ],
       "translations": {
         "es": "¿Me pasas la espátula?"
@@ -54,7 +59,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "¿Pásame la sal de la despensa?"
+        "es": "Pásame la sal de la despensa"
       }
     },
     {
@@ -108,7 +113,7 @@
       "level": "A2",
       "grammar": "Present continuous: action happening right now",
       "translations": {
-        "es": "El bicarbonato de sodio nos ayudará a hacer que la masa suba"
+        "es": "El bicarbonato de sodio ayudará a que la masa suba."
       }
     },
     {
@@ -153,7 +158,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "Can you rinse the vegetables with cold water?"
+        {
+          "text": "Can you rinse the vegetables with cold water?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 116
+        }
       ],
       "translations": {
         "es": "¿Podrías enjuagar las verduras con agua fría?"
@@ -183,7 +193,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Las especias y los condimentos estpan en el gabinete junto al fregadero"
+        "es": "Las especias y los condimentos están en el gabinete junto al fregadero"
       }
     },
     {
@@ -192,7 +202,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Do we have aluminium foil to wrap up the leftovers?"
+        {
+          "text": "Do we have aluminium foil to wrap up the leftovers?",
+          "type": "regional",
+          "region": "UK",
+          "audioIdx": 117
+        }
       ],
       "translations": {
         "es": "¿Tenemos papel de aluminio para envolver las sobras?"
@@ -213,7 +228,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could you pass me the colander to drain the pasta?"
+        {
+          "text": "Could you pass me the colander to drain the pasta?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 118
+        }
       ],
       "translations": {
         "es": "¿Puedes pasarme el escurridor para escurrir la pasta?"
@@ -225,7 +245,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Hay que comprar mantequilla sin sal?"
+        "es": "Hay que comprar mantequilla sin sal"
       }
     },
     {
@@ -234,7 +254,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "Can you help me open this jar, please?"
+        {
+          "text": "Can you help me open this jar, please?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 119
+        }
       ],
       "translations": {
         "es": "¿Podrías ayudarme a abrir este tarro, por favor?"
@@ -327,7 +352,7 @@
       "level": "B1",
       "grammar": null,
       "translations": {
-        "es": "El escabeche es un adobo muy utilizado en la cocina"
+        "es": "La marinada es un condimento muy utilizado en la cocina"
       }
     },
     {
@@ -345,7 +370,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Can you help me sift the flour?"
+        {
+          "text": "Can you help me sift the flour?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 120
+        }
       ],
       "translations": {
         "es": "¿Podrías ayudarme a tamizar la harina?"
@@ -420,7 +450,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "Take the food out of the fridge"
+        {
+          "text": "Take the food out of the fridge",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 121
+        }
       ],
       "translations": {
         "es": "Saca la comida del refrigerador"
@@ -432,7 +467,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Esta noche cocinamos la pizza casera"
+        "es": "Esta noche hacemos pizza casera."
       }
     },
     {
@@ -459,7 +494,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Can you chop the vegetables into small pieces, please?"
+        {
+          "text": "Can you chop the vegetables into small pieces, please?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 122
+        }
       ],
       "translations": {
         "es": "¿Podrías cortar las verduras en trozos pequeños, por favor?"
@@ -471,7 +511,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "El sartén está demasiado caliente; baja un poco el fuego"
+        "es": "La sartén está demasiado caliente; baja un poco el fuego"
       }
     },
     {
@@ -502,12 +542,12 @@
       }
     },
     {
-      "id": "kitchen_to_make_flan_you_have_to_2",
-      "phrase": "To make flan, you have to put the mold in a water bath",
+      "id": "kitchen_flan_bake_bain_marie",
+      "phrase": "Flan must be baked in a water bath inside the oven.",
       "level": "B1",
       "grammar": null,
       "translations": {
-        "es": "Para hacer el flan hay que poner el molde en baño maría"
+        "es": "El flan debe hornearse en baño maría dentro del horno."
       }
     },
     {
@@ -543,7 +583,12 @@
       "level": "A2",
       "grammar": "Contraction: 'let's' = let us — suggestion formula",
       "alternatives": [
-        "While I remove the fish bones, can you preheat the oven?"
+        {
+          "text": "While I remove the fish bones, can you preheat the oven?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 123
+        }
       ],
       "translations": {
         "es": "Mientras le quito las espinas al pescado, ¿puedes precalentar el horno?"
@@ -582,7 +627,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Al fondo para la salsa le falta sal"
+        "es": "A la salsa le falta sal"
       }
     },
     {
@@ -645,7 +690,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "La mejor guarnizicón para el pescado es el arroz"
+        "es": "La mejor guarnición para el pescado es el arroz"
       }
     },
     {
@@ -681,7 +726,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Antes cocer pasta tenemos que esperar a que el agua empiece a hervir"
+        "es": "Antes de cocer pasta tenemos que esperar a que el agua empiece a hervir"
       }
     },
     {
@@ -780,7 +825,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "La sartén está en el fregadero por que la usé ayer"
+        "es": "La sartén está en el fregadero porque la usé ayer"
       }
     },
     {
@@ -834,7 +879,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Los vasos y tasas están en el gabinete"
+        "es": "Los vasos y tazas están en el gabinete"
       }
     },
     {
@@ -849,105 +894,216 @@
     {
       "id": "kitchen_deglaze_pan_white_wine",
       "phrase": "I usually deglaze the pan with white wine to build the sauce's flavor base.",
-      "translations": { "es": "Normalmente desglaso el sartén con vino blanco para crear la base de sabor de la salsa." },
+      "translations": {
+        "es": "Normalmente desglaso la sartén con vino blanco para crear la base de sabor de la salsa."
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "kitchen_fold_egg_whites_not_stir",
-      "phrase": "To get the best results, fold the egg whites into the batter rather than stirring.",
-      "translations": { "es": "Para obtener los mejores resultados, incorpora las claras a la mezcla con movimientos envolventes en lugar de revolver." },
+      "phrase": "Fold the egg whites into the batter rather than stirring them in.",
+      "translations": {
+        "es": "Incorpora las claras a la mezcla con movimientos envolventes en lugar de revolver."
+      },
       "level": "B2",
       "grammar": "'fold … rather than stirring' — 'rather than' + gerund contrasts two methods"
     },
     {
       "id": "kitchen_let_meat_rest_juices_redistribute",
-      "phrase": "Let the meat rest for at least five minutes after cooking so the juices redistribute.",
-      "translations": { "es": "Deja reposar la carne al menos cinco minutos después de cocinarla para que los jugos se redistribuyan." },
+      "phrase": "Let the meat rest for five minutes after cooking so the juices redistribute.",
+      "translations": {
+        "es": "Deja reposar la carne cinco minutos después de cocinarla para que los jugos se redistribuyan."
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "kitchen_blanch_vegetables_before_stir_fry",
       "phrase": "This recipe calls for blanching the vegetables before adding them to the stir-fry.",
-      "translations": { "es": "Esta receta requiere blanquear las verduras antes de agregarlas al salteado." },
+      "translations": {
+        "es": "Esta receta requiere blanquear las verduras antes de agregarlas al salteado."
+      },
       "level": "B2",
       "grammar": "'calls for + gerund' — means 'requires' when describing a recipe step"
     },
     {
       "id": "kitchen_score_duck_skin_fat_renders",
-      "phrase": "Scoring the skin of the duck breast helps the fat render more evenly during cooking.",
-      "translations": { "es": "Hacer cortes en la piel de la pechuga de pato ayuda a que la grasa se derrita de forma más uniforme durante la cocción." },
+      "phrase": "Scoring the duck breast skin helps the fat render more evenly.",
+      "translations": {
+        "es": "Hacer cortes en la piel de la pechuga de pato ayuda a que la grasa se derrita de forma más uniforme."
+      },
       "level": "B2",
       "grammar": null
     },
     {
       "id": "kitchen_emulsified_vinaigrette_add_oil_slowly",
       "phrase": "The key to a well-emulsified vinaigrette is adding the oil very slowly while whisking constantly.",
-      "translations": { "es": "La clave de una vinagreta bien emulsionada es añadir el aceite muy despacio mientras se bate constantemente." },
+      "translations": {
+        "es": "La clave de una vinagreta bien emulsionada es añadir el aceite muy despacio mientras se bate constantemente."
+      },
       "level": "C1",
       "grammar": "'The key to X is + gerund' — structure to state the essential condition for success"
     },
     {
       "id": "kitchen_sauce_breaks_rescue_cold_water",
-      "phrase": "If the sauce breaks, you can sometimes rescue it by adding a small amount of cold water and whisking vigorously.",
-      "translations": { "es": "Si la salsa se corta, a veces puedes salvarla añadiendo un poco de agua fría y batiendo con energía." },
+      "phrase": "If the sauce breaks, rescue it by adding cold water and whisking vigorously.",
+      "translations": {
+        "es": "Si la salsa se corta, recupérala añadiendo agua fría y batiendo con energía."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "kitchen_brine_chicken_overnight_juicier",
       "phrase": "Brining the chicken overnight in salted water results in noticeably juicier and more flavorful meat.",
-      "translations": { "es": "Dejar el pollo en salmuera durante la noche resulta en una carne notablemente más jugosa y sabrosa." },
+      "translations": {
+        "es": "Dejar el pollo en salmuera durante la noche produce una carne notablemente más jugosa y sabrosa."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "kitchen_caramelized_onions_deglaze_balsamic",
       "phrase": "Once you've caramelized the onions, deglaze with balsamic vinegar to add depth and balance the sweetness.",
-      "translations": { "es": "Una vez que hayas caramelizado las cebollas, desglasa con vinagre balsámico para dar profundidad y equilibrar el dulzor." },
+      "translations": {
+        "es": "Una vez que hayas caramelizado las cebollas, desglasa con vinagre balsámico para dar profundidad y equilibrar el dulzor."
+      },
       "level": "C1",
       "grammar": null
     },
     {
       "id": "kitchen_make_day_ahead_flavors_meld",
-      "phrase": "This dish benefits from being made a day ahead — the flavors meld and the texture improves significantly overnight.",
-      "translations": { "es": "Este plato mejora si se prepara con un día de anticipación — los sabores se fusionan y la textura mejora considerablemente." },
+      "phrase": "This dish benefits from being made ahead, as the flavors meld overnight.",
+      "translations": {
+        "es": "Este plato mejora si se prepara con anticipación, ya que los sabores se fusionan durante la noche."
+      },
       "level": "C1",
       "grammar": "'benefits from being + past participle' — gerund after 'from' when subject is not the actor"
     },
     {
       "id": "kitchen_spherification_gel_membrane",
       "phrase": "The spherification technique involves submerging a liquid in a calcium bath to form a thin gel membrane.",
-      "translations": { "es": "La técnica de esferificación consiste en sumergir un líquido en un baño de calcio para formar una fina membrana gelatinosa." },
+      "translations": {
+        "es": "La técnica de esferificación consiste en sumergir un líquido en un baño de calcio para formar una fina membrana gelatinosa."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "kitchen_tempered_chocolate_crystalline_snap",
       "phrase": "Well-tempered chocolate has a stable crystalline structure that gives it a sharp snap and glossy finish.",
-      "translations": { "es": "El chocolate bien temperado tiene una estructura cristalina estable que le da un crujido definido y un acabado brillante." },
+      "translations": {
+        "es": "El chocolate bien temperado tiene una estructura cristalina estable que le da un crujido definido y un acabado brillante."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "kitchen_sous_vide_precise_temperature_control",
       "phrase": "The sous-vide method achieves precise temperature control, eliminating the margin of error inherent in conventional cooking.",
-      "translations": { "es": "El método sous-vide logra un control preciso de la temperatura, eliminando el margen de error inherente a la cocción convencional." },
+      "translations": {
+        "es": "El método sous-vide logra un control preciso de la temperatura, eliminando el margen de error inherente a la cocción convencional."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "kitchen_fat_flour_ratio_structural_integrity",
-      "phrase": "In pastry work, the ratio of fat to flour determines not just texture but the structural integrity of the finished product.",
-      "translations": { "es": "En repostería, la proporción de grasa a harina determina no solo la textura, sino también la integridad estructural del producto final." },
+      "phrase": "In pastry work, the fat-to-flour ratio determines both texture and the structural integrity of the final product.",
+      "translations": {
+        "es": "En repostería, la proporción grasa-harina determina tanto la textura como la integridad estructural del producto final."
+      },
       "level": "C2",
       "grammar": null
     },
     {
       "id": "kitchen_maillard_reaction_browning_flavor",
-      "phrase": "The Maillard reaction — the chemical browning above 140°C — is the foundation of roasted, seared, and baked flavor development.",
-      "translations": { "es": "La reacción de Maillard — el dorado químico que ocurre por encima de los 140 °C — es la base del desarrollo de sabor en asados, sellados y horneados." },
+      "phrase": "The Maillard reaction is the chemical browning above 140°C and the foundation of roasted, seared, and baked flavor.",
+      "translations": {
+        "es": "La reacción de Maillard es el dorado químico que ocurre por encima de los 140 °C y la base del sabor en asados, sellados y horneados."
+      },
+      "level": "C2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_temper_eggs_hot_liquid",
+      "phrase": "To temper eggs, slowly whisk in a ladleful of hot liquid before combining.",
+      "translations": {
+        "es": "Para temperar los huevos, incorpora poco a poco un cucharón de líquido caliente antes de mezclar."
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_roux_base_for_white_sauces",
+      "phrase": "A roux is equal parts fat and flour, the base for white sauces.",
+      "translations": {
+        "es": "Un roux es partes iguales de grasa y harina, la base de las salsas blancas."
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_season_throughout_not_just_end",
+      "phrase": "Don't wait until the end to season. Taste and adjust throughout cooking.",
+      "translations": {
+        "es": "No esperes hasta el final para sazonar. Prueba y ajusta durante toda la cocción."
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_prep_ingredients_before_start",
+      "phrase": "I always prep all my ingredients before cooking. It makes everything run smoothly.",
+      "translations": {
+        "es": "Siempre preparo todos los ingredientes antes de cocinar. Eso hace que todo fluya mejor."
+      },
+      "level": "B2",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_saute_vs_sweat_onions",
+      "phrase": "Sweating onions over low heat softens them without browning; sautéing over high heat caramelizes the surface.",
+      "translations": {
+        "es": "Sudar las cebollas a fuego bajo las ablanda sin dorarlas; saltearlas a fuego alto carameliza la superficie."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_umami_depth_fish_sauce_miso",
+      "phrase": "A small amount of fish sauce or miso paste deepens the umami in any savory dish.",
+      "translations": {
+        "es": "Una pequeña cantidad de salsa de pescado o pasta de miso intensifica el umami en cualquier plato salado."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_cure_salmon_salt_sugar_dill",
+      "phrase": "To cure salmon, coat it in salt, sugar, and dill and refrigerate for two days.",
+      "translations": {
+        "es": "Para curar el salmón, cúbrelo con sal, azúcar y eneldo y refrigéralo durante dos días."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_fat_carries_flavor_mouthfeel",
+      "phrase": "Fat carries flavor and contributes to mouthfeel, and dishes that are too lean often taste flat.",
+      "translations": {
+        "es": "La grasa transporta el sabor y contribuye a la textura en boca, y los platos demasiado magros suelen saber a poco."
+      },
+      "level": "C1",
+      "grammar": null
+    },
+    {
+      "id": "kitchen_lacto_fermentation_lactic_acid",
+      "phrase": "Lacto-fermentation uses bacteria to convert sugars into lactic acid, preserving the food and developing complex flavors.",
+      "translations": {
+        "es": "La lacto-fermentación usa bacterias para convertir los azúcares en ácido láctico, conservando el alimento y desarrollando sabores complejos."
+      },
       "level": "C2",
       "grammar": null
     }

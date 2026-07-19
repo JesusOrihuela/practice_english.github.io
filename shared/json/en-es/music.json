@@ -1,0 +1,556 @@
+{
+  "phrases": [
+    {
+      "id": "music_skip_song",
+      "source": "Skip that song.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sáltate esa canción.",
+          "audioSlug": "saltate_esa_cancion"
+        }
+      ]
+    },
+    {
+      "id": "music_favorite_song_always",
+      "source": "I really like that song, I listen to it all the time.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esa canción me gusta mucho, la escucho todo el tiempo.",
+          "audioSlug": "esa_cancion_me_gusta_mucho_la_escucho_todo_el_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "music_favorite_song",
+      "source": "That's my favorite song.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esa es mi canción favorita.",
+          "audioSlug": "esa_es_mi_cancion_favorita"
+        }
+      ]
+    },
+    {
+      "id": "music_go_concert_year",
+      "source": "We should go to a concert this year.",
+      "level": "B1",
+      "grammar": "'Deberíamos' usa el condicional de 'deber'; expresa sugerencia sin presionar al interlocutor.",
+      "target": [
+        {
+          "text": "Deberíamos ir a un concierto este año.",
+          "audioSlug": "deberiamos_ir_a_un_concierto_este_ano"
+        }
+      ]
+    },
+    {
+      "id": "music_new_concert_band",
+      "source": "There is a new concert by my favorite band, I have to go.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay un nuevo concierto de mi banda favorita, tengo que ir.",
+          "audioSlug": "hay_un_nuevo_concierto_de_mi_banda_favorita_tengo_que_ir"
+        }
+      ]
+    },
+    {
+      "id": "music_podcasts_while_exercise",
+      "source": "I love listening to podcasts while I exercise.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta escuchar pódcasts mientras hago ejercicio.",
+          "audioSlug": "me_encanta_escuchar_podcasts_mientras_hago_ejercicio"
+        }
+      ]
+    },
+    {
+      "id": "music_podcast_recommendation",
+      "source": "I don't know what podcast to listen to, can you recommend one?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No sé qué pódcast escuchar, ¿me recomiendas alguno?",
+          "audioSlug": "no_se_que_podcast_escuchar_me_recomiendas_alguno"
+        }
+      ]
+    },
+    {
+      "id": "music_song_special_memory",
+      "source": "This song reminds me of a special moment in my life.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esta canción me recuerda un momento especial de mi vida.",
+          "audioSlug": "esta_cancion_me_recuerda_un_momento_especial_de_mi_vida"
+        }
+      ]
+    },
+    {
+      "id": "music_new_album_disappointment",
+      "source": "The new album didn't impress me as much as the previous ones.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El nuevo álbum no me impresionó tanto como los anteriores.",
+          "audioSlug": "el_nuevo_album_no_me_impresiono_tanto_como_los_anteriores"
+        }
+      ]
+    },
+    {
+      "id": "music_what_kind_do_you_like",
+      "source": "What kind of music do you like?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué tipo de música te gusta?",
+          "audioSlug": "que_tipo_de_musica_te_gusta"
+        }
+      ]
+    },
+    {
+      "id": "music_love_this_song_who_sings",
+      "source": "I love this song. Who sings it?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta esta canción, ¿quién la canta?",
+          "audioSlug": "me_encanta_esta_cancion_quien_la_canta"
+        }
+      ]
+    },
+    {
+      "id": "music_add_song_playlist",
+      "source": "I'd like to add this song to my playlist.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría añadir esta canción a mi lista de reproducción.",
+          "audioSlug": "me_gustaria_anadir_esta_cancion_a_mi_lista_de_reproduccion"
+        }
+      ]
+    },
+    {
+      "id": "music_learning_guitar_six_months",
+      "source": "I've been learning to play the guitar for about six months.",
+      "level": "B1",
+      "grammar": "'Llevo + tiempo + gerundio' expresa duración hasta el presente; equivale al present perfect continuous.",
+      "target": [
+        {
+          "text": "Llevo unos seis meses aprendiendo a tocar la guitarra.",
+          "audioSlug": "llevo_unos_seis_meses_aprendiendo_a_tocar_la_guitarra"
+        }
+      ]
+    },
+    {
+      "id": "music_opening_act_surprised",
+      "source": "The opening act was surprisingly good. I hadn't heard of them before.",
+      "level": "B2",
+      "grammar": "'Nunca había oído hablar' usa el pluscuamperfecto; indica que el desconocimiento es anterior al concierto.",
+      "target": [
+        {
+          "text": "El grupo telonero estuvo sorprendentemente bien, aunque nunca había oído hablar de ellos antes.",
+          "audioSlug": "el_grupo_telonero_estuvo_sorprendentemente_bien_aunque_nunca_habia_oido_hablar_de_ellos_antes"
+        }
+      ]
+    },
+    {
+      "id": "music_headphones_or_speakers",
+      "source": "Do you prefer listening through headphones or on speakers?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Prefieres escuchar música con audífonos o por altavoces?",
+          "audioSlug": "prefieres_escuchar_musica_con_audifonos_o_por_altavoces"
+        }
+      ]
+    },
+    {
+      "id": "music_cover_version_back_to_original",
+      "source": "That cover version is so good it made me revisit the original.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esa versión es tan buena que me hizo volver a escuchar el original.",
+          "audioSlug": "esa_version_es_tan_buena_que_me_hizo_volver_a_escuchar_el_original"
+        }
+      ]
+    },
+    {
+      "id": "music_discovered_through_algorithm",
+      "source": "I discovered this band through a playlist algorithm. I'd never have found them otherwise.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Descubrí esta banda gracias al algoritmo y nunca la habría encontrado de otro modo.",
+          "audioSlug": "descubri_esta_banda_gracias_al_algoritmo_y_nunca_la_habria_encontrado_de_otro_modo"
+        }
+      ]
+    },
+    {
+      "id": "music_concert_sound_mix_terrible",
+      "source": "The energy was incredible, but the sound mix was terrible.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La energía era increíble, pero la mezcla de sonido era terrible.",
+          "audioSlug": "la_energia_era_increible_pero_la_mezcla_de_sonido_era_terrible"
+        }
+      ]
+    },
+    {
+      "id": "music_reunion_tour_expectations",
+      "source": "When a band reunites, I always worry they won't live up to my memories.",
+      "level": "B2",
+      "grammar": "'Temo que + subjuntivo' expresa temor sobre algo que podría ocurrir; el subjuntivo indica incertidumbre.",
+      "target": [
+        {
+          "text": "Cuando una banda anuncia una gira de reunión, temo que no cumplan mis expectativas.",
+          "audioSlug": "cuando_una_banda_anuncia_una_gira_de_reunion_temo_que_no_cumplan_mis_expectativas"
+        }
+      ]
+    },
+    {
+      "id": "music_acoustic_version_reveals_songwriting",
+      "source": "I prefer the acoustic version. Stripping it down reveals how strong the songwriting is.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero la versión acústica, porque simplificarla revela lo sólida que es la composición.",
+          "audioSlug": "prefiero_la_version_acustica_porque_simplificarla_revela_lo_solida_que_es_la_composicion"
+        }
+      ]
+    },
+    {
+      "id": "music_started_late_still_impressive",
+      "source": "She started playing piano in her thirties, which makes her technique even more impressive.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No aprendió piano hasta los treinta, lo que hace su técnica aún más impresionante.",
+          "audioSlug": "no_aprendio_piano_hasta_los_treinta_lo_que_hace_su_tecnica_aun_mas_impresionante"
+        }
+      ]
+    },
+    {
+      "id": "music_more_i_listened_more_appreciated",
+      "source": "The more I listened to jazz, the more I appreciated its improvisational elements.",
+      "level": "B2",
+      "grammar": "'Cuanto más + verbo, más + verbo' expresa proporcionalidad; equivale a 'the more... the more'.",
+      "target": [
+        {
+          "text": "Cuanto más escuchaba jazz, más apreciaba sus elementos de improvisación.",
+          "audioSlug": "cuanto_mas_escuchaba_jazz_mas_apreciaba_sus_elementos_de_improvisacion"
+        }
+      ]
+    },
+    {
+      "id": "music_live_better_than_studio",
+      "source": "The live performance was far better than the studio recording.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La actuación en vivo fue mucho mejor que la grabación de estudio.",
+          "audioSlug": "la_actuacion_en_vivo_fue_mucho_mejor_que_la_grabacion_de_estudio"
+        }
+      ]
+    },
+    {
+      "id": "music_similar_genre_film",
+      "source": "I want music similar to that film's soundtrack. Do you know the genre?",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Busco música similar a la de esa película, ¿sabes qué género es?",
+          "audioSlug": "busco_musica_similar_a_la_de_esa_pelicula_sabes_que_genero_es"
+        }
+      ]
+    },
+    {
+      "id": "music_vocal_range_earlier_work",
+      "source": "The singer's vocal range in this album is remarkable compared to her earlier work.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El rango vocal de la cantante en este álbum supera claramente su obra anterior.",
+          "audioSlug": "el_rango_vocal_de_la_cantante_en_este_album_supera_claramente_su_obra_anterior"
+        }
+      ]
+    },
+    {
+      "id": "music_festival_lineup_disappointing",
+      "source": "I think the festival lineup this year is disappointing. Too many commercial acts.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El cartel de este año es decepcionante, con demasiados artistas comerciales.",
+          "audioSlug": "el_cartel_de_este_ano_es_decepcionante_con_demasiados_artistas_comerciales"
+        }
+      ]
+    },
+    {
+      "id": "music_classical_pianist_switched_jazz",
+      "source": "He started as a classical pianist before switching to jazz in his late twenties.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Comenzó como pianista clásico y se pasó al jazz a finales de los veinte.",
+          "audioSlug": "comenzo_como_pianista_clasico_y_se_paso_al_jazz_a_finales_de_los_veinte"
+        }
+      ]
+    },
+    {
+      "id": "music_concept_album_narrative_arc",
+      "source": "This is a concept album in the truest sense, with every track feeding into a larger arc.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este es un álbum conceptual en sentido estricto, pues cada pista aporta al arco narrativo global.",
+          "audioSlug": "este_es_un_album_conceptual_en_sentido_estricto_pues_cada_pista_aporta_al_arco_narrativo_global"
+        }
+      ]
+    },
+    {
+      "id": "music_diaspora_cultural_identity",
+      "source": "For many diaspora communities, music is the primary means through which cultural identity is preserved.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Para muchas comunidades diaspóricas, la música es el medio principal de preservación de la identidad cultural.",
+          "audioSlug": "para_muchas_comunidades_diasporicas_la_musica_es_el_medio_principal_de_preservacion_de_la_identidad_cultural"
+        }
+      ]
+    },
+    {
+      "id": "music_overproduction_works_against_core",
+      "source": "The overproduced sound actually works against the song's emotional core, creating an unintended coldness.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La sobreproducción va en detrimento del núcleo emocional de la canción, creando una frialdad no deseada.",
+          "audioSlug": "la_sobreproduccion_va_en_detrimento_del_nucleo_emocional_de_la_cancion_creando_una_frialdad_no_deseada"
+        }
+      ]
+    },
+    {
+      "id": "music_genre_labels_useful_and_limiting",
+      "source": "Genre labels can be both useful and limiting, helpful for listeners but restrictive for artists.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Las etiquetas de género ayudan a encontrar música, pero limitan cómo se percibe a los artistas.",
+          "audioSlug": "las_etiquetas_de_genero_ayudan_a_encontrar_musica_pero_limitan_como_se_percibe_a_los_artistas"
+        }
+      ]
+    },
+    {
+      "id": "music_live_spontaneity_studio_cant_capture",
+      "source": "There's a spontaneity in live recordings that studio albums rarely capture, however technically refined they are.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Las grabaciones en vivo tienen una espontaneidad que el estudio rara vez captura.",
+          "audioSlug": "las_grabaciones_en_vivo_tienen_una_espontaneidad_que_el_estudio_rara_vez_captura"
+        }
+      ]
+    },
+    {
+      "id": "music_lyrics_political_commentary",
+      "source": "The lyrics are deceptively simple. There's a lot of political commentary beneath the surface.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Las letras son engañosamente sencillas, con mucho comentario político por debajo de la superficie.",
+          "audioSlug": "las_letras_son_enganosamente_sencillas_con_mucho_comentario_politico_por_debajo_de_la_superficie"
+        }
+      ]
+    },
+    {
+      "id": "music_blends_traditional_contemporary",
+      "source": "What strikes me most is how seamlessly this album blends traditional and contemporary influences.",
+      "level": "C1",
+      "grammar": "'Lo que + verbo' funciona como sujeto nominalizado; equivale al inglés 'what + verb'.",
+      "target": [
+        {
+          "text": "Lo que más me impacta es lo fluidamente que este álbum fusiona influencias tradicionales y contemporáneas.",
+          "audioSlug": "lo_que_mas_me_impacta_es_lo_fluidamente_que_este_album_fusiona_influencias_tradicionales_y_contemporaneas"
+        }
+      ]
+    },
+    {
+      "id": "music_indie_influence_underestimated",
+      "source": "I'd argue this band's influence on indie music over the last decade has been widely underestimated.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La influencia de esta banda en la música indie de la última década ha sido subestimada.",
+          "audioSlug": "la_influencia_de_esta_banda_en_la_musica_indie_de_la_ultima_decada_ha_sido_subestimada"
+        }
+      ]
+    },
+    {
+      "id": "music_chord_progression_unsettling",
+      "source": "The chord progression is unconventional, which gives the track its distinctively unsettling quality.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La progresión de acordes es poco convencional, lo que da a la pista su cualidad inquietante.",
+          "audioSlug": "la_progresion_de_acordes_es_poco_convencional_lo_que_da_a_la_pista_su_cualidad_inquietante"
+        }
+      ]
+    },
+    {
+      "id": "music_reinterprets_makes_her_own",
+      "source": "She doesn't just perform the song. She reinterprets it and makes it entirely her own.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No solo interpreta la canción, la reinterpreta de una forma que la convierte completamente en suya.",
+          "audioSlug": "no_solo_interpreta_la_cancion_la_reinterpreta_de_una_forma_que_la_convierte_completamente_en_suya"
+        }
+      ]
+    },
+    {
+      "id": "music_atonality_tonal_rupture",
+      "source": "Schoenberg's move toward atonality represented a fundamental rupture with the Western tonal tradition.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El giro de Schoenberg hacia la atonalidad representó una ruptura fundamental con la tradición tonal occidental.",
+          "audioSlug": "el_giro_de_schoenberg_hacia_la_atonalidad_represento_una_ruptura_fundamental_con_la_tradicion_tonal_occidental"
+        }
+      ]
+    },
+    {
+      "id": "music_orality_notation_limits",
+      "source": "The gap between oral traditions and written notation reveals the limits of formal systems to capture lived sound.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La brecha entre oralidad y notación revela los límites de los sistemas formales para capturar el sonido vivido.",
+          "audioSlug": "la_brecha_entre_oralidad_y_notacion_revela_los_limites_de_los_sistemas_formales_para_capturar_el_sonido_vivido"
+        }
+      ]
+    },
+    {
+      "id": "music_vehicle_collective_resistance",
+      "source": "Throughout history, music has functioned as a vehicle for collective resistance against political oppression and cultural erasure.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La música ha funcionado como vehículo de resistencia colectiva contra la opresión política y el borrado cultural.",
+          "audioSlug": "la_musica_ha_funcionado_como_vehiculo_de_resistencia_colectiva_contra_la_opresion_politica_y_el_borrado_cultural"
+        }
+      ]
+    },
+    {
+      "id": "music_canon_inclusion_exclusion_bias",
+      "source": "Musical canons involve acts of inclusion and exclusion that inevitably reflect the biases of those who construct them.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Todo canon musical conlleva actos de inclusión y exclusión que inevitablemente reflejan los sesgos de quienes lo construyen.",
+          "audioSlug": "todo_canon_musical_conlleva_actos_de_inclusion_y_exclusion_que_inevitablemente_reflejan_los_sesgos_de_quienes_lo_construyen"
+        }
+      ]
+    },
+    {
+      "id": "music_departure_genre_conventions",
+      "source": "The album represents a marked departure from the genre conventions that defined the band's earlier output.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El álbum es un marcado alejamiento de las convenciones del género que definieron su obra anterior.",
+          "audioSlug": "el_album_es_un_marcado_alejamiento_de_las_convenciones_del_genero_que_definieron_su_obra_anterior"
+        }
+      ]
+    },
+    {
+      "id": "music_african_polyrhythms_western_harmony",
+      "source": "His synthesis of African polyrhythms and Western harmonic structures challenged prevailing definitions of jazz.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su síntesis de polirritmia africana y estructuras armónicas occidentales desafió las definiciones predominantes del jazz.",
+          "audioSlug": "su_sintesis_de_polirritmia_africana_y_estructuras_armonicas_occidentales_desafio_las_definiciones_predominantes_del_jazz"
+        }
+      ]
+    },
+    {
+      "id": "music_meditation_collective_memory",
+      "source": "The album reads as a meditation on collective memory, each track functioning as a distinct emotional register.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El álbum es una meditación sobre la memoria colectiva, y cada pista funciona como un registro emocional distinto.",
+          "audioSlug": "el_album_es_una_meditacion_sobre_la_memoria_colectiva_y_cada_pista_funciona_como_un_registro_emocional_distinto"
+        }
+      ]
+    },
+    {
+      "id": "music_instrumentation_mirrors_lyrics",
+      "source": "Critics have noted that the instrumentation mirrors the lyrical content in ways that reward close listening.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los críticos han señalado que la instrumentación refleja el contenido lírico de formas que recompensan una escucha atenta.",
+          "audioSlug": "los_criticos_han_senalado_que_la_instrumentacion_refleja_el_contenido_lirico_de_formas_que_recompensan_una_escucha_atenta"
+        }
+      ]
+    },
+    {
+      "id": "music_folk_motifs_authenticity",
+      "source": "The composer's deliberate use of folk motifs gives the piece an authenticity that more polished productions often lack.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El uso deliberado de motivos folklóricos da a la pieza una autenticidad que las producciones pulidas suelen perder.",
+          "audioSlug": "el_uso_deliberado_de_motivos_folkloricos_da_a_la_pieza_una_autenticidad_que_las_producciones_pulidas_suelen_perder"
+        }
+      ]
+    }
+  ]
+}

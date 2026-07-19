@@ -5,175 +5,65 @@
    estimate CEFR bands need just ~10 well-selected items.
    ============================================================ */
 
-/* ---- Questions ------------------------------------------------
+/* ---- Questions (loaded from shared/json/placement-questions.json) ----
    Ordered A1 → C2 (2 per band, B1/B2 have 3). Correct answer index = .answer
+   To add a new language pair: add a key matching the pair id in the JSON file.
    ---------------------------------------------------------------- */
-const QUESTIONS = [
-  {
-    level: 'A1',
-    q: '¿Qué significa "Good morning"?',
-    options: ['Buenos días', 'Buenas noches', 'Buenas tardes', 'Hasta luego'],
-    answer: 0,
-  },
-  {
-    level: 'A1',
-    q: 'Completa: "She ___ a doctor."',
-    options: ['are', 'am', 'be', 'is'],
-    answer: 3,
-  },
-  {
-    level: 'A2',
-    q: '¿Qué significa "grateful"?',
-    options: ['enojado', 'cansado', 'agradecido', 'confundido'],
-    answer: 2,
-  },
-  {
-    level: 'A2',
-    q: 'Completa: "We ___ dinner together last night."',
-    options: ['eats', 'eat', 'eating', 'had'],
-    answer: 3,
-  },
-  {
-    level: 'B1',
-    q: '¿Qué significa "efficient"?',
-    options: ['lento', 'antiguo', 'eficiente', 'confuso'],
-    answer: 2,
-  },
-  {
-    level: 'B1',
-    q: 'Completa: "I have never ___ sushi before."',
-    options: ['ate', 'eat', 'eating', 'tried'],
-    answer: 3,
-  },
-  {
-    level: 'B1',
-    q: '¿Qué significa "to elaborate on an idea"?',
-    options: ['ignorarla', 'simplificarla', 'desarrollarla con más detalle', 'repetirla'],
-    answer: 2,
-  },
-  {
-    level: 'B2',
-    q: 'Completa: "If I ___ more free time, I would travel more."',
-    options: ['have', 'had', 'has', 'having'],
-    answer: 1,
-  },
-  {
-    level: 'B2',
-    q: '¿Qué significa "to advocate for a cause"?',
-    options: ['criticar públicamente', 'defender activamente', 'ignorar completamente', 'estudiar en privado'],
-    answer: 1,
-  },
-  {
-    level: 'B2',
-    q: 'Elige la oración gramaticalmente correcta:',
-    options: [
-      '"She suggested that he studies more."',
-      '"She suggested that he would study more."',
-      '"She suggested that he study more."',
-      '"She suggested that he studied more."',
-    ],
-    answer: 2,
-  },
-  {
-    level: 'C1',
-    q: 'Completa: "Not only ___ the deadline, but the team also lost the client."',
-    options: ['they missed', 'did they miss', 'they did miss', 'missed they'],
-    answer: 1,
-  },
-  {
-    level: 'C1',
-    q: '¿Qué significa "to corroborate a statement"?',
-    options: ['contradecirla con evidencia', 'confirmarla con evidencia adicional', 'ignorarla por completo', 'reformularla en términos simples'],
-    answer: 1,
-  },
-  {
-    level: 'C2',
-    q: 'Elige la oración gramaticalmente correcta en inglés formal:',
-    options: [
-      '"It is essential that he submits the report today."',
-      '"It is essential that he submit the report today."',
-      '"It is essential that he would submit the report today."',
-      '"It is essential that he submitted the report today."',
-    ],
-    answer: 1,
-  },
-  {
-    level: 'C2',
-    q: '¿Qué significa "to prevaricate"?',
-    options: ['hablar con claridad y precisión', 'evitar decir la verdad directamente', 'anticiparse a las consecuencias', 'contradecirse de manera repetida'],
-    answer: 1,
-  },
-];
+let QUESTIONS = null;
+AppData.get('placement')
+  .then(function (data) {
+    QUESTIONS = (data && data.questions) || [];
+  })
+  .catch(function () { QUESTIONS = []; });
 
 /* ---- CEFR result config ---- */
-const LEVELS = {
-  A1: {
-    label: 'A1 — Principiante',
-    emoji: '🌱',
-    color: '#22c55e',
-    message: '¡Punto de partida ideal! Comienza con vocabulario esencial y frases del día a día.',
-    suggestions: [
-      { emoji: '📚', label: 'Vocabulario',            url: '../../vocabulary/html/vocabulary.html' },
-      { emoji: '🎙️', label: 'Pronunciación: Saludos', url: '../../speaking/html/speaking.html' },
-      { emoji: '✍️', label: 'Dictado',                url: '../../dictation/html/dictation.html' },
-    ],
-  },
-  A2: {
-    label: 'A2 — Elemental',
-    emoji: '📗',
-    color: '#3b82f6',
-    message: 'Buena base. Practica vocabulario variado y empieza a producir tus propias oraciones.',
-    suggestions: [
-      { emoji: '🎙️', label: 'Pronunciación', url: '../../speaking/html/speaking.html' },
-      { emoji: '🔤', label: 'Cloze',          url: '../../cloze/html/cloze.html' },
-      { emoji: '🧠', label: 'Quiz',           url: '../../quiz/html/quiz.html' },
-    ],
-  },
-  B1: {
-    label: 'B1 — Intermedio',
-    emoji: '📘',
-    color: '#f59e0b',
-    message: '¡Buen nivel! Enfócate en gramática y producción activa para consolidar tu inglés.',
-    suggestions: [
-      { emoji: '📐', label: 'Gramática',  url: '../../grammar/html/grammar.html' },
-      { emoji: '🔄', label: 'Traducción', url: '../../translation/html/translation.html' },
-      { emoji: '🧩', label: 'Secuencia',  url: '../../scramble/html/scramble.html' },
-    ],
-  },
-  B2: {
-    label: 'B2 — Avanzado',
-    emoji: '🎓',
-    color: '#7c3aed',
-    message: '¡Nivel avanzado! Trabaja gramática compleja y producción sin apoyo.',
-    suggestions: [
-      { emoji: '📐', label: 'Gramática',               url: '../../grammar/html/grammar.html' },
-      { emoji: '🔄', label: 'Traducción',              url: '../../translation/html/translation.html' },
-      { emoji: '🎙️', label: 'Pronunciación: Avanzado', url: '../../speaking/html/speaking.html' },
-    ],
-  },
-  C1: {
-    label: 'C1 — Competente',
-    emoji: '🏅',
-    color: '#0891b2',
-    message: '¡Nivel competente! Usa el inglés con fluidez y precisión en contextos académicos y profesionales.',
-    suggestions: [
-      { emoji: '📐', label: 'Gramática',  url: '../../grammar/html/grammar.html' },
-      { emoji: '🔄', label: 'Traducción', url: '../../translation/html/translation.html' },
-      { emoji: '🧩', label: 'Secuencia',  url: '../../scramble/html/scramble.html' },
-    ],
-  },
-  C2: {
-    label: 'C2 — Maestría',
-    emoji: '🌟',
-    color: '#be123c',
-    message: '¡Nivel de maestría! Comprende y produce inglés con la precisión de un hablante culto nativo.',
-    suggestions: [
-      { emoji: '📐', label: 'Gramática',  url: '../../grammar/html/grammar.html' },
-      { emoji: '🔄', label: 'Traducción', url: '../../translation/html/translation.html' },
-      { emoji: '🧩', label: 'Secuencia',  url: '../../scramble/html/scramble.html' },
-    ],
-  },
+const _LEVEL_COLORS  = { A1: '#22c55e', A2: '#3b82f6', B1: '#f59e0b', B2: '#7c3aed', C1: '#0891b2', C2: '#be123c' };
+const _LEVEL_EMOJIS  = { A1: '🌱', A2: '📗', B1: '📘', B2: '🎓', C1: '🏅', C2: '🌟' };
+const _LEVEL_SUGGESTIONS = {
+  A1: [
+    { emoji: '📚', labelKey: 'act_vocabulary',            url: '../../vocabulary/html/vocabulary.html' },
+    { emoji: '🎙️', labelKey: 'placement_speaking_greetings', url: '../../speaking/html/speaking.html' },
+    { emoji: '✍️', labelKey: 'act_dictation',             url: '../../dictation/html/dictation.html' },
+  ],
+  A2: [
+    { emoji: '🎙️', labelKey: 'act_speaking',   url: '../../speaking/html/speaking.html' },
+    { emoji: '🔤', labelKey: 'act_cloze',       url: '../../cloze/html/cloze.html' },
+    { emoji: '🧠', labelKey: 'act_quiz',        url: '../../quiz/html/quiz.html' },
+  ],
+  B1: [
+    { emoji: '📐', labelKey: 'act_grammar',     url: '../../grammar/html/grammar.html' },
+    { emoji: '🔄', labelKey: 'act_translation', url: '../../translation/html/translation.html' },
+    { emoji: '🧩', labelKey: 'act_scramble',    url: '../../scramble/html/scramble.html' },
+  ],
+  B2: [
+    { emoji: '📐', labelKey: 'act_grammar',               url: '../../grammar/html/grammar.html' },
+    { emoji: '🔄', labelKey: 'act_translation',           url: '../../translation/html/translation.html' },
+    { emoji: '🎙️', labelKey: 'placement_speaking_advanced', url: '../../speaking/html/speaking.html' },
+  ],
+  C1: [
+    { emoji: '📐', labelKey: 'act_grammar',     url: '../../grammar/html/grammar.html' },
+    { emoji: '🔄', labelKey: 'act_translation', url: '../../translation/html/translation.html' },
+    { emoji: '🧩', labelKey: 'act_scramble',    url: '../../scramble/html/scramble.html' },
+  ],
+  C2: [
+    { emoji: '📐', labelKey: 'act_grammar',     url: '../../grammar/html/grammar.html' },
+    { emoji: '🔄', labelKey: 'act_translation', url: '../../translation/html/translation.html' },
+    { emoji: '🧩', labelKey: 'act_scramble',    url: '../../scramble/html/scramble.html' },
+  ],
 };
+
+function _getLevelConfig(level) {
+  var lk = level.toLowerCase();
+  return {
+    label:   AppLang.t('placement_result_' + lk + '_label'),
+    emoji:   _LEVEL_EMOJIS[level],
+    color:   _LEVEL_COLORS[level],
+    message: AppLang.t('placement_result_' + lk + '_msg'),
+    suggestions: (_LEVEL_SUGGESTIONS[level] || []).map(function (s) {
+      return { emoji: s.emoji, label: AppLang.t(s.labelKey), url: s.url };
+    }),
+  };
+}
 
 /* ---- State ---- */
 let currentQ = 0;
@@ -194,6 +84,26 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-btn').addEventListener('click', startTest);
   document.getElementById('skip-btn').addEventListener('click', skipTest);
   document.getElementById('retake-btn').addEventListener('click', retakeTest);
+
+  if (AppLangPair.getActive().source.code !== 'es' &&
+      typeof AppLang !== 'undefined') {
+    const _plPair = AppLangPair.getActive();
+    const _plParams = { target: _plPair.target.localName, targetName: _plPair.target.name, source: _plPair.source.localName, sourceName: _plPair.source.name };
+    const _t = key => { const v = AppLang.t(key, _plParams); return v !== key ? v : null; };
+    const _s = (sel, key) => { const el = document.querySelector(sel); const v = _t(key); if (el && v) el.textContent = v; };
+    const _i = (id,  key) => { const el = document.getElementById(id);  const v = _t(key); if (el && v) el.textContent = v; };
+    _s('.placement-title',       'placement_title');
+    _s('.placement-subtitle',    'placement_subtitle_enes');
+    _i('start-btn',              'placement_start_btn');
+    _i('skip-btn',               'placement_skip_btn');
+    _i('retake-btn',             'placement_retake_btn');
+    _i('result-cta',             'placement_result_cta');
+    _s('.result-suggestions-label', 'placement_suggestions_label');
+    // Info pills (by index)
+    const pills = document.querySelectorAll('.info-pill');
+    const pillKeys = ['placement_time_pill', 'placement_questions_pill', 'placement_result_pill'];
+    pills.forEach((p, i) => { const v = _t(pillKeys[i]); if (v) p.textContent = v; });
+  }
 });
 
 function startTest() {
@@ -286,7 +196,7 @@ function scoreToLevel(s) {
 
 function showResults() {
   const level  = scoreToLevel(score);
-  const config = LEVELS[level];
+  const config = _getLevelConfig(level);
 
   // Fill progress bar to 100%
   document.getElementById('placement-progress-fill').style.width = '100%';
@@ -304,7 +214,8 @@ function showResults() {
 
   levelEl.textContent  = config.label;
   levelEl.style.color  = config.color;
-  scoreEl.textContent  = score + ' / ' + QUESTIONS.length + ' respuestas correctas';
+  const _isEnSrc = AppLangPair.getActive().source.code === 'en';
+  scoreEl.textContent  = score + ' / ' + QUESTIONS.length + AppLang.t('placement_score_suffix');
   msgEl.textContent    = config.message;
 
   sugsEl.innerHTML = '';

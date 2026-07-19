@@ -11,7 +11,7 @@ function getTTS() {
   if (_tts) return Promise.resolve(_tts);
   if (_loadingPromise) return _loadingPromise;
 
-  _loadingPromise = KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-ONNX', {
+  _loadingPromise = KokoroTTS.from_pretrained('onnx-community/Kokoro-82M-v1.0-ONNX', {
     dtype  : 'q8',
     device : 'wasm',
     progress_callback: (p) => {

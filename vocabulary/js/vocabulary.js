@@ -47,7 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function _playCurrentWord(e) {
     e.stopPropagation(); // prevent card flip
     const word = words[currentIndex];
-    if (word) AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, word._origIdx ?? currentIndex, word.word);
+    if (word) {
+      const _vocPair   = AppLangPair.getActive();
+      const _isEnTgt   = _vocPair.target.code === 'en';
+      const _audioText = _isEnTgt ? word.word : (word.translations?.[_vocPair.target.code] || word.word);
+      AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, word.id, _audioText);
+    }
   }
   document.getElementById('listen-btn').addEventListener('click', _playCurrentWord);
   document.getElementById('listen-btn-back').addEventListener('click', _playCurrentWord);
@@ -146,17 +151,19 @@ function startTopic(topicId, pathMode, pathCard) {
   AppData.get(dataKey)
     .then(data => {
       const _order = CEFR_ORDER;
-      const _tagged = (data.words || []).map((w, i) => ({ ...w, _origIdx: i }))
+      const _tagged = (data.words || []).slice()
         .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
       words   = _tagged;
       cardIds = _tagged.map(x => vocabTopicKey + '_' + x.id);
 
       const topicObj = (AppTopics.VOCAB_TOPICS || []).find(t => t.id === topicId);
+      const _tgtCode = AppLangPair.getActive().target.code;
       const _pbArgs = {
         items: words,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
+        traductions: _tgtCode !== 'en' ? _tagged.map(w => w.translations?.[_tgtCode] || w.word) : null,
         cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
@@ -193,16 +200,21 @@ function showCard(index) {
   isFlipped = false;
   document.getElementById('flashcard').classList.remove('flipped');
 
+  const _cardPair    = AppLangPair.getActive();
+  const _isEnTarget  = _cardPair.target.code === 'en';
+  const _displayWord = _isEnTarget ? word.word : (word.translations?.[_cardPair.target.code] || word.word);
+  const _displayHint = _isEnTarget ? (word.translations?.[_cardPair.source.code] || '') : word.word;
+
   // Front
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
   document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
-  document.getElementById('word-text').textContent = word.word;
+  document.getElementById('word-text').textContent = _displayWord;
 
   // Back
-  document.getElementById('fc-back-word').textContent    = word.word;
-  document.getElementById('word-definition').textContent = word.definition;
-  document.getElementById('word-example').textContent    = word.example;
-  document.getElementById('word-translation').textContent = word.translations?.[AppLangPair.getActive().source.code] || '';
+  document.getElementById('fc-back-word').textContent    = _displayWord;
+  document.getElementById('word-definition').textContent = _isEnTarget ? word.definition : (word['definition_' + _cardPair.source.code] || word.definition);
+  document.getElementById('word-example').textContent    = _isEnTarget ? word.example    : (word['example_' + _cardPair.source.code]    || word.example);
+  document.getElementById('word-translation').textContent = _displayHint;
 
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
@@ -222,7 +234,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 function flipCard() {

@@ -6,7 +6,12 @@
       "level": "A1",
       "grammar": "Present simple: habitual action or general fact",
       "alternatives": [
-        "Can you send me that document by email?"
+        {
+          "text": "Can you send me that document by email?",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 98
+        }
       ],
       "translations": {
         "es": "¿Podrías enviarme ese documento por correo electrónico?"
@@ -27,7 +32,12 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could you help me set up my new printer?"
+        {
+          "text": "Could you help me set up my new printer?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 99
+        }
       ],
       "translations": {
         "es": "¿Puedes ayudarme a configurar mi nueva impresora?"
@@ -48,7 +58,7 @@
       "level": "A1",
       "grammar": "Modal 'can': ability or permission",
       "translations": {
-        "es": "Espera, mi computadora está actualizando"
+        "es": "Espera, mi computadora se está actualizando"
       }
     },
     {
@@ -57,7 +67,12 @@
       "level": "A1",
       "grammar": "Present continuous: action happening right now",
       "alternatives": [
-        "Tomorrow we're going to have a video call with the family"
+        {
+          "text": "Tomorrow we're going to have a video call with the family",
+          "type": "register",
+          "hint": "informal",
+          "audioIdx": 100
+        }
       ],
       "translations": {
         "es": "Mañana vamos a hacer una videollamada con la familia"
@@ -69,7 +84,10 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Do you know how I can transfer photos from my phone to my computer?"
+        {
+          "text": "Do you know how I can transfer photos from my phone to my computer?",
+          "type": "style"
+        }
       ],
       "translations": {
         "es": "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?"
@@ -81,7 +99,7 @@
       "level": "A2",
       "grammar": null,
       "translations": {
-        "es": "¿Puedes copiarme en ese email?"
+        "es": "¿Puedes copiarme en ese correo electrónico?"
       }
     },
     {
@@ -99,7 +117,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "Could you share your location?"
+        {
+          "text": "Could you share your location?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 101
+        }
       ],
       "translations": {
         "es": "¿Puedes compartir tu ubicación?"
@@ -129,7 +152,10 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "How do I remove this app from my phone?"
+        {
+          "text": "How do I remove this app from my phone?",
+          "type": "style"
+        }
       ],
       "translations": {
         "es": "¿Cómo elimino esta aplicación de mi teléfono?"
@@ -150,7 +176,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "¿Existe una app para escanear documentos?"
+        "es": "¿Existe una aplicación para escanear documentos?"
       }
     },
     {
@@ -186,10 +212,15 @@
       "level": "A2",
       "grammar": null,
       "alternatives": [
-        "Could I turn off notifications for this app?"
+        {
+          "text": "Could I turn off notifications for this app?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 102
+        }
       ],
       "translations": {
-        "es": "¿Puedo desactivar las notificaciones de esta app?"
+        "es": "¿Puedo desactivar las notificaciones de esta aplicación?"
       }
     },
     {
@@ -315,7 +346,7 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "Nececito un nuevo cable USB"
+        "es": "Necesito un nuevo cable USB"
       }
     },
     {
@@ -324,7 +355,12 @@
       "level": "A1",
       "grammar": null,
       "alternatives": [
-        "The WiFi is not working, could you restart it?"
+        {
+          "text": "The WiFi is not working, could you restart it?",
+          "type": "register",
+          "hint": "formal",
+          "audioIdx": 103
+        }
       ],
       "translations": {
         "es": "No funciona el WiFi, ¿lo puedes reiniciar?"
@@ -498,7 +534,7 @@
       "level": "B1",
       "grammar": null,
       "translations": {
-        "es": "Prende el escaner, necesito digitalizar este documento"
+        "es": "Prende el escáner, necesito digitalizar este documento"
       }
     },
     {
@@ -561,7 +597,7 @@
       "level": "A2",
       "grammar": null,
       "translations": {
-        "es": "No sé dónde está la batería portatil"
+        "es": "No sé dónde está la batería portátil"
       }
     },
     {
@@ -579,7 +615,17 @@
       "level": "A1",
       "grammar": null,
       "translations": {
-        "es": "¿Estás seguro que estas conectado al internet?"
+        "es": "¿Estás seguro de que estás conectado a internet?"
+      },
+      "translations_alternatives": {
+        "es": [
+          {
+            "text": "¿Estás segura de que estás conectada a internet?",
+            "type": "gender",
+            "hint": "femenino",
+            "audioIdx": 98
+          }
+        ]
       }
     },
     {
@@ -601,12 +647,75 @@
       }
     },
     {
+      "id": "technology_the_app_was_requesting_access_to",
+      "phrase": "The app was requesting my contacts and location, so I didn't install it.",
+      "level": "B2",
+      "grammar": "Past continuous for an action in progress at a key decision moment",
+      "translations": {
+        "es": "La aplicación pedía mis contactos y ubicación, así que decidí no instalarla."
+      }
+    },
+    {
+      "id": "technology_my_storage_is_almost_full_so",
+      "phrase": "My storage is almost full, so I need to delete files or upgrade.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Mi almacenamiento está casi lleno, así que necesito borrar archivos o actualizar mi plan."
+      }
+    },
+    {
+      "id": "technology_i_switched_to_a_monthly_subscription",
+      "phrase": "I switched to a monthly subscription instead of buying outright because updates are included.",
+      "level": "B2",
+      "grammar": "'Instead of + gerund' to contrast alternatives",
+      "translations": {
+        "es": "Cambié a una suscripción mensual en lugar de comprar el software de una vez porque las actualizaciones están incluidas."
+      }
+    },
+    {
+      "id": "technology_the_battery_life_significantly_improved_after",
+      "phrase": "The battery life significantly improved after I turned off background app refresh.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "La duración de la batería mejoró notablemente después de desactivar la actualización de aplicaciones en segundo plano."
+      }
+    },
+    {
+      "id": "technology_i_enabled_dark_mode_to_reduce",
+      "phrase": "I enabled dark mode to reduce eye strain and save battery on my OLED.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Activé el modo oscuro para reducir la fatiga visual y ahorrar batería en mi pantalla OLED."
+      }
+    },
+    {
+      "id": "technology_the_router_needs_to_be_placed",
+      "phrase": "The router needs to be placed centrally for better coverage throughout the house.",
+      "level": "B2",
+      "grammar": "Passive infinitive: 'needs to be placed' — impersonal recommendation",
+      "translations": {
+        "es": "El router debe colocarse en un lugar central para mejor cobertura en toda la casa."
+      }
+    },
+    {
+      "id": "technology_i_use_a_separate_browser_profile",
+      "phrase": "I keep a separate browser profile for work to avoid mixing personal data.",
+      "level": "B2",
+      "grammar": null,
+      "translations": {
+        "es": "Mantengo un perfil de navegador separado para el trabajo y así no mezclar mis datos personales."
+      }
+    },
+    {
       "id": "technology_my_phone_keeps_overheating_when",
       "phrase": "My phone keeps overheating when I run multiple apps at the same time.",
       "level": "B2",
       "grammar": "'Keep + gerund' to describe a repeated or continuing problem",
       "translations": {
-        "es": "Mi teléfono sigue sobrecalentándose cuando ejecuto varias aplicaciones al mismo tiempo."
+        "es": "Mi teléfono sigue sobrecalentándose cuando tengo varias aplicaciones abiertas al mismo tiempo."
       }
     },
     {
@@ -633,7 +742,7 @@
       "level": "B2",
       "grammar": "'Whenever' to express every time a condition is true",
       "translations": {
-        "es": "La calidad del streaming baja cada vez que alguien más usa internet en casa."
+        "es": "La calidad de la transmisión baja cada vez que alguien más usa internet en casa."
       }
     },
     {
@@ -646,8 +755,71 @@
       }
     },
     {
+      "id": "technology_the_algorithm_keeps_recommending_content",
+      "phrase": "The algorithm keeps recommending content based on past behavior, making it hard to discover anything new.",
+      "level": "C1",
+      "grammar": "'Keep + gerund' for persistent patterns; relative clause to add commentary",
+      "translations": {
+        "es": "El algoritmo sigue recomendándome contenido basado en mi comportamiento pasado, lo que hace difícil descubrir algo nuevo."
+      }
+    },
+    {
+      "id": "technology_i_enabled_biometric_authentication_so",
+      "phrase": "I enabled biometric authentication so that unlocking my device is both faster and more secure.",
+      "level": "C1",
+      "grammar": "'So that' to express purpose with a compound result",
+      "translations": {
+        "es": "Activé la autenticación biométrica para que desbloquear mi dispositivo sea más rápido y seguro."
+      }
+    },
+    {
+      "id": "technology_after_the_ransomware_attack_the_company",
+      "phrase": "After the ransomware attack, the company had no choice but to restore from their last backup.",
+      "level": "C1",
+      "grammar": "'Had no choice but to' — expressing a forced course of action",
+      "translations": {
+        "es": "Tras el ataque de ransomware, la empresa no tuvo más opción que restaurar todo desde su última copia de seguridad."
+      }
+    },
+    {
+      "id": "technology_i_requested_a_copy_of_all_data",
+      "phrase": "I requested all the data the platform had collected about me, and the results were unsettling.",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "Solicité una copia de todos los datos que la plataforma había recopilado sobre mí, y los resultados fueron inquietantes."
+      }
+    },
+    {
+      "id": "technology_the_app_uses_dark_patterns_to",
+      "phrase": "The app uses dark patterns to make canceling your subscription as confusing as possible.",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "La aplicación usa patrones engañosos para hacer que cancelar tu suscripción sea lo más confuso posible."
+      }
+    },
+    {
+      "id": "technology_working_remotely_requires_not_just",
+      "phrase": "Working remotely requires not just a reliable connection, but also the right tools for asynchronous collaboration.",
+      "level": "C1",
+      "grammar": "'Not just... but also' for additive emphasis",
+      "translations": {
+        "es": "Trabajar de forma remota requiere no solo una conexión confiable, sino también las herramientas adecuadas para la colaboración asíncrona."
+      }
+    },
+    {
+      "id": "technology_the_platform_monetizes_user_attention",
+      "phrase": "The platform monetizes user attention by selling targeted advertising based on behavioral data.",
+      "level": "C1",
+      "grammar": null,
+      "translations": {
+        "es": "La plataforma monetiza la atención de los usuarios vendiendo publicidad dirigida basada en datos de comportamiento."
+      }
+    },
+    {
       "id": "technology_my_privacy_settings_dont_seem",
-      "phrase": "My privacy settings don't seem to be working — my location is still being tracked.",
+      "phrase": "My privacy settings don't seem to be working. My location is still being tracked.",
       "level": "C1",
       "grammar": "Passive continuous: 'is being tracked' for an ongoing background action",
       "translations": {
@@ -660,7 +832,7 @@
       "level": "C1",
       "grammar": null,
       "translations": {
-        "es": "Recibí un correo de phishing haciéndose pasar por mi banco, pidiéndome que verificara mi cuenta."
+        "es": "Recibí un correo de phishing que se hacía pasar por mi banco y me pedía que verificara mi cuenta."
       }
     },
     {
@@ -688,6 +860,51 @@
       "grammar": "'Consider + gerund' for weighing an option",
       "translations": {
         "es": "Estoy pensando en cambiar de ecosistema, pero transferir todos mis datos es una gran preocupación."
+      }
+    },
+    {
+      "id": "technology_algorithmic_bias_can_perpetuate",
+      "phrase": "Algorithmic bias can perpetuate systemic inequalities when training data reflects historical discrimination.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El sesgo algorítmico puede perpetuar desigualdades sistémicas cuando los datos de entrenamiento reflejan discriminación histórica."
+      }
+    },
+    {
+      "id": "technology_the_right_to_be_forgotten_allows",
+      "phrase": "The right to be forgotten allows individuals to request deletion of personal data no longer relevant or accurate.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El derecho al olvido permite a las personas solicitar la eliminación de datos personales que ya no son relevantes ni exactos."
+      }
+    },
+    {
+      "id": "technology_surveillance_capitalism_refers_to",
+      "phrase": "Surveillance capitalism refers to treating personal data as a commodity to be extracted and traded for profit.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El capitalismo de vigilancia se refiere a la práctica de tratar los datos personales como una mercancía que se extrae y comercializa con fines de lucro."
+      }
+    },
+    {
+      "id": "technology_open_source_software_relies_on",
+      "phrase": "Open-source software relies on distributed, volunteer-driven development, which makes auditing for security vulnerabilities easier and more transparent.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "El software de código abierto depende de un desarrollo distribuido y voluntario, lo que hace que auditarlo en busca de vulnerabilidades de seguridad sea más fácil y transparente."
+      }
+    },
+    {
+      "id": "technology_digital_sovereignty_refers_to",
+      "phrase": "Digital sovereignty refers to a nation's ability to govern its data infrastructure independently of foreign platforms or regulations.",
+      "level": "C2",
+      "grammar": null,
+      "translations": {
+        "es": "La soberanía digital hace referencia a la capacidad de un país para gestionar su propia infraestructura de datos de forma independiente de plataformas o regulaciones extranjeras."
       }
     },
     {

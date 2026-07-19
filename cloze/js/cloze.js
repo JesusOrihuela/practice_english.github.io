@@ -22,7 +22,8 @@ function _equivalentMatch(guess, answer) {
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], audioIndices = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [];
+let _activeAudioSlug = '';   // audioSlug of the picked form for this round
 let currentIndex = 0;
 let currentBlank = null;  // { blank, blankClean, blankedPhrase, fullPhrase }
 let answered = false;
@@ -91,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('exercise-area').appendChild(_backLink);
   }
 
-  AppAudio.setBase('../../shared/audio/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
   AppAudio.warmup();
 });
 
@@ -150,24 +151,26 @@ function startTopic(topicId, pathMode, pathCard) {
   AppData.get(topicId)
     .then(data => {
       const _order = CEFR_ORDER;
-      const _tagged = (data.phrases || []).map((p, i) => ({
-        phrase: p.phrase, translation: p.translations?.[AppLangPair.getActive().source.code] || '',
-        grammar: p.grammar || null, level: p.level || null, id: p.id, origIdx: i,
+      const _tagged = (data.phrases || []).map(p => ({
+        practiceText: p.target?.[0]?.text || '',
+        hintText:     p.source || '',
+        forms:        p.target || [],
+        grammar: p.grammar || null, level: p.level || null, id: p.id,
       })).sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
-      phrases      = _tagged.map(x => x.phrase);
-      translations = _tagged.map(x => x.translation);
+      phrases      = _tagged.map(x => x.practiceText);
+      translations = _tagged.map(x => x.hintText);
       grammarNotes = _tagged.map(x => x.grammar);
       cefrLevels   = _tagged.map(x => x.level);
       cardIds      = _tagged.map(x => 'cloze_' + x.id);
-      audioIndices = _tagged.map(x => x.origIdx);
+      formPools    = _tagged.map(x => x.forms);
 
       const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
         items: phrases,
         cardIds,
-        topicLabel: topicObj ? topicObj.label : topicId,
+        topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: _tagged.map(x => x.translation),
+        traductions: _tagged.map(x => x.hintText),
         cefrLevels,
         onStart: idx => _beginExercise(idx),
       };
@@ -208,6 +211,10 @@ function selectBlankWord(phrase) {
   };
 }
 
+function _buildPool(forms) {
+  return forms.filter(f => f.audioSlug !== undefined);
+}
+
 function showPhrase(startIndex) {
   answered = false;
   currentBlank = null;
@@ -218,8 +225,13 @@ function showPhrase(startIndex) {
   while (!currentBlank) {
     if (tried.has(currentIndex) || tried.size >= cardIds.length) break;
     tried.add(currentIndex);
-    currentBlank = selectBlankWord(phrases[currentIndex]);
-    if (!currentBlank) {
+    // Pick a random form with audio and try to blank it
+    const _pool   = _buildPool(formPools[currentIndex] || []);
+    const _picked = _pool[Math.floor(Math.random() * _pool.length)];
+    currentBlank  = selectBlankWord(_picked.text);
+    if (currentBlank) {
+      _activeAudioSlug = _picked.audioSlug;
+    } else {
       currentIndex = (currentIndex + 1) % cardIds.length;
     }
   }
@@ -237,7 +249,7 @@ function showPhrase(startIndex) {
     return;
   }
 
-  document.getElementById('phrase-text').innerHTML        = currentBlank.blankedPhrase.replace('___', '<span aria-label="blank word">[___]</span>');
+  document.getElementById('phrase-text').innerHTML        = currentBlank.blankedPhrase.replace('___', '<span aria-label="' + AppLang.t('cloze_blank_word_aria') + '">[___]</span>');
   document.getElementById('translation-text').textContent = translations[currentIndex] || '';
   document.getElementById('cloze-input').value            = '';
   document.getElementById('cloze-input').disabled         = false;
@@ -266,7 +278,7 @@ function _showCefrBadge(level, containerId) {
   if (!level) { badge.className = 'cefr-phrase-badge'; badge.textContent = ''; return; }
   badge.className = 'cefr-phrase-badge cefr-badge cefr-badge--' + level.toLowerCase();
   badge.textContent = level;
-  badge.setAttribute('aria-label', 'CEFR level ' + level);
+  badge.setAttribute('aria-label', AppLang.t('cefr_level_aria', { level }));
 }
 
 // ---- Answer Check ----
@@ -393,7 +405,7 @@ function updateCounter() {
 
 function playTTS(text) {
   if (!text) return;
-  AppAudio.play(currentTopic, audioIndices[currentIndex] ?? currentIndex, text);
+  AppAudio.play(currentTopic, _activeAudioSlug, text);
 }
 
 // extractGrammarInfo is in shared/js/grammar-chip.js

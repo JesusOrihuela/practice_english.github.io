@@ -56,11 +56,11 @@
   }
 
   function _onOffline() {
-    _show('📶 No connection — progress saved locally', '#b91c1c');
+    _show((typeof AppLang !== 'undefined' ? AppLang.t('network_offline') : '📶 No connection'), '#b91c1c');
   }
 
   function _onOnline() {
-    _show('✓ Connection restored', '#15803d');
+    _show((typeof AppLang !== 'undefined' ? AppLang.t('network_online') : '✓ Connection restored'), '#15803d');
     _hide(3000);
   }
 

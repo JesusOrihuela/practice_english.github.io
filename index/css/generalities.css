@@ -1065,6 +1065,45 @@ body.path-mode {
 .feedback-note-icon { flex-shrink: 0; font-style: normal; }
 .feedback-note-text { font-style: italic; }
 
+/* ---- Alternative chips (AppFeedback.buildAltNote — shown after correct answer) ---- */
+.alt-note {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.alt-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--clr-text);
+}
+
+.alt-chip-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  white-space: nowrap;
+}
+
+.alt-chip-text { font-style: italic; }
+
+.alt-chip-text + .alt-chip-text::before {
+  content: '·';
+  font-style: normal;
+  color: var(--clr-border);
+  margin-right: 4px;
+}
+
+.alt-chip--base { border-color: var(--clr-primary); }
+
 /* ---- Back-to-path link (shown after answer in activities) ---- */
 .back-to-path-link {
   display: inline-block;
