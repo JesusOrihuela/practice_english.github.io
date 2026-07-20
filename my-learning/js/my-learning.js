@@ -213,6 +213,7 @@ function _buildSnakeTrail(container, queue, position) {
 
       var conn = document.createElement('div');
       conn.className = 'ml-h-conn' + (connDone ? ' ml-h-conn--done' : '');
+      conn.setAttribute('aria-hidden', 'true');  // decorative, not a list item
       conn.style.left      = sx + 'px';
       conn.style.top       = sy + 'px';
       conn.style.width     = len + 'px';

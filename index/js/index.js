@@ -139,6 +139,9 @@ function _renderSessionTrail() {
 function _buildTrailNodes(container, queue, position) {
   const trail = document.createElement('div');
   trail.className = 'path-trail';
+  // Transparent wrapper: keeps the .path-node listitems as the direct children
+  // of the role="list" container in the accessibility tree.
+  trail.setAttribute('role', 'presentation');
 
   // Zigzag geometry constants
   // Even-index nodes sit on the upper rail; odd-index nodes drop WAVE px lower.
@@ -160,6 +163,7 @@ function _buildTrailNodes(container, queue, position) {
       const prevDown = (idx - 1) % 2 !== 0; // previous node on lower rail?
       const conn = document.createElement('div');
       conn.className = 'path-connector' + (idx <= position ? ' path-connector--done' : '');
+      conn.setAttribute('aria-hidden', 'true');  // decorative, not a list item
       conn.style.width       = C_LEN + 'px';
       conn.style.marginRight = GAP_FIX + 'px';
       if (!prevDown) {
@@ -181,6 +185,7 @@ function _buildTrailNodes(container, queue, position) {
     const node = document.createElement('div');
     node.className = 'path-node path-node--' + side +
       (isDone ? ' path-node--done' : isActive ? ' path-node--active' : ' path-node--pending');
+    node.setAttribute('role', 'listitem');  // required child of the role="list" container
 
     // Odd-index nodes sit on the lower rail (WAVE px below upper rail)
     if (idx % 2 !== 0) node.style.marginTop = WAVE + 'px';
