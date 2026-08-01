@@ -55,7 +55,7 @@ const slugify = s => {
 // ── Configuration ─────────────────────────────────────────────────────────────
 
 const PHRASE_TOPICS = [
-  'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater',
   'gym', 'technology', 'accountability',

@@ -201,11 +201,11 @@ def build_sources(lang_code):
             ),
         })
 
-    # General vocabulary — text = translations[lang_code] (vocab still shared)
+    # General vocabulary — text = translations[lang_code] (per-pair vocab since Part C)
     sources.append({
         'id':        f'vocab{suffix}',
-        'json':      JSON / 'common' / 'vocab' / 'words.json',
-        'out_dir':   AUDIO / 'vocab',
+        'json':      JSON / 'pairs' / pair / 'vocab' / 'words.json',
+        'out_dir':   AUDIO / pair / 'vocab',
         'get_items': lambda d: d.get('words', []),
         'get_text':  lambda item, lc=lang_code: (
             item.get('translations', {}).get(lc) or item.get('word', '')
@@ -214,12 +214,12 @@ def build_sources(lang_code):
         'get_index': lambda item: item.get('id', ''),
     })
 
-    # Topic vocabulary — text = translations[lang_code] (vocab still shared)
+    # Topic vocabulary — text = translations[lang_code] (per-pair vocab since Part C)
     for topic in VOCAB_TOPICS:
         sources.append({
             'id':        f'vocab_{topic}{suffix}',
-            'json':      JSON / 'common' / 'vocab' / f'words-{topic}.json',
-            'out_dir':   AUDIO / f'vocab_{topic}',
+            'json':      JSON / 'pairs' / pair / 'vocab' / f'words-{topic}.json',
+            'out_dir':   AUDIO / pair / f'vocab_{topic}',
             'get_items': lambda d: d.get('words', []),
             'get_text':  lambda item, lc=lang_code: (
                 item.get('translations', {}).get(lc) or item.get('word', '')

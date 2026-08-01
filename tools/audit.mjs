@@ -57,7 +57,7 @@ const PAIRS = [
 // ─── TOPIC LISTS ─────────────────────────────────────────────────────────────
 
 const PHRASE_TOPICS = [
-  'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
 ];
@@ -324,7 +324,10 @@ function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
 
 function auditVocabFile(topic, langRules) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  const file = `shared/json/common/vocab/${filename}`;
+  // Vocabulary is per-pair since Part C; the copies are identical today, so the
+  // content audit runs against the canonical es-en copy (bilingual fields checked
+  // there apply to both). When en-es vocab diverges, loop over both pairs here.
+  const file = `shared/json/pairs/es-en/vocab/${filename}`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -499,16 +502,18 @@ function checkPhraseAudioAlignment(topic, pairId, targetLangCode) {
 function checkVocabAudioAlignment(topic) {
   const jsonFile    = topic === 'general' ? 'words.json' : `words-${topic}.json`;
   const audioSubdir = topic === 'general' ? 'vocab' : `vocab_${topic}`;
+  const fileRef     = `shared/json/pairs/*/vocab/${jsonFile}`;
 
-  const jsonPath  = join(JSON_DIR, 'common', 'vocab', jsonFile);
-  const audioPath = join(AUDIO_DIR, audioSubdir);
-  if (!existsSync(jsonPath) || !existsSync(audioPath)) return;
-
-  const data    = JSON.parse(readFileSync(jsonPath, 'utf8'));
-  const words   = data.words ?? [];
-  const fileRef = `shared/json/common/vocab/${jsonFile}`;
-
+  // Vocab audio is per-pair since Part C: each pair's target-language voices live
+  // under shared/audio/{pair}/{audioSubdir}. Map a target langCode to its pair
+  // (en → es-en; otherwise en-{lang}) and check the words in that pair's vocab.
   for (const [langCode, leaderVoice] of Object.entries(LANG_VOICE_LEADERS)) {
+    const pair = langCode === 'en' ? 'es-en' : `en-${langCode}`;
+    const jsonPath  = join(JSON_DIR, 'pairs', pair, 'vocab', jsonFile);
+    const audioPath = join(AUDIO_DIR, pair, audioSubdir);
+    if (!existsSync(jsonPath) || !existsSync(audioPath)) continue;
+    const words = (JSON.parse(readFileSync(jsonPath, 'utf8')).words) ?? [];
+
     let found = 0;
     for (const w of words) {
       if (existsSync(join(audioPath, `${w.id}-${leaderVoice}.wav`))) found++;

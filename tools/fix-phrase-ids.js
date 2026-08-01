@@ -7,7 +7,7 @@
 //
 // Phrases are keyed by pair — content is independent per pair, so phrase IDs
 // may diverge (e.g. es-en/restaurant has 76 phrases, en-es/restaurant has 77).
-// Vocabulary is shared across pairs (a single bilingual dataset under common/vocab).
+// Vocabulary is per-pair since Part C (pairs/{pairId}/vocab/); copies are identical today.
 //
 // Run this ANY TIME you add, edit, or remove phrases or vocabulary words. Forgetting
 // silently breaks the Mi Aprendizaje session builder (PathSession) for the affected pair.
@@ -25,7 +25,7 @@ const root = path.join(__dirname, '..');
 const PAIRS = ['es-en', 'en-es'];
 
 const phraseTopics = [
-  'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater',
   'gym', 'technology', 'accountability',
@@ -51,11 +51,13 @@ for (const pair of PAIRS) {
   }
 }
 
-// Vocabulary: shared across pairs (single dataset under common/vocab).
+// Vocabulary: per-pair since Part C (pairs/{pairId}/vocab/), but the copies are
+// identical today, so _ID_MAP.vocab stays flat and is built from the es-en copy.
+// When en-es vocab diverges, key this by pair like _ID_MAP.phrases.
 const vocab = {};
 for (const topic of vocabTopics) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  const filePath = path.join(root, 'shared', 'json', 'common', 'vocab', filename);
+  const filePath = path.join(root, 'shared', 'json', 'pairs', 'es-en', 'vocab', filename);
   const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   vocab[topic] = {
     quizBase:  topic === 'general' ? 'quiz_vocab' : `quiz_${topic}`,

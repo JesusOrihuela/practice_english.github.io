@@ -1,0 +1,46 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 5. Funciones, Inventario A1-A2",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Exponentes oficiales verbatim para funciones de saludo/despedida/presentacion. Usado como arbitro de cobertura funcional para el topic greetings del par en-es. Los exponentes son plantillas; la curaduria los realiza en frases completas naturales en espanol neutro.",
+  "targetLang": "es",
+  "topic": "greetings",
+  "functions": [
+    {
+      "id": "saludar",
+      "name": "Saludar",
+      "level": "A1",
+      "exponents": ["Hola.", "Buenos días.", "Buenas tardes.", "Buenas noches.", "Hola, ¿qué tal?", "Hola, ¿cómo estás?"]
+    },
+    {
+      "id": "responder_saludo",
+      "name": "Responder a un saludo",
+      "level": "A1",
+      "exponents": ["Muy bien, gracias, ¿y tú?", "Muy bien, gracias, ¿y usted?", "Bien. Y tú, ¿qué tal?", "Muy bien. Y usted, ¿cómo está?"]
+    },
+    {
+      "id": "dirigirse_alguien",
+      "name": "Dirigirse a alguien",
+      "level": "A1",
+      "exponents": ["Perdón.", "Perdone.", "Perdona.", "Oiga.", "Oye.", "Por favor."]
+    },
+    {
+      "id": "presentar",
+      "name": "Presentar a alguien / Presentarse",
+      "level": "A2",
+      "exponents": ["Este es mi amigo.", "Te presento a mi hermana.", "Le presento a la señora Ramos.", "Me llamo Ana.", "Soy Ana."]
+    },
+    {
+      "id": "responder_presentacion",
+      "name": "Responder a una presentación",
+      "level": "A1",
+      "exponents": ["Encantada.", "Encantado.", "Mucho gusto.", "Hola, ¿qué tal?"]
+    },
+    {
+      "id": "despedirse",
+      "name": "Despedirse",
+      "level": "A1",
+      "exponents": ["¡Adiós!", "Hasta mañana.", "¡Hasta luego!", "¡Chao!", "Un abrazo.", "Nos vemos."]
+    }
+  ]
+}

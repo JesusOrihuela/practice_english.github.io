@@ -122,15 +122,15 @@ const MANIFEST_PATH = resolve(__dirname, '../shared/audio/.manifest.json');
 
 /** All phrase topic IDs (each maps to shared/json/{id}.json) */
 const PHRASE_TOPICS = [
-  'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater',
   'gym', 'technology', 'accountability',
 ];
 
-/** All vocabulary topic IDs (each maps to shared/json/common/vocab/words-{id}.json) */
+/** All vocabulary topic IDs (each maps to shared/json/pairs/{pairId}/vocab/words-{id}.json) */
 const VOCAB_TOPICS = [
-  'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater',
   'gym', 'technology', 'accountability',
@@ -217,8 +217,8 @@ EN_TARGET_PAIRS.forEach(pair => {
 });
 ALL_SOURCES.push({
   id:         'vocab',
-  jsonPath:   resolve(__dirname, '../shared/json/common/vocab/words.json'),
-  outDir:     resolve(__dirname, '../shared/audio/vocab'),
+  jsonPath:   resolve(__dirname, '../shared/json/pairs/es-en/vocab/words.json'),
+  outDir:     resolve(__dirname, '../shared/audio/es-en/vocab'),
   getItems:   data => data.words || [],
   getText:    item => item.word,
   getId:      item => item.id,
@@ -229,8 +229,8 @@ ALL_SOURCES.push({
 VOCAB_TOPICS.forEach(id => {
   ALL_SOURCES.push({
     id:         `vocab_${id}`,
-    jsonPath:   resolve(__dirname, `../shared/json/common/vocab/words-${id}.json`),
-    outDir:     resolve(__dirname, `../shared/audio/vocab_${id}`),
+    jsonPath:   resolve(__dirname, `../shared/json/pairs/es-en/vocab/words-${id}.json`),
+    outDir:     resolve(__dirname, `../shared/audio/es-en/vocab_${id}`),
     getItems:   data => data.words || [],
     getText:    item => item.word,
     getId:      item => item.id,
@@ -267,8 +267,8 @@ for (const [langCode, voices] of Object.entries(LANG_VOICES)) {
 
   ALL_SOURCES.push({
     id:         `vocab${suffix}`,
-    jsonPath:   resolve(__dirname, '../shared/json/common/vocab/words.json'),
-    outDir:     resolve(__dirname, '../shared/audio/vocab'),
+    jsonPath:   resolve(__dirname, `../shared/json/pairs/en-${langCode}/vocab/words.json`),
+    outDir:     resolve(__dirname, `../shared/audio/en-${langCode}/vocab`),
     getItems:   data => (data.words || []).filter(w => w.translations?.[langCode]),
     getText:    item => item.translations[langCode],
     getId:      item => item.id,
@@ -280,8 +280,8 @@ for (const [langCode, voices] of Object.entries(LANG_VOICES)) {
   VOCAB_TOPICS.forEach(id => {
     ALL_SOURCES.push({
       id:         `vocab_${id}${suffix}`,
-      jsonPath:   resolve(__dirname, `../shared/json/common/vocab/words-${id}.json`),
-      outDir:     resolve(__dirname, `../shared/audio/vocab_${id}`),
+      jsonPath:   resolve(__dirname, `../shared/json/pairs/en-${langCode}/vocab/words-${id}.json`),
+      outDir:     resolve(__dirname, `../shared/audio/en-${langCode}/vocab_${id}`),
       getItems:   data => (data.words || []).filter(w => w.translations?.[langCode]),
       getText:    item => item.translations[langCode],
       getId:      item => item.id,

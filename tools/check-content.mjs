@@ -20,7 +20,7 @@ const BASE = join(__dirname, '..', 'shared', 'json');
 
 const PAIRS = ['es-en', 'en-es'];
 const TOPICS = [
-  'greetings', 'restaurant', 'kitchen', 'gym', 'technology',
+  'emociones', 'greetings', 'restaurant', 'kitchen', 'gym', 'technology',
   'supermarket', 'accommodation', 'accountability', 'movies',
   'music', 'theater', 'transportation', 'airport'
 ];
@@ -72,6 +72,21 @@ for (const pair of PAIRS) {
       // R17 — Terminal punctuation on source
       if (phrase.source && !TERMINAL_RE.test(phrase.source.trimEnd())) {
         flag(pair, topic, id, 'source', 'R17', `Missing terminal punctuation: "${phrase.source}"`);
+      }
+
+      // schema (R16 §3) — no two forms may carry identical labels. Forms that
+      // are indistinguishable by any labelled dimension are redundant duplicates.
+      if ((phrase.target || []).length > 1) {
+        const seenLabels = new Map();
+        for (let i = 0; i < phrase.target.length; i++) {
+          const key = JSON.stringify(phrase.target[i].labels || {});
+          if (seenLabels.has(key)) {
+            flag(pair, topic, id, `target[${i}].labels`, 'schema',
+              `Duplicate labels ${key} — redundant form indistinguishable from target[${seenLabels.get(key)}]; give it a distinct dimension or remove it`);
+          } else {
+            seenLabels.set(key, i);
+          }
+        }
       }
 
       // R17 + schema — validate each target form
