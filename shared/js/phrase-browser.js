@@ -20,7 +20,7 @@ const PhraseBrowser = (() => {
     return s.slice(0, max - 1).replace(/\s+\S*$/, '') + '\u2026';
   }
 
-  function show({ items, cardIds, topicLabel, pickerEl, traductions, cefrLevels, onStart }) {
+  function show({ items, cardIds, topicLabel, pickerEl, traductions, cefrLevels, forms, onStart }) {
     const cards     = Progress.getAllCards();
     const total     = cardIds.length;
     const seenCount = cardIds.filter(id => { const c = cards[id]; return c && c.reps > 0; }).length;
@@ -107,16 +107,11 @@ const PhraseBrowser = (() => {
       num.setAttribute('aria-hidden', 'true');
       num.textContent = i + 1;
 
-      const dot = document.createElement('span');
-      dot.className = 'pb-chip-dot';
-      dot.setAttribute('aria-hidden', 'true');
-
       const text = document.createElement('span');
       text.className = 'pb-chip-text';
       text.textContent = mainText;
 
       chip.appendChild(num);
-      chip.appendChild(dot);
       chip.appendChild(text);
 
       if (subText) {
@@ -135,6 +130,31 @@ const PhraseBrowser = (() => {
         badge.textContent = lvl;
         chip.appendChild(badge);
       }
+
+      // Coverage indicator — one pip per form, filled = practiced. A single-form
+      // phrase shows one pip (practiced-or-not); a multi-form phrase shows N pips
+      // (gender/region/register coverage). One consistent indicator — no separate
+      // "seen" dot of a different size to disambiguate.
+      const _pool  = (forms && forms[i]) ? forms[i].filter(f => f && f.audioSlug) : [];
+      const _total = Math.max(_pool.length, 1);
+      let _done;
+      if (_pool.length > 1 && typeof Progress !== 'undefined' && Progress.getVariantCoverage) {
+        _done = Progress.getVariantCoverage(cardIds[i], _pool.map(f => f.audioSlug)).practiced;
+      } else {
+        _done = seen ? _total : 0;   // single-form (or word list): reflect seen state
+      }
+      const cov = document.createElement('span');
+      cov.className = 'pb-chip-cov';
+      cov.setAttribute('role', 'img');
+      cov.setAttribute('aria-label', _total > 1
+        ? AppLang.t('pb_variants', { done: _done, total: _total })
+        : (seen ? AppLang.t('pb_learned') : AppLang.t('pb_not_practiced')));
+      for (let k = 0; k < _total; k++) {
+        const pip = document.createElement('span');
+        pip.className = 'pb-cov-pip' + (k < _done ? ' pb-cov-pip--done' : '');
+        cov.appendChild(pip);
+      }
+      chip.appendChild(cov);
 
       chip.addEventListener('click', () => { close(); window.scrollTo(0, 0); onStart(i); });
       grid.appendChild(chip);

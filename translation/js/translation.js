@@ -201,6 +201,7 @@ function startTopic(topicId, pathMode, pathCard) {
         pickerEl: document.getElementById('topic-picker'),
         traductions: validPairs.map(p => p.hintText),
         cefrLevels,
+        forms: formPools,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -236,9 +237,10 @@ function _buildPool(forms) {
 function showPhrase(index) {
   answered = false;
 
-  // Pick a random form with audio to use as the expected answer
+  // Pick the least-practiced form with audio as the audio hint (any form is
+  // still accepted; coverage is recorded from the form the user actually produces)
   const _pool = _buildPool(formPools[index] || []);
-  const _picked = _pool[Math.floor(Math.random() * _pool.length)] || { text: '', audioSlug: null };
+  const _picked = Progress.pickVariant(cardIds[index], _pool) || _pool[0] || { text: '', audioSlug: null };
   _currentExpected = _picked.text;
   _currentAudioSlug = _picked.audioSlug ?? null;
 
@@ -303,6 +305,8 @@ function checkAnswer() {
   if (_matchedForm?.audioSlug) _currentAudioSlug = _matchedForm.audioSlug;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  // Translation accepts any form — record the variant the user actually produced
+  if (_matchedForm?.audioSlug) Progress.recordVariant(cardIds[currentIndex], _matchedForm.audioSlug);
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'translation');
   Progress.recordSession('trans_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();

@@ -24,18 +24,19 @@ const AppPath = (() => {
   // ── CEFR-ordered topic list ─────────────────────────────────────────────
   const TOPICS = [
     { id: 'greetings',      level: 'A1', emoji: '👋', label: 'Saludos',           labelEn: 'Greetings',       order: 1  },
-    { id: 'restaurant',     level: 'A1', emoji: '🍽️', label: 'Restaurante',       labelEn: 'Restaurant',      order: 2  },
-    { id: 'supermarket',    level: 'A2', emoji: '🛒', label: 'Supermercado',      labelEn: 'Supermarket',     order: 3  },
-    { id: 'kitchen',        level: 'A2', emoji: '🍳', label: 'Cocina',            labelEn: 'Kitchen',         order: 4  },
-    { id: 'transportation', level: 'A2', emoji: '🚌', label: 'Transporte',        labelEn: 'Transportation',  order: 5  },
-    { id: 'airport',        level: 'A2', emoji: '✈️', label: 'Aeropuerto',        labelEn: 'Airport',         order: 6  },
-    { id: 'accommodation',  level: 'A2', emoji: '🏨', label: 'Alojamiento',       labelEn: 'Accommodation',   order: 7  },
-    { id: 'movies',         level: 'A2', emoji: '🎬', label: 'Películas & Series',labelEn: 'Movies & Series', order: 8  },
-    { id: 'music',          level: 'A2', emoji: '🎵', label: 'Música',            labelEn: 'Music',           order: 9  },
-    { id: 'theater',        level: 'B1', emoji: '🎭', label: 'Teatro & Arte',     labelEn: 'Theater & Arts',  order: 10 },
-    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gimnasio',          labelEn: 'Gym',             order: 11 },
-    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        labelEn: 'Technology',      order: 12 },
-    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Contabilidad',      labelEn: 'Accountability',  order: 13 },
+    { id: 'emociones',      level: 'A1', emoji: '😊', label: 'Emociones',         labelEn: 'Emotions',        order: 2  },
+    { id: 'restaurant',     level: 'A1', emoji: '🍽️', label: 'Restaurante',       labelEn: 'Restaurant',      order: 3  },
+    { id: 'supermarket',    level: 'A2', emoji: '🛒', label: 'Supermercado',      labelEn: 'Supermarket',     order: 4  },
+    { id: 'kitchen',        level: 'A2', emoji: '🍳', label: 'Cocina',            labelEn: 'Kitchen',         order: 5  },
+    { id: 'transportation', level: 'A2', emoji: '🚌', label: 'Transporte',        labelEn: 'Transportation',  order: 6  },
+    { id: 'airport',        level: 'A2', emoji: '✈️', label: 'Aeropuerto',        labelEn: 'Airport',         order: 7  },
+    { id: 'accommodation',  level: 'A2', emoji: '🏨', label: 'Alojamiento',       labelEn: 'Accommodation',   order: 8  },
+    { id: 'movies',         level: 'A2', emoji: '🎬', label: 'Películas & Series',labelEn: 'Movies & Series', order: 9  },
+    { id: 'music',          level: 'A2', emoji: '🎵', label: 'Música',            labelEn: 'Music',           order: 10 },
+    { id: 'theater',        level: 'B1', emoji: '🎭', label: 'Teatro & Arte',     labelEn: 'Theater & Arts',  order: 11 },
+    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gimnasio',          labelEn: 'Gym',             order: 12 },
+    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        labelEn: 'Technology',      order: 13 },
+    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Contabilidad',      labelEn: 'Accountability',  order: 14 },
   ];
 
   // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─

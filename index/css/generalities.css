@@ -742,6 +742,7 @@ body.path-mode {
 
 /* Per-topic accent colors */
 .img-topic-card[data-theme="greetings"]       { --topic-clr: #2563EB; }
+.img-topic-card[data-theme="emociones"]       { --topic-clr: #DB2777; }
 .img-topic-card[data-theme="restaurant"]      { --topic-clr: #EA580C; }
 .img-topic-card[data-theme="supermarket"]     { --topic-clr: #0891B2; }
 .img-topic-card[data-theme="kitchen"]         { --topic-clr: #15803D; }
@@ -963,6 +964,31 @@ body.path-mode {
   flex-shrink: 0;
   order: 3;
   padding: 1px 6px;
+}
+
+/* Coverage pips — one dot per form; filled = practiced. The single indicator
+   per chip: one pip for single-form phrases (practiced-or-not), N pips for
+   multi-form phrases (gender/region/register coverage). Replaces the old
+   separate "seen" dot so there is no big-vs-small dot to explain. */
+.pb-chip-cov {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  order: 4;
+  padding-left: 4px;
+}
+.pb-cov-pip {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--clr-border);
+  transition: background var(--transition), box-shadow var(--transition);
+}
+.pb-cov-pip--done {
+  background: var(--clr-success);
+  box-shadow: none;
 }
 
 /* ---- Reduced Motion (Accessibility) ---- */

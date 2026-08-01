@@ -174,6 +174,7 @@ function startTopic(topicId, pathMode, pathCard) {
         pickerEl: document.getElementById('topic-picker'),
         traductions: valid.map(p => p.hintText),
         cefrLevels,
+        forms: formPools,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -234,9 +235,9 @@ function showPhrase(index) {
   answered  = false;
   builtSentence = [];
 
-  // Pick a random form with audio to scramble
+  // Pick the least-practiced form with audio to scramble (coverage-aware)
   const _pool = _buildPool(formPools[index] || []);
-  _activeForm   = _pool[Math.floor(Math.random() * _pool.length)];
+  _activeForm   = Progress.pickVariant(cardIds[index], _pool) || _pool[0];
   shuffledTiles = scrambleWords(_activeForm.text);
 
   document.getElementById('hint-text').textContent = translations[index] || '';
@@ -352,6 +353,7 @@ function checkAnswer() {
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  if (_activeForm && _activeForm.audioSlug) Progress.recordVariant(cardIds[currentIndex], _activeForm.audioSlug);
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'scramble');
   Progress.recordSession('scramble_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();

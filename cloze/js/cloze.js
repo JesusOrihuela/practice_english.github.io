@@ -172,6 +172,7 @@ function startTopic(topicId, pathMode, pathCard) {
         pickerEl: document.getElementById('topic-picker'),
         traductions: _tagged.map(x => x.hintText),
         cefrLevels,
+        forms: formPools,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -225,9 +226,9 @@ function showPhrase(startIndex) {
   while (!currentBlank) {
     if (tried.has(currentIndex) || tried.size >= cardIds.length) break;
     tried.add(currentIndex);
-    // Pick a random form with audio and try to blank it
+    // Pick the least-practiced form with audio (coverage-aware) and try to blank it
     const _pool   = _buildPool(formPools[currentIndex] || []);
-    const _picked = _pool[Math.floor(Math.random() * _pool.length)];
+    const _picked = Progress.pickVariant(cardIds[currentIndex], _pool) || _pool[0];
     currentBlank  = selectBlankWord(_picked.text);
     if (currentBlank) {
       _activeAudioSlug = _picked.audioSlug;
@@ -299,6 +300,7 @@ function checkAnswer() {
 
   // Save progress immediately — so navigating away without pressing Next still records the result
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  if (_activeAudioSlug) Progress.recordVariant(cardIds[currentIndex], _activeAudioSlug);
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'cloze');
   Progress.recordSession('cloze_' + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();

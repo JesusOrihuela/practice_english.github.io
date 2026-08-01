@@ -148,6 +148,7 @@ async function startTopic(topicKey, pathMode, pathCard) {
     pickerEl: document.getElementById('topic-picker'),
     traductions: _tagged.map(x => x.hintText),
     cefrLevels,
+    forms: formPools,
     onStart: idx => _beginExercise(idx),
   };
   _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -182,11 +183,12 @@ function _buildPool(forms) {
 function loadPhrase(index, keepPicked = false) {
   hasChecked = false;
 
-  // Pick a random form with audio for this round.
+  // Pick the least-practiced form with audio for this round (coverage-aware
+  // rotation — guarantees every variant is exercised over repetitions).
   // keepPicked=true on retry — preserve the same form so the user hears the same audio.
   if (!keepPicked || !_activePicked) {
     const _pool  = _buildPool(formPools[index] || []);
-    _activePicked    = _pool[Math.floor(Math.random() * _pool.length)];
+    _activePicked    = Progress.pickVariant(cardIds[index], _pool) || _pool[0];
     _activeAudioSlug = _activePicked.audioSlug;
   }
 
@@ -303,6 +305,7 @@ function checkAnswer() {
   _lastCorrect = isCorrect;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  if (_activeAudioSlug) Progress.recordVariant(cardIds[currentIndex], _activeAudioSlug);
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'dictation');
   Progress.recordSession(DICT_PREFIX + currentTopic, isCorrect ? 1 : 0, 1);
   if (isCorrect) updateCounter();

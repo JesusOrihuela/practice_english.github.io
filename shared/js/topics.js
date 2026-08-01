@@ -10,6 +10,7 @@
 const AppTopics = (() => {
   const PHRASE_TOPICS = [
     { id: 'greetings',      label: 'Saludos',           labelEn: 'Greetings',       emoji: '👋' },
+    { id: 'emociones',      label: 'Emociones',          labelEn: 'Emotions',        emoji: '😊' },
     { id: 'restaurant',     label: 'Restaurante',        labelEn: 'Restaurant',      emoji: '🍽️' },
     { id: 'supermarket',    label: 'Supermercado',       labelEn: 'Supermarket',     emoji: '🛒' },
     { id: 'kitchen',        label: 'Cocina',             labelEn: 'Kitchen',         emoji: '🍳' },
@@ -24,9 +25,11 @@ const AppTopics = (() => {
     { id: 'accountability', label: 'Contabilidad',       labelEn: 'Accountability',  emoji: '🎯' },
   ];
 
+  // emociones is phrase-only (no vocabulary set), so it is excluded from the
+  // word activities (Vocabulario, Quiz) which would otherwise fail to load it.
   const VOCAB_TOPICS = [
     { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
-    ...PHRASE_TOPICS,
+    ...PHRASE_TOPICS.filter(t => t.id !== 'emociones'),
   ];
 
   // ── Topic label helper ────────────────────────────────────────

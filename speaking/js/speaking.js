@@ -205,6 +205,7 @@ function loadPhrases(topicId) {
         pickerEl: document.getElementById('topic-picker'),
         traductions: _tagged.map(x => x.hintText),
         cefrLevels,
+        forms: formPools,
         onStart: idx => _beginExercise(idx),
       };
       _openPhraseBrowser = () => PhraseBrowser.show(_pbArgs);
@@ -239,9 +240,9 @@ function _buildPool(forms) {
 }
 
 function showPhrase(index) {
-  // Pick a random form with audio for this round
+  // Pick the least-practiced form with audio (coverage-aware rotation)
   const _pool = _buildPool(formPools[index] || []);
-  _activePicked    = _pool[Math.floor(Math.random() * _pool.length)];
+  _activePicked    = Progress.pickVariant(cardIds[index], _pool) || _pool[0];
   _activeAudioSlug = _activePicked.audioSlug;
 
   document.getElementById('Phrase').textContent     = _activePicked.text;
@@ -654,6 +655,7 @@ function displayResult(text, confidence) {
   sessionTotal++;
 
   Progress.rate(cardIds[currentIndex], PathSession.getQualityFromResult(isCorrect));
+  if (_activeAudioSlug) Progress.recordVariant(cardIds[currentIndex], _activeAudioSlug);
   if (typeof AppProficiency !== 'undefined') AppProficiency.update(cefrLevels[currentIndex], isCorrect, 'speaking');
 
   const fbr = document.getElementById('speaking-feedback-result');

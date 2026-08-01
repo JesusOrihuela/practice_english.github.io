@@ -96,6 +96,8 @@
       pb_word:                'Palabra',
       pb_phrase:              'Frase',
       pb_learned:             '(aprendida)',
+      pb_variants:            '{done}/{total} variantes practicadas',
+      pb_not_practiced:       'sin practicar',
       pb_pct_learned:         '{pct}% de {topic} Aprendidas',
 
       // ── Contadores / progreso ───────────────────────────────────
@@ -306,6 +308,7 @@
       // ── Nombres de temas ──────────────────────────────────────
       topic_general:        'General',
       topic_greetings:      'Saludos',
+      topic_emociones:      'Emociones',
       topic_restaurant:     'Restaurante',
       topic_supermarket:    'Supermercado',
       topic_kitchen:        'Cocina',
@@ -587,6 +590,8 @@
       pb_word:                'Word',
       pb_phrase:              'Phrase',
       pb_learned:             '(learned)',
+      pb_variants:            '{done}/{total} variants practiced',
+      pb_not_practiced:       'not practiced',
       pb_pct_learned:         '{pct}% of {topic} Learned',
 
       // ── Counters / progress ───────────────────────────────────
@@ -797,6 +802,7 @@
       // ── Topic names ───────────────────────────────────────────
       topic_general:        'General',
       topic_greetings:      'Greetings',
+      topic_emociones:      'Emotions',
       topic_restaurant:     'Restaurant',
       topic_supermarket:    'Supermarket',
       topic_kitchen:        'Kitchen',

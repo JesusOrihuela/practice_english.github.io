@@ -1,0 +1,558 @@
+{
+  "phrases": [
+    {
+      "id": "emociones_im_sad",
+      "source": "I'm sad.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy triste.",
+          "audioSlug": "estoy_triste"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_happy",
+      "source": "I'm happy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy feliz.",
+          "audioSlug": "estoy_feliz"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_excited",
+      "source": "I'm excited.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy emocionada.",
+          "audioSlug": "estoy_emocionada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy emocionado.",
+          "audioSlug": "estoy_emocionado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_bored",
+      "source": "I'm bored.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy aburrida.",
+          "audioSlug": "estoy_aburrida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy aburrido.",
+          "audioSlug": "estoy_aburrido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_tired",
+      "source": "I'm tired.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy cansada.",
+          "audioSlug": "estoy_cansada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy cansado.",
+          "audioSlug": "estoy_cansado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_angry",
+      "source": "I'm angry.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enojada.",
+          "audioSlug": "estoy_enojada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy enojado.",
+          "audioSlug": "estoy_enojado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_surprised",
+      "source": "I'm surprised.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy sorprendida.",
+          "audioSlug": "estoy_sorprendida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy sorprendido.",
+          "audioSlug": "estoy_sorprendido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_confused",
+      "source": "I'm confused.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy confundida.",
+          "audioSlug": "estoy_confundida",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy confundido.",
+          "audioSlug": "estoy_confundido",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_worried",
+      "source": "I'm worried.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy preocupada.",
+          "audioSlug": "estoy_preocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy preocupado.",
+          "audioSlug": "estoy_preocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_nervous",
+      "source": "I'm nervous.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy nerviosa.",
+          "audioSlug": "estoy_nerviosa",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy nervioso.",
+          "audioSlug": "estoy_nervioso",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_scared",
+      "source": "I'm scared.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy asustada.",
+          "audioSlug": "estoy_asustada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy asustado.",
+          "audioSlug": "estoy_asustado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_relaxed",
+      "source": "I'm relaxed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy relajada.",
+          "audioSlug": "estoy_relajada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy relajado.",
+          "audioSlug": "estoy_relajado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_stressed",
+      "source": "I'm stressed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy estresada.",
+          "audioSlug": "estoy_estresada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy estresado.",
+          "audioSlug": "estoy_estresado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_busy",
+      "source": "I'm busy.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy ocupada.",
+          "audioSlug": "estoy_ocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        },
+        {
+          "text": "Estoy ocupado.",
+          "audioSlug": "estoy_ocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_sad",
+      "source": "Why are you sad?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás triste?",
+          "audioSlug": "por_que_estas_triste"
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_so_happy",
+      "source": "Why are you so happy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás tan feliz?",
+          "audioSlug": "por_que_estas_tan_feliz"
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_excited",
+      "source": "Why are you excited?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás emocionado?",
+          "audioSlug": "por_que_estas_emocionado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás emocionada?",
+          "audioSlug": "por_que_estas_emocionada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_bored",
+      "source": "Why are you bored?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás aburrido?",
+          "audioSlug": "por_que_estas_aburrido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás aburrida?",
+          "audioSlug": "por_que_estas_aburrida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_tired",
+      "source": "Why are you tired?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás cansado?",
+          "audioSlug": "por_que_estas_cansado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás cansada?",
+          "audioSlug": "por_que_estas_cansada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_angry",
+      "source": "Why are you angry?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás enojado?",
+          "audioSlug": "por_que_estas_enojado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás enojada?",
+          "audioSlug": "por_que_estas_enojada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_surprised",
+      "source": "Why are you surprised?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás sorprendido?",
+          "audioSlug": "por_que_estas_sorprendido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás sorprendida?",
+          "audioSlug": "por_que_estas_sorprendida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_confused",
+      "source": "Why are you confused?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás confundido?",
+          "audioSlug": "por_que_estas_confundido",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás confundida?",
+          "audioSlug": "por_que_estas_confundida",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_worried",
+      "source": "Why are you worried?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás preocupado?",
+          "audioSlug": "por_que_estas_preocupado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás preocupada?",
+          "audioSlug": "por_que_estas_preocupada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_nervous",
+      "source": "Why are you nervous?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás nervioso?",
+          "audioSlug": "por_que_estas_nervioso",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás nerviosa?",
+          "audioSlug": "por_que_estas_nerviosa",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_scared",
+      "source": "Why are you scared?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás asustado?",
+          "audioSlug": "por_que_estas_asustado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás asustada?",
+          "audioSlug": "por_que_estas_asustada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_relaxed",
+      "source": "Why are you relaxed?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás relajado?",
+          "audioSlug": "por_que_estas_relajado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás relajada?",
+          "audioSlug": "por_que_estas_relajada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_stressed",
+      "source": "Why are you stressed?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás estresado?",
+          "audioSlug": "por_que_estas_estresado",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "¿Por qué estás estresada?",
+          "audioSlug": "por_que_estas_estresada",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    }
+  ]
+}
