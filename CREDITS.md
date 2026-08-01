@@ -1,0 +1,50 @@
+# Credits & Content Sources
+
+Practice English is MIT-licensed (see [LICENSE](LICENSE)). Some learning content
+is curated with the help of open linguistic resources. This file records those
+sources and their licenses, as their terms require attribution.
+
+The raw corpora and their derived indexes are **not committed** to this repo
+(they are large and/or carry share-alike terms); they are downloaded on demand
+with `tools/sources/fetch-sources.sh` and processed by
+`tools/sources/build-freq-inventory.mjs`. Only curated, reworked phrases enter
+the app's content files.
+
+## Sources
+
+### Tatoeba — CC BY 2.0 FR
+Native-written example sentences with translations, used as a pool of candidate
+phrases (via `tools/build-candidates.mjs`). Sentences are curated, adapted to
+neutral Spanish, and enriched before inclusion; they are not reproduced verbatim
+as a dataset.
+- Project: https://tatoeba.org
+- Distribution: OPUS (https://opus.nlpl.eu) — `OPUS-Tatoeba` en-es corpus
+- License: Creative Commons Attribution 2.0 France (CC BY 2.0 FR)
+
+### FrequencyWords (Hermit Dave) — CC BY-SA 3.0
+Word-frequency lists from the OpenSubtitles 2018 corpus, used only as a
+*frequency signal* to estimate CEFR-band difficulty during content
+reconciliation (`tools/reconcile.mjs`). No frequency list is redistributed here.
+- Repository: https://github.com/hermitdave/FrequencyWords
+- License: Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
+
+### Plan Curricular del Instituto Cervantes (PCIC)
+Official Spanish reference inventories (functions, notions) used to decide which
+communicative functions and topics to cover, and at which CEFR level. Only short
+functional exponents are referenced; the structured seed lives at
+`tools/sources/derived/pcic-greetings.json`.
+- Source: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/
+- Public reference material (Instituto Cervantes)
+
+## Reference inventories consulted (no data redistributed)
+
+Used to guide selection and CEFR levelling; not bundled:
+
+- **NGSL** (New General Service List) — CC BY-SA 4.0 — https://www.newgeneralservicelist.com
+- **PHRASE List** (Martinez & Schmitt, 2012, *Applied Linguistics*) — academic reference
+- **Core Inventory for General English** (British Council / EAQUALS)
+- **CEFRLex** (EFLLex, ELELex, FLELex, …) — pedagogical-use lexicons
+- **Oxford 3000/5000**, **Cambridge** vocabulary lists — publisher references
+- Official CEFR inventories for future target languages: **Goethe-Institut Wortlisten** (de),
+  **Referencial Camões PLE** (pt), **Profilo della lingua italiana** (it),
+  **Niveaux de référence** (fr)

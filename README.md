@@ -103,6 +103,8 @@ Adding a new language pair is data-only: create `shared/json/pairs/{pairId}/`, a
 
 Released under the [MIT License](LICENSE) — free to use, modify, and distribute with attribution.
 
+Learning content is curated with the help of open linguistic resources (Tatoeba, FrequencyWords, Instituto Cervantes PCIC, and others). See [CREDITS.md](CREDITS.md) for sources and their licenses.
+
 ---
 
 <sub>Built with vanilla web tech and on-device ML.</sub>
