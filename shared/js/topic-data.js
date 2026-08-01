@@ -11,11 +11,11 @@
 const AppData = (() => {
   const _cache     = new Map();          // memory: in-flight Promises + resolved data
   const _BASE      = '../../shared/json/';
-  const _SS_PREFIX = 'pe_topic_v7_';     // v7: labels on all multi-form phrases; audioSlug on all forms including former style forms
+  const _SS_PREFIX = 'pe_topic_v8_';     // v8: vocabulary moved to per-pair pairs/{pairId}/vocab/
 
-  // IDs that are shared across all pairs (no pair prefix needed)
-  const _SHARED = /^(word-equivalents|words)($|[-_])/;
-  // Vocabulary lives under common/vocab/; other shared files under common/
+  // IDs still shared across all pairs (no pair prefix). Vocabulary is now per-pair.
+  const _SHARED = /^word-equivalents($|[-_])/;
+  // Vocabulary lives under pairs/{pairId}/vocab/ (per-pair since Part C)
   const _VOCAB  = /^words($|[-_])/;
 
   function _pairId() {
@@ -23,16 +23,17 @@ const AppData = (() => {
   }
 
   // Build URL:
-  //   words*            → common/vocab/   (shared bilingual vocabulary)
-  //   word-equivalents  → common/         (shared reference)
-  //   everything else   → pairs/{pairId}/ (pair-specific phrases, grammar, placement)
+  //   words*            → pairs/{pairId}/vocab/ (per-pair vocabulary)
+  //   word-equivalents  → common/               (shared reference)
+  //   everything else   → pairs/{pairId}/       (pair-specific phrases, grammar, placement)
   function _url(id) {
-    if (_VOCAB.test(id))  return _BASE + 'common/vocab/' + id + '.json';
+    if (_VOCAB.test(id))  return _BASE + 'pairs/' + _pairId() + '/vocab/' + id + '.json';
     if (_SHARED.test(id)) return _BASE + 'common/' + id + '.json';
     return _BASE + 'pairs/' + _pairId() + '/' + id + '.json';
   }
 
-  // Cache key includes pair for pair-specific files to prevent cross-pair collisions
+  // Cache key includes pair for pair-specific files (now including vocabulary) to
+  // prevent cross-pair collisions; only word-equivalents stays pair-agnostic.
   function _cacheKey(id) {
     if (_SHARED.test(id)) return _SS_PREFIX + id;
     return _SS_PREFIX + _pairId() + '_' + id;

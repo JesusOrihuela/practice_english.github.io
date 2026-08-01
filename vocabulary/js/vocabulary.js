@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('vocab-content').appendChild(_backLink);
   }
 
-  AppAudio.setBase('../../shared/audio/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
   AppAudio.warmup();
 });
 

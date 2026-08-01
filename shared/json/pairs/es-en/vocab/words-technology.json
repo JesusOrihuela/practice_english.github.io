@@ -1,0 +1,438 @@
+{
+  "words": [
+    {
+      "word": "device",
+      "definition": "An electronic gadget such as a phone, tablet, or computer",
+      "example": "My device ran out of battery during the meeting.",
+      "definition_es": "Aparato electrónico como un teléfono, tableta o computadora.",
+      "example_es": "Mi dispositivo se quedó sin batería durante la reunión.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "device",
+      "translations": {
+        "es": "dispositivo"
+      }
+    },
+    {
+      "word": "software",
+      "definition": "Programs and applications that run on a computer or device",
+      "example": "Make sure you update your software regularly for security.",
+      "definition_es": "Programas y aplicaciones que funcionan en una computadora o dispositivo.",
+      "example_es": "Asegúrate de actualizar el software regularmente por seguridad.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "software",
+      "translations": {
+        "es": "software"
+      }
+    },
+    {
+      "word": "password",
+      "definition": "A secret word or code used to gain access to a system",
+      "example": "Never share your password with anyone.",
+      "definition_es": "Código secreto que se usa para acceder a un sistema.",
+      "example_es": "Nunca compartas tu contraseña con nadie.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "password",
+      "translations": {
+        "es": "contraseña"
+      }
+    },
+    {
+      "word": "browser",
+      "definition": "A program used to access and navigate the internet",
+      "example": "Chrome and Firefox are the most popular web browsers.",
+      "definition_es": "Programa que se usa para acceder y navegar por internet.",
+      "example_es": "Chrome y Firefox son los navegadores web más populares.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "browser",
+      "translations": {
+        "es": "navegador"
+      }
+    },
+    {
+      "word": "upload",
+      "definition": "To transfer data from your device to the internet or a server",
+      "example": "I need to upload the document to the shared folder.",
+      "definition_es": "Enviar datos desde tu dispositivo a internet.",
+      "example_es": "Necesito subir el documento a la carpeta compartida.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "upload",
+      "translations": {
+        "es": "subir / cargar"
+      }
+    },
+    {
+      "word": "download",
+      "definition": "To transfer data from the internet or a server to your device",
+      "example": "You can download the app for free from the store.",
+      "definition_es": "Transferir datos desde internet o un servidor a tu dispositivo.",
+      "example_es": "Puedes descargar la aplicación gratis desde la tienda.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "download",
+      "translations": {
+        "es": "descargar"
+      }
+    },
+    {
+      "word": "wireless",
+      "definition": "Using radio signals instead of cables to transmit data",
+      "example": "The hotel offers free wireless internet throughout the building.",
+      "definition_es": "Que usa señales de radio en lugar de cables para transmitir datos.",
+      "example_es": "El hotel ofrece internet inalámbrico gratuito en todo el edificio.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "wireless",
+      "translations": {
+        "es": "inalámbrico"
+      }
+    },
+    {
+      "word": "notification",
+      "definition": "An alert or message sent by an app or system to your device",
+      "example": "I turned off all notifications to focus on my work.",
+      "definition_es": "Alerta o mensaje que una aplicación o sistema envía a tu dispositivo.",
+      "example_es": "Desactivé todas las notificaciones para concentrarme en mi trabajo.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "notification",
+      "translations": {
+        "es": "notificación"
+      }
+    },
+    {
+      "word": "update",
+      "definition": "A newer version of software that fixes problems or adds features",
+      "example": "The latest security update fixed several critical bugs.",
+      "definition_es": "Versión más reciente de un software que corrige problemas o añade funciones.",
+      "example_es": "La última actualización de seguridad corrigió varios errores críticos.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "update",
+      "translations": {
+        "es": "actualización"
+      }
+    },
+    {
+      "word": "storage",
+      "definition": "The space available to keep data on a device or in the cloud",
+      "example": "I need more storage space for all my photos and videos.",
+      "definition_es": "El espacio disponible para guardar datos en un dispositivo o en la nube.",
+      "example_es": "Necesito más espacio de almacenamiento para todas mis fotos y videos.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "storage",
+      "translations": {
+        "es": "almacenamiento"
+      }
+    },
+    {
+      "word": "compatible",
+      "definition": "Able to work together with another system or device without problems",
+      "example": "Check whether the software is compatible with your operating system.",
+      "definition_es": "Que puede funcionar junto a otro sistema o dispositivo sin problemas.",
+      "example_es": "Verifica si el software es compatible con tu sistema operativo.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "compatible",
+      "translations": {
+        "es": "compatible"
+      }
+    },
+    {
+      "word": "biometric",
+      "definition": "Using unique physical traits, like a fingerprint or face, to verify identity",
+      "example": "Most modern smartphones support biometric login.",
+      "definition_es": "Que usa características físicas únicas, como huellas digitales o el rostro, para verificar la identidad de una persona.",
+      "example_es": "La mayoría de los teléfonos modernos admiten inicio de sesión biométrico.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "biometric",
+      "translations": {
+        "es": "biométrico"
+      }
+    },
+    {
+      "word": "subscription",
+      "definition": "A recurring payment model that gives access to a service or software for a set period",
+      "example": "The software switched from a one-time purchase to a monthly subscription.",
+      "definition_es": "Modelo de pago recurrente que da acceso a un servicio o software durante un período determinado.",
+      "example_es": "El software cambió de compra única a una suscripción mensual.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "subscription",
+      "translations": {
+        "es": "suscripción"
+      }
+    },
+    {
+      "word": "bandwidth",
+      "definition": "The amount of data that can be transferred over a network in a given time",
+      "example": "Streaming videos in 4K requires a lot of bandwidth.",
+      "definition_es": "La cantidad de datos que pueden transferirse por una red en un tiempo determinado.",
+      "example_es": "Ver videos en 4K en línea requiere mucho ancho de banda.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "bandwidth",
+      "translations": {
+        "es": "ancho de banda"
+      }
+    },
+    {
+      "word": "encryption",
+      "definition": "The process of converting data into a secret code to protect it",
+      "example": "End-to-end encryption keeps your messages private and secure.",
+      "definition_es": "El proceso de convertir datos en un código secreto para protegerlos del acceso no autorizado.",
+      "example_es": "El cifrado de extremo a extremo mantiene tus mensajes privados y seguros.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "encryption",
+      "translations": {
+        "es": "cifrado"
+      }
+    },
+    {
+      "word": "algorithm",
+      "definition": "A set of step-by-step rules a computer follows to solve a problem",
+      "example": "Social media platforms use algorithms to decide what content you see.",
+      "definition_es": "Conjunto de reglas paso a paso que una computadora sigue para resolver un problema.",
+      "example_es": "Las plataformas de redes sociales usan algoritmos para decidir qué contenido ves.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "algorithm",
+      "translations": {
+        "es": "algoritmo"
+      }
+    },
+    {
+      "word": "malware",
+      "definition": "Harmful software designed to damage systems or steal information",
+      "example": "The antivirus program detected malware on the computer.",
+      "definition_es": "Software dañino diseñado para perjudicar sistemas o robar información.",
+      "example_es": "El programa antivirus detectó software malicioso en la computadora.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "B2",
+      "id": "malware",
+      "translations": {
+        "es": "software malicioso"
+      }
+    },
+    {
+      "word": "ransomware",
+      "definition": "Malicious software that encrypts a victim's files and demands payment to restore access",
+      "example": "The hospital was forced offline for days after a ransomware attack.",
+      "definition_es": "Software malicioso que cifra los archivos de una víctima y exige un pago para restaurar el acceso.",
+      "example_es": "El hospital tuvo que desconectarse varios días tras un ataque de ransomware.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "ransomware",
+      "translations": {
+        "es": "ransomware"
+      }
+    },
+    {
+      "word": "dark pattern",
+      "definition": "A deceptive interface design that manipulates users into actions they did not intend",
+      "example": "Hiding the unsubscribe button is a classic dark pattern.",
+      "definition_es": "Diseño de interfaz engañoso que manipula a los usuarios para que realicen acciones que no tenían intención de hacer.",
+      "example_es": "Ocultar el botón de cancelar suscripción es un patrón engañoso clásico.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "dark_pattern",
+      "translations": {
+        "es": "patrón engañoso"
+      }
+    },
+    {
+      "word": "latency",
+      "definition": "The delay between sending a request and receiving a response",
+      "example": "High latency makes video calls feel laggy and unnatural.",
+      "definition_es": "El retraso entre el envío de una solicitud y la recepción de una respuesta en una red.",
+      "example_es": "Una latencia alta hace que las videollamadas se sientan lentas y poco naturales.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "latency",
+      "translations": {
+        "es": "latencia"
+      }
+    },
+    {
+      "word": "phishing",
+      "definition": "A scam that tricks people into giving personal data through fake emails or websites",
+      "example": "She almost clicked a phishing link that looked like a message from her bank.",
+      "definition_es": "Estafa que engaña a las personas para que entreguen sus datos personales mediante correos o sitios web falsos.",
+      "example_es": "Casi hizo clic en un enlace de suplantación de identidad que parecía un mensaje de su banco.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "phishing",
+      "translations": {
+        "es": "suplantación de identidad"
+      }
+    },
+    {
+      "word": "cache",
+      "definition": "Temporary storage that saves recently accessed data to make future loading faster",
+      "example": "Clearing your browser's cache can fix many loading problems.",
+      "definition_es": "Almacenamiento temporal que guarda datos recientemente usados para acelerar futuras cargas.",
+      "example_es": "Limpiar la caché del navegador puede solucionar muchos problemas de carga.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "cache",
+      "translations": {
+        "es": "caché"
+      }
+    },
+    {
+      "word": "vulnerability",
+      "definition": "A weakness in a system that can be exploited by attackers",
+      "example": "The team patched a critical vulnerability before it was discovered publicly.",
+      "definition_es": "Una debilidad en un sistema que puede ser aprovechada por atacantes para causar daño o acceder sin autorización.",
+      "example_es": "El equipo corrigió una vulnerabilidad crítica antes de que fuera descubierta públicamente.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "vulnerability",
+      "translations": {
+        "es": "vulnerabilidad"
+      }
+    },
+    {
+      "word": "ecosystem",
+      "definition": "A group of devices, apps, and services from one company designed to work together",
+      "example": "Switching to Android means leaving the Apple ecosystem behind.",
+      "definition_es": "Conjunto de dispositivos, aplicaciones y servicios de una misma empresa diseñados para funcionar en armonía.",
+      "example_es": "Pasarse a Android significa abandonar el ecosistema de Apple.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C1",
+      "id": "ecosystem",
+      "translations": {
+        "es": "ecosistema"
+      }
+    },
+    {
+      "word": "algorithmic bias",
+      "definition": "Systematic errors in an algorithm's outputs that produce unfair or discriminatory results, often due to biased training data",
+      "example": "Researchers found algorithmic bias in the hiring tool, which penalized women's résumés.",
+      "definition_es": "Errores sistemáticos en los resultados de un algoritmo que producen resultados injustos o discriminatorios, a menudo por datos de entrenamiento sesgados.",
+      "example_es": "Los investigadores encontraron sesgo algorítmico en la herramienta de contratación, que penalizaba los currículums de mujeres.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "algorithmic_bias",
+      "translations": {
+        "es": "sesgo algorítmico"
+      }
+    },
+    {
+      "word": "surveillance",
+      "definition": "The systematic monitoring of individuals or groups, typically by governments or corporations, often through digital means",
+      "example": "Activists raised concerns about mass surveillance enabled by facial recognition software.",
+      "definition_es": "El monitoreo sistemático de individuos o grupos, típicamente por gobiernos o corporaciones, a menudo a través de medios digitales.",
+      "example_es": "Los activistas expresaron preocupación por la vigilancia masiva habilitada por el software de reconocimiento facial.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "surveillance",
+      "translations": {
+        "es": "vigilancia"
+      }
+    },
+    {
+      "word": "data breach",
+      "definition": "A security incident in which private information is accessed or exposed without authorization",
+      "example": "The company notified users after a data breach exposed their passwords.",
+      "definition_es": "Incidente de seguridad en el que información privada es accedida o expuesta sin autorización.",
+      "example_es": "La empresa notificó a los usuarios tras una filtración de datos que expuso sus contraseñas.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "data_breach",
+      "translations": {
+        "es": "filtración de datos"
+      }
+    },
+    {
+      "word": "obsolescence",
+      "definition": "The gradual process of becoming outdated or no longer useful, especially in technology",
+      "example": "Planned obsolescence means new phone models are designed to make older ones feel slow.",
+      "definition_es": "El proceso gradual de quedarse obsoleto o dejar de ser útil, especialmente en tecnología.",
+      "example_es": "La obsolescencia programada significa que los nuevos modelos de teléfono están diseñados para hacer que los anteriores parezcan lentos.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "obsolescence",
+      "translations": {
+        "es": "obsolescencia"
+      }
+    },
+    {
+      "word": "legacy",
+      "definition": "Describes older technology or software still in use but considered outdated",
+      "example": "Many banks still rely on legacy systems that are too expensive to replace.",
+      "definition_es": "Describe tecnología o software antiguos que siguen en uso pero se consideran obsoletos.",
+      "example_es": "Muchos bancos todavía dependen de sistemas heredados que son demasiado costosos de reemplazar.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "legacy",
+      "translations": {
+        "es": "heredado / obsoleto"
+      }
+    },
+    {
+      "word": "cybersecurity",
+      "definition": "The practice of protecting computers, networks, and data from digital attacks and unauthorized access",
+      "example": "The company hired a cybersecurity firm after the ransomware attack.",
+      "definition_es": "La práctica de proteger computadoras, redes y datos frente a ataques digitales y accesos no autorizados.",
+      "example_es": "La empresa contrató una firma de ciberseguridad tras el ataque de ransomware.",
+      "category": "Noun",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "cybersecurity",
+      "translations": {
+        "es": "ciberseguridad"
+      }
+    },
+    {
+      "word": "proprietary",
+      "definition": "Owned and controlled exclusively by a company, not open for public use or modification",
+      "example": "The device only works with the manufacturer's proprietary charging cable.",
+      "definition_es": "Que es propiedad exclusiva de una empresa y no está disponible para uso o modificación pública.",
+      "example_es": "El dispositivo solo funciona con el cable de carga propietario del fabricante.",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "level": "C2",
+      "id": "proprietary",
+      "translations": {
+        "es": "propietario / privativo"
+      }
+    }
+  ]
+}
