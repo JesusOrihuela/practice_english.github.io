@@ -531,6 +531,130 @@
           }
         }
       ]
+    },
+    {
+      "id": "emociones_how_do_you_feel",
+      "source": "How do you feel?",
+      "level": "A1",
+      "grammar": "'¿Cómo te sientes?' usa el verbo reflexivo 'sentirse' para preguntar por el estado.",
+      "target": [
+        {
+          "text": "¿Cómo te sientes?",
+          "audioSlug": "como_te_sientes"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_feel_fine",
+      "source": "I feel fine.",
+      "level": "A1",
+      "grammar": "'Me siento' es el reflexivo 'sentirse'; se usa con adverbios (bien, mal).",
+      "target": [
+        {
+          "text": "Me siento bien.",
+          "audioSlug": "me_siento_bien"
+        }
+      ]
+    },
+    {
+      "id": "emociones_are_you_okay",
+      "source": "Are you okay?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Estás bien?",
+          "audioSlug": "estas_bien"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_sick",
+      "source": "I feel sick.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enferma.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_enferma"
+        },
+        {
+          "text": "Estoy enfermo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_enfermo"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_embarrassed",
+      "source": "I am embarrassed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy avergonzada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_avergonzada"
+        },
+        {
+          "text": "Estoy avergonzado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_avergonzado"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_proud",
+      "source": "I am proud.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy orgullosa.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_orgullosa"
+        },
+        {
+          "text": "Estoy orgulloso.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_orgulloso"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_disappointed",
+      "source": "I am disappointed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy decepcionada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_decepcionada"
+        },
+        {
+          "text": "Estoy decepcionado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_decepcionado"
+        }
+      ]
     }
   ]
 }

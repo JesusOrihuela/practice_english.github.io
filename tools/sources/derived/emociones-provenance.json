@@ -8,11 +8,24 @@
   },
   "design": "Paradigma sistemático: 'Estoy + adjetivo' (1ª persona) y '¿Por qué estás + adjetivo?' (2ª persona). Adjetivos con género → dos formas con labels gender (Regla 10: 1ª persona base femenina, 2ª persona base masculina); adjetivos invariables (triste, feliz) → una forma sin labels.",
   "leveling_decisions": {
-    "reclasificadas_A2_a_A1": ["bored", "surprised", "worried", "nervous", "scared"],
+    "reclasificadas_A2_a_A1": [
+      "bored",
+      "surprised",
+      "worried",
+      "nervous",
+      "scared"
+    ],
     "basis": "El PCIC clasifica estas emociones básicas como A1 (misma estructura 'estar + adjetivo', sin razón gramatical para A2). Se bajan al nivel del inventario.",
-    "mantenidas_A2": ["excited", "confused", "relaxed", "stressed"],
+    "mantenidas_A2": [
+      "excited",
+      "confused",
+      "relaxed",
+      "stressed"
+    ],
     "basis_a2": "Vocabulario más específico, no listado en el núcleo A1 del PCIC.",
-    "retiradas": ["emociones_im_busy"],
+    "retiradas": [
+      "emociones_im_busy"
+    ],
     "basis_retiro": "'Estar ocupado' es un estado de disponibilidad, no un estado de ánimo/emoción — fuera del alcance temático (Emociones)."
   },
   "enrichment": {
@@ -20,5 +33,22 @@
     "note": "Tip ser/estar ('con estados de ánimo se usa estar, no ser') — punto genuino y no obvio que los angloparlantes confunden. Sin tips en es-en (para un hispanohablante, 'I'm happy' es trivial; no forzar relleno).",
     "gender_variants": "Adjetivos con género (cansado/a, enojado/a, preocupado/a, nervioso/a...) con ambas formas etiquetadas; invariables (triste, feliz) sin variante."
   },
-  "result_counts": { "en_es": 26, "es_en": 26, "distribution": "A1:18 A2:8" }
+  "result_counts": {
+    "en_es": 33,
+    "es_en": 33
+  },
+  "gap_fill": {
+    "added_per_pair": 7,
+    "list": [
+      "¿Cómo te sientes? (sentirse)",
+      "Me siento bien",
+      "¿Estás bien?",
+      "enfermo/sick",
+      "avergonzado/embarrassed",
+      "orgulloso/proud",
+      "decepcionado/disappointed"
+    ],
+    "basis": "El paradigma Estoy+adj estaba completo para el nucleo, pero faltaba la construccion reflexiva sentirse (¿como te sientes?/me siento), el check-in ¿estas bien?, y emociones comunes (enfermo, avergonzado, orgulloso, decepcionado). Anadido desde PCIC estados de animo.",
+    "tooling_fix": "emociones agregado a PHRASE_TOPICS en generate-audio-tgt.py (faltaba; excluido de VOCAB_TOPICS)."
+  }
 }

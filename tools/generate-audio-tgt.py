@@ -141,13 +141,14 @@ LANG_VOICE_MAPS = {
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 
 PHRASE_TOPICS = [
-    'greetings', 'restaurant', 'supermarket', 'kitchen',
+    'greetings', 'emociones', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
     'movies', 'music', 'theater',
     'gym', 'technology', 'accountability',
 ]
 
-VOCAB_TOPICS = PHRASE_TOPICS  # same list
+# emociones is phrase-only (no vocabulary file), mirroring shared/js/topics.js
+VOCAB_TOPICS = [t for t in PHRASE_TOPICS if t != 'emociones']
 
 ROOT  = Path(__file__).parent.parent  # practice_english.github.io/
 JSON  = ROOT / 'shared' / 'json'

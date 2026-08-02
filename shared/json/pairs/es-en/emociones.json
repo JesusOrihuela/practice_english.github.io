@@ -311,6 +311,90 @@
           "audioSlug": "why_are_you_stressed"
         }
       ]
+    },
+    {
+      "id": "emociones_how_do_you_feel",
+      "source": "¿Cómo te sientes?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How do you feel?",
+          "audioSlug": "how_do_you_feel"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_feel_fine",
+      "source": "Me siento bien.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I feel fine.",
+          "audioSlug": "i_feel_fine"
+        }
+      ]
+    },
+    {
+      "id": "emociones_are_you_okay",
+      "source": "¿Estás bien?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Are you okay?",
+          "audioSlug": "are_you_okay"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_sick",
+      "source": "Estoy enfermo/a.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I feel sick.",
+          "audioSlug": "i_feel_sick"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_embarrassed",
+      "source": "Estoy avergonzado/a.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I am embarrassed.",
+          "audioSlug": "i_am_embarrassed"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_proud",
+      "source": "Estoy orgulloso/a.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I am proud.",
+          "audioSlug": "i_am_proud"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_disappointed",
+      "source": "Estoy decepcionado/a.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I am disappointed.",
+          "audioSlug": "i_am_disappointed"
+        }
+      ]
     }
   ]
 }
