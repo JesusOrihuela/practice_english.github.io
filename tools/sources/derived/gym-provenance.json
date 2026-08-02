@@ -1,0 +1,17 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic gym (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es comunicación real de gimnasio, bien clasificada.",
+  "sources": { "es_target_inventory": "PCIC (Ocio/deporte) + Funciones (pedir información, describir).", "en_target": "Core Inventory + NGSL + gym/fitness ESL.", "attestation": "Guias ESL/ELE de gimnasio y fitness; PCIC." },
+  "per_phrase_record": "gym-attestation.json — 92 frases por función (membresía/clases, equipo/instalaciones, forma/técnica, rutina/recuperación, entrenamiento avanzado).",
+  "attestation": {
+    "principle": "El gimnasio es un dominio de HABILIDAD que llega a C1 en el RELATO de un gimnasta sobre su entrenamiento (periodización, macros, RPE, movilidad, específico a su deporte). Pero la CIENCIA DEL EJERCICIO/fisiología es ensayo expositivo, no comunicación — se retira.",
+    "retired_science_prose": ["efectos de interferencia (concurrent training) (C2)", "restricción del flujo sanguíneo/rehabilitación (C2)", "principio de especificidad (C2)", "liberación miofascial/reclutamiento motor (C2)", "biomecánica sentadilla vs bisagra de cadera (C2)", "adaptaciones neuromusculares vs hipertrofia (C2)", "biogénesis mitocondrial/fosforilación oxidativa (C2)", "zonas de FC/sistemas energéticos (C1 explicador impersonal)"],
+    "kept_c1": "Relato de gimnasta en 1a persona: periodización recomendada, seguimiento de macros, desequilibrio de fuerza, sobreentrenamiento/recuperación, sobrecarga progresiva, escala RPE, movilidad como fuerza en rango final, específico al deporte."
+  },
+  "gap_fill": {
+    "added_per_pair": 7,
+    "note": "Analizado por par: 'personal trainer' NO se añadió (ya existía en ambos pares como gym_is_there_a_personal_trainer_available). Los demás son actos distintos de los existentes.",
+    "list": ["Quisiera inscribirme en el gimnasio", "¿Cuánto cuesta la mensualidad?", "¿Dónde están los vestidores?", "¿Me puedes cuidar mientras levanto? (spot)", "¿Dónde están las mancuernas?", "¿Cuántas series y repeticiones hago?", "Hoy estoy muy adolorido/a (con variantes de género)"]
+  },
+  "result_counts": { "en_es": 92, "es_en": 92, "before": 93, "retired_each_pair": 8, "added_each_pair": 7 }
+}

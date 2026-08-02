@@ -1057,66 +1057,6 @@
       ]
     },
     {
-      "id": "gym_concurrent_training_interference_strength",
-      "source": "Combinar el entrenamiento de resistencia aeróbica y de fuerza puede inhibir las ganancias máximas de fuerza debido a efectos de interferencia.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Combining endurance and resistance training may inhibit maximal strength gains through interference effects.",
-          "audioSlug": "combining_endurance_and_resistance_training_may_inhibit_maximal_strength_gains_through_inte_019e0a97"
-        }
-      ]
-    },
-    {
-      "id": "gym_blood_flow_restriction_rehabilitation",
-      "source": "He estado usando el entrenamiento con restricción del flujo sanguíneo para estimular la hipertrofia a intensidades más bajas durante la rehabilitación.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I've been using blood flow restriction training to stimulate hypertrophy at lower intensities during rehabilitation.",
-          "audioSlug": "i_ve_been_using_blood_flow_restriction_training_to_stimulate_hypertrophy_at_lower_intensiti_abd7872a"
-        }
-      ]
-    },
-    {
-      "id": "gym_specificity_training_adaptations",
-      "source": "El principio de especificidad dicta que las adaptaciones son más pronunciadas cuando los ejercicios replican las exigencias de la actividad objetivo.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The principle of specificity dictates that adaptations are most pronounced when exercises replicate the target activity's demands.",
-          "audioSlug": "the_principle_of_specificity_dictates_that_adaptations_are_most_pronounced_when_exercises_r_fddbf308"
-        }
-      ]
-    },
-    {
-      "id": "gym_myofascial_release_motor_recruitment",
-      "source": "La liberación miofascial puede servir como protocolo de preactivación para mejorar el reclutamiento motor antes de movimientos compuestos pesados.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Myofascial release can serve as a pre-activation protocol to improve motor recruitment before heavy compound movements.",
-          "audioSlug": "myofascial_release_can_serve_as_a_pre_activation_protocol_to_improve_motor_recruitment_befo_ea5907a7"
-        }
-      ]
-    },
-    {
-      "id": "gym_squat_hip_hinge_biomechanics",
-      "source": "Entender las diferencias biomecánicas entre una sentadilla y una bisagra de cadera es fundamental para una programación de tren inferior resistente a lesiones.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Understanding the biomechanical differences between a squat and a hip hinge is fundamental to injury-resistant lower body programming.",
-          "audioSlug": "understanding_the_biomechanical_differences_between_a_squat_and_a_hip_hinge_is_fundamental_5344acd7"
-        }
-      ]
-    },
-    {
       "id": "gym_doms_few_days_after_leg_day",
       "source": "Me duelen las piernas dos días después del día de piernas. ¿Es normal?",
       "level": "B1",
@@ -1165,18 +1105,6 @@
       ]
     },
     {
-      "id": "gym_heart_rate_zones_energy_systems",
-      "source": "Entrenar en diferentes zonas de frecuencia cardíaca permite trabajar sistemas energéticos específicos, incluyendo la zona 2.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Training in different heart rate zones lets you target specific energy systems, including zone 2.",
-          "audioSlug": "training_in_different_heart_rate_zones_lets_you_target_specific_energy_systems_including_zone_2"
-        }
-      ]
-    },
-    {
       "id": "gym_rpe_scale_autoregulation",
       "source": "Cambié a la escala RPE para autorregular la intensidad según mi recuperación real.",
       "level": "C1",
@@ -1213,26 +1141,86 @@
       ]
     },
     {
-      "id": "gym_neuromuscular_adaptations_early_gains",
-      "source": "Las ganancias de fuerza tempranas en personas no entrenadas se atribuyen en gran medida a adaptaciones neuromusculares más que a la hipertrofia.",
-      "level": "C2",
+      "id": "gym_signup_membership",
+      "source": "Quisiera inscribirme en el gimnasio.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Early strength gains in untrained individuals are largely attributable to neuromuscular adaptations rather than hypertrophy.",
-          "audioSlug": "early_strength_gains_in_untrained_individuals_are_largely_attributable_to_neuromuscular_ada_c473d4dc"
+          "text": "I'd like to sign up for a membership.",
+          "audioSlug": "i_d_like_to_sign_up_for_a_membership"
         }
       ]
     },
     {
-      "id": "gym_mitochondrial_biogenesis_endurance",
-      "source": "El entrenamiento de resistencia sostenido induce la biogénesis mitocondrial, aumentando la capacidad celular para la fosforilación oxidativa.",
-      "level": "C2",
+      "id": "gym_monthly_membership_price",
+      "source": "¿Cuánto cuesta la mensualidad?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Sustained endurance training induces mitochondrial biogenesis, increasing the cell's capacity for oxidative phosphorylation.",
-          "audioSlug": "sustained_endurance_training_induces_mitochondrial_biogenesis_increasing_the_cell_s_capacit_9e8585c6"
+          "text": "How much is a monthly membership?",
+          "audioSlug": "how_much_is_a_monthly_membership"
+        }
+      ]
+    },
+    {
+      "id": "gym_where_locker_room",
+      "source": "¿Dónde están los vestidores?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the locker room?",
+          "audioSlug": "where_is_the_locker_room"
+        }
+      ]
+    },
+    {
+      "id": "gym_can_you_spot_me",
+      "source": "¿Me puedes cuidar mientras levanto?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can you spot me?",
+          "audioSlug": "can_you_spot_me"
+        }
+      ]
+    },
+    {
+      "id": "gym_where_dumbbells",
+      "source": "¿Dónde están las mancuernas?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where are the dumbbells?",
+          "audioSlug": "where_are_the_dumbbells"
+        }
+      ]
+    },
+    {
+      "id": "gym_how_many_sets_reps",
+      "source": "¿Cuántas series y repeticiones hago?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How many sets and reps should I do?",
+          "audioSlug": "how_many_sets_and_reps_should_i_do"
+        }
+      ]
+    },
+    {
+      "id": "gym_im_sore",
+      "source": "Hoy estoy muy adolorido/a.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm really sore today.",
+          "audioSlug": "i_m_really_sore_today"
         }
       ]
     }
