@@ -1,0 +1,268 @@
+{
+  "phrases": [
+    {
+      "id": "health_how_do_you_feel",
+      "source": "¿Cómo te sientes?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How are you feeling?",
+          "audioSlug": "how_are_you_feeling"
+        }
+      ]
+    },
+    {
+      "id": "health_i_dont_feel_well",
+      "source": "No me siento bien.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I don't feel well.",
+          "audioSlug": "i_don_t_feel_well"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_headache",
+      "source": "Me duele la cabeza.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a headache.",
+          "audioSlug": "i_have_a_headache"
+        }
+      ]
+    },
+    {
+      "id": "health_my_stomach_hurts",
+      "source": "Me duele el estómago.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My stomach hurts.",
+          "audioSlug": "my_stomach_hurts"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_fever",
+      "source": "Tengo fiebre.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a fever.",
+          "audioSlug": "i_have_a_fever"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_cold",
+      "source": "Estoy resfriada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a cold.",
+          "audioSlug": "i_have_a_cold"
+        }
+      ]
+    },
+    {
+      "id": "health_i_need_a_doctor",
+      "source": "Necesito ver a un médico.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to see a doctor.",
+          "audioSlug": "i_need_to_see_a_doctor"
+        }
+      ]
+    },
+    {
+      "id": "health_where_is_pharmacy",
+      "source": "¿Dónde está la farmacia más cercana?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the nearest pharmacy?",
+          "audioSlug": "where_is_the_nearest_pharmacy"
+        }
+      ]
+    },
+    {
+      "id": "health_i_want_an_appointment",
+      "source": "Quisiera pedir una cita.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to make an appointment.",
+          "audioSlug": "i_d_like_to_make_an_appointment"
+        }
+      ]
+    },
+    {
+      "id": "health_it_hurts_here",
+      "source": "Me duele aquí.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It hurts here.",
+          "audioSlug": "it_hurts_here"
+        }
+      ]
+    },
+    {
+      "id": "health_im_allergic",
+      "source": "Soy alérgica a la penicilina.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm allergic to penicillin.",
+          "audioSlug": "i_m_allergic_to_penicillin"
+        }
+      ]
+    },
+    {
+      "id": "health_take_this_medicine",
+      "source": "Toma esta medicina dos veces al día.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Take this medicine twice a day.",
+          "audioSlug": "take_this_medicine_twice_a_day"
+        }
+      ]
+    },
+    {
+      "id": "health_i_feel_dizzy",
+      "source": "Estoy mareada.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I feel dizzy.",
+          "audioSlug": "i_feel_dizzy"
+        }
+      ]
+    },
+    {
+      "id": "health_my_throat_hurts",
+      "source": "Me duele la garganta.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My throat hurts.",
+          "audioSlug": "my_throat_hurts"
+        }
+      ]
+    },
+    {
+      "id": "health_i_cut_my_hand",
+      "source": "Me corté la mano.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I cut my hand.",
+          "audioSlug": "i_cut_my_hand"
+        }
+      ]
+    },
+    {
+      "id": "health_call_an_ambulance",
+      "source": "¡Llamen a una ambulancia!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Call an ambulance!",
+          "audioSlug": "call_an_ambulance"
+        }
+      ]
+    },
+    {
+      "id": "health_get_well_soon",
+      "source": "¡Que te mejores pronto!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Get well soon!",
+          "audioSlug": "get_well_soon"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_cough",
+      "source": "Tengo tos.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a cough.",
+          "audioSlug": "i_have_a_cough"
+        }
+      ]
+    },
+    {
+      "id": "health_im_tired_all_time",
+      "source": "Estoy cansado/a todo el tiempo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm tired all the time.",
+          "audioSlug": "i_m_tired_all_the_time"
+        }
+      ]
+    },
+    {
+      "id": "health_take_care_of_health",
+      "source": "Deberías cuidar tu salud.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "You should take care of your health.",
+          "audioSlug": "you_should_take_care_of_your_health"
+        }
+      ]
+    },
+    {
+      "id": "health_my_back_hurts",
+      "source": "Me duele la espalda.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My back hurts.",
+          "audioSlug": "my_back_hurts"
+        }
+      ]
+    },
+    {
+      "id": "health_do_you_have_pain",
+      "source": "¿Dónde te duele?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where does it hurt?",
+          "audioSlug": "where_does_it_hurt"
+        }
+      ]
+    }
+  ]
+}

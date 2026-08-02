@@ -1,0 +1,308 @@
+{
+  "phrases": [
+    {
+      "id": "health_how_do_you_feel",
+      "source": "How are you feeling?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo te sientes?",
+          "audioSlug": "como_te_sientes"
+        }
+      ]
+    },
+    {
+      "id": "health_i_dont_feel_well",
+      "source": "I don't feel well.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me siento bien.",
+          "audioSlug": "no_me_siento_bien"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_headache",
+      "source": "I have a headache.",
+      "level": "A1",
+      "grammar": "'Doler' funciona como 'gustar': 'me duele la cabeza', 'me duelen los pies'.",
+      "target": [
+        {
+          "text": "Me duele la cabeza.",
+          "audioSlug": "me_duele_la_cabeza"
+        }
+      ]
+    },
+    {
+      "id": "health_my_stomach_hurts",
+      "source": "My stomach hurts.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele el estómago.",
+          "audioSlug": "me_duele_el_estomago"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_fever",
+      "source": "I have a fever.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo fiebre.",
+          "audioSlug": "tengo_fiebre"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_cold",
+      "source": "I have a cold.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy resfriada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_resfriada"
+        },
+        {
+          "text": "Estoy resfriado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_resfriado"
+        }
+      ]
+    },
+    {
+      "id": "health_i_need_a_doctor",
+      "source": "I need to see a doctor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito ver a un médico.",
+          "audioSlug": "necesito_ver_a_un_medico"
+        }
+      ]
+    },
+    {
+      "id": "health_where_is_pharmacy",
+      "source": "Where is the nearest pharmacy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la farmacia más cercana?",
+          "audioSlug": "donde_esta_la_farmacia_mas_cercana"
+        }
+      ]
+    },
+    {
+      "id": "health_i_want_an_appointment",
+      "source": "I'd like to make an appointment.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quisiera pedir una cita.",
+          "audioSlug": "quisiera_pedir_una_cita"
+        }
+      ]
+    },
+    {
+      "id": "health_it_hurts_here",
+      "source": "It hurts here.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele aquí.",
+          "audioSlug": "me_duele_aqui"
+        }
+      ]
+    },
+    {
+      "id": "health_im_allergic",
+      "source": "I'm allergic to penicillin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy alérgica a la penicilina.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_alergica_a_la_penicilina"
+        },
+        {
+          "text": "Soy alérgico a la penicilina.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_alergico_a_la_penicilina"
+        }
+      ]
+    },
+    {
+      "id": "health_take_this_medicine",
+      "source": "Take this medicine twice a day.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Toma esta medicina dos veces al día.",
+          "audioSlug": "toma_esta_medicina_dos_veces_al_dia"
+        }
+      ]
+    },
+    {
+      "id": "health_i_feel_dizzy",
+      "source": "I feel dizzy.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy mareada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_mareada"
+        },
+        {
+          "text": "Estoy mareado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_mareado"
+        }
+      ]
+    },
+    {
+      "id": "health_my_throat_hurts",
+      "source": "My throat hurts.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele la garganta.",
+          "audioSlug": "me_duele_la_garganta"
+        }
+      ]
+    },
+    {
+      "id": "health_i_cut_my_hand",
+      "source": "I cut my hand.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me corté la mano.",
+          "audioSlug": "me_corte_la_mano"
+        }
+      ]
+    },
+    {
+      "id": "health_call_an_ambulance",
+      "source": "Call an ambulance!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Llamen a una ambulancia!",
+          "audioSlug": "llamen_a_una_ambulancia"
+        }
+      ]
+    },
+    {
+      "id": "health_get_well_soon",
+      "source": "Get well soon!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Que te mejores pronto!",
+          "audioSlug": "que_te_mejores_pronto"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_a_cough",
+      "source": "I have a cough.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo tos.",
+          "audioSlug": "tengo_tos"
+        }
+      ]
+    },
+    {
+      "id": "health_im_tired_all_time",
+      "source": "I'm tired all the time.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy cansada todo el tiempo.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_cansada_todo_el_tiempo"
+        },
+        {
+          "text": "Estoy cansado todo el tiempo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_cansado_todo_el_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "health_take_care_of_health",
+      "source": "You should take care of your health.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Deberías cuidar tu salud.",
+          "audioSlug": "deberias_cuidar_tu_salud"
+        }
+      ]
+    },
+    {
+      "id": "health_my_back_hurts",
+      "source": "My back hurts.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele la espalda.",
+          "audioSlug": "me_duele_la_espalda"
+        }
+      ]
+    },
+    {
+      "id": "health_do_you_have_pain",
+      "source": "Where does it hurt?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde te duele?",
+          "audioSlug": "donde_te_duele"
+        }
+      ]
+    }
+  ]
+}

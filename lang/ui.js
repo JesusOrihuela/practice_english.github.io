@@ -325,6 +325,7 @@
       topic_personal_info:  'Información Personal',
       topic_family:         'Familia y Personas',
       topic_daily_routine:  'Rutina Diaria',
+      topic_health:         'Salud y Cuerpo',
 
       // ── Página principal (index.html) ─────────────────────────────
       index_hero_sub:           'Escucha, habla y amplía tu vocabulario con ejercicios interactivos diseñados para hacer el aprendizaje natural y divertido.',
@@ -823,6 +824,7 @@
       topic_personal_info:  'Personal Info',
       topic_family:         'Family & People',
       topic_daily_routine:  'Daily Routine',
+      topic_health:         'Health & Body',
 
       // ── Main page (index.html) ────────────────────────────────
       index_hero_sub:           'Listen, speak, and expand your vocabulary with interactive exercises designed to make learning natural and fun.',

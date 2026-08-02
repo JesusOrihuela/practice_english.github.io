@@ -53,7 +53,7 @@
     'greetings', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
     'movies', 'music', 'theater', 'museums',
-    'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine',
+    'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health',
   ];
 
   function _topicLabel(id) {
