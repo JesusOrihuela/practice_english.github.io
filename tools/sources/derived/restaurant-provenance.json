@@ -2,9 +2,33 @@
   "_doc": "Registro de procedencia y clasificación — topic restaurant (pares en-es y es-en).",
   "_purpose": "Sustento de que cada frase realiza una función/noción documentada de un inventario oficial, y de que su nivel CEFR está bien clasificado. Criterio de nivel: demanda comunicativa primaria (gramática + función), con el inventario confirmando el vocabulario y detectando desajustes genuinos (frecuencia≠CEFR).",
   "sources": {
-    "es_target": "PCIC — Nociones específicas (Alimentación) + Funciones (petición). Ver tools/sources/derived/pcic-restaurant.json",
-    "en_target": "British Council/EAQUALS Core Inventory (Functions) + NGSL frequency. Ver tools/sources/derived/core-inventory-restaurant.json",
-    "native_sentences": "Tatoeba (CC-BY) — cobertura mínima para este topic de servicio (homónimos: vino/venir, carta/letter, pedir/proponer); no usado como banco masivo, solo donde una oración genuina coincide."
+    "es_target_inventory": "PCIC — Nociones específicas (Alimentación) + Funciones (petición). Ver tools/sources/derived/pcic-restaurant.json",
+    "en_target_inventory": "British Council/EAQUALS Core Inventory (Functions) + NGSL frequency. Ver tools/sources/derived/core-inventory-restaurant.json",
+    "native_sentences": "Tatoeba (CC-BY) — cobertura mínima para este topic de servicio (homónimos: vino/venir, carta/letter, pedir/proponer); no usado como banco masivo, solo donde una oración genuina coincide.",
+    "attestation_en": [
+      "Espresso English — Restaurant English: 25 essential phrases (https://www.espressoenglish.net/restaurant-english-25-essential-phrases/)",
+      "7ESL — Restaurant English (https://7esl.com/restaurant-english/)",
+      "ESL Teacher — Vocabulary for restaurants (https://eslteacher.org/vocabulary-for-restaurants/)"
+    ],
+    "attestation_es": [
+      "Enforex — Frases para pedir comida (https://www.enforex.com/espanol/blog/frases-para-pedir-comida/)",
+      "Burbuja del Español — Frases útiles para restaurante",
+      "What's Up! — Expresiones en el restaurante"
+    ]
+  },
+  "attestation": {
+    "method": "Cada frase se verificó contra fuentes pedagógicas específicas del tema (no solo el inventario): se conserva si existe una frase estándar atestiguada que realiza la misma función con el mismo contenido; se retira si es idiosincrásica / de otro género.",
+    "attested_service_A1_C1": "Peticiones, preguntas de disponibilidad, alergias/dietas, quejas y felicitación al cocinero: todas con equivalente por función en las fuentes (ej. 'Is this dish spicy?'←'Is this spicy?'; '¿Podría darme la cuenta?'←'¿Nos puede traer la cuenta?'; 'compliment the chef'←'felicita al cocinero').",
+    "finding_c2_ceiling": "El lenguaje de servicio atestiguado tope naturalmente en B2/C1. El nivel C2 estaba relleno con prosa de crítico gastronómico (reseña), un género distinto que NADIE dice al personal y que no aparece en ninguna fuente de frases de restaurante.",
+    "retired_review_prose_c2": [
+      "restaurant_salt_umami_balance_dashi",
+      "restaurant_amuse_bouche_ambition_restraint",
+      "restaurant_wine_pairing_burgundy_premature",
+      "restaurant_tasting_menu_progression_redundancy",
+      "restaurant_attentiveness_discretion_equilibrium"
+    ],
+    "kept_genuine_c2_service": "restaurant_sommelier_provenance_barolo — petición de servicio real (hablar con el sommelier); vocabulario especializado (provenance/vintage/Barolo) justifica C2.",
+    "result_counts": { "en_es": 72, "es_en": 71, "retired_each_pair": 5 }
   },
   "function_coverage": {
     "pedir_objeto_servicio": "A1-A2 — '¿Me da/trae...?', '¿Podría...?' (condicional de cortesía). PCIC 4.3 / Core Inventory asking_for_things + ordering + making_requests.",
