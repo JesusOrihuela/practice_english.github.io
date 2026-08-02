@@ -756,6 +756,7 @@ body.path-mode {
 .img-topic-card[data-theme="gym"]             { --topic-clr: #DC2626; }
 .img-topic-card[data-theme="technology"]      { --topic-clr: #7C3AED; }
 .img-topic-card[data-theme="accountability"]  { --topic-clr: #4338CA; }
+.img-topic-card[data-theme="personal_info"]   { --topic-clr: #0D9488; }
 .img-topic-card[data-theme="general"]         { --topic-clr: #64748B; }
 
 .img-topic-card__img-wrap {

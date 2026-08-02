@@ -322,6 +322,7 @@
       topic_gym:            'Gimnasio',
       topic_technology:     'Tecnología',
       topic_accountability: 'Contabilidad',
+      topic_personal_info:  'Información Personal',
 
       // ── Página principal (index.html) ─────────────────────────────
       index_hero_sub:           'Escucha, habla y amplía tu vocabulario con ejercicios interactivos diseñados para hacer el aprendizaje natural y divertido.',
@@ -817,6 +818,7 @@
       topic_gym:            'Gym',
       topic_technology:     'Technology',
       topic_accountability: 'Accounting',
+      topic_personal_info:  'Personal Info',
 
       // ── Main page (index.html) ────────────────────────────────
       index_hero_sub:           'Listen, speak, and expand your vocabulary with interactive exercises designed to make learning natural and fun.',

@@ -1,0 +1,256 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_im_ana_and_you",
+      "source": "Hola, soy Ana. ¿Y tú?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hi, I'm Ana. And you?",
+          "audioSlug": "hi_i_m_ana_and_you"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_how_old_are_you",
+      "source": "¿Cuántos años tienes?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How old are you?",
+          "audioSlug": "how_old_are_you"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_years_old",
+      "source": "Tengo veinticinco años.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm twenty-five years old.",
+          "audioSlug": "i_m_twenty_five_years_old"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_are_you_from",
+      "source": "¿De dónde eres?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where are you from?",
+          "audioSlug": "where_are_you_from"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_from",
+      "source": "Soy de México.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm from Mexico.",
+          "audioSlug": "i_m_from_mexico"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_do_you_live",
+      "source": "¿Dónde vives?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where do you live?",
+          "audioSlug": "where_do_you_live"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_live_in",
+      "source": "Vivo en el centro de la ciudad.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I live in the city center.",
+          "audioSlug": "i_live_in_the_city_center"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_do_you_do",
+      "source": "¿A qué te dedicas?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What do you do for a living?",
+          "audioSlug": "what_do_you_do_for_a_living"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_a_teacher",
+      "source": "Soy profesor/a.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm a teacher.",
+          "audioSlug": "i_m_a_teacher"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_languages",
+      "source": "¿Qué idiomas hablas?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What languages do you speak?",
+          "audioSlug": "what_languages_do_you_speak"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_speak",
+      "source": "Hablo español y un poco de inglés.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I speak Spanish and a little English.",
+          "audioSlug": "i_speak_spanish_and_a_little_english"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_your_phone_number",
+      "source": "¿Cuál es tu número de teléfono?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What's your phone number?",
+          "audioSlug": "what_s_your_phone_number"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_can_i_have_your_number",
+      "source": "¿Me das tu número?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I have your number?",
+          "audioSlug": "can_i_have_your_number"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_this_is_my_friend",
+      "source": "Te presento a mi amiga Ana.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is my friend Ana.",
+          "audioSlug": "this_is_my_friend_ana"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_are_you_married",
+      "source": "¿Estás casado/a?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Are you married?",
+          "audioSlug": "are_you_married"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_single",
+      "source": "Soy soltero/a.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'm single.",
+          "audioSlug": "i_m_single"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_whats_your_email",
+      "source": "¿Cuál es tu correo electrónico?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What's your email?",
+          "audioSlug": "what_s_your_email"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_how_spell_name",
+      "source": "¿Cómo se escribe tu nombre?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How do you spell your name?",
+          "audioSlug": "how_do_you_spell_your_name"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_were_you_born",
+      "source": "¿Dónde naciste?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where were you born?",
+          "audioSlug": "where_were_you_born"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_was_born_in",
+      "source": "Nací en Argentina.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I was born in Argentina.",
+          "audioSlug": "i_was_born_in_argentina"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_do_you_have_children",
+      "source": "¿Tienes hijos?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have any children?",
+          "audioSlug": "do_you_have_any_children"
+        }
+      ]
+    }
+  ]
+}

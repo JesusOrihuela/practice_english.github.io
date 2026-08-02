@@ -1,0 +1,286 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_im_ana_and_you",
+      "source": "Hi, I'm Ana. And you?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola, soy Ana. ¿Y tú?",
+          "audioSlug": "hola_soy_ana_y_tu"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_how_old_are_you",
+      "source": "How old are you?",
+      "level": "A1",
+      "grammar": "La edad se expresa con 'tener': 'tienes X años', no 'eres'.",
+      "target": [
+        {
+          "text": "¿Cuántos años tienes?",
+          "audioSlug": "cuantos_anos_tienes"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_years_old",
+      "source": "I'm twenty-five years old.",
+      "level": "A1",
+      "grammar": "En español se 'tiene' una edad: 'tengo 25 años', no 'soy 25'.",
+      "target": [
+        {
+          "text": "Tengo veinticinco años.",
+          "audioSlug": "tengo_veinticinco_anos"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_are_you_from",
+      "source": "Where are you from?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿De dónde eres?",
+          "audioSlug": "de_donde_eres"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_from",
+      "source": "I'm from Mexico.",
+      "level": "A1",
+      "grammar": "'Ser de' indica origen o procedencia.",
+      "target": [
+        {
+          "text": "Soy de México.",
+          "audioSlug": "soy_de_mexico"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_do_you_live",
+      "source": "Where do you live?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde vives?",
+          "audioSlug": "donde_vives"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_live_in",
+      "source": "I live in the city center.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo en el centro de la ciudad.",
+          "audioSlug": "vivo_en_el_centro_de_la_ciudad"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_do_you_do",
+      "source": "What do you do for a living?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué te dedicas?",
+          "audioSlug": "a_que_te_dedicas"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_a_teacher",
+      "source": "I'm a teacher.",
+      "level": "A1",
+      "grammar": "Para profesiones se usa 'ser' sin artículo: 'soy profesora'.",
+      "target": [
+        {
+          "text": "Soy profesora.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_profesora"
+        },
+        {
+          "text": "Soy profesor.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_profesor"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_languages",
+      "source": "What languages do you speak?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué idiomas hablas?",
+          "audioSlug": "que_idiomas_hablas"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_speak",
+      "source": "I speak Spanish and a little English.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hablo español y un poco de inglés.",
+          "audioSlug": "hablo_espanol_y_un_poco_de_ingles"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_your_phone_number",
+      "source": "What's your phone number?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es tu número de teléfono?",
+          "audioSlug": "cual_es_tu_numero_de_telefono"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_can_i_have_your_number",
+      "source": "Can I have your number?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me das tu número?",
+          "audioSlug": "me_das_tu_numero"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_this_is_my_friend",
+      "source": "This is my friend Ana.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te presento a mi amiga Ana.",
+          "audioSlug": "te_presento_a_mi_amiga_ana"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_are_you_married",
+      "source": "Are you married?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Estás casado?",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estas_casado"
+        },
+        {
+          "text": "¿Estás casada?",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estas_casada"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_single",
+      "source": "I'm single.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy soltera.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_soltera"
+        },
+        {
+          "text": "Soy soltero.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_soltero"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_whats_your_email",
+      "source": "What's your email?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es tu correo electrónico?",
+          "audioSlug": "cual_es_tu_correo_electronico"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_how_spell_name",
+      "source": "How do you spell your name?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo se escribe tu nombre?",
+          "audioSlug": "como_se_escribe_tu_nombre"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_where_were_you_born",
+      "source": "Where were you born?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde naciste?",
+          "audioSlug": "donde_naciste"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_was_born_in",
+      "source": "I was born in Argentina.",
+      "level": "A2",
+      "grammar": "'Nací' es el pretérito de 'nacer' para decir dónde o cuándo naciste.",
+      "target": [
+        {
+          "text": "Nací en Argentina.",
+          "audioSlug": "naci_en_argentina"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_do_you_have_children",
+      "source": "Do you have any children?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienes hijos?",
+          "audioSlug": "tienes_hijos"
+        }
+      ]
+    }
+  ]
+}

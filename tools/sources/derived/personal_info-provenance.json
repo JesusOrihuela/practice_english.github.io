@@ -1,0 +1,19 @@
+{
+  "_doc": "Registro de procedencia — NUEVO topic personal_info (Información Personal / Personal Info), pares en-es y es-en.",
+  "_purpose": "Primer tema de la expansión por frecuencia. Cubre la función 'identificación personal' — de las de mayor frecuencia y ausente como tema propio.",
+  "sources": {
+    "es_target": "PCIC — 5. Funciones: dar/pedir información personal (identificación). Exponentes verbatim: 'Me llamo...', '¿Cómo te llamas?', '¿Cuántos años tienes?', 'Tengo X años', '¿De dónde eres?', 'Soy de...', '¿Dónde vives?', '¿A qué te dedicas?', 'Soy profesor/a'.",
+    "en_target": "British Council/EAQUALS Core Inventory — giving personal information (name, age, origin, job).",
+    "url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm"
+  },
+  "attestation": {
+    "principle": "Cada frase realiza una función de identificación personal documentada en el PCIC/Core Inventory, redactada como acto comunicativo natural (no lista de vocabulario).",
+    "functions": ["presentarse", "edad", "origen/nacionalidad", "residencia", "profesión", "idiomas", "teléfono/correo", "estado civil", "presentar a alguien", "lugar/fecha de nacimiento"],
+    "gender": "1a persona base femenina (Soy profesora/soltera), 2a persona base masculina (¿Estás casado?) — Regla 10. Fuente es-en con notación slash (profesor/a, casado/a, soltero/a)."
+  },
+  "enrichment": {
+    "note": "Tips de alto valor para angloparlantes: la edad con 'tener' ('tengo 25 años', no 'soy 25'), profesiones con 'ser' sin artículo, 'ser de' para origen, pretérito 'nací'."
+  },
+  "coverage_rationale": "Carga núcleo del top-1000 hoy ausente: pronombres/ser/estar/tener/vivir/hablar en 1a-2a persona, edad, origen, profesión — la base de toda conversación de presentación.",
+  "result_counts": { "en_es": 21, "es_en": 21, "distribution": "A1:12 A2:9", "new_topic": true, "order": 16, "images": "pendientes (buscar+aprobar en lote con los demás temas nuevos)" }
+}
