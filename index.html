@@ -774,20 +774,34 @@
     <script src="shared/js/theme.js"></script>
     <script>
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
+        // Automatic updates — mirrors shared/js/sw-register.js (root path here).
+        // Only reload on a real update (a controller already existed), never on
+        // first install. updateViaCache:'none' detects a new SW on the next
+        // navigation instead of up to 24h later.
+        const _hadController = !!navigator.serviceWorker.controller;
+        let _refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!_hadController || _refreshing) return;
+          _refreshing = true;
+          location.reload();
+        });
+        navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' })
           .then(reg => {
             reg.addEventListener('updatefound', () => {
               const nw = reg.installing;
               if (!nw) return;
               nw.addEventListener('statechange', () => {
-                if (nw.state === 'activated' && navigator.serviceWorker.controller) location.reload();
+                if (nw.state === 'activated' && _hadController && !_refreshing) {
+                  _refreshing = true;
+                  location.reload();
+                }
               });
             });
-          });
-        let _refreshing = false;
-        navigator.serviceWorker.addEventListener('controllerchange', () => {
-          if (!_refreshing) { _refreshing = true; location.reload(); }
-        });
+            document.addEventListener('visibilitychange', () => {
+              if (document.visibilityState === 'visible') reg.update().catch(() => {});
+            });
+          })
+          .catch(() => {});
         // Fire daily reminder if conditions are met (once per day, after configured time)
         if (window.NotificationSystem) window.NotificationSystem.checkAndNotify();
       }
