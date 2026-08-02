@@ -645,18 +645,6 @@
       ]
     },
     {
-      "id": "accountability_the_weighted_average_cost_of",
-      "source": "The weighted average cost of capital serves as the benchmark for evaluating investment returns.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El costo de capital promedio ponderado sirve como referencia para evaluar los rendimientos de inversión.",
-          "audioSlug": "el_costo_de_capital_promedio_ponderado_sirve_como_referencia_para_evaluar_los_rendimientos_0bddad3d"
-        }
-      ]
-    },
-    {
       "id": "accountability_operating_expenses_exceeded_budget",
       "source": "Operating expenses exceeded the budget by twelve percent last quarter.",
       "level": "B2",
@@ -789,18 +777,6 @@
       ]
     },
     {
-      "id": "accountability_going_concern_assumption_financial_statements",
-      "source": "The going concern assumption underpins the preparation of all financial statements.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El principio de empresa en marcha sustenta la elaboración de todos los estados financieros.",
-          "audioSlug": "el_principio_de_empresa_en_marcha_sustenta_la_elaboracion_de_todos_los_estados_financieros"
-        }
-      ]
-    },
-    {
       "id": "accountability_walk_through_reconciliation_management_statutory",
       "source": "Could you walk me through the reconciliation between the management accounts and the statutory figures?",
       "level": "C1",
@@ -837,18 +813,6 @@
       ]
     },
     {
-      "id": "accountability_substance_over_form_economic_reality",
-      "source": "The substance-over-form principle requires that transactions be recognized in accordance with their economic reality.",
-      "level": "C2",
-      "grammar": "'Exige que + subjuntivo' expresa mandato formal; el cambio de sujeto obliga al subjuntivo.",
-      "target": [
-        {
-          "text": "El principio de fondo sobre forma exige que las transacciones se reconozcan conforme a su realidad económica.",
-          "audioSlug": "el_principio_de_fondo_sobre_forma_exige_que_las_transacciones_se_reconozcan_conforme_a_su_r_3cda4de7"
-        }
-      ]
-    },
-    {
       "id": "accountability_earnings_per_share_basic_diluted_disclosure",
       "source": "Earnings per share must be reported using both basic and diluted figures to ensure full disclosure.",
       "level": "C2",
@@ -869,6 +833,126 @@
         {
           "text": "El umbral de materialidad se fijó en dos por ciento de los activos netos consolidados para la auditoría.",
           "audioSlug": "el_umbral_de_materialidad_se_fijo_en_dos_por_ciento_de_los_activos_netos_consolidados_para_1a9a1999"
+        }
+      ]
+    },
+    {
+      "id": "accountability_pay_invoice",
+      "source": "I need to pay this invoice.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito pagar esta factura.",
+          "audioSlug": "necesito_pagar_esta_factura"
+        }
+      ]
+    },
+    {
+      "id": "accountability_deadline",
+      "source": "When is the deadline?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuándo es la fecha límite?",
+          "audioSlug": "cuando_es_la_fecha_limite"
+        }
+      ]
+    },
+    {
+      "id": "accountability_send_invoice",
+      "source": "Can you send me the invoice?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me puedes enviar la factura?",
+          "audioSlug": "me_puedes_enviar_la_factura"
+        }
+      ]
+    },
+    {
+      "id": "accountability_total_amount",
+      "source": "What is the total amount?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es el monto total?",
+          "audioSlug": "cual_es_el_monto_total"
+        }
+      ]
+    },
+    {
+      "id": "accountability_over_budget",
+      "source": "We are over budget.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos pasamos del presupuesto.",
+          "audioSlug": "nos_pasamos_del_presupuesto"
+        }
+      ]
+    },
+    {
+      "id": "accountability_file_taxes",
+      "source": "I need to file my taxes.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito declarar mis impuestos.",
+          "audioSlug": "necesito_declarar_mis_impuestos"
+        }
+      ]
+    },
+    {
+      "id": "accountability_keep_receipt",
+      "source": "Please keep the receipt.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Guarda el recibo, por favor.",
+          "audioSlug": "guarda_el_recibo_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "accountability_how_much_owe",
+      "source": "How much do we owe?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto debemos?",
+          "audioSlug": "cuanto_debemos"
+        }
+      ]
+    },
+    {
+      "id": "accountability_payment_due",
+      "source": "The payment is due next week.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El pago vence la próxima semana.",
+          "audioSlug": "el_pago_vence_la_proxima_semana"
+        }
+      ]
+    },
+    {
+      "id": "accountability_check_numbers",
+      "source": "Can you check these numbers?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes revisar estas cifras?",
+          "audioSlug": "puedes_revisar_estas_cifras"
         }
       ]
     }

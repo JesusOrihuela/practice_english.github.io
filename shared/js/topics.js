@@ -23,7 +23,7 @@ const AppTopics = (() => {
     { id: 'museums',        label: 'Museos & Arte',      labelEn: 'Museums & Art',   emoji: '🖼️' },
     { id: 'gym',            label: 'Gimnasio',           labelEn: 'Gym',             emoji: '💪' },
     { id: 'technology',     label: 'Tecnología',         labelEn: 'Technology',      emoji: '💻' },
-    { id: 'accountability', label: 'Contabilidad',       labelEn: 'Accountability',  emoji: '🎯' },
+    { id: 'accountability', label: 'Contabilidad',       labelEn: 'Accounting',      emoji: '📊' },
   ];
 
   // emociones and museums are phrase-only (no vocabulary set), so they are

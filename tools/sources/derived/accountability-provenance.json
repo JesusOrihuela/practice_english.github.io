@@ -1,0 +1,18 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic accountability (Contabilidad / Accounting), pares en-es y es-en.",
+  "_purpose": "Sustento de que cada frase es comunicación profesional real de contabilidad/finanzas, bien clasificada.",
+  "sources": { "es_target": "Terminología contable profesional (NIIF) + PCIC (economía/finanzas).", "en_target": "Business/accounting English profesional + IFRS terminology.", "attestation": "Referencias de inglés/español contable profesional." },
+  "per_phrase_record": "accountability-attestation.json — 78 frases por función (pagos/facturas, oficina/gestión, impuestos/auditoría, análisis financiero, normas contables).",
+  "label_fix": "El labelEn era 'Accountability' (responsabilidad) pero el contenido y el español son 'Contabilidad' (accounting): mala traducción. Corregido a 'Accounting' en topics.js/path.js (ui.js ya decía 'Accounting'). Emoji 🎯 -> 📊 (mejor para contabilidad).",
+  "attestation": {
+    "principle": "La contabilidad es un dominio PROFESIONAL donde el practicante comunica de verdad (analizar variaciones, cubrir riesgo cambiario, constituir provisiones, conciliar cuentas, cumplir normas). Esa comunicación profesional se CONSERVA aunque sea C1-C2. Solo se retiran las DEFINICIONES de principios ('el principio X exige...', 'X sirve como referencia', 'X sustenta...').",
+    "retired_definitions": ["WACC 'sirve como referencia' (C2)", "empresa en marcha 'sustenta la elaboración' (C1)", "fondo sobre forma 'exige que...' (C2)"],
+    "kept": "Análisis de variaciones, hedging, comité de auditoría, depreciación, ratios, provisiones, precios de transferencia, impuesto diferido, conciliación, recompra, consolidación, reconocimiento de ingresos, deterioro, pasivo contingente, reexpresión, EPS, materialidad."
+  },
+  "gap_fill": {
+    "added_per_pair": 10,
+    "basis": "El tema NO tenía nivel principiante (A1:0, A2:5) — todo era contabilidad profesional. Añadidos básicos de finanzas/oficina para dar una progresión desde lo cotidiano.",
+    "list": ["Necesito pagar esta factura", "¿Cuándo es la fecha límite?", "¿Me puedes enviar la factura?", "¿Cuál es el monto total?", "Nos pasamos del presupuesto", "Necesito declarar mis impuestos", "Guarda el recibo", "¿Cuánto debemos?", "El pago vence la próxima semana", "¿Puedes revisar estas cifras?"]
+  },
+  "result_counts": { "en_es": 78, "es_en": 78, "before": 71, "retired_each_pair": 3, "added_each_pair": 10, "A1_before": 0, "A1_after": 6 }
+}
