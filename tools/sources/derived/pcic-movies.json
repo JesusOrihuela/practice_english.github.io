@@ -1,0 +1,19 @@
+{
+  "_source": "PCIC — 9. Nociones específicas (Ocio: cine, espectáculos) + 5. Funciones (expresar gustos e intereses, valorar, recomendar)",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Persona = ESPECTADOR/AFICIONADO. Hablar de cine es comunicación real (ir al cine, recomendar, opinar). Se retira la prosa de crítico/teoría fílmica (ensayo expositivo).",
+  "targetLang": "es",
+  "topic": "movies",
+  "notions": {
+    "A1": { "objetos": ["película", "cine", "boleto", "actor", "comedia"], "acciones": ["ver una película", "ir al cine"] },
+    "A2": { "objetos": ["serie", "documental", "cartelera", "trailer", "director", "festival"], "atributos": ["doblada", "subtitulada", "versión original"], "generos": ["terror", "acción", "thriller"] }
+  },
+  "functions": [
+    { "id": "ir_al_cine", "name": "Ir al cine", "level": "A1", "exponents": ["Dos boletos para la función de las ocho.", "¿Qué películas hay en cartelera?", "¿Dónde compro los boletos?"] },
+    { "id": "gustos", "name": "Expresar gustos e intereses", "level": "A1", "exponents": ["¿Qué tipo de películas te gustan?", "¿Cuál es tu película favorita?", "Es una comedia."] },
+    { "id": "proponer", "name": "Proponer un plan", "level": "A1", "exponents": ["¿Quieres ver una película esta noche?", "¿Vamos al cine?"] },
+    { "id": "recomendar", "name": "Recomendar", "level": "A2", "exponents": ["Tienes que verla, es un clásico.", "¿Qué serie me recomiendas?"] },
+    { "id": "opinar", "name": "Valorar / opinar (conversacional)", "level": "B1", "exponents": ["Las actuaciones fueron sobresalientes, pero el guion...", "La cinematografía vale la pena."] }
+  ]
+}

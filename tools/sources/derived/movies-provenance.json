@@ -1,0 +1,25 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic movies (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es comunicación real sobre cine/series (ir al cine, recomendar, opinar), bien clasificada.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Ocio y tiempo libre: cine) + Funciones (expresar gustos, opinar, recomendar). Ver pcic-movies.json",
+    "en_target_inventory": "Core Inventory (expressing opinions, likes/dislikes, recommendations) + NGSL + movie/cinema ESL",
+    "attestation": "Guias ESL/ELE de cine y ocio; PCIC funciones de opinión."
+  },
+  "per_phrase_record": "movies-attestation.json — 50 frases por función.",
+  "attestation": {
+    "principle": "Hablar de cine es comunicación real: ir al cine (boletos, cartelera, doblada/subtitulada), recomendar, y OPINAR conversacionalmente ('las actuaciones fueron sobresalientes, pero el guion...'). Pero la PROSA DE CRÍTICO/TEORÍA FÍLMICA es ensayo expositivo, no conversación — se retira aunque el vocabulario sea avanzado.",
+    "retired_critic_essay": {
+      "c2_all": ["intertextual references reward viewers", "diegetic sound naturalism", "contested gaze whose story", "deconstructs the superhero genre", "subverts conventions critical acclaim", "auteur signature long takes", "critique of consumerism", "refuses easy moral resolution"],
+      "c1_essayistic": ["authentic cultural representation (ensayo)", "documentary blurs observation/intervention (ensayo)", "explores themes of identity and belonging (ensayo)", "praised for unflinching portrayal of poverty (recepción crítica)"]
+    },
+    "kept": "Opinión conversacional de espectador (narrador poco fiable, arco del personaje justificado, actuaciones vs guion, cinematografía vale la pena, subtexto, montaje, narrativa no lineal) + ir al cine + recomendar series."
+  },
+  "gap_fill": {
+    "added_per_pair": 9,
+    "basis": "A1 solo 4; pesado en series/streaming pero sin los básicos de IR AL CINE. Añadidos desde PCIC + guías.",
+    "list": ["Dos boletos para la función de las ocho", "¿Qué películas hay en cartelera?", "¿doblada o subtitulada?", "¿Qué tipo de películas te gustan?", "¿Cuál es tu película favorita?", "Es una comedia", "¿Quieres ver una película esta noche?", "¿Dónde compro los boletos?", "versión original con subtítulos"],
+    "audio": "27 ES + 36 EN"
+  },
+  "result_counts": { "en_es": 50, "es_en": 50, "before": 53, "retired_each_pair": 12, "added_each_pair": 9 }
+}

@@ -507,42 +507,6 @@
       ]
     },
     {
-      "id": "movies_cultural_representation_authentic",
-      "source": "The film stands out for its authentic cultural representation, written by people from that community.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La película destaca por su representación cultural auténtica, escrita por personas de esa comunidad.",
-          "audioSlug": "la_pelicula_destaca_por_su_representacion_cultural_autentica_escrita_por_personas_de_esa_comunidad"
-        }
-      ]
-    },
-    {
-      "id": "movies_documentary_blurs_line_fiction",
-      "source": "The documentary blurs the line between observation and intervention, raising uncomfortable questions about the filmmaker's role.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El documental desdibuja la línea entre observación e intervención, cuestionando el papel del cineasta.",
-          "audioSlug": "el_documental_desdibuja_la_linea_entre_observacion_e_intervencion_cuestionando_el_papel_del_cineasta"
-        }
-      ]
-    },
-    {
-      "id": "movies_themes_identity_narrative",
-      "source": "The film explores themes of identity and belonging through a deceptively simple narrative.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La película explora temas de identidad y pertenencia a través de una narrativa engañosamente sencilla.",
-          "audioSlug": "la_pelicula_explora_temas_de_identidad_y_pertenencia_a_traves_de_una_narrativa_enganosament_26db17a8"
-        }
-      ]
-    },
-    {
       "id": "movies_nonlinear_storytelling_effective",
       "source": "I find the director's use of non-linear storytelling particularly effective in this piece.",
       "level": "C1",
@@ -577,18 +541,6 @@
       ]
     },
     {
-      "id": "movies_unflinching_poverty_sentimentality",
-      "source": "It was praised for its unflinching portrayal of poverty, avoiding the usual Hollywood sentimentality.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Fue elogiada por su retrato sin concesiones de la pobreza, evitando la habitual sensiblería de Hollywood.",
-          "audioSlug": "fue_elogiada_por_su_retrato_sin_concesiones_de_la_pobreza_evitando_la_habitual_sensibleria_74b2e0f4"
-        }
-      ]
-    },
-    {
       "id": "movies_cinematography_worth_watching",
       "source": "The cinematography alone makes it worth watching. Every frame looks like a painting.",
       "level": "C1",
@@ -601,108 +553,110 @@
       ]
     },
     {
-      "id": "movies_intertextual_references_reward_viewers",
-      "source": "The film rewards attentive viewers through its dense network of intertextual references to both classical cinema and literature.",
-      "level": "C2",
+      "id": "movies_two_tickets",
+      "source": "Two tickets for the eight o'clock showing, please.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La película recompensa a los espectadores atentos con referencias intertextuales al cine clásico y la literatura.",
-          "audioSlug": "la_pelicula_recompensa_a_los_espectadores_atentos_con_referencias_intertextuales_al_cine_cl_2babbbc5"
+          "text": "Dos boletos para la función de las ocho, por favor.",
+          "audioSlug": "dos_boletos_para_la_funcion_de_las_ocho_por_favor"
         }
       ]
     },
     {
-      "id": "movies_diegetic_sound_naturalism",
-      "source": "The director's choice to use only diegetic sound contributes to the film's uncompromising naturalism.",
-      "level": "C2",
+      "id": "movies_whats_showing",
+      "source": "What movies are showing this week?",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "La decisión del director de usar únicamente sonido diegético contribuye al naturalismo sin concesiones de la película.",
-          "audioSlug": "la_decision_del_director_de_usar_unicamente_sonido_diegetico_contribuye_al_naturalismo_sin_744c962c",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "La decisión de la directora de usar únicamente sonido diegético contribuye al naturalismo sin concesiones de la película.",
-          "audioSlug": "la_decision_de_la_directora_de_usar_unicamente_sonido_diegetico_contribuye_al_naturalismo_s_278ed617",
-          "labels": {
-            "gender": "femenino"
-          }
+          "text": "¿Qué películas hay en cartelera esta semana?",
+          "audioSlug": "que_peliculas_hay_en_cartelera_esta_semana"
         }
       ]
     },
     {
-      "id": "movies_contested_gaze_whose_story",
-      "source": "The film invites scrutiny of whose perspective is privileged in the narrative and whose is systematically silenced.",
-      "level": "C2",
+      "id": "movies_dubbed_or_subtitled",
+      "source": "Is the movie dubbed or subtitled?",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "La película invita a examinar qué perspectiva es privilegiada en la narrativa y cuál es sistemáticamente silenciada.",
-          "audioSlug": "la_pelicula_invita_a_examinar_que_perspectiva_es_privilegiada_en_la_narrativa_y_cual_es_sis_e323078b"
+          "text": "¿La película está doblada o subtitulada?",
+          "audioSlug": "la_pelicula_esta_doblada_o_subtitulada"
         }
       ]
     },
     {
-      "id": "movies_deconstruct_genre_vigilante",
-      "source": "The film deconstructs the superhero genre by interrogating the moral ambiguity of vigilante justice.",
-      "level": "C2",
-      "grammar": null,
+      "id": "movies_what_kind_you_like",
+      "source": "What kind of movies do you like?",
+      "level": "A1",
+      "grammar": "Gustar concuerda con lo que gusta: me gusta la película, me gustan las películas.",
       "target": [
         {
-          "text": "La película deconstruye el género de superhéroes al cuestionar la ambigüedad moral de la justicia por mano propia.",
-          "audioSlug": "la_pelicula_deconstruye_el_genero_de_superheroes_al_cuestionar_la_ambiguedad_moral_de_la_ju_3c42e4e6"
+          "text": "¿Qué tipo de películas te gustan?",
+          "audioSlug": "que_tipo_de_peliculas_te_gustan"
         }
       ]
     },
     {
-      "id": "movies_subverts_conventions_critical_acclaim",
-      "source": "Its deliberate subversion of narrative conventions alienated mainstream audiences but earned critical acclaim.",
-      "level": "C2",
+      "id": "movies_favorite_movie",
+      "source": "What's your favorite movie?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Su deliberada subversión de las convenciones narrativas alejó al público mayoritario pero obtuvo reconocimiento crítico.",
-          "audioSlug": "su_deliberada_subversion_de_las_convenciones_narrativas_alejo_al_publico_mayoritario_pero_o_3d073608"
+          "text": "¿Cuál es tu película favorita?",
+          "audioSlug": "cual_es_tu_pelicula_favorita"
         }
       ]
     },
     {
-      "id": "movies_auteur_long_takes_body_of_work",
-      "source": "The director's auteur signature is unmistakable. The long takes and sparse dialogue are hallmarks of her work.",
-      "level": "C2",
+      "id": "movies_its_a_comedy",
+      "source": "It's a comedy.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La firma de la directora es inconfundible, pues los planos secuencia y el diálogo escaso definen su obra.",
-          "audioSlug": "la_firma_de_la_directora_es_inconfundible_pues_los_planos_secuencia_y_el_dialogo_escaso_def_67793bf6"
+          "text": "Es una comedia.",
+          "audioSlug": "es_una_comedia"
         }
       ]
     },
     {
-      "id": "movies_polemic_consumerism_commercial",
-      "source": "The film functions as a critique of consumerism, embedding its argument within an ostensibly commercial genre.",
-      "level": "C2",
+      "id": "movies_want_to_watch_tonight",
+      "source": "Do you want to watch a movie tonight?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La película funciona como una crítica al consumismo, insertando su argumento dentro de un género aparentemente comercial.",
-          "audioSlug": "la_pelicula_funciona_como_una_critica_al_consumismo_insertando_su_argumento_dentro_de_un_ge_ce6b820f"
+          "text": "¿Quieres ver una película esta noche?",
+          "audioSlug": "quieres_ver_una_pelicula_esta_noche"
         }
       ]
     },
     {
-      "id": "movies_refuses_easy_moral_resolution",
-      "source": "What distinguishes it from its contemporaries is its refusal to provide an easy moral resolution.",
-      "level": "C2",
-      "grammar": "'Lo que + verbo' actúa como sujeto nominalizado; equivale al inglés 'what + verb'.",
+      "id": "movies_where_buy_tickets",
+      "source": "Where can I buy tickets?",
+      "level": "A1",
+      "grammar": null,
       "target": [
         {
-          "text": "Lo que la distingue de sus contemporáneas es su negativa a ofrecer una resolución moral sencilla.",
-          "audioSlug": "lo_que_la_distingue_de_sus_contemporaneas_es_su_negativa_a_ofrecer_una_resolucion_moral_sencilla"
+          "text": "¿Dónde puedo comprar los boletos?",
+          "audioSlug": "donde_puedo_comprar_los_boletos"
+        }
+      ]
+    },
+    {
+      "id": "movies_original_version_subtitles",
+      "source": "I'd rather watch it in the original version with subtitles.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero verla en versión original con subtítulos.",
+          "audioSlug": "prefiero_verla_en_version_original_con_subtitulos"
         }
       ]
     }
