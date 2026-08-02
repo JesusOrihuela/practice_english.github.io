@@ -1,0 +1,28 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic greetings (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase realiza una función de saludo documentada y está bien clasificada. Criterio: demanda comunicativa primaria + inventario oficial + atestiguación por función.",
+  "sources": {
+    "es_target_inventory": "PCIC — Funciones (saludar, responder, dirigirse a alguien, presentar/presentarse, responder a presentación, despedirse). Ver tools/sources/derived/pcic-greetings.json",
+    "en_target": "British Council/EAQUALS Core Inventory (functions: greetings, introductions, leave-taking) + NGSL.",
+    "attestation_en": ["Promova — English Greetings and Introductions", "FluentU — business greetings and introductions", "LearnLaughSpeak — formal greetings for professionals"],
+    "attestation_es": ["PCIC funciones", "Enforex / recursos ELE de saludos y presentaciones"]
+  },
+  "per_phrase_record": "tools/sources/derived/greetings-attestation.json — cada frase clasificada por función de saludo (saludar, preguntar/responder estado, presentar/presentarse, responder a presentación, despedirse, felicitar, condolencias, bienvenida, dar recuerdos, cortesía). Todas atestiguadas.",
+  "attestation": {
+    "method": "Cada frase verificada como acto de saludo estándar presente en el inventario/las fuentes; retiradas las que no son actos interpersonales de saludo.",
+    "finding_c2_ceiling": "Igual que restaurant: el lenguaje interpersonal de saludo atestiguado tope en B2/C1 (presentaciones formales, condolencias, bienvenidas, felicitaciones). El C2 estaba relleno con ORATORIA ceremonial y META-COMENTARIO sobre los saludos (no son saludos que se dicen a una persona).",
+    "retired_wrong_genre_c2": [
+      "greetings_honor_welcome_distinguished_delegates (oratoria ceremonial)",
+      "greetings_cultural_awareness_not_merely_etiquette (meta-comentario sobre saludos)",
+      "greetings_protocol_introductions_senior_first (meta-comentario sobre protocolo)",
+      "greetings_remiss_not_acknowledge_contribution (tributo de discurso, no saludo)"
+    ],
+    "kept_genuine_c2": "greetings_sincere_felicitations_promotion — felicitación formal (función 'felicitar' documentada); vocabulario elevado justifica C2.",
+    "b2_c1_kept": "Presentaciones formales, condolencias, bienvenidas, saludos de reencuentro y correspondencia formal — todas funciones interpersonales legítimas y atestiguadas."
+  },
+  "leveling": "A1-B1 revisados: saludos, preguntar/responder estado, presentaciones, despedidas — nivelación sólida (los B1 usan pretérito perfecto genuino 'how have you been'). Sin reclasificaciones necesarias.",
+  "enrichment": {
+    "note": "16 tips gramaticales ya presentes (subjuntivo tras deseo, condicional de sugerencia, imperativo de nosotros con enclítico, etc.), densidad ~20%. Variantes de registro formal/informal donde aplica."
+  },
+  "result_counts": { "en_es_before": 81, "en_es_after": 77, "es_en_before": 66, "es_en_after": 62, "retired_each_pair": 4 }
+}
