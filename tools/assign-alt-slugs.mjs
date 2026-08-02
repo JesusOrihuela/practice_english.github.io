@@ -58,7 +58,7 @@ const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability', 'personal_info',
+  'gym', 'technology', 'accountability', 'personal_info', 'family',
 ];
 
 const PAIRS = ['es-en', 'en-es'];

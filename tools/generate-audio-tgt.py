@@ -144,7 +144,7 @@ PHRASE_TOPICS = [
     'greetings', 'emociones', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
     'movies', 'music', 'theater', 'museums',
-    'gym', 'technology', 'accountability', 'personal_info',
+    'gym', 'technology', 'accountability', 'personal_info', 'family',
 ]
 
 # emociones and museums are phrase-only (no vocabulary file), mirroring shared/js/topics.js

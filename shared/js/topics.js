@@ -25,11 +25,12 @@ const AppTopics = (() => {
     { id: 'technology',     label: 'Tecnología',         labelEn: 'Technology',      emoji: '💻' },
     { id: 'accountability', label: 'Contabilidad',       labelEn: 'Accounting',      emoji: '📊' },
     { id: 'personal_info',  label: 'Información Personal',labelEn: 'Personal Info',   emoji: '🪪' },
+    { id: 'family',         label: 'Familia y Personas', labelEn: 'Family & People',  emoji: '👪' },
   ];
 
   // Phrase-only topics (no vocabulary set) are excluded from the word activities
   // (Vocabulario, Quiz) which would otherwise fail to load them.
-  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info']);
+  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'family']);
   const VOCAB_TOPICS = [
     { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
     ...PHRASE_TOPICS.filter(t => !PHRASE_ONLY.has(t.id)),

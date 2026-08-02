@@ -22,7 +22,7 @@ const PAIRS = ['es-en', 'en-es'];
 const TOPICS = [
   'emociones', 'greetings', 'restaurant', 'kitchen', 'gym', 'technology',
   'supermarket', 'accommodation', 'accountability', 'movies',
-  'music', 'theater', 'museums', 'transportation', 'airport', 'personal_info'
+  'music', 'theater', 'museums', 'transportation', 'airport', 'personal_info', 'family'
 ];
 
 // R15: ID suffix patterns that indicate generic/non-descriptive IDs

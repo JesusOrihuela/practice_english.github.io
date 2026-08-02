@@ -39,6 +39,7 @@ const AppPath = (() => {
     { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        labelEn: 'Technology',      order: 14 },
     { id: 'accountability', level: 'B2', emoji: '📊', label: 'Contabilidad',      labelEn: 'Accounting',      order: 15 },
     { id: 'personal_info',  level: 'A1', emoji: '🪪', label: 'Información Personal',labelEn: 'Personal Info',   order: 16 },
+    { id: 'family',         level: 'A1', emoji: '👪', label: 'Familia y Personas', labelEn: 'Family & People',  order: 17 },
   ];
 
   // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─
