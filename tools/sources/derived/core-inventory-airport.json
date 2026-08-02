@@ -1,0 +1,15 @@
+{
+  "_source": "British Council/EAQUALS Core Inventory + NGSL + airport/travel ESL materials",
+  "_url": "https://www.eaquals.org/resources/the-core-inventory-for-general-english/",
+  "_license": "Referencia pública (British Council / EAQUALS). NGSL: CC BY-SA.",
+  "_note": "Arbitro de nivel/persona para airport (par es-en). Persona = pasajero; llega a C1-C2 por tramites reales.",
+  "targetLang": "en",
+  "topic": "airport",
+  "functions": [
+    { "id": "location", "name": "Asking location", "level": "A1", "exponents": ["Where is the check-in counter?", "Where is security?", "Which gate does my flight leave from?"] },
+    { "id": "flight_info", "name": "Flight information", "level": "A1", "exponents": ["What time is my flight?", "Is my flight on time?", "Is this the gate for flight...?"] },
+    { "id": "checkin_seat", "name": "Check-in / seat", "level": "A1", "exponents": ["I need to check my luggage.", "I'd like an aisle/window seat."] },
+    { "id": "customs", "name": "Customs", "level": "A2", "exponents": ["I have nothing to declare.", "I'd like to declare these goods."] },
+    { "id": "issues", "name": "Issues and rights", "level": "B1", "exponents": ["My flight was delayed.", "My luggage didn't arrive.", "What compensation am I entitled to?"] }
+  ]
+}

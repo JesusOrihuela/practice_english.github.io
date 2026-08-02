@@ -419,18 +419,6 @@
       ]
     },
     {
-      "id": "airport_carbon_offset_scheme",
-      "source": "Does the airline offer a carbon offset scheme for passengers who wish to mitigate their emissions?",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿La aerolínea ofrece un programa de compensación de carbono para los pasajeros que deseen mitigar sus emisiones?",
-          "audioSlug": "la_aerolinea_ofrece_un_programa_de_compensacion_de_carbono_para_los_pasajeros_que_deseen_mi_ff8048ff"
-        }
-      ]
-    },
-    {
       "id": "airport_eu_regulation_compensation",
       "source": "Under EU Regulation 261/2004, I believe I'm entitled to compensation for this cancellation.",
       "level": "C2",
@@ -467,36 +455,122 @@
       ]
     },
     {
-      "id": "airport_force_majeure_rebook",
-      "source": "Given the force majeure clause, is the airline still obligated to rebook me on an alternative carrier?",
-      "level": "C2",
+      "id": "airport_where_is_checkin",
+      "source": "Where is the check-in counter?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Dada la cláusula de fuerza mayor, ¿la aerolínea sigue obligada a reembarcarme en otra compañía?",
-          "audioSlug": "dada_la_clausula_de_fuerza_mayor_la_aerolinea_sigue_obligada_a_reembarcarme_en_otra_compania"
+          "text": "¿Dónde está el mostrador de facturación?",
+          "audioSlug": "donde_esta_el_mostrador_de_facturacion"
         }
       ]
     },
     {
-      "id": "airport_asylum_request_procedure",
-      "source": "I wish to apply for asylum. Could you direct me to the appropriate immigration officer?",
-      "level": "C2",
-      "grammar": "'Deseo + infinitivo' es más formal que 'quiero + infinitivo'; indica voluntad deliberada.",
+      "id": "airport_which_gate",
+      "source": "Which gate is my flight?",
+      "level": "A1",
+      "grammar": null,
       "target": [
         {
-          "text": "Deseo solicitar asilo, ¿podría dirigirme con el funcionario de inmigración correspondiente?",
-          "audioSlug": "deseo_solicitar_asilo_podria_dirigirme_con_el_funcionario_de_inmigracion_correspondiente",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
+          "text": "¿Cuál es la puerta de mi vuelo?",
+          "audioSlug": "cual_es_la_puerta_de_mi_vuelo"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_is_security",
+      "source": "Where is security?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
         {
-          "text": "Deseo solicitar asilo, ¿podría dirigirme con la funcionaria de inmigración correspondiente?",
-          "audioSlug": "deseo_solicitar_asilo_podria_dirigirme_con_la_funcionaria_de_inmigracion_correspondiente",
-          "labels": {
-            "gender": "femenino"
-          }
+          "text": "¿Dónde está el control de seguridad?",
+          "audioSlug": "donde_esta_el_control_de_seguridad"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_passport_control",
+      "source": "Where is passport control?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está el control de pasaportes?",
+          "audioSlug": "donde_esta_el_control_de_pasaportes"
+        }
+      ]
+    },
+    {
+      "id": "airport_is_flight_on_time",
+      "source": "Is my flight on time?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Mi vuelo sale a tiempo?",
+          "audioSlug": "mi_vuelo_sale_a_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_boarding_pass",
+      "source": "Where can I get my boarding pass?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde recojo mi pase de abordar?",
+          "audioSlug": "donde_recojo_mi_pase_de_abordar"
+        }
+      ]
+    },
+    {
+      "id": "airport_nothing_to_declare",
+      "source": "I have nothing to declare.",
+      "level": "A2",
+      "grammar": "'Nada que + infinitivo' expresa que no hay algo por hacer.",
+      "target": [
+        {
+          "text": "No tengo nada que declarar.",
+          "audioSlug": "no_tengo_nada_que_declarar"
+        }
+      ]
+    },
+    {
+      "id": "airport_is_this_gate_for",
+      "source": "Is this the gate for flight 203?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es esta la puerta para el vuelo 203?",
+          "audioSlug": "es_esta_la_puerta_para_el_vuelo_203"
+        }
+      ]
+    },
+    {
+      "id": "airport_aisle_seat",
+      "source": "I'd like an aisle seat, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quisiera un asiento de pasillo, por favor.",
+          "audioSlug": "quisiera_un_asiento_de_pasillo_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "airport_duty_free_shop",
+      "source": "Where is the duty-free shop?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la tienda libre de impuestos?",
+          "audioSlug": "donde_esta_la_tienda_libre_de_impuestos"
         }
       ]
     }

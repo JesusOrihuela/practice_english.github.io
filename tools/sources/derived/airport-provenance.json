@@ -1,0 +1,22 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic airport (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es un acto de PASAJERO documentado y bien clasificado.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Viajes/transporte: aeropuerto). Ver pcic-airport.json",
+    "en_target_inventory": "Core Inventory + NGSL + airport ESL. Ver core-inventory-airport.json",
+    "attestation": "Guias ESL/ELE de aeropuerto y viajes; PCIC."
+  },
+  "per_phrase_record": "airport-attestation.json — 47 frases por función (ubicación, vuelo/embarque, asiento, equipaje, aduana, inmigración, incidencias/derechos).",
+  "attestation": {
+    "finding": "A diferencia de restaurant/supermarket, el aeropuerto es un dominio de TRAMITES REALES: el pasajero enfrenta visas, aduana, equipaje perdido, compensacion (EU261), revision de seguridad. Por eso llega legitimamente a C1-C2 y esos C1/C2 se CONSERVAN (son actos genuinos, no prosa).",
+    "retired_non_standard": ["airport_carbon_offset_scheme (consulta de politica ambiental, no acto de viaje)", "airport_force_majeure_rebook (jerga legal; el pasajero pide reembarque, no cita 'force majeure')", "airport_asylum_request_procedure (caso humanitario extremo, fuera del alcance de un tema de viajes)"],
+    "kept_c1_c2": "Visas/pasaporte, aduana/franquicia, menores no acompañados, millas/upgrade, equipaje perdido, EU261, revision de seguridad, responsabilidad de aerolinea asociada — todos actos de pasajero genuinos y atestiguados en guias de derechos del viajero."
+  },
+  "gap_fill": {
+    "added_per_pair": 10,
+    "basis": "Tema desbalanceado (A1 solo 5) con buenos B2-C2 pero sin los basicos de navegar un aeropuerto. Anadidos desde PCIC + guias.",
+    "list": ["¿Dónde está el mostrador de facturación?","¿Cuál es la puerta de mi vuelo?","¿Dónde está el control de seguridad?","¿Dónde está el control de pasaportes?","¿Mi vuelo sale a tiempo?","¿Dónde recojo mi pase de abordar?","No tengo nada que declarar.","¿Es esta la puerta para el vuelo X?","asiento de pasillo","tienda libre de impuestos"],
+    "audio": "30 ES + 40 EN"
+  },
+  "result_counts": { "en_es": 47, "es_en": 47, "before": 40, "retired_each_pair": 3, "added_each_pair": 10 }
+}

@@ -409,18 +409,6 @@
       ]
     },
     {
-      "id": "airport_carbon_offset_scheme",
-      "source": "¿La aerolínea ofrece un programa de compensación de carbono para los pasajeros que deseen mitigar sus emisiones?",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Does the airline offer a carbon offset scheme for passengers who wish to mitigate their emissions?",
-          "audioSlug": "does_the_airline_offer_a_carbon_offset_scheme_for_passengers_who_wish_to_mitigate_their_emissions"
-        }
-      ]
-    },
-    {
       "id": "airport_eu_regulation_compensation",
       "source": "Según el Reglamento UE 261/2004, creo que tengo derecho a compensación por esta cancelación.",
       "level": "C2",
@@ -457,26 +445,122 @@
       ]
     },
     {
-      "id": "airport_force_majeure_rebook",
-      "source": "Dada la cláusula de fuerza mayor, ¿la aerolínea sigue obligada a reembarcarme en otra compañía?",
-      "level": "C2",
+      "id": "airport_where_is_checkin",
+      "source": "¿Dónde está el mostrador de facturación?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Given the force majeure clause, is the airline still obligated to rebook me on an alternative carrier?",
-          "audioSlug": "given_the_force_majeure_clause_is_the_airline_still_obligated_to_rebook_me_on_an_alternative_carrier"
+          "text": "Where is the check-in counter?",
+          "audioSlug": "where_is_the_check_in_counter"
         }
       ]
     },
     {
-      "id": "airport_asylum_request_procedure",
-      "source": "Deseo solicitar asilo. ¿Podría dirigirme con el funcionario de inmigración correspondiente?",
-      "level": "C2",
-      "grammar": "'Wish to + infinitive' is more formal and deliberate than 'want to + infinitive'.",
+      "id": "airport_which_gate",
+      "source": "¿Cuál es la puerta de mi vuelo?",
+      "level": "A1",
+      "grammar": null,
       "target": [
         {
-          "text": "I wish to apply for asylum. Could you direct me to the appropriate immigration officer?",
-          "audioSlug": "i_wish_to_apply_for_asylum_could_you_direct_me_to_the_appropriate_immigration_officer"
+          "text": "Which gate does my flight leave from?",
+          "audioSlug": "which_gate_does_my_flight_leave_from"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_is_security",
+      "source": "¿Dónde está el control de seguridad?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the security checkpoint?",
+          "audioSlug": "where_is_the_security_checkpoint"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_passport_control",
+      "source": "¿Dónde está el control de pasaportes?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is passport control?",
+          "audioSlug": "where_is_passport_control"
+        }
+      ]
+    },
+    {
+      "id": "airport_is_flight_on_time",
+      "source": "¿Mi vuelo sale a tiempo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is my flight on time?",
+          "audioSlug": "is_my_flight_on_time"
+        }
+      ]
+    },
+    {
+      "id": "airport_where_boarding_pass",
+      "source": "¿Dónde recojo mi pase de abordar?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where do I get my boarding pass?",
+          "audioSlug": "where_do_i_get_my_boarding_pass"
+        }
+      ]
+    },
+    {
+      "id": "airport_nothing_to_declare",
+      "source": "No tengo nada que declarar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have nothing to declare.",
+          "audioSlug": "i_have_nothing_to_declare"
+        }
+      ]
+    },
+    {
+      "id": "airport_is_this_gate_for",
+      "source": "¿Es esta la puerta para el vuelo 203?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is this the gate for flight 203?",
+          "audioSlug": "is_this_the_gate_for_flight_203"
+        }
+      ]
+    },
+    {
+      "id": "airport_aisle_seat",
+      "source": "Quisiera un asiento de pasillo, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like an aisle seat, please.",
+          "audioSlug": "i_d_like_an_aisle_seat_please"
+        }
+      ]
+    },
+    {
+      "id": "airport_duty_free_shop",
+      "source": "¿Dónde está la tienda libre de impuestos?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the duty-free shop?",
+          "audioSlug": "where_is_the_duty_free_shop"
         }
       ]
     }

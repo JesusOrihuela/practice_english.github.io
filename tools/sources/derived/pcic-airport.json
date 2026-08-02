@@ -1,0 +1,19 @@
+{
+  "_source": "PCIC — 9. Nociones específicas (Viajes, alojamiento y transporte: aeropuerto, avión) + 5. Funciones",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Persona = PASAJERO. El aeropuerto es un dominio de tramites reales, por lo que llega legitimamente a C1-C2 (visas, aduana, equipaje, compensacion EU261). Se retira solo lo no-estandar/fuera de alcance (politica ambiental, jerga legal, asilo).",
+  "targetLang": "es",
+  "topic": "airport",
+  "notions": {
+    "A1": { "lugares": ["aeropuerto", "puerta de embarque", "sala de espera", "mostrador de facturación"], "objetos": ["vuelo", "pase de abordar", "equipaje", "asiento", "maleta"], "acciones": ["facturar", "embarcar"] },
+    "A2": { "lugares": ["terminal", "control de seguridad", "control de pasaportes", "aduana", "tienda libre de impuestos", "cinta de equipaje"], "objetos": ["equipaje de mano", "escala", "conexión", "divisas"], "acciones": ["cambiar divisas", "declarar", "hacer escala"] }
+  },
+  "functions": [
+    { "id": "ubicacion", "name": "Preguntar ubicación", "level": "A1", "exponents": ["¿Dónde está el mostrador de facturación?", "¿Dónde está el control de seguridad?", "¿Cuál es la puerta de mi vuelo?"] },
+    { "id": "vuelo_info", "name": "Información del vuelo", "level": "A1", "exponents": ["¿A qué hora sale mi vuelo?", "¿Mi vuelo sale a tiempo?", "¿Es esta la puerta para el vuelo...?"] },
+    { "id": "facturar_asiento", "name": "Facturar / asiento", "level": "A1", "exponents": ["Necesito facturar mi equipaje.", "Quisiera un asiento de pasillo/ventana."] },
+    { "id": "aduana", "name": "Aduana", "level": "A2", "exponents": ["No tengo nada que declarar.", "Quisiera declarar estos artículos."] },
+    { "id": "incidencias", "name": "Incidencias y derechos", "level": "B1", "exponents": ["Mi vuelo se retrasó.", "Mi equipaje no llegó.", "¿A qué compensación tengo derecho?"] }
+  ]
+}
