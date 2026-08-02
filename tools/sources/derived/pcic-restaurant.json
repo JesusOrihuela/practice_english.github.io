@@ -1,0 +1,53 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 9. Nociones específicas (Alimentación) + 5. Funciones (Pedir objetos / información / servicios)",
+  "_url_nociones_a1a2": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_url_nociones_b1b2": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_b1-b2.htm",
+  "_url_funciones_a1a2": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Inventario oficial verbatim usado como árbitro de nivel y cobertura funcional para el topic restaurant del par en-es. Los exponentes/nociones son plantillas; la curaduría los realiza en frases completas naturales en español neutro. CLAVE: el nivel de la NOCIÓN gobierna el vocabulario topical por encima de la frecuencia de corpus (frecuencia≠CEFR).",
+  "targetLang": "es",
+  "topic": "restaurant",
+  "notions": {
+    "A1": {
+      "restaurante": ["bar", "restaurante", "camarero", "mesa", "primer plato", "segundo plato", "postre", "el menú", "la cuenta"],
+      "bebidas": ["agua", "agua mineral", "leche", "té", "café", "café solo", "café con leche", "cortado", "cerveza", "vino", "vino blanco", "vino tinto"],
+      "alimentos": ["carne", "pescado", "fruta", "verdura", "huevos", "pan", "bocadillo", "sándwich", "hamburguesa"],
+      "utensilios": ["plato", "vaso", "taza", "botella", "servilleta"],
+      "comidas": ["desayuno", "comida", "merienda", "cena", "desayunar", "comer", "cenar"]
+    },
+    "A2": {
+      "restaurante": ["cafetería", "pizzería", "cocinero", "chef", "reservar una mesa", "tomar algo", "pedir el menú", "pedir la carta", "traer la cuenta", "menú del día"],
+      "bebidas": ["bebida con/sin alcohol", "bebida con/sin hielo", "zumo de naranja", "infusión", "botella", "lata", "tener sed"],
+      "estado": ["tener hambre"]
+    },
+    "B1": {
+      "restaurante": ["restaurante sencillo", "restaurante de lujo", "comida casera", "comida tradicional", "cocina internacional", "tomar nota", "servir el primer/segundo plato", "tomar un aperitivo", "una ración", "ir de tapas", "para tomar aquí", "para llevar"],
+      "coccion": ["a la plancha", "frito", "hervido", "freír", "hervir", "cocer", "asar", "aliñar", "condimentar"],
+      "sabor_textura": ["blando", "duro", "crudo", "poco hecho", "muy hecho", "salado", "dulce", "picante", "amargo"]
+    },
+    "B2": {
+      "restaurante": ["autoservicio", "banquete", "bufé", "comer de menú", "comer a la carta", "atender una mesa", "servir una mesa", "retirar el plato", "restaurante de cuatro tenedores"],
+      "coccion": ["a la brasa", "asada", "guisada", "al vapor", "a fuego lento", "al baño María", "rebozar", "empanar"]
+    }
+  },
+  "functions": [
+    {
+      "id": "pedir_objeto",
+      "name": "Pedir objetos (forma atenuada)",
+      "level": "A1",
+      "exponents": ["¿Puedes darme otra servilleta?", "¿Me trae otra cerveza, por favor?", "¿Me das un vaso de agua?"]
+    },
+    {
+      "id": "pedir_informacion",
+      "name": "Pedir información",
+      "level": "A1",
+      "exponents": ["¿Qué es esto?", "¿Cuánto...?"]
+    },
+    {
+      "id": "ofrecer_invitar",
+      "name": "Ofrecer e invitar",
+      "level": "A2",
+      "exponents": ["¿Quieres una copa?", "¿Un café? ¿Una cerveza?"]
+    }
+  ]
+}

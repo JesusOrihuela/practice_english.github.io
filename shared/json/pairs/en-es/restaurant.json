@@ -15,7 +15,7 @@
     {
       "id": "restaurant_do_you_have_any_vegetarian_options",
       "source": "Do you have any vegetarian options?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -51,7 +51,7 @@
     {
       "id": "restaurant_is_this_dish_spicy",
       "source": "Is this dish spicy?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -64,7 +64,7 @@
       "id": "restaurant_could_i_have_this_dish_without",
       "source": "Could I have this dish without onions, please?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'¿Podría + infinitivo?' es el condicional de cortesía para pedir algo con formalidad.",
       "target": [
         {
           "text": "¿Podría pedir este plato sin cebolla, por favor?",
@@ -88,7 +88,7 @@
       "id": "restaurant_how_long_will_the_food_take",
       "source": "How long will the food take to arrive?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "El futuro simple 'tardará' predice cuánto tiempo pasará antes de algo.",
       "target": [
         {
           "text": "¿Cuánto tardará en llegar la comida?",
@@ -112,7 +112,7 @@
       "id": "restaurant_is_it_possible_to_split_the",
       "source": "Is it possible to split the bill?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Es posible + infinitivo' cuando el sujeto no cambia, sin subjuntivo.",
       "target": [
         {
           "text": "¿Es posible dividir la cuenta?",
@@ -148,7 +148,7 @@
       "id": "restaurant_is_the_tip_included_in_the",
       "source": "Is the tip included in the bill?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Estar + participio' describe el resultado de una acción, no la acción misma.",
       "target": [
         {
           "text": "¿La propina está incluida en la cuenta?",
@@ -196,7 +196,7 @@
       "id": "restaurant_could_i_have_some_bread_while",
       "source": "Could I have some bread while we wait?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'Mientras + presente' expresa dos acciones que ocurren a la vez.",
       "target": [
         {
           "text": "¿Me traen pan mientras esperamos?",
@@ -219,7 +219,7 @@
     {
       "id": "restaurant_can_i_make_a_reservation_for",
       "source": "Can I make a reservation for two for tonight?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -316,7 +316,7 @@
       "id": "restaurant_is_it_possible_to_have_my",
       "source": "Is it possible to have my meal packed to go?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "'Es posible que + subjuntivo', pues la expresión de posibilidad exige el subjuntivo.",
       "target": [
         {
           "text": "¿Es posible que me empaquen la comida para llevar?",
@@ -328,7 +328,7 @@
       "id": "restaurant_could_you_recommend_a_good_wine",
       "source": "Could you recommend a good wine within a reasonable price range?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "'¿Podría + infinitivo?' es el condicional de cortesía para pedir algo con formalidad.",
       "target": [
         {
           "text": "¿Podría recomendarme un buen vino a un precio razonable?",
@@ -388,7 +388,7 @@
       "id": "restaurant_is_there_a_time_limit_for",
       "source": "Is there a time limit for dining?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Para + infinitivo' expresa la finalidad o el propósito de algo.",
       "target": [
         {
           "text": "¿Hay un límite de tiempo para cenar?",
@@ -460,7 +460,7 @@
       "id": "restaurant_is_there_a_charge_for_substitutions",
       "source": "Is there a charge for substitutions?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "'Hay que + infinitivo' expresa obligación impersonal, sin sujeto definido.",
       "target": [
         {
           "text": "¿Hay que pagar por las sustituciones?",
@@ -506,7 +506,7 @@
       "id": "restaurant_is_there_a_fee_for_using",
       "source": "Is there a fee for using a credit card?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Hay que + infinitivo' expresa obligación impersonal, sin sujeto definido.",
       "target": [
         {
           "text": "¿Hay que pagar por usar tarjeta de crédito?",
@@ -626,7 +626,7 @@
       "id": "restaurant_could_you_turn_down_the_music",
       "source": "Could you turn down the music a bit, please?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'¿Podría + infinitivo?' suaviza una petición y la vuelve más cortés.",
       "target": [
         {
           "text": "¿Podría bajar un poco la música, por favor?",
@@ -896,7 +896,7 @@
       "id": "restaurant_salt_umami_balance_dashi",
       "source": "The broth was accomplished, but the salt-to-umami balance tipped toward the former, undermining the dashi's delicacy.",
       "level": "C2",
-      "grammar": null,
+      "grammar": "El gerundio 'socavando' expresa una consecuencia simultánea a la acción principal.",
       "target": [
         {
           "text": "El caldo estaba logrado, pero el equilibrio sal-umami se inclinó hacia la primera, socavando la delicadeza del dashi.",
@@ -932,7 +932,7 @@
       "id": "restaurant_tasting_menu_progression_redundancy",
       "source": "The tasting menu's progression was exemplary, each course building logically on its predecessor without redundancy.",
       "level": "C2",
-      "grammar": null,
+      "grammar": "'Se + verbo' es la pasiva refleja, el sujeto recibe la acción sin agente explícito.",
       "target": [
         {
           "text": "La progresión del menú degustación fue ejemplar, pues cada plato se construyó lógicamente sobre el anterior sin redundancia.",

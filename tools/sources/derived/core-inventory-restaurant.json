@@ -1,0 +1,52 @@
+{
+  "_source": "British Council — EAQUALS Core Inventory for General English (Functions), + NGSL frequency (New General Service List) for vocabulary leveling",
+  "_url": "https://www.eaquals.org/resources/the-core-inventory-for-general-english/",
+  "_license": "Referencia pública (British Council / EAQUALS). NGSL: CC BY-SA.",
+  "_note": "El PDF oficial es de imagen (no extraíble verbatim); se documenta a nivel de FUNCIÓN con su banda CEFR canónica del Core Inventory, y el vocabulario se valida contra la frecuencia NGSL (tools/sources/derived/en-freq.json). Árbitro de nivel y cobertura funcional para el topic restaurant del par es-en.",
+  "targetLang": "en",
+  "topic": "restaurant",
+  "functions": [
+    {
+      "id": "asking_for_things",
+      "name": "Asking for things (shop/cafe/restaurant)",
+      "level": "A1",
+      "exponents": ["Can I have ...?", "A ..., please.", "Can we see the menu, please?"]
+    },
+    {
+      "id": "ordering_a_meal",
+      "name": "Ordering a meal / food and drink",
+      "level": "A2",
+      "exponents": ["Could I have ...?", "I'd like ...", "Could I have a glass of water, please?"]
+    },
+    {
+      "id": "making_requests",
+      "name": "Making requests (polite, with 'could'/'would')",
+      "level": "A2",
+      "exponents": ["Could you ...?", "Would you mind ...?", "Could I have some extra napkins, please?"]
+    },
+    {
+      "id": "asking_for_information",
+      "name": "Asking for and giving information",
+      "level": "A2",
+      "exponents": ["Is there ...?", "Do you have ...?", "Do you offer ...?"]
+    },
+    {
+      "id": "asking_permission",
+      "name": "Asking for permission / possibility",
+      "level": "B1",
+      "exponents": ["Is it possible to ...?", "Would it be possible to ...?"]
+    },
+    {
+      "id": "making_complaints",
+      "name": "Making and responding to complaints",
+      "level": "B1",
+      "exponents": ["I'm afraid ... doesn't match ...", "Could you send it back?", "This dish doesn't match the menu description."]
+    },
+    {
+      "id": "expressing_preferences",
+      "name": "Expressing preferences / requirements",
+      "level": "B1",
+      "exponents": ["I prefer ...", "I'm lactose intolerant.", "I'd rather ..."]
+    }
+  ]
+}

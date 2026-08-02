@@ -13,10 +13,15 @@ shared/audio/.manifest.json
 # frequency indexes / reconcile reports / candidate pools are large and/or carry
 # share-alike terms — not committed to this MIT repo. Regenerate locally with
 # tools/sources/fetch-sources.sh then tools/sources/build-freq-inventory.mjs.
-# See CREDITS.md for attribution. The hand-authored PCIC inventory is kept.
+# See CREDITS.md for attribution. The hand-authored inventory + provenance
+# artifacts (per-topic sustento) ARE kept; freq indexes / reconcile reports /
+# candidate pools are regenerable and stay ignored.
 tools/sources/raw/
 tools/sources/derived/*
 !tools/sources/derived/pcic-greetings.json
+!tools/sources/derived/pcic-*.json
+!tools/sources/derived/core-inventory-*.json
+!tools/sources/derived/*-provenance.json
 
 # ── Audio files (pre-generated, ~399 MB) ──────────────────────
 # Generated locally with: node tools/generate-audio.mjs

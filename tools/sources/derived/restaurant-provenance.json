@@ -1,0 +1,32 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic restaurant (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase realiza una función/noción documentada de un inventario oficial, y de que su nivel CEFR está bien clasificado. Criterio de nivel: demanda comunicativa primaria (gramática + función), con el inventario confirmando el vocabulario y detectando desajustes genuinos (frecuencia≠CEFR).",
+  "sources": {
+    "es_target": "PCIC — Nociones específicas (Alimentación) + Funciones (petición). Ver tools/sources/derived/pcic-restaurant.json",
+    "en_target": "British Council/EAQUALS Core Inventory (Functions) + NGSL frequency. Ver tools/sources/derived/core-inventory-restaurant.json",
+    "native_sentences": "Tatoeba (CC-BY) — cobertura mínima para este topic de servicio (homónimos: vino/venir, carta/letter, pedir/proponer); no usado como banco masivo, solo donde una oración genuina coincide."
+  },
+  "function_coverage": {
+    "pedir_objeto_servicio": "A1-A2 — '¿Me da/trae...?', '¿Podría...?' (condicional de cortesía). PCIC 4.3 / Core Inventory asking_for_things + ordering + making_requests.",
+    "pedir_informacion_disponibilidad": "A1-A2 — '¿Tienen...?', '¿Hay...?', '¿Ofrecen...?'. PCIC 1.2 / Core Inventory asking_for_information.",
+    "reservar": "A2 — '¿Puedo hacer una reserva...?'. PCIC noción 'reservar una mesa' (A2).",
+    "pedir_permiso_posibilidad": "A2-B1 — '¿Es posible + inf/que + subj?'. Core Inventory asking_permission.",
+    "quejarse": "B2 — 'no coincide con...', 'está muy hecho, ¿podrían llevárselo?'. Core Inventory making_complaints.",
+    "valorar_opinar": "C1-C2 — evaluaciones gastronómicas (servicio, maridaje, progresión del menú). PCIC funciones de valoración; Core Inventory expressing opinions."
+  },
+  "leveling_decisions": {
+    "confirmados_A1_por_inventario": ["menú", "la cuenta", "vaso de agua", "pan", "postre", "menú infantil", "camarero", "mesa", "plato"],
+    "frecuencia_rechazada": "reconcile marcó 39 'review' en en-es por baja frecuencia de corpus (picante, cebolla, servilletas, propina, postres, pan, menú). El PCIC los nivela A1/A2 como nociones de Alimentación → se conserva el nivel del inventario, no el de frecuencia.",
+    "reclasificadas": [
+      { "id": "restaurant_is_this_dish_spicy", "from": "A1", "to": "A2", "basis": "'picante' es noción B1 en el PCIC; en pregunta simple, demanda primaria = A2 (regla: adjetivo topical aislado no sube a B1)." },
+      { "id": "restaurant_do_you_have_any_vegetarian_options", "from": "A1", "to": "A2", "basis": "Restricción/preferencia dietética; no es noción básica A1." },
+      { "id": "restaurant_can_i_make_a_reservation_for", "from": "A1", "to": "A2", "basis": "Función 'reservar una mesa' clasificada A2 en el PCIC." }
+    ],
+    "retiradas": []
+  },
+  "enrichment": {
+    "grammar_tips_en_es": 13,
+    "grammar_tips_es_en": 14,
+    "note": "Tips de patrones canónicos diversos (condicional de cortesía, hay que + inf, es posible que + subjuntivo, pasiva refleja / passive, gerundio, primer condicional, etc.), densidad ~18% igual que el piloto greetings. Variantes de género (chef/sommelier) y regionales (papas/patatas) ya presentes."
+  }
+}

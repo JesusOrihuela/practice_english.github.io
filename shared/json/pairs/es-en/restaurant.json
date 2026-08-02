@@ -25,7 +25,7 @@
     {
       "id": "restaurant_do_you_have_any_vegetarian_options",
       "source": "¿Tienen alguna opción vegetariana?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -71,7 +71,7 @@
     {
       "id": "restaurant_is_this_dish_spicy",
       "source": "¿Este plato es picante?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -118,7 +118,7 @@
       "id": "restaurant_how_long_will_the_food_take",
       "source": "¿Cuánto tardará en llegar la comida?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'How long will it take?' uses 'will' to ask about future duration.",
       "target": [
         {
           "text": "How long will the food take to arrive?",
@@ -152,7 +152,7 @@
       "id": "restaurant_is_it_possible_to_split_the",
       "source": "¿Es posible dividir la cuenta?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Is it possible to + infinitive' politely asks whether something can be done.",
       "target": [
         {
           "text": "Is it possible to split the bill?",
@@ -164,7 +164,7 @@
       "id": "restaurant_do_you_have_any_desserts_available",
       "source": "¿Tienen postres disponibles?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "Use 'any', not 'some', in questions about quantity.",
       "target": [
         {
           "text": "Do you have any desserts available?",
@@ -198,7 +198,7 @@
       "id": "restaurant_is_the_tip_included_in_the",
       "source": "¿La propina está incluida en la cuenta?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "Passive 'is included' focuses on the tip, not on who includes it.",
       "target": [
         {
           "text": "Is the tip included in the bill?",
@@ -289,7 +289,7 @@
     {
       "id": "restaurant_can_i_make_a_reservation_for",
       "source": "¿Puedo hacer una reserva para dos para esta noche?",
-      "level": "A1",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
@@ -346,7 +346,7 @@
       "id": "restaurant_is_there_a_corkage_fee_if",
       "source": "¿Hay que pagar un descorche si traigo mi propio vino?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "In the 'if' clause use the present tense, never 'will', even for future meaning.",
       "target": [
         {
           "text": "Is there a corkage fee if I bring my own wine?",
@@ -690,7 +690,7 @@
       "id": "restaurant_is_there_a_fee_for_using",
       "source": "¿Hay que pagar por usar tarjeta de crédito?",
       "level": "A2",
-      "grammar": null,
+      "grammar": "After a preposition like 'for', the verb takes the '-ing' gerund form.",
       "target": [
         {
           "text": "Is there a fee for using a credit card?",
@@ -804,7 +804,7 @@
       "id": "restaurant_could_you_recommend_a_dish_for",
       "source": "¿Podría recomendarme un plato para alguien con intolerancia al gluten?",
       "level": "B1",
-      "grammar": null,
+      "grammar": "The relative pronoun 'who' introduces a clause describing a person.",
       "target": [
         {
           "text": "Could you recommend a dish for someone who is gluten intolerant?",
@@ -978,7 +978,7 @@
       "id": "restaurant_compliment_chef_risotto",
       "source": "Me gustaría elogiar al chef por el risotto. La sazón estaba absolutamente perfecta.",
       "level": "B2",
-      "grammar": null,
+      "grammar": "'I'd like to' ('I would like to') politely states a wish or request.",
       "target": [
         {
           "text": "I'd like to compliment the chef on the risotto. The seasoning was absolutely perfect.",
@@ -1002,7 +1002,7 @@
       "id": "restaurant_ingredients_sourced_local_organic",
       "source": "¿Podría decirme el origen de los ingredientes? Prefiero productos locales y orgánicos.",
       "level": "C1",
-      "grammar": null,
+      "grammar": "Indirect questions like 'tell me where' keep statement word order.",
       "target": [
         {
           "text": "Could you tell me where the ingredients are sourced? I prefer locally grown, organic produce.",
@@ -1098,7 +1098,7 @@
       "id": "restaurant_salt_umami_balance_dashi",
       "source": "El caldo estaba logrado, pero el equilibrio sal-umami se inclinó hacia la primera, socavando la delicadeza del dashi.",
       "level": "C2",
-      "grammar": null,
+      "grammar": "The '-ing' participle 'undermining' expresses a result of the main clause.",
       "target": [
         {
           "text": "The broth was accomplished, but the salt-to-umami balance tipped toward the former, undermining the dashi's delicacy.",
@@ -1134,7 +1134,7 @@
       "id": "restaurant_tasting_menu_progression_redundancy",
       "source": "La progresión del menú degustación fue ejemplar, pues cada plato se construyó lógicamente sobre el anterior sin redundancia.",
       "level": "C2",
-      "grammar": null,
+      "grammar": "The participle clause 'each course building' replaces 'which builds'.",
       "target": [
         {
           "text": "The tasting menu's progression was exemplary, each course building logically on its predecessor without redundancy.",
