@@ -4,8 +4,15 @@
   "sources": {
     "es_target_inventory": "PCIC — Funciones (saludar, responder, dirigirse a alguien, presentar/presentarse, responder a presentación, despedirse). Ver tools/sources/derived/pcic-greetings.json",
     "en_target": "British Council/EAQUALS Core Inventory (functions: greetings, introductions, leave-taking) + NGSL.",
-    "attestation_en": ["Promova — English Greetings and Introductions", "FluentU — business greetings and introductions", "LearnLaughSpeak — formal greetings for professionals"],
-    "attestation_es": ["PCIC funciones", "Enforex / recursos ELE de saludos y presentaciones"]
+    "attestation_en": [
+      "Promova — English Greetings and Introductions",
+      "FluentU — business greetings and introductions",
+      "LearnLaughSpeak — formal greetings for professionals"
+    ],
+    "attestation_es": [
+      "PCIC funciones",
+      "Enforex / recursos ELE de saludos y presentaciones"
+    ]
   },
   "per_phrase_record": "tools/sources/derived/greetings-attestation.json — cada frase clasificada por función de saludo (saludar, preguntar/responder estado, presentar/presentarse, responder a presentación, despedirse, felicitar, condolencias, bienvenida, dar recuerdos, cortesía). Todas atestiguadas.",
   "attestation": {
@@ -24,5 +31,30 @@
   "enrichment": {
     "note": "16 tips gramaticales ya presentes (subjuntivo tras deseo, condicional de sugerencia, imperativo de nosotros con enclítico, etc.), densidad ~20%. Variantes de registro formal/informal donde aplica."
   },
-  "result_counts": { "en_es_before": 81, "en_es_after": 77, "es_en_before": 66, "es_en_after": 62, "retired_each_pair": 4 }
+  "result_counts": {
+    "en_es_before": 81,
+    "en_es_after": 77,
+    "es_en_before": 66,
+    "es_en_after": 62,
+    "retired_each_pair": 4,
+    "es_en_after_gapfill": 74
+  },
+  "gap_fill": {
+    "pair": "es-en",
+    "added_A1_basics": 12,
+    "list": [
+      "Good morning/afternoon/evening",
+      "Goodbye/Bye",
+      "Thank you very much",
+      "You're welcome",
+      "What's your name?",
+      "Nice to meet you/Pleased to meet you",
+      "Excuse me",
+      "See you later",
+      "See you tomorrow",
+      "Very well, thanks. And you?"
+    ],
+    "basis": "es-en carecia de los saludos fundamentales (PCIC A1): habia derivado hacia variantes elaboradas de how-are-you y perdido los basicos. en-es ya los tenia. Anadidos desde PCIC + guias de saludos.",
+    "audio": "56 WAV EN (Kokoro)"
+  }
 }

@@ -979,6 +979,170 @@
           "audioSlug": "i_must_confess_i_ve_been_looking_forward_to_this_introduction_your_reputation_precedes_you"
         }
       ]
+    },
+    {
+      "id": "greetings_good_morning",
+      "source": "¡Buenos días!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good morning!",
+          "audioSlug": "good_morning"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_afternoon",
+      "source": "¡Buenas tardes!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good afternoon!",
+          "audioSlug": "good_afternoon"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_evening",
+      "source": "¡Buenas noches!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Good evening!",
+          "audioSlug": "good_evening"
+        }
+      ]
+    },
+    {
+      "id": "greetings_goodbye",
+      "source": "¡Adiós!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Goodbye!",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "goodbye"
+        },
+        {
+          "text": "Bye!",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "bye"
+        }
+      ]
+    },
+    {
+      "id": "greetings_thank_you",
+      "source": "Muchas gracias.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Thank you very much.",
+          "audioSlug": "thank_you_very_much"
+        }
+      ]
+    },
+    {
+      "id": "greetings_youre_welcome",
+      "source": "De nada.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "You're welcome.",
+          "audioSlug": "you_re_welcome"
+        }
+      ]
+    },
+    {
+      "id": "greetings_whats_your_name",
+      "source": "¿Cómo te llamas?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What's your name?",
+          "audioSlug": "what_s_your_name"
+        }
+      ]
+    },
+    {
+      "id": "greetings_nice_to_meet_you",
+      "source": "Mucho gusto.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nice to meet you.",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "nice_to_meet_you"
+        },
+        {
+          "text": "Pleased to meet you.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "pleased_to_meet_you"
+        }
+      ]
+    },
+    {
+      "id": "greetings_excuse_me",
+      "source": "Disculpe.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Excuse me.",
+          "audioSlug": "excuse_me"
+        }
+      ]
+    },
+    {
+      "id": "greetings_see_you_later",
+      "source": "¡Hasta luego!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "See you later!",
+          "audioSlug": "see_you_later"
+        }
+      ]
+    },
+    {
+      "id": "greetings_see_you_tomorrow",
+      "source": "¡Hasta mañana!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "See you tomorrow!",
+          "audioSlug": "see_you_tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "greetings_very_well_thanks",
+      "source": "Muy bien, gracias, ¿y tú?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Very well, thanks. And you?",
+          "audioSlug": "very_well_thanks_and_you"
+        }
+      ]
     }
   ]
 }
