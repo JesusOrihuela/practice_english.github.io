@@ -1,0 +1,314 @@
+{
+  "phrases": [
+    {
+      "id": "daily_what_time_is_it",
+      "source": "What time is it?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué hora es?",
+          "audioSlug": "que_hora_es"
+        }
+      ]
+    },
+    {
+      "id": "daily_its_three_oclock",
+      "source": "It's three o'clock.",
+      "level": "A1",
+      "grammar": "Para la hora se usa 'ser': 'son las tres' (plural), 'es la una' (singular).",
+      "target": [
+        {
+          "text": "Son las tres.",
+          "audioSlug": "son_las_tres"
+        }
+      ]
+    },
+    {
+      "id": "daily_half_past_two",
+      "source": "It's half past two.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son las dos y media.",
+          "audioSlug": "son_las_dos_y_media"
+        }
+      ]
+    },
+    {
+      "id": "daily_quarter_to_five",
+      "source": "It's a quarter to five.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son las cinco menos cuarto.",
+          "audioSlug": "son_las_cinco_menos_cuarto"
+        }
+      ]
+    },
+    {
+      "id": "daily_what_time_get_up",
+      "source": "What time do you get up?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué hora te levantas?",
+          "audioSlug": "a_que_hora_te_levantas"
+        }
+      ]
+    },
+    {
+      "id": "daily_i_get_up_at_seven",
+      "source": "I get up at seven.",
+      "level": "A1",
+      "grammar": "'Levantarse' es reflexivo: 'me levanto', 'te levantas'.",
+      "target": [
+        {
+          "text": "Me levanto a las siete.",
+          "audioSlug": "me_levanto_a_las_siete"
+        }
+      ]
+    },
+    {
+      "id": "daily_breakfast_at_eight",
+      "source": "I have breakfast at eight.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Desayuno a las ocho.",
+          "audioSlug": "desayuno_a_las_ocho"
+        }
+      ]
+    },
+    {
+      "id": "daily_go_to_work_by_bus",
+      "source": "I go to work by bus.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy al trabajo en autobús.",
+          "audioSlug": "voy_al_trabajo_en_autobus"
+        }
+      ]
+    },
+    {
+      "id": "daily_lunch_at_one",
+      "source": "I have lunch at one.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Almuerzo a la una.",
+          "audioSlug": "almuerzo_a_la_una"
+        }
+      ]
+    },
+    {
+      "id": "daily_get_home_at_six",
+      "source": "I get home at six.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llego a casa a las seis.",
+          "audioSlug": "llego_a_casa_a_las_seis"
+        }
+      ]
+    },
+    {
+      "id": "daily_dinner_at_nine",
+      "source": "I have dinner at nine.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ceno a las nueve.",
+          "audioSlug": "ceno_a_las_nueve"
+        }
+      ]
+    },
+    {
+      "id": "daily_go_to_bed_at_eleven",
+      "source": "I go to bed at eleven.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me acuesto a las once.",
+          "audioSlug": "me_acuesto_a_las_once"
+        }
+      ]
+    },
+    {
+      "id": "daily_i_sleep_eight_hours",
+      "source": "I sleep eight hours.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Duermo ocho horas.",
+          "audioSlug": "duermo_ocho_horas"
+        }
+      ]
+    },
+    {
+      "id": "daily_today_is_monday",
+      "source": "Today is Monday.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy es lunes.",
+          "audioSlug": "hoy_es_lunes"
+        }
+      ]
+    },
+    {
+      "id": "daily_see_you_on_friday",
+      "source": "See you on Friday.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos vemos el viernes.",
+          "audioSlug": "nos_vemos_el_viernes"
+        }
+      ]
+    },
+    {
+      "id": "daily_work_monday_to_friday",
+      "source": "I work from Monday to Friday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo de lunes a viernes.",
+          "audioSlug": "trabajo_de_lunes_a_viernes"
+        }
+      ]
+    },
+    {
+      "id": "daily_morning_go_to_gym",
+      "source": "In the morning I go to the gym.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Por la mañana voy al gimnasio.",
+          "audioSlug": "por_la_manana_voy_al_gimnasio"
+        }
+      ]
+    },
+    {
+      "id": "daily_shower_every_day",
+      "source": "I take a shower every day.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me ducho todos los días.",
+          "audioSlug": "me_ducho_todos_los_dias"
+        }
+      ]
+    },
+    {
+      "id": "daily_weekends",
+      "source": "What do you do on weekends?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué haces los fines de semana?",
+          "audioSlug": "que_haces_los_fines_de_semana"
+        }
+      ]
+    },
+    {
+      "id": "daily_always_busy_afternoon",
+      "source": "I'm always busy in the afternoon.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siempre estoy ocupada por la tarde.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "siempre_estoy_ocupada_por_la_tarde"
+        },
+        {
+          "text": "Siempre estoy ocupado por la tarde.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "siempre_estoy_ocupado_por_la_tarde"
+        }
+      ]
+    },
+    {
+      "id": "daily_usually_coffee",
+      "source": "I usually have coffee in the morning.",
+      "level": "A2",
+      "grammar": "'Soler + infinitivo' expresa un hábito o costumbre.",
+      "target": [
+        {
+          "text": "Suelo tomar café por la mañana.",
+          "audioSlug": "suelo_tomar_cafe_por_la_manana"
+        }
+      ]
+    },
+    {
+      "id": "daily_what_day_today",
+      "source": "What day is it today?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué día es hoy?",
+          "audioSlug": "que_dia_es_hoy"
+        }
+      ]
+    },
+    {
+      "id": "daily_its_late_i_go",
+      "source": "It's late, I have to go.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es tarde, tengo que irme.",
+          "audioSlug": "es_tarde_tengo_que_irme"
+        }
+      ]
+    },
+    {
+      "id": "daily_brush_teeth",
+      "source": "I brush my teeth after breakfast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me lavo los dientes después de desayunar.",
+          "audioSlug": "me_lavo_los_dientes_despues_de_desayunar"
+        }
+      ]
+    },
+    {
+      "id": "daily_rest_on_sundays",
+      "source": "I rest on Sundays.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Descanso los domingos.",
+          "audioSlug": "descanso_los_domingos"
+        }
+      ]
+    }
+  ]
+}
