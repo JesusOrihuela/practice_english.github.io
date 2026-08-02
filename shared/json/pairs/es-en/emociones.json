@@ -39,7 +39,7 @@
     {
       "id": "emociones_im_bored",
       "source": "Estoy aburrido/a.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -75,7 +75,7 @@
     {
       "id": "emociones_im_surprised",
       "source": "Estoy sorprendido/a.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -99,7 +99,7 @@
     {
       "id": "emociones_im_worried",
       "source": "Estoy preocupado/a.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -111,7 +111,7 @@
     {
       "id": "emociones_im_nervous",
       "source": "Estoy nervioso/a.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -123,7 +123,7 @@
     {
       "id": "emociones_im_scared",
       "source": "Estoy asustado/a.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -153,18 +153,6 @@
         {
           "text": "I'm stressed.",
           "audioSlug": "i_m_stressed"
-        }
-      ]
-    },
-    {
-      "id": "emociones_im_busy",
-      "source": "Estoy ocupado/a.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I'm busy.",
-          "audioSlug": "i_m_busy"
         }
       ]
     },
@@ -207,7 +195,7 @@
     {
       "id": "emociones_why_are_you_bored",
       "source": "¿Por qué estás aburrido/a?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -243,7 +231,7 @@
     {
       "id": "emociones_why_are_you_surprised",
       "source": "¿Por qué estás sorprendido/a?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -267,7 +255,7 @@
     {
       "id": "emociones_why_are_you_worried",
       "source": "¿Por qué estás preocupado/a?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -279,7 +267,7 @@
     {
       "id": "emociones_why_are_you_nervous",
       "source": "¿Por qué estás nervioso/a?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -291,7 +279,7 @@
     {
       "id": "emociones_why_are_you_scared",
       "source": "¿Por qué estás asustado/a?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {

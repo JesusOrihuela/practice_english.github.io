@@ -1,0 +1,24 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic emociones (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase realiza una función documentada (expresar estados de ánimo) y está bien clasificada. Criterio: demanda comunicativa primaria + inventario oficial.",
+  "sources": {
+    "es_target_inventory": "PCIC — Funciones: expresar estados de ánimo y sentimientos. Ver tools/sources/derived/pcic-emociones.json",
+    "en_target": "Core Inventory (functions: expressing feelings) + frecuencia básica; las emociones básicas son A1-A2 en inglés.",
+    "attestation": "Frases-modelo estándar de cualquier lección ELE/ESL de sentimientos ('Estoy triste/feliz/cansado', 'I'm sad/happy/tired', '¿Por qué estás...?', 'Why are you...?'). Atestiguación trivial: son el paradigma canónico del tema."
+  },
+  "design": "Paradigma sistemático: 'Estoy + adjetivo' (1ª persona) y '¿Por qué estás + adjetivo?' (2ª persona). Adjetivos con género → dos formas con labels gender (Regla 10: 1ª persona base femenina, 2ª persona base masculina); adjetivos invariables (triste, feliz) → una forma sin labels.",
+  "leveling_decisions": {
+    "reclasificadas_A2_a_A1": ["bored", "surprised", "worried", "nervous", "scared"],
+    "basis": "El PCIC clasifica estas emociones básicas como A1 (misma estructura 'estar + adjetivo', sin razón gramatical para A2). Se bajan al nivel del inventario.",
+    "mantenidas_A2": ["excited", "confused", "relaxed", "stressed"],
+    "basis_a2": "Vocabulario más específico, no listado en el núcleo A1 del PCIC.",
+    "retiradas": ["emociones_im_busy"],
+    "basis_retiro": "'Estar ocupado' es un estado de disponibilidad, no un estado de ánimo/emoción — fuera del alcance temático (Emociones)."
+  },
+  "enrichment": {
+    "grammar_tips_en_es": 4,
+    "note": "Tip ser/estar ('con estados de ánimo se usa estar, no ser') — punto genuino y no obvio que los angloparlantes confunden. Sin tips en es-en (para un hispanohablante, 'I'm happy' es trivial; no forzar relleno).",
+    "gender_variants": "Adjetivos con género (cansado/a, enojado/a, preocupado/a, nervioso/a...) con ambas formas etiquetadas; invariables (triste, feliz) sin variante."
+  },
+  "result_counts": { "en_es": 26, "es_en": 26, "distribution": "A1:18 A2:8" }
+}

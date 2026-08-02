@@ -1,0 +1,19 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 5. Funciones (Expresar estados de ánimo y sentimientos), Inventario A1-A2",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Inventario oficial de exponentes para expresar sentimientos/estados de ánimo, usado como árbitro de nivel para el topic emociones (par en-es). CLAVE: el PCIC clasifica la mayoría de las emociones básicas como A1 (misma estructura 'estar + adjetivo'). 'Estar ocupado' NO es un estado de ánimo (es disponibilidad) — fuera del tema.",
+  "targetLang": "es",
+  "topic": "emociones",
+  "functions": [
+    { "id": "alegria", "name": "Expresar alegría y satisfacción", "level": "A1", "exponents": ["Estoy contento.", "¡Qué bien!", "Estoy feliz."] },
+    { "id": "tristeza", "name": "Expresar tristeza y aflicción", "level": "A1", "exponents": ["Estoy triste."] },
+    { "id": "enfado", "name": "Expresar enfado e indignación", "level": "A1", "exponents": ["Estoy enfadado.", "Estoy enojado."] },
+    { "id": "miedo_preocupacion", "name": "Expresar miedo, ansiedad y preocupación", "level": "A1", "exponents": ["Estoy preocupado.", "Tengo miedo.", "Estoy asustado."] },
+    { "id": "nerviosismo", "name": "Expresar nerviosismo", "level": "A1", "exponents": ["Estoy nervioso."] },
+    { "id": "aburrimiento", "name": "Expresar aburrimiento", "level": "A1", "exponents": ["Estoy aburrido.", "¡Qué aburrido!"] },
+    { "id": "sorpresa", "name": "Expresar sorpresa y extrañeza", "level": "A1", "exponents": ["¡Increíble!", "Estoy sorprendido."] },
+    { "id": "sensaciones", "name": "Expresar sensaciones físicas", "level": "A1", "exponents": ["Estoy cansado.", "Estoy mal."] },
+    { "id": "estados_a2", "name": "Estados más específicos (vocabulario A2)", "level": "A2", "exponents": ["Estoy emocionado.", "Estoy confundido.", "Estoy relajado.", "Estoy estresado."] }
+  ]
+}

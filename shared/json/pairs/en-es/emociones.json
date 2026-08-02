@@ -16,7 +16,7 @@
       "id": "emociones_im_happy",
       "source": "I'm happy.",
       "level": "A1",
-      "grammar": null,
+      "grammar": "Con estados de ánimo y emociones se usa 'estar', no 'ser'.",
       "target": [
         {
           "text": "Estoy feliz.",
@@ -49,7 +49,7 @@
     {
       "id": "emociones_im_bored",
       "source": "I'm bored.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -115,7 +115,7 @@
     {
       "id": "emociones_im_surprised",
       "source": "I'm surprised.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -159,8 +159,8 @@
     {
       "id": "emociones_im_worried",
       "source": "I'm worried.",
-      "level": "A2",
-      "grammar": null,
+      "level": "A1",
+      "grammar": "Con estados de ánimo y emociones se usa 'estar', no 'ser'.",
       "target": [
         {
           "text": "Estoy preocupada.",
@@ -181,7 +181,7 @@
     {
       "id": "emociones_im_nervous",
       "source": "I'm nervous.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -203,7 +203,7 @@
     {
       "id": "emociones_im_scared",
       "source": "I'm scared.",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -248,7 +248,7 @@
       "id": "emociones_im_stressed",
       "source": "I'm stressed.",
       "level": "A2",
-      "grammar": null,
+      "grammar": "Con estados de ánimo y emociones se usa 'estar', no 'ser'.",
       "target": [
         {
           "text": "Estoy estresada.",
@@ -260,28 +260,6 @@
         {
           "text": "Estoy estresado.",
           "audioSlug": "estoy_estresado",
-          "labels": {
-            "gender": "masculino"
-          }
-        }
-      ]
-    },
-    {
-      "id": "emociones_im_busy",
-      "source": "I'm busy.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Estoy ocupada.",
-          "audioSlug": "estoy_ocupada",
-          "labels": {
-            "gender": "femenino"
-          }
-        },
-        {
-          "text": "Estoy ocupado.",
-          "audioSlug": "estoy_ocupado",
           "labels": {
             "gender": "masculino"
           }
@@ -337,7 +315,7 @@
     {
       "id": "emociones_why_are_you_bored",
       "source": "Why are you bored?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -382,7 +360,7 @@
       "id": "emociones_why_are_you_angry",
       "source": "Why are you angry?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'¿Por qué estás...?' usa 'estar' para preguntar por un estado de ánimo.",
       "target": [
         {
           "text": "¿Por qué estás enojado?",
@@ -403,7 +381,7 @@
     {
       "id": "emociones_why_are_you_surprised",
       "source": "Why are you surprised?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -447,7 +425,7 @@
     {
       "id": "emociones_why_are_you_worried",
       "source": "Why are you worried?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -469,7 +447,7 @@
     {
       "id": "emociones_why_are_you_nervous",
       "source": "Why are you nervous?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
@@ -491,7 +469,7 @@
     {
       "id": "emociones_why_are_you_scared",
       "source": "Why are you scared?",
-      "level": "A2",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
