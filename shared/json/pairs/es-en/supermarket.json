@@ -86,7 +86,7 @@
       "id": "supermarket_i_dont_have_cash_can_i",
       "source": "No tengo efectivo, ¿puedo pagar con tarjeta?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'Pay by card' and 'by cash' use 'by' for the method of payment.",
       "target": [
         {
           "text": "I don't have cash, can I pay with a card?",
@@ -98,7 +98,7 @@
       "id": "supermarket_where_are_the_cookies",
       "source": "¿Dónde están las galletas?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "Use 'Where is...?' for one thing and 'Where are...?' for plural, to ask location.",
       "target": [
         {
           "text": "Where are the cookies?",
@@ -242,7 +242,7 @@
       "id": "supermarket_where_are_the_shopping_carts",
       "source": "¿Dónde están los carritos de compra?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "Use 'Where is...?' for one thing and 'Where are...?' for plural, to ask location.",
       "target": [
         {
           "text": "Where are the shopping carts?",
@@ -645,42 +645,6 @@
       ]
     },
     {
-      "id": "supermarket_deli_cross_contamination_intolerance",
-      "source": "Me gustaría señalar una preocupación sobre los riesgos de contaminación cruzada en la charcutería para clientes con intolerancias.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I'd like to raise a concern about cross-contamination risks in the deli for customers with intolerances.",
-          "audioSlug": "i_d_like_to_raise_a_concern_about_cross_contamination_risks_in_the_deli_for_customers_with_84367732"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_best_before_use_by_mislead",
-      "source": "El etiquetado no distingue claramente entre la fecha de 'consumo preferente' y la de 'caducidad', lo que podría inducir a error a los consumidores.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Your labeling doesn't clearly distinguish between 'best before' and 'use by' dates, which could mislead consumers.",
-          "audioSlug": "your_labeling_doesn_t_clearly_distinguish_between_best_before_and_use_by_dates_which_could_ab5ef74c"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_sourcing_policy_free_range_certification",
-      "source": "¿Podría hablar con la gerencia sobre su política de abastecimiento de carne, específicamente sobre certificaciones de crianza en libertad?",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Could I speak with management about your meat sourcing policy, specifically regarding free-range certifications?",
-          "audioSlug": "could_i_speak_with_management_about_your_meat_sourcing_policy_specifically_regarding_free_r_943859ce"
-        }
-      ]
-    },
-    {
       "id": "supermarket_escalate_staff_assurance_not_honored",
       "source": "Por favor, escale este problema. Me aseguraron que se respetaría el precio promocional, pero no fue así.",
       "level": "C1",
@@ -705,66 +669,6 @@
       ]
     },
     {
-      "id": "supermarket_fair_trade_certifications_suppliers",
-      "source": "Me gustaría entender sus estándares de compra para productos de comercio justo, específicamente qué certificaciones de terceros exigen a sus proveedores.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I'd like to understand your procurement standards for fair-trade products, specifically which third-party certifications you require from suppliers.",
-          "audioSlug": "i_d_like_to_understand_your_procurement_standards_for_fair_trade_products_specifically_whic_975d6e0c"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_cold_chain_thaw_refreeze_food_safety",
-      "source": "Es posible que la cadena de frío se haya visto comprometida. Observo indicios de descongelación y recongelación que infringen la normativa de inocuidad alimentaria.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The cold chain may have been compromised. I see evidence of thawing and refreezing, violating food safety regulations.",
-          "audioSlug": "the_cold_chain_may_have_been_compromised_i_see_evidence_of_thawing_and_refreezing_violating_b8dc2995"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_traceability_protocols_supply_chain",
-      "source": "¿Podría facilitar documentación sobre los protocolos de trazabilidad de este producto? Estoy investigando la transparencia en la cadena de suministro minorista.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Could you provide documentation on the traceability protocols for this product? I'm researching supply chain transparency in retail.",
-          "audioSlug": "could_you_provide_documentation_on_the_traceability_protocols_for_this_product_i_m_research_9ee3e375"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_sustainability_report_food_waste_measures",
-      "source": "Su informe de sostenibilidad tiene como objetivo reducir el desperdicio alimentario en un treinta por ciento. ¿Qué medidas se están implementando aquí?",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Your sustainability report targets thirty percent less food waste. What measures are being implemented here?",
-          "audioSlug": "your_sustainability_report_targets_thirty_percent_less_food_waste_what_measures_are_being_i_490cef87"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_food_safety_inspector_temperature_logs",
-      "source": "Soy inspector de inocuidad alimentaria y estoy realizando una inspección rutinaria. ¿Puedo revisar los registros de temperatura de sus unidades refrigeradas?",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I'm a food safety inspector here for a routine check. May I review your refrigerated units' temperature logs?",
-          "audioSlug": "i_m_a_food_safety_inspector_here_for_a_routine_check_may_i_review_your_refrigerated_units_t_ea65166b"
-        }
-      ]
-    },
-    {
       "id": "supermarket_price_match_cheaper_elsewhere",
       "source": "¿Tienen política de igualación de precios? Encontré este artículo más barato en otra tienda.",
       "level": "B2",
@@ -785,18 +689,6 @@
         {
           "text": "How do I sign up for the loyalty program? Can I use points immediately?",
           "audioSlug": "how_do_i_sign_up_for_the_loyalty_program_can_i_use_points_immediately"
-        }
-      ]
-    },
-    {
-      "id": "supermarket_plastic_packaging_concern",
-      "source": "Me preocupa el exceso de embalaje plástico en sus productos de marca propia. ¿Hay planes para reducirlo?",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I'm concerned about excessive plastic packaging on your own-brand products. Are there plans to reduce it?",
-          "audioSlug": "i_m_concerned_about_excessive_plastic_packaging_on_your_own_brand_products_are_there_plans_b92eba4a"
         }
       ]
     }

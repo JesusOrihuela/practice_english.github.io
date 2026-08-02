@@ -1,0 +1,32 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 9. Nociones específicas (Compras, tiendas y establecimientos) + 5. Funciones (pedir información, pedir un producto/servicio, expresar queja)",
+  "_url_nociones": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_url_funciones": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/05_funciones_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Inventario oficial verbatim usado como árbitro de nivel y persona comunicativa para el topic supermarket (par en-es). CLAVE: la persona del tema es el COMPRADOR; el lenguaje de comprador atestiguado tope en B1/B2 (quejas de precio/calidad, alergias, devoluciones, lealtad). Personas de inspector/investigador/comprador corporativo están fuera del tema.",
+  "targetLang": "es",
+  "topic": "supermarket",
+  "notions": {
+    "A1": {
+      "tiendas": ["supermercado", "mercado", "tienda", "salida", "información"],
+      "personas": ["comprador", "vendedor"],
+      "acciones": ["comprar", "vender"],
+      "dinero": ["precio", "dinero", "billete", "euro", "céntimo", "tarjeta", "pagar con tarjeta"]
+    },
+    "A2": {
+      "tiendas": ["centro comercial", "frutería", "carnicería", "panadería", "tienda de ropa"],
+      "personas": ["frutero", "carnicero", "panadero", "dependiente", "cliente"],
+      "acciones": ["devolver", "cambiar", "ir de compras", "hacer la compra"],
+      "dinero": ["pagar en efectivo", "con/sin IVA", "dar una propina"],
+      "cantidades": ["docena de huevos", "lata de tomate", "paquete de arroz", "kilo de patatas", "medio kilo", "un cuarto de kilo"]
+    }
+  },
+  "functions": [
+    { "id": "pedir_info_ubicacion", "name": "Pedir información (dónde está algo)", "level": "A1", "exponents": ["¿Dónde está el/la...?", "¿Dónde están los/las...?"] },
+    { "id": "preguntar_precio", "name": "Preguntar el precio", "level": "A1", "exponents": ["¿Cuánto cuesta?", "¿Cuánto es?", "¿Cuánto es todo?"] },
+    { "id": "preguntar_disponibilidad", "name": "Preguntar por disponibilidad", "level": "A1", "exponents": ["¿Tienen...?", "¿Hay...?"] },
+    { "id": "pagar", "name": "Formas de pago", "level": "A1", "exponents": ["¿Puedo pagar con tarjeta?", "¿Aceptan tarjeta?", "En efectivo."] },
+    { "id": "devolver_cambiar", "name": "Devolver o cambiar (reclamar)", "level": "A2", "exponents": ["Quisiera devolver esto.", "Vengo a hacer una devolución.", "¿Puedo cambiarlo?"] },
+    { "id": "quejarse", "name": "Expresar queja (precio, calidad, servicio)", "level": "B1", "exponents": ["El precio no coincide con la caja.", "Me cobraron de más.", "Quisiera hablar con el encargado."] }
+  ]
+}

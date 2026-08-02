@@ -1,0 +1,17 @@
+{
+  "_source": "British Council — EAQUALS Core Inventory (Functions: asking for things, shopping, making complaints) + NGSL frequency + topic-specific grocery-shopping ESL materials",
+  "_url": "https://www.eaquals.org/resources/the-core-inventory-for-general-english/",
+  "_license": "Referencia pública (British Council / EAQUALS). NGSL: CC BY-SA.",
+  "_note": "Árbitro de nivel y persona para el topic supermarket (par es-en). Persona = COMPRADOR; el lenguaje atestiguado tope en B1/B2.",
+  "targetLang": "en",
+  "topic": "supermarket",
+  "functions": [
+    { "id": "finding_items", "name": "Finding items / asking where", "level": "A1", "exponents": ["Where can I find ...?", "Where is the ... section?", "Excuse me, where are the ...?"] },
+    { "id": "asking_price", "name": "Asking the price", "level": "A1", "exponents": ["How much does this cost?", "How much is it?"] },
+    { "id": "asking_availability", "name": "Asking availability", "level": "A1", "exponents": ["Do you have ...?", "Do you have any ...?"] },
+    { "id": "paying", "name": "Paying / checkout", "level": "A1", "exponents": ["Can I pay by card?", "Can I have a receipt, please?"] },
+    { "id": "returns", "name": "Returns and exchanges", "level": "A2", "exponents": ["I'd like to return this.", "I'm here to make a return."] },
+    { "id": "complaints", "name": "Making complaints (price, quality, service)", "level": "B1", "exponents": ["The shelf price doesn't match the register.", "I was overcharged.", "I'd like to speak to the manager."] },
+    { "id": "customer_service", "name": "Customer service (allergy, stock, loyalty, price match)", "level": "B2", "exponents": ["Do you have a price-match policy?", "How do I sign up for the loyalty program?", "Could you check the stockroom?"] }
+  ]
+}
