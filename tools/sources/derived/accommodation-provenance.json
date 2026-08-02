@@ -1,0 +1,13 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic accommodation (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es un acto de HUESPED documentado y bien clasificado.",
+  "sources": { "es_target_inventory": "PCIC — Nociones (alojamiento). Ver pcic-accommodation.json", "en_target_inventory": "Core Inventory + NGSL + hotel ESL", "attestation": "Guias ESL/ELE de hotel; PCIC." },
+  "per_phrase_record": "accommodation-attestation.json — 64 frases por función.",
+  "attestation": {
+    "finding": "Como airport, el hotel es un dominio de TRANSACCIONES REALES (facturas fiscales, quejas formales, tarifas corporativas, deposito de seguridad, caja fuerte). Llega legitimamente a C1-C2 y esos C1/C2 se CONSERVAN (actos genuinos de huesped, no prosa).",
+    "retired_legalese": ["accommodation_arbitration_clause_consumer_rights (clausula de arbitraje vs derechos estatutarios: jerga legal)", "accommodation_force_majeure_cancellation (fuerza mayor: jerga legal; el huesped pide reembolso)", "accommodation_damages_assessment_criteria (criterios de evaluacion de daños a discrecion: analisis de contrato, no acto de huesped)"],
+    "kept_c1_c2": "Deposito de seguridad, habitacion adaptada, factura fiscal, tarifa corporativa, queja de ruido, caja fuerte, anuncio engañoso, tarifa larga estancia, perks de fidelidad."
+  },
+  "gap_fill": { "added_per_pair": 8, "basis": "Faltaban basicos de check-in/out. Anadidos desde PCIC + guias.", "list": ["Tengo una reserva a nombre de...", "Quisiera registrarme", "¿Me da la llave?", "¿Cuánto cuesta por noche?", "El aire acondicionado no funciona", "¿Podrían despertarme a las siete?", "Quisiera dejar la habitación", "¿Es posible una salida tardía?"], "audio": "24 ES + 32 EN" },
+  "result_counts": { "en_es": 64, "es_en": 64, "before": 59, "retired_each_pair": 3, "added_each_pair": 8 }
+}

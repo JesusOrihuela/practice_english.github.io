@@ -1,0 +1,19 @@
+{
+  "_source": "PCIC — 9. Nociones específicas (Viajes, alojamiento y transporte: hotel/alojamiento) + 5. Funciones",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Persona = HUESPED. El hotel es un dominio de transacciones reales; llega legitimamente a C1-C2 (facturas fiscales, quejas formales, tarifas corporativas, caja fuerte). Se retira solo la jerga legal (clausula de arbitraje, fuerza mayor, criterios de daños).",
+  "targetLang": "es",
+  "topic": "accommodation",
+  "notions": {
+    "A1": { "lugares": ["hotel", "habitación", "recepción"], "objetos": ["reserva", "llave", "desayuno", "wifi"], "acciones": ["registrarse", "dejar la habitación"] },
+    "A2": { "objetos": ["habitación individual", "toalla", "almohada", "caja fuerte", "aire acondicionado"], "servicios": ["servicio de habitación", "traslado al aeropuerto", "spa"], "acciones": ["despertar", "reservar"] }
+  },
+  "functions": [
+    { "id": "checkin", "name": "Registro y salida", "level": "A1", "exponents": ["Tengo una reserva a nombre de...", "Quisiera registrarme.", "Quisiera dejar la habitación.", "¿Me da la llave?"] },
+    { "id": "precio_disponibilidad", "name": "Precio y disponibilidad", "level": "A1", "exponents": ["¿Cuánto cuesta por noche?", "¿Tienen habitaciones disponibles?"] },
+    { "id": "servicios", "name": "Servicios e instalaciones", "level": "A1", "exponents": ["¿El desayuno está incluido?", "¿Hay wifi, gimnasio o piscina?"] },
+    { "id": "peticiones", "name": "Peticiones", "level": "A2", "exponents": ["¿Podría darme más toallas?", "¿Podrían despertarme a las siete?", "¿Es posible una salida tardía?"] },
+    { "id": "quejas", "name": "Quejas", "level": "B1", "exponents": ["El aire acondicionado no funciona.", "Hay ruido.", "La habitación no coincide con mi reserva."] }
+  ]
+}

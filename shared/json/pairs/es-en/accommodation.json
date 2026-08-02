@@ -697,30 +697,6 @@
       ]
     },
     {
-      "id": "accommodation_arbitration_clause_consumer_rights",
-      "source": "El contrato contiene una cláusula de arbitraje. Me gustaría aclarar si anula mis derechos estatutarios como consumidor.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The contract contains an arbitration clause. Does it supersede my statutory consumer rights?",
-          "audioSlug": "the_contract_contains_an_arbitration_clause_does_it_supersede_my_statutory_consumer_rights"
-        }
-      ]
-    },
-    {
-      "id": "accommodation_force_majeure_cancellation",
-      "source": "Según su política de cancelación, creo que aplica una excepción por fuerza mayor a mi solicitud de reembolso.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Under your cancellation policy, I believe a force majeure exception applies to my refund request.",
-          "audioSlug": "under_your_cancellation_policy_i_believe_a_force_majeure_exception_applies_to_my_refund_request"
-        }
-      ]
-    },
-    {
       "id": "accommodation_room_misrepresented_listing",
       "source": "La habitación fue descrita de forma engañosa en el anuncio, pues las fotos mostraban vista al mar pero la habitación no la tenía.",
       "level": "C2",
@@ -745,18 +721,6 @@
       ]
     },
     {
-      "id": "accommodation_damages_assessment_criteria",
-      "source": "El contrato indica que los daños se evalúan a discreción del hotel. Me gustaría entender los criterios.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The contract states that damages are assessed at the hotel's discretion. I'd like to understand the criteria.",
-          "audioSlug": "the_contract_states_that_damages_are_assessed_at_the_hotel_s_discretion_i_d_like_to_underst_e5806813"
-        }
-      ]
-    },
-    {
       "id": "accommodation_loyalty_tier_benefits",
       "source": "¿Podría confirmar si mi nivel de fidelidad me da derecho a desayuno gratuito y salida tardía?",
       "level": "C2",
@@ -765,6 +729,102 @@
         {
           "text": "Could you confirm whether my loyalty status entitles me to complimentary breakfast and late checkout?",
           "audioSlug": "could_you_confirm_whether_my_loyalty_status_entitles_me_to_complimentary_breakfast_and_late_checkout"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_i_have_a_reservation",
+      "source": "Tengo una reserva a nombre de Smith.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a reservation under Smith.",
+          "audioSlug": "i_have_a_reservation_under_smith"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_id_like_to_check_in",
+      "source": "Quisiera registrarme, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to check in, please.",
+          "audioSlug": "i_d_like_to_check_in_please"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_could_i_have_the_key",
+      "source": "¿Me da la llave, por favor?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could I have the key, please?",
+          "audioSlug": "could_i_have_the_key_please"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_how_much_per_night",
+      "source": "¿Cuánto cuesta por noche?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How much is it per night?",
+          "audioSlug": "how_much_is_it_per_night"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_ac_not_working",
+      "source": "El aire acondicionado no funciona.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The air conditioning isn't working.",
+          "audioSlug": "the_air_conditioning_isn_t_working"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_wake_up_call",
+      "source": "¿Podrían despertarme a las siete?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could I have a wake-up call at seven?",
+          "audioSlug": "could_i_have_a_wake_up_call_at_seven"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_id_like_to_check_out",
+      "source": "Quisiera dejar la habitación, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'd like to check out, please.",
+          "audioSlug": "i_d_like_to_check_out_please"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_late_checkout_request",
+      "source": "¿Es posible una salida tardía?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Could I have a late check-out?",
+          "audioSlug": "could_i_have_a_late_check_out"
         }
       ]
     }
