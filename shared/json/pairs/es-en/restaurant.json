@@ -1071,6 +1071,64 @@
           "audioSlug": "could_i_speak_with_the_sommelier_i_d_like_to_know_the_provenance_and_vintage_of_the_barolo"
         }
       ]
+    },
+    {
+      "id": "restaurant_a_table_for_two_please",
+      "source": "Una mesa para dos, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A table for two, please.",
+          "audioSlug": "a_table_for_two_please"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_the_check_please",
+      "source": "La cuenta, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The check, please.",
+          "labels": {
+            "region": "US"
+          },
+          "audioSlug": "the_check_please"
+        },
+        {
+          "text": "The bill, please.",
+          "labels": {
+            "region": "UK"
+          },
+          "audioSlug": "the_bill_please"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_ill_have_the_chicken",
+      "source": "Para mí, el pollo, por favor.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'll have the chicken, please.",
+          "audioSlug": "i_ll_have_the_chicken_please"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_how_much_is_it_all",
+      "source": "¿Cuánto es todo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "How much is it all together?",
+          "audioSlug": "how_much_is_it_all_together"
+        }
+      ]
     }
   ]
 }

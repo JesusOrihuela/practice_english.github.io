@@ -889,6 +889,54 @@
           }
         }
       ]
+    },
+    {
+      "id": "restaurant_a_table_for_two_please",
+      "source": "A table for two, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Una mesa para dos, por favor.",
+          "audioSlug": "una_mesa_para_dos_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_the_check_please",
+      "source": "The check, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cuenta, por favor.",
+          "audioSlug": "la_cuenta_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_ill_have_the_chicken",
+      "source": "I'll have the chicken, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Para mí, el pollo, por favor.",
+          "audioSlug": "para_mi_el_pollo_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_how_much_is_it_all",
+      "source": "How much is it all together?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto es todo?",
+          "audioSlug": "cuanto_es_todo"
+        }
+      ]
     }
   ]
 }

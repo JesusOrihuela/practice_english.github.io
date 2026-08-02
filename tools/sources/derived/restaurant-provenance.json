@@ -29,7 +29,11 @@
     ],
     "kept_genuine_c2_service": "restaurant_sommelier_provenance_barolo — petición de servicio real (hablar con el sommelier); vocabulario especializado (provenance/vintage/Barolo) justifica C2.",
     "per_phrase_record": "tools/sources/derived/restaurant-attestation.json — las 72 frases clasificadas por función y estatus (70 atestiguadas). Además de la prosa de reseña C2, se retiraron 2 actos no estándar: 'Could you help me pronounce this dish?' (metacomunicativo) y 'Do you have a dog-friendly patio?' (nicho, ausente de las fuentes).",
-    "result_counts": { "en_es": 70, "es_en": 69, "retired_each_pair": 7, "of_which_review_c2": 5, "of_which_non_standard": 2 }
+    "result_counts": {
+      "en_es": 74,
+      "es_en": 73,
+      "note": "70/69 tras poda + 4 anadidos desde fuentes"
+    }
   },
   "function_coverage": {
     "pedir_objeto_servicio": "A1-A2 — '¿Me da/trae...?', '¿Podría...?' (condicional de cortesía). PCIC 4.3 / Core Inventory asking_for_things + ordering + making_requests.",
@@ -40,12 +44,37 @@
     "valorar_opinar": "C1-C2 — evaluaciones gastronómicas (servicio, maridaje, progresión del menú). PCIC funciones de valoración; Core Inventory expressing opinions."
   },
   "leveling_decisions": {
-    "confirmados_A1_por_inventario": ["menú", "la cuenta", "vaso de agua", "pan", "postre", "menú infantil", "camarero", "mesa", "plato"],
+    "confirmados_A1_por_inventario": [
+      "menú",
+      "la cuenta",
+      "vaso de agua",
+      "pan",
+      "postre",
+      "menú infantil",
+      "camarero",
+      "mesa",
+      "plato"
+    ],
     "frecuencia_rechazada": "reconcile marcó 39 'review' en en-es por baja frecuencia de corpus (picante, cebolla, servilletas, propina, postres, pan, menú). El PCIC los nivela A1/A2 como nociones de Alimentación → se conserva el nivel del inventario, no el de frecuencia.",
     "reclasificadas": [
-      { "id": "restaurant_is_this_dish_spicy", "from": "A1", "to": "A2", "basis": "'picante' es noción B1 en el PCIC; en pregunta simple, demanda primaria = A2 (regla: adjetivo topical aislado no sube a B1)." },
-      { "id": "restaurant_do_you_have_any_vegetarian_options", "from": "A1", "to": "A2", "basis": "Restricción/preferencia dietética; no es noción básica A1." },
-      { "id": "restaurant_can_i_make_a_reservation_for", "from": "A1", "to": "A2", "basis": "Función 'reservar una mesa' clasificada A2 en el PCIC." }
+      {
+        "id": "restaurant_is_this_dish_spicy",
+        "from": "A1",
+        "to": "A2",
+        "basis": "'picante' es noción B1 en el PCIC; en pregunta simple, demanda primaria = A2 (regla: adjetivo topical aislado no sube a B1)."
+      },
+      {
+        "id": "restaurant_do_you_have_any_vegetarian_options",
+        "from": "A1",
+        "to": "A2",
+        "basis": "Restricción/preferencia dietética; no es noción básica A1."
+      },
+      {
+        "id": "restaurant_can_i_make_a_reservation_for",
+        "from": "A1",
+        "to": "A2",
+        "basis": "Función 'reservar una mesa' clasificada A2 en el PCIC."
+      }
     ],
     "retiradas": []
   },
@@ -53,5 +82,15 @@
     "grammar_tips_en_es": 13,
     "grammar_tips_es_en": 14,
     "note": "Tips de patrones canónicos diversos (condicional de cortesía, hay que + inf, es posible que + subjuntivo, pasiva refleja / passive, gerundio, primer condicional, etc.), densidad ~18% igual que el piloto greetings. Variantes de género (chef/sommelier) y regionales (papas/patatas) ya presentes."
+  },
+  "gap_fill": {
+    "added_A1_basics": [
+      "Una mesa para dos",
+      "La cuenta por favor",
+      "Para mi el pollo",
+      "Cuanto es todo"
+    ],
+    "basis": "El tier A1 estaba delgado (6 frases) y faltaban basicos universales atestiguados en guias + Tatoeba. Conviven con las formas A2 corteses (progresion A1->A2).",
+    "region_variant_es_en": "check (US) / bill (UK)"
   }
 }
