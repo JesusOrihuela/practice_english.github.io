@@ -511,28 +511,6 @@
       ]
     },
     {
-      "id": "restaurant_could_you_help_me_pronounce_this",
-      "source": "¿Podría ayudarme a pronunciar este plato?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Could you help me pronounce this dish?",
-          "audioSlug": "could_you_help_me_pronounce_this_dish",
-          "labels": {
-            "register": "formal"
-          }
-        },
-        {
-          "text": "Can you help me pronounce this dish?",
-          "audioSlug": "can_you_help_me_pronounce_this_dish",
-          "labels": {
-            "register": "informal"
-          }
-        }
-      ]
-    },
-    {
       "id": "restaurant_is_there_a_time_limit_for",
       "source": "¿Hay un límite de tiempo para cenar?",
       "level": "A2",
@@ -695,18 +673,6 @@
         {
           "text": "Is there a fee for using a credit card?",
           "audioSlug": "is_there_a_fee_for_using_a_credit_card"
-        }
-      ]
-    },
-    {
-      "id": "restaurant_do_you_have_a_dogfriendly_patio",
-      "source": "¿Tienen un patio apto para perros?",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Do you have a dog-friendly patio?",
-          "audioSlug": "do_you_have_a_dog_friendly_patio"
         }
       ]
     },

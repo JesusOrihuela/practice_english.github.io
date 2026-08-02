@@ -28,7 +28,8 @@
       "restaurant_attentiveness_discretion_equilibrium"
     ],
     "kept_genuine_c2_service": "restaurant_sommelier_provenance_barolo — petición de servicio real (hablar con el sommelier); vocabulario especializado (provenance/vintage/Barolo) justifica C2.",
-    "result_counts": { "en_es": 72, "es_en": 71, "retired_each_pair": 5 }
+    "per_phrase_record": "tools/sources/derived/restaurant-attestation.json — las 72 frases clasificadas por función y estatus (70 atestiguadas). Además de la prosa de reseña C2, se retiraron 2 actos no estándar: 'Could you help me pronounce this dish?' (metacomunicativo) y 'Do you have a dog-friendly patio?' (nicho, ausente de las fuentes).",
+    "result_counts": { "en_es": 70, "es_en": 69, "retired_each_pair": 7, "of_which_review_c2": 5, "of_which_non_standard": 2 }
   },
   "function_coverage": {
     "pedir_objeto_servicio": "A1-A2 — '¿Me da/trae...?', '¿Podría...?' (condicional de cortesía). PCIC 4.3 / Core Inventory asking_for_things + ordering + making_requests.",
