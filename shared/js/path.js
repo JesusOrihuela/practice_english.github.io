@@ -33,10 +33,11 @@ const AppPath = (() => {
     { id: 'accommodation',  level: 'A2', emoji: '🏨', label: 'Alojamiento',       labelEn: 'Accommodation',   order: 8  },
     { id: 'movies',         level: 'A2', emoji: '🎬', label: 'Películas & Series',labelEn: 'Movies & Series', order: 9  },
     { id: 'music',          level: 'A2', emoji: '🎵', label: 'Música',            labelEn: 'Music',           order: 10 },
-    { id: 'theater',        level: 'B1', emoji: '🎭', label: 'Teatro & Arte',     labelEn: 'Theater & Arts',  order: 11 },
-    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gimnasio',          labelEn: 'Gym',             order: 12 },
-    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        labelEn: 'Technology',      order: 13 },
-    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Contabilidad',      labelEn: 'Accountability',  order: 14 },
+    { id: 'theater',        level: 'B1', emoji: '🎭', label: 'Teatro',            labelEn: 'Theater',         order: 11 },
+    { id: 'museums',        level: 'A2', emoji: '🖼️', label: 'Museos & Arte',     labelEn: 'Museums & Art',   order: 12 },
+    { id: 'gym',            level: 'B1', emoji: '💪', label: 'Gimnasio',          labelEn: 'Gym',             order: 13 },
+    { id: 'technology',     level: 'B1', emoji: '💻', label: 'Tecnología',        labelEn: 'Technology',      order: 14 },
+    { id: 'accountability', level: 'B2', emoji: '🎯', label: 'Contabilidad',      labelEn: 'Accountability',  order: 15 },
   ];
 
   // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─

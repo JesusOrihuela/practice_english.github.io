@@ -52,7 +52,7 @@
   var TOPIC_IDS = [
     'greetings', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
-    'movies', 'music', 'theater',
+    'movies', 'music', 'theater', 'museums',
     'gym', 'technology', 'accountability',
   ];
 

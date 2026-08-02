@@ -44,7 +44,7 @@ const DERIVED  = join(__dirname, 'sources', 'derived');
 const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
+  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability',
 ];
 
 // ── args ──────────────────────────────────────────────────────────────────

@@ -1,0 +1,20 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic theater (pares en-es y es-en). Tras el split, theater es SOLO teatro (el arte/museos se movió al nuevo tema 'museums').",
+  "_purpose": "Sustento de que cada frase es comunicación real de teatro (ir al teatro, opinar sobre una obra), bien clasificada.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Ocio: teatro, espectáculos) + Funciones (valorar, opinar).",
+    "en_target": "Core Inventory (opinions) + NGSL + theater ESL.",
+    "attestation": "Guias ESL/ELE de teatro/espectáculos; PCIC funciones de opinión."
+  },
+  "split": "El tema estaba etiquetado 'Teatro & Arte' y mezclaba teatro con museos/exposiciones/instalaciones. Por decisión del usuario se SEPARÓ: theater queda solo-teatro; el contenido de arte visual se movió al nuevo tema 'museums' (Museos & Arte).",
+  "attestation": {
+    "principle": "Hablar de teatro es comunicación real (ir al teatro, entradas, funciones, opinar conversacionalmente). Pero la PROSA DE TEORÍA/CRÍTICA TEATRAL es ensayo expositivo, no conversación — se retira.",
+    "retired_theory_prose": ["espacio liminal ritual/espectáculo (C2)", "teatro posdramático cuerpo/espacio (C2)", "catarsis colectiva irremplazable (C2)", "desintegración psicológica tour de force (C2)", "texto clásico vs estética contemporánea (C2)", "distanciamiento brechtiano/identificación (C2)", "minimalismo llena vacíos (C1)", "reposición lente social contemporánea (C1)", "público cómplice (C1)", "fábrica amplifica temas (C1)", "dramaturgo inserta crítica social (C1)"],
+    "kept": "Ir al teatro, entradas, intermedio, funciones + opinión conversacional (ovación, reposición vs original, vestuario, al aire libre, segunda función revela capas, puesta en escena, guion, actuación física, monólogo con contención, subvierte expectativas, iluminación inmersiva, final ambiguo)."
+  },
+  "gap_fill": {
+    "added_per_pair": 8,
+    "list": ["Dos entradas para la función de esta noche", "¿Qué obra hay en cartelera?", "¿Hay intermedio?", "¿Dónde están nuestros asientos?", "La obra estuvo genial", "¿Quieres ver una obra este fin de semana?", "¿Cuánto dura la función?", "¿Dónde está la taquilla?"]
+  },
+  "result_counts": { "en_es": 32, "es_en": 32, "before": 47, "moved_to_museums": 7, "retired_prose": 11, "added": 8 }
+}

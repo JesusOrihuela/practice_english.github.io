@@ -59,7 +59,7 @@ const PAIRS = [
 const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
+  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability',
 ];
 
 const VOCAB_TOPICS = [

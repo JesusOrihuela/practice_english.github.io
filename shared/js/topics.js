@@ -19,17 +19,19 @@ const AppTopics = (() => {
     { id: 'accommodation',  label: 'Alojamiento',        labelEn: 'Accommodation',   emoji: '🏨' },
     { id: 'movies',         label: 'Películas & Series', labelEn: 'Movies & Series', emoji: '🎬' },
     { id: 'music',          label: 'Música',             labelEn: 'Music',           emoji: '🎵' },
-    { id: 'theater',        label: 'Teatro & Arte',      labelEn: 'Theater & Arts',  emoji: '🎭' },
+    { id: 'theater',        label: 'Teatro',             labelEn: 'Theater',         emoji: '🎭' },
+    { id: 'museums',        label: 'Museos & Arte',      labelEn: 'Museums & Art',   emoji: '🖼️' },
     { id: 'gym',            label: 'Gimnasio',           labelEn: 'Gym',             emoji: '💪' },
     { id: 'technology',     label: 'Tecnología',         labelEn: 'Technology',      emoji: '💻' },
     { id: 'accountability', label: 'Contabilidad',       labelEn: 'Accountability',  emoji: '🎯' },
   ];
 
-  // emociones is phrase-only (no vocabulary set), so it is excluded from the
-  // word activities (Vocabulario, Quiz) which would otherwise fail to load it.
+  // emociones and museums are phrase-only (no vocabulary set), so they are
+  // excluded from the word activities (Vocabulario, Quiz) which would otherwise
+  // fail to load them.
   const VOCAB_TOPICS = [
     { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
-    ...PHRASE_TOPICS.filter(t => t.id !== 'emociones'),
+    ...PHRASE_TOPICS.filter(t => t.id !== 'emociones' && t.id !== 'museums'),
   ];
 
   // ── Topic label helper ────────────────────────────────────────

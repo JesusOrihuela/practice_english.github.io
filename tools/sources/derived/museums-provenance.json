@@ -1,0 +1,19 @@
+{
+  "_doc": "Registro de procedencia y clasificación — NUEVO topic museums (Museos & Arte), pares en-es y es-en. Creado al separar 'Teatro & Arte' en dos temas.",
+  "_purpose": "Sustento de que cada frase es comunicación real de visitante de museo/galería (visitar, entradas, exposiciones, opinar), bien clasificada.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Ocio: museos, exposiciones, arte) + Funciones (pedir información, valorar).",
+    "en_target": "Core Inventory (asking for information, opinions) + NGSL + museum/gallery ESL.",
+    "attestation": "Guias ESL/ELE de museos y ocio cultural; PCIC."
+  },
+  "origin": "7 frases de arte movidas desde theater (id theater_* -> museums_*): invitación a exposición, exposición de fotografía, visitar museo nuevo, museo de arte contemporáneo, llegar temprano a la instalación, exposición en varios niveles, retrospectiva del museo. Se retiraron 5 de prosa de crítica de arte (curadores, mirada/poder, comodificación, tesis curatorial, propiedad cultural/repatriación).",
+  "gap_fill": {
+    "added_per_pair": 11,
+    "list": ["¿Cuánto cuesta la entrada?", "¿Puedo tomar fotos aquí?", "¿Dónde está la exposición de Picasso?", "¿Hay audioguía?", "¿Dónde está la tienda del museo?", "¿A qué hora cierra el museo?", "¿La entrada es gratis los domingos?", "Me encanta este cuadro", "¿Quién pintó esto?", "¿Hay visita guiada?", "¿En qué piso está la exposición?"]
+  },
+  "attestation": {
+    "principle": "Visitar museos/exposiciones es comunicación real (entradas, ubicación, fotos, audioguía, opinar sobre una obra). Se retiró la prosa de crítica/teoría del arte (ensayo expositivo).",
+    "kept": "Actos de visitante (invitar, entradas, ubicación de exposición, fotos, audioguía, tienda, horarios, opinar sobre cuadros/esculturas) + reflexiones conversacionales de nivel medio."
+  },
+  "result_counts": { "en_es": 18, "es_en": 18, "moved_from_theater": 7, "added": 11 }
+}

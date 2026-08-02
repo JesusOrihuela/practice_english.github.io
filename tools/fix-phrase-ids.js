@@ -27,7 +27,7 @@ const PAIRS = ['es-en', 'en-es'];
 const phraseTopics = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater',
+  'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability',
 ];
 

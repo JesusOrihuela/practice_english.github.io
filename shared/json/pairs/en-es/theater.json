@@ -1,30 +1,6 @@
 {
   "phrases": [
     {
-      "id": "theater_art_exhibition_invite",
-      "source": "Do you want to go to an art exhibition with me?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Quieres ir a una exposición de arte conmigo?",
-          "audioSlug": "quieres_ir_a_una_exposicion_de_arte_conmigo"
-        }
-      ]
-    },
-    {
-      "id": "theater_photography_exhibition",
-      "source": "The photography exhibition was very interesting.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La exposición de fotografías fue muy interesante.",
-          "audioSlug": "la_exposicion_de_fotografias_fue_muy_interesante"
-        }
-      ]
-    },
-    {
       "id": "theater_moving_play",
       "source": "The play was very moving.",
       "level": "A2",
@@ -33,18 +9,6 @@
         {
           "text": "La obra de teatro fue muy conmovedora.",
           "audioSlug": "la_obra_de_teatro_fue_muy_conmovedora"
-        }
-      ]
-    },
-    {
-      "id": "theater_visit_new_museum",
-      "source": "I would like to go to the new museum that opened in the city.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me gustaría ir al nuevo museo que abrieron en la ciudad.",
-          "audioSlug": "me_gustaria_ir_al_nuevo_museo_que_abrieron_en_la_ciudad"
         }
       ]
     },
@@ -177,30 +141,6 @@
       ]
     },
     {
-      "id": "theater_contemporary_art_museum",
-      "source": "Have you been to the new exhibition at the contemporary art museum?",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Has ido a la nueva exposición del museo de arte contemporáneo?",
-          "audioSlug": "has_ido_a_la_nueva_exposicion_del_museo_de_arte_contemporaneo"
-        }
-      ]
-    },
-    {
-      "id": "theater_arrive_early_installation",
-      "source": "I'd recommend arriving early to see the installation before the crowd arrives.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Recomiendo llegar temprano para ver la instalación antes de que lleguen todos.",
-          "audioSlug": "recomiendo_llegar_temprano_para_ver_la_instalacion_antes_de_que_lleguen_todos"
-        }
-      ]
-    },
-    {
       "id": "theater_standing_ovation_deserved",
       "source": "The cast received a standing ovation, absolutely deserved after a performance like that.",
       "level": "B2",
@@ -261,18 +201,6 @@
       ]
     },
     {
-      "id": "theater_exhibition_accessible_multiple_levels",
-      "source": "The exhibition worked at multiple levels, from casual enjoyment to reading every caption carefully.",
-      "level": "B2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La exposición funcionaba en múltiples niveles, desde el disfrute casual hasta la lectura detallada.",
-          "audioSlug": "la_exposicion_funcionaba_en_multiples_niveles_desde_el_disfrute_casual_hasta_la_lectura_detallada"
-        }
-      ]
-    },
-    {
       "id": "theater_second_viewing_reveals_layers",
       "source": "Seeing this play twice, the second viewing revealed layers I had completely missed before.",
       "level": "B2",
@@ -300,28 +228,6 @@
         {
           "text": "La puesta en escena de la directora fue poco convencional pero notablemente efectiva.",
           "audioSlug": "la_puesta_en_escena_de_la_directora_fue_poco_convencional_pero_notablemente_efectiva",
-          "labels": {
-            "gender": "femenino"
-          }
-        }
-      ]
-    },
-    {
-      "id": "theater_museum_retrospective_evolution",
-      "source": "The museum's retrospective traces thirty years of the artist's creative evolution.",
-      "level": "B2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La retrospectiva del museo rastrea treinta años de la evolución creativa del artista.",
-          "audioSlug": "la_retrospectiva_del_museo_rastrea_treinta_anos_de_la_evolucion_creativa_del_artista",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "La retrospectiva del museo rastrea treinta años de la evolución creativa de la artista.",
-          "audioSlug": "la_retrospectiva_del_museo_rastrea_treinta_anos_de_la_evolucion_creativa_de_la_artista",
           "labels": {
             "gender": "femenino"
           }
@@ -387,86 +293,6 @@
       ]
     },
     {
-      "id": "theater_contrasting_works_in_dialogue",
-      "source": "The curators placed contrasting works in dialogue, letting the tensions between them generate meaning.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Los curadores pusieron obras contrastantes en diálogo, dejando que las tensiones entre ellas produzcan sentido.",
-          "audioSlug": "los_curadores_pusieron_obras_contrastantes_en_dialogo_dejando_que_las_tensiones_entre_ellas_eac2b120",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "Las curadoras pusieron obras contrastantes en diálogo, dejando que las tensiones entre ellas produzcan sentido.",
-          "audioSlug": "las_curadoras_pusieron_obras_contrastantes_en_dialogo_dejando_que_las_tensiones_entre_ellas_c2815e4c",
-          "labels": {
-            "gender": "femenino"
-          }
-        }
-      ]
-    },
-    {
-      "id": "theater_minimalism_fills_gaps_imaginatively",
-      "source": "The production's minimalism forces audiences to fill gaps imaginatively, creating a deeply personal experience.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El minimalismo de la puesta fuerza al público a llenar los vacíos, creando algo muy personal.",
-          "audioSlug": "el_minimalismo_de_la_puesta_fuerza_al_publico_a_llenar_los_vacios_creando_algo_muy_personal"
-        }
-      ]
-    },
-    {
-      "id": "theater_revival_reframes_contemporary_lens",
-      "source": "What makes this revival relevant is how it reframes a classic through a contemporary social lens.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Este nuevo montaje reencuadra un texto clásico a través de una lente social contemporánea.",
-          "audioSlug": "este_nuevo_montaje_reencuadra_un_texto_clasico_a_traves_de_una_lente_social_contemporanea"
-        }
-      ]
-    },
-    {
-      "id": "theater_audience_complicit_watching",
-      "source": "The director deliberately implicates the audience, making them complicit in what they watch.",
-      "level": "C1",
-      "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
-      "target": [
-        {
-          "text": "El director implica deliberadamente al público, haciéndolo cómplice de lo que observa.",
-          "audioSlug": "el_director_implica_deliberadamente_al_publico_haciendolo_complice_de_lo_que_observa",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "La directora implica deliberadamente al público, haciéndolo cómplice de lo que observa.",
-          "audioSlug": "la_directora_implica_deliberadamente_al_publico_haciendolo_complice_de_lo_que_observa",
-          "labels": {
-            "gender": "femenino"
-          }
-        }
-      ]
-    },
-    {
-      "id": "theater_factory_space_amplifies_themes",
-      "source": "Performing in a decommissioned factory rather than a conventional theater space amplifies the play's themes.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Actuar en una fábrica abandonada en lugar de un teatro convencional amplifica los temas.",
-          "audioSlug": "actuar_en_una_fabrica_abandonada_en_lugar_de_un_teatro_convencional_amplifica_los_temas"
-        }
-      ]
-    },
-    {
       "id": "theater_subverts_expectations_first_scene",
       "source": "What makes this production stand out is how the director subverts expectations from scene one.",
       "level": "C1",
@@ -482,40 +308,6 @@
         {
           "text": "Esta producción destaca porque la directora subvierte las expectativas del público desde la primera escena.",
           "audioSlug": "esta_produccion_destaca_porque_la_directora_subvierte_las_expectativas_del_publico_desde_la_90100d53",
-          "labels": {
-            "gender": "femenino"
-          }
-        }
-      ]
-    },
-    {
-      "id": "theater_exhibition_cultural_ownership",
-      "source": "The exhibition raises uncomfortable questions about cultural ownership and the repatriation of artifacts.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La exposición plantea incómodas preguntas sobre la propiedad cultural y la repatriación de artefactos.",
-          "audioSlug": "la_exposicion_plantea_incomodas_preguntas_sobre_la_propiedad_cultural_y_la_repatriacion_de_75edffe4"
-        }
-      ]
-    },
-    {
-      "id": "theater_playwright_social_critique_domestic",
-      "source": "The playwright manages to embed social critique within what appears to be a domestic drama.",
-      "level": "C1",
-      "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
-      "target": [
-        {
-          "text": "El dramaturgo logra insertar crítica social dentro de lo que parece ser un drama doméstico.",
-          "audioSlug": "el_dramaturgo_logra_insertar_critica_social_dentro_de_lo_que_parece_ser_un_drama_domestico",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "La dramaturga logra insertar crítica social dentro de lo que parece ser un drama doméstico.",
-          "audioSlug": "la_dramaturga_logra_insertar_critica_social_dentro_de_lo_que_parece_ser_un_drama_domestico",
           "labels": {
             "gender": "femenino"
           }
@@ -547,120 +339,98 @@
       ]
     },
     {
-      "id": "theater_liminal_ritual_spectacle",
-      "source": "The performance occupies a liminal space between ritual and spectacle, refusing to fully commit to either mode.",
-      "level": "C2",
+      "id": "theater_two_tickets",
+      "source": "Two tickets for tonight's show, please.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La actuación ocupa un espacio liminal entre ritual y espectáculo, sin comprometerse del todo con ninguno.",
-          "audioSlug": "la_actuacion_ocupa_un_espacio_liminal_entre_ritual_y_espectaculo_sin_comprometerse_del_todo_61c592a4"
+          "text": "Dos entradas para la función de esta noche, por favor.",
+          "audioSlug": "dos_entradas_para_la_funcion_de_esta_noche_por_favor"
         }
       ]
     },
     {
-      "id": "theater_postdramatic_body_space_primary",
-      "source": "This is unmistakably post-dramatic theater, where text is secondary and body and space are the primary expressive channels.",
-      "level": "C2",
+      "id": "theater_whats_playing",
+      "source": "What's playing at the theater?",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Es inconfundiblemente posdramático, pues el texto es secundario y el cuerpo y el espacio son los canales expresivos.",
-          "audioSlug": "es_inconfundiblemente_posdramatico_pues_el_texto_es_secundario_y_el_cuerpo_y_el_espacio_son_0a5a0bb1"
+          "text": "¿Qué obra hay en cartelera?",
+          "audioSlug": "que_obra_hay_en_cartelera"
         }
       ]
     },
     {
-      "id": "theater_collective_catharsis_unreplicable",
-      "source": "At its best, theater achieves a form of collective catharsis that no other art form can replicate.",
-      "level": "C2",
+      "id": "theater_is_there_intermission",
+      "source": "Is there an intermission?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "En su mejor versión, el teatro logra una catarsis colectiva que ninguna otra forma de arte puede replicar.",
-          "audioSlug": "en_su_mejor_version_el_teatro_logra_una_catarsis_colectiva_que_ninguna_otra_forma_de_arte_p_c0d1c230"
+          "text": "¿Hay intermedio?",
+          "audioSlug": "hay_intermedio"
         }
       ]
     },
     {
-      "id": "theater_gaze_instrument_of_power",
-      "source": "The installation positions the viewer's gaze as an instrument of power, where seeing is participating.",
-      "level": "C2",
+      "id": "theater_where_are_seats",
+      "source": "Where are our seats?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La instalación posiciona la mirada del espectador como instrumento de poder, donde ver es participar.",
-          "audioSlug": "la_instalacion_posiciona_la_mirada_del_espectador_como_instrumento_de_poder_donde_ver_es_participar"
+          "text": "¿Dónde están nuestros asientos?",
+          "audioSlug": "donde_estan_nuestros_asientos"
         }
       ]
     },
     {
-      "id": "theater_psychological_disintegration_tour_de_force",
-      "source": "The staging of the protagonist's psychological disintegration through fragmented dialogue is a tour de force.",
-      "level": "C2",
+      "id": "theater_play_was_great",
+      "source": "The play was great.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La representación de la desintegración psicológica del protagonista mediante el diálogo fragmentado es un tour de force.",
-          "audioSlug": "la_representacion_de_la_desintegracion_psicologica_del_protagonista_mediante_el_dialogo_fra_c8f10a96"
+          "text": "La obra estuvo genial.",
+          "audioSlug": "la_obra_estuvo_genial"
         }
       ]
     },
     {
-      "id": "theater_installation_commodification_audience",
-      "source": "The installation interrogates the commodification of art, placing the audience as both consumer and consumed.",
-      "level": "C2",
+      "id": "theater_want_to_see_play",
+      "source": "Do you want to see a play this weekend?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La instalación cuestiona la mercantilización del arte, colocando al público como consumidor y consumido a la vez.",
-          "audioSlug": "la_instalacion_cuestiona_la_mercantilizacion_del_arte_colocando_al_publico_como_consumidor_1ffe7af6"
+          "text": "¿Quieres ver una obra este fin de semana?",
+          "audioSlug": "quieres_ver_una_obra_este_fin_de_semana"
         }
       ]
     },
     {
-      "id": "theater_classical_text_contemporary_aesthetics",
-      "source": "The dramaturgy juxtaposes classical text with contemporary visual aesthetics to productive effect.",
-      "level": "C2",
+      "id": "theater_how_long_performance",
+      "source": "How long is the performance?",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "La dramaturgia yuxtapone texto clásico con estética visual contemporánea con resultados productivos.",
-          "audioSlug": "la_dramaturgia_yuxtapone_texto_clasico_con_estetica_visual_contemporanea_con_resultados_productivos"
+          "text": "¿Cuánto dura la función?",
+          "audioSlug": "cuanto_dura_la_funcion"
         }
       ]
     },
     {
-      "id": "theater_brechtian_alienation_identification",
-      "source": "The production's fidelity to Brechtian alienation prevents the audience from achieving emotional identification with the characters.",
-      "level": "C2",
+      "id": "theater_box_office",
+      "source": "Where is the box office?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La fidelidad de la producción al distanciamiento brechtiano impide que el público logre identificación emocional con los personajes.",
-          "audioSlug": "la_fidelidad_de_la_produccion_al_distanciamiento_brechtiano_impide_que_el_publico_logre_ide_1ebe0e15"
-        }
-      ]
-    },
-    {
-      "id": "theater_curatorial_thesis_uneven_works",
-      "source": "The curator's thematic thesis is compelling but ultimately undermined by the uneven quality of the works selected.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La tesis curatorial del curador es convincente, pero la calidad desigual de las obras la socava.",
-          "audioSlug": "la_tesis_curatorial_del_curador_es_convincente_pero_la_calidad_desigual_de_las_obras_la_socava",
-          "labels": {
-            "gender": "masculino"
-          }
-        },
-        {
-          "text": "La tesis curatorial de la curadora es convincente, pero la calidad desigual de las obras la socava.",
-          "audioSlug": "la_tesis_curatorial_de_la_curadora_es_convincente_pero_la_calidad_desigual_de_las_obras_la_socava",
-          "labels": {
-            "gender": "femenino"
-          }
+          "text": "¿Dónde está la taquilla?",
+          "audioSlug": "donde_esta_la_taquilla"
         }
       ]
     }

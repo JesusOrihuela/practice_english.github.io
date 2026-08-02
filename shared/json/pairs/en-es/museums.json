@@ -1,0 +1,230 @@
+{
+  "phrases": [
+    {
+      "id": "museums_art_exhibition_invite",
+      "source": "Do you want to go to an art exhibition with me?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Quieres ir a una exposición de arte conmigo?",
+          "audioSlug": "quieres_ir_a_una_exposicion_de_arte_conmigo"
+        }
+      ]
+    },
+    {
+      "id": "museums_photography_exhibition",
+      "source": "The photography exhibition was very interesting.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La exposición de fotografías fue muy interesante.",
+          "audioSlug": "la_exposicion_de_fotografias_fue_muy_interesante"
+        }
+      ]
+    },
+    {
+      "id": "museums_visit_new_museum",
+      "source": "I would like to go to the new museum that opened in the city.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustaría ir al nuevo museo que abrieron en la ciudad.",
+          "audioSlug": "me_gustaria_ir_al_nuevo_museo_que_abrieron_en_la_ciudad"
+        }
+      ]
+    },
+    {
+      "id": "museums_contemporary_art_museum",
+      "source": "Have you been to the new exhibition at the contemporary art museum?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Has ido a la nueva exposición del museo de arte contemporáneo?",
+          "audioSlug": "has_ido_a_la_nueva_exposicion_del_museo_de_arte_contemporaneo"
+        }
+      ]
+    },
+    {
+      "id": "museums_arrive_early_installation",
+      "source": "I'd recommend arriving early to see the installation before the crowd arrives.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Recomiendo llegar temprano para ver la instalación antes de que lleguen todos.",
+          "audioSlug": "recomiendo_llegar_temprano_para_ver_la_instalacion_antes_de_que_lleguen_todos"
+        }
+      ]
+    },
+    {
+      "id": "museums_exhibition_accessible_multiple_levels",
+      "source": "The exhibition worked at multiple levels, from casual enjoyment to reading every caption carefully.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La exposición funcionaba en múltiples niveles, desde el disfrute casual hasta la lectura detallada.",
+          "audioSlug": "la_exposicion_funcionaba_en_multiples_niveles_desde_el_disfrute_casual_hasta_la_lectura_detallada"
+        }
+      ]
+    },
+    {
+      "id": "museums_museum_retrospective_evolution",
+      "source": "The museum's retrospective traces thirty years of the artist's creative evolution.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La retrospectiva del museo rastrea treinta años de la evolución creativa del artista.",
+          "audioSlug": "la_retrospectiva_del_museo_rastrea_treinta_anos_de_la_evolucion_creativa_del_artista",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "La retrospectiva del museo rastrea treinta años de la evolución creativa de la artista.",
+          "audioSlug": "la_retrospectiva_del_museo_rastrea_treinta_anos_de_la_evolucion_creativa_de_la_artista",
+          "labels": {
+            "gender": "femenino"
+          }
+        }
+      ]
+    },
+    {
+      "id": "museums_how_much_admission",
+      "source": "How much is admission?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto cuesta la entrada?",
+          "audioSlug": "cuanto_cuesta_la_entrada"
+        }
+      ]
+    },
+    {
+      "id": "museums_can_i_take_photos",
+      "source": "Can I take photos here?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo tomar fotos aquí?",
+          "audioSlug": "puedo_tomar_fotos_aqui"
+        }
+      ]
+    },
+    {
+      "id": "museums_where_is_exhibition",
+      "source": "Where is the Picasso exhibition?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la exposición de Picasso?",
+          "audioSlug": "donde_esta_la_exposicion_de_picasso"
+        }
+      ]
+    },
+    {
+      "id": "museums_audio_guide",
+      "source": "Is there an audio guide?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay audioguía?",
+          "audioSlug": "hay_audioguia"
+        }
+      ]
+    },
+    {
+      "id": "museums_gift_shop",
+      "source": "Where is the museum shop?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la tienda del museo?",
+          "audioSlug": "donde_esta_la_tienda_del_museo"
+        }
+      ]
+    },
+    {
+      "id": "museums_what_time_close",
+      "source": "What time does the museum close?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué hora cierra el museo?",
+          "audioSlug": "a_que_hora_cierra_el_museo"
+        }
+      ]
+    },
+    {
+      "id": "museums_free_admission",
+      "source": "Is admission free on Sundays?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿La entrada es gratis los domingos?",
+          "audioSlug": "la_entrada_es_gratis_los_domingos"
+        }
+      ]
+    },
+    {
+      "id": "museums_i_love_this_painting",
+      "source": "I love this painting.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta este cuadro.",
+          "audioSlug": "me_encanta_este_cuadro"
+        }
+      ]
+    },
+    {
+      "id": "museums_who_painted_this",
+      "source": "Who painted this?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Quién pintó esto?",
+          "audioSlug": "quien_pinto_esto"
+        }
+      ]
+    },
+    {
+      "id": "museums_guided_tour",
+      "source": "Is there a guided tour?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay visita guiada?",
+          "audioSlug": "hay_visita_guiada"
+        }
+      ]
+    },
+    {
+      "id": "museums_which_floor",
+      "source": "Which floor is the exhibition on?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿En qué piso está la exposición?",
+          "audioSlug": "en_que_piso_esta_la_exposicion"
+        }
+      ]
+    }
+  ]
+}

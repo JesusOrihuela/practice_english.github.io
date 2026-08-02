@@ -124,7 +124,7 @@ const MANIFEST_PATH = resolve(__dirname, '../shared/audio/.manifest.json');
 const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater',
+  'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability',
 ];
 

@@ -752,6 +752,7 @@ body.path-mode {
 .img-topic-card[data-theme="movies"]          { --topic-clr: #C0392B; }
 .img-topic-card[data-theme="music"]           { --topic-clr: #0E7490; }
 .img-topic-card[data-theme="theater"]         { --topic-clr: #B45309; }
+.img-topic-card[data-theme="museums"]         { --topic-clr: #9333EA; }
 .img-topic-card[data-theme="gym"]             { --topic-clr: #DC2626; }
 .img-topic-card[data-theme="technology"]      { --topic-clr: #7C3AED; }
 .img-topic-card[data-theme="accountability"]  { --topic-clr: #4338CA; }
