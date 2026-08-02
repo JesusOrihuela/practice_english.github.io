@@ -4,8 +4,16 @@
   "sources": {
     "es_target_inventory": "PCIC — Nociones (Compras, tiendas y establecimientos) + Funciones. Ver tools/sources/derived/pcic-supermarket.json",
     "en_target_inventory": "British Council/EAQUALS Core Inventory + NGSL. Ver tools/sources/derived/core-inventory-supermarket.json",
-    "attestation_en": ["Espresso English — Supermarket phrases", "7ESL — 50 supermarket phrases", "Preply — grocery shopping in English"],
-    "attestation_es": ["StudySmarter — frases de compras", "Hispania Valencia — expresiones para ir de compras", "Expreso Español — supermercado"]
+    "attestation_en": [
+      "Espresso English — Supermarket phrases",
+      "7ESL — 50 supermarket phrases",
+      "Preply — grocery shopping in English"
+    ],
+    "attestation_es": [
+      "StudySmarter — frases de compras",
+      "Hispania Valencia — expresiones para ir de compras",
+      "Expreso Español — supermercado"
+    ]
   },
   "per_phrase_record": "tools/sources/derived/supermarket-attestation.json — 56 frases clasificadas por función de comprador (ubicación/buscar, precio, pago/caja, ofertas/lealtad, dieta/alergia, queja de precio, devolver/reclamar, disponibilidad/stock, planear compra, pedir ayuda).",
   "attestation": {
@@ -30,6 +38,38 @@
     ]
   },
   "leveling": "A1-B2 revisados y confirmados por PCIC/Core Inventory (comprar, buscar, precios, pago = A1; devoluciones, cantidades = A2; quejas = B1; servicio al cliente = B2). Sin reclasificaciones necesarias.",
-  "enrichment": { "grammar_tips_en_es": 10, "grammar_tips_es_en": 6, "note": "Patrones diversos (ya+pretérito, hay que+inf, lo que+verbo, pasiva refleja, condicional; en inglés: passive, present perfect, singular/plural location, pay by). Se quitó un tip trivial repetido ('Do you have...?')." },
-  "result_counts": { "en_es": 56, "es_en": 56, "retired_each_pair": 9, "of_which_c2": 5, "of_which_c1_advocacy": 4 }
+  "enrichment": {
+    "grammar_tips_en_es": 10,
+    "grammar_tips_es_en": 6,
+    "note": "Patrones diversos (ya+pretérito, hay que+inf, lo que+verbo, pasiva refleja, condicional; en inglés: passive, present perfect, singular/plural location, pay by). Se quitó un tip trivial repetido ('Do you have...?')."
+  },
+  "result_counts": {
+    "en_es": 56,
+    "es_en": 56,
+    "retired_each_pair": 9,
+    "of_which_c2": 5,
+    "of_which_c1_advocacy": 4,
+    "after_gapfill": {
+      "en_es": 61,
+      "es_en": 60
+    }
+  },
+  "gap_fill": {
+    "note": "Huecos analizados por par (independientes).",
+    "en_es_added": [
+      "¿Me da el recibo?",
+      "¿Cuánto es todo?",
+      "fecha de caducidad",
+      "¿Dónde está la caja?",
+      "¿Puedo pagar en efectivo?"
+    ],
+    "es_en_added": [
+      "Where can I find...?",
+      "When does this expire?",
+      "Where is the checkout?",
+      "Can I pay in cash?"
+    ],
+    "basis": "en-es carecia de recibo/total/caducidad/caja/efectivo; es-en carecia de la forma canonica Where can I find, caducidad, checkout, efectivo (recibo y card ya los tenia). Gaps distintos por par.",
+    "audio": "15 ES + 16 EN"
+  }
 }

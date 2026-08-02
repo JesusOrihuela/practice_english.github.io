@@ -691,6 +691,66 @@
           "audioSlug": "como_me_registro_en_el_programa_de_fidelidad_puedo_usar_los_puntos_de_inmediato"
         }
       ]
+    },
+    {
+      "id": "supermarket_can_i_have_the_receipt",
+      "source": "Can I have the receipt, please?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me da el recibo, por favor?",
+          "audioSlug": "me_da_el_recibo_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_how_much_is_it_all",
+      "source": "How much is it all together?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto es todo?",
+          "audioSlug": "cuanto_es_todo"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_expiration_date",
+      "source": "When does this expire?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es la fecha de caducidad?",
+          "audioSlug": "cual_es_la_fecha_de_caducidad"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_checkout",
+      "source": "Where do I pay?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la caja?",
+          "audioSlug": "donde_esta_la_caja"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_i_pay_in_cash",
+      "source": "Can I pay in cash?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo pagar en efectivo?",
+          "audioSlug": "puedo_pagar_en_efectivo"
+        }
+      ]
     }
   ]
 }

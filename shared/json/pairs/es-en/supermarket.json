@@ -691,6 +691,54 @@
           "audioSlug": "how_do_i_sign_up_for_the_loyalty_program_can_i_use_points_immediately"
         }
       ]
+    },
+    {
+      "id": "supermarket_where_can_i_find",
+      "source": "¿Dónde puedo encontrar el arroz?",
+      "level": "A1",
+      "grammar": "'Where can I find...?' politely asks an employee where an item is.",
+      "target": [
+        {
+          "text": "Where can I find the rice?",
+          "audioSlug": "where_can_i_find_the_rice"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_expiration_date",
+      "source": "¿Cuándo caduca esto?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "When does this expire?",
+          "audioSlug": "when_does_this_expire"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_where_is_the_checkout",
+      "source": "¿Dónde está la caja?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the checkout?",
+          "audioSlug": "where_is_the_checkout"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_can_i_pay_in_cash",
+      "source": "¿Puedo pagar en efectivo?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I pay in cash?",
+          "audioSlug": "can_i_pay_in_cash"
+        }
+      ]
     }
   ]
 }
