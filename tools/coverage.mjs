@@ -36,11 +36,17 @@ import { loadFreq, tokenize } from './lib-freq.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
-const TOPICS = [
-  'greetings','emociones','restaurant','supermarket','kitchen','transportation',
-  'airport','accommodation','movies','music','theater','museums','gym',
-  'technology','accountability',
-];
+// Auto-discover phrase topics from the pairs directory so new topics are counted
+// automatically. Excludes non-topic files (grammar-rules, placement).
+const NON_TOPIC = new Set(['grammar-rules', 'placement']);
+function discoverTopics() {
+  const dir = join(ROOT, 'shared/json/pairs/en-es');
+  return fs.readdirSync(dir)
+    .filter(f => f.endsWith('.json'))
+    .map(f => f.replace(/\.json$/, ''))
+    .filter(t => !NON_TOPIC.has(t));
+}
+const TOPICS = discoverTopics();
 
 // Tokenisation/interjection artifacts excluded from the "teachable" figure.
 const IGNORE = new Set([
