@@ -3,10 +3,15 @@
    No version numbers needed — network-first for code, cache-first for images.
    ============================================================ */
 
-// Three permanent caches — never need to bump a version number
-const IMG_CACHE   = 'pe-images'; // photos/icons: cache-first forever
-const AUDIO_CACHE = 'pe-audio';  // pre-generated WAV: cache-first forever (slug-named, immutable)
-const APP_CACHE   = 'pe-app';    // HTML/JS/CSS/JSON: network-first, cached for offline
+// Permanent caches. AUDIO/APP never need a version bump (audio is slug-named and
+// self-invalidating; app is network-first). IMAGES use a stable filename per
+// topic ({topic}.webp), so a changed image reuses the same URL — cache-first
+// forever would pin the old one permanently. They are served
+// stale-while-revalidate instead, and the cache name carries a version so a
+// bump force-purges stale images when one is intentionally replaced.
+const IMG_CACHE   = 'pe-images-v2'; // photos/icons: stale-while-revalidate
+const AUDIO_CACHE = 'pe-audio';     // pre-generated WAV: cache-first forever (slug-named, immutable)
+const APP_CACHE   = 'pe-app';       // HTML/JS/CSS/JSON: network-first, cached for offline
 
 const isImage = url =>
   url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i) !== null;
@@ -85,12 +90,11 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   if (url.origin !== location.origin) return;
 
-  // Cache-first for immutable static assets (images + audio): serve from cache
-  // instantly on repeat use, fetch + store on first miss.
-  if (isImage(url) || isAudio(url)) {
-    const cacheName = isAudio(url) ? AUDIO_CACHE : IMG_CACHE;
+  // Audio: cache-first forever. Slug-named files are immutable — a changed
+  // phrase produces a new filename, so the cache self-invalidates.
+  if (isAudio(url)) {
     event.respondWith(
-      caches.open(cacheName).then(cache =>
+      caches.open(AUDIO_CACHE).then(cache =>
         cache.match(event.request).then(cached => {
           if (cached) return cached;
           return fetch(event.request).then(response => {
@@ -98,6 +102,26 @@ self.addEventListener('fetch', event => {
               cache.put(event.request, response.clone());
             return response;
           });
+        })
+      )
+    );
+    return;
+  }
+
+  // Images: stale-while-revalidate. Serve the cached copy instantly (fast), but
+  // always fetch a fresh copy in the background and update the cache, so a
+  // replaced image ({topic}.webp reuses its URL) propagates on the next view
+  // instead of being pinned forever.
+  if (isImage(url)) {
+    event.respondWith(
+      caches.open(IMG_CACHE).then(cache =>
+        cache.match(event.request).then(cached => {
+          const network = fetch(event.request).then(response => {
+            if (response && response.status === 200)
+              cache.put(event.request, response.clone());
+            return response;
+          }).catch(() => cached);
+          return cached || network;
         })
       )
     );
