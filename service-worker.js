@@ -3,12 +3,20 @@
    No version numbers needed — network-first for code, cache-first for images.
    ============================================================ */
 
-// Two permanent caches — never need to bump a version number
-const IMG_CACHE = 'pe-images'; // photos/icons: cache-first forever
-const APP_CACHE = 'pe-app';    // HTML/JS/CSS/JSON: network-first, cached for offline
+// Three permanent caches — never need to bump a version number
+const IMG_CACHE   = 'pe-images'; // photos/icons: cache-first forever
+const AUDIO_CACHE = 'pe-audio';  // pre-generated WAV: cache-first forever (slug-named, immutable)
+const APP_CACHE   = 'pe-app';    // HTML/JS/CSS/JSON: network-first, cached for offline
 
 const isImage = url =>
   url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i) !== null;
+
+// Audio files are named by content slug and never change after upload, so they
+// are safe to serve cache-first forever — the same reasoning as images. Serving
+// them network-first (the old default) re-downloaded a 100-300 KB WAV on every
+// single playback, which is what made repeat audio feel slow to load.
+const isAudio = url =>
+  url.pathname.match(/\.(wav|mp3|ogg|opus|m4a|aac)$/i) !== null;
 
 // Minimum files required to render index.html offline.
 // Fetched atomically during install — if any returns non-200 the install
@@ -43,7 +51,7 @@ self.addEventListener('activate', event => {
     caches.keys()
       .then(keys => Promise.all(
         keys
-          .filter(k => k !== IMG_CACHE && k !== APP_CACHE)
+          .filter(k => k !== IMG_CACHE && k !== AUDIO_CACHE && k !== APP_CACHE)
           .map(k => caches.delete(k))
       ))
       .then(() => self.clients.claim())
@@ -77,9 +85,12 @@ self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   if (url.origin !== location.origin) return;
 
-  if (isImage(url)) {
+  // Cache-first for immutable static assets (images + audio): serve from cache
+  // instantly on repeat use, fetch + store on first miss.
+  if (isImage(url) || isAudio(url)) {
+    const cacheName = isAudio(url) ? AUDIO_CACHE : IMG_CACHE;
     event.respondWith(
-      caches.open(IMG_CACHE).then(cache =>
+      caches.open(cacheName).then(cache =>
         cache.match(event.request).then(cached => {
           if (cached) return cached;
           return fetch(event.request).then(response => {
