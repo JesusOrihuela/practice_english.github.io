@@ -16,7 +16,7 @@
       "id": "kitchen_pass_me_the_cutting_board",
       "source": "Pass me the cutting board.",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'Pásame' es el imperativo con el pronombre enclítico para pedir algo.",
       "target": [
         {
           "text": "Pásame la tabla de cortar.",
@@ -28,7 +28,7 @@
       "id": "kitchen_where_do_we_keep_the_measuring",
       "source": "Where do we keep the measuring cups?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'¿Dónde está?' (singular) y '¿dónde están?' (plural) para preguntar ubicación.",
       "target": [
         {
           "text": "¿Dónde guardamos las tazas de medir?",
@@ -40,7 +40,7 @@
       "id": "kitchen_can_you_pass_me_the_spatula",
       "source": "Can you pass me the spatula?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'Pásame' es el imperativo con el pronombre enclítico para pedir algo.",
       "target": [
         {
           "text": "¿Me pasas la espátula?",
@@ -76,7 +76,7 @@
       "id": "kitchen_we_need_to_replace_the_baking",
       "source": "We need to replace the baking powder.",
       "level": "A2",
-      "grammar": null,
+      "grammar": "'Hay que + infinitivo' expresa una obligación impersonal, sin sujeto.",
       "target": [
         {
           "text": "Hay que sustituir la levadura en polvo.",
@@ -352,7 +352,7 @@
       "id": "kitchen_where_do_we_keep_the_plastic",
       "source": "Where do we keep the plastic wrap to cover the leftovers?",
       "level": "A1",
-      "grammar": null,
+      "grammar": "'¿Dónde está?' (singular) y '¿dónde están?' (plural) para preguntar ubicación.",
       "target": [
         {
           "text": "¿Dónde guardamos el envoltorio de plástico para cubrir las sobras?",
@@ -405,18 +405,6 @@
         {
           "text": "La reducción de la salsa llevará tiempo.",
           "audioSlug": "la_reduccion_de_la_salsa_llevara_tiempo"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_marinade_is_a_commonly_used_seasoning",
-      "source": "Marinade is a commonly used seasoning in cooking.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La marinada es un condimento muy utilizado en la cocina.",
-          "audioSlug": "la_marinada_es_un_condimento_muy_utilizado_en_la_cocina"
         }
       ]
     },
@@ -1213,66 +1201,6 @@
       ]
     },
     {
-      "id": "kitchen_spherification_gel_membrane",
-      "source": "The spherification technique involves submerging a liquid in a calcium bath to form a thin gel membrane.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La esferificación sumerge un líquido en baño de calcio para formar una fina membrana gelatinosa.",
-          "audioSlug": "la_esferificacion_sumerge_un_liquido_en_bano_de_calcio_para_formar_una_fina_membrana_gelatinosa"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_tempered_chocolate_crystalline_snap",
-      "source": "Well-tempered chocolate has a stable crystalline structure that gives it a sharp snap and glossy finish.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El chocolate bien temperado tiene una estructura cristalina que le da crujido definido y acabado brillante.",
-          "audioSlug": "el_chocolate_bien_temperado_tiene_una_estructura_cristalina_que_le_da_crujido_definido_y_ac_b67ee5cf"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_sous_vide_precise_temperature_control",
-      "source": "The sous-vide method achieves precise temperature control, eliminating the margin of error inherent in conventional cooking.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El método sous-vide logra un control preciso de la temperatura que elimina el margen de error habitual.",
-          "audioSlug": "el_metodo_sous_vide_logra_un_control_preciso_de_la_temperatura_que_elimina_el_margen_de_err_8aef24b6"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_fat_flour_ratio_structural_integrity",
-      "source": "In pastry work, the fat-to-flour ratio determines both texture and the structural integrity of the final product.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "En repostería, la proporción grasa-harina determina tanto la textura como la integridad estructural del producto final.",
-          "audioSlug": "en_reposteria_la_proporcion_grasa_harina_determina_tanto_la_textura_como_la_integridad_estr_664ea6ac"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_maillard_reaction_browning_flavor",
-      "source": "The Maillard reaction is the chemical browning above 140°C and the foundation of roasted, seared, and baked flavor.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La reacción de Maillard es el dorado químico que da sabor a asados, sellados y horneados.",
-          "audioSlug": "la_reaccion_de_maillard_es_el_dorado_quimico_que_da_sabor_a_asados_sellados_y_horneados"
-        }
-      ]
-    },
-    {
       "id": "kitchen_temper_eggs_hot_liquid",
       "source": "To temper eggs, slowly whisk in a ladleful of hot liquid before combining.",
       "level": "B2",
@@ -1281,18 +1209,6 @@
         {
           "text": "Para temperar los huevos, añade despacio un cucharón de líquido caliente y luego mezcla.",
           "audioSlug": "para_temperar_los_huevos_anade_despacio_un_cucharon_de_liquido_caliente_y_luego_mezcla"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_roux_base_for_white_sauces",
-      "source": "A roux is equal parts fat and flour, the base for white sauces.",
-      "level": "B2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El roux combina grasa y harina a partes iguales para hacer salsas blancas.",
-          "audioSlug": "el_roux_combina_grasa_y_harina_a_partes_iguales_para_hacer_salsas_blancas"
         }
       ]
     },
@@ -1321,18 +1237,6 @@
       ]
     },
     {
-      "id": "kitchen_saute_vs_sweat_onions",
-      "source": "Sweating softens onions without browning, while sautéing over high heat caramelizes the surface.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Sudar cebollas a fuego bajo las ablanda, mientras que saltearlas a fuego alto las carameliza.",
-          "audioSlug": "sudar_cebollas_a_fuego_bajo_las_ablanda_mientras_que_saltearlas_a_fuego_alto_las_carameliza"
-        }
-      ]
-    },
-    {
       "id": "kitchen_umami_depth_fish_sauce_miso",
       "source": "A small amount of fish sauce or miso paste deepens the umami in any savory dish.",
       "level": "C1",
@@ -1353,30 +1257,6 @@
         {
           "text": "Para curar el salmón, cúbrelo con sal, azúcar y eneldo y refrigéralo durante dos días.",
           "audioSlug": "para_curar_el_salmon_cubrelo_con_sal_azucar_y_eneldo_y_refrigeralo_durante_dos_dias"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_fat_carries_flavor_mouthfeel",
-      "source": "Fat carries flavor and contributes to mouthfeel, and dishes that are too lean often taste flat.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La grasa transporta el sabor y aporta textura, pues sin ella los platos saben a poco.",
-          "audioSlug": "la_grasa_transporta_el_sabor_y_aporta_textura_pues_sin_ella_los_platos_saben_a_poco"
-        }
-      ]
-    },
-    {
-      "id": "kitchen_lacto_fermentation_lactic_acid",
-      "source": "Lacto-fermentation uses bacteria to convert sugars into lactic acid, preserving the food and developing complex flavors.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La lacto-fermentación usa bacterias para convertir los azúcares en ácido láctico, conservando el alimento y desarrollando sabores complejos.",
-          "audioSlug": "la_lacto_fermentacion_usa_bacterias_para_convertir_los_azucares_en_acido_lactico_conservand_2b23a456"
         }
       ]
     }

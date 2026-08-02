@@ -1,0 +1,27 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 9. Nociones específicas (Vivienda: cocina, menaje y electrodomésticos; Alimentación: preparación) + recetas",
+  "_url_nociones": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Inventario para el topic kitchen (par en-es). El tema es COMUNICACIÓN DE COCINA (peticiones, preguntas por utensilios/ingredientes, instrucciones de receta, consejos). Cocinar es un dominio de habilidad que llega a C1 en instrucciones/consejos, pero la CIENCIA CULINARIA enciclopédica ('la reacción de Maillard es...') es prosa expositiva, no comunicación — fuera del tema. Métodos de cocción (freír/hervir/asar/a la plancha) ver pcic-restaurant.json (Alimentación B1-B2).",
+  "targetLang": "es",
+  "topic": "kitchen",
+  "notions": {
+    "A1": {
+      "menaje": ["plato", "vaso", "taza", "botella", "servilleta"],
+      "recetas": ["receta", "ingrediente", "cocinar"]
+    },
+    "A2": {
+      "electrodomesticos": ["cocina eléctrica", "cocina de gas", "nevera", "lavaplatos", "microondas", "horno"],
+      "utensilios_ext": ["cuchillo", "sartén", "olla", "cuchara", "tenedor", "cuchara de madera", "tabla de cortar"],
+      "preparacion": ["cortar", "pelar", "lavar", "mezclar", "picar", "batir"]
+    }
+  },
+  "functions": [
+    { "id": "pedir_objeto", "name": "Pedir un utensilio/ingrediente", "level": "A1", "exponents": ["¿Me pasas...?", "Pásame...", "¿Puedes pasarme...?"] },
+    { "id": "preguntar_ubicacion", "name": "Preguntar dónde está algo", "level": "A1", "exponents": ["¿Dónde está...?", "¿Dónde están...?", "¿Dónde guardamos...?"] },
+    { "id": "preguntar_disponibilidad", "name": "Preguntar si hay un ingrediente", "level": "A1", "exponents": ["¿Tenemos...?", "¿Hay...?", "¿Nos queda...?"] },
+    { "id": "dar_instruccion", "name": "Dar una instrucción de receta", "level": "A2", "exponents": ["Pica la cebolla.", "Añade la sal.", "Mezcla los ingredientes.", "Precalienta el horno."] },
+    { "id": "expresar_necesidad", "name": "Expresar necesidad en la cocina", "level": "A2", "exponents": ["Hay que...", "Necesitamos...", "Tenemos que..."] },
+    { "id": "dar_consejo", "name": "Dar un consejo de cocina", "level": "B1", "exponents": ["Para que quede mejor, ...", "Conviene dejar reposar la carne.", "Si la salsa se corta, añade agua fría."] }
+  ]
+}
