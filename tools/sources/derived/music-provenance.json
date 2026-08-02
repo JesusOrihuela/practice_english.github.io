@@ -1,0 +1,25 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic music (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es comunicación real sobre música (escuchar, ir a conciertos, gustos, opinar), bien clasificada.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Ocio: música, conciertos) + Funciones (gustos, valorar). Ver pcic-music.json",
+    "en_target_inventory": "Core Inventory (opinions, likes/dislikes) + NGSL + music ESL",
+    "attestation": "Guias ESL/ELE de música y ocio; PCIC funciones de gustos/opinión."
+  },
+  "per_phrase_record": "music-attestation.json — 43 frases por función.",
+  "attestation": {
+    "principle": "Hablar de música es comunicación real: escuchar, poner música, ir a conciertos, gustos, y OPINAR conversacionalmente ('la sobreproducción va en contra del núcleo emocional', 'la progresión de acordes es inquietante'). Pero la MUSICOLOGÍA / crítica académica es ensayo expositivo, no conversación — se retira.",
+    "retired_musicology_essay": {
+      "c2_all": ["atonalidad de Schoenberg / ruptura tonal", "oralidad vs notación escrita", "música como resistencia colectiva", "cánones musicales y sesgos", "alejamiento de convenciones de género", "polirritmia africana vs armonía occidental", "meditación sobre memoria colectiva", "instrumentación refleja lo lírico", "motivos folklóricos y autenticidad"],
+      "c1_essayistic": ["música y preservación de identidad cultural en la diáspora", "etiquetas de género útiles y limitantes", "debate del sampling sobre originalidad/autoría (solo es-en)"]
+    },
+    "kept": "Opinión conversacional de aficionado (álbum conceptual, sobreproducción vs emoción, espontaneidad en vivo, letras con comentario político, mezcla de influencias, influencia indie subestimada, progresión de acordes, reinterpretación)."
+  },
+  "gap_fill": {
+    "added_per_pair": 8,
+    "basis": "A1 solo 5, A2 pesado en podcasts; faltaban básicos de hablar de música. Añadidos desde PCIC + guías.",
+    "list": ["¿Tocas algún instrumento?", "¿Puedes subir la música?", "Esta canción es muy pegadiza", "¿Quién es tu cantante favorito?", "¿Qué estás escuchando?", "Pongamos algo de música", "Tengo boletos para el concierto", "¿Puedes bajar la música?"],
+    "audio": "24 ES + 32 EN"
+  },
+  "result_counts": { "en_es": 43, "es_en": 43, "before": "46/47", "retired_each_pair": "11 (en-es) / 12 (es-en, incluye sampling)", "added_each_pair": 8 }
+}

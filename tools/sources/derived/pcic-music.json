@@ -1,0 +1,19 @@
+{
+  "_source": "PCIC — 9. Nociones específicas (Ocio: música, conciertos) + 5. Funciones (expresar gustos e intereses, valorar)",
+  "_url": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Persona = OYENTE/AFICIONADO. Hablar de música es comunicación real (escuchar, conciertos, gustos, opinar). Se retira la musicología/crítica académica (ensayo expositivo).",
+  "targetLang": "es",
+  "topic": "music",
+  "notions": {
+    "A1": { "objetos": ["canción", "música", "concierto", "cantante", "instrumento", "boleto"], "acciones": ["escuchar", "tocar", "cantar", "poner música"] },
+    "A2": { "objetos": ["banda", "álbum", "playlist", "podcast", "auriculares", "letra"], "generos": ["rock", "pop", "jazz"], "atributos": ["pegadiza", "en vivo"] }
+  },
+  "functions": [
+    { "id": "gustos", "name": "Expresar gustos", "level": "A1", "exponents": ["¿Qué tipo de música te gustan?", "¿Quién es tu cantante favorito?", "Me encanta esta canción."] },
+    { "id": "escuchar", "name": "Escuchar / poner música", "level": "A1", "exponents": ["¿Qué estás escuchando?", "Pongamos algo de música.", "¿Puedes subir/bajar la música?"] },
+    { "id": "tocar", "name": "Tocar un instrumento", "level": "A1", "exponents": ["¿Tocas algún instrumento?", "Estoy aprendiendo a tocar la guitarra."] },
+    { "id": "conciertos", "name": "Conciertos", "level": "A1", "exponents": ["Tengo boletos para el concierto.", "Deberíamos ir a un concierto."] },
+    { "id": "opinar", "name": "Valorar / opinar (conversacional)", "level": "B1", "exponents": ["El nuevo álbum no me impresionó tanto.", "La progresión de acordes es inquietante."] }
+  ]
+}

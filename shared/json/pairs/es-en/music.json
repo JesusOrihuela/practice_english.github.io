@@ -347,18 +347,6 @@
       ]
     },
     {
-      "id": "music_diaspora_cultural_identity",
-      "source": "Para muchas comunidades de la diáspora, la música es el principal medio a través del cual se preserva la identidad cultural.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "For many diaspora communities, music is the primary means through which cultural identity is preserved.",
-          "audioSlug": "for_many_diaspora_communities_music_is_the_primary_means_through_which_cultural_identity_is_d6ca5620"
-        }
-      ]
-    },
-    {
       "id": "music_overproduction_works_against_core",
       "source": "El sonido sobreproducido en realidad va en detrimento del núcleo emocional de la canción, creando una frialdad no intencionada.",
       "level": "C1",
@@ -367,30 +355,6 @@
         {
           "text": "The overproduced sound actually works against the song's emotional core, creating an unintended coldness.",
           "audioSlug": "the_overproduced_sound_actually_works_against_the_song_s_emotional_core_creating_an_uninten_dd3985bf"
-        }
-      ]
-    },
-    {
-      "id": "music_sampling_originality_authorship",
-      "source": "El debate sobre el sampling desafía las nociones convencionales de originalidad y autoría en la música.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The debate over sampling challenges conventional notions of originality and authorship in music.",
-          "audioSlug": "the_debate_over_sampling_challenges_conventional_notions_of_originality_and_authorship_in_music"
-        }
-      ]
-    },
-    {
-      "id": "music_genre_labels_useful_and_limiting",
-      "source": "Las etiquetas de género pueden ser útiles y limitantes al mismo tiempo, pues ayudan a los oyentes a encontrar música pero restringen cómo se percibe a los artistas.",
-      "level": "C1",
-      "grammar": "'Both... and' to acknowledge two simultaneously true but contrasting qualities",
-      "target": [
-        {
-          "text": "Genre labels can be both useful and limiting, helpful for listeners but restrictive for artists.",
-          "audioSlug": "genre_labels_can_be_both_useful_and_limiting_helpful_for_listeners_but_restrictive_for_artists"
         }
       ]
     },
@@ -467,110 +431,98 @@
       ]
     },
     {
-      "id": "music_atonality_tonal_rupture",
-      "source": "El giro de Schoenberg hacia la atonalidad representó una ruptura fundamental con la tradición tonal occidental.",
-      "level": "C2",
+      "id": "music_play_instrument",
+      "source": "¿Tocas algún instrumento?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Schoenberg's move toward atonality represented a fundamental rupture with the Western tonal tradition.",
-          "audioSlug": "schoenberg_s_move_toward_atonality_represented_a_fundamental_rupture_with_the_western_tonal_aa3c352e"
+          "text": "Do you play any instrument?",
+          "audioSlug": "do_you_play_any_instrument"
         }
       ]
     },
     {
-      "id": "music_orality_notation_limits",
-      "source": "La brecha entre las tradiciones orales y la notación escrita revela los límites de los sistemas formales para capturar el sonido vivido.",
-      "level": "C2",
+      "id": "music_turn_up",
+      "source": "¿Puedes subir la música?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "The gap between oral traditions and written notation reveals the limits of formal systems to capture lived sound.",
-          "audioSlug": "the_gap_between_oral_traditions_and_written_notation_reveals_the_limits_of_formal_systems_t_28d8eb5d"
+          "text": "Can you turn up the music?",
+          "audioSlug": "can_you_turn_up_the_music"
         }
       ]
     },
     {
-      "id": "music_vehicle_collective_resistance",
-      "source": "A lo largo de la historia, la música ha funcionado como vehículo de resistencia colectiva contra la opresión política y el borrado cultural.",
-      "level": "C2",
+      "id": "music_catchy",
+      "source": "Esta canción es muy pegadiza.",
+      "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Throughout history, music has functioned as a vehicle for collective resistance against political oppression and cultural erasure.",
-          "audioSlug": "throughout_history_music_has_functioned_as_a_vehicle_for_collective_resistance_against_poli_235e2f5f"
+          "text": "This song is really catchy.",
+          "audioSlug": "this_song_is_really_catchy"
         }
       ]
     },
     {
-      "id": "music_canon_inclusion_exclusion_bias",
-      "source": "Todo canon musical conlleva actos de inclusión y exclusión que inevitablemente reflejan los sesgos de quienes lo construyen.",
-      "level": "C2",
+      "id": "music_favorite_singer",
+      "source": "¿Quién es tu cantante favorito?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Musical canons involve acts of inclusion and exclusion that inevitably reflect the biases of those who construct them.",
-          "audioSlug": "musical_canons_involve_acts_of_inclusion_and_exclusion_that_inevitably_reflect_the_biases_o_50fef406"
+          "text": "Who's your favorite singer?",
+          "audioSlug": "who_s_your_favorite_singer"
         }
       ]
     },
     {
-      "id": "music_departure_genre_conventions",
-      "source": "El álbum representa un marcado alejamiento de las convenciones del género que definieron la obra anterior de la banda.",
-      "level": "C2",
+      "id": "music_what_listening",
+      "source": "¿Qué estás escuchando?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "The album represents a marked departure from the genre conventions that defined the band's earlier output.",
-          "audioSlug": "the_album_represents_a_marked_departure_from_the_genre_conventions_that_defined_the_band_s_db2ae42f"
+          "text": "What are you listening to?",
+          "audioSlug": "what_are_you_listening_to"
         }
       ]
     },
     {
-      "id": "music_african_polyrhythms_western_harmony",
-      "source": "Su síntesis de polirritmia africana y estructuras armónicas occidentales desafió las definiciones predominantes del jazz.",
-      "level": "C2",
+      "id": "music_turn_on",
+      "source": "Pongamos algo de música.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "His synthesis of African polyrhythms and Western harmonic structures challenged prevailing definitions of jazz.",
-          "audioSlug": "his_synthesis_of_african_polyrhythms_and_western_harmonic_structures_challenged_prevailing_e30ded75"
+          "text": "Let's put on some music.",
+          "audioSlug": "let_s_put_on_some_music"
         }
       ]
     },
     {
-      "id": "music_meditation_collective_memory",
-      "source": "El álbum se lee como una meditación sobre la memoria colectiva, con cada pista funcionando como un registro emocional distinto.",
-      "level": "C2",
-      "grammar": "'Each track functioning' is an absolute phrase that adds detail without a main verb.",
+      "id": "music_concert_tickets",
+      "source": "Tengo boletos para el concierto.",
+      "level": "A1",
+      "grammar": null,
       "target": [
         {
-          "text": "The album reads as a meditation on collective memory, each track functioning as a distinct emotional register.",
-          "audioSlug": "the_album_reads_as_a_meditation_on_collective_memory_each_track_functioning_as_a_distinct_e_4bd9a0d2"
+          "text": "I have tickets for the concert.",
+          "audioSlug": "i_have_tickets_for_the_concert"
         }
       ]
     },
     {
-      "id": "music_instrumentation_mirrors_lyrics",
-      "source": "Los críticos han señalado que la instrumentación refleja el contenido lírico de formas que recompensan una escucha atenta.",
-      "level": "C2",
+      "id": "music_turn_down",
+      "source": "¿Puedes bajar la música, por favor?",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Critics have noted that the instrumentation mirrors the lyrical content in ways that reward close listening.",
-          "audioSlug": "critics_have_noted_that_the_instrumentation_mirrors_the_lyrical_content_in_ways_that_reward_748caa09"
-        }
-      ]
-    },
-    {
-      "id": "music_folk_motifs_authenticity",
-      "source": "El uso deliberado de motivos folklóricos por parte del compositor le da a la pieza una autenticidad de la que las producciones más pulidas suelen carecer.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The composer's deliberate use of folk motifs gives the piece an authenticity that more polished productions often lack.",
-          "audioSlug": "the_composer_s_deliberate_use_of_folk_motifs_gives_the_piece_an_authenticity_that_more_poli_d0efca23"
+          "text": "Can you turn down the music, please?",
+          "audioSlug": "can_you_turn_down_the_music_please"
         }
       ]
     }
