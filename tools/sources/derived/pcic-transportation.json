@@ -1,0 +1,29 @@
+{
+  "_source": "Plan Curricular del Instituto Cervantes (PCIC) — 9. Nociones específicas (Viajes, alojamiento y transporte) + 5. Funciones (pedir información, pedir un servicio, expresar queja)",
+  "_url_nociones": "https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/niveles/09_nociones_especificas_inventario_a1-a2.htm",
+  "_license": "Referencia pública (Instituto Cervantes)",
+  "_note": "Inventario para el topic transportation (par en-es). La persona del tema es el VIAJERO/USUARIO del transporte; su lenguaje atestiguado tope en B1/B2 (quejas de tarifa/retraso/reembolso, peticiones). La POLÍTICA de transporte urbano (modal shift, congestion pricing, deregulation) es prosa de planificador/analista — fuera del tema.",
+  "targetLang": "es",
+  "topic": "transportation",
+  "notions": {
+    "A1": {
+      "medios": ["coche", "carro", "metro", "tren", "autobús", "taxi", "avión", "barco", "bicicleta"],
+      "lugares": ["parada de autobús", "parada de taxi", "estación de tren", "estación de metro", "puerto", "calle", "carretera"],
+      "acciones": ["ir en coche/en taxi/en tren/en metro/en autobús/en avión", "ir andando"]
+    },
+    "A2": {
+      "medios": ["moto", "ciclista"],
+      "acciones": ["coger/tomar un taxi/el metro/el tren", "montar en bicicleta", "viajar"],
+      "lugares": ["boca de metro", "andén"],
+      "objetos": ["boleto", "billete", "plano de metro", "mapa", "tarifa", "abono", "pase"]
+    }
+  },
+  "functions": [
+    { "id": "pedir_direccion", "name": "Preguntar cómo llegar", "level": "A1", "exponents": ["¿Cómo llego a...?", "¿Cómo se va a...?", "¿Dónde está la parada/estación de...?"] },
+    { "id": "preguntar_destino", "name": "Preguntar si un transporte va a un destino", "level": "A1", "exponents": ["¿Este autobús va a...?", "¿Es este el tren para...?"] },
+    { "id": "comprar_billete", "name": "Comprar un boleto", "level": "A1", "exponents": ["Un boleto a..., por favor.", "¿Cuánto cuesta un boleto a...?", "¿Dónde compro el boleto?"] },
+    { "id": "preguntar_horario", "name": "Preguntar horarios/frecuencia", "level": "A1", "exponents": ["¿Cuándo pasa el próximo autobús?", "¿A qué hora sale el tren?"] },
+    { "id": "taxi", "name": "Indicaciones al taxista", "level": "A1", "exponents": ["Lléveme a esta dirección.", "Pare aquí, por favor.", "¿Puede poner el taxímetro?"] },
+    { "id": "quejarse", "name": "Expresar queja (tarifa, retraso, reembolso)", "level": "B1", "exponents": ["Me cobró de más.", "Mi tren se retrasó.", "¿Tengo derecho a un reembolso?"] }
+  ]
+}

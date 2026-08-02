@@ -1,0 +1,16 @@
+{
+  "_source": "British Council — EAQUALS Core Inventory (asking for/giving directions, asking for information, complaints) + NGSL + public-transport ESL materials",
+  "_url": "https://www.eaquals.org/resources/the-core-inventory-for-general-english/",
+  "_license": "Referencia pública (British Council / EAQUALS). NGSL: CC BY-SA.",
+  "_note": "Árbitro de nivel y persona para el topic transportation (par es-en). Persona = VIAJERO; lenguaje atestiguado tope en B1/B2.",
+  "targetLang": "en",
+  "topic": "transportation",
+  "functions": [
+    { "id": "asking_directions", "name": "Asking how to get somewhere", "level": "A1", "exponents": ["How do I get to ...?", "Excuse me, could you tell me how to get to ...?", "Where is the nearest ...?"] },
+    { "id": "asking_destination", "name": "Checking a transport's destination", "level": "A1", "exponents": ["Does this bus go to ...?", "Is this the right bus for ...?"] },
+    { "id": "buying_ticket", "name": "Buying a ticket", "level": "A1", "exponents": ["One ticket to ..., please.", "Where can I buy a ticket?", "Which platform does the train leave from?"] },
+    { "id": "asking_times", "name": "Asking times/frequency", "level": "A1", "exponents": ["When is the next bus?", "What time does the train leave?"] },
+    { "id": "taxi", "name": "Directing a taxi", "level": "A1", "exponents": ["Take me to this address, please.", "Stop here, please.", "Can you turn on the meter?"] },
+    { "id": "complaints", "name": "Complaints (fare, delay, refund)", "level": "B1", "exponents": ["The driver overcharged me.", "My train was delayed.", "Am I entitled to a refund?"] }
+  ]
+}

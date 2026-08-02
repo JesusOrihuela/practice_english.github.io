@@ -1,0 +1,24 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic transportation (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es un acto de VIAJERO documentado y bien clasificado. Criterio: demanda comunicativa primaria + inventario oficial + atestiguación por función contra fuentes de transporte.",
+  "sources": {
+    "es_target_inventory": "PCIC — Nociones (Viajes, alojamiento y transporte) + Funciones. Ver tools/sources/derived/pcic-transportation.json",
+    "en_target_inventory": "British Council/EAQUALS Core Inventory + NGSL + public-transport ESL. Ver tools/sources/derived/core-inventory-transportation.json",
+    "attestation_en": ["ESLpals / Linguahouse — Public Transport", "ESLinfo — 150 transportation expressions", "test-english — Transport B1"],
+    "attestation_es": ["PCIC nociones", "recursos ELE de transporte"]
+  },
+  "per_phrase_record": "tools/sources/derived/transportation-attestation.json — 42 frases por función de viajero (ruta/ubicación, boleto/tarifa, taxi, destino/horario, queja/reclamo, necesidades especiales).",
+  "attestation": {
+    "finding_persona": "La persona del tema es el VIAJERO/USUARIO. El lenguaje atestiguado tope en B1/B2 (quejas de tarifa/retraso/reembolso, peticiones). El tema estaba desbalanceado (A1 solo 5; B2+ = 24 de 40) y relleno de PROSA DE POLÍTICA urbana (persona de planificador/analista, no viajero).",
+    "retired_policy_prose": ["modal shift / policy framework (C2)", "last-mile barrier to mobility (C2)", "congestion pricing scheme (C2)", "taxi deregulation standards (C2)", "integrated networks / carbon emissions (C2)", "ridesharing regulatory gray area (C1)", "accessible transport as planning principle (C1)", "lack of cycle lanes is dangerous (C1)"],
+    "kept_traveler_acts": "Abono/pase, queja de tarifa por ruta larga, reembolso por tren cancelado, impugnar multa de estacionamiento, organizar transporte accesible, pregunta de ciclista sobre carril, revisar contrato de alquiler."
+  },
+  "gap_fill": {
+    "added_per_pair": 10,
+    "basis": "El tema tenía buenos B2 (quejas) pero carecía de los básicos absolutos de moverse. Añadidos desde PCIC + guías de transporte.",
+    "list": ["¿Este autobús va a...?", "Un boleto a..., por favor", "¿De qué andén sale el tren?", "Pare aquí, por favor", "Lléveme a esta dirección", "¿Cuándo pasa el próximo autobús?", "¿Es este el autobús para...?", "estación de metro más cercana", "¿Cuánto se tarda en llegar?", "¿Puede poner el taxímetro?"],
+    "audio": "30 ES + 40 EN"
+  },
+  "leveling": "A1-B2 confirmados por PCIC/Core Inventory (medios, parada/estación, boleto, taxi = A1; andén, abono, coger/tomar = A2; quejas = B1-B2). Sin C2 de política (retirada); C1/C2 conservados solo si son actos de viajero genuinos.",
+  "result_counts": { "en_es": 42, "es_en": 42, "before": 40, "retired_each_pair": 8, "added_each_pair": 10 }
+}

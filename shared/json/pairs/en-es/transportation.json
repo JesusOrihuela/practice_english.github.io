@@ -321,42 +321,6 @@
       ]
     },
     {
-      "id": "transportation_ridesharing_liability_gray_area",
-      "source": "Ridesharing companies operate in a regulatory gray area when it comes to driver liability and insurance.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Las plataformas de transporte operan en una zona gris respecto a la responsabilidad de sus conductores.",
-          "audioSlug": "las_plataformas_de_transporte_operan_en_una_zona_gris_respecto_a_la_responsabilidad_de_sus_075f7f2c"
-        }
-      ]
-    },
-    {
-      "id": "transportation_accessibility_core_planning_principle",
-      "source": "Accessible transport isn't just a legal requirement but a core principle of urban planning.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El transporte accesible no es solo un requisito legal, sino un principio fundamental del urbanismo.",
-          "audioSlug": "el_transporte_accesible_no_es_solo_un_requisito_legal_sino_un_principio_fundamental_del_urbanismo"
-        }
-      ]
-    },
-    {
-      "id": "transportation_no_cycle_lanes_dangerous",
-      "source": "The lack of protected cycle lanes makes commuting by bike genuinely dangerous for most riders.",
-      "level": "C1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Sin carriles bici protegidos, ir al trabajo en bicicleta es peligroso para la mayoría de ciclistas.",
-          "audioSlug": "sin_carriles_bici_protegidos_ir_al_trabajo_en_bicicleta_es_peligroso_para_la_mayoria_de_ciclistas"
-        }
-      ]
-    },
-    {
       "id": "transportation_monthly_multimodal_pass",
       "source": "I'd like a monthly pass that covers all modes of public transport in the city.",
       "level": "C1",
@@ -427,42 +391,6 @@
       ]
     },
     {
-      "id": "transportation_modal_shift_policy_framework",
-      "source": "Achieving a modal shift to public transport requires a coherent policy framework, not just infrastructure investment.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Un cambio modal hacia el transporte público exige un marco de políticas coherente, no solo inversión en infraestructura.",
-          "audioSlug": "un_cambio_modal_hacia_el_transporte_publico_exige_un_marco_de_politicas_coherente_no_solo_i_5019eafd"
-        }
-      ]
-    },
-    {
-      "id": "transportation_last_mile_barrier_mobility",
-      "source": "The 'last mile' problem remains the greatest barrier to truly integrated urban mobility.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El problema del 'último kilómetro' sigue siendo el mayor obstáculo para una movilidad urbana verdaderamente integrada.",
-          "audioSlug": "el_problema_del_ultimo_kilometro_sigue_siendo_el_mayor_obstaculo_para_una_movilidad_urbana_4ffa536a"
-        }
-      ]
-    },
-    {
-      "id": "transportation_congestion_pricing_city_center",
-      "source": "The congestion pricing scheme has significantly reduced peak-hour traffic in the city center.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Las tarifas por congestión han reducido significativamente el tráfico en horas pico en el centro de la ciudad.",
-          "audioSlug": "las_tarifas_por_congestion_han_reducido_significativamente_el_trafico_en_horas_pico_en_el_c_f582a538"
-        }
-      ]
-    },
-    {
       "id": "transportation_rental_liability_provisions",
       "source": "I'd like to review the liability provisions in the rental agreement before signing.",
       "level": "C2",
@@ -475,30 +403,6 @@
       ]
     },
     {
-      "id": "transportation_taxi_deregulation_standards",
-      "source": "The deregulation of the taxi industry has led to more competition but inconsistent service standards.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La desregulación de la industria del taxi ha generado mayor competencia, pero estándares de servicio inconsistentes.",
-          "audioSlug": "la_desregulacion_de_la_industria_del_taxi_ha_generado_mayor_competencia_pero_estandares_de_ddd8c430"
-        }
-      ]
-    },
-    {
-      "id": "transportation_intermodal_urban_emissions",
-      "source": "Integrated transport networks are increasingly essential to reducing urban carbon emissions.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Las redes de transporte integradas son cada vez más esenciales para reducir las emisiones de carbono urbanas.",
-          "audioSlug": "las_redes_de_transporte_integradas_son_cada_vez_mas_esenciales_para_reducir_las_emisiones_d_eee33cdc"
-        }
-      ]
-    },
-    {
       "id": "transportation_penalty_charge_signage",
       "source": "I'd like to formally dispute this penalty charge. The parking restriction signage was inadequate.",
       "level": "C2",
@@ -507,6 +411,126 @@
         {
           "text": "Quisiera impugnar formalmente esta sanción porque la señalización de la restricción de estacionamiento era insuficiente.",
           "audioSlug": "quisiera_impugnar_formalmente_esta_sancion_porque_la_senalizacion_de_la_restriccion_de_esta_fc7c14a7"
+        }
+      ]
+    },
+    {
+      "id": "transportation_does_this_bus_go",
+      "source": "Does this bus go to the center?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Este autobús va al centro?",
+          "audioSlug": "este_autobus_va_al_centro"
+        }
+      ]
+    },
+    {
+      "id": "transportation_one_ticket_to",
+      "source": "One ticket to the airport, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Un boleto al aeropuerto, por favor.",
+          "audioSlug": "un_boleto_al_aeropuerto_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "transportation_which_platform",
+      "source": "Which platform does the train to Madrid leave from?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿De qué andén sale el tren a Madrid?",
+          "audioSlug": "de_que_anden_sale_el_tren_a_madrid"
+        }
+      ]
+    },
+    {
+      "id": "transportation_stop_here_please",
+      "source": "Stop here, please.",
+      "level": "A1",
+      "grammar": "'Pare' es el imperativo formal (usted), para dirigirse a un conductor.",
+      "target": [
+        {
+          "text": "Pare aquí, por favor.",
+          "audioSlug": "pare_aqui_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "transportation_take_me_to_address",
+      "source": "Take me to this address, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lléveme a esta dirección, por favor.",
+          "audioSlug": "lleveme_a_esta_direccion_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "transportation_when_next_bus",
+      "source": "When is the next bus?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuándo pasa el próximo autobús?",
+          "audioSlug": "cuando_pasa_el_proximo_autobus"
+        }
+      ]
+    },
+    {
+      "id": "transportation_right_bus_for",
+      "source": "Is this the right bus for the museum?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es este el autobús para el museo?",
+          "audioSlug": "es_este_el_autobus_para_el_museo"
+        }
+      ]
+    },
+    {
+      "id": "transportation_nearest_metro",
+      "source": "Where is the nearest metro station?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la estación de metro más cercana?",
+          "audioSlug": "donde_esta_la_estacion_de_metro_mas_cercana"
+        }
+      ]
+    },
+    {
+      "id": "transportation_how_long_to_get",
+      "source": "How long does it take to get to the center?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto se tarda en llegar al centro?",
+          "audioSlug": "cuanto_se_tarda_en_llegar_al_centro"
+        }
+      ]
+    },
+    {
+      "id": "transportation_turn_on_meter",
+      "source": "Can you turn on the meter, please?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puede poner el taxímetro, por favor?",
+          "audioSlug": "puede_poner_el_taximetro_por_favor"
         }
       ]
     }
