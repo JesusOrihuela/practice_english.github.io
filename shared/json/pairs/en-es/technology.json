@@ -1067,66 +1067,6 @@
       ]
     },
     {
-      "id": "technology_algorithmic_bias_can_perpetuate",
-      "source": "Algorithmic bias can perpetuate systemic inequalities when training data reflects historical discrimination.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El sesgo algorítmico puede perpetuar desigualdades sistémicas cuando los datos de entrenamiento reflejan discriminación histórica.",
-          "audioSlug": "el_sesgo_algoritmico_puede_perpetuar_desigualdades_sistemicas_cuando_los_datos_de_entrenami_f40bb75c"
-        }
-      ]
-    },
-    {
-      "id": "technology_the_right_to_be_forgotten_allows",
-      "source": "The right to be forgotten allows individuals to request deletion of personal data no longer relevant or accurate.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El derecho al olvido permite pedir la eliminación de datos personales que ya no son relevantes ni exactos.",
-          "audioSlug": "el_derecho_al_olvido_permite_pedir_la_eliminacion_de_datos_personales_que_ya_no_son_relevan_9001f607"
-        }
-      ]
-    },
-    {
-      "id": "technology_surveillance_capitalism_refers_to",
-      "source": "Surveillance capitalism refers to treating personal data as a commodity to be extracted and traded for profit.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El capitalismo de vigilancia convierte los datos personales en mercancía que se extrae y comercializa con lucro.",
-          "audioSlug": "el_capitalismo_de_vigilancia_convierte_los_datos_personales_en_mercancia_que_se_extrae_y_co_9e9da518"
-        }
-      ]
-    },
-    {
-      "id": "technology_open_source_software_relies_on",
-      "source": "Open-source software relies on distributed, volunteer-driven development, which makes auditing for security vulnerabilities easier and more transparent.",
-      "level": "C2",
-      "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
-      "target": [
-        {
-          "text": "El código abierto se basa en desarrollo voluntario distribuido, lo que facilita auditar sus vulnerabilidades.",
-          "audioSlug": "el_codigo_abierto_se_basa_en_desarrollo_voluntario_distribuido_lo_que_facilita_auditar_sus_604dc723"
-        }
-      ]
-    },
-    {
-      "id": "technology_digital_sovereignty_refers_to",
-      "source": "Digital sovereignty refers to a nation's ability to govern its data infrastructure independently of foreign platforms or regulations.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La soberanía digital es la capacidad de un país para gestionar su infraestructura de datos de forma independiente.",
-          "audioSlug": "la_soberania_digital_es_la_capacidad_de_un_pais_para_gestionar_su_infraestructura_de_datos_4802199a"
-        }
-      ]
-    },
-    {
       "id": "technology_the_company_acknowledged_a_data",
       "source": "The company acknowledged a data breach but hasn't disclosed how many accounts were compromised.",
       "level": "C2",
@@ -1139,42 +1079,6 @@
       ]
     },
     {
-      "id": "technology_planned_obsolescence_means_manufacturers_intentionally",
-      "source": "Planned obsolescence means manufacturers intentionally shorten a device's lifespan to drive sales.",
-      "level": "C2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La obsolescencia programada consiste en acortar intencionalmente la vida útil de un dispositivo para impulsar las ventas.",
-          "audioSlug": "la_obsolescencia_programada_consiste_en_acortar_intencionalmente_la_vida_util_de_un_disposi_a9f42186"
-        }
-      ]
-    },
-    {
-      "id": "technology_endtoend_encryption_ensures_that_not",
-      "source": "End-to-end encryption ensures that not even the service provider can read your messages.",
-      "level": "C2",
-      "grammar": "'Ni siquiera' intensifica la negación; equivale al inglés 'not even'.",
-      "target": [
-        {
-          "text": "El cifrado de extremo a extremo garantiza que ni siquiera el proveedor del servicio puede leer tus mensajes.",
-          "audioSlug": "el_cifrado_de_extremo_a_extremo_garantiza_que_ni_siquiera_el_proveedor_del_servicio_puede_l_46e0efcd"
-        }
-      ]
-    },
-    {
-      "id": "technology_cybersecurity_experts_recommend_using_a",
-      "source": "Cybersecurity experts recommend using a password manager rather than reusing passwords across platforms.",
-      "level": "C2",
-      "grammar": "'En lugar de + infinitivo' expresa una alternativa preferida; equivale al inglés 'rather than'.",
-      "target": [
-        {
-          "text": "Los expertos en ciberseguridad recomiendan usar un gestor de contraseñas en lugar de reutilizar contraseñas en distintas plataformas.",
-          "audioSlug": "los_expertos_en_ciberseguridad_recomiendan_usar_un_gestor_de_contrasenas_en_lugar_de_reutil_080d7070"
-        }
-      ]
-    },
-    {
       "id": "technology_the_legacy_system_is_no_longer",
       "source": "The legacy system is no longer maintained, meaning any new vulnerability discovered won't be patched.",
       "level": "C2",
@@ -1183,6 +1087,66 @@
         {
           "text": "El sistema heredado ya no recibe mantenimiento, lo que significa que cualquier nueva vulnerabilidad descubierta no será corregida.",
           "audioSlug": "el_sistema_heredado_ya_no_recibe_mantenimiento_lo_que_significa_que_cualquier_nueva_vulnera_b46d6a34"
+        }
+      ]
+    },
+    {
+      "id": "technology_phone_froze",
+      "source": "My phone froze.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Se me congeló el teléfono.",
+          "audioSlug": "se_me_congelo_el_telefono"
+        }
+      ]
+    },
+    {
+      "id": "technology_battery_low",
+      "source": "My battery is almost dead.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Casi no me queda batería.",
+          "audioSlug": "casi_no_me_queda_bateria"
+        }
+      ]
+    },
+    {
+      "id": "technology_app_crashing",
+      "source": "The app keeps crashing.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La aplicación se cierra sola todo el tiempo.",
+          "audioSlug": "la_aplicacion_se_cierra_sola_todo_el_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "technology_how_connect_wifi",
+      "source": "How do I connect to the WiFi?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo me conecto al WiFi?",
+          "audioSlug": "como_me_conecto_al_wifi"
+        }
+      ]
+    },
+    {
+      "id": "technology_help_install_app",
+      "source": "Can you help me install this app?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me ayudas a instalar esta aplicación?",
+          "audioSlug": "me_ayudas_a_instalar_esta_aplicacion"
         }
       ]
     }

@@ -1,0 +1,18 @@
+{
+  "_doc": "Registro de procedencia y clasificación — topic technology (pares en-es y es-en).",
+  "_purpose": "Sustento de que cada frase es comunicación real de usuario de tecnología, bien clasificada.",
+  "sources": { "es_target_inventory": "PCIC (Ciencia y tecnología) + Funciones (pedir ayuda, describir un problema).", "en_target": "Core Inventory + NGSL + tech/everyday-technology ESL.", "attestation": "Guias ESL/ELE de tecnología cotidiana; PCIC." },
+  "per_phrase_record": "technology-attestation.json — 95 frases por función.",
+  "attestation": {
+    "principle": "La tecnología es un dominio donde el USUARIO comunica experiencias reales, y llega legítimamente a C1-C2 (privacidad, seguridad, datos) en 1a persona. Se conservan esos C1/C2 de usuario. Pero las DEFINICIONES de conceptos tech ('X se refiere a', 'X significa', 'X garantiza') son ensayo expositivo — se retiran.",
+    "kept_c1": "Experiencias de usuario en 1a persona: algoritmo que recomienda, biométrica activada, ataque de ransomware/restaurar, solicitar mis datos, dark patterns, trabajo remoto/asíncrono, ubicación rastreada, phishing, limpiar caché, firmware, cambiar de ecosistema.",
+    "kept_c2": "technology_the_company_acknowledged_a_data (reporte conversacional de filtración), technology_the_legacy_system_is_no_longer (enunciado sobre sistema sin mantenimiento).",
+    "retired_definitions": ["sesgo algorítmico (C2)", "derecho al olvido (definición C2)", "capitalismo de vigilancia ('se refiere a') (C2)", "software de código abierto (definición C2)", "soberanía digital ('hace referencia a') (C2)", "obsolescencia programada ('significa') (C2)", "cifrado de extremo a extremo ('garantiza') (C2)", "gestor de contraseñas ('los expertos recomiendan') (C2, consejo esenayístico ya cubierto en A2)"]
+  },
+  "gap_fill": {
+    "added_per_pair": 5,
+    "note": "El tema ya era muy completo (98). Solo faltaban unos básicos de problema/uso.",
+    "list": ["Se me congeló el teléfono", "Casi no me queda batería", "La aplicación se cierra sola todo el tiempo", "¿Cómo me conecto al WiFi?", "¿Me ayudas a instalar esta aplicación?"]
+  },
+  "result_counts": { "en_es": 95, "es_en": 95, "before": 98, "retired_each_pair": 8, "added_each_pair": 5 }
+}
