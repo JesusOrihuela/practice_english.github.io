@@ -1259,6 +1259,102 @@
           "audioSlug": "para_curar_el_salmon_cubrelo_con_sal_azucar_y_eneldo_y_refrigeralo_durante_dos_dias"
         }
       ]
+    },
+    {
+      "id": "kitchen_water_is_boiling",
+      "source": "The water is boiling.",
+      "level": "A1",
+      "grammar": "'Estar + gerundio' expresa una acción que ocurre en este momento.",
+      "target": [
+        {
+          "text": "El agua está hirviendo.",
+          "audioSlug": "el_agua_esta_hirviendo"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_it_smells_good",
+      "source": "It smells really good.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Huele muy bien.",
+          "audioSlug": "huele_muy_bien"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_dinner_is_ready",
+      "source": "Dinner is ready.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cena está lista.",
+          "audioSlug": "la_cena_esta_lista"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_set_the_table",
+      "source": "Can you set the table?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes poner la mesa?",
+          "audioSlug": "puedes_poner_la_mesa"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_wash_your_hands",
+      "source": "Wash your hands before eating.",
+      "level": "A1",
+      "grammar": "'Lávate' es el imperativo reflexivo con el pronombre enclítico.",
+      "target": [
+        {
+          "text": "Lávate las manos antes de comer.",
+          "audioSlug": "lavate_las_manos_antes_de_comer"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_turn_off_the_stove",
+      "source": "Turn off the stove.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Apaga la estufa.",
+          "audioSlug": "apaga_la_estufa"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_im_hungry",
+      "source": "I am hungry.",
+      "level": "A1",
+      "grammar": "En español se 'tiene' hambre ('tengo hambre'), no se 'está' hambriento.",
+      "target": [
+        {
+          "text": "Tengo hambre.",
+          "audioSlug": "tengo_hambre"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_cook_over_low_heat",
+      "source": "Cook it over low heat.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cocínalo a fuego lento.",
+          "audioSlug": "cocinalo_a_fuego_lento"
+        }
+      ]
     }
   ]
 }

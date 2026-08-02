@@ -4,21 +4,71 @@
   "sources": {
     "es_target_inventory": "PCIC — Nociones (cocina, menaje, preparación) + recetas. Ver tools/sources/derived/pcic-kitchen.json (métodos de cocción en pcic-restaurant.json).",
     "en_target_inventory": "Core Inventory + NGSL + materiales ESL de cocina.",
-    "attestation_en": ["7ESL — Cooking verbs", "5 Minute English — kitchen vocabulary", "elessonworld — In the Kitchen (A1-A2)", "Promova — cooking food vocabulary"],
-    "attestation_es": ["PCIC nociones", "recursos ELE de cocina y recetas"]
+    "attestation_en": [
+      "7ESL — Cooking verbs",
+      "5 Minute English — kitchen vocabulary",
+      "elessonworld — In the Kitchen (A1-A2)",
+      "Promova — cooking food vocabulary"
+    ],
+    "attestation_es": [
+      "PCIC nociones",
+      "recursos ELE de cocina y recetas"
+    ]
   },
   "per_phrase_record": "tools/sources/derived/kitchen-attestation.json — 105 frases por función (pedir utensilio, ubicación, disponibilidad de ingrediente, instrucción de cocción/preparación/sazón, consejo de cocina, comunicación de cocina).",
   "attestation": {
     "principle": "Cocinar es un dominio de HABILIDAD que llega legítimamente a C1 en instrucciones y consejos de receta (atestiguados en recetarios). Pero la CIENCIA CULINARIA enciclopédica es prosa expositiva ('X es Y'), no comunicación — se retira aunque el vocabulario sea avanzado.",
     "retired_encyclopedic_prose": {
-      "c2": ["spherification (definición de técnica)", "tempered chocolate crystalline structure (definición)", "sous-vide precise temperature (exposición)", "fat-to-flour ratio (exposición)", "Maillard reaction browning (definición)", "lacto-fermentation lactic acid (definición)"],
-      "c1": ["saute_vs_sweat_onions (comparación definicional de técnicas)", "fat_carries_flavor_mouthfeel (exposición de ciencia de alimentos)"],
-      "b2": ["roux_base_for_white_sauces ('A roux is equal parts...' definición)"],
-      "b1": ["marinade_is_a_commonly_used_seasoning ('Marinade is...' definición)"]
+      "c2": [
+        "spherification (definición de técnica)",
+        "tempered chocolate crystalline structure (definición)",
+        "sous-vide precise temperature (exposición)",
+        "fat-to-flour ratio (exposición)",
+        "Maillard reaction browning (definición)",
+        "lacto-fermentation lactic acid (definición)"
+      ],
+      "c1": [
+        "saute_vs_sweat_onions (comparación definicional de técnicas)",
+        "fat_carries_flavor_mouthfeel (exposición de ciencia de alimentos)"
+      ],
+      "b2": [
+        "roux_base_for_white_sauces ('A roux is equal parts...' definición)"
+      ],
+      "b1": [
+        "marinade_is_a_commonly_used_seasoning ('Marinade is...' definición)"
+      ]
     },
     "kept": "Peticiones de utensilios, preguntas por ubicación/ingredientes, instrucciones de receta (imperativos: pica, deglasa, hornea), y consejos prácticos ('si la salsa se corta, añade agua fría'; 'deja reposar la carne') — todo lenguaje que una persona dice/usa en la cocina."
   },
   "leveling": "A1-C1 revisados: comunicación básica de cocina A1-A2; instrucciones/técnicas B1-B2; consejos avanzados C1. Sin C2 (la ciencia culinaria C2 era prosa, retirada). Confirmado por PCIC (menaje/preparación) y métodos de cocción (Alimentación B1-B2).",
-  "enrichment": { "grammar_tips_en_es": 6, "grammar_tips_es_en": 12, "note": "Imperativo de recetas, peticiones con enclítico, ubicación singular/plural, hay que + inf (es); imperative, pass me, we need to, calls for (en). Tope por tip para evitar repetición." },
-  "result_counts": { "en_es": 105, "es_en": 105, "retired_each_pair": 10, "ceiling": "C1 (sin C2: la ciencia culinaria era enciclopédica)" }
+  "enrichment": {
+    "grammar_tips_en_es": 6,
+    "grammar_tips_es_en": 12,
+    "note": "Imperativo de recetas, peticiones con enclítico, ubicación singular/plural, hay que + inf (es); imperative, pass me, we need to, calls for (en). Tope por tip para evitar repetición."
+  },
+  "result_counts": {
+    "en_es": 105,
+    "es_en": 105,
+    "retired_each_pair": 10,
+    "ceiling": "C1 (sin C2: la ciencia culinaria era enciclopédica)",
+    "after_gapfill": {
+      "en_es": 113,
+      "es_en": 113
+    }
+  },
+  "gap_fill": {
+    "added_per_pair": 8,
+    "list": [
+      "El agua está hirviendo",
+      "Huele muy bien",
+      "La cena está lista",
+      "¿Puedes poner la mesa?",
+      "Lávate las manos",
+      "Apaga la estufa",
+      "Tengo hambre",
+      "Cocínalo a fuego lento"
+    ],
+    "basis": "Kitchen (105) estaba skewed a tecnicas de receta y carecia de los basicos de VIDA COTIDIANA en la cocina (mismo hueco en ambos pares). Anadidos desde comunicacion de cocina cotidiana.",
+    "audio": "24 ES + 32 EN"
+  }
 }
