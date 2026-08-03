@@ -299,6 +299,126 @@
           "audioSlug": "i_rest_on_sundays"
         }
       ]
+    },
+    {
+      "id": "daily_routine_i_wake_up_early",
+      "source": "Me despierto temprano.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wake up early.",
+          "audioSlug": "i_wake_up_early"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_leave_home_at_eight",
+      "source": "Salgo de casa a las ocho.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I leave home at eight.",
+          "audioSlug": "i_leave_home_at_eight"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_study_english_every_day",
+      "source": "Estudio inglés todos los días.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I study English every day.",
+          "audioSlug": "i_study_english_every_day"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_watch_tv_at_night",
+      "source": "Veo la televisión por la noche.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I watch television at night.",
+          "audioSlug": "i_watch_television_at_night"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_run_in_the_park",
+      "source": "Corro en el parque por las mañanas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I run in the park in the mornings.",
+          "audioSlug": "i_run_in_the_park_in_the_mornings"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_prepare_breakfast",
+      "source": "Preparo el desayuno para mis hijos.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I prepare breakfast for my kids.",
+          "audioSlug": "i_prepare_breakfast_for_my_kids"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_have_coffee_before_leaving",
+      "source": "Tomo un café antes de salir.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have a coffee before leaving.",
+          "audioSlug": "i_have_a_coffee_before_leaving"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_read_before_sleeping",
+      "source": "Leo un rato antes de dormir.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I read for a while before sleeping.",
+          "audioSlug": "i_read_for_a_while_before_sleeping"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_what_do_you_do_before_breakfast",
+      "source": "¿Qué haces antes del desayuno?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What do you do before breakfast?",
+          "audioSlug": "what_do_you_do_before_breakfast"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_check_email_at_work",
+      "source": "Reviso el correo al llegar al trabajo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I check my email when I get to work.",
+          "audioSlug": "i_check_my_email_when_i_get_to_work"
+        }
+      ]
     }
   ]
 }

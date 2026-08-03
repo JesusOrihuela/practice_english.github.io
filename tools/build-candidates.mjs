@@ -47,6 +47,14 @@ const TOPIC_KEYWORDS = {
     'encantada', 'bienvenido', 'bienvenida', 'un placer', 'un abrazo',
     'saludos', 'cuídate', 'buen día',
   ],
+  daily_routine: [
+    'me levanto', 'me despierto', 'despierto', 'me ducho', 'me baño', 'me visto',
+    'desayuno', 'almuerzo', 'ceno', 'me acuesto', 'duermo', 'me duermo',
+    'rutina', 'todos los días', 'cada día', 'por la mañana', 'por la tarde',
+    'por la noche', 'me cepillo los dientes', 'salgo de casa', 'llego a casa',
+    'vuelvo a casa', 'regreso a casa', 'voy al trabajo', 'hago ejercicio',
+    'me preparo', 'antes de dormir', 'después de comer',
+  ],
 };
 
 // ── args ──────────────────────────────────────────────────────────────────
