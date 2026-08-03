@@ -21,6 +21,15 @@ as a dataset.
 - Distribution: OPUS (https://opus.nlpl.eu) — `OPUS-Tatoeba` en-es corpus
 - License: Creative Commons Attribution 2.0 France (CC BY 2.0 FR)
 
+### NGSL — New General Service List (Browne, Culligan & Phillips)
+A pedagogically curated list of ~2,801 high-frequency English lemmas for
+learners (excludes proper nouns, profanity and subtitle noise). Used as the
+clean frequency **target** for measuring English lexical coverage
+(`tools/coverage.mjs`, via `tools/sources/derived/ngsl-en.json`), not reproduced
+as an app dataset. Covers ~90% of general English text at ~2,000 words.
+- Project: https://www.newgeneralservicelist.com/
+- License: free for research and educational use, with attribution.
+
 ### FrequencyWords (Hermit Dave) — CC BY-SA 3.0
 Word-frequency lists from the OpenSubtitles 2018 corpus, used only as a
 *frequency signal* to estimate CEFR-band difficulty during content

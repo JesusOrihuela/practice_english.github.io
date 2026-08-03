@@ -22,6 +22,7 @@ tools/sources/derived/*
 !tools/sources/derived/pcic-*.json
 !tools/sources/derived/core-inventory-*.json
 !tools/sources/derived/*-provenance.json
+!tools/sources/derived/ngsl-*.json
 
 # ── Audio files (pre-generated, ~399 MB) ──────────────────────
 # Generated locally with: node tools/generate-audio.mjs

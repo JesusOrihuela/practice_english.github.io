@@ -109,3 +109,23 @@ for (const [pair, lang, label] of PAIRS) {
     }
   }
 }
+
+// ── NGSL — clean pedagogical target for the English side (es-en, target English) ──
+// The NGSL (2801 curated learner lemmas) excludes the profanity/fillers/proper
+// nouns that pollute the OpenSubtitles list, so it is the meaningful target for
+// "% of everyday communication covered".
+const ngslPath = join(ROOT, 'tools/sources/derived/ngsl-en.json');
+if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
+  const ngsl = JSON.parse(fs.readFileSync(ngslPath, 'utf8')).ranks;
+  const used = contentWords('es-en', 'en');
+  console.log(`\n=== Ingles vs NGSL (lista pedagogica, ${Object.keys(ngsl).length} lemmas) ===`);
+  for (const N of [500, 1000, 2000, 2801]) {
+    const list = Object.entries(ngsl).filter(([, r]) => r <= N).map(([w]) => w);
+    const covered = list.filter(w => used.has(w)).length;
+    console.log(`  Top-${N}: ${covered}/${list.length} (${(100 * covered / list.length).toFixed(1)}%)`);
+    if (N === 2801) {
+      const missing = list.filter(w => !used.has(w));
+      console.log(`  NGSL total no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
+    }
+  }
+}
