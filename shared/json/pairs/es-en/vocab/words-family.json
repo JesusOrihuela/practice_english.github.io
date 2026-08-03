@@ -209,6 +209,62 @@
       "translations": {
         "es": "femenino / mujer"
       }
+    },
+    {
+      "word": "friend",
+      "definition": "A person you know well and like.",
+      "example": "She is my best friend.",
+      "definition_es": "Persona que conoces bien y aprecias.",
+      "example_es": "Ella es mi mejor amiga.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "friend",
+      "translations": {
+        "es": "amigo / amiga"
+      }
+    },
+    {
+      "word": "boyfriend",
+      "definition": "A man someone is in a romantic relationship with.",
+      "example": "Her boyfriend works at the hospital.",
+      "definition_es": "Hombre con quien alguien tiene una relación amorosa.",
+      "example_es": "Su novio trabaja en el hospital.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "boyfriend",
+      "translations": {
+        "es": "novio"
+      }
+    },
+    {
+      "word": "girlfriend",
+      "definition": "A woman someone is in a romantic relationship with.",
+      "example": "He introduced his girlfriend to us.",
+      "definition_es": "Mujer con quien alguien tiene una relación amorosa.",
+      "example_es": "Nos presentó a su novia.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "girlfriend",
+      "translations": {
+        "es": "novia"
+      }
+    },
+    {
+      "word": "neighbor",
+      "definition": "A person who lives near you.",
+      "example": "Our neighbor watered the plants for us.",
+      "definition_es": "Persona que vive cerca de ti.",
+      "example_es": "Nuestro vecino nos regó las plantas.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "neighbor",
+      "translations": {
+        "es": "vecino / vecina"
+      }
     }
   ]
 }

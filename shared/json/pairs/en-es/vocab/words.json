@@ -2197,6 +2197,384 @@
       "translations": {
         "es": "elegir / escoger"
       }
+    },
+    {
+      "word": "thing",
+      "definition": "An object or matter that is not named exactly.",
+      "example": "What is that thing on the table?",
+      "definition_es": "Objeto o asunto que no se nombra con exactitud.",
+      "example_es": "¿Qué es esa cosa sobre la mesa?",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "thing",
+      "translations": {
+        "es": "cosa"
+      }
+    },
+    {
+      "word": "people",
+      "definition": "Human beings in general or as a group.",
+      "example": "Many people came to the concert.",
+      "definition_es": "Seres humanos en general o en grupo.",
+      "example_es": "Vino mucha gente al concierto.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "people",
+      "translations": {
+        "es": "gente / personas"
+      }
+    },
+    {
+      "word": "truth",
+      "definition": "What is true and matches the facts.",
+      "example": "She always tells the truth.",
+      "definition_es": "Lo que es verdadero y coincide con los hechos.",
+      "example_es": "Ella siempre dice la verdad.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "A2",
+      "id": "truth",
+      "translations": {
+        "es": "verdad"
+      }
+    },
+    {
+      "word": "idea",
+      "definition": "A thought or plan formed in the mind.",
+      "example": "I have a good idea for the project.",
+      "definition_es": "Pensamiento o plan que se forma en la mente.",
+      "example_es": "Tengo una buena idea para el proyecto.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "idea",
+      "translations": {
+        "es": "idea"
+      }
+    },
+    {
+      "word": "light",
+      "definition": "The energy from the sun or a lamp that lets us see.",
+      "example": "Please turn on the light.",
+      "definition_es": "Energía del sol o una lámpara que permite ver.",
+      "example_es": "Por favor, enciende la luz.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "light",
+      "translations": {
+        "es": "luz"
+      }
+    },
+    {
+      "word": "voice",
+      "definition": "The sound a person makes when speaking or singing.",
+      "example": "She has a beautiful singing voice.",
+      "definition_es": "Sonido que hace una persona al hablar o cantar.",
+      "example_es": "Ella tiene una voz preciosa al cantar.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "voice",
+      "translations": {
+        "es": "voz"
+      }
+    },
+    {
+      "word": "luck",
+      "definition": "Good or bad things that happen by chance.",
+      "example": "Good luck on your exam.",
+      "definition_es": "Cosas buenas o malas que pasan por azar.",
+      "example_es": "Buena suerte en tu examen.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "luck",
+      "translations": {
+        "es": "suerte"
+      }
+    },
+    {
+      "word": "fear",
+      "definition": "The bad feeling you have when you are in danger.",
+      "example": "He has a fear of heights.",
+      "definition_es": "Sensación desagradable ante un peligro.",
+      "example_es": "Él tiene miedo a las alturas.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "fear",
+      "translations": {
+        "es": "miedo"
+      }
+    },
+    {
+      "word": "dream",
+      "definition": "Images and stories your mind creates while you sleep.",
+      "example": "I had a strange dream last night.",
+      "definition_es": "Imágenes que crea la mente mientras duermes.",
+      "example_es": "Tuve un sueño extraño anoche.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "dream",
+      "translations": {
+        "es": "sueño"
+      }
+    },
+    {
+      "word": "world",
+      "definition": "The earth and all the people and places on it.",
+      "example": "She wants to travel around the world.",
+      "definition_es": "La Tierra y todo lo que hay en ella.",
+      "example_es": "Ella quiere viajar por todo el mundo.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "world",
+      "translations": {
+        "es": "mundo"
+      }
+    },
+    {
+      "word": "nature",
+      "definition": "Plants, animals, and everything in the natural world.",
+      "example": "We spent the weekend enjoying nature.",
+      "definition_es": "Plantas, animales y todo el mundo natural.",
+      "example_es": "Pasamos el fin de semana disfrutando la naturaleza.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "A2",
+      "id": "nature",
+      "translations": {
+        "es": "naturaleza"
+      }
+    },
+    {
+      "word": "success",
+      "definition": "The result of doing something well or reaching a goal.",
+      "example": "The show was a big success.",
+      "definition_es": "Resultado de hacer algo bien o lograr una meta.",
+      "example_es": "El espectáculo fue un gran éxito.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "success",
+      "translations": {
+        "es": "éxito"
+      }
+    },
+    {
+      "word": "silence",
+      "definition": "Complete quiet, with no sound at all.",
+      "example": "The library was in total silence.",
+      "definition_es": "Ausencia total de ruido.",
+      "example_es": "La biblioteca estaba en total silencio.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "A2",
+      "id": "silence",
+      "translations": {
+        "es": "silencio"
+      }
+    },
+    {
+      "word": "joy",
+      "definition": "A feeling of great happiness.",
+      "example": "The children shouted with joy.",
+      "definition_es": "Sentimiento de gran felicidad.",
+      "example_es": "Los niños gritaron de alegría.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "joy",
+      "translations": {
+        "es": "alegría"
+      }
+    },
+    {
+      "word": "hope",
+      "definition": "The wish for something good to happen.",
+      "example": "There is still hope of finding them.",
+      "definition_es": "Deseo de que algo bueno suceda.",
+      "example_es": "Todavía hay esperanza de encontrarlos.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "hope",
+      "translations": {
+        "es": "esperanza"
+      }
+    },
+    {
+      "word": "dog",
+      "definition": "A common animal kept as a pet or for work.",
+      "example": "Their dog barks at strangers.",
+      "definition_es": "Animal común que se tiene como mascota.",
+      "example_es": "Su perro le ladra a los extraños.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "dog",
+      "translations": {
+        "es": "perro"
+      }
+    },
+    {
+      "word": "river",
+      "definition": "A large natural stream of water that flows to the sea.",
+      "example": "They swam in the river all summer.",
+      "definition_es": "Corriente natural de agua que va al mar.",
+      "example_es": "Nadaron en el río todo el verano.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "river",
+      "translations": {
+        "es": "río"
+      }
+    },
+    {
+      "word": "beach",
+      "definition": "The sandy area next to the sea.",
+      "example": "We relaxed on the beach all day.",
+      "definition_es": "Zona de arena junto al mar.",
+      "example_es": "Descansamos en la playa todo el día.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "beach",
+      "translations": {
+        "es": "playa"
+      }
+    },
+    {
+      "word": "mountain",
+      "definition": "A very high area of land with steep sides.",
+      "example": "They climbed the highest mountain in the region.",
+      "definition_es": "Gran elevación de terreno con laderas empinadas.",
+      "example_es": "Escalaron la montaña más alta de la región.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "mountain",
+      "translations": {
+        "es": "montaña"
+      }
+    },
+    {
+      "word": "island",
+      "definition": "A piece of land surrounded by water.",
+      "example": "The island is famous for its beaches.",
+      "definition_es": "Tierra rodeada de agua por todos lados.",
+      "example_es": "La isla es famosa por sus playas.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "island",
+      "translations": {
+        "es": "isla"
+      }
+    },
+    {
+      "word": "flower",
+      "definition": "The colorful part of a plant that produces seeds.",
+      "example": "He gave her a bunch of flowers.",
+      "definition_es": "Parte colorida de una planta que da semillas.",
+      "example_es": "Él le regaló un ramo de flores.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "flower",
+      "translations": {
+        "es": "flor"
+      }
+    },
+    {
+      "word": "bird",
+      "definition": "An animal with feathers and wings that can usually fly.",
+      "example": "A small bird sang outside the window.",
+      "definition_es": "Animal con plumas y alas que suele volar.",
+      "example_es": "Un pájaro pequeño cantaba junto a la ventana.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "bird",
+      "translations": {
+        "es": "pájaro / ave"
+      }
+    },
+    {
+      "word": "lake",
+      "definition": "A large area of water surrounded by land.",
+      "example": "We rented a boat on the lake.",
+      "definition_es": "Gran extensión de agua rodeada de tierra.",
+      "example_es": "Rentamos un bote en el lago.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "lake",
+      "translations": {
+        "es": "lago"
+      }
+    },
+    {
+      "word": "planet",
+      "definition": "A large body in space that moves around a star.",
+      "example": "Earth is the third planet from the sun.",
+      "definition_es": "Cuerpo grande del espacio que gira en torno a una estrella.",
+      "example_es": "La Tierra es el tercer planeta desde el sol.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "planet",
+      "translations": {
+        "es": "planeta"
+      }
+    },
+    {
+      "word": "story",
+      "definition": "An account of real or invented events.",
+      "example": "My grandfather told us a funny story.",
+      "definition_es": "Relato de hechos reales o inventados.",
+      "example_es": "Mi abuelo nos contó un cuento divertido.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "story",
+      "translations": {
+        "es": "cuento / historia"
+      }
+    },
+    {
+      "word": "novel",
+      "definition": "A long written story about invented characters.",
+      "example": "She is reading a mystery novel.",
+      "definition_es": "Historia larga escrita sobre personajes inventados.",
+      "example_es": "Ella está leyendo una novela de misterio.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "novel",
+      "translations": {
+        "es": "novela"
+      }
+    },
+    {
+      "word": "painter",
+      "definition": "An artist who makes pictures with paint.",
+      "example": "The painter sold three works this month.",
+      "definition_es": "Artista que hace cuadros con pintura.",
+      "example_es": "El pintor vendió tres obras este mes.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "painter",
+      "translations": {
+        "es": "pintor / pintora"
+      }
     }
   ]
 }
