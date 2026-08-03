@@ -755,6 +755,42 @@
       "gloss_example": {
         "en": "The price is shown per unit."
       }
+    },
+    {
+      "id": "vender",
+      "term": "vender",
+      "definition": "Dar algo a cambio de dinero.",
+      "example": "Vende frutas en el mercado.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to sell"
+      },
+      "gloss": {
+        "en": "To give something in exchange for money."
+      },
+      "gloss_example": {
+        "en": "He sells fruit at the market."
+      }
+    },
+    {
+      "id": "valer",
+      "term": "valer",
+      "definition": "Tener un precio o un valor.",
+      "example": "¿Cuánto vale este libro?",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to be worth / to cost"
+      },
+      "gloss": {
+        "en": "To have a price or a value."
+      },
+      "gloss_example": {
+        "en": "How much is this book worth?"
+      }
     }
   ]
 }
