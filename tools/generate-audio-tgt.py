@@ -147,8 +147,15 @@ PHRASE_TOPICS = [
     'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
 ]
 
-# emociones and museums are phrase-only (no vocabulary file), mirroring shared/js/topics.js
-VOCAB_TOPICS = [t for t in PHRASE_TOPICS if t not in ('emociones', 'museums')]
+# Vocab topics = topics with a words-{topic}.json file. Declared explicitly because
+# 'society' is vocab-only (not a phrase topic) and several phrase topics are phrase-only
+# (no vocabulary file). Mirrors VOCAB_TOPICS in shared/js/topics.js and tools/audit.mjs.
+VOCAB_TOPICS = [
+    'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
+    'transportation', 'airport', 'accommodation',
+    'movies', 'music', 'theater',
+    'gym', 'technology', 'accountability',
+]
 
 ROOT  = Path(__file__).parent.parent  # practice_english.github.io/
 JSON  = ROOT / 'shared' / 'json'

@@ -1679,6 +1679,524 @@
       "translations": {
         "es": "superfluo / innecesario"
       }
+    },
+    {
+      "word": "example",
+      "definition": "A thing that shows what a larger group is like.",
+      "example": "This painting is a good example of her style.",
+      "definition_es": "Cosa que muestra cómo es un grupo mayor.",
+      "example_es": "Este cuadro es un buen ejemplo de su estilo.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "example",
+      "translations": {
+        "es": "ejemplo"
+      }
+    },
+    {
+      "word": "reason",
+      "definition": "The cause or explanation for something.",
+      "example": "There is no reason to worry.",
+      "definition_es": "Causa o explicación de algo.",
+      "example_es": "No hay razón para preocuparse.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "reason",
+      "translations": {
+        "es": "razón / motivo"
+      }
+    },
+    {
+      "word": "result",
+      "definition": "Something that happens because of an action or event.",
+      "example": "The test results arrived by email.",
+      "definition_es": "Lo que ocurre a causa de una acción.",
+      "example_es": "Los resultados del examen llegaron por correo.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "result",
+      "translations": {
+        "es": "resultado"
+      }
+    },
+    {
+      "word": "fact",
+      "definition": "A piece of information that is known to be true.",
+      "example": "It is a fact that water boils at one hundred degrees.",
+      "definition_es": "Información que se sabe que es verdadera.",
+      "example_es": "Es un hecho que el agua hierve a cien grados.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "fact",
+      "translations": {
+        "es": "hecho"
+      }
+    },
+    {
+      "word": "level",
+      "definition": "A position on a scale of amount, size, or quality.",
+      "example": "Her English is at an advanced level.",
+      "definition_es": "Posición en una escala de cantidad o calidad.",
+      "example_es": "Su inglés está en un nivel avanzado.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "level",
+      "translations": {
+        "es": "nivel"
+      }
+    },
+    {
+      "word": "member",
+      "definition": "A person who belongs to a group or organization.",
+      "example": "She is a member of the local sports club.",
+      "definition_es": "Persona que pertenece a un grupo.",
+      "example_es": "Ella es miembro del club deportivo local.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "member",
+      "translations": {
+        "es": "miembro"
+      }
+    },
+    {
+      "word": "age",
+      "definition": "The number of years a person has lived.",
+      "example": "Children of the same age often play together.",
+      "definition_es": "Número de años que alguien ha vivido.",
+      "example_es": "Los niños de la misma edad suelen jugar juntos.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "age",
+      "translations": {
+        "es": "edad"
+      }
+    },
+    {
+      "word": "history",
+      "definition": "The study of events that happened in the past.",
+      "example": "He teaches the history of ancient Rome.",
+      "definition_es": "Estudio de los hechos ocurridos en el pasado.",
+      "example_es": "Él enseña la historia de la antigua Roma.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "history",
+      "translations": {
+        "es": "historia"
+      }
+    },
+    {
+      "word": "game",
+      "definition": "An activity with rules that people play for fun.",
+      "example": "The children invented a new game.",
+      "definition_es": "Actividad con reglas que se juega por diversión.",
+      "example_es": "Los niños inventaron un nuevo juego.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "game",
+      "translations": {
+        "es": "juego / partido"
+      }
+    },
+    {
+      "word": "rule",
+      "definition": "An instruction that says what is allowed or not allowed.",
+      "example": "The first rule is to arrive on time.",
+      "definition_es": "Instrucción que dice qué se permite o no.",
+      "example_es": "La primera regla es llegar a tiempo.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "rule",
+      "translations": {
+        "es": "regla / norma"
+      }
+    },
+    {
+      "word": "letter",
+      "definition": "A written message sent to someone, usually by mail.",
+      "example": "She wrote a long letter to her grandmother.",
+      "definition_es": "Mensaje escrito que se envía a alguien.",
+      "example_es": "Escribió una carta larga a su abuela.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "letter",
+      "translations": {
+        "es": "carta / letra"
+      }
+    },
+    {
+      "word": "minute",
+      "definition": "A unit of time equal to sixty seconds.",
+      "example": "The bus leaves in ten minutes.",
+      "definition_es": "Unidad de tiempo de sesenta segundos.",
+      "example_es": "El autobús sale en diez minutos.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "minute",
+      "translations": {
+        "es": "minuto"
+      }
+    },
+    {
+      "word": "town",
+      "definition": "A place with houses and shops, smaller than a city.",
+      "example": "They live in a small town by the sea.",
+      "definition_es": "Lugar con casas y tiendas, menor que una ciudad.",
+      "example_es": "Viven en un pueblo pequeño junto al mar.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "town",
+      "translations": {
+        "es": "pueblo"
+      }
+    },
+    {
+      "word": "color",
+      "definition": "The quality such as red, blue, or green that we see in things.",
+      "example": "Blue is my favorite color.",
+      "definition_es": "Cualidad como el rojo o el azul que vemos.",
+      "example_es": "El azul es mi color favorito.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "color",
+      "translations": {
+        "es": "color"
+      }
+    },
+    {
+      "word": "situation",
+      "definition": "The set of conditions at a particular time and place.",
+      "example": "The company is in a difficult situation.",
+      "definition_es": "Conjunto de condiciones en un momento y lugar.",
+      "example_es": "La empresa está en una situación difícil.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "situation",
+      "translations": {
+        "es": "situación"
+      }
+    },
+    {
+      "word": "event",
+      "definition": "Something important that happens, often planned.",
+      "example": "The concert was the biggest event of the year.",
+      "definition_es": "Algo importante que ocurre, a menudo planeado.",
+      "example_es": "El concierto fue el mayor evento del año.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "event",
+      "translations": {
+        "es": "evento / acontecimiento"
+      }
+    },
+    {
+      "word": "decision",
+      "definition": "A choice made after thinking about the options.",
+      "example": "Choosing a career is an important decision.",
+      "definition_es": "Elección hecha tras pensar en las opciones.",
+      "example_es": "Elegir una carrera es una decisión importante.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "decision",
+      "translations": {
+        "es": "decisión"
+      }
+    },
+    {
+      "word": "role",
+      "definition": "The part or function that someone or something has.",
+      "example": "Parents play a key role in education.",
+      "definition_es": "Función que cumple alguien o algo.",
+      "example_es": "Los padres tienen un papel clave en la educación.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "role",
+      "translations": {
+        "es": "papel / rol"
+      }
+    },
+    {
+      "word": "detail",
+      "definition": "A small piece of information about something.",
+      "example": "She explained the plan in great detail.",
+      "definition_es": "Pequeña parte de información sobre algo.",
+      "example_es": "Explicó el plan con mucho detalle.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "detail",
+      "translations": {
+        "es": "detalle"
+      }
+    },
+    {
+      "word": "step",
+      "definition": "One of the actions in a process to reach a goal.",
+      "example": "The first step is to open an account.",
+      "definition_es": "Una de las acciones de un proceso.",
+      "example_es": "El primer paso es abrir una cuenta.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "step",
+      "translations": {
+        "es": "paso"
+      }
+    },
+    {
+      "word": "activity",
+      "definition": "Something that people do, often for fun or exercise.",
+      "example": "Swimming is a healthy activity.",
+      "definition_es": "Algo que la gente hace, a veces por diversión.",
+      "example_es": "Nadar es una actividad saludable.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "activity",
+      "translations": {
+        "es": "actividad"
+      }
+    },
+    {
+      "word": "position",
+      "definition": "The place where someone or something is located.",
+      "example": "The player changed his position on the field.",
+      "definition_es": "Lugar donde está alguien o algo.",
+      "example_es": "El jugador cambió su posición en la cancha.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "position",
+      "translations": {
+        "es": "posición"
+      }
+    },
+    {
+      "word": "test",
+      "definition": "A set of questions used to measure knowledge or skill.",
+      "example": "She passed her driving test.",
+      "definition_es": "Conjunto de preguntas para medir conocimiento.",
+      "example_es": "Aprobó su examen de manejo.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "test",
+      "translations": {
+        "es": "prueba / examen"
+      }
+    },
+    {
+      "word": "term",
+      "definition": "A word or phrase used with a specific meaning.",
+      "example": "Explain the term in simple words.",
+      "definition_es": "Palabra o frase con un significado específico.",
+      "example_es": "Explica el término con palabras sencillas.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "term",
+      "translations": {
+        "es": "término"
+      }
+    },
+    {
+      "word": "animal",
+      "definition": "A living creature that is not a plant or a human.",
+      "example": "The zoo has animals from every continent.",
+      "definition_es": "Ser vivo que no es planta ni humano.",
+      "example_es": "El zoológico tiene animales de todos los continentes.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "animal",
+      "translations": {
+        "es": "animal"
+      }
+    },
+    {
+      "word": "tree",
+      "definition": "A tall plant with a trunk, branches, and leaves.",
+      "example": "We planted a tree in the garden.",
+      "definition_es": "Planta alta con tronco, ramas y hojas.",
+      "example_es": "Plantamos un árbol en el jardín.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "tree",
+      "translations": {
+        "es": "árbol"
+      }
+    },
+    {
+      "word": "plant",
+      "definition": "A living thing that grows in the ground and has leaves.",
+      "example": "She waters the plants every morning.",
+      "definition_es": "Ser vivo que crece en la tierra y tiene hojas.",
+      "example_es": "Ella riega las plantas cada mañana.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "plant",
+      "translations": {
+        "es": "planta"
+      }
+    },
+    {
+      "word": "star",
+      "definition": "A bright point of light seen in the night sky.",
+      "example": "We watched the stars from the hill.",
+      "definition_es": "Punto brillante de luz en el cielo nocturno.",
+      "example_es": "Vimos las estrellas desde la colina.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "star",
+      "translations": {
+        "es": "estrella"
+      }
+    },
+    {
+      "word": "land",
+      "definition": "The solid part of the earth's surface.",
+      "example": "The farmer owns a large piece of land.",
+      "definition_es": "Parte sólida de la superficie de la Tierra.",
+      "example_es": "El granjero posee un gran terreno.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "land",
+      "translations": {
+        "es": "tierra / terreno"
+      }
+    },
+    {
+      "word": "come",
+      "definition": "To move toward the person who is speaking.",
+      "example": "Please come here for a moment.",
+      "definition_es": "Moverse hacia quien habla.",
+      "example_es": "Por favor, ven aquí un momento.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "come",
+      "translations": {
+        "es": "venir"
+      }
+    },
+    {
+      "word": "become",
+      "definition": "To start to be something over time.",
+      "example": "She became a doctor after six years.",
+      "definition_es": "Empezar a ser algo con el tiempo.",
+      "example_es": "Se convirtió en médica tras seis años.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "become",
+      "translations": {
+        "es": "convertirse / volverse"
+      }
+    },
+    {
+      "word": "happen",
+      "definition": "To take place, often without being planned.",
+      "example": "The accident happened near the bridge.",
+      "definition_es": "Ocurrir, a menudo sin planearse.",
+      "example_es": "El accidente ocurrió cerca del puente.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "happen",
+      "translations": {
+        "es": "pasar / suceder"
+      }
+    },
+    {
+      "word": "remember",
+      "definition": "To keep something in your mind or bring it back.",
+      "example": "I can't remember her phone number.",
+      "definition_es": "Traer algo a la mente o guardarlo.",
+      "example_es": "No puedo recordar su número de teléfono.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "remember",
+      "translations": {
+        "es": "recordar"
+      }
+    },
+    {
+      "word": "decide",
+      "definition": "To make a choice after thinking about it.",
+      "example": "They decided to move to another city.",
+      "definition_es": "Hacer una elección tras pensarla.",
+      "example_es": "Decidieron mudarse a otra ciudad.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "decide",
+      "translations": {
+        "es": "decidir"
+      }
+    },
+    {
+      "word": "spend",
+      "definition": "To use money to pay for things, or to use time.",
+      "example": "We spent the whole afternoon at the museum.",
+      "definition_es": "Usar dinero para pagar, o usar tiempo.",
+      "example_es": "Pasamos toda la tarde en el museo.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "spend",
+      "translations": {
+        "es": "gastar / pasar"
+      }
+    },
+    {
+      "word": "grow",
+      "definition": "To become bigger or to develop over time.",
+      "example": "These flowers grow quickly in spring.",
+      "definition_es": "Hacerse más grande o desarrollarse.",
+      "example_es": "Estas flores crecen rápido en primavera.",
+      "category": "Verb",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "grow",
+      "translations": {
+        "es": "crecer"
+      }
+    },
+    {
+      "word": "choose",
+      "definition": "To pick one thing from several possibilities.",
+      "example": "You can choose any dessert you like.",
+      "definition_es": "Tomar una cosa entre varias posibilidades.",
+      "example_es": "Puedes elegir el postre que quieras.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "choose",
+      "translations": {
+        "es": "elegir / escoger"
+      }
     }
   ]
 }

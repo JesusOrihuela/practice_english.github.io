@@ -35,9 +35,15 @@ const AppTopics = (() => {
 
   // Phrase-only topics (no vocabulary set) are excluded from the word activities
   // (Vocabulario, Quiz) which would otherwise fail to load them.
-  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival']);
-  const VOCAB_TOPICS = [
+  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'daily_routine', 'weather', 'directions', 'survival']);
+  // Vocab-only topics (no phrase set) — like 'general', they carry a word list
+  // but are not part of the CEFR learning path. Declared explicitly here.
+  const VOCAB_ONLY = [
     { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
+    { id: 'society', label: 'Sociedad y Trabajo', labelEn: 'Society & Work', emoji: '🏛️' },
+  ];
+  const VOCAB_TOPICS = [
+    ...VOCAB_ONLY,
     ...PHRASE_TOPICS.filter(t => !PHRASE_ONLY.has(t.id)),
   ];
 

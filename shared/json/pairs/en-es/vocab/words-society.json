@@ -1,0 +1,494 @@
+{
+  "words": [
+    {
+      "word": "country",
+      "definition": "An area of land with its own government and people.",
+      "example": "She has visited more than thirty countries.",
+      "definition_es": "Territorio con su propio gobierno y población.",
+      "example_es": "Ha visitado más de treinta países.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "country",
+      "translations": {
+        "es": "país"
+      }
+    },
+    {
+      "word": "job",
+      "definition": "The work a person does regularly to earn money.",
+      "example": "He found a new job at a local bank.",
+      "definition_es": "Trabajo que alguien hace para ganar dinero.",
+      "example_es": "Consiguió un nuevo empleo en un banco local.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "job",
+      "translations": {
+        "es": "trabajo / empleo"
+      }
+    },
+    {
+      "word": "government",
+      "definition": "The group of people who officially control a country.",
+      "example": "The government announced a new education plan.",
+      "definition_es": "Grupo que dirige oficialmente un país.",
+      "example_es": "El gobierno anunció un nuevo plan de educación.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "government",
+      "translations": {
+        "es": "gobierno"
+      }
+    },
+    {
+      "word": "law",
+      "definition": "A rule made by a government that everyone must obey.",
+      "example": "A new law bans smoking in restaurants.",
+      "definition_es": "Regla que hace el gobierno y todos deben cumplir.",
+      "example_es": "Una nueva ley prohíbe fumar en los restaurantes.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "law",
+      "translations": {
+        "es": "ley"
+      }
+    },
+    {
+      "word": "president",
+      "definition": "The elected leader of a country or an organization.",
+      "example": "The president gave a speech on television.",
+      "definition_es": "Líder elegido de un país u organización.",
+      "example_es": "La presidenta dio un discurso por televisión.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "president",
+      "translations": {
+        "es": "presidente / presidenta"
+      }
+    },
+    {
+      "word": "police",
+      "definition": "The official group that keeps order and enforces the law.",
+      "example": "The police arrived quickly after the accident.",
+      "definition_es": "Grupo oficial que mantiene el orden y la ley.",
+      "example_es": "La policía llegó rápido tras el accidente.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "police",
+      "translations": {
+        "es": "policía"
+      }
+    },
+    {
+      "word": "war",
+      "definition": "An armed fight between countries or groups.",
+      "example": "The war lasted for almost ten years.",
+      "definition_es": "Lucha armada entre países o grupos.",
+      "example_es": "La guerra duró casi diez años.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "war",
+      "translations": {
+        "es": "guerra"
+      }
+    },
+    {
+      "word": "vote",
+      "definition": "To choose a candidate or option in an election.",
+      "example": "Millions of people voted in the election.",
+      "definition_es": "Elegir a un candidato u opción en una votación.",
+      "example_es": "Millones de personas votaron en las elecciones.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "vote",
+      "translations": {
+        "es": "votar"
+      }
+    },
+    {
+      "word": "worker",
+      "definition": "A person who does a particular kind of work.",
+      "example": "The factory workers asked for higher pay.",
+      "definition_es": "Persona que realiza un trabajo determinado.",
+      "example_es": "Los trabajadores de la fábrica pidieron mejor pago.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "worker",
+      "translations": {
+        "es": "trabajador / trabajadora"
+      }
+    },
+    {
+      "word": "university",
+      "definition": "A place where people study for a degree after school.",
+      "example": "She studies medicine at the university.",
+      "definition_es": "Lugar donde se estudia una carrera tras la escuela.",
+      "example_es": "Ella estudia medicina en la universidad.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "university",
+      "translations": {
+        "es": "universidad"
+      }
+    },
+    {
+      "word": "science",
+      "definition": "The study of the natural world through observation and testing.",
+      "example": "My daughter loves science and biology.",
+      "definition_es": "Estudio del mundo natural mediante la observación.",
+      "example_es": "A mi hija le encanta la ciencia y la biología.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "science",
+      "translations": {
+        "es": "ciencia"
+      }
+    },
+    {
+      "word": "study",
+      "definition": "To spend time learning about a subject.",
+      "example": "They study English three times a week.",
+      "definition_es": "Dedicar tiempo a aprender sobre un tema.",
+      "example_es": "Estudian inglés tres veces por semana.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "study",
+      "translations": {
+        "es": "estudiar"
+      }
+    },
+    {
+      "word": "teach",
+      "definition": "To help someone learn a subject or skill.",
+      "example": "She teaches math at a primary school.",
+      "definition_es": "Ayudar a alguien a aprender algo.",
+      "example_es": "Ella enseña matemáticas en una escuela primaria.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "teach",
+      "translations": {
+        "es": "enseñar"
+      }
+    },
+    {
+      "word": "learn",
+      "definition": "To gain knowledge or a skill by studying or practising.",
+      "example": "Children learn languages very quickly.",
+      "definition_es": "Adquirir conocimiento o una habilidad.",
+      "example_es": "Los niños aprenden idiomas muy rápido.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "learn",
+      "translations": {
+        "es": "aprender"
+      }
+    },
+    {
+      "word": "state",
+      "definition": "A country or a region within a country, seen as a political unit.",
+      "example": "Texas is the second largest state in the country.",
+      "definition_es": "País o región dentro de un país como unidad política.",
+      "example_es": "Texas es el segundo estado más grande del país.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "state",
+      "translations": {
+        "es": "estado"
+      }
+    },
+    {
+      "word": "election",
+      "definition": "An event where people vote to choose their leaders.",
+      "example": "The election takes place every four years.",
+      "definition_es": "Evento en el que se vota para elegir líderes.",
+      "example_es": "La elección se realiza cada cuatro años.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "election",
+      "translations": {
+        "es": "elección"
+      }
+    },
+    {
+      "word": "court",
+      "definition": "The place where legal cases are decided by a judge.",
+      "example": "The case will be heard in court next month.",
+      "definition_es": "Lugar donde un juez resuelve casos legales.",
+      "example_es": "El caso se verá en el tribunal el próximo mes.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "court",
+      "translations": {
+        "es": "tribunal / corte"
+      }
+    },
+    {
+      "word": "society",
+      "definition": "All the people living together in an organized community.",
+      "example": "Technology has changed modern society deeply.",
+      "definition_es": "Conjunto de personas que viven organizadas en comunidad.",
+      "example_es": "La tecnología ha cambiado mucho la sociedad moderna.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "society",
+      "translations": {
+        "es": "sociedad"
+      }
+    },
+    {
+      "word": "nation",
+      "definition": "A large group of people who share a country and culture.",
+      "example": "The whole nation celebrated the victory.",
+      "definition_es": "Gran grupo de personas que comparten país y cultura.",
+      "example_es": "Toda la nación celebró la victoria.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "nation",
+      "translations": {
+        "es": "nación"
+      }
+    },
+    {
+      "word": "leader",
+      "definition": "A person who guides or directs a group.",
+      "example": "She became the leader of the party.",
+      "definition_es": "Persona que guía o dirige a un grupo.",
+      "example_es": "Ella se convirtió en la líder del partido.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "leader",
+      "translations": {
+        "es": "líder"
+      }
+    },
+    {
+      "word": "community",
+      "definition": "A group of people who live in the same area or share interests.",
+      "example": "The local community organized a food drive.",
+      "definition_es": "Grupo de personas que comparten lugar o intereses.",
+      "example_es": "La comunidad local organizó una colecta de alimentos.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "community",
+      "translations": {
+        "es": "comunidad"
+      }
+    },
+    {
+      "word": "organization",
+      "definition": "A group of people working together for a shared purpose.",
+      "example": "She works for a charity organization.",
+      "definition_es": "Grupo de personas que trabajan por un fin común.",
+      "example_es": "Ella trabaja para una organización benéfica.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "organization",
+      "translations": {
+        "es": "organización"
+      }
+    },
+    {
+      "word": "official",
+      "definition": "Approved by or coming from a person in authority.",
+      "example": "We are waiting for the official results.",
+      "definition_es": "Aprobado por una autoridad o que proviene de ella.",
+      "example_es": "Estamos esperando los resultados oficiales.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "official",
+      "translations": {
+        "es": "oficial"
+      }
+    },
+    {
+      "word": "military",
+      "definition": "Relating to soldiers or the armed forces.",
+      "example": "He served in the military for ten years.",
+      "definition_es": "Relacionado con los soldados o las fuerzas armadas.",
+      "example_es": "Sirvió en el ejército durante diez años.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "military",
+      "translations": {
+        "es": "militar"
+      }
+    },
+    {
+      "word": "campaign",
+      "definition": "A series of planned actions to reach a political or social goal.",
+      "example": "The campaign raised money for local schools.",
+      "definition_es": "Conjunto de acciones para lograr un objetivo político o social.",
+      "example_es": "La campaña recaudó dinero para las escuelas locales.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "campaign",
+      "translations": {
+        "es": "campaña"
+      }
+    },
+    {
+      "word": "career",
+      "definition": "The series of jobs a person has over their working life.",
+      "example": "She built a successful career in journalism.",
+      "definition_es": "Serie de empleos de una persona a lo largo de su vida.",
+      "example_es": "Construyó una carrera exitosa en el periodismo.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "career",
+      "translations": {
+        "es": "carrera profesional"
+      }
+    },
+    {
+      "word": "industry",
+      "definition": "The making of goods in factories, or a type of business activity.",
+      "example": "The car industry employs thousands of people.",
+      "definition_es": "Producción de bienes en fábricas o tipo de negocio.",
+      "example_es": "La industria del automóvil emplea a miles de personas.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "industry",
+      "translations": {
+        "es": "industria"
+      }
+    },
+    {
+      "word": "trade",
+      "definition": "The activity of buying and selling goods or services.",
+      "example": "Trade between the two countries grew last year.",
+      "definition_es": "Actividad de comprar y vender bienes o servicios.",
+      "example_es": "El comercio entre los dos países creció el año pasado.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "trade",
+      "translations": {
+        "es": "comercio"
+      }
+    },
+    {
+      "word": "firm",
+      "definition": "A company or business that sells goods or services.",
+      "example": "She works for a law firm downtown.",
+      "definition_es": "Compañía que vende bienes o servicios.",
+      "example_es": "Ella trabaja para una firma de abogados en el centro.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "firm",
+      "translations": {
+        "es": "empresa / firma"
+      }
+    },
+    {
+      "word": "education",
+      "definition": "The process of teaching and learning in schools.",
+      "example": "Good education opens many doors.",
+      "definition_es": "Proceso de enseñar y aprender en las escuelas.",
+      "example_es": "Una buena educación abre muchas puertas.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "education",
+      "translations": {
+        "es": "educación"
+      }
+    },
+    {
+      "word": "knowledge",
+      "definition": "The information and understanding a person has about something.",
+      "example": "Her knowledge of history is impressive.",
+      "definition_es": "Información y comprensión que alguien tiene sobre algo.",
+      "example_es": "Su conocimiento de la historia es impresionante.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "knowledge",
+      "translations": {
+        "es": "conocimiento"
+      }
+    },
+    {
+      "word": "research",
+      "definition": "Careful study done to discover new facts about a subject.",
+      "example": "The team is doing research on clean energy.",
+      "definition_es": "Estudio cuidadoso para descubrir nuevos hechos.",
+      "example_es": "El equipo hace investigación sobre energía limpia.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "research",
+      "translations": {
+        "es": "investigación"
+      }
+    },
+    {
+      "word": "skill",
+      "definition": "The ability to do something well through practice.",
+      "example": "Cooking is a useful skill to learn.",
+      "definition_es": "Capacidad de hacer algo bien con la práctica.",
+      "example_es": "Cocinar es una habilidad útil que vale la pena aprender.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "skill",
+      "translations": {
+        "es": "habilidad / destreza"
+      }
+    },
+    {
+      "word": "degree",
+      "definition": "A qualification given by a university after finishing a course.",
+      "example": "He earned a degree in engineering.",
+      "definition_es": "Título que da una universidad al terminar una carrera.",
+      "example_es": "Obtuvo un título en ingeniería.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "degree",
+      "translations": {
+        "es": "título / grado"
+      }
+    },
+    {
+      "word": "subject",
+      "definition": "An area of knowledge studied at school or university.",
+      "example": "History is my favorite subject.",
+      "definition_es": "Área de conocimiento que se estudia en la escuela.",
+      "example_es": "Historia es mi materia favorita.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "subject",
+      "translations": {
+        "es": "materia / asignatura"
+      }
+    }
+  ]
+}

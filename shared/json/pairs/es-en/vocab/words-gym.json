@@ -391,6 +391,104 @@
       "translations": {
         "es": "RPE (Tasa de Esfuerzo Percibido)"
       }
+    },
+    {
+      "word": "sport",
+      "definition": "A physical game or activity with rules.",
+      "example": "Soccer is the most popular sport here.",
+      "definition_es": "Juego o actividad física con reglas.",
+      "example_es": "El fútbol es el deporte más popular aquí.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "sport",
+      "translations": {
+        "es": "deporte"
+      }
+    },
+    {
+      "word": "score",
+      "definition": "The number of points each side has in a game.",
+      "example": "The final score was two to one.",
+      "definition_es": "Número de puntos de cada lado en un juego.",
+      "example_es": "El marcador final fue dos a uno.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "score",
+      "translations": {
+        "es": "marcador / puntuación"
+      }
+    },
+    {
+      "word": "goal",
+      "definition": "A point scored in games like soccer, or an aim to reach.",
+      "example": "He scored the winning goal.",
+      "definition_es": "Punto en juegos como el fútbol, o meta.",
+      "example_es": "Metió el gol de la victoria.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "goal",
+      "translations": {
+        "es": "gol / meta"
+      }
+    },
+    {
+      "word": "competition",
+      "definition": "An event where people try to win against others.",
+      "example": "She won first place in the swimming competition.",
+      "definition_es": "Evento donde las personas compiten por ganar.",
+      "example_es": "Ganó el primer lugar en la competencia de natación.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "competition",
+      "translations": {
+        "es": "competencia"
+      }
+    },
+    {
+      "word": "player",
+      "definition": "A person who takes part in a game or sport.",
+      "example": "Each team has eleven players.",
+      "definition_es": "Persona que participa en un juego o deporte.",
+      "example_es": "Cada equipo tiene once jugadores.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "player",
+      "translations": {
+        "es": "jugador / jugadora"
+      }
+    },
+    {
+      "word": "fit",
+      "definition": "Healthy and strong, especially from exercise.",
+      "example": "Running keeps me fit.",
+      "definition_es": "Sano y fuerte, sobre todo por el ejercicio.",
+      "example_es": "Correr me mantiene en forma.",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "fit",
+      "translations": {
+        "es": "en forma"
+      }
+    },
+    {
+      "word": "win",
+      "definition": "To be the best or first in a game or contest.",
+      "example": "Our team won the match.",
+      "definition_es": "Ser el mejor o el primero en un juego.",
+      "example_es": "Nuestro equipo ganó el partido.",
+      "category": "Verb",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "win",
+      "translations": {
+        "es": "ganar"
+      }
     }
   ]
 }

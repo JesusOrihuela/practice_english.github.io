@@ -63,7 +63,7 @@ const PHRASE_TOPICS = [
 ];
 
 const VOCAB_TOPICS = [
-  'general', 'greetings', 'restaurant', 'supermarket', 'kitchen',
+  'general', 'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
 ];
