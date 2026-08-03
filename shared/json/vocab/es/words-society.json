@@ -1115,6 +1115,60 @@
       "gloss_example": {
         "en": "She is looking for job stability."
       }
+    },
+    {
+      "id": "tradicion",
+      "term": "tradición",
+      "definition": "Costumbre que pasa de generación en generación.",
+      "example": "Es una tradición familiar.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "tradition"
+      },
+      "gloss": {
+        "en": "A custom passed down through generations."
+      },
+      "gloss_example": {
+        "en": "It is a family tradition."
+      }
+    },
+    {
+      "id": "celebrar",
+      "term": "celebrar",
+      "definition": "Festejar algo importante.",
+      "example": "Celebramos su cumpleaños.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to celebrate"
+      },
+      "gloss": {
+        "en": "To mark an important event with joy."
+      },
+      "gloss_example": {
+        "en": "We celebrated her birthday."
+      }
+    },
+    {
+      "id": "participar",
+      "term": "participar",
+      "definition": "Tomar parte en una actividad.",
+      "example": "Quiero participar en el proyecto.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to participate / to take part"
+      },
+      "gloss": {
+        "en": "To take part in an activity."
+      },
+      "gloss_example": {
+        "en": "I want to take part in the project."
+      }
     }
   ]
 }

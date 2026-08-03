@@ -737,6 +737,42 @@
       "gloss_example": {
         "en": "The guide showed us the city."
       }
+    },
+    {
+      "id": "turismo",
+      "term": "turismo",
+      "definition": "Actividad de viajar por placer.",
+      "example": "El turismo es importante en la costa.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "tourism"
+      },
+      "gloss": {
+        "en": "The activity of traveling for pleasure."
+      },
+      "gloss_example": {
+        "en": "Tourism is important on the coast."
+      }
+    },
+    {
+      "id": "excursion",
+      "term": "excursión",
+      "definition": "Viaje corto para conocer o divertirse.",
+      "example": "Hicimos una excursión a la montaña.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "trip / excursion"
+      },
+      "gloss": {
+        "en": "A short trip to explore or have fun."
+      },
+      "gloss_example": {
+        "en": "We took a trip to the mountains."
+      }
     }
   ]
 }

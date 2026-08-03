@@ -4193,6 +4193,438 @@
       "gloss_example": {
         "en": "I prefer tea to coffee."
       }
+    },
+    {
+      "id": "deber",
+      "term": "deber",
+      "definition": "Tener la obligación de hacer algo.",
+      "example": "Debes descansar más.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "must / to owe"
+      },
+      "gloss": {
+        "en": "To have the obligation to do something."
+      },
+      "gloss_example": {
+        "en": "You must rest more."
+      }
+    },
+    {
+      "id": "significar",
+      "term": "significar",
+      "definition": "Tener un sentido o querer decir algo.",
+      "example": "¿Qué significa esta palabra?",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to mean"
+      },
+      "gloss": {
+        "en": "To have a meaning or express something."
+      },
+      "gloss_example": {
+        "en": "What does this word mean?"
+      }
+    },
+    {
+      "id": "permitir",
+      "term": "permitir",
+      "definition": "Dejar que algo se haga.",
+      "example": "No permiten fumar aquí.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to allow"
+      },
+      "gloss": {
+        "en": "To let something happen."
+      },
+      "gloss_example": {
+        "en": "They don't allow smoking here."
+      }
+    },
+    {
+      "id": "comprender",
+      "term": "comprender",
+      "definition": "Entender el sentido de algo.",
+      "example": "Comprendo tu preocupación.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to understand"
+      },
+      "gloss": {
+        "en": "To grasp the meaning of something."
+      },
+      "gloss_example": {
+        "en": "I understand your concern."
+      }
+    },
+    {
+      "id": "reir",
+      "term": "reír",
+      "definition": "Mostrar alegría con sonidos y gestos.",
+      "example": "Nos reímos mucho con la película.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to laugh"
+      },
+      "gloss": {
+        "en": "To show joy with sounds and expressions."
+      },
+      "gloss_example": {
+        "en": "We laughed a lot at the movie."
+      }
+    },
+    {
+      "id": "llorar",
+      "term": "llorar",
+      "definition": "Soltar lágrimas por tristeza o emoción.",
+      "example": "El bebé llora cuando tiene hambre.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to cry"
+      },
+      "gloss": {
+        "en": "To shed tears from sadness or emotion."
+      },
+      "gloss_example": {
+        "en": "The baby cries when it is hungry."
+      }
+    },
+    {
+      "id": "caminar",
+      "term": "caminar",
+      "definition": "Andar a pie de un lugar a otro.",
+      "example": "Caminamos hasta la plaza.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to walk"
+      },
+      "gloss": {
+        "en": "To go on foot from one place to another."
+      },
+      "gloss_example": {
+        "en": "We walked to the square."
+      }
+    },
+    {
+      "id": "caer",
+      "term": "caer",
+      "definition": "Ir hacia abajo por su propio peso.",
+      "example": "Se me cayó el teléfono.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to fall"
+      },
+      "gloss": {
+        "en": "To drop downward by its own weight."
+      },
+      "gloss_example": {
+        "en": "My phone fell."
+      }
+    },
+    {
+      "id": "romper",
+      "term": "romper",
+      "definition": "Partir o dañar algo.",
+      "example": "Se rompió el vaso.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to break"
+      },
+      "gloss": {
+        "en": "To split or damage something."
+      },
+      "gloss_example": {
+        "en": "The glass broke."
+      }
+    },
+    {
+      "id": "importar",
+      "term": "importar",
+      "definition": "Tener valor o interés para alguien.",
+      "example": "No me importa esperar un poco.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to matter / to mind"
+      },
+      "gloss": {
+        "en": "To have value or interest for someone."
+      },
+      "gloss_example": {
+        "en": "I don't mind waiting a bit."
+      }
+    },
+    {
+      "id": "faltar",
+      "term": "faltar",
+      "definition": "No estar algo que debería estar.",
+      "example": "Falta una silla en la mesa.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to be missing / to lack"
+      },
+      "gloss": {
+        "en": "To not be present when it should be."
+      },
+      "gloss_example": {
+        "en": "There is a chair missing at the table."
+      }
+    },
+    {
+      "id": "aparecer",
+      "term": "aparecer",
+      "definition": "Empezar a verse o mostrarse.",
+      "example": "El sol apareció entre las nubes.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to appear"
+      },
+      "gloss": {
+        "en": "To start to be seen or shown."
+      },
+      "gloss_example": {
+        "en": "The sun appeared between the clouds."
+      }
+    },
+    {
+      "id": "espacio",
+      "term": "espacio",
+      "definition": "Lugar libre o zona disponible.",
+      "example": "No hay espacio en el armario.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "space / room"
+      },
+      "gloss": {
+        "en": "A free place or available area."
+      },
+      "gloss_example": {
+        "en": "There is no room in the closet."
+      }
+    },
+    {
+      "id": "texto",
+      "term": "texto",
+      "definition": "Conjunto de palabras escritas.",
+      "example": "Lee el texto con atención.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "text"
+      },
+      "gloss": {
+        "en": "A set of written words."
+      },
+      "gloss_example": {
+        "en": "Read the text carefully."
+      }
+    },
+    {
+      "id": "expresion",
+      "term": "expresión",
+      "definition": "Forma de decir algo, o gesto de la cara.",
+      "example": "Aprendí una expresión nueva.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "expression"
+      },
+      "gloss": {
+        "en": "A way of saying something, or a facial look."
+      },
+      "gloss_example": {
+        "en": "I learned a new expression."
+      }
+    },
+    {
+      "id": "posibilidad",
+      "term": "posibilidad",
+      "definition": "Que algo pueda ocurrir o hacerse.",
+      "example": "Hay una posibilidad de lluvia.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "possibility / chance"
+      },
+      "gloss": {
+        "en": "That something can happen or be done."
+      },
+      "gloss_example": {
+        "en": "There is a chance of rain."
+      }
+    },
+    {
+      "id": "humor",
+      "term": "humor",
+      "definition": "Estado de ánimo, o gracia para hacer reír.",
+      "example": "Hoy está de buen humor.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "mood / humor"
+      },
+      "gloss": {
+        "en": "A person's mood, or the quality of being funny."
+      },
+      "gloss_example": {
+        "en": "He is in a good mood today."
+      }
+    },
+    {
+      "id": "famoso",
+      "term": "famoso / famosa",
+      "definition": "Muy conocido por mucha gente.",
+      "example": "Es un actor famoso.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "famous"
+      },
+      "gloss": {
+        "en": "Very well known by many people."
+      },
+      "gloss_example": {
+        "en": "He is a famous actor."
+      }
+    },
+    {
+      "id": "tipico",
+      "term": "típico / típica",
+      "definition": "Propio o característico de algo.",
+      "example": "Es un plato típico de la región.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "typical"
+      },
+      "gloss": {
+        "en": "Characteristic of a particular place or thing."
+      },
+      "gloss_example": {
+        "en": "It is a typical dish of the region."
+      }
+    },
+    {
+      "id": "antiguo",
+      "term": "antiguo / antigua",
+      "definition": "Que existe desde hace mucho tiempo.",
+      "example": "Visitamos un castillo antiguo.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "old / ancient"
+      },
+      "gloss": {
+        "en": "That has existed for a long time."
+      },
+      "gloss_example": {
+        "en": "We visited an old castle."
+      }
+    },
+    {
+      "id": "cierto",
+      "term": "cierto / cierta",
+      "definition": "Que es verdad o seguro.",
+      "example": "Es cierto que hace frío.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "true / certain"
+      },
+      "gloss": {
+        "en": "That is true or sure."
+      },
+      "gloss_example": {
+        "en": "It is true that it is cold."
+      }
+    },
+    {
+      "id": "pobre",
+      "term": "pobre",
+      "definition": "Que tiene poco dinero o recursos.",
+      "example": "Ayudan a las familias pobres.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "poor"
+      },
+      "gloss": {
+        "en": "Having little money or resources."
+      },
+      "gloss_example": {
+        "en": "They help poor families."
+      }
+    },
+    {
+      "id": "peor",
+      "term": "peor",
+      "definition": "Más malo que otra cosa.",
+      "example": "Hoy el clima está peor que ayer.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "worse / worst"
+      },
+      "gloss": {
+        "en": "More bad than something else."
+      },
+      "gloss_example": {
+        "en": "The weather is worse today than yesterday."
+      }
+    },
+    {
+      "id": "loco",
+      "term": "loco / loca",
+      "definition": "Que actúa de forma poco sensata.",
+      "example": "Tuvo una idea un poco loca.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "crazy / mad"
+      },
+      "gloss": {
+        "en": "Acting in a wild or senseless way."
+      },
+      "gloss_example": {
+        "en": "He had a slightly crazy idea."
+      }
     }
   ]
 }
