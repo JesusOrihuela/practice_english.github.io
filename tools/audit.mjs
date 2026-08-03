@@ -320,14 +320,11 @@ function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
   }
 }
 
-// ─── VOCAB FILE AUDIT (unchanged schema — shared across pairs) ───────────────
+// ─── VOCAB FILE AUDIT (per-pair — word selection and CEFR levels diverge) ────
 
-function auditVocabFile(topic, langRules) {
+function auditVocabFile(pair, topic, langRules) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  // Vocabulary is per-pair since Part C; the copies are identical today, so the
-  // content audit runs against the canonical es-en copy (bilingual fields checked
-  // there apply to both). When en-es vocab diverges, loop over both pairs here.
-  const file = `shared/json/pairs/es-en/vocab/${filename}`;
+  const file = `shared/json/pairs/${pair}/vocab/${filename}`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -576,7 +573,7 @@ if (fileArg) {
     auditPlacementFile(id);
   }
 
-  for (const t of VOCAB_TOPICS) auditVocabFile(t, CONTENT_RULES.es);
+  for (const { id } of PAIRS) for (const t of VOCAB_TOPICS) auditVocabFile(id, t, CONTENT_RULES.es);
 
   if (!quick) {
     for (const { id, targetLang } of PAIRS) {
