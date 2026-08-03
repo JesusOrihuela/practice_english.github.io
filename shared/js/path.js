@@ -24,7 +24,7 @@ const AppPath = (() => {
   // ── CEFR-ordered topic list ─────────────────────────────────────────────
   const TOPICS = [
     { id: 'greetings',    level: 'A1', emoji: '👋', label: 'Saludos',                  labelEn: 'Greetings',            order: 1  },
-    { id: 'personal_info', level: 'A1', emoji: '🪪', label: 'Información Personal',     labelEn: 'Personal Info',        order: 2  },
+    { id: 'personal_info', level: 'A1', emoji: '🪪', label: 'Información Personal',     labelEn: 'Personal Information',  order: 2  },
     { id: 'family',       level: 'A1', emoji: '👪', label: 'Familia y Personas',       labelEn: 'Family & People',      order: 3  },
     { id: 'emociones',    level: 'A1', emoji: '😊', label: 'Emociones',                labelEn: 'Emotions',             order: 4  },
     { id: 'daily_routine', level: 'A1', emoji: '🕐', label: 'Rutina Diaria',            labelEn: 'Daily Routine',        order: 5  },

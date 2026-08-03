@@ -824,7 +824,7 @@
       topic_gym:            'Gym',
       topic_technology:     'Technology',
       topic_accountability: 'Accounting',
-      topic_personal_info:  'Personal Info',
+      topic_personal_info:  'Personal Information',
       topic_family:         'Family & People',
       topic_daily_routine:  'Daily Routine',
       topic_health:         'Health & Body',

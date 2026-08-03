@@ -10,7 +10,7 @@
 const AppTopics = (() => {
   const PHRASE_TOPICS = [
     { id: 'greetings',    label: 'Saludos',                  labelEn: 'Greetings',            emoji: '👋' },
-    { id: 'personal_info', label: 'Información Personal',     labelEn: 'Personal Info',        emoji: '🪪' },
+    { id: 'personal_info', label: 'Información Personal',     labelEn: 'Personal Information',  emoji: '🪪' },
     { id: 'family',       label: 'Familia y Personas',       labelEn: 'Family & People',      emoji: '👪' },
     { id: 'emociones',    label: 'Emociones',                labelEn: 'Emotions',             emoji: '😊' },
     { id: 'daily_routine', label: 'Rutina Diaria',            labelEn: 'Daily Routine',        emoji: '🕐' },
