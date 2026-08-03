@@ -429,6 +429,90 @@
           "audioSlug": "reviso_el_correo_al_llegar_al_trabajo"
         }
       ]
+    },
+    {
+      "id": "daily_routine_i_live_near_downtown",
+      "source": "I live near the city center.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo cerca del centro.",
+          "audioSlug": "vivo_cerca_del_centro"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_drink_a_lot_of_water",
+      "source": "I drink a lot of water during the day.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Bebo mucha agua durante el día.",
+          "audioSlug": "bebo_mucha_agua_durante_el_dia"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_watch_the_news_in_the_morning",
+      "source": "I watch the news in the morning.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Miro las noticias por la mañana.",
+          "audioSlug": "miro_las_noticias_por_la_manana"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_play_for_a_while_in_the_afternoon",
+      "source": "I play for a while in the afternoon.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Juego un rato por la tarde.",
+          "audioSlug": "juego_un_rato_por_la_tarde"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_run_three_kilometers_a_day",
+      "source": "I run three kilometers a day.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Corro tres kilómetros cada día.",
+          "audioSlug": "corro_tres_kilometros_cada_dia"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_think_about_my_day_before_sleeping",
+      "source": "I think about my day before sleeping.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pienso en mi día antes de dormir.",
+          "audioSlug": "pienso_en_mi_dia_antes_de_dormir"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_know_what_i_have_to_do",
+      "source": "I know what I have to do.",
+      "level": "A2",
+      "grammar": "'Lo que' equivale al inglés 'what' e introduce una idea como objeto del verbo.",
+      "target": [
+        {
+          "text": "Sé lo que tengo que hacer.",
+          "audioSlug": "se_lo_que_tengo_que_hacer"
+        }
+      ]
     }
   ]
 }

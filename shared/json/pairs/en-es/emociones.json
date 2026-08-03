@@ -655,6 +655,150 @@
           "audioSlug": "estoy_decepcionado"
         }
       ]
+    },
+    {
+      "id": "emociones_i_really_like_music",
+      "source": "I really like music.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta mucho la música.",
+          "audioSlug": "me_gusta_mucho_la_musica"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_love_traveling",
+      "source": "I love traveling.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta viajar.",
+          "audioSlug": "me_encanta_viajar"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_love_you_very_much",
+      "source": "I love you very much.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te quiero mucho.",
+          "audioSlug": "te_quiero_mucho"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_miss_you_a_lot",
+      "source": "I miss you a lot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te extraño mucho.",
+          "audioSlug": "te_extrano_mucho"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_prefer_to_stay_home",
+      "source": "I prefer to stay home.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero quedarme en casa.",
+          "audioSlug": "prefiero_quedarme_en_casa"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_not_interested_in_soccer",
+      "source": "I'm not interested in soccer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me interesa el fútbol.",
+          "audioSlug": "no_me_interesa_el_futbol"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_dont_mind_waiting",
+      "source": "I don't mind waiting.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me importa esperar.",
+          "audioSlug": "no_me_importa_esperar"
+        }
+      ]
+    },
+    {
+      "id": "emociones_flying_scares_me",
+      "source": "Flying scares me.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me da miedo volar.",
+          "audioSlug": "me_da_miedo_volar"
+        }
+      ]
+    },
+    {
+      "id": "emociones_noise_bothers_me",
+      "source": "Noise bothers me.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me molesta el ruido.",
+          "audioSlug": "me_molesta_el_ruido"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_feel_something_is_wrong",
+      "source": "I feel that something is wrong.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siento que algo va mal.",
+          "audioSlug": "siento_que_algo_va_mal"
+        }
+      ]
+    },
+    {
+      "id": "emociones_im_glad_to_see_you",
+      "source": "I'm glad to see you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me alegro de verte.",
+          "audioSlug": "me_alegro_de_verte"
+        }
+      ]
+    },
+    {
+      "id": "emociones_that_news_makes_me_sad",
+      "source": "That news makes me sad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esa noticia me pone triste.",
+          "audioSlug": "esa_noticia_me_pone_triste"
+        }
+      ]
     }
   ]
 }
