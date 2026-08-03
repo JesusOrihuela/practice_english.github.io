@@ -11,7 +11,7 @@
 const AppData = (() => {
   const _cache     = new Map();          // memory: in-flight Promises + resolved data
   const _BASE      = '../../shared/json/';
-  const _SS_PREFIX = 'pe_topic_v9_';     // v9: vocabulary moved to target-centric vocab/{targetLang}/
+  const _SS_PREFIX = 'pe_topic_v10_';    // v10: per-pair topics.json (Part B)
 
   // IDs still shared across all pairs (no pair prefix).
   const _SHARED = /^word-equivalents($|[-_])/;

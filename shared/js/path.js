@@ -550,8 +550,29 @@ const AppPath = (() => {
     });
   }
 
+  // Part B: refresh TOPICS from the active pair's topics.json (reusing AppTopics'
+  // fetch/cache). Keeps the embedded default above until loaded; mutates in place.
+  let _loadPromise = null;
+  function load() {
+    if (_loadPromise) return _loadPromise;
+    const base = (typeof AppTopics !== 'undefined' && AppTopics.load) ? AppTopics.load() : Promise.resolve();
+    _loadPromise = base.then(() => {
+      const recs = (typeof AppTopics !== 'undefined' && AppTopics.getRecords ? AppTopics.getRecords() : [])
+        .filter(t => t.phrase);
+      if (!recs.length) return;
+      const rebuilt = recs.slice().sort((a, b) => a.order - b.order)
+        .map(t => ({ id: t.id, level: t.level, emoji: t.emoji, label: t.label, labelEn: t.labelEn, order: t.order }));
+      TOPICS.length = 0; TOPICS.push(...rebuilt);
+    }).catch(() => {});
+    return _loadPromise;
+  }
+
+  // Eager load: refresh TOPICS from the active pair's data as soon as AppTopics has it.
+  load();
+
   return {
     TOPICS,
+    load,
     ACTIVITIES,
     SECONDARY_ACTIVITIES,
     GRAMMAR_TOTAL,

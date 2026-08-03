@@ -1,56 +1,83 @@
 /* ============================================================
-   topics.js — Canonical topic list (single source of truth)
-   Exposes window.AppTopics with two arrays:
-     PHRASE_TOPICS — 13 phrase-based topics (speaking, dictation, cloze,
-                     translation, scramble, progress)
-     VOCAB_TOPICS  — general + 13 topics (quiz, vocabulary)
-   Do not duplicate this list in activity files.
+   topics.js — Canonical topic list (per-pair, Part B)
+   Exposes window.AppTopics:
+     PHRASE_TOPICS — phrase-based topics (speaking, dictation, cloze, …)
+     VOCAB_TOPICS  — vocab-only ('general', 'society') + phrase topics with a word list
+     load()        — async: load the ACTIVE PAIR's shared/json/pairs/{pairId}/topics.json
+                     and override the embedded default (which covers es-en/en-es today).
+     getRecords()  — raw per-topic records (id, level, order, emoji, label, labelEn, flags)
+   The topic set/order/labels are now DATA per pair; the arrays below are the
+   default/fallback so pages work synchronously before load() resolves. Activities
+   call `await AppTopics.load()` early so a divergent pair gets its own topics.
    ============================================================ */
 
 const AppTopics = (() => {
-  const PHRASE_TOPICS = [
-    { id: 'greetings',    label: 'Saludos',                  labelEn: 'Greetings',            emoji: '👋' },
-    { id: 'personal_info', label: 'Información Personal',     labelEn: 'Personal Information',  emoji: '🪪' },
-    { id: 'family',       label: 'Familia y Personas',       labelEn: 'Family & People',      emoji: '👪' },
-    { id: 'emociones',    label: 'Emociones',                labelEn: 'Emotions',             emoji: '😊' },
-    { id: 'daily_routine', label: 'Rutina Diaria',            labelEn: 'Daily Routine',        emoji: '🕐' },
-    { id: 'survival',     label: 'Sobrevivir el Idioma',     labelEn: 'Language Survival',    emoji: '🆘' },
-    { id: 'weather',      label: 'Clima',                    labelEn: 'Weather',              emoji: '🌤️' },
-    { id: 'health',       label: 'Salud y Cuerpo',           labelEn: 'Health & Body',        emoji: '🩺' },
-    { id: 'directions',   label: 'Direcciones y Lugares',    labelEn: 'Directions & Places',  emoji: '🧭' },
-    { id: 'restaurant',   label: 'Restaurante',              labelEn: 'Restaurant',           emoji: '🍽️' },
-    { id: 'supermarket',  label: 'Supermercado',             labelEn: 'Supermarket',          emoji: '🛒' },
-    { id: 'transportation', label: 'Transporte',               labelEn: 'Transportation',       emoji: '🚌' },
-    { id: 'airport',      label: 'Aeropuerto',               labelEn: 'Airport',              emoji: '✈️' },
-    { id: 'accommodation', label: 'Alojamiento',              labelEn: 'Accommodation',        emoji: '🏨' },
-    { id: 'kitchen',      label: 'Cocina',                   labelEn: 'Kitchen',              emoji: '🍳' },
-    { id: 'movies',       label: 'Películas & Series',       labelEn: 'Movies & Series',      emoji: '🎬' },
-    { id: 'music',        label: 'Música',                   labelEn: 'Music',                emoji: '🎵' },
-    { id: 'technology',   label: 'Tecnología',               labelEn: 'Technology',           emoji: '💻' },
-    { id: 'gym',          label: 'Gimnasio',                 labelEn: 'Gym',                  emoji: '💪' },
-    { id: 'museums',      label: 'Museos & Arte',            labelEn: 'Museums & Art',        emoji: '🖼️' },
-    { id: 'theater',      label: 'Teatro',                   labelEn: 'Theater',              emoji: '🎭' },
-    { id: 'accountability', label: 'Contabilidad',             labelEn: 'Accounting',           emoji: '📊' },
+  // Embedded default records (es-en and en-es are identical today). Source of truth
+  // per pair is shared/json/pairs/{pairId}/topics.json; load() overrides these.
+  const _DEFAULT_RECORDS = [
+    { id: 'greetings',      label: 'Saludos',               labelEn: 'Greetings',            emoji: '👋', phrase: true,  vocab: true,  level: 'A1', order: 1 },
+    { id: 'personal_info',  label: 'Información Personal',   labelEn: 'Personal Information',  emoji: '🪪', phrase: true,  vocab: false, level: 'A1', order: 2 },
+    { id: 'family',         label: 'Familia y Personas',    labelEn: 'Family & People',      emoji: '👪', phrase: true,  vocab: true,  level: 'A1', order: 3 },
+    { id: 'emociones',      label: 'Emociones',             labelEn: 'Emotions',             emoji: '😊', phrase: true,  vocab: false, level: 'A1', order: 4 },
+    { id: 'daily_routine',  label: 'Rutina Diaria',         labelEn: 'Daily Routine',        emoji: '🕐', phrase: true,  vocab: false, level: 'A1', order: 5 },
+    { id: 'survival',       label: 'Sobrevivir el Idioma',  labelEn: 'Language Survival',    emoji: '🆘', phrase: true,  vocab: false, level: 'A1', order: 6 },
+    { id: 'weather',        label: 'Clima',                 labelEn: 'Weather',              emoji: '🌤️', phrase: true,  vocab: false, level: 'A1', order: 7 },
+    { id: 'health',         label: 'Salud y Cuerpo',        labelEn: 'Health & Body',        emoji: '🩺', phrase: true,  vocab: true,  level: 'A2', order: 8 },
+    { id: 'directions',     label: 'Direcciones y Lugares', labelEn: 'Directions & Places',  emoji: '🧭', phrase: true,  vocab: false, level: 'A2', order: 9 },
+    { id: 'restaurant',     label: 'Restaurante',           labelEn: 'Restaurant',           emoji: '🍽️', phrase: true,  vocab: true,  level: 'A1', order: 10 },
+    { id: 'supermarket',    label: 'Supermercado',          labelEn: 'Supermarket',          emoji: '🛒', phrase: true,  vocab: true,  level: 'A2', order: 11 },
+    { id: 'transportation', label: 'Transporte',            labelEn: 'Transportation',       emoji: '🚌', phrase: true,  vocab: true,  level: 'A2', order: 12 },
+    { id: 'airport',        label: 'Aeropuerto',            labelEn: 'Airport',              emoji: '✈️', phrase: true,  vocab: true,  level: 'A2', order: 13 },
+    { id: 'accommodation',  label: 'Alojamiento',           labelEn: 'Accommodation',        emoji: '🏨', phrase: true,  vocab: true,  level: 'A2', order: 14 },
+    { id: 'kitchen',        label: 'Cocina',                labelEn: 'Kitchen',              emoji: '🍳', phrase: true,  vocab: true,  level: 'A2', order: 15 },
+    { id: 'movies',         label: 'Películas & Series',    labelEn: 'Movies & Series',      emoji: '🎬', phrase: true,  vocab: true,  level: 'A2', order: 16 },
+    { id: 'music',          label: 'Música',                labelEn: 'Music',                emoji: '🎵', phrase: true,  vocab: true,  level: 'A2', order: 17 },
+    { id: 'technology',     label: 'Tecnología',            labelEn: 'Technology',           emoji: '💻', phrase: true,  vocab: true,  level: 'B1', order: 18 },
+    { id: 'gym',            label: 'Gimnasio',              labelEn: 'Gym',                  emoji: '💪', phrase: true,  vocab: true,  level: 'B1', order: 19 },
+    { id: 'museums',        label: 'Museos & Arte',         labelEn: 'Museums & Art',        emoji: '🖼️', phrase: true,  vocab: false, level: 'A2', order: 20 },
+    { id: 'theater',        label: 'Teatro',                labelEn: 'Theater',              emoji: '🎭', phrase: true,  vocab: true,  level: 'B1', order: 21 },
+    { id: 'accountability', label: 'Contabilidad',          labelEn: 'Accounting',           emoji: '📊', phrase: true,  vocab: true,  level: 'B2', order: 22 },
+    { id: 'general',        label: 'General',               labelEn: 'General',              emoji: '📖', phrase: false, vocab: true,  vocabOrder: 0 },
+    { id: 'society',        label: 'Sociedad y Trabajo',    labelEn: 'Society & Work',       emoji: '🏛️', phrase: false, vocab: true,  vocabOrder: 1 },
   ];
 
-  // Phrase-only topics (no vocabulary set) are excluded from the word activities
-  // (Vocabulario, Quiz) which would otherwise fail to load them.
-  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'daily_routine', 'weather', 'directions', 'survival']);
-  // Vocab-only topics (no phrase set) — like 'general', they carry a word list
-  // but are not part of the CEFR learning path. Declared explicitly here.
-  const VOCAB_ONLY = [
-    { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
-    { id: 'society', label: 'Sociedad y Trabajo', labelEn: 'Society & Work', emoji: '🏛️' },
-  ];
-  const VOCAB_TOPICS = [
-    ...VOCAB_ONLY,
-    ...PHRASE_TOPICS.filter(t => !PHRASE_ONLY.has(t.id)),
-  ];
+  const _view = t => ({ id: t.id, label: t.label, labelEn: t.labelEn, emoji: t.emoji });
+
+  // Derive the two public arrays from the raw records.
+  function _derive(records) {
+    const phrase = records.filter(t => t.phrase).sort((a, b) => a.order - b.order).map(_view);
+    const phraseOnly = new Set(records.filter(t => t.phrase && !t.vocab).map(t => t.id));
+    const vocabOnly = records.filter(t => !t.phrase && t.vocab)
+      .sort((a, b) => (a.vocabOrder ?? 99) - (b.vocabOrder ?? 99)).map(_view);
+    const vocab = [...vocabOnly, ...phrase.filter(t => !phraseOnly.has(t.id))];
+    return { phrase, vocab };
+  }
+
+  let _records = _DEFAULT_RECORDS;
+  const _d = _derive(_records);
+  const PHRASE_TOPICS = _d.phrase;   // mutated in place by load() (stable reference)
+  const VOCAB_TOPICS  = _d.vocab;
+  let _loadPromise = null;
+
+  // Load the active pair's topics.json and override the default in place.
+  function load() {
+    if (_loadPromise) return _loadPromise;
+    const p = (typeof AppData !== 'undefined') ? AppData.get('topics') : Promise.reject();
+    _loadPromise = p.then(data => {
+      const records = (data && Array.isArray(data.topics) && data.topics.length) ? data.topics : _DEFAULT_RECORDS;
+      _records = records;
+      const d = _derive(records);
+      PHRASE_TOPICS.length = 0; PHRASE_TOPICS.push(...d.phrase);
+      VOCAB_TOPICS.length = 0;  VOCAB_TOPICS.push(...d.vocab);
+    }).catch(() => { /* keep embedded default */ });
+    return _loadPromise;
+  }
+
+  function getRecords() { return _records; }
 
   // ── Topic label helper ────────────────────────────────────────
-  // Returns the localized label for a topic object.
-  // Reads from AppLang.t('topic_{id}') if available; falls back to
-  // topic.labelEn (English source) or topic.label (Spanish source).
+  // Returns the localized label for a topic object. Reads AppLang.t('topic_{id}')
+  // if available; falls back to topic.labelEn (English source) or topic.label.
   function getLabel(topic) {
     if (typeof AppLang !== 'undefined') {
       var key = 'topic_' + topic.id;
@@ -61,5 +88,11 @@ const AppTopics = (() => {
     return (src !== 'es' && topic.labelEn) ? topic.labelEn : topic.label;
   }
 
-  return { PHRASE_TOPICS, VOCAB_TOPICS, getLabel };
+  // Eager load: start fetching the active pair's topics.json immediately so the
+  // arrays are corrected in place before activities render. For es-en/en-es the
+  // data equals the embedded default, so this is a no-op behaviorally. A divergent
+  // pair may add `await AppTopics.load()` in activity init to guarantee zero FOUC.
+  load();
+
+  return { PHRASE_TOPICS, VOCAB_TOPICS, getLabel, load, getRecords };
 })();
