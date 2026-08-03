@@ -1,0 +1,256 @@
+{
+  "words": [
+    {
+      "id": "head",
+      "term": "head",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The part of the body above the neck that contains the brain.",
+      "example": "She wore a warm hat on her head.",
+      "translations": {
+        "es": "cabeza"
+      },
+      "gloss": {
+        "es": "Parte del cuerpo que está sobre el cuello."
+      },
+      "gloss_example": {
+        "es": "Se puso un sombrero abrigador en la cabeza."
+      }
+    },
+    {
+      "id": "face",
+      "term": "face",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The front part of the head, from forehead to chin.",
+      "example": "He washed his face before breakfast.",
+      "translations": {
+        "es": "cara / rostro"
+      },
+      "gloss": {
+        "es": "Parte delantera de la cabeza."
+      },
+      "gloss_example": {
+        "es": "Se lavó la cara antes de desayunar."
+      }
+    },
+    {
+      "id": "hair",
+      "term": "hair",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The fine threads that grow on a person's head and body.",
+      "example": "She brushed her long hair every morning.",
+      "translations": {
+        "es": "pelo / cabello"
+      },
+      "gloss": {
+        "es": "Filamentos que crecen en la cabeza y el cuerpo."
+      },
+      "gloss_example": {
+        "es": "Se cepillaba el pelo largo cada mañana."
+      }
+    },
+    {
+      "id": "heart",
+      "term": "heart",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The organ in the chest that pumps blood around the body.",
+      "example": "Running made his heart beat faster.",
+      "translations": {
+        "es": "corazón"
+      },
+      "gloss": {
+        "es": "Órgano del pecho que bombea la sangre."
+      },
+      "gloss_example": {
+        "es": "Correr hacía que su corazón latiera más rápido."
+      }
+    },
+    {
+      "id": "hospital",
+      "term": "hospital",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where sick or injured people receive medical care.",
+      "example": "They took the injured driver to the hospital.",
+      "translations": {
+        "es": "hospital"
+      },
+      "gloss": {
+        "es": "Lugar donde se atiende a personas enfermas."
+      },
+      "gloss_example": {
+        "es": "Llevaron al conductor herido al hospital."
+      }
+    },
+    {
+      "id": "patient",
+      "term": "patient",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who is receiving medical care.",
+      "example": "The nurse checked on each patient every hour.",
+      "translations": {
+        "es": "paciente"
+      },
+      "gloss": {
+        "es": "Persona que recibe atención médica."
+      },
+      "gloss_example": {
+        "es": "La enfermera revisaba a cada paciente cada hora."
+      }
+    },
+    {
+      "id": "die",
+      "term": "die",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To stop living.",
+      "example": "The plant died because no one watered it.",
+      "translations": {
+        "es": "morir"
+      },
+      "gloss": {
+        "es": "Dejar de vivir."
+      },
+      "gloss_example": {
+        "es": "La planta murió porque nadie la regó."
+      }
+    },
+    {
+      "id": "disease",
+      "term": "disease",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An illness that affects people, animals, or plants.",
+      "example": "Doctors work hard to prevent the spread of disease.",
+      "translations": {
+        "es": "enfermedad"
+      },
+      "gloss": {
+        "es": "Enfermedad que afecta a los seres vivos."
+      },
+      "gloss_example": {
+        "es": "Los médicos trabajan para evitar el contagio de enfermedades."
+      }
+    },
+    {
+      "id": "treatment",
+      "term": "treatment",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Medical care given to a patient for an illness or injury.",
+      "example": "The treatment reduced her pain within days.",
+      "translations": {
+        "es": "tratamiento"
+      },
+      "gloss": {
+        "es": "Atención médica que se da a un paciente."
+      },
+      "gloss_example": {
+        "es": "El tratamiento redujo su dolor en pocos días."
+      }
+    },
+    {
+      "id": "treat",
+      "term": "treat",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To give medical care to a patient or illness.",
+      "example": "The doctor treated the wound and gave her medicine.",
+      "translations": {
+        "es": "tratar"
+      },
+      "gloss": {
+        "es": "Dar atención médica a un paciente."
+      },
+      "gloss_example": {
+        "es": "El médico trató la herida y le dio medicina."
+      }
+    },
+    {
+      "id": "suffer",
+      "term": "suffer",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To experience pain, illness, or something unpleasant.",
+      "example": "Many patients suffer from headaches after the surgery.",
+      "translations": {
+        "es": "sufrir / padecer"
+      },
+      "gloss": {
+        "es": "Sentir dolor, enfermedad o algo desagradable."
+      },
+      "gloss_example": {
+        "es": "Muchos pacientes padecen dolores de cabeza tras la cirugía."
+      }
+    },
+    {
+      "id": "drug",
+      "term": "drug",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A substance used as a medicine to treat illness.",
+      "example": "This drug lowers blood pressure effectively.",
+      "translations": {
+        "es": "medicamento / droga"
+      },
+      "gloss": {
+        "es": "Sustancia usada como medicina para tratar enfermedades."
+      },
+      "gloss_example": {
+        "es": "Este medicamento baja la presión de forma eficaz."
+      }
+    },
+    {
+      "id": "death",
+      "term": "death",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The end of life.",
+      "example": "His death was a shock to the whole town.",
+      "translations": {
+        "es": "muerte"
+      },
+      "gloss": {
+        "es": "El final de la vida."
+      },
+      "gloss_example": {
+        "es": "Su muerte fue un golpe para todo el pueblo."
+      }
+    },
+    {
+      "id": "eye",
+      "term": "eye",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The part of the body used for seeing.",
+      "example": "She has bright green eyes.",
+      "translations": {
+        "es": "ojo"
+      },
+      "gloss": {
+        "es": "Parte del cuerpo que sirve para ver."
+      },
+      "gloss_example": {
+        "es": "Ella tiene ojos verdes y brillantes."
+      }
+    }
+  ]
+}

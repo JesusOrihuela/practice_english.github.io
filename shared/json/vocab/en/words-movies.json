@@ -1,0 +1,670 @@
+{
+  "words": [
+    {
+      "id": "movie",
+      "term": "movie",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A story told through moving pictures, usually shown in a cinema or on a screen",
+      "example": "Let's go see a movie tonight. There's a new comedy showing.",
+      "translations": {
+        "es": "película"
+      },
+      "gloss": {
+        "es": "Historia contada con imágenes en movimiento en una pantalla."
+      },
+      "gloss_example": {
+        "es": "Vamos al cine esta noche. Están poniendo una nueva comedia."
+      }
+    },
+    {
+      "id": "actor",
+      "term": "actor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who performs a role in a film or TV show",
+      "example": "My favorite actor won an award for his role in that drama.",
+      "translations": {
+        "es": "actor / actriz"
+      },
+      "gloss": {
+        "es": "Persona que interpreta un papel en una película."
+      },
+      "gloss_example": {
+        "es": "Mi actor favorito ganó un premio por su papel en ese drama."
+      }
+    },
+    {
+      "id": "cinema",
+      "term": "cinema",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building where films are shown to a paying audience on a large screen",
+      "example": "We bought tickets online and went to the cinema on Saturday night.",
+      "translations": {
+        "es": "cine"
+      },
+      "gloss": {
+        "es": "Edificio donde se proyectan películas para el público."
+      },
+      "gloss_example": {
+        "es": "Compramos las entradas por internet y fuimos al cine el sábado por la noche."
+      }
+    },
+    {
+      "id": "series",
+      "term": "series",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A set of TV episodes that follow the same story or characters across multiple seasons",
+      "example": "I started a new crime series last night and I'm already hooked.",
+      "translations": {
+        "es": "serie"
+      },
+      "gloss": {
+        "es": "Episodios de televisión que siguen la misma historia."
+      },
+      "gloss_example": {
+        "es": "Anoche empecé una nueva serie de crimen y ya me tiene enganchado."
+      }
+    },
+    {
+      "id": "scene",
+      "term": "scene",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A single part of a film or show that takes place in one location at one time",
+      "example": "The opening scene of the film is absolutely breathtaking.",
+      "translations": {
+        "es": "escena"
+      },
+      "gloss": {
+        "es": "Parte de una película que ocurre en un mismo lugar."
+      },
+      "gloss_example": {
+        "es": "La escena inicial de la película es absolutamente impresionante."
+      }
+    },
+    {
+      "id": "streaming",
+      "term": "streaming",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Watching or listening to digital media online without downloading it",
+      "example": "I watched the whole documentary series streaming on my phone.",
+      "translations": {
+        "es": "transmisión en línea"
+      },
+      "gloss": {
+        "es": "Ver o escuchar contenido digital en línea sin descargarlo."
+      },
+      "gloss_example": {
+        "es": "Vi toda la serie documental en línea desde mi celular."
+      }
+    },
+    {
+      "id": "trailer",
+      "term": "trailer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A short promotional preview of a film or television series",
+      "example": "Have you seen the trailer for the new superhero film yet?",
+      "translations": {
+        "es": "tráiler"
+      },
+      "gloss": {
+        "es": "Breve avance promocional de una película o serie de televisión."
+      },
+      "gloss_example": {
+        "es": "¿Ya viste el tráiler de la nueva película de superhéroes?"
+      }
+    },
+    {
+      "id": "plot",
+      "term": "plot",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The sequence of events that make up the main story of a film or series",
+      "example": "The plot of the novel was full of surprising twists.",
+      "translations": {
+        "es": "trama / argumento"
+      },
+      "gloss": {
+        "es": "La secuencia de eventos que forman la historia principal."
+      },
+      "gloss_example": {
+        "es": "La trama de la novela estaba llena de giros sorprendentes."
+      }
+    },
+    {
+      "id": "documentary",
+      "term": "documentary",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A film or TV programme that presents facts about real events or people",
+      "example": "The documentary explores the long-term impact of climate change.",
+      "translations": {
+        "es": "documental"
+      },
+      "gloss": {
+        "es": "Película que presenta hechos reales sobre eventos o personas."
+      },
+      "gloss_example": {
+        "es": "El documental explora el impacto a largo plazo del cambio climático."
+      }
+    },
+    {
+      "id": "subscription",
+      "term": "subscription",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An arrangement to pay regularly in exchange for access to a service",
+      "example": "I have a monthly subscription to a popular streaming platform.",
+      "translations": {
+        "es": "suscripción"
+      },
+      "gloss": {
+        "es": "Pago regular a cambio de acceso a un servicio."
+      },
+      "gloss_example": {
+        "es": "Tengo una suscripción mensual a una plataforma de video muy popular."
+      }
+    },
+    {
+      "id": "binge_watch",
+      "term": "binge-watch",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To watch many episodes of a series one after another in a short time",
+      "example": "I binge-watched the entire first season over the weekend.",
+      "translations": {
+        "es": "maratonear"
+      },
+      "gloss": {
+        "es": "Ver muchos episodios de una serie seguidos en poco tiempo."
+      },
+      "gloss_example": {
+        "es": "Maratoneé toda la primera temporada durante el fin de semana."
+      }
+    },
+    {
+      "id": "genre",
+      "term": "genre",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A category of films or series defined by a shared style or subject matter",
+      "example": "Mystery is her favourite film genre.",
+      "translations": {
+        "es": "género"
+      },
+      "gloss": {
+        "es": "Categoría de películas o series definida por un estilo o temática común."
+      },
+      "gloss_example": {
+        "es": "El misterio es su género cinematográfico favorito."
+      }
+    },
+    {
+      "id": "sequel",
+      "term": "sequel",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A film or series that continues the story of an earlier one",
+      "example": "The sequel was even more exciting than the original film.",
+      "translations": {
+        "es": "secuela"
+      },
+      "gloss": {
+        "es": "Película o serie que continúa la historia de una anterior."
+      },
+      "gloss_example": {
+        "es": "La secuela fue incluso más emocionante que la película original."
+      }
+    },
+    {
+      "id": "soundtrack",
+      "term": "soundtrack",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The recorded music that plays during a film or television show",
+      "example": "The movie's powerful soundtrack won three international awards.",
+      "translations": {
+        "es": "banda sonora"
+      },
+      "gloss": {
+        "es": "La música grabada que suena durante una película o programa de televisión."
+      },
+      "gloss_example": {
+        "es": "La poderosa banda sonora de la película ganó tres premios internacionales."
+      }
+    },
+    {
+      "id": "premiere",
+      "term": "premiere",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The first public showing of a new film, usually attended by the cast and crew",
+      "example": "The film's glamorous premiere was held in Los Angeles.",
+      "translations": {
+        "es": "estreno"
+      },
+      "gloss": {
+        "es": "La primera proyección pública de una nueva película."
+      },
+      "gloss_example": {
+        "es": "El glamoroso estreno de la película se celebró en Los Ángeles."
+      }
+    },
+    {
+      "id": "cast",
+      "term": "cast",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The complete group of actors appearing in a film or series",
+      "example": "The film has an incredible cast of internationally famous actors.",
+      "translations": {
+        "es": "reparto / elenco"
+      },
+      "gloss": {
+        "es": "El grupo completo de actores que aparecen en una película o serie."
+      },
+      "gloss_example": {
+        "es": "La película tiene un reparto increíble de actores famosos a nivel internacional."
+      }
+    },
+    {
+      "id": "adaptation",
+      "term": "adaptation",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A film or show based on a pre-existing work such as a novel, play, or true story",
+      "example": "The film is an adaptation of a bestselling novel that fans were eager to see on screen.",
+      "translations": {
+        "es": "adaptación"
+      },
+      "gloss": {
+        "es": "Película o serie basada en una obra preexistente como una novela, obra de teatro o historia real."
+      },
+      "gloss_example": {
+        "es": "La película es una adaptación de una novela muy vendida que los fans querían ver en pantalla."
+      }
+    },
+    {
+      "id": "plot_twist",
+      "term": "plot twist",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "An unexpected change in the direction or outcome of a story",
+      "example": "Nobody saw that plot twist coming. It completely changed our understanding of the main character.",
+      "translations": {
+        "es": "giro argumental / giro de trama"
+      },
+      "gloss": {
+        "es": "Un cambio inesperado en el rumbo o desenlace de una historia."
+      },
+      "gloss_example": {
+        "es": "Nadie vio venir ese giro argumental. Cambió por completo nuestra comprensión del personaje principal."
+      }
+    },
+    {
+      "id": "protagonist",
+      "term": "protagonist",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The main character of a story, film, or series",
+      "example": "The protagonist faces many moral dilemmas throughout the story.",
+      "translations": {
+        "es": "protagonista"
+      },
+      "gloss": {
+        "es": "El personaje principal de una historia, película o serie."
+      },
+      "gloss_example": {
+        "es": "El protagonista se enfrenta a múltiples dilemas morales a lo largo de la historia."
+      }
+    },
+    {
+      "id": "acclaimed",
+      "term": "acclaimed",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Praised enthusiastically and widely by critics and the public",
+      "example": "The director's latest film has been widely acclaimed by critics.",
+      "translations": {
+        "es": "aclamado"
+      },
+      "gloss": {
+        "es": "Muy elogiado por la crítica y el público de forma amplia y entusiasta."
+      },
+      "gloss_example": {
+        "es": "La última película del director ha sido ampliamente aclamada por la crítica."
+      }
+    },
+    {
+      "id": "dialogue",
+      "term": "dialogue",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The spoken words exchanged between characters in a film or script",
+      "example": "The sharp dialogue between the two leads made every scene crackle with tension.",
+      "translations": {
+        "es": "diálogo"
+      },
+      "gloss": {
+        "es": "Las palabras habladas que intercambian los personajes en una película o guion."
+      },
+      "gloss_example": {
+        "es": "El afilado diálogo entre los dos protagonistas hacía que cada escena vibrara de tensión."
+      }
+    },
+    {
+      "id": "blockbuster",
+      "term": "blockbuster",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A film that is very commercially successful and attracts huge audiences",
+      "example": "The studio invested heavily in the blockbuster, hoping it would dominate the summer box office.",
+      "translations": {
+        "es": "taquillero / superproducción"
+      },
+      "gloss": {
+        "es": "Película de gran éxito comercial que atrae enormes audiencias."
+      },
+      "gloss_example": {
+        "es": "El estudio invirtió mucho en la superproducción con la esperanza de dominar la taquilla del verano."
+      }
+    },
+    {
+      "id": "subplot",
+      "term": "subplot",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A secondary storyline that runs alongside and supports the main plot of a film",
+      "example": "The romantic subplot felt underdeveloped and distracted from the main story.",
+      "translations": {
+        "es": "trama secundaria"
+      },
+      "gloss": {
+        "es": "Trama secundaria que corre paralela a la trama principal de una película y la apoya."
+      },
+      "gloss_example": {
+        "es": "La trama secundaria romántica parecía poco desarrollada y distraía de la historia principal."
+      }
+    },
+    {
+      "id": "motif",
+      "term": "motif",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A recurring element, image, or symbol in a film that reinforces its central themes",
+      "example": "Water is used as a recurring motif throughout the film to symbolize transformation.",
+      "translations": {
+        "es": "motivo / leitmotiv"
+      },
+      "gloss": {
+        "es": "Elemento, imagen o símbolo recurrente en una película que refuerza sus temas centrales."
+      },
+      "gloss_example": {
+        "es": "El agua se usa como motivo recurrente en toda la película para simbolizar la transformación."
+      }
+    },
+    {
+      "id": "unreliable_narrator",
+      "term": "unreliable narrator",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A narrator whose credibility is compromised, leaving the audience to question whether events happened as described",
+      "example": "The use of an unreliable narrator forces viewers to actively question every scene.",
+      "translations": {
+        "es": "narrador no confiable"
+      },
+      "gloss": {
+        "es": "Narrador cuya credibilidad está comprometida, lo que lleva al espectador a cuestionar si los hechos ocurrieron como se describen."
+      },
+      "gloss_example": {
+        "es": "El uso de un narrador no confiable obliga al espectador a cuestionar activamente cada escena."
+      }
+    },
+    {
+      "id": "cinematography",
+      "term": "cinematography",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The art and technique of filming a movie, including camera angles, lighting, and composition",
+      "example": "The film won an Oscar for Best Cinematography thanks to its stunning visual style.",
+      "translations": {
+        "es": "cinematografía"
+      },
+      "gloss": {
+        "es": "El arte y la técnica de filmar una película, incluyendo los ángulos de cámara, la iluminación y la composición visual."
+      },
+      "gloss_example": {
+        "es": "La película ganó un Óscar a la Mejor Cinematografía gracias a su impresionante estilo visual."
+      }
+    },
+    {
+      "id": "narrative",
+      "term": "narrative",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The way a story is structured and told, including the order of events and the perspective chosen",
+      "example": "The film's non-linear narrative keeps the audience guessing until the final scene.",
+      "translations": {
+        "es": "narrativa"
+      },
+      "gloss": {
+        "es": "La forma en que se estructura y cuenta una historia, incluyendo el orden de los eventos y la perspectiva elegida."
+      },
+      "gloss_example": {
+        "es": "La narrativa no lineal de la película mantiene al público intrigado hasta la escena final."
+      }
+    },
+    {
+      "id": "pacing",
+      "term": "pacing",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The speed at which a film's story develops, affecting how tense or slow it feels",
+      "example": "Critics praised the slow pacing of the first act, which built tension effectively.",
+      "translations": {
+        "es": "ritmo narrativo"
+      },
+      "gloss": {
+        "es": "La velocidad a la que se desarrolla la historia de una película, lo que determina si se siente tensa o lenta."
+      },
+      "gloss_example": {
+        "es": "Los críticos elogiaron el ritmo pausado del primer acto, que generaba tensión de forma eficaz."
+      }
+    },
+    {
+      "id": "screenplay",
+      "term": "screenplay",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The written script of a film, including dialogue, scene descriptions, and action",
+      "example": "She won the award for Best Original Screenplay at the film festival.",
+      "translations": {
+        "es": "guion"
+      },
+      "gloss": {
+        "es": "El guion escrito de una película, que incluye los diálogos, las descripciones de escenas y las acciones."
+      },
+      "gloss_example": {
+        "es": "Ganó el premio al Mejor Guion Original en el festival de cine."
+      }
+    },
+    {
+      "id": "auteur",
+      "term": "auteur",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A director whose personal artistic vision is strongly reflected throughout their films",
+      "example": "She is considered an auteur because every film she makes reflects her distinct style.",
+      "translations": {
+        "es": "autor / cineasta con estilo propio"
+      },
+      "gloss": {
+        "es": "Director cuya visión artística personal se refleja con fuerza en todos sus films, considerado el verdadero autor de su obra."
+      },
+      "gloss_example": {
+        "es": "Se la considera una cineasta de autor porque cada película que hace refleja su estilo inconfundible."
+      }
+    },
+    {
+      "id": "intertextuality",
+      "term": "intertextuality",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The way a text is shaped by, and references, other texts, creating layers of meaning for informed audiences",
+      "example": "The film's intertextuality rewards viewers familiar with French New Wave cinema.",
+      "translations": {
+        "es": "intertextualidad"
+      },
+      "gloss": {
+        "es": "La forma en que un texto es moldeado por otros textos y los referencia, creando capas de significado para espectadores informados."
+      },
+      "gloss_example": {
+        "es": "La intertextualidad de la película recompensa a los espectadores familiarizados con la Nouvelle Vague francesa."
+      }
+    },
+    {
+      "id": "gaze",
+      "term": "gaze",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "In film theory, the perspective through which the audience is positioned to view characters, events, or the world of the film",
+      "example": "Feminist film critics have argued that Hollywood cinema traditionally adopts a male gaze.",
+      "translations": {
+        "es": "mirada / perspectiva"
+      },
+      "gloss": {
+        "es": "En teoría cinematográfica, la perspectiva desde la que el espectador es posicionado para ver a los personajes, los hechos o el mundo de la película."
+      },
+      "gloss_example": {
+        "es": "Las críticas de cine feministas han argumentado que el cine de Hollywood adopta tradicionalmente una mirada masculina."
+      }
+    },
+    {
+      "id": "allegory",
+      "term": "allegory",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A story in which characters and events represent deeper moral or political meanings",
+      "example": "The film is widely read as an allegory for racial inequality in America.",
+      "translations": {
+        "es": "alegoría"
+      },
+      "gloss": {
+        "es": "Historia en la que los personajes y los eventos representan significados morales o políticos más profundos, más allá del nivel literal."
+      },
+      "gloss_example": {
+        "es": "La película es ampliamente interpretada como una alegoría de la desigualdad racial en Estados Unidos."
+      }
+    },
+    {
+      "id": "subtext",
+      "term": "subtext",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Hidden meanings or themes in a film that are implied but not stated directly",
+      "example": "The subtext of the film is a critique of capitalism disguised as a romantic comedy.",
+      "translations": {
+        "es": "subtexto"
+      },
+      "gloss": {
+        "es": "Significados o temas ocultos en una película que se sugieren pero no se expresan directamente."
+      },
+      "gloss_example": {
+        "es": "El subtexto de la película es una crítica al capitalismo disfrazada de comedia romántica."
+      }
+    },
+    {
+      "id": "denouement",
+      "term": "denouement",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The final resolution of a story, where loose ends are tied up after the climax",
+      "example": "The film's dénouement was ambiguous, leaving audiences to interpret the ending themselves.",
+      "translations": {
+        "es": "desenlace"
+      },
+      "gloss": {
+        "es": "La resolución final de una historia, donde los cabos sueltos se atan después del clímax."
+      },
+      "gloss_example": {
+        "es": "El desenlace de la película fue ambiguo, dejando que el público interpretara el final por su cuenta."
+      }
+    },
+    {
+      "id": "polemic",
+      "term": "polemic",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A work that strongly argues against something, often a social or political system",
+      "example": "The documentary was seen as a polemic against the pharmaceutical industry.",
+      "translations": {
+        "es": "polémica / crítica apasionada"
+      },
+      "gloss": {
+        "es": "Obra que argumenta con fuerza en contra de algo, generalmente un sistema social o político."
+      },
+      "gloss_example": {
+        "es": "El documental fue visto como una crítica apasionada contra la industria farmacéutica."
+      }
+    },
+    {
+      "id": "character",
+      "term": "character",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person in a story, film, or play.",
+      "example": "The main character is a young detective.",
+      "translations": {
+        "es": "personaje"
+      },
+      "gloss": {
+        "es": "Persona que aparece en una historia o película."
+      },
+      "gloss_example": {
+        "es": "El personaje principal es un joven detective."
+      }
+    }
+  ]
+}

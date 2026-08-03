@@ -48,10 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation(); // prevent card flip
     const word = words[currentIndex];
     if (word) {
-      const _vocPair   = AppLangPair.getActive();
-      const _isEnTgt   = _vocPair.target.code === 'en';
-      const _audioText = _isEnTgt ? word.word : (word.translations?.[_vocPair.target.code] || word.word);
-      AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, word.id, _audioText);
+      AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, word.id, word.term);
     }
   }
   document.getElementById('listen-btn').addEventListener('click', _playCurrentWord);
@@ -91,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('vocab-content').appendChild(_backLink);
   }
 
-  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().id + '/');
+  AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().target.code + '/');
   AppAudio.warmup();
 });
 
@@ -157,13 +154,12 @@ function startTopic(topicId, pathMode, pathCard) {
       cardIds = _tagged.map(x => vocabTopicKey + '_' + x.id);
 
       const topicObj = (AppTopics.VOCAB_TOPICS || []).find(t => t.id === topicId);
-      const _tgtCode = AppLangPair.getActive().target.code;
       const _pbArgs = {
         items: words,
         cardIds,
         topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: _tgtCode !== 'en' ? _tagged.map(w => w.translations?.[_tgtCode] || w.word) : null,
+        traductions: _tagged.map(w => w.term),
         cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
@@ -200,20 +196,20 @@ function showCard(index) {
   isFlipped = false;
   document.getElementById('flashcard').classList.remove('flipped');
 
-  const _cardPair    = AppLangPair.getActive();
-  const _isEnTarget  = _cardPair.target.code === 'en';
-  const _displayWord = _isEnTarget ? word.word : (word.translations?.[_cardPair.target.code] || word.word);
-  const _displayHint = _isEnTarget ? (word.translations?.[_cardPair.source.code] || '') : word.word;
+  const _srcCode     = AppLangPair.getActive().source.code;
+  const _displayWord = word.term;
+  const _displayHint = word.translations?.[_srcCode] || '';
 
   // Front
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
   document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
   document.getElementById('word-text').textContent = _displayWord;
 
-  // Back
+  // Back — definition/example are the target-language (monolingual) forms; fall
+  // back to the source-language gloss for entries that lack a monolingual form.
   document.getElementById('fc-back-word').textContent    = _displayWord;
-  document.getElementById('word-definition').textContent = _isEnTarget ? word.definition : (word['definition_' + _cardPair.source.code] || word.definition);
-  document.getElementById('word-example').textContent    = _isEnTarget ? word.example    : (word['example_' + _cardPair.source.code]    || word.example);
+  document.getElementById('word-definition').textContent = word.definition || (word.gloss?.[_srcCode] || '');
+  document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 
   document.getElementById('next-btn').classList.add('hidden');

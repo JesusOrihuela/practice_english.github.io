@@ -11,31 +11,37 @@
 const AppData = (() => {
   const _cache     = new Map();          // memory: in-flight Promises + resolved data
   const _BASE      = '../../shared/json/';
-  const _SS_PREFIX = 'pe_topic_v8_';     // v8: vocabulary moved to per-pair pairs/{pairId}/vocab/
+  const _SS_PREFIX = 'pe_topic_v9_';     // v9: vocabulary moved to target-centric vocab/{targetLang}/
 
-  // IDs still shared across all pairs (no pair prefix). Vocabulary is now per-pair.
+  // IDs still shared across all pairs (no pair prefix).
   const _SHARED = /^word-equivalents($|[-_])/;
-  // Vocabulary lives under pairs/{pairId}/vocab/ (per-pair since Part C)
+  // Vocabulary lives under vocab/{targetLang}/ (target-centric — shared by target
+  // language, so all X→en pairs reuse the English vocab, all X→es reuse Spanish).
   const _VOCAB  = /^words($|[-_])/;
 
   function _pairId() {
     return (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().id : 'es-en';
   }
 
+  function _targetLang() {
+    return (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().target.code : 'en';
+  }
+
   // Build URL:
-  //   words*            → pairs/{pairId}/vocab/ (per-pair vocabulary)
-  //   word-equivalents  → common/               (shared reference)
-  //   everything else   → pairs/{pairId}/       (pair-specific phrases, grammar, placement)
+  //   words*            → vocab/{targetLang}/    (target-centric vocabulary)
+  //   word-equivalents  → common/                (shared reference)
+  //   everything else   → pairs/{pairId}/        (pair-specific phrases, grammar, placement)
   function _url(id) {
-    if (_VOCAB.test(id))  return _BASE + 'pairs/' + _pairId() + '/vocab/' + id + '.json';
+    if (_VOCAB.test(id))  return _BASE + 'vocab/' + _targetLang() + '/' + id + '.json';
     if (_SHARED.test(id)) return _BASE + 'common/' + id + '.json';
     return _BASE + 'pairs/' + _pairId() + '/' + id + '.json';
   }
 
-  // Cache key includes pair for pair-specific files (now including vocabulary) to
-  // prevent cross-pair collisions; only word-equivalents stays pair-agnostic.
+  // Cache key: vocab is keyed by target language (shared across pairs with the
+  // same target); other pair-specific files by pair; word-equivalents pair-agnostic.
   function _cacheKey(id) {
     if (_SHARED.test(id)) return _SS_PREFIX + id;
+    if (_VOCAB.test(id))  return _SS_PREFIX + 'tgt-' + _targetLang() + '_' + id;
     return _SS_PREFIX + _pairId() + '_' + id;
   }
 

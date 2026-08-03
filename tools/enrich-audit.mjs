@@ -128,17 +128,17 @@ function auditPhrases(topic) {
 
 function auditVocab(topic) {
   const fname = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  // vocab is per-pair since Part C
-  const file = join(PAIRS_DIR, PAIR, 'vocab', fname);
+  // vocab is target-centric: shared/json/vocab/{targetLang}/
+  const file = join(PAIRS_DIR, '..', 'vocab', targetLang, fname);
   if (!existsSync(file)) return;
   const data = JSON.parse(readFileSync(file, 'utf8'));
   for (const w of (data.words || [])) {
     if (WAIVERS.has(w.id)) continue;
-    if (!w.definition_es) flags.push({ topic, id: w.id, kind: 'vocab', detail: 'falta definition_es', text: w.word });
-    if (!w.example_es)    flags.push({ topic, id: w.id, kind: 'vocab', detail: 'falta example_es', text: w.word });
+    if (!w.definition) flags.push({ topic, id: w.id, kind: 'vocab', detail: 'falta definition (monolingüe del objetivo)', text: w.term });
+    if (!w.example)    flags.push({ topic, id: w.id, kind: 'vocab', detail: 'falta example', text: w.term });
     const lim = LEVEL_DEF_WORDS[w.level];
-    if (lim && w.definition_es && w.definition_es.split(/\s+/).length > lim) {
-      flags.push({ topic, id: w.id, kind: 'vocab', detail: `definition_es supera ${lim} palabras para ${w.level}`, text: w.word });
+    if (lim && w.definition && w.definition.split(/\s+/).length > lim) {
+      flags.push({ topic, id: w.id, kind: 'vocab', detail: `definition supera ${lim} palabras para ${w.level}`, text: w.term });
     }
   }
 }

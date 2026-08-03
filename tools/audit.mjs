@@ -67,6 +67,8 @@ const VOCAB_TOPICS = [
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
 ];
+// Vocabulary is target-centric: shared/json/vocab/{targetLang}/ (English + Spanish today).
+const VOCAB_LANGS = ['en', 'es'];
 
 // ─── AUDIO VOICE LEADERS (ONE PER LANGUAGE) ──────────────────────────────────
 
@@ -322,9 +324,9 @@ function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
 
 // ─── VOCAB FILE AUDIT (per-pair — word selection and CEFR levels diverge) ────
 
-function auditVocabFile(pair, topic, langRules) {
+function auditVocabFile(lang, topic, esRules) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-  const file = `shared/json/pairs/${pair}/vocab/${filename}`;
+  const file = `shared/json/vocab/${lang}/${filename}`;
   const absPath = join(ROOT, file);
   if (!existsSync(absPath)) return;
 
@@ -338,24 +340,31 @@ function auditVocabFile(pair, topic, langRules) {
   for (const w of words) {
     const id = w.id;
 
-    if (!w.definition_es) issue(file, id, 'definition_es', 'missing required field — add a monolingual Spanish definition (Rule 4)');
-    if (!w.example_es)    issue(file, id, 'example_es',    'missing required field — add a natural Spanish example sentence (Rule 4)');
+    if (!w.term)       issue(file, id, 'term',        'missing required field — the target-language term (Rule 4)');
+    if (!w.definition) issue(file, id, 'definition',  'missing required field — a monolingual target-language definition (Rule 4)');
+    if (!w.translations || !Object.keys(w.translations).length)
+      issue(file, id, 'translations', 'missing required field — at least one source-language translation (L1 anchor)');
 
-    checkEmDash(w.definition,    file, id, 'definition');
-    checkEmDash(w.example,       file, id, 'example');
-    checkEmDash(w.definition_es, file, id, 'definition_es');
-    checkEmDash(w.example_es,    file, id, 'example_es');
-    checkEmDash(w.translations?.es, file, id, 'translations.es');
+    // Rule 6: no em dash / colon / semicolon in any text field.
+    const allText = [
+      ['term', w.term], ['definition', w.definition], ['example', w.example],
+      ...Object.entries(w.translations   || {}).map(([k, v]) => [`translations.${k}`,   v]),
+      ...Object.entries(w.gloss          || {}).map(([k, v]) => [`gloss.${k}`,          v]),
+      ...Object.entries(w.gloss_example  || {}).map(([k, v]) => [`gloss_example.${k}`,  v]),
+    ];
+    for (const [key, text] of allText) checkEmDash(text, file, id, key);
 
-    if (langRules) {
-      const spanishFields = [
-        { key: 'translations.es', text: w.translations?.es },
-        { key: 'definition_es',   text: w.definition_es },
-        { key: 'example_es',      text: w.example_es },
-      ];
-      for (const { key, text } of spanishFields) {
-        checkAnglicisms(text, file, id, key, langRules);
-        checkRegionalTerms(text, file, id, key, langRules, false);
+    // Anglicisms / regional terms apply to Spanish text wherever it lives: the
+    // target fields when this is the Spanish vocab, plus any Spanish source gloss.
+    if (esRules) {
+      const spanishFields = [];
+      if (lang === 'es') spanishFields.push(['term', w.term], ['definition', w.definition], ['example', w.example]);
+      if (w.translations?.es)  spanishFields.push(['translations.es',  w.translations.es]);
+      if (w.gloss?.es)         spanishFields.push(['gloss.es',         w.gloss.es]);
+      if (w.gloss_example?.es) spanishFields.push(['gloss_example.es', w.gloss_example.es]);
+      for (const [key, text] of spanishFields) {
+        checkAnglicisms(text, file, id, key, esRules);
+        checkRegionalTerms(text, file, id, key, esRules, false);
       }
     }
   }
@@ -496,35 +505,33 @@ function checkPhraseAudioAlignment(topic, pairId, targetLangCode) {
 
 // ─── VOCAB AUDIO ALIGNMENT CHECK (shared, slug-based) ────────────────────────
 
-function checkVocabAudioAlignment(topic) {
+function checkVocabAudioAlignment(lang, topic) {
   const jsonFile    = topic === 'general' ? 'words.json' : `words-${topic}.json`;
   const audioSubdir = topic === 'general' ? 'vocab' : `vocab_${topic}`;
-  const fileRef     = `shared/json/pairs/*/vocab/${jsonFile}`;
+  const fileRef     = `shared/json/vocab/${lang}/${jsonFile}`;
+  const leaderVoice = LANG_VOICE_LEADERS[lang];
+  if (!leaderVoice) return;
 
-  // Vocab audio is per-pair since Part C: each pair's target-language voices live
-  // under shared/audio/{pair}/{audioSubdir}. Map a target langCode to its pair
-  // (en → es-en; otherwise en-{lang}) and check the words in that pair's vocab.
-  for (const [langCode, leaderVoice] of Object.entries(LANG_VOICE_LEADERS)) {
-    const pair = langCode === 'en' ? 'es-en' : `en-${langCode}`;
-    const jsonPath  = join(JSON_DIR, 'pairs', pair, 'vocab', jsonFile);
-    const audioPath = join(AUDIO_DIR, pair, audioSubdir);
-    if (!existsSync(jsonPath) || !existsSync(audioPath)) continue;
-    const words = (JSON.parse(readFileSync(jsonPath, 'utf8')).words) ?? [];
+  // Vocab is target-centric: shared/json/vocab/{lang}/ speaks its language's voices
+  // under shared/audio/{lang}/{audioSubdir}.
+  const jsonPath  = join(JSON_DIR, 'vocab', lang, jsonFile);
+  const audioPath = join(AUDIO_DIR, lang, audioSubdir);
+  if (!existsSync(jsonPath) || !existsSync(audioPath)) return;
+  const words = (JSON.parse(readFileSync(jsonPath, 'utf8')).words) ?? [];
 
-    let found = 0;
-    for (const w of words) {
-      if (existsSync(join(audioPath, `${w.id}-${leaderVoice}.wav`))) found++;
-    }
-    if (found === 0) continue;  // not yet generated for this language
+  let found = 0;
+  for (const w of words) {
+    if (existsSync(join(audioPath, `${w.id}-${leaderVoice}.wav`))) found++;
+  }
+  if (found === 0) return;  // not yet generated for this language
 
-    if (found !== words.length) {
-      const missing = words.length - found;
-      const genCmd = langCode === 'en'
-        ? `node tools/generate-audio.mjs --topic ${audioSubdir}`
-        : `python tools/generate-audio-tgt.py --lang ${langCode} --topic ${audioSubdir}`;
-      issue(fileRef, null, `audio_${langCode}`,
-        `${langCode.toUpperCase()} mismatch: ${missing} ${leaderVoice} files missing of ${words.length} — run: ${genCmd}`);
-    }
+  if (found !== words.length) {
+    const missing = words.length - found;
+    const genCmd = lang === 'en'
+      ? `node tools/generate-audio.mjs --topic ${audioSubdir}`
+      : `python tools/generate-audio-tgt.py --lang ${lang} --topic ${audioSubdir}`;
+    issue(fileRef, null, `audio_${lang}`,
+      `${lang.toUpperCase()} mismatch: ${missing} ${leaderVoice} files missing of ${words.length} — run: ${genCmd}`);
   }
 }
 
@@ -573,13 +580,13 @@ if (fileArg) {
     auditPlacementFile(id);
   }
 
-  for (const { id } of PAIRS) for (const t of VOCAB_TOPICS) auditVocabFile(id, t, CONTENT_RULES.es);
+  for (const lang of VOCAB_LANGS) for (const t of VOCAB_TOPICS) auditVocabFile(lang, t, CONTENT_RULES.es);
 
   if (!quick) {
     for (const { id, targetLang } of PAIRS) {
       for (const t of PHRASE_TOPICS) checkPhraseAudioAlignment(t, id, targetLang);
     }
-    for (const t of VOCAB_TOPICS) checkVocabAudioAlignment(t);
+    for (const lang of VOCAB_LANGS) for (const t of VOCAB_TOPICS) checkVocabAudioAlignment(lang, t);
   }
 }
 

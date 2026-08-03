@@ -85,7 +85,7 @@ const PhraseBrowser = (() => {
       const seen = !!(cards[cardIds[i]] && cards[cardIds[i]].reps > 0);
       let mainText, subText;
       if (isWordList) {
-        const _raw = (traductions && traductions[i]) ? traductions[i] : item.word;
+        const _raw = (traductions && traductions[i]) ? traductions[i] : (item.term || item.word);
         mainText = _raw ? _raw.charAt(0).toUpperCase() + _raw.slice(1) : _raw;
         const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
         subText  = item.category

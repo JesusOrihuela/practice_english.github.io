@@ -1,0 +1,616 @@
+{
+  "words": [
+    {
+      "id": "hotel",
+      "term": "hotel",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building where people pay to stay in furnished rooms and use shared services",
+      "example": "We stayed at a hotel near the beach for our vacation.",
+      "translations": {
+        "es": "hotel"
+      },
+      "gloss": {
+        "es": "Edificio donde se paga por dormir en habitaciones."
+      },
+      "gloss_example": {
+        "es": "Nos alojamos en un hotel cerca de la playa durante las vacaciones."
+      }
+    },
+    {
+      "id": "room",
+      "term": "room",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A separate space in a hotel or building where you sleep and stay",
+      "example": "We requested a room with two beds for our family.",
+      "translations": {
+        "es": "habitación"
+      },
+      "gloss": {
+        "es": "Espacio independiente en un hotel donde duermes y te alojas."
+      },
+      "gloss_example": {
+        "es": "Pedimos una habitación con dos camas para nuestra familia."
+      }
+    },
+    {
+      "id": "reservation",
+      "term": "reservation",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An arrangement made in advance to hold a hotel room for a specific period",
+      "example": "I made a reservation for two nights at a hotel near the airport.",
+      "translations": {
+        "es": "reserva"
+      },
+      "gloss": {
+        "es": "Acuerdo previo para guardar una habitación de hotel."
+      },
+      "gloss_example": {
+        "es": "Hice una reserva para dos noches en un hotel cerca del aeropuerto."
+      }
+    },
+    {
+      "id": "hostel",
+      "term": "hostel",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A low-cost place to stay where you share a room and facilities with other travelers",
+      "example": "She stayed in a hostel to save money during her backpacking trip.",
+      "translations": {
+        "es": "hostal / albergue"
+      },
+      "gloss": {
+        "es": "Alojamiento barato donde compartes habitación con otros viajeros."
+      },
+      "gloss_example": {
+        "es": "Se hospedó en un hostal para ahorrar dinero durante su viaje de mochilero."
+      }
+    },
+    {
+      "id": "key",
+      "term": "key",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A card or metal piece used to open the door to your hotel room",
+      "example": "I left my room key at the front desk before going to the pool.",
+      "translations": {
+        "es": "llave / tarjeta llave"
+      },
+      "gloss": {
+        "es": "Tarjeta o pieza para abrir tu habitación de hotel."
+      },
+      "gloss_example": {
+        "es": "Dejé la llave de mi habitación en recepción antes de ir a la piscina."
+      }
+    },
+    {
+      "id": "checkout",
+      "term": "checkout",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The process of paying your bill and leaving the hotel at the end of your stay",
+      "example": "Checkout is at noon. Please return your key to reception before then.",
+      "translations": {
+        "es": "salida"
+      },
+      "gloss": {
+        "es": "Pagar la cuenta y dejar el hotel al final."
+      },
+      "gloss_example": {
+        "es": "La salida es a mediodía. Por favor, devuelve la llave en recepción antes de esa hora."
+      }
+    },
+    {
+      "id": "reception",
+      "term": "reception",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The front desk of a hotel where guests check in, ask questions, and check out",
+      "example": "Go to reception if you need extra towels or a wake-up call.",
+      "translations": {
+        "es": "recepción"
+      },
+      "gloss": {
+        "es": "Mostrador de un hotel donde se registran los huéspedes."
+      },
+      "gloss_example": {
+        "es": "Ve a recepción si necesitas toallas adicionales o que te despierten."
+      }
+    },
+    {
+      "id": "balcony",
+      "term": "balcony",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An outdoor platform attached to a hotel room on an upper floor",
+      "example": "Our room had a balcony with a beautiful view of the sea.",
+      "translations": {
+        "es": "balcón"
+      },
+      "gloss": {
+        "es": "Plataforma exterior unida a una habitación en un piso alto."
+      },
+      "gloss_example": {
+        "es": "Nuestra habitación tenía un balcón con una hermosa vista al mar."
+      }
+    },
+    {
+      "id": "parking",
+      "term": "parking",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A designated area at a hotel where guests can leave their vehicles",
+      "example": "Does the hotel offer free parking, or is there an additional charge?",
+      "translations": {
+        "es": "estacionamiento / parking"
+      },
+      "gloss": {
+        "es": "Área de un hotel donde los huéspedes dejan sus vehículos."
+      },
+      "gloss_example": {
+        "es": "¿El hotel ofrece estacionamiento gratuito o tiene un costo adicional?"
+      }
+    },
+    {
+      "id": "towel",
+      "term": "towel",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A piece of cloth provided by the hotel for drying yourself after a shower or bath",
+      "example": "We called reception to ask for extra towels for the room.",
+      "translations": {
+        "es": "toalla"
+      },
+      "gloss": {
+        "es": "Pieza de tela para secarte después de ducharte."
+      },
+      "gloss_example": {
+        "es": "Llamamos a recepción para pedir toallas adicionales para la habitación."
+      }
+    },
+    {
+      "id": "accommodation",
+      "term": "accommodation",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A place where travelers can stay, such as a hotel, hostel, or rental apartment",
+      "example": "We booked accommodation close to the city centre for three nights.",
+      "translations": {
+        "es": "alojamiento"
+      },
+      "gloss": {
+        "es": "Lugar donde los viajeros pueden alojarse, como un hotel, hostal o apartamento de alquiler."
+      },
+      "gloss_example": {
+        "es": "Reservamos alojamiento cerca del centro de la ciudad durante tres noches."
+      }
+    },
+    {
+      "id": "amenities",
+      "term": "amenities",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Facilities and features provided by a hotel, such as a pool, gym, or free Wi-Fi",
+      "example": "The hotel's amenities include a rooftop pool and a full-service spa.",
+      "translations": {
+        "es": "instalaciones / servicios"
+      },
+      "gloss": {
+        "es": "Instalaciones y servicios que ofrece un hotel, como piscina, gimnasio o Wi-Fi gratuito."
+      },
+      "gloss_example": {
+        "es": "Las instalaciones del hotel incluyen una piscina en la azotea y un spa completo."
+      }
+    },
+    {
+      "id": "complimentary",
+      "term": "complimentary",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Given free of charge, usually as a courtesy or bonus by a hotel",
+      "example": "The hotel offered complimentary breakfast to all guests on weekends.",
+      "translations": {
+        "es": "gratuito / de cortesía"
+      },
+      "gloss": {
+        "es": "Que se ofrece sin costo, generalmente como cortesía o beneficio adicional del hotel."
+      },
+      "gloss_example": {
+        "es": "El hotel ofrecía desayuno gratuito a todos los huéspedes los fines de semana."
+      }
+    },
+    {
+      "id": "suite",
+      "term": "suite",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A set of connected rooms in a hotel, usually with a living area and bedroom",
+      "example": "They upgraded us to a suite on the top floor with a spectacular view.",
+      "translations": {
+        "es": "suite"
+      },
+      "gloss": {
+        "es": "Conjunto de habitaciones comunicadas en un hotel, normalmente con sala de estar y dormitorio."
+      },
+      "gloss_example": {
+        "es": "Nos mejoraron a una suite en el último piso con una vista espectacular."
+      }
+    },
+    {
+      "id": "housekeeping",
+      "term": "housekeeping",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The hotel department responsible for cleaning rooms and maintaining common areas",
+      "example": "Please call housekeeping if you need clean towels or your room tidied.",
+      "translations": {
+        "es": "servicio de limpieza / habitaciones"
+      },
+      "gloss": {
+        "es": "El departamento del hotel encargado de limpiar las habitaciones y mantener las zonas comunes."
+      },
+      "gloss_example": {
+        "es": "Llama al servicio de limpieza si necesitas toallas limpias o que arreglen tu habitación."
+      }
+    },
+    {
+      "id": "tariff",
+      "term": "tariff",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The official price list for hotel rooms and services",
+      "example": "The hotel's tariff varies by season, with peak rates in summer.",
+      "translations": {
+        "es": "tarifa / arancel"
+      },
+      "gloss": {
+        "es": "La lista oficial de precios de las habitaciones y servicios de un hotel."
+      },
+      "gloss_example": {
+        "es": "La tarifa del hotel varía según la temporada, con precios más altos en verano."
+      }
+    },
+    {
+      "id": "concierge",
+      "term": "concierge",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A hotel staff member who helps guests with special requests, bookings, and local information",
+      "example": "The concierge arranged restaurant reservations and museum tickets for our trip.",
+      "translations": {
+        "es": "conserje"
+      },
+      "gloss": {
+        "es": "El miembro del personal del hotel que ayuda a los huéspedes con peticiones especiales, reservas e información local."
+      },
+      "gloss_example": {
+        "es": "El conserje nos organizó las reservas en restaurantes y las entradas al museo."
+      }
+    },
+    {
+      "id": "deposit",
+      "term": "deposit",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "An amount of money paid in advance as security, returned when no damage is found at checkout",
+      "example": "The hotel required a deposit of $100 on the credit card at check-in.",
+      "translations": {
+        "es": "depósito / fianza"
+      },
+      "gloss": {
+        "es": "Cantidad de dinero pagada por adelantado como garantía, que se devuelve si no hay daños al realizar la salida."
+      },
+      "gloss_example": {
+        "es": "El hotel solicitó un depósito de 100 dólares en la tarjeta de crédito al registrarse."
+      }
+    },
+    {
+      "id": "occupancy",
+      "term": "occupancy",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The state of a room or hotel being used by a guest, or the rate at which rooms are filled",
+      "example": "The hotel reached full occupancy during the international conference.",
+      "translations": {
+        "es": "ocupación"
+      },
+      "gloss": {
+        "es": "El estado de una habitación u hotel ocupado por un huésped, o el porcentaje de habitaciones que están llenas."
+      },
+      "gloss_example": {
+        "es": "El hotel alcanzó la ocupación total durante el congreso internacional."
+      }
+    },
+    {
+      "id": "refund",
+      "term": "refund",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The return of money paid for a hotel booking, usually after a cancellation",
+      "example": "She requested a full refund after the hotel failed to provide the room she had booked.",
+      "translations": {
+        "es": "reembolso"
+      },
+      "gloss": {
+        "es": "La devolución del dinero pagado por una reserva de hotel, normalmente tras una cancelación."
+      },
+      "gloss_example": {
+        "es": "Solicitó un reembolso completo después de que el hotel no pudo darle la habitación reservada."
+      }
+    },
+    {
+      "id": "invoice",
+      "term": "invoice",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A formal document listing all charges for a hotel stay, often needed for business expense reports",
+      "example": "Please provide an itemized invoice. I need it for my company's accounting.",
+      "translations": {
+        "es": "factura"
+      },
+      "gloss": {
+        "es": "Documento formal que detalla todos los cargos de una estancia en un hotel, a menudo requerido para informes de gastos empresariales."
+      },
+      "gloss_example": {
+        "es": "Por favor, facilita una factura detallada. La necesito para la contabilidad de mi empresa."
+      }
+    },
+    {
+      "id": "complaint",
+      "term": "complaint",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A formal statement expressing dissatisfaction with a service or condition at a hotel",
+      "example": "She filed a formal complaint about the noise and received a discount on her bill.",
+      "translations": {
+        "es": "queja / reclamación"
+      },
+      "gloss": {
+        "es": "Declaración formal que expresa insatisfacción con un servicio o condición en un hotel."
+      },
+      "gloss_example": {
+        "es": "Presentó una queja formal por el ruido y recibió un descuento en su factura."
+      }
+    },
+    {
+      "id": "liability",
+      "term": "liability",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Legal or financial responsibility for damage or loss during a hotel stay",
+      "example": "The hotel disclaimed liability for valuables left outside the safe.",
+      "translations": {
+        "es": "responsabilidad / pasivo"
+      },
+      "gloss": {
+        "es": "Responsabilidad legal o económica por daños o pérdidas durante la estancia en un hotel."
+      },
+      "gloss_example": {
+        "es": "El hotel declinó toda responsabilidad por los objetos de valor dejados fuera de la caja fuerte."
+      }
+    },
+    {
+      "id": "waiver",
+      "term": "waiver",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A signed document in which a guest agrees not to hold the hotel responsible for certain events",
+      "example": "Guests signing the waiver acknowledge that the hotel is not liable for injuries in the gym.",
+      "translations": {
+        "es": "exención / renuncia de responsabilidad"
+      },
+      "gloss": {
+        "es": "Documento firmado en el que un huésped acepta no responsabilizar al hotel por ciertos eventos."
+      },
+      "gloss_example": {
+        "es": "Los huéspedes que firman la exención reconocen que el hotel no se hace responsable de las lesiones en el gimnasio."
+      }
+    },
+    {
+      "id": "corporate_rate",
+      "term": "corporate rate",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A discounted hotel price negotiated for business travelers or company accounts",
+      "example": "Our company has a corporate rate with the hotel chain that saves us 20% per night.",
+      "translations": {
+        "es": "tarifa corporativa"
+      },
+      "gloss": {
+        "es": "Precio de hotel con descuento negociado para viajeros de negocios o cuentas corporativas."
+      },
+      "gloss_example": {
+        "es": "Nuestra empresa tiene una tarifa corporativa con la cadena hotelera que nos ahorra un 20 % por noche."
+      }
+    },
+    {
+      "id": "indemnify",
+      "term": "indemnify",
+      "level": "C2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To compensate someone financially for loss or damage they have suffered",
+      "example": "The contract stipulates that the hotel will indemnify guests for losses caused by staff negligence.",
+      "translations": {
+        "es": "indemnizar"
+      },
+      "gloss": {
+        "es": "Compensar económicamente a alguien por una pérdida o daño que ha sufrido."
+      },
+      "gloss_example": {
+        "es": "El contrato estipula que el hotel indemnizará a los huéspedes por las pérdidas causadas por negligencia del personal."
+      }
+    },
+    {
+      "id": "misrepresentation",
+      "term": "misrepresentation",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A false or misleading description of a product or service, such as inaccurate photos in a listing",
+      "example": "She argued that the listing constituted misrepresentation and demanded a full refund.",
+      "translations": {
+        "es": "representación falsa / engaño publicitario"
+      },
+      "gloss": {
+        "es": "Descripción falsa o engañosa de un producto o servicio, como fotos inexactas en un anuncio."
+      },
+      "gloss_example": {
+        "es": "Argumentó que el anuncio constituía una representación falsa y exigió un reembolso completo."
+      }
+    },
+    {
+      "id": "arbitration",
+      "term": "arbitration",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A process of resolving a dispute outside of court, using a neutral third party",
+      "example": "The hotel's terms of service require disputes to be settled by arbitration.",
+      "translations": {
+        "es": "arbitraje"
+      },
+      "gloss": {
+        "es": "Proceso de resolución de un conflicto fuera de los tribunales, mediante un tercero neutral."
+      },
+      "gloss_example": {
+        "es": "Los términos del servicio del hotel exigen que las disputas se resuelvan mediante arbitraje."
+      }
+    },
+    {
+      "id": "discretion",
+      "term": "discretion",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The freedom or authority to decide what should be done in a particular situation",
+      "example": "Damage charges are assessed at the hotel's sole discretion, with no fixed schedule.",
+      "translations": {
+        "es": "discreción / potestad"
+      },
+      "gloss": {
+        "es": "La libertad o autoridad para decidir qué debe hacerse en una situación determinada."
+      },
+      "gloss_example": {
+        "es": "Los cargos por daños se evalúan a discreción exclusiva del hotel, sin un baremo fijo."
+      }
+    },
+    {
+      "id": "remittance",
+      "term": "remittance",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A payment sent to settle a bill or financial obligation, commonly used in formal correspondence",
+      "example": "Please arrange remittance within fourteen days of receipt of the invoice.",
+      "translations": {
+        "es": "remesa / pago / remisión de pago"
+      },
+      "gloss": {
+        "es": "Pago enviado para saldar una factura u obligación económica, de uso común en la correspondencia formal."
+      },
+      "gloss_example": {
+        "es": "Por favor, tramita la remesa en un plazo de catorce días a partir de la recepción de la factura."
+      }
+    },
+    {
+      "id": "bed",
+      "term": "bed",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A piece of furniture you sleep on.",
+      "example": "The hotel bed was very comfortable.",
+      "translations": {
+        "es": "cama"
+      },
+      "gloss": {
+        "es": "Mueble sobre el que se duerme."
+      },
+      "gloss_example": {
+        "es": "La cama del hotel era muy cómoda."
+      }
+    },
+    {
+      "id": "building",
+      "term": "building",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A structure with walls and a roof, such as a house.",
+      "example": "They live in a tall building downtown.",
+      "translations": {
+        "es": "edificio"
+      },
+      "gloss": {
+        "es": "Estructura con paredes y techo, como una casa."
+      },
+      "gloss_example": {
+        "es": "Viven en un edificio alto en el centro."
+      }
+    },
+    {
+      "id": "garden",
+      "term": "garden",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A piece of land where flowers and plants grow.",
+      "example": "They grow vegetables in the garden.",
+      "translations": {
+        "es": "jardín"
+      },
+      "gloss": {
+        "es": "Terreno donde crecen flores y plantas."
+      },
+      "gloss_example": {
+        "es": "Cultivan verduras en el jardín."
+      }
+    },
+    {
+      "id": "wall",
+      "term": "wall",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "One of the sides of a room or building.",
+      "example": "She hung a picture on the wall.",
+      "translations": {
+        "es": "pared"
+      },
+      "gloss": {
+        "es": "Uno de los lados de un cuarto o edificio."
+      },
+      "gloss_example": {
+        "es": "Colgó un cuadro en la pared."
+      }
+    }
+  ]
+}

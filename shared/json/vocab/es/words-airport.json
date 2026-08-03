@@ -1,0 +1,544 @@
+{
+  "words": [
+    {
+      "id": "flight",
+      "term": "vuelo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Viaje que se hace en avión.",
+      "example": "Nuestro vuelo a Miami sale a las siete de la mañana.",
+      "translations": {
+        "en": "flight"
+      },
+      "gloss": {
+        "en": "A journey made by airplane"
+      },
+      "gloss_example": {
+        "en": "Our flight to Miami leaves at seven in the morning."
+      }
+    },
+    {
+      "id": "passport",
+      "term": "pasaporte",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Documento oficial que te permite viajar entre países.",
+      "example": "No puedes abordar el avión sin un pasaporte válido.",
+      "translations": {
+        "en": "passport"
+      },
+      "gloss": {
+        "en": "An official document that identifies you and allows you to travel between countries"
+      },
+      "gloss_example": {
+        "en": "You cannot board the plane without a valid passport."
+      }
+    },
+    {
+      "id": "gate",
+      "term": "puerta de embarque",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Zona del aeropuerto donde esperas antes de abordar.",
+      "example": "Por favor, dirígete a la puerta B14. El embarque empieza en veinte minutos.",
+      "translations": {
+        "en": "gate"
+      },
+      "gloss": {
+        "en": "The area in an airport where passengers wait before boarding their specific flight"
+      },
+      "gloss_example": {
+        "en": "Please proceed to gate B14. Boarding starts in twenty minutes."
+      }
+    },
+    {
+      "id": "luggage",
+      "term": "equipaje",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bolsas y maletas que llevas contigo al viajar.",
+      "example": "Por favor, pon tu equipaje en la báscula antes de facturarlo.",
+      "translations": {
+        "en": "luggage"
+      },
+      "gloss": {
+        "en": "Bags and suitcases you take with you when traveling"
+      },
+      "gloss_example": {
+        "en": "Please put your luggage on the scale before checking in."
+      }
+    },
+    {
+      "id": "ticket",
+      "term": "boleto / billete",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Documento o confirmación digital que te permite abordar un vuelo.",
+      "example": "Guardé mi boleto electrónico en el celular para no perderlo.",
+      "translations": {
+        "en": "ticket"
+      },
+      "gloss": {
+        "en": "A document or digital confirmation that allows you to board a specific flight"
+      },
+      "gloss_example": {
+        "en": "I saved my e-ticket on my phone so I wouldn't lose it."
+      }
+    },
+    {
+      "id": "boarding",
+      "term": "embarque / abordaje",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Proceso de subir al avión antes de la salida.",
+      "example": "El embarque comienza cuarenta y cinco minutos antes de la salida programada.",
+      "translations": {
+        "en": "boarding"
+      },
+      "gloss": {
+        "en": "The process of getting onto a plane at the airport gate before departure"
+      },
+      "gloss_example": {
+        "en": "Boarding begins forty-five minutes before the scheduled departure."
+      }
+    },
+    {
+      "id": "check_in",
+      "term": "registro / facturación",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Registrarse en el aeropuerto y recibir la tarjeta de embarque.",
+      "example": "El registro en línea se abre 24 horas antes de la salida del vuelo.",
+      "translations": {
+        "en": "check-in"
+      },
+      "gloss": {
+        "en": "The process of registering your arrival at an airport and receiving your boarding pass"
+      },
+      "gloss_example": {
+        "en": "Online check-in opens 24 hours before the flight departs."
+      }
+    },
+    {
+      "id": "delay",
+      "term": "retraso / demora",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Tiempo por el que algo llega tarde o se pospone.",
+      "example": "El retraso fue causado por el mal tiempo en el aeropuerto de destino.",
+      "translations": {
+        "en": "delay"
+      },
+      "gloss": {
+        "en": "A period of time by which something is late or postponed"
+      },
+      "gloss_example": {
+        "en": "The delay was caused by bad weather at the destination airport."
+      }
+    },
+    {
+      "id": "currency",
+      "term": "divisa / moneda",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El dinero oficial que se usa en un país determinado.",
+      "example": "Asegúrate de cambiar tu moneda antes de llegar a tu destino.",
+      "translations": {
+        "en": "currency"
+      },
+      "gloss": {
+        "en": "The official money used in a particular country"
+      },
+      "gloss_example": {
+        "en": "Make sure to exchange your currency before arriving at your destination."
+      }
+    },
+    {
+      "id": "destination",
+      "term": "destino",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El lugar adonde alguien o algo se dirige.",
+      "example": "París es uno de los destinos turísticos más visitados del mundo.",
+      "translations": {
+        "en": "destination"
+      },
+      "gloss": {
+        "en": "The place where someone is going or where something is being sent"
+      },
+      "gloss_example": {
+        "en": "Paris is one of the most visited tourist destinations in the world."
+      }
+    },
+    {
+      "id": "customs",
+      "term": "aduana",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El proceso oficial en una frontera donde las autoridades revisan lo que traes al país.",
+      "example": "Debes declarar cualquier alimento o producto vegetal al pasar por la aduana.",
+      "translations": {
+        "en": "customs"
+      },
+      "gloss": {
+        "en": "The official process at a border where authorities check what you are bringing into a country"
+      },
+      "gloss_example": {
+        "en": "You must declare any food or plant products when going through customs."
+      }
+    },
+    {
+      "id": "layover",
+      "term": "escala",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Parada en un aeropuerto intermedio donde esperas antes de continuar a tu destino final.",
+      "example": "Tuvimos una escala de seis horas en Ámsterdam antes de nuestro vuelo de conexión.",
+      "translations": {
+        "en": "layover"
+      },
+      "gloss": {
+        "en": "A stop at an intermediate airport where you wait before continuing to your final destination"
+      },
+      "gloss_example": {
+        "en": "We had a six-hour layover in Amsterdam before our connecting flight."
+      }
+    },
+    {
+      "id": "transit",
+      "term": "tránsito",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Pasar por un aeropuerto camino a tu destino final sin entrar al país.",
+      "example": "Los pasajeros en tránsito no necesitan recoger su equipaje entre vuelos.",
+      "translations": {
+        "en": "transit"
+      },
+      "gloss": {
+        "en": "Passing through an airport or country on the way to your final destination without officially entering"
+      },
+      "gloss_example": {
+        "en": "Passengers in transit do not need to collect their bags between flights."
+      }
+    },
+    {
+      "id": "turbulence",
+      "term": "turbulencia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Movimientos bruscos e irregulares de un avión causados por corrientes de aire inestables.",
+      "example": "El piloto pidió a todos que se abrocharan el cinturón debido a la turbulencia.",
+      "translations": {
+        "en": "turbulence"
+      },
+      "gloss": {
+        "en": "Sudden, rough movements of an aircraft caused by irregular air currents"
+      },
+      "gloss_example": {
+        "en": "The pilot asked everyone to fasten their seatbelts due to turbulence."
+      }
+    },
+    {
+      "id": "jet_lag",
+      "term": "desfase horario",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Cansancio extremo y dificultad para dormir causados por volar a través de varios husos horarios.",
+      "example": "Le llevó tres días recuperarse del desfase horario después de volar a Tokio.",
+      "translations": {
+        "en": "jet lag"
+      },
+      "gloss": {
+        "en": "Extreme tiredness and difficulty sleeping caused by flying across multiple time zones"
+      },
+      "gloss_example": {
+        "en": "It took her three days to recover from jet lag after flying to Tokyo."
+      }
+    },
+    {
+      "id": "immigration",
+      "term": "inmigración / control migratorio",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso oficial en un aeropuerto donde las autoridades verifican tu pasaporte y visa al entrar a un país.",
+      "example": "Las colas de control migratorio pueden ser muy largas en los aeropuertos internacionales concurridos.",
+      "translations": {
+        "en": "immigration"
+      },
+      "gloss": {
+        "en": "The official process at an airport where authorities check your passport and visa when you enter a country"
+      },
+      "gloss_example": {
+        "en": "Immigration queues can be very long at busy international airports."
+      }
+    },
+    {
+      "id": "baggage_claim",
+      "term": "recogida de equipaje",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La zona del aeropuerto donde los pasajeros recogen su equipaje facturado después de aterrizar.",
+      "example": "Nuestras maletas deben llegar a la cinta número 4 de recogida de equipaje.",
+      "translations": {
+        "en": "baggage claim"
+      },
+      "gloss": {
+        "en": "The area in an airport where passengers collect their checked bags after landing"
+      },
+      "gloss_example": {
+        "en": "Our bags should arrive at baggage claim carousel 4."
+      }
+    },
+    {
+      "id": "overbooked",
+      "term": "sobrevendido / con exceso de reservas",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Situación en la que una aerolínea ha vendido más asientos de los que físicamente hay disponibles en un vuelo.",
+      "example": "Como el vuelo estaba sobrevendido, le pidieron a un pasajero tomar el siguiente a cambio de un bono.",
+      "translations": {
+        "en": "overbooked"
+      },
+      "gloss": {
+        "en": "When an airline has sold more seats than are physically available on a flight"
+      },
+      "gloss_example": {
+        "en": "Because the flight was overbooked, a passenger was asked to take the next one in exchange for a voucher."
+      }
+    },
+    {
+      "id": "upgrade",
+      "term": "mejora de clase",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Cambio a una clase de servicio superior en un vuelo, como de económica a clase ejecutiva.",
+      "example": "Usó sus millas de viajera frecuente para pedir una mejora a clase ejecutiva.",
+      "translations": {
+        "en": "upgrade"
+      },
+      "gloss": {
+        "en": "A change to a higher class of service on a flight, such as from economy to business class"
+      },
+      "gloss_example": {
+        "en": "She used her frequent flyer miles to request an upgrade to business class."
+      }
+    },
+    {
+      "id": "voucher",
+      "term": "vale / bono de compensación",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Documento emitido por una aerolínea como compensación, generalmente para una comida, alojamiento o vuelo futuro.",
+      "example": "Cada pasajero afectado recibió un vale de comida para el restaurante del aeropuerto.",
+      "translations": {
+        "en": "voucher"
+      },
+      "gloss": {
+        "en": "A document issued by an airline as compensation, typically for a meal, hotel stay, or future flight"
+      },
+      "gloss_example": {
+        "en": "Each affected passenger received a meal voucher for the airport restaurant."
+      }
+    },
+    {
+      "id": "duty_free",
+      "term": "libre de impuestos / duty-free",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Describe los productos vendidos en aeropuertos exentos de impuestos estándar, disponibles solo para viajeros internacionales.",
+      "example": "Compró perfume y chocolate en la tienda libre de impuestos antes de embarcar.",
+      "translations": {
+        "en": "duty-free"
+      },
+      "gloss": {
+        "en": "Describes goods sold at airports exempt from standard taxes, available to international travelers only"
+      },
+      "gloss_example": {
+        "en": "She bought perfume and chocolate at the duty-free shop before boarding."
+      }
+    },
+    {
+      "id": "biometrics",
+      "term": "biometría",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Tecnología que identifica a las personas mediante características físicas únicas como huellas dactilares o reconocimiento facial.",
+      "example": "Las nuevas puertas electrónicas usan biometría para verificar la identidad de los viajeros en segundos.",
+      "translations": {
+        "en": "biometrics"
+      },
+      "gloss": {
+        "en": "Technology that identifies people using unique physical features such as fingerprints or facial scans"
+      },
+      "gloss_example": {
+        "en": "The new e-gates use biometrics to verify travelers' identities in seconds."
+      }
+    },
+    {
+      "id": "prohibited",
+      "term": "prohibido",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Oficialmente prohibido, sin que se permita llevarlo a bordo de un avión o introducirlo en un país.",
+      "example": "Los líquidos de más de 100 ml están prohibidos en el equipaje de mano en la mayoría de los aeropuertos.",
+      "translations": {
+        "en": "prohibited"
+      },
+      "gloss": {
+        "en": "Officially forbidden, not allowed to be brought onto an aircraft or into a country"
+      },
+      "gloss_example": {
+        "en": "Liquids over 100 ml are prohibited in carry-on luggage at most airports."
+      }
+    },
+    {
+      "id": "carrier",
+      "term": "aerolínea / transportista",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Compañía aérea que opera vuelos de pasajeros o de carga.",
+      "example": "La ruta está operada por tres aerolíneas distintas, incluida una de bajo costo.",
+      "translations": {
+        "en": "carrier"
+      },
+      "gloss": {
+        "en": "An airline company that operates passenger or cargo flights"
+      },
+      "gloss_example": {
+        "en": "The route is serviced by three different carriers, including one budget airline."
+      }
+    },
+    {
+      "id": "overbooking",
+      "term": "sobreventa / overbooking",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La práctica de vender más asientos de los disponibles, usada como seguro contra las ausencias de pasajeros.",
+      "example": "El overbooking es habitual en la industria aérea, pero puede dejar sin asiento a pasajeros con reserva confirmada.",
+      "translations": {
+        "en": "overbooking"
+      },
+      "gloss": {
+        "en": "The practice of selling more seats than available, used as insurance against passenger no-shows"
+      },
+      "gloss_example": {
+        "en": "Overbooking is common in the airline industry but can leave confirmed passengers without a seat."
+      }
+    },
+    {
+      "id": "repatriation",
+      "term": "repatriación",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso de devolver a una persona a su país de origen, a menudo tras una emergencia o un proceso legal.",
+      "example": "Los viajeros varados esperaban vuelos de repatriación tras el cierre repentino de la frontera.",
+      "translations": {
+        "en": "repatriation"
+      },
+      "gloss": {
+        "en": "The process of returning a person to their home country, often after an emergency or legal process"
+      },
+      "gloss_example": {
+        "en": "Stranded travelers awaited repatriation flights after the sudden closure of the border."
+      }
+    },
+    {
+      "id": "asylum",
+      "term": "asilo",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Protección que concede un país a quien huyó de su tierra natal por temor a ser perseguido.",
+      "example": "Solicitó asilo en el aeropuerto alegando persecución política en su país de origen.",
+      "translations": {
+        "en": "asylum"
+      },
+      "gloss": {
+        "en": "Protection granted by a country to someone who has fled their home country fearing persecution"
+      },
+      "gloss_example": {
+        "en": "She requested asylum at the airport, citing political persecution in her home country."
+      }
+    },
+    {
+      "id": "contraband",
+      "term": "contrabando",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Mercancías que se importan o exportan ilegalmente, generalmente confiscadas por las autoridades aduaneras.",
+      "example": "El perro rastreador detectó contrabando escondido dentro de una maleta facturada.",
+      "translations": {
+        "en": "contraband"
+      },
+      "gloss": {
+        "en": "Goods that are illegally imported or exported, typically seized by customs authorities"
+      },
+      "gloss_example": {
+        "en": "The sniffer dog detected contraband hidden inside a checked suitcase."
+      }
+    },
+    {
+      "id": "manifest",
+      "term": "lista de pasajeros / manifiesto",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Lista oficial de pasajeros o carga a bordo de un avión, que la tripulación revisa antes de despegar.",
+      "example": "El capitán revisó la lista de pasajeros para confirmar que todos estaban a bordo.",
+      "translations": {
+        "en": "manifest"
+      },
+      "gloss": {
+        "en": "An official list of passengers or cargo on an aircraft, reviewed by the crew before departure"
+      },
+      "gloss_example": {
+        "en": "The captain reviewed the passenger manifest to confirm everyone was on board."
+      }
+    },
+    {
+      "id": "force_majeure",
+      "term": "fuerza mayor",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Un acontecimiento imprevisible, como un desastre natural, que impide cumplir un contrato o una obligación.",
+      "example": "La aerolínea se negó a pagar compensación alegando fuerza mayor por la erupción volcánica.",
+      "translations": {
+        "en": "force majeure"
+      },
+      "gloss": {
+        "en": "An unforeseeable event such as a natural disaster that prevents someone from fulfilling a contract"
+      },
+      "gloss_example": {
+        "en": "The airline refused to pay compensation, citing force majeure due to the volcanic eruption."
+      }
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+  "words": [
+    {
+      "id": "bus",
+      "term": "autobús / bus",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo grande que lleva pasajeros por una ruta fija.",
+      "example": "Toma el autobús desde el centro. Para justo frente al museo.",
+      "translations": {
+        "en": "bus"
+      },
+      "gloss": {
+        "en": "A large vehicle that carries passengers along a fixed route and stops at set points"
+      },
+      "gloss_example": {
+        "en": "Take the bus from the city center. It stops right outside the museum."
+      }
+    },
+    {
+      "id": "taxi",
+      "term": "taxi",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Auto con conductor al que pagas para que te lleve.",
+      "example": "Tomamos un taxi del hotel a la estación de tren.",
+      "translations": {
+        "en": "taxi"
+      },
+      "gloss": {
+        "en": "A car with a driver that you pay to take you to a specific place"
+      },
+      "gloss_example": {
+        "en": "We took a taxi from the hotel to the train station."
+      }
+    },
+    {
+      "id": "station",
+      "term": "estación",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde paran trenes o autobuses para subir pasajeros.",
+      "example": "La estación de tren está a diez minutos a pie del hotel.",
+      "translations": {
+        "en": "station"
+      },
+      "gloss": {
+        "en": "A building where buses, trains, or subway services stop to let passengers on and off"
+      },
+      "gloss_example": {
+        "en": "The train station is a ten-minute walk from the hotel."
+      }
+    },
+    {
+      "id": "stop",
+      "term": "parada",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde un autobús se detiene para dejar pasajeros.",
+      "example": "Bájate en la tercera parada. El museo está justo ahí.",
+      "translations": {
+        "en": "stop"
+      },
+      "gloss": {
+        "en": "A place where a bus or train pauses to pick up or drop off passengers"
+      },
+      "gloss_example": {
+        "en": "Get off at the third stop. The museum is right there."
+      }
+    },
+    {
+      "id": "metro",
+      "term": "metro / subterráneo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sistema de trenes urbanos para moverse por la ciudad.",
+      "example": "El metro es la forma más rápida de cruzar la ciudad en hora punta.",
+      "translations": {
+        "en": "metro"
+      },
+      "gloss": {
+        "en": "An underground or overground urban train system for city travel"
+      },
+      "gloss_example": {
+        "en": "The metro is the fastest way to cross the city during rush hour."
+      }
+    },
+    {
+      "id": "fare",
+      "term": "tarifa / pasaje",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El precio de un viaje en transporte público.",
+      "example": "La tarifa del autobús ha subido bastante desde el año pasado.",
+      "translations": {
+        "en": "fare"
+      },
+      "gloss": {
+        "en": "The price charged for a journey by public transport"
+      },
+      "gloss_example": {
+        "en": "The bus fare has increased significantly since last year."
+      }
+    },
+    {
+      "id": "route",
+      "term": "ruta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El camino que se sigue para viajar entre lugares.",
+      "example": "¿Qué ruta recomiendas, la autopista o el camino panorámico?",
+      "translations": {
+        "en": "route"
+      },
+      "gloss": {
+        "en": "The path or course taken to travel from one place to another"
+      },
+      "gloss_example": {
+        "en": "Which route do you recommend, the highway or the scenic road?"
+      }
+    },
+    {
+      "id": "transfer",
+      "term": "trasbordo / traslado",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cambiar de un vehículo a otro durante un viaje.",
+      "example": "Tendrás que hacer un trasbordo en la Estación Central para llegar al aeropuerto.",
+      "translations": {
+        "en": "transfer"
+      },
+      "gloss": {
+        "en": "A change from one vehicle or line to another during a journey"
+      },
+      "gloss_example": {
+        "en": "You'll need to make a transfer at Central Station to reach the airport."
+      }
+    },
+    {
+      "id": "schedule",
+      "term": "horario",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lista de horarios de trenes o autobuses.",
+      "example": "Consulta el horario del autobús en línea antes de ir a la parada.",
+      "translations": {
+        "en": "schedule"
+      },
+      "gloss": {
+        "en": "A list of times at which trains, buses, or other transport depart and arrive"
+      },
+      "gloss_example": {
+        "en": "Check the bus schedule online before heading to the stop."
+      }
+    },
+    {
+      "id": "itinerary",
+      "term": "itinerario",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Ruta o programa planificado de lugares y conexiones de transporte para un viaje.",
+      "example": "El guía turístico repartió el itinerario de nuestro viaje de tres días.",
+      "translations": {
+        "en": "itinerary"
+      },
+      "gloss": {
+        "en": "A planned route or schedule of places and transport connections for a trip"
+      },
+      "gloss_example": {
+        "en": "The tour guide handed out the itinerary for our three-day trip."
+      }
+    },
+    {
+      "id": "platform",
+      "term": "andén / plataforma",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Zona junto a las vías donde los pasajeros suben al tren.",
+      "example": "Tu tren sale del andén 7 en cinco minutos.",
+      "translations": {
+        "en": "platform"
+      },
+      "gloss": {
+        "en": "The raised area next to the rails at a station where passengers board and exit trains"
+      },
+      "gloss_example": {
+        "en": "Your train departs from platform 7 in five minutes."
+      }
+    },
+    {
+      "id": "timetable",
+      "term": "horario",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Lista impresa o en línea con los horarios de salida y llegada del transporte público.",
+      "example": "El horario muestra dos autobuses por hora entre semana, pero menos los fines de semana.",
+      "translations": {
+        "en": "timetable"
+      },
+      "gloss": {
+        "en": "A printed or online list showing departure and arrival times for public transport services"
+      },
+      "gloss_example": {
+        "en": "The timetable shows two buses per hour on weekdays but fewer on weekends."
+      }
+    },
+    {
+      "id": "carpool",
+      "term": "viaje compartido",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Acuerdo por el que varias personas comparten un carro por turnos.",
+      "example": "Organizamos un viaje compartido con tres compañeros para no pagar estacionamiento todos los días.",
+      "translations": {
+        "en": "carpool"
+      },
+      "gloss": {
+        "en": "An arrangement where a group of people share a car and take turns driving, to save costs and reduce traffic"
+      },
+      "gloss_example": {
+        "en": "We set up a carpool with three colleagues to avoid paying for parking every day."
+      }
+    },
+    {
+      "id": "commute",
+      "term": "trayecto diario al trabajo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El viaje diario habitual entre casa y el trabajo.",
+      "example": "Su trayecto diario al trabajo le lleva más de una hora en cada sentido en tren.",
+      "translations": {
+        "en": "commute"
+      },
+      "gloss": {
+        "en": "The regular journey between home and work or school, typically made daily"
+      },
+      "gloss_example": {
+        "en": "Her daily commute takes over an hour each way by train."
+      }
+    },
+    {
+      "id": "compensation",
+      "term": "compensación / indemnización",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Dinero o crédito que se paga a un pasajero cuando un servicio de transporte sufre retrasos significativos, es cancelado o no cumple sus estándares.",
+      "example": "Los pasajeros con más de dos horas de retraso tienen derecho a solicitar una compensación según la normativa europea.",
+      "translations": {
+        "en": "compensation"
+      },
+      "gloss": {
+        "en": "Money or credit paid to a passenger when a transport service is significantly delayed, cancelled, or falls below its advertised standard"
+      },
+      "gloss_example": {
+        "en": "Passengers delayed by more than two hours are entitled to claim compensation under EU regulations."
+      }
+    },
+    {
+      "id": "congestion",
+      "term": "congestión / tráfico",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Tráfico intenso que provoca movimiento lento o retrasos en carreteras o redes de transporte.",
+      "example": "La congestión en la autopista añadió 45 minutos al trayecto.",
+      "translations": {
+        "en": "congestion"
+      },
+      "gloss": {
+        "en": "Heavy traffic that causes slow movement or delays on roads or transport networks"
+      },
+      "gloss_example": {
+        "en": "Heavy congestion on the motorway added 45 minutes to the journey."
+      }
+    },
+    {
+      "id": "bypass",
+      "term": "variante / desvío / circunvalación",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Carretera que rodea una localidad o zona congestionada para que el tráfico la evite.",
+      "example": "Tomar la variante nos ahorró veinte minutos en comparación con pasar por el centro.",
+      "translations": {
+        "en": "bypass"
+      },
+      "gloss": {
+        "en": "A road that goes around a town or busy area, allowing traffic to avoid it"
+      },
+      "gloss_example": {
+        "en": "Taking the bypass saved us twenty minutes compared to driving through the city."
+      }
+    },
+    {
+      "id": "interchange",
+      "term": "intercambiador / nodo de transporte",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Nodo donde convergen varias carreteras, líneas de tren o servicios de transporte y los pasajeros pueden cambiar entre ellos.",
+      "example": "El intercambiador principal de la ciudad conecta el metro, los autobuses y los trenes regionales.",
+      "translations": {
+        "en": "interchange"
+      },
+      "gloss": {
+        "en": "A junction where several roads, rail lines, or transit services meet and passengers can switch between them"
+      },
+      "gloss_example": {
+        "en": "The city's main interchange connects the metro, bus, and regional rail services."
+      }
+    },
+    {
+      "id": "ridesharing",
+      "term": "transporte por aplicación",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Servicio que conecta pasajeros con conductores particulares a través de una aplicación para el celular.",
+      "example": "Las aplicaciones de transporte compartido han cambiado la forma de moverse por las ciudades en todo el mundo.",
+      "translations": {
+        "en": "ridesharing"
+      },
+      "gloss": {
+        "en": "A service that connects passengers with drivers through a smartphone app"
+      },
+      "gloss_example": {
+        "en": "Ridesharing apps have changed how people travel in cities around the world."
+      }
+    },
+    {
+      "id": "surcharge",
+      "term": "recargo / sobrecargo",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Cargo adicional que se suma a la tarifa básica, por ejemplo en horas pico o por equipaje.",
+      "example": "El taxista aplicó un recargo por el viaje durante un día festivo.",
+      "translations": {
+        "en": "surcharge"
+      },
+      "gloss": {
+        "en": "An extra charge added to the basic fare, for example during peak hours or for luggage"
+      },
+      "gloss_example": {
+        "en": "The taxi driver applied a surcharge for the journey during a public holiday."
+      }
+    },
+    {
+      "id": "infrastructure",
+      "term": "infraestructura",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Los sistemas y estructuras físicas, como carreteras y redes ferroviarias, de los que depende el transporte.",
+      "example": "La deficiente infraestructura es una de las principales razones por las que el transporte público es poco fiable en esta región.",
+      "translations": {
+        "en": "infrastructure"
+      },
+      "gloss": {
+        "en": "The physical systems and structures, such as roads and rail networks, that a transport system depends on"
+      },
+      "gloss_example": {
+        "en": "Poor infrastructure is one of the main reasons public transport is unreliable in this region."
+      }
+    },
+    {
+      "id": "accessibility",
+      "term": "accesibilidad",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El grado en que los servicios de transporte pueden ser utilizados por personas con discapacidad o movilidad reducida.",
+      "example": "La nueva flota de autobuses fue elogiada por su mejor accesibilidad para usuarios de silla de ruedas.",
+      "translations": {
+        "en": "accessibility"
+      },
+      "gloss": {
+        "en": "The degree to which transport services can be used by people with disabilities or limited mobility"
+      },
+      "gloss_example": {
+        "en": "The new bus fleet was praised for its improved accessibility for wheelchair users."
+      }
+    },
+    {
+      "id": "subsidy",
+      "term": "subvención / subsidio",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Dinero proporcionado por un gobierno para apoyar el transporte público y mantener las tarifas asequibles.",
+      "example": "Sin las subvenciones gubernamentales, los pasajes de autobús serían inasequibles para los pasajeros de bajos ingresos.",
+      "translations": {
+        "en": "subsidy"
+      },
+      "gloss": {
+        "en": "Money provided by a government to support public transport and keep fares affordable"
+      },
+      "gloss_example": {
+        "en": "Without government subsidies, bus fares would be unaffordable for low-income passengers."
+      }
+    },
+    {
+      "id": "penalty",
+      "term": "multa / sanción",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Multa o cargo impuesto por infringir una norma de transporte, como viajar sin billete.",
+      "example": "Recibió una multa por no validar su boleto antes de subir al tren.",
+      "translations": {
+        "en": "penalty"
+      },
+      "gloss": {
+        "en": "A fine or charge imposed for breaking a transport rule, such as travelling without a ticket"
+      },
+      "gloss_example": {
+        "en": "He received a penalty for failing to validate his ticket before boarding."
+      }
+    },
+    {
+      "id": "liability",
+      "term": "responsabilidad legal / pasivo",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Responsabilidad legal por daños o lesiones causados durante un viaje o alquiler de transporte.",
+      "example": "El contrato de alquiler indica claramente la responsabilidad del arrendatario por los daños al vehículo.",
+      "translations": {
+        "en": "liability"
+      },
+      "gloss": {
+        "en": "Legal responsibility for damage or injury caused during a transport journey or rental"
+      },
+      "gloss_example": {
+        "en": "The rental agreement clearly states the renter's liability for vehicle damage."
+      }
+    },
+    {
+      "id": "urban_mobility",
+      "term": "movilidad urbana",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La capacidad general de una ciudad para desplazar personas de forma eficiente mediante diversos modos de transporte.",
+      "example": "Mejorar la movilidad urbana requiere inversión tanto en infraestructura como en cambio de comportamiento.",
+      "translations": {
+        "en": "urban mobility"
+      },
+      "gloss": {
+        "en": "The overall capacity of a city to move people efficiently using various transport modes, including public transit, cycling, and walking"
+      },
+      "gloss_example": {
+        "en": "Improving urban mobility requires investment in both infrastructure and behavioral change."
+      }
+    },
+    {
+      "id": "deregulation",
+      "term": "desregulación",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La eliminación de normas y controles gubernamentales en un sector, lo que permite una mayor competencia en el mercado.",
+      "example": "La desregulación del sector de autobuses llevó a precios más bajos pero a servicios menos fiables.",
+      "translations": {
+        "en": "deregulation"
+      },
+      "gloss": {
+        "en": "The removal of government rules and controls from an industry, allowing greater market competition"
+      },
+      "gloss_example": {
+        "en": "The deregulation of the bus industry led to lower prices but less reliable services."
+      }
+    },
+    {
+      "id": "congestion_pricing",
+      "term": "tarifas por congestión / peaje urbano",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Sistema que cobra más a los conductores por entrar a zonas urbanas concurridas en horas pico, con el fin de reducir el tráfico.",
+      "example": "La zona de tarifas por congestión de Londres ha reducido el tráfico en el centro en más de un 30 por ciento.",
+      "translations": {
+        "en": "congestion pricing"
+      },
+      "gloss": {
+        "en": "A system that charges drivers more to enter busy city areas at peak times to reduce traffic"
+      },
+      "gloss_example": {
+        "en": "London's congestion pricing zone has cut central traffic by over 30 percent."
+      }
+    },
+    {
+      "id": "intermodal",
+      "term": "intermodal",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Que implica más de un tipo de transporte, como tren, autobús y bicicleta, integrados en un mismo viaje.",
+      "example": "La nueva terminal intermodal conecta el tren, el autobús y los carriles bici en una sola estación.",
+      "translations": {
+        "en": "intermodal"
+      },
+      "gloss": {
+        "en": "Involving more than one type of transport, such as trains, buses, and bikes, integrated into one journey"
+      },
+      "gloss_example": {
+        "en": "The new intermodal hub connects rail, bus, and cycle lanes in a single terminal."
+      }
+    },
+    {
+      "id": "carbon_footprint",
+      "term": "huella de carbono",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La cantidad total de gases de efecto invernadero producidos por una actividad, como un viaje o un medio de transporte.",
+      "example": "Tomar el tren en lugar de volar reduce drásticamente tu huella de carbono.",
+      "translations": {
+        "en": "carbon footprint"
+      },
+      "gloss": {
+        "en": "The total amount of greenhouse gases produced by an activity such as a journey or mode of transport"
+      },
+      "gloss_example": {
+        "en": "Taking the train instead of flying dramatically reduces your carbon footprint."
+      }
+    },
+    {
+      "id": "franchise",
+      "term": "concesión / franquicia",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Contrato que otorga a una empresa el derecho exclusivo de operar un servicio de transporte público en una ruta específica.",
+      "example": "El gobierno otorgó una nueva concesión para operar la línea ferroviaria del norte.",
+      "translations": {
+        "en": "franchise"
+      },
+      "gloss": {
+        "en": "A contract granting a company the exclusive right to operate a public transport service on a specific route"
+      },
+      "gloss_example": {
+        "en": "The government awarded a new franchise to operate the northern rail line."
+      }
+    },
+    {
+      "id": "drive",
+      "term": "conducir / manejar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Controlar y manejar un vehículo.",
+      "example": "Ella maneja al trabajo todos los días.",
+      "translations": {
+        "en": "drive"
+      },
+      "gloss": {
+        "en": "To control and operate a car or other vehicle."
+      },
+      "gloss_example": {
+        "en": "She drives to work every day."
+      }
+    },
+    {
+      "id": "trip",
+      "term": "viaje",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Viaje a un lugar y normalmente de regreso.",
+      "example": "Hicimos un viaje a las montañas.",
+      "translations": {
+        "en": "trip"
+      },
+      "gloss": {
+        "en": "A journey to a place and usually back again."
+      },
+      "gloss_example": {
+        "en": "We took a trip to the mountains."
+      }
+    },
+    {
+      "id": "mile",
+      "term": "milla",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad de distancia de casi 1.6 kilómetros.",
+      "example": "La estación está a dos millas.",
+      "translations": {
+        "en": "mile"
+      },
+      "gloss": {
+        "en": "A unit of distance equal to about 1.6 kilometers."
+      },
+      "gloss_example": {
+        "en": "The station is two miles away."
+      }
+    },
+    {
+      "id": "cross",
+      "term": "cruzar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir de un lado al otro de algo.",
+      "example": "Mira a ambos lados antes de cruzar la calle.",
+      "translations": {
+        "en": "cross"
+      },
+      "gloss": {
+        "en": "To go from one side of something to the other."
+      },
+      "gloss_example": {
+        "en": "Look both ways before you cross the street."
+      }
+    },
+    {
+      "id": "fly",
+      "term": "volar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Viajar por el aire, normalmente en avión.",
+      "example": "Volamos a Madrid la próxima semana.",
+      "translations": {
+        "en": "fly"
+      },
+      "gloss": {
+        "en": "To travel through the air, usually in an aircraft."
+      },
+      "gloss_example": {
+        "en": "We fly to Madrid next week."
+      }
+    },
+    {
+      "id": "airplane",
+      "term": "avión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo con alas que vuela por el aire.",
+      "example": "El avión aterrizó a tiempo.",
+      "translations": {
+        "en": "airplane"
+      },
+      "gloss": {
+        "en": "A vehicle with wings that flies through the air."
+      },
+      "gloss_example": {
+        "en": "The airplane landed on time."
+      }
+    }
+  ]
+}

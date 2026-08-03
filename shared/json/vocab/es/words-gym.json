@@ -1,0 +1,634 @@
+{
+  "words": [
+    {
+      "id": "repetition",
+      "term": "repetición",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un movimiento completo de un ejercicio.",
+      "example": "Haz tres series de doce repeticiones por cada ejercicio.",
+      "translations": {
+        "en": "repetition"
+      },
+      "gloss": {
+        "en": "One complete movement of an exercise, commonly called a rep"
+      },
+      "gloss_example": {
+        "en": "Do three sets of twelve repetitions for each exercise."
+      }
+    },
+    {
+      "id": "cardio",
+      "term": "cardio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ejercicio que eleva tu frecuencia cardíaca y mejora la resistencia.",
+      "example": "Hago treinta minutos de cardio antes de levantar pesas cada día.",
+      "translations": {
+        "en": "cardio"
+      },
+      "gloss": {
+        "en": "Physical exercise that raises your heart rate and improves cardiovascular fitness"
+      },
+      "gloss_example": {
+        "en": "I do thirty minutes of cardio before lifting weights each day."
+      }
+    },
+    {
+      "id": "posture",
+      "term": "postura",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La forma en que mantienes tu cuerpo al moverte.",
+      "example": "Una buena postura ayuda a prevenir el dolor crónico de espalda y cuello.",
+      "translations": {
+        "en": "posture"
+      },
+      "gloss": {
+        "en": "The way in which you hold your body when standing, sitting, or moving"
+      },
+      "gloss_example": {
+        "en": "Good posture helps prevent chronic back and neck pain."
+      }
+    },
+    {
+      "id": "routine",
+      "term": "rutina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Conjunto fijo de ejercicios que se hacen con regularidad.",
+      "example": "Mantener una rutina de entrenamiento constante es clave para ver resultados.",
+      "translations": {
+        "en": "routine"
+      },
+      "gloss": {
+        "en": "A fixed set of exercises performed regularly in a planned order"
+      },
+      "gloss_example": {
+        "en": "Sticking to a consistent workout routine is key to achieving results."
+      }
+    },
+    {
+      "id": "warm_up",
+      "term": "calentamiento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ejercicio suave antes del entrenamiento para preparar el cuerpo.",
+      "example": "Haz siempre un calentamiento de cinco minutos antes de empezar tu entrenamiento principal.",
+      "translations": {
+        "en": "warm-up"
+      },
+      "gloss": {
+        "en": "Light exercise done before intense training to prepare the body and prevent injury"
+      },
+      "gloss_example": {
+        "en": "Always do a five-minute warm-up before starting your main workout."
+      }
+    },
+    {
+      "id": "stamina",
+      "term": "resistencia / aguante",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La capacidad de mantener un esfuerzo físico o mental prolongado sin cansarse.",
+      "example": "Correr largas distancias requiere una gran resistencia y concentración mental.",
+      "translations": {
+        "en": "stamina"
+      },
+      "gloss": {
+        "en": "The ability to sustain prolonged physical or mental effort without tiring"
+      },
+      "gloss_example": {
+        "en": "Running long distances requires considerable stamina and mental focus."
+      }
+    },
+    {
+      "id": "flexibility",
+      "term": "flexibilidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La capacidad de mover las articulaciones y los músculos en toda su amplitud de movimiento.",
+      "example": "La práctica regular de yoga mejora tu fuerza, equilibrio y flexibilidad.",
+      "translations": {
+        "en": "flexibility"
+      },
+      "gloss": {
+        "en": "The ability to move joints and muscles through their full range of motion"
+      },
+      "gloss_example": {
+        "en": "Regular yoga practice improves your strength, balance, and flexibility."
+      }
+    },
+    {
+      "id": "intensity",
+      "term": "intensidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El grado de esfuerzo, fuerza o energía que se aplica durante un entrenamiento.",
+      "example": "Aumenta gradualmente la intensidad de tus entrenamientos para evitar lesiones.",
+      "translations": {
+        "en": "intensity"
+      },
+      "gloss": {
+        "en": "The degree of effort, force, or energy applied during a workout"
+      },
+      "gloss_example": {
+        "en": "Gradually increase the intensity of your workouts to avoid injury."
+      }
+    },
+    {
+      "id": "recovery",
+      "term": "recuperación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El período de descanso y reparación que el cuerpo necesita después del ejercicio intenso.",
+      "example": "Una nutrición adecuada y el sueño son esenciales para la recuperación muscular.",
+      "translations": {
+        "en": "recovery"
+      },
+      "gloss": {
+        "en": "The period of rest and repair that the body needs after intense exercise"
+      },
+      "gloss_example": {
+        "en": "Proper nutrition and sleep are essential for muscle recovery."
+      }
+    },
+    {
+      "id": "resistance",
+      "term": "resistencia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Fuerza que se opone al movimiento, usada para desarrollar los músculos.",
+      "example": "El entrenamiento de resistencia con pesas ayuda a aumentar la masa muscular y la densidad ósea.",
+      "translations": {
+        "en": "resistance"
+      },
+      "gloss": {
+        "en": "A force that opposes movement, used to build muscle strength in training"
+      },
+      "gloss_example": {
+        "en": "Resistance training with weights helps build muscle mass and bone density."
+      }
+    },
+    {
+      "id": "endurance",
+      "term": "aguante / resistencia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La capacidad de realizar ejercicio de forma sostenida durante un largo período de tiempo.",
+      "example": "El ciclismo y la natación son actividades excelentes para desarrollar el aguante.",
+      "translations": {
+        "en": "endurance"
+      },
+      "gloss": {
+        "en": "The ability to perform sustained exercise over a long period of time"
+      },
+      "gloss_example": {
+        "en": "Cycling and swimming are excellent activities for building endurance."
+      }
+    },
+    {
+      "id": "spotter",
+      "term": "observador",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que asiste y vigila a alguien que levanta pesas pesadas para garantizar su seguridad.",
+      "example": "Ten siempre un observador cerca cuando intentes un nuevo máximo personal.",
+      "translations": {
+        "en": "spotter"
+      },
+      "gloss": {
+        "en": "A person who assists and watches over someone lifting heavy weights for safety"
+      },
+      "gloss_example": {
+        "en": "Always have a spotter nearby when attempting a new personal best."
+      }
+    },
+    {
+      "id": "metabolism",
+      "term": "metabolismo",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Los procesos químicos del cuerpo que convierten los alimentos y bebidas en energía.",
+      "example": "El ejercicio regular ayuda a acelerar el metabolismo con el tiempo.",
+      "translations": {
+        "en": "metabolism"
+      },
+      "gloss": {
+        "en": "The chemical processes in your body that convert food and drink into energy"
+      },
+      "gloss_example": {
+        "en": "Regular exercise helps speed up your metabolism over time."
+      }
+    },
+    {
+      "id": "plateau",
+      "term": "estancamiento",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Período en el entrenamiento en que el progreso se detiene a pesar del esfuerzo continuo.",
+      "example": "Llegué a un estancamiento y tuve que cambiar mi rutina para seguir progresando.",
+      "translations": {
+        "en": "plateau"
+      },
+      "gloss": {
+        "en": "A period during training when progress stops despite continued effort"
+      },
+      "gloss_example": {
+        "en": "I hit a plateau and had to change my routine to keep seeing progress."
+      }
+    },
+    {
+      "id": "overtraining",
+      "term": "sobreentrenamiento",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Entrenar con demasiada frecuencia o intensidad sin el descanso adecuado, lo que provoca fatiga o lesiones.",
+      "example": "El sobreentrenamiento puede provocar agotamiento, lesiones y una menor capacidad de rendimiento.",
+      "translations": {
+        "en": "overtraining"
+      },
+      "gloss": {
+        "en": "Exercising too frequently or intensely without adequate rest, causing fatigue or injury"
+      },
+      "gloss_example": {
+        "en": "Overtraining can lead to burnout, injury, and decreased performance."
+      }
+    },
+    {
+      "id": "periodization",
+      "term": "periodización",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Enfoque de entrenamiento estructurado que alterna fases de intensidad y volumen variables para maximizar la adaptación del cuerpo.",
+      "example": "La periodización evita el estancamiento alternando bloques de entrenamiento intenso, moderado y ligero.",
+      "translations": {
+        "en": "periodization"
+      },
+      "gloss": {
+        "en": "A structured training approach that cycles through phases of varying intensity and volume to maximize adaptation"
+      },
+      "gloss_example": {
+        "en": "Periodization prevents stagnation by alternating heavy, moderate, and light training blocks."
+      }
+    },
+    {
+      "id": "hypertrophy",
+      "term": "hipertrofia",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El crecimiento de las fibras musculares en respuesta al entrenamiento de fuerza.",
+      "example": "Para maximizar la hipertrofia, la mayoría de los entrenadores recomiendan de ocho a doce repeticiones por serie.",
+      "translations": {
+        "en": "hypertrophy"
+      },
+      "gloss": {
+        "en": "The enlargement of muscle fibers in response to resistance training"
+      },
+      "gloss_example": {
+        "en": "To maximize hypertrophy, most coaches recommend eight to twelve repetitions per set."
+      }
+    },
+    {
+      "id": "progressive_overload",
+      "term": "sobrecarga progresiva",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El aumento gradual del estrés aplicado al cuerpo durante el entrenamiento para estimular la adaptación continua.",
+      "example": "Aumentar apenas dos kilos por semana es sobrecarga progresiva, la piedra angular del desarrollo de la fuerza.",
+      "translations": {
+        "en": "progressive overload"
+      },
+      "gloss": {
+        "en": "The gradual increase of stress placed on the body during training to stimulate continuous adaptation"
+      },
+      "gloss_example": {
+        "en": "Adding even five pounds per week is progressive overload, the cornerstone of strength development."
+      }
+    },
+    {
+      "id": "proprioception",
+      "term": "propiocepción",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La capacidad del cuerpo de percibir su propia posición, movimiento y equilibrio sin apoyo visual.",
+      "example": "Los ejercicios en tabla de equilibrio mejoran la propiocepción y reducen el riesgo de esguinces de tobillo.",
+      "translations": {
+        "en": "proprioception"
+      },
+      "gloss": {
+        "en": "The body's ability to sense its own position, movement, and balance without visual input"
+      },
+      "gloss_example": {
+        "en": "Balance board exercises improve proprioception and reduce the risk of ankle sprains."
+      }
+    },
+    {
+      "id": "deload",
+      "term": "semana de descarga / deload",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Período planificado de reducción significativa del volumen o la intensidad del entrenamiento para permitir la recuperación completa y prevenir el agotamiento.",
+      "example": "Después de ocho semanas de entrenamiento intenso, programar una semana de descarga es fundamental.",
+      "translations": {
+        "en": "deload"
+      },
+      "gloss": {
+        "en": "A planned period of significantly reduced training volume or intensity to allow full recovery and prevent burnout"
+      },
+      "gloss_example": {
+        "en": "After eight weeks of hard training, scheduling a deload week is essential."
+      }
+    },
+    {
+      "id": "biomechanics",
+      "term": "biomecánica",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El estudio de las fuerzas mecánicas que actúan sobre el cuerpo y cómo afectan al movimiento y al rendimiento.",
+      "example": "Un especialista en biomecánica analizó su sentadilla para identificar ineficiencias en su técnica.",
+      "translations": {
+        "en": "biomechanics"
+      },
+      "gloss": {
+        "en": "The study of the mechanical forces acting on the body and how they affect movement and performance"
+      },
+      "gloss_example": {
+        "en": "A biomechanics specialist analyzed her squat to identify inefficiencies in her technique."
+      }
+    },
+    {
+      "id": "lactate_threshold",
+      "term": "umbral de lactato",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La intensidad de ejercicio a la que el ácido láctico se acumula en la sangre más rápido de lo que el cuerpo puede eliminarlo, provocando fatiga.",
+      "example": "Entrenar justo por debajo de tu umbral de lactato mejora la capacidad aeróbica y el rendimiento en carrera.",
+      "translations": {
+        "en": "lactate threshold"
+      },
+      "gloss": {
+        "en": "The exercise intensity at which lactic acid accumulates in the blood faster than the body can clear it, causing fatigue"
+      },
+      "gloss_example": {
+        "en": "Training just below your lactate threshold improves aerobic capacity and race performance."
+      }
+    },
+    {
+      "id": "catabolism",
+      "term": "catabolismo",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La degradación metabólica del tejido muscular, desencadenada frecuentemente por una nutrición insuficiente o un estrés de entrenamiento excesivo.",
+      "example": "Garantizar una ingesta adecuada de proteínas ayuda a prevenir el catabolismo durante un déficit calórico.",
+      "translations": {
+        "en": "catabolism"
+      },
+      "gloss": {
+        "en": "The metabolic breakdown of muscle tissue, often triggered by insufficient nutrition or excessive training stress"
+      },
+      "gloss_example": {
+        "en": "Ensuring adequate protein intake helps prevent catabolism during a caloric deficit."
+      }
+    },
+    {
+      "id": "vo2_max",
+      "term": "VO₂ máximo",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La tasa máxima a la que el cuerpo puede consumir y utilizar oxígeno durante el ejercicio intenso, indicador clave de la condición aeróbica.",
+      "example": "Los ciclistas de élite suelen tener un VO₂ máximo más del doble que el de un adulto promedio.",
+      "translations": {
+        "en": "VO₂ max"
+      },
+      "gloss": {
+        "en": "The maximum rate at which the body can consume and use oxygen during intense exercise, a key indicator of aerobic fitness"
+      },
+      "gloss_example": {
+        "en": "Elite cyclists typically have a VO₂ max more than twice that of an average adult."
+      }
+    },
+    {
+      "id": "myofascial_release",
+      "term": "liberación miofascial",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Técnica de terapia de tejidos blandos que aplica presión suave para liberar la tensión en el tejido conectivo que rodea los músculos.",
+      "example": "Usar un rodillo de espuma para la liberación miofascial después de entrenar reduce las agujetas y mejora la movilidad.",
+      "translations": {
+        "en": "myofascial release"
+      },
+      "gloss": {
+        "en": "A soft tissue therapy technique that applies gentle pressure to release tension in the connective tissue surrounding muscles"
+      },
+      "gloss_example": {
+        "en": "Using a foam roller for myofascial release after training reduces soreness and improves mobility."
+      }
+    },
+    {
+      "id": "doms",
+      "term": "agujetas / dolor muscular tardío",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Dolor muscular que aparece entre 24 y 48 horas después de un ejercicio intenso o poco habitual.",
+      "example": "Casi no podía caminar al día siguiente del día de piernas. Agujetas clásicas.",
+      "translations": {
+        "en": "DOMS"
+      },
+      "gloss": {
+        "en": "Muscle soreness that develops 24 to 48 hours after intense or unfamiliar exercise"
+      },
+      "gloss_example": {
+        "en": "I could barely walk the day after leg day. Classic DOMS."
+      }
+    },
+    {
+      "id": "compound_movement",
+      "term": "movimiento compuesto",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Ejercicio que trabaja varios grupos musculares y articulaciones al mismo tiempo, como la sentadilla o el peso muerto.",
+      "example": "Los movimientos compuestos como el press de banca y el peso muerto son la base de la mayoría de los programas de fuerza.",
+      "translations": {
+        "en": "compound movement"
+      },
+      "gloss": {
+        "en": "An exercise that engages multiple muscle groups and joints simultaneously, such as a squat or deadlift"
+      },
+      "gloss_example": {
+        "en": "Compound movements like the bench press and deadlift are the foundation of most strength programs."
+      }
+    },
+    {
+      "id": "rpe",
+      "term": "RPE (Tasa de Esfuerzo Percibido)",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Tasa de Esfuerzo Percibido, escala para medir la dificultad subjetiva de un ejercicio o sesión de entrenamiento.",
+      "example": "Entrenar a un RPE de 8 significa que podrías hacer dos repeticiones más antes de llegar al fallo.",
+      "translations": {
+        "en": "RPE"
+      },
+      "gloss": {
+        "en": "Rate of Perceived Exertion, a scale for measuring the subjective difficulty of an exercise or training session."
+      },
+      "gloss_example": {
+        "en": "Training at an RPE of 8 means you could perform two more reps before failure."
+      }
+    },
+    {
+      "id": "sport",
+      "term": "deporte",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Juego o actividad física con reglas.",
+      "example": "El fútbol es el deporte más popular aquí.",
+      "translations": {
+        "en": "sport"
+      },
+      "gloss": {
+        "en": "A physical game or activity with rules."
+      },
+      "gloss_example": {
+        "en": "Soccer is the most popular sport here."
+      }
+    },
+    {
+      "id": "score",
+      "term": "marcador / puntuación",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Número de puntos de cada lado en un juego.",
+      "example": "El marcador final fue dos a uno.",
+      "translations": {
+        "en": "score"
+      },
+      "gloss": {
+        "en": "The number of points each side has in a game."
+      },
+      "gloss_example": {
+        "en": "The final score was two to one."
+      }
+    },
+    {
+      "id": "goal",
+      "term": "gol / meta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto en juegos como el fútbol, o meta.",
+      "example": "Metió el gol de la victoria.",
+      "translations": {
+        "en": "goal"
+      },
+      "gloss": {
+        "en": "A point scored in games like soccer, or an aim to reach."
+      },
+      "gloss_example": {
+        "en": "He scored the winning goal."
+      }
+    },
+    {
+      "id": "competition",
+      "term": "competencia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Evento donde las personas compiten por ganar.",
+      "example": "Ganó el primer lugar en la competencia de natación.",
+      "translations": {
+        "en": "competition"
+      },
+      "gloss": {
+        "en": "An event where people try to win against others."
+      },
+      "gloss_example": {
+        "en": "She won first place in the swimming competition."
+      }
+    },
+    {
+      "id": "player",
+      "term": "jugador / jugadora",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que participa en un juego o deporte.",
+      "example": "Cada equipo tiene once jugadores.",
+      "translations": {
+        "en": "player"
+      },
+      "gloss": {
+        "en": "A person who takes part in a game or sport."
+      },
+      "gloss_example": {
+        "en": "Each team has eleven players."
+      }
+    },
+    {
+      "id": "fit",
+      "term": "en forma",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Sano y fuerte, sobre todo por el ejercicio.",
+      "example": "Correr me mantiene en forma.",
+      "translations": {
+        "en": "fit"
+      },
+      "gloss": {
+        "en": "Healthy and strong, especially from exercise."
+      },
+      "gloss_example": {
+        "en": "Running keeps me fit."
+      }
+    },
+    {
+      "id": "win",
+      "term": "ganar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ser el mejor o el primero en un juego.",
+      "example": "Nuestro equipo ganó el partido.",
+      "translations": {
+        "en": "win"
+      },
+      "gloss": {
+        "en": "To be the best or first in a game or contest."
+      },
+      "gloss_example": {
+        "en": "Our team won the match."
+      }
+    }
+  ]
+}

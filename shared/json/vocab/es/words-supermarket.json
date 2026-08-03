@@ -1,0 +1,454 @@
+{
+  "words": [
+    {
+      "id": "aisle",
+      "term": "pasillo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pasillo largo entre filas de estantes en una tienda.",
+      "example": "Los cereales de desayuno están en el pasillo siete.",
+      "translations": {
+        "en": "aisle"
+      },
+      "gloss": {
+        "en": "A long passage between rows of shelves in a store"
+      },
+      "gloss_example": {
+        "en": "The breakfast cereals are in aisle seven."
+      }
+    },
+    {
+      "id": "checkout",
+      "term": "caja registradora",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar de una tienda donde los clientes pagan sus compras.",
+      "example": "Había una larga fila en la caja de autopago.",
+      "translations": {
+        "en": "checkout"
+      },
+      "gloss": {
+        "en": "The place in a store where customers pay for their purchases"
+      },
+      "gloss_example": {
+        "en": "There was a long queue at the self-service checkout."
+      }
+    },
+    {
+      "id": "coupon",
+      "term": "cupón",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vale que da derecho a un descuento en un producto.",
+      "example": "Usé un cupón para ahorrar dos dólares en los cereales.",
+      "translations": {
+        "en": "coupon"
+      },
+      "gloss": {
+        "en": "A voucher that entitles the holder to a discount on a product"
+      },
+      "gloss_example": {
+        "en": "I used a coupon to save two dollars on my breakfast cereal."
+      }
+    },
+    {
+      "id": "discount",
+      "term": "descuento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Reducción sobre el precio normal de venta de un producto.",
+      "example": "Esta tienda ofrece un descuento del diez por ciento para estudiantes.",
+      "translations": {
+        "en": "discount"
+      },
+      "gloss": {
+        "en": "A reduction from the normal selling price of a product"
+      },
+      "gloss_example": {
+        "en": "This store offers a ten percent discount for students."
+      }
+    },
+    {
+      "id": "receipt",
+      "term": "recibo / ticket",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Documento impreso que confirma que se ha realizado un pago.",
+      "example": "Guarda el recibo por si necesitas devolver el artículo.",
+      "translations": {
+        "en": "receipt"
+      },
+      "gloss": {
+        "en": "A printed document confirming that a payment has been made"
+      },
+      "gloss_example": {
+        "en": "Keep your receipt in case you need to return the item."
+      }
+    },
+    {
+      "id": "cashier",
+      "term": "cajero / cajera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona cuyo trabajo es cobrar los pagos en una tienda.",
+      "example": "La cajera escaneó todos mis artículos y los metió en una bolsa.",
+      "translations": {
+        "en": "cashier"
+      },
+      "gloss": {
+        "en": "A person whose job is to take payments at a store"
+      },
+      "gloss_example": {
+        "en": "The cashier scanned all my items and put them in a bag."
+      }
+    },
+    {
+      "id": "expiration",
+      "term": "fecha de caducidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La fecha a partir de la cual un producto no debe consumirse ni venderse.",
+      "example": "Siempre revisa la fecha de caducidad antes de comprar productos lácteos.",
+      "translations": {
+        "en": "expiration"
+      },
+      "gloss": {
+        "en": "The date after which a product should no longer be used or sold"
+      },
+      "gloss_example": {
+        "en": "Always check the expiration date before buying dairy products."
+      }
+    },
+    {
+      "id": "organic",
+      "term": "orgánico / ecológico",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Producido sin el uso de productos químicos artificiales ni pesticidas.",
+      "example": "Las verduras orgánicas suelen costar más que las cultivadas de forma convencional.",
+      "translations": {
+        "en": "organic"
+      },
+      "gloss": {
+        "en": "Produced without the use of artificial chemicals or pesticides"
+      },
+      "gloss_example": {
+        "en": "Organic vegetables tend to cost more than conventionally grown ones."
+      }
+    },
+    {
+      "id": "quantity",
+      "term": "cantidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La cantidad o el número de algo que está disponible o que se necesita.",
+      "example": "Por favor, ingresa la cantidad exacta que deseas pedir.",
+      "translations": {
+        "en": "quantity"
+      },
+      "gloss": {
+        "en": "The amount or number of something that is available or required"
+      },
+      "gloss_example": {
+        "en": "Please enter the exact quantity you would like to order."
+      }
+    },
+    {
+      "id": "promotion",
+      "term": "promoción / oferta",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Oferta especial que vende productos a precio reducido durante un tiempo limitado.",
+      "example": "El supermercado tiene una promoción de lleva dos paga uno esta semana.",
+      "translations": {
+        "en": "promotion"
+      },
+      "gloss": {
+        "en": "A special offer that sells products at a reduced price for a limited time"
+      },
+      "gloss_example": {
+        "en": "The supermarket is running a buy-one-get-one promotion this week."
+      }
+    },
+    {
+      "id": "loyalty",
+      "term": "fidelización",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Programa de puntos que recompensa a los clientes por sus compras frecuentes.",
+      "example": "Escanea tu tarjeta de fidelización en la caja para acumular puntos en cada compra.",
+      "translations": {
+        "en": "loyalty"
+      },
+      "gloss": {
+        "en": "A points programme that rewards customers for repeated purchases"
+      },
+      "gloss_example": {
+        "en": "Scan your loyalty card at checkout to earn points on every purchase."
+      }
+    },
+    {
+      "id": "bulk",
+      "term": "al por mayor / a granel",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Compra de una gran cantidad de producto de una sola vez, generalmente a un precio más bajo.",
+      "example": "Es mucho más barato comprar arroz y pasta a granel.",
+      "translations": {
+        "en": "bulk"
+      },
+      "gloss": {
+        "en": "Buying a large quantity of something at once, usually at a lower price"
+      },
+      "gloss_example": {
+        "en": "It is much cheaper to buy rice and pasta in bulk."
+      }
+    },
+    {
+      "id": "generic",
+      "term": "genérico / marca blanca",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Producto vendido sin marca reconocida, generalmente más barato que las versiones de marca.",
+      "example": "Los analgésicos genéricos contienen el mismo principio activo que los de marca.",
+      "translations": {
+        "en": "generic"
+      },
+      "gloss": {
+        "en": "A product sold without a brand name, often cheaper than branded versions"
+      },
+      "gloss_example": {
+        "en": "Generic painkillers contain the same active ingredient as branded ones."
+      }
+    },
+    {
+      "id": "perishable",
+      "term": "perecedero",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Que describe alimentos o productos que se deterioran o estropean con rapidez.",
+      "example": "Mantén todos los productos perecederos refrigerados a la temperatura correcta.",
+      "translations": {
+        "en": "perishable"
+      },
+      "gloss": {
+        "en": "Describing food or goods that will spoil or decay quickly"
+      },
+      "gloss_example": {
+        "en": "Keep all perishable items refrigerated at the correct temperature."
+      }
+    },
+    {
+      "id": "wholesale",
+      "term": "mayorista / al por mayor",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La venta de mercancías en grandes cantidades y a precios bajos, generalmente a minoristas o negocios.",
+      "example": "El restaurante compra sus productos a precios de mayorista para ahorrar dinero.",
+      "translations": {
+        "en": "wholesale"
+      },
+      "gloss": {
+        "en": "The sale of goods in large quantities at low prices, usually to retailers"
+      },
+      "gloss_example": {
+        "en": "The restaurant buys its produce at wholesale prices to save money."
+      }
+    },
+    {
+      "id": "allergen",
+      "term": "alérgeno",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Sustancia que puede provocar una reacción alérgica y que, por ley, debe declararse en las etiquetas de los alimentos.",
+      "example": "El envase debe enumerar los catorce alérgenos principales conforme a la normativa de etiquetado alimentario.",
+      "translations": {
+        "en": "allergen"
+      },
+      "gloss": {
+        "en": "A substance that triggers an allergic reaction, legally required to be declared on food labels"
+      },
+      "gloss_example": {
+        "en": "The packaging must list all fourteen major allergens in accordance with food labeling law."
+      }
+    },
+    {
+      "id": "traceability",
+      "term": "trazabilidad",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La capacidad de rastrear el origen y el recorrido completo de un producto a lo largo de la cadena de suministro.",
+      "example": "Los minoristas deben garantizar la trazabilidad del campo al estante para todos los productos frescos.",
+      "translations": {
+        "en": "traceability"
+      },
+      "gloss": {
+        "en": "The ability to track the origin and complete journey of a product through the supply chain"
+      },
+      "gloss_example": {
+        "en": "Retailers must guarantee traceability from farm to shelf for all fresh produce."
+      }
+    },
+    {
+      "id": "markup",
+      "term": "margen / sobrecoste",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La cantidad que se añade al precio de coste de un producto para cubrir gastos y generar beneficio.",
+      "example": "El margen del supermercado en las líneas orgánicas premium es significativamente mayor que en los productos estándar.",
+      "translations": {
+        "en": "markup"
+      },
+      "gloss": {
+        "en": "The amount added to the cost price of goods to cover expenses and generate profit"
+      },
+      "gloss_example": {
+        "en": "The supermarket's markup on premium organic lines is significantly higher than on standard products."
+      }
+    },
+    {
+      "id": "recall",
+      "term": "retirada del mercado",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La retirada oficial de un producto del mercado debido a un defecto de seguridad o calidad.",
+      "example": "El fabricante emitió una orden de retirada tras identificar un riesgo de contaminación en el lote.",
+      "translations": {
+        "en": "recall"
+      },
+      "gloss": {
+        "en": "The official withdrawal of a product from sale because of a safety or quality defect"
+      },
+      "gloss_example": {
+        "en": "The manufacturer issued a recall after a contamination risk was identified in the batch."
+      }
+    },
+    {
+      "id": "supplier",
+      "term": "proveedor",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Empresa o persona que proporciona bienes a un minorista o negocio para su reventa o uso.",
+      "example": "El supermercado trabaja con más de doscientos proveedores aprobados en varios países.",
+      "translations": {
+        "en": "supplier"
+      },
+      "gloss": {
+        "en": "A company or individual that provides goods to a retailer or business for resale or use"
+      },
+      "gloss_example": {
+        "en": "The supermarket works with over two hundred approved suppliers across multiple countries."
+      }
+    },
+    {
+      "id": "procurement",
+      "term": "aprovisionamiento / compras",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso formal mediante el cual una empresa busca y adquiere bienes o servicios de proveedores externos, gestionando contratos y condiciones.",
+      "example": "El equipo de aprovisionamiento negocia contratos a largo plazo para asegurar precios estables con los proveedores clave.",
+      "translations": {
+        "en": "procurement"
+      },
+      "gloss": {
+        "en": "The formal process by which a business sources and purchases goods or services from external suppliers"
+      },
+      "gloss_example": {
+        "en": "The procurement team negotiates long-term contracts to secure stable pricing from key suppliers."
+      }
+    },
+    {
+      "id": "cold_chain",
+      "term": "cadena de frío",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El sistema logístico de control de temperatura ininterrumpido que preserva los productos perecederos desde el productor hasta el consumidor.",
+      "example": "Una ruptura en la cadena de frío durante el transporte puede comprometer la seguridad de los productos congelados o refrigerados.",
+      "translations": {
+        "en": "cold chain"
+      },
+      "gloss": {
+        "en": "The uninterrupted temperature-controlled logistics system that preserves perishable goods from producer to consumer"
+      },
+      "gloss_example": {
+        "en": "A break in the cold chain during transport can compromise the safety of frozen or chilled products."
+      }
+    },
+    {
+      "id": "shrinkage",
+      "term": "merma / pérdida de inventario",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La pérdida no justificada de inventario en el comercio minorista, causada generalmente por robo, daños o errores administrativos.",
+      "example": "La tienda implementó nuevas medidas de seguridad tras el aumento significativo de la merma el trimestre pasado.",
+      "translations": {
+        "en": "shrinkage"
+      },
+      "gloss": {
+        "en": "The unexplained loss of retail inventory, typically due to theft, damage, or administrative error"
+      },
+      "gloss_example": {
+        "en": "The store introduced new security measures after shrinkage rates rose significantly last quarter."
+      }
+    },
+    {
+      "id": "supply_chain",
+      "term": "cadena de suministro",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La red completa de productores, procesadores, distribuidores y minoristas que intervienen en la entrega de un producto al consumidor final.",
+      "example": "Las interrupciones en la cadena de suministro global provocaron escasez generalizada y aumentos de precios.",
+      "translations": {
+        "en": "supply chain"
+      },
+      "gloss": {
+        "en": "The entire network of producers, processors, distributors, and retailers involved in delivering a product to the consumer"
+      },
+      "gloss_example": {
+        "en": "Disruptions to the global supply chain caused widespread shortages and price increases."
+      }
+    },
+    {
+      "id": "adulteration",
+      "term": "adulteración",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La práctica ilegal de añadir sustancias inferiores o dañinas a los alimentos, comprometiendo su pureza o seguridad.",
+      "example": "La investigación sobre fraude alimentario reveló una adulteración generalizada de la miel importada con jarabes más baratos.",
+      "translations": {
+        "en": "adulteration"
+      },
+      "gloss": {
+        "en": "The illegal practice of adding inferior or harmful substances to food products, compromising their purity or safety"
+      },
+      "gloss_example": {
+        "en": "The food fraud investigation revealed widespread adulteration of imported honey with cheaper syrups."
+      }
+    }
+  ]
+}

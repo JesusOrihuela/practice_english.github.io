@@ -69,13 +69,13 @@ function contentWords(pair, lang) {
     const d = JSON.parse(fs.readFileSync(path, 'utf8'));
     for (const p of (d.phrases || [])) for (const f of p.target) for (const w of tokenize(f.text)) words.add(w);
   }
-  const vdir = join(ROOT, `shared/json/pairs/${pair}/vocab`);
+  // Vocabulary is target-centric: shared/json/vocab/{targetLang}/, term = the word.
+  const vdir = join(ROOT, `shared/json/vocab/${lang}`);
   if (fs.existsSync(vdir)) for (const file of fs.readdirSync(vdir)) {
     if (!file.endsWith('.json')) continue;
     const d = JSON.parse(fs.readFileSync(join(vdir, file), 'utf8'));
     for (const wobj of (d.words || [])) {
-      const term = lang === 'es' ? (wobj.translations?.es || '') : (wobj.word || '');
-      for (const w of tokenize(term)) words.add(w);
+      for (const w of tokenize(wobj.term || '')) words.add(w);
     }
   }
   return words;

@@ -215,12 +215,13 @@ EN_TARGET_PAIRS.forEach(pair => {
     });
   });
 });
+// English vocabulary is target-centric: shared/json/vocab/en/ → shared/audio/en/vocab*.
 ALL_SOURCES.push({
   id:         'vocab',
-  jsonPath:   resolve(__dirname, '../shared/json/pairs/es-en/vocab/words.json'),
-  outDir:     resolve(__dirname, '../shared/audio/es-en/vocab'),
+  jsonPath:   resolve(__dirname, '../shared/json/vocab/en/words.json'),
+  outDir:     resolve(__dirname, '../shared/audio/en/vocab'),
   getItems:   data => data.words || [],
-  getText:    item => item.word,
+  getText:    item => item.term,
   getId:      item => item.id,
   getIndex:   item => item.id,
   voices:     VOICES_EN,
@@ -229,10 +230,10 @@ ALL_SOURCES.push({
 VOCAB_TOPICS.forEach(id => {
   ALL_SOURCES.push({
     id:         `vocab_${id}`,
-    jsonPath:   resolve(__dirname, `../shared/json/pairs/es-en/vocab/words-${id}.json`),
-    outDir:     resolve(__dirname, `../shared/audio/es-en/vocab_${id}`),
+    jsonPath:   resolve(__dirname, `../shared/json/vocab/en/words-${id}.json`),
+    outDir:     resolve(__dirname, `../shared/audio/en/vocab_${id}`),
     getItems:   data => data.words || [],
-    getText:    item => item.word,
+    getText:    item => item.term,
     getId:      item => item.id,
     getIndex:   item => item.id,
     voices:     VOICES_EN,
@@ -267,10 +268,10 @@ for (const [langCode, voices] of Object.entries(LANG_VOICES)) {
 
   ALL_SOURCES.push({
     id:         `vocab${suffix}`,
-    jsonPath:   resolve(__dirname, `../shared/json/pairs/en-${langCode}/vocab/words.json`),
-    outDir:     resolve(__dirname, `../shared/audio/en-${langCode}/vocab`),
-    getItems:   data => (data.words || []).filter(w => w.translations?.[langCode]),
-    getText:    item => item.translations[langCode],
+    jsonPath:   resolve(__dirname, `../shared/json/vocab/${langCode}/words.json`),
+    outDir:     resolve(__dirname, `../shared/audio/${langCode}/vocab`),
+    getItems:   data => (data.words || []).filter(w => w.term),
+    getText:    item => item.term,
     getId:      item => item.id,
     getIndex:   item => item.id,
     voices,
@@ -280,10 +281,10 @@ for (const [langCode, voices] of Object.entries(LANG_VOICES)) {
   VOCAB_TOPICS.forEach(id => {
     ALL_SOURCES.push({
       id:         `vocab_${id}${suffix}`,
-      jsonPath:   resolve(__dirname, `../shared/json/pairs/en-${langCode}/vocab/words-${id}.json`),
-      outDir:     resolve(__dirname, `../shared/audio/en-${langCode}/vocab_${id}`),
-      getItems:   data => (data.words || []).filter(w => w.translations?.[langCode]),
-      getText:    item => item.translations[langCode],
+      jsonPath:   resolve(__dirname, `../shared/json/vocab/${langCode}/words-${id}.json`),
+      outDir:     resolve(__dirname, `../shared/audio/${langCode}/vocab_${id}`),
+      getItems:   data => (data.words || []).filter(w => w.term),
+      getText:    item => item.term,
       getId:      item => item.id,
       getIndex:   item => item.id,
       voices,

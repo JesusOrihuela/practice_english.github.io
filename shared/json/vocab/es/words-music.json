@@ -1,0 +1,634 @@
+{
+  "words": [
+    {
+      "id": "song",
+      "term": "canción",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pieza musical breve con letra, pensada para ser cantada.",
+      "example": "Puso su canción favorita en repetición toda la mañana.",
+      "translations": {
+        "en": "song"
+      },
+      "gloss": {
+        "en": "A short piece of music with words, meant to be sung"
+      },
+      "gloss_example": {
+        "en": "She played her favorite song on repeat all morning."
+      }
+    },
+    {
+      "id": "singer",
+      "term": "cantante",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que interpreta música usando su voz.",
+      "example": "Mi cantante favorita actúa en vivo en la ciudad el mes que viene.",
+      "translations": {
+        "en": "singer"
+      },
+      "gloss": {
+        "en": "A person who performs music by using their voice"
+      },
+      "gloss_example": {
+        "en": "My favorite singer is performing live in the city next month."
+      }
+    },
+    {
+      "id": "concert",
+      "term": "concierto",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Actuación musical en vivo ante un público.",
+      "example": "Compramos entradas para un concierto en el anfiteatro al aire libre.",
+      "translations": {
+        "en": "concert"
+      },
+      "gloss": {
+        "en": "A live musical performance given in front of an audience"
+      },
+      "gloss_example": {
+        "en": "We bought tickets to a concert at the outdoor amphitheater."
+      }
+    },
+    {
+      "id": "playlist",
+      "term": "lista de reproducción / playlist",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lista de canciones agrupadas para reproducirse en orden.",
+      "example": "Hizo una lista de reproducción para el viaje por carretera con todas sus canciones favoritas.",
+      "translations": {
+        "en": "playlist"
+      },
+      "gloss": {
+        "en": "A list of songs grouped together to be played in order"
+      },
+      "gloss_example": {
+        "en": "She made a playlist for the road trip with all her favorite songs."
+      }
+    },
+    {
+      "id": "band",
+      "term": "banda / grupo musical",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Grupo de músicos que tocan y actúan juntos.",
+      "example": "La banda lleva tres meses de gira por Europa.",
+      "translations": {
+        "en": "band"
+      },
+      "gloss": {
+        "en": "A group of musicians who play and perform together"
+      },
+      "gloss_example": {
+        "en": "The band has been touring Europe for three months."
+      }
+    },
+    {
+      "id": "album",
+      "term": "álbum / disco",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Colección de canciones publicadas juntas.",
+      "example": "Su último álbum se convirtió en el disco más vendido del año.",
+      "translations": {
+        "en": "album"
+      },
+      "gloss": {
+        "en": "A collection of songs released together as a single record or digital release"
+      },
+      "gloss_example": {
+        "en": "Their latest album became the best-selling record of the year."
+      }
+    },
+    {
+      "id": "lyrics",
+      "term": "letra (de una canción)",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Las palabras de una canción.",
+      "example": "Busqué la letra en internet porque no entendía lo que decía.",
+      "translations": {
+        "en": "lyrics"
+      },
+      "gloss": {
+        "en": "The words of a song"
+      },
+      "gloss_example": {
+        "en": "I looked up the lyrics online because I couldn't understand what he was saying."
+      }
+    },
+    {
+      "id": "instrument",
+      "term": "instrumento musical",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto que se usa para producir sonidos musicales.",
+      "example": "Aprender un instrumento musical requiere práctica diaria y paciencia.",
+      "translations": {
+        "en": "instrument"
+      },
+      "gloss": {
+        "en": "A device used to make musical sounds, such as a guitar, piano, or drum"
+      },
+      "gloss_example": {
+        "en": "Learning a musical instrument requires daily practice and patience."
+      }
+    },
+    {
+      "id": "beat",
+      "term": "ritmo / beat",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El ritmo regular que marca el compás de la música.",
+      "example": "La canción tiene un ritmo tan pegadizo que es imposible no ponerse a bailar.",
+      "translations": {
+        "en": "beat"
+      },
+      "gloss": {
+        "en": "The regular rhythm in music that you can tap your foot to"
+      },
+      "gloss_example": {
+        "en": "The song has such a catchy beat that you can't help dancing."
+      }
+    },
+    {
+      "id": "genre",
+      "term": "género musical",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Estilo o categoría musical, como jazz, pop o clásica.",
+      "example": "¿Qué género musical prefieres, rock o pop?",
+      "translations": {
+        "en": "genre"
+      },
+      "gloss": {
+        "en": "A style or category of music, such as jazz, pop, or classical"
+      },
+      "gloss_example": {
+        "en": "What genre of music do you prefer, rock or pop?"
+      }
+    },
+    {
+      "id": "chorus",
+      "term": "coro / estribillo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "La parte que se repite en una canción, con el mensaje principal.",
+      "example": "Todo el público coreó el estribillo del éxito musical.",
+      "translations": {
+        "en": "chorus"
+      },
+      "gloss": {
+        "en": "The repeated section of a song that usually contains the main message and melody"
+      },
+      "gloss_example": {
+        "en": "Everyone in the crowd sang along to the chorus of the hit song."
+      }
+    },
+    {
+      "id": "melody",
+      "term": "melodía",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Secuencia de notas musicales que forman una melodía reconocible.",
+      "example": "La melodía era tan pegadiza que no podía sacármela de la cabeza.",
+      "translations": {
+        "en": "melody"
+      },
+      "gloss": {
+        "en": "A sequence of musical notes that form a recognizable tune"
+      },
+      "gloss_example": {
+        "en": "The melody was so catchy that I couldn't get it out of my head."
+      }
+    },
+    {
+      "id": "acoustic",
+      "term": "acústico",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que describe música interpretada con instrumentos naturales, sin amplificación electrónica.",
+      "example": "Tocó una versión acústica de su mayor éxito en el local íntimo.",
+      "translations": {
+        "en": "acoustic"
+      },
+      "gloss": {
+        "en": "Describes music played with natural, non-electronic instruments"
+      },
+      "gloss_example": {
+        "en": "He played an acoustic version of his biggest hit at the intimate venue."
+      }
+    },
+    {
+      "id": "tour",
+      "term": "gira",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Serie de conciertos o actuaciones en diferentes ciudades o países.",
+      "example": "La banda anunció una gira mundial para promocionar su nuevo álbum.",
+      "translations": {
+        "en": "tour"
+      },
+      "gloss": {
+        "en": "A series of concerts or performances in different cities or countries"
+      },
+      "gloss_example": {
+        "en": "The band announced a world tour to promote their new album."
+      }
+    },
+    {
+      "id": "sampling",
+      "term": "sampling / sampleo",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La práctica de tomar digitalmente un fragmento de una canción grabada para incorporarlo en una nueva composición.",
+      "example": "Los productores de hip-hop construyeron toda una forma de arte en torno al sampling creativo.",
+      "translations": {
+        "en": "sampling"
+      },
+      "gloss": {
+        "en": "The practice of digitally borrowing a section of a recorded song to incorporate into a new composition"
+      },
+      "gloss_example": {
+        "en": "Hip-hop producers built an entire art form around creative sampling."
+      }
+    },
+    {
+      "id": "pitch",
+      "term": "tono / altura tonal",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El grado de altura de una nota musical, es decir, si suena aguda o grave.",
+      "example": "Tiene oído absoluto y puede identificar cualquier nota musical sin referencia.",
+      "translations": {
+        "en": "pitch"
+      },
+      "gloss": {
+        "en": "How high or low a musical note sounds"
+      },
+      "gloss_example": {
+        "en": "She has perfect pitch and can identify any musical note without a reference."
+      }
+    },
+    {
+      "id": "setlist",
+      "term": "lista de canciones del concierto",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El orden planificado de canciones que un músico o banda interpretará en un concierto.",
+      "example": "La lista de canciones de la banda incluía todos sus clásicos más tres temas nuevos.",
+      "translations": {
+        "en": "setlist"
+      },
+      "gloss": {
+        "en": "The planned order of songs that a musician or band will perform at a concert"
+      },
+      "gloss_example": {
+        "en": "The band's setlist included all their classics plus three new songs."
+      }
+    },
+    {
+      "id": "venue",
+      "term": "recinto / sala de conciertos",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El lugar donde se celebra un concierto o actuación.",
+      "example": "El recinto tiene capacidad para más de diez mil personas y cuenta con una acústica increíble.",
+      "translations": {
+        "en": "venue"
+      },
+      "gloss": {
+        "en": "The place where a concert or performance takes place"
+      },
+      "gloss_example": {
+        "en": "The venue holds over ten thousand people and has incredible acoustics."
+      }
+    },
+    {
+      "id": "remix",
+      "term": "remix / remezcla",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Nueva versión de una canción en la que la grabación original se edita o reorganiza.",
+      "example": "El remix del DJ de ese éxito de los 90 fue incluso más popular que el original.",
+      "translations": {
+        "en": "remix"
+      },
+      "gloss": {
+        "en": "A new version of a song in which the original recording is edited or rearranged"
+      },
+      "gloss_example": {
+        "en": "The DJ's remix of that 90s hit was even more popular than the original."
+      }
+    },
+    {
+      "id": "virtuoso",
+      "term": "virtuoso",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Músico con una habilidad técnica excepcional y un dominio extraordinario de su instrumento.",
+      "example": "La joven pianista es considerada una virtuosa. Interpretó a Chopin con once años.",
+      "translations": {
+        "en": "virtuoso"
+      },
+      "gloss": {
+        "en": "A musician with exceptional technical skill and mastery of their instrument"
+      },
+      "gloss_example": {
+        "en": "The young pianist is considered a virtuoso. She performed Chopin at age eleven."
+      }
+    },
+    {
+      "id": "canon",
+      "term": "canon",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El conjunto de obras o artistas considerados esenciales y definitivos en una tradición musical, generalmente establecido por la crítica y las instituciones.",
+      "example": "Los debates sobre el canon del jazz a menudo reflejan cuyas contribuciones han sido históricamente reconocidas.",
+      "translations": {
+        "en": "canon"
+      },
+      "gloss": {
+        "en": "The body of works or artists considered essential and definitive in a musical tradition, often set by critics and institutions"
+      },
+      "gloss_example": {
+        "en": "Debates about the jazz canon often reflect whose contributions have been historically recognized."
+      }
+    },
+    {
+      "id": "improvisation",
+      "term": "improvisación",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La creación espontánea de música en el momento, sin preparación previa ni partitura.",
+      "example": "El jazz se basa en la improvisación, y los músicos se responden mutuamente en tiempo real.",
+      "translations": {
+        "en": "improvisation"
+      },
+      "gloss": {
+        "en": "The spontaneous creation of music in the moment, without prior preparation or notation"
+      },
+      "gloss_example": {
+        "en": "Jazz is built on improvisation, and musicians respond to each other in real time."
+      }
+    },
+    {
+      "id": "dissonance",
+      "term": "disonancia",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Combinación de notas musicales que producen una sensación de tensión o inestabilidad al no resolverse.",
+      "example": "El compositor usó la disonancia deliberadamente para evocar inquietud y conflicto.",
+      "translations": {
+        "en": "dissonance"
+      },
+      "gloss": {
+        "en": "A combination of musical notes that clash or feel unresolved, creating tension"
+      },
+      "gloss_example": {
+        "en": "The composer used dissonance deliberately to evoke unease and conflict."
+      }
+    },
+    {
+      "id": "arrangement",
+      "term": "arreglo musical",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Adaptación de una pieza musical para instrumentos o voces distintos a los del original.",
+      "example": "El arreglo orquestal de la canción pop la transformó en algo completamente nuevo.",
+      "translations": {
+        "en": "arrangement"
+      },
+      "gloss": {
+        "en": "An adaptation of a piece of music for different instruments or voices from the original"
+      },
+      "gloss_example": {
+        "en": "The orchestral arrangement of the pop song transformed it into something entirely new."
+      }
+    },
+    {
+      "id": "timbre",
+      "term": "timbre (sonoro)",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La cualidad sonora característica que distingue a un instrumento o voz de otro, más allá del tono y el volumen.",
+      "example": "Su timbre es inconfundible, ninguna otra cantante suena igual que ella.",
+      "translations": {
+        "en": "timbre"
+      },
+      "gloss": {
+        "en": "The distinctive quality of a musical sound that allows you to tell instruments or voices apart"
+      },
+      "gloss_example": {
+        "en": "Her timbre is instantly recognizable. No other singer sounds quite like her."
+      }
+    },
+    {
+      "id": "counterpoint",
+      "term": "contrapunto",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Técnica musical en la que dos o más melodías independientes suenan simultáneamente de forma armónica.",
+      "example": "El uso del contrapunto en las fugas de Bach sigue estudiándose en conservatorios de todo el mundo.",
+      "translations": {
+        "en": "counterpoint"
+      },
+      "gloss": {
+        "en": "A musical technique in which two or more independent melodies are played at the same time"
+      },
+      "gloss_example": {
+        "en": "Bach's use of counterpoint in his fugues is still studied in conservatories worldwide."
+      }
+    },
+    {
+      "id": "erasure",
+      "term": "borramiento / invisibilización",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La supresión deliberada o sistémica del patrimonio musical de una cultura del registro histórico o del reconocimiento general.",
+      "example": "La invisibilización de los artistas negros en la historia del rock and roll primitivo ha sido ampliamente documentada.",
+      "translations": {
+        "en": "erasure"
+      },
+      "gloss": {
+        "en": "The deliberate or systemic suppression of a culture's musical heritage from the historical record or mainstream recognition"
+      },
+      "gloss_example": {
+        "en": "The erasure of Black artists from early rock and roll history has been extensively documented."
+      }
+    },
+    {
+      "id": "polyrhythm",
+      "term": "polirritmia",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El uso simultáneo de dos o más patrones rítmicos en conflicto dentro de una misma pieza musical.",
+      "example": "Las tradiciones de percusión de África Occidental se construyen sobre estructuras polirítmicas complejas.",
+      "translations": {
+        "en": "polyrhythm"
+      },
+      "gloss": {
+        "en": "The simultaneous use of two or more conflicting rhythmic patterns in music"
+      },
+      "gloss_example": {
+        "en": "West African drumming traditions are built on complex polyrhythmic structures."
+      }
+    },
+    {
+      "id": "leitmotif",
+      "term": "leitmotiv",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Tema musical recurrente que se asocia a un personaje, idea o emoción concretos dentro de una composición.",
+      "example": "Wagner desarrolló la técnica del leitmotiv para representar personajes sin necesidad de palabras.",
+      "translations": {
+        "en": "leitmotif"
+      },
+      "gloss": {
+        "en": "A recurring musical theme associated with a particular character, idea, or emotion in a composition"
+      },
+      "gloss_example": {
+        "en": "Wagner developed the leitmotif technique to represent characters without words."
+      }
+    },
+    {
+      "id": "atonal",
+      "term": "atonal",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Que describe música que evita un centro tonal o tonalidad definida, generando un sonido inestable y desorientador.",
+      "example": "Las composiciones atonales de Schoenberg dividieron al público entre la admiración y la confusión.",
+      "translations": {
+        "en": "atonal"
+      },
+      "gloss": {
+        "en": "Describes music that avoids a tonal center or key, creating an unsettled, disorienting sound"
+      },
+      "gloss_example": {
+        "en": "Schoenberg's atonal compositions divided audiences between admiration and confusion."
+      }
+    },
+    {
+      "id": "syncopation",
+      "term": "síncopa",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Patrón rítmico en el que el acento recae en tiempos débiles o contratiempos, dando a la música un swing o un impulso característico.",
+      "example": "La síncopa del pianista de jazz le daba incluso a una melodía sencilla una irresistible sensación de impulso.",
+      "translations": {
+        "en": "syncopation"
+      },
+      "gloss": {
+        "en": "A rhythmic pattern in which the emphasis falls on normally weak or off beats, giving music a swing or bounce"
+      },
+      "gloss_example": {
+        "en": "The jazz pianist's syncopation gave even a simple melody a compelling sense of forward momentum."
+      }
+    },
+    {
+      "id": "appropriation",
+      "term": "apropiación (cultural)",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La adopción de elementos de una cultura o tradición musical en otra, lo que en ocasiones plantea interrogantes éticos.",
+      "example": "El debate sobre la apropiación cultural en la música sigue dividiendo a críticos y artistas por igual.",
+      "translations": {
+        "en": "appropriation"
+      },
+      "gloss": {
+        "en": "The adoption of elements from one musical culture or tradition into another, sometimes raising ethical questions"
+      },
+      "gloss_example": {
+        "en": "The debate over cultural appropriation in music continues to divide critics and artists alike."
+      }
+    },
+    {
+      "id": "sing",
+      "term": "cantar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Producir sonidos musicales con la voz.",
+      "example": "Ella canta en un coro local.",
+      "translations": {
+        "en": "sing"
+      },
+      "gloss": {
+        "en": "To make musical sounds with your voice."
+      },
+      "gloss_example": {
+        "en": "She sings in a local choir."
+      }
+    },
+    {
+      "id": "dance",
+      "term": "bailar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Mover el cuerpo al ritmo de la música.",
+      "example": "Bailaron toda la noche en la fiesta.",
+      "translations": {
+        "en": "dance"
+      },
+      "gloss": {
+        "en": "To move your body in time with music."
+      },
+      "gloss_example": {
+        "en": "They danced all night at the party."
+      }
+    },
+    {
+      "id": "musician",
+      "term": "músico / música",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que toca o escribe música.",
+      "example": "El músico tocó durante dos horas.",
+      "translations": {
+        "en": "musician"
+      },
+      "gloss": {
+        "en": "A person who plays or writes music."
+      },
+      "gloss_example": {
+        "en": "The musician played for two hours."
+      }
+    }
+  ]
+}

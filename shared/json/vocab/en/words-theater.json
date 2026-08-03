@@ -1,0 +1,634 @@
+{
+  "words": [
+    {
+      "id": "theater",
+      "term": "theater",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building where plays, operas, or other live performances are presented to an audience",
+      "example": "We went to the theater to see a musical comedy last Saturday.",
+      "translations": {
+        "es": "teatro"
+      },
+      "gloss": {
+        "es": "Edificio donde se presentan obras en vivo."
+      },
+      "gloss_example": {
+        "es": "Fuimos al teatro a ver una comedia musical el sábado pasado."
+      }
+    },
+    {
+      "id": "play",
+      "term": "play",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A written story performed on stage by actors in front of an audience",
+      "example": "We saw a play about Shakespeare's life at the local theater.",
+      "translations": {
+        "es": "obra de teatro"
+      },
+      "gloss": {
+        "es": "Historia que los actores representan en un escenario."
+      },
+      "gloss_example": {
+        "es": "Vimos una obra de teatro sobre la vida de Shakespeare en el teatro local."
+      }
+    },
+    {
+      "id": "museum",
+      "term": "museum",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building that displays collections of historical, artistic, or scientific objects for the public",
+      "example": "The natural history museum has a new dinosaur exhibition this month.",
+      "translations": {
+        "es": "museo"
+      },
+      "gloss": {
+        "es": "Edificio que exhibe objetos históricos, artísticos o científicos."
+      },
+      "gloss_example": {
+        "es": "El museo de historia natural tiene una nueva exposición de dinosaurios este mes."
+      }
+    },
+    {
+      "id": "exhibition",
+      "term": "exhibition",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A public display of works of art or objects of interest, held in a gallery or museum",
+      "example": "The photography exhibition attracted over fifty thousand visitors in its first week.",
+      "translations": {
+        "es": "exposición"
+      },
+      "gloss": {
+        "es": "Muestra pública de arte u objetos de interés."
+      },
+      "gloss_example": {
+        "es": "La exposición de fotografía atrajo a más de cincuenta mil visitantes en su primera semana."
+      }
+    },
+    {
+      "id": "stage",
+      "term": "stage",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The raised area in a theater where actors perform in front of the audience",
+      "example": "The actors stepped onto the stage to thunderous applause.",
+      "translations": {
+        "es": "escenario"
+      },
+      "gloss": {
+        "es": "Zona elevada de un teatro donde actúan los actores."
+      },
+      "gloss_example": {
+        "es": "Los actores subieron al escenario entre atronadores aplausos."
+      }
+    },
+    {
+      "id": "performance",
+      "term": "performance",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A live presentation of a play, concert, dance, or other art form in front of an audience",
+      "example": "The evening performance received a standing ovation from the audience.",
+      "translations": {
+        "es": "actuación / función"
+      },
+      "gloss": {
+        "es": "Presentación en vivo de una obra ante el público."
+      },
+      "gloss_example": {
+        "es": "La función de la noche recibió una ovación de pie del público."
+      }
+    },
+    {
+      "id": "gallery",
+      "term": "gallery",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A room or building where works of art are displayed for the public",
+      "example": "The gallery was showing a collection of contemporary sculpture from local artists.",
+      "translations": {
+        "es": "galería"
+      },
+      "gloss": {
+        "es": "Sala donde se exponen obras de arte al público."
+      },
+      "gloss_example": {
+        "es": "La galería exhibía una colección de escultura contemporánea de artistas locales."
+      }
+    },
+    {
+      "id": "opera",
+      "term": "opera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A dramatic performance in which all or most of the dialogue is sung, often with orchestral accompaniment",
+      "example": "It was her first time at the opera, and she was surprised by how moving it was.",
+      "translations": {
+        "es": "ópera"
+      },
+      "gloss": {
+        "es": "Espectáculo dramático en el que el diálogo se canta."
+      },
+      "gloss_example": {
+        "es": "Era la primera vez que iba a la ópera y le sorprendió lo emocionante que resultó."
+      }
+    },
+    {
+      "id": "audience",
+      "term": "audience",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The group of people who watch a performance or visit an exhibition",
+      "example": "The audience gave the cast a standing ovation at the end of the show.",
+      "translations": {
+        "es": "público / audiencia"
+      },
+      "gloss": {
+        "es": "Grupo de personas que asiste a una actuación."
+      },
+      "gloss_example": {
+        "es": "El público le dio una ovación de pie al reparto al final del espectáculo."
+      }
+    },
+    {
+      "id": "ticket",
+      "term": "ticket",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A printed or digital pass that allows entry to a theater, museum, or other event",
+      "example": "Tickets for the opening night sold out within hours of going on sale.",
+      "translations": {
+        "es": "entrada / boleto"
+      },
+      "gloss": {
+        "es": "Pase que permite la entrada a un evento."
+      },
+      "gloss_example": {
+        "es": "Las entradas para la noche de estreno se agotaron a las pocas horas de salir a la venta."
+      }
+    },
+    {
+      "id": "intermission",
+      "term": "intermission",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A short break between the acts or parts of a live performance",
+      "example": "During the intermission, we went to the bar and talked about the first act.",
+      "translations": {
+        "es": "intermedio"
+      },
+      "gloss": {
+        "es": "Breve pausa entre los actos o partes de una actuación en vivo."
+      },
+      "gloss_example": {
+        "es": "Durante el intermedio, fuimos al bar y comentamos el primer acto."
+      }
+    },
+    {
+      "id": "set",
+      "term": "set",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The scenery and furniture arranged on stage to represent the location of a play",
+      "example": "The set was a simple arrangement of chairs and a single lamp, yet it felt completely real.",
+      "translations": {
+        "es": "escenografía / set"
+      },
+      "gloss": {
+        "es": "La escenografía dispuesta en el escenario para representar el lugar."
+      },
+      "gloss_example": {
+        "es": "La escenografía era solo unas sillas y una lámpara, pero resultaba completamente real."
+      }
+    },
+    {
+      "id": "rehearsal",
+      "term": "rehearsal",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A practice session for a play or performance before presenting it to an audience",
+      "example": "The director called an extra rehearsal the night before opening night.",
+      "translations": {
+        "es": "ensayo"
+      },
+      "gloss": {
+        "es": "Sesión de práctica de una obra o actuación antes de presentarla al público."
+      },
+      "gloss_example": {
+        "es": "El director convocó un ensayo extra la noche anterior al estreno."
+      }
+    },
+    {
+      "id": "curtain_call",
+      "term": "curtain call",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The moment after a performance when the actors return to the stage to receive the audience's applause",
+      "example": "The cast received three curtain calls on opening night.",
+      "translations": {
+        "es": "llamada a escena / saludo final"
+      },
+      "gloss": {
+        "es": "Momento tras la actuación en que los actores reciben aplausos."
+      },
+      "gloss_example": {
+        "es": "El reparto recibió tres llamadas a escena en la noche del estreno."
+      }
+    },
+    {
+      "id": "retrospective",
+      "term": "retrospective",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An exhibition that looks back at an artist's work over a long period of time",
+      "example": "The gallery is hosting a retrospective of the sculptor's forty-year career.",
+      "translations": {
+        "es": "retrospectiva"
+      },
+      "gloss": {
+        "es": "Exposición que repasa la obra de un artista a lo largo de su carrera."
+      },
+      "gloss_example": {
+        "es": "La galería acoge una retrospectiva de los cuarenta años de carrera de la escultora."
+      }
+    },
+    {
+      "id": "revival",
+      "term": "revival",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A new production of a previously staged play or show, often with a fresh interpretation",
+      "example": "The revival of the classic 1950s musical was far more political than the original.",
+      "translations": {
+        "es": "reposición"
+      },
+      "gloss": {
+        "es": "Nueva producción de una obra o espectáculo anteriormente representado, a menudo con una interpretación renovada."
+      },
+      "gloss_example": {
+        "es": "La reposición del clásico musical de los años 50 era mucho más política que el original."
+      }
+    },
+    {
+      "id": "monologue",
+      "term": "monologue",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A long speech delivered by a single actor, either to another character or directly to the audience",
+      "example": "The opening monologue set the entire emotional tone for the rest of the play.",
+      "translations": {
+        "es": "monólogo"
+      },
+      "gloss": {
+        "es": "Largo discurso interpretado por un solo actor, dirigido a otro personaje o directamente al público."
+      },
+      "gloss_example": {
+        "es": "El monólogo inicial estableció el tono emocional de toda la obra."
+      }
+    },
+    {
+      "id": "nostalgia",
+      "term": "nostalgia",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A bittersweet longing for the past, often evoked by art, music, or memories",
+      "example": "The exhibit's black-and-white photos filled the room with a gentle nostalgia.",
+      "translations": {
+        "es": "nostalgia"
+      },
+      "gloss": {
+        "es": "Añoranza agridulce del pasado que suele evocar el arte, la música o los recuerdos."
+      },
+      "gloss_example": {
+        "es": "Las fotografías en blanco y negro de la exposición llenaron la sala de una suave nostalgia."
+      }
+    },
+    {
+      "id": "staging",
+      "term": "staging",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The way a play is organized and arranged on stage, including the actors' movements and use of space",
+      "example": "The director's unconventional staging placed the audience on three sides of the stage.",
+      "translations": {
+        "es": "puesta en escena / montaje"
+      },
+      "gloss": {
+        "es": "La forma en que se organiza y dispone una obra en el escenario, incluidos los movimientos de los actores y el uso del espacio."
+      },
+      "gloss_example": {
+        "es": "La puesta en escena poco convencional del director colocó al público en tres lados del escenario."
+      }
+    },
+    {
+      "id": "playwright",
+      "term": "playwright",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A person who writes plays for the theater",
+      "example": "She is considered one of the most important playwrights of her generation.",
+      "translations": {
+        "es": "dramaturgo / dramaturga"
+      },
+      "gloss": {
+        "es": "Persona que escribe obras de teatro para ser representadas en escena."
+      },
+      "gloss_example": {
+        "es": "Se la considera una de las dramaturgas más importantes de su generación."
+      }
+    },
+    {
+      "id": "script",
+      "term": "script",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The written text of a play, including all dialogue and stage directions",
+      "example": "The actors spent weeks studying the script before rehearsals even began.",
+      "translations": {
+        "es": "guion / libreto"
+      },
+      "gloss": {
+        "es": "El texto escrito de una obra de teatro, que incluye todos los diálogos y las acotaciones escénicas."
+      },
+      "gloss_example": {
+        "es": "Los actores pasaron semanas estudiando el guion antes de que comenzaran los ensayos."
+      }
+    },
+    {
+      "id": "curator",
+      "term": "curator",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A person responsible for selecting and organizing works of art for a museum or exhibition",
+      "example": "The curator's choices for the exhibition were bold and deliberately provocative.",
+      "translations": {
+        "es": "curador / conservador"
+      },
+      "gloss": {
+        "es": "Persona responsable de seleccionar y organizar obras de arte para un museo o exposición."
+      },
+      "gloss_example": {
+        "es": "Las elecciones del curador para la exposición fueron atrevidas y deliberadamente provocadoras."
+      }
+    },
+    {
+      "id": "immersive",
+      "term": "immersive",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Describing a performance or experience that surrounds and deeply engages the audience, often blurring the boundary between performer and viewer",
+      "example": "The immersive theater piece had no fixed stage. Audience members moved through different rooms.",
+      "translations": {
+        "es": "inmersivo"
+      },
+      "gloss": {
+        "es": "Que rodea y compromete profundamente al espectador, borrando a menudo el límite entre intérprete y público."
+      },
+      "gloss_example": {
+        "es": "La obra de teatro inmersiva no tenía escenario fijo y el público se movía por distintas salas."
+      }
+    },
+    {
+      "id": "complicit",
+      "term": "complicit",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Sharing moral responsibility for something, even without direct involvement",
+      "example": "The play implicates the audience as complicit in the events unfolding on stage.",
+      "translations": {
+        "es": "cómplice"
+      },
+      "gloss": {
+        "es": "Que comparte responsabilidad moral en algo, incluso sin participación directa."
+      },
+      "gloss_example": {
+        "es": "La obra implica al público como cómplice de los hechos que se desarrollan en el escenario."
+      }
+    },
+    {
+      "id": "dramaturgy",
+      "term": "dramaturgy",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The craft and theory of writing and structuring plays for performance",
+      "example": "The dramaturgy of the piece was experimental, blending spoken word with live music.",
+      "translations": {
+        "es": "dramaturgia"
+      },
+      "gloss": {
+        "es": "El arte y la teoría de escribir y estructurar obras de teatro para su representación."
+      },
+      "gloss_example": {
+        "es": "La dramaturgia de la pieza era experimental, combinando la palabra hablada con música en vivo."
+      }
+    },
+    {
+      "id": "subversive",
+      "term": "subversive",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Intended to challenge or undermine established norms, conventions, or authority through art",
+      "example": "The play was called subversive for its unflattering portrayal of political leaders.",
+      "translations": {
+        "es": "subversivo"
+      },
+      "gloss": {
+        "es": "Que pretende cuestionar o socavar las normas, convenciones o la autoridad establecidas a través del arte."
+      },
+      "gloss_example": {
+        "es": "La obra fue calificada de subversiva por su retrato poco favorecedor de los líderes políticos."
+      }
+    },
+    {
+      "id": "installation",
+      "term": "installation",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A form of contemporary art that uses three-dimensional objects arranged to transform a space",
+      "example": "The artist's installation filled the entire hall with suspended mirrors and colored light.",
+      "translations": {
+        "es": "instalación artística"
+      },
+      "gloss": {
+        "es": "Forma de arte contemporáneo que utiliza objetos tridimensionales dispuestos para transformar un espacio."
+      },
+      "gloss_example": {
+        "es": "La instalación del artista llenó toda la sala con espejos suspendidos y luz de colores."
+      }
+    },
+    {
+      "id": "catharsis",
+      "term": "catharsis",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The emotional release or purification that an audience experiences through witnessing a powerful dramatic work",
+      "example": "The final act provided a profound catharsis that left many audience members in tears.",
+      "translations": {
+        "es": "catarsis"
+      },
+      "gloss": {
+        "es": "La liberación o purificación emocional que experimenta el público al presenciar una obra dramática poderosa."
+      },
+      "gloss_example": {
+        "es": "El último acto produjo una catarsis profunda que dejó a muchos espectadores con los ojos llenos de lágrimas."
+      }
+    },
+    {
+      "id": "liminal",
+      "term": "liminal",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Relating to a threshold state between two conditions or categories, neither fully one thing nor another",
+      "example": "The performance occupied a liminal space between dance and theater that resisted easy classification.",
+      "translations": {
+        "es": "liminal"
+      },
+      "gloss": {
+        "es": "Relativo a un estado umbral entre dos condiciones o categorías, sin ser plenamente ninguna de las dos."
+      },
+      "gloss_example": {
+        "es": "La actuación ocupaba un espacio liminal entre la danza y el teatro que resistía cualquier clasificación fácil."
+      }
+    },
+    {
+      "id": "post_dramatic",
+      "term": "post-dramatic",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Relating to a form of theater that moves beyond text-based narrative, prioritizing physical presence, space, and sensory experience over plot",
+      "example": "Post-dramatic theater challenges the idea that a play must tell a linear story.",
+      "translations": {
+        "es": "posdramático"
+      },
+      "gloss": {
+        "es": "Relativo a una forma teatral que va más allá de la narrativa basada en el texto, priorizando la presencia física, el espacio y la experiencia sensorial sobre la trama."
+      },
+      "gloss_example": {
+        "es": "El teatro posdramático cuestiona la idea de que una obra deba contar una historia lineal."
+      }
+    },
+    {
+      "id": "alienation_effect",
+      "term": "alienation effect",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A technique in theater, developed by Bertolt Brecht, designed to prevent emotional identification so the audience thinks critically",
+      "example": "Actors breaking the fourth wall is a classic use of the alienation effect.",
+      "translations": {
+        "es": "efecto de distanciamiento"
+      },
+      "gloss": {
+        "es": "Técnica teatral desarrollada por Bertolt Brecht para impedir la identificación emocional del público y fomentar el pensamiento crítico."
+      },
+      "gloss_example": {
+        "es": "Que los actores rompan la cuarta pared es un uso clásico del efecto de distanciamiento."
+      }
+    },
+    {
+      "id": "commodification",
+      "term": "commodification",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The process of turning something, including art or culture, into a commercial product to be bought and sold",
+      "example": "The exhibition critically examined the commodification of indigenous art by Western galleries.",
+      "translations": {
+        "es": "mercantilización / cosificación"
+      },
+      "gloss": {
+        "es": "El proceso de convertir algo, incluido el arte o la cultura, en un producto comercial que se compra y se vende."
+      },
+      "gloss_example": {
+        "es": "La exposición examinó críticamente la mercantilización del arte indígena por parte de las galerías occidentales."
+      }
+    },
+    {
+      "id": "repatriation",
+      "term": "repatriation",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The return of cultural artifacts to their country or community of origin, often from foreign museums",
+      "example": "The museum agreed to the repatriation of ancient sculptures taken during the colonial era.",
+      "translations": {
+        "es": "repatriación"
+      },
+      "gloss": {
+        "es": "La devolución de objetos culturales a su país o comunidad de origen, a menudo desde museos extranjeros."
+      },
+      "gloss_example": {
+        "es": "El museo acordó la repatriación de esculturas antiguas tomadas durante la era colonial."
+      }
+    },
+    {
+      "id": "postmodern",
+      "term": "postmodern",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Relating to an artistic style that blends high and low culture, questions fixed meanings, and often uses irony and self-reference",
+      "example": "The postmodern production deliberately mixed classical text with pop music and TV aesthetics.",
+      "translations": {
+        "es": "posmoderno"
+      },
+      "gloss": {
+        "es": "Relativo a un estilo artístico que mezcla cultura alta y popular, cuestiona los significados fijos y usa con frecuencia la ironía y la autorreferencia."
+      },
+      "gloss_example": {
+        "es": "La producción posmoderna mezcló deliberadamente textos clásicos con música pop y estética televisiva."
+      }
+    },
+    {
+      "id": "provenance",
+      "term": "provenance",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The documented history of an artwork's origins and ownership, important for legal and ethical reasons",
+      "example": "The museum refused to purchase the painting because its provenance could not be verified.",
+      "translations": {
+        "es": "procedencia / historial de propiedad"
+      },
+      "gloss": {
+        "es": "El historial documentado del origen y la propiedad de una obra de arte, importante por razones legales y éticas."
+      },
+      "gloss_example": {
+        "es": "El museo se negó a adquirir el cuadro porque no se pudo verificar su procedencia."
+      }
+    }
+  ]
+}

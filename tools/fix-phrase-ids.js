@@ -2,12 +2,12 @@
 // Regenerates _ID_MAP in shared/js/progress.js from the actual JSON files.
 //
 // _ID_MAP structure:
-//   { phrases: { <pairId>: { <topic>: [phraseId, ...] } },
-//     vocab:   { <pairId>: { <topic>: { quizBase, vocabBase, ids: [wordId, ...] } } } }
+//   { phrases: { <pairId>:    { <topic>: [phraseId, ...] } },
+//     vocab:   { <targetLang>: { <topic>: { quizBase, vocabBase, ids: [wordId, ...] } } } }
 //
-// Both phrases AND vocab are keyed by pair — content is independent per pair, so
-// IDs, word selection and CEFR levels may diverge (e.g. es-en vocab follows the
-// English NGSL core; en-es vocab follows the Spanish ELELex core).
+// Phrases are keyed by pair (content independent per pair). Vocab is target-centric
+// — keyed by target language and shared across pairs with the same target (English
+// NGSL core under 'en', Spanish ELELex core under 'es'), read from shared/json/vocab/.
 //
 // Run this ANY TIME you add, edit, or remove phrases or vocabulary words. Forgetting
 // silently breaks the Mi Aprendizaje session builder (PathSession) for the affected pair.
@@ -51,17 +51,18 @@ for (const pair of PAIRS) {
   }
 }
 
-// Vocabulary: per-pair (pairs/{pairId}/vocab/). Word selection and CEFR levels
-// diverge between pairs (English NGSL core vs Spanish ELELex core), so the map
-// is keyed by pair like _ID_MAP.phrases.
+// Vocabulary: target-centric (shared/json/vocab/{targetLang}/). Word selection
+// and CEFR levels are independent per target language (English NGSL core vs
+// Spanish ELELex core), so the map is keyed by target language.
+const VOCAB_LANGS = ['en', 'es'];
 const vocab = {};
-for (const pair of PAIRS) {
-  vocab[pair] = {};
+for (const lang of VOCAB_LANGS) {
+  vocab[lang] = {};
   for (const topic of vocabTopics) {
     const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
-    const filePath = path.join(root, 'shared', 'json', 'pairs', pair, 'vocab', filename);
+    const filePath = path.join(root, 'shared', 'json', 'vocab', lang, filename);
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-    vocab[pair][topic] = {
+    vocab[lang][topic] = {
       quizBase:  topic === 'general' ? 'quiz_vocab' : `quiz_${topic}`,
       vocabBase: topic === 'general' ? 'vocab' : `vocab_${topic}`,
       ids: (data.words || data).map(w => w.id),
@@ -103,18 +104,18 @@ for (const pair of PAIRS) {
     }
   }
 }
-for (const pair of PAIRS) {
+for (const lang of VOCAB_LANGS) {
   for (const topic of vocabTopics) {
-    if (JSON.stringify(written.vocab[pair][topic].ids) !== JSON.stringify(vocab[pair][topic].ids)) {
-      allOk = false; console.error(`  ✗ vocab.${pair}.${topic} mismatch after write`);
+    if (JSON.stringify(written.vocab[lang][topic].ids) !== JSON.stringify(vocab[lang][topic].ids)) {
+      allOk = false; console.error(`  ✗ vocab.${lang}.${topic} mismatch after write`);
     }
   }
 }
 
 if (allOk) {
   const pCount = PAIRS.reduce((s, p) => s + phraseTopics.reduce((a, t) => a + phrases[p][t].length, 0), 0);
-  const vCount = PAIRS.reduce((s, p) => s + vocabTopics.reduce((a, t) => a + vocab[p][t].ids.length, 0), 0);
-  console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs across ${PAIRS.length} pairs, ${vCount} vocab IDs.`);
+  const vCount = VOCAB_LANGS.reduce((s, l) => s + vocabTopics.reduce((a, t) => a + vocab[l][t].ids.length, 0), 0);
+  console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs across ${PAIRS.length} pairs, ${vCount} vocab IDs (${VOCAB_LANGS.length} target languages).`);
 } else {
   console.error('❌ Verification failed — check output above.');
   process.exit(1);

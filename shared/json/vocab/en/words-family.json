@@ -1,0 +1,346 @@
+{
+  "words": [
+    {
+      "id": "child",
+      "term": "child",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A young human being who is not yet an adult.",
+      "example": "The child laughed while playing in the park.",
+      "translations": {
+        "es": "niño / niña"
+      },
+      "gloss": {
+        "es": "Persona joven que todavía no es adulta."
+      },
+      "gloss_example": {
+        "es": "El niño reía mientras jugaba en el parque."
+      }
+    },
+    {
+      "id": "boy",
+      "term": "boy",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A male child or young man.",
+      "example": "The boy kicked the ball across the field.",
+      "translations": {
+        "es": "niño / chico"
+      },
+      "gloss": {
+        "es": "Niño o joven de sexo masculino."
+      },
+      "gloss_example": {
+        "es": "El niño pateó la pelota por la cancha."
+      }
+    },
+    {
+      "id": "girl",
+      "term": "girl",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A female child or young woman.",
+      "example": "The girl drew a picture of her family.",
+      "translations": {
+        "es": "niña / chica"
+      },
+      "gloss": {
+        "es": "Niña o joven de sexo femenino."
+      },
+      "gloss_example": {
+        "es": "La niña dibujó a su familia."
+      }
+    },
+    {
+      "id": "baby",
+      "term": "baby",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A very young child who cannot yet walk or talk.",
+      "example": "The baby slept quietly in her mother's arms.",
+      "translations": {
+        "es": "bebé"
+      },
+      "gloss": {
+        "es": "Niño muy pequeño que aún no camina."
+      },
+      "gloss_example": {
+        "es": "El bebé dormía tranquilo en los brazos de su madre."
+      }
+    },
+    {
+      "id": "kid",
+      "term": "kid",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An informal word for a child.",
+      "example": "Their kids go to the same school.",
+      "translations": {
+        "es": "niño / chico"
+      },
+      "gloss": {
+        "es": "Palabra informal para referirse a un niño."
+      },
+      "gloss_example": {
+        "es": "Los niños jugaban felices en el parque."
+      }
+    },
+    {
+      "id": "parent",
+      "term": "parent",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who is the father or mother of a child.",
+      "example": "Every parent wants their children to be happy.",
+      "translations": {
+        "es": "padre / madre"
+      },
+      "gloss": {
+        "es": "Padre o madre de una persona."
+      },
+      "gloss_example": {
+        "es": "Cada madre quiere lo mejor para sus hijos."
+      }
+    },
+    {
+      "id": "couple",
+      "term": "couple",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Two people who are married or in a romantic relationship.",
+      "example": "The couple walked hand in hand along the beach.",
+      "translations": {
+        "es": "pareja"
+      },
+      "gloss": {
+        "es": "Dos personas unidas por una relación amorosa."
+      },
+      "gloss_example": {
+        "es": "La pareja paseaba tomada de la mano."
+      }
+    },
+    {
+      "id": "adult",
+      "term": "adult",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A fully grown person who is legally responsible.",
+      "example": "Tickets are cheaper for children than for adults.",
+      "translations": {
+        "es": "adulto / adulta"
+      },
+      "gloss": {
+        "es": "Persona que ya terminó de crecer."
+      },
+      "gloss_example": {
+        "es": "Los boletos cuestan menos para niños que para adultos."
+      }
+    },
+    {
+      "id": "wife",
+      "term": "wife",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The woman a person is married to.",
+      "example": "He introduced me to his wife at the party.",
+      "translations": {
+        "es": "esposa"
+      },
+      "gloss": {
+        "es": "Mujer con la que alguien está casado."
+      },
+      "gloss_example": {
+        "es": "Me presentó a su esposa en la fiesta."
+      }
+    },
+    {
+      "id": "husband",
+      "term": "husband",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The man a person is married to.",
+      "example": "Her husband cooks dinner every evening.",
+      "translations": {
+        "es": "esposo / marido"
+      },
+      "gloss": {
+        "es": "Hombre con el que alguien está casado."
+      },
+      "gloss_example": {
+        "es": "Su esposo cocina la cena todas las noches."
+      }
+    },
+    {
+      "id": "marry",
+      "term": "marry",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To become someone's husband or wife.",
+      "example": "They decided to marry after five years together.",
+      "translations": {
+        "es": "casarse"
+      },
+      "gloss": {
+        "es": "Unirse a alguien en matrimonio."
+      },
+      "gloss_example": {
+        "es": "Decidieron casarse tras cinco años juntos."
+      }
+    },
+    {
+      "id": "guy",
+      "term": "guy",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An informal word for a man.",
+      "example": "A friendly guy helped me carry the boxes.",
+      "translations": {
+        "es": "tipo / hombre"
+      },
+      "gloss": {
+        "es": "Palabra informal para referirse a un hombre."
+      },
+      "gloss_example": {
+        "es": "Un tipo amable me ayudó a cargar las cajas."
+      }
+    },
+    {
+      "id": "generation",
+      "term": "generation",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "All the people born around the same time.",
+      "example": "Younger generations rely heavily on technology.",
+      "translations": {
+        "es": "generación"
+      },
+      "gloss": {
+        "es": "Grupo de personas nacidas en la misma época."
+      },
+      "gloss_example": {
+        "es": "Las nuevas generaciones dependen mucho de la tecnología."
+      }
+    },
+    {
+      "id": "male",
+      "term": "male",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Belonging to the sex that does not give birth.",
+      "example": "The form asked whether I was male or female.",
+      "translations": {
+        "es": "masculino / hombre"
+      },
+      "gloss": {
+        "es": "Del sexo que no da a luz."
+      },
+      "gloss_example": {
+        "es": "El formulario preguntaba si era hombre o mujer."
+      }
+    },
+    {
+      "id": "female",
+      "term": "female",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Belonging to the sex that can give birth.",
+      "example": "Most of the students in the class are female.",
+      "translations": {
+        "es": "femenino / mujer"
+      },
+      "gloss": {
+        "es": "Del sexo que puede dar a luz."
+      },
+      "gloss_example": {
+        "es": "La mayoría de las estudiantes de la clase son mujeres."
+      }
+    },
+    {
+      "id": "friend",
+      "term": "friend",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person you know well and like.",
+      "example": "She is my best friend.",
+      "translations": {
+        "es": "amigo / amiga"
+      },
+      "gloss": {
+        "es": "Persona que conoces bien y aprecias."
+      },
+      "gloss_example": {
+        "es": "Ella es mi mejor amiga."
+      }
+    },
+    {
+      "id": "boyfriend",
+      "term": "boyfriend",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A man someone is in a romantic relationship with.",
+      "example": "Her boyfriend works at the hospital.",
+      "translations": {
+        "es": "novio"
+      },
+      "gloss": {
+        "es": "Hombre con quien alguien tiene una relación amorosa."
+      },
+      "gloss_example": {
+        "es": "Su novio trabaja en el hospital."
+      }
+    },
+    {
+      "id": "girlfriend",
+      "term": "girlfriend",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A woman someone is in a romantic relationship with.",
+      "example": "He introduced his girlfriend to us.",
+      "translations": {
+        "es": "novia"
+      },
+      "gloss": {
+        "es": "Mujer con quien alguien tiene una relación amorosa."
+      },
+      "gloss_example": {
+        "es": "Nos presentó a su novia."
+      }
+    },
+    {
+      "id": "neighbor",
+      "term": "neighbor",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who lives near you.",
+      "example": "Our neighbor watered the plants for us.",
+      "translations": {
+        "es": "vecino / vecina"
+      },
+      "gloss": {
+        "es": "Persona que vive cerca de ti."
+      },
+      "gloss_example": {
+        "es": "Nuestro vecino nos regó las plantas."
+      }
+    }
+  ]
+}

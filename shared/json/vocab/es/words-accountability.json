@@ -1,0 +1,760 @@
+{
+  "words": [
+    {
+      "id": "deadline",
+      "term": "fecha límite / plazo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La fecha y hora límite para completar una tarea.",
+      "example": "Necesitamos entregar el informe completo antes del plazo del viernes.",
+      "translations": {
+        "en": "deadline"
+      },
+      "gloss": {
+        "en": "The latest time by which a task or piece of work must be completed"
+      },
+      "gloss_example": {
+        "en": "We need to submit the full report before the deadline on Friday."
+      }
+    },
+    {
+      "id": "commitment",
+      "term": "compromiso",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Una promesa firme u obligación de llevar a cabo un determinado curso de acción.",
+      "example": "Demostró un compromiso sobresaliente para terminar el proyecto a tiempo.",
+      "translations": {
+        "en": "commitment"
+      },
+      "gloss": {
+        "en": "A firm promise or obligation to carry out a particular course of action"
+      },
+      "gloss_example": {
+        "en": "She showed outstanding commitment to finishing the project on time."
+      }
+    },
+    {
+      "id": "milestone",
+      "term": "hito",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Evento o etapa significativos que marcan el progreso en un proyecto.",
+      "example": "Completar el primer capítulo fue un hito importante para el equipo.",
+      "translations": {
+        "en": "milestone"
+      },
+      "gloss": {
+        "en": "A significant event or stage that marks progress in a project"
+      },
+      "gloss_example": {
+        "en": "Completing the first chapter was an important milestone for the team."
+      }
+    },
+    {
+      "id": "feedback",
+      "term": "retroalimentación",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Comentarios que se dan a alguien para ayudarle a mejorar.",
+      "example": "Mi jefe me dio una retroalimentación muy útil sobre mi presentación trimestral.",
+      "translations": {
+        "en": "feedback"
+      },
+      "gloss": {
+        "en": "Information or comments given to help someone improve their work"
+      },
+      "gloss_example": {
+        "en": "My manager gave me very useful feedback on my quarterly presentation."
+      }
+    },
+    {
+      "id": "objective",
+      "term": "objetivo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Una meta o resultado específico hacia el que se trabaja.",
+      "example": "Nuestro principal objetivo este trimestre es reducir los costos operativos un 15 %.",
+      "translations": {
+        "en": "objective"
+      },
+      "gloss": {
+        "en": "A specific goal or result that you are working towards"
+      },
+      "gloss_example": {
+        "en": "Our main objective this quarter is to reduce operational costs by 15%."
+      }
+    },
+    {
+      "id": "priority",
+      "term": "prioridad",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Algo más importante que debe hacerse primero.",
+      "example": "Descansar lo suficiente debe ser la máxima prioridad durante un proyecto intenso.",
+      "translations": {
+        "en": "priority"
+      },
+      "gloss": {
+        "en": "Something that is more important than other things and should be done first"
+      },
+      "gloss_example": {
+        "en": "Getting enough rest should be a top priority during a busy project."
+      }
+    },
+    {
+      "id": "delegate",
+      "term": "delegar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Asignar una tarea o responsabilidad a otra persona que tiene las habilidades adecuadas.",
+      "example": "Los gerentes eficaces saben cómo delegar tareas sin microgestionar.",
+      "translations": {
+        "en": "delegate"
+      },
+      "gloss": {
+        "en": "To give a task or responsibility to someone else who has the right skills"
+      },
+      "gloss_example": {
+        "en": "Effective managers know how to delegate tasks without micromanaging."
+      }
+    },
+    {
+      "id": "outcome",
+      "term": "resultado",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El resultado o consecuencia final que surge de una acción o proceso.",
+      "example": "El resultado de la negociación fue mucho mejor de lo que nadie esperaba.",
+      "translations": {
+        "en": "outcome"
+      },
+      "gloss": {
+        "en": "The final result or consequence that follows from an action or process"
+      },
+      "gloss_example": {
+        "en": "The outcome of the negotiation was far better than anyone had expected."
+      }
+    },
+    {
+      "id": "follow_up",
+      "term": "seguimiento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Acción posterior para verificar el progreso de algo.",
+      "example": "Enviaré un correo de seguimiento para confirmar los detalles de nuestra reunión.",
+      "translations": {
+        "en": "follow-up"
+      },
+      "gloss": {
+        "en": "A further action taken after an earlier one to check progress or results"
+      },
+      "gloss_example": {
+        "en": "I will send a follow-up email to confirm the details of our meeting."
+      }
+    },
+    {
+      "id": "accountable",
+      "term": "responsable",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Responsable de tus propias acciones y obligado a explicarlas o justificarlas.",
+      "example": "Cada miembro del equipo es responsable de sus propios resultados individuales.",
+      "translations": {
+        "en": "accountable"
+      },
+      "gloss": {
+        "en": "Responsible for your own actions and expected to explain or justify them"
+      },
+      "gloss_example": {
+        "en": "Each team member is accountable for their own individual results."
+      }
+    },
+    {
+      "id": "transparent",
+      "term": "transparente",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Abierto y honesto, que comparte la información con claridad sin ocultar nada.",
+      "example": "Los buenos líderes siempre deben ser transparentes con sus decisiones clave.",
+      "translations": {
+        "en": "transparent"
+      },
+      "gloss": {
+        "en": "Open and honest, sharing information clearly without hiding anything"
+      },
+      "gloss_example": {
+        "en": "Good leaders should always be transparent about their key decisions."
+      }
+    },
+    {
+      "id": "initiative",
+      "term": "iniciativa",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La capacidad de emprender nuevas tareas de forma independiente, sin que nadie te lo indique.",
+      "example": "Tomó la iniciativa de reorganizar las reuniones del equipo.",
+      "translations": {
+        "en": "initiative"
+      },
+      "gloss": {
+        "en": "The ability to start new tasks independently, without being told to"
+      },
+      "gloss_example": {
+        "en": "He took the initiative to reorganise the team meetings."
+      }
+    },
+    {
+      "id": "procrastinate",
+      "term": "procrastinar",
+      "level": "B2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "Retrasar o posponer algo que debe hacerse, generalmente por falta de motivación.",
+      "example": "Intenta no procrastinar. Divide las tareas grandes en pasos más pequeños y manejables.",
+      "translations": {
+        "en": "procrastinate"
+      },
+      "gloss": {
+        "en": "To delay or postpone doing something that needs to be done"
+      },
+      "gloss_example": {
+        "en": "Try not to procrastinate. Break large tasks into smaller, manageable steps."
+      }
+    },
+    {
+      "id": "benchmark",
+      "term": "punto de referencia",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Un estándar o punto de referencia utilizado para medir o evaluar el desempeño.",
+      "example": "Usa las cifras de ventas del año pasado como punto de referencia para los objetivos de este año.",
+      "translations": {
+        "en": "benchmark"
+      },
+      "gloss": {
+        "en": "A standard or reference point used to measure or assess performance"
+      },
+      "gloss_example": {
+        "en": "Use last year's sales figures as a benchmark for this year's targets."
+      }
+    },
+    {
+      "id": "proactive",
+      "term": "proactivo",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Que actúa para prevenir problemas en lugar de limitarse a reaccionar ante ellos.",
+      "example": "Ser proactivo con respecto a tu salud puede ayudar a prevenir muchos problemas futuros.",
+      "translations": {
+        "en": "proactive"
+      },
+      "gloss": {
+        "en": "Taking action to prevent problems rather than simply reacting to them"
+      },
+      "gloss_example": {
+        "en": "Being proactive about your health can help prevent many future problems."
+      }
+    },
+    {
+      "id": "accountability_concept",
+      "term": "rendición de cuentas",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La cualidad de ser responsable de las propias decisiones y acciones, y estar obligado a explicarlas ante los demás.",
+      "example": "Una cultura de rendición de cuentas garantiza que todos se responsabilicen de sus resultados, no solo de sus tareas.",
+      "translations": {
+        "en": "accountability"
+      },
+      "gloss": {
+        "en": "The quality of being responsible for your decisions and actions, and expected to explain them to others"
+      },
+      "gloss_example": {
+        "en": "A culture of accountability ensures that everyone owns their results, not just their tasks."
+      }
+    },
+    {
+      "id": "discrepancy",
+      "term": "discrepancia",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Una diferencia entre dos cifras o declaraciones que deberían coincidir o estar de acuerdo.",
+      "example": "El auditor encontró una discrepancia entre las cifras de inventario declaradas y las reales.",
+      "translations": {
+        "en": "discrepancy"
+      },
+      "gloss": {
+        "en": "A difference between two figures or statements that should match or agree"
+      },
+      "gloss_example": {
+        "en": "The auditor found a discrepancy between the reported and actual inventory numbers."
+      }
+    },
+    {
+      "id": "compliance",
+      "term": "cumplimiento normativo",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El acto de seguir las normas, reglamentos o estándares establecidos por una autoridad u organización.",
+      "example": "La empresa contrató a un responsable de cumplimiento normativo para garantizar que todos los procesos cumplen los requisitos legales.",
+      "translations": {
+        "en": "compliance"
+      },
+      "gloss": {
+        "en": "The act of following rules, regulations, or standards set by an authority or organization"
+      },
+      "gloss_example": {
+        "en": "The company hired a compliance officer to ensure all processes meet legal requirements."
+      }
+    },
+    {
+      "id": "variance",
+      "term": "varianza / desviación",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La diferencia entre una cantidad planificada o esperada y la cantidad real registrada.",
+      "example": "Una desviación presupuestaria del 15 % desencadenó una revisión interna del gasto.",
+      "translations": {
+        "en": "variance"
+      },
+      "gloss": {
+        "en": "The difference between a planned or expected amount and the actual amount recorded"
+      },
+      "gloss_example": {
+        "en": "A budget variance of 15% triggered an internal review of spending."
+      }
+    },
+    {
+      "id": "accrual",
+      "term": "devengo / acumulación contable",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Método contable que registra ingresos o gastos cuando se generan o incurren, independientemente de cuándo se realice el pago.",
+      "example": "Con el método de devengo, los ingresos se reconocen cuando se presta el servicio, no cuando se factura.",
+      "translations": {
+        "en": "accrual"
+      },
+      "gloss": {
+        "en": "A method of recording income or expenses when earned or incurred, regardless of when payment is made"
+      },
+      "gloss_example": {
+        "en": "Under the accrual method, revenue is recognized when a service is delivered, not when invoiced."
+      }
+    },
+    {
+      "id": "liability",
+      "term": "pasivo / responsabilidad legal",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Una obligación financiera o deuda que una persona u organización debe a otra parte.",
+      "example": "La demanda generó un pasivo significativo en el balance de la empresa.",
+      "translations": {
+        "en": "liability"
+      },
+      "gloss": {
+        "en": "A financial obligation or debt that an individual or organization owes to another party"
+      },
+      "gloss_example": {
+        "en": "The lawsuit created a significant liability on the company's balance sheet."
+      }
+    },
+    {
+      "id": "fiduciary",
+      "term": "fiduciario",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Relativo al deber legal de actuar en el mejor interés de otra parte al gestionar sus activos o bienes.",
+      "example": "En calidad de fiduciario, el gestor del fondo está legalmente obligado a priorizar los intereses del cliente.",
+      "translations": {
+        "en": "fiduciary"
+      },
+      "gloss": {
+        "en": "Relating to the legal duty to act in another party's best interest when managing their assets"
+      },
+      "gloss_example": {
+        "en": "As a fiduciary, the fund manager is legally required to prioritize the client's interests."
+      }
+    },
+    {
+      "id": "amortization",
+      "term": "amortización",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso de reducir gradualmente una deuda o distribuir el costo de un activo a lo largo del tiempo.",
+      "example": "El calendario de amortización del préstamo muestra pagos mensuales iguales distribuidos en veinte años.",
+      "translations": {
+        "en": "amortization"
+      },
+      "gloss": {
+        "en": "The process of gradually reducing a debt or spreading the cost of an asset over time"
+      },
+      "gloss_example": {
+        "en": "The loan's amortization schedule shows equal monthly payments spread over twenty years."
+      }
+    },
+    {
+      "id": "solvency",
+      "term": "solvencia",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La condición financiera de tener suficientes activos o ingresos para pagar todas las deudas y obligaciones.",
+      "example": "Los analistas cuestionaron la solvencia de la empresa tras tres trimestres consecutivos de pérdidas.",
+      "translations": {
+        "en": "solvency"
+      },
+      "gloss": {
+        "en": "The financial condition of having enough assets or income to pay all debts and obligations"
+      },
+      "gloss_example": {
+        "en": "Analysts questioned the firm's solvency after three consecutive quarters of losses."
+      }
+    },
+    {
+      "id": "contingency",
+      "term": "contingencia / reserva",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Una provisión o reserva destinada a cubrir eventos futuros inesperados o necesidades financieras imprevistas.",
+      "example": "El presupuesto del proyecto incluye una contingencia del diez por ciento para costos imprevistos.",
+      "translations": {
+        "en": "contingency"
+      },
+      "gloss": {
+        "en": "A provision or reserve set aside to cover unexpected future events or financial needs"
+      },
+      "gloss_example": {
+        "en": "The project budget includes a ten-percent contingency for unforeseen costs."
+      }
+    },
+    {
+      "id": "depreciation",
+      "term": "depreciación",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La reducción gradual en el valor registrado de un activo fijo a lo largo de su vida útil.",
+      "example": "La empresa aplica depreciación en línea recta a todo su equipo de manufactura.",
+      "translations": {
+        "en": "depreciation"
+      },
+      "gloss": {
+        "en": "The gradual reduction in the recorded value of a fixed asset over its useful life"
+      },
+      "gloss_example": {
+        "en": "The company applies straight-line depreciation to all its manufacturing equipment."
+      }
+    },
+    {
+      "id": "reconciliation",
+      "term": "conciliación",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso de comparar dos conjuntos de registros financieros para verificar que son coherentes y exactos.",
+      "example": "La conciliación bancaria mensual reveló un error de registro en las cuentas.",
+      "translations": {
+        "en": "reconciliation"
+      },
+      "gloss": {
+        "en": "The process of comparing two sets of financial records to verify they are consistent and accurate"
+      },
+      "gloss_example": {
+        "en": "The monthly bank reconciliation revealed a posting error in the accounts."
+      }
+    },
+    {
+      "id": "overhead",
+      "term": "gastos generales / gastos indirectos",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Los costos operativos continuos de una empresa que no están directamente vinculados a la producción de un producto o servicio específico.",
+      "example": "El alquiler, los servicios públicos y los salarios administrativos se clasifican como gastos generales.",
+      "translations": {
+        "en": "overhead"
+      },
+      "gloss": {
+        "en": "The ongoing operating costs of a business that are not directly tied to producing a specific product or service"
+      },
+      "gloss_example": {
+        "en": "Rent, utilities, and administrative salaries are all classified as overhead."
+      }
+    },
+    {
+      "id": "liquidity",
+      "term": "liquidez",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La capacidad de una empresa para convertir rápidamente sus activos en efectivo y cumplir sus obligaciones a corto plazo.",
+      "example": "La escasa liquidez obligó a la empresa a retrasar los pagos a proveedores treinta días.",
+      "translations": {
+        "en": "liquidity"
+      },
+      "gloss": {
+        "en": "The ability of a company to quickly convert its assets into cash to meet short-term obligations"
+      },
+      "gloss_example": {
+        "en": "Poor liquidity forced the company to delay supplier payments by thirty days."
+      }
+    },
+    {
+      "id": "provision_accounting",
+      "term": "provisión",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Cantidad reservada en las cuentas para cubrir un gasto o pasivo futuro probable.",
+      "example": "La empresa constituyó una provisión de dos millones de dólares por posibles reclamaciones de garantía.",
+      "translations": {
+        "en": "provision"
+      },
+      "gloss": {
+        "en": "An amount set aside in the accounts to cover a probable future expense or liability"
+      },
+      "gloss_example": {
+        "en": "The company made a provision of two million dollars for potential warranty claims."
+      }
+    },
+    {
+      "id": "leverage",
+      "term": "apalancamiento",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El uso de fondos prestados para aumentar el rendimiento potencial de una inversión, al tiempo que se amplían las posibles pérdidas.",
+      "example": "Un alto apalancamiento financiero puede acelerar el crecimiento, pero incrementa significativamente el riesgo de quiebra.",
+      "translations": {
+        "en": "leverage"
+      },
+      "gloss": {
+        "en": "The use of borrowed funds to increase the potential return on an investment, while also amplifying potential losses"
+      },
+      "gloss_example": {
+        "en": "High financial leverage can accelerate growth but significantly increases bankruptcy risk."
+      }
+    },
+    {
+      "id": "impairment",
+      "term": "deterioro",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Reducción del valor recuperable de un activo por debajo de su valor en libros en el balance general.",
+      "example": "Una prueba de deterioro reveló que la marca adquirida valía mucho menos que su valor en libros.",
+      "translations": {
+        "en": "impairment"
+      },
+      "gloss": {
+        "en": "A reduction in the recoverable value of an asset below its carrying amount on the balance sheet"
+      },
+      "gloss_example": {
+        "en": "An impairment test revealed that the acquired brand was worth far less than its book value."
+      }
+    },
+    {
+      "id": "materiality",
+      "term": "materialidad / importancia relativa",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El principio contable según el cual solo la información suficientemente significativa para influir en la decisión del lector debe revelarse.",
+      "example": "El auditor aplicó un umbral de materialidad del uno por ciento del total de activos para orientar el alcance de la auditoría.",
+      "translations": {
+        "en": "materiality"
+      },
+      "gloss": {
+        "en": "The accounting principle that only information significant enough to influence a reader's decision needs to be disclosed"
+      },
+      "gloss_example": {
+        "en": "The auditor applied a materiality threshold of one percent of total assets to guide the audit scope."
+      }
+    },
+    {
+      "id": "hedging",
+      "term": "cobertura / hedging",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Estrategia financiera que utiliza instrumentos como derivados para compensar el riesgo de movimientos adversos en los precios.",
+      "example": "La cobertura cambiaria protegió a la empresa de las pérdidas cuando el dólar se debilitó considerablemente.",
+      "translations": {
+        "en": "hedging"
+      },
+      "gloss": {
+        "en": "A financial strategy that uses instruments such as derivatives to offset the risk of adverse price movements"
+      },
+      "gloss_example": {
+        "en": "Currency hedging protected the firm from losses when the dollar weakened sharply."
+      }
+    },
+    {
+      "id": "fund",
+      "term": "fondo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Cantidad de dinero guardada para un fin.",
+      "example": "La empresa creó un fondo para la investigación.",
+      "translations": {
+        "en": "fund"
+      },
+      "gloss": {
+        "en": "An amount of money saved or used for a purpose."
+      },
+      "gloss_example": {
+        "en": "The company set up a fund for research."
+      }
+    },
+    {
+      "id": "capital",
+      "term": "capital",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Dinero para iniciar o hacer crecer un negocio.",
+      "example": "Necesitan capital para abrir una segunda tienda.",
+      "translations": {
+        "en": "capital"
+      },
+      "gloss": {
+        "en": "Money used to start or grow a business."
+      },
+      "gloss_example": {
+        "en": "They need capital to open a second store."
+      }
+    },
+    {
+      "id": "purchase",
+      "term": "compra",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Algo que se ha comprado.",
+      "example": "Guarda el recibo de tu compra.",
+      "translations": {
+        "en": "purchase"
+      },
+      "gloss": {
+        "en": "Something that has been bought."
+      },
+      "gloss_example": {
+        "en": "Keep the receipt for your purchase."
+      }
+    },
+    {
+      "id": "demand",
+      "term": "demanda",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Deseo de los compradores por un producto.",
+      "example": "Hay mucha demanda de autos eléctricos.",
+      "translations": {
+        "en": "demand"
+      },
+      "gloss": {
+        "en": "The desire of buyers for a product or service."
+      },
+      "gloss_example": {
+        "en": "There is high demand for electric cars."
+      }
+    },
+    {
+      "id": "estimate",
+      "term": "estimación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Cálculo aproximado de un valor o costo.",
+      "example": "La estimación de la reparación fue muy alta.",
+      "translations": {
+        "en": "estimate"
+      },
+      "gloss": {
+        "en": "A rough calculation of a value or cost."
+      },
+      "gloss_example": {
+        "en": "The estimate for the repair was too high."
+      }
+    },
+    {
+      "id": "dollar",
+      "term": "dólar",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad de dinero de Estados Unidos y otros países.",
+      "example": "El libro cuesta quince dólares.",
+      "translations": {
+        "en": "dollar"
+      },
+      "gloss": {
+        "en": "A unit of money used in the United States and other countries."
+      },
+      "gloss_example": {
+        "en": "The book costs fifteen dollars."
+      }
+    },
+    {
+      "id": "cent",
+      "term": "centavo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Moneda que vale una centésima de dólar.",
+      "example": "El bolígrafo costó noventa centavos.",
+      "translations": {
+        "en": "cent"
+      },
+      "gloss": {
+        "en": "A small unit of money worth one hundredth of a dollar."
+      },
+      "gloss_example": {
+        "en": "The pen cost ninety cents."
+      }
+    },
+    {
+      "id": "unit",
+      "term": "unidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Cosa individual o cantidad fija para medir.",
+      "example": "El precio se muestra por unidad.",
+      "translations": {
+        "en": "unit"
+      },
+      "gloss": {
+        "en": "A single thing or a fixed amount used to measure."
+      },
+      "gloss_example": {
+        "en": "The price is shown per unit."
+      }
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "words": [
+    {
+      "id": "recipe",
+      "term": "recipe",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A set of instructions for preparing a particular dish",
+      "example": "This is my grandmother's secret recipe for apple pie.",
+      "translations": {
+        "es": "receta"
+      },
+      "gloss": {
+        "es": "Conjunto de instrucciones para preparar un plato."
+      },
+      "gloss_example": {
+        "es": "Esta es la receta secreta de mi abuela para el pastel de manzana."
+      }
+    },
+    {
+      "id": "ingredient",
+      "term": "ingredient",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "One of the foods or substances used to make a dish",
+      "example": "You only need a few fresh ingredients to make this meal.",
+      "translations": {
+        "es": "ingrediente"
+      },
+      "gloss": {
+        "es": "Cada alimento o sustancia usada para preparar un plato."
+      },
+      "gloss_example": {
+        "es": "Solo necesitas unos pocos ingredientes frescos para preparar esta comida."
+      }
+    },
+    {
+      "id": "boil",
+      "term": "boil",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To heat a liquid until it produces large bubbles at 100°C",
+      "example": "Boil the pasta for ten minutes until it is al dente.",
+      "translations": {
+        "es": "hervir"
+      },
+      "gloss": {
+        "es": "Calentar un líquido hasta que produce burbujas a 100 °C."
+      },
+      "gloss_example": {
+        "es": "Hierve la pasta durante diez minutos hasta que esté al dente."
+      }
+    },
+    {
+      "id": "blend",
+      "term": "blend",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To mix ingredients smoothly, often in a blender",
+      "example": "Blend the fruits together to make a thick smoothie.",
+      "translations": {
+        "es": "mezclar / licuar"
+      },
+      "gloss": {
+        "es": "Mezclar ingredientes hasta obtener una consistencia suave."
+      },
+      "gloss_example": {
+        "es": "Licúa las frutas juntas para hacer un smoothie espeso."
+      }
+    },
+    {
+      "id": "preheat",
+      "term": "preheat",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To heat an oven to the required temperature before cooking begins",
+      "example": "Preheat the oven to 180°C before putting in the cake.",
+      "translations": {
+        "es": "precalentar"
+      },
+      "gloss": {
+        "es": "Calentar el horno antes de empezar a cocinar."
+      },
+      "gloss_example": {
+        "es": "Precalienta el horno a 180 °C antes de meter el pastel."
+      }
+    },
+    {
+      "id": "whisk",
+      "term": "whisk",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To beat eggs, cream, or a sauce quickly to add air and make it light",
+      "example": "Whisk the eggs until they are light and fluffy.",
+      "translations": {
+        "es": "batir"
+      },
+      "gloss": {
+        "es": "Batir huevos, crema o una salsa con rapidez para incorporar aire y hacerlos más ligeros."
+      },
+      "gloss_example": {
+        "es": "Bate los huevos hasta que queden esponjosos y livianos."
+      }
+    },
+    {
+      "id": "dice",
+      "term": "dice",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To cut food into small, evenly sized cube-shaped pieces",
+      "example": "Dice the onion and garlic finely before adding them to the pan.",
+      "translations": {
+        "es": "cortar en cubos"
+      },
+      "gloss": {
+        "es": "Cortar un alimento en trozos pequeños y uniformes con forma de cubo."
+      },
+      "gloss_example": {
+        "es": "Corta la cebolla y el ajo en cubos pequeños antes de añadirlos a la sartén."
+      }
+    },
+    {
+      "id": "marinate",
+      "term": "marinate",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To soak food in a seasoned liquid before cooking to add flavour",
+      "example": "Marinate the chicken in lemon juice and herbs for two hours.",
+      "translations": {
+        "es": "marinar"
+      },
+      "gloss": {
+        "es": "Remojar un alimento en un líquido condimentado antes de cocinarlo para añadir sabor."
+      },
+      "gloss_example": {
+        "es": "Marina el pollo en jugo de limón y hierbas durante dos horas."
+      }
+    },
+    {
+      "id": "grate",
+      "term": "grate",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To shred food into small thin pieces by rubbing it against a grater",
+      "example": "Grate the cheese over the pasta just before serving.",
+      "translations": {
+        "es": "rallar"
+      },
+      "gloss": {
+        "es": "Desmenuzar un alimento en trozos pequeños frotándolo contra un rallador."
+      },
+      "gloss_example": {
+        "es": "Ralla el queso sobre la pasta justo antes de servir."
+      }
+    },
+    {
+      "id": "batter",
+      "term": "batter",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A liquid mixture of flour, eggs, and milk used for coating or baking",
+      "example": "Dip the fish pieces in the batter before frying them.",
+      "translations": {
+        "es": "masa líquida"
+      },
+      "gloss": {
+        "es": "Mezcla líquida de harina, huevos y leche que se usa para rebozar o hornear."
+      },
+      "gloss_example": {
+        "es": "Sumerge los trozos de pescado en la masa líquida antes de freírlos."
+      }
+    },
+    {
+      "id": "utensil",
+      "term": "utensil",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A tool or implement used for cooking or eating",
+      "example": "Make sure all cooking utensils are clean before you start.",
+      "translations": {
+        "es": "utensilio"
+      },
+      "gloss": {
+        "es": "Herramienta o instrumento que se utiliza para cocinar o comer."
+      },
+      "gloss_example": {
+        "es": "Asegúrate de que todos los utensilios de cocina estén limpios antes de empezar."
+      }
+    },
+    {
+      "id": "simmer",
+      "term": "simmer",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To cook food gently in liquid just below boiling point",
+      "example": "Let the soup simmer on low heat for about twenty minutes.",
+      "translations": {
+        "es": "cocer a fuego lento"
+      },
+      "gloss": {
+        "es": "Cocinar un alimento a fuego lento en líquido justo por debajo del punto de ebullición."
+      },
+      "gloss_example": {
+        "es": "Deja que la sopa se cocine a fuego lento durante unos veinte minutos."
+      }
+    },
+    {
+      "id": "saut",
+      "term": "sauté",
+      "level": "B2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To fry food quickly in a little oil or butter over high heat",
+      "example": "Sauté the mushrooms in butter for about two minutes.",
+      "translations": {
+        "es": "saltear"
+      },
+      "gloss": {
+        "es": "Freír un alimento rápidamente con muy poco aceite o mantequilla a fuego alto, removiendo con frecuencia."
+      },
+      "gloss_example": {
+        "es": "Saltea los champiñones en mantequilla durante unos dos minutos."
+      }
+    },
+    {
+      "id": "knead",
+      "term": "knead",
+      "level": "B2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To work dough firmly with your hands by pushing and folding",
+      "example": "Knead the bread dough for ten minutes until it is smooth and elastic.",
+      "translations": {
+        "es": "amasar"
+      },
+      "gloss": {
+        "es": "Trabajar la masa con firmeza usando las manos, empujando y doblando repetidamente hasta obtener una textura elástica."
+      },
+      "gloss_example": {
+        "es": "Amasa la masa del pan durante diez minutos hasta que quede suave y elástica."
+      }
+    },
+    {
+      "id": "broil",
+      "term": "broil",
+      "level": "B2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To cook food directly under intense overhead heat in an oven",
+      "example": "Broil the fish fillets for about five minutes on each side.",
+      "translations": {
+        "es": "asar al grill"
+      },
+      "gloss": {
+        "es": "Cocinar un alimento directamente bajo el calor intenso del grill superior del horno."
+      },
+      "gloss_example": {
+        "es": "Asa los filetes de pescado al grill durante unos cinco minutos por cada lado."
+      }
+    },
+    {
+      "id": "deglaze",
+      "term": "deglaze",
+      "level": "C1",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To add liquid to a hot pan to dissolve caramelized residue and incorporate it into a sauce",
+      "example": "Deglaze the pan with cognac and scrape up all the browned bits.",
+      "translations": {
+        "es": "desglasar"
+      },
+      "gloss": {
+        "es": "Añadir líquido a una sartén caliente para disolver los residuos caramelizados y así incorporarlos a una salsa."
+      },
+      "gloss_example": {
+        "es": "Desglasa la sartén con coñac y raspa todos los trozos dorados del fondo."
+      }
+    },
+    {
+      "id": "emulsify",
+      "term": "emulsify",
+      "level": "C1",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To combine two normally unmixable liquids into a stable, uniform mixture",
+      "example": "Mustard helps emulsify the dressing, keeping the oil and vinegar combined.",
+      "translations": {
+        "es": "emulsionar"
+      },
+      "gloss": {
+        "es": "Combinar dos líquidos que normalmente no se mezclan para formar una mezcla estable y uniforme."
+      },
+      "gloss_example": {
+        "es": "La mostaza ayuda a emulsionar el aderezo, manteniendo el aceite y el vinagre unidos."
+      }
+    },
+    {
+      "id": "braise",
+      "term": "braise",
+      "level": "C1",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To cook food slowly in a small amount of liquid in a covered pot, combining searing and steaming",
+      "example": "Braise the short ribs for three hours until the meat falls off the bone.",
+      "translations": {
+        "es": "brasear / estofar"
+      },
+      "gloss": {
+        "es": "Cocinar un alimento lentamente con una pequeña cantidad de líquido en una olla tapada, combinando el sellado y el vapor."
+      },
+      "gloss_example": {
+        "es": "Estofar las costillitas durante tres horas hasta que la carne se desprenda del hueso."
+      }
+    },
+    {
+      "id": "render",
+      "term": "render",
+      "level": "C1",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To melt and release the fat from meat by cooking it slowly over low to medium heat",
+      "example": "Render the duck fat slowly before raising the heat to crisp the skin.",
+      "translations": {
+        "es": "derretir / fundir la grasa"
+      },
+      "gloss": {
+        "es": "Fundir y liberar la grasa de la carne cocinándola lentamente a fuego bajo o medio."
+      },
+      "gloss_example": {
+        "es": "Derrite la grasa del pato a fuego lento antes de subir el fuego para que la piel quede crujiente."
+      }
+    },
+    {
+      "id": "blanch",
+      "term": "blanch",
+      "level": "C1",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To plunge food briefly into boiling water then immediately into cold water to stop cooking",
+      "example": "Blanch the green beans for two minutes to preserve their color and crunch.",
+      "translations": {
+        "es": "blanquear / escaldar"
+      },
+      "gloss": {
+        "es": "Sumergir brevemente un alimento en agua hirviendo y luego de inmediato en agua fría para detener la cocción."
+      },
+      "gloss_example": {
+        "es": "Escalda los ejotes durante dos minutos para conservar su color y textura crujiente."
+      }
+    },
+    {
+      "id": "spherification",
+      "term": "spherification",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A molecular gastronomy technique that encapsulates a liquid inside a thin gel membrane to form edible spheres",
+      "example": "The chef used spherification to create olive oil pearls that burst in the mouth.",
+      "translations": {
+        "es": "esferificación"
+      },
+      "gloss": {
+        "es": "Técnica de gastronomía molecular que encapsula un líquido dentro de una fina membrana de gel para formar esferas comestibles."
+      },
+      "gloss_example": {
+        "es": "El chef usó la esferificación para crear perlas de aceite de oliva que estallan en la boca."
+      }
+    },
+    {
+      "id": "temper",
+      "term": "temper",
+      "level": "C2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To stabilize melted chocolate by carefully controlling its temperature to form the correct cocoa butter crystals",
+      "example": "If you don't temper the chocolate properly, it will look dull and have a crumbly texture.",
+      "translations": {
+        "es": "temperar (el chocolate)"
+      },
+      "gloss": {
+        "es": "Estabilizar el chocolate fundido controlando su temperatura con precisión para formar los cristales correctos de manteca de cacao."
+      },
+      "gloss_example": {
+        "es": "Si no temperas bien el chocolate, quedará opaco y con una textura quebradiza."
+      }
+    },
+    {
+      "id": "maillard",
+      "term": "Maillard reaction",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The chemical browning that occurs when amino acids and sugars are heated above 140°C, producing complex roasted flavors",
+      "example": "Understanding the Maillard reaction explains why searing meat before braising develops so much more flavor.",
+      "translations": {
+        "es": "reacción de Maillard"
+      },
+      "gloss": {
+        "es": "El dorado químico que se produce cuando los aminoácidos y los azúcares se calientan por encima de los 140 °C, generando sabores tostados y complejos."
+      },
+      "gloss_example": {
+        "es": "Entender la reacción de Maillard explica por qué sellar la carne antes de estofar desarrolla mucho más sabor."
+      }
+    },
+    {
+      "id": "roux",
+      "term": "roux",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A cooked mixture of equal parts fat and flour used as the base for thickening sauces, soups, and gravies",
+      "example": "Make a roux by cooking the butter and flour together for two minutes before adding the milk.",
+      "translations": {
+        "es": "roux"
+      },
+      "gloss": {
+        "es": "Mezcla cocida de partes iguales de grasa y harina que se usa como base para espesar salsas, sopas y jugos."
+      },
+      "gloss_example": {
+        "es": "Prepara un roux cocinando la mantequilla y la harina juntas durante dos minutos antes de agregar la leche."
+      }
+    },
+    {
+      "id": "fold",
+      "term": "fold",
+      "level": "B2",
+      "category": "Verb",
+      "difficulty": "hard",
+      "definition": "To gently combine a delicate ingredient into a mixture using a cutting and turning motion to avoid losing air",
+      "example": "Fold the beaten egg whites into the chocolate mixture with a large spatula.",
+      "translations": {
+        "es": "envolver / incorporar"
+      },
+      "gloss": {
+        "es": "Incorporar suavemente un ingrediente delicado en una mezcla con movimiento de corte y vuelta para no perder el aire."
+      },
+      "gloss_example": {
+        "es": "Incorpora las claras batidas a la mezcla de chocolate con una espátula grande."
+      }
+    },
+    {
+      "id": "umami",
+      "term": "umami",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The fifth basic taste, a deep, savory, meaty quality found in foods rich in glutamates such as parmesan, miso, and soy sauce.",
+      "example": "Adding a splash of soy sauce enhances the umami and brings the whole dish together.",
+      "translations": {
+        "es": "umami"
+      },
+      "gloss": {
+        "es": "El quinto sabor básico, una calidad profunda, salada y umami presente en alimentos ricos en glutamatos como el parmesano, el miso y la salsa de soja."
+      },
+      "gloss_example": {
+        "es": "Agregar un chorrito de salsa de soya intensifica el umami y redondea todo el plato."
+      }
+    }
+  ]
+}

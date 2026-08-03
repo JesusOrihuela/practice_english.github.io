@@ -1,0 +1,490 @@
+{
+  "words": [
+    {
+      "id": "appetizer",
+      "term": "appetizer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A small dish served before the main course",
+      "example": "We ordered some appetizers while waiting for our table.",
+      "translations": {
+        "es": "aperitivo"
+      },
+      "gloss": {
+        "es": "Pequeño plato que se sirve antes del plato principal."
+      },
+      "gloss_example": {
+        "es": "Pedimos unos aperitivos mientras esperábamos que nos asignaran mesa."
+      }
+    },
+    {
+      "id": "reservation",
+      "term": "reservation",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An arrangement to have a table held at a restaurant",
+      "example": "I made a reservation for two at eight o'clock.",
+      "translations": {
+        "es": "reserva"
+      },
+      "gloss": {
+        "es": "Acuerdo previo para guardar una mesa en un restaurante."
+      },
+      "gloss_example": {
+        "es": "Hice una reserva para dos personas a las ocho."
+      }
+    },
+    {
+      "id": "menu",
+      "term": "menu",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A list of dishes available in a restaurant",
+      "example": "Could we see the menu, please?",
+      "translations": {
+        "es": "menú"
+      },
+      "gloss": {
+        "es": "Lista de platos disponibles en un restaurante."
+      },
+      "gloss_example": {
+        "es": "¿Nos podría traer el menú, por favor?"
+      }
+    },
+    {
+      "id": "waiter",
+      "term": "waiter",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who serves food and drink at a restaurant",
+      "example": "The waiter recommended the salmon dish.",
+      "translations": {
+        "es": "mesero / camarero"
+      },
+      "gloss": {
+        "es": "Persona que sirve comida y bebidas en un restaurante."
+      },
+      "gloss_example": {
+        "es": "El mesero nos recomendó el plato de salmón."
+      }
+    },
+    {
+      "id": "tip",
+      "term": "tip",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Extra money given to a service worker as a reward for good service",
+      "example": "We left a generous tip for the excellent service.",
+      "translations": {
+        "es": "propina"
+      },
+      "gloss": {
+        "es": "Dinero extra que se da por un buen servicio."
+      },
+      "gloss_example": {
+        "es": "Dejamos una propina generosa por el excelente servicio."
+      }
+    },
+    {
+      "id": "bill",
+      "term": "bill",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A document showing the total amount owed for a meal",
+      "example": "Could we have the bill, please?",
+      "translations": {
+        "es": "cuenta"
+      },
+      "gloss": {
+        "es": "Documento que muestra el total a pagar por una comida."
+      },
+      "gloss_example": {
+        "es": "¿Nos podría traer la cuenta, por favor?"
+      }
+    },
+    {
+      "id": "portion",
+      "term": "portion",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The amount of food served to one person",
+      "example": "The portions here are quite large.",
+      "translations": {
+        "es": "porción"
+      },
+      "gloss": {
+        "es": "Cantidad de comida que se sirve a una persona en un restaurante."
+      },
+      "gloss_example": {
+        "es": "Las porciones aquí son bastante grandes."
+      }
+    },
+    {
+      "id": "cuisine",
+      "term": "cuisine",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A style of cooking associated with a country or region",
+      "example": "Italian cuisine is famous for its pasta and pizza.",
+      "translations": {
+        "es": "gastronomía"
+      },
+      "gloss": {
+        "es": "Estilo culinario propio de un país o región, con sus ingredientes y técnicas características."
+      },
+      "gloss_example": {
+        "es": "La gastronomía italiana es famosa por su pasta y su pizza."
+      }
+    },
+    {
+      "id": "entr_e",
+      "term": "entrée",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The main course of a meal",
+      "example": "For my entrée, I will have the grilled chicken.",
+      "translations": {
+        "es": "plato principal"
+      },
+      "gloss": {
+        "es": "El plato principal de una comida en un restaurante."
+      },
+      "gloss_example": {
+        "es": "De plato principal, voy a pedir el pollo a la parrilla."
+      }
+    },
+    {
+      "id": "dietary",
+      "term": "dietary",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relating to special food requirements or restrictions",
+      "example": "Do you have any dietary restrictions I should know about?",
+      "translations": {
+        "es": "dietético"
+      },
+      "gloss": {
+        "es": "Relacionado con las necesidades o restricciones alimentarias especiales de una persona."
+      },
+      "gloss_example": {
+        "es": "¿Tiene alguna restricción dietética que deba conocer?"
+      }
+    },
+    {
+      "id": "seasoning",
+      "term": "seasoning",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Salt, herbs, or spices added to food for extra flavour",
+      "example": "The chef added more seasoning to bring out the flavour.",
+      "translations": {
+        "es": "condimento"
+      },
+      "gloss": {
+        "es": "Sal, hierbas o especias que se añaden a la comida para realzar su sabor."
+      },
+      "gloss_example": {
+        "es": "El chef añadió más condimento para realzar el sabor del plato."
+      }
+    },
+    {
+      "id": "garnish",
+      "term": "garnish",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A small decoration of food placed on or around a dish",
+      "example": "The soup came with a garnish of fresh parsley.",
+      "translations": {
+        "es": "guarnición"
+      },
+      "gloss": {
+        "es": "Pequeño adorno comestible que se coloca sobre o alrededor de un plato para decorarlo o complementarlo."
+      },
+      "gloss_example": {
+        "es": "La sopa llegó con una guarnición de perejil fresco."
+      }
+    },
+    {
+      "id": "ambiance",
+      "term": "ambiance",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The atmosphere or mood of a place",
+      "example": "The restaurant had a romantic ambiance with soft lighting.",
+      "translations": {
+        "es": "ambiente"
+      },
+      "gloss": {
+        "es": "El ambiente o atmósfera que transmite un lugar, creado por su decoración, luz y sonido."
+      },
+      "gloss_example": {
+        "es": "El restaurante tenía un ambiente romántico gracias a su iluminación tenue."
+      }
+    },
+    {
+      "id": "sommelier",
+      "term": "sommelier",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A trained wine expert who helps guests choose wine",
+      "example": "The sommelier recommended a local red wine to pair with the steak.",
+      "translations": {
+        "es": "sommelier"
+      },
+      "gloss": {
+        "es": "Experto en vinos con formación especializada que asesora a los comensales en la elección de vinos."
+      },
+      "gloss_example": {
+        "es": "El sommelier recomendó un tinto local para maridar con el filete."
+      }
+    },
+    {
+      "id": "delicacy",
+      "term": "delicacy",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A rare or expensive food considered a special treat",
+      "example": "Oysters are considered a delicacy in many countries.",
+      "translations": {
+        "es": "manjar"
+      },
+      "gloss": {
+        "es": "Alimento raro, caro o refinado que se considera un placer especial o un lujo culinario."
+      },
+      "gloss_example": {
+        "es": "Las ostras se consideran un manjar en muchos países."
+      }
+    },
+    {
+      "id": "pairing",
+      "term": "pairing",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The practice of selecting wines or beverages that complement the flavors of specific dishes",
+      "example": "The sommelier suggested a classic pairing of Burgundy with the duck confit.",
+      "translations": {
+        "es": "maridaje"
+      },
+      "gloss": {
+        "es": "La práctica de seleccionar vinos o bebidas que complementen y realcen los sabores de un plato específico."
+      },
+      "gloss_example": {
+        "es": "El sommelier sugirió un maridaje clásico de Borgoña con el confit de pato."
+      }
+    },
+    {
+      "id": "palate",
+      "term": "palate",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A person's capacity to appreciate and distinguish between different flavors",
+      "example": "He has a refined palate and can identify most grape varieties by taste alone.",
+      "translations": {
+        "es": "paladar"
+      },
+      "gloss": {
+        "es": "La capacidad de una persona para apreciar y distinguir matices entre diferentes sabores y aromas."
+      },
+      "gloss_example": {
+        "es": "Tiene un paladar muy refinado y puede identificar la mayoría de las variedades de uva solo por el sabor."
+      }
+    },
+    {
+      "id": "tasting_menu",
+      "term": "tasting menu",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A multi-course dining experience featuring small portions of dishes selected by the chef",
+      "example": "We opted for the tasting menu to try the full range of the chef's seasonal creations.",
+      "translations": {
+        "es": "menú degustación"
+      },
+      "gloss": {
+        "es": "Experiencia gastronómica de varios tiempos en la que se sirven pequeñas porciones de platos seleccionados por el chef para mostrar su cocina."
+      },
+      "gloss_example": {
+        "es": "Nos decidimos por el menú degustación para probar toda la propuesta de temporada del chef."
+      }
+    },
+    {
+      "id": "accompaniment",
+      "term": "accompaniment",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A side dish or drink served alongside a main course to complement it",
+      "example": "The duck arrived with a cherry reduction and a seasonal vegetable accompaniment.",
+      "translations": {
+        "es": "acompañamiento"
+      },
+      "gloss": {
+        "es": "Guarnición o bebida que se sirve junto al plato principal para complementar sus sabores."
+      },
+      "gloss_example": {
+        "es": "El pato llegó con una reducción de cereza y un acompañamiento de verduras de temporada."
+      }
+    },
+    {
+      "id": "corkage",
+      "term": "corkage",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A fee charged by a restaurant when guests bring their own wine or other alcoholic beverages",
+      "example": "The corkage fee was thirty dollars per bottle, which made it worthwhile to bring a special wine.",
+      "translations": {
+        "es": "descorche"
+      },
+      "gloss": {
+        "es": "Cargo que cobra un restaurante cuando los clientes traen su propio vino u otras bebidas alcohólicas."
+      },
+      "gloss_example": {
+        "es": "El cargo por descorche era de treinta dólares por botella, lo que hacía rentable traer un vino especial."
+      }
+    },
+    {
+      "id": "terroir",
+      "term": "terroir",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The combination of soil, climate, and geography of a specific place that gives wine its distinctive character",
+      "example": "The sommelier explained how the terroir of the Burgundy region shapes the wine's minerality.",
+      "translations": {
+        "es": "terruño / terroir"
+      },
+      "gloss": {
+        "es": "La combinación de suelo, clima y geografía de un lugar específico que confiere al vino su carácter distintivo e irrepetible."
+      },
+      "gloss_example": {
+        "es": "El sommelier explicó cómo el terruño de la región de Borgoña determina la mineralidad del vino."
+      }
+    },
+    {
+      "id": "umami",
+      "term": "umami",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The fifth basic taste, a savory, meaty depth of flavor found in aged cheeses, cured meats, and fermented foods.",
+      "example": "Parmesan and anchovies are often added to dishes to intensify the umami profile.",
+      "translations": {
+        "es": "umami"
+      },
+      "gloss": {
+        "es": "El quinto sabor básico, una profundidad sabrosa y carnosa presente en quesos curados, carnes ahumadas y alimentos fermentados."
+      },
+      "gloss_example": {
+        "es": "El parmesano y las anchoas suelen añadirse a los platos para intensificar el sabor umami."
+      }
+    },
+    {
+      "id": "gastronomy",
+      "term": "gastronomy",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The art, culture, and science of fine food and its relationship to history and society",
+      "example": "The city has become a center of gastronomy, attracting chefs from around the world.",
+      "translations": {
+        "es": "gastronomía"
+      },
+      "gloss": {
+        "es": "El arte, la cultura y la ciencia de la buena mesa y su relación con la historia, la sociedad y la identidad cultural."
+      },
+      "gloss_example": {
+        "es": "La ciudad se ha convertido en un centro de gastronomía que atrae a chefs de todo el mundo."
+      }
+    },
+    {
+      "id": "oenology",
+      "term": "oenology",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The scientific study of wine and winemaking, from fermentation to bottling",
+      "example": "She studied oenology in Bordeaux before joining a winery in the Napa Valley.",
+      "translations": {
+        "es": "enología"
+      },
+      "gloss": {
+        "es": "El estudio científico del vino y su elaboración, desde la fermentación hasta el embotellado."
+      },
+      "gloss_example": {
+        "es": "Estudió enología en Burdeos antes de incorporarse a una bodega en el Valle de Napa."
+      }
+    },
+    {
+      "id": "mouthfeel",
+      "term": "mouthfeel",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The physical sensation of a food or drink in the mouth, including texture, weight, and consistency",
+      "example": "The critic praised the wine for its silky mouthfeel and long, complex finish.",
+      "translations": {
+        "es": "textura en boca / sensación en boca"
+      },
+      "gloss": {
+        "es": "La sensación física que produce un alimento o bebida en la boca, incluyendo la textura, el cuerpo y la consistencia."
+      },
+      "gloss_example": {
+        "es": "El crítico elogió el vino por su sedosa textura en boca y su final largo y complejo."
+      }
+    },
+    {
+      "id": "beer",
+      "term": "beer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An alcoholic drink made from grain.",
+      "example": "He ordered a cold beer.",
+      "translations": {
+        "es": "cerveza"
+      },
+      "gloss": {
+        "es": "Bebida alcohólica hecha de cereales."
+      },
+      "gloss_example": {
+        "es": "Pidió una cerveza fría."
+      }
+    },
+    {
+      "id": "tomato",
+      "term": "tomato",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A soft red fruit eaten in salads and sauces.",
+      "example": "This sauce is made with fresh tomatoes.",
+      "translations": {
+        "es": "tomate"
+      },
+      "gloss": {
+        "es": "Fruto rojo y blando que se come en ensaladas."
+      },
+      "gloss_example": {
+        "es": "Esta salsa se hace con tomates frescos."
+      }
+    }
+  ]
+}
