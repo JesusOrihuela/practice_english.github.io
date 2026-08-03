@@ -475,6 +475,62 @@
       "translations": {
         "es": "pared"
       }
+    },
+    {
+      "word": "neighborhood",
+      "definition": "The area of a town where people live.",
+      "example": "It is a quiet, safe neighborhood.",
+      "definition_es": "Zona de una ciudad donde vive la gente.",
+      "example_es": "Es un barrio tranquilo y seguro.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "neighborhood",
+      "translations": {
+        "es": "barrio"
+      }
+    },
+    {
+      "word": "housing",
+      "definition": "Buildings where people live.",
+      "example": "Housing is expensive in this city.",
+      "definition_es": "Edificios donde vive la gente.",
+      "example_es": "La vivienda es cara en esta ciudad.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "housing",
+      "translations": {
+        "es": "vivienda"
+      }
+    },
+    {
+      "word": "living_room",
+      "definition": "The main room where a family relaxes.",
+      "example": "We watched a movie in the living room.",
+      "definition_es": "Cuarto principal donde descansa la familia.",
+      "example_es": "Vimos una película en el salón.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "living_room",
+      "translations": {
+        "es": "salón / sala"
+      }
+    },
+    {
+      "word": "square",
+      "definition": "An open public space in a town or city.",
+      "example": "The market is held in the main square.",
+      "definition_es": "Espacio público abierto en una ciudad.",
+      "example_es": "El mercado se pone en la plaza principal.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "square",
+      "translations": {
+        "es": "plaza"
+      }
     }
   ]
 }

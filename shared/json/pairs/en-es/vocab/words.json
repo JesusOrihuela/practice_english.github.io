@@ -2575,6 +2575,258 @@
       "translations": {
         "es": "pintor / pintora"
       }
+    },
+    {
+      "word": "black",
+      "definition": "The darkest color, like the night sky.",
+      "example": "She wore a black dress to the party.",
+      "definition_es": "El color más oscuro, como la noche.",
+      "example_es": "Se puso un vestido negro para la fiesta.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "black",
+      "translations": {
+        "es": "negro"
+      }
+    },
+    {
+      "word": "green",
+      "definition": "The color of grass and leaves.",
+      "example": "The traffic light turned green.",
+      "definition_es": "El color de la hierba y las hojas.",
+      "example_es": "El semáforo se puso verde.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "green",
+      "translations": {
+        "es": "verde"
+      }
+    },
+    {
+      "word": "red",
+      "definition": "The color of blood or a ripe tomato.",
+      "example": "He drives a red car.",
+      "definition_es": "El color de la sangre o del tomate maduro.",
+      "example_es": "Él maneja un carro rojo.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "red",
+      "translations": {
+        "es": "rojo"
+      }
+    },
+    {
+      "word": "blue",
+      "definition": "The color of a clear sky or the sea.",
+      "example": "Her eyes are bright blue.",
+      "definition_es": "El color del cielo despejado o el mar.",
+      "example_es": "Sus ojos son de un azul brillante.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "blue",
+      "translations": {
+        "es": "azul"
+      }
+    },
+    {
+      "word": "old",
+      "definition": "Having lived or existed for a long time.",
+      "example": "They live in an old house.",
+      "definition_es": "Que tiene muchos años o mucho tiempo.",
+      "example_es": "Viven en una casa vieja.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "old",
+      "translations": {
+        "es": "viejo / vieja"
+      }
+    },
+    {
+      "word": "young",
+      "definition": "Having lived for only a short time.",
+      "example": "She is too young to drive.",
+      "definition_es": "Que tiene pocos años.",
+      "example_es": "Ella es muy joven para manejar.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "young",
+      "translations": {
+        "es": "joven"
+      }
+    },
+    {
+      "word": "pretty",
+      "definition": "Pleasant to look at.",
+      "example": "What a pretty garden.",
+      "definition_es": "Agradable a la vista.",
+      "example_es": "Qué jardín tan bonito.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "pretty",
+      "translations": {
+        "es": "bonito / bonita"
+      }
+    },
+    {
+      "word": "easy",
+      "definition": "Not difficult to do or understand.",
+      "example": "The test was quite easy.",
+      "definition_es": "Que no es difícil de hacer o entender.",
+      "example_es": "El examen fue bastante fácil.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "easy",
+      "translations": {
+        "es": "fácil"
+      }
+    },
+    {
+      "word": "tasty",
+      "definition": "Having a good, pleasant flavor.",
+      "example": "This soup is really tasty.",
+      "definition_es": "Que tiene buen sabor.",
+      "example_es": "Esta sopa está muy rica.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "tasty",
+      "translations": {
+        "es": "rico / sabroso"
+      }
+    },
+    {
+      "word": "content",
+      "definition": "Happy and satisfied with what you have.",
+      "example": "He felt content after a good meal.",
+      "definition_es": "Feliz y satisfecho con lo que se tiene.",
+      "example_es": "Se sentía contento tras una buena comida.",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "level": "A1",
+      "id": "content_adj",
+      "translations": {
+        "es": "contento / contenta"
+      }
+    },
+    {
+      "word": "reality",
+      "definition": "The way things actually are.",
+      "example": "The plan sounds good but reality is harder.",
+      "definition_es": "La manera en que las cosas realmente son.",
+      "example_es": "El plan suena bien, pero la realidad es más dura.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "reality",
+      "translations": {
+        "es": "realidad"
+      }
+    },
+    {
+      "word": "future",
+      "definition": "The time that will come after now.",
+      "example": "She has big plans for the future.",
+      "definition_es": "El tiempo que vendrá después de ahora.",
+      "example_es": "Ella tiene grandes planes para el futuro.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "future",
+      "translations": {
+        "es": "futuro"
+      }
+    },
+    {
+      "word": "experience",
+      "definition": "Knowledge or skill gained by doing something.",
+      "example": "She has years of teaching experience.",
+      "definition_es": "Conocimiento que se gana al hacer algo.",
+      "example_es": "Ella tiene años de experiencia enseñando.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "experience",
+      "translations": {
+        "es": "experiencia"
+      }
+    },
+    {
+      "word": "opinion",
+      "definition": "What a person thinks about something.",
+      "example": "In my opinion, the film was too long.",
+      "definition_es": "Lo que una persona piensa sobre algo.",
+      "example_es": "En mi opinión, la película fue muy larga.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "opinion",
+      "translations": {
+        "es": "opinión"
+      }
+    },
+    {
+      "word": "culture",
+      "definition": "The customs, art, and beliefs of a group of people.",
+      "example": "I love learning about other cultures.",
+      "definition_es": "Costumbres, arte y creencias de un grupo.",
+      "example_es": "Me encanta aprender sobre otras culturas.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "culture",
+      "translations": {
+        "es": "cultura"
+      }
+    },
+    {
+      "word": "love",
+      "definition": "A very strong feeling of affection.",
+      "example": "Their love grew over the years.",
+      "definition_es": "Sentimiento muy fuerte de afecto.",
+      "example_es": "Su amor creció con los años.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "love",
+      "translations": {
+        "es": "amor"
+      }
+    },
+    {
+      "word": "emotion",
+      "definition": "A strong feeling such as joy, fear, or anger.",
+      "example": "Her voice was full of emotion.",
+      "definition_es": "Sentimiento fuerte como alegría o miedo.",
+      "example_es": "Su voz estaba llena de emoción.",
+      "category": "Noun",
+      "difficulty": "medium",
+      "level": "B1",
+      "id": "emotion",
+      "translations": {
+        "es": "emoción"
+      }
+    },
+    {
+      "word": "adventure",
+      "definition": "An exciting or unusual experience.",
+      "example": "The trip was a real adventure.",
+      "definition_es": "Experiencia emocionante o poco común.",
+      "example_es": "El viaje fue toda una aventura.",
+      "category": "Noun",
+      "difficulty": "easy",
+      "level": "A2",
+      "id": "adventure",
+      "translations": {
+        "es": "aventura"
+      }
     }
   ]
 }
