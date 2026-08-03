@@ -227,6 +227,102 @@
           "audioSlug": "tengo_calor"
         }
       ]
+    },
+    {
+      "id": "weather_in_summer_it_is_very_hot",
+      "source": "In summer it's very hot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En verano hace mucho calor.",
+          "audioSlug": "en_verano_hace_mucho_calor"
+        }
+      ]
+    },
+    {
+      "id": "weather_it_is_cool_in_the_morning",
+      "source": "It's cool in the morning.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace fresco por la mañana.",
+          "audioSlug": "hace_fresco_por_la_manana"
+        }
+      ]
+    },
+    {
+      "id": "weather_the_sky_is_clear",
+      "source": "The sky is clear.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El cielo está despejado.",
+          "audioSlug": "el_cielo_esta_despejado"
+        }
+      ]
+    },
+    {
+      "id": "weather_it_is_going_to_rain_this_afternoon",
+      "source": "It's going to rain in the afternoon.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Va a llover por la tarde.",
+          "audioSlug": "va_a_llover_por_la_tarde"
+        }
+      ]
+    },
+    {
+      "id": "weather_the_temperature_drops_at_night",
+      "source": "The temperature drops at night.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La temperatura baja por la noche.",
+          "audioSlug": "la_temperatura_baja_por_la_noche"
+        }
+      ]
+    },
+    {
+      "id": "weather_it_will_be_sunny_tomorrow",
+      "source": "It will be sunny tomorrow.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mañana estará soleado.",
+          "audioSlug": "manana_estara_soleado"
+        }
+      ]
+    },
+    {
+      "id": "weather_the_climate_is_changing",
+      "source": "The climate is changing.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El clima está cambiando.",
+          "audioSlug": "el_clima_esta_cambiando"
+        }
+      ]
+    },
+    {
+      "id": "weather_it_rains_a_lot_this_time_of_year",
+      "source": "It rains a lot this time of year.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llueve mucho en esta época.",
+          "audioSlug": "llueve_mucho_en_esta_epoca"
+        }
+      ]
     }
   ]
 }

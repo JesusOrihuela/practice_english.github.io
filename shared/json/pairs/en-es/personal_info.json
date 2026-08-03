@@ -281,6 +281,102 @@
           "audioSlug": "tienes_hijos"
         }
       ]
+    },
+    {
+      "id": "personal_info_my_last_name_is_garcia",
+      "source": "My last name is García.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi apellido es García.",
+          "audioSlug": "mi_apellido_es_garcia"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_live_with_my_family",
+      "source": "I live with my family.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo con mi familia.",
+          "audioSlug": "vivo_con_mi_familia"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_study_at_the_university",
+      "source": "I study at the university.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estudio en la universidad.",
+          "audioSlug": "estudio_en_la_universidad"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_work_at_a_tech_company",
+      "source": "I work at a technology company.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo en una empresa de tecnología.",
+          "audioSlug": "trabajo_en_una_empresa_de_tecnologia"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_is_your_address",
+      "source": "What is your address?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es tu dirección?",
+          "audioSlug": "cual_es_tu_direccion"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_what_is_your_nationality",
+      "source": "What is your nationality?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es tu nacionalidad?",
+          "audioSlug": "cual_es_tu_nacionalidad"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_a_medical_student",
+      "source": "I'm a medical student.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy estudiante de medicina.",
+          "audioSlug": "soy_estudiante_de_medicina"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_speak_three_languages",
+      "source": "I speak three languages.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hablo tres idiomas.",
+          "audioSlug": "hablo_tres_idiomas"
+        }
+      ]
     }
   ]
 }

@@ -303,6 +303,124 @@
           "audioSlug": "donde_te_duele"
         }
       ]
+    },
+    {
+      "id": "health_i_have_to_go_to_the_hospital",
+      "source": "I have to go to the hospital.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo que ir al hospital.",
+          "audioSlug": "tengo_que_ir_al_hospital"
+        }
+      ]
+    },
+    {
+      "id": "health_i_feel_much_better_today",
+      "source": "I feel much better today.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me siento mucho mejor hoy.",
+          "audioSlug": "me_siento_mucho_mejor_hoy"
+        }
+      ]
+    },
+    {
+      "id": "health_i_need_to_rest",
+      "source": "I need to rest for a few days.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito descansar unos días.",
+          "audioSlug": "necesito_descansar_unos_dias"
+        }
+      ]
+    },
+    {
+      "id": "health_do_you_have_any_pain",
+      "source": "Do you have any pain?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienes algún dolor?",
+          "audioSlug": "tienes_algun_dolor"
+        }
+      ]
+    },
+    {
+      "id": "health_i_hurt_my_knee",
+      "source": "I hurt my knee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me lastimé la rodilla.",
+          "audioSlug": "me_lastime_la_rodilla"
+        }
+      ]
+    },
+    {
+      "id": "health_the_doctor_says_im_fine",
+      "source": "The doctor says I'm fine.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El doctor dice que estoy bien.",
+          "audioSlug": "el_doctor_dice_que_estoy_bien"
+        }
+      ]
+    },
+    {
+      "id": "health_i_need_a_prescription",
+      "source": "I need a prescription.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito una receta médica.",
+          "audioSlug": "necesito_una_receta_medica"
+        }
+      ]
+    },
+    {
+      "id": "health_you_should_drink_water",
+      "source": "You should drink a lot of water.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debes tomar mucha agua.",
+          "audioSlug": "debes_tomar_mucha_agua"
+        }
+      ]
+    },
+    {
+      "id": "health_i_have_been_sick_since_yesterday",
+      "source": "I have been sick since yesterday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enferma desde ayer.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_enferma_desde_ayer"
+        },
+        {
+          "text": "Estoy enfermo desde ayer.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_enfermo_desde_ayer"
+        }
+      ]
     }
   ]
 }

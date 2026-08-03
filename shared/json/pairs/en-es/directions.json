@@ -225,6 +225,102 @@
           "audioSlug": "cuanto_se_tarda_a_pie"
         }
       ]
+    },
+    {
+      "id": "directions_where_is_the_bus_stop",
+      "source": "Where is the bus stop?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la parada de autobús?",
+          "audioSlug": "donde_esta_la_parada_de_autobus"
+        }
+      ]
+    },
+    {
+      "id": "directions_the_museum_is_near_here",
+      "source": "The museum is near here.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El museo está cerca de aquí.",
+          "audioSlug": "el_museo_esta_cerca_de_aqui"
+        }
+      ]
+    },
+    {
+      "id": "directions_cross_the_street_carefully",
+      "source": "Cross the street carefully.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cruza la calle con cuidado.",
+          "audioSlug": "cruza_la_calle_con_cuidado"
+        }
+      ]
+    },
+    {
+      "id": "directions_walk_to_the_end_of_the_street",
+      "source": "Walk to the end of the street.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Camina hasta el final de la calle.",
+          "audioSlug": "camina_hasta_el_final_de_la_calle"
+        }
+      ]
+    },
+    {
+      "id": "directions_it_is_five_minutes_on_foot",
+      "source": "It's five minutes on foot.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está a cinco minutos a pie.",
+          "audioSlug": "esta_a_cinco_minutos_a_pie"
+        }
+      ]
+    },
+    {
+      "id": "directions_follow_the_signs",
+      "source": "Follow the signs.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sigue las señales.",
+          "audioSlug": "sigue_las_senales"
+        }
+      ]
+    },
+    {
+      "id": "directions_can_you_show_me_the_way",
+      "source": "Can you show me the way?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puede indicarme el camino?",
+          "audioSlug": "puede_indicarme_el_camino"
+        }
+      ]
+    },
+    {
+      "id": "directions_turn_at_the_second_traffic_light",
+      "source": "Turn at the second traffic light.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Gira en el segundo semáforo.",
+          "audioSlug": "gira_en_el_segundo_semaforo"
+        }
+      ]
     }
   ]
 }

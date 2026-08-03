@@ -55,6 +55,44 @@ const TOPIC_KEYWORDS = {
     'vuelvo a casa', 'regreso a casa', 'voy al trabajo', 'hago ejercicio',
     'me preparo', 'antes de dormir', 'después de comer',
   ],
+  family: [
+    'familia', 'madre', 'padre', 'mamá', 'papá', 'hermano', 'hermana',
+    'hermanos', 'padres', 'hijo', 'hija', 'hijos', 'esposo', 'esposa',
+    'marido', 'mujer', 'abuelo', 'abuela', 'abuelos', 'tío', 'tía',
+    'primo', 'prima', 'sobrino', 'sobrina', 'novio', 'novia', 'pariente',
+    'casado', 'casada', 'gemelos', 'nieto', 'nieta',
+  ],
+  health: [
+    'me duele', 'dolor', 'enfermo', 'enferma', 'médico', 'doctor', 'doctora',
+    'hospital', 'fiebre', 'tos', 'resfriado', 'gripe', 'medicina', 'pastilla',
+    'me siento', 'estoy enfermo', 'estoy enferma', 'sano', 'sana', 'cuerpo',
+    'cabeza', 'estómago', 'garganta', 'receta', 'farmacia', 'me lastimé',
+    'me duele la cabeza', 'descansar', 'sangre',
+  ],
+  personal_info: [
+    'me llamo', 'mi nombre', 'apellido', 'vivo en', 'soy de', 'tengo',
+    'nacionalidad', 'edad', 'soltero', 'soltera', 'casado', 'casada',
+    'ocupación', 'profesión', 'hablo', 'idiomas', 'nombre', 'dirección',
+    'teléfono', 'correo', 'nací', 'trabajo de', 'estudiante',
+  ],
+  weather: [
+    'hace calor', 'hace frío', 'hace sol', 'está nublado', 'llueve', 'lluvia',
+    'nieva', 'nieve', 'viento', 'tormenta', 'temperatura', 'grados',
+    'pronóstico', 'clima', 'el tiempo', 'está lloviendo', 'despejado',
+    'húmedo', 'paraguas', 'hace viento', 'nublado', 'sol', 'frío', 'calor',
+  ],
+  directions: [
+    'dónde está', 'cómo llego', 'a la derecha', 'a la izquierda', 'todo recto',
+    'sigue recto', 'gira', 'cerca', 'lejos', 'la esquina', 'la calle',
+    'la avenida', 'el semáforo', 'cruza', 'al lado', 'enfrente', 'está lejos',
+    'está cerca', 'mapa', 'perdido', 'perdida', 'cuadras', 'derecho',
+  ],
+  survival: [
+    'no entiendo', 'no hablo', 'puede repetir', 'más despacio', 'cómo se dice',
+    'qué significa', 'no sé', 'ayuda', 'disculpe', 'perdón', 'habla inglés',
+    'puede ayudarme', 'no comprendo', 'cómo se escribe', 'qué quiere decir',
+    'estoy perdido', 'estoy perdida', 'necesito ayuda', 'repetir', 'despacio',
+  ],
 };
 
 // ── args ──────────────────────────────────────────────────────────────────

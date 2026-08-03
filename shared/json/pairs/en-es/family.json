@@ -297,6 +297,114 @@
           "audioSlug": "tienes_hermanos"
         }
       ]
+    },
+    {
+      "id": "family_how_is_your_family",
+      "source": "How is your family?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo está tu familia?",
+          "audioSlug": "como_esta_tu_familia"
+        }
+      ]
+    },
+    {
+      "id": "family_how_many_children_do_you_have",
+      "source": "How many children do you have?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuántos hijos tienes?",
+          "audioSlug": "cuantos_hijos_tienes"
+        }
+      ]
+    },
+    {
+      "id": "family_my_whole_family_is_fine",
+      "source": "My whole family is fine.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Toda mi familia está bien.",
+          "audioSlug": "toda_mi_familia_esta_bien"
+        }
+      ]
+    },
+    {
+      "id": "family_i_love_my_family_very_much",
+      "source": "I love my family very much.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero mucho a mi familia.",
+          "audioSlug": "quiero_mucho_a_mi_familia"
+        }
+      ]
+    },
+    {
+      "id": "family_my_aunt_lives_in_the_city",
+      "source": "My aunt lives in the city.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi tía vive en la ciudad.",
+          "audioSlug": "mi_tia_vive_en_la_ciudad"
+        }
+      ]
+    },
+    {
+      "id": "family_my_daughter_is_not_a_child_anymore",
+      "source": "My daughter is not a child anymore.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi hija ya no es una niña.",
+          "audioSlug": "mi_hija_ya_no_es_una_nina"
+        }
+      ]
+    },
+    {
+      "id": "family_what_does_your_brother_do",
+      "source": "What does your brother do for a living?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿En qué trabaja tu hermano?",
+          "audioSlug": "en_que_trabaja_tu_hermano"
+        }
+      ]
+    },
+    {
+      "id": "family_can_i_bring_my_family",
+      "source": "Can I bring my family?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo traer a mi familia?",
+          "audioSlug": "puedo_traer_a_mi_familia"
+        }
+      ]
+    },
+    {
+      "id": "family_my_kids_go_to_the_same_school",
+      "source": "My kids go to the same school.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mis hijos van a la misma escuela.",
+          "audioSlug": "mis_hijos_van_a_la_misma_escuela"
+        }
+      ]
     }
   ]
 }

@@ -215,6 +215,90 @@
           "audioSlug": "me_lo_puedes_escribir"
         }
       ]
+    },
+    {
+      "id": "survival_i_need_to_go_to_the_bathroom",
+      "source": "I need to go to the bathroom.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito ir al baño.",
+          "audioSlug": "necesito_ir_al_bano"
+        }
+      ]
+    },
+    {
+      "id": "survival_where_is_the_exit",
+      "source": "Where is the exit?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la salida?",
+          "audioSlug": "donde_esta_la_salida"
+        }
+      ]
+    },
+    {
+      "id": "survival_where_can_i_buy_a_ticket",
+      "source": "Where can I buy a ticket?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde puedo comprar un boleto?",
+          "audioSlug": "donde_puedo_comprar_un_boleto"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_lost_my_passport",
+      "source": "I lost my passport.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdí mi pasaporte.",
+          "audioSlug": "perdi_mi_pasaporte"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_call_the_police",
+      "source": "Can you call the police?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puede llamar a la policía?",
+          "audioSlug": "puede_llamar_a_la_policia"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_cant_find_my_phone",
+      "source": "I can't find my phone.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No encuentro mi teléfono.",
+          "audioSlug": "no_encuentro_mi_telefono"
+        }
+      ]
+    },
+    {
+      "id": "survival_does_anyone_here_speak_english",
+      "source": "Does anyone here speak English?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Alguien habla inglés aquí?",
+          "audioSlug": "alguien_habla_ingles_aqui"
+        }
+      ]
     }
   ]
 }
