@@ -3311,6 +3311,744 @@
       "gloss_example": {
         "es": "El pintor vendió tres obras este mes."
       }
+    },
+    {
+      "id": "talk",
+      "term": "talk",
+      "definition": "To say things to someone as part of a conversation.",
+      "example": "We talked for hours about the trip.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "hablar / conversar"
+      },
+      "gloss": {
+        "es": "Decir cosas a alguien en una conversación."
+      },
+      "gloss_example": {
+        "es": "Hablamos durante horas sobre el viaje."
+      }
+    },
+    {
+      "id": "hear",
+      "term": "hear",
+      "definition": "To notice a sound with your ears.",
+      "example": "I can hear music from the street.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "oír"
+      },
+      "gloss": {
+        "es": "Percibir un sonido con los oídos."
+      },
+      "gloss_example": {
+        "es": "Oigo música desde la calle."
+      }
+    },
+    {
+      "id": "hold",
+      "term": "hold",
+      "definition": "To carry or keep something in your hands.",
+      "example": "Please hold my bag for a moment.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "sostener / agarrar"
+      },
+      "gloss": {
+        "es": "Llevar o mantener algo en las manos."
+      },
+      "gloss_example": {
+        "es": "Sostén mi bolsa un momento, por favor."
+      }
+    },
+    {
+      "id": "fall",
+      "term": "fall",
+      "definition": "To drop down toward the ground.",
+      "example": "The leaves fall in autumn.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "caer / caerse"
+      },
+      "gloss": {
+        "es": "Ir hacia abajo por el propio peso."
+      },
+      "gloss_example": {
+        "es": "Las hojas caen en otoño."
+      }
+    },
+    {
+      "id": "sit",
+      "term": "sit",
+      "definition": "To rest with your body upright and your weight on your bottom.",
+      "example": "Please sit down and relax.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "sentarse"
+      },
+      "gloss": {
+        "es": "Apoyar el cuerpo sobre las nalgas para descansar."
+      },
+      "gloss_example": {
+        "es": "Siéntate y relájate, por favor."
+      }
+    },
+    {
+      "id": "break",
+      "term": "break",
+      "definition": "To separate into pieces, or a short rest.",
+      "example": "Be careful not to break the glass.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "romper / descanso"
+      },
+      "gloss": {
+        "es": "Partir algo en pedazos, o una pausa breve."
+      },
+      "gloss_example": {
+        "es": "Ten cuidado de no romper el vaso."
+      }
+    },
+    {
+      "id": "appear",
+      "term": "appear",
+      "definition": "To start to be seen, or to seem.",
+      "example": "A rainbow appeared after the rain.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "aparecer / parecer"
+      },
+      "gloss": {
+        "es": "Empezar a verse, o dar la impresión."
+      },
+      "gloss_example": {
+        "es": "Apareció un arcoíris tras la lluvia."
+      }
+    },
+    {
+      "id": "agree",
+      "term": "agree",
+      "definition": "To have the same opinion as someone.",
+      "example": "I agree with your plan.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "estar de acuerdo"
+      },
+      "gloss": {
+        "es": "Tener la misma opinión que alguien."
+      },
+      "gloss_example": {
+        "es": "Estoy de acuerdo con tu plan."
+      }
+    },
+    {
+      "id": "raise",
+      "term": "raise",
+      "definition": "To lift something to a higher position.",
+      "example": "Please raise your hand to answer.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "levantar / subir"
+      },
+      "gloss": {
+        "es": "Poner algo en una posición más alta."
+      },
+      "gloss_example": {
+        "es": "Levanta la mano para responder."
+      }
+    },
+    {
+      "id": "realize",
+      "term": "realize",
+      "definition": "To suddenly understand or become aware of something.",
+      "example": "I realized I had left my keys at home.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "darse cuenta"
+      },
+      "gloss": {
+        "es": "Comprender de pronto o notar algo."
+      },
+      "gloss_example": {
+        "es": "Me di cuenta de que dejé las llaves en casa."
+      }
+    },
+    {
+      "id": "mention",
+      "term": "mention",
+      "definition": "To speak briefly about something.",
+      "example": "She mentioned a new restaurant nearby.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "mencionar"
+      },
+      "gloss": {
+        "es": "Hablar brevemente de algo."
+      },
+      "gloss_example": {
+        "es": "Mencionó un restaurante nuevo cerca."
+      }
+    },
+    {
+      "id": "imagine",
+      "term": "imagine",
+      "definition": "To form a picture of something in your mind.",
+      "example": "Imagine living by the sea.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "imaginar"
+      },
+      "gloss": {
+        "es": "Formar una imagen de algo en la mente."
+      },
+      "gloss_example": {
+        "es": "Imagina vivir junto al mar."
+      }
+    },
+    {
+      "id": "wonder",
+      "term": "wonder",
+      "definition": "To think about something with curiosity.",
+      "example": "I wonder what time it is.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "preguntarse"
+      },
+      "gloss": {
+        "es": "Pensar en algo con curiosidad."
+      },
+      "gloss_example": {
+        "es": "Me pregunto qué hora es."
+      }
+    },
+    {
+      "id": "compare",
+      "term": "compare",
+      "definition": "To look at how things are similar or different.",
+      "example": "Let's compare the two phones.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "comparar"
+      },
+      "gloss": {
+        "es": "Ver en qué se parecen o difieren las cosas."
+      },
+      "gloss_example": {
+        "es": "Comparemos los dos teléfonos."
+      }
+    },
+    {
+      "id": "manage",
+      "term": "manage",
+      "definition": "To be in charge of, or to succeed in doing something difficult.",
+      "example": "She manages a small team.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "gestionar / lograr"
+      },
+      "gloss": {
+        "es": "Estar a cargo de algo, o conseguir algo difícil."
+      },
+      "gloss_example": {
+        "es": "Ella gestiona un equipo pequeño."
+      }
+    },
+    {
+      "id": "achieve",
+      "term": "achieve",
+      "definition": "To succeed in reaching a goal.",
+      "example": "He achieved his dream of traveling the world.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "lograr / alcanzar"
+      },
+      "gloss": {
+        "es": "Tener éxito en alcanzar una meta."
+      },
+      "gloss_example": {
+        "es": "Logró su sueño de viajar por el mundo."
+      }
+    },
+    {
+      "id": "express",
+      "term": "express",
+      "definition": "To show your thoughts or feelings in words.",
+      "example": "It is hard to express how I feel.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "expresar"
+      },
+      "gloss": {
+        "es": "Mostrar pensamientos o sentimientos con palabras."
+      },
+      "gloss_example": {
+        "es": "Es difícil expresar cómo me siento."
+      }
+    },
+    {
+      "id": "promise",
+      "term": "promise",
+      "definition": "To say firmly that you will do something.",
+      "example": "I promise to call you tomorrow.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "es": "prometer"
+      },
+      "gloss": {
+        "es": "Decir con firmeza que harás algo."
+      },
+      "gloss_example": {
+        "es": "Prometo llamarte mañana."
+      }
+    },
+    {
+      "id": "part",
+      "term": "part",
+      "definition": "A piece or section of something larger.",
+      "example": "This is the best part of the movie.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "parte"
+      },
+      "gloss": {
+        "es": "Pieza o sección de algo mayor."
+      },
+      "gloss_example": {
+        "es": "Esta es la mejor parte de la película."
+      }
+    },
+    {
+      "id": "cause",
+      "term": "cause",
+      "definition": "The reason something happens.",
+      "example": "The cause of the fire is unknown.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "causa"
+      },
+      "gloss": {
+        "es": "La razón por la que algo ocurre."
+      },
+      "gloss_example": {
+        "es": "Se desconoce la causa del incendio."
+      }
+    },
+    {
+      "id": "period",
+      "term": "period",
+      "definition": "A length of time.",
+      "example": "We stayed for a short period.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "período / época"
+      },
+      "gloss": {
+        "es": "Un lapso de tiempo."
+      },
+      "gloss_example": {
+        "es": "Nos quedamos un período corto."
+      }
+    },
+    {
+      "id": "practice",
+      "term": "practice",
+      "definition": "Doing an activity regularly to improve.",
+      "example": "Practice makes perfect.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "práctica"
+      },
+      "gloss": {
+        "es": "Hacer una actividad con regularidad para mejorar."
+      },
+      "gloss_example": {
+        "es": "La práctica hace al maestro."
+      }
+    },
+    {
+      "id": "source",
+      "term": "source",
+      "definition": "The place something comes from.",
+      "example": "The sun is our main source of light.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "fuente / origen"
+      },
+      "gloss": {
+        "es": "El lugar del que proviene algo."
+      },
+      "gloss_example": {
+        "es": "El sol es nuestra principal fuente de luz."
+      }
+    },
+    {
+      "id": "opinion",
+      "term": "opinion",
+      "definition": "What a person thinks about something.",
+      "example": "In my opinion, the book is excellent.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "opinión"
+      },
+      "gloss": {
+        "es": "Lo que una persona piensa sobre algo."
+      },
+      "gloss_example": {
+        "es": "En mi opinión, el libro es excelente."
+      }
+    },
+    {
+      "id": "shape",
+      "term": "shape",
+      "definition": "The outer form of something, like a circle or square.",
+      "example": "The pool has an unusual shape.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "forma"
+      },
+      "gloss": {
+        "es": "La forma exterior de algo, como un círculo."
+      },
+      "gloss_example": {
+        "es": "La piscina tiene una forma poco común."
+      }
+    },
+    {
+      "id": "purpose",
+      "term": "purpose",
+      "definition": "The reason for doing something.",
+      "example": "The purpose of the meeting is to plan the trip.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "propósito / fin"
+      },
+      "gloss": {
+        "es": "La razón para hacer algo."
+      },
+      "gloss_example": {
+        "es": "El propósito de la reunión es planear el viaje."
+      }
+    },
+    {
+      "id": "doubt",
+      "term": "doubt",
+      "definition": "A feeling of not being sure.",
+      "example": "I have no doubt she will win.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "duda"
+      },
+      "gloss": {
+        "es": "Sensación de no estar seguro."
+      },
+      "gloss_example": {
+        "es": "No tengo duda de que ella ganará."
+      }
+    },
+    {
+      "id": "memory",
+      "term": "memory",
+      "definition": "Something you remember, or the ability to remember.",
+      "example": "I have happy memories of that summer.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "recuerdo / memoria"
+      },
+      "gloss": {
+        "es": "Algo que recuerdas, o la capacidad de recordar."
+      },
+      "gloss_example": {
+        "es": "Tengo recuerdos felices de aquel verano."
+      }
+    },
+    {
+      "id": "object",
+      "term": "object",
+      "definition": "A thing that you can see and touch.",
+      "example": "There was a strange object on the table.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "objeto"
+      },
+      "gloss": {
+        "es": "Cosa que se puede ver y tocar."
+      },
+      "gloss_example": {
+        "es": "Había un objeto extraño sobre la mesa."
+      }
+    },
+    {
+      "id": "direction",
+      "term": "direction",
+      "definition": "The way toward which someone or something moves.",
+      "example": "We walked in the wrong direction.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "dirección / sentido"
+      },
+      "gloss": {
+        "es": "El rumbo hacia el que se mueve algo."
+      },
+      "gloss_example": {
+        "es": "Caminamos en la dirección equivocada."
+      }
+    },
+    {
+      "id": "solution",
+      "term": "solution",
+      "definition": "A way to solve a problem.",
+      "example": "We found a simple solution.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "solución"
+      },
+      "gloss": {
+        "es": "Manera de resolver un problema."
+      },
+      "gloss_example": {
+        "es": "Encontramos una solución sencilla."
+      }
+    },
+    {
+      "id": "young",
+      "term": "young",
+      "definition": "Having lived for only a short time.",
+      "example": "She is still very young.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "joven"
+      },
+      "gloss": {
+        "es": "Que tiene pocos años."
+      },
+      "gloss_example": {
+        "es": "Ella es todavía muy joven."
+      }
+    },
+    {
+      "id": "able",
+      "term": "able",
+      "definition": "Having the skill or power to do something.",
+      "example": "She is able to speak three languages.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "capaz"
+      },
+      "gloss": {
+        "es": "Que tiene la capacidad de hacer algo."
+      },
+      "gloss_example": {
+        "es": "Ella es capaz de hablar tres idiomas."
+      }
+    },
+    {
+      "id": "easy",
+      "term": "easy",
+      "definition": "Not difficult to do.",
+      "example": "This game is easy to learn.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "fácil"
+      },
+      "gloss": {
+        "es": "Que no es difícil de hacer."
+      },
+      "gloss_example": {
+        "es": "Este juego es fácil de aprender."
+      }
+    },
+    {
+      "id": "short",
+      "term": "short",
+      "definition": "Small in length, distance, or time.",
+      "example": "It was a short trip.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "corto / bajo"
+      },
+      "gloss": {
+        "es": "De poca longitud, distancia o tiempo."
+      },
+      "gloss_example": {
+        "es": "Fue un viaje corto."
+      }
+    },
+    {
+      "id": "true",
+      "term": "true",
+      "definition": "Based on facts, not false.",
+      "example": "The story is true.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "verdadero / cierto"
+      },
+      "gloss": {
+        "es": "Basado en hechos, no falso."
+      },
+      "gloss_example": {
+        "es": "La historia es verdadera."
+      }
+    },
+    {
+      "id": "main",
+      "term": "main",
+      "definition": "Most important or largest.",
+      "example": "The main problem is time.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "principal"
+      },
+      "gloss": {
+        "es": "El más importante o grande."
+      },
+      "gloss_example": {
+        "es": "El problema principal es el tiempo."
+      }
+    },
+    {
+      "id": "common",
+      "term": "common",
+      "definition": "Happening often or shared by many.",
+      "example": "It is a common mistake.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "común"
+      },
+      "gloss": {
+        "es": "Que ocurre a menudo o es compartido por muchos."
+      },
+      "gloss_example": {
+        "es": "Es un error común."
+      }
+    },
+    {
+      "id": "huge",
+      "term": "huge",
+      "definition": "Extremely large.",
+      "example": "They live in a huge house.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "enorme"
+      },
+      "gloss": {
+        "es": "Extremadamente grande."
+      },
+      "gloss_example": {
+        "es": "Viven en una casa enorme."
+      }
+    },
+    {
+      "id": "deep",
+      "term": "deep",
+      "definition": "Going far down from the top.",
+      "example": "The lake is very deep.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "profundo / hondo"
+      },
+      "gloss": {
+        "es": "Que llega muy abajo desde la superficie."
+      },
+      "gloss_example": {
+        "es": "El lago es muy profundo."
+      }
+    },
+    {
+      "id": "wide",
+      "term": "wide",
+      "definition": "Large from one side to the other.",
+      "example": "It is a wide street.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "ancho / amplio"
+      },
+      "gloss": {
+        "es": "Grande de un lado a otro."
+      },
+      "gloss_example": {
+        "es": "Es una calle ancha."
+      }
     }
   ]
 }
