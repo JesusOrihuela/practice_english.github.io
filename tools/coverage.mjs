@@ -25,8 +25,14 @@
  *   node tools/coverage.mjs --pair en-es     # one pair
  *   node tools/coverage.mjs --missing 60     # show more missing words
  *   node tools/coverage.mjs --top 1000       # focus on one band
+ *   node tools/coverage.mjs --pair es-en --gate --min 90   # GATE: exit 1 if < 90%
  *
- * EXIT CODE: 0 always (report, not a gate).
+ * GATE (core-vocabulary rule): with --gate, checks that the target language covers
+ *   ≥ --min% (default 90) of the pedagogical top-1000 (NGSL for en, ELELex for es)
+ *   and exits 1 if not. es-en → checks English (en); en-es → checks Spanish (es).
+ *   English runs in CI (NGSL committed); Spanish is local only (ELELex CC BY-NC-SA).
+ *
+ * EXIT CODE: without --gate, always 0 (report). With --gate, 1 when below --min.
  */
 
 import fs from 'fs';
@@ -60,6 +66,12 @@ const PAIR_ARG = argVal('--pair');
 const MISSING_N = parseInt(argVal('--missing') || '30', 10);
 const TOP_ARG = argVal('--top');
 const BANDS = TOP_ARG ? [parseInt(TOP_ARG, 10)] : [500, 1000, 2000];
+
+// Gate mode: enforce the core-vocabulary rule. A pair "passes" when its target
+// language covers ≥ MIN% of the pedagogical top-1000 (NGSL for en, ELELex for es).
+const GATE = args.includes('--gate');
+const MIN  = parseFloat(argVal('--min') || '90');
+const gateTop1000 = {};  // targetLang → top-1000 coverage % (from NGSL/ELELex)
 
 function contentWords(pair, lang) {
   const words = new Set();
@@ -122,6 +134,7 @@ if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
   for (const N of [500, 1000, 2000, 2801]) {
     const list = Object.entries(ngsl).filter(([, r]) => r <= N).map(([w]) => w);
     const covered = list.filter(w => used.has(w)).length;
+    if (N === 1000) gateTop1000.en = 100 * covered / list.length;
     console.log(`  Top-${N}: ${covered}/${list.length} (${(100 * covered / list.length).toFixed(1)}%)`);
     if (N === 2801) {
       const missing = list.filter(w => !used.has(w));
@@ -150,6 +163,7 @@ if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
   for (const N of [500, 1000, 2000, 2800]) {
     let covered = 0;
     for (let r = 1; r <= N; r++) if (coveredRanks.has(r)) covered++;
+    if (N === 1000) gateTop1000.es = 100 * covered / N;
     console.log(`  Top-${N}: ${covered}/${N} (${(100 * covered / N).toFixed(1)}%)`);
     if (N === 2800) {
       const missing = [];
@@ -157,4 +171,32 @@ if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
       console.log(`  ELELex top-${N} no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
     }
   }
+}
+
+// ── GATE — enforce the core-vocabulary rule (top-1000 ≥ MIN%) ─────────────────
+// The premise: knowing the ~1000 most frequent units covers ~88% of everyday
+// communication. A pair is only "complete" when its target language teaches that
+// core. NGSL (en) is committed so this runs in CI; ELELex (es) is CC BY-NC-SA and
+// only present locally, so the es gate is a local-only check.
+if (GATE) {
+  const scope = PAIR_ARG === 'es-en' ? ['en']
+              : PAIR_ARG === 'en-es' ? ['es']
+              : ['en', 'es'];
+  console.log(`\n=== GATE — cobertura del top-1000 ≥ ${MIN}% ===`);
+  let failed = false;
+  for (const lang of scope) {
+    if (!(lang in gateTop1000)) {
+      console.error(`  ✗ ${lang}: lista de frecuencia no disponible (no se pudo medir). ` +
+        `${lang === 'es' ? 'Descarga ELELex: tools/sources/fetch-sources.sh + build-elelex.mjs' : ''}`);
+      failed = true; continue;
+    }
+    const pct = gateTop1000[lang];
+    const ok = pct >= MIN;
+    if (!ok) failed = true;
+    console.log(`  ${ok ? '✓' : '✗'} ${lang}: ${pct.toFixed(1)}% ${ok ? '≥' : '<'} ${MIN}%` +
+      (ok ? '' : `  → faltan ${(MIN - pct).toFixed(1)} puntos; ver faltantes arriba`));
+  }
+  console.log(failed ? '\nGATE: FALLA — el par no cumple la premisa del núcleo ~1000.'
+                     : '\nGATE: OK — el par cumple la premisa del núcleo ~1000.');
+  process.exit(failed ? 1 : 0);
 }
