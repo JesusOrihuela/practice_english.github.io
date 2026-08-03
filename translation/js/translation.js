@@ -22,7 +22,10 @@ let _currentAudioSlug = null; // audioSlug of the picked form
 
 // ---- Init ----
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
   // Set dynamic translation title using active target language name
   const pair = AppLangPair.getActive();
   const titleEl = document.querySelector('.trans-title');

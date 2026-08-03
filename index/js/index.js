@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', async function () {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
 
   /* ── Hero image skew effect ── */
   const image = document.getElementById('skewingImage');

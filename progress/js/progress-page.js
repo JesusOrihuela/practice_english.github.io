@@ -21,6 +21,10 @@ function _fetchJSON(url) {
 function _pHref(href) { return '../../' + href; }
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
+
   renderLangPair();
   renderNotificationSettings();
   renderBackupSection();

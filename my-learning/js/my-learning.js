@@ -20,6 +20,10 @@ function _esc(s) {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
+
   const fy = document.getElementById('footer-year');
   if (fy) fy.textContent = new Date().getFullYear();
 

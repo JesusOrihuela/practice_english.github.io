@@ -38,7 +38,10 @@ const PHASE_IDS = [
 ];
 
 /* ── Init ── */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
   document.getElementById('footer-year').textContent = new Date().getFullYear();
 
   document.getElementById('back-to-categories').addEventListener('click', () => {

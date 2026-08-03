@@ -28,7 +28,10 @@ function _vocabGridOpts() {
   };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
   const _urlTopic = new URLSearchParams(location.search).get('topic');
   const _pathMode = new URLSearchParams(location.search).get('path') === '1';
   const _pathCard = new URLSearchParams(location.search).get('card');

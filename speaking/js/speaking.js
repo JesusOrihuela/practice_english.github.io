@@ -45,7 +45,10 @@ AppData.get('word-equivalents')
   })
   .catch(() => {});
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
+  // Part B: load the active pair's topics before reading topic lists.
+  await AppTopics.load();
+  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
   jsConfetti = new JSConfetti();
 
   const textFallback = document.getElementById('text-fallback');
