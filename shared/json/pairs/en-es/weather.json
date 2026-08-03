@@ -1,0 +1,232 @@
+{
+  "phrases": [
+    {
+      "id": "weather_whats_the_weather",
+      "source": "What's the weather like?",
+      "level": "A1",
+      "grammar": "El clima se expresa con 'hacer' impersonal: 'hace sol', 'hace frío'.",
+      "target": [
+        {
+          "text": "¿Qué tiempo hace?",
+          "audioSlug": "que_tiempo_hace"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_sunny",
+      "source": "It's sunny.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace sol.",
+          "audioSlug": "hace_sol"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_raining",
+      "source": "It's raining.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está lloviendo.",
+          "audioSlug": "esta_lloviendo"
+        }
+      ]
+    },
+    {
+      "id": "weather_very_cold_today",
+      "source": "It's very cold today.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy hace mucho frío.",
+          "audioSlug": "hoy_hace_mucho_frio"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_hot",
+      "source": "It's hot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace calor.",
+          "audioSlug": "hace_calor"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_windy",
+      "source": "It's windy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace viento.",
+          "audioSlug": "hace_viento"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_cloudy",
+      "source": "It's cloudy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está nublado.",
+          "audioSlug": "esta_nublado"
+        }
+      ]
+    },
+    {
+      "id": "weather_its_snowing",
+      "source": "It's snowing.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está nevando.",
+          "audioSlug": "esta_nevando"
+        }
+      ]
+    },
+    {
+      "id": "weather_whats_temperature",
+      "source": "What's the temperature?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué temperatura hace?",
+          "audioSlug": "que_temperatura_hace"
+        }
+      ]
+    },
+    {
+      "id": "weather_thirty_degrees",
+      "source": "It's thirty degrees.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estamos a treinta grados.",
+          "audioSlug": "estamos_a_treinta_grados"
+        }
+      ]
+    },
+    {
+      "id": "weather_take_umbrella",
+      "source": "Take an umbrella, it's going to rain.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lleva un paraguas, va a llover.",
+          "audioSlug": "lleva_un_paraguas_va_a_llover"
+        }
+      ]
+    },
+    {
+      "id": "weather_nice_today",
+      "source": "The weather is nice today.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy hace buen tiempo.",
+          "audioSlug": "hoy_hace_buen_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "weather_bad_weather",
+      "source": "The weather is bad.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace mal tiempo.",
+          "audioSlug": "hace_mal_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "weather_love_spring",
+      "source": "I love spring.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta la primavera.",
+          "audioSlug": "me_encanta_la_primavera"
+        }
+      ]
+    },
+    {
+      "id": "weather_cold_in_winter",
+      "source": "It's cold in winter.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En invierno hace frío.",
+          "audioSlug": "en_invierno_hace_frio"
+        }
+      ]
+    },
+    {
+      "id": "weather_forecast_tomorrow",
+      "source": "What's the forecast for tomorrow?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es el pronóstico para mañana?",
+          "audioSlug": "cual_es_el_pronostico_para_manana"
+        }
+      ]
+    },
+    {
+      "id": "weather_beautiful_day",
+      "source": "It's a beautiful day.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un día precioso.",
+          "audioSlug": "es_un_dia_precioso"
+        }
+      ]
+    },
+    {
+      "id": "weather_im_cold",
+      "source": "I'm cold.",
+      "level": "A1",
+      "grammar": "Las personas 'tienen' frío/calor ('tengo frío'); el clima 'hace' frío/calor.",
+      "target": [
+        {
+          "text": "Tengo frío.",
+          "audioSlug": "tengo_frio"
+        }
+      ]
+    },
+    {
+      "id": "weather_im_hot",
+      "source": "I'm hot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo calor.",
+          "audioSlug": "tengo_calor"
+        }
+      ]
+    }
+  ]
+}

@@ -42,6 +42,9 @@ const AppPath = (() => {
     { id: 'family',         level: 'A1', emoji: '👪', label: 'Familia y Personas', labelEn: 'Family & People',  order: 17 },
     { id: 'daily_routine',  level: 'A1', emoji: '🕐', label: 'Rutina Diaria',      labelEn: 'Daily Routine',   order: 18 },
     { id: 'health',         level: 'A2', emoji: '🩺', label: 'Salud y Cuerpo',     labelEn: 'Health & Body',   order: 19 },
+    { id: 'weather',       level: 'A1', emoji: '🌤️', label: 'Clima',                      labelEn: 'Weather',               order: 20 },
+    { id: 'directions',    level: 'A2', emoji: '🧭', label: 'Direcciones y Lugares',      labelEn: 'Directions & Places',   order: 21 },
+    { id: 'survival',      level: 'A1', emoji: '🆘', label: 'Sobrevivir el Idioma',       labelEn: 'Language Survival',     order: 22 },
   ];
 
   // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─

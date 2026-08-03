@@ -760,6 +760,9 @@ body.path-mode {
 .img-topic-card[data-theme="family"]          { --topic-clr: #E11D48; }
 .img-topic-card[data-theme="daily_routine"]   { --topic-clr: #0284C7; }
 .img-topic-card[data-theme="health"]          { --topic-clr: #16A34A; }
+.img-topic-card[data-theme="weather"]         { --topic-clr: #0EA5E9; }
+.img-topic-card[data-theme="directions"]      { --topic-clr: #CA8A04; }
+.img-topic-card[data-theme="survival"]        { --topic-clr: #DB2777; }
 .img-topic-card[data-theme="general"]         { --topic-clr: #64748B; }
 
 .img-topic-card__img-wrap {

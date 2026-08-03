@@ -28,11 +28,14 @@ const AppTopics = (() => {
     { id: 'family',         label: 'Familia y Personas', labelEn: 'Family & People',  emoji: '👪' },
     { id: 'daily_routine',  label: 'Rutina Diaria',      labelEn: 'Daily Routine',   emoji: '🕐' },
     { id: 'health',         label: 'Salud y Cuerpo',     labelEn: 'Health & Body',   emoji: '🩺' },
+    { id: 'weather',       label: 'Clima',                      labelEn: 'Weather',               emoji: '🌤️' },
+    { id: 'directions',    label: 'Direcciones y Lugares',      labelEn: 'Directions & Places',   emoji: '🧭' },
+    { id: 'survival',      label: 'Sobrevivir el Idioma',       labelEn: 'Language Survival',     emoji: '🆘' },
   ];
 
   // Phrase-only topics (no vocabulary set) are excluded from the word activities
   // (Vocabulario, Quiz) which would otherwise fail to load them.
-  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'family', 'daily_routine', 'health']);
+  const PHRASE_ONLY = new Set(['emociones', 'museums', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival']);
   const VOCAB_TOPICS = [
     { id: 'general', label: 'General', labelEn: 'General', emoji: '📖' },
     ...PHRASE_TOPICS.filter(t => !PHRASE_ONLY.has(t.id)),

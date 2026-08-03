@@ -1,0 +1,230 @@
+{
+  "phrases": [
+    {
+      "id": "directions_how_to_get_to",
+      "source": "How do I get to the station?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo llego a la estación?",
+          "audioSlug": "como_llego_a_la_estacion"
+        }
+      ]
+    },
+    {
+      "id": "directions_where_is_the_bank",
+      "source": "Where is the bank?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está el banco?",
+          "audioSlug": "donde_esta_el_banco"
+        }
+      ]
+    },
+    {
+      "id": "directions_is_it_far",
+      "source": "Is it far from here?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Está lejos de aquí?",
+          "audioSlug": "esta_lejos_de_aqui"
+        }
+      ]
+    },
+    {
+      "id": "directions_go_straight",
+      "source": "Go straight ahead.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sigue todo recto.",
+          "audioSlug": "sigue_todo_recto"
+        }
+      ]
+    },
+    {
+      "id": "directions_turn_left",
+      "source": "Turn left at the corner.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Gira a la izquierda en la esquina.",
+          "audioSlug": "gira_a_la_izquierda_en_la_esquina"
+        }
+      ]
+    },
+    {
+      "id": "directions_turn_right",
+      "source": "Turn right.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Gira a la derecha.",
+          "audioSlug": "gira_a_la_derecha"
+        }
+      ]
+    },
+    {
+      "id": "directions_its_next_to",
+      "source": "It's next to the supermarket.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está al lado del supermercado.",
+          "audioSlug": "esta_al_lado_del_supermercado"
+        }
+      ]
+    },
+    {
+      "id": "directions_its_on_the_corner",
+      "source": "It's on the corner.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está en la esquina.",
+          "audioSlug": "esta_en_la_esquina"
+        }
+      ]
+    },
+    {
+      "id": "directions_how_far",
+      "source": "How far is it?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué distancia está?",
+          "audioSlug": "a_que_distancia_esta"
+        }
+      ]
+    },
+    {
+      "id": "directions_im_lost",
+      "source": "I'm lost.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy perdida.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_perdida"
+        },
+        {
+          "text": "Estoy perdido.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_perdido"
+        }
+      ]
+    },
+    {
+      "id": "directions_can_you_show_map",
+      "source": "Can you show me on the map?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me lo puedes mostrar en el mapa?",
+          "audioSlug": "me_lo_puedes_mostrar_en_el_mapa"
+        }
+      ]
+    },
+    {
+      "id": "directions_is_there_nearby",
+      "source": "Is there a supermarket nearby?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay un supermercado cerca?",
+          "audioSlug": "hay_un_supermercado_cerca"
+        }
+      ]
+    },
+    {
+      "id": "directions_across_from",
+      "source": "It's across from the park.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está enfrente del parque.",
+          "audioSlug": "esta_enfrente_del_parque"
+        }
+      ]
+    },
+    {
+      "id": "directions_behind",
+      "source": "It's behind the church.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está detrás de la iglesia.",
+          "audioSlug": "esta_detras_de_la_iglesia"
+        }
+      ]
+    },
+    {
+      "id": "directions_two_blocks",
+      "source": "It's two blocks from here.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está a dos cuadras de aquí.",
+          "audioSlug": "esta_a_dos_cuadras_de_aqui"
+        }
+      ]
+    },
+    {
+      "id": "directions_which_way",
+      "source": "Which way is the center?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por dónde se va al centro?",
+          "audioSlug": "por_donde_se_va_al_centro"
+        }
+      ]
+    },
+    {
+      "id": "directions_take_first_street",
+      "source": "Take the first street on the right.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Toma la primera calle a la derecha.",
+          "audioSlug": "toma_la_primera_calle_a_la_derecha"
+        }
+      ]
+    },
+    {
+      "id": "directions_how_long_walk",
+      "source": "How long does it take on foot?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto se tarda a pie?",
+          "audioSlug": "cuanto_se_tarda_a_pie"
+        }
+      ]
+    }
+  ]
+}
