@@ -3635,6 +3635,258 @@
       "gloss_example": {
         "en": "The trip was a real adventure."
       }
+    },
+    {
+      "id": "lengua",
+      "term": "lengua",
+      "definition": "Idioma que habla un grupo de personas.",
+      "example": "El español es una lengua muy hablada.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "language / tongue"
+      },
+      "gloss": {
+        "en": "A language spoken by a group of people."
+      },
+      "gloss_example": {
+        "en": "Spanish is a widely spoken language."
+      }
+    },
+    {
+      "id": "ropa",
+      "term": "ropa",
+      "definition": "Prendas que usamos para vestirnos.",
+      "example": "Guardó la ropa limpia en el armario.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "clothes"
+      },
+      "gloss": {
+        "en": "The things people wear to cover their body."
+      },
+      "gloss_example": {
+        "en": "She put the clean clothes in the closet."
+      }
+    },
+    {
+      "id": "frase",
+      "term": "frase",
+      "definition": "Conjunto de palabras con un sentido completo.",
+      "example": "Escribe una frase con esta palabra.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "sentence / phrase"
+      },
+      "gloss": {
+        "en": "A group of words that expresses a complete idea."
+      },
+      "gloss_example": {
+        "en": "Write a sentence with this word."
+      }
+    },
+    {
+      "id": "principio",
+      "term": "principio",
+      "definition": "El comienzo de algo, o una regla básica.",
+      "example": "Al principio, el trabajo parecía difícil.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "beginning / principle"
+      },
+      "gloss": {
+        "en": "The start of something, or a basic rule."
+      },
+      "gloss_example": {
+        "en": "At the beginning, the job seemed hard."
+      }
+    },
+    {
+      "id": "asunto",
+      "term": "asunto",
+      "definition": "Tema o cuestión de la que se trata.",
+      "example": "Tenemos que hablar de un asunto importante.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "matter / issue"
+      },
+      "gloss": {
+        "en": "A topic or affair that is being dealt with."
+      },
+      "gloss_example": {
+        "en": "We need to talk about an important matter."
+      }
+    },
+    {
+      "id": "caracter",
+      "term": "carácter",
+      "definition": "Manera de ser de una persona.",
+      "example": "Tiene un carácter tranquilo y amable.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "character / personality"
+      },
+      "gloss": {
+        "en": "The nature or personality of a person."
+      },
+      "gloss_example": {
+        "en": "He has a calm and kind character."
+      }
+    },
+    {
+      "id": "necesidad",
+      "term": "necesidad",
+      "definition": "Algo que hace falta o se necesita.",
+      "example": "El agua es una necesidad básica.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "need"
+      },
+      "gloss": {
+        "en": "Something that is required or lacking."
+      },
+      "gloss_example": {
+        "en": "Water is a basic need."
+      }
+    },
+    {
+      "id": "malo",
+      "term": "malo / mala",
+      "definition": "Que no es bueno o no funciona bien.",
+      "example": "Hoy tuve un día muy malo.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "bad"
+      },
+      "gloss": {
+        "en": "Not good, or of poor quality."
+      },
+      "gloss_example": {
+        "en": "I had a very bad day today."
+      }
+    },
+    {
+      "id": "natural_adj",
+      "term": "natural",
+      "definition": "Que viene de la naturaleza, no artificial.",
+      "example": "Prefiero los jugos naturales.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "natural"
+      },
+      "gloss": {
+        "en": "Coming from nature, not made by people."
+      },
+      "gloss_example": {
+        "en": "I prefer natural juices."
+      }
+    },
+    {
+      "id": "serio",
+      "term": "serio / seria",
+      "definition": "Que no bromea, o que es importante.",
+      "example": "Es un problema muy serio.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "serious"
+      },
+      "gloss": {
+        "en": "Not joking, or important and grave."
+      },
+      "gloss_example": {
+        "en": "It is a very serious problem."
+      }
+    },
+    {
+      "id": "distinto",
+      "term": "distinto / distinta",
+      "definition": "Que no es igual a otra cosa.",
+      "example": "Su idea es distinta a la mía.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "different"
+      },
+      "gloss": {
+        "en": "Not the same as something else."
+      },
+      "gloss_example": {
+        "en": "Her idea is different from mine."
+      }
+    },
+    {
+      "id": "imposible",
+      "term": "imposible",
+      "definition": "Que no se puede hacer o lograr.",
+      "example": "Es imposible llegar a tiempo.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "impossible"
+      },
+      "gloss": {
+        "en": "That cannot be done or achieved."
+      },
+      "gloss_example": {
+        "en": "It is impossible to arrive on time."
+      }
+    },
+    {
+      "id": "verdadero",
+      "term": "verdadero / verdadera",
+      "definition": "Que es cierto o real.",
+      "example": "Esa es la verdadera razón.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "true / real"
+      },
+      "gloss": {
+        "en": "That is true or genuine."
+      },
+      "gloss_example": {
+        "en": "That is the real reason."
+      }
+    },
+    {
+      "id": "maravilloso",
+      "term": "maravilloso / maravillosa",
+      "definition": "Muy bueno o admirable.",
+      "example": "Pasamos un día maravilloso en la playa.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "wonderful"
+      },
+      "gloss": {
+        "en": "Extremely good or admirable."
+      },
+      "gloss_example": {
+        "en": "We had a wonderful day at the beach."
+      }
     }
   ]
 }

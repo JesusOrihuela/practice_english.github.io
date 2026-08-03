@@ -665,6 +665,42 @@
       "gloss_example": {
         "en": "The main character is a young detective."
       }
+    },
+    {
+      "id": "detective",
+      "term": "detective",
+      "definition": "Persona que investiga casos y misterios.",
+      "example": "El detective resolvió el caso.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "detective"
+      },
+      "gloss": {
+        "en": "A person who investigates cases and mysteries."
+      },
+      "gloss_example": {
+        "en": "The detective solved the case."
+      }
+    },
+    {
+      "id": "premio",
+      "term": "premio",
+      "definition": "Reconocimiento que se da por ganar o destacar.",
+      "example": "La película ganó un premio importante.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "prize / award"
+      },
+      "gloss": {
+        "en": "A reward given for winning or excelling."
+      },
+      "gloss_example": {
+        "en": "The film won an important award."
+      }
     }
   ]
 }

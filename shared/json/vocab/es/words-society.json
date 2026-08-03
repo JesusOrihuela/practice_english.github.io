@@ -971,6 +971,150 @@
       "gloss_example": {
         "en": "We finally found a solution."
       }
+    },
+    {
+      "id": "habitante",
+      "term": "habitante",
+      "definition": "Persona que vive en un lugar.",
+      "example": "La ciudad tiene millones de habitantes.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "inhabitant"
+      },
+      "gloss": {
+        "en": "A person who lives in a place."
+      },
+      "gloss_example": {
+        "en": "The city has millions of inhabitants."
+      }
+    },
+    {
+      "id": "mayoria",
+      "term": "mayoría",
+      "definition": "La parte más grande de un grupo.",
+      "example": "La mayoría votó a favor.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "majority"
+      },
+      "gloss": {
+        "en": "The larger part of a group."
+      },
+      "gloss_example": {
+        "en": "The majority voted in favor."
+      }
+    },
+    {
+      "id": "sector",
+      "term": "sector",
+      "definition": "Parte de una economía o actividad.",
+      "example": "Trabaja en el sector de la salud.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "sector"
+      },
+      "gloss": {
+        "en": "A part of the economy or an activity."
+      },
+      "gloss_example": {
+        "en": "She works in the health sector."
+      }
+    },
+    {
+      "id": "agencia",
+      "term": "agencia",
+      "definition": "Empresa que ofrece un servicio.",
+      "example": "Reservé el viaje en una agencia.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "agency"
+      },
+      "gloss": {
+        "en": "A business that provides a service."
+      },
+      "gloss_example": {
+        "en": "I booked the trip at an agency."
+      }
+    },
+    {
+      "id": "taller",
+      "term": "taller",
+      "definition": "Lugar donde se arreglan o hacen cosas.",
+      "example": "Dejé el carro en el taller.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "workshop / garage"
+      },
+      "gloss": {
+        "en": "A place where things are made or repaired."
+      },
+      "gloss_example": {
+        "en": "I left the car at the garage."
+      }
+    },
+    {
+      "id": "tarea",
+      "term": "tarea",
+      "definition": "Trabajo que se debe hacer.",
+      "example": "Los niños terminaron la tarea.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "task / homework"
+      },
+      "gloss": {
+        "en": "A piece of work that must be done."
+      },
+      "gloss_example": {
+        "en": "The children finished their homework."
+      }
+    },
+    {
+      "id": "condicion",
+      "term": "condición",
+      "definition": "Estado o requisito de algo.",
+      "example": "El carro está en buenas condiciones.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "condition"
+      },
+      "gloss": {
+        "en": "The state of something, or a requirement."
+      },
+      "gloss_example": {
+        "en": "The car is in good condition."
+      }
+    },
+    {
+      "id": "laboral",
+      "term": "laboral",
+      "definition": "Relacionado con el trabajo.",
+      "example": "Busca estabilidad laboral.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "work-related / labor"
+      },
+      "gloss": {
+        "en": "Related to work or employment."
+      },
+      "gloss_example": {
+        "en": "She is looking for job stability."
+      }
     }
   ]
 }

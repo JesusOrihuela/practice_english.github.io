@@ -665,6 +665,78 @@
       "gloss_example": {
         "en": "The airplane landed on time."
       }
+    },
+    {
+      "id": "vacaciones",
+      "term": "vacaciones",
+      "definition": "Días de descanso sin trabajar ni estudiar.",
+      "example": "Nos vamos de vacaciones en julio.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "vacation / holidays"
+      },
+      "gloss": {
+        "en": "Days of rest away from work or study."
+      },
+      "gloss_example": {
+        "en": "We are going on vacation in July."
+      }
+    },
+    {
+      "id": "paseo",
+      "term": "paseo",
+      "definition": "Caminata corta por gusto.",
+      "example": "Dimos un paseo por el parque.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "walk / stroll"
+      },
+      "gloss": {
+        "en": "A short walk for pleasure."
+      },
+      "gloss_example": {
+        "en": "We took a stroll through the park."
+      }
+    },
+    {
+      "id": "costa",
+      "term": "costa",
+      "definition": "Zona donde la tierra se encuentra con el mar.",
+      "example": "Pasamos el verano en la costa.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "coast"
+      },
+      "gloss": {
+        "en": "The land along the edge of the sea."
+      },
+      "gloss_example": {
+        "en": "We spent the summer on the coast."
+      }
+    },
+    {
+      "id": "guia",
+      "term": "guía",
+      "definition": "Persona o libro que orienta a otros.",
+      "example": "El guía nos mostró la ciudad.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "guide"
+      },
+      "gloss": {
+        "en": "A person or book that shows the way."
+      },
+      "gloss_example": {
+        "en": "The guide showed us the city."
+      }
     }
   ]
 }
