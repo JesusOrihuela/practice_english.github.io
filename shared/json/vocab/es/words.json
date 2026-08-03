@@ -4625,6 +4625,744 @@
       "gloss_example": {
         "en": "He had a slightly crazy idea."
       }
+    },
+    {
+      "id": "gustar",
+      "term": "gustar",
+      "definition": "Resultar agradable algo a alguien.",
+      "example": "Me gusta caminar por la playa.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to like"
+      },
+      "gloss": {
+        "en": "To find something pleasant."
+      },
+      "gloss_example": {
+        "en": "I like walking on the beach."
+      }
+    },
+    {
+      "id": "sentarse",
+      "term": "sentarse",
+      "definition": "Apoyar el cuerpo sobre las nalgas.",
+      "example": "Se sentó junto a la ventana.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to sit down"
+      },
+      "gloss": {
+        "en": "To rest with your weight on your bottom."
+      },
+      "gloss_example": {
+        "en": "She sat down by the window."
+      }
+    },
+    {
+      "id": "realizar",
+      "term": "realizar",
+      "definition": "Hacer o llevar a cabo algo.",
+      "example": "Realizaron un gran trabajo.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to carry out / to do"
+      },
+      "gloss": {
+        "en": "To do or complete something."
+      },
+      "gloss_example": {
+        "en": "They did a great job."
+      }
+    },
+    {
+      "id": "existir",
+      "term": "existir",
+      "definition": "Ser real o tener vida.",
+      "example": "Existen muchas culturas distintas.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to exist"
+      },
+      "gloss": {
+        "en": "To be real or have life."
+      },
+      "gloss_example": {
+        "en": "Many different cultures exist."
+      }
+    },
+    {
+      "id": "formar",
+      "term": "formar",
+      "definition": "Crear o dar forma a algo.",
+      "example": "Formaron un grupo de música.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to form"
+      },
+      "gloss": {
+        "en": "To create or shape something."
+      },
+      "gloss_example": {
+        "en": "They formed a music band."
+      }
+    },
+    {
+      "id": "levantar",
+      "term": "levantar",
+      "definition": "Subir algo o ponerlo más alto.",
+      "example": "Levantó la caja con cuidado.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to lift / to raise"
+      },
+      "gloss": {
+        "en": "To move something to a higher place."
+      },
+      "gloss_example": {
+        "en": "He lifted the box carefully."
+      }
+    },
+    {
+      "id": "producir",
+      "term": "producir",
+      "definition": "Hacer o fabricar algo.",
+      "example": "La fábrica produce autos.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to produce"
+      },
+      "gloss": {
+        "en": "To make or manufacture something."
+      },
+      "gloss_example": {
+        "en": "The factory produces cars."
+      }
+    },
+    {
+      "id": "andar",
+      "term": "andar",
+      "definition": "Moverse a pie, o funcionar algo.",
+      "example": "Andamos por el centro toda la tarde.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to walk / to go"
+      },
+      "gloss": {
+        "en": "To move on foot, or to work (a machine)."
+      },
+      "gloss_example": {
+        "en": "We walked around downtown all afternoon."
+      }
+    },
+    {
+      "id": "disfrutar",
+      "term": "disfrutar",
+      "definition": "Sentir placer con algo.",
+      "example": "Disfruté mucho la fiesta.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to enjoy"
+      },
+      "gloss": {
+        "en": "To take pleasure in something."
+      },
+      "gloss_example": {
+        "en": "I really enjoyed the party."
+      }
+    },
+    {
+      "id": "probar",
+      "term": "probar",
+      "definition": "Comer o beber un poco, o intentar algo.",
+      "example": "Prueba esta sopa, está deliciosa.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to try / to taste"
+      },
+      "gloss": {
+        "en": "To taste a little, or to test something."
+      },
+      "gloss_example": {
+        "en": "Try this soup, it is delicious."
+      }
+    },
+    {
+      "id": "divertirse",
+      "term": "divertirse",
+      "definition": "Pasarla bien.",
+      "example": "Los niños se divirtieron en el parque.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to have fun"
+      },
+      "gloss": {
+        "en": "To have a good time."
+      },
+      "gloss_example": {
+        "en": "The children had fun at the park."
+      }
+    },
+    {
+      "id": "construir",
+      "term": "construir",
+      "definition": "Hacer un edificio u otra cosa.",
+      "example": "Van a construir un puente nuevo.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to build"
+      },
+      "gloss": {
+        "en": "To make a building or other structure."
+      },
+      "gloss_example": {
+        "en": "They are going to build a new bridge."
+      }
+    },
+    {
+      "id": "practicar",
+      "term": "practicar",
+      "definition": "Hacer algo con frecuencia para mejorar.",
+      "example": "Practico español todos los días.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to practice"
+      },
+      "gloss": {
+        "en": "To do something regularly to improve."
+      },
+      "gloss_example": {
+        "en": "I practice Spanish every day."
+      }
+    },
+    {
+      "id": "observar",
+      "term": "observar",
+      "definition": "Mirar con atención.",
+      "example": "Observó el cielo durante horas.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to observe / to watch"
+      },
+      "gloss": {
+        "en": "To look carefully at something."
+      },
+      "gloss_example": {
+        "en": "She watched the sky for hours."
+      }
+    },
+    {
+      "id": "continuar",
+      "term": "continuar",
+      "definition": "Seguir haciendo algo.",
+      "example": "Continuamos el viaje al amanecer.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to continue"
+      },
+      "gloss": {
+        "en": "To keep doing something."
+      },
+      "gloss_example": {
+        "en": "We continued the trip at dawn."
+      }
+    },
+    {
+      "id": "quitar",
+      "term": "quitar",
+      "definition": "Retirar o sacar algo.",
+      "example": "Quita los platos de la mesa.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to remove / to take away"
+      },
+      "gloss": {
+        "en": "To take something away."
+      },
+      "gloss_example": {
+        "en": "Take the plates off the table."
+      }
+    },
+    {
+      "id": "sorprender",
+      "term": "sorprender",
+      "definition": "Causar asombro a alguien.",
+      "example": "Su respuesta me sorprendió.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to surprise"
+      },
+      "gloss": {
+        "en": "To cause someone to feel astonished."
+      },
+      "gloss_example": {
+        "en": "Her answer surprised me."
+      }
+    },
+    {
+      "id": "separar",
+      "term": "separar",
+      "definition": "Poner cosas aparte una de otra.",
+      "example": "Separa la ropa blanca de la de color.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to separate"
+      },
+      "gloss": {
+        "en": "To move things apart from each other."
+      },
+      "gloss_example": {
+        "en": "Separate the white clothes from the colored ones."
+      }
+    },
+    {
+      "id": "resultar",
+      "term": "resultar",
+      "definition": "Terminar de cierta manera.",
+      "example": "El plan resultó un éxito.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to turn out / to result"
+      },
+      "gloss": {
+        "en": "To end up in a certain way."
+      },
+      "gloss_example": {
+        "en": "The plan turned out to be a success."
+      }
+    },
+    {
+      "id": "costar",
+      "term": "costar",
+      "definition": "Tener un precio, o ser difícil.",
+      "example": "¿Cuánto cuesta el boleto?",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to cost"
+      },
+      "gloss": {
+        "en": "To have a price, or to be hard."
+      },
+      "gloss_example": {
+        "en": "How much does the ticket cost?"
+      }
+    },
+    {
+      "id": "sonreir",
+      "term": "sonreír",
+      "definition": "Poner cara de alegría con la boca.",
+      "example": "Le sonrió al bebé.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to smile"
+      },
+      "gloss": {
+        "en": "To make a happy expression with your mouth."
+      },
+      "gloss_example": {
+        "en": "She smiled at the baby."
+      }
+    },
+    {
+      "id": "gritar",
+      "term": "gritar",
+      "definition": "Hablar muy fuerte.",
+      "example": "No grites, te escucho bien.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to shout"
+      },
+      "gloss": {
+        "en": "To speak very loudly."
+      },
+      "gloss_example": {
+        "en": "Don't shout, I can hear you fine."
+      }
+    },
+    {
+      "id": "doler",
+      "term": "doler",
+      "definition": "Causar dolor una parte del cuerpo.",
+      "example": "Me duele la cabeza.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to hurt / to ache"
+      },
+      "gloss": {
+        "en": "To feel pain in a part of the body."
+      },
+      "gloss_example": {
+        "en": "My head hurts."
+      }
+    },
+    {
+      "id": "capitulo",
+      "term": "capítulo",
+      "definition": "Cada una de las partes de un libro o serie.",
+      "example": "Vi el último capítulo anoche.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "chapter / episode"
+      },
+      "gloss": {
+        "en": "One of the parts of a book or series."
+      },
+      "gloss_example": {
+        "en": "I watched the last episode last night."
+      }
+    },
+    {
+      "id": "vuelta",
+      "term": "vuelta",
+      "definition": "Regreso, o giro alrededor de algo.",
+      "example": "Dimos una vuelta por el barrio.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "turn / walk / return"
+      },
+      "gloss": {
+        "en": "A return, or a turn around something."
+      },
+      "gloss_example": {
+        "en": "We took a walk around the neighborhood."
+      }
+    },
+    {
+      "id": "resto",
+      "term": "resto",
+      "definition": "Lo que queda de algo.",
+      "example": "El resto del dinero está en el banco.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "rest / remainder"
+      },
+      "gloss": {
+        "en": "What is left of something."
+      },
+      "gloss_example": {
+        "en": "The rest of the money is in the bank."
+      }
+    },
+    {
+      "id": "pagina",
+      "term": "página",
+      "definition": "Cada lado de una hoja de papel.",
+      "example": "Abre el libro en la página diez.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "page"
+      },
+      "gloss": {
+        "en": "Each side of a sheet of paper."
+      },
+      "gloss_example": {
+        "en": "Open the book to page ten."
+      }
+    },
+    {
+      "id": "modelo",
+      "term": "modelo",
+      "definition": "Ejemplo a seguir, o tipo de algo.",
+      "example": "Este carro es un modelo nuevo.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "model"
+      },
+      "gloss": {
+        "en": "An example to follow, or a type of thing."
+      },
+      "gloss_example": {
+        "en": "This car is a new model."
+      }
+    },
+    {
+      "id": "material",
+      "term": "material",
+      "definition": "Sustancia con la que se hace algo.",
+      "example": "La mesa es de un material resistente.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "material"
+      },
+      "gloss": {
+        "en": "The substance something is made of."
+      },
+      "gloss_example": {
+        "en": "The table is made of a strong material."
+      }
+    },
+    {
+      "id": "par",
+      "term": "par",
+      "definition": "Conjunto de dos cosas iguales.",
+      "example": "Compré un par de zapatos.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "pair"
+      },
+      "gloss": {
+        "en": "A set of two matching things."
+      },
+      "gloss_example": {
+        "en": "I bought a pair of shoes."
+      }
+    },
+    {
+      "id": "piedra",
+      "term": "piedra",
+      "definition": "Material duro y sólido de la tierra.",
+      "example": "El camino estaba lleno de piedras.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "stone / rock"
+      },
+      "gloss": {
+        "en": "A hard, solid piece of earth."
+      },
+      "gloss_example": {
+        "en": "The path was full of stones."
+      }
+    },
+    {
+      "id": "hoja",
+      "term": "hoja",
+      "definition": "Parte verde de una planta, o lámina de papel.",
+      "example": "Escribe en una hoja en blanco.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "leaf / sheet"
+      },
+      "gloss": {
+        "en": "The green part of a plant, or a sheet of paper."
+      },
+      "gloss_example": {
+        "en": "Write on a blank sheet."
+      }
+    },
+    {
+      "id": "hogar",
+      "term": "hogar",
+      "definition": "Casa donde vive una familia.",
+      "example": "No hay nada como el hogar.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "home"
+      },
+      "gloss": {
+        "en": "The house where a family lives."
+      },
+      "gloss_example": {
+        "en": "There is no place like home."
+      }
+    },
+    {
+      "id": "medida",
+      "term": "medida",
+      "definition": "Tamaño o cantidad de algo, o acción para lograr un fin.",
+      "example": "Tomaron medidas para ahorrar agua.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "measure / measurement"
+      },
+      "gloss": {
+        "en": "A size or amount, or an action to reach a goal."
+      },
+      "gloss_example": {
+        "en": "They took measures to save water."
+      }
+    },
+    {
+      "id": "claro_adj",
+      "term": "claro",
+      "definition": "Fácil de entender, o con mucha luz.",
+      "example": "Su explicación fue muy clara.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "clear"
+      },
+      "gloss": {
+        "en": "Easy to understand, or full of light."
+      },
+      "gloss_example": {
+        "en": "Her explanation was very clear."
+      }
+    },
+    {
+      "id": "igual",
+      "term": "igual",
+      "definition": "Que es lo mismo que otra cosa.",
+      "example": "Tu bici es igual a la mía.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "equal / same"
+      },
+      "gloss": {
+        "en": "The same as something else."
+      },
+      "gloss_example": {
+        "en": "Your bike is the same as mine."
+      }
+    },
+    {
+      "id": "actual",
+      "term": "actual",
+      "definition": "Del momento presente.",
+      "example": "El precio actual es más alto.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "current / present"
+      },
+      "gloss": {
+        "en": "Belonging to the present time."
+      },
+      "gloss_example": {
+        "en": "The current price is higher."
+      }
+    },
+    {
+      "id": "moderno",
+      "term": "moderno",
+      "definition": "De la época actual o reciente.",
+      "example": "Viven en un edificio moderno.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "modern"
+      },
+      "gloss": {
+        "en": "Of the present or recent time."
+      },
+      "gloss_example": {
+        "en": "They live in a modern building."
+      }
+    },
+    {
+      "id": "justo_adj",
+      "term": "justo",
+      "definition": "Que trata a todos con equidad.",
+      "example": "No es justo que él pague todo.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "fair / just"
+      },
+      "gloss": {
+        "en": "Treating everyone equally and rightly."
+      },
+      "gloss_example": {
+        "en": "It is not fair that he pays for everything."
+      }
+    },
+    {
+      "id": "hermoso",
+      "term": "hermoso",
+      "definition": "Muy bonito o bello.",
+      "example": "Qué paisaje tan hermoso.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "beautiful"
+      },
+      "gloss": {
+        "en": "Very pretty or lovely."
+      },
+      "gloss_example": {
+        "en": "What a beautiful landscape."
+      }
+    },
+    {
+      "id": "primero",
+      "term": "primero",
+      "definition": "Que está antes que los demás.",
+      "example": "Vivo en el primer piso.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "first"
+      },
+      "gloss": {
+        "en": "Coming before all others."
+      },
+      "gloss_example": {
+        "en": "I live on the first floor."
+      }
     }
   ]
 }
