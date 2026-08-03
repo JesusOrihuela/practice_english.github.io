@@ -7,6 +7,7 @@
 # Sources & licenses (see ../../CREDITS.md):
 #   FrequencyWords (Hermit Dave)  — CC BY-SA 3.0
 #   Tatoeba via OPUS              — CC BY 2.0 FR
+#   ELELex (CEFRLex, UCLouvain)   — CC BY-NC-SA 4.0 (Spanish pedagogical target)
 set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/raw"
@@ -23,5 +24,10 @@ curl -sSL --max-time 180 -o "$DIR/tatoeba-en-es.zip" \
   "https://object.pouta.csc.fi/OPUS-Tatoeba/v2023-04-12/moses/en-es.txt.zip"
 ( cd "$DIR" && unzip -o tatoeba-en-es.zip >/dev/null )
 
+echo "→ ELELex (es) — CEFRLex pedagogical lexicon, CC BY-NC-SA 4.0"
+curl -sSL --max-time 120 -o "$DIR/ELELex.tsv" \
+  "https://cental.uclouvain.be/cefrlex/static/resources/es/ELELex.tsv"
+
 echo "✓ Fuentes descargadas en $DIR"
 echo "  Ahora: node \"$(dirname "${BASH_SOURCE[0]}")/build-freq-inventory.mjs\""
+echo "        node \"$(dirname "${BASH_SOURCE[0]}")/build-elelex.mjs\"  (target español para coverage.mjs)"

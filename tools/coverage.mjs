@@ -32,7 +32,7 @@
 import fs from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
-import { loadFreq, tokenize } from './lib-freq.mjs';
+import { loadFreq, tokenize, lookupRank } from './lib-freq.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -126,6 +126,35 @@ if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
     if (N === 2801) {
       const missing = list.filter(w => !used.has(w));
       console.log(`  NGSL total no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
+    }
+  }
+}
+
+// ── ELELex — clean pedagogical target for the Spanish side (en-es, target Spanish) ──
+// ELELex (CEFRLex, CC BY-NC-SA) is a CEFR-graded lemma list built from SFL
+// pedagogical materials, so it is the clean Spanish analog of NGSL — a real
+// learning target, unlike the noisy OpenSubtitles es-freq list. The derived
+// index is NOT committed (see build-elelex.mjs / .gitignore); build it locally.
+// Since ELELex is lemmatised and content has inflected forms, lookupRank maps
+// each content surface word back toward its lemma (plural/gender/enclitic).
+const elelexPath = join(ROOT, 'tools/sources/derived/elelex-es.json');
+if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
+  const elelex = JSON.parse(fs.readFileSync(elelexPath, 'utf8'));
+  const ranks = elelex.ranks;
+  const used = contentWords('en-es', 'es');
+  const coveredRanks = new Set();
+  for (const w of used) { const r = lookupRank(w, 'es', ranks); if (r != null) coveredRanks.add(r); }
+  const byRank = {};
+  for (const [w, r] of Object.entries(ranks)) byRank[r] = w;
+  console.log(`\n=== Espanol vs ELELex (lexico pedagogico CEFR, ${elelex.count} lemmas) ===`);
+  for (const N of [500, 1000, 2000, 2800]) {
+    let covered = 0;
+    for (let r = 1; r <= N; r++) if (coveredRanks.has(r)) covered++;
+    console.log(`  Top-${N}: ${covered}/${N} (${(100 * covered / N).toFixed(1)}%)`);
+    if (N === 2800) {
+      const missing = [];
+      for (let r = 1; r <= N; r++) if (!coveredRanks.has(r) && byRank[r]) missing.push(byRank[r]);
+      console.log(`  ELELex top-${N} no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
     }
   }
 }

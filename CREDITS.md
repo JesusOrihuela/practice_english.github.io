@@ -30,6 +30,17 @@ as an app dataset. Covers ~90% of general English text at ~2,000 words.
 - Project: https://www.newgeneralservicelist.com/
 - License: free for research and educational use, with attribution.
 
+### ELELex — CEFR-graded lexical resource for Spanish (CEFRLex, UCLouvain CENTAL)
+A pedagogically graded Spanish lexicon (14,290 entries) built from Spanish-as-a-
+foreign-language textbooks and simplified readers, giving each lemma a CEFR-level
+frequency distribution. Used as the clean frequency **target** for measuring
+Spanish lexical coverage (`tools/coverage.mjs`, via a locally-built
+`tools/sources/derived/elelex-es.json`) — the Spanish analog of NGSL. The raw
+lexicon and the derived index are **not redistributed** here (download on demand
+with `tools/sources/fetch-sources.sh`, then `tools/sources/build-elelex.mjs`).
+- Project: https://cental.uclouvain.be/cefrlex/elelex/
+- License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
+
 ### FrequencyWords (Hermit Dave) — CC BY-SA 3.0
 Word-frequency lists from the OpenSubtitles 2018 corpus, used only as a
 *frequency signal* to estimate CEFR-band difficulty during content
