@@ -179,6 +179,366 @@
           "audioSlug": "vamos_a_planear_el_viaje"
         }
       ]
+    },
+    {
+      "id": "planes_quiero_convertirme_en_medico",
+      "source": "Your goal is to work in medicine one day.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero convertirme en médico.",
+          "audioSlug": "quiero_convertirme_en_medico"
+        }
+      ]
+    },
+    {
+      "id": "planes_debes_mantener_la_calma",
+      "source": "In a crisis you must stay composed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debes mantener la calma.",
+          "audioSlug": "debes_mantener_la_calma"
+        }
+      ]
+    },
+    {
+      "id": "planes_aqui_no_lo_permiten",
+      "source": "That behavior is forbidden in this place.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Aquí no lo permiten.",
+          "audioSlug": "aqui_no_lo_permiten"
+        }
+      ]
+    },
+    {
+      "id": "planes_acepto_tu_oferta",
+      "source": "You gladly take what they propose.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Acepto tu oferta.",
+          "audioSlug": "acepto_tu_oferta"
+        }
+      ]
+    },
+    {
+      "id": "planes_esto_ocupa_mucho_espacio",
+      "source": "The object takes up a lot of room.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esto ocupa mucho espacio.",
+          "audioSlug": "esto_ocupa_mucho_espacio"
+        }
+      ]
+    },
+    {
+      "id": "planes_vamos_a_acordar_un_plan",
+      "source": "Together you settle on a course of action.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a acordar un plan.",
+          "audioSlug": "vamos_a_acordar_un_plan"
+        }
+      ]
+    },
+    {
+      "id": "planes_quita_eso_de_ahi",
+      "source": "You ask someone to remove it from there.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quita eso de ahí.",
+          "audioSlug": "quita_eso_de_ahi"
+        }
+      ]
+    },
+    {
+      "id": "planes_quiero_sorprenderte",
+      "source": "You have a surprise planned for them.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero sorprenderte.",
+          "audioSlug": "quiero_sorprenderte"
+        }
+      ]
+    },
+    {
+      "id": "planes_puedes_disponer_de_mi_ayuda",
+      "source": "Your support is fully available to them.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Puedes disponer de mi ayuda.",
+          "audioSlug": "puedes_disponer_de_mi_ayuda"
+        }
+      ]
+    },
+    {
+      "id": "planes_me_falta_tiempo",
+      "source": "There aren't enough hours for everything.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me falta tiempo.",
+          "audioSlug": "me_falta_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "planes_se_valorar_lo_que_tengo",
+      "source": "You appreciate what you already have.",
+      "level": "B1",
+      "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what'.",
+      "target": [
+        {
+          "text": "Sé valorar lo que tengo.",
+          "audioSlug": "se_valorar_lo_que_tengo"
+        }
+      ]
+    },
+    {
+      "id": "planes_no_quiero_provocar_problemas",
+      "source": "You have no wish to stir up trouble.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No quiero provocar problemas.",
+          "audioSlug": "no_quiero_provocar_problemas"
+        }
+      ]
+    },
+    {
+      "id": "planes_voy_a_colocar_los_libros",
+      "source": "You'll put each book in its place.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy a colocar los libros.",
+          "audioSlug": "voy_a_colocar_los_libros"
+        }
+      ]
+    },
+    {
+      "id": "planes_debes_marcar_el_numero",
+      "source": "To call, you enter the digits on the phone.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debes marcar el número.",
+          "audioSlug": "debes_marcar_el_numero"
+        }
+      ]
+    },
+    {
+      "id": "planes_esto_nos_va_a_unir",
+      "source": "The experience will bring you closer together.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esto nos va a unir.",
+          "audioSlug": "esto_nos_va_a_unir"
+        }
+      ]
+    },
+    {
+      "id": "planes_puede_generar_dudas",
+      "source": "The plan might raise some doubts.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Puede generar dudas.",
+          "audioSlug": "puede_generar_dudas"
+        }
+      ]
+    },
+    {
+      "id": "planes_vamos_a_continuar",
+      "source": "After the break you pick up where you left off.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a continuar.",
+          "audioSlug": "vamos_a_continuar"
+        }
+      ]
+    },
+    {
+      "id": "planes_hay_que_actuar_ya",
+      "source": "The moment calls for action, not waiting.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay que actuar ya.",
+          "audioSlug": "hay_que_actuar_ya"
+        }
+      ]
+    },
+    {
+      "id": "planes_puede_resultar_dificil",
+      "source": "The task may well turn out to be hard.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Puede resultar difícil.",
+          "audioSlug": "puede_resultar_dificil"
+        }
+      ]
+    },
+    {
+      "id": "planes_no_voy_a_abandonar",
+      "source": "You refuse to give up on this.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No voy a abandonar.",
+          "audioSlug": "no_voy_a_abandonar"
+        }
+      ]
+    },
+    {
+      "id": "planes_debo_reconocer_mi_error",
+      "source": "You honestly own up to what went wrong.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debo reconocer mi error.",
+          "audioSlug": "debo_reconocer_mi_error"
+        }
+      ]
+    },
+    {
+      "id": "planes_hay_que_aprovechar_el_tiempo",
+      "source": "You want to make the most of every hour.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay que aprovechar el tiempo.",
+          "audioSlug": "hay_que_aprovechar_el_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "planes_te_quiero_animar",
+      "source": "You want to lift their spirits to go on.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te quiero animar.",
+          "audioSlug": "te_quiero_animar"
+        }
+      ]
+    },
+    {
+      "id": "planes_nada_me_va_a_detener",
+      "source": "Nothing will stop you from your goal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nada me va a detener.",
+          "audioSlug": "nada_me_va_a_detener"
+        }
+      ]
+    },
+    {
+      "id": "planes_me_voy_a_encargar_de_eso",
+      "source": "You take full charge of the matter.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me voy a encargar de eso.",
+          "audioSlug": "me_voy_a_encargar_de_eso"
+        }
+      ]
+    },
+    {
+      "id": "planes_no_me_puedes_obligar",
+      "source": "You refuse to be forced into it.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me puedes obligar.",
+          "audioSlug": "no_me_puedes_obligar"
+        }
+      ]
+    },
+    {
+      "id": "planes_quiero_realizar_mi_sueno",
+      "source": "You mean to make your dream come true.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero realizar mi sueño.",
+          "audioSlug": "quiero_realizar_mi_sueno"
+        }
+      ]
+    },
+    {
+      "id": "planes_puedes_utilizar_esto",
+      "source": "Feel free to make use of this.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Puedes utilizar esto.",
+          "audioSlug": "puedes_utilizar_esto"
+        }
+      ]
+    },
+    {
+      "id": "planes_vamos_a_formar_un_equipo",
+      "source": "You'll put a group together to work.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a formar un equipo.",
+          "audioSlug": "vamos_a_formar_un_equipo"
+        }
+      ]
+    },
+    {
+      "id": "planes_te_voy_a_echar_de_menos",
+      "source": "You'll feel their absence when they go.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te voy a echar de menos.",
+          "audioSlug": "te_voy_a_echar_de_menos"
+        }
+      ]
     }
   ]
 }
