@@ -5363,6 +5363,978 @@
       "gloss_example": {
         "en": "I live on the first floor."
       }
+    },
+    {
+      "id": "nacer",
+      "term": "nacer",
+      "definition": "Empezar a vivir, salir al mundo.",
+      "example": "Mi hija nació en marzo.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to be born"
+      },
+      "gloss": {
+        "en": "To come into life."
+      },
+      "gloss_example": {
+        "en": "My daughter was born in March."
+      }
+    },
+    {
+      "id": "interesar",
+      "term": "interesar",
+      "definition": "Despertar la atención de alguien.",
+      "example": "Me interesa la ciencia.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to interest"
+      },
+      "gloss": {
+        "en": "To make someone want to know more."
+      },
+      "gloss_example": {
+        "en": "I am interested in science."
+      }
+    },
+    {
+      "id": "encantar",
+      "term": "encantar",
+      "definition": "Gustar mucho algo.",
+      "example": "Me encanta esta canción.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to love / to delight"
+      },
+      "gloss": {
+        "en": "To like something very much."
+      },
+      "gloss_example": {
+        "en": "I love this song."
+      }
+    },
+    {
+      "id": "acompañar",
+      "term": "acompañar",
+      "definition": "Ir con alguien a algún lugar.",
+      "example": "Te acompaño a la estación.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to accompany / to go with"
+      },
+      "gloss": {
+        "en": "To go somewhere with someone."
+      },
+      "gloss_example": {
+        "en": "I'll go with you to the station."
+      }
+    },
+    {
+      "id": "vestir",
+      "term": "vestir",
+      "definition": "Poner ropa a alguien o a uno mismo.",
+      "example": "Viste al niño para la escuela.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to dress"
+      },
+      "gloss": {
+        "en": "To put clothes on yourself or someone."
+      },
+      "gloss_example": {
+        "en": "Dress the child for school."
+      }
+    },
+    {
+      "id": "contestar",
+      "term": "contestar",
+      "definition": "Responder a una pregunta o llamada.",
+      "example": "Contesta el teléfono, por favor.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to answer"
+      },
+      "gloss": {
+        "en": "To reply to a question or call."
+      },
+      "gloss_example": {
+        "en": "Answer the phone, please."
+      }
+    },
+    {
+      "id": "pintar",
+      "term": "pintar",
+      "definition": "Dar color con pintura.",
+      "example": "Pintaron la casa de blanco.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to paint"
+      },
+      "gloss": {
+        "en": "To put color on with paint."
+      },
+      "gloss_example": {
+        "en": "They painted the house white."
+      }
+    },
+    {
+      "id": "desear",
+      "term": "desear",
+      "definition": "Querer que algo suceda.",
+      "example": "Te deseo un buen viaje.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to wish / to want"
+      },
+      "gloss": {
+        "en": "To want something to happen."
+      },
+      "gloss_example": {
+        "en": "I wish you a good trip."
+      }
+    },
+    {
+      "id": "acercar",
+      "term": "acercar",
+      "definition": "Poner algo más cerca.",
+      "example": "Acerca la silla a la mesa.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to bring closer"
+      },
+      "gloss": {
+        "en": "To put something nearer."
+      },
+      "gloss_example": {
+        "en": "Bring the chair closer to the table."
+      }
+    },
+    {
+      "id": "cansar",
+      "term": "cansar",
+      "definition": "Hacer que alguien pierda energía.",
+      "example": "El viaje me cansó mucho.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to tire"
+      },
+      "gloss": {
+        "en": "To make someone lose energy."
+      },
+      "gloss_example": {
+        "en": "The trip tired me a lot."
+      }
+    },
+    {
+      "id": "echar",
+      "term": "echar",
+      "definition": "Tirar o poner algo en un lugar.",
+      "example": "Echa sal a la sopa.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to throw / to put in"
+      },
+      "gloss": {
+        "en": "To throw or add something."
+      },
+      "gloss_example": {
+        "en": "Add salt to the soup."
+      }
+    },
+    {
+      "id": "ocupar",
+      "term": "ocupar",
+      "definition": "Llenar un espacio o un lugar.",
+      "example": "El sofá ocupa media sala.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to occupy / to take up"
+      },
+      "gloss": {
+        "en": "To fill a space or place."
+      },
+      "gloss_example": {
+        "en": "The sofa takes up half the room."
+      }
+    },
+    {
+      "id": "sonar",
+      "term": "sonar",
+      "definition": "Producir un sonido.",
+      "example": "El teléfono sonó dos veces.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to ring / to sound"
+      },
+      "gloss": {
+        "en": "To make a sound."
+      },
+      "gloss_example": {
+        "en": "The phone rang twice."
+      }
+    },
+    {
+      "id": "pasear",
+      "term": "pasear",
+      "definition": "Caminar por gusto.",
+      "example": "Paseamos por el parque.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to take a walk"
+      },
+      "gloss": {
+        "en": "To walk for pleasure."
+      },
+      "gloss_example": {
+        "en": "We took a walk in the park."
+      }
+    },
+    {
+      "id": "meter",
+      "term": "meter",
+      "definition": "Poner algo dentro de otra cosa.",
+      "example": "Metió la ropa en la maleta.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to put in"
+      },
+      "gloss": {
+        "en": "To put something inside."
+      },
+      "gloss_example": {
+        "en": "She put the clothes in the suitcase."
+      }
+    },
+    {
+      "id": "enamorarse",
+      "term": "enamorarse",
+      "definition": "Empezar a sentir amor por alguien.",
+      "example": "Se enamoró de ella al instante.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to fall in love"
+      },
+      "gloss": {
+        "en": "To begin to feel love for someone."
+      },
+      "gloss_example": {
+        "en": "He fell in love with her instantly."
+      }
+    },
+    {
+      "id": "acordar",
+      "term": "acordar",
+      "definition": "Ponerse de acuerdo, o recordar algo.",
+      "example": "Acordamos vernos el lunes.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to agree / to remember"
+      },
+      "gloss": {
+        "en": "To reach an agreement, or to recall."
+      },
+      "gloss_example": {
+        "en": "We agreed to meet on Monday."
+      }
+    },
+    {
+      "id": "colocar",
+      "term": "colocar",
+      "definition": "Poner algo en un lugar.",
+      "example": "Colocó los libros en el estante.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to place / to put"
+      },
+      "gloss": {
+        "en": "To put something in a place."
+      },
+      "gloss_example": {
+        "en": "He placed the books on the shelf."
+      }
+    },
+    {
+      "id": "marcar",
+      "term": "marcar",
+      "definition": "Hacer una señal, o anotar un gol.",
+      "example": "Marca la fecha en el calendario.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to mark / to score"
+      },
+      "gloss": {
+        "en": "To make a sign, or to score a goal."
+      },
+      "gloss_example": {
+        "en": "Mark the date on the calendar."
+      }
+    },
+    {
+      "id": "perdonar",
+      "term": "perdonar",
+      "definition": "Dejar de sentir enojo por una falta.",
+      "example": "Perdóname por llegar tarde.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to forgive"
+      },
+      "gloss": {
+        "en": "To stop feeling angry about a fault."
+      },
+      "gloss_example": {
+        "en": "Forgive me for being late."
+      }
+    },
+    {
+      "id": "abandonar",
+      "term": "abandonar",
+      "definition": "Dejar algo o a alguien para siempre.",
+      "example": "Abandonó la ciudad hace años.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to abandon / to leave"
+      },
+      "gloss": {
+        "en": "To leave something or someone for good."
+      },
+      "gloss_example": {
+        "en": "He left the city years ago."
+      }
+    },
+    {
+      "id": "depender",
+      "term": "depender",
+      "definition": "Necesitar de algo o alguien.",
+      "example": "El plan depende del clima.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to depend"
+      },
+      "gloss": {
+        "en": "To need something or someone."
+      },
+      "gloss_example": {
+        "en": "The plan depends on the weather."
+      }
+    },
+    {
+      "id": "relajarse",
+      "term": "relajarse",
+      "definition": "Descansar y calmarse.",
+      "example": "Me relajo escuchando música.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to relax"
+      },
+      "gloss": {
+        "en": "To rest and calm down."
+      },
+      "gloss_example": {
+        "en": "I relax by listening to music."
+      }
+    },
+    {
+      "id": "tirar",
+      "term": "tirar",
+      "definition": "Lanzar algo, o dejarlo caer.",
+      "example": "No tires basura al suelo.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to throw / to throw away"
+      },
+      "gloss": {
+        "en": "To throw something, or to drop it."
+      },
+      "gloss_example": {
+        "en": "Don't throw trash on the ground."
+      }
+    },
+    {
+      "id": "robar",
+      "term": "robar",
+      "definition": "Tomar algo que no es tuyo.",
+      "example": "Le robaron el celular.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to steal / to rob"
+      },
+      "gloss": {
+        "en": "To take something that is not yours."
+      },
+      "gloss_example": {
+        "en": "They stole his phone."
+      }
+    },
+    {
+      "id": "callar",
+      "term": "callar",
+      "definition": "Dejar de hablar.",
+      "example": "Se calló cuando entró el jefe.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to be quiet"
+      },
+      "gloss": {
+        "en": "To stop talking."
+      },
+      "gloss_example": {
+        "en": "He went quiet when the boss came in."
+      }
+    },
+    {
+      "id": "aprovechar",
+      "term": "aprovechar",
+      "definition": "Usar bien una oportunidad o cosa.",
+      "example": "Aprovecha el buen clima para salir.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to take advantage of"
+      },
+      "gloss": {
+        "en": "To make good use of an opportunity."
+      },
+      "gloss_example": {
+        "en": "Take advantage of the good weather to go out."
+      }
+    },
+    {
+      "id": "unir",
+      "term": "unir",
+      "definition": "Juntar dos o más cosas.",
+      "example": "Una el cable a la pantalla.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to join / to unite"
+      },
+      "gloss": {
+        "en": "To put two or more things together."
+      },
+      "gloss_example": {
+        "en": "Join the cable to the screen."
+      }
+    },
+    {
+      "id": "animar",
+      "term": "animar",
+      "definition": "Dar ánimo o alegría a alguien.",
+      "example": "Sus amigos la animaron a seguir.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to encourage / to cheer up"
+      },
+      "gloss": {
+        "en": "To give someone courage or joy."
+      },
+      "gloss_example": {
+        "en": "Her friends encouraged her to go on."
+      }
+    },
+    {
+      "id": "acostarse",
+      "term": "acostarse",
+      "definition": "Echarse para dormir o descansar.",
+      "example": "Me acuesto a las once.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to go to bed / to lie down"
+      },
+      "gloss": {
+        "en": "To lie down to sleep or rest."
+      },
+      "gloss_example": {
+        "en": "I go to bed at eleven."
+      }
+    },
+    {
+      "id": "paisaje",
+      "term": "paisaje",
+      "definition": "Vista de un lugar natural.",
+      "example": "El paisaje de montaña es precioso.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "landscape / scenery"
+      },
+      "gloss": {
+        "en": "A view of a natural area."
+      },
+      "gloss_example": {
+        "en": "The mountain scenery is beautiful."
+      }
+    },
+    {
+      "id": "moda",
+      "term": "moda",
+      "definition": "Estilo de ropa popular en un momento.",
+      "example": "Ese abrigo está de moda.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "fashion"
+      },
+      "gloss": {
+        "en": "A popular style of clothes at a time."
+      },
+      "gloss_example": {
+        "en": "That coat is in fashion."
+      }
+    },
+    {
+      "id": "zapato",
+      "term": "zapato",
+      "definition": "Prenda que cubre y protege el pie.",
+      "example": "Necesito zapatos nuevos.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "shoe"
+      },
+      "gloss": {
+        "en": "A covering that protects the foot."
+      },
+      "gloss_example": {
+        "en": "I need new shoes."
+      }
+    },
+    {
+      "id": "traje",
+      "term": "traje",
+      "definition": "Conjunto de ropa formal.",
+      "example": "Llevó un traje azul a la boda.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "suit"
+      },
+      "gloss": {
+        "en": "A set of formal clothes."
+      },
+      "gloss_example": {
+        "en": "He wore a blue suit to the wedding."
+      }
+    },
+    {
+      "id": "especie",
+      "term": "especie",
+      "definition": "Grupo de seres vivos parecidos, o tipo de algo.",
+      "example": "Es una especie de ave rara.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "species / kind"
+      },
+      "gloss": {
+        "en": "A group of similar living things, or a kind."
+      },
+      "gloss_example": {
+        "en": "It is a rare species of bird."
+      }
+    },
+    {
+      "id": "rosa",
+      "term": "rosa",
+      "definition": "Flor de olor agradable, o color claro rojizo.",
+      "example": "Le regaló una rosa roja.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "rose / pink"
+      },
+      "gloss": {
+        "en": "A sweet-smelling flower, or a light red color."
+      },
+      "gloss_example": {
+        "en": "He gave her a red rose."
+      }
+    },
+    {
+      "id": "accidente",
+      "term": "accidente",
+      "definition": "Suceso malo e inesperado.",
+      "example": "Hubo un accidente en la carretera.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "accident"
+      },
+      "gloss": {
+        "en": "A bad, unexpected event."
+      },
+      "gloss_example": {
+        "en": "There was an accident on the highway."
+      }
+    },
+    {
+      "id": "invitado",
+      "term": "invitado",
+      "definition": "Persona a la que se invita a un lugar.",
+      "example": "Tenemos veinte invitados a la cena.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "guest"
+      },
+      "gloss": {
+        "en": "A person invited to a place."
+      },
+      "gloss_example": {
+        "en": "We have twenty guests for dinner."
+      }
+    },
+    {
+      "id": "biblioteca",
+      "term": "biblioteca",
+      "definition": "Lugar con libros para leer o pedir prestados.",
+      "example": "Estudio en la biblioteca.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "library"
+      },
+      "gloss": {
+        "en": "A place with books to read or borrow."
+      },
+      "gloss_example": {
+        "en": "I study at the library."
+      }
+    },
+    {
+      "id": "interior",
+      "term": "interior",
+      "definition": "La parte de adentro de algo.",
+      "example": "El interior del carro es cómodo.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "interior / inside"
+      },
+      "gloss": {
+        "en": "The inner part of something."
+      },
+      "gloss_example": {
+        "en": "The interior of the car is comfortable."
+      }
+    },
+    {
+      "id": "diseno",
+      "term": "diseño",
+      "definition": "Forma en que se planea o se ve algo.",
+      "example": "Me gusta el diseño de esta página.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "design"
+      },
+      "gloss": {
+        "en": "The way something is planned or looks."
+      },
+      "gloss_example": {
+        "en": "I like the design of this page."
+      }
+    },
+    {
+      "id": "caracteristica",
+      "term": "característica",
+      "definition": "Rasgo propio de algo o alguien.",
+      "example": "Su color es una característica única.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "feature / characteristic"
+      },
+      "gloss": {
+        "en": "A quality that belongs to something."
+      },
+      "gloss_example": {
+        "en": "Its color is a unique feature."
+      }
+    },
+    {
+      "id": "familiar_adj",
+      "term": "familiar",
+      "definition": "Conocido, o relativo a la familia.",
+      "example": "Su cara me resulta familiar.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "familiar"
+      },
+      "gloss": {
+        "en": "Well known, or related to family."
+      },
+      "gloss_example": {
+        "en": "His face looks familiar to me."
+      }
+    },
+    {
+      "id": "fantastico",
+      "term": "fantástico",
+      "definition": "Muy bueno o maravilloso.",
+      "example": "Pasamos unas vacaciones fantásticas.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "fantastic"
+      },
+      "gloss": {
+        "en": "Very good or wonderful."
+      },
+      "gloss_example": {
+        "en": "We had a fantastic vacation."
+      }
+    },
+    {
+      "id": "bello",
+      "term": "bello",
+      "definition": "Que tiene belleza.",
+      "example": "Es una ciudad bella.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "beautiful"
+      },
+      "gloss": {
+        "en": "Having beauty."
+      },
+      "gloss_example": {
+        "en": "It is a beautiful city."
+      }
+    },
+    {
+      "id": "ideal",
+      "term": "ideal",
+      "definition": "Perfecto para un fin.",
+      "example": "Es el lugar ideal para descansar.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "ideal"
+      },
+      "gloss": {
+        "en": "Perfect for a purpose."
+      },
+      "gloss_example": {
+        "en": "It is the ideal place to rest."
+      }
+    },
+    {
+      "id": "peligroso",
+      "term": "peligroso",
+      "definition": "Que puede causar daño.",
+      "example": "Nadar ahí es peligroso.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "dangerous"
+      },
+      "gloss": {
+        "en": "That can cause harm."
+      },
+      "gloss_example": {
+        "en": "Swimming there is dangerous."
+      }
+    },
+    {
+      "id": "sano",
+      "term": "sano",
+      "definition": "Que tiene buena salud, o que hace bien.",
+      "example": "Lleva una vida sana.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "healthy"
+      },
+      "gloss": {
+        "en": "In good health, or good for you."
+      },
+      "gloss_example": {
+        "en": "She lives a healthy life."
+      }
+    },
+    {
+      "id": "situar",
+      "term": "situar",
+      "definition": "Poner algo en un lugar.",
+      "example": "Situaron la tienda cerca del centro.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to locate / to place"
+      },
+      "gloss": {
+        "en": "To put something in a place."
+      },
+      "gloss_example": {
+        "en": "They located the store near downtown."
+      }
+    },
+    {
+      "id": "detener",
+      "term": "detener",
+      "definition": "Hacer que algo o alguien se pare.",
+      "example": "El policía detuvo el auto.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to stop"
+      },
+      "gloss": {
+        "en": "To make something or someone halt."
+      },
+      "gloss_example": {
+        "en": "The officer stopped the car."
+      }
+    },
+    {
+      "id": "conservar",
+      "term": "conservar",
+      "definition": "Mantener algo en buen estado.",
+      "example": "Conserva la calma en las emergencias.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "en": "to keep / to preserve"
+      },
+      "gloss": {
+        "en": "To keep something in good condition."
+      },
+      "gloss_example": {
+        "en": "He keeps calm in emergencies."
+      }
+    },
+    {
+      "id": "presente",
+      "term": "presente",
+      "definition": "El momento actual, o que está aquí.",
+      "example": "Vive el presente sin preocuparte.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "present"
+      },
+      "gloss": {
+        "en": "The current moment, or being here."
+      },
+      "gloss_example": {
+        "en": "Live in the present without worrying."
+      }
+    },
+    {
+      "id": "fisico",
+      "term": "físico",
+      "definition": "Relativo al cuerpo o a la materia.",
+      "example": "Hace ejercicio físico a diario.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "physical"
+      },
+      "gloss": {
+        "en": "Relating to the body or matter."
+      },
+      "gloss_example": {
+        "en": "He does physical exercise daily."
+      }
+    },
+    {
+      "id": "mundial",
+      "term": "mundial",
+      "definition": "Que abarca todo el mundo.",
+      "example": "Es un problema mundial.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "worldwide / global"
+      },
+      "gloss": {
+        "en": "Covering the whole world."
+      },
+      "gloss_example": {
+        "en": "It is a worldwide problem."
+      }
     }
   ]
 }
