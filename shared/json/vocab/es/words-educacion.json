@@ -1,0 +1,292 @@
+{
+  "words": [
+    {
+      "id": "university",
+      "term": "universidad",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde se estudia una carrera tras la escuela.",
+      "example": "Ella estudia medicina en la universidad.",
+      "translations": {
+        "en": "university"
+      },
+      "gloss": {
+        "en": "A place where people study for a degree after school."
+      },
+      "gloss_example": {
+        "en": "She studies medicine at the university."
+      }
+    },
+    {
+      "id": "science",
+      "term": "ciencia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Estudio del mundo natural mediante la observación.",
+      "example": "A mi hija le encanta la ciencia y la biología.",
+      "translations": {
+        "en": "science"
+      },
+      "gloss": {
+        "en": "The study of the natural world through observation and testing."
+      },
+      "gloss_example": {
+        "en": "My daughter loves science and biology."
+      }
+    },
+    {
+      "id": "study",
+      "term": "estudiar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dedicar tiempo a aprender sobre un tema.",
+      "example": "Estudian inglés tres veces por semana.",
+      "translations": {
+        "en": "study"
+      },
+      "gloss": {
+        "en": "To spend time learning about a subject."
+      },
+      "gloss_example": {
+        "en": "They study English three times a week."
+      }
+    },
+    {
+      "id": "teach",
+      "term": "enseñar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ayudar a alguien a aprender algo.",
+      "example": "Ella enseña matemáticas en una escuela primaria.",
+      "translations": {
+        "en": "teach"
+      },
+      "gloss": {
+        "en": "To help someone learn a subject or skill."
+      },
+      "gloss_example": {
+        "en": "She teaches math at a primary school."
+      }
+    },
+    {
+      "id": "learn",
+      "term": "aprender",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Adquirir conocimiento o una habilidad.",
+      "example": "Los niños aprenden idiomas muy rápido.",
+      "translations": {
+        "en": "learn"
+      },
+      "gloss": {
+        "en": "To gain knowledge or a skill by studying or practising."
+      },
+      "gloss_example": {
+        "en": "Children learn languages very quickly."
+      }
+    },
+    {
+      "id": "education",
+      "term": "educación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Proceso de enseñar y aprender en las escuelas.",
+      "example": "Una buena educación abre muchas puertas.",
+      "translations": {
+        "en": "education"
+      },
+      "gloss": {
+        "en": "The process of teaching and learning in schools."
+      },
+      "gloss_example": {
+        "en": "Good education opens many doors."
+      }
+    },
+    {
+      "id": "knowledge",
+      "term": "conocimiento",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Información y comprensión que alguien tiene sobre algo.",
+      "example": "Su conocimiento de la historia es impresionante.",
+      "translations": {
+        "en": "knowledge"
+      },
+      "gloss": {
+        "en": "The information and understanding a person has about something."
+      },
+      "gloss_example": {
+        "en": "Her knowledge of history is impressive."
+      }
+    },
+    {
+      "id": "research",
+      "term": "investigación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Estudio cuidadoso para descubrir nuevos hechos.",
+      "example": "El equipo hace investigación sobre energía limpia.",
+      "translations": {
+        "en": "research"
+      },
+      "gloss": {
+        "en": "Careful study done to discover new facts about a subject."
+      },
+      "gloss_example": {
+        "en": "The team is doing research on clean energy."
+      }
+    },
+    {
+      "id": "skill",
+      "term": "habilidad / destreza",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Capacidad de hacer algo bien con la práctica.",
+      "example": "Cocinar es una habilidad útil que vale la pena aprender.",
+      "translations": {
+        "en": "skill"
+      },
+      "gloss": {
+        "en": "The ability to do something well through practice."
+      },
+      "gloss_example": {
+        "en": "Cooking is a useful skill to learn."
+      }
+    },
+    {
+      "id": "degree",
+      "term": "título / grado",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Título que da una universidad al terminar una carrera.",
+      "example": "Obtuvo un título en ingeniería.",
+      "translations": {
+        "en": "degree"
+      },
+      "gloss": {
+        "en": "A qualification given by a university after finishing a course."
+      },
+      "gloss_example": {
+        "en": "He earned a degree in engineering."
+      }
+    },
+    {
+      "id": "subject",
+      "term": "materia / asignatura",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Área de conocimiento que se estudia en la escuela.",
+      "example": "Historia es mi materia favorita.",
+      "translations": {
+        "en": "subject"
+      },
+      "gloss": {
+        "en": "An area of knowledge studied at school or university."
+      },
+      "gloss_example": {
+        "en": "History is my favorite subject."
+      }
+    },
+    {
+      "id": "writer",
+      "term": "escritor / escritora",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que escribe libros o artículos.",
+      "example": "Ella se convirtió en una escritora famosa.",
+      "translations": {
+        "en": "writer"
+      },
+      "gloss": {
+        "en": "A person who writes books or articles."
+      },
+      "gloss_example": {
+        "en": "She became a famous writer."
+      }
+    },
+    {
+      "id": "pupil",
+      "term": "alumno / alumna",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Niño que recibe enseñanza en la escuela.",
+      "example": "Cada alumno recibió un libro.",
+      "translations": {
+        "en": "pupil"
+      },
+      "gloss": {
+        "en": "A child who is being taught at school."
+      },
+      "gloss_example": {
+        "en": "Each pupil received a book."
+      }
+    },
+    {
+      "id": "course",
+      "term": "curso",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Conjunto de lecciones sobre un tema.",
+      "example": "Me inscribí en un curso de cocina.",
+      "translations": {
+        "en": "course"
+      },
+      "gloss": {
+        "en": "A set of lessons about a subject."
+      },
+      "gloss_example": {
+        "en": "I signed up for a cooking course."
+      }
+    },
+    {
+      "id": "experto",
+      "term": "experto",
+      "definition": "Persona con mucho conocimiento en un tema.",
+      "example": "Es un experto en historia.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "expert"
+      },
+      "gloss": {
+        "en": "A person with great knowledge of a subject."
+      },
+      "gloss_example": {
+        "en": "He is an expert in history."
+      }
+    },
+    {
+      "id": "cientifico",
+      "term": "científico",
+      "definition": "Persona que hace ciencia, o relativo a la ciencia.",
+      "example": "Los científicos estudian el clima.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "scientist / scientific"
+      },
+      "gloss": {
+        "en": "A person who does science, or relating to science."
+      },
+      "gloss_example": {
+        "en": "Scientists study the climate."
+      }
+    }
+  ]
+}

@@ -1,0 +1,760 @@
+{
+  "words": [
+    {
+      "id": "accurate",
+      "term": "preciso",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Correcto y preciso, sin errores.",
+      "example": "El pronóstico del tiempo fue sorprendentemente preciso.",
+      "translations": {
+        "en": "accurate"
+      },
+      "gloss": {
+        "en": "Correct and precise, without errors"
+      },
+      "gloss_example": {
+        "en": "The weather forecast was surprisingly accurate."
+      }
+    },
+    {
+      "id": "anxious",
+      "term": "ansioso",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que se siente preocupado o nervioso por algo incierto.",
+      "example": "Se sentía ansiosa antes de la gran entrevista.",
+      "translations": {
+        "en": "anxious"
+      },
+      "gloss": {
+        "en": "Feeling worried or nervous about something uncertain"
+      },
+      "gloss_example": {
+        "en": "She felt anxious before the big interview."
+      }
+    },
+    {
+      "id": "broad",
+      "term": "amplio",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Amplio en extensión, que abarca muchos temas.",
+      "example": "Tiene un amplio conocimiento de la historia.",
+      "translations": {
+        "en": "broad"
+      },
+      "gloss": {
+        "en": "Wide in extent, covering many subjects"
+      },
+      "gloss_example": {
+        "en": "She has a broad knowledge of history."
+      }
+    },
+    {
+      "id": "capable",
+      "term": "capaz",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene la habilidad o las cualidades para hacer algo.",
+      "example": "Él es capaz de manejar el proyecto por sí solo.",
+      "translations": {
+        "en": "capable"
+      },
+      "gloss": {
+        "en": "Having the ability or qualities to do something"
+      },
+      "gloss_example": {
+        "en": "He is capable of handling the project alone."
+      }
+    },
+    {
+      "id": "complex",
+      "term": "complejo",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que consta de muchas partes interconectadas, complicado.",
+      "example": "El cerebro humano es un órgano complejo.",
+      "translations": {
+        "en": "complex"
+      },
+      "gloss": {
+        "en": "Consisting of many interconnected parts, complicated"
+      },
+      "gloss_example": {
+        "en": "The human brain is a complex organ."
+      }
+    },
+    {
+      "id": "confident",
+      "term": "seguro de si mismo",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que se siente seguro de sus habilidades.",
+      "example": "Se sentía segura de sí misma antes de la presentación.",
+      "translations": {
+        "en": "confident"
+      },
+      "gloss": {
+        "en": "Feeling certain about your abilities or a situation"
+      },
+      "gloss_example": {
+        "en": "She felt confident before the presentation."
+      }
+    },
+    {
+      "id": "curious",
+      "term": "curioso",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Con ganas de saber o aprender algo nuevo.",
+      "example": "Los niños son naturalmente curiosos sobre el mundo.",
+      "translations": {
+        "en": "curious"
+      },
+      "gloss": {
+        "en": "Eager to know or learn something"
+      },
+      "gloss_example": {
+        "en": "Children are naturally curious about the world."
+      }
+    },
+    {
+      "id": "enormous",
+      "term": "enorme",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Muy grande en tamaño o cantidad.",
+      "example": "El elefante era enorme comparado con el perro.",
+      "translations": {
+        "en": "enormous"
+      },
+      "gloss": {
+        "en": "Very large in size or quantity"
+      },
+      "gloss_example": {
+        "en": "The elephant was enormous compared to the dog."
+      }
+    },
+    {
+      "id": "essential",
+      "term": "esencial",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Absolutamente necesario, extremadamente importante.",
+      "example": "El sueño es esencial para una buena salud.",
+      "translations": {
+        "en": "essential"
+      },
+      "gloss": {
+        "en": "Absolutely necessary, extremely important"
+      },
+      "gloss_example": {
+        "en": "Sleep is essential for good health."
+      }
+    },
+    {
+      "id": "grateful",
+      "term": "agradecido",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que siente o expresa agradecimiento por algo.",
+      "example": "Estoy agradecido por toda tu ayuda.",
+      "translations": {
+        "en": "grateful"
+      },
+      "gloss": {
+        "en": "Feeling or showing appreciation for something"
+      },
+      "gloss_example": {
+        "en": "I am grateful for all your help."
+      }
+    },
+    {
+      "id": "humble",
+      "term": "humilde",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene una opinión modesta de sí mismo, no arrogante.",
+      "example": "A pesar de su éxito, se mantuvo humilde.",
+      "translations": {
+        "en": "humble"
+      },
+      "gloss": {
+        "en": "Having a modest opinion of yourself, not arrogant"
+      },
+      "gloss_example": {
+        "en": "Despite his success, he remained humble."
+      }
+    },
+    {
+      "id": "logical",
+      "term": "logico",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que sigue un razonamiento claro y sensato.",
+      "example": "Su argumento era lógico y bien estructurado.",
+      "translations": {
+        "en": "logical"
+      },
+      "gloss": {
+        "en": "Following clear and sensible reasoning"
+      },
+      "gloss_example": {
+        "en": "Her argument was logical and well-structured."
+      }
+    },
+    {
+      "id": "necessary",
+      "term": "necesario",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que se requiere hacer, de importancia vital.",
+      "example": "El protector solar es necesario cuando se pasa tiempo al aire libre.",
+      "translations": {
+        "en": "necessary"
+      },
+      "gloss": {
+        "en": "Required to be done, of vital importance"
+      },
+      "gloss_example": {
+        "en": "Sunscreen is necessary when spending time outdoors."
+      }
+    },
+    {
+      "id": "obvious",
+      "term": "obvio",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que se percibe o entiende fácilmente, claro.",
+      "example": "La respuesta era obvia para todos en la sala.",
+      "translations": {
+        "en": "obvious"
+      },
+      "gloss": {
+        "en": "Easily perceived or understood, clear"
+      },
+      "gloss_example": {
+        "en": "The answer was obvious to everyone in the room."
+      }
+    },
+    {
+      "id": "responsible",
+      "term": "responsable",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene la obligación de hacer algo, digno de confianza.",
+      "example": "Sé responsable con los recursos que tienes.",
+      "translations": {
+        "en": "responsible"
+      },
+      "gloss": {
+        "en": "Having an obligation to do something, trustworthy"
+      },
+      "gloss_example": {
+        "en": "Be responsible with the resources you have."
+      }
+    },
+    {
+      "id": "unique",
+      "term": "unico",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que es el único en su especie.",
+      "example": "Cada persona tiene un conjunto único de habilidades.",
+      "translations": {
+        "en": "unique"
+      },
+      "gloss": {
+        "en": "Being the only one of its kind, unlike anything else"
+      },
+      "gloss_example": {
+        "en": "Each person has a unique set of skills."
+      }
+    },
+    {
+      "id": "valuable",
+      "term": "valioso",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que vale mucho, muy útil o importante.",
+      "example": "El tiempo es el recurso más valioso que tenemos.",
+      "translations": {
+        "en": "valuable"
+      },
+      "gloss": {
+        "en": "Worth a great deal, highly useful or important"
+      },
+      "gloss_example": {
+        "en": "Time is the most valuable resource we have."
+      }
+    },
+    {
+      "id": "vast",
+      "term": "vasto",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Muy grande en tamaño, cantidad o extensión.",
+      "example": "El océano es vasto y está lleno de misterios.",
+      "translations": {
+        "en": "vast"
+      },
+      "gloss": {
+        "en": "Very great in size, amount, or extent"
+      },
+      "gloss_example": {
+        "en": "The ocean is vast and full of mysteries."
+      }
+    },
+    {
+      "id": "old",
+      "term": "viejo / vieja",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene muchos años o mucho tiempo.",
+      "example": "Viven en una casa vieja.",
+      "translations": {
+        "en": "old"
+      },
+      "gloss": {
+        "en": "Having lived or existed for a long time."
+      },
+      "gloss_example": {
+        "en": "They live in an old house."
+      }
+    },
+    {
+      "id": "young",
+      "term": "joven",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene pocos años.",
+      "example": "Ella es muy joven para manejar.",
+      "translations": {
+        "en": "young"
+      },
+      "gloss": {
+        "en": "Having lived for only a short time."
+      },
+      "gloss_example": {
+        "en": "She is too young to drive."
+      }
+    },
+    {
+      "id": "pretty",
+      "term": "bonito / bonita",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Agradable a la vista.",
+      "example": "Qué jardín tan bonito.",
+      "translations": {
+        "en": "pretty"
+      },
+      "gloss": {
+        "en": "Pleasant to look at."
+      },
+      "gloss_example": {
+        "en": "What a pretty garden."
+      }
+    },
+    {
+      "id": "easy",
+      "term": "fácil",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no es difícil de hacer o entender.",
+      "example": "El examen fue bastante fácil.",
+      "translations": {
+        "en": "easy"
+      },
+      "gloss": {
+        "en": "Not difficult to do or understand."
+      },
+      "gloss_example": {
+        "en": "The test was quite easy."
+      }
+    },
+    {
+      "id": "tasty",
+      "term": "rico / sabroso",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene buen sabor.",
+      "example": "Esta sopa está muy rica.",
+      "translations": {
+        "en": "tasty"
+      },
+      "gloss": {
+        "en": "Having a good, pleasant flavor."
+      },
+      "gloss_example": {
+        "en": "This soup is really tasty."
+      }
+    },
+    {
+      "id": "content_adj",
+      "term": "contento / contenta",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Feliz y satisfecho con lo que se tiene.",
+      "example": "Se sentía contento tras una buena comida.",
+      "translations": {
+        "en": "content"
+      },
+      "gloss": {
+        "en": "Happy and satisfied with what you have."
+      },
+      "gloss_example": {
+        "en": "He felt content after a good meal."
+      }
+    },
+    {
+      "id": "malo",
+      "term": "malo / mala",
+      "definition": "Que no es bueno o no funciona bien.",
+      "example": "Hoy tuve un día muy malo.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "bad"
+      },
+      "gloss": {
+        "en": "Not good, or of poor quality."
+      },
+      "gloss_example": {
+        "en": "I had a very bad day today."
+      }
+    },
+    {
+      "id": "natural_adj",
+      "term": "natural",
+      "definition": "Que viene de la naturaleza, no artificial.",
+      "example": "Prefiero los jugos naturales.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "natural"
+      },
+      "gloss": {
+        "en": "Coming from nature, not made by people."
+      },
+      "gloss_example": {
+        "en": "I prefer natural juices."
+      }
+    },
+    {
+      "id": "serio",
+      "term": "serio / seria",
+      "definition": "Que no bromea, o que es importante.",
+      "example": "Es un problema muy serio.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "serious"
+      },
+      "gloss": {
+        "en": "Not joking, or important and grave."
+      },
+      "gloss_example": {
+        "en": "It is a very serious problem."
+      }
+    },
+    {
+      "id": "imposible",
+      "term": "imposible",
+      "definition": "Que no se puede hacer o lograr.",
+      "example": "Es imposible llegar a tiempo.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "impossible"
+      },
+      "gloss": {
+        "en": "That cannot be done or achieved."
+      },
+      "gloss_example": {
+        "en": "It is impossible to arrive on time."
+      }
+    },
+    {
+      "id": "maravilloso",
+      "term": "maravilloso / maravillosa",
+      "definition": "Muy bueno o admirable.",
+      "example": "Pasamos un día maravilloso en la playa.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "wonderful"
+      },
+      "gloss": {
+        "en": "Extremely good or admirable."
+      },
+      "gloss_example": {
+        "en": "We had a wonderful day at the beach."
+      }
+    },
+    {
+      "id": "famoso",
+      "term": "famoso / famosa",
+      "definition": "Muy conocido por mucha gente.",
+      "example": "Es un actor famoso.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "famous"
+      },
+      "gloss": {
+        "en": "Very well known by many people."
+      },
+      "gloss_example": {
+        "en": "He is a famous actor."
+      }
+    },
+    {
+      "id": "tipico",
+      "term": "típico / típica",
+      "definition": "Propio o característico de algo.",
+      "example": "Es un plato típico de la región.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "typical"
+      },
+      "gloss": {
+        "en": "Characteristic of a particular place or thing."
+      },
+      "gloss_example": {
+        "en": "It is a typical dish of the region."
+      }
+    },
+    {
+      "id": "antiguo",
+      "term": "antiguo / antigua",
+      "definition": "Que existe desde hace mucho tiempo.",
+      "example": "Visitamos un castillo antiguo.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "old / ancient"
+      },
+      "gloss": {
+        "en": "That has existed for a long time."
+      },
+      "gloss_example": {
+        "en": "We visited an old castle."
+      }
+    },
+    {
+      "id": "pobre",
+      "term": "pobre",
+      "definition": "Que tiene poco dinero o recursos.",
+      "example": "Ayudan a las familias pobres.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "poor"
+      },
+      "gloss": {
+        "en": "Having little money or resources."
+      },
+      "gloss_example": {
+        "en": "They help poor families."
+      }
+    },
+    {
+      "id": "peor",
+      "term": "peor",
+      "definition": "Más malo que otra cosa.",
+      "example": "Hoy el clima está peor que ayer.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "worse / worst"
+      },
+      "gloss": {
+        "en": "More bad than something else."
+      },
+      "gloss_example": {
+        "en": "The weather is worse today than yesterday."
+      }
+    },
+    {
+      "id": "claro_adj",
+      "term": "claro",
+      "definition": "Fácil de entender, o con mucha luz.",
+      "example": "Su explicación fue muy clara.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "clear"
+      },
+      "gloss": {
+        "en": "Easy to understand, or full of light."
+      },
+      "gloss_example": {
+        "en": "Her explanation was very clear."
+      }
+    },
+    {
+      "id": "igual",
+      "term": "igual",
+      "definition": "Que es lo mismo que otra cosa.",
+      "example": "Tu bici es igual a la mía.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "equal / same"
+      },
+      "gloss": {
+        "en": "The same as something else."
+      },
+      "gloss_example": {
+        "en": "Your bike is the same as mine."
+      }
+    },
+    {
+      "id": "moderno",
+      "term": "moderno",
+      "definition": "De la época actual o reciente.",
+      "example": "Viven en un edificio moderno.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "modern"
+      },
+      "gloss": {
+        "en": "Of the present or recent time."
+      },
+      "gloss_example": {
+        "en": "They live in a modern building."
+      }
+    },
+    {
+      "id": "hermoso",
+      "term": "hermoso",
+      "definition": "Muy bonito o bello.",
+      "example": "Qué paisaje tan hermoso.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "beautiful"
+      },
+      "gloss": {
+        "en": "Very pretty or lovely."
+      },
+      "gloss_example": {
+        "en": "What a beautiful landscape."
+      }
+    },
+    {
+      "id": "primero",
+      "term": "primero",
+      "definition": "Que está antes que los demás.",
+      "example": "Vivo en el primer piso.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "first"
+      },
+      "gloss": {
+        "en": "Coming before all others."
+      },
+      "gloss_example": {
+        "en": "I live on the first floor."
+      }
+    },
+    {
+      "id": "fantastico",
+      "term": "fantástico",
+      "definition": "Muy bueno o maravilloso.",
+      "example": "Pasamos unas vacaciones fantásticas.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "fantastic"
+      },
+      "gloss": {
+        "en": "Very good or wonderful."
+      },
+      "gloss_example": {
+        "en": "We had a fantastic vacation."
+      }
+    },
+    {
+      "id": "ideal",
+      "term": "ideal",
+      "definition": "Perfecto para un fin.",
+      "example": "Es el lugar ideal para descansar.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "ideal"
+      },
+      "gloss": {
+        "en": "Perfect for a purpose."
+      },
+      "gloss_example": {
+        "en": "It is the ideal place to rest."
+      }
+    },
+    {
+      "id": "sano",
+      "term": "sano",
+      "definition": "Que tiene buena salud, o que hace bien.",
+      "example": "Lleva una vida sana.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "en": "healthy"
+      },
+      "gloss": {
+        "en": "In good health, or good for you."
+      },
+      "gloss_example": {
+        "en": "She lives a healthy life."
+      }
+    }
+  ]
+}

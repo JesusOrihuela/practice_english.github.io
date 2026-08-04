@@ -1,0 +1,238 @@
+{
+  "words": [
+    {
+      "id": "age",
+      "term": "edad",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Número de años que alguien ha vivido.",
+      "example": "Los niños de la misma edad suelen jugar juntos.",
+      "translations": {
+        "en": "age"
+      },
+      "gloss": {
+        "en": "The number of years a person has lived."
+      },
+      "gloss_example": {
+        "en": "Children of the same age often play together."
+      }
+    },
+    {
+      "id": "history",
+      "term": "historia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Estudio de los hechos ocurridos en el pasado.",
+      "example": "Él enseña la historia de la antigua Roma.",
+      "translations": {
+        "en": "history"
+      },
+      "gloss": {
+        "en": "The study of events that happened in the past."
+      },
+      "gloss_example": {
+        "en": "He teaches the history of ancient Rome."
+      }
+    },
+    {
+      "id": "minute",
+      "term": "minuto",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad de tiempo de sesenta segundos.",
+      "example": "El autobús sale en diez minutos.",
+      "translations": {
+        "en": "minute"
+      },
+      "gloss": {
+        "en": "A unit of time equal to sixty seconds."
+      },
+      "gloss_example": {
+        "en": "The bus leaves in ten minutes."
+      }
+    },
+    {
+      "id": "future",
+      "term": "futuro",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El tiempo que vendrá después de ahora.",
+      "example": "Ella tiene grandes planes para el futuro.",
+      "translations": {
+        "en": "future"
+      },
+      "gloss": {
+        "en": "The time that will come after now."
+      },
+      "gloss_example": {
+        "en": "She has big plans for the future."
+      }
+    },
+    {
+      "id": "presente",
+      "term": "presente",
+      "definition": "El momento actual, o que está aquí.",
+      "example": "Vive el presente sin preocuparte.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "present"
+      },
+      "gloss": {
+        "en": "The current moment, or being here."
+      },
+      "gloss_example": {
+        "en": "Live in the present without worrying."
+      }
+    },
+    {
+      "id": "hour",
+      "term": "hora",
+      "definition": "Período de sesenta minutos.",
+      "example": "El viaje dura dos horas.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "hour"
+      },
+      "gloss": {
+        "en": "A period of sixty minutes."
+      },
+      "gloss_example": {
+        "en": "The trip takes two hours."
+      }
+    },
+    {
+      "id": "day",
+      "term": "día",
+      "definition": "Período de veinticuatro horas.",
+      "example": "Nos vemos en tres días.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "day"
+      },
+      "gloss": {
+        "en": "A period of twenty-four hours."
+      },
+      "gloss_example": {
+        "en": "See you in three days."
+      }
+    },
+    {
+      "id": "week",
+      "term": "semana",
+      "definition": "Período de siete días.",
+      "example": "Trabajo cinco días a la semana.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "week"
+      },
+      "gloss": {
+        "en": "A period of seven days."
+      },
+      "gloss_example": {
+        "en": "I work five days a week."
+      }
+    },
+    {
+      "id": "month",
+      "term": "mes",
+      "definition": "Una de las doce partes del año.",
+      "example": "Nació en el mismo mes que yo.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "month"
+      },
+      "gloss": {
+        "en": "One of the twelve parts of a year."
+      },
+      "gloss_example": {
+        "en": "She was born in the same month as me."
+      }
+    },
+    {
+      "id": "year",
+      "term": "año",
+      "definition": "Período de doce meses.",
+      "example": "Nos mudamos aquí hace dos años.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "year"
+      },
+      "gloss": {
+        "en": "A period of twelve months."
+      },
+      "gloss_example": {
+        "en": "We moved here two years ago."
+      }
+    },
+    {
+      "id": "moment",
+      "term": "momento",
+      "definition": "Un período muy corto de tiempo.",
+      "example": "Espera un momento, por favor.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "moment"
+      },
+      "gloss": {
+        "en": "A very short period of time."
+      },
+      "gloss_example": {
+        "en": "Wait a moment, please."
+      }
+    },
+    {
+      "id": "night",
+      "term": "noche",
+      "definition": "La parte oscura del día.",
+      "example": "La ciudad es hermosa de noche.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "night"
+      },
+      "gloss": {
+        "en": "The dark part of the day."
+      },
+      "gloss_example": {
+        "en": "The city is beautiful at night."
+      }
+    },
+    {
+      "id": "week_end",
+      "term": "época",
+      "definition": "Un período o temporada.",
+      "example": "Es la mejor época para viajar.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "time / era"
+      },
+      "gloss": {
+        "en": "A period or season."
+      },
+      "gloss_example": {
+        "en": "It is the best time of year to travel."
+      }
+    }
+  ]
+}

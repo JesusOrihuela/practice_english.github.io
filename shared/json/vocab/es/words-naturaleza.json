@@ -341,6 +341,42 @@
       "gloss_example": {
         "en": "He gave her a red rose."
       }
+    },
+    {
+      "id": "light",
+      "term": "luz",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Energía del sol o una lámpara que permite ver.",
+      "example": "Por favor, enciende la luz.",
+      "translations": {
+        "en": "light"
+      },
+      "gloss": {
+        "en": "The energy from the sun or a lamp that lets us see."
+      },
+      "gloss_example": {
+        "en": "Please turn on the light."
+      }
+    },
+    {
+      "id": "especie",
+      "term": "especie",
+      "definition": "Grupo de seres vivos parecidos, o tipo de algo.",
+      "example": "Es una especie de ave rara.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "species / kind"
+      },
+      "gloss": {
+        "en": "A group of similar living things, or a kind."
+      },
+      "gloss_example": {
+        "en": "It is a rare species of bird."
+      }
     }
   ]
 }

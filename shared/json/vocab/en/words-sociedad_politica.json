@@ -1,0 +1,1012 @@
+{
+  "words": [
+    {
+      "id": "country",
+      "term": "country",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An area of land with its own government and people.",
+      "example": "She has visited more than thirty countries.",
+      "translations": {
+        "es": "país"
+      },
+      "gloss": {
+        "es": "Territorio con su propio gobierno y población."
+      },
+      "gloss_example": {
+        "es": "Ha visitado más de treinta países."
+      }
+    },
+    {
+      "id": "government",
+      "term": "government",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The group of people who officially control a country.",
+      "example": "The government announced a new education plan.",
+      "translations": {
+        "es": "gobierno"
+      },
+      "gloss": {
+        "es": "Grupo que dirige oficialmente un país."
+      },
+      "gloss_example": {
+        "es": "El gobierno anunció un nuevo plan de educación."
+      }
+    },
+    {
+      "id": "law",
+      "term": "law",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A rule made by a government that everyone must obey.",
+      "example": "A new law bans smoking in restaurants.",
+      "translations": {
+        "es": "ley"
+      },
+      "gloss": {
+        "es": "Regla que hace el gobierno y todos deben cumplir."
+      },
+      "gloss_example": {
+        "es": "Una nueva ley prohíbe fumar en los restaurantes."
+      }
+    },
+    {
+      "id": "president",
+      "term": "president",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The elected leader of a country or an organization.",
+      "example": "The president gave a speech on television.",
+      "translations": {
+        "es": "presidente / presidenta"
+      },
+      "gloss": {
+        "es": "Líder elegido de un país u organización."
+      },
+      "gloss_example": {
+        "es": "La presidenta dio un discurso por televisión."
+      }
+    },
+    {
+      "id": "police",
+      "term": "police",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The official group that keeps order and enforces the law.",
+      "example": "The police arrived quickly after the accident.",
+      "translations": {
+        "es": "policía"
+      },
+      "gloss": {
+        "es": "Grupo oficial que mantiene el orden y la ley."
+      },
+      "gloss_example": {
+        "es": "La policía llegó rápido tras el accidente."
+      }
+    },
+    {
+      "id": "war",
+      "term": "war",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An armed fight between countries or groups.",
+      "example": "The war lasted for almost ten years.",
+      "translations": {
+        "es": "guerra"
+      },
+      "gloss": {
+        "es": "Lucha armada entre países o grupos."
+      },
+      "gloss_example": {
+        "es": "La guerra duró casi diez años."
+      }
+    },
+    {
+      "id": "vote",
+      "term": "vote",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To choose a candidate or option in an election.",
+      "example": "Millions of people voted in the election.",
+      "translations": {
+        "es": "votar"
+      },
+      "gloss": {
+        "es": "Elegir a un candidato u opción en una votación."
+      },
+      "gloss_example": {
+        "es": "Millones de personas votaron en las elecciones."
+      }
+    },
+    {
+      "id": "state",
+      "term": "state",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A country or a region within a country, seen as a political unit.",
+      "example": "Texas is the second largest state in the country.",
+      "translations": {
+        "es": "estado"
+      },
+      "gloss": {
+        "es": "País o región dentro de un país como unidad política."
+      },
+      "gloss_example": {
+        "es": "Texas es el segundo estado más grande del país."
+      }
+    },
+    {
+      "id": "election",
+      "term": "election",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An event where people vote to choose their leaders.",
+      "example": "The election takes place every four years.",
+      "translations": {
+        "es": "elección"
+      },
+      "gloss": {
+        "es": "Evento en el que se vota para elegir líderes."
+      },
+      "gloss_example": {
+        "es": "La elección se realiza cada cuatro años."
+      }
+    },
+    {
+      "id": "court",
+      "term": "court",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The place where legal cases are decided by a judge.",
+      "example": "The case will be heard in court next month.",
+      "translations": {
+        "es": "tribunal / corte"
+      },
+      "gloss": {
+        "es": "Lugar donde un juez resuelve casos legales."
+      },
+      "gloss_example": {
+        "es": "El caso se verá en el tribunal el próximo mes."
+      }
+    },
+    {
+      "id": "society",
+      "term": "society",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "All the people living together in an organized community.",
+      "example": "Technology has changed modern society deeply.",
+      "translations": {
+        "es": "sociedad"
+      },
+      "gloss": {
+        "es": "Conjunto de personas que viven organizadas en comunidad."
+      },
+      "gloss_example": {
+        "es": "La tecnología ha cambiado mucho la sociedad moderna."
+      }
+    },
+    {
+      "id": "nation",
+      "term": "nation",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A large group of people who share a country and culture.",
+      "example": "The whole nation celebrated the victory.",
+      "translations": {
+        "es": "nación"
+      },
+      "gloss": {
+        "es": "Gran grupo de personas que comparten país y cultura."
+      },
+      "gloss_example": {
+        "es": "Toda la nación celebró la victoria."
+      }
+    },
+    {
+      "id": "leader",
+      "term": "leader",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who guides or directs a group.",
+      "example": "She became the leader of the party.",
+      "translations": {
+        "es": "líder"
+      },
+      "gloss": {
+        "es": "Persona que guía o dirige a un grupo."
+      },
+      "gloss_example": {
+        "es": "Ella se convirtió en la líder del partido."
+      }
+    },
+    {
+      "id": "community",
+      "term": "community",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A group of people who live in the same area or share interests.",
+      "example": "The local community organized a food drive.",
+      "translations": {
+        "es": "comunidad"
+      },
+      "gloss": {
+        "es": "Grupo de personas que comparten lugar o intereses."
+      },
+      "gloss_example": {
+        "es": "La comunidad local organizó una colecta de alimentos."
+      }
+    },
+    {
+      "id": "organization",
+      "term": "organization",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A group of people working together for a shared purpose.",
+      "example": "She works for a charity organization.",
+      "translations": {
+        "es": "organización"
+      },
+      "gloss": {
+        "es": "Grupo de personas que trabajan por un fin común."
+      },
+      "gloss_example": {
+        "es": "Ella trabaja para una organización benéfica."
+      }
+    },
+    {
+      "id": "official",
+      "term": "official",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Approved by or coming from a person in authority.",
+      "example": "We are waiting for the official results.",
+      "translations": {
+        "es": "oficial"
+      },
+      "gloss": {
+        "es": "Aprobado por una autoridad o que proviene de ella."
+      },
+      "gloss_example": {
+        "es": "Estamos esperando los resultados oficiales."
+      }
+    },
+    {
+      "id": "military",
+      "term": "military",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relating to soldiers or the armed forces.",
+      "example": "He served in the military for ten years.",
+      "translations": {
+        "es": "militar"
+      },
+      "gloss": {
+        "es": "Relacionado con los soldados o las fuerzas armadas."
+      },
+      "gloss_example": {
+        "es": "Sirvió en el ejército durante diez años."
+      }
+    },
+    {
+      "id": "campaign",
+      "term": "campaign",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A series of planned actions to reach a political or social goal.",
+      "example": "The campaign raised money for local schools.",
+      "translations": {
+        "es": "campaña"
+      },
+      "gloss": {
+        "es": "Conjunto de acciones para lograr un objetivo político o social."
+      },
+      "gloss_example": {
+        "es": "La campaña recaudó dinero para las escuelas locales."
+      }
+    },
+    {
+      "id": "news",
+      "term": "news",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Reports about recent events.",
+      "example": "I heard the news on the radio.",
+      "translations": {
+        "es": "noticia / noticias"
+      },
+      "gloss": {
+        "es": "Informes sobre hechos recientes."
+      },
+      "gloss_example": {
+        "es": "Escuché la noticia en la radio."
+      }
+    },
+    {
+      "id": "newspaper",
+      "term": "newspaper",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Printed sheets with news, sold every day.",
+      "example": "He reads the newspaper with his coffee.",
+      "translations": {
+        "es": "periódico"
+      },
+      "gloss": {
+        "es": "Hojas impresas con noticias que se venden a diario."
+      },
+      "gloss_example": {
+        "es": "Él lee el periódico con su café."
+      }
+    },
+    {
+      "id": "magazine",
+      "term": "magazine",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A thin book with articles and pictures, sold regularly.",
+      "example": "She writes for a fashion magazine.",
+      "translations": {
+        "es": "revista"
+      },
+      "gloss": {
+        "es": "Publicación con artículos e imágenes que sale con regularidad."
+      },
+      "gloss_example": {
+        "es": "Ella escribe para una revista de moda."
+      }
+    },
+    {
+      "id": "journalist",
+      "term": "journalist",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who writes news for papers, radio, or television.",
+      "example": "The journalist interviewed the mayor.",
+      "translations": {
+        "es": "periodista"
+      },
+      "gloss": {
+        "es": "Persona que escribe noticias para los medios."
+      },
+      "gloss_example": {
+        "es": "El periodista entrevistó al alcalde."
+      }
+    },
+    {
+      "id": "king",
+      "term": "king",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A man who rules a country, usually by birth.",
+      "example": "The king lived in a large palace.",
+      "translations": {
+        "es": "rey"
+      },
+      "gloss": {
+        "es": "Hombre que gobierna un país, normalmente por nacimiento."
+      },
+      "gloss_example": {
+        "es": "El rey vivía en un gran palacio."
+      }
+    },
+    {
+      "id": "citizen",
+      "term": "citizen",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who legally belongs to a country.",
+      "example": "Every citizen has the right to vote.",
+      "translations": {
+        "es": "ciudadano / ciudadana"
+      },
+      "gloss": {
+        "es": "Persona que pertenece legalmente a un país."
+      },
+      "gloss_example": {
+        "es": "Todo ciudadano tiene derecho a votar."
+      }
+    },
+    {
+      "id": "freedom",
+      "term": "freedom",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The right to act, speak, or think as you want.",
+      "example": "They fought for their freedom.",
+      "translations": {
+        "es": "libertad"
+      },
+      "gloss": {
+        "es": "Derecho a actuar, hablar o pensar como uno quiere."
+      },
+      "gloss_example": {
+        "es": "Lucharon por su libertad."
+      }
+    },
+    {
+      "id": "peace",
+      "term": "peace",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A time without war, or a calm quiet state.",
+      "example": "The two countries finally made peace.",
+      "translations": {
+        "es": "paz"
+      },
+      "gloss": {
+        "es": "Tiempo sin guerra, o estado de calma."
+      },
+      "gloss_example": {
+        "es": "Los dos países por fin hicieron la paz."
+      }
+    },
+    {
+      "id": "culture",
+      "term": "culture",
+      "definition": "The customs, art, and beliefs of a group of people.",
+      "example": "I enjoy learning about other cultures.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "cultura"
+      },
+      "gloss": {
+        "es": "Costumbres, arte y creencias de un grupo."
+      },
+      "gloss_example": {
+        "es": "Disfruto aprender sobre otras culturas."
+      }
+    },
+    {
+      "id": "relationship",
+      "term": "relationship",
+      "definition": "The way people are connected or feel about each other.",
+      "example": "They have a close relationship.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "relación"
+      },
+      "gloss": {
+        "es": "La forma en que las personas se conectan."
+      },
+      "gloss_example": {
+        "es": "Tienen una relación cercana."
+      }
+    },
+    {
+      "id": "college",
+      "term": "college",
+      "definition": "A place of higher education after school.",
+      "example": "She studies art at college.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "universidad / instituto"
+      },
+      "gloss": {
+        "es": "Centro de educación superior tras la escuela."
+      },
+      "gloss_example": {
+        "es": "Ella estudia arte en la universidad."
+      }
+    },
+    {
+      "id": "statement",
+      "term": "statement",
+      "definition": "Something said or written in a formal way.",
+      "example": "The company made a public statement.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "declaración"
+      },
+      "gloss": {
+        "es": "Algo dicho o escrito de forma formal."
+      },
+      "gloss_example": {
+        "es": "La empresa hizo una declaración pública."
+      }
+    },
+    {
+      "id": "advantage",
+      "term": "advantage",
+      "definition": "Something that helps you or puts you ahead.",
+      "example": "Speaking English is a big advantage.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "ventaja"
+      },
+      "gloss": {
+        "es": "Algo que te ayuda o te pone por delante."
+      },
+      "gloss_example": {
+        "es": "Hablar inglés es una gran ventaja."
+      }
+    },
+    {
+      "id": "officer",
+      "term": "officer",
+      "definition": "A person with authority, such as in the police or army.",
+      "example": "A police officer directed the traffic.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "oficial / agente"
+      },
+      "gloss": {
+        "es": "Persona con autoridad, como en la policía."
+      },
+      "gloss_example": {
+        "es": "Un agente de policía dirigía el tráfico."
+      }
+    },
+    {
+      "id": "professional",
+      "term": "professional",
+      "definition": "Relating to a job that needs special training.",
+      "example": "She gave professional advice.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "profesional"
+      },
+      "gloss": {
+        "es": "Relativo a un trabajo que requiere formación."
+      },
+      "gloss_example": {
+        "es": "Ella dio un consejo profesional."
+      }
+    },
+    {
+      "id": "legal",
+      "term": "legal",
+      "definition": "Allowed by law.",
+      "example": "It is legal to park here on Sundays.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "legal"
+      },
+      "gloss": {
+        "es": "Permitido por la ley."
+      },
+      "gloss_example": {
+        "es": "Es legal estacionar aquí los domingos."
+      }
+    },
+    {
+      "id": "economic",
+      "term": "economic",
+      "definition": "Relating to money and the economy.",
+      "example": "The country faces economic problems.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "económico"
+      },
+      "gloss": {
+        "es": "Relativo al dinero y la economía."
+      },
+      "gloss_example": {
+        "es": "El país enfrenta problemas económicos."
+      }
+    },
+    {
+      "id": "national",
+      "term": "national",
+      "definition": "Relating to a whole country.",
+      "example": "Today is a national holiday.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "nacional"
+      },
+      "gloss": {
+        "es": "Relativo a todo un país."
+      },
+      "gloss_example": {
+        "es": "Hoy es un día festivo nacional."
+      }
+    },
+    {
+      "id": "population",
+      "term": "population",
+      "definition": "All the people living in a place.",
+      "example": "The population is growing fast.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "población"
+      },
+      "gloss": {
+        "es": "Todas las personas que viven en un lugar."
+      },
+      "gloss_example": {
+        "es": "La población crece rápido."
+      }
+    },
+    {
+      "id": "environment",
+      "term": "environment",
+      "definition": "The natural world around us.",
+      "example": "We must protect the environment.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "medio ambiente / entorno"
+      },
+      "gloss": {
+        "es": "El mundo natural que nos rodea."
+      },
+      "gloss_example": {
+        "es": "Debemos proteger el medio ambiente."
+      }
+    },
+    {
+      "id": "discussion",
+      "term": "discussion",
+      "definition": "A conversation about a subject.",
+      "example": "We had a long discussion about it.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discusión / debate"
+      },
+      "gloss": {
+        "es": "Conversación sobre un tema."
+      },
+      "gloss_example": {
+        "es": "Tuvimos un largo debate al respecto."
+      }
+    },
+    {
+      "id": "ability",
+      "term": "ability",
+      "definition": "The skill or power to do something.",
+      "example": "She has the ability to lead.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "capacidad / habilidad"
+      },
+      "gloss": {
+        "es": "La destreza o poder para hacer algo."
+      },
+      "gloss_example": {
+        "es": "Ella tiene la capacidad de liderar."
+      }
+    },
+    {
+      "id": "operation",
+      "term": "operation",
+      "definition": "A planned activity, or a medical procedure.",
+      "example": "The operation was a success.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "operación"
+      },
+      "gloss": {
+        "es": "Actividad planeada, o cirugía."
+      },
+      "gloss_example": {
+        "es": "La operación fue un éxito."
+      }
+    },
+    {
+      "id": "theory",
+      "term": "theory",
+      "definition": "An idea that explains how something works.",
+      "example": "He has a theory about it.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "teoría"
+      },
+      "gloss": {
+        "es": "Idea que explica cómo funciona algo."
+      },
+      "gloss_example": {
+        "es": "Él tiene una teoría al respecto."
+      }
+    },
+    {
+      "id": "argument",
+      "term": "argument",
+      "definition": "A disagreement, or a reason for an opinion.",
+      "example": "They had an argument about money.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discusión / argumento"
+      },
+      "gloss": {
+        "es": "Un desacuerdo, o una razón para una opinión."
+      },
+      "gloss_example": {
+        "es": "Tuvieron una discusión por dinero."
+      }
+    },
+    {
+      "id": "speech",
+      "term": "speech",
+      "definition": "A formal talk given to a group.",
+      "example": "The president gave a speech.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discurso"
+      },
+      "gloss": {
+        "es": "Charla formal ante un grupo."
+      },
+      "gloss_example": {
+        "es": "El presidente dio un discurso."
+      }
+    },
+    {
+      "id": "resource",
+      "term": "resource",
+      "definition": "Something useful that can be used, like money or time.",
+      "example": "Water is a valuable resource.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "recurso"
+      },
+      "gloss": {
+        "es": "Algo útil que se puede usar, como dinero o tiempo."
+      },
+      "gloss_example": {
+        "es": "El agua es un recurso valioso."
+      }
+    },
+    {
+      "id": "author",
+      "term": "author",
+      "definition": "A person who writes books.",
+      "example": "She is a famous author.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "autor / autora"
+      },
+      "gloss": {
+        "es": "Persona que escribe libros."
+      },
+      "gloss_example": {
+        "es": "Ella es una autora famosa."
+      }
+    },
+    {
+      "id": "responsibility",
+      "term": "responsibility",
+      "definition": "A duty to take care of something.",
+      "example": "It is your responsibility to lock the door.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "responsabilidad"
+      },
+      "gloss": {
+        "es": "El deber de encargarse de algo."
+      },
+      "gloss_example": {
+        "es": "Es tu responsabilidad cerrar la puerta."
+      }
+    },
+    {
+      "id": "local",
+      "term": "local",
+      "definition": "Belonging to the nearby area.",
+      "example": "We shop at the local market.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "local"
+      },
+      "gloss": {
+        "es": "De la zona cercana."
+      },
+      "gloss_example": {
+        "es": "Compramos en el mercado local."
+      }
+    },
+    {
+      "id": "major",
+      "term": "major",
+      "definition": "Very important or large.",
+      "example": "It was a major change.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "importante / mayor"
+      },
+      "gloss": {
+        "es": "Muy importante o grande."
+      },
+      "gloss_example": {
+        "es": "Fue un cambio importante."
+      }
+    },
+    {
+      "id": "race",
+      "term": "race",
+      "definition": "A competition of speed, or a group of people.",
+      "example": "He won the race.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "carrera / raza"
+      },
+      "gloss": {
+        "es": "Competencia de velocidad, o grupo de personas."
+      },
+      "gloss_example": {
+        "es": "Ganó la carrera."
+      }
+    },
+    {
+      "id": "holiday",
+      "term": "holiday",
+      "definition": "A day of rest or celebration.",
+      "example": "Monday is a holiday.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "día festivo / feriado"
+      },
+      "gloss": {
+        "es": "Día de descanso o celebración."
+      },
+      "gloss_example": {
+        "es": "El lunes es día festivo."
+      }
+    },
+    {
+      "id": "club",
+      "term": "club",
+      "definition": "A group of people with a shared interest.",
+      "example": "She joined a book club.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "club"
+      },
+      "gloss": {
+        "es": "Grupo de personas con un interés común."
+      },
+      "gloss_example": {
+        "es": "Se unió a un club de lectura."
+      }
+    },
+    {
+      "id": "damage",
+      "term": "damage",
+      "definition": "Harm that makes something worse.",
+      "example": "The storm caused a lot of damage.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "daño"
+      },
+      "gloss": {
+        "es": "Perjuicio que empeora algo."
+      },
+      "gloss_example": {
+        "es": "La tormenta causó muchos daños."
+      }
+    },
+    {
+      "id": "property",
+      "term": "property",
+      "definition": "A thing that someone owns, such as land or a building.",
+      "example": "They bought a property in the country.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "propiedad"
+      },
+      "gloss": {
+        "es": "Algo que alguien posee, como un terreno."
+      },
+      "gloss_example": {
+        "es": "Compraron una propiedad en el campo."
+      }
+    },
+    {
+      "id": "agent",
+      "term": "agent",
+      "definition": "A person who acts for others in business.",
+      "example": "A travel agent booked our trip.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "agente"
+      },
+      "gloss": {
+        "es": "Persona que actúa por otros en negocios."
+      },
+      "gloss_example": {
+        "es": "Un agente de viajes reservó nuestro viaje."
+      }
+    },
+    {
+      "id": "target",
+      "term": "target",
+      "definition": "A goal or something you aim at.",
+      "example": "Our target is to save more.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "objetivo / meta"
+      },
+      "gloss": {
+        "es": "Una meta o algo a lo que se apunta."
+      },
+      "gloss_example": {
+        "es": "Nuestro objetivo es ahorrar más."
+      }
+    }
+  ]
+}

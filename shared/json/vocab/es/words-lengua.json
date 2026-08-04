@@ -179,6 +179,42 @@
       "gloss_example": {
         "en": "May I ask a question?"
       }
+    },
+    {
+      "id": "voice",
+      "term": "voz",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Sonido que hace una persona al hablar o cantar.",
+      "example": "Ella tiene una voz preciosa al cantar.",
+      "translations": {
+        "en": "voice"
+      },
+      "gloss": {
+        "en": "The sound a person makes when speaking or singing."
+      },
+      "gloss_example": {
+        "en": "She has a beautiful singing voice."
+      }
+    },
+    {
+      "id": "silence",
+      "term": "silencio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Ausencia total de ruido.",
+      "example": "La biblioteca estaba en total silencio.",
+      "translations": {
+        "en": "silence"
+      },
+      "gloss": {
+        "en": "Complete quiet, with no sound at all."
+      },
+      "gloss_example": {
+        "en": "The library was in total silence."
+      }
     }
   ]
 }

@@ -1,0 +1,976 @@
+{
+  "words": [
+    {
+      "id": "adapt",
+      "term": "adaptarse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Cambiar para ajustarse a una nueva situación.",
+      "example": "Los animales deben adaptarse para sobrevivir en la naturaleza.",
+      "translations": {
+        "en": "adapt"
+      },
+      "gloss": {
+        "en": "To change in order to fit a new situation"
+      },
+      "gloss_example": {
+        "en": "Animals must adapt to survive in the wild."
+      }
+    },
+    {
+      "id": "admire",
+      "term": "admirar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Considerar algo o a alguien con respeto, placer o satisfacción.",
+      "example": "Admiro su dedicación al trabajo.",
+      "translations": {
+        "en": "admire"
+      },
+      "gloss": {
+        "en": "To regard with respect, pleasure, or satisfaction"
+      },
+      "gloss_example": {
+        "en": "I admire her dedication to her work."
+      }
+    },
+    {
+      "id": "assume",
+      "term": "asumir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Aceptar algo como verdadero sin pruebas.",
+      "example": "No des por supuesto que sabes la respuesta.",
+      "translations": {
+        "en": "assume"
+      },
+      "gloss": {
+        "en": "To accept something as true without proof"
+      },
+      "gloss_example": {
+        "en": "Do not assume you know the answer."
+      }
+    },
+    {
+      "id": "commit",
+      "term": "comprometerse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dedicarte a algo o comprometerte a hacerlo.",
+      "example": "Se comprometió a aprender inglés cada día.",
+      "translations": {
+        "en": "commit"
+      },
+      "gloss": {
+        "en": "To dedicate yourself to something or pledge to do it"
+      },
+      "gloss_example": {
+        "en": "She committed to learning English every day."
+      }
+    },
+    {
+      "id": "dedicate",
+      "term": "dedicar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Destinar tiempo y esfuerzo a un propósito.",
+      "example": "Dedicó años a dominar el piano.",
+      "translations": {
+        "en": "dedicate"
+      },
+      "gloss": {
+        "en": "To devote time and effort to a purpose"
+      },
+      "gloss_example": {
+        "en": "She dedicated years to mastering the piano."
+      }
+    },
+    {
+      "id": "explore",
+      "term": "explorar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Recorrer un lugar desconocido o investigar algo.",
+      "example": "Nos encanta explorar ciudades nuevas en las vacaciones.",
+      "translations": {
+        "en": "explore"
+      },
+      "gloss": {
+        "en": "To travel through an unfamiliar area or investigate something"
+      },
+      "gloss_example": {
+        "en": "We love to explore new cities on vacation."
+      }
+    },
+    {
+      "id": "focus",
+      "term": "enfoque",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Concentrar la atención o el esfuerzo en algo.",
+      "example": "Intenta enfocarte en una tarea a la vez.",
+      "translations": {
+        "en": "focus"
+      },
+      "gloss": {
+        "en": "To concentrate attention or effort on something"
+      },
+      "gloss_example": {
+        "en": "Try to focus on one task at a time."
+      }
+    },
+    {
+      "id": "highlight",
+      "term": "destacar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Seleccionar y enfatizar las partes más importantes.",
+      "example": "Destacó los puntos clave del informe.",
+      "translations": {
+        "en": "highlight"
+      },
+      "gloss": {
+        "en": "To pick out and emphasize the most important parts"
+      },
+      "gloss_example": {
+        "en": "She highlighted the key points in the report."
+      }
+    },
+    {
+      "id": "identify",
+      "term": "identificar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Reconocer o establecer quién o qué es algo.",
+      "example": "¿Puedes identificar el problema principal aquí?",
+      "translations": {
+        "en": "identify"
+      },
+      "gloss": {
+        "en": "To recognize or establish who or what something is"
+      },
+      "gloss_example": {
+        "en": "Can you identify the main problem here?"
+      }
+    },
+    {
+      "id": "improve",
+      "term": "mejorar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer o volverse mejor.",
+      "example": "La práctica regular mejorará tu pronunciación.",
+      "translations": {
+        "en": "improve"
+      },
+      "gloss": {
+        "en": "To make or become better"
+      },
+      "gloss_example": {
+        "en": "Regular practice will improve your pronunciation."
+      }
+    },
+    {
+      "id": "inspire",
+      "term": "inspirar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Llenar a alguien de deseo o capacidad para hacer algo.",
+      "example": "Los grandes maestros inspiran a los estudiantes a pensar con libertad.",
+      "translations": {
+        "en": "inspire"
+      },
+      "gloss": {
+        "en": "To fill someone with the urge or ability to do something"
+      },
+      "gloss_example": {
+        "en": "Great teachers inspire students to think freely."
+      }
+    },
+    {
+      "id": "maintain",
+      "term": "mantener",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Mantener en buen estado, continuar haciendo algo.",
+      "example": "Es importante mantener buenos hábitos.",
+      "translations": {
+        "en": "maintain"
+      },
+      "gloss": {
+        "en": "To keep in good condition, to continue doing something"
+      },
+      "gloss_example": {
+        "en": "It is important to maintain good habits."
+      }
+    },
+    {
+      "id": "motivate",
+      "term": "motivar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar a alguien una razón o incentivo para actuar.",
+      "example": "Un buen entrenador sabe cómo motivar a un equipo.",
+      "translations": {
+        "en": "motivate"
+      },
+      "gloss": {
+        "en": "To give someone a reason or incentive to act"
+      },
+      "gloss_example": {
+        "en": "A good coach knows how to motivate a team."
+      }
+    },
+    {
+      "id": "recognize",
+      "term": "reconocer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Identificar a alguien a partir de una experiencia previa.",
+      "example": "Reconocí su voz de inmediato.",
+      "translations": {
+        "en": "recognize"
+      },
+      "gloss": {
+        "en": "To identify someone or something from previous experience"
+      },
+      "gloss_example": {
+        "en": "I recognized his voice immediately."
+      }
+    },
+    {
+      "id": "struggle",
+      "term": "luchar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer grandes esfuerzos para superar dificultades.",
+      "example": "Mucha gente lucha con hablar en público.",
+      "translations": {
+        "en": "struggle"
+      },
+      "gloss": {
+        "en": "To make forceful efforts against difficulties"
+      },
+      "gloss_example": {
+        "en": "Many people struggle with public speaking."
+      }
+    },
+    {
+      "id": "come",
+      "term": "venir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Moverse hacia quien habla.",
+      "example": "Por favor, ven aquí un momento.",
+      "translations": {
+        "en": "come"
+      },
+      "gloss": {
+        "en": "To move toward the person who is speaking."
+      },
+      "gloss_example": {
+        "en": "Please come here for a moment."
+      }
+    },
+    {
+      "id": "become",
+      "term": "convertirse / volverse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Empezar a ser algo con el tiempo.",
+      "example": "Se convirtió en médica tras seis años.",
+      "translations": {
+        "en": "become"
+      },
+      "gloss": {
+        "en": "To start to be something over time."
+      },
+      "gloss_example": {
+        "en": "She became a doctor after six years."
+      }
+    },
+    {
+      "id": "happen",
+      "term": "pasar / suceder",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ocurrir, a menudo sin planearse.",
+      "example": "El accidente ocurrió cerca del puente.",
+      "translations": {
+        "en": "happen"
+      },
+      "gloss": {
+        "en": "To take place, often without being planned."
+      },
+      "gloss_example": {
+        "en": "The accident happened near the bridge."
+      }
+    },
+    {
+      "id": "remember",
+      "term": "recordar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Traer algo a la mente o guardarlo.",
+      "example": "No puedo recordar su número de teléfono.",
+      "translations": {
+        "en": "remember"
+      },
+      "gloss": {
+        "en": "To keep something in your mind or bring it back."
+      },
+      "gloss_example": {
+        "en": "I can't remember her phone number."
+      }
+    },
+    {
+      "id": "decide",
+      "term": "decidir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer una elección tras pensarla.",
+      "example": "Decidieron mudarse a otra ciudad.",
+      "translations": {
+        "en": "decide"
+      },
+      "gloss": {
+        "en": "To make a choice after thinking about it."
+      },
+      "gloss_example": {
+        "en": "They decided to move to another city."
+      }
+    },
+    {
+      "id": "spend",
+      "term": "gastar / pasar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Usar dinero para pagar, o usar tiempo.",
+      "example": "Pasamos toda la tarde en el museo.",
+      "translations": {
+        "en": "spend"
+      },
+      "gloss": {
+        "en": "To use money to pay for things, or to use time."
+      },
+      "gloss_example": {
+        "en": "We spent the whole afternoon at the museum."
+      }
+    },
+    {
+      "id": "choose",
+      "term": "elegir / escoger",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar una cosa entre varias posibilidades.",
+      "example": "Puedes elegir el postre que quieras.",
+      "translations": {
+        "en": "choose"
+      },
+      "gloss": {
+        "en": "To pick one thing from several possibilities."
+      },
+      "gloss_example": {
+        "en": "You can choose any dessert you like."
+      }
+    },
+    {
+      "id": "querer",
+      "term": "querer",
+      "definition": "Desear algo, o sentir cariño por alguien.",
+      "example": "Quiero aprender a cocinar.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to want / to love"
+      },
+      "gloss": {
+        "en": "To wish for something, or to feel affection."
+      },
+      "gloss_example": {
+        "en": "I want to learn to cook."
+      }
+    },
+    {
+      "id": "saber",
+      "term": "saber",
+      "definition": "Tener conocimiento de algo.",
+      "example": "No sé dónde está la salida.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to know"
+      },
+      "gloss": {
+        "en": "To have knowledge of something."
+      },
+      "gloss_example": {
+        "en": "I don't know where the exit is."
+      }
+    },
+    {
+      "id": "vivir",
+      "term": "vivir",
+      "definition": "Tener vida, o residir en un lugar.",
+      "example": "Vivo cerca del trabajo.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to live"
+      },
+      "gloss": {
+        "en": "To be alive, or to reside somewhere."
+      },
+      "gloss_example": {
+        "en": "I live near my job."
+      }
+    },
+    {
+      "id": "pensar",
+      "term": "pensar",
+      "definition": "Formar ideas en la mente.",
+      "example": "Pienso que tienes razón.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to think"
+      },
+      "gloss": {
+        "en": "To form ideas in the mind."
+      },
+      "gloss_example": {
+        "en": "I think you are right."
+      }
+    },
+    {
+      "id": "mirar",
+      "term": "mirar",
+      "definition": "Dirigir la vista hacia algo.",
+      "example": "Mira ese pájaro tan bonito.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to look / to watch"
+      },
+      "gloss": {
+        "en": "To direct your eyes toward something."
+      },
+      "gloss_example": {
+        "en": "Look at that pretty bird."
+      }
+    },
+    {
+      "id": "preguntar",
+      "term": "preguntar",
+      "definition": "Pedir información a alguien.",
+      "example": "Voy a preguntar la hora.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to ask"
+      },
+      "gloss": {
+        "en": "To request information from someone."
+      },
+      "gloss_example": {
+        "en": "I am going to ask for the time."
+      }
+    },
+    {
+      "id": "entrar",
+      "term": "entrar",
+      "definition": "Pasar de afuera hacia adentro.",
+      "example": "Entra, la puerta está abierta.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to enter / to go in"
+      },
+      "gloss": {
+        "en": "To go from outside to inside."
+      },
+      "gloss_example": {
+        "en": "Come in, the door is open."
+      }
+    },
+    {
+      "id": "oir",
+      "term": "oír",
+      "definition": "Percibir sonidos con los oídos.",
+      "example": "No te oigo bien, habla más fuerte.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to hear"
+      },
+      "gloss": {
+        "en": "To perceive sounds with your ears."
+      },
+      "gloss_example": {
+        "en": "I can't hear you well, speak louder."
+      }
+    },
+    {
+      "id": "preferir",
+      "term": "preferir",
+      "definition": "Gustar más una cosa que otra.",
+      "example": "Prefiero el té al café.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to prefer"
+      },
+      "gloss": {
+        "en": "To like one thing more than another."
+      },
+      "gloss_example": {
+        "en": "I prefer tea to coffee."
+      }
+    },
+    {
+      "id": "reir",
+      "term": "reír",
+      "definition": "Mostrar alegría con sonidos y gestos.",
+      "example": "Nos reímos mucho con la película.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to laugh"
+      },
+      "gloss": {
+        "en": "To show joy with sounds and expressions."
+      },
+      "gloss_example": {
+        "en": "We laughed a lot at the movie."
+      }
+    },
+    {
+      "id": "llorar",
+      "term": "llorar",
+      "definition": "Soltar lágrimas por tristeza o emoción.",
+      "example": "El bebé llora cuando tiene hambre.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to cry"
+      },
+      "gloss": {
+        "en": "To shed tears from sadness or emotion."
+      },
+      "gloss_example": {
+        "en": "The baby cries when it is hungry."
+      }
+    },
+    {
+      "id": "caminar",
+      "term": "caminar",
+      "definition": "Andar a pie de un lugar a otro.",
+      "example": "Caminamos hasta la plaza.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to walk"
+      },
+      "gloss": {
+        "en": "To go on foot from one place to another."
+      },
+      "gloss_example": {
+        "en": "We walked to the square."
+      }
+    },
+    {
+      "id": "gustar",
+      "term": "gustar",
+      "definition": "Resultar agradable algo a alguien.",
+      "example": "Me gusta caminar por la playa.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to like"
+      },
+      "gloss": {
+        "en": "To find something pleasant."
+      },
+      "gloss_example": {
+        "en": "I like walking on the beach."
+      }
+    },
+    {
+      "id": "sentarse",
+      "term": "sentarse",
+      "definition": "Apoyar el cuerpo sobre las nalgas.",
+      "example": "Se sentó junto a la ventana.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to sit down"
+      },
+      "gloss": {
+        "en": "To rest with your weight on your bottom."
+      },
+      "gloss_example": {
+        "en": "She sat down by the window."
+      }
+    },
+    {
+      "id": "levantar",
+      "term": "levantar",
+      "definition": "Subir algo o ponerlo más alto.",
+      "example": "Levantó la caja con cuidado.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to lift / to raise"
+      },
+      "gloss": {
+        "en": "To move something to a higher place."
+      },
+      "gloss_example": {
+        "en": "He lifted the box carefully."
+      }
+    },
+    {
+      "id": "divertirse",
+      "term": "divertirse",
+      "definition": "Pasarla bien.",
+      "example": "Los niños se divirtieron en el parque.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to have fun"
+      },
+      "gloss": {
+        "en": "To have a good time."
+      },
+      "gloss_example": {
+        "en": "The children had fun at the park."
+      }
+    },
+    {
+      "id": "practicar",
+      "term": "practicar",
+      "definition": "Hacer algo con frecuencia para mejorar.",
+      "example": "Practico español todos los días.",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to practice"
+      },
+      "gloss": {
+        "en": "To do something regularly to improve."
+      },
+      "gloss_example": {
+        "en": "I practice Spanish every day."
+      }
+    },
+    {
+      "id": "observar",
+      "term": "observar",
+      "definition": "Mirar con atención.",
+      "example": "Observó el cielo durante horas.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to observe / to watch"
+      },
+      "gloss": {
+        "en": "To look carefully at something."
+      },
+      "gloss_example": {
+        "en": "She watched the sky for hours."
+      }
+    },
+    {
+      "id": "costar",
+      "term": "costar",
+      "definition": "Tener un precio, o ser difícil.",
+      "example": "¿Cuánto cuesta el boleto?",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to cost"
+      },
+      "gloss": {
+        "en": "To have a price, or to be hard."
+      },
+      "gloss_example": {
+        "en": "How much does the ticket cost?"
+      }
+    },
+    {
+      "id": "gritar",
+      "term": "gritar",
+      "definition": "Hablar muy fuerte.",
+      "example": "No grites, te escucho bien.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to shout"
+      },
+      "gloss": {
+        "en": "To speak very loudly."
+      },
+      "gloss_example": {
+        "en": "Don't shout, I can hear you fine."
+      }
+    },
+    {
+      "id": "doler",
+      "term": "doler",
+      "definition": "Causar dolor una parte del cuerpo.",
+      "example": "Me duele la cabeza.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to hurt / to ache"
+      },
+      "gloss": {
+        "en": "To feel pain in a part of the body."
+      },
+      "gloss_example": {
+        "en": "My head hurts."
+      }
+    },
+    {
+      "id": "nacer",
+      "term": "nacer",
+      "definition": "Empezar a vivir, salir al mundo.",
+      "example": "Mi hija nació en marzo.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to be born"
+      },
+      "gloss": {
+        "en": "To come into life."
+      },
+      "gloss_example": {
+        "en": "My daughter was born in March."
+      }
+    },
+    {
+      "id": "interesar",
+      "term": "interesar",
+      "definition": "Despertar la atención de alguien.",
+      "example": "Me interesa la ciencia.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to interest"
+      },
+      "gloss": {
+        "en": "To make someone want to know more."
+      },
+      "gloss_example": {
+        "en": "I am interested in science."
+      }
+    },
+    {
+      "id": "encantar",
+      "term": "encantar",
+      "definition": "Gustar mucho algo.",
+      "example": "Me encanta esta canción.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to love / to delight"
+      },
+      "gloss": {
+        "en": "To like something very much."
+      },
+      "gloss_example": {
+        "en": "I love this song."
+      }
+    },
+    {
+      "id": "contestar",
+      "term": "contestar",
+      "definition": "Responder a una pregunta o llamada.",
+      "example": "Contesta el teléfono, por favor.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to answer"
+      },
+      "gloss": {
+        "en": "To reply to a question or call."
+      },
+      "gloss_example": {
+        "en": "Answer the phone, please."
+      }
+    },
+    {
+      "id": "pintar",
+      "term": "pintar",
+      "definition": "Dar color con pintura.",
+      "example": "Pintaron la casa de blanco.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to paint"
+      },
+      "gloss": {
+        "en": "To put color on with paint."
+      },
+      "gloss_example": {
+        "en": "They painted the house white."
+      }
+    },
+    {
+      "id": "relajarse",
+      "term": "relajarse",
+      "definition": "Descansar y calmarse.",
+      "example": "Me relajo escuchando música.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to relax"
+      },
+      "gloss": {
+        "en": "To rest and calm down."
+      },
+      "gloss_example": {
+        "en": "I relax by listening to music."
+      }
+    },
+    {
+      "id": "tirar",
+      "term": "tirar",
+      "definition": "Lanzar algo, o dejarlo caer.",
+      "example": "No tires basura al suelo.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to throw / to throw away"
+      },
+      "gloss": {
+        "en": "To throw something, or to drop it."
+      },
+      "gloss_example": {
+        "en": "Don't throw trash on the ground."
+      }
+    },
+    {
+      "id": "robar",
+      "term": "robar",
+      "definition": "Tomar algo que no es tuyo.",
+      "example": "Le robaron el celular.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to steal / to rob"
+      },
+      "gloss": {
+        "en": "To take something that is not yours."
+      },
+      "gloss_example": {
+        "en": "They stole his phone."
+      }
+    },
+    {
+      "id": "acostarse",
+      "term": "acostarse",
+      "definition": "Echarse para dormir o descansar.",
+      "example": "Me acuesto a las once.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to go to bed / to lie down"
+      },
+      "gloss": {
+        "en": "To lie down to sleep or rest."
+      },
+      "gloss_example": {
+        "en": "I go to bed at eleven."
+      }
+    },
+    {
+      "id": "celebrar",
+      "term": "celebrar",
+      "definition": "Festejar algo importante.",
+      "example": "Celebramos su cumpleaños.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to celebrate"
+      },
+      "gloss": {
+        "en": "To mark an important event with joy."
+      },
+      "gloss_example": {
+        "en": "We celebrated her birthday."
+      }
+    },
+    {
+      "id": "organizar",
+      "term": "organizar",
+      "definition": "Preparar y ordenar algo.",
+      "example": "Organizamos una reunión para el viernes.",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "translations": {
+        "en": "to organize"
+      },
+      "gloss": {
+        "en": "To arrange and prepare something."
+      },
+      "gloss_example": {
+        "en": "We organized a meeting for Friday."
+      }
+    }
+  ]
+}

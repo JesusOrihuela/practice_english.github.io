@@ -1,0 +1,94 @@
+{
+  "words": [
+    {
+      "id": "number",
+      "term": "number",
+      "definition": "A word or symbol used for counting.",
+      "example": "Pick a number between one and ten.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "número"
+      },
+      "gloss": {
+        "es": "Palabra o símbolo para contar."
+      },
+      "gloss_example": {
+        "es": "Elige un número entre uno y diez."
+      }
+    },
+    {
+      "id": "amount",
+      "term": "amount",
+      "definition": "How much there is of something.",
+      "example": "A small amount of salt is enough.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "cantidad"
+      },
+      "gloss": {
+        "es": "Cuánto hay de algo."
+      },
+      "gloss_example": {
+        "es": "Una pequeña cantidad de sal es suficiente."
+      }
+    },
+    {
+      "id": "half",
+      "term": "half",
+      "definition": "One of two equal parts.",
+      "example": "I ate half of the cake.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "mitad"
+      },
+      "gloss": {
+        "es": "Una de dos partes iguales."
+      },
+      "gloss_example": {
+        "es": "Me comí la mitad del pastel."
+      }
+    },
+    {
+      "id": "group",
+      "term": "group",
+      "definition": "A number of people or things together.",
+      "example": "A group of tourists arrived.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "grupo"
+      },
+      "gloss": {
+        "es": "Conjunto de personas o cosas juntas."
+      },
+      "gloss_example": {
+        "es": "Llegó un grupo de turistas."
+      }
+    },
+    {
+      "id": "piece",
+      "term": "piece",
+      "definition": "A part of something larger.",
+      "example": "Have a piece of bread.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "pieza / trozo"
+      },
+      "gloss": {
+        "es": "Una parte de algo más grande."
+      },
+      "gloss_example": {
+        "es": "Toma un trozo de pan."
+      }
+    }
+  ]
+}

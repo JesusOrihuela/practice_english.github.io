@@ -1,0 +1,346 @@
+{
+  "words": [
+    {
+      "id": "job",
+      "term": "trabajo / empleo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Trabajo que alguien hace para ganar dinero.",
+      "example": "Consiguió un nuevo empleo en un banco local.",
+      "translations": {
+        "en": "job"
+      },
+      "gloss": {
+        "en": "The work a person does regularly to earn money."
+      },
+      "gloss_example": {
+        "en": "He found a new job at a local bank."
+      }
+    },
+    {
+      "id": "worker",
+      "term": "trabajador / trabajadora",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que realiza un trabajo determinado.",
+      "example": "Los trabajadores de la fábrica pidieron mejor pago.",
+      "translations": {
+        "en": "worker"
+      },
+      "gloss": {
+        "en": "A person who does a particular kind of work."
+      },
+      "gloss_example": {
+        "en": "The factory workers asked for higher pay."
+      }
+    },
+    {
+      "id": "industry",
+      "term": "industria",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Producción de bienes en fábricas o tipo de negocio.",
+      "example": "La industria del automóvil emplea a miles de personas.",
+      "translations": {
+        "en": "industry"
+      },
+      "gloss": {
+        "en": "The making of goods in factories, or a type of business activity."
+      },
+      "gloss_example": {
+        "en": "The car industry employs thousands of people."
+      }
+    },
+    {
+      "id": "trade",
+      "term": "comercio",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Actividad de comprar y vender bienes o servicios.",
+      "example": "El comercio entre los dos países creció el año pasado.",
+      "translations": {
+        "en": "trade"
+      },
+      "gloss": {
+        "en": "The activity of buying and selling goods or services."
+      },
+      "gloss_example": {
+        "en": "Trade between the two countries grew last year."
+      }
+    },
+    {
+      "id": "firm",
+      "term": "empresa / firma",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Compañía que vende bienes o servicios.",
+      "example": "Ella trabaja para una firma de abogados en el centro.",
+      "translations": {
+        "en": "firm"
+      },
+      "gloss": {
+        "en": "A company or business that sells goods or services."
+      },
+      "gloss_example": {
+        "en": "She works for a law firm downtown."
+      }
+    },
+    {
+      "id": "office",
+      "term": "oficina",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde las personas hacen su trabajo.",
+      "example": "Su oficina está en el tercer piso.",
+      "translations": {
+        "en": "office"
+      },
+      "gloss": {
+        "en": "A room or building where people do their work."
+      },
+      "gloss_example": {
+        "en": "Her office is on the third floor."
+      }
+    },
+    {
+      "id": "project",
+      "term": "proyecto",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Trabajo planeado con un objetivo claro.",
+      "example": "Terminamos el proyecto escolar a tiempo.",
+      "translations": {
+        "en": "project"
+      },
+      "gloss": {
+        "en": "A planned piece of work with a clear goal."
+      },
+      "gloss_example": {
+        "en": "We finished the school project on time."
+      }
+    },
+    {
+      "id": "development",
+      "term": "desarrollo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Proceso de crecer o avanzar.",
+      "example": "La ciudad ha tenido un desarrollo rápido.",
+      "translations": {
+        "en": "development"
+      },
+      "gloss": {
+        "en": "The process of growing or becoming more advanced."
+      },
+      "gloss_example": {
+        "en": "The city has seen rapid development."
+      }
+    },
+    {
+      "id": "boss",
+      "term": "jefe / jefa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que está a cargo de los trabajadores.",
+      "example": "Mi jefe aprobó el día libre.",
+      "translations": {
+        "en": "boss"
+      },
+      "gloss": {
+        "en": "The person who is in charge of workers."
+      },
+      "gloss_example": {
+        "en": "My boss approved the day off."
+      }
+    },
+    {
+      "id": "partner_business",
+      "term": "socio / socia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que comparte un negocio con otra.",
+      "example": "Ella fundó la empresa con dos socios.",
+      "translations": {
+        "en": "partner_business"
+      },
+      "gloss": {
+        "en": "A person who shares ownership of a business."
+      },
+      "gloss_example": {
+        "en": "She started the firm with two partners."
+      }
+    },
+    {
+      "id": "interview",
+      "term": "entrevista",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Reunión donde se hacen preguntas a alguien.",
+      "example": "Ella tiene una entrevista de trabajo mañana.",
+      "translations": {
+        "en": "interview"
+      },
+      "gloss": {
+        "en": "A meeting where someone is asked questions."
+      },
+      "gloss_example": {
+        "en": "She has a job interview tomorrow."
+      }
+    },
+    {
+      "id": "solution",
+      "term": "solución",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Manera de resolver un problema.",
+      "example": "Por fin encontramos una solución.",
+      "translations": {
+        "en": "solution"
+      },
+      "gloss": {
+        "en": "A way to solve a problem."
+      },
+      "gloss_example": {
+        "en": "We finally found a solution."
+      }
+    },
+    {
+      "id": "sector",
+      "term": "sector",
+      "definition": "Parte de una economía o actividad.",
+      "example": "Trabaja en el sector de la salud.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "sector"
+      },
+      "gloss": {
+        "en": "A part of the economy or an activity."
+      },
+      "gloss_example": {
+        "en": "She works in the health sector."
+      }
+    },
+    {
+      "id": "agencia",
+      "term": "agencia",
+      "definition": "Empresa que ofrece un servicio.",
+      "example": "Reservé el viaje en una agencia.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "agency"
+      },
+      "gloss": {
+        "en": "A business that provides a service."
+      },
+      "gloss_example": {
+        "en": "I booked the trip at an agency."
+      }
+    },
+    {
+      "id": "taller",
+      "term": "taller",
+      "definition": "Lugar donde se arreglan o hacen cosas.",
+      "example": "Dejé el carro en el taller.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "workshop / garage"
+      },
+      "gloss": {
+        "en": "A place where things are made or repaired."
+      },
+      "gloss_example": {
+        "en": "I left the car at the garage."
+      }
+    },
+    {
+      "id": "tarea",
+      "term": "tarea",
+      "definition": "Trabajo que se debe hacer.",
+      "example": "Los niños terminaron la tarea.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "task / homework"
+      },
+      "gloss": {
+        "en": "A piece of work that must be done."
+      },
+      "gloss_example": {
+        "en": "The children finished their homework."
+      }
+    },
+    {
+      "id": "condicion",
+      "term": "condición",
+      "definition": "Estado o requisito de algo.",
+      "example": "El carro está en buenas condiciones.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "condition"
+      },
+      "gloss": {
+        "en": "The state of something, or a requirement."
+      },
+      "gloss_example": {
+        "en": "The car is in good condition."
+      }
+    },
+    {
+      "id": "laboral",
+      "term": "laboral",
+      "definition": "Relacionado con el trabajo.",
+      "example": "Busca estabilidad laboral.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "en": "work-related / labor"
+      },
+      "gloss": {
+        "en": "Related to work or employment."
+      },
+      "gloss_example": {
+        "en": "She is looking for job stability."
+      }
+    },
+    {
+      "id": "capacidad",
+      "term": "capacidad",
+      "definition": "Aptitud para hacer algo, o cantidad que cabe.",
+      "example": "Tiene una gran capacidad de trabajo.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "en": "ability / capacity"
+      },
+      "gloss": {
+        "en": "The skill to do something, or how much fits."
+      },
+      "gloss_example": {
+        "en": "He has a great capacity for work."
+      }
+    }
+  ]
+}

@@ -1,0 +1,868 @@
+{
+  "words": [
+    {
+      "id": "abundant",
+      "term": "abundant",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Present in large quantities, more than enough",
+      "example": "The garden had abundant flowers this spring.",
+      "translations": {
+        "es": "abundante"
+      },
+      "gloss": {
+        "es": "Presente en grandes cantidades, más que suficiente."
+      },
+      "gloss_example": {
+        "es": "El jardín tenía flores abundantes esta primavera."
+      }
+    },
+    {
+      "id": "adequate",
+      "term": "adequate",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Satisfactory or acceptable in quality or quantity",
+      "example": "The shelter was adequate but not luxurious.",
+      "translations": {
+        "es": "adecuado"
+      },
+      "gloss": {
+        "es": "Satisfactorio o aceptable en calidad o cantidad."
+      },
+      "gloss_example": {
+        "es": "El refugio era adecuado, aunque no lujoso."
+      }
+    },
+    {
+      "id": "ambitious",
+      "term": "ambitious",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Having a strong desire to succeed",
+      "example": "He was ambitious and worked long hours.",
+      "translations": {
+        "es": "ambicioso"
+      },
+      "gloss": {
+        "es": "Que tiene un fuerte deseo de triunfar."
+      },
+      "gloss_example": {
+        "es": "Era ambicioso y trabajaba muchas horas."
+      }
+    },
+    {
+      "id": "appropriate",
+      "term": "appropriate",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Suitable or proper in the circumstances",
+      "example": "Formal clothes are appropriate for the meeting.",
+      "translations": {
+        "es": "apropiado"
+      },
+      "gloss": {
+        "es": "Adecuado o correcto para las circunstancias."
+      },
+      "gloss_example": {
+        "es": "La ropa formal es apropiada para la reunión."
+      }
+    },
+    {
+      "id": "concise",
+      "term": "concise",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Giving information clearly using only a few words",
+      "example": "A good essay should be clear and concise.",
+      "translations": {
+        "es": "conciso"
+      },
+      "gloss": {
+        "es": "Que expresa información con claridad usando pocas palabras."
+      },
+      "gloss_example": {
+        "es": "Un buen ensayo debe ser claro y conciso."
+      }
+    },
+    {
+      "id": "consistent",
+      "term": "consistent",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Acting the same way over time, not changing",
+      "example": "Being consistent is key to building habits.",
+      "translations": {
+        "es": "constante"
+      },
+      "gloss": {
+        "es": "Que actúa de la misma manera a lo largo del tiempo, sin cambios."
+      },
+      "gloss_example": {
+        "es": "Ser constante es clave para crear hábitos."
+      }
+    },
+    {
+      "id": "crucial",
+      "term": "crucial",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Extremely important or necessary",
+      "example": "Water is crucial for all living things.",
+      "translations": {
+        "es": "crucial"
+      },
+      "gloss": {
+        "es": "Extremadamente importante o necesario."
+      },
+      "gloss_example": {
+        "es": "El agua es crucial para todos los seres vivos."
+      }
+    },
+    {
+      "id": "diverse",
+      "term": "diverse",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Showing a great deal of variety, very different",
+      "example": "The city has a diverse population.",
+      "translations": {
+        "es": "diverso"
+      },
+      "gloss": {
+        "es": "Que muestra gran variedad, muy diferente."
+      },
+      "gloss_example": {
+        "es": "La ciudad tiene una población diversa."
+      }
+    },
+    {
+      "id": "efficient",
+      "term": "efficient",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Achieving maximum productivity with minimum wasted effort",
+      "example": "Electric cars are more efficient than petrol ones.",
+      "translations": {
+        "es": "eficiente"
+      },
+      "gloss": {
+        "es": "Que logra la máxima productividad con el mínimo esfuerzo desperdiciado."
+      },
+      "gloss_example": {
+        "es": "Los autos eléctricos son más eficientes que los de gasolina."
+      }
+    },
+    {
+      "id": "evident",
+      "term": "evident",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Plain or obvious, clearly seen or understood",
+      "example": "It was evident she had not slept well.",
+      "translations": {
+        "es": "evidente"
+      },
+      "gloss": {
+        "es": "Claro u obvio, que se ve o entiende fácilmente."
+      },
+      "gloss_example": {
+        "es": "Era evidente que no había dormido bien."
+      }
+    },
+    {
+      "id": "exceptional",
+      "term": "exceptional",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Unusually good, outstanding",
+      "example": "Her performance was truly exceptional.",
+      "translations": {
+        "es": "excepcional"
+      },
+      "gloss": {
+        "es": "Inusualmente bueno, sobresaliente."
+      },
+      "gloss_example": {
+        "es": "Su actuación fue verdaderamente excepcional."
+      }
+    },
+    {
+      "id": "flexible",
+      "term": "flexible",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Able to change or be changed easily to fit situations",
+      "example": "Her schedule was flexible enough to help.",
+      "translations": {
+        "es": "flexible"
+      },
+      "gloss": {
+        "es": "Que puede cambiar o adaptarse con facilidad a distintas situaciones."
+      },
+      "gloss_example": {
+        "es": "Su horario era lo suficientemente flexible como para ayudar."
+      }
+    },
+    {
+      "id": "fortunate",
+      "term": "fortunate",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Favored by luck, lucky",
+      "example": "We were fortunate to find a parking spot.",
+      "translations": {
+        "es": "afortunado"
+      },
+      "gloss": {
+        "es": "Favorecido por la suerte, afortunado."
+      },
+      "gloss_example": {
+        "es": "Tuvimos la suerte de encontrar un lugar para estacionarnos."
+      }
+    },
+    {
+      "id": "genuine",
+      "term": "genuine",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Truly what something is said to be, authentic",
+      "example": "Her smile was genuine and warm.",
+      "translations": {
+        "es": "genuino"
+      },
+      "gloss": {
+        "es": "Verdaderamente lo que se dice que es, auténtico."
+      },
+      "gloss_example": {
+        "es": "Su sonrisa era genuina y cálida."
+      }
+    },
+    {
+      "id": "inevitable",
+      "term": "inevitable",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Certain to happen, unable to be avoided",
+      "example": "Change is inevitable over time.",
+      "translations": {
+        "es": "inevitable"
+      },
+      "gloss": {
+        "es": "Que con certeza ocurrirá, imposible de evitar."
+      },
+      "gloss_example": {
+        "es": "El cambio es inevitable con el tiempo."
+      }
+    },
+    {
+      "id": "innovative",
+      "term": "innovative",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Using new ideas or methods, original and creative",
+      "example": "The company is known for its innovative products.",
+      "translations": {
+        "es": "innovador"
+      },
+      "gloss": {
+        "es": "Que usa nuevas ideas o métodos, original y creativo."
+      },
+      "gloss_example": {
+        "es": "La empresa es conocida por sus productos innovadores."
+      }
+    },
+    {
+      "id": "passionate",
+      "term": "passionate",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Having or showing strong feelings about something",
+      "example": "He is passionate about environmental issues.",
+      "translations": {
+        "es": "apasionado"
+      },
+      "gloss": {
+        "es": "Que tiene o muestra sentimientos intensos sobre algo."
+      },
+      "gloss_example": {
+        "es": "Está muy apasionado por los temas medioambientales."
+      }
+    },
+    {
+      "id": "precise",
+      "term": "precise",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Marked by exactness and accuracy",
+      "example": "Use precise measurements when baking.",
+      "translations": {
+        "es": "preciso"
+      },
+      "gloss": {
+        "es": "Que se caracteriza por la exactitud y la precisión."
+      },
+      "gloss_example": {
+        "es": "Usa medidas precisas cuando hornees."
+      }
+    },
+    {
+      "id": "profound",
+      "term": "profound",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Very deep or intense, having great importance",
+      "example": "The book had a profound impact on my thinking.",
+      "translations": {
+        "es": "profundo"
+      },
+      "gloss": {
+        "es": "Muy hondo o intenso, de gran importancia."
+      },
+      "gloss_example": {
+        "es": "El libro tuvo un impacto profundo en mi forma de pensar."
+      }
+    },
+    {
+      "id": "realistic",
+      "term": "realistic",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Having a sensible and practical idea of what can be achieved",
+      "example": "Set realistic goals to stay motivated.",
+      "translations": {
+        "es": "realista"
+      },
+      "gloss": {
+        "es": "Que tiene una idea sensata y práctica de lo que puede lograrse."
+      },
+      "gloss_example": {
+        "es": "Establece metas realistas para mantenerte motivado."
+      }
+    },
+    {
+      "id": "relevant",
+      "term": "relevant",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Closely connected or appropriate to the matter at hand",
+      "example": "Only include relevant information in your report.",
+      "translations": {
+        "es": "relevante"
+      },
+      "gloss": {
+        "es": "Estrechamente relacionado o adecuado con el asunto en cuestión."
+      },
+      "gloss_example": {
+        "es": "Incluye solo información relevante en tu informe."
+      }
+    },
+    {
+      "id": "remarkable",
+      "term": "remarkable",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Worthy of attention, extraordinary",
+      "example": "She made remarkable progress in just one month.",
+      "translations": {
+        "es": "notable"
+      },
+      "gloss": {
+        "es": "Digno de atención, extraordinario."
+      },
+      "gloss_example": {
+        "es": "Logró un progreso notable en solo un mes."
+      }
+    },
+    {
+      "id": "resilient",
+      "term": "resilient",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Able to recover quickly from difficulties",
+      "example": "Children are often more resilient than adults.",
+      "translations": {
+        "es": "resiliente"
+      },
+      "gloss": {
+        "es": "Capaz de recuperarse rápidamente de las dificultades."
+      },
+      "gloss_example": {
+        "es": "Los niños suelen ser más resilientes que los adultos."
+      }
+    },
+    {
+      "id": "significant",
+      "term": "significant",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Important enough to have an effect, noteworthy",
+      "example": "There was a significant improvement in her grades.",
+      "translations": {
+        "es": "significativo"
+      },
+      "gloss": {
+        "es": "Lo suficientemente importante como para tener un efecto, digno de mención."
+      },
+      "gloss_example": {
+        "es": "Hubo una mejora significativa en sus calificaciones."
+      }
+    },
+    {
+      "id": "sufficient",
+      "term": "sufficient",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Enough, adequate for the purpose",
+      "example": "Is there sufficient food for everyone?",
+      "translations": {
+        "es": "suficiente"
+      },
+      "gloss": {
+        "es": "Suficiente, adecuado para el propósito."
+      },
+      "gloss_example": {
+        "es": "¿Hay suficiente comida para todos?"
+      }
+    },
+    {
+      "id": "sustainable",
+      "term": "sustainable",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Able to be maintained without depleting natural resources",
+      "example": "The company switched to sustainable packaging.",
+      "translations": {
+        "es": "sostenible"
+      },
+      "gloss": {
+        "es": "Que puede mantenerse sin agotar los recursos naturales."
+      },
+      "gloss_example": {
+        "es": "La empresa cambió a un embalaje sostenible."
+      }
+    },
+    {
+      "id": "transparent",
+      "term": "transparent",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Easy to perceive or detect, honest and open",
+      "example": "Good leaders should be transparent with their teams.",
+      "translations": {
+        "es": "transparente"
+      },
+      "gloss": {
+        "es": "Fácil de percibir o detectar, honesto y abierto."
+      },
+      "gloss_example": {
+        "es": "Los buenos líderes deben ser transparentes con sus equipos."
+      }
+    },
+    {
+      "id": "versatile",
+      "term": "versatile",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Able to adapt to many different functions or activities",
+      "example": "A versatile employee is an asset to any company.",
+      "translations": {
+        "es": "versatil"
+      },
+      "gloss": {
+        "es": "Que puede adaptarse a muchas funciones o actividades diferentes."
+      },
+      "gloss_example": {
+        "es": "Un empleado versátil es un activo para cualquier empresa."
+      }
+    },
+    {
+      "id": "vulnerable",
+      "term": "vulnerable",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Exposed to the possibility of being harmed or attacked",
+      "example": "Young children are vulnerable to illness.",
+      "translations": {
+        "es": "vulnerable"
+      },
+      "gloss": {
+        "es": "Expuesto a la posibilidad de ser dañado o atacado."
+      },
+      "gloss_example": {
+        "es": "Los niños pequeños son vulnerables a las enfermedades."
+      }
+    },
+    {
+      "id": "worthwhile",
+      "term": "worthwhile",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Worth the time, money, or effort spent on it",
+      "example": "Learning a new skill is always worthwhile.",
+      "translations": {
+        "es": "que vale la pena"
+      },
+      "gloss": {
+        "es": "Que vale el tiempo, el dinero o el esfuerzo invertido."
+      },
+      "gloss_example": {
+        "es": "Aprender una nueva habilidad siempre vale la pena."
+      }
+    },
+    {
+      "id": "articulate",
+      "term": "articulate",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Having or expressing clear, precise, and well-organized thoughts in speech or writing",
+      "example": "He gave an articulate explanation of the problem that convinced the whole committee.",
+      "translations": {
+        "es": "elocuente / articulado"
+      },
+      "gloss": {
+        "es": "Que expresa pensamientos claros, precisos y bien organizados en el habla o la escritura."
+      },
+      "gloss_example": {
+        "es": "Dio una explicación muy articulada del problema que convenció a todo el comité."
+      }
+    },
+    {
+      "id": "cohesive",
+      "term": "cohesive",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Forming a unified, logically connected, and well-integrated whole",
+      "example": "The report lacked a cohesive argument. Each section seemed to contradict the last.",
+      "translations": {
+        "es": "cohesivo / coherente"
+      },
+      "gloss": {
+        "es": "Que forma un todo unificado, lógicamente conectado y bien integrado."
+      },
+      "gloss_example": {
+        "es": "Al informe le faltaba un argumento cohesivo. Cada sección parecía contradecir a la anterior."
+      }
+    },
+    {
+      "id": "eloquent",
+      "term": "eloquent",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Fluent, persuasive, and able to express ideas clearly and effectively in language",
+      "example": "The president's eloquent speech moved the nation and set the tone for the summit.",
+      "translations": {
+        "es": "elocuente"
+      },
+      "gloss": {
+        "es": "Fluido, persuasivo y capaz de expresar ideas con claridad y eficacia mediante el lenguaje."
+      },
+      "gloss_example": {
+        "es": "El elocuente discurso del presidente conmovió a la nación y marcó el tono de la cumbre."
+      }
+    },
+    {
+      "id": "paramount",
+      "term": "paramount",
+      "level": "C1",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "More important than anything else, of the greatest significance",
+      "example": "The safety of passengers is paramount and cannot be compromised for any reason.",
+      "translations": {
+        "es": "primordial / de suma importancia"
+      },
+      "gloss": {
+        "es": "Más importante que cualquier otra cosa, de la mayor trascendencia."
+      },
+      "gloss_example": {
+        "es": "La seguridad de los pasajeros es primordial y no puede comprometerse por ninguna razón."
+      }
+    },
+    {
+      "id": "analogous",
+      "term": "analogous",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Comparable in certain respects, typically to help clarify a situation by pointing out a similarity",
+      "example": "The relationship between a conductor and an orchestra is analogous to that of a CEO and a company.",
+      "translations": {
+        "es": "análogo / comparable"
+      },
+      "gloss": {
+        "es": "Comparable en ciertos aspectos, típicamente para aclarar una situación señalando una similitud."
+      },
+      "gloss_example": {
+        "es": "La relación entre un director y una orquesta es análoga a la de un director ejecutivo y una empresa."
+      }
+    },
+    {
+      "id": "esoteric",
+      "term": "esoteric",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Understood by or intended for only a small number of people with specialized knowledge",
+      "example": "His lectures were brilliant but far too esoteric for a general audience.",
+      "translations": {
+        "es": "esotérico / oscuro / de nicho"
+      },
+      "gloss": {
+        "es": "Que solo entiende o está destinado a un pequeño número de personas con conocimiento especializado."
+      },
+      "gloss_example": {
+        "es": "Sus conferencias eran brillantes, pero demasiado esotéricas para el público en general."
+      }
+    },
+    {
+      "id": "cogent",
+      "term": "cogent",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Clear, logical, and convincing in argument or reasoning",
+      "example": "She presented a cogent case for restructuring the department that was hard to refute.",
+      "translations": {
+        "es": "convincente / contundente"
+      },
+      "gloss": {
+        "es": "Claro, lógico y convincente en la argumentación o el razonamiento."
+      },
+      "gloss_example": {
+        "es": "Presentó un argumento convincente para reestructurar el departamento que era difícil de refutar."
+      }
+    },
+    {
+      "id": "disingenuous",
+      "term": "disingenuous",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Not candid or sincere, typically by pretending to know less than one does",
+      "example": "It would be disingenuous to claim that the decision was purely based on merit.",
+      "translations": {
+        "es": "poco sincero / deshonesto"
+      },
+      "gloss": {
+        "es": "Que no es sincero ni franco, típicamente fingiendo saber menos de lo que sabe."
+      },
+      "gloss_example": {
+        "es": "Sería poco sincero afirmar que la decisión se basó puramente en el mérito."
+      }
+    },
+    {
+      "id": "inexorable",
+      "term": "inexorable",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Impossible to stop or prevent, continuing without any possibility of being changed",
+      "example": "The inexorable rise in global temperatures demands urgent collective action.",
+      "translations": {
+        "es": "inexorable / imparable"
+      },
+      "gloss": {
+        "es": "Imposible de detener o evitar, sin posibilidad alguna de ser cambiado."
+      },
+      "gloss_example": {
+        "es": "El inexorable aumento de las temperaturas globales exige una acción colectiva urgente."
+      }
+    },
+    {
+      "id": "pragmatic",
+      "term": "pragmatic",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Dealing with things sensibly and realistically based on practical considerations rather than ideals",
+      "example": "A pragmatic approach to the crisis meant making compromises that neither side fully wanted.",
+      "translations": {
+        "es": "pragmático"
+      },
+      "gloss": {
+        "es": "Que aborda las cosas de forma sensata y realista basándose en consideraciones prácticas más que en ideales."
+      },
+      "gloss_example": {
+        "es": "Un enfoque pragmático ante la crisis implicó hacer concesiones que ninguna de las partes deseaba del todo."
+      }
+    },
+    {
+      "id": "superfluous",
+      "term": "superfluous",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "More than is needed, desired, or required, and unnecessary given what already exists",
+      "example": "Most of the appendix was superfluous and should have been cut before publication.",
+      "translations": {
+        "es": "superfluo / innecesario"
+      },
+      "gloss": {
+        "es": "Más de lo necesario, deseado o requerido, e innecesario dado lo que ya existe."
+      },
+      "gloss_example": {
+        "es": "La mayor parte del apéndice era superflua y debería haberse eliminado antes de la publicación."
+      }
+    },
+    {
+      "id": "common",
+      "term": "common",
+      "definition": "Happening often or shared by many.",
+      "example": "It is a common mistake.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "común"
+      },
+      "gloss": {
+        "es": "Que ocurre a menudo o es compartido por muchos."
+      },
+      "gloss_example": {
+        "es": "Es un error común."
+      }
+    },
+    {
+      "id": "huge",
+      "term": "huge",
+      "definition": "Extremely large.",
+      "example": "They live in a huge house.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "enorme"
+      },
+      "gloss": {
+        "es": "Extremadamente grande."
+      },
+      "gloss_example": {
+        "es": "Viven en una casa enorme."
+      }
+    },
+    {
+      "id": "average",
+      "term": "average",
+      "definition": "The usual or middle amount.",
+      "example": "The average price went down.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "promedio / medio"
+      },
+      "gloss": {
+        "es": "La cantidad usual o intermedia."
+      },
+      "gloss_example": {
+        "es": "El precio promedio bajó."
+      }
+    },
+    {
+      "id": "certain",
+      "term": "certain",
+      "definition": "Sure, or a particular one not named.",
+      "example": "I am certain about the date.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "seguro / cierto"
+      },
+      "gloss": {
+        "es": "Seguro, o uno en particular sin nombrar."
+      },
+      "gloss_example": {
+        "es": "Estoy seguro de la fecha."
+      }
+    },
+    {
+      "id": "various",
+      "term": "various",
+      "definition": "Several different ones.",
+      "example": "We visited various cities.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "varios / diversos"
+      },
+      "gloss": {
+        "es": "Varios diferentes."
+      },
+      "gloss_example": {
+        "es": "Visitamos varias ciudades."
+      }
+    },
+    {
+      "id": "likely",
+      "term": "likely",
+      "definition": "Probably going to happen.",
+      "example": "It is likely to rain.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "probable"
+      },
+      "gloss": {
+        "es": "Que probablemente va a pasar."
+      },
+      "gloss_example": {
+        "es": "Es probable que llueva."
+      }
+    },
+    {
+      "id": "former",
+      "term": "former",
+      "definition": "Belonging to an earlier time, previous.",
+      "example": "The former president spoke.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "anterior / antiguo"
+      },
+      "gloss": {
+        "es": "De un tiempo anterior, previo."
+      },
+      "gloss_example": {
+        "es": "El expresidente habló."
+      }
+    }
+  ]
+}

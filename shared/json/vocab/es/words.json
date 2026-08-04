@@ -289,60 +289,6 @@
       }
     },
     {
-      "id": "age",
-      "term": "edad",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Número de años que alguien ha vivido.",
-      "example": "Los niños de la misma edad suelen jugar juntos.",
-      "translations": {
-        "en": "age"
-      },
-      "gloss": {
-        "en": "The number of years a person has lived."
-      },
-      "gloss_example": {
-        "en": "Children of the same age often play together."
-      }
-    },
-    {
-      "id": "history",
-      "term": "historia",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Estudio de los hechos ocurridos en el pasado.",
-      "example": "Él enseña la historia de la antigua Roma.",
-      "translations": {
-        "en": "history"
-      },
-      "gloss": {
-        "en": "The study of events that happened in the past."
-      },
-      "gloss_example": {
-        "en": "He teaches the history of ancient Rome."
-      }
-    },
-    {
-      "id": "game",
-      "term": "juego / partido",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Actividad con reglas que se juega por diversión.",
-      "example": "Los niños inventaron un nuevo juego.",
-      "translations": {
-        "en": "game"
-      },
-      "gloss": {
-        "en": "An activity with rules that people play for fun."
-      },
-      "gloss_example": {
-        "en": "The children invented a new game."
-      }
-    },
-    {
       "id": "rule",
       "term": "regla / norma",
       "level": "A2",
@@ -358,42 +304,6 @@
       },
       "gloss_example": {
         "en": "The first rule is to arrive on time."
-      }
-    },
-    {
-      "id": "minute",
-      "term": "minuto",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Unidad de tiempo de sesenta segundos.",
-      "example": "El autobús sale en diez minutos.",
-      "translations": {
-        "en": "minute"
-      },
-      "gloss": {
-        "en": "A unit of time equal to sixty seconds."
-      },
-      "gloss_example": {
-        "en": "The bus leaves in ten minutes."
-      }
-    },
-    {
-      "id": "town",
-      "term": "pueblo",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Lugar con casas y tiendas, menor que una ciudad.",
-      "example": "Viven en un pueblo pequeño junto al mar.",
-      "translations": {
-        "en": "town"
-      },
-      "gloss": {
-        "en": "A place with houses and shops, smaller than a city."
-      },
-      "gloss_example": {
-        "en": "They live in a small town by the sea."
       }
     },
     {
@@ -613,60 +523,6 @@
       }
     },
     {
-      "id": "light",
-      "term": "luz",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Energía del sol o una lámpara que permite ver.",
-      "example": "Por favor, enciende la luz.",
-      "translations": {
-        "en": "light"
-      },
-      "gloss": {
-        "en": "The energy from the sun or a lamp that lets us see."
-      },
-      "gloss_example": {
-        "en": "Please turn on the light."
-      }
-    },
-    {
-      "id": "voice",
-      "term": "voz",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "definition": "Sonido que hace una persona al hablar o cantar.",
-      "example": "Ella tiene una voz preciosa al cantar.",
-      "translations": {
-        "en": "voice"
-      },
-      "gloss": {
-        "en": "The sound a person makes when speaking or singing."
-      },
-      "gloss_example": {
-        "en": "She has a beautiful singing voice."
-      }
-    },
-    {
-      "id": "world",
-      "term": "mundo",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "La Tierra y todo lo que hay en ella.",
-      "example": "Ella quiere viajar por todo el mundo.",
-      "translations": {
-        "en": "world"
-      },
-      "gloss": {
-        "en": "The earth and all the people and places on it."
-      },
-      "gloss_example": {
-        "en": "She wants to travel around the world."
-      }
-    },
-    {
       "id": "success",
       "term": "éxito",
       "level": "B1",
@@ -685,24 +541,6 @@
       }
     },
     {
-      "id": "silence",
-      "term": "silencio",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "medium",
-      "definition": "Ausencia total de ruido.",
-      "example": "La biblioteca estaba en total silencio.",
-      "translations": {
-        "en": "silence"
-      },
-      "gloss": {
-        "en": "Complete quiet, with no sound at all."
-      },
-      "gloss_example": {
-        "en": "The library was in total silence."
-      }
-    },
-    {
       "id": "reality",
       "term": "realidad",
       "level": "B1",
@@ -718,24 +556,6 @@
       },
       "gloss_example": {
         "en": "The plan sounds good but reality is harder."
-      }
-    },
-    {
-      "id": "future",
-      "term": "futuro",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "El tiempo que vendrá después de ahora.",
-      "example": "Ella tiene grandes planes para el futuro.",
-      "translations": {
-        "en": "future"
-      },
-      "gloss": {
-        "en": "The time that will come after now."
-      },
-      "gloss_example": {
-        "en": "She has big plans for the future."
       }
     },
     {
@@ -772,24 +592,6 @@
       },
       "gloss_example": {
         "en": "In my opinion, the film was too long."
-      }
-    },
-    {
-      "id": "adventure",
-      "term": "aventura",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Experiencia emocionante o poco común.",
-      "example": "El viaje fue toda una aventura.",
-      "translations": {
-        "en": "adventure"
-      },
-      "gloss": {
-        "en": "An exciting or unusual experience."
-      },
-      "gloss_example": {
-        "en": "The trip was a real adventure."
       }
     },
     {
@@ -865,24 +667,6 @@
       }
     },
     {
-      "id": "espacio",
-      "term": "espacio",
-      "definition": "Lugar libre o zona disponible.",
-      "example": "No hay espacio en el armario.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "space / room"
-      },
-      "gloss": {
-        "en": "A free place or available area."
-      },
-      "gloss_example": {
-        "en": "There is no room in the closet."
-      }
-    },
-    {
       "id": "posibilidad",
       "term": "posibilidad",
       "definition": "Que algo pueda ocurrir o hacerse.",
@@ -898,42 +682,6 @@
       },
       "gloss_example": {
         "en": "There is a chance of rain."
-      }
-    },
-    {
-      "id": "vuelta",
-      "term": "vuelta",
-      "definition": "Regreso, o giro alrededor de algo.",
-      "example": "Dimos una vuelta por el barrio.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "en": "turn / walk / return"
-      },
-      "gloss": {
-        "en": "A return, or a turn around something."
-      },
-      "gloss_example": {
-        "en": "We took a walk around the neighborhood."
-      }
-    },
-    {
-      "id": "resto",
-      "term": "resto",
-      "definition": "Lo que queda de algo.",
-      "example": "El resto del dinero está en el banco.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "rest / remainder"
-      },
-      "gloss": {
-        "en": "What is left of something."
-      },
-      "gloss_example": {
-        "en": "The rest of the money is in the bank."
       }
     },
     {
@@ -955,150 +703,6 @@
       }
     },
     {
-      "id": "material",
-      "term": "material",
-      "definition": "Sustancia con la que se hace algo.",
-      "example": "La mesa es de un material resistente.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "en": "material"
-      },
-      "gloss": {
-        "en": "The substance something is made of."
-      },
-      "gloss_example": {
-        "en": "The table is made of a strong material."
-      }
-    },
-    {
-      "id": "par",
-      "term": "par",
-      "definition": "Conjunto de dos cosas iguales.",
-      "example": "Compré un par de zapatos.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "en": "pair"
-      },
-      "gloss": {
-        "en": "A set of two matching things."
-      },
-      "gloss_example": {
-        "en": "I bought a pair of shoes."
-      }
-    },
-    {
-      "id": "medida",
-      "term": "medida",
-      "definition": "Tamaño o cantidad de algo, o acción para lograr un fin.",
-      "example": "Tomaron medidas para ahorrar agua.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "measure / measurement"
-      },
-      "gloss": {
-        "en": "A size or amount, or an action to reach a goal."
-      },
-      "gloss_example": {
-        "en": "They took measures to save water."
-      }
-    },
-    {
-      "id": "especie",
-      "term": "especie",
-      "definition": "Grupo de seres vivos parecidos, o tipo de algo.",
-      "example": "Es una especie de ave rara.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "species / kind"
-      },
-      "gloss": {
-        "en": "A group of similar living things, or a kind."
-      },
-      "gloss_example": {
-        "en": "It is a rare species of bird."
-      }
-    },
-    {
-      "id": "accidente",
-      "term": "accidente",
-      "definition": "Suceso malo e inesperado.",
-      "example": "Hubo un accidente en la carretera.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "en": "accident"
-      },
-      "gloss": {
-        "en": "A bad, unexpected event."
-      },
-      "gloss_example": {
-        "en": "There was an accident on the highway."
-      }
-    },
-    {
-      "id": "biblioteca",
-      "term": "biblioteca",
-      "definition": "Lugar con libros para leer o pedir prestados.",
-      "example": "Estudio en la biblioteca.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "en": "library"
-      },
-      "gloss": {
-        "en": "A place with books to read or borrow."
-      },
-      "gloss_example": {
-        "en": "I study at the library."
-      }
-    },
-    {
-      "id": "interior",
-      "term": "interior",
-      "definition": "La parte de adentro de algo.",
-      "example": "El interior del carro es cómodo.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "interior / inside"
-      },
-      "gloss": {
-        "en": "The inner part of something."
-      },
-      "gloss_example": {
-        "en": "The interior of the car is comfortable."
-      }
-    },
-    {
-      "id": "diseno",
-      "term": "diseño",
-      "definition": "Forma en que se planea o se ve algo.",
-      "example": "Me gusta el diseño de esta página.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "design"
-      },
-      "gloss": {
-        "en": "The way something is planned or looks."
-      },
-      "gloss_example": {
-        "en": "I like the design of this page."
-      }
-    },
-    {
       "id": "caracteristica",
       "term": "característica",
       "definition": "Rasgo propio de algo o alguien.",
@@ -1114,24 +718,6 @@
       },
       "gloss_example": {
         "en": "Its color is a unique feature."
-      }
-    },
-    {
-      "id": "presente",
-      "term": "presente",
-      "definition": "El momento actual, o que está aquí.",
-      "example": "Vive el presente sin preocuparte.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "en": "present"
-      },
-      "gloss": {
-        "en": "The current moment, or being here."
-      },
-      "gloss_example": {
-        "en": "Live in the present without worrying."
       }
     }
   ]

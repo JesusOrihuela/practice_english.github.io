@@ -1,0 +1,166 @@
+{
+  "words": [
+    {
+      "id": "town",
+      "term": "town",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place with houses and shops, smaller than a city.",
+      "example": "They live in a small town by the sea.",
+      "translations": {
+        "es": "pueblo"
+      },
+      "gloss": {
+        "es": "Lugar con casas y tiendas, menor que una ciudad."
+      },
+      "gloss_example": {
+        "es": "Viven en un pueblo pequeño junto al mar."
+      }
+    },
+    {
+      "id": "world",
+      "term": "world",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The earth and all the people and places on it.",
+      "example": "She wants to travel around the world.",
+      "translations": {
+        "es": "mundo"
+      },
+      "gloss": {
+        "es": "La Tierra y todo lo que hay en ella."
+      },
+      "gloss_example": {
+        "es": "Ella quiere viajar por todo el mundo."
+      }
+    },
+    {
+      "id": "city",
+      "term": "city",
+      "definition": "A large town.",
+      "example": "Madrid is a big city.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "ciudad"
+      },
+      "gloss": {
+        "es": "Un pueblo grande."
+      },
+      "gloss_example": {
+        "es": "Madrid es una ciudad grande."
+      }
+    },
+    {
+      "id": "street",
+      "term": "street",
+      "definition": "A public road in a town or city.",
+      "example": "They live on a quiet street.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "calle"
+      },
+      "gloss": {
+        "es": "Vía pública en un pueblo o ciudad."
+      },
+      "gloss_example": {
+        "es": "Viven en una calle tranquila."
+      }
+    },
+    {
+      "id": "place",
+      "term": "place",
+      "definition": "A particular position or area.",
+      "example": "This is a nice place to eat.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "lugar / sitio"
+      },
+      "gloss": {
+        "es": "Una posición o zona en particular."
+      },
+      "gloss_example": {
+        "es": "Este es un buen lugar para comer."
+      }
+    },
+    {
+      "id": "area",
+      "term": "area",
+      "definition": "A part of a place or region.",
+      "example": "This area is very safe.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "zona / área"
+      },
+      "gloss": {
+        "es": "Una parte de un lugar o región."
+      },
+      "gloss_example": {
+        "es": "Esta zona es muy segura."
+      }
+    },
+    {
+      "id": "center",
+      "term": "center",
+      "definition": "The middle part of a place.",
+      "example": "Her office is in the center of town.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "centro"
+      },
+      "gloss": {
+        "es": "La parte del medio de un lugar."
+      },
+      "gloss_example": {
+        "es": "Su oficina está en el centro del pueblo."
+      }
+    },
+    {
+      "id": "field",
+      "term": "field",
+      "definition": "An open area of land, often for crops or sports.",
+      "example": "The children played in the field.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "campo / cancha"
+      },
+      "gloss": {
+        "es": "Terreno abierto, para cultivo o deporte."
+      },
+      "gloss_example": {
+        "es": "Los niños jugaron en el campo."
+      }
+    },
+    {
+      "id": "road",
+      "term": "road",
+      "definition": "A way between places for cars.",
+      "example": "This road leads to the beach.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "camino / carretera"
+      },
+      "gloss": {
+        "es": "Vía entre lugares para vehículos."
+      },
+      "gloss_example": {
+        "es": "Este camino lleva a la playa."
+      }
+    }
+  ]
+}

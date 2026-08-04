@@ -1,0 +1,580 @@
+{
+  "words": [
+    {
+      "id": "accurate",
+      "term": "accurate",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Correct and precise, without errors",
+      "example": "The weather forecast was surprisingly accurate.",
+      "translations": {
+        "es": "preciso"
+      },
+      "gloss": {
+        "es": "Correcto y preciso, sin errores."
+      },
+      "gloss_example": {
+        "es": "El pronóstico del tiempo fue sorprendentemente preciso."
+      }
+    },
+    {
+      "id": "anxious",
+      "term": "anxious",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Feeling worried or nervous about something uncertain",
+      "example": "She felt anxious before the big interview.",
+      "translations": {
+        "es": "ansioso"
+      },
+      "gloss": {
+        "es": "Que se siente preocupado o nervioso por algo incierto."
+      },
+      "gloss_example": {
+        "es": "Se sentía ansiosa antes de la gran entrevista."
+      }
+    },
+    {
+      "id": "broad",
+      "term": "broad",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Wide in extent, covering many subjects",
+      "example": "She has a broad knowledge of history.",
+      "translations": {
+        "es": "amplio"
+      },
+      "gloss": {
+        "es": "Amplio en extensión, que abarca muchos temas."
+      },
+      "gloss_example": {
+        "es": "Tiene un amplio conocimiento de la historia."
+      }
+    },
+    {
+      "id": "capable",
+      "term": "capable",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having the ability or qualities to do something",
+      "example": "He is capable of handling the project alone.",
+      "translations": {
+        "es": "capaz"
+      },
+      "gloss": {
+        "es": "Que tiene la habilidad o las cualidades para hacer algo."
+      },
+      "gloss_example": {
+        "es": "Él es capaz de manejar el proyecto por sí solo."
+      }
+    },
+    {
+      "id": "complex",
+      "term": "complex",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Consisting of many interconnected parts, complicated",
+      "example": "The human brain is a complex organ.",
+      "translations": {
+        "es": "complejo"
+      },
+      "gloss": {
+        "es": "Que consta de muchas partes interconectadas, complicado."
+      },
+      "gloss_example": {
+        "es": "El cerebro humano es un órgano complejo."
+      }
+    },
+    {
+      "id": "confident",
+      "term": "confident",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Feeling certain about your abilities or a situation",
+      "example": "She felt confident before the presentation.",
+      "translations": {
+        "es": "seguro de si mismo"
+      },
+      "gloss": {
+        "es": "Que se siente seguro de sus habilidades."
+      },
+      "gloss_example": {
+        "es": "Se sentía segura de sí misma antes de la presentación."
+      }
+    },
+    {
+      "id": "curious",
+      "term": "curious",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Eager to know or learn something",
+      "example": "Children are naturally curious about the world.",
+      "translations": {
+        "es": "curioso"
+      },
+      "gloss": {
+        "es": "Con ganas de saber o aprender algo nuevo."
+      },
+      "gloss_example": {
+        "es": "Los niños son naturalmente curiosos sobre el mundo."
+      }
+    },
+    {
+      "id": "enormous",
+      "term": "enormous",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Very large in size or quantity",
+      "example": "The elephant was enormous compared to the dog.",
+      "translations": {
+        "es": "enorme"
+      },
+      "gloss": {
+        "es": "Muy grande en tamaño o cantidad."
+      },
+      "gloss_example": {
+        "es": "El elefante era enorme comparado con el perro."
+      }
+    },
+    {
+      "id": "essential",
+      "term": "essential",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Absolutely necessary, extremely important",
+      "example": "Sleep is essential for good health.",
+      "translations": {
+        "es": "esencial"
+      },
+      "gloss": {
+        "es": "Absolutamente necesario, extremadamente importante."
+      },
+      "gloss_example": {
+        "es": "El sueño es esencial para una buena salud."
+      }
+    },
+    {
+      "id": "grateful",
+      "term": "grateful",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Feeling or showing appreciation for something",
+      "example": "I am grateful for all your help.",
+      "translations": {
+        "es": "agradecido"
+      },
+      "gloss": {
+        "es": "Que siente o expresa agradecimiento por algo."
+      },
+      "gloss_example": {
+        "es": "Estoy agradecido por toda tu ayuda."
+      }
+    },
+    {
+      "id": "humble",
+      "term": "humble",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having a modest opinion of yourself, not arrogant",
+      "example": "Despite his success, he remained humble.",
+      "translations": {
+        "es": "humilde"
+      },
+      "gloss": {
+        "es": "Que tiene una opinión modesta de sí mismo, no arrogante."
+      },
+      "gloss_example": {
+        "es": "A pesar de su éxito, se mantuvo humilde."
+      }
+    },
+    {
+      "id": "logical",
+      "term": "logical",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Following clear and sensible reasoning",
+      "example": "Her argument was logical and well-structured.",
+      "translations": {
+        "es": "logico"
+      },
+      "gloss": {
+        "es": "Que sigue un razonamiento claro y sensato."
+      },
+      "gloss_example": {
+        "es": "Su argumento era lógico y bien estructurado."
+      }
+    },
+    {
+      "id": "necessary",
+      "term": "necessary",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Required to be done, of vital importance",
+      "example": "Sunscreen is necessary when spending time outdoors.",
+      "translations": {
+        "es": "necesario"
+      },
+      "gloss": {
+        "es": "Que se requiere hacer, de importancia vital."
+      },
+      "gloss_example": {
+        "es": "El protector solar es necesario cuando se pasa tiempo al aire libre."
+      }
+    },
+    {
+      "id": "obvious",
+      "term": "obvious",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Easily perceived or understood, clear",
+      "example": "The answer was obvious to everyone in the room.",
+      "translations": {
+        "es": "obvio"
+      },
+      "gloss": {
+        "es": "Que se percibe o entiende fácilmente, claro."
+      },
+      "gloss_example": {
+        "es": "La respuesta era obvia para todos en la sala."
+      }
+    },
+    {
+      "id": "responsible",
+      "term": "responsible",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having an obligation to do something, trustworthy",
+      "example": "Be responsible with the resources you have.",
+      "translations": {
+        "es": "responsable"
+      },
+      "gloss": {
+        "es": "Que tiene la obligación de hacer algo, digno de confianza."
+      },
+      "gloss_example": {
+        "es": "Sé responsable con los recursos que tienes."
+      }
+    },
+    {
+      "id": "unique",
+      "term": "unique",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Being the only one of its kind, unlike anything else",
+      "example": "Each person has a unique set of skills.",
+      "translations": {
+        "es": "unico"
+      },
+      "gloss": {
+        "es": "Que es el único en su especie."
+      },
+      "gloss_example": {
+        "es": "Cada persona tiene un conjunto único de habilidades."
+      }
+    },
+    {
+      "id": "valuable",
+      "term": "valuable",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Worth a great deal, highly useful or important",
+      "example": "Time is the most valuable resource we have.",
+      "translations": {
+        "es": "valioso"
+      },
+      "gloss": {
+        "es": "Que vale mucho, muy útil o importante."
+      },
+      "gloss_example": {
+        "es": "El tiempo es el recurso más valioso que tenemos."
+      }
+    },
+    {
+      "id": "vast",
+      "term": "vast",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Very great in size, amount, or extent",
+      "example": "The ocean is vast and full of mysteries.",
+      "translations": {
+        "es": "vasto"
+      },
+      "gloss": {
+        "es": "Muy grande en tamaño, cantidad o extensión."
+      },
+      "gloss_example": {
+        "es": "El océano es vasto y está lleno de misterios."
+      }
+    },
+    {
+      "id": "young",
+      "term": "young",
+      "definition": "Having lived for only a short time.",
+      "example": "She is still very young.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "joven"
+      },
+      "gloss": {
+        "es": "Que tiene pocos años."
+      },
+      "gloss_example": {
+        "es": "Ella es todavía muy joven."
+      }
+    },
+    {
+      "id": "able",
+      "term": "able",
+      "definition": "Having the skill or power to do something.",
+      "example": "She is able to speak three languages.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "capaz"
+      },
+      "gloss": {
+        "es": "Que tiene la capacidad de hacer algo."
+      },
+      "gloss_example": {
+        "es": "Ella es capaz de hablar tres idiomas."
+      }
+    },
+    {
+      "id": "easy",
+      "term": "easy",
+      "definition": "Not difficult to do.",
+      "example": "This game is easy to learn.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "fácil"
+      },
+      "gloss": {
+        "es": "Que no es difícil de hacer."
+      },
+      "gloss_example": {
+        "es": "Este juego es fácil de aprender."
+      }
+    },
+    {
+      "id": "short",
+      "term": "short",
+      "definition": "Small in length, distance, or time.",
+      "example": "It was a short trip.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "corto / bajo"
+      },
+      "gloss": {
+        "es": "De poca longitud, distancia o tiempo."
+      },
+      "gloss_example": {
+        "es": "Fue un viaje corto."
+      }
+    },
+    {
+      "id": "true",
+      "term": "true",
+      "definition": "Based on facts, not false.",
+      "example": "The story is true.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "verdadero / cierto"
+      },
+      "gloss": {
+        "es": "Basado en hechos, no falso."
+      },
+      "gloss_example": {
+        "es": "La historia es verdadera."
+      }
+    },
+    {
+      "id": "main",
+      "term": "main",
+      "definition": "Most important or largest.",
+      "example": "The main problem is time.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "principal"
+      },
+      "gloss": {
+        "es": "El más importante o grande."
+      },
+      "gloss_example": {
+        "es": "El problema principal es el tiempo."
+      }
+    },
+    {
+      "id": "deep",
+      "term": "deep",
+      "definition": "Going far down from the top.",
+      "example": "The lake is very deep.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "profundo / hondo"
+      },
+      "gloss": {
+        "es": "Que llega muy abajo desde la superficie."
+      },
+      "gloss_example": {
+        "es": "El lago es muy profundo."
+      }
+    },
+    {
+      "id": "wide",
+      "term": "wide",
+      "definition": "Large from one side to the other.",
+      "example": "It is a wide street.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "ancho / amplio"
+      },
+      "gloss": {
+        "es": "Grande de un lado a otro."
+      },
+      "gloss_example": {
+        "es": "Es una calle ancha."
+      }
+    },
+    {
+      "id": "difficult",
+      "term": "difficult",
+      "definition": "Not easy to do or understand.",
+      "example": "It was a difficult exam.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "difícil"
+      },
+      "gloss": {
+        "es": "Que no es fácil de hacer o entender."
+      },
+      "gloss_example": {
+        "es": "Fue un examen difícil."
+      }
+    },
+    {
+      "id": "serious",
+      "term": "serious",
+      "definition": "Important and needing attention, or not joking.",
+      "example": "This is a serious problem.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "serio / grave"
+      },
+      "gloss": {
+        "es": "Importante y que requiere atención."
+      },
+      "gloss_example": {
+        "es": "Este es un problema grave."
+      }
+    },
+    {
+      "id": "natural",
+      "term": "natural",
+      "definition": "Existing in nature, not made by people.",
+      "example": "The park has natural beauty.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "natural"
+      },
+      "gloss": {
+        "es": "Que existe en la naturaleza, no artificial."
+      },
+      "gloss_example": {
+        "es": "El parque tiene una belleza natural."
+      }
+    },
+    {
+      "id": "real",
+      "term": "real",
+      "definition": "Actually existing, not imagined.",
+      "example": "Is this a real diamond?",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "real / verdadero"
+      },
+      "gloss": {
+        "es": "Que existe de verdad, no imaginado."
+      },
+      "gloss_example": {
+        "es": "¿Es un diamante real?"
+      }
+    },
+    {
+      "id": "poor",
+      "term": "poor",
+      "definition": "Having little money, or of low quality.",
+      "example": "They help poor families.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "pobre"
+      },
+      "gloss": {
+        "es": "Con poco dinero, o de mala calidad."
+      },
+      "gloss_example": {
+        "es": "Ayudan a familias pobres."
+      }
+    },
+    {
+      "id": "modern",
+      "term": "modern",
+      "definition": "Of the present or recent time.",
+      "example": "It is a modern building.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "moderno"
+      },
+      "gloss": {
+        "es": "De la época actual o reciente."
+      },
+      "gloss_example": {
+        "es": "Es un edificio moderno."
+      }
+    }
+  ]
+}
