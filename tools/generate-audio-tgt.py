@@ -151,9 +151,10 @@ PHRASE_TOPICS = [
 # 'society' is vocab-only (not a phrase topic) and several phrase topics are phrase-only
 # (no vocabulary file). Mirrors VOCAB_TOPICS in shared/js/topics.js and tools/audit.mjs.
 VOCAB_TOPICS = [
-    'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
+    'society', 'verbos', 'adjetivos', 'colores', 'naturaleza', 'ropa', 'lengua',
+    'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
-    'movies', 'music', 'theater',
+    'movies', 'music', 'theater', 'museums',
     'gym', 'technology', 'accountability',
 ]
 

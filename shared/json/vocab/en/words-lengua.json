@@ -1,0 +1,76 @@
+{
+  "words": [
+    {
+      "id": "letter",
+      "term": "letter",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A written message sent to someone, usually by mail.",
+      "example": "She wrote a long letter to her grandmother.",
+      "translations": {
+        "es": "carta / letra"
+      },
+      "gloss": {
+        "es": "Mensaje escrito que se envía a alguien."
+      },
+      "gloss_example": {
+        "es": "Escribió una carta larga a su abuela."
+      }
+    },
+    {
+      "id": "term",
+      "term": "term",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A word or phrase used with a specific meaning.",
+      "example": "Explain the term in simple words.",
+      "translations": {
+        "es": "término"
+      },
+      "gloss": {
+        "es": "Palabra o frase con un significado específico."
+      },
+      "gloss_example": {
+        "es": "Explica el término con palabras sencillas."
+      }
+    },
+    {
+      "id": "word",
+      "term": "word",
+      "definition": "A single unit of language with meaning.",
+      "example": "I don't know this word.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "palabra"
+      },
+      "gloss": {
+        "es": "Unidad de la lengua con significado."
+      },
+      "gloss_example": {
+        "es": "No conozco esta palabra."
+      }
+    },
+    {
+      "id": "question",
+      "term": "question",
+      "definition": "A sentence that asks for information.",
+      "example": "May I ask a question?",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "pregunta"
+      },
+      "gloss": {
+        "es": "Oración que pide información."
+      },
+      "gloss_example": {
+        "es": "¿Puedo hacer una pregunta?"
+      }
+    }
+  ]
+}

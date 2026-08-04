@@ -130,9 +130,10 @@ const PHRASE_TOPICS = [
 
 /** All vocabulary topic IDs (each maps to shared/json/pairs/{pairId}/vocab/words-{id}.json) */
 const VOCAB_TOPICS = [
-  'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
+  'society', 'verbos', 'adjetivos', 'colores', 'naturaleza', 'ropa', 'lengua',
+  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater',
+  'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability',
 ];
 

@@ -431,6 +431,60 @@
       "gloss_example": {
         "en": "What a lovely day it is today."
       }
+    },
+    {
+      "id": "member",
+      "term": "miembro",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que pertenece a un grupo.",
+      "example": "Ella es miembro del club deportivo local.",
+      "translations": {
+        "en": "member"
+      },
+      "gloss": {
+        "en": "A person who belongs to a group or organization."
+      },
+      "gloss_example": {
+        "en": "She is a member of the local sports club."
+      }
+    },
+    {
+      "id": "people",
+      "term": "gente / personas",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Seres humanos en general o en grupo.",
+      "example": "Vino mucha gente al concierto.",
+      "translations": {
+        "en": "people"
+      },
+      "gloss": {
+        "en": "Human beings in general or as a group."
+      },
+      "gloss_example": {
+        "en": "Many people came to the concert."
+      }
+    },
+    {
+      "id": "invitado",
+      "term": "invitado",
+      "definition": "Persona a la que se invita a un lugar.",
+      "example": "Tenemos veinte invitados a la cena.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "guest"
+      },
+      "gloss": {
+        "en": "A person invited to a place."
+      },
+      "gloss_example": {
+        "en": "We have twenty guests for dinner."
+      }
     }
   ]
 }

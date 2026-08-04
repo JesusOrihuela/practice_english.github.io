@@ -1,0 +1,346 @@
+{
+  "words": [
+    {
+      "id": "animal",
+      "term": "animal",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ser vivo que no es planta ni humano.",
+      "example": "El zoológico tiene animales de todos los continentes.",
+      "translations": {
+        "en": "animal"
+      },
+      "gloss": {
+        "en": "A living creature that is not a plant or a human."
+      },
+      "gloss_example": {
+        "en": "The zoo has animals from every continent."
+      }
+    },
+    {
+      "id": "tree",
+      "term": "árbol",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Planta alta con tronco, ramas y hojas.",
+      "example": "Plantamos un árbol en el jardín.",
+      "translations": {
+        "en": "tree"
+      },
+      "gloss": {
+        "en": "A tall plant with a trunk, branches, and leaves."
+      },
+      "gloss_example": {
+        "en": "We planted a tree in the garden."
+      }
+    },
+    {
+      "id": "plant",
+      "term": "planta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ser vivo que crece en la tierra y tiene hojas.",
+      "example": "Ella riega las plantas cada mañana.",
+      "translations": {
+        "en": "plant"
+      },
+      "gloss": {
+        "en": "A living thing that grows in the ground and has leaves."
+      },
+      "gloss_example": {
+        "en": "She waters the plants every morning."
+      }
+    },
+    {
+      "id": "star",
+      "term": "estrella",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto brillante de luz en el cielo nocturno.",
+      "example": "Vimos las estrellas desde la colina.",
+      "translations": {
+        "en": "star"
+      },
+      "gloss": {
+        "en": "A bright point of light seen in the night sky."
+      },
+      "gloss_example": {
+        "en": "We watched the stars from the hill."
+      }
+    },
+    {
+      "id": "land",
+      "term": "tierra / terreno",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Parte sólida de la superficie de la Tierra.",
+      "example": "El granjero posee un gran terreno.",
+      "translations": {
+        "en": "land"
+      },
+      "gloss": {
+        "en": "The solid part of the earth's surface."
+      },
+      "gloss_example": {
+        "en": "The farmer owns a large piece of land."
+      }
+    },
+    {
+      "id": "nature",
+      "term": "naturaleza",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Plantas, animales y todo el mundo natural.",
+      "example": "Pasamos el fin de semana disfrutando la naturaleza.",
+      "translations": {
+        "en": "nature"
+      },
+      "gloss": {
+        "en": "Plants, animals, and everything in the natural world."
+      },
+      "gloss_example": {
+        "en": "We spent the weekend enjoying nature."
+      }
+    },
+    {
+      "id": "dog",
+      "term": "perro",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal común que se tiene como mascota.",
+      "example": "Su perro le ladra a los extraños.",
+      "translations": {
+        "en": "dog"
+      },
+      "gloss": {
+        "en": "A common animal kept as a pet or for work."
+      },
+      "gloss_example": {
+        "en": "Their dog barks at strangers."
+      }
+    },
+    {
+      "id": "river",
+      "term": "río",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Corriente natural de agua que va al mar.",
+      "example": "Nadaron en el río todo el verano.",
+      "translations": {
+        "en": "river"
+      },
+      "gloss": {
+        "en": "A large natural stream of water that flows to the sea."
+      },
+      "gloss_example": {
+        "en": "They swam in the river all summer."
+      }
+    },
+    {
+      "id": "beach",
+      "term": "playa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Zona de arena junto al mar.",
+      "example": "Descansamos en la playa todo el día.",
+      "translations": {
+        "en": "beach"
+      },
+      "gloss": {
+        "en": "The sandy area next to the sea."
+      },
+      "gloss_example": {
+        "en": "We relaxed on the beach all day."
+      }
+    },
+    {
+      "id": "mountain",
+      "term": "montaña",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Gran elevación de terreno con laderas empinadas.",
+      "example": "Escalaron la montaña más alta de la región.",
+      "translations": {
+        "en": "mountain"
+      },
+      "gloss": {
+        "en": "A very high area of land with steep sides."
+      },
+      "gloss_example": {
+        "en": "They climbed the highest mountain in the region."
+      }
+    },
+    {
+      "id": "island",
+      "term": "isla",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Tierra rodeada de agua por todos lados.",
+      "example": "La isla es famosa por sus playas.",
+      "translations": {
+        "en": "island"
+      },
+      "gloss": {
+        "en": "A piece of land surrounded by water."
+      },
+      "gloss_example": {
+        "en": "The island is famous for its beaches."
+      }
+    },
+    {
+      "id": "flower",
+      "term": "flor",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Parte colorida de una planta que da semillas.",
+      "example": "Él le regaló un ramo de flores.",
+      "translations": {
+        "en": "flower"
+      },
+      "gloss": {
+        "en": "The colorful part of a plant that produces seeds."
+      },
+      "gloss_example": {
+        "en": "He gave her a bunch of flowers."
+      }
+    },
+    {
+      "id": "bird",
+      "term": "pájaro / ave",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal con plumas y alas que suele volar.",
+      "example": "Un pájaro pequeño cantaba junto a la ventana.",
+      "translations": {
+        "en": "bird"
+      },
+      "gloss": {
+        "en": "An animal with feathers and wings that can usually fly."
+      },
+      "gloss_example": {
+        "en": "A small bird sang outside the window."
+      }
+    },
+    {
+      "id": "lake",
+      "term": "lago",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Gran extensión de agua rodeada de tierra.",
+      "example": "Rentamos un bote en el lago.",
+      "translations": {
+        "en": "lake"
+      },
+      "gloss": {
+        "en": "A large area of water surrounded by land."
+      },
+      "gloss_example": {
+        "en": "We rented a boat on the lake."
+      }
+    },
+    {
+      "id": "planet",
+      "term": "planeta",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Cuerpo grande del espacio que gira en torno a una estrella.",
+      "example": "La Tierra es el tercer planeta desde el sol.",
+      "translations": {
+        "en": "planet"
+      },
+      "gloss": {
+        "en": "A large body in space that moves around a star."
+      },
+      "gloss_example": {
+        "en": "Earth is the third planet from the sun."
+      }
+    },
+    {
+      "id": "piedra",
+      "term": "piedra",
+      "definition": "Material duro y sólido de la tierra.",
+      "example": "El camino estaba lleno de piedras.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "stone / rock"
+      },
+      "gloss": {
+        "en": "A hard, solid piece of earth."
+      },
+      "gloss_example": {
+        "en": "The path was full of stones."
+      }
+    },
+    {
+      "id": "hoja",
+      "term": "hoja",
+      "definition": "Parte verde de una planta, o lámina de papel.",
+      "example": "Escribe en una hoja en blanco.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "leaf / sheet"
+      },
+      "gloss": {
+        "en": "The green part of a plant, or a sheet of paper."
+      },
+      "gloss_example": {
+        "en": "Write on a blank sheet."
+      }
+    },
+    {
+      "id": "paisaje",
+      "term": "paisaje",
+      "definition": "Vista de un lugar natural.",
+      "example": "El paisaje de montaña es precioso.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "landscape / scenery"
+      },
+      "gloss": {
+        "en": "A view of a natural area."
+      },
+      "gloss_example": {
+        "en": "The mountain scenery is beautiful."
+      }
+    },
+    {
+      "id": "rosa",
+      "term": "rosa",
+      "definition": "Flor de olor agradable, o color claro rojizo.",
+      "example": "Le regaló una rosa roja.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "rose / pink"
+      },
+      "gloss": {
+        "en": "A sweet-smelling flower, or a light red color."
+      },
+      "gloss_example": {
+        "en": "He gave her a red rose."
+      }
+    }
+  ]
+}

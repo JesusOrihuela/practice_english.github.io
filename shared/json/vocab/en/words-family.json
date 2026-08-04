@@ -341,6 +341,60 @@
       "gloss_example": {
         "es": "Nuestro vecino nos regó las plantas."
       }
+    },
+    {
+      "id": "member",
+      "term": "member",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who belongs to a group or organization.",
+      "example": "She is a member of the local sports club.",
+      "translations": {
+        "es": "miembro"
+      },
+      "gloss": {
+        "es": "Persona que pertenece a un grupo."
+      },
+      "gloss_example": {
+        "es": "Ella es miembro del club deportivo local."
+      }
+    },
+    {
+      "id": "people",
+      "term": "people",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Human beings in general or as a group.",
+      "example": "Many people came to the concert.",
+      "translations": {
+        "es": "gente / personas"
+      },
+      "gloss": {
+        "es": "Seres humanos en general o en grupo."
+      },
+      "gloss_example": {
+        "es": "Vino mucha gente al concierto."
+      }
+    },
+    {
+      "id": "individual",
+      "term": "individual",
+      "definition": "A single person, or relating to one person.",
+      "example": "Each individual has a role.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "individuo"
+      },
+      "gloss": {
+        "es": "Una sola persona."
+      },
+      "gloss_example": {
+        "es": "Cada individuo tiene un papel."
+      }
     }
   ]
 }

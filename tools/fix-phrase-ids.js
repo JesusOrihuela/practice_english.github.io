@@ -32,9 +32,10 @@ const phraseTopics = [
 ];
 
 const vocabTopics = [
-  'general', 'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
+  'general', 'society', 'verbos', 'adjetivos', 'colores', 'naturaleza', 'ropa', 'lengua',
+  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater',
+  'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability',
 ];
 

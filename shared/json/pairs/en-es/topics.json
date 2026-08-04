@@ -3,7 +3,7 @@
     { "id": "greetings",      "label": "Saludos",              "labelEn": "Greetings",           "emoji": "👋", "phrase": true,  "vocab": true,  "level": "A1", "order": 1 },
     { "id": "personal_info",  "label": "Información Personal",  "labelEn": "Personal Information", "emoji": "🪪", "phrase": true,  "vocab": false, "level": "A1", "order": 2 },
     { "id": "family",         "label": "Familia y Personas",   "labelEn": "Family & People",     "emoji": "👪", "phrase": true,  "vocab": true,  "level": "A1", "order": 3 },
-    { "id": "emociones",      "label": "Emociones",            "labelEn": "Emotions",            "emoji": "😊", "phrase": true,  "vocab": false, "level": "A1", "order": 4 },
+    { "id": "emociones",      "label": "Emociones",            "labelEn": "Emotions",            "emoji": "😊", "phrase": true,  "vocab": true,  "level": "A1", "order": 4 },
     { "id": "daily_routine",  "label": "Rutina Diaria",        "labelEn": "Daily Routine",       "emoji": "🕐", "phrase": true,  "vocab": false, "level": "A1", "order": 5 },
     { "id": "survival",       "label": "Sobrevivir el Idioma", "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 6 },
     { "id": "weather",        "label": "Clima",                "labelEn": "Weather",             "emoji": "🌤️", "phrase": true,  "vocab": false, "level": "A1", "order": 7 },
@@ -19,10 +19,16 @@
     { "id": "music",          "label": "Música",               "labelEn": "Music",               "emoji": "🎵", "phrase": true,  "vocab": true,  "level": "A2", "order": 17 },
     { "id": "technology",     "label": "Tecnología",           "labelEn": "Technology",          "emoji": "💻", "phrase": true,  "vocab": true,  "level": "B1", "order": 18 },
     { "id": "gym",            "label": "Gimnasio",             "labelEn": "Gym",                 "emoji": "💪", "phrase": true,  "vocab": true,  "level": "B1", "order": 19 },
-    { "id": "museums",        "label": "Museos & Arte",         "labelEn": "Museums & Art",       "emoji": "🖼️", "phrase": true,  "vocab": false, "level": "A2", "order": 20 },
+    { "id": "museums",        "label": "Museos & Arte",         "labelEn": "Museums & Art",       "emoji": "🖼️", "phrase": true,  "vocab": true,  "level": "A2", "order": 20 },
     { "id": "theater",        "label": "Teatro",               "labelEn": "Theater",             "emoji": "🎭", "phrase": true,  "vocab": true,  "level": "B1", "order": 21 },
     { "id": "accountability", "label": "Contabilidad",         "labelEn": "Accounting",          "emoji": "📊", "phrase": true,  "vocab": true,  "level": "B2", "order": 22 },
-    { "id": "general",        "label": "General",              "labelEn": "General",             "emoji": "📖", "phrase": false, "vocab": true,  "vocabOrder": 0 },
-    { "id": "society",        "label": "Sociedad y Trabajo",   "labelEn": "Society & Work",      "emoji": "🏛️", "phrase": false, "vocab": true,  "vocabOrder": 1 }
+    { "id": "general",        "label": "Conceptos",            "labelEn": "Concepts",            "emoji": "💡", "phrase": false, "vocab": true,  "vocabOrder": 0 },
+    { "id": "society",        "label": "Sociedad y Trabajo",   "labelEn": "Society & Work",      "emoji": "🏛️", "phrase": false, "vocab": true,  "vocabOrder": 1 },
+    { "id": "verbos",         "label": "Verbos",               "labelEn": "Verbs",               "emoji": "🏃", "phrase": false, "vocab": true,  "vocabOrder": 2 },
+    { "id": "adjetivos",      "label": "Adjetivos",            "labelEn": "Adjectives",          "emoji": "🔤", "phrase": false, "vocab": true,  "vocabOrder": 3 },
+    { "id": "colores",        "label": "Colores",              "labelEn": "Colors",              "emoji": "🎨", "phrase": false, "vocab": true,  "vocabOrder": 4 },
+    { "id": "naturaleza",     "label": "Naturaleza",           "labelEn": "Nature",              "emoji": "🌳", "phrase": false, "vocab": true,  "vocabOrder": 5 },
+    { "id": "ropa",           "label": "Ropa y Moda",          "labelEn": "Clothing & Fashion",  "emoji": "👕", "phrase": false, "vocab": true,  "vocabOrder": 6 },
+    { "id": "lengua",         "label": "Lengua y Comunicación","labelEn": "Language & Communication", "emoji": "🗣️", "phrase": false, "vocab": true, "vocabOrder": 7 }
   ]
 }

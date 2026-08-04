@@ -63,9 +63,10 @@ const PHRASE_TOPICS = [
 ];
 
 const VOCAB_TOPICS = [
-  'general', 'society', 'greetings', 'family', 'health', 'restaurant', 'supermarket', 'kitchen',
+  'general', 'society', 'verbos', 'adjetivos', 'colores', 'naturaleza', 'ropa', 'lengua',
+  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'gym', 'technology', 'accountability',
+  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability',
 ];
 // Vocabulary is target-centric: shared/json/vocab/{targetLang}/ (English + Spanish today).
 const VOCAB_LANGS = ['en', 'es'];
