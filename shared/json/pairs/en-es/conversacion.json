@@ -1,0 +1,160 @@
+{
+  "phrases": [
+    {
+      "id": "conversacion_podemos_hablar",
+      "source": "You want to start a private conversation.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Podemos hablar?",
+          "audioSlug": "podemos_hablar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_puedo_preguntar_algo",
+      "source": "You'd like to raise a question in class.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo preguntar algo?",
+          "audioSlug": "puedo_preguntar_algo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_supe_que_responder",
+      "source": "Someone asked you something and you froze.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No supe qué responder.",
+          "audioSlug": "no_supe_que_responder"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_alguien_puede_contestar",
+      "source": "The phone is ringing and nobody picks up.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Alguien puede contestar?",
+          "audioSlug": "alguien_puede_contestar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dejame_explicarte",
+      "source": "You want a chance to make your reasons clear.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Déjame explicarte.",
+          "audioSlug": "dejame_explicarte"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_me_gusta_discutir",
+      "source": "You would rather avoid a heated argument.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me gusta discutir.",
+          "audioSlug": "no_me_gusta_discutir"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_hace_falta_gritar",
+      "source": "Someone is raising their voice at you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No hace falta gritar.",
+          "audioSlug": "no_hace_falta_gritar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_quiero_saber_tu_opinion",
+      "source": "You really value what this person thinks.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero saber tu opinión.",
+          "audioSlug": "quiero_saber_tu_opinion"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_estoy_de_acuerdo_contigo",
+      "source": "You share this person's view completely.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy de acuerdo contigo.",
+          "audioSlug": "estoy_de_acuerdo_contigo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_supongo_que_si",
+      "source": "You give a tentative yes without being certain.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Supongo que sí.",
+          "audioSlug": "supongo_que_si"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_lo_dudo_mucho",
+      "source": "You find that claim very hard to believe.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lo dudo mucho.",
+          "audioSlug": "lo_dudo_mucho"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_volvere_a_mencionar_eso",
+      "source": "You promise to drop a touchy subject.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No volveré a mencionar eso.",
+          "audioSlug": "no_volvere_a_mencionar_eso"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_tengo_comentarios",
+      "source": "A reporter asks and you decline to say anything.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No tengo comentarios.",
+          "audioSlug": "no_tengo_comentarios"
+        }
+      ]
+    }
+  ]
+}

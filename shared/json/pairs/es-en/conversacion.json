@@ -1,0 +1,160 @@
+{
+  "phrases": [
+    {
+      "id": "conversacion_talk_to_me",
+      "source": "Quieres que esta persona se abra contigo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Talk to me.",
+          "audioSlug": "talk_to_me"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_ask_tom",
+      "source": "Alguien tiene la información que te falta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ask Tom.",
+          "audioSlug": "ask_tom"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_answer_me",
+      "source": "Le hiciste una pregunta y no dice nada.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Answer me.",
+          "audioSlug": "answer_me"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_let_me_explain",
+      "source": "Quieres aclarar tus razones con calma.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let me explain.",
+          "audioSlug": "let_me_explain"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_please_speak_up",
+      "source": "Casi no se oye lo que dice esa persona.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please speak up.",
+          "audioSlug": "please_speak_up"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_please_do_not_shout",
+      "source": "Alguien te está levantando la voz.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please don't shout.",
+          "audioSlug": "please_don_t_shout"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_doubt_it",
+      "source": "Esa afirmación te cuesta creerla.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I doubt it.",
+          "audioSlug": "i_doubt_it"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_dont_like_to_argue",
+      "source": "Prefieres evitar las discusiones acaloradas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I don't like to argue.",
+          "audioSlug": "i_don_t_like_to_argue"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_agree_with_you",
+      "source": "Compartes por completo su punto de vista.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I agree with you.",
+          "audioSlug": "i_agree_with_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_suppose_so",
+      "source": "Das un sí con poca seguridad.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I suppose so.",
+          "audioSlug": "i_suppose_so"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_did_tom_mention_me",
+      "source": "Tienes curiosidad de si salió tu nombre.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Did Tom mention me?",
+          "audioSlug": "did_tom_mention_me"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_we_have_nothing_to_discuss",
+      "source": "Das por cerrada la conversación.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We have nothing to discuss.",
+          "audioSlug": "we_have_nothing_to_discuss"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_have_no_comment",
+      "source": "Un periodista pregunta y prefieres callar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have no comment.",
+          "audioSlug": "i_have_no_comment"
+        }
+      ]
+    }
+  ]
+}
