@@ -44,12 +44,15 @@ jobs:
       - name: Content audit (audit.mjs --quick)
         run: node tools/audit.mjs --quick
 
-  # Core-vocabulary rule: the target language must teach ≥ 90% of the pedagogical
-  # top-1000 (premise: the ~1000 most frequent units cover ~88% of everyday speech).
-  # English uses NGSL (committed). Spanish uses ELELex (CC BY-NC-SA, not committed)
-  # so its gate runs LOCALLY only — see coverage.mjs. This job is a visible signal,
-  # not (yet) a required check: coverage is being raised toward the target. Make it
-  # required in branch protection once it turns green.
+  # Core-vocabulary rule (TWO CHANNELS): the target language must teach ≥ 90% of the
+  # pedagogical top-1000 with PHRASES alone AND with VOCAB alone — the core taught
+  # both in context (phrases) and in isolation (vocab). Phrases are measured over the
+  # full teachable top-1000; vocab over content words only (closed-class function
+  # words are excluded — they cannot be flashcards). Premise: the ~1000 most frequent
+  # units cover ~88% of everyday speech. English uses NGSL (committed). Spanish uses
+  # ELELex (CC BY-NC-SA, not committed) so its gate runs LOCALLY only — see
+  # coverage.mjs. This job is a visible signal, not (yet) a required check: coverage
+  # is being raised toward the target. Make it required in branch protection once green.
   coverage:
     runs-on: ubuntu-latest
     steps:
@@ -64,5 +67,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Core-vocabulary coverage gate (EN, NGSL top-1000 >= 90%)
+      - name: Core-vocabulary coverage gate (EN, NGSL top-1000 >= 90% in BOTH channels)
         run: node tools/coverage.mjs --pair es-en --gate --min 90

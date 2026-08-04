@@ -1,42 +1,378 @@
 {
   "topics": [
-    { "id": "greetings",      "label": "Saludos",              "labelEn": "Greetings",           "emoji": "👋", "phrase": true,  "vocab": true,  "level": "A1", "order": 1 },
-    { "id": "personal_info",  "label": "Información Personal",  "labelEn": "Personal Information", "emoji": "🪪", "phrase": true,  "vocab": false, "level": "A1", "order": 2 },
-    { "id": "family",         "label": "Familia y Personas",   "labelEn": "Family & People",     "emoji": "👪", "phrase": true,  "vocab": true,  "level": "A1", "order": 3 },
-    { "id": "emociones",      "label": "Emociones",            "labelEn": "Emotions",            "emoji": "😊", "phrase": true,  "vocab": true,  "level": "A1", "order": 4 },
-    { "id": "daily_routine",  "label": "Rutina Diaria",        "labelEn": "Daily Routine",       "emoji": "🕐", "phrase": true,  "vocab": false, "level": "A1", "order": 5 },
-    { "id": "survival",       "label": "Sobrevivir el Idioma", "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 6 },
-    { "id": "weather",        "label": "Clima",                "labelEn": "Weather",             "emoji": "🌤️", "phrase": true,  "vocab": false, "level": "A1", "order": 7 },
-    { "id": "health",         "label": "Salud y Cuerpo",       "labelEn": "Health & Body",       "emoji": "🩺", "phrase": true,  "vocab": true,  "level": "A2", "order": 8 },
-    { "id": "directions",     "label": "Direcciones y Lugares","labelEn": "Directions & Places", "emoji": "🧭", "phrase": true,  "vocab": false, "level": "A2", "order": 9 },
-    { "id": "restaurant",     "label": "Restaurante",          "labelEn": "Restaurant",          "emoji": "🍽️", "phrase": true,  "vocab": true,  "level": "A1", "order": 10 },
-    { "id": "supermarket",    "label": "Supermercado",         "labelEn": "Supermarket",         "emoji": "🛒", "phrase": true,  "vocab": true,  "level": "A2", "order": 11 },
-    { "id": "transportation", "label": "Transporte",           "labelEn": "Transportation",      "emoji": "🚌", "phrase": true,  "vocab": true,  "level": "A2", "order": 12 },
-    { "id": "airport",        "label": "Aeropuerto",           "labelEn": "Airport",             "emoji": "✈️", "phrase": true,  "vocab": true,  "level": "A2", "order": 13 },
-    { "id": "accommodation",  "label": "Alojamiento",          "labelEn": "Accommodation",       "emoji": "🏨", "phrase": true,  "vocab": true,  "level": "A2", "order": 14 },
-    { "id": "kitchen",        "label": "Cocina",               "labelEn": "Kitchen",             "emoji": "🍳", "phrase": true,  "vocab": true,  "level": "A2", "order": 15 },
-    { "id": "movies",         "label": "Películas & Series",    "labelEn": "Movies & Series",     "emoji": "🎬", "phrase": true,  "vocab": true,  "level": "A2", "order": 16 },
-    { "id": "music",          "label": "Música",               "labelEn": "Music",               "emoji": "🎵", "phrase": true,  "vocab": true,  "level": "A2", "order": 17 },
-    { "id": "technology",     "label": "Tecnología",           "labelEn": "Technology",          "emoji": "💻", "phrase": true,  "vocab": true,  "level": "B1", "order": 18 },
-    { "id": "gym",            "label": "Gimnasio",             "labelEn": "Gym",                 "emoji": "💪", "phrase": true,  "vocab": true,  "level": "B1", "order": 19 },
-    { "id": "museums",        "label": "Museos & Arte",         "labelEn": "Museums & Art",       "emoji": "🖼️", "phrase": true,  "vocab": true,  "level": "A2", "order": 20 },
-    { "id": "theater",        "label": "Teatro",               "labelEn": "Theater",             "emoji": "🎭", "phrase": true,  "vocab": true,  "level": "B1", "order": 21 },
-    { "id": "accountability", "label": "Contabilidad",         "labelEn": "Accounting",          "emoji": "📊", "phrase": true,  "vocab": true,  "level": "B2", "order": 22 },
-    { "id": "general",             "label": "Conceptos",            "labelEn": "Concepts",              "emoji": "💡", "phrase": false, "vocab": true, "vocabOrder": 0 },
-    { "id": "verbos_basicos",      "label": "Verbos Básicos",       "labelEn": "Basic Verbs",           "emoji": "🏃", "phrase": false, "vocab": true, "vocabOrder": 1 },
-    { "id": "verbos_avanzados",    "label": "Verbos Avanzados",     "labelEn": "Advanced Verbs",        "emoji": "⚡", "phrase": false, "vocab": true, "vocabOrder": 2 },
-    { "id": "adjetivos_basicos",   "label": "Adjetivos Básicos",    "labelEn": "Basic Adjectives",      "emoji": "🔤", "phrase": false, "vocab": true, "vocabOrder": 3 },
-    { "id": "adjetivos_avanzados", "label": "Adjetivos Avanzados",  "labelEn": "Advanced Adjectives",   "emoji": "🔠", "phrase": false, "vocab": true, "vocabOrder": 4 },
-    { "id": "colores",             "label": "Colores",              "labelEn": "Colors",                "emoji": "🎨", "phrase": false, "vocab": true, "vocabOrder": 5 },
-    { "id": "naturaleza",          "label": "Naturaleza",           "labelEn": "Nature",                "emoji": "🌳", "phrase": false, "vocab": true, "vocabOrder": 6 },
-    { "id": "tiempo",              "label": "Tiempo",               "labelEn": "Time",                  "emoji": "⏰", "phrase": false, "vocab": true, "vocabOrder": 7 },
-    { "id": "lugares",             "label": "Lugares",              "labelEn": "Places",                "emoji": "📍", "phrase": false, "vocab": true, "vocabOrder": 8 },
-    { "id": "cantidad",            "label": "Cantidad y Medida",    "labelEn": "Quantity & Measure",    "emoji": "🔢", "phrase": false, "vocab": true, "vocabOrder": 9 },
-    { "id": "juegos",              "label": "Juegos y Ocio",        "labelEn": "Games & Leisure",       "emoji": "🎲", "phrase": false, "vocab": true, "vocabOrder": 10 },
-    { "id": "ropa",                "label": "Ropa y Moda",          "labelEn": "Clothing & Fashion",    "emoji": "👕", "phrase": false, "vocab": true, "vocabOrder": 11 },
-    { "id": "lengua",              "label": "Lengua y Comunicación","labelEn": "Language & Communication","emoji": "🗣️","phrase": false, "vocab": true, "vocabOrder": 12 },
-    { "id": "sociedad_politica",   "label": "Sociedad y Política",  "labelEn": "Society & Politics",    "emoji": "🏛️", "phrase": false, "vocab": true, "vocabOrder": 13 },
-    { "id": "trabajo",             "label": "Trabajo y Economía",   "labelEn": "Work & Economy",        "emoji": "💼", "phrase": false, "vocab": true, "vocabOrder": 14 },
-    { "id": "educacion",           "label": "Educación",            "labelEn": "Education",             "emoji": "🎓", "phrase": false, "vocab": true, "vocabOrder": 15 }
+    {
+      "id": "greetings",
+      "label": "Saludos",
+      "labelEn": "Greetings",
+      "emoji": "👋",
+      "phrase": true,
+      "vocab": true,
+      "level": "A1",
+      "order": 1
+    },
+    {
+      "id": "personal_info",
+      "label": "Información Personal",
+      "labelEn": "Personal Information",
+      "emoji": "🪪",
+      "phrase": true,
+      "vocab": false,
+      "level": "A1",
+      "order": 2
+    },
+    {
+      "id": "family",
+      "label": "Familia y Personas",
+      "labelEn": "Family & People",
+      "emoji": "👪",
+      "phrase": true,
+      "vocab": true,
+      "level": "A1",
+      "order": 3
+    },
+    {
+      "id": "emociones",
+      "label": "Emociones",
+      "labelEn": "Emotions",
+      "emoji": "😊",
+      "phrase": true,
+      "vocab": true,
+      "level": "A1",
+      "order": 4
+    },
+    {
+      "id": "daily_routine",
+      "label": "Rutina Diaria",
+      "labelEn": "Daily Routine",
+      "emoji": "🕐",
+      "phrase": true,
+      "vocab": false,
+      "level": "A1",
+      "order": 5
+    },
+    {
+      "id": "survival",
+      "label": "Sobrevivir el Idioma",
+      "labelEn": "Language Survival",
+      "emoji": "🆘",
+      "phrase": true,
+      "vocab": false,
+      "level": "A1",
+      "order": 6
+    },
+    {
+      "id": "weather",
+      "label": "Clima",
+      "labelEn": "Weather",
+      "emoji": "🌤️",
+      "phrase": true,
+      "vocab": false,
+      "level": "A1",
+      "order": 7
+    },
+    {
+      "id": "health",
+      "label": "Salud y Cuerpo",
+      "labelEn": "Health & Body",
+      "emoji": "🩺",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 8
+    },
+    {
+      "id": "directions",
+      "label": "Direcciones y Lugares",
+      "labelEn": "Directions & Places",
+      "emoji": "🧭",
+      "phrase": true,
+      "vocab": false,
+      "level": "A2",
+      "order": 9
+    },
+    {
+      "id": "restaurant",
+      "label": "Restaurante",
+      "labelEn": "Restaurant",
+      "emoji": "🍽️",
+      "phrase": true,
+      "vocab": true,
+      "level": "A1",
+      "order": 10
+    },
+    {
+      "id": "supermarket",
+      "label": "Supermercado",
+      "labelEn": "Supermarket",
+      "emoji": "🛒",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 11
+    },
+    {
+      "id": "transportation",
+      "label": "Transporte",
+      "labelEn": "Transportation",
+      "emoji": "🚌",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 12
+    },
+    {
+      "id": "airport",
+      "label": "Aeropuerto",
+      "labelEn": "Airport",
+      "emoji": "✈️",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 13
+    },
+    {
+      "id": "accommodation",
+      "label": "Alojamiento",
+      "labelEn": "Accommodation",
+      "emoji": "🏨",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 14
+    },
+    {
+      "id": "kitchen",
+      "label": "Cocina",
+      "labelEn": "Kitchen",
+      "emoji": "🍳",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 15
+    },
+    {
+      "id": "movies",
+      "label": "Películas & Series",
+      "labelEn": "Movies & Series",
+      "emoji": "🎬",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 16
+    },
+    {
+      "id": "music",
+      "label": "Música",
+      "labelEn": "Music",
+      "emoji": "🎵",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 17
+    },
+    {
+      "id": "technology",
+      "label": "Tecnología",
+      "labelEn": "Technology",
+      "emoji": "💻",
+      "phrase": true,
+      "vocab": true,
+      "level": "B1",
+      "order": 18
+    },
+    {
+      "id": "gym",
+      "label": "Gimnasio",
+      "labelEn": "Gym",
+      "emoji": "💪",
+      "phrase": true,
+      "vocab": true,
+      "level": "B1",
+      "order": 19
+    },
+    {
+      "id": "museums",
+      "label": "Museos & Arte",
+      "labelEn": "Museums & Art",
+      "emoji": "🖼️",
+      "phrase": true,
+      "vocab": true,
+      "level": "A2",
+      "order": 20
+    },
+    {
+      "id": "theater",
+      "label": "Teatro",
+      "labelEn": "Theater",
+      "emoji": "🎭",
+      "phrase": true,
+      "vocab": true,
+      "level": "B1",
+      "order": 21
+    },
+    {
+      "id": "accountability",
+      "label": "Contabilidad",
+      "labelEn": "Accounting",
+      "emoji": "📊",
+      "phrase": true,
+      "vocab": true,
+      "level": "B2",
+      "order": 22
+    },
+    {
+      "id": "descripciones",
+      "label": "Descripciones",
+      "labelEn": "Descriptions",
+      "emoji": "🔍",
+      "phrase": true,
+      "vocab": false,
+      "level": "A2",
+      "order": 23
+    },
+    {
+      "id": "general",
+      "label": "Conceptos",
+      "labelEn": "Concepts",
+      "emoji": "💡",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 0
+    },
+    {
+      "id": "verbos_basicos",
+      "label": "Verbos Básicos",
+      "labelEn": "Basic Verbs",
+      "emoji": "🏃",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 1
+    },
+    {
+      "id": "verbos_avanzados",
+      "label": "Verbos Avanzados",
+      "labelEn": "Advanced Verbs",
+      "emoji": "⚡",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 2
+    },
+    {
+      "id": "adjetivos_basicos",
+      "label": "Adjetivos Básicos",
+      "labelEn": "Basic Adjectives",
+      "emoji": "🔤",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 3
+    },
+    {
+      "id": "adjetivos_avanzados",
+      "label": "Adjetivos Avanzados",
+      "labelEn": "Advanced Adjectives",
+      "emoji": "🔠",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 4
+    },
+    {
+      "id": "colores",
+      "label": "Colores",
+      "labelEn": "Colors",
+      "emoji": "🎨",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 5
+    },
+    {
+      "id": "naturaleza",
+      "label": "Naturaleza",
+      "labelEn": "Nature",
+      "emoji": "🌳",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 6
+    },
+    {
+      "id": "tiempo",
+      "label": "Tiempo",
+      "labelEn": "Time",
+      "emoji": "⏰",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 7
+    },
+    {
+      "id": "lugares",
+      "label": "Lugares",
+      "labelEn": "Places",
+      "emoji": "📍",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 8
+    },
+    {
+      "id": "cantidad",
+      "label": "Cantidad y Medida",
+      "labelEn": "Quantity & Measure",
+      "emoji": "🔢",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 9
+    },
+    {
+      "id": "juegos",
+      "label": "Juegos y Ocio",
+      "labelEn": "Games & Leisure",
+      "emoji": "🎲",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 10
+    },
+    {
+      "id": "ropa",
+      "label": "Ropa y Moda",
+      "labelEn": "Clothing & Fashion",
+      "emoji": "👕",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 11
+    },
+    {
+      "id": "lengua",
+      "label": "Lengua y Comunicación",
+      "labelEn": "Language & Communication",
+      "emoji": "🗣️",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 12
+    },
+    {
+      "id": "sociedad_politica",
+      "label": "Sociedad y Política",
+      "labelEn": "Society & Politics",
+      "emoji": "🏛️",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 13
+    },
+    {
+      "id": "trabajo",
+      "label": "Trabajo y Economía",
+      "labelEn": "Work & Economy",
+      "emoji": "💼",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 14
+    },
+    {
+      "id": "educacion",
+      "label": "Educación",
+      "labelEn": "Education",
+      "emoji": "🎓",
+      "phrase": false,
+      "vocab": true,
+      "vocabOrder": 15
+    }
   ]
 }

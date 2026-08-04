@@ -60,6 +60,84 @@ const IGNORE = new Set([
   'oh','uh','ah','eh','mmm','hmm','yeah','yep','nope','huh','wow','ok','okay',
 ]);
 
+// ELELex top-1000 artifacts that are not teachable content words: single-letter
+// list markers (b, c, d), corpus proper nouns (requena, raulito), and honorific/
+// dialectal tokens that are not general vocabulary. Excluded from the teachable
+// Spanish figure so the phrase/vocab channels are not unfairly penalised. The raw
+// figure is still shown so the metric is not gamed.
+const IGNORE_ES = new Set([
+  'b','c','d','requena','raulito','san','don','doña','vos','inca',
+]);
+const ignoreFor = (lang) => (lang === 'es' ? IGNORE_ES : IGNORE);
+
+// Closed-class FUNCTION words (articles, pronouns, prepositions, conjunctions,
+// determiners/quantifiers, auxiliaries/modals, grammatical adverbs). They belong
+// to the top-1000 but cannot be taught as isolated vocabulary flashcards — they
+// are acquired through exposure in phrases. So they are excluded from the VOCAB
+// channel denominator only; the PHRASE channel still counts them (phrases must
+// cover them). Each list is a superset; only members present in the top-1000 matter.
+const FUNCTION_EN = new Set([
+  // articles / determiners / quantifiers
+  'a','an','the','this','that','these','those','each','every','either','neither','another','other','such',
+  'all','both','some','any','no','none','much','many','more','most','less','least','few','several','enough','half',
+  // pronouns
+  'i','me','my','mine','myself','you','your','yours','yourself','yourselves','he','him','his','himself',
+  'she','her','hers','herself','it','its','itself','we','us','our','ours','ourselves','they','them','their','theirs','themselves',
+  'who','whom','whose','which','what','whatever','whoever','whichever','one','ones',
+  'someone','somebody','something','anyone','anybody','anything','everyone','everybody','everything','nobody','nothing','else',
+  // prepositions
+  'of','to','in','for','on','with','at','by','from','about','into','onto','over','under','above','below',
+  'between','among','through','during','before','after','since','until','till','against','toward','towards',
+  'upon','within','without','throughout','despite','except','besides','beyond','behind','beneath','beside',
+  'across','along','around','round','off','out','up','down','near','per','via','than','as','unto',
+  // conjunctions
+  'and','or','but','nor','so','yet','if','because','while','whereas','although','though','unless','whether',
+  'once','when','whenever','where','wherever','why','how','plus',
+  // auxiliaries / modals
+  'be','am','is','are','was','were','been','being','have','has','had','do','does','did',
+  'will','would','shall','should','can','could','may','might','must','ought','dare','used',
+  // negation / affirmation
+  'not','yes','yeah','yep','nope',
+  // grammatical adverbs / connectors
+  'there','here','now','then','very','just','only','also','even','too','still','quite','rather','already',
+  'almost','always','never','ever','often','sometimes','usually','seldom','rarely','however','therefore',
+  'thus','hence','perhaps','maybe','instead','indeed','anyway','anyhow','moreover','furthermore',
+  'nevertheless','again','soon','otherwise','meanwhile','likewise','somewhat','somehow',
+  'everywhere','anywhere','somewhere','nowhere','elsewhere',
+]);
+const FUNCTION_ES = new Set([
+  // artículos / determinantes / cuantificadores
+  'el','la','los','las','un','una','unos','unas','lo','uno',
+  'este','esta','estos','estas','ese','esa','esos','esas','aquel','aquella','aquellos','aquellas','esto','eso','aquello',
+  'todo','toda','todos','todas','otro','otra','otros','otras','mismo','misma','mismos','mismas',
+  'cada','alguno','alguna','algunos','algunas','ninguno','ninguna','ningún','cualquier','cualquiera',
+  'tanto','tanta','tantos','tantas','mucho','mucha','muchos','muchas','poco','poca','pocos','pocas',
+  'demasiado','demasiada','demasiados','demasiadas','varios','varias','tal','tales','demás','ambos','ambas','bastante',
+  // posesivos
+  'mi','mis','tu','tus','su','sus','nuestro','nuestra','nuestros','nuestras','vuestro','vuestra','vuestros','vuestras',
+  'mío','mía','míos','mías','tuyo','tuya','tuyos','tuyas','suyo','suya','suyos','suyas',
+  // pronombres
+  'yo','tú','él','ella','ello','ellos','ellas','nosotros','nosotras','vosotros','vosotras','usted','ustedes',
+  'me','te','se','nos','os','le','les','mí','ti','sí','conmigo','contigo','consigo','vos',
+  'alguien','nadie','algo','nada','quien','quienes','cuyo','cuya','cuyos','cuyas',
+  // interrogativos
+  'qué','quién','quiénes','cuál','cuáles','cómo','cuándo','dónde','cuánto','cuánta','cuántos','cuántas',
+  // preposiciones
+  'de','a','en','con','por','para','sobre','sin','desde','hasta','entre','hacia','según','tras','ante',
+  'contra','durante','bajo','mediante','salvo','excepto','junto',
+  // conjunciones
+  'y','e','o','u','que','pero','si','porque','como','cuando','aunque','mientras','pues','ni','sino','mas','embargo','además',
+  // auxiliares / modales
+  'haber','poder','deber',
+  // adverbios gramaticales / conectores / negación / afirmación
+  'no','sí','más','menos','muy','ya','ahora','aquí','allí','ahí','allá','acá','arriba','abajo',
+  'siempre','nunca','jamás','también','tampoco','así','tan','casi','luego','entonces','después','antes',
+  'todavía','aún','quizá','quizás','incluso','solo','sólo','bien','apenas','adelante','atrás','pronto',
+  'enseguida','encima','debajo','delante','detrás','dentro','fuera','cerca','lejos','alrededor',
+]);
+const functionFor = (lang) => (lang === 'es' ? FUNCTION_ES : FUNCTION_EN);
+const unionSet = (a, b) => { const s = new Set(a); for (const x of b) s.add(x); return s; };
+
 const args = process.argv.slice(2);
 const argVal = (n) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : null; };
 const PAIR_ARG = argVal('--pair');
@@ -71,26 +149,50 @@ const BANDS = TOP_ARG ? [parseInt(TOP_ARG, 10)] : [500, 1000, 2000];
 // language covers ≥ MIN% of the pedagogical top-1000 (NGSL for en, ELELex for es).
 const GATE = args.includes('--gate');
 const MIN  = parseFloat(argVal('--min') || '90');
-const gateTop1000 = {};  // targetLang → top-1000 coverage % (from NGSL/ELELex)
+// Two-channel gate: each targetLang must cover ≥ MIN% of the pedagogical top-1000
+// with phrases alone AND with vocab alone.
+const gatePhrases = {};  // targetLang → top-1000 phrase-only coverage % (teachable)
+const gateVocab   = {};  // targetLang → top-1000 vocab-only  coverage % (teachable)
 
-function contentWords(pair, lang) {
+// Collect the distinct content words used by a pair, restricted to a channel:
+//   'phrases' — only phrase target[].text
+//   'vocab'   — only vocab terms (target-centric)
+//   'all'     — both (combined figure)
+// The core-vocabulary rule is now a two-channel gate: the top-1000 must be covered
+// ≥ MIN% by phrases alone AND by vocab alone, so the core is taught both in context
+// (phrases) and in isolation (vocab).
+function contentWords(pair, lang, scope = 'all') {
   const words = new Set();
-  for (const t of TOPICS) {
-    const path = join(ROOT, `shared/json/pairs/${pair}/${t}.json`);
-    if (!fs.existsSync(path)) continue;
-    const d = JSON.parse(fs.readFileSync(path, 'utf8'));
-    for (const p of (d.phrases || [])) for (const f of p.target) for (const w of tokenize(f.text)) words.add(w);
+  if (scope === 'phrases' || scope === 'all') {
+    for (const t of TOPICS) {
+      const path = join(ROOT, `shared/json/pairs/${pair}/${t}.json`);
+      if (!fs.existsSync(path)) continue;
+      const d = JSON.parse(fs.readFileSync(path, 'utf8'));
+      for (const p of (d.phrases || [])) for (const f of p.target) for (const w of tokenize(f.text)) words.add(w);
+    }
   }
-  // Vocabulary is target-centric: shared/json/vocab/{targetLang}/, term = the word.
-  const vdir = join(ROOT, `shared/json/vocab/${lang}`);
-  if (fs.existsSync(vdir)) for (const file of fs.readdirSync(vdir)) {
-    if (!file.endsWith('.json')) continue;
-    const d = JSON.parse(fs.readFileSync(join(vdir, file), 'utf8'));
-    for (const wobj of (d.words || [])) {
-      for (const w of tokenize(wobj.term || '')) words.add(w);
+  if (scope === 'vocab' || scope === 'all') {
+    // Vocabulary is target-centric: shared/json/vocab/{targetLang}/, term = the word.
+    const vdir = join(ROOT, `shared/json/vocab/${lang}`);
+    if (fs.existsSync(vdir)) for (const file of fs.readdirSync(vdir)) {
+      if (!file.endsWith('.json')) continue;
+      const d = JSON.parse(fs.readFileSync(join(vdir, file), 'utf8'));
+      for (const wobj of (d.words || [])) {
+        for (const w of tokenize(wobj.term || '')) words.add(w);
+      }
     }
   }
   return words;
+}
+
+// Coverage of a flat lemma list (NGSL) by a used-set, over the lemmas that remain
+// after removing `exclude` (interjection artifacts for both channels; plus function
+// words for the vocab channel).
+function channelCov(list, used, exclude) {
+  const teachable = list.filter(w => !exclude.has(w));
+  const missing = teachable.filter(w => !used.has(w));
+  return { covered: teachable.length - missing.length, total: teachable.length,
+           pct: 100 * (teachable.length - missing.length) / teachable.length, missing };
 }
 
 const PAIRS = [['en-es','es','Espanol (par en-es)'], ['es-en','en','Ingles (par es-en)']]
@@ -129,16 +231,28 @@ for (const [pair, lang, label] of PAIRS) {
 const ngslPath = join(ROOT, 'tools/sources/derived/ngsl-en.json');
 if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
   const ngsl = JSON.parse(fs.readFileSync(ngslPath, 'utf8')).ranks;
-  const used = contentWords('es-en', 'en');
+  const usedAll     = contentWords('es-en', 'en', 'all');
+  const usedPhrases = contentWords('es-en', 'en', 'phrases');
+  const usedVocab   = contentWords('es-en', 'en', 'vocab');
+  const igEn = ignoreFor('en');
+  const igFnEn = unionSet(igEn, functionFor('en'));  // vocab channel: also drop function words
   console.log(`\n=== Ingles vs NGSL (lista pedagogica, ${Object.keys(ngsl).length} lemmas) ===`);
   for (const N of [500, 1000, 2000, 2801]) {
     const list = Object.entries(ngsl).filter(([, r]) => r <= N).map(([w]) => w);
-    const covered = list.filter(w => used.has(w)).length;
-    if (N === 1000) gateTop1000.en = 100 * covered / list.length;
-    console.log(`  Top-${N}: ${covered}/${list.length} (${(100 * covered / list.length).toFixed(1)}%)`);
+    const all = channelCov(list, usedAll, igEn);
+    console.log(`  Top-${N}: ${all.covered}/${all.total} (${all.pct.toFixed(1)}%)`);
+    if (N === 1000) {
+      const ph = channelCov(list, usedPhrases, igEn);       // phrases: full teachable top-1000
+      const vo = channelCov(list, usedVocab, igFnEn);        // vocab: content words only
+      gatePhrases.en = ph.pct;
+      gateVocab.en   = vo.pct;
+      console.log(`    · frases-solo (todo el top-1000): ${ph.covered}/${ph.total} (${ph.pct.toFixed(1)}%)`);
+      console.log(`    · vocab-solo (solo contenido):    ${vo.covered}/${vo.total} (${vo.pct.toFixed(1)}%)`);
+      console.log(`    Faltan en frases (${ph.missing.length}, muestra): ${ph.missing.slice(0, MISSING_N).join(', ')}`);
+      console.log(`    Faltan en vocab-contenido (${vo.missing.length}, muestra): ${vo.missing.slice(0, MISSING_N).join(', ')}`);
+    }
     if (N === 2801) {
-      const missing = list.filter(w => !used.has(w));
-      console.log(`  NGSL total no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
+      console.log(`  NGSL total no cubiertas: ${all.missing.length}. Muestra: ${all.missing.slice(0, MISSING_N).join(', ')}`);
     }
   }
 }
@@ -154,21 +268,44 @@ const elelexPath = join(ROOT, 'tools/sources/derived/elelex-es.json');
 if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
   const elelex = JSON.parse(fs.readFileSync(elelexPath, 'utf8'));
   const ranks = elelex.ranks;
-  const used = contentWords('en-es', 'es');
-  const coveredRanks = new Set();
-  for (const w of used) { const r = lookupRank(w, 'es', ranks); if (r != null) coveredRanks.add(r); }
   const byRank = {};
   for (const [w, r] of Object.entries(ranks)) byRank[r] = w;
+  // Rank-based coverage over teachable ranks; `exclude` lemmas are skipped from the
+  // denominator (IGNORE_ES for both channels; plus function words for vocab).
+  // Content surface forms are mapped toward their lemma by lookupRank.
+  function elelexCov(N, used, exclude) {
+    const coveredRanks = new Set();
+    for (const w of used) { const r = lookupRank(w, 'es', ranks); if (r != null) coveredRanks.add(r); }
+    let covered = 0, total = 0; const missing = [];
+    for (let r = 1; r <= N; r++) {
+      const lemma = byRank[r];
+      if (!lemma || exclude.has(lemma)) continue;
+      total++;
+      if (coveredRanks.has(r)) covered++; else missing.push(lemma);
+    }
+    return { covered, total, pct: 100 * covered / total, missing };
+  }
+  const usedAll     = contentWords('en-es', 'es', 'all');
+  const usedPhrases = contentWords('en-es', 'es', 'phrases');
+  const usedVocab   = contentWords('en-es', 'es', 'vocab');
+  const igEs = IGNORE_ES;
+  const igFnEs = unionSet(igEs, functionFor('es'));  // vocab channel: also drop function words
   console.log(`\n=== Espanol vs ELELex (lexico pedagogico CEFR, ${elelex.count} lemmas) ===`);
   for (const N of [500, 1000, 2000, 2800]) {
-    let covered = 0;
-    for (let r = 1; r <= N; r++) if (coveredRanks.has(r)) covered++;
-    if (N === 1000) gateTop1000.es = 100 * covered / N;
-    console.log(`  Top-${N}: ${covered}/${N} (${(100 * covered / N).toFixed(1)}%)`);
+    const all = elelexCov(N, usedAll, igEs);
+    console.log(`  Top-${N}: ${all.covered}/${all.total} (${all.pct.toFixed(1)}%)`);
+    if (N === 1000) {
+      const ph = elelexCov(N, usedPhrases, igEs);      // phrases: full teachable top-1000
+      const vo = elelexCov(N, usedVocab, igFnEs);       // vocab: content words only
+      gatePhrases.es = ph.pct;
+      gateVocab.es   = vo.pct;
+      console.log(`    · frases-solo (todo el top-1000): ${ph.covered}/${ph.total} (${ph.pct.toFixed(1)}%)`);
+      console.log(`    · vocab-solo (solo contenido):    ${vo.covered}/${vo.total} (${vo.pct.toFixed(1)}%)`);
+      console.log(`    Faltan en frases (${ph.missing.length}, muestra): ${ph.missing.slice(0, MISSING_N).join(', ')}`);
+      console.log(`    Faltan en vocab-contenido (${vo.missing.length}, muestra): ${vo.missing.slice(0, MISSING_N).join(', ')}`);
+    }
     if (N === 2800) {
-      const missing = [];
-      for (let r = 1; r <= N; r++) if (!coveredRanks.has(r) && byRank[r]) missing.push(byRank[r]);
-      console.log(`  ELELex top-${N} no cubiertas: ${missing.length}. Muestra: ${missing.slice(0, MISSING_N).join(', ')}`);
+      console.log(`  ELELex top-${N} no cubiertas: ${all.missing.length}. Muestra: ${all.missing.slice(0, MISSING_N).join(', ')}`);
     }
   }
 }
@@ -182,21 +319,23 @@ if (GATE) {
   const scope = PAIR_ARG === 'es-en' ? ['en']
               : PAIR_ARG === 'en-es' ? ['es']
               : ['en', 'es'];
-  console.log(`\n=== GATE — cobertura del top-1000 ≥ ${MIN}% ===`);
+  console.log(`\n=== GATE — cobertura del top-1000 ≥ ${MIN}% en AMBOS canales (frases y vocab) ===`);
   let failed = false;
   for (const lang of scope) {
-    if (!(lang in gateTop1000)) {
+    if (!(lang in gatePhrases) || !(lang in gateVocab)) {
       console.error(`  ✗ ${lang}: lista de frecuencia no disponible (no se pudo medir). ` +
         `${lang === 'es' ? 'Descarga ELELex: tools/sources/fetch-sources.sh + build-elelex.mjs' : ''}`);
       failed = true; continue;
     }
-    const pct = gateTop1000[lang];
-    const ok = pct >= MIN;
-    if (!ok) failed = true;
-    console.log(`  ${ok ? '✓' : '✗'} ${lang}: ${pct.toFixed(1)}% ${ok ? '≥' : '<'} ${MIN}%` +
-      (ok ? '' : `  → faltan ${(MIN - pct).toFixed(1)} puntos; ver faltantes arriba`));
+    for (const [channel, table] of [['frases', gatePhrases], ['vocab', gateVocab]]) {
+      const pct = table[lang];
+      const ok = pct >= MIN;
+      if (!ok) failed = true;
+      console.log(`  ${ok ? '✓' : '✗'} ${lang} · ${channel}: ${pct.toFixed(1)}% ${ok ? '≥' : '<'} ${MIN}%` +
+        (ok ? '' : `  → faltan ${(MIN - pct).toFixed(1)} puntos; ver faltantes arriba`));
+    }
   }
-  console.log(failed ? '\nGATE: FALLA — el par no cumple la premisa del núcleo ~1000.'
-                     : '\nGATE: OK — el par cumple la premisa del núcleo ~1000.');
+  console.log(failed ? '\nGATE: FALLA — el par no cumple la premisa del núcleo ~1000 en ambos canales.'
+                     : '\nGATE: OK — el par cumple la premisa del núcleo ~1000 en frases y en vocab.');
   process.exit(failed ? 1 : 0);
 }
