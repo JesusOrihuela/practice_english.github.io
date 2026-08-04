@@ -155,6 +155,210 @@
           "audioSlug": "no_tengo_comentarios"
         }
       ]
+    },
+    {
+      "id": "conversacion_no_te_puedo_oir",
+      "source": "There is too much noise to catch your voice.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No te puedo oír.",
+          "audioSlug": "no_te_puedo_oir"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_voy_a_contar_algo",
+      "source": "You have a story to share with them.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te voy a contar algo.",
+          "audioSlug": "te_voy_a_contar_algo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_lo_puedo_entender",
+      "source": "The idea just won't sink in for you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No lo puedo entender.",
+          "audioSlug": "no_lo_puedo_entender"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_ahora_te_comprendo",
+      "source": "At last their feelings make sense to you.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ahora te comprendo.",
+          "audioSlug": "ahora_te_comprendo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_te_rias_de_mi",
+      "source": "Someone mocks you and it stings.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No te rías de mí.",
+          "audioSlug": "no_te_rias_de_mi"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_por_favor_sonrie",
+      "source": "You ask for a happy look in the photo.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Por favor, sonríe.",
+          "audioSlug": "por_favor_sonrie"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_lo_puedes_imaginar",
+      "source": "You ask them to picture the whole scene.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Te lo puedes imaginar?",
+          "audioSlug": "te_lo_puedes_imaginar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_creo",
+      "source": "You take what they say as the truth.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te creo.",
+          "audioSlug": "te_creo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_quiero_comentar_algo",
+      "source": "You'd like to add a remark to the talk.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero comentar algo.",
+          "audioSlug": "quiero_comentar_algo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_tengo_algo_que_anunciar",
+      "source": "You have important news to make public.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo algo que anunciar.",
+          "audioSlug": "tengo_algo_que_anunciar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_puedes_repetir_eso",
+      "source": "You didn't catch it and need it said again.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes repetir eso?",
+          "audioSlug": "puedes_repetir_eso"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_ve_a_saludar_a_los_invitados",
+      "source": "You welcome the guests as they arrive.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ve a saludar a los invitados.",
+          "audioSlug": "ve_a_saludar_a_los_invitados"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_no_te_quejes_tanto",
+      "source": "Someone protests about everything nonstop.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No te quejes tanto.",
+          "audioSlug": "no_te_quejes_tanto"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_voy_a_avisar",
+      "source": "You'll let them know when it is time.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te voy a avisar.",
+          "audioSlug": "te_voy_a_avisar"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_debo_admitir_mi_error",
+      "source": "You honestly own up to your mistake.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debo admitir mi error.",
+          "audioSlug": "debo_admitir_mi_error"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_quiero_agradecer",
+      "source": "You want to thank them warmly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te quiero agradecer.",
+          "audioSlug": "te_quiero_agradecer"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_a_veces_es_mejor_callar",
+      "source": "Sometimes saying nothing is the wiser choice.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A veces es mejor callar.",
+          "audioSlug": "a_veces_es_mejor_callar"
+        }
+      ]
     }
   ]
 }

@@ -155,6 +155,210 @@
           "audioSlug": "i_have_no_comment"
         }
       ]
+    },
+    {
+      "id": "conversacion_i_cant_hear_you",
+      "source": "Hay mucho ruido y no distingues su voz.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I can't hear you.",
+          "audioSlug": "i_can_t_hear_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_can_you_imagine_that",
+      "source": "Le pides que se figure la escena.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can you imagine that?",
+          "audioSlug": "can_you_imagine_that"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_try_to_guess",
+      "source": "Le pides que adivine sin darle pistas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Try to guess.",
+          "audioSlug": "try_to_guess"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_cant_express_it",
+      "source": "No encuentras palabras para lo que sientes.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I can't express it.",
+          "audioSlug": "i_can_t_express_it"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dont_laugh_at_me",
+      "source": "Alguien se burla de ti y te molesta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Don't laugh at me.",
+          "audioSlug": "don_t_laugh_at_me"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_please_smile",
+      "source": "Pides un gesto alegre para la foto.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please smile.",
+          "audioSlug": "please_smile"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_didnt_realize_that",
+      "source": "No te habías dado cuenta de ese detalle.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I didn't realize that.",
+          "audioSlug": "i_didn_t_realize_that"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_please_consider_it",
+      "source": "Le pides que piense bien la propuesta.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please consider it.",
+          "audioSlug": "please_consider_it"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_believe_you",
+      "source": "Aceptas como verdad lo que te cuenta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I believe you.",
+          "audioSlug": "i_believe_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_did_you_notice_that",
+      "source": "Preguntas si reparó en ese detalle.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Did you notice that?",
+          "audioSlug": "did_you_notice_that"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_mean_it",
+      "source": "Dejas claro que hablas totalmente en serio.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I mean it.",
+          "audioSlug": "i_mean_it"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_understand_you",
+      "source": "Captas bien lo que quiere decir.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I understand you.",
+          "audioSlug": "i_understand_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_can_you_repeat_that",
+      "source": "No lo entendiste y pides que lo diga otra vez.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can you repeat that?",
+          "audioSlug": "can_you_repeat_that"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_admit_my_mistake",
+      "source": "Reconoces con honestidad que te equivocaste.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I admit my mistake.",
+          "audioSlug": "i_admit_my_mistake"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dont_complain_so_much",
+      "source": "Alguien protesta por todo sin parar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Don't complain so much.",
+          "audioSlug": "don_t_complain_so_much"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_want_to_warn_you",
+      "source": "Quieres avisarle de un posible peligro.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I want to warn you.",
+          "audioSlug": "i_want_to_warn_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_want_to_thank_you",
+      "source": "Le agradeces de corazón toda su ayuda.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I want to thank you.",
+          "audioSlug": "i_want_to_thank_you"
+        }
+      ]
     }
   ]
 }
