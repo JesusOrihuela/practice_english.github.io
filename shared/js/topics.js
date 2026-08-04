@@ -38,6 +38,7 @@ const AppTopics = (() => {
     { id: 'theater',        label: 'Teatro',                labelEn: 'Theater',              emoji: '🎭', phrase: true,  vocab: true,  level: 'B1', order: 21 },
     { id: 'accountability', label: 'Contabilidad',          labelEn: 'Accounting',           emoji: '📊', phrase: true,  vocab: true,  level: 'B2', order: 22 },
     { id: 'descripciones',  label: 'Descripciones',         labelEn: 'Descriptions',         emoji: '🔍', phrase: true,  vocab: false, level: 'A2', order: 23 },
+    { id: 'planes', label: 'Planes y decisiones', labelEn: 'Plans & Decisions', emoji: '🎯', phrase: true,  vocab: false, level: 'A2', order: 25 },
     { id: 'tiempo_libre', label: 'Tiempo libre y cultura', labelEn: 'Leisure & Culture', emoji: '🎉', phrase: true,  vocab: false, level: 'A2', order: 27 },
     { id: 'naturaleza_lugares', label: 'Naturaleza y lugares', labelEn: 'Nature & Places', emoji: '🏞️', phrase: true,  vocab: false, level: 'A2', order: 26 },
     { id: 'conversacion', label: 'Conversación y opiniones', labelEn: 'Conversation & Opinions', emoji: '💬', phrase: true,  vocab: false, level: 'A2', order: 24 },

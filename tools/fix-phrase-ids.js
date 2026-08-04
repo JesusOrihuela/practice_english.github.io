@@ -29,7 +29,7 @@ const phraseTopics = [
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
+  'descripciones', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
 ];
 
 const vocabTopics = [
