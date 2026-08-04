@@ -421,6 +421,234 @@
           "audioSlug": "estoy_enfermo_desde_ayer"
         }
       ]
+    },
+    {
+      "id": "health_mi_abuela_murio_el_ano_pasado",
+      "source": "Your grandmother passed away a year ago.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi abuela murió el año pasado.",
+          "audioSlug": "mi_abuela_murio_el_ano_pasado"
+        }
+      ]
+    },
+    {
+      "id": "health_mi_bebe_va_a_nacer_pronto",
+      "source": "Your baby will be born very soon.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi bebé va a nacer pronto.",
+          "audioSlug": "mi_bebe_va_a_nacer_pronto"
+        }
+      ]
+    },
+    {
+      "id": "health_es_una_enfermedad_grave",
+      "source": "The illness is a serious one.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una enfermedad grave.",
+          "audioSlug": "es_una_enfermedad_grave"
+        }
+      ]
+    },
+    {
+      "id": "health_me_canso_muy_rapido",
+      "source": "You run out of energy quickly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me canso muy rápido.",
+          "audioSlug": "me_canso_muy_rapido"
+        }
+      ]
+    },
+    {
+      "id": "health_abre_la_boca_por_favor",
+      "source": "The dentist asks you to open up.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Abre la boca, por favor.",
+          "audioSlug": "abre_la_boca_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "health_tengo_el_pelo_muy_largo",
+      "source": "Your hair reaches down to your waist.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo el pelo muy largo.",
+          "audioSlug": "tengo_el_pelo_muy_largo"
+        }
+      ]
+    },
+    {
+      "id": "health_me_entro_algo_en_el_ojo",
+      "source": "Something got into the part you see with.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me entró algo en el ojo.",
+          "audioSlug": "me_entro_algo_en_el_ojo"
+        }
+      ]
+    },
+    {
+      "id": "health_el_corazon_late_rapido",
+      "source": "Your chest is pounding quickly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El corazón late rápido.",
+          "audioSlug": "el_corazon_late_rapido"
+        }
+      ]
+    },
+    {
+      "id": "health_debo_guardar_cama_hoy",
+      "source": "You must stay in bed to recover.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debo guardar cama hoy.",
+          "audioSlug": "debo_guardar_cama_hoy"
+        }
+      ]
+    },
+    {
+      "id": "health_done_sangre_en_el_hospital",
+      "source": "You gave blood at the hospital.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Doné sangre en el hospital.",
+          "audioSlug": "done_sangre_en_el_hospital"
+        }
+      ]
+    },
+    {
+      "id": "health_su_piel_es_muy_suave",
+      "source": "Her skin feels very soft.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su piel es muy suave.",
+          "audioSlug": "su_piel_es_muy_suave"
+        }
+      ]
+    },
+    {
+      "id": "health_me_rompi_un_hueso",
+      "source": "You fractured a hard part of the body.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me rompí un hueso.",
+          "audioSlug": "me_rompi_un_hueso"
+        }
+      ]
+    },
+    {
+      "id": "health_tengo_fiebre_alta",
+      "source": "Your body feels hot from being ill.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo fiebre alta.",
+          "audioSlug": "tengo_fiebre_alta"
+        }
+      ]
+    },
+    {
+      "id": "health_necesito_descansar",
+      "source": "You must rest to get better.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito descansar.",
+          "audioSlug": "necesito_descansar"
+        }
+      ]
+    },
+    {
+      "id": "health_no_puedo_respirar_bien",
+      "source": "You struggle to take in air.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No puedo respirar bien.",
+          "audioSlug": "no_puedo_respirar_bien"
+        }
+      ]
+    },
+    {
+      "id": "health_fue_una_muerte_triste",
+      "source": "The passing was a very sad one.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue una muerte triste.",
+          "audioSlug": "fue_una_muerte_triste"
+        }
+      ]
+    },
+    {
+      "id": "health_cuida_tu_salud",
+      "source": "Look after your well-being.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cuida tu salud.",
+          "audioSlug": "cuida_tu_salud"
+        }
+      ]
+    },
+    {
+      "id": "health_me_duele_un_diente",
+      "source": "One of your teeth is aching.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele un diente.",
+          "audioSlug": "me_duele_un_diente"
+        }
+      ]
+    },
+    {
+      "id": "health_el_medico_me_va_a_curar",
+      "source": "The doctor will make you well again.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El médico me va a curar.",
+          "audioSlug": "el_medico_me_va_a_curar"
+        }
+      ]
     }
   ]
 }
