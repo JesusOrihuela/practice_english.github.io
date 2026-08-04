@@ -405,6 +405,232 @@
           "audioSlug": "mis_hijos_van_a_la_misma_escuela"
         }
       ]
+    },
+    {
+      "id": "family_es_mi_mejor_amigo",
+      "source": "He is the person who knows you best.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es mi mejor amigo.",
+          "audioSlug": "es_mi_mejor_amigo"
+        }
+      ]
+    },
+    {
+      "id": "family_hay_un_nino_en_el_parque",
+      "source": "A small boy is playing over there.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay un niño en el parque.",
+          "audioSlug": "hay_un_nino_en_el_parque"
+        }
+      ]
+    },
+    {
+      "id": "family_es_un_buen_chico",
+      "source": "That young lad behaves very well.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un buen chico.",
+          "audioSlug": "es_un_buen_chico"
+        }
+      ]
+    },
+    {
+      "id": "family_es_mi_companero_de_clase",
+      "source": "He sits next to you at school.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es mi compañero de clase.",
+          "audioSlug": "es_mi_companero_de_clase"
+        }
+      ]
+    },
+    {
+      "id": "family_ese_senor_es_muy_amable",
+      "source": "That gentleman treats everyone kindly.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese señor es muy amable.",
+          "audioSlug": "ese_senor_es_muy_amable"
+        }
+      ]
+    },
+    {
+      "id": "family_es_su_novio",
+      "source": "He is the young man she is dating.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es su novio.",
+          "audioSlug": "es_su_novio"
+        }
+      ]
+    },
+    {
+      "id": "family_son_buena_gente",
+      "source": "Those folks are kind and decent.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son buena gente.",
+          "audioSlug": "son_buena_gente"
+        }
+      ]
+    },
+    {
+      "id": "family_mi_mama_cocina_muy_bien",
+      "source": "Your mother is a wonderful cook.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi mamá cocina muy bien.",
+          "audioSlug": "mi_mama_cocina_muy_bien"
+        }
+      ]
+    },
+    {
+      "id": "family_mi_papa_trabaja_mucho",
+      "source": "Your father puts in long hours.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi papá trabaja mucho.",
+          "audioSlug": "mi_papa_trabaja_mucho"
+        }
+      ]
+    },
+    {
+      "id": "family_ese_muchacho_es_muy_listo",
+      "source": "That young fellow is very clever.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese muchacho es muy listo.",
+          "audioSlug": "ese_muchacho_es_muy_listo"
+        }
+      ]
+    },
+    {
+      "id": "family_eres_mi_invitado",
+      "source": "You welcome them warmly to your home.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eres mi invitado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "eres_mi_invitado"
+        },
+        {
+          "text": "Eres mi invitada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "eres_mi_invitada"
+        }
+      ]
+    },
+    {
+      "id": "family_soy_miembro_del_equipo",
+      "source": "You belong to the team.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy miembro del equipo.",
+          "audioSlug": "soy_miembro_del_equipo"
+        }
+      ]
+    },
+    {
+      "id": "family_hacen_una_linda_pareja",
+      "source": "The two of them look lovely together.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hacen una linda pareja.",
+          "audioSlug": "hacen_una_linda_pareja"
+        }
+      ]
+    },
+    {
+      "id": "family_es_mi_vecino",
+      "source": "He lives right next door to you.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es mi vecino.",
+          "audioSlug": "es_mi_vecino"
+        }
+      ]
+    },
+    {
+      "id": "family_es_un_hombre_honrado",
+      "source": "The man is honest and upright.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un hombre honrado.",
+          "audioSlug": "es_un_hombre_honrado"
+        }
+      ]
+    },
+    {
+      "id": "family_es_una_mujer_muy_fuerte",
+      "source": "The woman has great strength of character.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una mujer muy fuerte.",
+          "audioSlug": "es_una_mujer_muy_fuerte"
+        }
+      ]
+    },
+    {
+      "id": "family_el_bebe_esta_dormido",
+      "source": "The youngest one sleeps peacefully.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El bebé está dormido.",
+          "audioSlug": "el_bebe_esta_dormido"
+        }
+      ]
+    },
+    {
+      "id": "family_su_esposo_es_alto",
+      "source": "The man she married is very tall.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su esposo es alto.",
+          "audioSlug": "su_esposo_es_alto"
+        }
+      ]
     }
   ]
 }
