@@ -60,7 +60,7 @@ const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones', 'naturaleza_lugares', 'conversacion',
+  'descripciones', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
 ];
 
 const VOCAB_TOPICS = [

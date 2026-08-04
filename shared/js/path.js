@@ -46,6 +46,7 @@ const AppPath = (() => {
     { id: 'theater',      level: 'B1', emoji: '🎭', label: 'Teatro',                   labelEn: 'Theater',              order: 21 },
     { id: 'accountability', level: 'B2', emoji: '📊', label: 'Contabilidad',             labelEn: 'Accounting',           order: 22 },
     { id: 'descripciones', level: 'A2', emoji: '🔍', label: 'Descripciones',            labelEn: 'Descriptions',         order: 23 },
+    { id: 'tiempo_libre', level: 'A2', emoji: '🎉', label: 'Tiempo libre y cultura',            labelEn: 'Leisure & Culture',         order: 27 },
     { id: 'naturaleza_lugares', level: 'A2', emoji: '🏞️', label: 'Naturaleza y lugares',            labelEn: 'Nature & Places',         order: 26 },
     { id: 'conversacion', level: 'A2', emoji: '💬', label: 'Conversación y opiniones',            labelEn: 'Conversation & Opinions',         order: 24 },
   ];
