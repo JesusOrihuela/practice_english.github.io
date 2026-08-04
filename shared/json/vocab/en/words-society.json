@@ -1061,6 +1061,258 @@
       "gloss_example": {
         "es": "Es legal estacionar aquí los domingos."
       }
+    },
+    {
+      "id": "economic",
+      "term": "economic",
+      "definition": "Relating to money and the economy.",
+      "example": "The country faces economic problems.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "económico"
+      },
+      "gloss": {
+        "es": "Relativo al dinero y la economía."
+      },
+      "gloss_example": {
+        "es": "El país enfrenta problemas económicos."
+      }
+    },
+    {
+      "id": "national",
+      "term": "national",
+      "definition": "Relating to a whole country.",
+      "example": "Today is a national holiday.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "nacional"
+      },
+      "gloss": {
+        "es": "Relativo a todo un país."
+      },
+      "gloss_example": {
+        "es": "Hoy es un día festivo nacional."
+      }
+    },
+    {
+      "id": "population",
+      "term": "population",
+      "definition": "All the people living in a place.",
+      "example": "The population is growing fast.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "población"
+      },
+      "gloss": {
+        "es": "Todas las personas que viven en un lugar."
+      },
+      "gloss_example": {
+        "es": "La población crece rápido."
+      }
+    },
+    {
+      "id": "environment",
+      "term": "environment",
+      "definition": "The natural world around us.",
+      "example": "We must protect the environment.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "medio ambiente / entorno"
+      },
+      "gloss": {
+        "es": "El mundo natural que nos rodea."
+      },
+      "gloss_example": {
+        "es": "Debemos proteger el medio ambiente."
+      }
+    },
+    {
+      "id": "discussion",
+      "term": "discussion",
+      "definition": "A conversation about a subject.",
+      "example": "We had a long discussion about it.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discusión / debate"
+      },
+      "gloss": {
+        "es": "Conversación sobre un tema."
+      },
+      "gloss_example": {
+        "es": "Tuvimos un largo debate al respecto."
+      }
+    },
+    {
+      "id": "ability",
+      "term": "ability",
+      "definition": "The skill or power to do something.",
+      "example": "She has the ability to lead.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "capacidad / habilidad"
+      },
+      "gloss": {
+        "es": "La destreza o poder para hacer algo."
+      },
+      "gloss_example": {
+        "es": "Ella tiene la capacidad de liderar."
+      }
+    },
+    {
+      "id": "attend",
+      "term": "attend",
+      "definition": "To go to an event or place.",
+      "example": "Many people attended the concert.",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "translations": {
+        "es": "asistir"
+      },
+      "gloss": {
+        "es": "Ir a un evento o lugar."
+      },
+      "gloss_example": {
+        "es": "Mucha gente asistió al concierto."
+      }
+    },
+    {
+      "id": "operation",
+      "term": "operation",
+      "definition": "A planned activity, or a medical procedure.",
+      "example": "The operation was a success.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "operación"
+      },
+      "gloss": {
+        "es": "Actividad planeada, o cirugía."
+      },
+      "gloss_example": {
+        "es": "La operación fue un éxito."
+      }
+    },
+    {
+      "id": "theory",
+      "term": "theory",
+      "definition": "An idea that explains how something works.",
+      "example": "He has a theory about it.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "teoría"
+      },
+      "gloss": {
+        "es": "Idea que explica cómo funciona algo."
+      },
+      "gloss_example": {
+        "es": "Él tiene una teoría al respecto."
+      }
+    },
+    {
+      "id": "argument",
+      "term": "argument",
+      "definition": "A disagreement, or a reason for an opinion.",
+      "example": "They had an argument about money.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discusión / argumento"
+      },
+      "gloss": {
+        "es": "Un desacuerdo, o una razón para una opinión."
+      },
+      "gloss_example": {
+        "es": "Tuvieron una discusión por dinero."
+      }
+    },
+    {
+      "id": "speech",
+      "term": "speech",
+      "definition": "A formal talk given to a group.",
+      "example": "The president gave a speech.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "discurso"
+      },
+      "gloss": {
+        "es": "Charla formal ante un grupo."
+      },
+      "gloss_example": {
+        "es": "El presidente dio un discurso."
+      }
+    },
+    {
+      "id": "resource",
+      "term": "resource",
+      "definition": "Something useful that can be used, like money or time.",
+      "example": "Water is a valuable resource.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "recurso"
+      },
+      "gloss": {
+        "es": "Algo útil que se puede usar, como dinero o tiempo."
+      },
+      "gloss_example": {
+        "es": "El agua es un recurso valioso."
+      }
+    },
+    {
+      "id": "author",
+      "term": "author",
+      "definition": "A person who writes books.",
+      "example": "She is a famous author.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "autor / autora"
+      },
+      "gloss": {
+        "es": "Persona que escribe libros."
+      },
+      "gloss_example": {
+        "es": "Ella es una autora famosa."
+      }
+    },
+    {
+      "id": "responsibility",
+      "term": "responsibility",
+      "definition": "A duty to take care of something.",
+      "example": "It is your responsibility to lock the door.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "responsabilidad"
+      },
+      "gloss": {
+        "es": "El deber de encargarse de algo."
+      },
+      "gloss_example": {
+        "es": "Es tu responsabilidad cerrar la puerta."
+      }
     }
   ]
 }
