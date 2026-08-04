@@ -41,7 +41,7 @@ const PHRASE_TOPICS = [
   'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones', 'trabajo_economia', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
+  'descripciones', 'sociedad_actualidad', 'trabajo_economia', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
 ];
 
 // Gendered state/role adjectives & participles (masculine base). If a phrase's
