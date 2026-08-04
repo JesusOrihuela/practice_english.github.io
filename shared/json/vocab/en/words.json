@@ -5057,6 +5057,294 @@
       "gloss_example": {
         "es": "El parque tiene una belleza natural."
       }
+    },
+    {
+      "id": "black",
+      "term": "black",
+      "definition": "The darkest color, like night.",
+      "example": "He wore black shoes.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "negro"
+      },
+      "gloss": {
+        "es": "El color más oscuro, como la noche."
+      },
+      "gloss_example": {
+        "es": "Llevaba zapatos negros."
+      }
+    },
+    {
+      "id": "red",
+      "term": "red",
+      "definition": "The color of blood.",
+      "example": "She has a red car.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "rojo"
+      },
+      "gloss": {
+        "es": "El color de la sangre."
+      },
+      "gloss_example": {
+        "es": "Ella tiene un carro rojo."
+      }
+    },
+    {
+      "id": "blue",
+      "term": "blue",
+      "definition": "The color of a clear sky.",
+      "example": "The sea looks blue today.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "azul"
+      },
+      "gloss": {
+        "es": "El color del cielo despejado."
+      },
+      "gloss_example": {
+        "es": "El mar se ve azul hoy."
+      }
+    },
+    {
+      "id": "green",
+      "term": "green",
+      "definition": "The color of grass.",
+      "example": "The light turned green.",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "verde"
+      },
+      "gloss": {
+        "es": "El color de la hierba."
+      },
+      "gloss_example": {
+        "es": "El semáforo se puso verde."
+      }
+    },
+    {
+      "id": "real",
+      "term": "real",
+      "definition": "Actually existing, not imagined.",
+      "example": "Is this a real diamond?",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "real / verdadero"
+      },
+      "gloss": {
+        "es": "Que existe de verdad, no imaginado."
+      },
+      "gloss_example": {
+        "es": "¿Es un diamante real?"
+      }
+    },
+    {
+      "id": "poor",
+      "term": "poor",
+      "definition": "Having little money, or of low quality.",
+      "example": "They help poor families.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "pobre"
+      },
+      "gloss": {
+        "es": "Con poco dinero, o de mala calidad."
+      },
+      "gloss_example": {
+        "es": "Ayudan a familias pobres."
+      }
+    },
+    {
+      "id": "modern",
+      "term": "modern",
+      "definition": "Of the present or recent time.",
+      "example": "It is a modern building.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "moderno"
+      },
+      "gloss": {
+        "es": "De la época actual o reciente."
+      },
+      "gloss_example": {
+        "es": "Es un edificio moderno."
+      }
+    },
+    {
+      "id": "fire",
+      "term": "fire",
+      "definition": "The heat and light produced when something burns.",
+      "example": "They sat by the fire.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "fuego / incendio"
+      },
+      "gloss": {
+        "es": "Calor y luz al quemarse algo."
+      },
+      "gloss_example": {
+        "es": "Se sentaron junto al fuego."
+      }
+    },
+    {
+      "id": "article",
+      "term": "article",
+      "definition": "A piece of writing in a newspaper or magazine.",
+      "example": "I read an interesting article.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "artículo"
+      },
+      "gloss": {
+        "es": "Texto en un periódico o revista."
+      },
+      "gloss_example": {
+        "es": "Leí un artículo interesante."
+      }
+    },
+    {
+      "id": "trouble",
+      "term": "trouble",
+      "definition": "A problem or difficulty.",
+      "example": "The car gave us trouble.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "problema / lío"
+      },
+      "gloss": {
+        "es": "Un problema o dificultad."
+      },
+      "gloss_example": {
+        "es": "El carro nos dio problemas."
+      }
+    },
+    {
+      "id": "clock",
+      "term": "clock",
+      "definition": "A device that shows the time.",
+      "example": "The clock on the wall stopped.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "reloj"
+      },
+      "gloss": {
+        "es": "Aparato que muestra la hora."
+      },
+      "gloss_example": {
+        "es": "El reloj de la pared se paró."
+      }
+    },
+    {
+      "id": "clothes",
+      "term": "clothes",
+      "definition": "The things people wear.",
+      "example": "I bought new clothes.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "ropa"
+      },
+      "gloss": {
+        "es": "Las prendas que usa la gente."
+      },
+      "gloss_example": {
+        "es": "Compré ropa nueva."
+      }
+    },
+    {
+      "id": "rock",
+      "term": "rock",
+      "definition": "A hard piece of stone, or a music style.",
+      "example": "The beach is full of rocks.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "roca / piedra"
+      },
+      "gloss": {
+        "es": "Trozo duro de piedra, o un estilo de música."
+      },
+      "gloss_example": {
+        "es": "La playa está llena de rocas."
+      }
+    },
+    {
+      "id": "response",
+      "term": "response",
+      "definition": "An answer or reaction.",
+      "example": "I am waiting for a response.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "respuesta"
+      },
+      "gloss": {
+        "es": "Una contestación o reacción."
+      },
+      "gloss_example": {
+        "es": "Estoy esperando una respuesta."
+      }
+    },
+    {
+      "id": "former",
+      "term": "former",
+      "definition": "Belonging to an earlier time, previous.",
+      "example": "The former president spoke.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "anterior / antiguo"
+      },
+      "gloss": {
+        "es": "De un tiempo anterior, previo."
+      },
+      "gloss_example": {
+        "es": "El expresidente habló."
+      }
+    },
+    {
+      "id": "middle",
+      "term": "middle",
+      "definition": "The center of something.",
+      "example": "A table stood in the middle of the room.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "medio / centro"
+      },
+      "gloss": {
+        "es": "El centro de algo."
+      },
+      "gloss_example": {
+        "es": "Una mesa estaba en medio de la sala."
+      }
     }
   ]
 }

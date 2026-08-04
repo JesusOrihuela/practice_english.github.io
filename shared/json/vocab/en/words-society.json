@@ -1313,6 +1313,186 @@
       "gloss_example": {
         "es": "Es tu responsabilidad cerrar la puerta."
       }
+    },
+    {
+      "id": "local",
+      "term": "local",
+      "definition": "Belonging to the nearby area.",
+      "example": "We shop at the local market.",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "translations": {
+        "es": "local"
+      },
+      "gloss": {
+        "es": "De la zona cercana."
+      },
+      "gloss_example": {
+        "es": "Compramos en el mercado local."
+      }
+    },
+    {
+      "id": "major",
+      "term": "major",
+      "definition": "Very important or large.",
+      "example": "It was a major change.",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "translations": {
+        "es": "importante / mayor"
+      },
+      "gloss": {
+        "es": "Muy importante o grande."
+      },
+      "gloss_example": {
+        "es": "Fue un cambio importante."
+      }
+    },
+    {
+      "id": "race",
+      "term": "race",
+      "definition": "A competition of speed, or a group of people.",
+      "example": "He won the race.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "carrera / raza"
+      },
+      "gloss": {
+        "es": "Competencia de velocidad, o grupo de personas."
+      },
+      "gloss_example": {
+        "es": "Ganó la carrera."
+      }
+    },
+    {
+      "id": "holiday",
+      "term": "holiday",
+      "definition": "A day of rest or celebration.",
+      "example": "Monday is a holiday.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "día festivo / feriado"
+      },
+      "gloss": {
+        "es": "Día de descanso o celebración."
+      },
+      "gloss_example": {
+        "es": "El lunes es día festivo."
+      }
+    },
+    {
+      "id": "club",
+      "term": "club",
+      "definition": "A group of people with a shared interest.",
+      "example": "She joined a book club.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "club"
+      },
+      "gloss": {
+        "es": "Grupo de personas con un interés común."
+      },
+      "gloss_example": {
+        "es": "Se unió a un club de lectura."
+      }
+    },
+    {
+      "id": "task",
+      "term": "task",
+      "definition": "A piece of work to be done.",
+      "example": "Cleaning the office is my task.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "tarea"
+      },
+      "gloss": {
+        "es": "Un trabajo por hacer."
+      },
+      "gloss_example": {
+        "es": "Limpiar la oficina es mi tarea."
+      }
+    },
+    {
+      "id": "damage",
+      "term": "damage",
+      "definition": "Harm that makes something worse.",
+      "example": "The storm caused a lot of damage.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "daño"
+      },
+      "gloss": {
+        "es": "Perjuicio que empeora algo."
+      },
+      "gloss_example": {
+        "es": "La tormenta causó muchos daños."
+      }
+    },
+    {
+      "id": "property",
+      "term": "property",
+      "definition": "A thing that someone owns, such as land or a building.",
+      "example": "They bought a property in the country.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "propiedad"
+      },
+      "gloss": {
+        "es": "Algo que alguien posee, como un terreno."
+      },
+      "gloss_example": {
+        "es": "Compraron una propiedad en el campo."
+      }
+    },
+    {
+      "id": "agent",
+      "term": "agent",
+      "definition": "A person who acts for others in business.",
+      "example": "A travel agent booked our trip.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "agente"
+      },
+      "gloss": {
+        "es": "Persona que actúa por otros en negocios."
+      },
+      "gloss_example": {
+        "es": "Un agente de viajes reservó nuestro viaje."
+      }
+    },
+    {
+      "id": "target",
+      "term": "target",
+      "definition": "A goal or something you aim at.",
+      "example": "Our target is to save more.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "objetivo / meta"
+      },
+      "gloss": {
+        "es": "Una meta o algo a lo que se apunta."
+      },
+      "gloss_example": {
+        "es": "Nuestro objetivo es ahorrar más."
+      }
     }
   ]
 }
