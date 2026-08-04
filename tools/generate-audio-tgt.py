@@ -145,7 +145,7 @@ PHRASE_TOPICS = [
     'transportation', 'airport', 'accommodation',
     'movies', 'music', 'theater', 'museums',
     'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-    'descripciones', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
+    'descripciones', 'trabajo_economia', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion',
 ]
 
 # Vocab topics = topics with a words-{topic}.json file. Declared explicitly because
