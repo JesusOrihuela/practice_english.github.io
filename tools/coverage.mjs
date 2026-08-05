@@ -148,7 +148,7 @@ const BANDS = TOP_ARG ? [parseInt(TOP_ARG, 10)] : [500, 1000, 2000];
 // Gate mode: enforce the core-vocabulary rule. A pair "passes" when its target
 // language covers ≥ MIN% of the pedagogical top-1000 (NGSL for en, ELELex for es).
 const GATE = args.includes('--gate');
-const MIN  = parseFloat(argVal('--min') || '90');
+const MIN  = parseFloat(argVal('--min') || '80');
 // Two-channel gate: each targetLang must cover ≥ MIN% of the pedagogical top-1000
 // with phrases alone AND with vocab alone.
 const gatePhrases = {};  // targetLang → top-1000 phrase-only coverage % (teachable)

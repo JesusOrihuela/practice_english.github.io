@@ -47,7 +47,6 @@ const AppPath = (() => {
     { id: 'accountability', level: 'B2', emoji: '📊', label: 'Contabilidad',             labelEn: 'Accounting',           order: 30 },
     { id: 'descripciones', level: 'A2', emoji: '🔍', label: 'Descripciones',            labelEn: 'Descriptions',         order: 9 },
     { id: 'conceptos', level: 'B1', emoji: '💭', label: 'Ideas y conceptos',            labelEn: 'Ideas & Concepts',         order: 29 },
-    { id: 'sociedad_actualidad', level: 'B1', emoji: '📰', label: 'Sociedad y actualidad',            labelEn: 'Society & Current Affairs',         order: 28 },
     { id: 'trabajo_economia', level: 'B1', emoji: '💼', label: 'Trabajo y economía',            labelEn: 'Work & Economy',         order: 27 },
     { id: 'planes', level: 'A2', emoji: '🎯', label: 'Planes y decisiones',            labelEn: 'Plans & Decisions',         order: 11 },
     { id: 'tiempo_libre', level: 'A2', emoji: '🎉', label: 'Tiempo libre y cultura',            labelEn: 'Leisure & Culture',         order: 15 },

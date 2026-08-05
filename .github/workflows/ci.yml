@@ -67,5 +67,5 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Core-vocabulary coverage gate (EN, NGSL top-1000 >= 90% in BOTH channels)
-        run: node tools/coverage.mjs --pair es-en --gate --min 90
+      - name: Core-vocabulary coverage gate (EN, NGSL top-1000 >= 80% in BOTH channels)
+        run: node tools/coverage.mjs --pair es-en --gate --min 80

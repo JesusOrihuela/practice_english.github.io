@@ -39,7 +39,6 @@ const AppTopics = (() => {
     { id: 'accountability', label: 'Contabilidad',          labelEn: 'Accounting',           emoji: '📊', phrase: true,  vocab: true,  level: 'B2', order: 30 },
     { id: 'descripciones',  label: 'Descripciones',         labelEn: 'Descriptions',         emoji: '🔍', phrase: true,  vocab: false, level: 'A2', order: 9 },
     { id: 'conceptos', label: 'Ideas y conceptos', labelEn: 'Ideas & Concepts', emoji: '💭', phrase: true,  vocab: false, level: 'B1', order: 29 },
-    { id: 'sociedad_actualidad', label: 'Sociedad y actualidad', labelEn: 'Society & Current Affairs', emoji: '📰', phrase: true,  vocab: false, level: 'B1', order: 28 },
     { id: 'trabajo_economia', label: 'Trabajo y economía', labelEn: 'Work & Economy', emoji: '💼', phrase: true,  vocab: false, level: 'B1', order: 27 },
     { id: 'planes', label: 'Planes y decisiones', labelEn: 'Plans & Decisions', emoji: '🎯', phrase: true,  vocab: false, level: 'A2', order: 11 },
     { id: 'tiempo_libre', label: 'Tiempo libre y cultura', labelEn: 'Leisure & Culture', emoji: '🎉', phrase: true,  vocab: false, level: 'A2', order: 15 },
