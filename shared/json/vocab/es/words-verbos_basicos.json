@@ -1565,6 +1565,294 @@
       "gloss_example": {
         "en": "Close the door."
       }
+    },
+    {
+      "id": "llamar",
+      "term": "llamar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Decir el nombre o telefonear a alguien.",
+      "example": "Llámame más tarde.",
+      "translations": {
+        "en": "to call"
+      },
+      "gloss": {
+        "en": "To say the name of or phone someone."
+      },
+      "gloss_example": {
+        "en": "Call me later."
+      }
+    },
+    {
+      "id": "parecer",
+      "term": "parecer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar la impresión de algo.",
+      "example": "Pareces cansado.",
+      "translations": {
+        "en": "to seem"
+      },
+      "gloss": {
+        "en": "To appear to be."
+      },
+      "gloss_example": {
+        "en": "You seem tired."
+      }
+    },
+    {
+      "id": "necesitar",
+      "term": "necesitar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Requerir algo importante.",
+      "example": "Necesito ayuda.",
+      "translations": {
+        "en": "to need"
+      },
+      "gloss": {
+        "en": "To require something important."
+      },
+      "gloss_example": {
+        "en": "I need help."
+      }
+    },
+    {
+      "id": "dormir",
+      "term": "dormir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Descansar con los ojos cerrados.",
+      "example": "Duermo ocho horas.",
+      "translations": {
+        "en": "to sleep"
+      },
+      "gloss": {
+        "en": "To rest with your eyes closed."
+      },
+      "gloss_example": {
+        "en": "I sleep eight hours."
+      }
+    },
+    {
+      "id": "perder",
+      "term": "perder",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dejar de tener algo.",
+      "example": "No quiero perder el tren.",
+      "translations": {
+        "en": "to lose"
+      },
+      "gloss": {
+        "en": "To stop having something."
+      },
+      "gloss_example": {
+        "en": "I don't want to miss the train."
+      }
+    },
+    {
+      "id": "explicar",
+      "term": "explicar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer que algo se entienda.",
+      "example": "Te lo explico.",
+      "translations": {
+        "en": "to explain"
+      },
+      "gloss": {
+        "en": "To make something understood."
+      },
+      "gloss_example": {
+        "en": "I'll explain it to you."
+      }
+    },
+    {
+      "id": "cambiar",
+      "term": "cambiar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Volver algo diferente.",
+      "example": "Quiero cambiar de trabajo.",
+      "translations": {
+        "en": "to change"
+      },
+      "gloss": {
+        "en": "To make something different."
+      },
+      "gloss_example": {
+        "en": "I want to change jobs."
+      }
+    },
+    {
+      "id": "preparar",
+      "term": "preparar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dejar algo listo.",
+      "example": "Preparo la cena.",
+      "translations": {
+        "en": "to prepare"
+      },
+      "gloss": {
+        "en": "To get something ready."
+      },
+      "gloss_example": {
+        "en": "I am making dinner."
+      }
+    },
+    {
+      "id": "recibir",
+      "term": "recibir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar algo que llega.",
+      "example": "Recibí tu carta.",
+      "translations": {
+        "en": "to receive"
+      },
+      "gloss": {
+        "en": "To take something that arrives."
+      },
+      "gloss_example": {
+        "en": "I received your letter."
+      }
+    },
+    {
+      "id": "descubrir",
+      "term": "descubrir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Encontrar algo por primera vez.",
+      "example": "Descubrí un lugar nuevo.",
+      "translations": {
+        "en": "to discover"
+      },
+      "gloss": {
+        "en": "To find something for the first time."
+      },
+      "gloss_example": {
+        "en": "I discovered a new place."
+      }
+    },
+    {
+      "id": "visitar",
+      "term": "visitar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir a ver a alguien o un lugar.",
+      "example": "Visito a mi abuela.",
+      "translations": {
+        "en": "to visit"
+      },
+      "gloss": {
+        "en": "To go and see someone or a place."
+      },
+      "gloss_example": {
+        "en": "I visit my grandmother."
+      }
+    },
+    {
+      "id": "escuchar",
+      "term": "escuchar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Prestar atención a un sonido.",
+      "example": "Escucho música.",
+      "translations": {
+        "en": "to listen"
+      },
+      "gloss": {
+        "en": "To pay attention to a sound."
+      },
+      "gloss_example": {
+        "en": "I listen to music."
+      }
+    },
+    {
+      "id": "viajar",
+      "term": "viajar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir de un lugar a otro lejano.",
+      "example": "Me gusta viajar.",
+      "translations": {
+        "en": "to travel"
+      },
+      "gloss": {
+        "en": "To go from one place to a distant one."
+      },
+      "gloss_example": {
+        "en": "I like to travel."
+      }
+    },
+    {
+      "id": "crear",
+      "term": "crear",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer algo nuevo.",
+      "example": "Quiero crear una empresa.",
+      "translations": {
+        "en": "to create"
+      },
+      "gloss": {
+        "en": "To make something new."
+      },
+      "gloss_example": {
+        "en": "I want to create a company."
+      }
+    },
+    {
+      "id": "acabar",
+      "term": "acabar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Llegar al final de algo.",
+      "example": "Acabo de comer.",
+      "translations": {
+        "en": "to finish"
+      },
+      "gloss": {
+        "en": "To reach the end of something."
+      },
+      "gloss_example": {
+        "en": "I have just eaten."
+      }
+    },
+    {
+      "id": "servir",
+      "term": "servir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ser útil o dar comida.",
+      "example": "¿Te sirvo más?",
+      "translations": {
+        "en": "to serve"
+      },
+      "gloss": {
+        "en": "To be useful or give food."
+      },
+      "gloss_example": {
+        "en": "Shall I serve you more?"
+      }
     }
   ]
 }

@@ -1475,6 +1475,276 @@
       "gloss_example": {
         "es": "Espérame aquí."
       }
+    },
+    {
+      "id": "like",
+      "term": "like",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To find someone or something pleasant.",
+      "example": "I like this song.",
+      "translations": {
+        "es": "gustar"
+      },
+      "gloss": {
+        "es": "Encontrar algo agradable."
+      },
+      "gloss_example": {
+        "es": "Me gusta esta canción."
+      }
+    },
+    {
+      "id": "mean",
+      "term": "mean",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To have a particular meaning.",
+      "example": "What does this word mean?",
+      "translations": {
+        "es": "significar"
+      },
+      "gloss": {
+        "es": "Tener un significado."
+      },
+      "gloss_example": {
+        "es": "¿Qué significa esta palabra?"
+      }
+    },
+    {
+      "id": "change",
+      "term": "change",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To become or make different.",
+      "example": "I want to change my job.",
+      "translations": {
+        "es": "cambiar"
+      },
+      "gloss": {
+        "es": "Volver algo diferente."
+      },
+      "gloss_example": {
+        "es": "Quiero cambiar de trabajo."
+      }
+    },
+    {
+      "id": "write",
+      "term": "write",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To form letters or words.",
+      "example": "I write in my notebook.",
+      "translations": {
+        "es": "escribir"
+      },
+      "gloss": {
+        "es": "Formar letras o palabras."
+      },
+      "gloss_example": {
+        "es": "Escribo en mi cuaderno."
+      }
+    },
+    {
+      "id": "try",
+      "term": "try",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To attempt to do something.",
+      "example": "Try to be on time.",
+      "translations": {
+        "es": "intentar"
+      },
+      "gloss": {
+        "es": "Procurar hacer algo."
+      },
+      "gloss_example": {
+        "es": "Intenta llegar a tiempo."
+      }
+    },
+    {
+      "id": "leave",
+      "term": "leave",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To go away from a place.",
+      "example": "I leave at eight.",
+      "translations": {
+        "es": "irse"
+      },
+      "gloss": {
+        "es": "Marcharse de un lugar."
+      },
+      "gloss_example": {
+        "es": "Me voy a las ocho."
+      }
+    },
+    {
+      "id": "live",
+      "term": "live",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To be alive or have a home somewhere.",
+      "example": "I live in Madrid.",
+      "translations": {
+        "es": "vivir"
+      },
+      "gloss": {
+        "es": "Estar vivo o tener hogar en un lugar."
+      },
+      "gloss_example": {
+        "es": "Vivo en Madrid."
+      }
+    },
+    {
+      "id": "let",
+      "term": "let",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To allow someone to do something.",
+      "example": "Let me help you.",
+      "translations": {
+        "es": "dejar"
+      },
+      "gloss": {
+        "es": "Permitir que alguien haga algo."
+      },
+      "gloss_example": {
+        "es": "Déjame ayudarte."
+      }
+    },
+    {
+      "id": "follow",
+      "term": "follow",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To go after someone or something.",
+      "example": "Follow me, please.",
+      "translations": {
+        "es": "seguir"
+      },
+      "gloss": {
+        "es": "Ir detrás de alguien o algo."
+      },
+      "gloss_example": {
+        "es": "Sígueme, por favor."
+      }
+    },
+    {
+      "id": "begin",
+      "term": "begin",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To start doing something.",
+      "example": "The film begins now.",
+      "translations": {
+        "es": "comenzar"
+      },
+      "gloss": {
+        "es": "Dar inicio a algo."
+      },
+      "gloss_example": {
+        "es": "La película comienza ahora."
+      }
+    },
+    {
+      "id": "believe",
+      "term": "believe",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To think something is true.",
+      "example": "I believe you.",
+      "translations": {
+        "es": "creer"
+      },
+      "gloss": {
+        "es": "Pensar que algo es verdad."
+      },
+      "gloss_example": {
+        "es": "Te creo."
+      }
+    },
+    {
+      "id": "love",
+      "term": "love",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To care about someone very much.",
+      "example": "I love my family.",
+      "translations": {
+        "es": "amar"
+      },
+      "gloss": {
+        "es": "Querer mucho a alguien."
+      },
+      "gloss_example": {
+        "es": "Amo a mi familia."
+      }
+    },
+    {
+      "id": "understand",
+      "term": "understand",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To know what something means.",
+      "example": "I understand the lesson.",
+      "translations": {
+        "es": "entender"
+      },
+      "gloss": {
+        "es": "Saber lo que algo significa."
+      },
+      "gloss_example": {
+        "es": "Entiendo la lección."
+      }
+    },
+    {
+      "id": "close",
+      "term": "close",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To shut something.",
+      "example": "Close the door.",
+      "translations": {
+        "es": "cerrar"
+      },
+      "gloss": {
+        "es": "Hacer que algo quede cerrado."
+      },
+      "gloss_example": {
+        "es": "Cierra la puerta."
+      }
+    },
+    {
+      "id": "open",
+      "term": "open",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To make something not closed.",
+      "example": "Open the window.",
+      "translations": {
+        "es": "abrir"
+      },
+      "gloss": {
+        "es": "Hacer que algo deje de estar cerrado."
+      },
+      "gloss_example": {
+        "es": "Abre la ventana."
+      }
     }
   ]
 }
