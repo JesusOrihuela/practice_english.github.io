@@ -1097,6 +1097,96 @@
       "gloss_example": {
         "en": "It is a normal day."
       }
+    },
+    {
+      "id": "diferente",
+      "term": "diferente",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no es igual.",
+      "example": "Este es diferente.",
+      "translations": {
+        "en": "different"
+      },
+      "gloss": {
+        "en": "Not the same."
+      },
+      "gloss_example": {
+        "en": "This one is different."
+      }
+    },
+    {
+      "id": "unico",
+      "term": "único",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que es el único de su clase.",
+      "example": "Es una pieza única.",
+      "translations": {
+        "en": "unique"
+      },
+      "gloss": {
+        "en": "Being the only one of its kind."
+      },
+      "gloss_example": {
+        "en": "It is a unique piece."
+      }
+    },
+    {
+      "id": "medio",
+      "term": "medio",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que está en el centro, o la mitad.",
+      "example": "Vive en el piso de en medio.",
+      "translations": {
+        "en": "middle"
+      },
+      "gloss": {
+        "en": "In the center, or half."
+      },
+      "gloss_example": {
+        "en": "He lives on the middle floor."
+      }
+    },
+    {
+      "id": "economico",
+      "term": "económico",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que cuesta poco dinero.",
+      "example": "Es un hotel económico.",
+      "translations": {
+        "en": "cheap"
+      },
+      "gloss": {
+        "en": "Costing little money."
+      },
+      "gloss_example": {
+        "en": "It is a cheap hotel."
+      }
+    },
+    {
+      "id": "extranjero",
+      "term": "extranjero",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De otro país.",
+      "example": "Es un turista extranjero.",
+      "translations": {
+        "en": "foreign"
+      },
+      "gloss": {
+        "en": "From another country."
+      },
+      "gloss_example": {
+        "en": "He is a foreign tourist."
+      }
     }
   ]
 }

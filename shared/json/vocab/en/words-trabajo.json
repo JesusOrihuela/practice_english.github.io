@@ -233,6 +233,42 @@
       "gloss_example": {
         "es": "Voy al mercado."
       }
+    },
+    {
+      "id": "company",
+      "term": "company",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A business that sells goods or services.",
+      "example": "I work for a big company.",
+      "translations": {
+        "es": "empresa"
+      },
+      "gloss": {
+        "es": "Un negocio que vende bienes o servicios."
+      },
+      "gloss_example": {
+        "es": "Trabajo para una gran empresa."
+      }
+    },
+    {
+      "id": "cost",
+      "term": "cost",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The amount of money you pay.",
+      "example": "The cost is too high.",
+      "translations": {
+        "es": "costo"
+      },
+      "gloss": {
+        "es": "La cantidad de dinero que se paga."
+      },
+      "gloss_example": {
+        "es": "El costo es muy alto."
+      }
     }
   ]
 }

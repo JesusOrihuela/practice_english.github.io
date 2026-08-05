@@ -269,6 +269,24 @@
       "gloss_example": {
         "es": "Es una buena estudiante."
       }
+    },
+    {
+      "id": "book",
+      "term": "book",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A set of pages with text to read.",
+      "example": "I am reading a book.",
+      "translations": {
+        "es": "libro"
+      },
+      "gloss": {
+        "es": "Un conjunto de hojas con texto para leer."
+      },
+      "gloss_example": {
+        "es": "Estoy leyendo un libro."
+      }
     }
   ]
 }

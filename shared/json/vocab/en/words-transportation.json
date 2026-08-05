@@ -665,6 +665,42 @@
       "gloss_example": {
         "es": "El avión aterrizó a tiempo."
       }
+    },
+    {
+      "id": "car",
+      "term": "car",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A vehicle with four wheels.",
+      "example": "My car is blue.",
+      "translations": {
+        "es": "carro"
+      },
+      "gloss": {
+        "es": "Un vehículo de cuatro ruedas."
+      },
+      "gloss_example": {
+        "es": "Mi carro es azul."
+      }
+    },
+    {
+      "id": "train",
+      "term": "train",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A line of connected railway cars.",
+      "example": "The train is late.",
+      "translations": {
+        "es": "tren"
+      },
+      "gloss": {
+        "es": "Una fila de vagones de ferrocarril."
+      },
+      "gloss_example": {
+        "es": "El tren llega tarde."
+      }
     }
   ]
 }

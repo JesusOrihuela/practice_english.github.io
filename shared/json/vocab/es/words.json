@@ -989,6 +989,78 @@
       "gloss_example": {
         "en": "This is the best way."
       }
+    },
+    {
+      "id": "imagen",
+      "term": "imagen",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una figura o foto de algo.",
+      "example": "Es una imagen bonita.",
+      "translations": {
+        "en": "image"
+      },
+      "gloss": {
+        "en": "A picture or photo of something."
+      },
+      "gloss_example": {
+        "en": "It is a nice image."
+      }
+    },
+    {
+      "id": "tema",
+      "term": "tema",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El asunto del que se habla.",
+      "example": "Cambiemos de tema.",
+      "translations": {
+        "en": "topic"
+      },
+      "gloss": {
+        "en": "The subject being talked about."
+      },
+      "gloss_example": {
+        "en": "Let's change the topic."
+      }
+    },
+    {
+      "id": "cambio",
+      "term": "cambio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El paso de una cosa a otra.",
+      "example": "Es un gran cambio.",
+      "translations": {
+        "en": "change"
+      },
+      "gloss": {
+        "en": "The move from one thing to another."
+      },
+      "gloss_example": {
+        "en": "It is a big change."
+      }
+    },
+    {
+      "id": "lado",
+      "term": "lado",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una de las partes o caras de algo.",
+      "example": "Escribe en este lado.",
+      "translations": {
+        "en": "side"
+      },
+      "gloss": {
+        "en": "One of the parts or faces of something."
+      },
+      "gloss_example": {
+        "en": "Write on this side."
+      }
     }
   ]
 }

@@ -323,6 +323,42 @@
       "gloss_example": {
         "en": "Wait a moment."
       }
+    },
+    {
+      "id": "verano",
+      "term": "verano",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La estación más calurosa del año.",
+      "example": "En verano vamos a la playa.",
+      "translations": {
+        "en": "summer"
+      },
+      "gloss": {
+        "en": "The hottest season of the year."
+      },
+      "gloss_example": {
+        "en": "In summer we go to the beach."
+      }
+    },
+    {
+      "id": "siglo",
+      "term": "siglo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Un período de cien años.",
+      "example": "El edificio es de otro siglo.",
+      "translations": {
+        "en": "century"
+      },
+      "gloss": {
+        "en": "A period of a hundred years."
+      },
+      "gloss_example": {
+        "en": "The building is from another century."
+      }
     }
   ]
 }

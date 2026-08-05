@@ -467,6 +467,42 @@
       "gloss_example": {
         "en": "Adding a splash of soy sauce enhances the umami and brings the whole dish together."
       }
+    },
+    {
+      "id": "comida",
+      "term": "comida",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lo que comemos.",
+      "example": "La comida está lista.",
+      "translations": {
+        "en": "food"
+      },
+      "gloss": {
+        "en": "What we eat."
+      },
+      "gloss_example": {
+        "en": "The food is ready."
+      }
+    },
+    {
+      "id": "vino",
+      "term": "vino",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bebida alcohólica hecha de uvas.",
+      "example": "Un vaso de vino tinto.",
+      "translations": {
+        "en": "wine"
+      },
+      "gloss": {
+        "en": "An alcoholic drink made from grapes."
+      },
+      "gloss_example": {
+        "en": "A glass of red wine."
+      }
     }
   ]
 }

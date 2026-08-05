@@ -305,6 +305,42 @@
       "gloss_example": {
         "en": "It is a nice place."
       }
+    },
+    {
+      "id": "piso",
+      "term": "piso",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El suelo de un lugar, o una vivienda.",
+      "example": "El piso está limpio.",
+      "translations": {
+        "en": "floor"
+      },
+      "gloss": {
+        "en": "The floor of a place, or an apartment."
+      },
+      "gloss_example": {
+        "en": "The floor is clean."
+      }
+    },
+    {
+      "id": "mesa",
+      "term": "mesa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mueble con patas para comer o trabajar.",
+      "example": "Pon el vaso en la mesa.",
+      "translations": {
+        "en": "table"
+      },
+      "gloss": {
+        "en": "A piece of furniture to eat or work on."
+      },
+      "gloss_example": {
+        "en": "Put the glass on the table."
+      }
     }
   ]
 }

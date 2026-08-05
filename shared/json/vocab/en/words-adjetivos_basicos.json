@@ -917,6 +917,60 @@
       "gloss_example": {
         "es": "Ella es muy agradable."
       }
+    },
+    {
+      "id": "large",
+      "term": "large",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Big in size or amount.",
+      "example": "It is a large room.",
+      "translations": {
+        "es": "grande"
+      },
+      "gloss": {
+        "es": "De gran tamaño o cantidad."
+      },
+      "gloss_example": {
+        "es": "Es una habitación grande."
+      }
+    },
+    {
+      "id": "public",
+      "term": "public",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Open to all people.",
+      "example": "It is a public park.",
+      "translations": {
+        "es": "público"
+      },
+      "gloss": {
+        "es": "Abierto a todas las personas."
+      },
+      "gloss_example": {
+        "es": "Es un parque público."
+      }
+    },
+    {
+      "id": "possible",
+      "term": "possible",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Able to happen or be done.",
+      "example": "It is possible to win.",
+      "translations": {
+        "es": "posible"
+      },
+      "gloss": {
+        "es": "Que puede pasar o hacerse."
+      },
+      "gloss_example": {
+        "es": "Es posible ganar."
+      }
     }
   ]
 }
