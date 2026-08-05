@@ -186,7 +186,7 @@
       "level": "A2",
       "category": "Verb",
       "difficulty": "easy",
-      "definition": "To fill someone with the urge or ability to do something",
+      "definition": "To fill someone with the urge to do something.",
       "example": "Great teachers inspire students to think freely.",
       "translations": {
         "es": "inspirar"
@@ -366,7 +366,7 @@
       "level": "A2",
       "category": "Verb",
       "difficulty": "easy",
-      "definition": "To use money to pay for things, or to use time.",
+      "definition": "To use money or time on something.",
       "example": "We spent the whole afternoon at the museum.",
       "translations": {
         "es": "gastar / pasar"
@@ -471,7 +471,7 @@
     {
       "id": "sit",
       "term": "sit",
-      "definition": "To rest with your body upright and your weight on your bottom.",
+      "definition": "To rest with your weight on a seat.",
       "example": "Please sit down and relax.",
       "level": "A1",
       "category": "Verb",
@@ -844,6 +844,276 @@
       },
       "gloss_example": {
         "es": "Ella me sonrió."
+      }
+    },
+    {
+      "id": "say",
+      "term": "say",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To express something in words.",
+      "example": "Please say your name slowly.",
+      "translations": {
+        "es": "decir"
+      },
+      "gloss": {
+        "es": "Expresar algo con palabras."
+      },
+      "gloss_example": {
+        "es": "Por favor, di tu nombre despacio."
+      }
+    },
+    {
+      "id": "go",
+      "term": "go",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move from one place to another.",
+      "example": "I go to school every day.",
+      "translations": {
+        "es": "ir"
+      },
+      "gloss": {
+        "es": "Moverse de un lugar a otro."
+      },
+      "gloss_example": {
+        "es": "Voy a la escuela todos los días."
+      }
+    },
+    {
+      "id": "know",
+      "term": "know",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To have information in your mind.",
+      "example": "I know the answer.",
+      "translations": {
+        "es": "saber"
+      },
+      "gloss": {
+        "es": "Tener información en la mente."
+      },
+      "gloss_example": {
+        "es": "Sé la respuesta."
+      }
+    },
+    {
+      "id": "get",
+      "term": "get",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To receive or obtain something.",
+      "example": "I get a letter every week.",
+      "translations": {
+        "es": "conseguir"
+      },
+      "gloss": {
+        "es": "Recibir u obtener algo."
+      },
+      "gloss_example": {
+        "es": "Recibo una carta cada semana."
+      }
+    },
+    {
+      "id": "think",
+      "term": "think",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To use your mind to form ideas.",
+      "example": "I think you are right.",
+      "translations": {
+        "es": "pensar"
+      },
+      "gloss": {
+        "es": "Usar la mente para formar ideas."
+      },
+      "gloss_example": {
+        "es": "Creo que tienes razón."
+      }
+    },
+    {
+      "id": "make",
+      "term": "make",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To create or produce something.",
+      "example": "I make coffee every morning.",
+      "translations": {
+        "es": "hacer"
+      },
+      "gloss": {
+        "es": "Crear o producir algo."
+      },
+      "gloss_example": {
+        "es": "Hago café cada mañana."
+      }
+    },
+    {
+      "id": "see",
+      "term": "see",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To notice something with your eyes.",
+      "example": "I can see the sea.",
+      "translations": {
+        "es": "ver"
+      },
+      "gloss": {
+        "es": "Percibir algo con los ojos."
+      },
+      "gloss_example": {
+        "es": "Puedo ver el mar."
+      }
+    },
+    {
+      "id": "take",
+      "term": "take",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To hold and carry something.",
+      "example": "Take an umbrella with you.",
+      "translations": {
+        "es": "tomar"
+      },
+      "gloss": {
+        "es": "Agarrar y llevar algo."
+      },
+      "gloss_example": {
+        "es": "Toma un paraguas contigo."
+      }
+    },
+    {
+      "id": "want",
+      "term": "want",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To wish for something.",
+      "example": "I want a glass of water.",
+      "translations": {
+        "es": "querer"
+      },
+      "gloss": {
+        "es": "Desear algo."
+      },
+      "gloss_example": {
+        "es": "Quiero un vaso de agua."
+      }
+    },
+    {
+      "id": "give",
+      "term": "give",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To hand something to someone.",
+      "example": "Give me the book, please.",
+      "translations": {
+        "es": "dar"
+      },
+      "gloss": {
+        "es": "Entregar algo a alguien."
+      },
+      "gloss_example": {
+        "es": "Dame el libro, por favor."
+      }
+    },
+    {
+      "id": "find",
+      "term": "find",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To discover something you look for.",
+      "example": "I can't find my keys.",
+      "translations": {
+        "es": "encontrar"
+      },
+      "gloss": {
+        "es": "Hallar algo que buscabas."
+      },
+      "gloss_example": {
+        "es": "No encuentro mis llaves."
+      }
+    },
+    {
+      "id": "need",
+      "term": "need",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To require something important.",
+      "example": "I need your help.",
+      "translations": {
+        "es": "necesitar"
+      },
+      "gloss": {
+        "es": "Requerir algo importante."
+      },
+      "gloss_example": {
+        "es": "Necesito tu ayuda."
+      }
+    },
+    {
+      "id": "tell",
+      "term": "tell",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To give information to someone.",
+      "example": "Tell me the truth.",
+      "translations": {
+        "es": "contar"
+      },
+      "gloss": {
+        "es": "Dar información a alguien."
+      },
+      "gloss_example": {
+        "es": "Cuéntame la verdad."
+      }
+    },
+    {
+      "id": "show",
+      "term": "show",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To let someone see something.",
+      "example": "Show me your photos.",
+      "translations": {
+        "es": "mostrar"
+      },
+      "gloss": {
+        "es": "Dejar que alguien vea algo."
+      },
+      "gloss_example": {
+        "es": "Muéstrame tus fotos."
+      }
+    },
+    {
+      "id": "feel",
+      "term": "feel",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To experience an emotion or sensation.",
+      "example": "I feel happy today.",
+      "translations": {
+        "es": "sentir"
+      },
+      "gloss": {
+        "es": "Experimentar una emoción o sensación."
+      },
+      "gloss_example": {
+        "es": "Me siento feliz hoy."
       }
     }
   ]

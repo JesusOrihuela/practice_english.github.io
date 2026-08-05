@@ -971,6 +971,276 @@
       "gloss_example": {
         "en": "We organized a meeting for Friday."
       }
+    },
+    {
+      "id": "ser",
+      "term": "ser",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Existir o tener una cualidad esencial.",
+      "example": "Ella es muy amable.",
+      "translations": {
+        "en": "to be"
+      },
+      "gloss": {
+        "en": "To exist or have an essential quality."
+      },
+      "gloss_example": {
+        "en": "She is very kind."
+      }
+    },
+    {
+      "id": "tener",
+      "term": "tener",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Poseer algo.",
+      "example": "Tengo dos hermanos.",
+      "translations": {
+        "en": "to have"
+      },
+      "gloss": {
+        "en": "To possess something."
+      },
+      "gloss_example": {
+        "en": "I have two brothers."
+      }
+    },
+    {
+      "id": "hacer",
+      "term": "hacer",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Crear o realizar una acción.",
+      "example": "Hago la comida cada día.",
+      "translations": {
+        "en": "to do"
+      },
+      "gloss": {
+        "en": "To create or carry out an action."
+      },
+      "gloss_example": {
+        "en": "I make lunch every day."
+      }
+    },
+    {
+      "id": "ir",
+      "term": "ir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Moverse hacia un lugar.",
+      "example": "Voy a la escuela.",
+      "translations": {
+        "en": "to go"
+      },
+      "gloss": {
+        "en": "To move toward a place."
+      },
+      "gloss_example": {
+        "en": "I go to school."
+      }
+    },
+    {
+      "id": "decir",
+      "term": "decir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Expresar algo con palabras.",
+      "example": "Dime la verdad.",
+      "translations": {
+        "en": "to say"
+      },
+      "gloss": {
+        "en": "To express something in words."
+      },
+      "gloss_example": {
+        "en": "Tell me the truth."
+      }
+    },
+    {
+      "id": "ver",
+      "term": "ver",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Percibir con los ojos.",
+      "example": "Veo el mar desde aquí.",
+      "translations": {
+        "en": "to see"
+      },
+      "gloss": {
+        "en": "To perceive with the eyes."
+      },
+      "gloss_example": {
+        "en": "I can see the sea from here."
+      }
+    },
+    {
+      "id": "dar",
+      "term": "dar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Entregar algo a alguien.",
+      "example": "Dame el libro, por favor.",
+      "translations": {
+        "en": "to give"
+      },
+      "gloss": {
+        "en": "To hand something to someone."
+      },
+      "gloss_example": {
+        "en": "Give me the book, please."
+      }
+    },
+    {
+      "id": "hablar",
+      "term": "hablar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Comunicarse con palabras.",
+      "example": "Hablo dos idiomas.",
+      "translations": {
+        "en": "to speak"
+      },
+      "gloss": {
+        "en": "To communicate with words."
+      },
+      "gloss_example": {
+        "en": "I speak two languages."
+      }
+    },
+    {
+      "id": "estar",
+      "term": "estar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Encontrarse en un lugar o estado.",
+      "example": "Estoy en casa.",
+      "translations": {
+        "en": "to be"
+      },
+      "gloss": {
+        "en": "To be in a place or state."
+      },
+      "gloss_example": {
+        "en": "I am at home."
+      }
+    },
+    {
+      "id": "poner",
+      "term": "poner",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Colocar algo en un lugar.",
+      "example": "Pon el vaso en la mesa.",
+      "translations": {
+        "en": "to put"
+      },
+      "gloss": {
+        "en": "To place something somewhere."
+      },
+      "gloss_example": {
+        "en": "Put the glass on the table."
+      }
+    },
+    {
+      "id": "encontrar",
+      "term": "encontrar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hallar algo que buscabas.",
+      "example": "No encuentro mis llaves.",
+      "translations": {
+        "en": "to find"
+      },
+      "gloss": {
+        "en": "To discover something you look for."
+      },
+      "gloss_example": {
+        "en": "I can't find my keys."
+      }
+    },
+    {
+      "id": "empezar",
+      "term": "empezar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar inicio a algo.",
+      "example": "Empiezo a trabajar temprano.",
+      "translations": {
+        "en": "to start"
+      },
+      "gloss": {
+        "en": "To begin something."
+      },
+      "gloss_example": {
+        "en": "I start work early."
+      }
+    },
+    {
+      "id": "salir",
+      "term": "salir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir de dentro hacia fuera.",
+      "example": "Salgo de casa a las ocho.",
+      "translations": {
+        "en": "to leave"
+      },
+      "gloss": {
+        "en": "To go out of a place."
+      },
+      "gloss_example": {
+        "en": "I leave home at eight."
+      }
+    },
+    {
+      "id": "creer",
+      "term": "creer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Aceptar algo como verdad.",
+      "example": "Te creo.",
+      "translations": {
+        "en": "to believe"
+      },
+      "gloss": {
+        "en": "To accept something as true."
+      },
+      "gloss_example": {
+        "en": "I believe you."
+      }
+    },
+    {
+      "id": "comer",
+      "term": "comer",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar alimento.",
+      "example": "Como fruta cada día.",
+      "translations": {
+        "en": "to eat"
+      },
+      "gloss": {
+        "en": "To take in food."
+      },
+      "gloss_example": {
+        "en": "I eat fruit every day."
+      }
     }
   ]
 }
