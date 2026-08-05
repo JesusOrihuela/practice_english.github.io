@@ -1355,6 +1355,42 @@
           "audioSlug": "cocinalo_a_fuego_lento"
         }
       ]
+    },
+    {
+      "id": "kitchen_quiero_una_cerveza",
+      "source": "I want a beer.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero una cerveza.",
+          "audioSlug": "quiero_una_cerveza"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_me_gusta_el_chocolate",
+      "source": "I like chocolate.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta el chocolate.",
+          "audioSlug": "me_gusta_el_chocolate"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_es_un_tomate_rojo",
+      "source": "It is a red tomato.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un tomate rojo.",
+          "audioSlug": "es_un_tomate_rojo"
+        }
+      ]
     }
   ]
 }

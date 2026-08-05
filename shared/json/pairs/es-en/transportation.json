@@ -523,6 +523,30 @@
           "audioSlug": "can_you_turn_on_the_meter_please"
         }
       ]
+    },
+    {
+      "id": "transportation_i_drive_to_work",
+      "source": "Conduzco al trabajo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I drive to work.",
+          "audioSlug": "i_drive_to_work"
+        }
+      ]
+    },
+    {
+      "id": "transportation_birds_can_fly",
+      "source": "Los pájaros pueden volar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Birds can fly.",
+          "audioSlug": "birds_can_fly"
+        }
+      ]
     }
   ]
 }

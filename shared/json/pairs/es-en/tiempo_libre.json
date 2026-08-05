@@ -179,6 +179,30 @@
           "audioSlug": "i_like_to_paint"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_throw_the_ball",
+      "source": "Lanza la pelota.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Throw the ball.",
+          "audioSlug": "throw_the_ball"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_dont_fight",
+      "source": "No pelees.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Don't fight.",
+          "audioSlug": "don_t_fight"
+        }
+      ]
     }
   ]
 }

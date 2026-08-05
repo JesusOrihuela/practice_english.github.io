@@ -191,6 +191,54 @@
           "audioSlug": "vamos_a_pasear"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_estoy_de_vacaciones",
+      "source": "I am on vacation.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy de vacaciones.",
+          "audioSlug": "estoy_de_vacaciones"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_gusta_el_baile",
+      "source": "I like dancing.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta el baile.",
+          "audioSlug": "me_gusta_el_baile"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_leo_una_novela",
+      "source": "I am reading a novel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Leo una novela.",
+          "audioSlug": "leo_una_novela"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_gano_un_premio",
+      "source": "He won a prize.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ganó un premio.",
+          "audioSlug": "gano_un_premio"
+        }
+      ]
     }
   ]
 }

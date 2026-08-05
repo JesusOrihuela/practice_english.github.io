@@ -533,6 +533,18 @@
           "audioSlug": "puede_poner_el_taximetro_por_favor"
         }
       ]
+    },
+    {
+      "id": "transportation_el_avion_llego_tarde",
+      "source": "The plane arrived late.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El avión llegó tarde.",
+          "audioSlug": "el_avion_llego_tarde"
+        }
+      ]
     }
   ]
 }

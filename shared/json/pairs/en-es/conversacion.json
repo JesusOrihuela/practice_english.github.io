@@ -395,6 +395,30 @@
           "audioSlug": "me_despido_de_ti"
         }
       ]
+    },
+    {
+      "id": "conversacion_me_hace_reir",
+      "source": "It makes me laugh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me hace reír.",
+          "audioSlug": "me_hace_reir"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_siempre_sonrie",
+      "source": "She always smiles.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siempre sonríe.",
+          "audioSlug": "siempre_sonrie"
+        }
+      ]
     }
   ]
 }
