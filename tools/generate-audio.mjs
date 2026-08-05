@@ -63,6 +63,13 @@ const slugify = s => {
   return `${head}_${hash}`;
 };
 
+// Normalize text before TTS: slash-separated variants (e.g. vocab terms like
+// "niño / niña" or "hostal / albergue") would be read aloud with the slash spoken.
+// Replace any "/" (with optional surrounding spaces) with a comma so both variants
+// are spoken naturally with a pause. Filenames are slug/ID-based, so this only
+// affects the spoken audio, not paths or displayed text.
+const speakable = s => (s || '').replace(/\s*\/\s*/g, ', ');
+
 // ── Configuration ──────────────────────────────────────────────────────────
 
 /**
@@ -457,7 +464,7 @@ for (const src of sources) {
       const fileIdx = src.getIndex ? src.getIndex(items[i]) : i;
       const outPath = resolve(src.outDir, `${fileIdx}-${voice}.wav`);
       if (!existsSync(outPath)) {
-        tasks.push({ src: src.id, i: fileIdx, voice, text: src.getText(items[i]), outPath });
+        tasks.push({ src: src.id, i: fileIdx, voice, text: speakable(src.getText(items[i])), outPath });
       }
     }
   }

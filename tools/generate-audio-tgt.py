@@ -255,6 +255,10 @@ def build_sources(lang_code):
 
 async def tts_to_mp3(text: str, voice: str) -> bytes:
     """Synthesize text with edge-tts and return raw MP3 bytes."""
+    # Slash-separated variants (vocab terms like "hostal / albergue") would be read
+    # with the slash spoken aloud. Replace "/" with a comma so both variants are
+    # spoken naturally. Filenames are ID-based, so only the spoken audio changes.
+    text = re.sub(r'\s*/\s*', ', ', text)
     tts = edge_tts.Communicate(text, voice)
     chunks = []
     async for chunk in tts.stream():
