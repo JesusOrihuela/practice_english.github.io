@@ -755,6 +755,348 @@
       "gloss_example": {
         "en": "She lives a healthy life."
       }
+    },
+    {
+      "id": "nuevo",
+      "term": "nuevo",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Hecho o creado hace poco.",
+      "example": "Tengo un teléfono nuevo.",
+      "translations": {
+        "en": "new"
+      },
+      "gloss": {
+        "en": "Made or created recently."
+      },
+      "gloss_example": {
+        "en": "I have a new phone."
+      }
+    },
+    {
+      "id": "bueno",
+      "term": "bueno",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De buena calidad o agradable.",
+      "example": "Es un buen libro.",
+      "translations": {
+        "en": "good"
+      },
+      "gloss": {
+        "en": "Of high quality or pleasant."
+      },
+      "gloss_example": {
+        "en": "It is a good book."
+      }
+    },
+    {
+      "id": "grande",
+      "term": "grande",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De gran tamaño.",
+      "example": "Es una casa grande.",
+      "translations": {
+        "en": "big"
+      },
+      "gloss": {
+        "en": "Large in size."
+      },
+      "gloss_example": {
+        "en": "It is a big house."
+      }
+    },
+    {
+      "id": "pequeno",
+      "term": "pequeño",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De poco tamaño.",
+      "example": "Tengo un carro pequeño.",
+      "translations": {
+        "en": "small"
+      },
+      "gloss": {
+        "en": "Little in size."
+      },
+      "gloss_example": {
+        "en": "I have a small car."
+      }
+    },
+    {
+      "id": "importante",
+      "term": "importante",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene mucho valor.",
+      "example": "Es un día importante.",
+      "translations": {
+        "en": "important"
+      },
+      "gloss": {
+        "en": "Having great value or meaning."
+      },
+      "gloss_example": {
+        "en": "It is an important day."
+      }
+    },
+    {
+      "id": "mejor",
+      "term": "mejor",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De más calidad que otro.",
+      "example": "Es la mejor opción.",
+      "translations": {
+        "en": "better"
+      },
+      "gloss": {
+        "en": "Of higher quality than another."
+      },
+      "gloss_example": {
+        "en": "It is the best option."
+      }
+    },
+    {
+      "id": "ultimo",
+      "term": "último",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que viene después de todos.",
+      "example": "Es el último día.",
+      "translations": {
+        "en": "last"
+      },
+      "gloss": {
+        "en": "Coming after all others."
+      },
+      "gloss_example": {
+        "en": "It is the last day."
+      }
+    },
+    {
+      "id": "alto",
+      "term": "alto",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que llega muy arriba.",
+      "example": "El muro es muy alto.",
+      "translations": {
+        "en": "tall"
+      },
+      "gloss": {
+        "en": "Reaching far up."
+      },
+      "gloss_example": {
+        "en": "The wall is very tall."
+      }
+    },
+    {
+      "id": "bajo_adj",
+      "term": "bajo",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Cercano al suelo.",
+      "example": "El techo es bajo.",
+      "translations": {
+        "en": "low"
+      },
+      "gloss": {
+        "en": "Close to the ground."
+      },
+      "gloss_example": {
+        "en": "The ceiling is low."
+      }
+    },
+    {
+      "id": "largo",
+      "term": "largo",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que mide mucho de extremo a extremo.",
+      "example": "Es un camino largo.",
+      "translations": {
+        "en": "long"
+      },
+      "gloss": {
+        "en": "Measuring a lot end to end."
+      },
+      "gloss_example": {
+        "en": "It is a long road."
+      }
+    },
+    {
+      "id": "corto",
+      "term": "corto",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De poca longitud.",
+      "example": "El pelo corto es cómodo.",
+      "translations": {
+        "en": "short"
+      },
+      "gloss": {
+        "en": "Not long in length."
+      },
+      "gloss_example": {
+        "en": "Short hair is comfortable."
+      }
+    },
+    {
+      "id": "dificil",
+      "term": "difícil",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que cuesta hacer.",
+      "example": "Es un examen difícil.",
+      "translations": {
+        "en": "difficult"
+      },
+      "gloss": {
+        "en": "Hard to do."
+      },
+      "gloss_example": {
+        "en": "It is a difficult exam."
+      }
+    },
+    {
+      "id": "posible",
+      "term": "posible",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que puede pasar.",
+      "example": "Es una solución posible.",
+      "translations": {
+        "en": "possible"
+      },
+      "gloss": {
+        "en": "That can happen."
+      },
+      "gloss_example": {
+        "en": "It is a possible solution."
+      }
+    },
+    {
+      "id": "lleno_adj",
+      "term": "lleno",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no admite más.",
+      "example": "El vaso está lleno.",
+      "translations": {
+        "en": "full"
+      },
+      "gloss": {
+        "en": "Holding as much as possible."
+      },
+      "gloss_example": {
+        "en": "The glass is full."
+      }
+    },
+    {
+      "id": "especial",
+      "term": "especial",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Distinto de lo común.",
+      "example": "Es un día especial.",
+      "translations": {
+        "en": "special"
+      },
+      "gloss": {
+        "en": "Different from the ordinary."
+      },
+      "gloss_example": {
+        "en": "It is a special day."
+      }
+    },
+    {
+      "id": "personal_adj",
+      "term": "personal",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que pertenece a una persona.",
+      "example": "Es un asunto personal.",
+      "translations": {
+        "en": "personal"
+      },
+      "gloss": {
+        "en": "Belonging to one person."
+      },
+      "gloss_example": {
+        "en": "It is a personal matter."
+      }
+    },
+    {
+      "id": "feliz",
+      "term": "feliz",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que siente alegría.",
+      "example": "Estoy muy feliz hoy.",
+      "translations": {
+        "en": "happy"
+      },
+      "gloss": {
+        "en": "Feeling joy."
+      },
+      "gloss_example": {
+        "en": "I am very happy today."
+      }
+    },
+    {
+      "id": "fuerte",
+      "term": "fuerte",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene mucha fuerza.",
+      "example": "Es una persona fuerte.",
+      "translations": {
+        "en": "strong"
+      },
+      "gloss": {
+        "en": "Having great strength."
+      },
+      "gloss_example": {
+        "en": "He is a strong person."
+      }
+    },
+    {
+      "id": "normal_adj",
+      "term": "normal",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Común o habitual.",
+      "example": "Es un día normal.",
+      "translations": {
+        "en": "normal"
+      },
+      "gloss": {
+        "en": "Common or usual."
+      },
+      "gloss_example": {
+        "en": "It is a normal day."
+      }
     }
   ]
 }

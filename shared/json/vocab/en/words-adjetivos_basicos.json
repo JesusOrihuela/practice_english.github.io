@@ -575,6 +575,348 @@
       "gloss_example": {
         "es": "Es un edificio moderno."
       }
+    },
+    {
+      "id": "good",
+      "term": "good",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Of high quality or pleasant.",
+      "example": "This is a good book.",
+      "translations": {
+        "es": "bueno"
+      },
+      "gloss": {
+        "es": "De buena calidad o agradable."
+      },
+      "gloss_example": {
+        "es": "Es un buen libro."
+      }
+    },
+    {
+      "id": "new",
+      "term": "new",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Made or created recently.",
+      "example": "I have a new phone.",
+      "translations": {
+        "es": "nuevo"
+      },
+      "gloss": {
+        "es": "Hecho o creado hace poco."
+      },
+      "gloss_example": {
+        "es": "Tengo un teléfono nuevo."
+      }
+    },
+    {
+      "id": "first",
+      "term": "first",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Coming before all others.",
+      "example": "This is my first day.",
+      "translations": {
+        "es": "primero"
+      },
+      "gloss": {
+        "es": "Que viene antes que los demás."
+      },
+      "gloss_example": {
+        "es": "Es mi primer día."
+      }
+    },
+    {
+      "id": "great",
+      "term": "great",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Very good or very large.",
+      "example": "It was a great party.",
+      "translations": {
+        "es": "estupendo"
+      },
+      "gloss": {
+        "es": "Muy bueno o muy grande."
+      },
+      "gloss_example": {
+        "es": "Fue una fiesta estupenda."
+      }
+    },
+    {
+      "id": "high",
+      "term": "high",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Reaching far up.",
+      "example": "The wall is very high.",
+      "translations": {
+        "es": "alto"
+      },
+      "gloss": {
+        "es": "Que llega muy arriba."
+      },
+      "gloss_example": {
+        "es": "El muro es muy alto."
+      }
+    },
+    {
+      "id": "low",
+      "term": "low",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Close to the ground.",
+      "example": "The chair is too low.",
+      "translations": {
+        "es": "bajo"
+      },
+      "gloss": {
+        "es": "Cercano al suelo."
+      },
+      "gloss_example": {
+        "es": "La silla es demasiado baja."
+      }
+    },
+    {
+      "id": "different",
+      "term": "different",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Not the same.",
+      "example": "They are very different.",
+      "translations": {
+        "es": "diferente"
+      },
+      "gloss": {
+        "es": "Que no es igual."
+      },
+      "gloss_example": {
+        "es": "Son muy diferentes."
+      }
+    },
+    {
+      "id": "next",
+      "term": "next",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Coming right after this one.",
+      "example": "See you next week.",
+      "translations": {
+        "es": "próximo"
+      },
+      "gloss": {
+        "es": "Que viene justo después."
+      },
+      "gloss_example": {
+        "es": "Nos vemos la próxima semana."
+      }
+    },
+    {
+      "id": "big",
+      "term": "big",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Large in size.",
+      "example": "It is a big house.",
+      "translations": {
+        "es": "grande"
+      },
+      "gloss": {
+        "es": "De gran tamaño."
+      },
+      "gloss_example": {
+        "es": "Es una casa grande."
+      }
+    },
+    {
+      "id": "small",
+      "term": "small",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Little in size.",
+      "example": "I have a small car.",
+      "translations": {
+        "es": "pequeño"
+      },
+      "gloss": {
+        "es": "De poco tamaño."
+      },
+      "gloss_example": {
+        "es": "Tengo un carro pequeño."
+      }
+    },
+    {
+      "id": "long",
+      "term": "long",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Measuring a lot end to end.",
+      "example": "It is a long road.",
+      "translations": {
+        "es": "largo"
+      },
+      "gloss": {
+        "es": "Que mide mucho de extremo a extremo."
+      },
+      "gloss_example": {
+        "es": "Es un camino largo."
+      }
+    },
+    {
+      "id": "important",
+      "term": "important",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having great value or meaning.",
+      "example": "This is an important day.",
+      "translations": {
+        "es": "importante"
+      },
+      "gloss": {
+        "es": "Que tiene mucho valor."
+      },
+      "gloss_example": {
+        "es": "Es un día importante."
+      }
+    },
+    {
+      "id": "bad",
+      "term": "bad",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Not good, of poor quality.",
+      "example": "The weather is bad.",
+      "translations": {
+        "es": "malo"
+      },
+      "gloss": {
+        "es": "Que no es bueno."
+      },
+      "gloss_example": {
+        "es": "El clima está malo."
+      }
+    },
+    {
+      "id": "sure",
+      "term": "sure",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Certain about something.",
+      "example": "Are you sure?",
+      "translations": {
+        "es": "seguro"
+      },
+      "gloss": {
+        "es": "Que está convencido de algo."
+      },
+      "gloss_example": {
+        "es": "¿Estás seguro?"
+      }
+    },
+    {
+      "id": "hard",
+      "term": "hard",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Difficult to do.",
+      "example": "This test is hard.",
+      "translations": {
+        "es": "difícil"
+      },
+      "gloss": {
+        "es": "Que cuesta hacer."
+      },
+      "gloss_example": {
+        "es": "Este examen es difícil."
+      }
+    },
+    {
+      "id": "full",
+      "term": "full",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Holding as much as possible.",
+      "example": "The glass is full.",
+      "translations": {
+        "es": "lleno"
+      },
+      "gloss": {
+        "es": "Que no admite más."
+      },
+      "gloss_example": {
+        "es": "El vaso está lleno."
+      }
+    },
+    {
+      "id": "free",
+      "term": "free",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Costing no money.",
+      "example": "The entrance is free.",
+      "translations": {
+        "es": "gratis"
+      },
+      "gloss": {
+        "es": "Que no cuesta dinero."
+      },
+      "gloss_example": {
+        "es": "La entrada es gratis."
+      }
+    },
+    {
+      "id": "last",
+      "term": "last",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Coming after all others.",
+      "example": "This is the last one.",
+      "translations": {
+        "es": "último"
+      },
+      "gloss": {
+        "es": "Que viene después de todos."
+      },
+      "gloss_example": {
+        "es": "Este es el último."
+      }
+    },
+    {
+      "id": "nice",
+      "term": "nice",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Pleasant or kind.",
+      "example": "She is very nice.",
+      "translations": {
+        "es": "agradable"
+      },
+      "gloss": {
+        "es": "Agradable o amable."
+      },
+      "gloss_example": {
+        "es": "Ella es muy agradable."
+      }
     }
   ]
 }
