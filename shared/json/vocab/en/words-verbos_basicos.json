@@ -1115,6 +1115,366 @@
       "gloss_example": {
         "es": "Me siento feliz hoy."
       }
+    },
+    {
+      "id": "work",
+      "term": "work",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To do a job or task.",
+      "example": "I work in an office.",
+      "translations": {
+        "es": "trabajar"
+      },
+      "gloss": {
+        "es": "Hacer un trabajo o tarea."
+      },
+      "gloss_example": {
+        "es": "Trabajo en una oficina."
+      }
+    },
+    {
+      "id": "use",
+      "term": "use",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To do something with a tool or object.",
+      "example": "I use a pen to write.",
+      "translations": {
+        "es": "usar"
+      },
+      "gloss": {
+        "es": "Emplear algo para un fin."
+      },
+      "gloss_example": {
+        "es": "Uso un bolígrafo para escribir."
+      }
+    },
+    {
+      "id": "look",
+      "term": "look",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To turn your eyes toward something.",
+      "example": "Look at the sky.",
+      "translations": {
+        "es": "mirar"
+      },
+      "gloss": {
+        "es": "Dirigir los ojos hacia algo."
+      },
+      "gloss_example": {
+        "es": "Mira el cielo."
+      }
+    },
+    {
+      "id": "ask",
+      "term": "ask",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To say a question to someone.",
+      "example": "Ask the teacher.",
+      "translations": {
+        "es": "preguntar"
+      },
+      "gloss": {
+        "es": "Hacer una pregunta a alguien."
+      },
+      "gloss_example": {
+        "es": "Pregúntale al profesor."
+      }
+    },
+    {
+      "id": "help",
+      "term": "help",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To make something easier for someone.",
+      "example": "Can you help me?",
+      "translations": {
+        "es": "ayudar"
+      },
+      "gloss": {
+        "es": "Hacer algo más fácil para alguien."
+      },
+      "gloss_example": {
+        "es": "¿Me puedes ayudar?"
+      }
+    },
+    {
+      "id": "meet",
+      "term": "meet",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To come together with someone.",
+      "example": "Let's meet at noon.",
+      "translations": {
+        "es": "reunirse"
+      },
+      "gloss": {
+        "es": "Juntarse con alguien."
+      },
+      "gloss_example": {
+        "es": "Reunámonos al mediodía."
+      }
+    },
+    {
+      "id": "start",
+      "term": "start",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To begin doing something.",
+      "example": "We start at nine.",
+      "translations": {
+        "es": "empezar"
+      },
+      "gloss": {
+        "es": "Dar inicio a algo."
+      },
+      "gloss_example": {
+        "es": "Empezamos a las nueve."
+      }
+    },
+    {
+      "id": "put",
+      "term": "put",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To place something somewhere.",
+      "example": "Put it on the table.",
+      "translations": {
+        "es": "poner"
+      },
+      "gloss": {
+        "es": "Colocar algo en un lugar."
+      },
+      "gloss_example": {
+        "es": "Ponlo en la mesa."
+      }
+    },
+    {
+      "id": "keep",
+      "term": "keep",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To continue having something.",
+      "example": "Keep the change.",
+      "translations": {
+        "es": "mantener"
+      },
+      "gloss": {
+        "es": "Conservar o seguir teniendo algo."
+      },
+      "gloss_example": {
+        "es": "Quédate con el cambio."
+      }
+    },
+    {
+      "id": "run",
+      "term": "run",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move quickly on your feet.",
+      "example": "I run every morning.",
+      "translations": {
+        "es": "correr"
+      },
+      "gloss": {
+        "es": "Moverse rápido con los pies."
+      },
+      "gloss_example": {
+        "es": "Corro todas las mañanas."
+      }
+    },
+    {
+      "id": "turn",
+      "term": "turn",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move to face a new direction.",
+      "example": "Turn left here.",
+      "translations": {
+        "es": "girar"
+      },
+      "gloss": {
+        "es": "Cambiar de dirección."
+      },
+      "gloss_example": {
+        "es": "Gira a la izquierda aquí."
+      }
+    },
+    {
+      "id": "bring",
+      "term": "bring",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To carry something to a place.",
+      "example": "Bring your book.",
+      "translations": {
+        "es": "traer"
+      },
+      "gloss": {
+        "es": "Llevar algo a un lugar."
+      },
+      "gloss_example": {
+        "es": "Trae tu libro."
+      }
+    },
+    {
+      "id": "move",
+      "term": "move",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To change from one place to another.",
+      "example": "Please move your car.",
+      "translations": {
+        "es": "mover"
+      },
+      "gloss": {
+        "es": "Cambiar de un lugar a otro."
+      },
+      "gloss_example": {
+        "es": "Mueve tu carro, por favor."
+      }
+    },
+    {
+      "id": "read",
+      "term": "read",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To look at words and understand them.",
+      "example": "I read every night.",
+      "translations": {
+        "es": "leer"
+      },
+      "gloss": {
+        "es": "Mirar palabras y entenderlas."
+      },
+      "gloss_example": {
+        "es": "Leo cada noche."
+      }
+    },
+    {
+      "id": "pay",
+      "term": "pay",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To give money for something.",
+      "example": "I will pay now.",
+      "translations": {
+        "es": "pagar"
+      },
+      "gloss": {
+        "es": "Dar dinero por algo."
+      },
+      "gloss_example": {
+        "es": "Voy a pagar ahora."
+      }
+    },
+    {
+      "id": "buy",
+      "term": "buy",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To get something with money.",
+      "example": "I want to buy bread.",
+      "translations": {
+        "es": "comprar"
+      },
+      "gloss": {
+        "es": "Obtener algo con dinero."
+      },
+      "gloss_example": {
+        "es": "Quiero comprar pan."
+      }
+    },
+    {
+      "id": "speak",
+      "term": "speak",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To talk to someone.",
+      "example": "I speak two languages.",
+      "translations": {
+        "es": "hablar"
+      },
+      "gloss": {
+        "es": "Comunicarse con palabras."
+      },
+      "gloss_example": {
+        "es": "Hablo dos idiomas."
+      }
+    },
+    {
+      "id": "send",
+      "term": "send",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To make something go somewhere.",
+      "example": "Send me a message.",
+      "translations": {
+        "es": "enviar"
+      },
+      "gloss": {
+        "es": "Hacer que algo vaya a un lugar."
+      },
+      "gloss_example": {
+        "es": "Envíame un mensaje."
+      }
+    },
+    {
+      "id": "walk",
+      "term": "walk",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move on your feet slowly.",
+      "example": "I walk to work.",
+      "translations": {
+        "es": "caminar"
+      },
+      "gloss": {
+        "es": "Moverse a pie despacio."
+      },
+      "gloss_example": {
+        "es": "Camino al trabajo."
+      }
+    },
+    {
+      "id": "wait",
+      "term": "wait",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To stay until something happens.",
+      "example": "Wait for me here.",
+      "translations": {
+        "es": "esperar"
+      },
+      "gloss": {
+        "es": "Quedarse hasta que algo pase."
+      },
+      "gloss_example": {
+        "es": "Espérame aquí."
+      }
     }
   ]
 }

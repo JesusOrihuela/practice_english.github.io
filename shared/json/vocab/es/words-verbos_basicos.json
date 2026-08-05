@@ -1241,6 +1241,330 @@
       "gloss_example": {
         "en": "I eat fruit every day."
       }
+    },
+    {
+      "id": "trabajar",
+      "term": "trabajar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer un trabajo o tarea.",
+      "example": "Trabajo en una oficina.",
+      "translations": {
+        "en": "to work"
+      },
+      "gloss": {
+        "en": "To do a job or task."
+      },
+      "gloss_example": {
+        "en": "I work in an office."
+      }
+    },
+    {
+      "id": "usar",
+      "term": "usar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Emplear algo para un fin.",
+      "example": "Uso un bolígrafo para escribir.",
+      "translations": {
+        "en": "to use"
+      },
+      "gloss": {
+        "en": "To do something with a tool."
+      },
+      "gloss_example": {
+        "en": "I use a pen to write."
+      }
+    },
+    {
+      "id": "pedir",
+      "term": "pedir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Solicitar algo a alguien.",
+      "example": "Pide ayuda si la necesitas.",
+      "translations": {
+        "en": "to ask for"
+      },
+      "gloss": {
+        "en": "To request something from someone."
+      },
+      "gloss_example": {
+        "en": "Ask for help if you need it."
+      }
+    },
+    {
+      "id": "ayudar",
+      "term": "ayudar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer algo más fácil para alguien.",
+      "example": "¿Me puedes ayudar?",
+      "translations": {
+        "en": "to help"
+      },
+      "gloss": {
+        "en": "To make something easier for someone."
+      },
+      "gloss_example": {
+        "en": "Can you help me?"
+      }
+    },
+    {
+      "id": "llegar",
+      "term": "llegar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Alcanzar un lugar.",
+      "example": "Llego a casa a las seis.",
+      "translations": {
+        "en": "to arrive"
+      },
+      "gloss": {
+        "en": "To reach a place."
+      },
+      "gloss_example": {
+        "en": "I arrive home at six."
+      }
+    },
+    {
+      "id": "llevar",
+      "term": "llevar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Transportar algo de un lugar a otro.",
+      "example": "Llevo el paraguas.",
+      "translations": {
+        "en": "to carry"
+      },
+      "gloss": {
+        "en": "To carry something from one place to another."
+      },
+      "gloss_example": {
+        "en": "I carry the umbrella."
+      }
+    },
+    {
+      "id": "tomar",
+      "term": "tomar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Agarrar o beber algo.",
+      "example": "Toma un vaso de agua.",
+      "translations": {
+        "en": "to take"
+      },
+      "gloss": {
+        "en": "To hold or drink something."
+      },
+      "gloss_example": {
+        "en": "Have a glass of water."
+      }
+    },
+    {
+      "id": "quedar",
+      "term": "quedar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Permanecer en un lugar o estado.",
+      "example": "Me quedo en casa hoy.",
+      "translations": {
+        "en": "to stay"
+      },
+      "gloss": {
+        "en": "To remain in a place or state."
+      },
+      "gloss_example": {
+        "en": "I am staying home today."
+      }
+    },
+    {
+      "id": "seguir",
+      "term": "seguir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Continuar o ir detrás.",
+      "example": "Sigue por esta calle.",
+      "translations": {
+        "en": "to follow"
+      },
+      "gloss": {
+        "en": "To continue or go behind."
+      },
+      "gloss_example": {
+        "en": "Follow this street."
+      }
+    },
+    {
+      "id": "dejar",
+      "term": "dejar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Soltar algo o permitir.",
+      "example": "Deja el libro en la mesa.",
+      "translations": {
+        "en": "to leave"
+      },
+      "gloss": {
+        "en": "To let go of something or allow."
+      },
+      "gloss_example": {
+        "en": "Leave the book on the table."
+      }
+    },
+    {
+      "id": "buscar",
+      "term": "buscar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tratar de encontrar algo.",
+      "example": "Busco mis llaves.",
+      "translations": {
+        "en": "to look for"
+      },
+      "gloss": {
+        "en": "To try to find something."
+      },
+      "gloss_example": {
+        "en": "I am looking for my keys."
+      }
+    },
+    {
+      "id": "escribir",
+      "term": "escribir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Formar palabras con letras.",
+      "example": "Escribo una carta.",
+      "translations": {
+        "en": "to write"
+      },
+      "gloss": {
+        "en": "To form words with letters."
+      },
+      "gloss_example": {
+        "en": "I am writing a letter."
+      }
+    },
+    {
+      "id": "leer",
+      "term": "leer",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Mirar palabras y entenderlas.",
+      "example": "Leo cada noche.",
+      "translations": {
+        "en": "to read"
+      },
+      "gloss": {
+        "en": "To look at words and understand them."
+      },
+      "gloss_example": {
+        "en": "I read every night."
+      }
+    },
+    {
+      "id": "pagar",
+      "term": "pagar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar dinero por algo.",
+      "example": "Voy a pagar ahora.",
+      "translations": {
+        "en": "to pay"
+      },
+      "gloss": {
+        "en": "To give money for something."
+      },
+      "gloss_example": {
+        "en": "I will pay now."
+      }
+    },
+    {
+      "id": "comprar",
+      "term": "comprar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Obtener algo con dinero.",
+      "example": "Quiero comprar pan.",
+      "translations": {
+        "en": "to buy"
+      },
+      "gloss": {
+        "en": "To get something with money."
+      },
+      "gloss_example": {
+        "en": "I want to buy bread."
+      }
+    },
+    {
+      "id": "esperar",
+      "term": "esperar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Quedarse hasta que algo pase.",
+      "example": "Espérame aquí.",
+      "translations": {
+        "en": "to wait"
+      },
+      "gloss": {
+        "en": "To stay until something happens."
+      },
+      "gloss_example": {
+        "en": "Wait for me here."
+      }
+    },
+    {
+      "id": "abrir",
+      "term": "abrir",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer que algo deje de estar cerrado.",
+      "example": "Abre la ventana.",
+      "translations": {
+        "en": "to open"
+      },
+      "gloss": {
+        "en": "To make something no longer closed."
+      },
+      "gloss_example": {
+        "en": "Open the window."
+      }
+    },
+    {
+      "id": "cerrar",
+      "term": "cerrar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer que algo quede cerrado.",
+      "example": "Cierra la puerta.",
+      "translations": {
+        "en": "to close"
+      },
+      "gloss": {
+        "en": "To make something closed."
+      },
+      "gloss_example": {
+        "en": "Close the door."
+      }
     }
   ]
 }
