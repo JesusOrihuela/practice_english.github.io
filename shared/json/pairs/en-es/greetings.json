@@ -979,6 +979,18 @@
           "audioSlug": "debo_confesarlo_esperaba_este_encuentro_con_entusiasmo_pues_su_trabajo_lo_precede"
         }
       ]
+    },
+    {
+      "id": "greetings_te_deseo_mucha_suerte",
+      "source": "I wish you a lot of luck.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te deseo mucha suerte.",
+          "audioSlug": "te_deseo_mucha_suerte"
+        }
+      ]
     }
   ]
 }

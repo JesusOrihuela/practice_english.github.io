@@ -799,6 +799,42 @@
           "audioSlug": "esa_noticia_me_pone_triste"
         }
       ]
+    },
+    {
+      "id": "emociones_esta_de_buen_humor",
+      "source": "He is in a good mood.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está de buen humor.",
+          "audioSlug": "esta_de_buen_humor"
+        }
+      ]
+    },
+    {
+      "id": "emociones_salte_de_alegria",
+      "source": "I jumped for joy.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salté de alegría.",
+          "audioSlug": "salte_de_alegria"
+        }
+      ]
+    },
+    {
+      "id": "emociones_te_voy_a_echar_de_menos",
+      "source": "I'm going to miss you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te voy a echar de menos.",
+          "audioSlug": "te_voy_a_echar_de_menos"
+        }
+      ]
     }
   ]
 }

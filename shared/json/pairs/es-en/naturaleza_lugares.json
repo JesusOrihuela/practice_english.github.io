@@ -241,18 +241,6 @@
       ]
     },
     {
-      "id": "naturaleza_lugares_what_is_your_favorite_color",
-      "source": "¿Cuál es tu color favorito?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "What is your favorite color?",
-          "audioSlug": "what_is_your_favorite_color"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_i_water_the_plant",
       "source": "Riego la planta.",
       "level": "A2",
@@ -321,6 +309,30 @@
         {
           "text": "Plants die without water.",
           "audioSlug": "plants_die_without_water"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_we_must_protect_the_environment",
+      "source": "Debemos proteger el medio ambiente.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We must protect the environment.",
+          "audioSlug": "we_must_protect_the_environment"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_birds_can_fly",
+      "source": "Los pájaros pueden volar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Birds can fly.",
+          "audioSlug": "birds_can_fly"
         }
       ]
     }

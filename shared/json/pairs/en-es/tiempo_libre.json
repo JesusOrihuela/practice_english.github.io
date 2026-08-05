@@ -239,6 +239,30 @@
           "audioSlug": "gano_un_premio"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_tom_gano_la_carrera",
+      "source": "Tom won the race.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tom ganó la carrera.",
+          "audioSlug": "tom_gano_la_carrera"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_viste_el_partido",
+      "source": "Did you watch the game?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Viste el partido?",
+          "audioSlug": "viste_el_partido"
+        }
+      ]
     }
   ]
 }

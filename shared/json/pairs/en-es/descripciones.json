@@ -1111,6 +1111,66 @@
           "audioSlug": "es_una_lengua_indigena"
         }
       ]
+    },
+    {
+      "id": "descripciones_tiene_una_voz_bonita",
+      "source": "She has a nice voice.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tiene una voz bonita.",
+          "audioSlug": "tiene_una_voz_bonita"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_el_salon_es_grande",
+      "source": "The living room is big.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El salón es grande.",
+          "audioSlug": "el_salon_es_grande"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_la_pared_es_blanca",
+      "source": "The wall is white.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La pared es blanca.",
+          "audioSlug": "la_pared_es_blanca"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_es_un_tomate_rojo",
+      "source": "It is a red tomato.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un tomate rojo.",
+          "audioSlug": "es_un_tomate_rojo"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_es_una_mesa_de_madera",
+      "source": "It is a wooden table.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una mesa de madera.",
+          "audioSlug": "es_una_mesa_de_madera"
+        }
+      ]
     }
   ]
 }

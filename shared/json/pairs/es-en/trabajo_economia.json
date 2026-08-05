@@ -121,18 +121,6 @@
       ]
     },
     {
-      "id": "trabajo_economia_i_love_science",
-      "source": "Me encanta la ciencia.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I love science.",
-          "audioSlug": "i_love_science"
-        }
-      ]
-    },
-    {
       "id": "trabajo_economia_he_works_in_industry",
       "source": "Él trabaja en la industria.",
       "level": "B1",
@@ -153,6 +141,42 @@
         {
           "text": "I teach English.",
           "audioSlug": "i_teach_english"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_we_have_free_trade",
+      "source": "Tenemos libre comercio.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We have free trade.",
+          "audioSlug": "we_have_free_trade"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_economic_growth_is_slow",
+      "source": "El crecimiento económico es lento.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Economic growth is slow.",
+          "audioSlug": "economic_growth_is_slow"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_i_have_an_interview_today",
+      "source": "Tengo una entrevista hoy.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have an interview today.",
+          "audioSlug": "i_have_an_interview_today"
         }
       ]
     }

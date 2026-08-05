@@ -253,18 +253,6 @@
       ]
     },
     {
-      "id": "naturaleza_lugares_es_una_mesa_de_madera",
-      "source": "It is a wooden table.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es una mesa de madera.",
-          "audioSlug": "es_una_mesa_de_madera"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_la_hoja_es_verde",
       "source": "The leaf is green.",
       "level": "A2",
@@ -309,18 +297,6 @@
         {
           "text": "Es un pájaro pequeño.",
           "audioSlug": "es_un_pajaro_pequeno"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_cual_es_tu_color_favorito",
-      "source": "What is your favorite color?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Cuál es tu color favorito?",
-          "audioSlug": "cual_es_tu_color_favorito"
         }
       ]
     },
@@ -381,6 +357,18 @@
         {
           "text": "Hay que conservar la naturaleza.",
           "audioSlug": "hay_que_conservar_la_naturaleza"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_cuida_el_entorno",
+      "source": "Take care of the environment.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cuida el entorno.",
+          "audioSlug": "cuida_el_entorno"
         }
       ]
     }

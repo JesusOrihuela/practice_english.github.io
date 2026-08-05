@@ -193,18 +193,6 @@
       ]
     },
     {
-      "id": "tiempo_libre_dont_fight",
-      "source": "No pelees.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Don't fight.",
-          "audioSlug": "don_t_fight"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_i_like_to_draw",
       "source": "Me gusta dibujar.",
       "level": "A2",
@@ -225,6 +213,18 @@
         {
           "text": "Hit the ball.",
           "audioSlug": "hit_the_ball"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_i_love_trips",
+      "source": "Me encantan los viajes.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I love trips.",
+          "audioSlug": "i_love_trips"
         }
       ]
     }

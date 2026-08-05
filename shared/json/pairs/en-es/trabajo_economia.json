@@ -109,30 +109,6 @@
       ]
     },
     {
-      "id": "trabajo_economia_me_encanta_la_ciencia",
-      "source": "I love science.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me encanta la ciencia.",
-          "audioSlug": "me_encanta_la_ciencia"
-        }
-      ]
-    },
-    {
-      "id": "trabajo_economia_el_alumno_estudia_mucho",
-      "source": "The student studies a lot.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El alumno estudia mucho.",
-          "audioSlug": "el_alumno_estudia_mucho"
-        }
-      ]
-    },
-    {
       "id": "trabajo_economia_el_autor_firma_su_libro",
       "source": "The author signs his book.",
       "level": "B1",
@@ -153,6 +129,42 @@
         {
           "text": "Enseño inglés.",
           "audioSlug": "enseno_ingles"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_trabajo_para_una_organizacion",
+      "source": "I work for an organization.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo para una organización.",
+          "audioSlug": "trabajo_para_una_organizacion"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_trabajo_en_este_sector",
+      "source": "I work in this sector.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo en este sector.",
+          "audioSlug": "trabajo_en_este_sector"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_como_fue_la_entrevista",
+      "source": "How did the interview go?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo fue la entrevista?",
+          "audioSlug": "como_fue_la_entrevista"
         }
       ]
     }

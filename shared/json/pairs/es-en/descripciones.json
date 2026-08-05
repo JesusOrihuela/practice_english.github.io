@@ -923,6 +923,30 @@
           "audioSlug": "it_is_an_economic_crisis"
         }
       ]
+    },
+    {
+      "id": "descripciones_she_is_a_famous_model",
+      "source": "Ella es una modelo famosa.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She is a famous model.",
+          "audioSlug": "she_is_a_famous_model"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_it_is_a_strange_object",
+      "source": "Es un objeto extraño.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is a strange object.",
+          "audioSlug": "it_is_a_strange_object"
+        }
+      ]
     }
   ]
 }

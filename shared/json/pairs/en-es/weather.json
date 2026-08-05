@@ -323,6 +323,18 @@
           "audioSlug": "llueve_mucho_en_esta_epoca"
         }
       ]
+    },
+    {
+      "id": "weather_siento_mucho_frio",
+      "source": "I feel very cold.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siento mucho frío.",
+          "audioSlug": "siento_mucho_frio"
+        }
+      ]
     }
   ]
 }

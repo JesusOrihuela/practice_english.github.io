@@ -121,18 +121,6 @@
       ]
     },
     {
-      "id": "planes_te_deseo_mucha_suerte",
-      "source": "I wish you a lot of luck.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Te deseo mucha suerte.",
-          "audioSlug": "te_deseo_mucha_suerte"
-        }
-      ]
-    },
-    {
       "id": "planes_te_lo_prometo",
       "source": "I promise you.",
       "level": "A1",
@@ -501,30 +489,6 @@
         {
           "text": "Vamos a formar un equipo.",
           "audioSlug": "vamos_a_formar_un_equipo"
-        }
-      ]
-    },
-    {
-      "id": "planes_te_voy_a_echar_de_menos",
-      "source": "I'm going to miss you.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Te voy a echar de menos.",
-          "audioSlug": "te_voy_a_echar_de_menos"
-        }
-      ]
-    },
-    {
-      "id": "planes_siento_mucho_frio",
-      "source": "I feel very cold.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Siento mucho frío.",
-          "audioSlug": "siento_mucho_frio"
         }
       ]
     },
