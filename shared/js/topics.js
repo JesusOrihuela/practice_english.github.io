@@ -61,6 +61,7 @@ const AppTopics = (() => {
     { id: 'sociedad_politica',   label: 'Sociedad y Política',  labelEn: 'Society & Politics',      emoji: '🏛️', phrase: false, vocab: true, vocabOrder: 13 },
     { id: 'trabajo',             label: 'Trabajo y Economía',   labelEn: 'Work & Economy',          emoji: '💼', phrase: false, vocab: true, vocabOrder: 14 },
     { id: 'educacion',           label: 'Educación',            labelEn: 'Education',               emoji: '🎓', phrase: false, vocab: true, vocabOrder: 15 },
+    { id: 'objetos',            label: 'Objetos y cosas',      labelEn: 'Objects & Things',        emoji: '📦', phrase: false, vocab: true, vocabOrder: 16 },
   ];
 
   const _view = t => ({ id: t.id, label: t.label, labelEn: t.labelEn, emoji: t.emoji });

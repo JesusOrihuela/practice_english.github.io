@@ -161,6 +161,42 @@
       "gloss_example": {
         "en": "Have a piece of bread."
       }
+    },
+    {
+      "id": "lado",
+      "term": "lado",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una de las partes o caras de algo.",
+      "example": "Escribe en este lado.",
+      "translations": {
+        "en": "side"
+      },
+      "gloss": {
+        "en": "One of the parts or faces of something."
+      },
+      "gloss_example": {
+        "en": "Write on this side."
+      }
+    },
+    {
+      "id": "forma",
+      "term": "forma",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El aspecto o tipo de algo.",
+      "example": "Tiene forma redonda.",
+      "translations": {
+        "en": "shape"
+      },
+      "gloss": {
+        "en": "The shape or type of something."
+      },
+      "gloss_example": {
+        "en": "It has a round shape."
+      }
     }
   ]
 }

@@ -469,24 +469,6 @@
       }
     },
     {
-      "id": "thing",
-      "term": "thing",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "An object or matter that is not named exactly.",
-      "example": "What is that thing on the table?",
-      "translations": {
-        "es": "cosa"
-      },
-      "gloss": {
-        "es": "Objeto o asunto que no se nombra con exactitud."
-      },
-      "gloss_example": {
-        "es": "¿Qué es esa cosa sobre la mesa?"
-      }
-    },
-    {
       "id": "truth",
       "term": "truth",
       "level": "A2",
@@ -631,24 +613,6 @@
       }
     },
     {
-      "id": "shape",
-      "term": "shape",
-      "definition": "The outer form of something, like a circle or square.",
-      "example": "The pool has an unusual shape.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "es": "forma"
-      },
-      "gloss": {
-        "es": "La forma exterior de algo, como un círculo."
-      },
-      "gloss_example": {
-        "es": "La piscina tiene una forma poco común."
-      }
-    },
-    {
       "id": "purpose",
       "term": "purpose",
       "definition": "The reason for doing something.",
@@ -700,24 +664,6 @@
       },
       "gloss_example": {
         "es": "Tengo recuerdos felices de aquel verano."
-      }
-    },
-    {
-      "id": "object",
-      "term": "object",
-      "definition": "A thing that you can see and touch.",
-      "example": "There was a strange object on the table.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "es": "objeto"
-      },
-      "gloss": {
-        "es": "Cosa que se puede ver y tocar."
-      },
-      "gloss_example": {
-        "es": "Había un objeto extraño sobre la mesa."
       }
     },
     {
@@ -811,24 +757,6 @@
       }
     },
     {
-      "id": "figure",
-      "term": "figure",
-      "definition": "A number, or the shape of a person's body.",
-      "example": "The sales figures went up.",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "translations": {
-        "es": "cifra / figura"
-      },
-      "gloss": {
-        "es": "Un número, o la forma del cuerpo."
-      },
-      "gloss_example": {
-        "es": "Las cifras de ventas subieron."
-      }
-    },
-    {
       "id": "note",
       "term": "note",
       "definition": "A short written message to remember something.",
@@ -919,24 +847,6 @@
       }
     },
     {
-      "id": "ring",
-      "term": "ring",
-      "definition": "A round band worn on a finger.",
-      "example": "She wears a gold ring.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "es": "anillo / timbre"
-      },
-      "gloss": {
-        "es": "Aro que se lleva en el dedo, o sonido de campana."
-      },
-      "gloss_example": {
-        "es": "Ella lleva un anillo de oro."
-      }
-    },
-    {
       "id": "difficulty",
       "term": "difficulty",
       "definition": "The state of being hard to do.",
@@ -952,24 +862,6 @@
       },
       "gloss_example": {
         "es": "Aprendió a nadar sin dificultad."
-      }
-    },
-    {
-      "id": "fire",
-      "term": "fire",
-      "definition": "The heat and light produced when something burns.",
-      "example": "They sat by the fire.",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "es": "fuego / incendio"
-      },
-      "gloss": {
-        "es": "Calor y luz al quemarse algo."
-      },
-      "gloss_example": {
-        "es": "Se sentaron junto al fuego."
       }
     },
     {
@@ -1006,24 +898,6 @@
       },
       "gloss_example": {
         "es": "El carro nos dio problemas."
-      }
-    },
-    {
-      "id": "clock",
-      "term": "clock",
-      "definition": "A device that shows the time.",
-      "example": "The clock on the wall stopped.",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "translations": {
-        "es": "reloj"
-      },
-      "gloss": {
-        "es": "Aparato que muestra la hora."
-      },
-      "gloss_example": {
-        "es": "El reloj de la pared se paró."
       }
     },
     {
@@ -1189,24 +1063,6 @@
       }
     },
     {
-      "id": "name",
-      "term": "name",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "The word that identifies a person.",
-      "example": "What is your name?",
-      "translations": {
-        "es": "nombre"
-      },
-      "gloss": {
-        "es": "La palabra que identifica a alguien."
-      },
-      "gloss_example": {
-        "es": "¿Cuál es tu nombre?"
-      }
-    },
-    {
       "id": "information",
       "term": "information",
       "level": "A2",
@@ -1222,42 +1078,6 @@
       },
       "gloss_example": {
         "es": "Necesito más información."
-      }
-    },
-    {
-      "id": "business",
-      "term": "business",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "The activity of buying and selling.",
-      "example": "She runs a small business.",
-      "translations": {
-        "es": "negocio"
-      },
-      "gloss": {
-        "es": "La actividad de comprar y vender."
-      },
-      "gloss_example": {
-        "es": "Ella tiene un pequeño negocio."
-      }
-    },
-    {
-      "id": "service",
-      "term": "service",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Help or work done for others.",
-      "example": "The service is very good.",
-      "translations": {
-        "es": "servicio"
-      },
-      "gloss": {
-        "es": "Ayuda o trabajo hecho para otros."
-      },
-      "gloss_example": {
-        "es": "El servicio es muy bueno."
       }
     },
     {
@@ -1297,24 +1117,6 @@
       }
     },
     {
-      "id": "sound",
-      "term": "sound",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Something you hear.",
-      "example": "I heard a strange sound.",
-      "translations": {
-        "es": "sonido"
-      },
-      "gloss": {
-        "es": "Algo que se oye."
-      },
-      "gloss_example": {
-        "es": "Oí un sonido extraño."
-      }
-    },
-    {
       "id": "form",
       "term": "form",
       "level": "B1",
@@ -1348,24 +1150,6 @@
       },
       "gloss_example": {
         "es": "Tiene interés en el arte."
-      }
-    },
-    {
-      "id": "report",
-      "term": "report",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "definition": "A written or spoken account of something.",
-      "example": "I wrote a report.",
-      "translations": {
-        "es": "informe"
-      },
-      "gloss": {
-        "es": "Un relato escrito o hablado de algo."
-      },
-      "gloss_example": {
-        "es": "Escribí un informe."
       }
     },
     {
@@ -1420,42 +1204,6 @@
       },
       "gloss_example": {
         "es": "Tiene mucha experiencia."
-      }
-    },
-    {
-      "id": "line",
-      "term": "line",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "A long thin mark or a row.",
-      "example": "Draw a straight line.",
-      "translations": {
-        "es": "línea"
-      },
-      "gloss": {
-        "es": "Una marca larga y fina o una fila."
-      },
-      "gloss_example": {
-        "es": "Traza una línea recta."
-      }
-    },
-    {
-      "id": "side",
-      "term": "side",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "One of the surfaces or edges of something.",
-      "example": "Write on this side.",
-      "translations": {
-        "es": "lado"
-      },
-      "gloss": {
-        "es": "Una de las caras o bordes de algo."
-      },
-      "gloss_example": {
-        "es": "Escribe en este lado."
       }
     },
     {

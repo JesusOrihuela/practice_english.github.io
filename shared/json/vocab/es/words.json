@@ -469,24 +469,6 @@
       }
     },
     {
-      "id": "thing",
-      "term": "cosa",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Objeto o asunto que no se nombra con exactitud.",
-      "example": "¿Qué es esa cosa sobre la mesa?",
-      "translations": {
-        "en": "thing"
-      },
-      "gloss": {
-        "en": "An object or matter that is not named exactly."
-      },
-      "gloss_example": {
-        "en": "What is that thing on the table?"
-      }
-    },
-    {
       "id": "truth",
       "term": "verdad",
       "level": "A2",
@@ -811,24 +793,6 @@
       }
     },
     {
-      "id": "nombre",
-      "term": "nombre",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "La palabra que identifica a alguien.",
-      "example": "¿Cuál es tu nombre?",
-      "translations": {
-        "en": "name"
-      },
-      "gloss": {
-        "en": "The word that identifies a person."
-      },
-      "gloss_example": {
-        "en": "What is your name?"
-      }
-    },
-    {
       "id": "sistema",
       "term": "sistema",
       "level": "B1",
@@ -847,24 +811,6 @@
       }
     },
     {
-      "id": "negocio",
-      "term": "negocio",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "La actividad de comprar y vender.",
-      "example": "Su negocio va bien.",
-      "translations": {
-        "en": "business"
-      },
-      "gloss": {
-        "en": "The activity of buying and selling."
-      },
-      "gloss_example": {
-        "en": "Her business is going well."
-      }
-    },
-    {
       "id": "informacion",
       "term": "información",
       "level": "A2",
@@ -880,24 +826,6 @@
       },
       "gloss_example": {
         "en": "I need more information."
-      }
-    },
-    {
-      "id": "servicio",
-      "term": "servicio",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Ayuda o trabajo hecho para otros.",
-      "example": "El servicio es muy bueno.",
-      "translations": {
-        "en": "service"
-      },
-      "gloss": {
-        "en": "Help or work done for others."
-      },
-      "gloss_example": {
-        "en": "The service is very good."
       }
     },
     {
@@ -937,42 +865,6 @@
       }
     },
     {
-      "id": "sonido",
-      "term": "sonido",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Algo que se oye.",
-      "example": "Oí un sonido extraño.",
-      "translations": {
-        "en": "sound"
-      },
-      "gloss": {
-        "en": "Something you hear."
-      },
-      "gloss_example": {
-        "en": "I heard a strange sound."
-      }
-    },
-    {
-      "id": "forma",
-      "term": "forma",
-      "level": "B1",
-      "category": "Noun",
-      "difficulty": "medium",
-      "definition": "El aspecto o tipo de algo.",
-      "example": "Tiene forma redonda.",
-      "translations": {
-        "en": "shape"
-      },
-      "gloss": {
-        "en": "The shape or type of something."
-      },
-      "gloss_example": {
-        "en": "It has a round shape."
-      }
-    },
-    {
       "id": "manera",
       "term": "manera",
       "level": "A2",
@@ -988,24 +880,6 @@
       },
       "gloss_example": {
         "en": "This is the best way."
-      }
-    },
-    {
-      "id": "imagen",
-      "term": "imagen",
-      "level": "A2",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Una figura o foto de algo.",
-      "example": "Es una imagen bonita.",
-      "translations": {
-        "en": "image"
-      },
-      "gloss": {
-        "en": "A picture or photo of something."
-      },
-      "gloss_example": {
-        "en": "It is a nice image."
       }
     },
     {
@@ -1042,24 +916,6 @@
       },
       "gloss_example": {
         "en": "It is a big change."
-      }
-    },
-    {
-      "id": "lado",
-      "term": "lado",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Una de las partes o caras de algo.",
-      "example": "Escribe en este lado.",
-      "translations": {
-        "en": "side"
-      },
-      "gloss": {
-        "en": "One of the parts or faces of something."
-      },
-      "gloss_example": {
-        "en": "Write on this side."
       }
     }
   ]

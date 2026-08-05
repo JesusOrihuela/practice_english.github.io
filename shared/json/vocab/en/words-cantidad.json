@@ -89,6 +89,78 @@
       "gloss_example": {
         "es": "Toma un trozo de pan."
       }
+    },
+    {
+      "id": "line",
+      "term": "line",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A long thin mark or a row.",
+      "example": "Draw a straight line.",
+      "translations": {
+        "es": "línea"
+      },
+      "gloss": {
+        "es": "Una marca larga y fina o una fila."
+      },
+      "gloss_example": {
+        "es": "Traza una línea recta."
+      }
+    },
+    {
+      "id": "side",
+      "term": "side",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "One of the surfaces or edges of something.",
+      "example": "Write on this side.",
+      "translations": {
+        "es": "lado"
+      },
+      "gloss": {
+        "es": "Una de las caras o bordes de algo."
+      },
+      "gloss_example": {
+        "es": "Escribe en este lado."
+      }
+    },
+    {
+      "id": "shape",
+      "term": "shape",
+      "definition": "The outer form of something, like a circle or square.",
+      "example": "The pool has an unusual shape.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "es": "forma"
+      },
+      "gloss": {
+        "es": "La forma exterior de algo, como un círculo."
+      },
+      "gloss_example": {
+        "es": "La piscina tiene una forma poco común."
+      }
+    },
+    {
+      "id": "figure",
+      "term": "figure",
+      "definition": "A number, or the shape of a person's body.",
+      "example": "The sales figures went up.",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "translations": {
+        "es": "cifra / figura"
+      },
+      "gloss": {
+        "es": "Un número, o la forma del cuerpo."
+      },
+      "gloss_example": {
+        "es": "Las cifras de ventas subieron."
+      }
     }
   ]
 }

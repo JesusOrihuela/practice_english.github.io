@@ -154,7 +154,7 @@ PHRASE_TOPICS = [
 VOCAB_TOPICS = [
     'verbos_basicos', 'verbos_avanzados', 'adjetivos_basicos', 'adjetivos_avanzados',
     'colores', 'naturaleza', 'tiempo', 'lugares', 'cantidad', 'juegos', 'ropa', 'lengua',
-    'sociedad_politica', 'trabajo', 'educacion',
+    'sociedad_politica', 'trabajo', 'educacion', 'objetos',
     'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
     'transportation', 'airport', 'accommodation',
     'movies', 'music', 'theater', 'museums',

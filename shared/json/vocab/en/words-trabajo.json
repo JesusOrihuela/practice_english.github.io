@@ -269,6 +269,60 @@
       "gloss_example": {
         "es": "El costo es muy alto."
       }
+    },
+    {
+      "id": "business",
+      "term": "business",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The activity of buying and selling.",
+      "example": "She runs a small business.",
+      "translations": {
+        "es": "negocio"
+      },
+      "gloss": {
+        "es": "La actividad de comprar y vender."
+      },
+      "gloss_example": {
+        "es": "Ella tiene un pequeño negocio."
+      }
+    },
+    {
+      "id": "service",
+      "term": "service",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Help or work done for others.",
+      "example": "The service is very good.",
+      "translations": {
+        "es": "servicio"
+      },
+      "gloss": {
+        "es": "Ayuda o trabajo hecho para otros."
+      },
+      "gloss_example": {
+        "es": "El servicio es muy bueno."
+      }
+    },
+    {
+      "id": "report",
+      "term": "report",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A written or spoken account of something.",
+      "example": "I wrote a report.",
+      "translations": {
+        "es": "informe"
+      },
+      "gloss": {
+        "es": "Un relato escrito o hablado de algo."
+      },
+      "gloss_example": {
+        "es": "Escribí un informe."
+      }
     }
   ]
 }

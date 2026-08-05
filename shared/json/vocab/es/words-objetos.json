@@ -1,0 +1,76 @@
+{
+  "words": [
+    {
+      "id": "thing",
+      "term": "cosa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto o asunto que no se nombra con exactitud.",
+      "example": "¿Qué es esa cosa sobre la mesa?",
+      "translations": {
+        "en": "thing"
+      },
+      "gloss": {
+        "en": "An object or matter that is not named exactly."
+      },
+      "gloss_example": {
+        "en": "What is that thing on the table?"
+      }
+    },
+    {
+      "id": "imagen",
+      "term": "imagen",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una figura o foto de algo.",
+      "example": "Es una imagen bonita.",
+      "translations": {
+        "en": "image"
+      },
+      "gloss": {
+        "en": "A picture or photo of something."
+      },
+      "gloss_example": {
+        "en": "It is a nice image."
+      }
+    },
+    {
+      "id": "sonido",
+      "term": "sonido",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Algo que se oye.",
+      "example": "Oí un sonido extraño.",
+      "translations": {
+        "en": "sound"
+      },
+      "gloss": {
+        "en": "Something you hear."
+      },
+      "gloss_example": {
+        "en": "I heard a strange sound."
+      }
+    },
+    {
+      "id": "nombre",
+      "term": "nombre",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La palabra que identifica a alguien.",
+      "example": "¿Cuál es tu nombre?",
+      "translations": {
+        "en": "name"
+      },
+      "gloss": {
+        "en": "The word that identifies a person."
+      },
+      "gloss_example": {
+        "en": "What is your name?"
+      }
+    }
+  ]
+}
