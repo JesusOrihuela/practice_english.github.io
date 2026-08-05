@@ -203,6 +203,30 @@
           "audioSlug": "don_t_fight"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_i_like_to_draw",
+      "source": "Me gusta dibujar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I like to draw.",
+          "audioSlug": "i_like_to_draw"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_hit_the_ball",
+      "source": "Golpea la pelota.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hit the ball.",
+          "audioSlug": "hit_the_ball"
+        }
+      ]
     }
   ]
 }

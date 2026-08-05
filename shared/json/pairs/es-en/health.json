@@ -587,6 +587,18 @@
           "audioSlug": "my_tooth_hurts"
         }
       ]
+    },
+    {
+      "id": "health_smoking_can_kill",
+      "source": "Fumar puede matar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Smoking can kill.",
+          "audioSlug": "smoking_can_kill"
+        }
+      ]
     }
   ]
 }

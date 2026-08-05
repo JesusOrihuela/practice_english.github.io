@@ -181,18 +181,6 @@
       ]
     },
     {
-      "id": "planes_please_hold_this",
-      "source": "Sostén esto, por favor.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Please hold this.",
-          "audioSlug": "please_hold_this"
-        }
-      ]
-    },
-    {
       "id": "planes_i_spend_too_much",
       "source": "Gasto demasiado.",
       "level": "A2",
@@ -337,18 +325,6 @@
       ]
     },
     {
-      "id": "planes_i_recognize_you",
-      "source": "Te reconozco.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I recognize you.",
-          "audioSlug": "i_recognize_you"
-        }
-      ]
-    },
-    {
       "id": "planes_it_depends_on_you",
       "source": "Depende de ti.",
       "level": "A2",
@@ -457,18 +433,6 @@
       ]
     },
     {
-      "id": "planes_the_box_contains_books",
-      "source": "La caja contiene libros.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The box contains books.",
-          "audioSlug": "the_box_contains_books"
-        }
-      ]
-    },
-    {
       "id": "planes_it_can_occur_again",
       "source": "Puede ocurrir otra vez.",
       "level": "B1",
@@ -505,18 +469,6 @@
       ]
     },
     {
-      "id": "planes_they_treat_me_well",
-      "source": "Me tratan bien.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "They treat me well.",
-          "audioSlug": "they_treat_me_well"
-        }
-      ]
-    },
-    {
       "id": "planes_please_fill_the_form",
       "source": "Llena el formulario, por favor.",
       "level": "A2",
@@ -525,18 +477,6 @@
         {
           "text": "Please fill the form.",
           "audioSlug": "please_fill_the_form"
-        }
-      ]
-    },
-    {
-      "id": "planes_please_sit_down",
-      "source": "Siéntate, por favor.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Please sit down.",
-          "audioSlug": "please_sit_down"
         }
       ]
     },
@@ -553,18 +493,6 @@
       ]
     },
     {
-      "id": "planes_pick_a_card",
-      "source": "Elige una carta.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Pick a card.",
-          "audioSlug": "pick_a_card"
-        }
-      ]
-    },
-    {
       "id": "planes_we_seek_the_truth",
       "source": "Buscamos la verdad.",
       "level": "B1",
@@ -573,30 +501,6 @@
         {
           "text": "We seek the truth.",
           "audioSlug": "we_seek_the_truth"
-        }
-      ]
-    },
-    {
-      "id": "planes_does_this_fit",
-      "source": "¿Esto queda bien?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Does this fit?",
-          "audioSlug": "does_this_fit"
-        }
-      ]
-    },
-    {
-      "id": "planes_you_may_enter",
-      "source": "Puedes entrar.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "You may enter.",
-          "audioSlug": "you_may_enter"
         }
       ]
     },
@@ -673,18 +577,6 @@
       ]
     },
     {
-      "id": "planes_i_associate_it_with_summer",
-      "source": "Lo asocio con el verano.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I associate it with summer.",
-          "audioSlug": "i_associate_it_with_summer"
-        }
-      ]
-    },
-    {
       "id": "planes_can_you_estimate_the_cost",
       "source": "¿Puedes estimar el costo?",
       "level": "B1",
@@ -697,66 +589,6 @@
       ]
     },
     {
-      "id": "planes_be_careful_not_to_fall",
-      "source": "Ten cuidado de no caer.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Be careful not to fall.",
-          "audioSlug": "be_careful_not_to_fall"
-        }
-      ]
-    },
-    {
-      "id": "planes_they_build_houses",
-      "source": "Ellos construyen casas.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "They build houses.",
-          "audioSlug": "they_build_houses"
-        }
-      ]
-    },
-    {
-      "id": "planes_i_like_to_draw",
-      "source": "Me gusta dibujar.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I like to draw.",
-          "audioSlug": "i_like_to_draw"
-        }
-      ]
-    },
-    {
-      "id": "planes_i_teach_english",
-      "source": "Enseño inglés.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I teach English.",
-          "audioSlug": "i_teach_english"
-        }
-      ]
-    },
-    {
-      "id": "planes_hit_the_ball",
-      "source": "Golpea la pelota.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Hit the ball.",
-          "audioSlug": "hit_the_ball"
-        }
-      ]
-    },
-    {
       "id": "planes_lets_solve_the_problem",
       "source": "Resolvamos el problema.",
       "level": "B1",
@@ -765,30 +597,6 @@
         {
           "text": "Let's solve the problem.",
           "audioSlug": "let_s_solve_the_problem"
-        }
-      ]
-    },
-    {
-      "id": "planes_please_identify_yourself",
-      "source": "Identifícate, por favor.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Please identify yourself.",
-          "audioSlug": "please_identify_yourself"
-        }
-      ]
-    },
-    {
-      "id": "planes_mark_the_correct_answer",
-      "source": "Marca la respuesta correcta.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Mark the correct answer.",
-          "audioSlug": "mark_the_correct_answer"
         }
       ]
     },
@@ -813,42 +621,6 @@
         {
           "text": "I need to organize this.",
           "audioSlug": "i_need_to_organize_this"
-        }
-      ]
-    },
-    {
-      "id": "planes_i_always_wear_a_hat",
-      "source": "Siempre uso un sombrero.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I always wear a hat.",
-          "audioSlug": "i_always_wear_a_hat"
-        }
-      ]
-    },
-    {
-      "id": "planes_plants_die_without_water",
-      "source": "Las plantas mueren sin agua.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Plants die without water.",
-          "audioSlug": "plants_die_without_water"
-        }
-      ]
-    },
-    {
-      "id": "planes_smoking_can_kill",
-      "source": "Fumar puede matar.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Smoking can kill.",
-          "audioSlug": "smoking_can_kill"
         }
       ]
     },

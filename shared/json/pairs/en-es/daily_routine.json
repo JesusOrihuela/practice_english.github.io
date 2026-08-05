@@ -13,42 +13,6 @@
       ]
     },
     {
-      "id": "daily_its_three_oclock",
-      "source": "It's three o'clock.",
-      "level": "A1",
-      "grammar": "Para la hora se usa 'ser': 'son las tres' (plural), 'es la una' (singular).",
-      "target": [
-        {
-          "text": "Son las tres.",
-          "audioSlug": "son_las_tres"
-        }
-      ]
-    },
-    {
-      "id": "daily_half_past_two",
-      "source": "It's half past two.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Son las dos y media.",
-          "audioSlug": "son_las_dos_y_media"
-        }
-      ]
-    },
-    {
-      "id": "daily_quarter_to_five",
-      "source": "It's a quarter to five.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Son las cinco menos cuarto.",
-          "audioSlug": "son_las_cinco_menos_cuarto"
-        }
-      ]
-    },
-    {
       "id": "daily_what_time_get_up",
       "source": "What time do you get up?",
       "level": "A1",
@@ -511,6 +475,18 @@
         {
           "text": "Sé lo que tengo que hacer.",
           "audioSlug": "se_lo_que_tengo_que_hacer"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_me_visto_rapido",
+      "source": "I get dressed quickly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me visto rápido.",
+          "audioSlug": "me_visto_rapido"
         }
       ]
     }

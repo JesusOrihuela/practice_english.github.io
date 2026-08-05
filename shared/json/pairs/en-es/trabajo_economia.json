@@ -61,18 +61,6 @@
       ]
     },
     {
-      "id": "trabajo_economia_te_deseo_mucho_exito",
-      "source": "I wish you great success.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Te deseo mucho éxito.",
-          "audioSlug": "te_deseo_mucho_exito"
-        }
-      ]
-    },
-    {
       "id": "trabajo_economia_el_es_mi_jefe",
       "source": "He is my boss.",
       "level": "A1",
@@ -105,18 +93,6 @@
         {
           "text": "Quiero comprarlo.",
           "audioSlug": "quiero_comprarlo"
-        }
-      ]
-    },
-    {
-      "id": "trabajo_economia_debo_venderlo_hoy",
-      "source": "I must sell it today.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Debo venderlo hoy.",
-          "audioSlug": "debo_venderlo_hoy"
         }
       ]
     },
@@ -177,6 +153,18 @@
         {
           "text": "El autor firma su libro.",
           "audioSlug": "el_autor_firma_su_libro"
+        }
+      ]
+    },
+    {
+      "id": "trabajo_economia_enseno_ingles",
+      "source": "I teach English.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Enseño inglés.",
+          "audioSlug": "enseno_ingles"
         }
       ]
     }

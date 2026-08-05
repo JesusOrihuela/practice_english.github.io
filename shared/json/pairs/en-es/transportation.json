@@ -545,6 +545,18 @@
           "audioSlug": "el_avion_llego_tarde"
         }
       ]
+    },
+    {
+      "id": "transportation_sabes_conducir",
+      "source": "Can you drive?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Sabes conducir?",
+          "audioSlug": "sabes_conducir"
+        }
+      ]
     }
   ]
 }
