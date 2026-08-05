@@ -719,6 +719,276 @@
       "gloss_example": {
         "en": "Its color is a unique feature."
       }
+    },
+    {
+      "id": "vida",
+      "term": "vida",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El tiempo en que alguien está vivo.",
+      "example": "Ella tiene una vida feliz.",
+      "translations": {
+        "en": "life"
+      },
+      "gloss": {
+        "en": "The time a person is alive."
+      },
+      "gloss_example": {
+        "en": "She has a happy life."
+      }
+    },
+    {
+      "id": "problema",
+      "term": "problema",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Algo difícil de resolver.",
+      "example": "Tenemos un problema.",
+      "translations": {
+        "en": "problem"
+      },
+      "gloss": {
+        "en": "A difficult thing to solve."
+      },
+      "gloss_example": {
+        "en": "We have a problem."
+      }
+    },
+    {
+      "id": "parte",
+      "term": "parte",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una porción de un todo.",
+      "example": "Esta es la mejor parte.",
+      "translations": {
+        "en": "part"
+      },
+      "gloss": {
+        "en": "A portion of a whole."
+      },
+      "gloss_example": {
+        "en": "This is the best part."
+      }
+    },
+    {
+      "id": "caso",
+      "term": "caso",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Una situación particular.",
+      "example": "Es un caso especial.",
+      "translations": {
+        "en": "case"
+      },
+      "gloss": {
+        "en": "A particular situation."
+      },
+      "gloss_example": {
+        "en": "It is a special case."
+      }
+    },
+    {
+      "id": "fin",
+      "term": "fin",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La parte final de algo.",
+      "example": "Estamos cerca del fin.",
+      "translations": {
+        "en": "end"
+      },
+      "gloss": {
+        "en": "The final part of something."
+      },
+      "gloss_example": {
+        "en": "We are near the end."
+      }
+    },
+    {
+      "id": "nombre",
+      "term": "nombre",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La palabra que identifica a alguien.",
+      "example": "¿Cuál es tu nombre?",
+      "translations": {
+        "en": "name"
+      },
+      "gloss": {
+        "en": "The word that identifies a person."
+      },
+      "gloss_example": {
+        "en": "What is your name?"
+      }
+    },
+    {
+      "id": "sistema",
+      "term": "sistema",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Un conjunto de cosas o reglas conectadas.",
+      "example": "El sistema funciona bien.",
+      "translations": {
+        "en": "system"
+      },
+      "gloss": {
+        "en": "A set of connected things or rules."
+      },
+      "gloss_example": {
+        "en": "The system works well."
+      }
+    },
+    {
+      "id": "negocio",
+      "term": "negocio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La actividad de comprar y vender.",
+      "example": "Su negocio va bien.",
+      "translations": {
+        "en": "business"
+      },
+      "gloss": {
+        "en": "The activity of buying and selling."
+      },
+      "gloss_example": {
+        "en": "Her business is going well."
+      }
+    },
+    {
+      "id": "informacion",
+      "term": "información",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Datos o detalles sobre algo.",
+      "example": "Necesito más información.",
+      "translations": {
+        "en": "information"
+      },
+      "gloss": {
+        "en": "Facts or details about something."
+      },
+      "gloss_example": {
+        "en": "I need more information."
+      }
+    },
+    {
+      "id": "servicio",
+      "term": "servicio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ayuda o trabajo hecho para otros.",
+      "example": "El servicio es muy bueno.",
+      "translations": {
+        "en": "service"
+      },
+      "gloss": {
+        "en": "Help or work done for others."
+      },
+      "gloss_example": {
+        "en": "The service is very good."
+      }
+    },
+    {
+      "id": "orden",
+      "term": "orden",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La forma en que se ordenan las cosas.",
+      "example": "Todo está en orden.",
+      "translations": {
+        "en": "order"
+      },
+      "gloss": {
+        "en": "The way things are arranged."
+      },
+      "gloss_example": {
+        "en": "Everything is in order."
+      }
+    },
+    {
+      "id": "tipo",
+      "term": "tipo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un grupo de cosas parecidas.",
+      "example": "¿Qué tipo de música?",
+      "translations": {
+        "en": "type"
+      },
+      "gloss": {
+        "en": "A group of similar things."
+      },
+      "gloss_example": {
+        "en": "What type of music?"
+      }
+    },
+    {
+      "id": "sonido",
+      "term": "sonido",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Algo que se oye.",
+      "example": "Oí un sonido extraño.",
+      "translations": {
+        "en": "sound"
+      },
+      "gloss": {
+        "en": "Something you hear."
+      },
+      "gloss_example": {
+        "en": "I heard a strange sound."
+      }
+    },
+    {
+      "id": "forma",
+      "term": "forma",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El aspecto o tipo de algo.",
+      "example": "Tiene forma redonda.",
+      "translations": {
+        "en": "shape"
+      },
+      "gloss": {
+        "en": "The shape or type of something."
+      },
+      "gloss_example": {
+        "en": "It has a round shape."
+      }
+    },
+    {
+      "id": "manera",
+      "term": "manera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El modo de hacer algo.",
+      "example": "Esta es la mejor manera.",
+      "translations": {
+        "en": "way"
+      },
+      "gloss": {
+        "en": "The way of doing something."
+      },
+      "gloss_example": {
+        "en": "This is the best way."
+      }
     }
   ]
 }
