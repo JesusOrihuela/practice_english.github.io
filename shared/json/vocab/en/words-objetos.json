@@ -107,6 +107,150 @@
       "gloss_example": {
         "es": "¿Cuál es tu nombre?"
       }
+    },
+    {
+      "id": "letter",
+      "term": "letter",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A written message sent to someone.",
+      "example": "I wrote a letter.",
+      "translations": {
+        "es": "carta"
+      },
+      "gloss": {
+        "es": "Un mensaje escrito que se envía."
+      },
+      "gloss_example": {
+        "es": "Escribí una carta."
+      }
+    },
+    {
+      "id": "box",
+      "term": "box",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A container with straight sides.",
+      "example": "The box is heavy.",
+      "translations": {
+        "es": "caja"
+      },
+      "gloss": {
+        "es": "Un recipiente de lados rectos."
+      },
+      "gloss_example": {
+        "es": "La caja es pesada."
+      }
+    },
+    {
+      "id": "key",
+      "term": "key",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A metal object that opens a lock.",
+      "example": "I lost my keys.",
+      "translations": {
+        "es": "llave"
+      },
+      "gloss": {
+        "es": "Objeto de metal que abre una cerradura."
+      },
+      "gloss_example": {
+        "es": "Perdí mis llaves."
+      }
+    },
+    {
+      "id": "card",
+      "term": "card",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A small stiff piece of paper or plastic.",
+      "example": "Here is my card.",
+      "translations": {
+        "es": "tarjeta"
+      },
+      "gloss": {
+        "es": "Un trozo pequeño y rígido de papel o plástico."
+      },
+      "gloss_example": {
+        "es": "Aquí está mi tarjeta."
+      }
+    },
+    {
+      "id": "ticket",
+      "term": "ticket",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A paper that lets you enter or travel.",
+      "example": "I bought two tickets.",
+      "translations": {
+        "es": "boleto"
+      },
+      "gloss": {
+        "es": "Un papel que te deja entrar o viajar."
+      },
+      "gloss_example": {
+        "es": "Compré dos boletos."
+      }
+    },
+    {
+      "id": "picture",
+      "term": "picture",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A drawing or photo of something.",
+      "example": "It is a nice picture.",
+      "translations": {
+        "es": "cuadro"
+      },
+      "gloss": {
+        "es": "Un dibujo o foto de algo."
+      },
+      "gloss_example": {
+        "es": "Es un cuadro bonito."
+      }
+    },
+    {
+      "id": "paper",
+      "term": "paper",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The thin material you write on.",
+      "example": "I need a sheet of paper.",
+      "translations": {
+        "es": "papel"
+      },
+      "gloss": {
+        "es": "El material fino sobre el que escribes."
+      },
+      "gloss_example": {
+        "es": "Necesito una hoja de papel."
+      }
+    },
+    {
+      "id": "bag",
+      "term": "bag",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A container you carry things in.",
+      "example": "This bag is heavy.",
+      "translations": {
+        "es": "bolsa"
+      },
+      "gloss": {
+        "es": "Un recipiente para llevar cosas."
+      },
+      "gloss_example": {
+        "es": "Esta bolsa es pesada."
+      }
     }
   ]
 }

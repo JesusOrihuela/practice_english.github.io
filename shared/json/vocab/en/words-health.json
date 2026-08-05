@@ -269,6 +269,132 @@
       "gloss_example": {
         "es": "Lávate las manos."
       }
+    },
+    {
+      "id": "arm",
+      "term": "arm",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part from shoulder to hand.",
+      "example": "He broke his arm.",
+      "translations": {
+        "es": "brazo"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo del hombro a la mano."
+      },
+      "gloss_example": {
+        "es": "Se rompió el brazo."
+      }
+    },
+    {
+      "id": "leg",
+      "term": "leg",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part you walk with.",
+      "example": "My legs are tired.",
+      "translations": {
+        "es": "pierna"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo con la que caminas."
+      },
+      "gloss_example": {
+        "es": "Me duelen las piernas."
+      }
+    },
+    {
+      "id": "foot",
+      "term": "foot",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part at the end of your leg.",
+      "example": "My foot hurts.",
+      "translations": {
+        "es": "pie"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo al final de la pierna."
+      },
+      "gloss_example": {
+        "es": "Me duele el pie."
+      }
+    },
+    {
+      "id": "mouth",
+      "term": "mouth",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part you eat and speak with.",
+      "example": "Open your mouth.",
+      "translations": {
+        "es": "boca"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo con la que comes y hablas."
+      },
+      "gloss_example": {
+        "es": "Abre la boca."
+      }
+    },
+    {
+      "id": "tooth",
+      "term": "tooth",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A hard white part in your mouth.",
+      "example": "My tooth hurts.",
+      "translations": {
+        "es": "diente"
+      },
+      "gloss": {
+        "es": "Una parte dura y blanca de la boca."
+      },
+      "gloss_example": {
+        "es": "Me duele un diente."
+      }
+    },
+    {
+      "id": "ear",
+      "term": "ear",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part you hear with.",
+      "example": "I have an ear infection.",
+      "translations": {
+        "es": "oreja"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo con la que oyes."
+      },
+      "gloss_example": {
+        "es": "Tengo una infección de oído."
+      }
+    },
+    {
+      "id": "nose",
+      "term": "nose",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The body part you smell with.",
+      "example": "My nose is cold.",
+      "translations": {
+        "es": "nariz"
+      },
+      "gloss": {
+        "es": "La parte del cuerpo con la que hueles."
+      },
+      "gloss_example": {
+        "es": "Tengo la nariz fría."
+      }
     }
   ]
 }
