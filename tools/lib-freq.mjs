@@ -49,6 +49,23 @@ export function rankToBand(rank) {
 
 const ES_ENCLITICS = ['melo','mela','selo','sela','telo','tela','noslo','nosla','me','te','se','nos','os','le','les','lo','la','los','las'];
 
+// Common English irregular past/participle → base lemma. Regular -s/-ed/-ing are
+// handled by suffix rules; this covers the strong verbs whose stem changes.
+const EN_IRREGULAR = {
+  became: 'become', held: 'hold', heard: 'hear', spent: 'spend', fell: 'fall', fallen: 'fall',
+  grew: 'grow', grown: 'grow', won: 'win', bore: 'bear', born: 'bear', borne: 'bear',
+  drew: 'draw', drawn: 'draw', wore: 'wear', worn: 'wear', threw: 'throw', thrown: 'throw',
+  flew: 'fly', flown: 'fly', sat: 'sit', fought: 'fight', taught: 'teach', led: 'lead',
+  bought: 'buy', caught: 'catch', paid: 'pay', sold: 'sell', lost: 'lose', sent: 'send',
+  broke: 'break', broken: 'break', chose: 'choose', chosen: 'choose', rose: 'rise', risen: 'rise',
+  drove: 'drive', driven: 'drive', rang: 'ring', rung: 'ring', struck: 'strike', sought: 'seek',
+  dealt: 'deal', meant: 'mean', kept: 'keep', brought: 'bring', laid: 'lay', built: 'build',
+  found: 'find', told: 'tell', gave: 'give', given: 'give', took: 'take', taken: 'take',
+  came: 'come', knew: 'know', known: 'know', thought: 'think', felt: 'feel', met: 'meet',
+  ran: 'run', wrote: 'write', written: 'write', spoke: 'speak', spoken: 'speak', stood: 'stand',
+  understood: 'understand', left: 'leave',
+};
+
 // Best (lowest) rank found for a surface word, trying light morphological
 // fallbacks for the given language. `ranks` is the {word: rank} map.
 export function lookupRank(word, lang, ranks) {
@@ -68,10 +85,30 @@ export function lookupRank(word, lang, ranks) {
     if (word.endsWith('a'))  cands.add(word.slice(0, -1) + 'o');
     if (word.endsWith('es') && word.length > 4) cands.add(word.slice(0, -2));
     if (word.endsWith('s')  && word.length > 3) cands.add(word.slice(0, -1));
+    // Verb → infinitive reconstruction. A direct dictionary hit already returned
+    // above, so a homograph noun/adverb (solo, costa, caso) never reaches here — this
+    // only fires for genuine conjugated forms not present as their own lemma.
+    const addInf = (stem) => { cands.add(stem + 'ar'); cands.add(stem + 'er'); cands.add(stem + 'ir'); };
+    if (word.endsWith('ando')) cands.add(word.slice(0, -4) + 'ar');
+    if (word.endsWith('iendo') || word.endsWith('yendo')) { cands.add(word.slice(0, -5) + 'er'); cands.add(word.slice(0, -5) + 'ir'); }
+    if (/(ado|ada|ados|adas)$/.test(word)) cands.add(word.replace(/(ado|ada|ados|adas)$/, 'ar'));
+    if (/(ido|ida|idos|idas)$/.test(word)) { const s = word.replace(/(ido|ida|idos|idas)$/, ''); cands.add(s + 'er'); cands.add(s + 'ir'); }
+    // present/preterite/imperfect endings → strip, try infinitives, undoing the
+    // stem-change diphthong (ue→o, ie→e) so 'duele'→'doler', 'quiero'→'querer'.
+    for (const e of ['o','as','a','amos','an','es','e','emos','en','imos','é','aste','ó','aron','í','iste','ió','ieron','aba','abas','aban','ía','ías','ían']) {
+      if (word.endsWith(e) && word.length - e.length >= 2) {
+        const st = word.slice(0, -e.length);
+        addInf(st);
+        const und = st.replace(/ue([^aeiou]*)$/, 'o$1').replace(/ie([^aeiou]*)$/, 'e$1');
+        if (und !== st) addInf(und);
+      }
+    }
   } else {
-    if (word.endsWith('s') && word.length > 3) cands.add(word.slice(0, -1));
-    if (word.endsWith('ed') && word.length > 4) { cands.add(word.slice(0, -1)); cands.add(word.slice(0, -2)); }
-    if (word.endsWith('ing') && word.length > 5) cands.add(word.slice(0, -3));
+    if (word.endsWith('s') && word.length > 3) { cands.add(word.slice(0, -1)); if (word.endsWith('es')) cands.add(word.slice(0, -2)); if (word.endsWith('ies')) cands.add(word.slice(0, -3) + 'y'); }
+    if (word.endsWith('ed') && word.length > 4) { cands.add(word.slice(0, -1)); cands.add(word.slice(0, -2)); if (word.endsWith('ied')) cands.add(word.slice(0, -3) + 'y'); }
+    if (word.endsWith('ing') && word.length > 5) { cands.add(word.slice(0, -3)); cands.add(word.slice(0, -3) + 'e'); }
+    const past = EN_IRREGULAR[word];
+    if (past) cands.add(past);
   }
   let best = null;
   for (const c of cands) {

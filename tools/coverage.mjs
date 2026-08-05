@@ -185,14 +185,21 @@ function contentWords(pair, lang, scope = 'all') {
   return words;
 }
 
-// Coverage of a flat lemma list (NGSL) by a used-set, over the lemmas that remain
-// after removing `exclude` (interjection artifacts for both channels; plus function
-// words for the vocab channel).
-function channelCov(list, used, exclude) {
+// Coverage of a flat lemma list (NGSL) over the lemmas that remain after removing
+// `exclude`. A lemma counts as covered when any surface form in the content maps to
+// its rank via lookupRank (so 'parents'→parent, 'became'→become are credited), i.e.
+// its rank is in `coveredRanks`.
+function channelCov(list, ranks, coveredRanks, exclude) {
   const teachable = list.filter(w => !exclude.has(w));
-  const missing = teachable.filter(w => !used.has(w));
+  const missing = teachable.filter(w => !coveredRanks.has(ranks[w]));
   return { covered: teachable.length - missing.length, total: teachable.length,
            pct: 100 * (teachable.length - missing.length) / teachable.length, missing };
+}
+// Ranks reachable from a used-set through light morphology (English NGSL).
+function coveredRanksEn(used, ranks) {
+  const s = new Set();
+  for (const w of used) { const r = lookupRank(w, 'en', ranks); if (r != null) s.add(r); }
+  return s;
 }
 
 const PAIRS = [['en-es','es','Espanol (par en-es)'], ['es-en','en','Ingles (par es-en)']]
@@ -231,19 +238,19 @@ for (const [pair, lang, label] of PAIRS) {
 const ngslPath = join(ROOT, 'tools/sources/derived/ngsl-en.json');
 if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
   const ngsl = JSON.parse(fs.readFileSync(ngslPath, 'utf8')).ranks;
-  const usedAll     = contentWords('es-en', 'en', 'all');
-  const usedPhrases = contentWords('es-en', 'en', 'phrases');
-  const usedVocab   = contentWords('es-en', 'en', 'vocab');
+  const crAll     = coveredRanksEn(contentWords('es-en', 'en', 'all'), ngsl);
+  const crPhrases = coveredRanksEn(contentWords('es-en', 'en', 'phrases'), ngsl);
+  const crVocab   = coveredRanksEn(contentWords('es-en', 'en', 'vocab'), ngsl);
   const igEn = ignoreFor('en');
   const igFnEn = unionSet(igEn, functionFor('en'));  // vocab channel: also drop function words
   console.log(`\n=== Ingles vs NGSL (lista pedagogica, ${Object.keys(ngsl).length} lemmas) ===`);
   for (const N of [500, 1000, 2000, 2801]) {
     const list = Object.entries(ngsl).filter(([, r]) => r <= N).map(([w]) => w);
-    const all = channelCov(list, usedAll, igEn);
+    const all = channelCov(list, ngsl, crAll, igEn);
     console.log(`  Top-${N}: ${all.covered}/${all.total} (${all.pct.toFixed(1)}%)`);
     if (N === 1000) {
-      const ph = channelCov(list, usedPhrases, igEn);       // phrases: full teachable top-1000
-      const vo = channelCov(list, usedVocab, igFnEn);        // vocab: content words only
+      const ph = channelCov(list, ngsl, crPhrases, igEn);       // phrases: full teachable top-1000
+      const vo = channelCov(list, ngsl, crVocab, igFnEn);        // vocab: content words only
       gatePhrases.en = ph.pct;
       gateVocab.en   = vo.pct;
       console.log(`    · frases-solo (todo el top-1000): ${ph.covered}/${ph.total} (${ph.pct.toFixed(1)}%)`);
