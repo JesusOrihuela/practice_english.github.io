@@ -359,6 +359,42 @@
           "audioSlug": "a_veces_es_mejor_callar"
         }
       ]
+    },
+    {
+      "id": "conversacion_me_refiero_a_esto",
+      "source": "I am referring to this.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me refiero a esto.",
+          "audioSlug": "me_refiero_a_esto"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_perdono",
+      "source": "I forgive you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te perdono.",
+          "audioSlug": "te_perdono"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_me_despido_de_ti",
+      "source": "I say goodbye to you.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me despido de ti.",
+          "audioSlug": "me_despido_de_ti"
+        }
+      ]
     }
   ]
 }

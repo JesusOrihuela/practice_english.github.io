@@ -359,6 +359,54 @@
           "audioSlug": "i_want_to_thank_you"
         }
       ]
+    },
+    {
+      "id": "conversacion_i_wonder_why",
+      "source": "Me pregunto por qué.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wonder why.",
+          "audioSlug": "i_wonder_why"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dont_lie_to_me",
+      "source": "No me mientas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Don't lie to me.",
+          "audioSlug": "don_t_lie_to_me"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_refer_to_this_book",
+      "source": "Me refiero a este libro.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I refer to this book.",
+          "audioSlug": "i_refer_to_this_book"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_can_you_define_it",
+      "source": "¿Puedes definirlo?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can you define it?",
+          "audioSlug": "can_you_define_it"
+        }
+      ]
     }
   ]
 }
