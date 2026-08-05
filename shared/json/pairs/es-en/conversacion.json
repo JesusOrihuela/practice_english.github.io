@@ -2,7 +2,7 @@
   "phrases": [
     {
       "id": "conversacion_talk_to_me",
-      "source": "Quieres que esta persona se abra contigo.",
+      "source": "Háblame.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -14,7 +14,7 @@
     },
     {
       "id": "conversacion_ask_tom",
-      "source": "Alguien tiene la información que te falta.",
+      "source": "Pregúntale a Tom.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -26,7 +26,7 @@
     },
     {
       "id": "conversacion_answer_me",
-      "source": "Le hiciste una pregunta y no dice nada.",
+      "source": "Respóndeme.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -38,7 +38,7 @@
     },
     {
       "id": "conversacion_let_me_explain",
-      "source": "Quieres aclarar tus razones con calma.",
+      "source": "Déjame explicar.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -50,7 +50,7 @@
     },
     {
       "id": "conversacion_please_speak_up",
-      "source": "Casi no se oye lo que dice esa persona.",
+      "source": "Habla más fuerte, por favor.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -62,7 +62,7 @@
     },
     {
       "id": "conversacion_please_do_not_shout",
-      "source": "Alguien te está levantando la voz.",
+      "source": "Por favor, no grites.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -74,7 +74,7 @@
     },
     {
       "id": "conversacion_i_doubt_it",
-      "source": "Esa afirmación te cuesta creerla.",
+      "source": "Lo dudo.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -86,7 +86,7 @@
     },
     {
       "id": "conversacion_i_dont_like_to_argue",
-      "source": "Prefieres evitar las discusiones acaloradas.",
+      "source": "No me gusta discutir.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -98,7 +98,7 @@
     },
     {
       "id": "conversacion_i_agree_with_you",
-      "source": "Compartes por completo su punto de vista.",
+      "source": "Estoy de acuerdo contigo.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -110,7 +110,7 @@
     },
     {
       "id": "conversacion_i_suppose_so",
-      "source": "Das un sí con poca seguridad.",
+      "source": "Supongo que sí.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -122,7 +122,7 @@
     },
     {
       "id": "conversacion_did_tom_mention_me",
-      "source": "Tienes curiosidad de si salió tu nombre.",
+      "source": "¿Tom me mencionó?",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -134,7 +134,7 @@
     },
     {
       "id": "conversacion_we_have_nothing_to_discuss",
-      "source": "Das por cerrada la conversación.",
+      "source": "No tenemos nada que discutir.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -146,7 +146,7 @@
     },
     {
       "id": "conversacion_i_have_no_comment",
-      "source": "Un periodista pregunta y prefieres callar.",
+      "source": "No tengo comentarios.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -158,7 +158,7 @@
     },
     {
       "id": "conversacion_i_cant_hear_you",
-      "source": "Hay mucho ruido y no distingues su voz.",
+      "source": "No te puedo oír.",
       "level": "A1",
       "grammar": null,
       "target": [
@@ -170,7 +170,7 @@
     },
     {
       "id": "conversacion_can_you_imagine_that",
-      "source": "Le pides que se figure la escena.",
+      "source": "¿Te puedes imaginar eso?",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -182,7 +182,7 @@
     },
     {
       "id": "conversacion_try_to_guess",
-      "source": "Le pides que adivine sin darle pistas.",
+      "source": "Trata de adivinar.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -194,7 +194,7 @@
     },
     {
       "id": "conversacion_i_cant_express_it",
-      "source": "No encuentras palabras para lo que sientes.",
+      "source": "No lo puedo expresar.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -206,7 +206,7 @@
     },
     {
       "id": "conversacion_dont_laugh_at_me",
-      "source": "Alguien se burla de ti y te molesta.",
+      "source": "No te rías de mí.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -218,7 +218,7 @@
     },
     {
       "id": "conversacion_please_smile",
-      "source": "Pides un gesto alegre para la foto.",
+      "source": "Sonríe, por favor.",
       "level": "A1",
       "grammar": null,
       "target": [
@@ -230,7 +230,7 @@
     },
     {
       "id": "conversacion_i_didnt_realize_that",
-      "source": "No te habías dado cuenta de ese detalle.",
+      "source": "No me di cuenta de eso.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -242,7 +242,7 @@
     },
     {
       "id": "conversacion_please_consider_it",
-      "source": "Le pides que piense bien la propuesta.",
+      "source": "Por favor, considéralo.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -254,7 +254,7 @@
     },
     {
       "id": "conversacion_i_believe_you",
-      "source": "Aceptas como verdad lo que te cuenta.",
+      "source": "Te creo.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -266,7 +266,7 @@
     },
     {
       "id": "conversacion_did_you_notice_that",
-      "source": "Preguntas si reparó en ese detalle.",
+      "source": "¿Notaste eso?",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -278,7 +278,7 @@
     },
     {
       "id": "conversacion_i_mean_it",
-      "source": "Dejas claro que hablas totalmente en serio.",
+      "source": "Lo digo en serio.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -290,7 +290,7 @@
     },
     {
       "id": "conversacion_i_understand_you",
-      "source": "Captas bien lo que quiere decir.",
+      "source": "Te entiendo.",
       "level": "A1",
       "grammar": null,
       "target": [
@@ -302,7 +302,7 @@
     },
     {
       "id": "conversacion_can_you_repeat_that",
-      "source": "No lo entendiste y pides que lo diga otra vez.",
+      "source": "¿Puedes repetir eso?",
       "level": "A1",
       "grammar": null,
       "target": [
@@ -314,7 +314,7 @@
     },
     {
       "id": "conversacion_i_admit_my_mistake",
-      "source": "Reconoces con honestidad que te equivocaste.",
+      "source": "Admito mi error.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -326,7 +326,7 @@
     },
     {
       "id": "conversacion_dont_complain_so_much",
-      "source": "Alguien protesta por todo sin parar.",
+      "source": "No te quejes tanto.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -338,7 +338,7 @@
     },
     {
       "id": "conversacion_i_want_to_warn_you",
-      "source": "Quieres avisarle de un posible peligro.",
+      "source": "Quiero advertirte.",
       "level": "A2",
       "grammar": null,
       "target": [
@@ -350,7 +350,7 @@
     },
     {
       "id": "conversacion_i_want_to_thank_you",
-      "source": "Le agradeces de corazón toda su ayuda.",
+      "source": "Quiero agradecerte.",
       "level": "A2",
       "grammar": null,
       "target": [
