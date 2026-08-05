@@ -41,7 +41,7 @@ const AppTopicGrid = (() => {
       const imgSrc = '../img/' + topic.id + '.webp';
       btn.innerHTML =
         '<div class="img-topic-card__img-wrap">' +
-          '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" width="800" height="450">' +
+          '<img class="img-topic-card__img" src="' + imgSrc + '" alt="" loading="lazy" onerror="this.remove()" width="800" height="450">' +
           '<div class="img-topic-card__overlay"></div>' +
         '</div>' +
         '<div class="img-topic-card__body">' +

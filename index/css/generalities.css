@@ -764,6 +764,14 @@ body.path-mode {
 .img-topic-card[data-theme="directions"]      { --topic-clr: #CA8A04; }
 .img-topic-card[data-theme="survival"]        { --topic-clr: #DB2777; }
 .img-topic-card[data-theme="general"]         { --topic-clr: #64748B; }
+.img-topic-card[data-theme="descripciones"]       { --topic-clr: #8B5CF6; }
+.img-topic-card[data-theme="conversacion"]        { --topic-clr: #06B6D4; }
+.img-topic-card[data-theme="planes"]              { --topic-clr: #10B981; }
+.img-topic-card[data-theme="naturaleza_lugares"]  { --topic-clr: #65A30D; }
+.img-topic-card[data-theme="tiempo_libre"]        { --topic-clr: #F43F5E; }
+.img-topic-card[data-theme="trabajo_economia"]    { --topic-clr: #4F46E5; }
+.img-topic-card[data-theme="sociedad_actualidad"] { --topic-clr: #BE123C; }
+.img-topic-card[data-theme="conceptos"]           { --topic-clr: #D97706; }
 
 .img-topic-card__img-wrap {
   position: relative;
