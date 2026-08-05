@@ -287,6 +287,60 @@
       "gloss_example": {
         "en": "Scientists study the climate."
       }
+    },
+    {
+      "id": "estudio",
+      "term": "estudio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El acto de aprender algo.",
+      "example": "El estudio es importante.",
+      "translations": {
+        "en": "study"
+      },
+      "gloss": {
+        "en": "The act of learning something."
+      },
+      "gloss_example": {
+        "en": "Study is important."
+      }
+    },
+    {
+      "id": "profesor",
+      "term": "profesor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La persona que enseña.",
+      "example": "Mi profesor es amable.",
+      "translations": {
+        "en": "teacher"
+      },
+      "gloss": {
+        "en": "The person who teaches."
+      },
+      "gloss_example": {
+        "en": "My teacher is kind."
+      }
+    },
+    {
+      "id": "libro",
+      "term": "libro",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un conjunto de hojas con texto para leer.",
+      "example": "Leo un libro.",
+      "translations": {
+        "en": "book"
+      },
+      "gloss": {
+        "en": "A set of pages with text to read."
+      },
+      "gloss_example": {
+        "en": "I am reading a book."
+      }
     }
   ]
 }

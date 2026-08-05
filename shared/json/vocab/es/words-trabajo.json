@@ -341,6 +341,42 @@
       "gloss_example": {
         "en": "He has a great capacity for work."
       }
+    },
+    {
+      "id": "dinero",
+      "term": "dinero",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lo que usamos para comprar cosas.",
+      "example": "No tengo dinero.",
+      "translations": {
+        "en": "money"
+      },
+      "gloss": {
+        "en": "What we use to buy things."
+      },
+      "gloss_example": {
+        "en": "I have no money."
+      }
+    },
+    {
+      "id": "precio",
+      "term": "precio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El dinero que cuesta algo.",
+      "example": "El precio es alto.",
+      "translations": {
+        "en": "price"
+      },
+      "gloss": {
+        "en": "The money something costs."
+      },
+      "gloss_example": {
+        "en": "The price is high."
+      }
     }
   ]
 }

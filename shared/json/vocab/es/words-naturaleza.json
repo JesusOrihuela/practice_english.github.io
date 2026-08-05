@@ -377,6 +377,42 @@
       "gloss_example": {
         "en": "It is a rare species of bird."
       }
+    },
+    {
+      "id": "agua",
+      "term": "agua",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El líquido que bebemos.",
+      "example": "Quiero un vaso de agua.",
+      "translations": {
+        "en": "water"
+      },
+      "gloss": {
+        "en": "The liquid we drink."
+      },
+      "gloss_example": {
+        "en": "I want a glass of water."
+      }
+    },
+    {
+      "id": "sol",
+      "term": "sol",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La estrella que nos da luz y calor.",
+      "example": "Hoy hace sol.",
+      "translations": {
+        "en": "sun"
+      },
+      "gloss": {
+        "en": "The star that gives us light and heat."
+      },
+      "gloss_example": {
+        "en": "It is sunny today."
+      }
     }
   ]
 }

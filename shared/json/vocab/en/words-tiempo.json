@@ -215,6 +215,24 @@
       "gloss_example": {
         "es": "La ciudad es hermosa de noche."
       }
+    },
+    {
+      "id": "time",
+      "term": "time",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "What we measure in hours and minutes.",
+      "example": "What time is it?",
+      "translations": {
+        "es": "tiempo"
+      },
+      "gloss": {
+        "es": "Lo que medimos en horas y minutos."
+      },
+      "gloss_example": {
+        "es": "¿Qué hora es?"
+      }
     }
   ]
 }

@@ -215,6 +215,96 @@
       "gloss_example": {
         "en": "This road leads to the beach."
       }
+    },
+    {
+      "id": "casa",
+      "term": "casa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un edificio donde vive la gente.",
+      "example": "Estoy en casa.",
+      "translations": {
+        "en": "house"
+      },
+      "gloss": {
+        "en": "A building where people live."
+      },
+      "gloss_example": {
+        "en": "I am at home."
+      }
+    },
+    {
+      "id": "escuela",
+      "term": "escuela",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un lugar donde aprenden los niños.",
+      "example": "Voy a la escuela.",
+      "translations": {
+        "en": "school"
+      },
+      "gloss": {
+        "en": "A place where children learn."
+      },
+      "gloss_example": {
+        "en": "I go to school."
+      }
+    },
+    {
+      "id": "tienda",
+      "term": "tienda",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un lugar donde se compran cosas.",
+      "example": "Voy a la tienda.",
+      "translations": {
+        "en": "shop"
+      },
+      "gloss": {
+        "en": "A place where you buy things."
+      },
+      "gloss_example": {
+        "en": "I am going to the shop."
+      }
+    },
+    {
+      "id": "calle",
+      "term": "calle",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una vía en un pueblo con casas.",
+      "example": "Vivo en esta calle.",
+      "translations": {
+        "en": "street"
+      },
+      "gloss": {
+        "en": "A road in a town with houses."
+      },
+      "gloss_example": {
+        "en": "I live on this street."
+      }
+    },
+    {
+      "id": "lugar",
+      "term": "lugar",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una posición o zona particular.",
+      "example": "Es un lugar bonito.",
+      "translations": {
+        "en": "place"
+      },
+      "gloss": {
+        "en": "A particular position or area."
+      },
+      "gloss_example": {
+        "en": "It is a nice place."
+      }
     }
   ]
 }

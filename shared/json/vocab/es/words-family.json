@@ -485,6 +485,60 @@
       "gloss_example": {
         "en": "We have twenty guests for dinner."
       }
+    },
+    {
+      "id": "hijo",
+      "term": "hijo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un niño respecto de sus padres.",
+      "example": "Tengo un hijo.",
+      "translations": {
+        "en": "son"
+      },
+      "gloss": {
+        "en": "A child in relation to its parents."
+      },
+      "gloss_example": {
+        "en": "I have a son."
+      }
+    },
+    {
+      "id": "hermano",
+      "term": "hermano",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un hijo de los mismos padres.",
+      "example": "Es mi hermano.",
+      "translations": {
+        "en": "brother"
+      },
+      "gloss": {
+        "en": "A son of the same parents."
+      },
+      "gloss_example": {
+        "en": "He is my brother."
+      }
+    },
+    {
+      "id": "abuelo",
+      "term": "abuelo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El padre de tu padre o madre.",
+      "example": "Mi abuelo tiene ochenta años.",
+      "translations": {
+        "en": "grandfather"
+      },
+      "gloss": {
+        "en": "The father of your father or mother."
+      },
+      "gloss_example": {
+        "en": "My grandfather is eighty."
+      }
     }
   ]
 }

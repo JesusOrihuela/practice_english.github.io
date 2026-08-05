@@ -395,6 +395,60 @@
       "gloss_example": {
         "es": "Cada individuo tiene un papel."
       }
+    },
+    {
+      "id": "man",
+      "term": "man",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An adult male person.",
+      "example": "He is a kind man.",
+      "translations": {
+        "es": "hombre"
+      },
+      "gloss": {
+        "es": "Una persona adulta de sexo masculino."
+      },
+      "gloss_example": {
+        "es": "Es un hombre amable."
+      }
+    },
+    {
+      "id": "woman",
+      "term": "woman",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An adult female person.",
+      "example": "She is a strong woman.",
+      "translations": {
+        "es": "mujer"
+      },
+      "gloss": {
+        "es": "Una persona adulta de sexo femenino."
+      },
+      "gloss_example": {
+        "es": "Es una mujer fuerte."
+      }
+    },
+    {
+      "id": "person",
+      "term": "person",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A human being.",
+      "example": "She is a good person.",
+      "translations": {
+        "es": "persona"
+      },
+      "gloss": {
+        "es": "Un ser humano."
+      },
+      "gloss_example": {
+        "es": "Es una buena persona."
+      }
     }
   ]
 }

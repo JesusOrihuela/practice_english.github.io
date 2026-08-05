@@ -161,6 +161,78 @@
       "gloss_example": {
         "es": "Este camino lleva a la playa."
       }
+    },
+    {
+      "id": "school",
+      "term": "school",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where children learn.",
+      "example": "I go to school.",
+      "translations": {
+        "es": "escuela"
+      },
+      "gloss": {
+        "es": "Un lugar donde aprenden los niños."
+      },
+      "gloss_example": {
+        "es": "Voy a la escuela."
+      }
+    },
+    {
+      "id": "home",
+      "term": "home",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The place where you live.",
+      "example": "I am at home.",
+      "translations": {
+        "es": "hogar"
+      },
+      "gloss": {
+        "es": "El lugar donde vives."
+      },
+      "gloss_example": {
+        "es": "Estoy en casa."
+      }
+    },
+    {
+      "id": "house",
+      "term": "house",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building where people live.",
+      "example": "They have a big house.",
+      "translations": {
+        "es": "casa"
+      },
+      "gloss": {
+        "es": "Un edificio donde vive la gente."
+      },
+      "gloss_example": {
+        "es": "Tienen una casa grande."
+      }
+    },
+    {
+      "id": "room",
+      "term": "room",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A separate space inside a building.",
+      "example": "My room is small.",
+      "translations": {
+        "es": "cuarto"
+      },
+      "gloss": {
+        "es": "Un espacio separado dentro de un edificio."
+      },
+      "gloss_example": {
+        "es": "Mi cuarto es pequeño."
+      }
     }
   ]
 }

@@ -197,6 +197,42 @@
       "gloss_example": {
         "es": "Limpiar la oficina es mi tarea."
       }
+    },
+    {
+      "id": "money",
+      "term": "money",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "What we use to buy things.",
+      "example": "I have no money.",
+      "translations": {
+        "es": "dinero"
+      },
+      "gloss": {
+        "es": "Lo que usamos para comprar cosas."
+      },
+      "gloss_example": {
+        "es": "No tengo dinero."
+      }
+    },
+    {
+      "id": "market",
+      "term": "market",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place to buy and sell things.",
+      "example": "I go to the market.",
+      "translations": {
+        "es": "mercado"
+      },
+      "gloss": {
+        "es": "Un lugar para comprar y vender cosas."
+      },
+      "gloss_example": {
+        "es": "Voy al mercado."
+      }
     }
   ]
 }

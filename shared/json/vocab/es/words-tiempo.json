@@ -233,6 +233,96 @@
       "gloss_example": {
         "en": "It is the best time of year to travel."
       }
+    },
+    {
+      "id": "vez",
+      "term": "vez",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cada ocasión en que pasa algo.",
+      "example": "Lo vi una vez.",
+      "translations": {
+        "en": "time"
+      },
+      "gloss": {
+        "en": "Each occasion something happens."
+      },
+      "gloss_example": {
+        "en": "I saw it once."
+      }
+    },
+    {
+      "id": "semana",
+      "term": "semana",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un período de siete días.",
+      "example": "Nos vemos la próxima semana.",
+      "translations": {
+        "en": "week"
+      },
+      "gloss": {
+        "en": "A period of seven days."
+      },
+      "gloss_example": {
+        "en": "See you next week."
+      }
+    },
+    {
+      "id": "mes",
+      "term": "mes",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Una de las doce partes del año.",
+      "example": "Viajo el próximo mes.",
+      "translations": {
+        "en": "month"
+      },
+      "gloss": {
+        "en": "One of the twelve parts of a year."
+      },
+      "gloss_example": {
+        "en": "I travel next month."
+      }
+    },
+    {
+      "id": "hora",
+      "term": "hora",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un período de sesenta minutos.",
+      "example": "El viaje dura una hora.",
+      "translations": {
+        "en": "hour"
+      },
+      "gloss": {
+        "en": "A period of sixty minutes."
+      },
+      "gloss_example": {
+        "en": "The trip takes an hour."
+      }
+    },
+    {
+      "id": "momento",
+      "term": "momento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Un período muy corto de tiempo.",
+      "example": "Espera un momento.",
+      "translations": {
+        "en": "moment"
+      },
+      "gloss": {
+        "en": "A very short period of time."
+      },
+      "gloss_example": {
+        "en": "Wait a moment."
+      }
     }
   ]
 }
