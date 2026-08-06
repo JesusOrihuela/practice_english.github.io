@@ -73,18 +73,6 @@
       ]
     },
     {
-      "id": "conversacion_i_doubt_it",
-      "source": "Lo dudo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I doubt it.",
-          "audioSlug": "i_doubt_it"
-        }
-      ]
-    },
-    {
       "id": "conversacion_i_dont_like_to_argue",
       "source": "No me gusta discutir.",
       "level": "A2",
@@ -93,30 +81,6 @@
         {
           "text": "I don't like to argue.",
           "audioSlug": "i_don_t_like_to_argue"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_i_agree_with_you",
-      "source": "Estoy de acuerdo contigo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I agree with you.",
-          "audioSlug": "i_agree_with_you"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_i_suppose_so",
-      "source": "Supongo que sí.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I suppose so.",
-          "audioSlug": "i_suppose_so"
         }
       ]
     },
@@ -169,18 +133,6 @@
       ]
     },
     {
-      "id": "conversacion_can_you_imagine_that",
-      "source": "¿Te puedes imaginar eso?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Can you imagine that?",
-          "audioSlug": "can_you_imagine_that"
-        }
-      ]
-    },
-    {
       "id": "conversacion_try_to_guess",
       "source": "Trata de adivinar.",
       "level": "A2",
@@ -229,30 +181,6 @@
       ]
     },
     {
-      "id": "conversacion_i_didnt_realize_that",
-      "source": "No me di cuenta de eso.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I didn't realize that.",
-          "audioSlug": "i_didn_t_realize_that"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_please_consider_it",
-      "source": "Por favor, considéralo.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Please consider it.",
-          "audioSlug": "please_consider_it"
-        }
-      ]
-    },
-    {
       "id": "conversacion_i_believe_you",
       "source": "Te creo.",
       "level": "A2",
@@ -261,18 +189,6 @@
         {
           "text": "I believe you.",
           "audioSlug": "i_believe_you"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_did_you_notice_that",
-      "source": "¿Notaste eso?",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Did you notice that?",
-          "audioSlug": "did_you_notice_that"
         }
       ]
     },
@@ -357,18 +273,6 @@
         {
           "text": "I want to thank you.",
           "audioSlug": "i_want_to_thank_you"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_i_wonder_why",
-      "source": "Me pregunto por qué.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I wonder why.",
-          "audioSlug": "i_wonder_why"
         }
       ]
     },

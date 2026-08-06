@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "cuerpo_tengo_el_pelo_muy_largo",
+      "source": "My hair is very long.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo el pelo muy largo.",
+          "audioSlug": "tengo_el_pelo_muy_largo"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_el_corazon_late_rapido",
+      "source": "The heart beats fast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El corazón late rápido.",
+          "audioSlug": "el_corazon_late_rapido"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_su_piel_es_muy_suave",
+      "source": "Her skin is very soft.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su piel es muy suave.",
+          "audioSlug": "su_piel_es_muy_suave"
+        }
+      ]
+    }
+  ]
+}

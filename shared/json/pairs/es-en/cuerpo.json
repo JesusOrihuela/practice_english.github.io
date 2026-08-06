@@ -1,0 +1,52 @@
+{
+  "phrases": [
+    {
+      "id": "cuerpo_her_hair_is_very_long",
+      "source": "Su cabello es muy largo.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Her hair is very long.",
+          "audioSlug": "her_hair_is_very_long"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_my_heart_is_beating_fast",
+      "source": "Mi corazón late rápido.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My heart is beating fast.",
+          "audioSlug": "my_heart_is_beating_fast"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_her_skin_is_very_soft",
+      "source": "Su piel es muy suave.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Her skin is very soft.",
+          "audioSlug": "her_skin_is_very_soft"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_the_brain_is_amazing",
+      "source": "El cerebro es asombroso.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The brain is amazing.",
+          "audioSlug": "the_brain_is_amazing"
+        }
+      ]
+    }
+  ]
+}

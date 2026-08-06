@@ -1,0 +1,64 @@
+{
+  "phrases": [
+    {
+      "id": "animales_it_is_a_wild_animal",
+      "source": "Es un animal salvaje.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is a wild animal.",
+          "audioSlug": "it_is_a_wild_animal"
+        }
+      ]
+    },
+    {
+      "id": "animales_a_dog_runs_fast",
+      "source": "Un perro corre rápido.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A dog runs fast.",
+          "audioSlug": "a_dog_runs_fast"
+        }
+      ]
+    },
+    {
+      "id": "animales_my_cat_sleeps_a_lot",
+      "source": "Mi gato duerme mucho.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My cat sleeps a lot.",
+          "audioSlug": "my_cat_sleeps_a_lot"
+        }
+      ]
+    },
+    {
+      "id": "animales_it_is_a_small_bird",
+      "source": "Es un pájaro pequeño.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is a small bird.",
+          "audioSlug": "it_is_a_small_bird"
+        }
+      ]
+    },
+    {
+      "id": "animales_birds_can_fly",
+      "source": "Los pájaros pueden volar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Birds can fly.",
+          "audioSlug": "birds_can_fly"
+        }
+      ]
+    }
+  ]
+}

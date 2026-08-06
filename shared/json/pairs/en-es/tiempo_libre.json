@@ -37,18 +37,6 @@
       ]
     },
     {
-      "id": "tiempo_libre_me_gusta_el_deporte",
-      "source": "I like sport.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me gusta el deporte.",
-          "audioSlug": "me_gusta_el_deporte"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_hoy_hay_una_fiesta",
       "source": "There is a party today.",
       "level": "A1",
@@ -85,54 +73,6 @@
       ]
     },
     {
-      "id": "tiempo_libre_quiero_ganar",
-      "source": "I want to win.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Quiero ganar.",
-          "audioSlug": "quiero_ganar"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_odio_perder",
-      "source": "I hate to lose.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Odio perder.",
-          "audioSlug": "odio_perder"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_fin_del_juego",
-      "source": "Game over.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Fin del juego.",
-          "audioSlug": "fin_del_juego"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_ella_gano_el_concurso",
-      "source": "She won the contest.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Ella ganó el concurso.",
-          "audioSlug": "ella_gano_el_concurso"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_la_aventura_comienza",
       "source": "The adventure begins.",
       "level": "A2",
@@ -141,30 +81,6 @@
         {
           "text": "La aventura comienza.",
           "audioSlug": "la_aventura_comienza"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_salgo_a_correr_temprano",
-      "source": "I go out to run early.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Salgo a correr temprano.",
-          "audioSlug": "salgo_a_correr_temprano"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_no_se_nadar",
-      "source": "I can't swim.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "No sé nadar.",
-          "audioSlug": "no_se_nadar"
         }
       ]
     },
@@ -189,18 +105,6 @@
         {
           "text": "Vamos a pasear.",
           "audioSlug": "vamos_a_pasear"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_estoy_de_vacaciones",
-      "source": "I am on vacation.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Estoy de vacaciones.",
-          "audioSlug": "estoy_de_vacaciones"
         }
       ]
     },
@@ -237,54 +141,6 @@
         {
           "text": "Ganó un premio.",
           "audioSlug": "gano_un_premio"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_tom_gano_la_carrera",
-      "source": "Tom won the race.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Tom ganó la carrera.",
-          "audioSlug": "tom_gano_la_carrera"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_viste_el_partido",
-      "source": "Did you watch the game?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Viste el partido?",
-          "audioSlug": "viste_el_partido"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_me_encanta_viajar",
-      "source": "I love traveling.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me encanta viajar.",
-          "audioSlug": "me_encanta_viajar"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_no_me_interesa_el_futbol",
-      "source": "I'm not interested in soccer.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "No me interesa el fútbol.",
-          "audioSlug": "no_me_interesa_el_futbol"
         }
       ]
     }

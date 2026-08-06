@@ -1,0 +1,64 @@
+{
+  "phrases": [
+    {
+      "id": "animales_es_un_animal_salvaje",
+      "source": "It is a wild animal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un animal salvaje.",
+          "audioSlug": "es_un_animal_salvaje"
+        }
+      ]
+    },
+    {
+      "id": "animales_vi_un_perro_en_la_calle",
+      "source": "I saw a dog in the street.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vi un perro en la calle.",
+          "audioSlug": "vi_un_perro_en_la_calle"
+        }
+      ]
+    },
+    {
+      "id": "animales_mi_gato_duerme_mucho",
+      "source": "My cat sleeps a lot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi gato duerme mucho.",
+          "audioSlug": "mi_gato_duerme_mucho"
+        }
+      ]
+    },
+    {
+      "id": "animales_es_un_pajaro_pequeno",
+      "source": "It is a small bird.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un pájaro pequeño.",
+          "audioSlug": "es_un_pajaro_pequeno"
+        }
+      ]
+    },
+    {
+      "id": "animales_es_una_especie_rara",
+      "source": "It is a rare species.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una especie rara.",
+          "audioSlug": "es_una_especie_rara"
+        }
+      ]
+    }
+  ]
+}
