@@ -20,20 +20,20 @@
     },
     {
       "id": "reservation",
-      "term": "reserva",
+      "term": "reserva de mesa",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
-      "definition": "Acuerdo previo para guardar una mesa en un restaurante.",
-      "example": "Hice una reserva para dos personas a las ocho.",
+      "definition": "Acuerdo para que te guarden una mesa en un restaurante.",
+      "example": "Hice una reserva de mesa para las ocho.",
       "translations": {
-        "en": "reservation"
+        "en": "table reservation"
       },
       "gloss": {
-        "en": "An arrangement to have a table held at a restaurant"
+        "en": "An arrangement to have a table kept for you at a restaurant."
       },
       "gloss_example": {
-        "en": "I made a reservation for two at eight o'clock."
+        "en": "I made a table reservation for eight o'clock."
       }
     },
     {
@@ -128,17 +128,17 @@
     },
     {
       "id": "cuisine",
-      "term": "gastronomía",
+      "term": "cocina",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
-      "definition": "Estilo culinario propio de un país o región, con sus ingredientes y técnicas características.",
-      "example": "La gastronomía italiana es famosa por su pasta y su pizza.",
+      "definition": "Estilo culinario propio de un país o región, con sus ingredientes y técnicas.",
+      "example": "La cocina italiana es famosa por su pasta y su pizza.",
       "translations": {
         "en": "cuisine"
       },
       "gloss": {
-        "en": "A style of cooking associated with a country or region"
+        "en": "A style of cooking associated with a country or region."
       },
       "gloss_example": {
         "en": "Italian cuisine is famous for its pasta and pizza."
