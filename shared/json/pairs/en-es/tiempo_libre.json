@@ -263,6 +263,30 @@
           "audioSlug": "viste_el_partido"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_me_encanta_viajar",
+      "source": "I love traveling.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta viajar.",
+          "audioSlug": "me_encanta_viajar"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_no_me_interesa_el_futbol",
+      "source": "I'm not interested in soccer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me interesa el fútbol.",
+          "audioSlug": "no_me_interesa_el_futbol"
+        }
+      ]
     }
   ]
 }

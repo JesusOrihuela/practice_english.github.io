@@ -227,6 +227,42 @@
           "audioSlug": "i_love_trips"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_she_is_a_great_player",
+      "source": "Ella es una gran jugadora.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She is a great player.",
+          "audioSlug": "she_is_a_great_player"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_i_wrote_a_letter",
+      "source": "Escribí una carta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wrote a letter.",
+          "audioSlug": "i_wrote_a_letter"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_tom_won_the_competition",
+      "source": "Tom ganó la competencia.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tom won the competition.",
+          "audioSlug": "tom_won_the_competition"
+        }
+      ]
     }
   ]
 }

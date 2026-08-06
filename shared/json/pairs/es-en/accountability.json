@@ -1,28 +1,6 @@
 {
   "phrases": [
     {
-      "id": "accountability_lets_start_the_meeting",
-      "source": "Empecemos la reunión.",
-      "level": "A2",
-      "grammar": "'Let's + infinitive' is the standard way to make an inclusive suggestion.",
-      "target": [
-        {
-          "text": "Let's start the meeting.",
-          "audioSlug": "let_s_start_the_meeting",
-          "labels": {
-            "register": "informal"
-          }
-        },
-        {
-          "text": "Let's begin the meeting.",
-          "audioSlug": "let_s_begin_the_meeting",
-          "labels": {
-            "register": "formal"
-          }
-        }
-      ]
-    },
-    {
       "id": "accountability_the_financial_reports_have_been_reviewed",
       "source": "Se han revisado los informes financieros.",
       "level": "B1",
@@ -113,28 +91,6 @@
         {
           "text": "The inventory needs to be updated.",
           "audioSlug": "the_inventory_needs_to_be_updated"
-        }
-      ]
-    },
-    {
-      "id": "accountability_we_have_a_new_client",
-      "source": "Tenemos un nuevo cliente.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "We have a new client.",
-          "audioSlug": "we_have_a_new_client",
-          "labels": {
-            "register": "formal"
-          }
-        },
-        {
-          "text": "We have a new customer.",
-          "audioSlug": "we_have_a_new_customer",
-          "labels": {
-            "register": "informal"
-          }
         }
       ]
     },
@@ -265,40 +221,6 @@
         {
           "text": "Have the contracts with the suppliers been signed?",
           "audioSlug": "have_the_contracts_with_the_suppliers_been_signed"
-        }
-      ]
-    },
-    {
-      "id": "accountability_when_is_the_meeting_scheduled",
-      "source": "¿Cuándo está programada la reunión?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "When is the meeting scheduled?",
-          "audioSlug": "when_is_the_meeting_scheduled",
-          "labels": {
-            "register": "formal"
-          }
-        },
-        {
-          "text": "When is the meeting planned?",
-          "audioSlug": "when_is_the_meeting_planned",
-          "labels": {
-            "register": "informal"
-          }
-        }
-      ]
-    },
-    {
-      "id": "accountability_it_is_important_to_consider_the",
-      "source": "Es importante considerar las nuevas tendencias del mercado.",
-      "level": "B1",
-      "grammar": "'It is + adjective + to-infinitive' is an impersonal way to make a recommendation.",
-      "target": [
-        {
-          "text": "It is important to consider the new market trends.",
-          "audioSlug": "it_is_important_to_consider_the_new_market_trends"
         }
       ]
     },

@@ -301,42 +301,6 @@
       ]
     },
     {
-      "id": "naturaleza_lugares_nos_vemos_en_la_plaza",
-      "source": "Let's meet in the square.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Nos vemos en la plaza.",
-          "audioSlug": "nos_vemos_en_la_plaza"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_vivo_en_este_barrio",
-      "source": "I live in this neighborhood.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Vivo en este barrio.",
-          "audioSlug": "vivo_en_este_barrio"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_viaje_por_america",
-      "source": "I traveled through America.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Viajé por América.",
-          "audioSlug": "viaje_por_america"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_los_arboles_rodean_la_casa",
       "source": "The trees surround the house.",
       "level": "B1",
@@ -369,6 +333,18 @@
         {
           "text": "Cuida el entorno.",
           "audioSlug": "cuida_el_entorno"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_es_una_especie_rara",
+      "source": "It is a rare species.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una especie rara.",
+          "audioSlug": "es_una_especie_rara"
         }
       ]
     }

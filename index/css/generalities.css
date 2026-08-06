@@ -769,7 +769,11 @@ body.path-mode {
 .img-topic-card[data-theme="planes"]              { --topic-clr: #10B981; }
 .img-topic-card[data-theme="naturaleza_lugares"]  { --topic-clr: #65A30D; }
 .img-topic-card[data-theme="tiempo_libre"]        { --topic-clr: #F43F5E; }
-.img-topic-card[data-theme="trabajo_economia"]    { --topic-clr: #4F46E5; }
+.img-topic-card[data-theme="economia"]            { --topic-clr: #4F46E5; }
+.img-topic-card[data-theme="oficina"]             { --topic-clr: #4B5563; }
+.img-topic-card[data-theme="profesiones"]         { --topic-clr: #B45309; }
+.img-topic-card[data-theme="describiendo_personas"] { --topic-clr: #DB2777; }
+.img-topic-card[data-theme="sitios"]              { --topic-clr: #059669; }
 .img-topic-card[data-theme="conceptos"]           { --topic-clr: #D97706; }
 
 .img-topic-card__img-wrap {

@@ -1,0 +1,224 @@
+{
+  "phrases": [
+    {
+      "id": "describiendo_personas_es_un_buen_chico",
+      "source": "He is a good boy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un buen chico.",
+          "audioSlug": "es_un_buen_chico"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_ese_senor_es_muy_amable",
+      "source": "That man is very kind.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese señor es muy amable.",
+          "audioSlug": "ese_senor_es_muy_amable"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_un_hombre_honrado",
+      "source": "He is an honest man.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un hombre honrado.",
+          "audioSlug": "es_un_hombre_honrado"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_una_mujer_muy_fuerte",
+      "source": "She is a very strong woman.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una mujer muy fuerte.",
+          "audioSlug": "es_una_mujer_muy_fuerte"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_ese_muchacho_es_muy_listo",
+      "source": "That boy is very clever.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese muchacho es muy listo.",
+          "audioSlug": "ese_muchacho_es_muy_listo"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_un_habitante_de_la_ciudad",
+      "source": "He is a city dweller.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un habitante de la ciudad.",
+          "audioSlug": "es_un_habitante_de_la_ciudad"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_son_buena_gente",
+      "source": "They are good people.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son buena gente.",
+          "audioSlug": "son_buena_gente"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_soy_joven",
+      "source": "I am young.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy joven.",
+          "audioSlug": "soy_joven"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_muy_famoso",
+      "source": "He is very famous.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es muy famoso.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "es_muy_famoso"
+        },
+        {
+          "text": "Es muy famosa.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "es_muy_famosa"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_muy_guapo",
+      "source": "He is very handsome.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es muy guapo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "es_muy_guapo"
+        },
+        {
+          "text": "Es muy guapa.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "es_muy_guapa"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_soy_vieja",
+      "source": "I am old.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy vieja.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_vieja"
+        },
+        {
+          "text": "Soy viejo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_viejo"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_muy_rico",
+      "source": "He is very rich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es muy rico.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "es_muy_rico"
+        },
+        {
+          "text": "Es muy rica.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "es_muy_rica"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_pobre",
+      "source": "He is poor.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es pobre.",
+          "audioSlug": "es_pobre"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_eres_fuerte",
+      "source": "You are strong.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eres fuerte.",
+          "audioSlug": "eres_fuerte"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_un_heroe_nacional",
+      "source": "He is a national hero.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un héroe nacional.",
+          "audioSlug": "es_un_heroe_nacional"
+        }
+      ]
+    }
+  ]
+}

@@ -419,6 +419,18 @@
           "audioSlug": "siempre_sonrie"
         }
       ]
+    },
+    {
+      "id": "conversacion_necesito_silencio",
+      "source": "I need silence.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito silencio.",
+          "audioSlug": "necesito_silencio"
+        }
+      ]
     }
   ]
 }

@@ -433,18 +433,6 @@
       ]
     },
     {
-      "id": "conceptos_i_love_this_culture",
-      "source": "Amo esta cultura.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I love this culture.",
-          "audioSlug": "i_love_this_culture"
-        }
-      ]
-    },
-    {
       "id": "conceptos_it_is_a_huge_structure",
       "source": "Es una estructura enorme.",
       "level": "B1",
@@ -817,18 +805,6 @@
       ]
     },
     {
-      "id": "conceptos_the_population_is_growing",
-      "source": "La población está creciendo.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The population is growing.",
-          "audioSlug": "the_population_is_growing"
-        }
-      ]
-    },
-    {
       "id": "conceptos_i_have_no_fear",
       "source": "No tengo miedo.",
       "level": "A2",
@@ -849,18 +825,6 @@
         {
           "text": "What is your aim?",
           "audioSlug": "what_is_your_aim"
-        }
-      ]
-    },
-    {
-      "id": "conceptos_tom_won_the_competition",
-      "source": "Tom ganó la competencia.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Tom won the competition.",
-          "audioSlug": "tom_won_the_competition"
         }
       ]
     },
@@ -925,42 +889,6 @@
       ]
     },
     {
-      "id": "conceptos_i_wrote_a_letter",
-      "source": "Escribí una carta.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I wrote a letter.",
-          "audioSlug": "i_wrote_a_letter"
-        }
-      ]
-    },
-    {
-      "id": "conceptos_turn_the_page",
-      "source": "Pasa la página.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Turn the page.",
-          "audioSlug": "turn_the_page"
-        }
-      ]
-    },
-    {
-      "id": "conceptos_she_has_a_soft_voice",
-      "source": "Tiene una voz suave.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "She has a soft voice.",
-          "audioSlug": "she_has_a_soft_voice"
-        }
-      ]
-    },
-    {
       "id": "conceptos_times_change",
       "source": "Los tiempos cambian.",
       "level": "A2",
@@ -969,6 +897,18 @@
         {
           "text": "Times change.",
           "audioSlug": "times_change"
+        }
+      ]
+    },
+    {
+      "id": "conceptos_it_is_a_new_generation",
+      "source": "Es una nueva generación.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is a new generation.",
+          "audioSlug": "it_is_a_new_generation"
         }
       ]
     }

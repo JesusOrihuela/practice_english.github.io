@@ -937,6 +937,18 @@
           "audioSlug": "cuanto_es_todo"
         }
       ]
+    },
+    {
+      "id": "restaurant_quiero_una_cerveza",
+      "source": "I want a beer.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero una cerveza.",
+          "audioSlug": "quiero_una_cerveza"
+        }
+      ]
     }
   ]
 }

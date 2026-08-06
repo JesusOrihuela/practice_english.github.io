@@ -373,18 +373,6 @@
       ]
     },
     {
-      "id": "health_my_grandfather_died_last_year",
-      "source": "Mi abuelo murió el año pasado.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "My grandfather died last year.",
-          "audioSlug": "my_grandfather_died_last_year"
-        }
-      ]
-    },
-    {
       "id": "health_she_suffers_from_headaches",
       "source": "Ella sufre de dolores de cabeza.",
       "level": "B1",
@@ -597,6 +585,18 @@
         {
           "text": "Smoking can kill.",
           "audioSlug": "smoking_can_kill"
+        }
+      ]
+    },
+    {
+      "id": "health_i_feel_sick",
+      "source": "Estoy enfermo/a.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I feel sick.",
+          "audioSlug": "i_feel_sick"
         }
       ]
     }

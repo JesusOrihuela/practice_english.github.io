@@ -1,0 +1,130 @@
+{
+  "phrases": [
+    {
+      "id": "oficina_let_s_start_the_meeting",
+      "source": "Empecemos la reunión.",
+      "level": "A2",
+      "grammar": "'Let's + infinitive' is the standard way to make an inclusive suggestion.",
+      "target": [
+        {
+          "text": "Let's start the meeting.",
+          "audioSlug": "let_s_start_the_meeting",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Let's begin the meeting.",
+          "audioSlug": "let_s_begin_the_meeting",
+          "labels": {
+            "register": "formal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oficina_when_is_the_meeting_scheduled",
+      "source": "¿Cuándo está programada la reunión?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "When is the meeting scheduled?",
+          "audioSlug": "when_is_the_meeting_scheduled",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "When is the meeting planned?",
+          "audioSlug": "when_is_the_meeting_planned",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oficina_it_is_important_to_consider_the_new_market_trends",
+      "source": "Es importante considerar las nuevas tendencias del mercado.",
+      "level": "B1",
+      "grammar": "'It is + adjective + to-infinitive' is an impersonal way to make a recommendation.",
+      "target": [
+        {
+          "text": "It is important to consider the new market trends.",
+          "audioSlug": "it_is_important_to_consider_the_new_market_trends"
+        }
+      ]
+    },
+    {
+      "id": "oficina_we_have_a_new_client",
+      "source": "Tenemos un nuevo cliente.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We have a new client.",
+          "audioSlug": "we_have_a_new_client",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "We have a new customer.",
+          "audioSlug": "we_have_a_new_customer",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "oficina_i_work_every_day",
+      "source": "Trabajo todos los días.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I work every day.",
+          "audioSlug": "i_work_every_day"
+        }
+      ]
+    },
+    {
+      "id": "oficina_this_is_my_office",
+      "source": "Esta es mi oficina.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is my office.",
+          "audioSlug": "this_is_my_office"
+        }
+      ]
+    },
+    {
+      "id": "oficina_he_is_my_boss",
+      "source": "Él es mi jefe.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He is my boss.",
+          "audioSlug": "he_is_my_boss"
+        }
+      ]
+    },
+    {
+      "id": "oficina_he_works_in_industry",
+      "source": "Él trabaja en la industria.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He works in industry.",
+          "audioSlug": "he_works_in_industry"
+        }
+      ]
+    }
+  ]
+}

@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "accountability_lets_start_the_meeting",
-      "source": "Let's start the meeting.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Empecemos la reunión.",
-          "audioSlug": "empecemos_la_reunion"
-        }
-      ]
-    },
-    {
       "id": "accountability_the_financial_reports_have_been_reviewed",
       "source": "The financial reports have been reviewed.",
       "level": "B1",
@@ -93,18 +81,6 @@
         {
           "text": "El inventario debe actualizarse.",
           "audioSlug": "el_inventario_debe_actualizarse"
-        }
-      ]
-    },
-    {
-      "id": "accountability_we_have_a_new_client",
-      "source": "We have a new client.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Tenemos un nuevo cliente.",
-          "audioSlug": "tenemos_un_nuevo_cliente"
         }
       ]
     },
@@ -235,30 +211,6 @@
         {
           "text": "¿Ya se firmaron los contratos con los proveedores?",
           "audioSlug": "ya_se_firmaron_los_contratos_con_los_proveedores"
-        }
-      ]
-    },
-    {
-      "id": "accountability_when_is_the_meeting_scheduled",
-      "source": "When is the meeting scheduled?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Cuándo está programada la reunión?",
-          "audioSlug": "cuando_esta_programada_la_reunion"
-        }
-      ]
-    },
-    {
-      "id": "accountability_it_is_important_to_consider_the",
-      "source": "It is important to consider the new market trends.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es importante considerar las nuevas tendencias del mercado.",
-          "audioSlug": "es_importante_considerar_las_nuevas_tendencias_del_mercado"
         }
       ]
     },

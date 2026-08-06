@@ -573,6 +573,18 @@
           "audioSlug": "donde_esta_la_tienda_libre_de_impuestos"
         }
       ]
+    },
+    {
+      "id": "airport_el_avion_llego_tarde",
+      "source": "The plane arrived late.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El avión llegó tarde.",
+          "audioSlug": "el_avion_llego_tarde"
+        }
+      ]
     }
   ]
 }

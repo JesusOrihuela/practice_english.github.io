@@ -431,18 +431,6 @@
       ]
     },
     {
-      "id": "family_es_un_buen_chico",
-      "source": "He is a good boy.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un buen chico.",
-          "audioSlug": "es_un_buen_chico"
-        }
-      ]
-    },
-    {
       "id": "family_es_mi_companero_de_clase",
       "source": "He is my classmate.",
       "level": "A2",
@@ -455,18 +443,6 @@
       ]
     },
     {
-      "id": "family_ese_senor_es_muy_amable",
-      "source": "That man is very kind.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Ese señor es muy amable.",
-          "audioSlug": "ese_senor_es_muy_amable"
-        }
-      ]
-    },
-    {
       "id": "family_es_su_novio",
       "source": "He is her boyfriend.",
       "level": "A2",
@@ -475,18 +451,6 @@
         {
           "text": "Es su novio.",
           "audioSlug": "es_su_novio"
-        }
-      ]
-    },
-    {
-      "id": "family_son_buena_gente",
-      "source": "They are good people.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Son buena gente.",
-          "audioSlug": "son_buena_gente"
         }
       ]
     },
@@ -511,18 +475,6 @@
         {
           "text": "Mi papá trabaja mucho.",
           "audioSlug": "mi_papa_trabaja_mucho"
-        }
-      ]
-    },
-    {
-      "id": "family_ese_muchacho_es_muy_listo",
-      "source": "That boy is very clever.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Ese muchacho es muy listo.",
-          "audioSlug": "ese_muchacho_es_muy_listo"
         }
       ]
     },
@@ -585,30 +537,6 @@
       ]
     },
     {
-      "id": "family_es_un_hombre_honrado",
-      "source": "He is an honest man.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un hombre honrado.",
-          "audioSlug": "es_un_hombre_honrado"
-        }
-      ]
-    },
-    {
-      "id": "family_es_una_mujer_muy_fuerte",
-      "source": "She is a very strong woman.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es una mujer muy fuerte.",
-          "audioSlug": "es_una_mujer_muy_fuerte"
-        }
-      ]
-    },
-    {
       "id": "family_el_bebe_esta_dormido",
       "source": "The baby is asleep.",
       "level": "A1",
@@ -633,146 +561,14 @@
       ]
     },
     {
-      "id": "family_es_un_buen_trabajador",
-      "source": "He is a good worker.",
+      "id": "family_mi_bebe_va_a_nacer_pronto",
+      "source": "My baby will be born soon.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Es un buen trabajador.",
-          "audioSlug": "es_un_buen_trabajador"
-        }
-      ]
-    },
-    {
-      "id": "family_es_mi_socio",
-      "source": "He is my business partner.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es mi socio.",
-          "audioSlug": "es_mi_socio"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_escritor_famoso",
-      "source": "He is a famous writer.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un escritor famoso.",
-          "audioSlug": "es_un_escritor_famoso"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_buen_detective",
-      "source": "He is a good detective.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un buen detective.",
-          "audioSlug": "es_un_buen_detective"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_gran_pintor",
-      "source": "He is a great painter.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un gran pintor.",
-          "audioSlug": "es_un_gran_pintor"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_poeta_conocido",
-      "source": "He is a well-known poet.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un poeta conocido.",
-          "audioSlug": "es_un_poeta_conocido"
-        }
-      ]
-    },
-    {
-      "id": "family_es_periodista",
-      "source": "He is a journalist.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es periodista.",
-          "audioSlug": "es_periodista"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_cientifico",
-      "source": "He is a scientist.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un científico.",
-          "audioSlug": "es_un_cientifico"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_musico_talentoso",
-      "source": "He is a talented musician.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un músico talentoso.",
-          "audioSlug": "es_un_musico_talentoso"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_experto",
-      "source": "He is an expert.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un experto.",
-          "audioSlug": "es_un_experto"
-        }
-      ]
-    },
-    {
-      "id": "family_es_nuestro_guia",
-      "source": "He is our guide.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es nuestro guía.",
-          "audioSlug": "es_nuestro_guia"
-        }
-      ]
-    },
-    {
-      "id": "family_es_un_habitante_de_la_ciudad",
-      "source": "He is a city dweller.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un habitante de la ciudad.",
-          "audioSlug": "es_un_habitante_de_la_ciudad"
+          "text": "Mi bebé va a nacer pronto.",
+          "audioSlug": "mi_bebe_va_a_nacer_pronto"
         }
       ]
     }

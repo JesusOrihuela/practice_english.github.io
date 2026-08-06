@@ -657,30 +657,6 @@
       ]
     },
     {
-      "id": "emociones_i_really_like_music",
-      "source": "I really like music.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me gusta mucho la música.",
-          "audioSlug": "me_gusta_mucho_la_musica"
-        }
-      ]
-    },
-    {
-      "id": "emociones_i_love_traveling",
-      "source": "I love traveling.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me encanta viajar.",
-          "audioSlug": "me_encanta_viajar"
-        }
-      ]
-    },
-    {
       "id": "emociones_i_love_you_very_much",
       "source": "I love you very much.",
       "level": "A1",
@@ -713,18 +689,6 @@
         {
           "text": "Prefiero quedarme en casa.",
           "audioSlug": "prefiero_quedarme_en_casa"
-        }
-      ]
-    },
-    {
-      "id": "emociones_im_not_interested_in_soccer",
-      "source": "I'm not interested in soccer.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "No me interesa el fútbol.",
-          "audioSlug": "no_me_interesa_el_futbol"
         }
       ]
     },
@@ -833,6 +797,18 @@
         {
           "text": "Te voy a echar de menos.",
           "audioSlug": "te_voy_a_echar_de_menos"
+        }
+      ]
+    },
+    {
+      "id": "emociones_senti_una_gran_emocion",
+      "source": "I felt great emotion.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sentí una gran emoción.",
+          "audioSlug": "senti_una_gran_emocion"
         }
       ]
     }

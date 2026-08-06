@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "descripciones_soy_joven",
-      "source": "I am young.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Soy joven.",
-          "audioSlug": "soy_joven"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_dificil",
       "source": "It is difficult.",
       "level": "A2",
@@ -37,28 +25,6 @@
       ]
     },
     {
-      "id": "descripciones_es_muy_famoso",
-      "source": "He is very famous.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es muy famoso.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "es_muy_famoso"
-        },
-        {
-          "text": "Es muy famosa.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "es_muy_famosa"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_un_libro_antiguo",
       "source": "It is an old book.",
       "level": "A2",
@@ -67,84 +33,6 @@
         {
           "text": "Es un libro antiguo.",
           "audioSlug": "es_un_libro_antiguo"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_muy_guapo",
-      "source": "He is very handsome.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es muy guapo.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "es_muy_guapo"
-        },
-        {
-          "text": "Es muy guapa.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "es_muy_guapa"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_soy_vieja",
-      "source": "I am old.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Soy vieja.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "soy_vieja"
-        },
-        {
-          "text": "Soy viejo.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "soy_viejo"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_muy_rico",
-      "source": "He is very rich.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es muy rico.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "es_muy_rico"
-        },
-        {
-          "text": "Es muy rica.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "es_muy_rica"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_pobre",
-      "source": "He is poor.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es pobre.",
-          "audioSlug": "es_pobre"
         }
       ]
     },
@@ -191,18 +79,6 @@
         {
           "text": "Está lleno.",
           "audioSlug": "esta_lleno"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_eres_fuerte",
-      "source": "You are strong.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Eres fuerte.",
-          "audioSlug": "eres_fuerte"
         }
       ]
     },
@@ -761,18 +637,6 @@
         {
           "text": "Para mí es igual.",
           "audioSlug": "para_mi_es_igual"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_un_heroe_nacional",
-      "source": "He is a national hero.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un héroe nacional.",
-          "audioSlug": "es_un_heroe_nacional"
         }
       ]
     },

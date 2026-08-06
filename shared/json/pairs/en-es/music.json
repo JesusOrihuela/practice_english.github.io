@@ -515,6 +515,18 @@
           "audioSlug": "puedes_bajar_la_musica_por_favor"
         }
       ]
+    },
+    {
+      "id": "music_me_gusta_mucho_la_musica",
+      "source": "I really like music.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta mucho la música.",
+          "audioSlug": "me_gusta_mucho_la_musica"
+        }
+      ]
     }
   ]
 }

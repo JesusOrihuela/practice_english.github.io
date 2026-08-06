@@ -435,18 +435,6 @@
       ]
     },
     {
-      "id": "health_mi_bebe_va_a_nacer_pronto",
-      "source": "My baby will be born soon.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Mi bebé va a nacer pronto.",
-          "audioSlug": "mi_bebe_va_a_nacer_pronto"
-        }
-      ]
-    },
-    {
       "id": "health_es_una_enfermedad_grave",
       "source": "It is a serious illness.",
       "level": "B1",
@@ -647,6 +635,18 @@
         {
           "text": "El médico me va a curar.",
           "audioSlug": "el_medico_me_va_a_curar"
+        }
+      ]
+    },
+    {
+      "id": "health_hubo_un_accidente",
+      "source": "There was an accident.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hubo un accidente.",
+          "audioSlug": "hubo_un_accidente"
         }
       ]
     }
