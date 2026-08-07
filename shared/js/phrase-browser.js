@@ -14,12 +14,6 @@
 
 const PhraseBrowser = (() => {
 
-  /* Truncate a label to a max character count, breaking at word boundary */
-  function truncate(s, max) {
-    if (s.length <= max) return s;
-    return s.slice(0, max - 1).replace(/\s+\S*$/, '') + '\u2026';
-  }
-
   function show({ items, cardIds, topicLabel, pickerEl, traductions, cefrLevels, forms, onStart }) {
     const cards     = Progress.getAllCards();
     const total     = cardIds.length;
@@ -92,13 +86,15 @@ const PhraseBrowser = (() => {
           ? (typeof AppLang !== 'undefined' ? AppLang.t(_POS[item.category] || item.category) : item.category)
           : null;
       } else {
-        const raw = (traductions && traductions[i]) ? traductions[i] : item;
-        mainText = truncate(raw, 42);
+        // No JS truncation — the CSS ellipsis on .pb-chip-text cuts the label
+        // exactly where the chip actually runs out of width at each viewport.
+        mainText = (traductions && traductions[i]) ? traductions[i] : item;
         subText  = null;
       }
 
       const chip = document.createElement('button');
       chip.className = 'pb-chip' + (seen ? ' pb-chip--seen' : '');
+      chip.title = mainText;
       chip.setAttribute('role', 'listitem');
       chip.setAttribute('aria-label', AppLang.t(isWordList ? 'pb_word' : 'pb_phrase') + ' ' + (i + 1) + ': ' + mainText + (seen ? ' ' + AppLang.t('pb_learned') : ''));
 
