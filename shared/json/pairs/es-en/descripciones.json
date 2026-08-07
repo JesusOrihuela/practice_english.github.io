@@ -37,18 +37,6 @@
       ]
     },
     {
-      "id": "descripciones_this_house_is_old",
-      "source": "Esta casa es antigua.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "This house is old.",
-          "audioSlug": "this_house_is_old"
-        }
-      ]
-    },
-    {
       "id": "descripciones_the_cup_is_full",
       "source": "La taza está llena.",
       "level": "A1",
@@ -93,90 +81,6 @@
         {
           "text": "This is serious.",
           "audioSlug": "this_is_serious"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_her_house_is_very_modern",
-      "source": "Su casa es muy moderna.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Her house is very modern.",
-          "audioSlug": "her_house_is_very_modern"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_her_car_is_red",
-      "source": "Su auto es rojo.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Her car is red.",
-          "audioSlug": "her_car_is_red"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_his_shirt_is_blue",
-      "source": "Su camisa es azul.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "His shirt is blue.",
-          "audioSlug": "his_shirt_is_blue"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_road_is_long",
-      "source": "El camino es largo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The road is long.",
-          "audioSlug": "the_road_is_long"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_wall_is_very_high",
-      "source": "El muro es muy alto.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The wall is very high.",
-          "audioSlug": "the_wall_is_very_high"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_bridge_is_low",
-      "source": "El puente es bajo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The bridge is low.",
-          "audioSlug": "the_bridge_is_low"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_this_exam_is_hard",
-      "source": "Este examen es difícil.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "This exam is hard.",
-          "audioSlug": "this_exam_is_hard"
         }
       ]
     },
@@ -229,18 +133,6 @@
       ]
     },
     {
-      "id": "descripciones_the_water_is_deep",
-      "source": "El agua es profunda.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The water is deep.",
-          "audioSlug": "the_water_is_deep"
-        }
-      ]
-    },
-    {
       "id": "descripciones_the_story_is_true",
       "source": "La historia es verdadera.",
       "level": "A2",
@@ -261,30 +153,6 @@
         {
           "text": "Is this real?",
           "audioSlug": "is_this_real"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_room_is_clean",
-      "source": "El cuarto está limpio.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The room is clean.",
-          "audioSlug": "the_room_is_clean"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_room_is_dark",
-      "source": "El cuarto está oscuro.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The room is dark.",
-          "audioSlug": "the_room_is_dark"
         }
       ]
     },
@@ -349,42 +217,6 @@
       ]
     },
     {
-      "id": "descripciones_the_library_is_quiet",
-      "source": "La biblioteca está en silencio.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The library is quiet.",
-          "audioSlug": "the_library_is_quiet"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_this_phone_is_cheap",
-      "source": "Este teléfono es barato.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "This phone is cheap.",
-          "audioSlug": "this_phone_is_cheap"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_your_answer_is_wrong",
-      "source": "Tu respuesta es incorrecta.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Your answer is wrong.",
-          "audioSlug": "your_answer_is_wrong"
-        }
-      ]
-    },
-    {
       "id": "descripciones_i_am_ready",
       "source": "Estoy listo/a.",
       "level": "A1",
@@ -405,30 +237,6 @@
         {
           "text": "I am very busy.",
           "audioSlug": "i_am_very_busy"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_bus_is_slow",
-      "source": "El autobús es lento.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The bus is slow.",
-          "audioSlug": "the_bus_is_slow"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_bed_is_soft",
-      "source": "La cama es blanda.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The bed is soft.",
-          "audioSlug": "the_bed_is_soft"
         }
       ]
     },
@@ -457,18 +265,6 @@
       ]
     },
     {
-      "id": "descripciones_is_this_food_local",
-      "source": "¿Esta comida es local?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Is this food local?",
-          "audioSlug": "is_this_food_local"
-        }
-      ]
-    },
-    {
       "id": "descripciones_it_is_very_common",
       "source": "Es muy común.",
       "level": "A2",
@@ -477,30 +273,6 @@
         {
           "text": "It is very common.",
           "audioSlug": "it_is_very_common"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_work_is_complete",
-      "source": "El trabajo está completo.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The work is complete.",
-          "audioSlug": "the_work_is_complete"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_the_news_is_official",
-      "source": "La noticia es oficial.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "The news is official.",
-          "audioSlug": "the_news_is_official"
         }
       ]
     },
@@ -517,66 +289,6 @@
       ]
     },
     {
-      "id": "descripciones_it_is_an_average_result",
-      "source": "Es un resultado promedio.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It is an average result.",
-          "audioSlug": "it_is_an_average_result"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_is_this_legal",
-      "source": "¿Esto es legal?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Is this legal?",
-          "audioSlug": "is_this_legal"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_it_is_a_daily_activity",
-      "source": "Es una actividad diaria.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It is a daily activity.",
-          "audioSlug": "it_is_a_daily_activity"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_it_has_a_central_location",
-      "source": "Tiene una ubicación central.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It has a central location.",
-          "audioSlug": "it_has_a_central_location"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_it_is_a_public_place",
-      "source": "Es un lugar público.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It is a public place.",
-          "audioSlug": "it_is_a_public_place"
-        }
-      ]
-    },
-    {
       "id": "descripciones_is_it_private",
       "source": "¿Es privado?",
       "level": "A2",
@@ -589,18 +301,6 @@
       ]
     },
     {
-      "id": "descripciones_it_is_for_personal_reasons",
-      "source": "Es por razones personales.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It is for personal reasons.",
-          "audioSlug": "it_is_for_personal_reasons"
-        }
-      ]
-    },
-    {
       "id": "descripciones_this_is_very_special",
       "source": "Esto es muy especial.",
       "level": "A2",
@@ -609,18 +309,6 @@
         {
           "text": "This is very special.",
           "audioSlug": "this_is_very_special"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_my_answer_is_final",
-      "source": "Mi respuesta es definitiva.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "My answer is final.",
-          "audioSlug": "my_answer_is_final"
         }
       ]
     },

@@ -774,6 +774,10 @@ body.path-mode {
 .img-topic-card[data-theme="profesiones"]         { --topic-clr: #B45309; }
 .img-topic-card[data-theme="describiendo_personas"] { --topic-clr: #DB2777; }
 .img-topic-card[data-theme="sitios"]              { --topic-clr: #059669; }
+.img-topic-card[data-theme="vestimenta"]  { --topic-clr: #C026D3; }
+.img-topic-card[data-theme="hogar"]       { --topic-clr: #D97706; }
+.img-topic-card[data-theme="calendario"]  { --topic-clr: #6366F1; }
+.img-topic-card[data-theme="emergencias"] { --topic-clr: #EF4444; }
 .img-topic-card[data-theme="cotidianidad"]        { --topic-clr: #0284C7; }
 .img-topic-card[data-theme="pensamientos_opiniones"] { --topic-clr: #7C3AED; }
 .img-topic-card[data-theme="viajes"]              { --topic-clr: #0D9488; }

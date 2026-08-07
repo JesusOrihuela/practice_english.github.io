@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "emergencias_i_lost_my_passport",
+      "source": "Perdí mi pasaporte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I lost my passport.",
+          "audioSlug": "i_lost_my_passport"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_can_you_call_the_police",
+      "source": "¿Puede llamar a la policía?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can you call the police?",
+          "audioSlug": "can_you_call_the_police"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_i_can_t_find_my_phone",
+      "source": "No encuentro mi teléfono.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I can't find my phone.",
+          "audioSlug": "i_can_t_find_my_phone"
+        }
+      ]
+    }
+  ]
+}

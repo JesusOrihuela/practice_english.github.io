@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "economia_i_need_a_new_job",
-      "source": "Necesito un nuevo trabajo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I need a new job.",
-          "audioSlug": "i_need_a_new_job"
-        }
-      ]
-    },
-    {
       "id": "economia_i_have_no_money",
       "source": "No tengo dinero.",
       "level": "A1",
@@ -33,18 +21,6 @@
         {
           "text": "Business is slow.",
           "audioSlug": "business_is_slow"
-        }
-      ]
-    },
-    {
-      "id": "economia_i_love_my_career",
-      "source": "Amo mi carrera.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I love my career.",
-          "audioSlug": "i_love_my_career"
         }
       ]
     },
@@ -73,18 +49,6 @@
       ]
     },
     {
-      "id": "economia_i_went_to_the_market",
-      "source": "Fui al mercado.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I went to the market.",
-          "audioSlug": "i_went_to_the_market"
-        }
-      ]
-    },
-    {
       "id": "economia_we_have_free_trade",
       "source": "Tenemos libre comercio.",
       "level": "B1",
@@ -105,18 +69,6 @@
         {
           "text": "Economic growth is slow.",
           "audioSlug": "economic_growth_is_slow"
-        }
-      ]
-    },
-    {
-      "id": "economia_i_have_an_interview_today",
-      "source": "Tengo una entrevista hoy.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I have an interview today.",
-          "audioSlug": "i_have_an_interview_today"
         }
       ]
     },
@@ -189,6 +141,18 @@
         {
           "text": "Can you estimate the cost?",
           "audioSlug": "can_you_estimate_the_cost"
+        }
+      ]
+    },
+    {
+      "id": "economia_it_is_important_to_consider_the_new_market_trends",
+      "source": "Es importante considerar las nuevas tendencias del mercado.",
+      "level": "B1",
+      "grammar": "'It is + adjective + to-infinitive' is an impersonal way to make a recommendation.",
+      "target": [
+        {
+          "text": "It is important to consider the new market trends.",
+          "audioSlug": "it_is_important_to_consider_the_new_market_trends"
         }
       ]
     }

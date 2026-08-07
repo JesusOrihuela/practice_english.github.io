@@ -1189,6 +1189,18 @@
           "audioSlug": "can_you_help_me_install_this_app"
         }
       ]
+    },
+    {
+      "id": "technology_this_phone_is_cheap",
+      "source": "Este teléfono es barato.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This phone is cheap.",
+          "audioSlug": "this_phone_is_cheap"
+        }
+      ]
     }
   ]
 }

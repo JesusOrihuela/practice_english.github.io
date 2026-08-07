@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "calendario_what_time_is_it",
+      "source": "¿Qué hora es?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What time is it?",
+          "audioSlug": "what_time_is_it"
+        }
+      ]
+    },
+    {
+      "id": "calendario_today_is_monday",
+      "source": "Hoy es lunes.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Today is Monday.",
+          "audioSlug": "today_is_monday"
+        }
+      ]
+    },
+    {
+      "id": "calendario_what_day_is_it_today",
+      "source": "¿Qué día es hoy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What day is it today?",
+          "audioSlug": "what_day_is_it_today"
+        }
+      ]
+    }
+  ]
+}

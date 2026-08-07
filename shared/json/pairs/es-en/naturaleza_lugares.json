@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "naturaleza_lugares_i_love_my_country",
-      "source": "Amo mi país.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I love my country.",
-          "audioSlug": "i_love_my_country"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_what_a_tall_mountain",
       "source": "¡Qué montaña tan alta!",
       "level": "A1",
@@ -21,18 +9,6 @@
         {
           "text": "What a tall mountain!",
           "audioSlug": "what_a_tall_mountain"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_i_ran_around_the_field",
-      "source": "Corrí por el campo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I ran around the field.",
-          "audioSlug": "i_ran_around_the_field"
         }
       ]
     },
@@ -273,6 +249,18 @@
         {
           "text": "These flowers are natural.",
           "audioSlug": "these_flowers_are_natural"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_the_water_is_deep",
+      "source": "El agua es profunda.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The water is deep.",
+          "audioSlug": "the_water_is_deep"
         }
       ]
     }

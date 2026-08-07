@@ -739,6 +739,18 @@
           "audioSlug": "can_i_pay_in_cash"
         }
       ]
+    },
+    {
+      "id": "supermarket_i_went_to_the_market",
+      "source": "Fui al mercado.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I went to the market.",
+          "audioSlug": "i_went_to_the_market"
+        }
+      ]
     }
   ]
 }

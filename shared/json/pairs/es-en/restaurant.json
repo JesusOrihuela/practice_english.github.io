@@ -1129,6 +1129,30 @@
           "audioSlug": "how_much_is_it_all_together"
         }
       ]
+    },
+    {
+      "id": "restaurant_is_this_food_local",
+      "source": "¿Esta comida es local?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is this food local?",
+          "audioSlug": "is_this_food_local"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_i_prefer_coffee",
+      "source": "Prefiero café.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I prefer coffee.",
+          "audioSlug": "i_prefer_coffee"
+        }
+      ]
     }
   ]
 }

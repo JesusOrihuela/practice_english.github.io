@@ -35,6 +35,30 @@
           "audioSlug": "it_was_a_long_campaign"
         }
       ]
+    },
+    {
+      "id": "politica_is_this_legal",
+      "source": "¿Esto es legal?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is this legal?",
+          "audioSlug": "is_this_legal"
+        }
+      ]
+    },
+    {
+      "id": "politica_i_want_to_apply",
+      "source": "Quiero postularme.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I want to apply.",
+          "audioSlug": "i_want_to_apply"
+        }
+      ]
     }
   ]
 }

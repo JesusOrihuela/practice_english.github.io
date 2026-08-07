@@ -35,6 +35,30 @@
           "audioSlug": "i_am_late"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_i_need_to_go_to_the_bathroom",
+      "source": "Necesito ir al baño.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to go to the bathroom.",
+          "audioSlug": "i_need_to_go_to_the_bathroom"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_it_s_late_i_have_to_go",
+      "source": "Es tarde, tengo que irme.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It's late, I have to go.",
+          "audioSlug": "it_s_late_i_have_to_go"
+        }
+      ]
     }
   ]
 }

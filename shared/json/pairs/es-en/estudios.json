@@ -35,6 +35,54 @@
           "audioSlug": "she_does_research"
         }
       ]
+    },
+    {
+      "id": "estudios_i_study_at_the_university",
+      "source": "Estudio en la universidad.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I study at the university.",
+          "audioSlug": "i_study_at_the_university"
+        }
+      ]
+    },
+    {
+      "id": "estudios_this_exam_is_hard",
+      "source": "Este examen es difícil.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This exam is hard.",
+          "audioSlug": "this_exam_is_hard"
+        }
+      ]
+    },
+    {
+      "id": "estudios_your_answer_is_wrong",
+      "source": "Tu respuesta es incorrecta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Your answer is wrong.",
+          "audioSlug": "your_answer_is_wrong"
+        }
+      ]
+    },
+    {
+      "id": "estudios_the_library_is_quiet",
+      "source": "La biblioteca está en silencio.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The library is quiet.",
+          "audioSlug": "the_library_is_quiet"
+        }
+      ]
     }
   ]
 }

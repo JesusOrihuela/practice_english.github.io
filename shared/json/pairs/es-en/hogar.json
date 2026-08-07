@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "hogar_the_room_is_clean",
+      "source": "El cuarto está limpio.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The room is clean.",
+          "audioSlug": "the_room_is_clean"
+        }
+      ]
+    },
+    {
+      "id": "hogar_the_room_is_dark",
+      "source": "El cuarto está oscuro.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The room is dark.",
+          "audioSlug": "the_room_is_dark"
+        }
+      ]
+    },
+    {
+      "id": "hogar_the_bed_is_soft",
+      "source": "La cama es blanda.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The bed is soft.",
+          "audioSlug": "the_bed_is_soft"
+        }
+      ]
+    }
+  ]
+}

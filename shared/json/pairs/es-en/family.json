@@ -181,18 +181,6 @@
       ]
     },
     {
-      "id": "family_looks_like_father",
-      "source": "Se parece a su padre.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "He looks like his father.",
-          "audioSlug": "he_looks_like_his_father"
-        }
-      ]
-    },
-    {
       "id": "family_live_with_partner",
       "source": "Vivo con mi pareja.",
       "level": "A2",
@@ -421,18 +409,6 @@
       ]
     },
     {
-      "id": "family_her_husband_is_tall",
-      "source": "Su esposo es alto.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Her husband is tall.",
-          "audioSlug": "her_husband_is_tall"
-        }
-      ]
-    },
-    {
       "id": "family_they_are_a_nice_couple",
       "source": "Son una linda pareja.",
       "level": "A2",
@@ -441,18 +417,6 @@
         {
           "text": "They are a nice couple.",
           "audioSlug": "they_are_a_nice_couple"
-        }
-      ]
-    },
-    {
-      "id": "family_he_is_an_adult_now",
-      "source": "Ahora es un adulto.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "He is an adult now.",
-          "audioSlug": "he_is_an_adult_now"
         }
       ]
     },
@@ -513,6 +477,18 @@
         {
           "text": "My grandfather died last year.",
           "audioSlug": "my_grandfather_died_last_year"
+        }
+      ]
+    },
+    {
+      "id": "family_do_you_have_any_children",
+      "source": "¿Tienes hijos?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have any children?",
+          "audioSlug": "do_you_have_any_children"
         }
       ]
     }

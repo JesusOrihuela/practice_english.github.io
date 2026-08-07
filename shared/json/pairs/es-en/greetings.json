@@ -659,40 +659,6 @@
       ]
     },
     {
-      "id": "greetings_whats_on_your_mind",
-      "source": "¿Qué te preocupa?",
-      "level": "A2",
-      "grammar": "'What's on your mind?' is an idiom for 'What are you thinking about?'",
-      "target": [
-        {
-          "text": "What's on your mind?",
-          "audioSlug": "what_s_on_your_mind"
-        }
-      ]
-    },
-    {
-      "id": "greetings_is_there_anything_i_can_do",
-      "source": "¿Hay algo que pueda hacer por ti?",
-      "level": "A2",
-      "grammar": "A polite offer of help; 'Can I help you?' is the less formal version.",
-      "target": [
-        {
-          "text": "Is there anything I can do for you?",
-          "audioSlug": "is_there_anything_i_can_do_for_you",
-          "labels": {
-            "register": "formal"
-          }
-        },
-        {
-          "text": "Can I do anything for you?",
-          "audioSlug": "can_i_do_anything_for_you",
-          "labels": {
-            "register": "informal"
-          }
-        }
-      ]
-    },
-    {
       "id": "greetings_introduce_myself_account_manager",
       "source": "Me gustaría presentarme. Soy la nueva gerente de cuentas para su región.",
       "level": "B2",
@@ -766,7 +732,7 @@
     },
     {
       "id": "greetings_dont_believe_formally_introduced",
-      "source": "Reconoces a alguien en una recepción formal, pero nadie los presentó. Tomas la iniciativa.",
+      "source": "No creo que nos hayan presentado formalmente. Estoy aquí en representación de la delegación europea.",
       "level": "C1",
       "grammar": "'I don't believe we've been formally introduced' is a polished opener in formal settings.",
       "target": [
@@ -814,7 +780,7 @@
     },
     {
       "id": "greetings_dont_think_weve_met",
-      "source": "Conoces a alguien nuevo y te presentas por tu nombre.",
+      "source": "Creo que no nos conocemos. Soy Alex.",
       "level": "B1",
       "grammar": null,
       "target": [
@@ -934,7 +900,7 @@
     },
     {
       "id": "greetings_mutual_acquaintance_conference",
-      "source": "Crees que ambos conocen a la misma persona y lo comentas.",
+      "source": "Creo que tenemos un conocido en común. Conoces a Alex de la conferencia, ¿cierto?",
       "level": "C1",
       "grammar": null,
       "target": [
@@ -1129,6 +1095,18 @@
         {
           "text": "See you on Friday.",
           "audioSlug": "see_you_on_friday"
+        }
+      ]
+    },
+    {
+      "id": "greetings_this_is_my_friend_ana",
+      "source": "Te presento a mi amiga Ana.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is my friend Ana.",
+          "audioSlug": "this_is_my_friend_ana"
         }
       ]
     }

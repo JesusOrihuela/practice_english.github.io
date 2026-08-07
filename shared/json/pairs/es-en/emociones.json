@@ -313,18 +313,6 @@
       ]
     },
     {
-      "id": "emociones_how_do_you_feel",
-      "source": "¿Cómo te sientes?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "How do you feel?",
-          "audioSlug": "how_do_you_feel"
-        }
-      ]
-    },
-    {
       "id": "emociones_i_feel_fine",
       "source": "Me siento bien.",
       "level": "A1",
@@ -417,6 +405,30 @@
         {
           "text": "I have no fear.",
           "audioSlug": "i_have_no_fear"
+        }
+      ]
+    },
+    {
+      "id": "emociones_please_remain_calm",
+      "source": "Mantén la calma, por favor.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Please remain calm.",
+          "audioSlug": "please_remain_calm"
+        }
+      ]
+    },
+    {
+      "id": "emociones_don_t_be_afraid_to_fail",
+      "source": "No tengas miedo de fallar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Don't be afraid to fail.",
+          "audioSlug": "don_t_be_afraid_to_fail"
         }
       ]
     }

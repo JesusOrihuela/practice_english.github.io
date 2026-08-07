@@ -45,18 +45,6 @@
       ]
     },
     {
-      "id": "oficina_it_is_important_to_consider_the_new_market_trends",
-      "source": "Es importante considerar las nuevas tendencias del mercado.",
-      "level": "B1",
-      "grammar": "'It is + adjective + to-infinitive' is an impersonal way to make a recommendation.",
-      "target": [
-        {
-          "text": "It is important to consider the new market trends.",
-          "audioSlug": "it_is_important_to_consider_the_new_market_trends"
-        }
-      ]
-    },
-    {
       "id": "oficina_we_have_a_new_client",
       "source": "Tenemos un nuevo cliente.",
       "level": "A2",
@@ -75,18 +63,6 @@
           "labels": {
             "register": "informal"
           }
-        }
-      ]
-    },
-    {
-      "id": "oficina_i_work_every_day",
-      "source": "Trabajo todos los días.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I work every day.",
-          "audioSlug": "i_work_every_day"
         }
       ]
     },
@@ -135,6 +111,54 @@
         {
           "text": "I will attend the meeting.",
           "audioSlug": "i_will_attend_the_meeting"
+        }
+      ]
+    },
+    {
+      "id": "oficina_the_work_is_complete",
+      "source": "El trabajo está completo.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The work is complete.",
+          "audioSlug": "the_work_is_complete"
+        }
+      ]
+    },
+    {
+      "id": "oficina_i_have_an_interview_today",
+      "source": "Tengo una entrevista hoy.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have an interview today.",
+          "audioSlug": "i_have_an_interview_today"
+        }
+      ]
+    },
+    {
+      "id": "oficina_i_need_a_new_job",
+      "source": "Necesito un nuevo trabajo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need a new job.",
+          "audioSlug": "i_need_a_new_job"
+        }
+      ]
+    },
+    {
+      "id": "oficina_i_work_from_monday_to_friday",
+      "source": "Trabajo de lunes a viernes.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I work from Monday to Friday.",
+          "audioSlug": "i_work_from_monday_to_friday"
         }
       ]
     }

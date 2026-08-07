@@ -169,18 +169,6 @@
       ]
     },
     {
-      "id": "conversacion_please_smile",
-      "source": "Sonríe, por favor.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Please smile.",
-          "audioSlug": "please_smile"
-        }
-      ]
-    },
-    {
       "id": "conversacion_i_believe_you",
       "source": "Te creo.",
       "level": "A2",
@@ -405,6 +393,64 @@
         {
           "text": "I respect you.",
           "audioSlug": "i_respect_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_what_s_on_your_mind",
+      "source": "¿Qué te preocupa?",
+      "level": "A2",
+      "grammar": "'What's on your mind?' is an idiom for 'What are you thinking about?'",
+      "target": [
+        {
+          "text": "What's on your mind?",
+          "audioSlug": "what_s_on_your_mind"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_is_there_anything_i_can_do_for_you",
+      "source": "¿Hay algo que pueda hacer por ti?",
+      "level": "A2",
+      "grammar": "A polite offer of help; 'Can I help you?' is the less formal version.",
+      "target": [
+        {
+          "text": "Is there anything I can do for you?",
+          "audioSlug": "is_there_anything_i_can_do_for_you",
+          "labels": {
+            "register": "formal"
+          }
+        },
+        {
+          "text": "Can I do anything for you?",
+          "audioSlug": "can_i_do_anything_for_you",
+          "labels": {
+            "register": "informal"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_need_your_help",
+      "source": "Necesito tu ayuda.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need your help.",
+          "audioSlug": "i_need_your_help"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_want_to_encourage_you",
+      "source": "Quiero animarte.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I want to encourage you.",
+          "audioSlug": "i_want_to_encourage_you"
         }
       ]
     }

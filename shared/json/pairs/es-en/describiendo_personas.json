@@ -227,6 +227,42 @@
           "audioSlug": "she_is_a_famous_model"
         }
       ]
+    },
+    {
+      "id": "describiendo_personas_her_husband_is_tall",
+      "source": "Su esposo es alto.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Her husband is tall.",
+          "audioSlug": "her_husband_is_tall"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_he_is_an_adult_now",
+      "source": "Ahora es un adulto.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He is an adult now.",
+          "audioSlug": "he_is_an_adult_now"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_he_looks_like_his_father",
+      "source": "Se parece a su padre.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He looks like his father.",
+          "audioSlug": "he_looks_like_his_father"
+        }
+      ]
     }
   ]
 }

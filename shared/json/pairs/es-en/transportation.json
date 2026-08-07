@@ -535,6 +535,42 @@
           "audioSlug": "i_drive_to_work"
         }
       ]
+    },
+    {
+      "id": "transportation_where_can_i_buy_a_ticket",
+      "source": "¿Dónde puedo comprar un boleto?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where can I buy a ticket?",
+          "audioSlug": "where_can_i_buy_a_ticket"
+        }
+      ]
+    },
+    {
+      "id": "transportation_the_bus_is_slow",
+      "source": "El autobús es lento.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The bus is slow.",
+          "audioSlug": "the_bus_is_slow"
+        }
+      ]
+    },
+    {
+      "id": "transportation_her_car_is_red",
+      "source": "Su auto es rojo.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Her car is red.",
+          "audioSlug": "her_car_is_red"
+        }
+      ]
     }
   ]
 }

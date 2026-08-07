@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "daily_what_time_is_it",
-      "source": "¿Qué hora es?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "What time is it?",
-          "audioSlug": "what_time_is_it"
-        }
-      ]
-    },
-    {
       "id": "daily_what_time_get_up",
       "source": "¿A qué hora te levantas?",
       "level": "A1",
@@ -121,30 +109,6 @@
       ]
     },
     {
-      "id": "daily_today_is_monday",
-      "source": "Hoy es lunes.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Today is Monday.",
-          "audioSlug": "today_is_monday"
-        }
-      ]
-    },
-    {
-      "id": "daily_work_monday_to_friday",
-      "source": "Trabajo de lunes a viernes.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I work from Monday to Friday.",
-          "audioSlug": "i_work_from_monday_to_friday"
-        }
-      ]
-    },
-    {
       "id": "daily_morning_go_to_gym",
       "source": "Por la mañana voy al gimnasio.",
       "level": "A1",
@@ -201,30 +165,6 @@
         {
           "text": "I usually have coffee in the morning.",
           "audioSlug": "i_usually_have_coffee_in_the_morning"
-        }
-      ]
-    },
-    {
-      "id": "daily_what_day_today",
-      "source": "¿Qué día es hoy?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "What day is it today?",
-          "audioSlug": "what_day_is_it_today"
-        }
-      ]
-    },
-    {
-      "id": "daily_its_late_i_go",
-      "source": "Es tarde, tengo que irme.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It's late, I have to go.",
-          "audioSlug": "it_s_late_i_have_to_go"
         }
       ]
     },
@@ -297,18 +237,6 @@
         {
           "text": "I watch television at night.",
           "audioSlug": "i_watch_television_at_night"
-        }
-      ]
-    },
-    {
-      "id": "daily_routine_i_run_in_the_park",
-      "source": "Corro en el parque por las mañanas.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I run in the park in the mornings.",
-          "audioSlug": "i_run_in_the_park_in_the_mornings"
         }
       ]
     },
