@@ -2,14 +2,22 @@
    progress.css — Progress Dashboard
    ============================================================ */
 
+/* Standard page container (--max-w + 24px gutters); content keeps a
+   readable 800px column via the child cap below. */
 .progress-page {
   width: 100%;
-  max-width: 800px;
+  max-width: var(--max-w);
   padding: 36px 24px 72px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 36px;
   flex: 1;
+}
+
+.progress-page > * {
+  width: 100%;
+  max-width: 800px;
 }
 
 /* ---- Page Header ---- */

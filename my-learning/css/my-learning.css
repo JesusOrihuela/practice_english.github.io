@@ -2,14 +2,23 @@
    my-learning.css — My Learning Path page
    ============================================================ */
 
+/* Standard page container (--max-w + 24px gutters, same as the landing
+   page and topic pickers); the content itself keeps a readable 700px
+   column via the child cap below. */
 .ml-page {
   width: 100%;
-  max-width: 700px;
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 32px 20px 64px;
+  padding: 32px 24px 64px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 24px;
+}
+
+.ml-page > * {
+  width: 100%;
+  max-width: 700px;
 }
 
 /* ── Header ── */

@@ -834,9 +834,10 @@ body.path-mode {
 }
 
 /* ---- Phrase Browser ---- */
+/* Fills the standard page container (--max-w + 24px gutters) so the
+   two-column chip grid gets wide, readable columns like the topic grid. */
 .pb-section {
   width: 100%;
-  max-width: 720px;
   margin: 0 auto;
   padding: 0 0 2rem;
   animation: pb-fade-in 0.18s ease;
@@ -902,7 +903,9 @@ body.path-mode {
   margin-bottom: 24px;
 }
 
-@media (max-width: 480px) {
+/* Below ~700px two columns would truncate phrases again — switch to one
+   full-width column instead of showing cut-off text. */
+@media (max-width: 700px) {
   .pb-grid { grid-template-columns: 1fr; }
 }
 
@@ -1000,10 +1003,14 @@ body.path-mode {
 .pb-chip-cov {
   display: inline-flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 4px;
   flex-shrink: 0;
   order: 4;
   padding-left: 4px;
+  /* Fixed slot for up to 3 pips so the CEFR badge column stays aligned
+     across chips regardless of how many variant pips each phrase has. */
+  min-width: 32px;
 }
 .pb-cov-pip {
   width: 8px;
