@@ -226,5 +226,32 @@ const AppFeedback = (() => {
     return frag;
   }
 
-  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote };
+  /**
+   * Show/refresh a small badge stating the grammatical gender of the form
+   * currently displayed (multi-gender target languages: es, sl, ...). Driven
+   * purely by form.labels.gender — no branching by language code, so any
+   * future gendered target works automatically. Removes the badge when the
+   * active form carries no gender label.
+   */
+  function applyVariantBadge(containerId, form) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    let badge = container.querySelector('.gender-phrase-badge');
+    const gender = form && form.labels && form.labels.gender;
+    if (!gender) { if (badge) badge.remove(); return; }
+    if (!badge) {
+      badge = document.createElement('span');
+      badge.className = 'gender-phrase-badge';
+      container.style.position = 'relative';
+      container.appendChild(badge);
+    }
+    const key = gender === 'masculino' ? 'alt_note_gender_m'
+              : gender === 'femenino'  ? 'alt_note_gender_f'
+              : gender === 'neutro'    ? 'alt_note_gender_n' : null;
+    const label = key ? t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
+    const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
+    badge.textContent = sym + label;
+  }
+
+  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge };
 })();

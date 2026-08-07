@@ -24,6 +24,7 @@ function _equivalentMatch(guess, answer) {
 let currentTopic = '';
 let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [];
 let _activeAudioSlug = '';   // audioSlug of the picked form for this round
+let _activePickedForm = null; // picked form object (labels drive the gender badge)
 let currentIndex = 0;
 let currentBlank = null;  // { blank, blankClean, blankedPhrase, fullPhrase }
 let answered = false;
@@ -235,6 +236,7 @@ function showPhrase(startIndex) {
     currentBlank  = selectBlankWord(_picked.text);
     if (currentBlank) {
       _activeAudioSlug = _picked.audioSlug;
+      _activePickedForm = _picked;
     } else {
       currentIndex = (currentIndex + 1) % cardIds.length;
     }
@@ -267,6 +269,7 @@ function showPhrase(startIndex) {
   document.getElementById('phrase-card').className        = 'phrase-card';
 
   _showCefrBadge(cefrLevels[currentIndex], 'phrase-card');
+  AppFeedback.applyVariantBadge('phrase-card', _activePickedForm);
   document.getElementById('cloze-input')?.focus();
 }
 

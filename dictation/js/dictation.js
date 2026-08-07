@@ -211,6 +211,7 @@ function loadPhrase(index, keepPicked = false) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (wrap) wrap.classList.add('hidden');
   _showCefrBadge(cefrLevels[index], 'audio-controls');
+  AppFeedback.applyVariantBadge('audio-controls', _activePicked);
 }
 
 function _showCefrBadge(level, containerId) {

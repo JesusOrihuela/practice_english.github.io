@@ -1375,3 +1375,21 @@ body.path-mode {
   pointer-events: none;
 }
 
+/* Gender-of-the-shown-variant badge (multi-gender targets) — floats
+   top-left, mirroring the CEFR badge on the right */
+.gender-phrase-badge {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  pointer-events: none;
+  user-select: none;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.4;
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text-muted);
+}
+

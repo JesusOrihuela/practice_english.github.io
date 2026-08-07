@@ -254,6 +254,7 @@ function showPhrase(index) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (wrap) wrap.classList.add('hidden');
   _showCefrBadge(cefrLevels[index], 'phrase-card');
+  AppFeedback.applyVariantBadge('phrase-card', _activePicked);
   resetAttempt();
 }
 

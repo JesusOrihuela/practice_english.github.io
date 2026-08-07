@@ -254,6 +254,7 @@ function showPhrase(index) {
   document.getElementById('clear-btn').disabled = false;
 
   _showCefrBadge(cefrLevels[index], 'hint-card');
+  AppFeedback.applyVariantBadge('hint-card', _activeForm);
   renderTiles();
   const firstTile = document.querySelector('#word-bank .word-tile');
   if (firstTile) firstTile.focus();
