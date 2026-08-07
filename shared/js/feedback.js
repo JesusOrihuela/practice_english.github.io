@@ -248,7 +248,7 @@ const AppFeedback = (() => {
     const key = gender === 'masculino' ? 'alt_note_gender_m'
               : gender === 'femenino'  ? 'alt_note_gender_f'
               : gender === 'neutro'    ? 'alt_note_gender_n' : null;
-    const label = key ? t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
+    const label = key ? AppLang.t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
     const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
     badge.textContent = sym + label;
   }
