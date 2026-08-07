@@ -289,18 +289,6 @@
       ]
     },
     {
-      "id": "conversacion_a_veces_es_mejor_callar",
-      "source": "Sometimes it is better to keep quiet.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "A veces es mejor callar.",
-          "audioSlug": "a_veces_es_mejor_callar"
-        }
-      ]
-    },
-    {
       "id": "conversacion_me_refiero_a_esto",
       "source": "I am referring to this.",
       "level": "B1",
@@ -337,30 +325,6 @@
       ]
     },
     {
-      "id": "conversacion_me_hace_reir",
-      "source": "It makes me laugh.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me hace reír.",
-          "audioSlug": "me_hace_reir"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_siempre_sonrie",
-      "source": "She always smiles.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Siempre sonríe.",
-          "audioSlug": "siempre_sonrie"
-        }
-      ]
-    },
-    {
       "id": "conversacion_necesito_silencio",
       "source": "I need silence.",
       "level": "A2",
@@ -369,6 +333,18 @@
         {
           "text": "Necesito silencio.",
           "audioSlug": "necesito_silencio"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dime_la_verdad",
+      "source": "Tell me the truth.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Dime la verdad.",
+          "audioSlug": "dime_la_verdad"
         }
       ]
     }

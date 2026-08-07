@@ -83,6 +83,42 @@
           "audioSlug": "el_es_mi_jefe"
         }
       ]
+    },
+    {
+      "id": "oficina_trabajo_para_una_organizacion",
+      "source": "I work for an organization.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo para una organización.",
+          "audioSlug": "trabajo_para_una_organizacion"
+        }
+      ]
+    },
+    {
+      "id": "oficina_trabajo_en_este_sector",
+      "source": "I work in this sector.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo en este sector.",
+          "audioSlug": "trabajo_en_este_sector"
+        }
+      ]
+    },
+    {
+      "id": "oficina_como_fue_la_entrevista",
+      "source": "How did the interview go?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo fue la entrevista?",
+          "audioSlug": "como_fue_la_entrevista"
+        }
+      ]
     }
   ]
 }

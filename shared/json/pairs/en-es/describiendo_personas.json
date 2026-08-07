@@ -219,6 +219,54 @@
           "audioSlug": "es_un_heroe_nacional"
         }
       ]
+    },
+    {
+      "id": "describiendo_personas_mi_vecino_es_muy_simpatico",
+      "source": "My neighbor is very nice.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi vecino es muy simpático.",
+          "audioSlug": "mi_vecino_es_muy_simpatico"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_tiene_una_voz_bonita",
+      "source": "She has a nice voice.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tiene una voz bonita.",
+          "audioSlug": "tiene_una_voz_bonita"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_siempre_sonrie",
+      "source": "She always smiles.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siempre sonríe.",
+          "audioSlug": "siempre_sonrie"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_tiene_mucho_caracter",
+      "source": "He has a strong character.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tiene mucho carácter.",
+          "audioSlug": "tiene_mucho_caracter"
+        }
+      ]
     }
   ]
 }

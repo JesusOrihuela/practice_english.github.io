@@ -54,7 +54,6 @@ const AppTopics = (() => {
     { id: 'technology',             label: 'Tecnología',                 labelEn: 'Technology',                 emoji: '💻', phrase: true,  vocab: true, level: 'B1', order: 35 },
     { id: 'gym',                    label: 'Gimnasio',                   labelEn: 'Gym',                        emoji: '💪', phrase: true,  vocab: true, level: 'B1', order: 36 },
     { id: 'theater',                label: 'Teatro',                     labelEn: 'Theater',                    emoji: '🎭', phrase: true,  vocab: true, level: 'B1', order: 37 },
-    { id: 'conceptos',              label: 'Ideas y conceptos',          labelEn: 'Ideas & Concepts',           emoji: '💭', phrase: true,  vocab: false, level: 'B1', order: 38 },
     { id: 'accountability',         label: 'Contabilidad',               labelEn: 'Accounting',                 emoji: '📊', phrase: true,  vocab: true, level: 'B2', order: 39 },
     { id: 'general',             label: 'Conceptos',            labelEn: 'Concepts',                emoji: '💡', phrase: false, vocab: true, vocabOrder: 0 },
     { id: 'verbos_basicos',      label: 'Verbos Básicos',       labelEn: 'Basic Verbs',             emoji: '🏃', phrase: false, vocab: true, vocabOrder: 1 },

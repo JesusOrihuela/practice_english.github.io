@@ -59,6 +59,18 @@
           "audioSlug": "es_una_especie_rara"
         }
       ]
+    },
+    {
+      "id": "animales_el_gato_es_negro",
+      "source": "The cat is black.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El gato es negro.",
+          "audioSlug": "el_gato_es_negro"
+        }
+      ]
     }
   ]
 }

@@ -193,18 +193,6 @@
       ]
     },
     {
-      "id": "family_neighbor_nice",
-      "source": "My neighbor is very nice.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Mi vecino es muy simpático.",
-          "audioSlug": "mi_vecino_es_muy_simpatico"
-        }
-      ]
-    },
-    {
       "id": "family_live_with_partner",
       "source": "I live with my partner.",
       "level": "A2",
@@ -419,18 +407,6 @@
       ]
     },
     {
-      "id": "family_hay_un_nino_en_el_parque",
-      "source": "There is a boy in the park.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Hay un niño en el parque.",
-          "audioSlug": "hay_un_nino_en_el_parque"
-        }
-      ]
-    },
-    {
       "id": "family_es_mi_companero_de_clase",
       "source": "He is my classmate.",
       "level": "A2",
@@ -501,18 +477,6 @@
       ]
     },
     {
-      "id": "family_soy_miembro_del_equipo",
-      "source": "I am a member of the team.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Soy miembro del equipo.",
-          "audioSlug": "soy_miembro_del_equipo"
-        }
-      ]
-    },
-    {
       "id": "family_hacen_una_linda_pareja",
       "source": "They make a lovely couple.",
       "level": "A2",
@@ -569,6 +533,18 @@
         {
           "text": "Mi bebé va a nacer pronto.",
           "audioSlug": "mi_bebe_va_a_nacer_pronto"
+        }
+      ]
+    },
+    {
+      "id": "family_mi_abuela_murio_el_ano_pasado",
+      "source": "My grandmother died last year.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi abuela murió el año pasado.",
+          "audioSlug": "mi_abuela_murio_el_ano_pasado"
         }
       ]
     }

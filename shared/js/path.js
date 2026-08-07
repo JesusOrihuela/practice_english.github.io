@@ -62,7 +62,6 @@ const AppPath = (() => {
     { id: 'technology',             level: 'B1', emoji: '💻', label: 'Tecnología',                 labelEn: 'Technology',                 order: 35 },
     { id: 'gym',                    level: 'B1', emoji: '💪', label: 'Gimnasio',                   labelEn: 'Gym',                        order: 36 },
     { id: 'theater',                level: 'B1', emoji: '🎭', label: 'Teatro',                     labelEn: 'Theater',                    order: 37 },
-    { id: 'conceptos',              level: 'B1', emoji: '💭', label: 'Ideas y conceptos',          labelEn: 'Ideas & Concepts',           order: 38 },
     { id: 'accountability',         level: 'B2', emoji: '📊', label: 'Contabilidad',               labelEn: 'Accounting',                 order: 39 },
   ];
 

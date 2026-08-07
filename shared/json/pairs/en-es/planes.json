@@ -49,42 +49,6 @@
       ]
     },
     {
-      "id": "planes_las_cosas_pueden_cambiar",
-      "source": "Things can change.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Las cosas pueden cambiar.",
-          "audioSlug": "las_cosas_pueden_cambiar"
-        }
-      ]
-    },
-    {
-      "id": "planes_no_voy_a_olvidarte",
-      "source": "I won't forget you.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "No voy a olvidarte.",
-          "audioSlug": "no_voy_a_olvidarte"
-        }
-      ]
-    },
-    {
-      "id": "planes_debes_recordar_eso",
-      "source": "You must remember that.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Debes recordar eso.",
-          "audioSlug": "debes_recordar_eso"
-        }
-      ]
-    },
-    {
       "id": "planes_voy_a_necesitar_tu_ayuda",
       "source": "I'm going to need your help.",
       "level": "A1",
@@ -325,18 +289,6 @@
       ]
     },
     {
-      "id": "planes_puede_resultar_dificil",
-      "source": "It may turn out to be difficult.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Puede resultar difícil.",
-          "audioSlug": "puede_resultar_dificil"
-        }
-      ]
-    },
-    {
       "id": "planes_no_voy_a_abandonar",
       "source": "I'm not going to give up.",
       "level": "B1",
@@ -445,18 +397,6 @@
       ]
     },
     {
-      "id": "planes_vamos_a_formar_un_equipo",
-      "source": "Let's form a team.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Vamos a formar un equipo.",
-          "audioSlug": "vamos_a_formar_un_equipo"
-        }
-      ]
-    },
-    {
       "id": "planes_vamos_a_terminar",
       "source": "Let's finish.",
       "level": "A2",
@@ -541,18 +481,6 @@
       ]
     },
     {
-      "id": "planes_voy_a_organizar_la_fiesta",
-      "source": "I'm going to organize the party.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Voy a organizar la fiesta.",
-          "audioSlug": "voy_a_organizar_la_fiesta"
-        }
-      ]
-    },
-    {
       "id": "planes_no_quiero_complicar_las_cosas",
       "source": "I don't want to complicate things.",
       "level": "B1",
@@ -573,6 +501,30 @@
         {
           "text": "Pienso en mi futuro.",
           "audioSlug": "pienso_en_mi_futuro"
+        }
+      ]
+    },
+    {
+      "id": "planes_es_la_decision_final",
+      "source": "It is the final decision.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es la decisión final.",
+          "audioSlug": "es_la_decision_final"
+        }
+      ]
+    },
+    {
+      "id": "planes_ese_es_mi_objetivo",
+      "source": "That is my goal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese es mi objetivo.",
+          "audioSlug": "ese_es_mi_objetivo"
         }
       ]
     }

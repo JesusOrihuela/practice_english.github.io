@@ -51,16 +51,6 @@
       "order": 5
     },
     {
-      "id": "cotidianidad",
-      "label": "Cotidianidad",
-      "labelEn": "Everyday Life",
-      "emoji": "📅",
-      "phrase": true,
-      "vocab": false,
-      "level": "A2",
-      "order": 6
-    },
-    {
       "id": "survival",
       "label": "Sobrevivir el Idioma",
       "labelEn": "Language Survival",
@@ -68,7 +58,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A1",
-      "order": 7
+      "order": 6
     },
     {
       "id": "weather",
@@ -78,7 +68,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A1",
-      "order": 8
+      "order": 7
     },
     {
       "id": "restaurant",
@@ -88,7 +78,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A1",
-      "order": 9
+      "order": 8
     },
     {
       "id": "descripciones",
@@ -98,7 +88,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 10
+      "order": 9
     },
     {
       "id": "describiendo_personas",
@@ -108,13 +98,23 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 11
+      "order": 10
     },
     {
       "id": "profesiones",
       "label": "Profesiones",
       "labelEn": "Professions",
       "emoji": "👔",
+      "phrase": true,
+      "vocab": false,
+      "level": "A2",
+      "order": 11
+    },
+    {
+      "id": "estudios",
+      "label": "Educación",
+      "labelEn": "Education",
+      "emoji": "🎓",
       "phrase": true,
       "vocab": false,
       "level": "A2",
@@ -161,6 +161,16 @@
       "order": 16
     },
     {
+      "id": "cotidianidad",
+      "label": "Cotidianidad",
+      "labelEn": "Everyday Life",
+      "emoji": "📅",
+      "phrase": true,
+      "vocab": false,
+      "level": "A2",
+      "order": 17
+    },
+    {
       "id": "directions",
       "label": "Direcciones",
       "labelEn": "Directions",
@@ -168,7 +178,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 17
+      "order": 18
     },
     {
       "id": "sitios",
@@ -178,7 +188,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 18
+      "order": 19
     },
     {
       "id": "naturaleza_lugares",
@@ -188,7 +198,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 19
+      "order": 20
     },
     {
       "id": "animales",
@@ -198,7 +208,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 20
+      "order": 21
     },
     {
       "id": "deportes",
@@ -208,7 +218,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 21
+      "order": 22
     },
     {
       "id": "tiempo_libre",
@@ -218,7 +228,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 22
+      "order": 23
     },
     {
       "id": "health",
@@ -228,7 +238,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 23
+      "order": 24
     },
     {
       "id": "cuerpo",
@@ -238,7 +248,7 @@
       "phrase": true,
       "vocab": false,
       "level": "A2",
-      "order": 24
+      "order": 25
     },
     {
       "id": "supermarket",
@@ -248,7 +258,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 25
+      "order": 26
     },
     {
       "id": "kitchen",
@@ -258,7 +268,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 26
+      "order": 27
     },
     {
       "id": "transportation",
@@ -268,7 +278,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 27
+      "order": 28
     },
     {
       "id": "airport",
@@ -278,7 +288,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 28
+      "order": 29
     },
     {
       "id": "accommodation",
@@ -288,7 +298,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 29
+      "order": 30
     },
     {
       "id": "movies",
@@ -298,7 +308,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 30
+      "order": 31
     },
     {
       "id": "music",
@@ -308,7 +318,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 31
+      "order": 32
     },
     {
       "id": "museums",
@@ -318,7 +328,7 @@
       "phrase": true,
       "vocab": true,
       "level": "A2",
-      "order": 32
+      "order": 33
     },
     {
       "id": "economia",
@@ -328,7 +338,7 @@
       "phrase": true,
       "vocab": false,
       "level": "B1",
-      "order": 33
+      "order": 34
     },
     {
       "id": "oficina",
@@ -338,7 +348,17 @@
       "phrase": true,
       "vocab": false,
       "level": "B1",
-      "order": 34
+      "order": 35
+    },
+    {
+      "id": "politica",
+      "label": "Política",
+      "labelEn": "Politics",
+      "emoji": "🏛️",
+      "phrase": true,
+      "vocab": false,
+      "level": "B1",
+      "order": 36
     },
     {
       "id": "technology",
@@ -348,7 +368,7 @@
       "phrase": true,
       "vocab": true,
       "level": "B1",
-      "order": 35
+      "order": 37
     },
     {
       "id": "gym",
@@ -358,7 +378,7 @@
       "phrase": true,
       "vocab": true,
       "level": "B1",
-      "order": 36
+      "order": 38
     },
     {
       "id": "theater",
@@ -368,17 +388,7 @@
       "phrase": true,
       "vocab": true,
       "level": "B1",
-      "order": 37
-    },
-    {
-      "id": "conceptos",
-      "label": "Ideas y conceptos",
-      "labelEn": "Ideas & Concepts",
-      "emoji": "💭",
-      "phrase": true,
-      "vocab": false,
-      "level": "B1",
-      "order": 38
+      "order": 39
     },
     {
       "id": "accountability",
@@ -388,7 +398,7 @@
       "phrase": true,
       "vocab": true,
       "level": "B2",
-      "order": 39
+      "order": 40
     },
     {
       "id": "general",

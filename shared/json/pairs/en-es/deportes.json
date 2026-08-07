@@ -119,6 +119,42 @@
           "audioSlug": "no_me_interesa_el_futbol"
         }
       ]
+    },
+    {
+      "id": "deportes_soy_miembro_del_equipo",
+      "source": "I am a member of the team.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy miembro del equipo.",
+          "audioSlug": "soy_miembro_del_equipo"
+        }
+      ]
+    },
+    {
+      "id": "deportes_gano_un_premio",
+      "source": "He won a prize.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ganó un premio.",
+          "audioSlug": "gano_un_premio"
+        }
+      ]
+    },
+    {
+      "id": "deportes_vamos_a_formar_un_equipo",
+      "source": "Let's form a team.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a formar un equipo.",
+          "audioSlug": "vamos_a_formar_un_equipo"
+        }
+      ]
     }
   ]
 }

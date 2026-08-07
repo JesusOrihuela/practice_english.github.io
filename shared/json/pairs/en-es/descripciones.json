@@ -37,28 +37,6 @@
       ]
     },
     {
-      "id": "descripciones_estoy_contenta",
-      "source": "I am happy.",
-      "level": "A1",
-      "grammar": "Con estados de ánimo se usa 'estar', no 'ser'.",
-      "target": [
-        {
-          "text": "Estoy contenta.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "estoy_contenta"
-        },
-        {
-          "text": "Estoy contento.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "estoy_contento"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_muy_dulce",
       "source": "It is very sweet.",
       "level": "A1",
@@ -141,18 +119,6 @@
       ]
     },
     {
-      "id": "descripciones_el_gato_es_negro",
-      "source": "The cat is black.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "El gato es negro.",
-          "audioSlug": "el_gato_es_negro"
-        }
-      ]
-    },
-    {
       "id": "descripciones_la_rosa_es_roja",
       "source": "The rose is red.",
       "level": "A1",
@@ -161,18 +127,6 @@
         {
           "text": "La rosa es roja.",
           "audioSlug": "la_rosa_es_roja"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_la_hierba_es_verde",
-      "source": "The grass is green.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La hierba es verde.",
-          "audioSlug": "la_hierba_es_verde"
         }
       ]
     },
@@ -629,18 +583,6 @@
       ]
     },
     {
-      "id": "descripciones_para_mi_es_igual",
-      "source": "It is all the same to me.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Para mí es igual.",
-          "audioSlug": "para_mi_es_igual"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_un_lugar_maravilloso",
       "source": "It is a wonderful place.",
       "level": "A2",
@@ -661,18 +603,6 @@
         {
           "text": "Es una idea fantástica.",
           "audioSlug": "es_una_idea_fantastica"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_eso_me_suena_familiar",
-      "source": "That sounds familiar to me.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Eso me suena familiar.",
-          "audioSlug": "eso_me_suena_familiar"
         }
       ]
     },
@@ -725,30 +655,6 @@
       ]
     },
     {
-      "id": "descripciones_es_un_problema_social",
-      "source": "It is a social problem.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un problema social.",
-          "audioSlug": "es_un_problema_social"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_un_tema_politico",
-      "source": "It is a political topic.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un tema político.",
-          "audioSlug": "es_un_tema_politico"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_un_lugar_publico",
       "source": "It is a public place.",
       "level": "A2",
@@ -785,30 +691,6 @@
       ]
     },
     {
-      "id": "descripciones_es_la_decision_final",
-      "source": "It is the final decision.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es la decisión final.",
-          "audioSlug": "es_la_decision_final"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_un_evento_cultural",
-      "source": "It is a cultural event.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un evento cultural.",
-          "audioSlug": "es_un_evento_cultural"
-        }
-      ]
-    },
-    {
       "id": "descripciones_es_un_lugar_turistico",
       "source": "It is a tourist spot.",
       "level": "A2",
@@ -817,30 +699,6 @@
         {
           "text": "Es un lugar turístico.",
           "audioSlug": "es_un_lugar_turistico"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_un_grupo_diverso",
-      "source": "It is a diverse group.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un grupo diverso.",
-          "audioSlug": "es_un_grupo_diverso"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_es_un_acto_religioso",
-      "source": "It is a religious ceremony.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un acto religioso.",
-          "audioSlug": "es_un_acto_religioso"
         }
       ]
     },
@@ -973,18 +831,6 @@
         {
           "text": "Es una lengua indígena.",
           "audioSlug": "es_una_lengua_indigena"
-        }
-      ]
-    },
-    {
-      "id": "descripciones_tiene_una_voz_bonita",
-      "source": "She has a nice voice.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Tiene una voz bonita.",
-          "audioSlug": "tiene_una_voz_bonita"
         }
       ]
     },

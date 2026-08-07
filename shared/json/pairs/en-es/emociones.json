@@ -811,6 +811,40 @@
           "audioSlug": "senti_una_gran_emocion"
         }
       ]
+    },
+    {
+      "id": "emociones_estoy_contenta",
+      "source": "I am happy.",
+      "level": "A1",
+      "grammar": "Con estados de ánimo se usa 'estar', no 'ser'.",
+      "target": [
+        {
+          "text": "Estoy contenta.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_contenta"
+        },
+        {
+          "text": "Estoy contento.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_contento"
+        }
+      ]
+    },
+    {
+      "id": "emociones_me_hace_reir",
+      "source": "It makes me laugh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me hace reír.",
+          "audioSlug": "me_hace_reir"
+        }
+      ]
     }
   ]
 }
