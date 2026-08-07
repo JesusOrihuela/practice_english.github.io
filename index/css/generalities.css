@@ -989,10 +989,11 @@ body.path-mode {
   order: 3;
 }
 
-/* CEFR level badge inside phrase/word browser chips */
+/* CEFR level badge inside phrase/word browser chips — always the
+   rightmost element, flush to the chip edge (variant pips sit before it). */
 .pb-chip-cefr {
   flex-shrink: 0;
-  order: 3;
+  order: 5;
   padding: 1px 6px;
 }
 
