@@ -50,7 +50,7 @@
     },
     {
       "id": "health_i_have_a_fever",
-      "source": "Tengo fiebre.",
+      "source": "I have a fever.",
       "level": "A1",
       "grammar": null,
       "target": [
@@ -207,18 +207,6 @@
         {
           "text": "Me corté la mano.",
           "audioSlug": "me_corte_la_mano"
-        }
-      ]
-    },
-    {
-      "id": "health_call_an_ambulance",
-      "source": "Call an ambulance!",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¡Llamen a una ambulancia!",
-          "audioSlug": "llamen_a_una_ambulancia"
         }
       ]
     },
@@ -579,14 +567,24 @@
       ]
     },
     {
-      "id": "health_hubo_un_accidente",
-      "source": "There was an accident.",
-      "level": "A2",
+      "id": "health_estoy_enferma",
+      "source": "I feel sick.",
+      "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Hubo un accidente.",
-          "audioSlug": "hubo_un_accidente"
+          "text": "Estoy enferma.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_enferma"
+        },
+        {
+          "text": "Estoy enfermo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_enfermo"
         }
       ]
     }

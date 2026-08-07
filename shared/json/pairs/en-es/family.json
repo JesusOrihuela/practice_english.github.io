@@ -407,18 +407,6 @@
       ]
     },
     {
-      "id": "family_es_mi_companero_de_clase",
-      "source": "He is my classmate.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es mi compañero de clase.",
-          "audioSlug": "es_mi_companero_de_clase"
-        }
-      ]
-    },
-    {
       "id": "family_es_su_novio",
       "source": "He is her boyfriend.",
       "level": "A2",
@@ -451,28 +439,6 @@
         {
           "text": "Mi papá trabaja mucho.",
           "audioSlug": "mi_papa_trabaja_mucho"
-        }
-      ]
-    },
-    {
-      "id": "family_eres_mi_invitado",
-      "source": "You are my guest.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Eres mi invitado.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "eres_mi_invitado"
-        },
-        {
-          "text": "Eres mi invitada.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "eres_mi_invitada"
         }
       ]
     },
@@ -513,18 +479,6 @@
       ]
     },
     {
-      "id": "family_su_esposo_es_alto",
-      "source": "Her husband is tall.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Su esposo es alto.",
-          "audioSlug": "su_esposo_es_alto"
-        }
-      ]
-    },
-    {
       "id": "family_mi_bebe_va_a_nacer_pronto",
       "source": "My baby will be born soon.",
       "level": "A2",
@@ -545,6 +499,18 @@
         {
           "text": "Mi abuela murió el año pasado.",
           "audioSlug": "mi_abuela_murio_el_ano_pasado"
+        }
+      ]
+    },
+    {
+      "id": "family_tienes_hijos",
+      "source": "Do you have any children?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienes hijos?",
+          "audioSlug": "tienes_hijos"
         }
       ]
     }

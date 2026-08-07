@@ -59,6 +59,18 @@
           "audioSlug": "voy_a_pagar_yo"
         }
       ]
+    },
+    {
+      "id": "economia_ese_billete_es_falso",
+      "source": "That banknote is fake.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese billete es falso.",
+          "audioSlug": "ese_billete_es_falso"
+        }
+      ]
     }
   ]
 }

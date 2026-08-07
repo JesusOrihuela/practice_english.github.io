@@ -11,6 +11,42 @@
           "audioSlug": "voy_a_colocar_los_libros"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_necesito_ir_al_bano",
+      "source": "I need to go to the bathroom.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito ir al baño.",
+          "audioSlug": "necesito_ir_al_bano"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_es_tarde_tengo_que_irme",
+      "source": "It's late, I have to go.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es tarde, tengo que irme.",
+          "audioSlug": "es_tarde_tengo_que_irme"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_me_falta_tiempo",
+      "source": "I'm short on time.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me falta tiempo.",
+          "audioSlug": "me_falta_tiempo"
+        }
+      ]
     }
   ]
 }

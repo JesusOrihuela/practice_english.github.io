@@ -25,18 +25,6 @@
       ]
     },
     {
-      "id": "sitios_viaje_por_america",
-      "source": "I traveled through America.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Viajé por América.",
-          "audioSlug": "viaje_por_america"
-        }
-      ]
-    },
-    {
       "id": "sitios_vivo_en_una_comunidad_pequena",
       "source": "I live in a small community.",
       "level": "A2",
@@ -45,6 +33,102 @@
         {
           "text": "Vivo en una comunidad pequeña.",
           "audioSlug": "vivo_en_una_comunidad_pequena"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_un_lugar_muy_bonito",
+      "source": "It is a very pretty place.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un lugar muy bonito.",
+          "audioSlug": "es_un_lugar_muy_bonito"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_un_lugar_maravilloso",
+      "source": "It is a wonderful place.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un lugar maravilloso.",
+          "audioSlug": "es_un_lugar_maravilloso"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_el_lugar_ideal",
+      "source": "It is the ideal place.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es el lugar ideal.",
+          "audioSlug": "es_el_lugar_ideal"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_un_lugar_publico",
+      "source": "It is a public place.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un lugar público.",
+          "audioSlug": "es_un_lugar_publico"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_un_edificio_moderno",
+      "source": "It is a modern building.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un edificio moderno.",
+          "audioSlug": "es_un_edificio_moderno"
+        }
+      ]
+    },
+    {
+      "id": "sitios_es_un_lugar_turistico",
+      "source": "It is a tourist spot.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un lugar turístico.",
+          "audioSlug": "es_un_lugar_turistico"
+        }
+      ]
+    },
+    {
+      "id": "sitios_amo_mi_pais",
+      "source": "I love my country.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Amo mi país.",
+          "audioSlug": "amo_mi_pais"
+        }
+      ]
+    },
+    {
+      "id": "sitios_vivo_en_el_campo",
+      "source": "I live in the countryside.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo en el campo.",
+          "audioSlug": "vivo_en_el_campo"
         }
       ]
     }

@@ -25,18 +25,6 @@
       ]
     },
     {
-      "id": "tiempo_libre_me_encanta_cantar",
-      "source": "I love to sing.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me encanta cantar.",
-          "audioSlug": "me_encanta_cantar"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_hoy_hay_una_fiesta",
       "source": "There is a party today.",
       "level": "A1",
@@ -69,18 +57,6 @@
         {
           "text": "Quiero disfrutar el momento.",
           "audioSlug": "quiero_disfrutar_el_momento"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_la_aventura_comienza",
-      "source": "The adventure begins.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "La aventura comienza.",
-          "audioSlug": "la_aventura_comienza"
         }
       ]
     },
@@ -129,6 +105,18 @@
         {
           "text": "Leo una novela.",
           "audioSlug": "leo_una_novela"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_vamos_a_caminar",
+      "source": "Let's walk.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a caminar.",
+          "audioSlug": "vamos_a_caminar"
         }
       ]
     }

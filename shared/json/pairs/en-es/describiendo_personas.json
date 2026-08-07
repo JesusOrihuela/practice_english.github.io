@@ -61,18 +61,6 @@
       ]
     },
     {
-      "id": "describiendo_personas_es_un_habitante_de_la_ciudad",
-      "source": "He is a city dweller.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es un habitante de la ciudad.",
-          "audioSlug": "es_un_habitante_de_la_ciudad"
-        }
-      ]
-    },
-    {
       "id": "describiendo_personas_son_buena_gente",
       "source": "They are good people.",
       "level": "A1",
@@ -265,6 +253,30 @@
         {
           "text": "Tiene mucho carácter.",
           "audioSlug": "tiene_mucho_caracter"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_su_esposo_es_alto",
+      "source": "Her husband is tall.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su esposo es alto.",
+          "audioSlug": "su_esposo_es_alto"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_soy_responsable",
+      "source": "I am responsible.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy responsable.",
+          "audioSlug": "soy_responsable"
         }
       ]
     }

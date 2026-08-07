@@ -1,3 +1,28 @@
 {
-  "phrases": []
+  "phrases": [
+    {
+      "id": "vestimenta_su_camisa_es_azul",
+      "source": "His shirt is blue.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su camisa es azul.",
+          "audioSlug": "su_camisa_es_azul"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_es_un_vestido_lindo",
+      "source": "It is a lovely dress.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un vestido lindo.",
+          "audioSlug": "es_un_vestido_lindo"
+        }
+      ]
+    }
+  ]
 }

@@ -167,18 +167,6 @@
       ]
     },
     {
-      "id": "personal_info_this_is_my_friend",
-      "source": "This is my friend Ana.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Te presento a mi amiga Ana.",
-          "audioSlug": "te_presento_a_mi_amiga_ana"
-        }
-      ]
-    },
-    {
       "id": "personal_info_are_you_married",
       "source": "Are you married?",
       "level": "A2",
@@ -271,18 +259,6 @@
       ]
     },
     {
-      "id": "personal_info_do_you_have_children",
-      "source": "Do you have any children?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Tienes hijos?",
-          "audioSlug": "tienes_hijos"
-        }
-      ]
-    },
-    {
       "id": "personal_info_my_last_name_is_garcia",
       "source": "My last name is García.",
       "level": "A1",
@@ -303,18 +279,6 @@
         {
           "text": "Vivo con mi familia.",
           "audioSlug": "vivo_con_mi_familia"
-        }
-      ]
-    },
-    {
-      "id": "personal_info_i_study_at_the_university",
-      "source": "I study at the university.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Estudio en la universidad.",
-          "audioSlug": "estudio_en_la_universidad"
         }
       ]
     },
@@ -399,6 +363,18 @@
         {
           "text": "Vivo cerca del centro.",
           "audioSlug": "vivo_cerca_del_centro"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_soy_de_la_costa",
+      "source": "I'm from the coast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy de la costa.",
+          "audioSlug": "soy_de_la_costa"
         }
       ]
     }

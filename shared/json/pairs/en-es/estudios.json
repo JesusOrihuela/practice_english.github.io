@@ -11,6 +11,30 @@
           "audioSlug": "la_educacion_es_importante"
         }
       ]
+    },
+    {
+      "id": "estudios_estudio_en_la_universidad",
+      "source": "I study at the university.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estudio en la universidad.",
+          "audioSlug": "estudio_en_la_universidad"
+        }
+      ]
+    },
+    {
+      "id": "estudios_es_mi_companero_de_clase",
+      "source": "He is my classmate.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es mi compañero de clase.",
+          "audioSlug": "es_mi_companero_de_clase"
+        }
+      ]
     }
   ]
 }

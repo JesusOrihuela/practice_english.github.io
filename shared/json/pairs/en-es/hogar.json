@@ -1,3 +1,74 @@
 {
-  "phrases": []
+  "phrases": [
+    {
+      "id": "hogar_eres_mi_invitado",
+      "source": "You are my guest.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eres mi invitado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "eres_mi_invitado"
+        },
+        {
+          "text": "Eres mi invitada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "eres_mi_invitada"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_salon_es_grande",
+      "source": "The living room is big.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El salón es grande.",
+          "audioSlug": "el_salon_es_grande"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_pared_es_blanca",
+      "source": "The wall is white.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La pared es blanca.",
+          "audioSlug": "la_pared_es_blanca"
+        }
+      ]
+    },
+    {
+      "id": "hogar_es_una_mesa_de_madera",
+      "source": "It is a wooden table.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una mesa de madera.",
+          "audioSlug": "es_una_mesa_de_madera"
+        }
+      ]
+    },
+    {
+      "id": "hogar_vamos_a_construir_una_casa",
+      "source": "We are going to build a house.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos a construir una casa.",
+          "audioSlug": "vamos_a_construir_una_casa"
+        }
+      ]
+    }
+  ]
 }

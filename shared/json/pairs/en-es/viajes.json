@@ -47,6 +47,30 @@
           "audioSlug": "estoy_de_vacaciones"
         }
       ]
+    },
+    {
+      "id": "viajes_la_aventura_comienza",
+      "source": "The adventure begins.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La aventura comienza.",
+          "audioSlug": "la_aventura_comienza"
+        }
+      ]
+    },
+    {
+      "id": "viajes_viaje_por_america",
+      "source": "I traveled through America.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Viajé por América.",
+          "audioSlug": "viaje_por_america"
+        }
+      ]
     }
   ]
 }

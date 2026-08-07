@@ -169,18 +169,6 @@
       ]
     },
     {
-      "id": "conversacion_por_favor_sonrie",
-      "source": "Please smile.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Por favor, sonríe.",
-          "audioSlug": "por_favor_sonrie"
-        }
-      ]
-    },
-    {
       "id": "conversacion_te_creo",
       "source": "I believe you.",
       "level": "A2",
@@ -225,18 +213,6 @@
         {
           "text": "¿Puedes repetir eso?",
           "audioSlug": "puedes_repetir_eso"
-        }
-      ]
-    },
-    {
-      "id": "conversacion_ve_a_saludar_a_los_invitados",
-      "source": "Go and greet the guests.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Ve a saludar a los invitados.",
-          "audioSlug": "ve_a_saludar_a_los_invitados"
         }
       ]
     },
@@ -313,18 +289,6 @@
       ]
     },
     {
-      "id": "conversacion_me_despido_de_ti",
-      "source": "I say goodbye to you.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me despido de ti.",
-          "audioSlug": "me_despido_de_ti"
-        }
-      ]
-    },
-    {
       "id": "conversacion_necesito_silencio",
       "source": "I need silence.",
       "level": "A2",
@@ -345,6 +309,78 @@
         {
           "text": "Dime la verdad.",
           "audioSlug": "dime_la_verdad"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_que_te_preocupa",
+      "source": "What's on your mind?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué te preocupa?",
+          "audioSlug": "que_te_preocupa"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_hay_algo_que_pueda_hacer_por_ti",
+      "source": "Is there anything I can do for you?",
+      "level": "B1",
+      "grammar": "'Hay algo que + subjuntivo' expresa disponibilidad; el subjuntivo señala posibilidad abierta.",
+      "target": [
+        {
+          "text": "¿Hay algo que pueda hacer por ti?",
+          "audioSlug": "hay_algo_que_pueda_hacer_por_ti"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_la_explicacion_es_muy_clara",
+      "source": "The explanation is very clear.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La explicación es muy clara.",
+          "audioSlug": "la_explicacion_es_muy_clara"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_se_que_lo_puedes_lograr",
+      "source": "I know you can do it.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sé que lo puedes lograr.",
+          "audioSlug": "se_que_lo_puedes_lograr"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_puedes_disponer_de_mi_ayuda",
+      "source": "You can count on my help.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Puedes disponer de mi ayuda.",
+          "audioSlug": "puedes_disponer_de_mi_ayuda"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_te_quiero_animar",
+      "source": "I want to encourage you.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te quiero animar.",
+          "audioSlug": "te_quiero_animar"
         }
       ]
     }

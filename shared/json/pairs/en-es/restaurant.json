@@ -949,6 +949,42 @@
           "audioSlug": "quiero_una_cerveza"
         }
       ]
+    },
+    {
+      "id": "restaurant_es_un_plato_tipico",
+      "source": "It is a typical dish.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un plato típico.",
+          "audioSlug": "es_un_plato_tipico"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_la_comida_esta_mala",
+      "source": "The food is bad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La comida está mala.",
+          "audioSlug": "la_comida_esta_mala"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_es_un_plato_sano",
+      "source": "It is a healthy dish.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un plato sano.",
+          "audioSlug": "es_un_plato_sano"
+        }
+      ]
     }
   ]
 }

@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "daily_what_time_is_it",
-      "source": "What time is it?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Qué hora es?",
-          "audioSlug": "que_hora_es"
-        }
-      ]
-    },
-    {
       "id": "daily_what_time_get_up",
       "source": "What time do you get up?",
       "level": "A1",
@@ -121,30 +109,6 @@
       ]
     },
     {
-      "id": "daily_today_is_monday",
-      "source": "Today is Monday.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Hoy es lunes.",
-          "audioSlug": "hoy_es_lunes"
-        }
-      ]
-    },
-    {
-      "id": "daily_work_monday_to_friday",
-      "source": "I work from Monday to Friday.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Trabajo de lunes a viernes.",
-          "audioSlug": "trabajo_de_lunes_a_viernes"
-        }
-      ]
-    },
-    {
       "id": "daily_morning_go_to_gym",
       "source": "In the morning I go to the gym.",
       "level": "A1",
@@ -211,30 +175,6 @@
         {
           "text": "Suelo tomar café por la mañana.",
           "audioSlug": "suelo_tomar_cafe_por_la_manana"
-        }
-      ]
-    },
-    {
-      "id": "daily_what_day_today",
-      "source": "What day is it today?",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Qué día es hoy?",
-          "audioSlug": "que_dia_es_hoy"
-        }
-      ]
-    },
-    {
-      "id": "daily_its_late_i_go",
-      "source": "It's late, I have to go.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es tarde, tengo que irme.",
-          "audioSlug": "es_tarde_tengo_que_irme"
         }
       ]
     },
@@ -307,18 +247,6 @@
         {
           "text": "Veo la televisión por la noche.",
           "audioSlug": "veo_la_television_por_la_noche"
-        }
-      ]
-    },
-    {
-      "id": "daily_routine_i_run_in_the_park",
-      "source": "I run in the park in the mornings.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Corro en el parque por las mañanas.",
-          "audioSlug": "corro_en_el_parque_por_las_mananas"
         }
       ]
     },
@@ -415,18 +343,6 @@
         {
           "text": "Juego un rato por la tarde.",
           "audioSlug": "juego_un_rato_por_la_tarde"
-        }
-      ]
-    },
-    {
-      "id": "daily_routine_i_run_three_kilometers_a_day",
-      "source": "I run three kilometers a day.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Corro tres kilómetros cada día.",
-          "audioSlug": "corro_tres_kilometros_cada_dia"
         }
       ]
     },

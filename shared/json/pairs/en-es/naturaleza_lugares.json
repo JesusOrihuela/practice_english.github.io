@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "naturaleza_lugares_amo_mi_pais",
-      "source": "I love my country.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Amo mi país.",
-          "audioSlug": "amo_mi_pais"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_vamos_a_la_montana",
       "source": "Let's go to the mountain.",
       "level": "A1",
@@ -21,18 +9,6 @@
         {
           "text": "Vamos a la montaña.",
           "audioSlug": "vamos_a_la_montana"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_vivo_en_el_campo",
-      "source": "I live in the countryside.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Vivo en el campo.",
-          "audioSlug": "vivo_en_el_campo"
         }
       ]
     },
@@ -121,18 +97,6 @@
       ]
     },
     {
-      "id": "naturaleza_lugares_soy_de_la_costa",
-      "source": "I'm from the coast.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Soy de la costa.",
-          "audioSlug": "soy_de_la_costa"
-        }
-      ]
-    },
-    {
       "id": "naturaleza_lugares_el_cielo_esta_despejado",
       "source": "The sky is clear.",
       "level": "A2",
@@ -141,18 +105,6 @@
         {
           "text": "El cielo está despejado.",
           "audioSlug": "el_cielo_esta_despejado"
-        }
-      ]
-    },
-    {
-      "id": "naturaleza_lugares_me_perdi_en_el_bosque",
-      "source": "I got lost in the forest.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Me perdí en el bosque.",
-          "audioSlug": "me_perdi_en_el_bosque"
         }
       ]
     },
@@ -297,6 +249,30 @@
         {
           "text": "La hierba es verde.",
           "audioSlug": "la_hierba_es_verde"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_es_un_paisaje_hermoso",
+      "source": "It is a beautiful landscape.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un paisaje hermoso.",
+          "audioSlug": "es_un_paisaje_hermoso"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_la_rosa_es_roja",
+      "source": "The rose is red.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La rosa es roja.",
+          "audioSlug": "la_rosa_es_roja"
         }
       ]
     }

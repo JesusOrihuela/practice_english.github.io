@@ -1,3 +1,64 @@
 {
-  "phrases": []
+  "phrases": [
+    {
+      "id": "emergencias_perdi_mi_pasaporte",
+      "source": "I lost my passport.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdí mi pasaporte.",
+          "audioSlug": "perdi_mi_pasaporte"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_puede_llamar_a_la_policia",
+      "source": "Can you call the police?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puede llamar a la policía?",
+          "audioSlug": "puede_llamar_a_la_policia"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_no_encuentro_mi_telefono",
+      "source": "I can't find my phone.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No encuentro mi teléfono.",
+          "audioSlug": "no_encuentro_mi_telefono"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_hubo_un_accidente",
+      "source": "There was an accident.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hubo un accidente.",
+          "audioSlug": "hubo_un_accidente"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_llamen_a_una_ambulancia",
+      "source": "Call an ambulance!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Llamen a una ambulancia!",
+          "audioSlug": "llamen_a_una_ambulancia"
+        }
+      ]
+    }
+  ]
 }

@@ -545,6 +545,42 @@
           "audioSlug": "sabes_conducir"
         }
       ]
+    },
+    {
+      "id": "transportation_donde_puedo_comprar_un_boleto",
+      "source": "Where can I buy a ticket?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde puedo comprar un boleto?",
+          "audioSlug": "donde_puedo_comprar_un_boleto"
+        }
+      ]
+    },
+    {
+      "id": "transportation_el_tren_es_muy_rapido",
+      "source": "The train is very fast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El tren es muy rápido.",
+          "audioSlug": "el_tren_es_muy_rapido"
+        }
+      ]
+    },
+    {
+      "id": "transportation_el_autobus_es_lento",
+      "source": "The bus is slow.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El autobús es lento.",
+          "audioSlug": "el_autobus_es_lento"
+        }
+      ]
     }
   ]
 }

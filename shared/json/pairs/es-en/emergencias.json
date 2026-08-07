@@ -35,6 +35,18 @@
           "audioSlug": "i_can_t_find_my_phone"
         }
       ]
+    },
+    {
+      "id": "emergencias_call_an_ambulance",
+      "source": "¡Llamen a una ambulancia!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Call an ambulance!",
+          "audioSlug": "call_an_ambulance"
+        }
+      ]
     }
   ]
 }

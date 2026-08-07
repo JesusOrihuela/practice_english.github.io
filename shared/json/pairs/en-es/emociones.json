@@ -569,28 +569,6 @@
       ]
     },
     {
-      "id": "emociones_im_sick",
-      "source": "I feel sick.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Estoy enferma.",
-          "labels": {
-            "gender": "femenino"
-          },
-          "audioSlug": "estoy_enferma"
-        },
-        {
-          "text": "Estoy enfermo.",
-          "labels": {
-            "gender": "masculino"
-          },
-          "audioSlug": "estoy_enfermo"
-        }
-      ]
-    },
-    {
       "id": "emociones_im_embarrassed",
       "source": "I am embarrassed.",
       "level": "A2",
@@ -677,30 +655,6 @@
         {
           "text": "Te extraño mucho.",
           "audioSlug": "te_extrano_mucho"
-        }
-      ]
-    },
-    {
-      "id": "emociones_i_prefer_to_stay_home",
-      "source": "I prefer to stay home.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Prefiero quedarme en casa.",
-          "audioSlug": "prefiero_quedarme_en_casa"
-        }
-      ]
-    },
-    {
-      "id": "emociones_i_dont_mind_waiting",
-      "source": "I don't mind waiting.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "No me importa esperar.",
-          "audioSlug": "no_me_importa_esperar"
         }
       ]
     },
@@ -843,6 +797,52 @@
         {
           "text": "Me hace reír.",
           "audioSlug": "me_hace_reir"
+        }
+      ]
+    },
+    {
+      "id": "emociones_eres_feliz",
+      "source": "Are you happy?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Eres feliz?",
+          "audioSlug": "eres_feliz"
+        }
+      ]
+    },
+    {
+      "id": "emociones_estoy_tranquila",
+      "source": "I am calm.",
+      "level": "A2",
+      "grammar": "Usa 'estar' para describir cómo te sientes en este momento.",
+      "target": [
+        {
+          "text": "Estoy tranquila.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_tranquila"
+        },
+        {
+          "text": "Estoy tranquilo.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_tranquilo"
+        }
+      ]
+    },
+    {
+      "id": "emociones_debes_mantener_la_calma",
+      "source": "You must stay calm.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debes mantener la calma.",
+          "audioSlug": "debes_mantener_la_calma"
         }
       ]
     }

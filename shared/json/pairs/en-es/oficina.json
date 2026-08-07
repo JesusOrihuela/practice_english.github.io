@@ -49,18 +49,6 @@
       ]
     },
     {
-      "id": "oficina_yo_trabajo_mucho",
-      "source": "I work a lot.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Yo trabajo mucho.",
-          "audioSlug": "yo_trabajo_mucho"
-        }
-      ]
-    },
-    {
       "id": "oficina_esta_es_mi_oficina",
       "source": "This is my office.",
       "level": "A1",
@@ -117,6 +105,18 @@
         {
           "text": "¿Cómo fue la entrevista?",
           "audioSlug": "como_fue_la_entrevista"
+        }
+      ]
+    },
+    {
+      "id": "oficina_trabajo_de_lunes_a_viernes",
+      "source": "I work from Monday to Friday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Trabajo de lunes a viernes.",
+          "audioSlug": "trabajo_de_lunes_a_viernes"
         }
       ]
     }

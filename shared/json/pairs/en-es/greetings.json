@@ -643,30 +643,6 @@
       ]
     },
     {
-      "id": "greetings_whats_on_your_mind",
-      "source": "What's on your mind?",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "¿Qué te preocupa?",
-          "audioSlug": "que_te_preocupa"
-        }
-      ]
-    },
-    {
-      "id": "greetings_is_there_anything_i_can_do",
-      "source": "Is there anything I can do for you?",
-      "level": "B1",
-      "grammar": "'Hay algo que + subjuntivo' expresa disponibilidad; el subjuntivo señala posibilidad abierta.",
-      "target": [
-        {
-          "text": "¿Hay algo que pueda hacer por ti?",
-          "audioSlug": "hay_algo_que_pueda_hacer_por_ti"
-        }
-      ]
-    },
-    {
       "id": "greetings_introduce_myself_account_manager",
       "source": "I'd like to introduce myself. I'm the new account manager for your region.",
       "level": "B2",
@@ -1001,6 +977,54 @@
         {
           "text": "Nos vemos el viernes.",
           "audioSlug": "nos_vemos_el_viernes"
+        }
+      ]
+    },
+    {
+      "id": "greetings_te_presento_a_mi_amiga_ana",
+      "source": "This is my friend Ana.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Te presento a mi amiga Ana.",
+          "audioSlug": "te_presento_a_mi_amiga_ana"
+        }
+      ]
+    },
+    {
+      "id": "greetings_tu_primero",
+      "source": "You go first.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tú primero.",
+          "audioSlug": "tu_primero"
+        }
+      ]
+    },
+    {
+      "id": "greetings_me_despido_de_ti",
+      "source": "I say goodbye to you.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me despido de ti.",
+          "audioSlug": "me_despido_de_ti"
+        }
+      ]
+    },
+    {
+      "id": "greetings_ve_a_saludar_a_los_invitados",
+      "source": "Go and greet the guests.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ve a saludar a los invitados.",
+          "audioSlug": "ve_a_saludar_a_los_invitados"
         }
       ]
     }

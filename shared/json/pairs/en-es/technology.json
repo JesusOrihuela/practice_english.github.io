@@ -1161,6 +1161,30 @@
           "audioSlug": "el_telefono_sono"
         }
       ]
+    },
+    {
+      "id": "technology_este_telefono_es_barato",
+      "source": "This phone is cheap.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este teléfono es barato.",
+          "audioSlug": "este_telefono_es_barato"
+        }
+      ]
+    },
+    {
+      "id": "technology_debes_marcar_el_numero",
+      "source": "You must dial the number.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Debes marcar el número.",
+          "audioSlug": "debes_marcar_el_numero"
+        }
+      ]
     }
   ]
 }

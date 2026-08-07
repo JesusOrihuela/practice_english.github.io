@@ -203,6 +203,102 @@
           "audioSlug": "la_mayoria_esta_de_acuerdo"
         }
       ]
+    },
+    {
+      "id": "pensamientos_opiniones_no_me_importa_esperar",
+      "source": "I don't mind waiting.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No me importa esperar.",
+          "audioSlug": "no_me_importa_esperar"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_es_una_idea_loca",
+      "source": "It is a crazy idea.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una idea loca.",
+          "audioSlug": "es_una_idea_loca"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_es_una_idea_fantastica",
+      "source": "It is a fantastic idea.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una idea fantástica.",
+          "audioSlug": "es_una_idea_fantastica"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_eso_es_cierto",
+      "source": "That is true.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eso es cierto.",
+          "audioSlug": "eso_es_cierto"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_eso_es_imposible",
+      "source": "That is impossible.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eso es imposible.",
+          "audioSlug": "eso_es_imposible"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_no_es_justo",
+      "source": "It is not fair.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No es justo.",
+          "audioSlug": "no_es_justo"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_pienso_en_mi_futuro",
+      "source": "I think about my future.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pienso en mi futuro.",
+          "audioSlug": "pienso_en_mi_futuro"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_se_valorar_lo_que_tengo",
+      "source": "I know how to value what I have.",
+      "level": "B1",
+      "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what'.",
+      "target": [
+        {
+          "text": "Sé valorar lo que tengo.",
+          "audioSlug": "se_valorar_lo_que_tengo"
+        }
+      ]
     }
   ]
 }

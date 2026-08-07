@@ -527,6 +527,18 @@
           "audioSlug": "me_gusta_mucho_la_musica"
         }
       ]
+    },
+    {
+      "id": "music_me_encanta_cantar",
+      "source": "I love to sing.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encanta cantar.",
+          "audioSlug": "me_encanta_cantar"
+        }
+      ]
     }
   ]
 }

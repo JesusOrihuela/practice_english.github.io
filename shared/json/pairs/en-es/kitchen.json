@@ -1355,6 +1355,30 @@
           "audioSlug": "cocinalo_a_fuego_lento"
         }
       ]
+    },
+    {
+      "id": "kitchen_es_muy_dulce",
+      "source": "It is very sweet.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es muy dulce.",
+          "audioSlug": "es_muy_dulce"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_es_un_tomate_rojo",
+      "source": "It is a red tomato.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es un tomate rojo.",
+          "audioSlug": "es_un_tomate_rojo"
+        }
+      ]
     }
   ]
 }

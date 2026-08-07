@@ -321,6 +321,18 @@
           "audioSlug": "gira_en_el_segundo_semaforo"
         }
       ]
+    },
+    {
+      "id": "directions_donde_esta_la_salida",
+      "source": "Where is the exit?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la salida?",
+          "audioSlug": "donde_esta_la_salida"
+        }
+      ]
     }
   ]
 }
