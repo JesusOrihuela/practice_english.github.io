@@ -311,6 +311,18 @@
           "audioSlug": "turn_at_the_second_traffic_light"
         }
       ]
+    },
+    {
+      "id": "directions_we_walked_in_that_direction",
+      "source": "Caminamos en esa dirección.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We walked in that direction.",
+          "audioSlug": "we_walked_in_that_direction"
+        }
+      ]
     }
   ]
 }

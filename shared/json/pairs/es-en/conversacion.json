@@ -313,14 +313,98 @@
       ]
     },
     {
-      "id": "conversacion_turn_the_page",
-      "source": "Pasa la página.",
+      "id": "conversacion_i_have_nothing_particular_to_say",
+      "source": "No tengo nada en particular que decir.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have nothing particular to say.",
+          "audioSlug": "i_have_nothing_particular_to_say"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_please_be_patient",
+      "source": "Ten paciencia, por favor.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Turn the page.",
-          "audioSlug": "turn_the_page"
+          "text": "Please be patient.",
+          "audioSlug": "please_be_patient"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_let_s_change_the_subject",
+      "source": "Cambiemos de tema.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let's change the subject.",
+          "audioSlug": "let_s_change_the_subject"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_tell_me_the_truth",
+      "source": "Dime la verdad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tell me the truth.",
+          "audioSlug": "tell_me_the_truth"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_they_had_an_argument",
+      "source": "Tuvieron una discusión.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "They had an argument.",
+          "audioSlug": "they_had_an_argument"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_he_gave_a_speech",
+      "source": "Él dio un discurso.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He gave a speech.",
+          "audioSlug": "he_gave_a_speech"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_write_me_a_note",
+      "source": "Escríbeme una nota.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Write me a note.",
+          "audioSlug": "write_me_a_note"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_respect_you",
+      "source": "Te respeto.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I respect you.",
+          "audioSlug": "i_respect_you"
         }
       ]
     }

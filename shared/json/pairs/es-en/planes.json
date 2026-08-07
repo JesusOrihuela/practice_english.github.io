@@ -85,30 +85,6 @@
       ]
     },
     {
-      "id": "planes_dont_forget_it",
-      "source": "No lo olvides.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Don't forget it.",
-          "audioSlug": "don_t_forget_it"
-        }
-      ]
-    },
-    {
-      "id": "planes_i_remember",
-      "source": "Lo recuerdo.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I remember.",
-          "audioSlug": "i_remember"
-        }
-      ]
-    },
-    {
       "id": "planes_i_need_your_help",
       "source": "Necesito tu ayuda.",
       "level": "A1",
@@ -169,18 +145,6 @@
       ]
     },
     {
-      "id": "planes_i_spend_too_much",
-      "source": "Gasto demasiado.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I spend too much.",
-          "audioSlug": "i_spend_too_much"
-        }
-      ]
-    },
-    {
       "id": "planes_i_want_to_join_the_team",
       "source": "Quiero unirme al equipo.",
       "level": "A2",
@@ -189,18 +153,6 @@
         {
           "text": "I want to join the team.",
           "audioSlug": "i_want_to_join_the_team"
-        }
-      ]
-    },
-    {
-      "id": "planes_they_made_a_good_offer",
-      "source": "Hicieron una buena oferta.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "They made a good offer.",
-          "audioSlug": "they_made_a_good_offer"
         }
       ]
     },
@@ -273,18 +225,6 @@
         {
           "text": "Try to avoid it.",
           "audioSlug": "try_to_avoid_it"
-        }
-      ]
-    },
-    {
-      "id": "planes_you_will_gain_a_lot",
-      "source": "Ganarás mucho.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "You will gain a lot.",
-          "audioSlug": "you_will_gain_a_lot"
         }
       ]
     },
@@ -409,30 +349,6 @@
       ]
     },
     {
-      "id": "planes_it_can_occur_again",
-      "source": "Puede ocurrir otra vez.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "It can occur again.",
-          "audioSlug": "it_can_occur_again"
-        }
-      ]
-    },
-    {
-      "id": "planes_a_problem_may_appear",
-      "source": "Puede aparecer un problema.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "A problem may appear.",
-          "audioSlug": "a_problem_may_appear"
-        }
-      ]
-    },
-    {
       "id": "planes_dont_be_afraid_to_fail",
       "source": "No tengas miedo de fallar.",
       "level": "B1",
@@ -465,18 +381,6 @@
         {
           "text": "We seek the truth.",
           "audioSlug": "we_seek_the_truth"
-        }
-      ]
-    },
-    {
-      "id": "planes_i_will_attend_the_meeting",
-      "source": "Asistiré a la reunión.",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I will attend the meeting.",
-          "audioSlug": "i_will_attend_the_meeting"
         }
       ]
     },
@@ -529,18 +433,6 @@
       ]
     },
     {
-      "id": "planes_can_you_estimate_the_cost",
-      "source": "¿Puedes estimar el costo?",
-      "level": "B1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Can you estimate the cost?",
-          "audioSlug": "can_you_estimate_the_cost"
-        }
-      ]
-    },
-    {
       "id": "planes_lets_solve_the_problem",
       "source": "Resolvamos el problema.",
       "level": "B1",
@@ -573,6 +465,42 @@
         {
           "text": "I can relate to that.",
           "audioSlug": "i_can_relate_to_that"
+        }
+      ]
+    },
+    {
+      "id": "planes_it_is_a_hard_decision",
+      "source": "Es una decisión difícil.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is a hard decision.",
+          "audioSlug": "it_is_a_hard_decision"
+        }
+      ]
+    },
+    {
+      "id": "planes_that_is_my_main_goal",
+      "source": "Ese es mi objetivo principal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "That is my main goal.",
+          "audioSlug": "that_is_my_main_goal"
+        }
+      ]
+    },
+    {
+      "id": "planes_what_is_your_aim",
+      "source": "¿Cuál es tu objetivo?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What is your aim?",
+          "audioSlug": "what_is_your_aim"
         }
       ]
     }

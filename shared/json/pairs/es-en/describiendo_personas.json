@@ -203,6 +203,30 @@
           "audioSlug": "she_has_a_soft_voice"
         }
       ]
+    },
+    {
+      "id": "describiendo_personas_my_neighbor_is_very_nice",
+      "source": "Mi vecino es muy simpático.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My neighbor is very nice.",
+          "audioSlug": "my_neighbor_is_very_nice"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_she_is_a_famous_model",
+      "source": "Ella es una modelo famosa.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She is a famous model.",
+          "audioSlug": "she_is_a_famous_model"
+        }
+      ]
     }
   ]
 }

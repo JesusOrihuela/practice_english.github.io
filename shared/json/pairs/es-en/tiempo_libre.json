@@ -61,18 +61,6 @@
       ]
     },
     {
-      "id": "tiempo_libre_i_really_enjoy_music",
-      "source": "Disfruto mucho la música.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I really enjoy music.",
-          "audioSlug": "i_really_enjoy_music"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_i_like_to_paint",
       "source": "Me gusta pintar.",
       "level": "A2",
@@ -105,6 +93,18 @@
         {
           "text": "I wrote a letter.",
           "audioSlug": "i_wrote_a_letter"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_reading_is_a_good_activity",
+      "source": "Leer es una buena actividad.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Reading is a good activity.",
+          "audioSlug": "reading_is_a_good_activity"
         }
       ]
     }

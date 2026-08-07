@@ -133,7 +133,7 @@ const PHRASE_TOPICS = [
   'transportation', 'airport', 'accommodation',
   'movies', 'music', 'theater', 'museums',
   'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones', 'conceptos',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo',
+  'descripciones', 'conceptos',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica',
 ];
 
 /** All vocabulary topic IDs (each maps to shared/json/pairs/{pairId}/vocab/words-{id}.json) */

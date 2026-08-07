@@ -251,6 +251,30 @@
           "audioSlug": "we_must_protect_the_environment"
         }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_the_grass_is_green",
+      "source": "El césped es verde.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The grass is green.",
+          "audioSlug": "the_grass_is_green"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_these_flowers_are_natural",
+      "source": "Estas flores son naturales.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "These flowers are natural.",
+          "audioSlug": "these_flowers_are_natural"
+        }
+      ]
     }
   ]
 }

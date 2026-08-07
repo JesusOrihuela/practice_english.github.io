@@ -780,6 +780,8 @@ body.path-mode {
 .img-topic-card[data-theme="animales"]            { --topic-clr: #CA8A04; }
 .img-topic-card[data-theme="deportes"]            { --topic-clr: #DC2626; }
 .img-topic-card[data-theme="cuerpo"]              { --topic-clr: #16A34A; }
+.img-topic-card[data-theme="estudios"]            { --topic-clr: #2563EB; }
+.img-topic-card[data-theme="politica"]            { --topic-clr: #B91C1C; }
 .img-topic-card[data-theme="conceptos"]           { --topic-clr: #D97706; }
 
 .img-topic-card__img-wrap {

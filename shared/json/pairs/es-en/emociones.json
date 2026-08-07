@@ -383,6 +383,42 @@
           "audioSlug": "i_am_disappointed"
         }
       ]
+    },
+    {
+      "id": "emociones_i_am_very_happy",
+      "source": "Estoy muy feliz.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I am very happy.",
+          "audioSlug": "i_am_very_happy"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_feel_a_lot_of_pressure",
+      "source": "Siento mucha presión.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I feel a lot of pressure.",
+          "audioSlug": "i_feel_a_lot_of_pressure"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_have_no_fear",
+      "source": "No tengo miedo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I have no fear.",
+          "audioSlug": "i_have_no_fear"
+        }
+      ]
     }
   ]
 }

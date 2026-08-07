@@ -59,6 +59,18 @@
           "audioSlug": "birds_can_fly"
         }
       ]
+    },
+    {
+      "id": "animales_the_cat_is_black",
+      "source": "El gato es negro.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The cat is black.",
+          "audioSlug": "the_cat_is_black"
+        }
+      ]
     }
   ]
 }

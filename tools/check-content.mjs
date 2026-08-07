@@ -23,7 +23,7 @@ const TOPICS = [
   'emociones', 'greetings', 'restaurant', 'kitchen', 'gym', 'technology',
   'supermarket', 'accommodation', 'accountability', 'movies',
   'music', 'theater', 'museums', 'transportation', 'airport', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones', 'conceptos',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo'
+  'descripciones', 'conceptos',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica'
 ];
 
 // R15: ID suffix patterns that indicate generic/non-descriptive IDs
