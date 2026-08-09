@@ -1379,6 +1379,30 @@
           "audioSlug": "es_un_tomate_rojo"
         }
       ]
+    },
+    {
+      "id": "kitchen_la_sopa_esta_caliente",
+      "source": "The soup is hot.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La sopa está caliente.",
+          "audioSlug": "la_sopa_esta_caliente"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_el_agua_esta_fria",
+      "source": "The water is cold.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El agua está fría.",
+          "audioSlug": "el_agua_esta_fria"
+        }
+      ]
     }
   ]
 }

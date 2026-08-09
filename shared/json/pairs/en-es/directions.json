@@ -333,6 +333,18 @@
           "audioSlug": "donde_esta_la_salida"
         }
       ]
+    },
+    {
+      "id": "directions_vamos_al_norte",
+      "source": "We are going north.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos al norte.",
+          "audioSlug": "vamos_al_norte"
+        }
+      ]
     }
   ]
 }
