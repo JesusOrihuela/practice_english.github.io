@@ -467,6 +467,42 @@
       "gloss_example": {
         "es": "Agregar un chorrito de salsa de soya intensifica el umami y redondea todo el plato."
       }
+    },
+    {
+      "id": "oil",
+      "term": "oil",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A thick liquid from plants used for cooking",
+      "example": "Add some oil to the pan.",
+      "translations": {
+        "es": "aceite"
+      },
+      "gloss": {
+        "es": "Líquido espeso de las plantas que se usa para cocinar."
+      },
+      "gloss_example": {
+        "es": "Añade un poco de aceite a la sartén."
+      }
+    },
+    {
+      "id": "garlic",
+      "term": "garlic",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A strong-smelling plant used to add flavor to food",
+      "example": "This sauce needs more garlic.",
+      "translations": {
+        "es": "ajo"
+      },
+      "gloss": {
+        "es": "Planta de olor fuerte que se usa para dar sabor a la comida."
+      },
+      "gloss_example": {
+        "es": "Esta salsa necesita más ajo."
+      }
     }
   ]
 }

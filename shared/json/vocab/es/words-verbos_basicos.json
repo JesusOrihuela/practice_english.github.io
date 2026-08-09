@@ -2069,6 +2069,132 @@
       "gloss_example": {
         "en": "I'm going to pick up the kids from school."
       }
+    },
+    {
+      "id": "lavar",
+      "term": "lavar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Limpiar algo con agua.",
+      "example": "Voy a lavar los platos.",
+      "translations": {
+        "en": "wash"
+      },
+      "gloss": {
+        "en": "To clean something with water"
+      },
+      "gloss_example": {
+        "en": "I'm going to wash the dishes."
+      }
+    },
+    {
+      "id": "cenar",
+      "term": "cenar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Comer la comida de la noche.",
+      "example": "Cenamos a las nueve.",
+      "translations": {
+        "en": "have dinner"
+      },
+      "gloss": {
+        "en": "To eat the evening meal"
+      },
+      "gloss_example": {
+        "en": "We have dinner at nine."
+      }
+    },
+    {
+      "id": "mover",
+      "term": "mover",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Cambiar algo de lugar o de posición.",
+      "example": "Ayúdame a mover la mesa.",
+      "translations": {
+        "en": "move"
+      },
+      "gloss": {
+        "en": "To change the place or position of something"
+      },
+      "gloss_example": {
+        "en": "Help me move the table."
+      }
+    },
+    {
+      "id": "repetir",
+      "term": "repetir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer o decir algo otra vez.",
+      "example": "¿Puedes repetir, por favor?",
+      "translations": {
+        "en": "repeat"
+      },
+      "gloss": {
+        "en": "To do or say something again"
+      },
+      "gloss_example": {
+        "en": "Can you repeat that, please?"
+      }
+    },
+    {
+      "id": "prestar",
+      "term": "prestar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar algo a alguien por un tiempo para que lo devuelva.",
+      "example": "¿Me prestas tu bolígrafo?",
+      "translations": {
+        "en": "lend"
+      },
+      "gloss": {
+        "en": "To give something to someone for a while to be returned"
+      },
+      "gloss_example": {
+        "en": "Can you lend me your pen?"
+      }
+    },
+    {
+      "id": "coger",
+      "term": "coger",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar algo con la mano.",
+      "example": "Coge un plato del armario.",
+      "translations": {
+        "en": "take / grab"
+      },
+      "gloss": {
+        "en": "To take something with your hand"
+      },
+      "gloss_example": {
+        "en": "Grab a plate from the cabinet."
+      }
+    },
+    {
+      "id": "cubrir",
+      "term": "cubrir",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Poner algo encima de otra cosa para taparla.",
+      "example": "Cubre la olla con la tapa.",
+      "translations": {
+        "en": "cover"
+      },
+      "gloss": {
+        "en": "To put something over another thing to hide it"
+      },
+      "gloss_example": {
+        "en": "Cover the pot with the lid."
+      }
     }
   ]
 }

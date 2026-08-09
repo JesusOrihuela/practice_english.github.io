@@ -917,6 +917,78 @@
       "gloss_example": {
         "en": "It is a big change."
       }
+    },
+    {
+      "id": "duda",
+      "term": "duda",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Falta de certeza sobre algo.",
+      "example": "Tengo una duda sobre el ejercicio.",
+      "translations": {
+        "en": "doubt"
+      },
+      "gloss": {
+        "en": "A lack of certainty about something"
+      },
+      "gloss_example": {
+        "en": "I have a doubt about the exercise."
+      }
+    },
+    {
+      "id": "diferencia",
+      "term": "diferencia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aquello en que dos cosas no son iguales.",
+      "example": "No veo la diferencia entre los dos.",
+      "translations": {
+        "en": "difference"
+      },
+      "gloss": {
+        "en": "The way two things are not the same"
+      },
+      "gloss_example": {
+        "en": "I don't see the difference between the two."
+      }
+    },
+    {
+      "id": "recuerdo",
+      "term": "recuerdo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Algo que guardamos en la memoria del pasado.",
+      "example": "Tengo un buen recuerdo de ese viaje.",
+      "translations": {
+        "en": "memory"
+      },
+      "gloss": {
+        "en": "Something from the past kept in the mind"
+      },
+      "gloss_example": {
+        "en": "I have a good memory of that trip."
+      }
+    },
+    {
+      "id": "sentido",
+      "term": "sentido",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Significado razonable de algo.",
+      "example": "Eso no tiene sentido.",
+      "translations": {
+        "en": "sense / meaning"
+      },
+      "gloss": {
+        "en": "A reasonable meaning of something"
+      },
+      "gloss_example": {
+        "en": "That makes no sense."
+      }
     }
   ]
 }

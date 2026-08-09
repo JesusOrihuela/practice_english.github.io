@@ -665,6 +665,42 @@
       "gloss_example": {
         "en": "They had a civil wedding."
       }
+    },
+    {
+      "id": "derecho",
+      "term": "derecho",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Algo que la ley permite hacer o tener a una persona.",
+      "example": "Todos tienen derecho a la salud.",
+      "translations": {
+        "en": "right"
+      },
+      "gloss": {
+        "en": "Something the law allows a person to do or have"
+      },
+      "gloss_example": {
+        "en": "Everyone has the right to health care."
+      }
+    },
+    {
+      "id": "reunion",
+      "term": "reunión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Encuentro de personas para tratar un tema.",
+      "example": "La reunión es a las diez.",
+      "translations": {
+        "en": "meeting"
+      },
+      "gloss": {
+        "en": "A gathering of people to discuss a topic"
+      },
+      "gloss_example": {
+        "en": "The meeting is at ten."
+      }
     }
   ]
 }

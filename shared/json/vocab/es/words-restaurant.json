@@ -539,6 +539,42 @@
       "gloss_example": {
         "en": "It is good to drink a lot of water."
       }
+    },
+    {
+      "id": "cena",
+      "term": "cena",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La comida principal de la noche.",
+      "example": "La cena está lista.",
+      "translations": {
+        "en": "dinner"
+      },
+      "gloss": {
+        "en": "The main evening meal"
+      },
+      "gloss_example": {
+        "en": "Dinner is ready."
+      }
+    },
+    {
+      "id": "desayuno",
+      "term": "desayuno",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La primera comida del día.",
+      "example": "El desayuno está incluido.",
+      "translations": {
+        "en": "breakfast"
+      },
+      "gloss": {
+        "en": "The first meal of the day"
+      },
+      "gloss_example": {
+        "en": "Breakfast is included."
+      }
     }
   ]
 }

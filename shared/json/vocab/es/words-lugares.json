@@ -305,6 +305,42 @@
       "gloss_example": {
         "en": "Put the glass on the table."
       }
+    },
+    {
+      "id": "aeropuerto",
+      "term": "aeropuerto",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar de donde salen y a donde llegan los aviones.",
+      "example": "Llegamos temprano al aeropuerto.",
+      "translations": {
+        "en": "airport"
+      },
+      "gloss": {
+        "en": "A place where planes take off and land"
+      },
+      "gloss_example": {
+        "en": "We arrived early at the airport."
+      }
+    },
+    {
+      "id": "parque",
+      "term": "parque",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Zona verde pública para pasear o descansar.",
+      "example": "Los niños juegan en el parque.",
+      "translations": {
+        "en": "park"
+      },
+      "gloss": {
+        "en": "A public green area for walking or resting"
+      },
+      "gloss_example": {
+        "en": "The children play in the park."
+      }
     }
   ]
 }

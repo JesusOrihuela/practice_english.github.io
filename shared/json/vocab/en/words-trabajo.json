@@ -323,6 +323,150 @@
       "gloss_example": {
         "es": "Escribí un informe."
       }
+    },
+    {
+      "id": "customer",
+      "term": "customer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who buys goods or services",
+      "example": "The customer asked for a refund.",
+      "translations": {
+        "es": "cliente"
+      },
+      "gloss": {
+        "es": "Persona que compra bienes o servicios."
+      },
+      "gloss_example": {
+        "es": "El cliente pidió un reembolso."
+      }
+    },
+    {
+      "id": "manager",
+      "term": "manager",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person in charge of a business or team",
+      "example": "I'd like to speak to the manager.",
+      "translations": {
+        "es": "gerente"
+      },
+      "gloss": {
+        "es": "Persona a cargo de un negocio o equipo."
+      },
+      "gloss_example": {
+        "es": "Me gustaría hablar con el gerente."
+      }
+    },
+    {
+      "id": "employee",
+      "term": "employee",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who works for a company or person",
+      "example": "The company has fifty employees.",
+      "translations": {
+        "es": "empleado"
+      },
+      "gloss": {
+        "es": "Persona que trabaja para una empresa o persona."
+      },
+      "gloss_example": {
+        "es": "La empresa tiene cincuenta empleados."
+      }
+    },
+    {
+      "id": "meeting",
+      "term": "meeting",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An event where people come together to talk about something",
+      "example": "The meeting starts at ten.",
+      "translations": {
+        "es": "reunión"
+      },
+      "gloss": {
+        "es": "Evento en que las personas se juntan para hablar de algo."
+      },
+      "gloss_example": {
+        "es": "La reunión empieza a las diez."
+      }
+    },
+    {
+      "id": "contract",
+      "term": "contract",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A written legal agreement between people",
+      "example": "Please sign the contract.",
+      "translations": {
+        "es": "contrato"
+      },
+      "gloss": {
+        "es": "Acuerdo legal escrito entre personas."
+      },
+      "gloss_example": {
+        "es": "Por favor, firma el contrato."
+      }
+    },
+    {
+      "id": "document",
+      "term": "document",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An official paper with information",
+      "example": "Keep this document in a safe place.",
+      "translations": {
+        "es": "documento"
+      },
+      "gloss": {
+        "es": "Papel oficial con información."
+      },
+      "gloss_example": {
+        "es": "Guarda este documento en un lugar seguro."
+      }
+    },
+    {
+      "id": "income",
+      "term": "income",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The money a person or company receives regularly",
+      "example": "Rent takes half of my income.",
+      "translations": {
+        "es": "ingreso"
+      },
+      "gloss": {
+        "es": "El dinero que una persona o empresa recibe con regularidad."
+      },
+      "gloss_example": {
+        "es": "La renta se lleva la mitad de mis ingresos."
+      }
+    },
+    {
+      "id": "profit",
+      "term": "profit",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The money you gain after paying all costs",
+      "example": "The shop made a small profit.",
+      "translations": {
+        "es": "ganancia"
+      },
+      "gloss": {
+        "es": "El dinero que se gana después de pagar todos los costos."
+      },
+      "gloss_example": {
+        "es": "La tienda tuvo una pequeña ganancia."
+      }
     }
   ]
 }

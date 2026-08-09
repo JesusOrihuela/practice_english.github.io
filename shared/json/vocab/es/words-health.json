@@ -431,6 +431,60 @@
       "gloss_example": {
         "en": "My ear hurts."
       }
+    },
+    {
+      "id": "espalda",
+      "term": "espalda",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La parte de atrás del cuerpo, entre el cuello y la cintura.",
+      "example": "Me duele la espalda.",
+      "translations": {
+        "en": "back"
+      },
+      "gloss": {
+        "en": "The rear part of the body, between the neck and the waist"
+      },
+      "gloss_example": {
+        "en": "My back hurts."
+      }
+    },
+    {
+      "id": "piel",
+      "term": "piel",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "La capa que cubre todo el cuerpo por fuera.",
+      "example": "El sol daña la piel.",
+      "translations": {
+        "en": "skin"
+      },
+      "gloss": {
+        "en": "The layer that covers the whole body on the outside"
+      },
+      "gloss_example": {
+        "en": "The sun damages the skin."
+      }
+    },
+    {
+      "id": "medicina",
+      "term": "medicina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sustancia que se toma para curar una enfermedad.",
+      "example": "Toma la medicina dos veces al día.",
+      "translations": {
+        "en": "medicine"
+      },
+      "gloss": {
+        "en": "A substance taken to cure an illness"
+      },
+      "gloss_example": {
+        "en": "Take the medicine twice a day."
+      }
     }
   ]
 }

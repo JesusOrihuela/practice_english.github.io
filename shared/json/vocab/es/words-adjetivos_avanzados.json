@@ -1025,6 +1025,150 @@
       "gloss_example": {
         "en": "The view from the mountain is incredible."
       }
+    },
+    {
+      "id": "anterior",
+      "term": "anterior",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que va o existió antes que otro.",
+      "example": "El dueño anterior pintó la casa.",
+      "translations": {
+        "en": "previous"
+      },
+      "gloss": {
+        "en": "Coming or existing before another"
+      },
+      "gloss_example": {
+        "en": "The previous owner painted the house."
+      }
+    },
+    {
+      "id": "local",
+      "term": "local",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que pertenece a un lugar o zona cercana.",
+      "example": "Prefiero los productos locales.",
+      "translations": {
+        "en": "local"
+      },
+      "gloss": {
+        "en": "Belonging to a nearby place or area"
+      },
+      "gloss_example": {
+        "en": "I prefer local products."
+      }
+    },
+    {
+      "id": "nacional",
+      "term": "nacional",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que pertenece a toda una nación.",
+      "example": "Es un héroe nacional.",
+      "translations": {
+        "en": "national"
+      },
+      "gloss": {
+        "en": "Belonging to a whole nation"
+      },
+      "gloss_example": {
+        "en": "He is a national hero."
+      }
+    },
+    {
+      "id": "comercial",
+      "term": "comercial",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relacionado con la compra y venta de cosas.",
+      "example": "Es una zona comercial muy concurrida.",
+      "translations": {
+        "en": "commercial"
+      },
+      "gloss": {
+        "en": "Related to buying and selling things"
+      },
+      "gloss_example": {
+        "en": "It's a very busy commercial area."
+      }
+    },
+    {
+      "id": "histórico",
+      "term": "histórico",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relacionado con la historia o muy importante en ella.",
+      "example": "Visitamos el centro histórico.",
+      "translations": {
+        "en": "historical"
+      },
+      "gloss": {
+        "en": "Related to history or very important in it"
+      },
+      "gloss_example": {
+        "en": "We visited the historic center."
+      }
+    },
+    {
+      "id": "numeroso",
+      "term": "numeroso",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que está formado por muchos.",
+      "example": "Viene de una familia numerosa.",
+      "translations": {
+        "en": "large / numerous"
+      },
+      "gloss": {
+        "en": "Made up of many"
+      },
+      "gloss_example": {
+        "en": "She comes from a large family."
+      }
+    },
+    {
+      "id": "religioso",
+      "term": "religioso",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relacionado con la religión.",
+      "example": "Es una ceremonia religiosa.",
+      "translations": {
+        "en": "religious"
+      },
+      "gloss": {
+        "en": "Related to religion"
+      },
+      "gloss_example": {
+        "en": "It is a religious ceremony."
+      }
+    },
+    {
+      "id": "clasico",
+      "term": "clásico",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que es tradicional y sigue siendo valorado con el tiempo.",
+      "example": "Esa película es un clásico.",
+      "translations": {
+        "en": "classic"
+      },
+      "gloss": {
+        "en": "Traditional and still valued over time"
+      },
+      "gloss_example": {
+        "en": "That movie is a classic."
+      }
     }
   ]
 }

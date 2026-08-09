@@ -1259,6 +1259,348 @@
       "gloss_example": {
         "es": "Ella tiene el control."
       }
+    },
+    {
+      "id": "issue",
+      "term": "issue",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An important topic or problem to discuss",
+      "example": "We must solve this issue.",
+      "translations": {
+        "es": "asunto / problema"
+      },
+      "gloss": {
+        "es": "Tema o problema importante que se debe tratar."
+      },
+      "gloss_example": {
+        "es": "Debemos resolver este asunto."
+      }
+    },
+    {
+      "id": "chance",
+      "term": "chance",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A possibility that something will happen, or an opportunity",
+      "example": "Give me one more chance.",
+      "translations": {
+        "es": "oportunidad"
+      },
+      "gloss": {
+        "es": "Posibilidad de que algo pase, u ocasión."
+      },
+      "gloss_example": {
+        "es": "Dame una oportunidad más."
+      }
+    },
+    {
+      "id": "choice",
+      "term": "choice",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The act of choosing, or the thing chosen",
+      "example": "It was a difficult choice.",
+      "translations": {
+        "es": "elección"
+      },
+      "gloss": {
+        "es": "El acto de elegir, o lo que se elige."
+      },
+      "gloss_example": {
+        "es": "Fue una elección difícil."
+      }
+    },
+    {
+      "id": "difference",
+      "term": "difference",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The way two things are not the same",
+      "example": "What's the difference between them?",
+      "translations": {
+        "es": "diferencia"
+      },
+      "gloss": {
+        "es": "La forma en que dos cosas no son iguales."
+      },
+      "gloss_example": {
+        "es": "¿Cuál es la diferencia entre ellos?"
+      }
+    },
+    {
+      "id": "effort",
+      "term": "effort",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The energy you use to do something",
+      "example": "That effort was worth it.",
+      "translations": {
+        "es": "esfuerzo"
+      },
+      "gloss": {
+        "es": "La energía que usas para hacer algo."
+      },
+      "gloss_example": {
+        "es": "Ese esfuerzo valió la pena."
+      }
+    },
+    {
+      "id": "quality",
+      "term": "quality",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "How good or bad something is",
+      "example": "The quality of this cloth is high.",
+      "translations": {
+        "es": "calidad"
+      },
+      "gloss": {
+        "es": "Lo bueno o malo que es algo."
+      },
+      "gloss_example": {
+        "es": "La calidad de esta tela es alta."
+      }
+    },
+    {
+      "id": "action",
+      "term": "action",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The process of doing something",
+      "example": "We need action, not words.",
+      "translations": {
+        "es": "acción"
+      },
+      "gloss": {
+        "es": "El proceso de hacer algo."
+      },
+      "gloss_example": {
+        "es": "Necesitamos acción, no palabras."
+      }
+    },
+    {
+      "id": "risk",
+      "term": "risk",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The chance that something bad will happen",
+      "example": "There is a risk of rain.",
+      "translations": {
+        "es": "riesgo"
+      },
+      "gloss": {
+        "es": "La posibilidad de que pase algo malo."
+      },
+      "gloss_example": {
+        "es": "Hay riesgo de lluvia."
+      }
+    },
+    {
+      "id": "limit",
+      "term": "limit",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The greatest amount that is allowed or possible",
+      "example": "There's a limit on carry-on bags.",
+      "translations": {
+        "es": "límite"
+      },
+      "gloss": {
+        "es": "La mayor cantidad permitida o posible."
+      },
+      "gloss_example": {
+        "es": "Hay un límite para el equipaje de mano."
+      }
+    },
+    {
+      "id": "conclusion",
+      "term": "conclusion",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The final decision or opinion after thinking",
+      "example": "What is your conclusion?",
+      "translations": {
+        "es": "conclusión"
+      },
+      "gloss": {
+        "es": "La decisión u opinión final tras pensar."
+      },
+      "gloss_example": {
+        "es": "¿Cuál es tu conclusión?"
+      }
+    },
+    {
+      "id": "possibility",
+      "term": "possibility",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Something that may happen or be true",
+      "example": "There is a possibility of delay.",
+      "translations": {
+        "es": "posibilidad"
+      },
+      "gloss": {
+        "es": "Algo que puede pasar o ser cierto."
+      },
+      "gloss_example": {
+        "es": "Existe la posibilidad de un retraso."
+      }
+    },
+    {
+      "id": "variety",
+      "term": "variety",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A number of different types of something",
+      "example": "The market has a variety of fruit.",
+      "translations": {
+        "es": "variedad"
+      },
+      "gloss": {
+        "es": "Un número de tipos diferentes de algo."
+      },
+      "gloss_example": {
+        "es": "El mercado tiene variedad de fruta."
+      }
+    },
+    {
+      "id": "value",
+      "term": "value",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "How much something is worth",
+      "example": "The value of the house went up.",
+      "translations": {
+        "es": "valor"
+      },
+      "gloss": {
+        "es": "Cuánto vale algo."
+      },
+      "gloss_example": {
+        "es": "El valor de la casa subió."
+      }
+    },
+    {
+      "id": "condition",
+      "term": "condition",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The state that someone or something is in",
+      "example": "The car is in good condition.",
+      "translations": {
+        "es": "condición / estado"
+      },
+      "gloss": {
+        "es": "El estado en que se encuentra alguien o algo."
+      },
+      "gloss_example": {
+        "es": "El carro está en buen estado."
+      }
+    },
+    {
+      "id": "method",
+      "term": "method",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A particular way of doing something",
+      "example": "This method is faster.",
+      "translations": {
+        "es": "método"
+      },
+      "gloss": {
+        "es": "Una manera particular de hacer algo."
+      },
+      "gloss_example": {
+        "es": "Este método es más rápido."
+      }
+    },
+    {
+      "id": "attention",
+      "term": "attention",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The act of watching or listening carefully",
+      "example": "Pay attention to the teacher.",
+      "translations": {
+        "es": "atención"
+      },
+      "gloss": {
+        "es": "El acto de mirar o escuchar con cuidado."
+      },
+      "gloss_example": {
+        "es": "Presta atención a la maestra."
+      }
+    },
+    {
+      "id": "sense",
+      "term": "sense",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A reasonable meaning, or the ability to understand",
+      "example": "That makes sense to me.",
+      "translations": {
+        "es": "sentido"
+      },
+      "gloss": {
+        "es": "Un significado razonable, o la capacidad de entender."
+      },
+      "gloss_example": {
+        "es": "Eso tiene sentido para mí."
+      }
+    },
+    {
+      "id": "loss",
+      "term": "loss",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The fact of no longer having something",
+      "example": "The loss of the keys was a problem.",
+      "translations": {
+        "es": "pérdida"
+      },
+      "gloss": {
+        "es": "El hecho de ya no tener algo."
+      },
+      "gloss_example": {
+        "es": "La pérdida de las llaves fue un problema."
+      }
+    },
+    {
+      "id": "pressure",
+      "term": "pressure",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A strong feeling of stress, or a force pushing on something",
+      "example": "I feel a lot of pressure at work.",
+      "translations": {
+        "es": "presión"
+      },
+      "gloss": {
+        "es": "Una fuerte sensación de estrés, o una fuerza que empuja algo."
+      },
+      "gloss_example": {
+        "es": "Siento mucha presión en el trabajo."
+      }
     }
   ]
 }

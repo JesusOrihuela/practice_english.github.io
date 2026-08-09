@@ -53,6 +53,42 @@
       "gloss_example": {
         "es": "El pintor vendió tres obras este mes."
       }
+    },
+    {
+      "id": "art",
+      "term": "art",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Things people create to be beautiful, like paintings",
+      "example": "I love modern art.",
+      "translations": {
+        "es": "arte"
+      },
+      "gloss": {
+        "es": "Cosas que la gente crea para que sean bellas, como las pinturas."
+      },
+      "gloss_example": {
+        "es": "Me encanta el arte moderno."
+      }
+    },
+    {
+      "id": "paint",
+      "term": "paint",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To make a picture using colors",
+      "example": "She likes to paint landscapes.",
+      "translations": {
+        "es": "pintar"
+      },
+      "gloss": {
+        "es": "Hacer un cuadro usando colores."
+      },
+      "gloss_example": {
+        "es": "A ella le gusta pintar paisajes."
+      }
     }
   ]
 }

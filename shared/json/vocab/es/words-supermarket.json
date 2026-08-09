@@ -521,6 +521,60 @@
       "gloss_example": {
         "en": "Rice goes with many dishes."
       }
+    },
+    {
+      "id": "verdura",
+      "term": "verdura",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Planta comestible como la lechuga o la zanahoria.",
+      "example": "Come más verduras.",
+      "translations": {
+        "en": "vegetable"
+      },
+      "gloss": {
+        "en": "An edible plant such as lettuce or carrots"
+      },
+      "gloss_example": {
+        "en": "Eat more vegetables."
+      }
+    },
+    {
+      "id": "pescado",
+      "term": "pescado",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pez que se prepara como alimento.",
+      "example": "Compré pescado fresco.",
+      "translations": {
+        "en": "fish (food)"
+      },
+      "gloss": {
+        "en": "Fish prepared as food"
+      },
+      "gloss_example": {
+        "en": "I bought fresh fish."
+      }
+    },
+    {
+      "id": "bebida",
+      "term": "bebida",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Líquido que se toma, como el agua o el jugo.",
+      "example": "¿Qué bebida quieres?",
+      "translations": {
+        "en": "drink"
+      },
+      "gloss": {
+        "en": "A liquid you drink, such as water or juice"
+      },
+      "gloss_example": {
+        "en": "What drink do you want?"
+      }
     }
   ]
 }

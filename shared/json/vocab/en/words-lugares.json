@@ -233,6 +233,78 @@
       "gloss_example": {
         "es": "Mi cuarto es pequeño."
       }
+    },
+    {
+      "id": "church",
+      "term": "church",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A building where Christians go to pray",
+      "example": "The old church is beautiful.",
+      "translations": {
+        "es": "iglesia"
+      },
+      "gloss": {
+        "es": "Edificio donde los cristianos van a rezar."
+      },
+      "gloss_example": {
+        "es": "La iglesia antigua es hermosa."
+      }
+    },
+    {
+      "id": "village",
+      "term": "village",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A small group of houses in the countryside",
+      "example": "She grew up in a small village.",
+      "translations": {
+        "es": "pueblo"
+      },
+      "gloss": {
+        "es": "Pequeño grupo de casas en el campo."
+      },
+      "gloss_example": {
+        "es": "Ella creció en un pueblo pequeño."
+      }
+    },
+    {
+      "id": "bank_place",
+      "term": "bank",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place that keeps and lends money",
+      "example": "The bank opens at nine.",
+      "translations": {
+        "es": "banco"
+      },
+      "gloss": {
+        "es": "Lugar que guarda y presta dinero."
+      },
+      "gloss_example": {
+        "es": "El banco abre a las nueve."
+      }
+    },
+    {
+      "id": "shop",
+      "term": "shop",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where you buy things",
+      "example": "There's a shop on the corner.",
+      "translations": {
+        "es": "tienda"
+      },
+      "gloss": {
+        "es": "Lugar donde compras cosas."
+      },
+      "gloss_example": {
+        "es": "Hay una tienda en la esquina."
+      }
     }
   ]
 }

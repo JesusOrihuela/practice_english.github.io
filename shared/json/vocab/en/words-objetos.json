@@ -215,6 +215,96 @@
       "gloss_example": {
         "es": "Esta bolsa es pesada."
       }
+    },
+    {
+      "id": "door",
+      "term": "door",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The part you open to enter or leave a room or building",
+      "example": "Please close the door.",
+      "translations": {
+        "es": "puerta"
+      },
+      "gloss": {
+        "es": "La parte que se abre para entrar o salir de un cuarto o edificio."
+      },
+      "gloss_example": {
+        "es": "Por favor, cierra la puerta."
+      }
+    },
+    {
+      "id": "window",
+      "term": "window",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An opening in a wall with glass that lets in light",
+      "example": "Open the window, please.",
+      "translations": {
+        "es": "ventana"
+      },
+      "gloss": {
+        "es": "Abertura en una pared con vidrio que deja entrar la luz."
+      },
+      "gloss_example": {
+        "es": "Abre la ventana, por favor."
+      }
+    },
+    {
+      "id": "floor",
+      "term": "floor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The flat surface you walk on inside a building",
+      "example": "The keys fell on the floor.",
+      "translations": {
+        "es": "suelo / piso"
+      },
+      "gloss": {
+        "es": "La superficie plana sobre la que caminas dentro de un edificio."
+      },
+      "gloss_example": {
+        "es": "Las llaves cayeron al suelo."
+      }
+    },
+    {
+      "id": "machine",
+      "term": "machine",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device with parts that work together to do a job",
+      "example": "This machine makes coffee.",
+      "translations": {
+        "es": "máquina"
+      },
+      "gloss": {
+        "es": "Aparato con piezas que trabajan juntas para hacer una tarea."
+      },
+      "gloss_example": {
+        "es": "Esta máquina hace café."
+      }
+    },
+    {
+      "id": "bottle",
+      "term": "bottle",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A tall container for liquids, usually of glass or plastic",
+      "example": "I bought a bottle of water.",
+      "translations": {
+        "es": "botella"
+      },
+      "gloss": {
+        "es": "Recipiente alto para líquidos, por lo general de vidrio o plástico."
+      },
+      "gloss_example": {
+        "es": "Compré una botella de agua."
+      }
     }
   ]
 }

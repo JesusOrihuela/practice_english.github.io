@@ -1961,6 +1961,312 @@
       "gloss_example": {
         "es": "Escucha a la maestra, por favor."
       }
+    },
+    {
+      "id": "thank",
+      "term": "thank",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To tell someone you are grateful",
+      "example": "I want to thank you for your help.",
+      "translations": {
+        "es": "agradecer"
+      },
+      "gloss": {
+        "es": "Decirle a alguien que estás agradecido."
+      },
+      "gloss_example": {
+        "es": "Quiero agradecerte por tu ayuda."
+      }
+    },
+    {
+      "id": "eat",
+      "term": "eat",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To put food in your mouth and swallow it",
+      "example": "We eat dinner at eight.",
+      "translations": {
+        "es": "comer"
+      },
+      "gloss": {
+        "es": "Poner comida en la boca y tragarla."
+      },
+      "gloss_example": {
+        "es": "Cenamos a las ocho."
+      }
+    },
+    {
+      "id": "drink",
+      "term": "drink",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To take liquid into your mouth and swallow it",
+      "example": "You should drink more water.",
+      "translations": {
+        "es": "beber"
+      },
+      "gloss": {
+        "es": "Tomar líquido por la boca y tragarlo."
+      },
+      "gloss_example": {
+        "es": "Deberías beber más agua."
+      }
+    },
+    {
+      "id": "watch",
+      "term": "watch",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To look at something for a while",
+      "example": "We watch a movie every Friday.",
+      "translations": {
+        "es": "ver / mirar"
+      },
+      "gloss": {
+        "es": "Mirar algo durante un rato."
+      },
+      "gloss_example": {
+        "es": "Vemos una película cada viernes."
+      }
+    },
+    {
+      "id": "sleep",
+      "term": "sleep",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To rest with your eyes closed and your mind not active",
+      "example": "I sleep eight hours a night.",
+      "translations": {
+        "es": "dormir"
+      },
+      "gloss": {
+        "es": "Descansar con los ojos cerrados y la mente en reposo."
+      },
+      "gloss_example": {
+        "es": "Duermo ocho horas por noche."
+      }
+    },
+    {
+      "id": "arrive",
+      "term": "arrive",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To reach a place",
+      "example": "The train will arrive soon.",
+      "translations": {
+        "es": "llegar"
+      },
+      "gloss": {
+        "es": "Alcanzar un lugar."
+      },
+      "gloss_example": {
+        "es": "El tren llegará pronto."
+      }
+    },
+    {
+      "id": "forget",
+      "term": "forget",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To not remember something",
+      "example": "Don't forget your umbrella.",
+      "translations": {
+        "es": "olvidar"
+      },
+      "gloss": {
+        "es": "No recordar algo."
+      },
+      "gloss_example": {
+        "es": "No olvides tu paraguas."
+      }
+    },
+    {
+      "id": "pass",
+      "term": "pass",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move past someone or something, or to give something by hand",
+      "example": "Please pass me the salt.",
+      "translations": {
+        "es": "pasar"
+      },
+      "gloss": {
+        "es": "Moverse por delante de algo, o dar algo con la mano."
+      },
+      "gloss_example": {
+        "es": "Pásame la sal, por favor."
+      }
+    },
+    {
+      "id": "catch",
+      "term": "catch",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To take and hold something moving through the air",
+      "example": "Catch the ball!",
+      "translations": {
+        "es": "atrapar"
+      },
+      "gloss": {
+        "es": "Tomar y sujetar algo que se mueve por el aire."
+      },
+      "gloss_example": {
+        "es": "¡Atrapa la pelota!"
+      }
+    },
+    {
+      "id": "touch",
+      "term": "touch",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To put your hand or finger on something",
+      "example": "Please don't touch the paintings.",
+      "translations": {
+        "es": "tocar"
+      },
+      "gloss": {
+        "es": "Poner la mano o el dedo sobre algo."
+      },
+      "gloss_example": {
+        "es": "Por favor, no toques los cuadros."
+      }
+    },
+    {
+      "id": "clean",
+      "term": "clean",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To remove dirt from something",
+      "example": "I clean my room on Saturdays.",
+      "translations": {
+        "es": "limpiar"
+      },
+      "gloss": {
+        "es": "Quitar la suciedad de algo."
+      },
+      "gloss_example": {
+        "es": "Limpio mi cuarto los sábados."
+      }
+    },
+    {
+      "id": "cover",
+      "term": "cover",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To put something over another thing to hide or protect it",
+      "example": "Cover the pot while it cooks.",
+      "translations": {
+        "es": "cubrir"
+      },
+      "gloss": {
+        "es": "Poner algo encima de otra cosa para taparla o protegerla."
+      },
+      "gloss_example": {
+        "es": "Cubre la olla mientras se cocina."
+      }
+    },
+    {
+      "id": "prepare",
+      "term": "prepare",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To get something ready",
+      "example": "I need to prepare lunch.",
+      "translations": {
+        "es": "preparar"
+      },
+      "gloss": {
+        "es": "Dejar algo listo."
+      },
+      "gloss_example": {
+        "es": "Necesito preparar el almuerzo."
+      }
+    },
+    {
+      "id": "finish",
+      "term": "finish",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To reach the end of something",
+      "example": "I'll finish the report today.",
+      "translations": {
+        "es": "terminar"
+      },
+      "gloss": {
+        "es": "Llegar al final de algo."
+      },
+      "gloss_example": {
+        "es": "Terminaré el informe hoy."
+      }
+    },
+    {
+      "id": "pull",
+      "term": "pull",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move something toward you",
+      "example": "Pull the door to open it.",
+      "translations": {
+        "es": "jalar"
+      },
+      "gloss": {
+        "es": "Mover algo hacia ti."
+      },
+      "gloss_example": {
+        "es": "Jala la puerta para abrirla."
+      }
+    },
+    {
+      "id": "push",
+      "term": "push",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To move something away from you with force",
+      "example": "Push the button to start.",
+      "translations": {
+        "es": "empujar"
+      },
+      "gloss": {
+        "es": "Mover algo lejos de ti con fuerza."
+      },
+      "gloss_example": {
+        "es": "Empuja el botón para empezar."
+      }
+    },
+    {
+      "id": "prefer",
+      "term": "prefer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To like one thing more than another",
+      "example": "I prefer tea over coffee.",
+      "translations": {
+        "es": "preferir"
+      },
+      "gloss": {
+        "es": "Gustar más una cosa que otra."
+      },
+      "gloss_example": {
+        "es": "Prefiero el té al café."
+      }
     }
   ]
 }

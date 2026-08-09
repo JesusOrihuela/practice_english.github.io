@@ -1151,6 +1151,168 @@
       "gloss_example": {
         "es": "Caminar es parte de mi rutina diaria."
       }
+    },
+    {
+      "id": "old",
+      "term": "old",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having lived or existed for a long time",
+      "example": "This is a very old house.",
+      "translations": {
+        "es": "viejo"
+      },
+      "gloss": {
+        "es": "Que ha vivido o existido durante mucho tiempo."
+      },
+      "gloss_example": {
+        "es": "Esta es una casa muy vieja."
+      }
+    },
+    {
+      "id": "late",
+      "term": "late",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Arriving or happening after the usual time",
+      "example": "I'm sorry I'm late.",
+      "translations": {
+        "es": "tarde (con retraso)"
+      },
+      "gloss": {
+        "es": "Que llega o sucede después de la hora habitual."
+      },
+      "gloss_example": {
+        "es": "Perdón por llegar tarde."
+      }
+    },
+    {
+      "id": "early",
+      "term": "early",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Happening before the usual time",
+      "example": "We took an early train.",
+      "translations": {
+        "es": "temprano"
+      },
+      "gloss": {
+        "es": "Que sucede antes de la hora habitual."
+      },
+      "gloss_example": {
+        "es": "Tomamos un tren temprano."
+      }
+    },
+    {
+      "id": "happy",
+      "term": "happy",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Feeling or showing pleasure",
+      "example": "She looks very happy today.",
+      "translations": {
+        "es": "feliz"
+      },
+      "gloss": {
+        "es": "Que siente o muestra alegría."
+      },
+      "gloss_example": {
+        "es": "Ella se ve muy feliz hoy."
+      }
+    },
+    {
+      "id": "hot",
+      "term": "hot",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Having a high temperature",
+      "example": "The soup is too hot.",
+      "translations": {
+        "es": "caliente"
+      },
+      "gloss": {
+        "es": "Que tiene una temperatura alta."
+      },
+      "gloss_example": {
+        "es": "La sopa está muy caliente."
+      }
+    },
+    {
+      "id": "fine",
+      "term": "fine",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Good, well, or acceptable",
+      "example": "Everything is fine now.",
+      "translations": {
+        "es": "bien"
+      },
+      "gloss": {
+        "es": "Bueno, en buen estado o aceptable."
+      },
+      "gloss_example": {
+        "es": "Todo está bien ahora."
+      }
+    },
+    {
+      "id": "normal",
+      "term": "normal",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Usual, ordinary, or expected",
+      "example": "It's normal to feel nervous.",
+      "translations": {
+        "es": "normal"
+      },
+      "gloss": {
+        "es": "Habitual, corriente o esperado."
+      },
+      "gloss_example": {
+        "es": "Es normal sentirse nervioso."
+      }
+    },
+    {
+      "id": "alone",
+      "term": "alone",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Without other people",
+      "example": "She lives alone.",
+      "translations": {
+        "es": "solo"
+      },
+      "gloss": {
+        "es": "Sin otras personas."
+      },
+      "gloss_example": {
+        "es": "Ella vive sola."
+      }
+    },
+    {
+      "id": "dead",
+      "term": "dead",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "No longer alive",
+      "example": "The plant is dead.",
+      "translations": {
+        "es": "muerto"
+      },
+      "gloss": {
+        "es": "Que ya no está vivo."
+      },
+      "gloss_example": {
+        "es": "La planta está muerta."
+      }
     }
   ]
 }

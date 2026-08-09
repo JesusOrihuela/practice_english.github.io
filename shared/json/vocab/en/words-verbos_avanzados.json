@@ -1565,6 +1565,456 @@
       "gloss_example": {
         "es": "Evito conducir en hora pico."
       }
+    },
+    {
+      "id": "reach",
+      "term": "reach",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To arrive at a place or point, or to stretch out to touch something",
+      "example": "We reached the top of the hill.",
+      "translations": {
+        "es": "alcanzar"
+      },
+      "gloss": {
+        "es": "Llegar a un lugar o punto, o estirarse para tocar algo."
+      },
+      "gloss_example": {
+        "es": "Alcanzamos la cima de la colina."
+      }
+    },
+    {
+      "id": "discuss",
+      "term": "discuss",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To talk about something with others",
+      "example": "Let's discuss the plan tomorrow.",
+      "translations": {
+        "es": "discutir / tratar"
+      },
+      "gloss": {
+        "es": "Hablar de algo con otras personas."
+      },
+      "gloss_example": {
+        "es": "Tratemos el plan mañana."
+      }
+    },
+    {
+      "id": "apply",
+      "term": "apply",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To make a formal request, usually in writing",
+      "example": "I want to apply for that job.",
+      "translations": {
+        "es": "postularse"
+      },
+      "gloss": {
+        "es": "Hacer una solicitud formal, por lo general por escrito."
+      },
+      "gloss_example": {
+        "es": "Quiero postularme a ese trabajo."
+      }
+    },
+    {
+      "id": "introduce",
+      "term": "introduce",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To tell people someone's name for the first time",
+      "example": "Let me introduce my colleague.",
+      "translations": {
+        "es": "presentar"
+      },
+      "gloss": {
+        "es": "Decir el nombre de alguien por primera vez a otros."
+      },
+      "gloss_example": {
+        "es": "Déjame presentar a mi colega."
+      }
+    },
+    {
+      "id": "notice",
+      "term": "notice",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To see or become aware of something",
+      "example": "I didn't notice the sign.",
+      "translations": {
+        "es": "notar"
+      },
+      "gloss": {
+        "es": "Ver algo o darse cuenta de ello."
+      },
+      "gloss_example": {
+        "es": "No noté el letrero."
+      }
+    },
+    {
+      "id": "organize",
+      "term": "organize",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To arrange things or plan an event in an orderly way",
+      "example": "She organized the whole trip.",
+      "translations": {
+        "es": "organizar"
+      },
+      "gloss": {
+        "es": "Ordenar cosas o planear un evento de forma ordenada."
+      },
+      "gloss_example": {
+        "es": "Ella organizó todo el viaje."
+      }
+    },
+    {
+      "id": "perform",
+      "term": "perform",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To do an action, or to act, sing, or play for an audience",
+      "example": "The band will perform tonight.",
+      "translations": {
+        "es": "actuar / realizar"
+      },
+      "gloss": {
+        "es": "Realizar una acción, o actuar, cantar o tocar ante un público."
+      },
+      "gloss_example": {
+        "es": "La banda actuará esta noche."
+      }
+    },
+    {
+      "id": "discover",
+      "term": "discover",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To find something for the first time",
+      "example": "Scientists discovered a new planet.",
+      "translations": {
+        "es": "descubrir"
+      },
+      "gloss": {
+        "es": "Encontrar algo por primera vez."
+      },
+      "gloss_example": {
+        "es": "Los científicos descubrieron un nuevo planeta."
+      }
+    },
+    {
+      "id": "replace",
+      "term": "replace",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To put a new thing in place of an old one",
+      "example": "We need to replace the batteries.",
+      "translations": {
+        "es": "reemplazar"
+      },
+      "gloss": {
+        "es": "Poner algo nuevo en lugar de algo viejo."
+      },
+      "gloss_example": {
+        "es": "Necesitamos reemplazar las pilas."
+      }
+    },
+    {
+      "id": "extend",
+      "term": "extend",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To make something longer or last more time",
+      "example": "Can I extend my stay one night?",
+      "translations": {
+        "es": "extender"
+      },
+      "gloss": {
+        "es": "Hacer que algo sea más largo o dure más tiempo."
+      },
+      "gloss_example": {
+        "es": "¿Puedo extender mi estadía una noche?"
+      }
+    },
+    {
+      "id": "depend",
+      "term": "depend",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To be decided by something else, or to need someone for support",
+      "example": "Our plans depend on the weather.",
+      "translations": {
+        "es": "depender"
+      },
+      "gloss": {
+        "es": "Estar decidido por otra cosa, o necesitar a alguien para apoyarse."
+      },
+      "gloss_example": {
+        "es": "Nuestros planes dependen del clima."
+      }
+    },
+    {
+      "id": "argue",
+      "term": "argue",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To disagree with someone, often angrily",
+      "example": "They always argue about money.",
+      "translations": {
+        "es": "discutir (pelear)"
+      },
+      "gloss": {
+        "es": "Estar en desacuerdo con alguien, a veces con enojo."
+      },
+      "gloss_example": {
+        "es": "Siempre discuten por dinero."
+      }
+    },
+    {
+      "id": "represent",
+      "term": "represent",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To act or speak on behalf of a person or group",
+      "example": "She represents our region.",
+      "translations": {
+        "es": "representar"
+      },
+      "gloss": {
+        "es": "Actuar o hablar en nombre de una persona o grupo."
+      },
+      "gloss_example": {
+        "es": "Ella representa a nuestra región."
+      }
+    },
+    {
+      "id": "affect",
+      "term": "affect",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To cause a change in something",
+      "example": "The rain affected the crops.",
+      "translations": {
+        "es": "afectar"
+      },
+      "gloss": {
+        "es": "Causar un cambio en algo."
+      },
+      "gloss_example": {
+        "es": "La lluvia afectó los cultivos."
+      }
+    },
+    {
+      "id": "reduce",
+      "term": "reduce",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To make something smaller in size or amount",
+      "example": "We must reduce our costs.",
+      "translations": {
+        "es": "reducir"
+      },
+      "gloss": {
+        "es": "Hacer que algo sea menor en tamaño o cantidad."
+      },
+      "gloss_example": {
+        "es": "Debemos reducir nuestros costos."
+      }
+    },
+    {
+      "id": "seek",
+      "term": "seek",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To try to find or get something",
+      "example": "They seek a better life.",
+      "translations": {
+        "es": "buscar"
+      },
+      "gloss": {
+        "es": "Tratar de encontrar o conseguir algo."
+      },
+      "gloss_example": {
+        "es": "Buscan una vida mejor."
+      }
+    },
+    {
+      "id": "tend",
+      "term": "tend",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To usually do something or behave in a certain way",
+      "example": "I tend to wake up early.",
+      "translations": {
+        "es": "soler / tender"
+      },
+      "gloss": {
+        "es": "Hacer algo habitualmente o comportarse de cierta manera."
+      },
+      "gloss_example": {
+        "es": "Suelo despertarme temprano."
+      }
+    },
+    {
+      "id": "operate",
+      "term": "operate",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To make a machine work, or to run a business",
+      "example": "Do you know how to operate this machine?",
+      "translations": {
+        "es": "operar / manejar"
+      },
+      "gloss": {
+        "es": "Hacer funcionar una máquina, o dirigir un negocio."
+      },
+      "gloss_example": {
+        "es": "¿Sabes manejar esta máquina?"
+      }
+    },
+    {
+      "id": "reflect",
+      "term": "reflect",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To think carefully, or to show an image like a mirror",
+      "example": "I need time to reflect on this.",
+      "translations": {
+        "es": "reflexionar"
+      },
+      "gloss": {
+        "es": "Pensar con cuidado, o mostrar una imagen como un espejo."
+      },
+      "gloss_example": {
+        "es": "Necesito tiempo para reflexionar sobre esto."
+      }
+    },
+    {
+      "id": "miss",
+      "term": "miss",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To feel sad because someone is not there, or to fail to catch something",
+      "example": "I miss my family a lot.",
+      "translations": {
+        "es": "extrañar"
+      },
+      "gloss": {
+        "es": "Sentir tristeza porque alguien no está, o no lograr tomar algo."
+      },
+      "gloss_example": {
+        "es": "Extraño mucho a mi familia."
+      }
+    },
+    {
+      "id": "worry",
+      "term": "worry",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To feel uneasy about something that might happen",
+      "example": "Don't worry, everything is fine.",
+      "translations": {
+        "es": "preocuparse"
+      },
+      "gloss": {
+        "es": "Sentir intranquilidad por algo que podría pasar."
+      },
+      "gloss_example": {
+        "es": "No te preocupes, todo está bien."
+      }
+    },
+    {
+      "id": "kill",
+      "term": "kill",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To make a living thing die",
+      "example": "Frost can kill the plants.",
+      "translations": {
+        "es": "matar"
+      },
+      "gloss": {
+        "es": "Hacer que un ser vivo muera."
+      },
+      "gloss_example": {
+        "es": "La helada puede matar las plantas."
+      }
+    },
+    {
+      "id": "bear",
+      "term": "bear",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To accept or deal with something difficult",
+      "example": "I can't bear this heat.",
+      "translations": {
+        "es": "soportar"
+      },
+      "gloss": {
+        "es": "Aceptar o sobrellevar algo difícil."
+      },
+      "gloss_example": {
+        "es": "No soporto este calor."
+      }
+    },
+    {
+      "id": "propose",
+      "term": "propose",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To suggest a plan or idea formally",
+      "example": "I propose a short break.",
+      "translations": {
+        "es": "proponer"
+      },
+      "gloss": {
+        "es": "Sugerir un plan o idea de manera formal."
+      },
+      "gloss_example": {
+        "es": "Propongo un breve descanso."
+      }
+    },
+    {
+      "id": "encourage",
+      "term": "encourage",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "To give someone confidence or support to do something",
+      "example": "My teacher encouraged me to try again.",
+      "translations": {
+        "es": "animar"
+      },
+      "gloss": {
+        "es": "Dar confianza o apoyo a alguien para que haga algo."
+      },
+      "gloss_example": {
+        "es": "Mi maestra me animó a intentarlo de nuevo."
+      }
     }
   ]
 }

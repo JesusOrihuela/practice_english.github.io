@@ -2087,6 +2087,312 @@
       "gloss_example": {
         "en": "The rent went up this year."
       }
+    },
+    {
+      "id": "comunicar",
+      "term": "comunicar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Dar a conocer algo a otra persona.",
+      "example": "Necesito comunicar la noticia al equipo.",
+      "translations": {
+        "en": "communicate"
+      },
+      "gloss": {
+        "en": "To make something known to another person"
+      },
+      "gloss_example": {
+        "en": "I need to communicate the news to the team."
+      }
+    },
+    {
+      "id": "relacionar",
+      "term": "relacionar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Establecer una conexión entre dos cosas.",
+      "example": "Es difícil relacionar los dos hechos.",
+      "translations": {
+        "en": "relate / connect"
+      },
+      "gloss": {
+        "en": "To make a connection between two things"
+      },
+      "gloss_example": {
+        "en": "It's hard to connect the two facts."
+      }
+    },
+    {
+      "id": "disponer",
+      "term": "disponer",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Tener algo listo para usarlo, o colocar algo en cierto orden.",
+      "example": "Disponemos de poco tiempo.",
+      "translations": {
+        "en": "have available"
+      },
+      "gloss": {
+        "en": "To have something ready to use, or to arrange something"
+      },
+      "gloss_example": {
+        "en": "We have little time available."
+      }
+    },
+    {
+      "id": "actuar",
+      "term": "actuar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Hacer algo, o interpretar un papel en teatro o cine.",
+      "example": "Hay que actuar con calma.",
+      "translations": {
+        "en": "act"
+      },
+      "gloss": {
+        "en": "To do something, or to play a role in theater or film"
+      },
+      "gloss_example": {
+        "en": "We must act calmly."
+      }
+    },
+    {
+      "id": "regalar",
+      "term": "regalar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Dar algo a alguien sin pedir nada a cambio.",
+      "example": "Le voy a regalar un libro.",
+      "translations": {
+        "en": "give as a gift"
+      },
+      "gloss": {
+        "en": "To give something to someone without asking for anything back"
+      },
+      "gloss_example": {
+        "en": "I'm going to give her a book."
+      }
+    },
+    {
+      "id": "prometer",
+      "term": "prometer",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Decir con seguridad que harás algo.",
+      "example": "Te prometo que volveré.",
+      "translations": {
+        "en": "promise"
+      },
+      "gloss": {
+        "en": "To say with certainty that you will do something"
+      },
+      "gloss_example": {
+        "en": "I promise you I'll come back."
+      }
+    },
+    {
+      "id": "alquilar",
+      "term": "alquilar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Pagar para usar algo por un tiempo.",
+      "example": "Vamos a alquilar un carro.",
+      "translations": {
+        "en": "rent"
+      },
+      "gloss": {
+        "en": "To pay to use something for a period of time"
+      },
+      "gloss_example": {
+        "en": "We are going to rent a car."
+      }
+    },
+    {
+      "id": "informar",
+      "term": "informar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Dar información a alguien.",
+      "example": "Nos informaron del cambio de horario.",
+      "translations": {
+        "en": "inform"
+      },
+      "gloss": {
+        "en": "To give information to someone"
+      },
+      "gloss_example": {
+        "en": "They informed us of the schedule change."
+      }
+    },
+    {
+      "id": "recuperar",
+      "term": "recuperar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Volver a tener algo que se había perdido.",
+      "example": "Logré recuperar mis archivos.",
+      "translations": {
+        "en": "recover"
+      },
+      "gloss": {
+        "en": "To get back something that was lost"
+      },
+      "gloss_example": {
+        "en": "I managed to recover my files."
+      }
+    },
+    {
+      "id": "declarar",
+      "term": "declarar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Decir algo de manera oficial o pública.",
+      "example": "No tengo nada que declarar.",
+      "translations": {
+        "en": "declare"
+      },
+      "gloss": {
+        "en": "To say something in an official or public way"
+      },
+      "gloss_example": {
+        "en": "I have nothing to declare."
+      }
+    },
+    {
+      "id": "recomendar",
+      "term": "recomendar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Sugerir algo bueno a alguien.",
+      "example": "¿Qué plato me recomiendas?",
+      "translations": {
+        "en": "recommend"
+      },
+      "gloss": {
+        "en": "To suggest something good to someone"
+      },
+      "gloss_example": {
+        "en": "What dish do you recommend?"
+      }
+    },
+    {
+      "id": "complicar",
+      "term": "complicar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Hacer que algo sea más difícil.",
+      "example": "No quiero complicar las cosas.",
+      "translations": {
+        "en": "complicate"
+      },
+      "gloss": {
+        "en": "To make something more difficult"
+      },
+      "gloss_example": {
+        "en": "I don't want to complicate things."
+      }
+    },
+    {
+      "id": "alcanzar",
+      "term": "alcanzar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Llegar a un punto o lugar, o ser suficiente.",
+      "example": "El dinero no alcanza para todo.",
+      "translations": {
+        "en": "reach / be enough"
+      },
+      "gloss": {
+        "en": "To get to a point or place, or to be enough"
+      },
+      "gloss_example": {
+        "en": "The money isn't enough for everything."
+      }
+    },
+    {
+      "id": "devolver",
+      "term": "devolver",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Dar algo de vuelta a quien lo tenía.",
+      "example": "Tengo que devolver este libro.",
+      "translations": {
+        "en": "return / give back"
+      },
+      "gloss": {
+        "en": "To give something back to the person who had it"
+      },
+      "gloss_example": {
+        "en": "I have to return this book."
+      }
+    },
+    {
+      "id": "instalar",
+      "term": "instalar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Poner un programa o aparato listo para funcionar.",
+      "example": "¿Me ayudas a instalar esta aplicación?",
+      "translations": {
+        "en": "install"
+      },
+      "gloss": {
+        "en": "To set up a program or device so it works"
+      },
+      "gloss_example": {
+        "en": "Can you help me install this app?"
+      }
+    },
+    {
+      "id": "encargar",
+      "term": "encargar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Pedir a alguien que haga o consiga algo.",
+      "example": "Me encargaron organizar la fiesta.",
+      "translations": {
+        "en": "put in charge / order"
+      },
+      "gloss": {
+        "en": "To ask someone to do or get something"
+      },
+      "gloss_example": {
+        "en": "They put me in charge of organizing the party."
+      }
+    },
+    {
+      "id": "expresar",
+      "term": "expresar",
+      "level": "B1",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Dar a conocer lo que se piensa o siente.",
+      "example": "Le cuesta expresar sus emociones.",
+      "translations": {
+        "en": "express"
+      },
+      "gloss": {
+        "en": "To show what you think or feel"
+      },
+      "gloss_example": {
+        "en": "He finds it hard to express his emotions."
+      }
     }
   ]
 }

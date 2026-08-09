@@ -1007,6 +1007,96 @@
       "gloss_example": {
         "es": "Nuestro objetivo es ahorrar más."
       }
+    },
+    {
+      "id": "team",
+      "term": "team",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A group of people who work or play together",
+      "example": "Our team won the game.",
+      "translations": {
+        "es": "equipo"
+      },
+      "gloss": {
+        "es": "Grupo de personas que trabajan o juegan juntas."
+      },
+      "gloss_example": {
+        "es": "Nuestro equipo ganó el partido."
+      }
+    },
+    {
+      "id": "security",
+      "term": "security",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Protection from danger or harm",
+      "example": "Airport security was very slow.",
+      "translations": {
+        "es": "seguridad"
+      },
+      "gloss": {
+        "es": "Protección frente al peligro o daño."
+      },
+      "gloss_example": {
+        "es": "La seguridad del aeropuerto fue muy lenta."
+      }
+    },
+    {
+      "id": "tax",
+      "term": "tax",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Money people pay to the government",
+      "example": "We pay tax every year.",
+      "translations": {
+        "es": "impuesto"
+      },
+      "gloss": {
+        "es": "Dinero que las personas pagan al gobierno."
+      },
+      "gloss_example": {
+        "es": "Pagamos impuestos cada año."
+      }
+    },
+    {
+      "id": "agreement",
+      "term": "agreement",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A situation where people share the same opinion or decision",
+      "example": "We reached an agreement.",
+      "translations": {
+        "es": "acuerdo"
+      },
+      "gloss": {
+        "es": "Situación en que las personas comparten la misma opinión o decisión."
+      },
+      "gloss_example": {
+        "es": "Llegamos a un acuerdo."
+      }
+    },
+    {
+      "id": "policy",
+      "term": "policy",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A plan or set of rules used by a government or company",
+      "example": "What is the refund policy?",
+      "translations": {
+        "es": "política (norma)"
+      },
+      "gloss": {
+        "es": "Plan o conjunto de reglas que usa un gobierno o empresa."
+      },
+      "gloss_example": {
+        "es": "¿Cuál es la política de reembolso?"
+      }
     }
   ]
 }

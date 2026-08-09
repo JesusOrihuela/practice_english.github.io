@@ -647,6 +647,60 @@
       "gloss_example": {
         "es": "Una buena comunicación mejora el trabajo en equipo."
       }
+    },
+    {
+      "id": "phone",
+      "term": "phone",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device used to talk to people far away",
+      "example": "My phone is out of battery.",
+      "translations": {
+        "es": "teléfono"
+      },
+      "gloss": {
+        "es": "Aparato que se usa para hablar con personas lejanas."
+      },
+      "gloss_example": {
+        "es": "Mi teléfono se quedó sin batería."
+      }
+    },
+    {
+      "id": "screen",
+      "term": "screen",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The flat surface of a device that shows images",
+      "example": "The screen is too bright.",
+      "translations": {
+        "es": "pantalla"
+      },
+      "gloss": {
+        "es": "La superficie plana de un aparato que muestra imágenes."
+      },
+      "gloss_example": {
+        "es": "La pantalla está demasiado brillante."
+      }
+    },
+    {
+      "id": "file",
+      "term": "file",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A set of information stored together on a computer",
+      "example": "I can't open this file.",
+      "translations": {
+        "es": "archivo"
+      },
+      "gloss": {
+        "es": "Conjunto de información guardado junto en una computadora."
+      },
+      "gloss_example": {
+        "es": "No puedo abrir este archivo."
+      }
     }
   ]
 }

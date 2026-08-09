@@ -683,6 +683,42 @@
       "gloss_example": {
         "en": "I'll take a photo of you."
       }
+    },
+    {
+      "id": "correo",
+      "term": "correo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mensaje que se envía por internet o por carta.",
+      "example": "Te mandé un correo ayer.",
+      "translations": {
+        "en": "email / mail"
+      },
+      "gloss": {
+        "en": "A message sent over the internet or by letter"
+      },
+      "gloss_example": {
+        "en": "I sent you an email yesterday."
+      }
+    },
+    {
+      "id": "anuncio",
+      "term": "anuncio",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Mensaje que informa o intenta vender algo.",
+      "example": "Salió un anuncio en la pantalla.",
+      "translations": {
+        "en": "advertisement / announcement"
+      },
+      "gloss": {
+        "en": "A message that informs or tries to sell something"
+      },
+      "gloss_example": {
+        "en": "An ad came up on the screen."
+      }
     }
   ]
 }

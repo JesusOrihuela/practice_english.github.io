@@ -233,6 +233,168 @@
       "gloss_example": {
         "es": "¿Qué hora es?"
       }
+    },
+    {
+      "id": "today",
+      "term": "today",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "On this day",
+      "example": "I have a meeting today.",
+      "translations": {
+        "es": "hoy"
+      },
+      "gloss": {
+        "es": "En este día."
+      },
+      "gloss_example": {
+        "es": "Tengo una reunión hoy."
+      }
+    },
+    {
+      "id": "yesterday",
+      "term": "yesterday",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "On the day before today",
+      "example": "We arrived yesterday.",
+      "translations": {
+        "es": "ayer"
+      },
+      "gloss": {
+        "es": "En el día anterior a hoy."
+      },
+      "gloss_example": {
+        "es": "Llegamos ayer."
+      }
+    },
+    {
+      "id": "tomorrow",
+      "term": "tomorrow",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "On the day after today",
+      "example": "See you tomorrow.",
+      "translations": {
+        "es": "mañana"
+      },
+      "gloss": {
+        "es": "En el día siguiente a hoy."
+      },
+      "gloss_example": {
+        "es": "Nos vemos mañana."
+      }
+    },
+    {
+      "id": "summer",
+      "term": "summer",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The warmest season of the year",
+      "example": "We travel every summer.",
+      "translations": {
+        "es": "verano"
+      },
+      "gloss": {
+        "es": "La estación más cálida del año."
+      },
+      "gloss_example": {
+        "es": "Viajamos cada verano."
+      }
+    },
+    {
+      "id": "winter",
+      "term": "winter",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The coldest season of the year",
+      "example": "It snows in winter.",
+      "translations": {
+        "es": "invierno"
+      },
+      "gloss": {
+        "es": "La estación más fría del año."
+      },
+      "gloss_example": {
+        "es": "Nieva en invierno."
+      }
+    },
+    {
+      "id": "evening",
+      "term": "evening",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The time of day between afternoon and night",
+      "example": "We meet in the evening.",
+      "translations": {
+        "es": "tarde-noche"
+      },
+      "gloss": {
+        "es": "La parte del día entre la tarde y la noche."
+      },
+      "gloss_example": {
+        "es": "Nos vemos al caer la tarde."
+      }
+    },
+    {
+      "id": "afternoon",
+      "term": "afternoon",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The time of day between noon and evening",
+      "example": "I study in the afternoon.",
+      "translations": {
+        "es": "tarde"
+      },
+      "gloss": {
+        "es": "La parte del día entre el mediodía y la noche."
+      },
+      "gloss_example": {
+        "es": "Estudio por la tarde."
+      }
+    },
+    {
+      "id": "weekend",
+      "term": "weekend",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Saturday and Sunday",
+      "example": "What are your weekend plans?",
+      "translations": {
+        "es": "fin de semana"
+      },
+      "gloss": {
+        "es": "El sábado y el domingo."
+      },
+      "gloss_example": {
+        "es": "¿Cuáles son tus planes para el fin de semana?"
+      }
+    },
+    {
+      "id": "century",
+      "term": "century",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A period of one hundred years",
+      "example": "The church is over a century old.",
+      "translations": {
+        "es": "siglo"
+      },
+      "gloss": {
+        "es": "Período de cien años."
+      },
+      "gloss_example": {
+        "es": "La iglesia tiene más de un siglo."
+      }
     }
   ]
 }

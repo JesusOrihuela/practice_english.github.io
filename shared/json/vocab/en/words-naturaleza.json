@@ -323,6 +323,96 @@
       "gloss_example": {
         "es": "Se sentaron junto al fuego."
       }
+    },
+    {
+      "id": "water",
+      "term": "water",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The clear liquid that falls as rain and that we drink",
+      "example": "I drink a lot of water.",
+      "translations": {
+        "es": "agua"
+      },
+      "gloss": {
+        "es": "El líquido claro que cae como lluvia y que bebemos."
+      },
+      "gloss_example": {
+        "es": "Bebo mucha agua."
+      }
+    },
+    {
+      "id": "air",
+      "term": "air",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The mix of gases around us that we breathe",
+      "example": "The mountain air is fresh.",
+      "translations": {
+        "es": "aire"
+      },
+      "gloss": {
+        "es": "La mezcla de gases que nos rodea y que respiramos."
+      },
+      "gloss_example": {
+        "es": "El aire de la montaña es fresco."
+      }
+    },
+    {
+      "id": "sea",
+      "term": "sea",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A large area of salt water",
+      "example": "We swam in the sea.",
+      "translations": {
+        "es": "mar"
+      },
+      "gloss": {
+        "es": "Gran extensión de agua salada."
+      },
+      "gloss_example": {
+        "es": "Nadamos en el mar."
+      }
+    },
+    {
+      "id": "fish_animal",
+      "term": "fish",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An animal that lives in water and swims",
+      "example": "There are many fish in the lake.",
+      "translations": {
+        "es": "pez"
+      },
+      "gloss": {
+        "es": "Animal que vive en el agua y nada."
+      },
+      "gloss_example": {
+        "es": "Hay muchos peces en el lago."
+      }
+    },
+    {
+      "id": "sky",
+      "term": "sky",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The space above us where we see clouds and stars",
+      "example": "The sky is blue today.",
+      "translations": {
+        "es": "cielo"
+      },
+      "gloss": {
+        "es": "El espacio sobre nosotros donde vemos nubes y estrellas."
+      },
+      "gloss_example": {
+        "es": "El cielo está azul hoy."
+      }
     }
   ]
 }

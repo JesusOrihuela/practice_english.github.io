@@ -47,6 +47,126 @@
           "audioSlug": "me_falta_tiempo"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_se_me_hizo_tarde",
+      "source": "I'm running late.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Se me hizo tarde.",
+          "audioSlug": "se_me_hizo_tarde"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_tengo_que_hacer_varios_recados",
+      "source": "I have to run some errands.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo que hacer varios recados.",
+          "audioSlug": "tengo_que_hacer_varios_recados"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_perdi_el_autobus",
+      "source": "I missed the bus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdí el autobús.",
+          "audioSlug": "perdi_el_autobus"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_se_me_olvido_comprar_pan",
+      "source": "I forgot to buy bread.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Se me olvidó comprar pan.",
+          "audioSlug": "se_me_olvido_comprar_pan"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_no_paro_en_todo_el_dia",
+      "source": "I don't stop all day.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No paro en todo el día.",
+          "audioSlug": "no_paro_en_todo_el_dia"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_tengo_mil_cosas_que_hacer",
+      "source": "I have a thousand things to do.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo mil cosas que hacer.",
+          "audioSlug": "tengo_mil_cosas_que_hacer"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_se_me_acabo_el_tiempo",
+      "source": "I ran out of time.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Se me acabó el tiempo.",
+          "audioSlug": "se_me_acabo_el_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_hoy_fue_un_dia_largo",
+      "source": "Today was a long day.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy fue un día largo.",
+          "audioSlug": "hoy_fue_un_dia_largo"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_al_fin_puedo_descansar",
+      "source": "I can finally rest.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Al fin puedo descansar.",
+          "audioSlug": "al_fin_puedo_descansar"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_hoy_tengo_mucho_trabajo",
+      "source": "I have a lot of work today.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy tengo mucho trabajo.",
+          "audioSlug": "hoy_tengo_mucho_trabajo"
+        }
+      ]
     }
   ]
 }

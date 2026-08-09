@@ -467,6 +467,24 @@
       "gloss_example": {
         "es": "Esta salsa se hace con tomates frescos."
       }
+    },
+    {
+      "id": "food",
+      "term": "food",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The things people and animals eat",
+      "example": "The food here is delicious.",
+      "translations": {
+        "es": "comida"
+      },
+      "gloss": {
+        "es": "Lo que comen las personas y los animales."
+      },
+      "gloss_example": {
+        "es": "La comida aquí es deliciosa."
+      }
     }
   ]
 }
