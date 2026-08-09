@@ -332,6 +332,7 @@
       topic_survival:       'Sobrevivir el Idioma',
 
       // ── Página principal (index.html) ─────────────────────────────
+      index_hero_title:          '¿Listo para dominar<br><span class="highlight">un nuevo idioma?</span>',
       index_hero_sub:           'Escucha, habla y amplía tu vocabulario con ejercicios interactivos diseñados para hacer el aprendizaje natural y divertido.',
       index_stat_activities:    'Actividades',
       index_stat_phrases:       'Frases',
@@ -836,6 +837,7 @@
       topic_survival:       'Language Survival',
 
       // ── Main page (index.html) ────────────────────────────────
+      index_hero_title:          'Ready to master<br><span class="highlight">a new language?</span>',
       index_hero_sub:           'Listen, speak, and expand your vocabulary with interactive exercises designed to make learning natural and fun.',
       index_stat_activities:    'Activities',
       index_stat_phrases:       'Phrases',

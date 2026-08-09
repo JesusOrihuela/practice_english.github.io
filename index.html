@@ -58,6 +58,26 @@
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
     }
     </script>
+
+    <!-- i18n cloak: the landing is hardcoded in Spanish and translated by
+         _initMainPageI18n() at end of body. For a non-Spanish source (active
+         en-* pair, or navigator.language on first visit) hide the page until it
+         is translated so no Spanish flashes. Spanish sources render instantly.
+         generalities.css (loaded above) defines html.lang-cloak body{visibility:hidden}. -->
+    <script>
+    (function () {
+      try {
+        var p = localStorage.getItem('pe_active_pair');
+        var src = p ? p.split('-')[0] : (navigator.language || 'en').toLowerCase().split('-')[0];
+        if (src === 'es') return;
+        var de = document.documentElement;
+        de.classList.add('lang-cloak');
+        var reveal = function () { de.classList.remove('lang-cloak'); };
+        document.addEventListener('DOMContentLoaded', reveal);
+        setTimeout(reveal, 2000);
+      } catch (e) {}
+    })();
+    </script>
 </head>
 
 <body>
@@ -599,9 +619,9 @@
             if (html) el.innerHTML = txt; else el.textContent = txt;
           }
 
-          // Hero section
-          var _hero = document.querySelector('.hero-title');
-          if (_hero) _hero.innerHTML = 'Ready to master<br><span class="highlight">a new language?</span>';
+          // Hero section (title carries markup → innerHTML from i18n, not a
+          // hardcoded string, so a third source language translates correctly too)
+          _set('.hero-title', 'index_hero_title', true);
           _set('.hero-subtitle', 'index_hero_sub');
           var _statLabels = document.querySelectorAll('.hero-stats .stat .stat-label');
           var _statKeys = ['index_stat_activities', 'index_stat_phrases', 'index_stat_free'];
