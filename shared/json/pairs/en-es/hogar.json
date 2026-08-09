@@ -69,6 +69,150 @@
           "audioSlug": "vamos_a_construir_una_casa"
         }
       ]
+    },
+    {
+      "id": "hogar_cierra_la_puerta_al_salir",
+      "source": "Close the door when you leave.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cierra la puerta al salir.",
+          "audioSlug": "cierra_la_puerta_al_salir"
+        }
+      ]
+    },
+    {
+      "id": "hogar_puedes_abrir_la_ventana",
+      "source": "Can you open the window?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes abrir la ventana?",
+          "audioSlug": "puedes_abrir_la_ventana"
+        }
+      ]
+    },
+    {
+      "id": "hogar_los_muebles_son_nuevos",
+      "source": "The furniture is new.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los muebles son nuevos.",
+          "audioSlug": "los_muebles_son_nuevos"
+        }
+      ]
+    },
+    {
+      "id": "hogar_vivo_en_un_apartamento_pequeno",
+      "source": "I live in a small apartment.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo en un apartamento pequeño.",
+          "audioSlug": "vivo_en_un_apartamento_pequeno"
+        }
+      ]
+    },
+    {
+      "id": "hogar_mi_habitacion_esta_en_el_segundo_piso",
+      "source": "My room is on the second floor.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi habitación está en el segundo piso.",
+          "audioSlug": "mi_habitacion_esta_en_el_segundo_piso"
+        }
+      ]
+    },
+    {
+      "id": "hogar_enciende_la_luz_por_favor",
+      "source": "Turn on the light, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Enciende la luz, por favor.",
+          "audioSlug": "enciende_la_luz_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_techo_tiene_una_gotera",
+      "source": "The roof has a leak.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El techo tiene una gotera.",
+          "audioSlug": "el_techo_tiene_una_gotera"
+        }
+      ]
+    },
+    {
+      "id": "hogar_sientete_como_en_tu_casa",
+      "source": "Make yourself at home.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Siéntete como en tu casa.",
+          "audioSlug": "sientete_como_en_tu_casa"
+        }
+      ]
+    },
+    {
+      "id": "hogar_hay_que_limpiar_la_cocina",
+      "source": "We need to clean the kitchen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay que limpiar la cocina.",
+          "audioSlug": "hay_que_limpiar_la_cocina"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_casa_tiene_tres_dormitorios",
+      "source": "The house has three bedrooms.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La casa tiene tres dormitorios.",
+          "audioSlug": "la_casa_tiene_tres_dormitorios"
+        }
+      ]
+    },
+    {
+      "id": "hogar_barre_el_suelo_por_favor",
+      "source": "Sweep the floor, please.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Barre el suelo, por favor.",
+          "audioSlug": "barre_el_suelo_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "hogar_apaga_la_luz_antes_de_dormir",
+      "source": "Turn off the light before sleeping.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Apaga la luz antes de dormir.",
+          "audioSlug": "apaga_la_luz_antes_de_dormir"
+        }
+      ]
     }
   ]
 }

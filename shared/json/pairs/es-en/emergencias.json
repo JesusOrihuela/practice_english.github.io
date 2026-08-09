@@ -47,6 +47,150 @@
           "audioSlug": "call_an_ambulance"
         }
       ]
+    },
+    {
+      "id": "emergencias_call_the_police",
+      "source": "¡Llama a la policía!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Call the police!",
+          "audioSlug": "call_the_police"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_we_need_an_ambulance",
+      "source": "Necesitamos una ambulancia.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We need an ambulance.",
+          "audioSlug": "we_need_an_ambulance"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_there_s_a_fire",
+      "source": "¡Hay un incendio!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "There's a fire!",
+          "audioSlug": "there_s_a_fire"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_my_wallet_was_stolen",
+      "source": "Me robaron la cartera.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My wallet was stolen.",
+          "audioSlug": "my_wallet_was_stolen"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_is_there_any_danger",
+      "source": "¿Hay algún peligro?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is there any danger?",
+          "audioSlug": "is_there_any_danger"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_there_was_an_accident_on_the_street",
+      "source": "Hubo un accidente en la calle.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "There was an accident on the street.",
+          "audioSlug": "there_was_an_accident_on_the_street"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_i_lost_my_keys",
+      "source": "Perdí mis llaves.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I lost my keys.",
+          "audioSlug": "i_lost_my_keys"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_help_please",
+      "source": "¡Ayuda, por favor!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Help, please!",
+          "audioSlug": "help_please"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_where_is_the_emergency_exit",
+      "source": "¿Dónde está la salida de emergencia?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Where is the emergency exit?",
+          "audioSlug": "where_is_the_emergency_exit"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_call_the_firefighters",
+      "source": "Llamen a los bomberos.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Call the firefighters.",
+          "audioSlug": "call_the_firefighters"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_it_s_an_emergency",
+      "source": "Es una emergencia.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It's an emergency.",
+          "audioSlug": "it_s_an_emergency"
+        }
+      ]
+    },
+    {
+      "id": "emergencias_someone_fainted",
+      "source": "Alguien se desmayó.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Someone fainted.",
+          "audioSlug": "someone_fainted"
+        }
+      ]
     }
   ]
 }

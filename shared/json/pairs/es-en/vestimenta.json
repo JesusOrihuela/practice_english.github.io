@@ -11,6 +11,150 @@
           "audioSlug": "his_shirt_is_blue"
         }
       ]
+    },
+    {
+      "id": "vestimenta_put_on_your_shoes",
+      "source": "Ponte los zapatos.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Put on your shoes.",
+          "audioSlug": "put_on_your_shoes"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_take_off_your_coat",
+      "source": "Quítate el abrigo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Take off your coat.",
+          "audioSlug": "take_off_your_coat"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_i_like_that_blue_shirt",
+      "source": "Me gusta esa camisa azul.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I like that blue shirt.",
+          "audioSlug": "i_like_that_blue_shirt"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_what_size_do_you_wear",
+      "source": "¿Qué talla usas?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "What size do you wear?",
+          "audioSlug": "what_size_do_you_wear"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_this_dress_is_very_pretty",
+      "source": "Este vestido es muy bonito.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This dress is very pretty.",
+          "audioSlug": "this_dress_is_very_pretty"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_i_need_to_buy_new_clothes",
+      "source": "Necesito comprar ropa nueva.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I need to buy new clothes.",
+          "audioSlug": "i_need_to_buy_new_clothes"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_she_s_wearing_a_black_hat",
+      "source": "Lleva un sombrero negro.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She's wearing a black hat.",
+          "audioSlug": "she_s_wearing_a_black_hat"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_can_i_try_on_this_jacket",
+      "source": "¿Puedo probarme esta chaqueta?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I try on this jacket?",
+          "audioSlug": "can_i_try_on_this_jacket"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_the_shoes_are_too_tight",
+      "source": "Los zapatos me quedan apretados.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The shoes are too tight.",
+          "audioSlug": "the_shoes_are_too_tight"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_hang_up_your_coat_please",
+      "source": "Cuelga tu abrigo, por favor.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hang up your coat, please.",
+          "audioSlug": "hang_up_your_coat_please"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_i_ll_wear_a_t_shirt",
+      "source": "Me pondré una camiseta.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I'll wear a T-shirt.",
+          "audioSlug": "i_ll_wear_a_t_shirt"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_your_tie_matches_the_suit",
+      "source": "Tu corbata combina con el traje.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Your tie matches the suit.",
+          "audioSlug": "your_tie_matches_the_suit"
+        }
+      ]
     }
   ]
 }

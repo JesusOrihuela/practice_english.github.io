@@ -35,6 +35,150 @@
           "audioSlug": "que_dia_es_hoy"
         }
       ]
+    },
+    {
+      "id": "calendario_que_hora_tienes",
+      "source": "What time do you have?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué hora tienes?",
+          "audioSlug": "que_hora_tienes"
+        }
+      ]
+    },
+    {
+      "id": "calendario_son_las_tres_en_punto",
+      "source": "It's three o'clock.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son las tres en punto.",
+          "audioSlug": "son_las_tres_en_punto"
+        }
+      ]
+    },
+    {
+      "id": "calendario_es_mediodia",
+      "source": "It's noon.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es mediodía.",
+          "audioSlug": "es_mediodia"
+        }
+      ]
+    },
+    {
+      "id": "calendario_es_medianoche",
+      "source": "It's midnight.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es medianoche.",
+          "audioSlug": "es_medianoche"
+        }
+      ]
+    },
+    {
+      "id": "calendario_que_fecha_es_hoy",
+      "source": "What's the date today?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué fecha es hoy?",
+          "audioSlug": "que_fecha_es_hoy"
+        }
+      ]
+    },
+    {
+      "id": "calendario_hoy_es_quince_de_mayo",
+      "source": "Today is May fifteenth.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy es quince de mayo.",
+          "audioSlug": "hoy_es_quince_de_mayo"
+        }
+      ]
+    },
+    {
+      "id": "calendario_mi_cumpleanos_es_en_marzo",
+      "source": "My birthday is in March.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi cumpleaños es en marzo.",
+          "audioSlug": "mi_cumpleanos_es_en_marzo"
+        }
+      ]
+    },
+    {
+      "id": "calendario_la_reunion_es_el_martes",
+      "source": "The meeting is on Tuesday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La reunión es el martes.",
+          "audioSlug": "la_reunion_es_el_martes"
+        }
+      ]
+    },
+    {
+      "id": "calendario_llego_en_cinco_minutos",
+      "source": "I'll be there in five minutes.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llego en cinco minutos.",
+          "audioSlug": "llego_en_cinco_minutos"
+        }
+      ]
+    },
+    {
+      "id": "calendario_son_las_ocho_y_media",
+      "source": "It's half past eight.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Son las ocho y media.",
+          "audioSlug": "son_las_ocho_y_media"
+        }
+      ]
+    },
+    {
+      "id": "calendario_el_ano_tiene_doce_meses",
+      "source": "A year has twelve months.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El año tiene doce meses.",
+          "audioSlug": "el_ano_tiene_doce_meses"
+        }
+      ]
+    },
+    {
+      "id": "calendario_nos_vemos_la_proxima_semana",
+      "source": "See you next week.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos vemos la próxima semana.",
+          "audioSlug": "nos_vemos_la_proxima_semana"
+        }
+      ]
     }
   ]
 }
