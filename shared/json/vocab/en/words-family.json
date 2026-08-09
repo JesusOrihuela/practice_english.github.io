@@ -449,6 +449,114 @@
       "gloss_example": {
         "es": "Es una buena persona."
       }
+    },
+    {
+      "id": "mother",
+      "term": "mother",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A female parent",
+      "example": "My mother makes the best soup.",
+      "translations": {
+        "es": "madre"
+      },
+      "gloss": {
+        "es": "Progenitora de una persona."
+      },
+      "gloss_example": {
+        "es": "Mi madre hace la mejor sopa."
+      }
+    },
+    {
+      "id": "father",
+      "term": "father",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A male parent",
+      "example": "My father taught me to ride a bike.",
+      "translations": {
+        "es": "padre"
+      },
+      "gloss": {
+        "es": "Progenitor de una persona."
+      },
+      "gloss_example": {
+        "es": "Mi padre me enseñó a andar en bicicleta."
+      }
+    },
+    {
+      "id": "son",
+      "term": "son",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A male child of a person",
+      "example": "Their son plays soccer on weekends.",
+      "translations": {
+        "es": "hijo"
+      },
+      "gloss": {
+        "es": "Descendiente varón de una persona."
+      },
+      "gloss_example": {
+        "es": "Su hijo juega fútbol los fines de semana."
+      }
+    },
+    {
+      "id": "daughter",
+      "term": "daughter",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A female child of a person",
+      "example": "Her daughter is studying medicine.",
+      "translations": {
+        "es": "hija"
+      },
+      "gloss": {
+        "es": "Descendiente mujer de una persona."
+      },
+      "gloss_example": {
+        "es": "Su hija estudia medicina."
+      }
+    },
+    {
+      "id": "brother",
+      "term": "brother",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A male sibling",
+      "example": "My brother is two years older than me.",
+      "translations": {
+        "es": "hermano"
+      },
+      "gloss": {
+        "es": "Hermano varón de una persona."
+      },
+      "gloss_example": {
+        "es": "Mi hermano es dos años mayor que yo."
+      }
+    },
+    {
+      "id": "sister",
+      "term": "sister",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A female sibling",
+      "example": "His sister lives in another city.",
+      "translations": {
+        "es": "hermana"
+      },
+      "gloss": {
+        "es": "Hermana mujer de una persona."
+      },
+      "gloss_example": {
+        "es": "Su hermana vive en otra ciudad."
+      }
     }
   ]
 }

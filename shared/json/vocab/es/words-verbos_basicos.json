@@ -1853,6 +1853,222 @@
       "gloss_example": {
         "en": "Shall I serve you more?"
       }
+    },
+    {
+      "id": "sacar",
+      "term": "sacar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Poner algo fuera del lugar donde estaba.",
+      "example": "Saca la basura antes de dormir.",
+      "translations": {
+        "en": "take out"
+      },
+      "gloss": {
+        "en": "To move something out of the place where it was"
+      },
+      "gloss_example": {
+        "en": "Take out the trash before going to bed."
+      }
+    },
+    {
+      "id": "traer",
+      "term": "traer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Llevar algo hacia el lugar donde uno está.",
+      "example": "¿Puedes traer pan de la tienda?",
+      "translations": {
+        "en": "bring"
+      },
+      "gloss": {
+        "en": "To carry something to the place where you are"
+      },
+      "gloss_example": {
+        "en": "Can you bring bread from the store?"
+      }
+    },
+    {
+      "id": "tocar",
+      "term": "tocar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Poner la mano sobre algo, o hacer sonar un instrumento.",
+      "example": "Mi hermana toca el piano muy bien.",
+      "translations": {
+        "en": "touch / play (an instrument)"
+      },
+      "gloss": {
+        "en": "To put your hand on something, or to play an instrument"
+      },
+      "gloss_example": {
+        "en": "My sister plays the piano very well."
+      }
+    },
+    {
+      "id": "mostrar",
+      "term": "mostrar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer que alguien vea algo.",
+      "example": "Muéstrame tu dibujo.",
+      "translations": {
+        "en": "show"
+      },
+      "gloss": {
+        "en": "To let someone see something"
+      },
+      "gloss_example": {
+        "en": "Show me your drawing."
+      }
+    },
+    {
+      "id": "enviar",
+      "term": "enviar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer que algo llegue a otra persona o lugar.",
+      "example": "Te voy a enviar las fotos hoy.",
+      "translations": {
+        "en": "send"
+      },
+      "gloss": {
+        "en": "To make something go to another person or place"
+      },
+      "gloss_example": {
+        "en": "I will send you the photos today."
+      }
+    },
+    {
+      "id": "cocinar",
+      "term": "cocinar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Preparar comida usando calor.",
+      "example": "Hoy me toca cocinar a mí.",
+      "translations": {
+        "en": "cook"
+      },
+      "gloss": {
+        "en": "To prepare food using heat"
+      },
+      "gloss_example": {
+        "en": "Today it's my turn to cook."
+      }
+    },
+    {
+      "id": "bajar",
+      "term": "bajar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir o llevar algo de un lugar alto a uno más bajo.",
+      "example": "Baja las escaleras con cuidado.",
+      "translations": {
+        "en": "go down / lower"
+      },
+      "gloss": {
+        "en": "To go or move something from a high place to a lower one"
+      },
+      "gloss_example": {
+        "en": "Go down the stairs carefully."
+      }
+    },
+    {
+      "id": "guardar",
+      "term": "guardar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Poner algo en un lugar seguro para conservarlo.",
+      "example": "Guarda tus juguetes en la caja.",
+      "translations": {
+        "en": "keep / put away"
+      },
+      "gloss": {
+        "en": "To put something in a safe place to keep it"
+      },
+      "gloss_example": {
+        "en": "Put your toys away in the box."
+      }
+    },
+    {
+      "id": "cuidar",
+      "term": "cuidar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Atender a alguien o algo para que esté bien.",
+      "example": "Mi abuela cuida a mi hermano pequeño.",
+      "translations": {
+        "en": "take care of"
+      },
+      "gloss": {
+        "en": "To look after someone or something so they are well"
+      },
+      "gloss_example": {
+        "en": "My grandmother takes care of my little brother."
+      }
+    },
+    {
+      "id": "descansar",
+      "term": "descansar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dejar de trabajar o moverse para recuperar energía.",
+      "example": "Necesito descansar después del viaje.",
+      "translations": {
+        "en": "rest"
+      },
+      "gloss": {
+        "en": "To stop working or moving to get your energy back"
+      },
+      "gloss_example": {
+        "en": "I need to rest after the trip."
+      }
+    },
+    {
+      "id": "comenzar",
+      "term": "comenzar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Dar inicio a algo.",
+      "example": "La clase comienza a las nueve.",
+      "translations": {
+        "en": "begin"
+      },
+      "gloss": {
+        "en": "To start something"
+      },
+      "gloss_example": {
+        "en": "The class begins at nine."
+      }
+    },
+    {
+      "id": "recoger",
+      "term": "recoger",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Levantar algo del suelo o ir por alguien a un lugar.",
+      "example": "Voy a recoger a los niños de la escuela.",
+      "translations": {
+        "en": "pick up"
+      },
+      "gloss": {
+        "en": "To lift something up or to go get someone from a place"
+      },
+      "gloss_example": {
+        "en": "I'm going to pick up the kids from school."
+      }
     }
   ]
 }

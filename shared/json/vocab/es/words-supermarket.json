@@ -431,6 +431,96 @@
       "gloss_example": {
         "en": "The food fraud investigation revealed widespread adulteration of imported honey with cheaper syrups."
       }
+    },
+    {
+      "id": "carne",
+      "term": "carne",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento que se obtiene de los animales.",
+      "example": "Compré carne para la cena.",
+      "translations": {
+        "en": "meat"
+      },
+      "gloss": {
+        "en": "Food that comes from animals"
+      },
+      "gloss_example": {
+        "en": "I bought meat for dinner."
+      }
+    },
+    {
+      "id": "leche",
+      "term": "leche",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Líquido blanco que se bebe y sirve para hacer queso y yogur.",
+      "example": "Falta leche para el desayuno.",
+      "translations": {
+        "en": "milk"
+      },
+      "gloss": {
+        "en": "A white liquid you drink, also used to make cheese and yogurt"
+      },
+      "gloss_example": {
+        "en": "We need milk for breakfast."
+      }
+    },
+    {
+      "id": "huevo",
+      "term": "huevo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento de forma ovalada que ponen las gallinas.",
+      "example": "Quiero dos huevos con pan.",
+      "translations": {
+        "en": "egg"
+      },
+      "gloss": {
+        "en": "An oval food laid by hens"
+      },
+      "gloss_example": {
+        "en": "I want two eggs with bread."
+      }
+    },
+    {
+      "id": "pan",
+      "term": "pan",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento hecho de harina y horneado.",
+      "example": "Este pan está recién hecho.",
+      "translations": {
+        "en": "bread"
+      },
+      "gloss": {
+        "en": "A food made from flour and baked"
+      },
+      "gloss_example": {
+        "en": "This bread is freshly baked."
+      }
+    },
+    {
+      "id": "arroz",
+      "term": "arroz",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Grano blanco pequeño que se cocina en agua.",
+      "example": "El arroz acompaña muchos platillos.",
+      "translations": {
+        "en": "rice"
+      },
+      "gloss": {
+        "en": "A small white grain cooked in water"
+      },
+      "gloss_example": {
+        "en": "Rice goes with many dishes."
+      }
     }
   ]
 }

@@ -1745,6 +1745,222 @@
       "gloss_example": {
         "es": "Abre la ventana."
       }
+    },
+    {
+      "id": "lose",
+      "term": "lose",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To no longer have something, or to not win",
+      "example": "Don't lose your keys again.",
+      "translations": {
+        "es": "perder"
+      },
+      "gloss": {
+        "es": "Dejar de tener algo, o no ganar."
+      },
+      "gloss_example": {
+        "es": "No vuelvas a perder tus llaves."
+      }
+    },
+    {
+      "id": "visit",
+      "term": "visit",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To go to see a person or a place",
+      "example": "We visit my grandmother every Sunday.",
+      "translations": {
+        "es": "visitar"
+      },
+      "gloss": {
+        "es": "Ir a ver a una persona o un lugar."
+      },
+      "gloss_example": {
+        "es": "Visitamos a mi abuela todos los domingos."
+      }
+    },
+    {
+      "id": "stay",
+      "term": "stay",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To remain in a place and not leave",
+      "example": "I want to stay home tonight.",
+      "translations": {
+        "es": "quedarse"
+      },
+      "gloss": {
+        "es": "Permanecer en un lugar y no irse."
+      },
+      "gloss_example": {
+        "es": "Quiero quedarme en casa esta noche."
+      }
+    },
+    {
+      "id": "add",
+      "term": "add",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To put something together with something else",
+      "example": "Add some salt to the soup.",
+      "translations": {
+        "es": "añadir"
+      },
+      "gloss": {
+        "es": "Poner algo junto con otra cosa."
+      },
+      "gloss_example": {
+        "es": "Añade un poco de sal a la sopa."
+      }
+    },
+    {
+      "id": "sell",
+      "term": "sell",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To give something in exchange for money",
+      "example": "They sell fresh bread every morning.",
+      "translations": {
+        "es": "vender"
+      },
+      "gloss": {
+        "es": "Dar algo a cambio de dinero."
+      },
+      "gloss_example": {
+        "es": "Venden pan fresco todas las mañanas."
+      }
+    },
+    {
+      "id": "carry",
+      "term": "carry",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To hold something and take it somewhere",
+      "example": "Can you carry this bag for me?",
+      "translations": {
+        "es": "cargar"
+      },
+      "gloss": {
+        "es": "Sostener algo y llevarlo a otro lugar."
+      },
+      "gloss_example": {
+        "es": "¿Puedes cargar esta bolsa por mí?"
+      }
+    },
+    {
+      "id": "enjoy",
+      "term": "enjoy",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To get pleasure from something",
+      "example": "I really enjoy reading at night.",
+      "translations": {
+        "es": "disfrutar"
+      },
+      "gloss": {
+        "es": "Obtener placer de algo."
+      },
+      "gloss_example": {
+        "es": "Disfruto mucho leer por la noche."
+      }
+    },
+    {
+      "id": "save",
+      "term": "save",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To keep something for the future, or to help someone out of danger",
+      "example": "I save a little money every month.",
+      "translations": {
+        "es": "ahorrar / salvar"
+      },
+      "gloss": {
+        "es": "Guardar algo para el futuro, o sacar a alguien del peligro."
+      },
+      "gloss_example": {
+        "es": "Ahorro un poco de dinero cada mes."
+      }
+    },
+    {
+      "id": "continue",
+      "term": "continue",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To keep doing something without stopping",
+      "example": "Please continue with your story.",
+      "translations": {
+        "es": "continuar"
+      },
+      "gloss": {
+        "es": "Seguir haciendo algo sin parar."
+      },
+      "gloss_example": {
+        "es": "Por favor, continúa con tu historia."
+      }
+    },
+    {
+      "id": "return",
+      "term": "return",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To go back to a place, or to give something back",
+      "example": "She will return home next week.",
+      "translations": {
+        "es": "regresar / devolver"
+      },
+      "gloss": {
+        "es": "Volver a un lugar, o entregar algo de vuelta."
+      },
+      "gloss_example": {
+        "es": "Ella regresará a casa la próxima semana."
+      }
+    },
+    {
+      "id": "explain",
+      "term": "explain",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To make something clear so others can understand it",
+      "example": "Can you explain this exercise to me?",
+      "translations": {
+        "es": "explicar"
+      },
+      "gloss": {
+        "es": "Hacer que algo quede claro para que otros lo entiendan."
+      },
+      "gloss_example": {
+        "es": "¿Me puedes explicar este ejercicio?"
+      }
+    },
+    {
+      "id": "listen",
+      "term": "listen",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "To pay attention to a sound or to what someone says",
+      "example": "Listen to the teacher, please.",
+      "translations": {
+        "es": "escuchar"
+      },
+      "gloss": {
+        "es": "Prestar atención a un sonido o a lo que alguien dice."
+      },
+      "gloss_example": {
+        "es": "Escucha a la maestra, por favor."
+      }
     }
   ]
 }

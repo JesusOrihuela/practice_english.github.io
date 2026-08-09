@@ -395,6 +395,24 @@
       "gloss_example": {
         "es": "Tengo la nariz fría."
       }
+    },
+    {
+      "id": "doctor",
+      "term": "doctor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person whose job is to treat sick people",
+      "example": "You should see a doctor about that cough.",
+      "translations": {
+        "es": "médico / médica"
+      },
+      "gloss": {
+        "es": "Persona cuyo trabajo es atender a los enfermos."
+      },
+      "gloss_example": {
+        "es": "Deberías ver a un médico por esa tos."
+      }
     }
   ]
 }

@@ -863,6 +863,114 @@
       "gloss_example": {
         "es": "El expresidente habló."
       }
+    },
+    {
+      "id": "whole",
+      "term": "whole",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Complete, with nothing missing",
+      "example": "I read the whole book in one day.",
+      "translations": {
+        "es": "entero"
+      },
+      "gloss": {
+        "es": "Completo, sin que falte nada."
+      },
+      "gloss_example": {
+        "es": "Leí el libro entero en un día."
+      }
+    },
+    {
+      "id": "available",
+      "term": "available",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Possible to get, use, or talk to",
+      "example": "Is this room available tonight?",
+      "translations": {
+        "es": "disponible"
+      },
+      "gloss": {
+        "es": "Que se puede conseguir, usar o contactar."
+      },
+      "gloss_example": {
+        "es": "¿Está disponible esta habitación esta noche?"
+      }
+    },
+    {
+      "id": "similar",
+      "term": "similar",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Almost the same but not exactly",
+      "example": "Our ideas are similar in many ways.",
+      "translations": {
+        "es": "similar"
+      },
+      "gloss": {
+        "es": "Casi igual, pero no exactamente."
+      },
+      "gloss_example": {
+        "es": "Nuestras ideas son similares en muchos aspectos."
+      }
+    },
+    {
+      "id": "basic",
+      "term": "basic",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Most simple or most important as a starting point",
+      "example": "You only need basic skills for this job.",
+      "translations": {
+        "es": "básico"
+      },
+      "gloss": {
+        "es": "Lo más simple o esencial como punto de partida."
+      },
+      "gloss_example": {
+        "es": "Solo necesitas habilidades básicas para este trabajo."
+      }
+    },
+    {
+      "id": "previous",
+      "term": "previous",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Happening or existing before this one",
+      "example": "The previous owner painted the house blue.",
+      "translations": {
+        "es": "anterior"
+      },
+      "gloss": {
+        "es": "Que sucedió o existió antes que este."
+      },
+      "gloss_example": {
+        "es": "El dueño anterior pintó la casa de azul."
+      }
+    },
+    {
+      "id": "original",
+      "term": "original",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "First or earliest, or new and different from others",
+      "example": "The original plan was much simpler.",
+      "translations": {
+        "es": "original"
+      },
+      "gloss": {
+        "es": "Primero o más antiguo, o nuevo y diferente de los demás."
+      },
+      "gloss_example": {
+        "es": "El plan original era mucho más sencillo."
+      }
     }
   ]
 }

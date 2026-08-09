@@ -539,6 +539,60 @@
       "gloss_example": {
         "en": "My grandfather is eighty."
       }
+    },
+    {
+      "id": "mama",
+      "term": "mamá",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Forma cariñosa de llamar a la madre.",
+      "example": "Mi mamá me llama todos los días.",
+      "translations": {
+        "en": "mom"
+      },
+      "gloss": {
+        "en": "An affectionate word for mother"
+      },
+      "gloss_example": {
+        "en": "My mom calls me every day."
+      }
+    },
+    {
+      "id": "papa_padre",
+      "term": "papá",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Forma cariñosa de llamar al padre.",
+      "example": "Mi papá cocina los domingos.",
+      "translations": {
+        "en": "dad"
+      },
+      "gloss": {
+        "en": "An affectionate word for father"
+      },
+      "gloss_example": {
+        "en": "My dad cooks on Sundays."
+      }
+    },
+    {
+      "id": "tio",
+      "term": "tío / tía",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Hermano o hermana de tu padre o de tu madre.",
+      "example": "Mi tía vive cerca de nosotros.",
+      "translations": {
+        "en": "uncle / aunt"
+      },
+      "gloss": {
+        "en": "The brother or sister of your father or mother"
+      },
+      "gloss_example": {
+        "en": "My aunt lives near us."
+      }
     }
   ]
 }

@@ -287,6 +287,24 @@
       "gloss_example": {
         "es": "Estoy leyendo un libro."
       }
+    },
+    {
+      "id": "teacher",
+      "term": "teacher",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person whose job is to help people learn",
+      "example": "Our teacher explains everything with patience.",
+      "translations": {
+        "es": "maestro / maestra"
+      },
+      "gloss": {
+        "es": "Persona cuyo trabajo es ayudar a otros a aprender."
+      },
+      "gloss_example": {
+        "es": "Nuestra maestra explica todo con paciencia."
+      }
     }
   ]
 }
