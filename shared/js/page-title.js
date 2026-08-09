@@ -40,3 +40,24 @@
     document.title = txt.replace(/<[^>]*>/g, '') + ' — Practice English';
   }
 })();
+
+/* ── i18n cloak ──────────────────────────────────────────────────────────
+   For pairs whose source language is NOT the hardcoded HTML language (es),
+   hide the content until every element is translated, so no Spanish text is
+   ever painted (title, headers, footer, buttons…). This runs in <head>,
+   before first paint. The cloak is removed on DOMContentLoaded — which fires
+   after the whole body is parsed and all end-of-body scripts (nav.js and each
+   activity's own i18n) have run — so it works uniformly for every page,
+   including ones that don't load nav.js (e.g. placement). A failsafe timer
+   guarantees the content is never stuck hidden if something throws. */
+(function () {
+  if (typeof AppLangPair === 'undefined') return;
+  try {
+    if (AppLangPair.getActive().source.code === 'es') return;  // source pair: no cloak
+    var de = document.documentElement;
+    de.classList.add('lang-cloak');
+    var reveal = function () { de.classList.remove('lang-cloak'); };
+    document.addEventListener('DOMContentLoaded', reveal);
+    setTimeout(reveal, 2000);  // failsafe
+  } catch (e) { /* never let cloaking break the page */ }
+})();

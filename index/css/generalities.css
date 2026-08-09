@@ -228,6 +228,15 @@ footer {
 /* ---- Global Utility: Hidden ---- */
 .hidden { display: none !important; }
 
+/* ---- i18n cloak (FOUC prevention for non-Spanish-source pairs) ----
+   The HTML text is hardcoded in Spanish (the original source language).
+   For a pair whose source is another language (e.g. en-es), page-title.js
+   adds `lang-cloak` to <html> in the <head> so no Spanish text is painted;
+   nav.js removes it at end of body once every element has been translated.
+   Spanish-source pairs (es-en) never get the class, so they render instantly.
+   `visibility` keeps layout intact (no reflow) and lets the page background show. */
+html.lang-cloak body { visibility: hidden; }
+
 /* ---- Shared Component: Back Button ---- */
 .back-btn {
   display: inline-flex;
