@@ -35,6 +35,12 @@
     var txt = AppLang.t(key, _i18nParams);
     if (txt !== key) el.textContent = txt;
   });
+  // data-i18n-html: values that carry markup (e.g. an accent <span> inside an h1).
+  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+    var key = el.getAttribute('data-i18n-html');
+    var txt = AppLang.t(key, _i18nParams);
+    if (txt !== key) el.innerHTML = txt;
+  });
   document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
     var key = el.getAttribute('data-i18n-aria');
     var txt = AppLang.t(key, _i18nParams);
@@ -70,31 +76,8 @@
     document.title = _pageTxt.replace(/<[^>]*>/g, '') + ' — Practice English';
   }
 
-  // Sections below only run for non-source-language-HTML pairs.
-  // Source-lang HTML (es-en) is already written in the source language and uses
-  // <span> markup inside h1 that innerHTML reassignment would correctly set,
-  // but the hardcoded HTML already has the right text — no JS update needed.
-  if (AppLangPair.getActive().source.code === 'es') return;
-
-  // 3. Common exercise buttons
-  var _BTN_MAP = {
-    'back-btn':           'back_to_topics',
-    'back-to-categories': 'back_to_categories',
-    'back-to-rules':      'back_to_rules',
-    'listen-btn':         'listen_btn',
-    'listen-btn-back':    'listen_btn',
-    'play-btn':           'listen_btn',
-    'listenButton':       'listen_btn_label',
-    'check-btn':          'btn_verify',
-  };
-  Object.keys(_BTN_MAP).forEach(function (id) {
-    var el = document.getElementById(id);
-    if (!el) return;
-    var txt = AppLang.t(_BTN_MAP[id]);
-    if (txt !== _BTN_MAP[id]) el.textContent = txt;
-  });
-
-  // 3b. Footer — always set from i18n (works for both es and en)
+  // 3. Footer — built from i18n for ALL pairs. The name is invariant; only the
+  //    "Developed by" text and the (dynamic) year vary. The <p> is empty in HTML.
   var _footerP = document.querySelector('footer .footer-content p');
   if (_footerP) {
     var _devTxt = AppLang.t('footer_developed_by');
@@ -105,27 +88,8 @@
     }
   }
 
-  // 4. Exercise area titles (by CSS class)
-  var _TITLE_MAP = {
-    'listening-title':    'speaking_title',
-    'listening-subtitle': 'speaking_sub',
-    'dict-title':         'dictation_title',
-    'cloze-title':        'cloze_title',
-    'cloze-subtitle':     'cloze_sub',
-    'scramble-title':     'scramble_title',
-  };
-  Object.keys(_TITLE_MAP).forEach(function (cls) {
-    var el = document.querySelector('.' + cls);
-    if (!el) return;
-    var txt = AppLang.t(_TITLE_MAP[cls]);
-    if (txt !== _TITLE_MAP[cls]) el.textContent = txt;
-  });
-
-  // 5. Topic picker page header h1 (non-source-lang pairs only —
-  //    source-lang HTML already has the correct <span> markup hardcoded)
-  if (_pageTxt && _pageTxt !== _PAGE_TITLE_MAP[_activity]) {
-    var _h1 = document.querySelector('.topic-picker-header h1, .dict-header h1, .cloze-header h1, .trans-header h1, .scramble-header h1, .grammar-header h1');
-    if (_h1) _h1.innerHTML = _pageTxt;
-  }
+  // NOTE: buttons, exercise titles and page-header h1 are no longer special-cased
+  // here — they carry data-i18n / data-i18n-html in the HTML and are filled by the
+  // generic passes above, for every language pair (no hardcoded text anywhere).
 
 }());

@@ -13,13 +13,13 @@
 
     es: {
       // ── Títulos del área de ejercicio ──────────────────────────
-      speaking_title:         '¿Cómo se pronuncia?',
+      speaking_title:         '¿Cómo se <span>pronuncia?</span>',
       speaking_sub:           'Escucha con atención y luego pronuncia la frase en voz alta.',
-      dictation_title:        'Escucha y Escribe',
-      cloze_title:            'Completa el espacio',
+      dictation_title:        'Escucha y <span>Escribe</span>',
+      cloze_title:            'Completa el <span>espacio</span>',
       translation_title:      'Traduce al {lang}',
       translation_sub:        'Lee la frase en {source} y escribe la versión en {lang}.',
-      scramble_title:         'Construye la oración',
+      scramble_title:         'Construye la <span>oración</span>',
 
       // ── TTS / STT ───────────────────────────────────────────────
       tts_loading:            '🔊 Cargando modelo de voz…',
@@ -289,18 +289,19 @@
       // ── Botones de ejercicio ─────────────────────────────────────
       listen_btn:             '🔊 Escuchar',
       cloze_sub:              'Escribe la palabra que falta, luego presiona Enter o Verificar.',
+      dictation_sub:          'Presiona Play, luego escribe lo que escuchas. Presiona Enter para verificar.',
       back_to_categories:     '← Categorías',
       back_to_rules:          '← Reglas',
 
       // ── Títulos de página (encabezado del topic picker) ──────────
-      speaking_page_title:    'Pronunciación en Voz Alta',
-      dictation_page_title:   'Práctica de Dictado',
-      cloze_page_title:       'Ejercicio de Cloze',
-      translation_page_title: 'Traducción Inversa',
-      scramble_page_title:    'Construye la Oración',
-      vocab_page_title:       'Vocabulario Interactivo',
-      quiz_page_title:        'Prueba de Vocabulario',
-      grammar_page_title:     'Taller de Gramática',
+      speaking_page_title:    'Pronunciación en <span>Voz Alta</span>',
+      dictation_page_title:   'Práctica de <span>Dictado</span>',
+      cloze_page_title:       'Ejercicio de <span>Cloze</span>',
+      translation_page_title: 'Traducción <span>Inversa</span>',
+      scramble_page_title:    'Construye la <span>Oración</span>',
+      vocab_page_title:       'Vocabulario <span>Interactivo</span>',
+      quiz_page_title:        'Prueba de <span>Vocabulario</span>',
+      grammar_page_title:     'Taller de <span>Gramática</span>',
       my_learning_page_title: 'Mi Aprendizaje',
       progress_page_title:    'Mi Perfil',
       placement_page_title:   'Prueba de Nivel',
@@ -450,9 +451,9 @@
       grammar_continue_btn:       'Continuar →',
       related_phrases_aria:       'Frases de práctica relacionadas',
       // My learning
-      ml_page_h1:                 'Mi Ruta de Aprendizaje',
+      ml_page_h1:                 'Mi <span>Ruta de Aprendizaje</span>',
       // Progress page
-      progress_page_h1:           'Mi Perfil',
+      progress_page_h1:           'Mi <span>Perfil</span>',
       progress_page_subtitle:     'Tus ejercicios y dominio de un vistazo.',
       progress_lang_section:      '🌐 Idioma',
       progress_exercises_section: '📊 Resumen de Ejercicios',
@@ -488,6 +489,7 @@
       notif_time_label:           'Recuérdame a las',
       // Placement
       placement_title:            'Prueba de Nivel',
+      placement_page_h1:          'Prueba de <span>Nivel</span>',
       placement_subtitle_enes:    '14 preguntas para encontrar tu nivel de {target} (A1–C2) y sugerirte el mejor punto de partida.',
       placement_time_pill:        '⏱️ ~3 minutos',
       placement_questions_pill:   '❓ 14 preguntas',
@@ -515,13 +517,13 @@
 
     en: {
       // ── Exercise area titles ───────────────────────────────────
-      speaking_title:         'How do you pronounce it?',
+      speaking_title:         'How do you <span>pronounce it?</span>',
       speaking_sub:           'Listen carefully, then say the phrase out loud.',
-      dictation_title:        'Listen and Write',
-      cloze_title:            'Fill in the blank',
+      dictation_title:        'Listen and <span>Write</span>',
+      cloze_title:            'Fill in the <span>blank</span>',
       translation_title:      'Translate to {lang}',
       translation_sub:        'Read the phrase in {source} and write it in {lang}.',
-      scramble_title:         'Build the sentence',
+      scramble_title:         'Build the <span>sentence</span>',
 
       // ── TTS / STT ─────────────────────────────────────────────
       tts_loading:            '🔊 Loading voice model…',
@@ -791,6 +793,7 @@
       // ── Exercise buttons ──────────────────────────────────────
       listen_btn:             '🔊 Listen',
       cloze_sub:              'Type the missing word, then press Enter or Verify.',
+      dictation_sub:          'Press Play, then type what you hear. Press Enter to verify.',
       back_to_categories:     '← Categories',
       back_to_rules:          '← Rules',
 
@@ -952,9 +955,9 @@
       grammar_continue_btn:       'Continue →',
       related_phrases_aria:       'Related practice phrases',
       // My learning
-      ml_page_h1:                 'My Learning Path',
+      ml_page_h1:                 'My <span>Learning</span> Path',
       // Progress page
-      progress_page_h1:           'My Profile',
+      progress_page_h1:           'My <span>Profile</span>',
       progress_page_subtitle:     'Your exercises and mastery at a glance.',
       progress_lang_section:      '🌐 Language',
       progress_exercises_section: '📊 Exercise Summary',
@@ -990,6 +993,7 @@
       notif_time_label:           'Remind me at',
       // Placement
       placement_title:            'Level Test',
+      placement_page_h1:          'Level <span>Test</span>',
       placement_subtitle_enes:    '14 questions to find your {targetName} level (A1–C2) and suggest the best starting point.',
       placement_time_pill:        '⏱️ ~3 minutes',
       placement_questions_pill:   '❓ 14 questions',
