@@ -6,11 +6,14 @@
       so a new pair's block can't omit JS-only or dynamically-built keys.
    1. KEY RESOLUTION — each data-i18n / -html / -aria / -placeholder key
       used in the HTML is defined in EVERY language block of lang/ui.js.
-   2. NO HARDCODED TEXT — no translatable element (h1/h2/h3/p/button/label,
-      or a <span> with a class) holds literal letter text unless it carries a
-      data-i18n* attribute; and no aria-label / placeholder holds letter text
-      without its data-i18n-aria / -placeholder. Elements with an id (JS-filled
-      at runtime) and pure emoji/number/symbol text are allowed.
+   2. NO HARDCODED TEXT — an element (h1–h4/p/button/label, or a <span> with a
+      class) with literal letter text must carry a data-i18n* attribute, OR ship
+      empty (JS fills it) — even if it has an id (id no longer exempts hardcoded
+      text; a JS-filled element must not render a wrong-language placeholder).
+      This includes: (a) direct text, (b) aria-label / placeholder attribute text
+      (needs data-i18n-aria / -placeholder), and (c) text AFTER a child element
+      (e.g. `<span id=streak><span>🔥</span> Racha</span>`). Pure
+      emoji/number/symbol text and <script> bodies are ignored.
 
    Exit 1 on any violation. Run: node tools/check-i18n.mjs
    ============================================================ */
@@ -113,6 +116,22 @@ for (const rel of HTML) {
       if (!isLetterText(val)) continue;    // emoji/number/symbol only → ok
       if (m[0].includes(need)) continue;   // translated via data-i18n → ok
       problems.push(`${rel}: hardcoded ${attr} "${val.slice(0, 40)}" (add ${need})`);
+    }
+  }
+
+  // 2c. hardcoded text AFTER a child element — the "child-then-text" blind spot the
+  // open-tag scans above miss, e.g. a badge like
+  //   <span id="streak"><span aria-hidden>🔥</span> Racha de 0 día</span>
+  // where the "Racha…" text sits after a child. Flag letter text that follows an
+  // inline closing tag (before the next tag). Such an element must carry data-i18n
+  // on its parent or ship empty (JS fills it) — a raw string renders one language
+  // for every pair. Emoji/number/symbol runs (the child's icon spacing) are fine.
+  const CHILD_TEXT = /<\/(?:span|b|i|em|strong|small|sup|sub|abbr|mark|a|button|label)>([^<]*)</gi;
+  let cm;
+  while ((cm = CHILD_TEXT.exec(body))) {
+    const text = (cm[1] || '').trim();
+    if (isLetterText(text)) {
+      problems.push(`${rel}: hardcoded text after a child element "${text.slice(0, 40)}" (add data-i18n on the parent, or empty it if JS fills it)`);
     }
   }
 }
