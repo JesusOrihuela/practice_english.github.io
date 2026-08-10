@@ -119,38 +119,7 @@ function showTopicPicker() {
 }
 
 function _showLoadError(topicId) {
-  const old = document.getElementById('fetch-error-banner');
-  if (old) old.remove();
-
-  const banner = document.createElement('div');
-  banner.id = 'fetch-error-banner';
-  banner.setAttribute('role', 'alert');
-  banner.setAttribute('aria-live', 'assertive');
-  Object.assign(banner.style, {
-    background: 'var(--clr-danger-light)', color: 'var(--clr-danger)',
-    border: '1px solid var(--clr-danger)', borderRadius: 'var(--radius-md)',
-    padding: '12px 16px', marginBottom: '12px',
-    display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px',
-    fontSize: '0.88rem', fontWeight: '600',
-  });
-
-  const txt = document.createElement('span');
-  txt.textContent = AppLang.t('error_loading');
-
-  const btn = document.createElement('button');
-  btn.textContent = AppLang.t('retry');
-  Object.assign(btn.style, {
-    background: 'var(--clr-danger)', color: '#fff', border: 'none',
-    borderRadius: 'var(--radius-full)', padding: '6px 14px',
-    fontFamily: 'inherit', fontSize: '0.82rem', fontWeight: '700',
-    cursor: 'pointer', flexShrink: '0',
-  });
-  btn.addEventListener('click', () => { banner.remove(); startTopic(topicId); });
-
-  banner.appendChild(txt);
-  banner.appendChild(btn);
-  const picker = document.getElementById('topic-picker');
-  if (picker) picker.insertBefore(banner, picker.firstChild);
+  AppUI.loadError(document.getElementById('topic-picker'), function () { startTopic(topicId); });
 }
 
 // ---- Load Topic ----
