@@ -125,6 +125,13 @@
                 <div id="scramble-diff"></div>
             </div>
 
+            <!-- Grammar micro-tip chip (shown on correct answer, free mode only) -->
+            <div id="grammar-chip-wrap" class="grammar-chip-wrap hidden">
+                <a id="grammar-chip" class="grammar-chip" href="../../grammar/html/grammar.html" aria-label="Abrir Taller de Gramática para esta regla" data-i18n-aria="grammar_chip_aria">
+                    📐 <span id="grammar-chip-label"></span> →
+                </a>
+            </div>
+
             <!-- Next / Try Again (shown after answer) -->
             <button class="next-btn hidden" id="next-btn" aria-label="Continuar a la siguiente frase" data-i18n-aria="next_btn_aria" data-i18n="btn_next"></button>
             <button class="try-again-btn hidden" id="try-again-btn" aria-label="Intentar esta frase de nuevo" data-i18n-aria="try_again_phrase_aria">↩ Intentar de nuevo</button>
@@ -155,6 +162,7 @@
     <script src="../../shared/js/feedback.js"></script>
     <script src="../../shared/js/path.js"></script>
     <script src="../../shared/js/path-session.js"></script>
+    <script src="../../shared/js/grammar-chip.js"></script>
     <script src="../js/scramble.js"></script>
     <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>

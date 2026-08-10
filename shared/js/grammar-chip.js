@@ -1,6 +1,7 @@
 /* ============================================================
    grammar-chip.js — Shared utility for grammar micro-tip chips
-   Included in: speaking, cloze, translation, grammar
+   Chip (AppGrammarChip): speaking, dictation, cloze, translation, scramble.
+   rulesFor also feeds the grammar page's related-phrases panel.
 
    The phrase's `grammar` tip is written in the TARGET language, so the tip →
    rule map is target-language-specific. `ruleId` values must match rule `id`

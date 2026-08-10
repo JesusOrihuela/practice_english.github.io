@@ -332,6 +332,9 @@
 .feedback-result.correct   { color: var(--clr-success); }
 .feedback-result.incorrect { color: var(--clr-danger); }
 
+/* Grammar chip (link styling is shared in generalities.css) */
+.grammar-chip-wrap { margin-top: 8px; margin-bottom: 8px; }
+
 /* ---- Next / Try Again standalone buttons ---- */
 #exercise-area .next-btn,
 #exercise-area .try-again-btn {

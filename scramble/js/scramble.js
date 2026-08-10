@@ -8,7 +8,7 @@ let _openPhraseBrowser = null;
 
 
 let currentTopic = '';
-let phrases = [], translations = [], cardIds = [], cefrLevels = [], formPools = [];
+let phrases = [], translations = [], cardIds = [], cefrLevels = [], formPools = [], grammarNotes = [], phraseIds = [];
 let _activeForm = null; // { text, audioSlug, labels?, ... } — picked form for the current scramble round
 let currentIndex = 0;
 let shuffledTiles = [];   // [{ tileId, word }]
@@ -145,7 +145,7 @@ function startTopic(topicId, pathMode, pathCard) {
           practiceText: p.target?.[0]?.text || '',
           hintText:     p.source || '',
           forms:        p.target || [],
-          level: p.level || null, id: p.id,
+          level: p.level || null, id: p.id, grammar: p.grammar || null,
         }))
         .filter(p => p.practiceText.split(' ').length > 2)
         .sort((a, b) => (_order[a.level] ?? 99) - (_order[b.level] ?? 99));
@@ -168,6 +168,9 @@ function startTopic(topicId, pathMode, pathCard) {
       cefrLevels   = valid.map(p => p.level);
       cardIds      = valid.map(p => 'scramble_' + p.id);
       formPools    = valid.map(p => p.forms);
+      grammarNotes = valid.map(p => p.grammar);
+      phraseIds    = valid.map(p => p.id);
+      AppGrammarChip.load();   // preload evidence map so auto-chips are ready
 
       const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
@@ -249,6 +252,7 @@ function showPhrase(index) {
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('try-again-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
+  document.getElementById('grammar-chip-wrap')?.classList.add('hidden');
   document.getElementById('construction-area').classList.remove('construction-area--answered');
   document.getElementById('check-btn').disabled = false;
   document.getElementById('clear-btn').disabled = false;
@@ -377,11 +381,26 @@ function checkAnswer() {
   );
 
   feedback.className = 'scramble-feedback ' + (isCorrect ? 'correct' : 'incorrect');
+  updateGrammarChip(isCorrect);
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
   document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 
+}
+
+// Grammar chip (correct only). Most-advanced rule the phrase exercises (authored tip
+// ∪ evidence map); no chip in path mode or when no grammar-section rule applies.
+function updateGrammarChip(isCorrect) {
+  const wrap = document.getElementById('grammar-chip-wrap');
+  if (!wrap) return;
+  const info = isCorrect
+    ? AppGrammarChip.choose({ tip: grammarNotes[currentIndex], id: phraseIds[currentIndex], pathMode: _pathModeActive })
+    : null;
+  if (!info || !info.ruleId) { wrap.classList.add('hidden'); return; }
+  document.getElementById('grammar-chip-label').textContent = info.label;
+  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + info.ruleId;
+  wrap.classList.remove('hidden');
 }
 
 // ---- Rating & Advance ----
