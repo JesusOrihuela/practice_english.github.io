@@ -323,7 +323,7 @@ function handleAnswer(isCorrect, chosenWord, correctIdx) {
   exampleEl.textContent = '"' + (words[correctIdx].example || '') + '"';
   feedbackEl.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   document.getElementById('next-btn').classList.toggle('hidden', !isCorrect);
-  document.getElementById('try-again-btn').classList.toggle('hidden', isCorrect);
+  document.getElementById('try-again-btn').classList.remove('hidden');  // siempre: acierto→avanzar o reforzar; fallo→reintentar
   document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(isCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 

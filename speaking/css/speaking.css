@@ -288,15 +288,32 @@
 /* .uf-* classes live in generalities.css (shared via AppFeedback) */
 
 /* ---- Standalone Next / Try Again ---- */
+/* Grammar chip row: centered, no margin (feedback above + action-row below set
+   the symmetric vertical spacing). */
+.post-feedback-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.post-feedback-row .grammar-chip-wrap { margin: 0; }
+
+/* Next / Try again — side by side in one row */
+#exercise-area .action-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-top: 16px;
+}
 #tryAnotherButton,
 #tryAgainButton {
-  width: 100%;
-  margin-top: 4px;
+  flex: 1;
+  padding: 14px;
+  margin-top: 0;
   animation: fadeInScale 0.3s ease-out both;
 }
-
-#tryAnotherButton { padding: 14px; }
-#tryAgainButton   { padding: 12px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {

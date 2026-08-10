@@ -137,10 +137,10 @@
 /* .feedback-divider and .feedback-note live in generalities.css */
 
 /* ---- Standalone Next / Try Again buttons ---- */
+/* Next / Try again — side by side in one row */
+#quiz-content .action-row { display: flex; gap: 12px; width: 100%; margin-top: 16px; }
 #quiz-content .next-btn,
-#quiz-content .try-again-btn { width: 100%; margin-top: 4px; animation: fadeInScale 0.3s ease-out both; }
-#quiz-content .next-btn      { padding: 14px; }
-#quiz-content .try-again-btn { padding: 12px; }
+#quiz-content .try-again-btn { flex: 1; padding: 14px; margin-top: 0; animation: fadeInScale 0.3s ease-out both; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
