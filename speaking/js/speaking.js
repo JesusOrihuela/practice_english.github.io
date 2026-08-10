@@ -198,11 +198,7 @@ function _beginExercise(idx) {
   currentIndex = idx;
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('exercise-area').classList.remove('hidden');
-  const streakBadge = document.getElementById('streak-badge');
-  if (streakBadge) {
-    const streak = Progress.getStreak();
-    streakBadge.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
-  }
+  AppSessionBar.updateStreak('streak-badge');
   showPhrase(currentIndex);
   updateSessionCounter();
 }
@@ -257,25 +253,7 @@ function updateGrammarChip(index) {
 // extractGrammarInfo is in shared/js/grammar-chip.js
 
 function updateSessionCounter() {
-  const el = document.getElementById('session-counter');
-  if (!el || phrases.length === 0) return;
-  if (_pathModeActive && typeof PathSession !== 'undefined') {
-    const prog = PathSession.getProgress();
-    el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
-    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
-    const fill = document.getElementById('session-progress-fill');
-    if (fill) fill.style.width = pct + '%';
-    const bar = document.getElementById('session-progress-bar');
-    if (bar) bar.setAttribute('aria-valuenow', pct);
-    return;
-  }
-  const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
-  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
-  const fill = document.getElementById('session-progress-fill');
-  if (fill) fill.style.width = pct + '%';
-  const bar = document.getElementById('session-progress-bar');
-  if (bar) bar.setAttribute('aria-valuenow', pct);
+  AppSessionBar.updateCounter('session-counter', cardIds, _pathModeActive);
 }
 
 /* ---- Attempt Flow ---- */
@@ -331,9 +309,7 @@ function nextPhrase() {
 
   const listenBtn = document.getElementById('listenButton');
   if (listenBtn) listenBtn.focus();
-  const streak = Progress.getStreak();
-  const el = document.getElementById('streak-badge');
-  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
+  AppSessionBar.updateStreak('streak-badge');
 }
 
 function _showPathSessionComplete() {

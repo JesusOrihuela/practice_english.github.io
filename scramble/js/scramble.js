@@ -170,8 +170,7 @@ function _beginExercise(idx) {
   currentIndex = idx;
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('exercise-area').classList.remove('hidden');
-  const streak = Progress.getStreak();
-  document.getElementById('scramble-streak').textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
+  AppSessionBar.updateStreak('scramble-streak');
   showPhrase(currentIndex);
   updateCounter();
 }
@@ -388,8 +387,7 @@ function rateAndNext(quality) {
   }
   updateCounter();
 
-  const streak = Progress.getStreak();
-  document.getElementById('scramble-streak').textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
+  AppSessionBar.updateStreak('scramble-streak');
 
   currentIndex = (currentIndex + 1) % phrases.length;
   showPhrase(currentIndex);
@@ -402,22 +400,5 @@ function _showPathSessionComplete() {
 // ---- Counter ----
 
 function updateCounter() {
-  const el = document.getElementById('scramble-counter');
-  if (_pathModeActive && typeof PathSession !== 'undefined') {
-    const prog = PathSession.getProgress();
-    if (el) el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
-    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
-    const fill = document.getElementById('session-progress-fill');
-    if (fill) fill.style.width = pct + '%';
-    const bar = document.getElementById('session-progress-bar');
-    if (bar) bar.setAttribute('aria-valuenow', pct);
-    return;
-  }
-  const stats = Progress.getStatsForCards(cardIds);
-  if (el) el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
-  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
-  const fill = document.getElementById('session-progress-fill');
-  if (fill) fill.style.width = pct + '%';
-  const bar = document.getElementById('session-progress-bar');
-  if (bar) bar.setAttribute('aria-valuenow', pct);
+  AppSessionBar.updateCounter('scramble-counter', cardIds, _pathModeActive);
 }

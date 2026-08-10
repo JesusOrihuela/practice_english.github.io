@@ -153,9 +153,7 @@ function _beginExercise(idx) {
   currentIndex = idx;
   document.getElementById('topic-picker').classList.add('hidden');
   document.getElementById('vocab-content').classList.remove('hidden');
-  const streak = Progress.getStreak();
-  const el = document.getElementById('vocab-streak');
-  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
+  AppSessionBar.updateStreak('vocab-streak');
   showCard(currentIndex);
   updateStatsBar();
 }
@@ -238,9 +236,7 @@ function rateAndNext(quality) {
   const scene = document.getElementById('flashcard-scene');
   if (scene) scene.focus();
 
-  const streak = Progress.getStreak();
-  const el = document.getElementById('vocab-streak');
-  if (el) el.textContent = AppLang.t(streak.current === 1 ? 'streak_singular' : 'streak_plural', { n: streak.current });
+  AppSessionBar.updateStreak('vocab-streak');
 }
 
 function _showPathSessionComplete() {
@@ -251,23 +247,5 @@ function _showPathSessionComplete() {
 // ---- Utilities ----
 
 function updateStatsBar() {
-  const el = document.getElementById('cards-remaining');
-  if (!el) return;
-  if (_pathModeActive && typeof PathSession !== 'undefined') {
-    const prog = PathSession.getProgress();
-    el.textContent = AppLang.t('cta_exercise_n', { cur: prog.current, total: prog.total });
-    const pct = prog.total > 0 ? Math.round((prog.current / prog.total) * 100) : 0;
-    const fill = document.getElementById('session-progress-fill');
-    if (fill) fill.style.width = pct + '%';
-    const bar = document.getElementById('session-progress-bar');
-    if (bar) bar.setAttribute('aria-valuenow', pct);
-    return;
-  }
-  const stats = Progress.getStatsForCards(cardIds);
-  el.textContent = AppLang.t('topic_learned', { seen: stats.seen, total: stats.total });
-  const pct = stats.total > 0 ? Math.min(100, Math.round((stats.seen / stats.total) * 100)) : 0;
-  const fill = document.getElementById('session-progress-fill');
-  if (fill) fill.style.width = pct + '%';
-  const bar = document.getElementById('session-progress-bar');
-  if (bar) bar.setAttribute('aria-valuenow', pct);
+  AppSessionBar.updateCounter('cards-remaining', cardIds, _pathModeActive);
 }
