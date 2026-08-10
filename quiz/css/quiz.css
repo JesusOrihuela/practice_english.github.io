@@ -6,7 +6,7 @@
 .quiz-page {
   width: 100%;
   max-width: var(--max-w);
-  padding: 32px 24px 64px;
+  padding: 32px var(--page-pad-x) 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -144,7 +144,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
-  .quiz-page { padding: 20px 16px 48px; }
+  .quiz-page { padding: 20px var(--page-pad-x) 48px; }
   .choices-grid { grid-template-columns: 1fr; }
   .choice-btn { min-height: 56px; }
   .quiz-word { font-size: 1.8rem; }

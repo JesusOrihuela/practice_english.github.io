@@ -6,7 +6,7 @@
 #main-content {
   width: 100%;
   max-width: var(--max-w);
-  padding: 36px 24px 72px;
+  padding: 36px var(--page-pad-x) 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -203,7 +203,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
-  #main-content { padding: 24px 14px 56px; }
+  #main-content { padding: 24px var(--page-pad-x) 56px; }
   .word-text { font-size: 2rem; }
   .flashcard-front { padding: 24px 20px 22px; }
   .flashcard-back  { padding: 20px; }

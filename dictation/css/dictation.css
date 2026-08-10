@@ -5,7 +5,7 @@
 .dictation-page {
   width: 100%;
   max-width: var(--max-w);
-  padding: 36px 24px 72px;
+  padding: 36px var(--page-pad-x) 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +248,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
-  .dictation-page { padding: 24px 14px 56px; }
+  .dictation-page { padding: 24px var(--page-pad-x) 56px; }
   .topic-grid { grid-template-columns: repeat(2, 1fr); }
   .audio-controls { gap: 8px; }
   .play-btn { padding: 14px 24px; font-size: 1rem; }

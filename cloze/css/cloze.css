@@ -6,7 +6,7 @@
 .cloze-page {
   width: 100%;
   max-width: var(--max-w);
-  padding: 32px 24px 64px;
+  padding: 32px var(--page-pad-x) 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +247,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
-  .cloze-page { padding: 20px 16px 48px; }
+  .cloze-page { padding: 20px var(--page-pad-x) 48px; }
   .phrase-card { padding: 24px 18px; }
   .phrase-text { font-size: 1.1rem; }
   .cloze-input-row { flex-direction: column; }

@@ -47,6 +47,12 @@
   --transition-bounce: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
   --header-h: 68px;
   --max-w:    1200px;
+  /* Standard page side (horizontal) padding — the ONE source of truth every page
+     container uses so the spacing to the screen edges matches the home page on
+     every screen. Fluid: 24px on tablet/desktop (≥480px, exactly home's value),
+     scaling down to 16px on small phones so narrow screens keep usable content
+     width. Change here to re-space the whole app. */
+  --page-pad-x: clamp(16px, 5vw, 24px);
   --gradient-hero: linear-gradient(135deg, #EBEEF2 0%, #F1F3F5 50%, #ECEEF2 100%);
 }
 

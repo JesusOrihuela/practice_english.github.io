@@ -9,7 +9,7 @@
   width: 100%;
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 32px 24px 64px;
+  padding: 32px var(--page-pad-x) 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -328,6 +328,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 480px) {
-  .ml-page { padding: 24px 16px 48px; }
+  .ml-page { padding: 24px var(--page-pad-x) 48px; }
   .ml-snode__bubble { width: 56px; height: 56px; font-size: 1.4rem; }
 }

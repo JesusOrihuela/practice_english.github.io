@@ -6,7 +6,7 @@
 .speaking-page {
   width: 100%;
   max-width: var(--max-w);
-  padding: 40px 24px 64px;
+  padding: 40px var(--page-pad-x) 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,7 +300,7 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
-  .speaking-page { padding: 24px 16px 56px; }
+  .speaking-page { padding: 24px var(--page-pad-x) 56px; }
   .phrase-card { padding: 28px 20px; }
   #Phrase { font-size: 1.3rem; }
   #listenButton, #speakButton { min-width: 140px; padding: 12px 20px; }
