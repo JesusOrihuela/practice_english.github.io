@@ -23,12 +23,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Sparse checkout: the validators only read JSON + tool scripts, so we
-      # skip the ~400 MB of audio for a fast, cheap run.
-      - name: Checkout (JSON + tools only)
+      # skip the ~400 MB of audio for a fast, cheap run. shared/js is needed
+      # because fix-phrase-ids.js --check reads shared/js/progress.js (the _ID_MAP).
+      - name: Checkout (JSON + JS + tools only)
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
             shared/json
+            shared/js
             tools
           sparse-checkout-cone-mode: true
 
