@@ -9,7 +9,7 @@ let _openPhraseBrowser = null;
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [], phraseIds = [];
 let currentIndex = 0;
 let answered = false;
 let _lastCorrect = false;
@@ -182,6 +182,8 @@ function startTopic(topicId, pathMode, pathCard) {
       cefrLevels   = validPairs.map(p => p.level);
       cardIds      = validPairs.map(p => 'trans_' + p.id);
       formPools    = validPairs.map(p => p.forms);
+      phraseIds    = validPairs.map(p => p.id);
+      AppGrammarChip.load();   // preload evidence map so auto-chips are ready
 
       if (phrases.length === 0) {
         showTopicPicker();
@@ -332,26 +334,32 @@ function checkAnswer() {
 
   feedback.className = 'trans-feedback ' + (isCorrect ? 'correct' : 'incorrect');
 
-  // Grammar tip (correct only) — shown below a divider
+  // Grammar (correct only). Chip (link to a rule) and the authored tip TEXT are
+  // independent: the chip is the most-advanced rule the phrase exercises (and is
+  // hidden in path mode / when no rule applies), while the tip-text panel appears
+  // only when a human note exists for the phrase.
   const chipWrap  = document.getElementById('grammar-chip-wrap');
   const tipEl     = document.getElementById('feedback-grammar-tip');
   const dividerEl = document.getElementById('feedback-divider');
-  const tip = isCorrect ? grammarNotes[currentIndex] : null;
-  if (tip) {
-    const { label, ruleId } = extractGrammarInfo(tip);
-    if (ruleId && chipWrap) {
-      document.getElementById('grammar-chip-label').textContent = label;
-      document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
-      chipWrap.classList.remove('hidden');
-    } else if (chipWrap) {
-      chipWrap.classList.add('hidden');
-    }
+  const authoredTip = isCorrect ? grammarNotes[currentIndex] : null;
+  const chosen = isCorrect
+    ? AppGrammarChip.choose({ tip: grammarNotes[currentIndex], id: phraseIds[currentIndex], pathMode: _pathModeActive })
+    : null;
+
+  if (chosen && chosen.ruleId && chipWrap) {
+    document.getElementById('grammar-chip-label').textContent = chosen.label;
+    document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + chosen.ruleId;
+    chipWrap.classList.remove('hidden');
+  } else if (chipWrap) {
+    chipWrap.classList.add('hidden');
+  }
+
+  if (authoredTip) {
     const tipTextEl = document.getElementById('feedback-grammar-tip-text');
-    if (tipTextEl) tipTextEl.textContent = tip;
+    if (tipTextEl) tipTextEl.textContent = authoredTip;
     if (tipEl)     tipEl.classList.remove('hidden');
     if (dividerEl) dividerEl.classList.remove('hidden');
   } else {
-    if (chipWrap)  chipWrap.classList.add('hidden');
     if (tipEl)     tipEl.classList.add('hidden');
     if (dividerEl) dividerEl.classList.add('hidden');
   }

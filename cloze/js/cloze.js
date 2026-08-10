@@ -22,7 +22,7 @@ function _equivalentMatch(guess, answer) {
 
 
 let currentTopic = '';
-let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [];
+let phrases = [], translations = [], grammarNotes = [], cardIds = [], cefrLevels = [], formPools = [], phraseIds = [];
 let _activeAudioSlug = '';   // audioSlug of the picked form for this round
 let _activePickedForm = null; // picked form object (labels drive the gender badge)
 let currentIndex = 0;
@@ -167,6 +167,8 @@ function startTopic(topicId, pathMode, pathCard) {
       cefrLevels   = _tagged.map(x => x.level);
       cardIds      = _tagged.map(x => 'cloze_' + x.id);
       formPools    = _tagged.map(x => x.forms);
+      phraseIds    = _tagged.map(x => x.id);
+      AppGrammarChip.load();   // preload evidence map so auto-chips are ready
 
       const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicId);
       const _pbArgs = {
@@ -325,16 +327,13 @@ function checkAnswer() {
 
   const chipWrap = document.getElementById('grammar-chip-wrap');
   if (chipWrap) {
-    const tip = isCorrect ? grammarNotes[currentIndex] : null;
-    if (tip) {
-      const { label, ruleId } = extractGrammarInfo(tip);
-      if (ruleId) {
-        document.getElementById('grammar-chip-label').textContent = label;
-        document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
-        chipWrap.classList.remove('hidden');
-      } else {
-        chipWrap.classList.add('hidden');
-      }
+    const info = isCorrect
+      ? AppGrammarChip.choose({ tip: grammarNotes[currentIndex], id: phraseIds[currentIndex], pathMode: _pathModeActive })
+      : null;
+    if (info && info.ruleId) {
+      document.getElementById('grammar-chip-label').textContent = info.label;
+      document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + info.ruleId;
+      chipWrap.classList.remove('hidden');
     } else {
       chipWrap.classList.add('hidden');
     }

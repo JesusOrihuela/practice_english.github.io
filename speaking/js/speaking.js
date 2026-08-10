@@ -199,6 +199,7 @@ function loadPhrases(topicId) {
       cefrLevels   = _tagged.map(x => x.level);
       cardIds      = _tagged.map(x => x.id);
       formPools    = _tagged.map(x => x.forms);
+      AppGrammarChip.load();   // preload evidence map so auto-chips are ready
 
       const topicObj = AppTopics.PHRASE_TOPICS.find(t => t.id === topicId);
       const _pbArgs = {
@@ -276,16 +277,12 @@ function _showCefrBadge(level, containerId) {
 function updateGrammarChip(index) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (!wrap) return;
-  // Grammar chips reference English grammar rules — not applicable for en-es
-  if (AppLangPair.getActive().target.code !== 'en') { wrap.classList.add('hidden'); return; }
-  const tip = grammarTips[index] || null;
-  if (!tip) { wrap.classList.add('hidden'); return; }
-  const { label, ruleId } = extractGrammarInfo(tip);
-  // Only show the chip when there is a direct link to a specific grammar rule.
-  // Going to the Grammar main page without context is not useful.
-  if (!ruleId) { wrap.classList.add('hidden'); return; }
-  document.getElementById('grammar-chip-label').textContent = label;
-  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
+  // Most-advanced rule the phrase exercises (authored tip ∪ evidence map); no chip
+  // in path mode or when the phrase exercises no grammar-section rule. See AppGrammarChip.
+  const info = AppGrammarChip.choose({ tip: grammarTips[index], id: cardIds[index], pathMode: _pathModeActive });
+  if (!info || !info.ruleId) { wrap.classList.add('hidden'); return; }
+  document.getElementById('grammar-chip-label').textContent = info.label;
+  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + info.ruleId;
   wrap.classList.remove('hidden');
 }
 

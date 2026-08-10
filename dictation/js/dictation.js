@@ -10,7 +10,7 @@ let _openPhraseBrowser = null;
 
 
 // ---- State ----
-let phrases = [], grammarTips = [], cardIds = [], cefrLevels = [], formPools = [], currentIndex = 0;
+let phrases = [], grammarTips = [], cardIds = [], cefrLevels = [], formPools = [], phraseIds = [], currentIndex = 0;
 let _activeAudioSlug = '';   // audioSlug of the picked form for this round
 let _activePicked    = null; // { text, audioSlug, labels?, ... } — picked form for this round
 let currentTopic = '';
@@ -142,6 +142,8 @@ async function startTopic(topicKey, pathMode, pathCard) {
   cefrLevels  = _tagged.map(x => x.level);
   cardIds     = _tagged.map(x => DICT_PREFIX + x.id);
   formPools   = _tagged.map(x => x.forms);
+  phraseIds   = _tagged.map(x => x.id);
+  AppGrammarChip.load();   // preload evidence map so auto-chips are ready
 
   const topicObj = (AppTopics.PHRASE_TOPICS || []).find(t => t.id === topicKey);
   const _pbArgs = {
@@ -279,13 +281,10 @@ function playAudio() {
 function updateGrammarChip(index) {
   const wrap = document.getElementById('grammar-chip-wrap');
   if (!wrap) return;
-  if (AppLangPair.getActive().target.code !== 'en') { wrap.classList.add('hidden'); return; }
-  const tip = grammarTips[index] || null;
-  if (!tip) { wrap.classList.add('hidden'); return; }
-  const { label, ruleId } = extractGrammarInfo(tip);
-  if (!ruleId) { wrap.classList.add('hidden'); return; }
-  document.getElementById('grammar-chip-label').textContent = label;
-  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + ruleId;
+  const info = AppGrammarChip.choose({ tip: grammarTips[index], id: phraseIds[index], pathMode: _pathModeActive });
+  if (!info || !info.ruleId) { wrap.classList.add('hidden'); return; }
+  document.getElementById('grammar-chip-label').textContent = info.label;
+  document.getElementById('grammar-chip').href = '../../grammar/html/grammar.html?rule=' + info.ruleId;
   wrap.classList.remove('hidden');
 }
 

@@ -121,18 +121,22 @@ function verifyPair(pair) {
   const phrasesByTopic = {};
   for (const t of topicsMeta) {
     const d = JSON.parse(fs.readFileSync(`${ROOT}/shared/json/pairs/${pair}/${t.id}.json`, 'utf8'));
-    phrasesByTopic[t.id] = (d.phrases || []).map(p => p.target.map(f => f.text).join(' '));
+    phrasesByTopic[t.id] = (d.phrases || []).map(p => ({ id: p.id, text: p.target.map(f => f.text).join(' ') }));
   }
   const rulesFile = `${ROOT}/shared/json/pairs/${pair}/grammar-rules.json`;
   const data = JSON.parse(fs.readFileSync(rulesFile, 'utf8'));
   const changes = [];
+  const phraseRules = {};   // phraseId → [ruleId]  (every rule this phrase exercises)
   for (const r of data.rules) {
     if (CURATED.has(r.id)) continue;                    // keep hand-curated
     const d = det[r.id];
     if (!d) { changes.push({ id: r.id, note: 'NO DETECTOR (kept)', keep: true }); continue; }
-    const hits = [];
+    const hits = [];                                    // [topicId, matchCount] for rule.topics
     for (const [tid, phrases] of Object.entries(phrasesByTopic)) {
-      const n = phrases.filter(p => d.test(p)).length;
+      let n = 0;
+      for (const p of phrases) {
+        if (d.test(p.text)) { n++; (phraseRules[p.id] ||= []).push(r.id); }
+      }
       if (n >= MIN_HITS) hits.push([tid, n]);
     }
     hits.sort((a, b) => b[1] - a[1]);
@@ -142,7 +146,17 @@ function verifyPair(pair) {
     if (!same) changes.push({ id: r.id, old, now: newTopics, evidence: hits.slice(0, MAX_TOPICS) });
     r.topics = newTopics;
   }
-  if (WRITE) fs.writeFileSync(rulesFile, JSON.stringify(data, null, 2) + '\n');
+  // Deterministic order for stable diffs / --check comparison.
+  const map = {};
+  for (const id of Object.keys(phraseRules).sort()) map[id] = phraseRules[id].slice().sort();
+  const mapFile = `${ROOT}/shared/json/pairs/${pair}/grammar-phrase-rules.json`;
+  const mapNow = JSON.stringify(map, null, 0);
+  const mapOld = fs.existsSync(mapFile) ? JSON.stringify(JSON.parse(fs.readFileSync(mapFile, 'utf8')), null, 0) : '';
+  if (mapNow !== mapOld) changes.push({ id: '(grammar-phrase-rules.json)', mapDrift: true });
+  if (WRITE) {
+    fs.writeFileSync(rulesFile, JSON.stringify(data, null, 2) + '\n');
+    fs.writeFileSync(mapFile, JSON.stringify(map, null, 2) + '\n');
+  }
   return { pair, changes };
 }
 
@@ -155,6 +169,7 @@ for (const pair of pairs) {
   for (const c of res.changes) {
     if (c.keep) continue;
     drift++;
+    if (c.mapDrift) { console.log(`  ${c.id.padEnd(30)} el mapa por-frase difiere de la evidencia`); continue; }
     console.log(`  ${c.id.padEnd(30)} ${JSON.stringify(c.old)} → ${JSON.stringify(c.now)}` +
                 (c.evidence ? `  (evidencia: ${c.evidence.map(e => e[0] + ':' + e[1]).join(', ')})` : ''));
   }
