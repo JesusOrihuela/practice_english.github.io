@@ -45,7 +45,9 @@ const SHELL = [
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(APP_CACHE)
-      .then(cache => cache.addAll(SHELL))
+      // Revalidate against the server so a freshly-installed SW never precaches a
+      // stale shell from the HTTP cache.
+      .then(cache => cache.addAll(SHELL.map(u => new Request(u, { cache: 'no-cache' }))))
       .then(() => self.skipWaiting())
   );
 });
@@ -128,9 +130,14 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Network-first: always fetch fresh JS/CSS/JSON/HTML when online
+  // Network-first: always fetch fresh JS/CSS/JSON/HTML when online. `cache:
+  // 'no-cache'` forces the browser to revalidate with the server (a cheap
+  // conditional request → 304 when unchanged, fresh 200 when changed) instead of
+  // serving a possibly-stale copy from the HTTP cache. This closes the last
+  // staleness window so a deploy is visible on the next navigation — the user
+  // never needs a manual/hard refresh. Falls back to the SW cache when offline.
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, { cache: 'no-cache' })
       .then(response => {
         if (response && response.status === 200) {
           const clone = response.clone();
