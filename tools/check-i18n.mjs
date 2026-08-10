@@ -68,6 +68,8 @@ const isLetterText = (t) => /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ¿¡]{2,}/.test(
 
 for (const rel of HTML) {
   const s = fs.readFileSync(path.join(ROOT, rel), 'utf8');
+  // Scan the markup only — <script> bodies are JS, not rendered UI text.
+  const body = s.replace(/<script[\s\S]*?<\/script>/gi, '');
 
   // 1. keys resolve in every block
   for (const m of s.matchAll(/data-i18n(?:-html|-aria|-placeholder)?="([a-z0-9_]+)"/gi)) {
@@ -77,16 +79,18 @@ for (const rel of HTML) {
     }
   }
 
-  // 2. no hardcoded text (heuristic)
+  // 2. no hardcoded text. An element that holds literal letter text must carry a
+  // data-i18n attribute — even if it has an id. A JS-filled element (counter,
+  // streak, badge) must ship EMPTY so no wrong-language text renders for another
+  // pair before/if the script runs. (id no longer exempts hardcoded text.)
   const scan = (re, attrsIdx, textIdx) => {
     let m;
-    while ((m = re.exec(s))) {
+    while ((m = re.exec(body))) {
       const attrs = m[attrsIdx] || '';
       const text = (m[textIdx] || '').trim();
       if (!isLetterText(text)) continue;      // emoji/number/symbol only → ok
       if (hasI18n(attrs)) continue;            // translated via data-i18n → ok
-      if (hasId(attrs)) continue;              // JS-filled at runtime → ok
-      problems.push(`${rel}: hardcoded text "${text.slice(0, 40)}" (add data-i18n or an id)`);
+      problems.push(`${rel}: hardcoded text "${text.slice(0, 40)}" (add data-i18n, or empty it if JS fills it)`);
     }
   };
   scan(TAGS, 2, 3);
@@ -104,7 +108,7 @@ for (const rel of HTML) {
   for (const { attr, need } of ATTR_I18N) {
     const re = new RegExp('<[a-z][^>]*\\b' + attr + '="([^"]*)"[^>]*>', 'gi');
     let m;
-    while ((m = re.exec(s))) {
+    while ((m = re.exec(body))) {
       const val = (m[1] || '').trim();
       if (!isLetterText(val)) continue;    // emoji/number/symbol only → ok
       if (m[0].includes(need)) continue;   // translated via data-i18n → ok
