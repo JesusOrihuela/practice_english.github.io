@@ -307,7 +307,7 @@
       placement_page_title:   'Prueba de Nivel',
 
       // ── Nombres de temas ──────────────────────────────────────
-      topic_general:        'General',
+      topic_general:        'Conceptos',
       topic_greetings:      'Saludos',
       topic_emociones:      'Emociones',
       topic_restaurant:     'Restaurante',
@@ -324,11 +324,11 @@
       topic_technology:     'Tecnología',
       topic_accountability: 'Contabilidad',
       topic_personal_info:  'Información Personal',
-      topic_family:         'Familia y Personas',
+      topic_family:         'Familia',
       topic_daily_routine:  'Rutina Diaria',
-      topic_health:         'Salud y Cuerpo',
+      topic_health:         'Salud',
       topic_weather:        'Clima',
-      topic_directions:     'Direcciones y Lugares',
+      topic_directions:     'Direcciones',
       topic_survival:       'Sobrevivir el Idioma',
 
       // ── Página principal (index.html) ─────────────────────────────
@@ -822,7 +822,7 @@
       placement_page_title:   '<span>Level</span> Test',
 
       // ── Topic names ───────────────────────────────────────────
-      topic_general:        'General',
+      topic_general:        'Concepts',
       topic_greetings:      'Greetings',
       topic_emociones:      'Emotions',
       topic_restaurant:     'Restaurant',
@@ -839,11 +839,11 @@
       topic_technology:     'Technology',
       topic_accountability: 'Accounting',
       topic_personal_info:  'Personal Information',
-      topic_family:         'Family & People',
+      topic_family:         'Family',
       topic_daily_routine:  'Daily Routine',
-      topic_health:         'Health & Body',
+      topic_health:         'Health',
       topic_weather:        'Weather',
-      topic_directions:     'Directions & Places',
+      topic_directions:     'Directions',
       topic_survival:       'Language Survival',
 
       // ── Main page (index.html) ────────────────────────────────

@@ -56,6 +56,7 @@ jobs:
           sparse-checkout: |
             lang
             tools
+            shared/json/pairs/es-en
             speaking/html
             dictation/html
             cloze/html

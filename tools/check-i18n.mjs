@@ -74,6 +74,30 @@ for (const rel of HTML) {
   scan(SPAN, 1, 2);
 }
 
+// ── 3. Topic labels: the topic_{id} i18n value (what the UI actually shows via
+//    AppTopics.getLabel) must equal the atomic label in topics.json, so a stale
+//    compound label (e.g. "Directions & Places" repeating the Places category)
+//    can't linger after a category split. Checked per language block. ──────────
+try {
+  const tj = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared/json/pairs/es-en/topics.json'), 'utf8')).topics;
+  const jsonLabel = {}; // id → { es: label, en: labelEn }
+  for (const t of tj) jsonLabel[t.id] = { es: t.label, en: t.labelEn };
+  // reuse the block boundaries computed above
+  for (let i = 0; i < starts.length; i++) {
+    const code = starts[i].code;
+    if (code !== 'es' && code !== 'en') continue;
+    const from = starts[i].idx, to = i + 1 < starts.length ? starts[i + 1].idx : ui.length;
+    const body = ui.slice(from, to);
+    for (const m of body.matchAll(/topic_([a-z_]+):\s*'([^']+)'/g)) {
+      const id = m[1], val = m[2];
+      const jl = jsonLabel[id];
+      if (jl && jl[code] !== undefined && jl[code] !== val) {
+        problems.push(`lang/ui.js '${code}': topic_${id} = "${val}" ≠ topics.json label "${jl[code]}" (stale label?)`);
+      }
+    }
+  }
+} catch (e) { problems.push('topic-label check failed: ' + e.message); }
+
 if (problems.length) {
   console.log(`✗ check-i18n: ${problems.length} issue(s)`);
   for (const p of problems) console.log('  ' + p);
