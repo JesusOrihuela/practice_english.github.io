@@ -44,7 +44,7 @@
 /* ---- Exercise Section ---- */
 #exercise-area {
   width: 100%;
-  max-width: 640px;
+  max-width: var(--max-w);
   display: flex;
   flex-direction: column;
   align-items: center;

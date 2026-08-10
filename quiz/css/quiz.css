@@ -14,7 +14,7 @@
   flex: 1;
 }
 
-#quiz-content { width: 100%; max-width: 600px; display: flex; flex-direction: column; align-items: center; }
+#quiz-content { width: 100%; max-width: var(--max-w); display: flex; flex-direction: column; align-items: center; }
 
 
 

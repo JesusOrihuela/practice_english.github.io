@@ -89,7 +89,7 @@
 .topic-btn .topic-progress { font-size: 0.7rem; color: var(--clr-text-muted); font-weight: 600; }
 
 /* ---- Exercise Area ---- */
-#exercise-area { width: 100%; max-width: 640px; display: flex; flex-direction: column; align-items: center; gap: 0; }
+#exercise-area { width: 100%; max-width: var(--max-w); display: flex; flex-direction: column; align-items: center; gap: 0; }
 
 
 
