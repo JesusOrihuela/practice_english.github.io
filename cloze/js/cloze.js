@@ -257,7 +257,19 @@ function showPhrase(startIndex) {
     return;
   }
 
-  document.getElementById('phrase-text').innerHTML        = currentBlank.blankedPhrase.replace('___', '<span aria-label="' + AppLang.t('cloze_blank_word_aria') + '">[___]</span>');
+  // Build the blanked phrase with DOM nodes (not innerHTML) so phrase text with
+  // &, <, > renders literally instead of being parsed as markup.
+  (function renderBlank() {
+    var host  = document.getElementById('phrase-text');
+    var parts = currentBlank.blankedPhrase.split('___');
+    host.textContent = '';
+    host.appendChild(document.createTextNode(parts[0] || ''));
+    var blank = document.createElement('span');
+    blank.setAttribute('aria-label', AppLang.t('cloze_blank_word_aria'));
+    blank.textContent = '[___]';
+    host.appendChild(blank);
+    if (parts.length > 1) host.appendChild(document.createTextNode(parts.slice(1).join('___')));
+  })();
   document.getElementById('translation-text').textContent = translations[currentIndex] || '';
   document.getElementById('cloze-input').value            = '';
   document.getElementById('cloze-input').disabled         = false;
@@ -371,18 +383,7 @@ function rateAndNext(quality) {
 
 function _showPathSessionComplete() {
   AppAudio.cancel();
-  const prog = typeof PathSession !== 'undefined' ? PathSession.getProgress() : null;
-  const reviewCount = prog ? Math.max(0, prog.total - (prog.newCount || 0)) : 0;
-  const newCount    = prog ? (prog.newCount || 0) : 0;
-  document.body.innerHTML =
-    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
-      '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
-      '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
-      '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
-    '</div>';
+  AppUI.sessionComplete();
 }
 
 // ---- Counter ----

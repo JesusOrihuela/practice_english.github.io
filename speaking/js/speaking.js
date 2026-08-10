@@ -372,18 +372,7 @@ function _showPathSessionComplete() {
   if (_isRecording) _stopRecording();
   AppAudio.cancel();
   AppTTS.cancel();
-  const prog = typeof PathSession !== 'undefined' ? PathSession.getProgress() : null;
-  const reviewCount = prog ? Math.max(0, prog.total - (prog.newCount || 0)) : 0;
-  const newCount    = prog ? (prog.newCount || 0) : 0;
-  document.body.innerHTML =
-    '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;padding:2rem;text-align:center;font-family:inherit;">' +
-      '<div style="font-size:3rem;margin-bottom:1rem;">🎉</div>' +
-      '<h1 style="font-size:1.5rem;font-weight:700;margin-bottom:0.5rem;">' + AppLang.t('session_complete') + '</h1>' +
-      '<p style="color:var(--clr-text-muted,#6b7280);margin-bottom:2rem;">' +
-        AppLang.t('path_complete_summary', { review: reviewCount, new: newCount }) +
-      '</p>' +
-      '<a href="../../my-learning/html/my-learning.html" style="background:var(--clr-primary,#4f46e5);color:#fff;padding:0.75rem 2rem;border-radius:999px;text-decoration:none;font-weight:600;">' + AppLang.t('my_learning_link') + '</a>' +
-    '</div>';
+  AppUI.sessionComplete();
 }
 
 /* ---- TTS (Kokoro via AppTTS) ---- */

@@ -196,32 +196,47 @@ const Progress = (() => {
     setTimeout(() => t.remove(), 8000);
   }
 
+  // In-memory cache: the parsed store is read on nearly every interaction and by
+  // read-heavy pages (Mi Aprendizaje / Perfil call it dozens of times per render).
+  // Parse once, keep it, and let _save keep it in sync. Safe because the only
+  // other writers of STORE_KEY (backup import, pair switch) reload the page, which
+  // rebuilds this module and its cache from fresh localStorage.
+  let _cache = null;
+  let _allCardsMemo = null;   // normalized view for getAllCards, invalidated on save
+
   function _load() {
+    if (_cache) return _cache;
+    let data;
     try {
       const raw = localStorage.getItem(STORE_KEY);
       if (!raw) {
-        const migrated = _migrateLegacy();
-        if (migrated) return migrated;
-        return { _v: SCHEMA_VERSION, cards: {} };
+        data = _migrateLegacy() || { _v: SCHEMA_VERSION, cards: {} };
+      } else {
+        data = JSON.parse(raw);
+        if (!data || typeof data !== 'object') {
+          data = { _v: SCHEMA_VERSION, cards: {} };
+        } else {
+          if (!data.cards) data.cards = {};
+          if (!data._v || data._v < 3) {
+            data = _migrateCardIds(data);
+            _migrateSplitTopics(data);
+            _cache = data; _save(data);           // set cache before _save reads it
+          } else if (_migrateSplitTopics(data)) {
+            _cache = data; _save(data);
+          }
+        }
       }
-      const data = JSON.parse(raw);
-      if (!data || typeof data !== 'object') return { _v: SCHEMA_VERSION, cards: {} };
-      if (!data.cards) data.cards = {};
-      if (!data._v || data._v < 3) {
-        const upgraded = _migrateCardIds(data);
-        _migrateSplitTopics(upgraded);
-        _save(upgraded);
-        return upgraded;
-      }
-      if (_migrateSplitTopics(data)) _save(data);
-      return data;
     } catch (e) {
-      return { _v: SCHEMA_VERSION, cards: {} };
+      data = { _v: SCHEMA_VERSION, cards: {} };
     }
+    _cache = data;
+    return data;
   }
 
   function _save(data) {
     data._v = SCHEMA_VERSION;
+    _cache = data;             // keep the in-memory cache authoritative
+    _allCardsMemo = null;      // data changed → drop the normalized view
     try { localStorage.setItem(STORE_KEY, JSON.stringify(data)); }
     catch (e) {
       if (e instanceof DOMException && (e.name === 'QuotaExceededError' || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')) {
@@ -425,7 +440,11 @@ const Progress = (() => {
    *   reps    — correct for all activity files and phrase-browser
    *   lapses  — used by grammar.js checks
    */
+  // Read-only normalized view of all cards. Memoized (invalidated in _save) because
+  // read-heavy pages call this once per topic — up to ~44× per render. Callers must
+  // treat the result as read-only (they all do); mutating it would corrupt the memo.
   function getAllCards() {
+    if (_allCardsMemo) return _allCardsMemo;
     const data = _load();
     const out  = {};
 
@@ -444,6 +463,7 @@ const Progress = (() => {
       };
     });
 
+    _allCardsMemo = out;
     return out;
   }
 
