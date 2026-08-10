@@ -52,6 +52,14 @@ jobs:
       - name: Grammar topics + phrase-rule map reflect evidence (grammar-topics.mjs --check)
         run: node tools/grammar-topics.mjs --check
 
+      # Mi Aprendizaje path completeness: _ID_MAP in progress.js (the topic→phraseIds /
+      # vocabIds lookup the path session builder reads) must match the content. Derived
+      # from topics.json + the vocab files, so a new category/phrase/word flows in
+      # automatically — this fails the build if progress.js was not regenerated, which
+      # would otherwise silently drop that content from every learner's path.
+      - name: Path ID map reflects content (fix-phrase-ids.js --check)
+        run: node tools/fix-phrase-ids.js --check
+
   # i18n standard: no hardcoded UI text in HTML — every translatable element is
   # empty with a data-i18n* attribute, filled from lang/ui.js by AppI18nDom. This
   # job fails if any page hardcodes text or uses a key missing from a language block.

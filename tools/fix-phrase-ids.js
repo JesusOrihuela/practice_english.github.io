@@ -5,42 +5,49 @@
 //   { phrases: { <pairId>:    { <topic>: [phraseId, ...] } },
 //     vocab:   { <targetLang>: { <topic>: { quizBase, vocabBase, ids: [wordId, ...] } } } }
 //
-// Phrases are keyed by pair (content independent per pair). Vocab is target-centric
-// — keyed by target language and shared across pairs with the same target (English
-// NGSL core under 'en', Spanish ELELex core under 'es'), read from shared/json/vocab/.
+// The topic lists are DERIVED, not hardcoded, so adding a category or phrase flows
+// through automatically (the Mi Aprendizaje path reads _ID_MAP for every topic):
+//   - phrases: each pair's phrase topics come from that pair's topics.json (t.phrase).
+//     Content is independent per pair, so each pair is read separately.
+//   - vocab: target-centric (shared/json/vocab/{lang}/), discovered from the words*.json
+//     files present; keyed by target language, shared across pairs with the same target.
 //
-// Run this ANY TIME you add, edit, or remove phrases or vocabulary words. Forgetting
-// silently breaks the Mi Aprendizaje session builder (PathSession) for the affected pair.
+// Run this ANY TIME you add, edit, or remove phrases, vocabulary words, or categories.
+// Forgetting silently drops the affected content from the path session builder — so
+// CI runs `--check` (below) to fail the build if progress.js drifts from the content.
 //
 // Usage:
-//   node tools/fix-phrase-ids.js
-//
-// Safe to run multiple times — only rewrites the file if the map actually changed.
+//   node tools/fix-phrase-ids.js            # regenerate (writes only if changed)
+//   node tools/fix-phrase-ids.js --check    # exit 1 if _ID_MAP is stale (no write) — CI
 
 const fs = require('fs');
 const path = require('path');
 
-const root = path.join(__dirname, '..');
+const root  = path.join(__dirname, '..');
+const CHECK = process.argv.includes('--check');
 
-const PAIRS = ['es-en', 'en-es'];
+const PAIRS       = ['es-en', 'en-es'];
+const VOCAB_LANGS = ['en', 'es'];
 
-const phraseTopics = [
-  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-];
+// ── Derive topic lists from the content (single source of truth) ─────────────
 
-const vocabTopics = [
-  'general', 'verbos_basicos', 'verbos_avanzados', 'adjetivos_basicos', 'adjetivos_avanzados',
-  'colores', 'naturaleza', 'tiempo', 'lugares', 'cantidad', 'juegos', 'ropa', 'lengua',
-  'sociedad_politica', 'trabajo', 'educacion', 'objetos',
-  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability',
-];
+// Phrase topics for a pair = the phrase categories declared in its topics.json,
+// in that file's order (deterministic — same committed file everywhere).
+function phraseTopicsFor(pair) {
+  const tj = JSON.parse(fs.readFileSync(
+    path.join(root, 'shared', 'json', 'pairs', pair, 'topics.json'), 'utf8'));
+  return (tj.topics || []).filter(t => t.phrase).map(t => t.id);
+}
+
+// Vocab topics for a language = the words*.json files present, sorted for a
+// deterministic order across filesystems (readdir order is not portable).
+function vocabTopicsFor(lang) {
+  const dir = path.join(root, 'shared', 'json', 'vocab', lang);
+  return fs.readdirSync(dir)
+    .filter(f => f === 'words.json' || /^words-.+\.json$/.test(f))
+    .map(f => (f === 'words.json' ? 'general' : f.replace(/^words-/, '').replace(/\.json$/, '')))
+    .sort();
+}
 
 // ── 1. Build the map from JSON ───────────────────────────────────────────────
 
@@ -48,7 +55,7 @@ const vocabTopics = [
 const phrases = {};
 for (const pair of PAIRS) {
   phrases[pair] = {};
-  for (const topic of phraseTopics) {
+  for (const topic of phraseTopicsFor(pair)) {
     const filePath = path.join(root, 'shared', 'json', 'pairs', pair, `${topic}.json`);
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     phrases[pair][topic] = (data.phrases || data).map(p => p.id);
@@ -58,11 +65,10 @@ for (const pair of PAIRS) {
 // Vocabulary: target-centric (shared/json/vocab/{targetLang}/). Word selection
 // and CEFR levels are independent per target language (English NGSL core vs
 // Spanish ELELex core), so the map is keyed by target language.
-const VOCAB_LANGS = ['en', 'es'];
 const vocab = {};
 for (const lang of VOCAB_LANGS) {
   vocab[lang] = {};
-  for (const topic of vocabTopics) {
+  for (const topic of vocabTopicsFor(lang)) {
     const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
     const filePath = path.join(root, 'shared', 'json', 'vocab', lang, filename);
     const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -76,7 +82,7 @@ for (const lang of VOCAB_LANGS) {
 
 const idMap = { phrases, vocab };
 
-// ── 2. Replace the whole _ID_MAP block in progress.js ────────────────────────
+// ── 2. Compare / replace the _ID_MAP block in progress.js ────────────────────
 
 const progressPath = path.join(root, 'shared', 'js', 'progress.js');
 const src = fs.readFileSync(progressPath, 'utf8');
@@ -95,32 +101,27 @@ if (newSrc === src) {
   process.exit(0);
 }
 
-fs.writeFileSync(progressPath, newSrc, 'utf8');
-
-// ── 3. Verify ─────────────────────────────────────────────────────────────────
-
-const written = JSON.parse(newSrc.match(/const _ID_MAP = (\{[\s\S]*?\});/)[1]);
-let allOk = true;
-for (const pair of PAIRS) {
-  for (const topic of phraseTopics) {
-    if (JSON.stringify(written.phrases[pair][topic]) !== JSON.stringify(phrases[pair][topic])) {
-      allOk = false; console.error(`  ✗ phrases.${pair}.${topic} mismatch after write`);
-    }
-  }
-}
-for (const lang of VOCAB_LANGS) {
-  for (const topic of vocabTopics) {
-    if (JSON.stringify(written.vocab[lang][topic].ids) !== JSON.stringify(vocab[lang][topic].ids)) {
-      allOk = false; console.error(`  ✗ vocab.${lang}.${topic} mismatch after write`);
-    }
-  }
-}
-
-if (allOk) {
-  const pCount = PAIRS.reduce((s, p) => s + phraseTopics.reduce((a, t) => a + phrases[p][t].length, 0), 0);
-  const vCount = VOCAB_LANGS.reduce((s, l) => s + vocabTopics.reduce((a, t) => a + vocab[l][t].ids.length, 0), 0);
-  console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs across ${PAIRS.length} pairs, ${vCount} vocab IDs (${VOCAB_LANGS.length} target languages).`);
-} else {
-  console.error('❌ Verification failed — check output above.');
+if (CHECK) {
+  console.error('✗ _ID_MAP is STALE — content (categories/phrases/vocab) changed but');
+  console.error('  shared/js/progress.js was not regenerated, so the Mi Aprendizaje path');
+  console.error('  would silently drop the new content.');
+  console.error('  Fix: node tools/fix-phrase-ids.js   (then commit shared/js/progress.js)');
   process.exit(1);
 }
+
+fs.writeFileSync(progressPath, newSrc, 'utf8');
+
+// ── 3. Verify the written map round-trips ────────────────────────────────────
+
+const written = JSON.parse(newSrc.match(/const _ID_MAP = (\{[\s\S]*?\});/)[1]);
+if (JSON.stringify(written) !== JSON.stringify(idMap)) {
+  console.error('❌ Verification failed — written _ID_MAP does not match the rebuilt map.');
+  process.exit(1);
+}
+
+const pCount = PAIRS.reduce((s, p) =>
+  s + Object.values(phrases[p]).reduce((a, ids) => a + ids.length, 0), 0);
+const vCount = VOCAB_LANGS.reduce((s, l) =>
+  s + Object.values(vocab[l]).reduce((a, e) => a + e.ids.length, 0), 0);
+console.log(`✅ _ID_MAP updated: ${pCount} phrase IDs across ${PAIRS.length} pairs, ` +
+            `${vCount} vocab IDs (${VOCAB_LANGS.length} target languages).`);
