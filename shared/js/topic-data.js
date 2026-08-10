@@ -1,11 +1,17 @@
 /* ============================================================
-   topic-data.js — Shared JSON cache for topic data files
-   Three-layer cache: memory → sessionStorage → network fetch.
-   - Memory cache: synchronous hit within the same page load
-   - sessionStorage cache: instant hit across page navigations
-     within the same tab (cleared when tab closes)
-   - Concurrent requests for the same key share one fetch (in-flight dedup)
-   - Failed fetches are evicted so the caller can retry cleanly
+   topic-data.js — Shared JSON loader for topic data files
+
+   NETWORK-FIRST (mirrors the service worker), so a content deploy reaches users
+   on the next navigation with NO manual reload or hard refresh:
+   - Memory cache: synchronous hit within the same page load (also dedups
+     concurrent in-flight requests). Cleared on every navigation, so it never
+     pins content across page loads.
+   - Network: every fresh get fetches from the network (through the SW, which is
+     itself network-first → fresh online, cached for offline).
+   - sessionStorage: OFFLINE FALLBACK ONLY. We keep a copy of each fetched file
+     so a mid-session offline navigation still works, but it is never served
+     while online — that was the old source of stale content that forced a hard
+     refresh. (Cleared when the tab closes.)
    ============================================================ */
 
 const AppData = (() => {
@@ -65,14 +71,12 @@ const AppData = (() => {
   function get(id) {
     const key = _cacheKey(id);
 
-    // 1 — Memory cache (same page, also holds in-flight Promises for dedup)
+    // 1 — Memory cache (same page only; also holds in-flight Promises for dedup)
     if (_cache.has(key)) return Promise.resolve(_cache.get(key));
 
-    // 2 — sessionStorage (cross-page within the same tab — no network needed)
-    const ss = _ssGet(id);
-    if (ss) { _cache.set(key, ss); return Promise.resolve(ss); }
-
-    // 3 — Network fetch
+    // 2 — Network-first: always fetch fresh when online (through the SW). Fall
+    // back to the sessionStorage copy only if the fetch fails (offline), so
+    // stale content is never served while online.
     const p = fetch(_url(id))
       .then(r => {
         if (!r.ok) throw new Error('HTTP ' + r.status);
@@ -80,11 +84,13 @@ const AppData = (() => {
       })
       .then(data => {
         _cache.set(key, data);  // replace in-flight Promise with resolved value
-        _ssPut(id, data);       // persist for subsequent activity pages this session
+        _ssPut(id, data);       // keep an offline fallback copy for this tab
         return data;
       })
       .catch(err => {
-        _cache.delete(key);     // evict so the caller can retry
+        const ss = _ssGet(id);  // offline / fetch failed → last-known copy
+        if (ss) { _cache.set(key, ss); return ss; }
+        _cache.delete(key);     // nothing cached → evict so the caller can retry
         throw err;
       });
 
