@@ -38,13 +38,11 @@
             <div class="placement-card">
                 <div class="placement-icon" aria-hidden="true">🎯</div>
                 <h1 class="placement-title" data-i18n-html="placement_page_h1"></h1>
-                <p class="placement-subtitle">
-                    14 preguntas para encontrar tu nivel de inglés (A1–C2) y sugerirte el mejor punto de partida.
-                </p>
-                <div class="placement-info-pills" aria-label="Detalles de la prueba">
-                    <span class="info-pill">⏱️ ~3 minutos</span>
-                    <span class="info-pill">❓ 14 preguntas</span>
-                    <span class="info-pill">📊 Resultado CEFR</span>
+                <p class="placement-subtitle" data-i18n="placement_subtitle"></p>
+                <div class="placement-info-pills" aria-label="" data-i18n-aria="placement_details_aria">
+                    <span class="info-pill" data-i18n="placement_pill_time"></span>
+                    <span class="info-pill" data-i18n="placement_pill_questions"></span>
+                    <span class="info-pill" data-i18n="placement_pill_result"></span>
                 </div>
                 <div class="placement-actions">
                     <button id="start-btn" class="ptest-btn ptest-btn--primary" data-i18n="placement_start_btn"></button>
@@ -85,12 +83,10 @@
                 <p class="result-score" id="result-score" role="status" aria-live="polite"></p>
                 <p class="result-message" id="result-message"></p>
 
-                <div class="result-suggestions-label">Actividades recomendadas para tu nivel:</div>
+                <div class="result-suggestions-label" data-i18n="placement_suggestions_label"></div>
                 <div class="result-suggestions" id="result-suggestions"></div>
 
-                <a href="../../index.html" class="ptest-btn ptest-btn--primary result-cta" id="result-cta">
-                    Empezar a practicar →
-                </a>
+                <a href="../../index.html" class="ptest-btn ptest-btn--primary result-cta" id="result-cta" data-i18n="placement_result_cta"></a>
                 <button id="retake-btn" class="ptest-btn ptest-btn--ghost" data-i18n="placement_retake_btn"></button>
             </div>
         </div>
@@ -103,9 +99,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('footer-year').textContent = new Date().getFullYear();
-    </script>
     <script src="../../shared/js/flags.js"></script>
     <script src="../../shared/js/cefr.js"></script>
     <script src="../../shared/js/lang-pair.js"></script>
@@ -113,7 +106,21 @@
     <script src="../../lang/ui.js"></script>
     <script src="../../lang/target/en.js"></script>
     <script src="../../shared/js/lang.js"></script>
+    <script src="../../shared/js/i18n-dom.js"></script>
     <script src="../../shared/js/page-title.js"></script>
+    <script>
+      /* Footer: invariant name + translatable "developed by" + dynamic year
+         (placement doesn't load nav.js, which builds it on other pages). */
+      (function () {
+        var fp = document.querySelector('footer .footer-content p');
+        if (fp && typeof AppLang !== 'undefined') {
+          var dev = AppLang.t('footer_developed_by');
+          if (dev !== 'footer_developed_by') {
+            fp.innerHTML = '© <span id="footer-year">' + new Date().getFullYear() + '</span> ' + dev + ' Jesús Orihuela';
+          }
+        }
+      })();
+    </script>
     <script src="../js/placement.js"></script>
     <script src="../../shared/js/network-status.js"></script>
     <script src="../../shared/js/theme.js"></script>

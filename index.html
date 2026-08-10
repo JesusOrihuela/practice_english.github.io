@@ -59,17 +59,14 @@
     }
     </script>
 
-    <!-- i18n cloak: the landing is hardcoded in Spanish and translated by
-         _initMainPageI18n() at end of body. For a non-Spanish source (active
-         en-* pair, or navigator.language on first visit) hide the page until it
-         is translated so no Spanish flashes. Spanish sources render instantly.
+    <!-- i18n cloak: the landing carries no hardcoded UI text — every element is
+         empty (data-i18n) and filled by _initMainPageI18n() at end of body, for
+         ALL pairs. Hide the page until it's filled so no empty content is painted;
+         reveal on DOMContentLoaded (after that runs), with a 2 s failsafe.
          generalities.css (loaded above) defines html.lang-cloak body{visibility:hidden}. -->
     <script>
     (function () {
       try {
-        var p = localStorage.getItem('pe_active_pair');
-        var src = p ? p.split('-')[0] : (navigator.language || 'en').toLowerCase().split('-')[0];
-        if (src === 'es') return;
         var de = document.documentElement;
         de.classList.add('lang-cloak');
         var reveal = function () { de.classList.remove('lang-cloak'); };
@@ -81,7 +78,7 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#main-content">Ir al contenido principal</a>
+    <a class="skip-link" href="#main-content" data-i18n="skip_to_main"></a>
     <header>
         <a href="index.html" aria-label="Practice English — Home">
             <img src="index/img/ico/logo.webp" alt="Practice English" width="284" height="88" fetchpriority="high">
@@ -95,30 +92,24 @@
                 <div class="hexagon"></div>
                 <div class="hexagon"></div>
 
-                <h1 class="hero-title">
-                    ¿Listo para dominar<br>
-                    <span class="highlight">un nuevo idioma?</span>
-                </h1>
+                <h1 class="hero-title" data-i18n-html="index_hero_title"></h1>
 
-                <p class="hero-subtitle">
-                    Escucha, habla y amplía tu vocabulario con ejercicios
-                    interactivos diseñados para hacer el aprendizaje natural y divertido.
-                </p>
+                <p class="hero-subtitle" data-i18n="index_hero_sub"></p>
 
                 <div class="hero-stats">
                     <div class="stat">
                         <div class="stat-number">8</div>
-                        <div class="stat-label">Actividades</div>
+                        <div class="stat-label" data-i18n="index_stat_activities"></div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
                         <div class="stat-number">700+</div>
-                        <div class="stat-label">Frases</div>
+                        <div class="stat-label" data-i18n="index_stat_phrases"></div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <div class="stat-number">Gratis</div>
-                        <div class="stat-label">Siempre</div>
+                        <div class="stat-number" data-i18n="index_stat_free_num"></div>
+                        <div class="stat-label" data-i18n="index_stat_free"></div>
                     </div>
                 </div>
             </div>
@@ -135,15 +126,15 @@
         <!-- ── Learning Path ── -->
         <section class="path-section" id="path-section">
           <div class="path-intro">
-            <h2 class="path-heading">Tu Ruta de Aprendizaje</h2>
-            <p class="path-subheading">Tu sesión diaria — guiada por repetición espaciada.</p>
+            <h2 class="path-heading" data-i18n="index_path_heading"></h2>
+            <p class="path-subheading" data-i18n="index_path_sub"></p>
           </div>
           <div class="path-card">
             <div class="path-session-cta" id="path-session-cta"><!-- JS --></div>
             <div class="path-card__trail">
-              <button class="path-scroll-btn path-scroll-btn--left hidden" id="path-scroll-left" aria-label="Desplazar a la izquierda">‹</button>
+              <button class="path-scroll-btn path-scroll-btn--left hidden" id="path-scroll-left" aria-label="" data-i18n-aria="index_scroll_left">‹</button>
               <div class="path-nodes" id="path-nodes" role="list"><!-- JS --></div>
-              <button class="path-scroll-btn path-scroll-btn--right hidden" id="path-scroll-right" aria-label="Desplazar a la derecha">›</button>
+              <button class="path-scroll-btn path-scroll-btn--right hidden" id="path-scroll-right" aria-label="" data-i18n-aria="index_scroll_right">›</button>
               <div class="path-nodes-fade path-nodes-fade--left hidden" aria-hidden="true"></div>
               <div class="path-nodes-fade path-nodes-fade--right" aria-hidden="true"></div>
             </div>
@@ -154,30 +145,30 @@
         <section class="activities-section" id="all-activities">
 
             <div class="activities-intro">
-                <h2 class="activities-heading">Elige tu actividad</h2>
-                <p class="activities-subheading">9 ejercicios con respaldo científico — cada uno enfocado en un aspecto distinto del aprendizaje.</p>
+                <h2 class="activities-heading" data-i18n="index_activities_heading"></h2>
+                <p class="activities-subheading" data-i18n="index_activities_sub"></p>
             </div>
 
             <!-- Group A: Habla y Escucha -->
             <div class="activity-group">
                 <div class="group-label">
-                    <span class="group-badge">🎙️ Habla y Escucha</span>
+                    <span class="group-badge" data-i18n="index_group_speaking"></span>
                 </div>
                 <div class="activity-grid activity-grid--2">
                     <a href="speaking/html/speaking.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">🎙️</div>
-                            <h3>Pronunciación</h3>
-                            <span class="card-benefit">Habla en voz alta — recibe retroalimentación de pronunciación en tiempo real</span>
-                            <p>Usa tu micrófono para hablar y recibe retroalimentación instantánea sobre tu pronunciación.</p>
+                            <h3 data-i18n="act_speaking"></h3>
+                            <span class="card-benefit" data-i18n="index_card_speaking_benefit"></span>
+                            <p data-i18n="index_card_speaking_desc"></p>
                         </div>
                     </a>
                     <a href="dictation/html/dictation.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">✍️</div>
-                            <h3>Dictado</h3>
-                            <span class="card-benefit">Escucha y escribe — entrena la comprensión auditiva</span>
-                            <p>Escucha con atención y escribe lo que oyes — entrena la escucha y la ortografía al mismo tiempo.</p>
+                            <h3 data-i18n="act_dictation"></h3>
+                            <span class="card-benefit" data-i18n="index_card_dictation_benefit"></span>
+                            <p data-i18n="index_card_dictation_desc"></p>
                         </div>
                     </a>
                 </div>
@@ -186,31 +177,31 @@
             <!-- Group B: Práctica de Oraciones -->
             <div class="activity-group">
                 <div class="group-label">
-                    <span class="group-badge">✏️ Práctica de Oraciones</span>
+                    <span class="group-badge" data-i18n="index_group_sentences"></span>
                 </div>
                 <div class="activity-grid activity-grid--3">
                     <a href="cloze/html/cloze.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">🔤</div>
-                            <h3>Cloze</h3>
-                            <span class="card-benefit">Genera la palabra faltante — efecto de generación</span>
-                            <p>Completa la palabra que falta. Generar palabras tú mismo construye una memoria un 40% más fuerte que leerlas.</p>
+                            <h3 data-i18n="act_cloze"></h3>
+                            <span class="card-benefit" data-i18n="index_card_cloze_benefit"></span>
+                            <p data-i18n="index_card_cloze_desc"></p>
                         </div>
                     </a>
                     <a href="translation/html/translation.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">🔄</div>
-                            <h3>Traducción</h3>
-                            <span class="card-benefit">Español → Inglés — la dirección más efectiva</span>
-                            <p>Lee en español, escribe en inglés. La producción activa L1→L2 profundiza la retención de gramática y vocabulario.</p>
+                            <h3 data-i18n="act_translation"></h3>
+                            <span class="card-benefit" data-i18n="index_card_translation_benefit"></span>
+                            <p data-i18n="index_card_translation_desc"></p>
                         </div>
                     </a>
                     <a href="scramble/html/scramble.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">🧩</div>
-                            <h3>Secuencia</h3>
-                            <span class="card-benefit">Reconstruye el orden de las palabras — gramática sin traducción</span>
-                            <p>Toca las palabras desordenadas en el orden correcto. Entrena el orden de las palabras en inglés de forma natural.</p>
+                            <h3 data-i18n="act_scramble"></h3>
+                            <span class="card-benefit" data-i18n="index_card_scramble_benefit"></span>
+                            <p data-i18n="index_card_scramble_desc"></p>
                         </div>
                     </a>
                 </div>
@@ -219,23 +210,23 @@
             <!-- Group C: Vocabulario -->
             <div class="activity-group">
                 <div class="group-label">
-                    <span class="group-badge">📖 Vocabulario</span>
+                    <span class="group-badge" data-i18n="index_group_vocab"></span>
                 </div>
                 <div class="activity-grid activity-grid--2">
                     <a href="vocabulary/html/vocabulary.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">📚</div>
-                            <h3>Vocabulario</h3>
-                            <span class="card-benefit">Tarjetas con repetición espaciada — efecto de práctica distribuida</span>
-                            <p>Domina más de 100 palabras con tarjetas inteligentes que se adaptan usando repetición espaciada.</p>
+                            <h3 data-i18n="act_vocabulary"></h3>
+                            <span class="card-benefit" data-i18n="index_card_vocabulary_benefit"></span>
+                            <p data-i18n="index_card_vocabulary_desc"></p>
                         </div>
                     </a>
                     <a href="quiz/html/quiz.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">🧠</div>
-                            <h3>Quiz</h3>
-                            <span class="card-benefit">Fuerza el recuerdo activo — efecto del test</span>
-                            <p>Preguntas de opción múltiple que fuerzan el recuerdo activo — el efecto del test construye una memoria a largo plazo más sólida.</p>
+                            <h3 data-i18n="act_quiz"></h3>
+                            <span class="card-benefit" data-i18n="index_card_quiz_benefit"></span>
+                            <p data-i18n="index_card_quiz_desc"></p>
                         </div>
                     </a>
                 </div>
@@ -244,15 +235,15 @@
             <!-- Group D: Gramática -->
             <div class="activity-group">
                 <div class="group-label">
-                    <span class="group-badge">📐 Gramática</span>
+                    <span class="group-badge" data-i18n="index_group_grammar"></span>
                 </div>
                 <div class="activity-grid activity-grid--3">
                     <a href="grammar/html/grammar.html" class="feature-card-link">
                         <div class="feature-card">
                             <div class="feature-icon">📐</div>
-                            <h3>Gramática</h3>
-                            <span class="card-benefit">Aprende reglas de forma inductiva en 5 fases</span>
-                            <p>Contexto → Observación → Regla → Comprensión → Producción. Ejercicios de 5 fases con base científica y SRS por regla.</p>
+                            <h3 data-i18n="act_grammar"></h3>
+                            <span class="card-benefit" data-i18n="index_card_grammar_benefit"></span>
+                            <p data-i18n="index_card_grammar_desc"></p>
                         </div>
                     </a>
                 </div>
@@ -267,7 +258,7 @@
     <div id="ob-overlay" class="ob-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="ob-title">
         <div class="ob-modal">
 
-            <button class="ob-close" id="ob-close" aria-label="Cerrar">✕</button>
+            <button class="ob-close" id="ob-close" aria-label="" data-i18n-aria="ob_close_aria">✕</button>
 
             <div class="ob-inner">
 
@@ -282,20 +273,17 @@
             <!-- ── Step 0: How it works ── -->
             <div class="ob-step" id="ob-step-0">
                 <div class="ob-hero-icon">🗣️</div>
-                <h2 class="ob-title" id="ob-title">Tu inglés, en conversaciones reales</h2>
-                <p class="ob-body">
-                    Practica pronunciación, escritura y comprensión con frases de la vida diaria — restaurantes, viajes, trabajo y más.<br><br>
-                    El sistema aprende contigo: te muestra exactamente lo que necesitas en el momento justo.
-                </p>
-                <button class="ob-primary-btn" id="ob-next-0">Empezar →</button>
+                <h2 class="ob-title" id="ob-title" data-i18n="ob_title_how"></h2>
+                <p class="ob-body" data-i18n-html="ob_body_how"></p>
+                <button class="ob-primary-btn" id="ob-next-0" data-i18n="ob_btn_find_level"></button>
             </div>
 
             <!-- ── Step 1: Topic Preferences ── -->
             <div class="ob-step hidden" id="ob-step-1">
-                <h2 class="ob-title">¿Qué te interesa?</h2>
-                <p class="ob-body ob-body--sm">Elige los temas que más te interesan. Los verás con más frecuencia en tu ruta — puedes cambiarlo después.</p>
+                <h2 class="ob-title" data-i18n="ob_title_topics"></h2>
+                <p class="ob-body ob-body--sm" data-i18n="ob_body_topics"></p>
                 <div class="ob-topic-bubbles" id="ob-topic-bubbles"></div>
-                <button class="ob-primary-btn" id="ob-topics-done" type="button">Encontrar mi nivel →</button>
+                <button class="ob-primary-btn" id="ob-topics-done" type="button" data-i18n="ob_btn_topics_done"></button>
             </div>
 
             <!-- ── Step 2: Placement Quiz ── -->
@@ -309,12 +297,12 @@
                 </div>
                 <p class="ob-quiz-q" id="ob-quiz-q"></p>
                 <div class="ob-quiz-opts" id="ob-quiz-opts"></div>
-                <button class="ob-ghost-btn ob-quiz-skip" id="ob-quiz-skip">Saltar — ya sé mi nivel</button>
+                <button class="ob-ghost-btn ob-quiz-skip" id="ob-quiz-skip" data-i18n="ob_quiz_skip"></button>
                 <div class="ob-quiz-manual hidden" id="ob-quiz-manual">
-                    <p class="ob-quiz-manual-label">Elige tu nivel:</p>
-                    <button class="ob-manual-btn" data-level="A1">🌱 A1–A2 &nbsp; Principiante</button>
-                    <button class="ob-manual-btn" data-level="B1">🌿 B1–B2 &nbsp; Intermedio</button>
-                    <button class="ob-manual-btn" data-level="C1">🌳 C1–C2 &nbsp; Avanzado</button>
+                    <p class="ob-quiz-manual-label" data-i18n="ob_manual_label"></p>
+                    <button class="ob-manual-btn" data-level="A1" data-i18n-html="manual_level_beginner"></button>
+                    <button class="ob-manual-btn" data-level="B1" data-i18n-html="manual_level_intermediate"></button>
+                    <button class="ob-manual-btn" data-level="C1" data-i18n-html="manual_level_advanced"></button>
                 </div>
             </div>
 
@@ -322,10 +310,10 @@
             <!-- ── Step 3: Welcome ── -->
             <div class="ob-step hidden" id="ob-step-3">
                 <div class="ob-hero-icon">🎉</div>
-                <h2 class="ob-title">¡Todo listo!</h2>
+                <h2 class="ob-title" data-i18n="ob_title_done"></h2>
                 <p class="ob-body ob-body--sm" id="ob-welcome-msg"></p>
-                <button class="ob-primary-btn" id="ob-go-path" type="button">🗺️ Ir a Mi Ruta</button>
-                <button class="ob-ghost-btn" id="ob-go-free" type="button">Explorar por mi cuenta →</button>
+                <button class="ob-primary-btn" id="ob-go-path" type="button" data-i18n="ob_btn_go_path"></button>
+                <button class="ob-ghost-btn" id="ob-go-free" type="button" data-i18n="ob_btn_explore"></button>
             </div>
 
             </div><!-- /ob-inner -->
@@ -335,7 +323,7 @@
 
     <footer>
         <div class="footer-content">
-            <p>© <span id="footer-year">2025</span> Desarrollado por Jesús Orihuela</p>
+            <p></p>
             <a href="https://github.com/JesusOrihuela/practice_english.github.io" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white" opacity="0.8" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a>
@@ -350,6 +338,7 @@
     <script src="lang/ui.js"></script>
     <script src="lang/target/en.js"></script>
     <script src="shared/js/lang.js"></script>
+    <script src="shared/js/i18n-dom.js"></script>
     <script>
       /* ── Pair Selection + Onboarding Modal + Embedded Placement Quiz ── */
       (function () {
@@ -604,80 +593,19 @@
 
         // ── Main page i18n (translates static HTML for non-es source) ──
         function _initMainPageI18n() {
-          if (typeof AppLang === 'undefined') return;
-          // Determine source language: active pair > navigator.language > 'en'
-          var _srcCode = localStorage.getItem('pe_active_pair') && typeof AppLangPair !== 'undefined'
-            ? AppLangPair.getActive().source.code
-            : (navigator.language || 'en').toLowerCase().split('-')[0];
-          if (_srcCode === 'es') return; // already Spanish — nothing to translate
+          if (typeof AppI18nDom === 'undefined') return;
+          // Fill every data-i18n* element (landing + onboarding) from AppLang,
+          // for ALL pairs — no hardcoded UI text in the HTML (project standard).
+          AppI18nDom.apply(document, AppI18nDom.params());
 
-          function _set(sel, key, html) {
-            var el = document.querySelector(sel);
-            if (!el) return;
-            var txt = AppLang.t(key);
-            if (txt === key) return; // key not found — skip
-            if (html) el.innerHTML = txt; else el.textContent = txt;
-          }
-
-          // Hero section (title carries markup → innerHTML from i18n, not a
-          // hardcoded string, so a third source language translates correctly too)
-          _set('.hero-title', 'index_hero_title', true);
-          _set('.hero-subtitle', 'index_hero_sub');
-          var _statLabels = document.querySelectorAll('.hero-stats .stat .stat-label');
-          var _statKeys = ['index_stat_activities', 'index_stat_phrases', 'index_stat_free'];
-          _statLabels.forEach(function (el, i) {
-            if (_statKeys[i]) { var t = AppLang.t(_statKeys[i]); if (t !== _statKeys[i]) el.textContent = t; }
-          });
-          // "Gratis" is in .stat-number (text, not a number)
-          var _freeNum = document.querySelector('.hero-stats .stat:last-child .stat-number');
-          if (_freeNum) { var t = AppLang.t('index_stat_free_num'); if (t !== 'index_stat_free_num') _freeNum.textContent = t; }
-
-          // Learning path section
-          _set('.path-heading',    'index_path_heading');
-          _set('.path-subheading', 'index_path_sub');
-
-          // Activities section
-          _set('.activities-heading',    'index_activities_heading');
-          _set('.activities-subheading', 'index_activities_sub');
-
-          // Group badges (by first link href inside each group)
-          var _GROUP_MAP = {
-            'speaking':    'index_group_speaking',
-            'cloze':       'index_group_sentences',
-            'vocabulary':  'index_group_vocab',
-            'grammar':     'index_group_grammar',
-          };
-          document.querySelectorAll('.activity-group').forEach(function (group) {
-            var firstLink = group.querySelector('.feature-card-link');
-            if (!firstLink) return;
-            var m = (firstLink.getAttribute('href') || '').match(/([\w-]+)\/html\//);
-            if (!m) return;
-            var badge = group.querySelector('.group-badge');
-            if (badge) {
-              var txt = AppLang.t(_GROUP_MAP[m[1]] || '');
-              if (txt && txt !== (_GROUP_MAP[m[1]] || '')) badge.textContent = txt;
+          // Footer: invariant name + translatable "developed by" + dynamic year.
+          var fp = document.querySelector('footer .footer-content p');
+          if (fp && typeof AppLang !== 'undefined') {
+            var dev = AppLang.t('footer_developed_by');
+            if (dev !== 'footer_developed_by') {
+              fp.innerHTML = '© <span id="footer-year">' + new Date().getFullYear() + '</span> ' + dev + ' Jesús Orihuela';
             }
-          });
-
-          // Activity cards: h3, benefit tagline, description
-          document.querySelectorAll('.feature-card-link').forEach(function (link) {
-            var m = (link.getAttribute('href') || '').match(/([\w-]+)\/html\//);
-            if (!m) return;
-            var act = m[1];
-            var card = link.querySelector('.feature-card');
-            if (!card) return;
-
-            var h3 = card.querySelector('h3');
-            if (h3) { var t1 = AppLang.t('act_' + act); if (t1 !== 'act_' + act) h3.textContent = t1; }
-
-            var _idxPair = AppLangPair.getActive();
-            var _idxParams = { target: _idxPair.target.localName, source: _idxPair.source.localName, targetName: _idxPair.target.name, sourceName: _idxPair.source.name };
-            var benefit = card.querySelector('.card-benefit');
-            if (benefit) { var t2 = AppLang.t('index_card_' + act + '_benefit', _idxParams); if (t2 !== 'index_card_' + act + '_benefit') benefit.textContent = t2; }
-
-            var desc = card.querySelector('p');
-            if (desc) { var t3 = AppLang.t('index_card_' + act + '_desc', _idxParams); if (t3 !== 'index_card_' + act + '_desc') desc.textContent = t3; }
-          });
+          }
         }
 
         // ── Pair picker (shown when pe_active_pair === null) ──────────

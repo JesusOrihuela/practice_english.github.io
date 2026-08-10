@@ -44,6 +44,39 @@ jobs:
       - name: Content audit (audit.mjs --quick)
         run: node tools/audit.mjs --quick
 
+  # i18n standard: no hardcoded UI text in HTML — every translatable element is
+  # empty with a data-i18n* attribute, filled from lang/ui.js by AppI18nDom. This
+  # job fails if any page hardcodes text or uses a key missing from a language block.
+  i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (HTML + lang + tools)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            lang
+            tools
+            speaking/html
+            dictation/html
+            cloze/html
+            translation/html
+            scramble/html
+            vocabulary/html
+            quiz/html
+            grammar/html
+            my-learning/html
+            progress/html
+            placement/html
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: No hardcoded UI text + keys resolve (check-i18n.mjs)
+        run: node tools/check-i18n.mjs
+
   # Core-vocabulary rule (TWO CHANNELS): the target language must teach ≥ 90% of the
   # pedagogical top-1000 with PHRASES alone AND with VOCAB alone — the core taught
   # both in context (phrases) and in isolation (vocab). Phrases are measured over the

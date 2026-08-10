@@ -332,6 +332,9 @@
       topic_survival:       'Sobrevivir el Idioma',
 
       // ── Página principal (index.html) ─────────────────────────────
+      index_scroll_left:         'Desplazar a la izquierda',
+      index_scroll_right:        'Desplazar a la derecha',
+      ob_close_aria:            'Cerrar',
       index_hero_title:          '¿Listo para dominar<br><span class="highlight">un nuevo idioma?</span>',
       index_hero_sub:           'Escucha, habla y amplía tu vocabulario con ejercicios interactivos diseñados para hacer el aprendizaje natural y divertido.',
       index_stat_activities:    'Actividades',
@@ -490,6 +493,13 @@
       notif_time_label:           'Recuérdame a las',
       // Placement
       placement_title:            'Prueba de Nivel',
+      placement_subtitle:         '14 preguntas para encontrar tu nivel de {target} (A1–C2) y sugerirte el mejor punto de partida.',
+      placement_details_aria:     'Detalles de la prueba',
+      placement_pill_time:        '⏱️ ~3 minutos',
+      placement_pill_questions:   '❓ 14 preguntas',
+      placement_pill_result:      '📊 Resultado CEFR',
+      placement_suggestions_label:'Actividades recomendadas para tu nivel:',
+      placement_result_cta:       'Empezar a practicar →',
       placement_page_h1:          'Prueba de <span>Nivel</span>',
       placement_subtitle_enes:    '14 preguntas para encontrar tu nivel de {target} (A1–C2) y sugerirte el mejor punto de partida.',
       placement_time_pill:        '⏱️ ~3 minutos',
@@ -837,6 +847,9 @@
       topic_survival:       'Language Survival',
 
       // ── Main page (index.html) ────────────────────────────────
+      index_scroll_left:         'Scroll left',
+      index_scroll_right:        'Scroll right',
+      ob_close_aria:            'Close',
       index_hero_title:          'Ready to master<br><span class="highlight">a new language?</span>',
       index_hero_sub:           'Listen, speak, and expand your vocabulary with interactive exercises designed to make learning natural and fun.',
       index_stat_activities:    'Activities',
@@ -995,6 +1008,13 @@
       notif_time_label:           'Remind me at',
       // Placement
       placement_title:            'Level Test',
+      placement_subtitle:         '14 questions to find your {target} level (A1–C2) and suggest the best starting point.',
+      placement_details_aria:     'Test details',
+      placement_pill_time:        '⏱️ ~3 minutes',
+      placement_pill_questions:   '❓ 14 questions',
+      placement_pill_result:      '📊 CEFR result',
+      placement_suggestions_label:'Recommended activities for your level:',
+      placement_result_cta:       'Start practicing →',
       placement_page_h1:          'Level <span>Test</span>',
       placement_subtitle_enes:    '14 questions to find your {targetName} level (A1–C2) and suggest the best starting point.',
       placement_time_pill:        '⏱️ ~3 minutes',

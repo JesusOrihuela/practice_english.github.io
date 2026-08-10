@@ -20,37 +20,10 @@
   // ── i18n label injection ───────────────────────────────────────
   if (typeof AppLangPair === 'undefined' || typeof AppLang === 'undefined') return;
 
-  // 1. Nav labels via data-i18n — must run for ALL language pairs
-  // Pass {target}/{source} params so strings that reference language names
-  // can substitute them dynamically (e.g. translation_picker_sub, grammar_picker_sub).
-  var _navPair = AppLangPair.getActive();
-  var _i18nParams = {
-    target:     _navPair.target.localName,
-    source:     _navPair.source.localName,
-    targetName: _navPair.target.name,
-    sourceName: _navPair.source.name,
-  };
-  document.querySelectorAll('[data-i18n]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n');
-    var txt = AppLang.t(key, _i18nParams);
-    if (txt !== key) el.textContent = txt;
-  });
-  // data-i18n-html: values that carry markup (e.g. an accent <span> inside an h1).
-  document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-html');
-    var txt = AppLang.t(key, _i18nParams);
-    if (txt !== key) el.innerHTML = txt;
-  });
-  document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-aria');
-    var txt = AppLang.t(key, _i18nParams);
-    if (txt !== key) el.setAttribute('aria-label', txt);
-  });
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-    var key = el.getAttribute('data-i18n-placeholder');
-    var txt = AppLang.t(key, _i18nParams);
-    if (txt !== key) el.setAttribute('placeholder', txt);
-  });
+  // 1. Fill every data-i18n* element via the shared applier — runs for ALL
+  //    language pairs (the project standard; see shared/js/i18n-dom.js).
+  var _i18nParams = AppI18nDom.params();
+  AppI18nDom.apply(document, _i18nParams);
 
   // 2. Browser tab title — runs for ALL language pairs
   // AppLang.t() returns the correct source-language string regardless of pair.
