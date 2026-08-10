@@ -1,13 +1,16 @@
 /* ============================================================
    check-i18n.mjs — enforces the "no hardcoded UI text" standard.
 
-   Checks every HTML page:
+   Checks:
+   0. BLOCK PARITY — every language block in lang/ui.js defines the same keys,
+      so a new pair's block can't omit JS-only or dynamically-built keys.
    1. KEY RESOLUTION — each data-i18n / -html / -aria / -placeholder key
       used in the HTML is defined in EVERY language block of lang/ui.js.
    2. NO HARDCODED TEXT — no translatable element (h1/h2/h3/p/button/label,
       or a <span> with a class) holds literal letter text unless it carries a
-      data-i18n* attribute. Elements with an id (JS-filled at runtime) and
-      pure emoji/number/symbol text are allowed.
+      data-i18n* attribute; and no aria-label / placeholder holds letter text
+      without its data-i18n-aria / -placeholder. Elements with an id (JS-filled
+      at runtime) and pure emoji/number/symbol text are allowed.
 
    Exit 1 on any violation. Run: node tools/check-i18n.mjs
    ============================================================ */
@@ -41,6 +44,22 @@ const langCodes = Object.keys(blocks);
 
 // ── Scan HTML ─────────────────────────────────────────────────────────────
 const problems = [];
+
+// ── 0. Block parity: every language block must define the SAME keys ──────────
+// HTML-used keys are checked below, but keys referenced only from JS (AppLang.t)
+// or built dynamically (act_*, placement_result_*, milestone_*) are not. Parity
+// guarantees a NEW pair's block can't ship missing any of them: if a key exists
+// in one block it must exist in all. (The 2-letter block names themselves are
+// excluded.)
+const allKeys = new Set();
+for (const code of langCodes) for (const k of blocks[code]) if (!langCodes.includes(k)) allKeys.add(k);
+for (const code of langCodes) {
+  for (const k of allKeys) {
+    if (!blocks[code].has(k)) {
+      problems.push(`lang/ui.js '${code}' block is missing key "${k}" (defined in another block — all blocks must match, or a pair renders raw keys)`);
+    }
+  }
+}
 const TAGS = /<(h1|h2|h3|h4|p|button|label)\b([^>]*)>([^<]*)</gi;
 const SPAN = /<span\b([^>]*\bclass="[^"]*"[^>]*)>([^<]*)</gi;
 const hasI18n = (attrs) => /data-i18n(?:-html|-aria|-placeholder)?=/.test(attrs);
