@@ -758,9 +758,6 @@ function buildRelatedPhrases(rule) {
   container.innerHTML = '';
   container.classList.add('hidden');
 
-  var keywords = rule.title.toLowerCase().split(/\s+/).filter(function(w){ return w.length > 3; });
-  if (keywords.length === 0) return;
-
   var topicMeta = (typeof AppTopics !== 'undefined' ? AppTopics.PHRASE_TOPICS : []).map(function(t) {
     return { id: t.id, label: (typeof AppTopics !== 'undefined') ? AppTopics.getLabel(t) : t.label };
   });
@@ -780,9 +777,12 @@ function buildRelatedPhrases(rule) {
       for (var i = 0; i < phrases.length && matches.length < 3; i++) {
         var tip = phrases[i].grammar || null;
         if (!tip) continue;
-        var tipLower = tip.toLowerCase();
-        var hit = keywords.some(function(kw){ return tipLower.indexOf(kw) !== -1; });
-        if (hit) matches.push({ phrase: phrases[i].phrase, topicId: res.meta.id, topicLabel: res.meta.label });
+        // A phrase is "related" to this rule iff its grammar tip links to it —
+        // the same target-language tip→rule map the grammar chip uses.
+        var info = (typeof extractGrammarInfo === 'function') ? extractGrammarInfo(tip) : { ruleId: null };
+        if (info.ruleId !== rule.id) continue;
+        var _text = (phrases[i].target && phrases[i].target[0]) ? phrases[i].target[0].text : '';
+        if (_text) matches.push({ phrase: _text, topicId: res.meta.id, topicLabel: res.meta.label });
       }
     }
     if (matches.length === 0) return;
