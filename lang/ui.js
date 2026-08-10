@@ -380,6 +380,9 @@
       skip_to_main:               'Ir al contenido principal',
       nav_modes_aria:             'Modos de práctica',
       nav_home_aria:              'Inicio',
+      nav_github_aria:            'Repositorio de GitHub',
+      lang_badge_aria:            '{sourceName} a {targetName}',
+      backup_import_aria:         'Importar archivo de copia de seguridad',
       // Topic picker subtitles
       speaking_picker_sub:        'Elige un tema y comienza a practicar tu pronunciación con retroalimentación en tiempo real.',
       dictation_picker_sub:       'Escucha cada frase y escribe exactamente lo que oyes.',
@@ -895,6 +898,9 @@
       skip_to_main:               'Skip to main content',
       nav_modes_aria:             'Practice modes',
       nav_home_aria:              'Home',
+      nav_github_aria:            'GitHub Repository',
+      lang_badge_aria:            '{sourceName} to {targetName}',
+      backup_import_aria:         'Import backup file',
       // Topic picker subtitles
       speaking_picker_sub:        'Choose a topic and start practicing your pronunciation with real-time feedback.',
       dictation_picker_sub:       'Listen to each phrase and type exactly what you hear.',

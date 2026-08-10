@@ -72,6 +72,26 @@ for (const rel of HTML) {
   };
   scan(TAGS, 2, 3);
   scan(SPAN, 1, 2);
+
+  // 2b. no hardcoded ATTRIBUTE text: an element with a placeholder / aria-label
+  // that holds letter text must carry its data-i18n counterpart, or the value
+  // stays in one language for every pair (AppI18nDom fills these at runtime — a
+  // raw value is just a JS-off fallback and must not be the only source). Tags
+  // can span lines, so match through to the closing '>'.
+  const ATTR_I18N = [
+    { attr: 'placeholder', need: 'data-i18n-placeholder' },
+    { attr: 'aria-label',  need: 'data-i18n-aria' },
+  ];
+  for (const { attr, need } of ATTR_I18N) {
+    const re = new RegExp('<[a-z][^>]*\\b' + attr + '="([^"]*)"[^>]*>', 'gi');
+    let m;
+    while ((m = re.exec(s))) {
+      const val = (m[1] || '').trim();
+      if (!isLetterText(val)) continue;    // emoji/number/symbol only → ok
+      if (m[0].includes(need)) continue;   // translated via data-i18n → ok
+      problems.push(`${rel}: hardcoded ${attr} "${val.slice(0, 40)}" (add ${need})`);
+    }
+  }
 }
 
 // ── 3. Topic labels: the topic_{id} i18n value (what the UI actually shows via
