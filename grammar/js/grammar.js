@@ -768,19 +768,25 @@ function buildRelatedPhrases(rule) {
       .catch(function(){ return null; });
   });
 
-  Promise.all(fetches).then(function(results) {
+  // Load the phrase→rules evidence map first so "related" uses the SAME link the
+  // chip does (evidence map ∪ authored tip), not just phrases with a written tip.
+  var _mapReady = (typeof AppGrammarChip !== 'undefined' && AppGrammarChip.load)
+    ? AppGrammarChip.load() : Promise.resolve();
+
+  Promise.all([_mapReady, Promise.all(fetches)]).then(function(all) {
+    var results = all[1];
     var matches = [];
     for (var t = 0; t < results.length && matches.length < 3; t++) {
       var res = results[t];
       if (!res) continue;
       var phrases = res.data.phrases || [];
       for (var i = 0; i < phrases.length && matches.length < 3; i++) {
-        var tip = phrases[i].grammar || null;
-        if (!tip) continue;
-        // A phrase is "related" to this rule iff its grammar tip links to it —
-        // the same target-language tip→rule map the grammar chip uses.
-        var info = (typeof extractGrammarInfo === 'function') ? extractGrammarInfo(tip) : { ruleId: null };
-        if (info.ruleId !== rule.id) continue;
+        // A phrase is "related" to this rule iff it exercises it — the same
+        // phrase↔rule link the grammar chip uses (map ∪ authored tip).
+        var rids = (typeof AppGrammarChip !== 'undefined' && AppGrammarChip.rulesFor)
+          ? AppGrammarChip.rulesFor({ id: phrases[i].id, tip: phrases[i].grammar || null })
+          : [];
+        if (rids.indexOf(rule.id) === -1) continue;
         var _text = (phrases[i].target && phrases[i].target[0]) ? phrases[i].target[0].text : '';
         if (_text) matches.push({ phrase: _text, topicId: res.meta.id, topicLabel: res.meta.label });
       }

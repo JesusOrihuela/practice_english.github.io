@@ -134,17 +134,27 @@ var AppGrammarChip = (function () {
     });
   }
 
+  // Every grammar-section rule a phrase exercises: evidence map ∪ the rule its
+  // authored tip resolves to. Single source of truth for the phrase↔rule link —
+  // used both by the chip (choose) and the Grammar page's related-phrases panel,
+  // so a chip that points at rule X is always mirrored by X listing that phrase.
+  // phrase: { tip, id } → [ruleId].
+  function rulesFor(phrase) {
+    phrase = phrase || {};
+    var out = (_loaded && _map && _map[phrase.id]) ? _map[phrase.id].slice() : [];
+    if (phrase.tip) {
+      var ai = extractGrammarInfo(phrase.tip);
+      if (ai.ruleId && out.indexOf(ai.ruleId) === -1) out.push(ai.ruleId);
+    }
+    return out;
+  }
+
   // phrase: { tip, id, pathMode } → { label, ruleId } | null.  ruleId null/absent
   // means "no chip". Callers show a chip only when the result has a truthy ruleId.
   function choose(phrase) {
     phrase = phrase || {};
     if (phrase.pathMode) return null;   // Ruta de Aprendizaje: focused attention → no chip
-    // Candidate rules the phrase exercises: evidence map ∪ authored-tip's rule.
-    var cands = (_loaded && _map && _map[phrase.id]) ? _map[phrase.id].slice() : [];
-    if (phrase.tip) {
-      var ai = extractGrammarInfo(phrase.tip);
-      if (ai.ruleId && cands.indexOf(ai.ruleId) === -1) cands.push(ai.ruleId);
-    }
+    var cands = rulesFor(phrase);
     if (!cands.length) return null;     // no explicit grammar rule → no chip (don't invent)
     // Show only ONE: the most advanced (highest-CEFR) structure in the phrase.
     var best = null, bestLvl = -1;
@@ -157,5 +167,5 @@ var AppGrammarChip = (function () {
     return { label: label, ruleId: best };
   }
 
-  return { load: load, choose: choose };
+  return { load: load, choose: choose, rulesFor: rulesFor };
 })();
