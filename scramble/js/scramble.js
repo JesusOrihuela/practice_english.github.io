@@ -383,7 +383,7 @@ function checkAnswer() {
   feedback.className = 'scramble-feedback ' + (isCorrect ? 'correct' : 'incorrect');
   updateGrammarChip(isCorrect);
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
-  document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById('try-again-btn').classList.remove('hidden');  // siempre: acierto→avanzar o reforzar; fallo→reintentar
   document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 

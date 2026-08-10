@@ -244,15 +244,20 @@
 .listen-btn:hover { background: var(--clr-accent-light); color: var(--clr-accent-dark); border-color: var(--clr-accent); }
 
 /* ---- Standalone Next / Try Again ---- */
-#exercise-area .next-btn,
-#exercise-area .try-again-btn {
+/* ---- Next / Try Again — side by side in one row ---- */
+#exercise-area .action-row {
+  display: flex;
+  gap: 12px;
   width: 100%;
   margin-top: 16px;
+}
+#exercise-area .next-btn,
+#exercise-area .try-again-btn {
+  flex: 1;
+  padding: 14px;
+  margin-top: 0;
   animation: fadeInScale 0.3s ease-out both;
 }
-
-#exercise-area .next-btn     { padding: 14px; }
-#exercise-area .try-again-btn { padding: 12px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {

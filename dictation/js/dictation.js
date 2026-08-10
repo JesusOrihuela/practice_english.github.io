@@ -353,7 +353,7 @@ function checkAnswer() {
   document.getElementById('play-btn').disabled = false;
 
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
-  document.getElementById('try-again-btn').classList.toggle('hidden', _lastCorrect);
+  document.getElementById('try-again-btn').classList.remove('hidden');  // siempre: acierto→avanzar o reforzar; fallo→reintentar
   document.getElementById('back-to-path')?.classList.remove('hidden');
   document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
 

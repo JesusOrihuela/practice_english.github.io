@@ -122,6 +122,7 @@
 
       // ── Botones de ejercicio ────────────────────────────────────
       btn_next:               'Siguiente →',
+      btn_try_again:          '↩ Intentar de nuevo',
       btn_verify:             'Verificar ✓',
       btn_results:            'Ver resultados →',
       done_status:            '✓ Hecho',
@@ -640,6 +641,7 @@
 
       // ── Exercise buttons ──────────────────────────────────────
       btn_next:               'Next →',
+      btn_try_again:          '↩ Try again',
       btn_verify:             'Verify ✓',
       btn_results:            'See results →',
       done_status:            '✓ Done',

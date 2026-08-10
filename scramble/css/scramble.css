@@ -332,19 +332,24 @@
 .feedback-result.correct   { color: var(--clr-success); }
 .feedback-result.incorrect { color: var(--clr-danger); }
 
-/* Grammar chip (link styling is shared in generalities.css) */
-.grammar-chip-wrap { margin-top: 8px; margin-bottom: 8px; }
+/* Grammar chip (link styling is shared in generalities.css). Symmetric vertical
+   spacing: the feedback's 16px margin-bottom sets the gap above, this sets the
+   equal gap below. */
+.grammar-chip-wrap { margin-top: 0; margin-bottom: 16px; }
 
-/* ---- Next / Try Again standalone buttons ---- */
+/* ---- Next / Try Again — side by side in one row ---- */
+#exercise-area .action-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
 #exercise-area .next-btn,
 #exercise-area .try-again-btn {
-  width: 100%;
-  margin-top: 4px;
+  flex: 1;
+  padding: 14px;
+  margin-top: 0;
   animation: fadeInScale 0.3s ease-out both;
 }
-
-#exercise-area .next-btn     { padding: 14px; }
-#exercise-area .try-again-btn { padding: 12px; }
 
 /* ---- Responsive ---- */
 @media (max-width: 480px) {
