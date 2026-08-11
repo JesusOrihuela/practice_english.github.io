@@ -474,6 +474,7 @@ function _stopRecording() {
       const ctx     = new AudioContext({ sampleRate: 16000 });
       const decoded = await ctx.decodeAudioData(ab);
       const audio   = decoded.getChannelData(0);
+      ctx.close().catch(() => {});   // browsers cap concurrent AudioContexts (~6); release it
 
       const worker = _getSttWorker();
       if (!worker) { _onSttError(AppLang.t('stt_not_available')); return; }

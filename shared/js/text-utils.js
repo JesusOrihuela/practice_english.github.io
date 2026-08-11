@@ -47,13 +47,24 @@ const AppText = (() => {
    * @param {Object} [map] - Contraction map; omit or pass null to skip expansion.
    */
   function normalise(s, map) {
-    const stripped = (s || '').toLowerCase()
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9\s']/g, '')
-      .replace(/\s+/g, ' ')
-      .trim();
+    // Spanish targets: fold accents (á→a…) for keyboard convenience but keep ñ,
+    // which is a distinct letter (año ≠ ano). English targets use ASCII folding.
+    const keepEnye = (typeof AppLangPair !== "undefined") && AppLangPair.getActive().target.code === "es";
+    let stripped;
+    if (keepEnye) {
+      stripped = (s || "").toLowerCase()
+        .replace(/[áàâä]/g, "a").replace(/[éèêë]/g, "e").replace(/[íìîï]/g, "i")
+        .replace(/[óòôö]/g, "o").replace(/[úùûü]/g, "u")
+        .replace(/[^a-z0-9ñ\s']/g, "")
+        .replace(/\s+/g, " ").trim();
+    } else {
+      stripped = (s || "").toLowerCase()
+        .normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9\s']/g, "")
+        .replace(/\s+/g, " ").trim();
+    }
     if (!map) return stripped;
-    return expandContractions(stripped, map).replace(/\s+/g, ' ').trim();
+    return expandContractions(stripped, map).replace(/\s+/g, " ").trim();
   }
 
   /**
@@ -150,9 +161,11 @@ const AppText = (() => {
 
 const AppCloze = (() => {
 
-  // Words that are unsuitable blanks: function words, pronouns, wh-words.
-  // This is the single canonical set — edit here to affect both activities.
-  const STOP_WORDS = new Set([
+  // Words that are unsuitable blanks: function words, pronouns, wh-words. Chosen
+  // per TARGET language (that's the language the blank is in), so cloze for a
+  // Spanish target doesn't leave the gap on "de"/"la"/"que". Two-letter words are
+  // already excluded by the length filter, so these lists cover 3+ letters.
+  const STOP_WORDS_EN = new Set([
     'a','an','the','in','on','at','to','of','is','are','was','were','be','been',
     'have','has','had','do','does','did','will','would','could','should','may',
     'might','must','shall','and','or','but','if','so','yet','for','nor',
@@ -162,6 +175,25 @@ const AppCloze = (() => {
     // wh-question words — blanking these produces trivial, non-generative gaps
     'what','when','where','why','who','whom','whose','which','how',
   ]);
+
+  // Spanish function words in UNACCENTED form (the clean step folds accents away):
+  // articles, prepositions, conjunctions, relatives, pronouns, common copulas.
+  const STOP_WORDS_ES = new Set([
+    'los','las','una','unos','unas','del',
+    'con','por','para','sin','sobre','entre','hasta','desde','hacia',
+    'que','como','cuando','donde','porque','pero','sino','pues','aunque',
+    'sus','mis','tus','nos','les',
+    'esta','estan','ser','estar','hay','muy','mas','tan','solo','pero',
+    'este','estos','estas','ese','esa','esos','esas','esto','eso',
+    'ella','ellos','ellas','usted','ustedes','nosotros','vosotros',
+    // question words (unaccented after folding)
+    'que','como','donde','cuando','quien','cual','cuanto','cuantos',
+  ]);
+
+  function _stopWords() {
+    var code = (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().target.code : 'en';
+    return code === 'es' ? STOP_WORDS_ES : STOP_WORDS_EN;
+  }
 
   /**
    * Select the word to blank in a phrase.
@@ -177,10 +209,11 @@ const AppCloze = (() => {
    *   Returns null when no blankable word exists in the phrase.
    */
   function pick(phrase) {
+    const stop = _stopWords();
     const tokens = phrase.split(' ');
     const candidates = tokens
       .map((w, i) => ({ word: w, idx: i, clean: w.toLowerCase().replace(/[^a-z'-]/g, '') }))
-      .filter(t => t.clean.length > 2 && !STOP_WORDS.has(t.clean));
+      .filter(t => t.clean.length > 2 && !stop.has(t.clean));
 
     if (candidates.length === 0) return null;
 

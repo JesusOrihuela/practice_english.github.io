@@ -485,6 +485,11 @@ function _importProgress(file) {
       var data = JSON.parse(e.target.result);
       var keys = Object.keys(data).filter(function (k) { return k.startsWith('pe_'); });
       if (keys.length === 0) throw new Error('no pe_ keys');
+      // Validate the SRS payloads parse before touching storage, so a corrupt file
+      // is rejected wholesale instead of silently wiping progress on next load.
+      keys.forEach(function (k) { if (/^pe_progress/.test(k)) JSON.parse(data[k]); });
+      // Destructive: overwrites current progress — confirm first.
+      if (!window.confirm(AppLang.t('backup_import_confirm'))) return;
       keys.forEach(function (k) { localStorage.setItem(k, data[k]); });
       var statusEl = document.getElementById('backup-status');
       if (statusEl) {

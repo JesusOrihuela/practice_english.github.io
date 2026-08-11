@@ -120,7 +120,8 @@ const AppLangPair = (() => {
     var badge = document.createElement('a');
     badge.className  = 'lp-badge';
     badge.href       = _progressHref();
-    badge.setAttribute('aria-label', pair.label + ' — cambiar idioma / change language');
+    badge.setAttribute('aria-label',
+      (typeof AppLang !== 'undefined') ? AppLang.t('lang_switch_aria', { pair: pair.label }) : pair.label);
     badge.setAttribute('title', pair.label);
 
     badge.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));

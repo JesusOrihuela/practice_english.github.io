@@ -382,6 +382,7 @@
       nav_modes_aria:             'Modos de práctica',
       nav_home_aria:              'Inicio',
       nav_github_aria:            'Repositorio de GitHub',
+      lang_switch_aria:           '{pair} — cambiar idioma',
       lang_badge_aria:            '{sourceName} a {targetName}',
       backup_import_aria:         'Importar archivo de copia de seguridad',
       // Topic picker subtitles
@@ -485,6 +486,7 @@
       backup_never_exported:      'Aún no has exportado tu progreso.',
       backup_import_success:      '✓ Progreso restaurado. Recargando…',
       backup_import_error:        'Archivo inválido. Verifica que sea un respaldo de Practice English.',
+      backup_import_confirm:      'Esto reemplazará tu progreso actual con el del archivo. ¿Continuar?',
       backup_instructions_export: '⬇️  Descarga un archivo .json con todo tu progreso. Guárdalo en Google Drive, iCloud o envíatelo por correo.',
       backup_instructions_import: '⬆️  Para restaurar, selecciona el archivo .json que descargaste anteriormente.',
       backup_reminder_title:      '💾 ¿Cuándo fue tu último respaldo?',
@@ -901,6 +903,7 @@
       nav_modes_aria:             'Practice modes',
       nav_home_aria:              'Home',
       nav_github_aria:            'GitHub Repository',
+      lang_switch_aria:           '{pair} — change language',
       lang_badge_aria:            '{sourceName} to {targetName}',
       backup_import_aria:         'Import backup file',
       // Topic picker subtitles
@@ -1004,6 +1007,7 @@
       backup_never_exported:      'You haven\'t exported your progress yet.',
       backup_import_success:      '✓ Progress restored. Reloading…',
       backup_import_error:        'Invalid file. Make sure it\'s a Practice English backup.',
+      backup_import_confirm:      'This will replace your current progress with the file\'s. Continue?',
       backup_instructions_export: '⬇️  Download a .json file with all your progress. Save it to Google Drive, iCloud, or email it to yourself.',
       backup_instructions_import: '⬆️  To restore, select the .json file you previously downloaded.',
       backup_reminder_title:      '💾 Time to back up?',
