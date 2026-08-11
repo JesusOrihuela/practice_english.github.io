@@ -737,6 +737,42 @@
       "gloss_example": {
         "es": "El precio se muestra por unidad."
       }
+    },
+    {
+      "id": "credit",
+      "term": "credit",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Money a bank lets you use that you pay back later.",
+      "example": "She bought the car on credit.",
+      "translations": {
+        "es": "crédito"
+      },
+      "gloss": {
+        "es": "Dinero que un banco te presta y devuelves luego."
+      },
+      "gloss_example": {
+        "es": "Compró el carro a crédito."
+      }
+    },
+    {
+      "id": "account",
+      "term": "account",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "An arrangement to keep money at a bank.",
+      "example": "She opened a savings account.",
+      "translations": {
+        "es": "cuenta"
+      },
+      "gloss": {
+        "es": "Arreglo para guardar dinero en un banco."
+      },
+      "gloss_example": {
+        "es": "Abrió una cuenta de ahorros."
+      }
     }
   ]
 }

@@ -413,6 +413,42 @@
       "gloss_example": {
         "es": "Ella tiene grandes planes para el futuro."
       }
+    },
+    {
+      "id": "date",
+      "term": "date",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A particular day of the month or year.",
+      "example": "What is the date today?",
+      "translations": {
+        "es": "fecha"
+      },
+      "gloss": {
+        "es": "Día concreto del mes o del año."
+      },
+      "gloss_example": {
+        "es": "¿Qué fecha es hoy?"
+      }
+    },
+    {
+      "id": "past",
+      "term": "past",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The time that has already happened.",
+      "example": "We learned from our past.",
+      "translations": {
+        "es": "pasado"
+      },
+      "gloss": {
+        "es": "Tiempo que ya ocurrió."
+      },
+      "gloss_example": {
+        "es": "Aprendimos de nuestro pasado."
+      }
     }
   ]
 }
