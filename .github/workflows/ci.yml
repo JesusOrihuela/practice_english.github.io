@@ -129,14 +129,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      # Required check. --min is a REGRESSION FLOOR (78%), not the target: it blocks
-      # a merge that drops English coverage below 78% in either channel, with a small
-      # buffer so a routine content edit near the boundary doesn't lock main. The
+      # Required check. --min is a RATCHETING REGRESSION FLOOR, not the target: it
+      # blocks a merge that drops English coverage below the floor in either channel,
+      # kept a couple points below live coverage so routine edits don't lock main. The
       # quality TARGET is ~88% (stretch beyond the 80% sweet spot), pursued additively
-      # in batches; raise this floor as coverage climbs. Spanish (ELELex, CC BY-NC-SA)
-      # is measured locally only.
-      - name: Core-vocabulary coverage floor (EN, NGSL top-1000 >= 78% in BOTH channels)
-        run: node tools/coverage.mjs --pair es-en --gate --min 78
+      # in batches; the floor is raised toward its end state of 86% (= target − 2) as
+      # coverage climbs, and must never sit above current coverage (that would be an
+      # unmet gate, not a regression guard). Current live: vocab ~81%, phrases ~82% →
+      # floor 80. Spanish (ELELex, CC BY-NC-SA) is measured locally only.
+      - name: Core-vocabulary coverage floor (EN, NGSL top-1000 >= 80% in BOTH channels)
+        run: node tools/coverage.mjs --pair es-en --gate --min 80
 
   # Browser smoke suite (tests/smoke.mjs): runs the app in headless Chromium and
   # checks the things static checks can't — the answer loop, feedback rendering,
