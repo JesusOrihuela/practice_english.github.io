@@ -135,10 +135,11 @@ jobs:
       # quality TARGET is ~88% (stretch beyond the 80% sweet spot), pursued additively
       # in batches; the floor is raised toward its end state of 86% (= target − 2) as
       # coverage climbs, and must never sit above current coverage (that would be an
-      # unmet gate, not a regression guard). Current live: vocab ~81%, phrases ~82% →
-      # floor 80. Spanish (ELELex, CC BY-NC-SA) is measured locally only.
-      - name: Core-vocabulary coverage floor (EN, NGSL top-1000 >= 80% in BOTH channels)
-        run: node tools/coverage.mjs --pair es-en --gate --min 80
+      # unmet gate, not a regression guard). Current live: vocab ~88%, phrases ~86% →
+      # floor 82 (ratcheting toward 86 as the phrase channel reaches the 88% target).
+      # Spanish (ELELex, CC BY-NC-SA) is measured locally only.
+      - name: Core-vocabulary coverage floor (EN, NGSL top-1000 >= 82% in BOTH channels)
+        run: node tools/coverage.mjs --pair es-en --gate --min 82
 
   # Browser smoke suite (tests/smoke.mjs): runs the app in headless Chromium and
   # checks the things static checks can't — the answer loop, feedback rendering,
