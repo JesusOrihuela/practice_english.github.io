@@ -465,6 +465,18 @@
           "audioSlug": "give_me_an_example"
         }
       ]
+    },
+    {
+      "id": "conversacion_is_it_good_news",
+      "source": "¿Son buenas noticias?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is it good news?",
+          "audioSlug": "is_it_good_news"
+        }
+      ]
     }
   ]
 }
