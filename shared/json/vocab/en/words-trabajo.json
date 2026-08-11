@@ -467,6 +467,186 @@
       "gloss_example": {
         "es": "La tienda tuvo una pequeña ganancia."
       }
+    },
+    {
+      "id": "staff",
+      "term": "staff",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The group of people who work for an organization.",
+      "example": "The hotel staff were friendly and helpful.",
+      "translations": {
+        "es": "el personal"
+      },
+      "gloss": {
+        "es": "Conjunto de personas que trabajan en una organización."
+      },
+      "gloss_example": {
+        "es": "El personal del hotel fue amable y servicial."
+      }
+    },
+    {
+      "id": "product",
+      "term": "product",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Something that is made or grown to be sold.",
+      "example": "This product is popular with young customers.",
+      "translations": {
+        "es": "producto"
+      },
+      "gloss": {
+        "es": "Algo que se fabrica o cultiva para venderse."
+      },
+      "gloss_example": {
+        "es": "Este producto es popular entre los clientes jóvenes."
+      }
+    },
+    {
+      "id": "director",
+      "term": "director",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A person who manages or controls a company or department.",
+      "example": "The director approved the new budget.",
+      "translations": {
+        "es": "director / directora"
+      },
+      "gloss": {
+        "es": "Persona que dirige una empresa o un departamento."
+      },
+      "gloss_example": {
+        "es": "La directora aprobó el nuevo presupuesto."
+      }
+    },
+    {
+      "id": "agency",
+      "term": "agency",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A business that provides a particular service for others.",
+      "example": "She works for a travel agency downtown.",
+      "translations": {
+        "es": "agencia"
+      },
+      "gloss": {
+        "es": "Empresa que ofrece un servicio determinado a otros."
+      },
+      "gloss_example": {
+        "es": "Ella trabaja en una agencia de viajes del centro."
+      }
+    },
+    {
+      "id": "management",
+      "term": "management",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The activity of controlling and organizing the work of a company.",
+      "example": "Good management keeps the whole team motivated.",
+      "translations": {
+        "es": "gestión / administración"
+      },
+      "gloss": {
+        "es": "Actividad de controlar y organizar el trabajo de una empresa."
+      },
+      "gloss_example": {
+        "es": "Una buena gestión mantiene motivado a todo el equipo."
+      }
+    },
+    {
+      "id": "sale",
+      "term": "sale",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The act of selling something for money.",
+      "example": "The store announced a big sale for the weekend.",
+      "translations": {
+        "es": "venta"
+      },
+      "gloss": {
+        "es": "Acción de vender algo por dinero."
+      },
+      "gloss_example": {
+        "es": "La tienda anunció una gran venta para el fin de semana."
+      }
+    },
+    {
+      "id": "investment",
+      "term": "investment",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Money put into a business or asset to earn more later.",
+      "example": "They made a smart investment in clean energy.",
+      "translations": {
+        "es": "inversión"
+      },
+      "gloss": {
+        "es": "Dinero que se coloca en un negocio para ganar más."
+      },
+      "gloss_example": {
+        "es": "Hicieron una buena inversión en energía limpia."
+      }
+    },
+    {
+      "id": "economy",
+      "term": "economy",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The system of money, trade, and industry of a country.",
+      "example": "The country's economy grew slowly last year.",
+      "translations": {
+        "es": "economía"
+      },
+      "gloss": {
+        "es": "Sistema de dinero, comercio e industria de un país."
+      },
+      "gloss_example": {
+        "es": "La economía del país creció despacio el año pasado."
+      }
+    },
+    {
+      "id": "proposal",
+      "term": "proposal",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A formal plan or suggestion offered for others to consider.",
+      "example": "The board rejected the expensive proposal.",
+      "translations": {
+        "es": "propuesta"
+      },
+      "gloss": {
+        "es": "Plan o sugerencia formal que se ofrece para considerar."
+      },
+      "gloss_example": {
+        "es": "La junta rechazó la costosa propuesta."
+      }
+    },
+    {
+      "id": "department",
+      "term": "department",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A separate part of a large organization or store.",
+      "example": "He works in the marketing department.",
+      "translations": {
+        "es": "departamento"
+      },
+      "gloss": {
+        "es": "Parte separada de una organización o tienda grande."
+      },
+      "gloss_example": {
+        "es": "Él trabaja en el departamento de mercadeo."
+      }
     }
   ]
 }
