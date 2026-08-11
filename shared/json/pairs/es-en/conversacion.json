@@ -453,6 +453,18 @@
           "audioSlug": "i_want_to_encourage_you"
         }
       ]
+    },
+    {
+      "id": "conversacion_give_me_an_example",
+      "source": "Dame un ejemplo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Give me an example.",
+          "audioSlug": "give_me_an_example"
+        }
+      ]
     }
   ]
 }
