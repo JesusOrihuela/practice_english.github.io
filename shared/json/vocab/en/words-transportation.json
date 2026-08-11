@@ -683,6 +683,42 @@
       "gloss_example": {
         "es": "El tren llega tarde."
       }
+    },
+    {
+      "id": "travel",
+      "term": "travel",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The activity of going from one place to another.",
+      "example": "Air travel has become cheaper.",
+      "translations": {
+        "es": "viaje"
+      },
+      "gloss": {
+        "es": "Actividad de ir de un lugar a otro."
+      },
+      "gloss_example": {
+        "es": "Los viajes en avión se han vuelto más baratos."
+      }
+    },
+    {
+      "id": "seat",
+      "term": "seat",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where you sit, as on a bus or plane.",
+      "example": "Please take your seat.",
+      "translations": {
+        "es": "asiento"
+      },
+      "gloss": {
+        "es": "Lugar donde te sientas, como en un autobús o avión."
+      },
+      "gloss_example": {
+        "es": "Por favor, toma tu asiento."
+      }
     }
   ]
 }

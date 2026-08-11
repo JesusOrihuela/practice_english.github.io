@@ -305,6 +305,42 @@
       "gloss_example": {
         "es": "Hay una tienda en la esquina."
       }
+    },
+    {
+      "id": "store",
+      "term": "store",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where goods are sold.",
+      "example": "The store closes at nine.",
+      "translations": {
+        "es": "tienda"
+      },
+      "gloss": {
+        "es": "Lugar donde se venden productos."
+      },
+      "gloss_example": {
+        "es": "La tienda cierra a las nueve."
+      }
+    },
+    {
+      "id": "bar",
+      "term": "bar",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A place where people buy and drink drinks.",
+      "example": "We met friends at a bar downtown.",
+      "translations": {
+        "es": "bar"
+      },
+      "gloss": {
+        "es": "Lugar donde se compran y beben bebidas."
+      },
+      "gloss_example": {
+        "es": "Vimos a unos amigos en un bar del centro."
+      }
     }
   ]
 }
