@@ -161,6 +161,60 @@
       "gloss_example": {
         "es": "Las cifras de ventas subieron."
       }
+    },
+    {
+      "id": "percent",
+      "term": "percent",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "One part in every hundred.",
+      "example": "Prices rose by ten percent.",
+      "translations": {
+        "es": "por ciento"
+      },
+      "gloss": {
+        "es": "Una parte de cada cien."
+      },
+      "gloss_example": {
+        "es": "Los precios subieron un diez por ciento."
+      }
+    },
+    {
+      "id": "size",
+      "term": "size",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "How big or small something is.",
+      "example": "What size do you wear?",
+      "translations": {
+        "es": "tamaño / talla"
+      },
+      "gloss": {
+        "es": "Cómo de grande o pequeño es algo."
+      },
+      "gloss_example": {
+        "es": "¿Qué talla usas?"
+      }
+    },
+    {
+      "id": "weight",
+      "term": "weight",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "How heavy something or someone is.",
+      "example": "The doctor checked my weight.",
+      "translations": {
+        "es": "peso"
+      },
+      "gloss": {
+        "es": "Cómo de pesado es algo o alguien."
+      },
+      "gloss_example": {
+        "es": "El médico revisó mi peso."
+      }
     }
   ]
 }

@@ -701,6 +701,96 @@
       "gloss_example": {
         "es": "No puedo abrir este archivo."
       }
+    },
+    {
+      "id": "computer",
+      "term": "computer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "An electronic machine that stores and processes information.",
+      "example": "She bought a new computer for her studies.",
+      "translations": {
+        "es": "computadora"
+      },
+      "gloss": {
+        "es": "Máquina electrónica que guarda y procesa información."
+      },
+      "gloss_example": {
+        "es": "Compró una computadora nueva para sus estudios."
+      }
+    },
+    {
+      "id": "television",
+      "term": "television",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device that shows programs with pictures and sound.",
+      "example": "They watched the news on television.",
+      "translations": {
+        "es": "televisor / televisión"
+      },
+      "gloss": {
+        "es": "Aparato que muestra programas con imagen y sonido."
+      },
+      "gloss_example": {
+        "es": "Vieron las noticias en la televisión."
+      }
+    },
+    {
+      "id": "link",
+      "term": "link",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A connection that takes you to another page or file.",
+      "example": "Click the link to open the article.",
+      "translations": {
+        "es": "enlace / vínculo"
+      },
+      "gloss": {
+        "es": "Conexión que te lleva a otra página o archivo."
+      },
+      "gloss_example": {
+        "es": "Haz clic en el enlace para abrir el artículo."
+      }
+    },
+    {
+      "id": "version",
+      "term": "version",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A form of something that differs slightly from other forms.",
+      "example": "The app released a faster version.",
+      "translations": {
+        "es": "versión"
+      },
+      "gloss": {
+        "es": "Forma de algo que difiere un poco de otras."
+      },
+      "gloss_example": {
+        "es": "La aplicación lanzó una versión más rápida."
+      }
+    },
+    {
+      "id": "site",
+      "term": "site",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A place on the internet where you find information.",
+      "example": "The site loads quickly on my phone.",
+      "translations": {
+        "es": "sitio web"
+      },
+      "gloss": {
+        "es": "Lugar en internet donde encuentras información."
+      },
+      "gloss_example": {
+        "es": "El sitio web carga rápido en mi teléfono."
+      }
     }
   ]
 }

@@ -107,6 +107,42 @@
       "gloss_example": {
         "es": "La biblioteca estaba en total silencio."
       }
+    },
+    {
+      "id": "language",
+      "term": "language",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The system of words people use to speak and write.",
+      "example": "She speaks three languages.",
+      "translations": {
+        "es": "idioma / lengua"
+      },
+      "gloss": {
+        "es": "Sistema de palabras para hablar y escribir."
+      },
+      "gloss_example": {
+        "es": "Ella habla tres idiomas."
+      }
+    },
+    {
+      "id": "conversation",
+      "term": "conversation",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A talk between two or more people.",
+      "example": "We had a long conversation about work.",
+      "translations": {
+        "es": "conversación"
+      },
+      "gloss": {
+        "es": "Charla entre dos o más personas."
+      },
+      "gloss_example": {
+        "es": "Tuvimos una larga conversación sobre el trabajo."
+      }
     }
   ]
 }
