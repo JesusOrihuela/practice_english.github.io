@@ -539,6 +539,18 @@
           "audioSlug": "i_escaped_death"
         }
       ]
+    },
+    {
+      "id": "health_my_head_hurts",
+      "source": "Me duele la cabeza.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My head hurts.",
+          "audioSlug": "my_head_hurts"
+        }
+      ]
     }
   ]
 }
