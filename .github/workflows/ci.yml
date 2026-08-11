@@ -121,3 +121,48 @@ jobs:
           node-version: '20'
       - name: Core-vocabulary coverage gate (EN, NGSL top-1000 >= 80% in BOTH channels)
         run: node tools/coverage.mjs --pair es-en --gate --min 80
+
+  # Browser smoke suite (tests/smoke.mjs): runs the app in headless Chromium and
+  # checks the things static checks can't — the answer loop, feedback rendering,
+  # the Enter-key regression, and that every page loads with no uncaught JS errors
+  # (it already caught a missing script include on the placement page). Serves the
+  # app itself (no audio needed), so it checks out everything except shared/audio.
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (app, no audio)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            index
+            lang
+            shared/js
+            shared/css
+            shared/json
+            cloze
+            dictation
+            translation
+            scramble
+            vocabulary
+            quiz
+            grammar
+            speaking
+            my-learning
+            progress
+            placement
+            tests
+          sparse-checkout-cone-mode: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install deps (playwright-core)
+        run: npm ci
+      - name: Install Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+      - name: Browser smoke suite
+        run: npm test
+        env:
+          PW_CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+          PW_CHANNEL: chrome   # fallback if the action's path output is empty

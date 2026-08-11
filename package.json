@@ -1,0 +1,12 @@
+{
+  "name": "practice-english",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Practice English — static language-learning PWA. Root deps are the Playwright browser smoke suite only (the app itself ships no build step).",
+  "scripts": {
+    "test": "node tests/smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "^1.62.1"
+  }
+}
