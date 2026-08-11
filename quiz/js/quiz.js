@@ -34,12 +34,13 @@ function _isCognate(word) {
   const src  = _norm(word.translations?.[_srcCode] || '');
   if (!term || !src) return false;
   if (term === src) return true;
-  // Suffix pairs where an English and a Spanish word share the same root.
-  const _pairs = [
-    ['tion','cion'],['ty','dad'],['ous','o'],['ous','oso'],
-    ['ate','ar'],['ize','izar'],['ise','izar'],['al','al'],['ble','ble'],
-    ['ent','ente'],['ant','ante'],['ic','ico'],['ical','ico'],['ly','mente'],
-  ];
+  // Suffix pairs where the target term and its source translation share a root are
+  // defined PER LANGUAGE PAIR in shared/js/lang-profiles.js (cognateSuffixes). No
+  // suffix table is hardcoded here; a pair with no table simply has no cognate
+  // boost. cognateSuffixes is oriented [targetSuffix, sourceSuffix] for (target, source).
+  const _tgtCode = AppLangPair.getActive().target.code;
+  const _pairs = (typeof AppLangProfiles !== 'undefined')
+    ? AppLangProfiles.cognateSuffixes(_tgtCode, _srcCode) : [];
   const _match = (a, b) => {
     for (const [eSuf, sSuf] of _pairs) {
       if (a.endsWith(eSuf) && b.endsWith(sSuf)) {

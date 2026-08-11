@@ -54,7 +54,11 @@ function launch() {
 }
 
 // Drive: topic picker → phrase browser → exercise input visible.
-async function openExercise(page, url, inputSel) {
+// `pair` (optional) selects the active language pair before any page script runs,
+// so we can exercise a non-default target language (e.g. Spanish: ñ-preserving
+// fold + Spanish cloze stop-words from the language profile).
+async function openExercise(page, url, inputSel, pair) {
+  if (pair) await page.addInitScript(p => { localStorage.setItem('pe_active_pair', p); }, pair);
   // Not 'networkidle' — Speaking/Vocabulary warm up TTS/STT models so the network
   // is never idle. The explicit selector waits below gate on the actual UI instead.
   await page.goto(BASE + url, { waitUntil: 'domcontentloaded' });
@@ -111,6 +115,37 @@ try {
       await page.waitForTimeout(350);
       check((await page.textContent('#phrase-text')) !== before,        'cloze correct: a second Enter advances');
     }
+    await page.close();
+  }
+
+  // ── 2b. Language profile in a NON-DEFAULT target (Spanish, en-es pair): the
+  //    ñ-preserving accent fold and the Spanish cloze stop-words come from
+  //    shared/js/lang-profiles.js. Assert the profile is wired for Spanish and
+  //    that a correct answer (typed back as the folded form) still matches.
+  {
+    console.log('Language profile — en-es (Spanish target)');
+    const page = await browser.newPage();
+    const errs = []; page.on('pageerror', e => errs.push(e.message));
+    await openExercise(page, '/cloze/html/cloze.html', '#cloze-input', 'en-es');
+    const prof = await page.evaluate(() => ({
+      pair: AppLangPair.getActive().id,
+      preserve: AppLangProfiles.foldPreserve('es'),
+      stops: AppLangProfiles.clozeStopWords('es').size,
+      // ñ must survive the fold (año ≠ ano); accents must not.
+      folded: AppText.normalise('Año pingüino ESTÁ'),
+    }));
+    check(prof.pair === 'en-es',        `en-es: active pair is Spanish target (${prof.pair})`);
+    check(prof.preserve === 'ñ',        `en-es: profile preserves ñ (${prof.preserve})`);
+    check(prof.stops > 0,               `en-es: Spanish cloze stop-words loaded (${prof.stops})`);
+    check(prof.folded === 'año pinguino esta', `en-es: fold keeps ñ, drops accents ("${prof.folded}")`);
+    const answer = await page.evaluate(() => (typeof currentBlank !== 'undefined' && currentBlank) ? currentBlank.blankClean : null);
+    if (answer) {
+      await page.fill('#cloze-input', answer);
+      await page.press('#cloze-input', 'Enter');
+      await page.waitForTimeout(350);
+      check(/correct|correcto/i.test((await page.textContent('#feedback-result')) || ''), 'en-es cloze: correct answer matches (fold works)');
+    } else { console.log('  ~ correct-path skipped (no readable answer)'); }
+    check(errs.length === 0,            `en-es: no page errors (${errs[0] || ''})`);
     await page.close();
   }
 

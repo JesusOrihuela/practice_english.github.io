@@ -39,6 +39,7 @@ import fs from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import { loadFreq, tokenize, lookupRank } from './lib-freq.mjs';
+import AppLangProfiles from '../shared/js/lang-profiles.js';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -54,88 +55,21 @@ function discoverTopics() {
 }
 const TOPICS = discoverTopics();
 
-// Tokenisation/interjection artifacts excluded from the "teachable" figure.
-const IGNORE = new Set([
-  "'s","'t","'m","'re","'ll","'ve","'d",'s','t','m','re','ll','ve','d','don','doesn','didn','isn','aren','wasn','won','can','couldn','wouldn','shouldn',
-  'oh','uh','ah','eh','mmm','hmm','yeah','yep','nope','huh','wow','ok','okay',
-]);
-
-// ELELex top-1000 artifacts that are not teachable content words: single-letter
-// list markers (b, c, d), corpus proper nouns (requena, raulito), and honorific/
-// dialectal tokens that are not general vocabulary. Excluded from the teachable
-// Spanish figure so the phrase/vocab channels are not unfairly penalised. The raw
-// figure is still shown so the metric is not gamed.
-const IGNORE_ES = new Set([
-  'b','c','d','requena','raulito','san','don','doña','vos','inca',
-]);
-const ignoreFor = (lang) => (lang === 'es' ? IGNORE_ES : IGNORE);
-
-// Closed-class FUNCTION words (articles, pronouns, prepositions, conjunctions,
-// determiners/quantifiers, auxiliaries/modals, grammatical adverbs). They belong
-// to the top-1000 but cannot be taught as isolated vocabulary flashcards — they
-// are acquired through exposure in phrases. So they are excluded from the VOCAB
-// channel denominator only; the PHRASE channel still counts them (phrases must
-// cover them). Each list is a superset; only members present in the top-1000 matter.
-const FUNCTION_EN = new Set([
-  // articles / determiners / quantifiers
-  'a','an','the','this','that','these','those','each','every','either','neither','another','other','such',
-  'all','both','some','any','no','none','much','many','more','most','less','least','few','several','enough','half',
-  // pronouns
-  'i','me','my','mine','myself','you','your','yours','yourself','yourselves','he','him','his','himself',
-  'she','her','hers','herself','it','its','itself','we','us','our','ours','ourselves','they','them','their','theirs','themselves',
-  'who','whom','whose','which','what','whatever','whoever','whichever','one','ones',
-  'someone','somebody','something','anyone','anybody','anything','everyone','everybody','everything','nobody','nothing','else',
-  // prepositions
-  'of','to','in','for','on','with','at','by','from','about','into','onto','over','under','above','below',
-  'between','among','through','during','before','after','since','until','till','against','toward','towards',
-  'upon','within','without','throughout','despite','except','besides','beyond','behind','beneath','beside',
-  'across','along','around','round','off','out','up','down','near','per','via','than','as','unto',
-  // conjunctions
-  'and','or','but','nor','so','yet','if','because','while','whereas','although','though','unless','whether',
-  'once','when','whenever','where','wherever','why','how','plus',
-  // auxiliaries / modals
-  'be','am','is','are','was','were','been','being','have','has','had','do','does','did',
-  'will','would','shall','should','can','could','may','might','must','ought','dare','used',
-  // negation / affirmation
-  'not','yes','yeah','yep','nope',
-  // grammatical adverbs / connectors
-  'there','here','now','then','very','just','only','also','even','too','still','quite','rather','already',
-  'almost','always','never','ever','often','sometimes','usually','seldom','rarely','however','therefore',
-  'thus','hence','perhaps','maybe','instead','indeed','anyway','anyhow','moreover','furthermore',
-  'nevertheless','again','soon','otherwise','meanwhile','likewise','somewhat','somehow',
-  'everywhere','anywhere','somewhere','nowhere','elsewhere',
-]);
-const FUNCTION_ES = new Set([
-  // artículos / determinantes / cuantificadores
-  'el','la','los','las','un','una','unos','unas','lo','uno',
-  'este','esta','estos','estas','ese','esa','esos','esas','aquel','aquella','aquellos','aquellas','esto','eso','aquello',
-  'todo','toda','todos','todas','otro','otra','otros','otras','mismo','misma','mismos','mismas',
-  'cada','alguno','alguna','algunos','algunas','ninguno','ninguna','ningún','cualquier','cualquiera',
-  'tanto','tanta','tantos','tantas','mucho','mucha','muchos','muchas','poco','poca','pocos','pocas',
-  'demasiado','demasiada','demasiados','demasiadas','varios','varias','tal','tales','demás','ambos','ambas','bastante',
-  // posesivos
-  'mi','mis','tu','tus','su','sus','nuestro','nuestra','nuestros','nuestras','vuestro','vuestra','vuestros','vuestras',
-  'mío','mía','míos','mías','tuyo','tuya','tuyos','tuyas','suyo','suya','suyos','suyas',
-  // pronombres
-  'yo','tú','él','ella','ello','ellos','ellas','nosotros','nosotras','vosotros','vosotras','usted','ustedes',
-  'me','te','se','nos','os','le','les','mí','ti','sí','conmigo','contigo','consigo','vos',
-  'alguien','nadie','algo','nada','quien','quienes','cuyo','cuya','cuyos','cuyas',
-  // interrogativos
-  'qué','quién','quiénes','cuál','cuáles','cómo','cuándo','dónde','cuánto','cuánta','cuántos','cuántas',
-  // preposiciones
-  'de','a','en','con','por','para','sobre','sin','desde','hasta','entre','hacia','según','tras','ante',
-  'contra','durante','bajo','mediante','salvo','excepto','junto',
-  // conjunciones
-  'y','e','o','u','que','pero','si','porque','como','cuando','aunque','mientras','pues','ni','sino','mas','embargo','además',
-  // auxiliares / modales
-  'haber','poder','deber',
-  // adverbios gramaticales / conectores / negación / afirmación
-  'no','sí','más','menos','muy','ya','ahora','aquí','allí','ahí','allá','acá','arriba','abajo',
-  'siempre','nunca','jamás','también','tampoco','así','tan','casi','luego','entonces','después','antes',
-  'todavía','aún','quizá','quizás','incluso','solo','sólo','bien','apenas','adelante','atrás','pronto',
-  'enseguida','encima','debajo','delante','detrás','dentro','fuera','cerca','lejos','alrededor',
-]);
-const functionFor = (lang) => (lang === 'es' ? FUNCTION_ES : FUNCTION_EN);
+// Per-language lexical sets (artifacts to ignore + closed-class FUNCTION words)
+// come from the shared language-profile registry — the SAME data the browser reads
+// (shared/js/lang-profiles.js). No word list is hardcoded here.
+//
+//  • ignoreFor(lang)   — tokenisation/interjection artifacts and non-teachable
+//    tokens, excluded from BOTH channels so the metric is not unfairly penalised
+//    (English contraction fragments; ELELex list markers/proper nouns). The raw
+//    figure is still shown so it can't be gamed.
+//  • functionFor(lang) — closed-class function words (articles, pronouns,
+//    prepositions, conjunctions, determiners, auxiliaries, grammatical adverbs).
+//    They belong to the top-1000 but can't be isolated-vocab flashcards, so they
+//    are dropped from the VOCAB channel denominator only; the PHRASE channel still
+//    counts them. Each list is a superset; only members in the top-1000 matter.
+const ignoreFor = (lang) => AppLangProfiles.ignoreTokens(lang);
+const functionFor = (lang) => AppLangProfiles.functionWords(lang);
 const unionSet = (a, b) => { const s = new Set(a); for (const x of b) s.add(x); return s; };
 
 const args = process.argv.slice(2);
@@ -218,7 +152,8 @@ for (const [pair, lang, label] of PAIRS) {
   console.log(`Palabras de contenido distintas: ${used.size}`);
   for (const N of BANDS) {
     const list = byBand[N];
-    const teachable = list.filter(w => !IGNORE.has(w));
+    const _igEn = ignoreFor('en');
+    const teachable = list.filter(w => !_igEn.has(w));
     const covered = list.filter(w => used.has(w)).length;
     const coveredT = teachable.filter(w => used.has(w)).length;
     const pct = (100 * covered / list.length).toFixed(1);
@@ -295,7 +230,7 @@ if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
   const usedAll     = contentWords('en-es', 'es', 'all');
   const usedPhrases = contentWords('en-es', 'es', 'phrases');
   const usedVocab   = contentWords('en-es', 'es', 'vocab');
-  const igEs = IGNORE_ES;
+  const igEs = ignoreFor('es');
   const igFnEs = unionSet(igEs, functionFor('es'));  // vocab channel: also drop function words
   console.log(`\n=== Espanol vs ELELex (lexico pedagogico CEFR, ${elelex.count} lemmas) ===`);
   for (const N of [500, 1000, 2000, 2800]) {

@@ -62,6 +62,13 @@ jobs:
       - name: Path ID map reflects content (fix-phrase-ids.js --check)
         run: node tools/fix-phrase-ids.js --check
 
+      # Every target language a pair learns must have a COMPLETE linguistic profile
+      # (shared/js/lang-profiles.js + tools/lang-detectors.mjs): accent-fold rule,
+      # cloze stop-words, function words, grammar detectors, and tip→rule labels
+      # whose rule ids exist. Turns "add a language" into "fill one profile or fail".
+      - name: Language profiles complete (check-lang-profiles.mjs)
+        run: node tools/check-lang-profiles.mjs
+
   # i18n standard: no hardcoded UI text in HTML — every translatable element is
   # empty with a data-i18n* attribute, filled from lang/ui.js by AppI18nDom. This
   # job fails if any page hardcodes text or uses a key missing from a language block.

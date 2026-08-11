@@ -34,35 +34,50 @@ const AppText = (() => {
   }
 
   /**
-   * Normalise a phrase for comparison:
-   * lowercase → NFD decompose → strip diacritics → strip non-alphanumeric
-   * (except apostrophe) → collapse spaces → optionally expand contractions.
-   *
-   * NFD decomposition splits accented letters into base + combining mark
-   * (e.g. é → e + ◌́), then the diacritic strip removes the mark, leaving
-   * the base letter. This lets Spanish-keyboard users type "é" or "e"
-   * interchangeably when answering English phrases.
-   *
+   * The active target language's fold-preserve set: graphemes that must survive
+   * accent-folding because they are DISTINCT LETTERS, not accented vowels
+   * (Spanish 'ñ': año ≠ ano). Read from the language profile — no language code
+   * is hardcoded here. Empty string ('' = fold everything to ASCII) when there is
+   * no profile or the language preserves nothing (English).
+   */
+  function _foldPreserve() {
+    if (typeof AppLangProfiles === "undefined" || typeof AppLangPair === "undefined") return "";
+    return AppLangProfiles.foldPreserve(AppLangPair.getActive().target.code);
+  }
+
+  /**
+   * Fold a string for comparison: lowercase → NFD decompose → strip diacritics
+   * → strip non-alphanumeric (except apostrophe and preserved graphemes) →
+   * collapse spaces. NFD splits accented letters into base + combining mark
+   * (é → e + ◌́); the strip removes the mark, leaving the base letter, so
+   * keyboard users type "é" or "e" interchangeably. Any grapheme in `preserve`
+   * is shielded from decomposition (e.g. ñ, which NFD would split into n + ◌̃).
+   * @param {string} s        - Raw input (any case).
+   * @param {string} preserve - Distinct letters to keep intact (e.g. "ñ").
+   */
+  function _fold(s, preserve) {
+    let x = (s || "").toLowerCase();
+    const restore = [];
+    for (let i = 0; i < preserve.length; i++) {
+      const tok = "" + i + "";
+      restore.push([tok, preserve[i]]);
+      x = x.split(preserve[i]).join(tok);          // shield before NFD
+    }
+    x = x.normalize("NFD").replace(/[̀-ͯ]/g, "");
+    for (const [tok, ch] of restore) x = x.split(tok).join(ch);   // unshield
+    const cls = preserve.replace(/[\\\]^-]/g, "\\$&");            // escape for char class
+    return x.replace(new RegExp("[^a-z0-9" + cls + "\\s']", "g"), "")
+      .replace(/\s+/g, " ").trim();
+  }
+
+  /**
+   * Normalise a phrase for comparison. Folds the active target language's accents
+   * (preserving its distinct letters), then optionally expands contractions.
    * @param {string}  s    - Raw input (any case).
    * @param {Object} [map] - Contraction map; omit or pass null to skip expansion.
    */
   function normalise(s, map) {
-    // Spanish targets: fold accents (á→a…) for keyboard convenience but keep ñ,
-    // which is a distinct letter (año ≠ ano). English targets use ASCII folding.
-    const keepEnye = (typeof AppLangPair !== "undefined") && AppLangPair.getActive().target.code === "es";
-    let stripped;
-    if (keepEnye) {
-      stripped = (s || "").toLowerCase()
-        .replace(/[áàâä]/g, "a").replace(/[éèêë]/g, "e").replace(/[íìîï]/g, "i")
-        .replace(/[óòôö]/g, "o").replace(/[úùûü]/g, "u")
-        .replace(/[^a-z0-9ñ\s']/g, "")
-        .replace(/\s+/g, " ").trim();
-    } else {
-      stripped = (s || "").toLowerCase()
-        .normalize("NFD").replace(/[̀-ͯ]/g, "")
-        .replace(/[^a-z0-9\s']/g, "")
-        .replace(/\s+/g, " ").trim();
-    }
+    const stripped = _fold(s, _foldPreserve());
     if (!map) return stripped;
     return expandContractions(stripped, map).replace(/\s+/g, " ").trim();
   }
@@ -161,38 +176,14 @@ const AppText = (() => {
 
 const AppCloze = (() => {
 
-  // Words that are unsuitable blanks: function words, pronouns, wh-words. Chosen
-  // per TARGET language (that's the language the blank is in), so cloze for a
-  // Spanish target doesn't leave the gap on "de"/"la"/"que". Two-letter words are
-  // already excluded by the length filter, so these lists cover 3+ letters.
-  const STOP_WORDS_EN = new Set([
-    'a','an','the','in','on','at','to','of','is','are','was','were','be','been',
-    'have','has','had','do','does','did','will','would','could','should','may',
-    'might','must','shall','and','or','but','if','so','yet','for','nor',
-    'i','you','he','she','we','they','me','him','her','us','them',
-    'my','your','his','its','our','their','this','that','these','those',
-    'with','from','by','as','not','no','up','out','it',
-    // wh-question words — blanking these produces trivial, non-generative gaps
-    'what','when','where','why','who','whom','whose','which','how',
-  ]);
-
-  // Spanish function words in UNACCENTED form (the clean step folds accents away):
-  // articles, prepositions, conjunctions, relatives, pronouns, common copulas.
-  const STOP_WORDS_ES = new Set([
-    'los','las','una','unos','unas','del',
-    'con','por','para','sin','sobre','entre','hasta','desde','hacia',
-    'que','como','cuando','donde','porque','pero','sino','pues','aunque',
-    'sus','mis','tus','nos','les',
-    'esta','estan','ser','estar','hay','muy','mas','tan','solo','pero',
-    'este','estos','estas','ese','esa','esos','esas','esto','eso',
-    'ella','ellos','ellas','usted','ustedes','nosotros','vosotros',
-    // question words (unaccented after folding)
-    'que','como','donde','cuando','quien','cual','cuanto','cuantos',
-  ]);
-
+  // Words unsuitable as a blank (function words, pronouns, wh-words) are read from
+  // the active TARGET language's profile — the blank is in the target language, so
+  // a Spanish target doesn't leave the gap on "de"/"la"/"que". Defined per language
+  // in shared/js/lang-profiles.js (clozeStopWords); no language code is hardcoded
+  // here. 1–2-letter words are already dropped by the length filter below.
   function _stopWords() {
-    var code = (typeof AppLangPair !== 'undefined') ? AppLangPair.getActive().target.code : 'en';
-    return code === 'es' ? STOP_WORDS_ES : STOP_WORDS_EN;
+    if (typeof AppLangProfiles === 'undefined' || typeof AppLangPair === 'undefined') return new Set();
+    return AppLangProfiles.clozeStopWords(AppLangPair.getActive().target.code);
   }
 
   /**
