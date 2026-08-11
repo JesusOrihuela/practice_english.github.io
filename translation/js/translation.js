@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   document.getElementById('check-btn').addEventListener('click', checkAnswer);
   document.getElementById('trans-input').addEventListener('keydown', e => {
-    if (e.key === 'Enter') checkAnswer();
+    if (e.key === 'Enter') { e.preventDefault(); checkAnswer(); }
   });
 
   document.getElementById('listen-btn').addEventListener('click', () => {
@@ -344,7 +344,7 @@ function checkAnswer() {
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.remove('hidden');  // siempre: acierto→avanzar o reforzar; fallo→reintentar
   document.getElementById('back-to-path')?.classList.remove('hidden');
-  document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
+  setTimeout(function () { document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus(); }, 0); // defer: keep the submitting Enter on the input, not the just-shown button
 
 }
 

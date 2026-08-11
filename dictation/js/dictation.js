@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
   const input = document.getElementById('dict-input');
-  input.addEventListener('keydown', e => { if (e.key === 'Enter') checkAnswer(); });
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); checkAnswer(); } });
 
   document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
   document.getElementById('try-again-btn').addEventListener('click', () => loadPhrase(currentIndex, true));
@@ -288,7 +288,7 @@ function checkAnswer() {
   document.getElementById('next-btn').classList.toggle('hidden', !_lastCorrect);
   document.getElementById('try-again-btn').classList.remove('hidden');  // siempre: acierto→avanzar o reforzar; fallo→reintentar
   document.getElementById('back-to-path')?.classList.remove('hidden');
-  document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus();
+  setTimeout(function () { document.getElementById(_lastCorrect ? 'next-btn' : 'try-again-btn')?.focus(); }, 0); // defer: keep the submitting Enter on the input, not the just-shown button
 
 }
 
