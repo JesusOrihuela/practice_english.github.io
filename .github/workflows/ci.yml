@@ -115,11 +115,14 @@ jobs:
   coverage:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (JSON + tools only)
+      - name: Checkout (JSON + JS + tools)
         uses: actions/checkout@v4
         with:
+          # shared/js is needed because coverage.mjs imports the language-profile
+          # registry (shared/js/lang-profiles.js) for function-word / ignore sets.
           sparse-checkout: |
             shared/json
+            shared/js
             tools
           sparse-checkout-cone-mode: true
       - name: Set up Node
