@@ -69,16 +69,10 @@ function _quizGridOpts() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Part B: load the active pair's topics before reading topic lists.
-  await AppTopics.load();
-  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
-  const _urlTopic = new URLSearchParams(location.search).get('topic');
-  const _pathMode = new URLSearchParams(location.search).get('path') === '1';
-  const _pathCard = new URLSearchParams(location.search).get('card');
+  await AppActivity.loadData();
+  const { topic: _urlTopic, path: _pathMode, card: _pathCard } = AppActivity.pathParams();
 
-  if (_pathMode) {
-    document.getElementById('back-btn').classList.add('hidden');
-    if (typeof PathSession !== 'undefined') PathSession.start();
-  }
+  if (_pathMode) AppActivity.startPathMode();
 
   if (_urlTopic && AppTopics.VOCAB_TOPICS.some(t => t.id === _urlTopic)) {
     startTopic(_urlTopic, _pathMode, _pathCard);

@@ -24,8 +24,7 @@ let _currentAudioSlug = null; // audioSlug of the picked form
 
 document.addEventListener('DOMContentLoaded', async () => {
   // Part B: load the active pair's topics before reading topic lists.
-  await AppTopics.load();
-  if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
+  await AppActivity.loadData();
   // Set dynamic translation title using active target language name
   const pair = AppLangPair.getActive();
   const titleEl = document.querySelector('.trans-title');
@@ -55,14 +54,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
     .catch(() => {}); // non-critical — comparison still works without it
 
-  const _urlTopic = new URLSearchParams(location.search).get('topic');
-  const _pathMode = new URLSearchParams(location.search).get('path') === '1';
-  const _pathCard = new URLSearchParams(location.search).get('card');
+  const { topic: _urlTopic, path: _pathMode, card: _pathCard } = AppActivity.pathParams();
 
-  if (_pathMode) {
-    document.getElementById('back-btn').classList.add('hidden');
-    if (typeof PathSession !== 'undefined') PathSession.start();
-  }
+  if (_pathMode) AppActivity.startPathMode();
 
   if (_urlTopic && AppTopics.PHRASE_TOPICS.some(t => t.id === _urlTopic)) {
     startTopic(_urlTopic, _pathMode, _pathCard);
