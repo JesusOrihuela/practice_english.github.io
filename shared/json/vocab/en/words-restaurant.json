@@ -485,6 +485,24 @@
       "gloss_example": {
         "es": "La comida aquí es deliciosa."
       }
+    },
+    {
+      "id": "restaurant",
+      "term": "restaurant",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A place where you buy and eat meals.",
+      "example": "We had dinner at a nice restaurant.",
+      "translations": {
+        "es": "restaurante"
+      },
+      "gloss": {
+        "es": "Lugar donde compras y comes comidas."
+      },
+      "gloss_example": {
+        "es": "Cenamos en un restaurante agradable."
+      }
     }
   ]
 }

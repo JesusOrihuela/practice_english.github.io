@@ -1151,6 +1151,168 @@
       "gloss_example": {
         "es": "Vale la pena leer este libro."
       }
+    },
+    {
+      "id": "popular",
+      "term": "popular",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Liked by many people.",
+      "example": "This song is very popular now.",
+      "translations": {
+        "es": "popular"
+      },
+      "gloss": {
+        "es": "Que gusta a mucha gente."
+      },
+      "gloss_example": {
+        "es": "Esta canción es muy popular ahora."
+      }
+    },
+    {
+      "id": "traditional",
+      "term": "traditional",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Following long-established customs.",
+      "example": "They wore traditional clothes.",
+      "translations": {
+        "es": "tradicional"
+      },
+      "gloss": {
+        "es": "Que sigue costumbres antiguas."
+      },
+      "gloss_example": {
+        "es": "Llevaban ropa tradicional."
+      }
+    },
+    {
+      "id": "international",
+      "term": "international",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Involving two or more countries.",
+      "example": "She works for an international company.",
+      "translations": {
+        "es": "internacional"
+      },
+      "gloss": {
+        "es": "Que implica dos o más países."
+      },
+      "gloss_example": {
+        "es": "Ella trabaja para una empresa internacional."
+      }
+    },
+    {
+      "id": "personal",
+      "term": "personal",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Belonging to one particular person.",
+      "example": "These are my personal notes.",
+      "translations": {
+        "es": "personal"
+      },
+      "gloss": {
+        "es": "Que pertenece a una persona concreta."
+      },
+      "gloss_example": {
+        "es": "Estas son mis notas personales."
+      }
+    },
+    {
+      "id": "current",
+      "term": "current",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Happening or existing now.",
+      "example": "What is your current address?",
+      "translations": {
+        "es": "actual"
+      },
+      "gloss": {
+        "es": "Que ocurre o existe ahora."
+      },
+      "gloss_example": {
+        "es": "¿Cuál es tu dirección actual?"
+      }
+    },
+    {
+      "id": "single",
+      "term": "single",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Only one, not more.",
+      "example": "There was a single chair in the room.",
+      "translations": {
+        "es": "único / solo"
+      },
+      "gloss": {
+        "es": "Solo uno, no más."
+      },
+      "gloss_example": {
+        "es": "Había una única silla en la habitación."
+      }
+    },
+    {
+      "id": "social",
+      "term": "social",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relating to society and people living together.",
+      "example": "Housing is an important social issue.",
+      "translations": {
+        "es": "social"
+      },
+      "gloss": {
+        "es": "Relativo a la sociedad y la convivencia."
+      },
+      "gloss_example": {
+        "es": "La vivienda es un tema social importante."
+      }
+    },
+    {
+      "id": "political",
+      "term": "political",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relating to government and public affairs.",
+      "example": "The country faces a political crisis.",
+      "translations": {
+        "es": "político"
+      },
+      "gloss": {
+        "es": "Relativo al gobierno y los asuntos públicos."
+      },
+      "gloss_example": {
+        "es": "El país enfrenta una crisis política."
+      }
+    },
+    {
+      "id": "human",
+      "term": "human",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Relating to people.",
+      "example": "Kindness is a human quality.",
+      "translations": {
+        "es": "humano"
+      },
+      "gloss": {
+        "es": "Relativo a las personas."
+      },
+      "gloss_example": {
+        "es": "La amabilidad es una cualidad humana."
+      }
     }
   ]
 }

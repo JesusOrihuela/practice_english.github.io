@@ -449,6 +449,24 @@
       "gloss_example": {
         "es": "El paciente recibió una atención excelente."
       }
+    },
+    {
+      "id": "health",
+      "term": "health",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The condition of your body and mind.",
+      "example": "Regular sleep is good for your health.",
+      "translations": {
+        "es": "salud"
+      },
+      "gloss": {
+        "es": "Estado de tu cuerpo y tu mente."
+      },
+      "gloss_example": {
+        "es": "Dormir bien es bueno para la salud."
+      }
     }
   ]
 }
