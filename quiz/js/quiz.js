@@ -101,15 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   if (_pathMode) {
-    const _backLink = document.createElement('a');
-    _backLink.id = 'back-to-path';
-    _backLink.href = '../../my-learning/html/my-learning.html';
-    _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = AppLang.t('back_to_path');
-    _backLink.addEventListener('click', function () {
-      if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
-    });
-    document.getElementById('quiz-content').appendChild(_backLink);
+    AppUI.addPathBackLink('quiz-content', function () { return _lastCorrect; });
   }
 });
 

@@ -102,15 +102,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     AppTopicGrid.build({ badge: 'Speaking', ariaLabelSuffix: 'speaking practice', srsPrefix: '', onSelect: startTopic });
   }
   if (_pathMode) {
-    const _backLink = document.createElement('a');
-    _backLink.id = 'back-to-path';
-    _backLink.href = '../../my-learning/html/my-learning.html';
-    _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = AppLang.t('back_to_path');
-    _backLink.addEventListener('click', function () {
-      if (_lastCorrect && typeof PathSession !== 'undefined') PathSession.advance();
-    });
-    document.getElementById('exercise-area').appendChild(_backLink);
+    AppUI.addPathBackLink('exercise-area', function () { return _lastCorrect; });
   }
 
   AppTTS.warmup();

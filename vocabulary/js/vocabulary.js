@@ -80,15 +80,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('next-btn').addEventListener('click', () => rateAndNext(3));
 
   if (_pathMode) {
-    const _backLink = document.createElement('a');
-    _backLink.id = 'back-to-path';
-    _backLink.href = '../../my-learning/html/my-learning.html';
-    _backLink.className = 'back-to-path-link hidden';
-    _backLink.textContent = AppLang.t('back_to_path');
-    _backLink.addEventListener('click', function () {
-      if (isFlipped && typeof PathSession !== 'undefined') PathSession.advance();
-    });
-    document.getElementById('vocab-content').appendChild(_backLink);
+    AppUI.addPathBackLink('vocab-content', function () { return isFlipped; });
   }
 
   AppAudio.setBase('../../shared/audio/' + AppLangPair.getActive().target.code + '/');

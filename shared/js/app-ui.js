@@ -64,5 +64,22 @@ var AppUI = (function () {
     if (container) container.insertBefore(banner, container.firstChild);
   }
 
-  return { sessionComplete: sessionComplete, loadError: loadError };
+  // Path-mode "← back to Mi Aprendizaje" link, appended (hidden) to the activity's
+  // exercise container. On click it advances the PathSession only when the round is
+  // "done" — each activity decides what that means, so it passes isReadyFn (a getter
+  // reading its own _lastCorrect / isFlipped state at click time).
+  function addPathBackLink(containerId, isReadyFn) {
+    var link = document.createElement('a');
+    link.id = 'back-to-path';
+    link.href = '../../my-learning/html/my-learning.html';
+    link.className = 'back-to-path-link hidden';
+    link.textContent = AppLang.t('back_to_path');
+    link.addEventListener('click', function () {
+      if (isReadyFn() && typeof PathSession !== 'undefined') PathSession.advance();
+    });
+    var c = document.getElementById(containerId);
+    if (c) c.appendChild(link);
+  }
+
+  return { sessionComplete: sessionComplete, loadError: loadError, addPathBackLink: addPathBackLink };
 })();
