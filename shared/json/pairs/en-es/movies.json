@@ -659,6 +659,18 @@
           "audioSlug": "prefiero_verla_en_version_original_con_subtitulos"
         }
       ]
+    },
+    {
+      "id": "movies_me_gusto_el_programa",
+      "source": "I liked the show.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gustó el programa.",
+          "audioSlug": "me_gusto_el_programa"
+        }
+      ]
     }
   ]
 }

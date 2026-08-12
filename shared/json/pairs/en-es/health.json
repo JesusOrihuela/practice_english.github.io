@@ -611,6 +611,30 @@
           "audioSlug": "casi_mori"
         }
       ]
+    },
+    {
+      "id": "health_me_encuentro_mejor",
+      "source": "I feel better.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me encuentro mejor.",
+          "audioSlug": "me_encuentro_mejor"
+        }
+      ]
+    },
+    {
+      "id": "health_puedes_andar",
+      "source": "Can you walk?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes andar?",
+          "audioSlug": "puedes_andar"
+        }
+      ]
     }
   ]
 }

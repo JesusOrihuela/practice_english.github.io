@@ -467,6 +467,30 @@
           "audioSlug": "de_acuerdo"
         }
       ]
+    },
+    {
+      "id": "conversacion_un_momento",
+      "source": "Just a moment.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Un momento.",
+          "audioSlug": "un_momento"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_esa_es_la_historia",
+      "source": "That's the story.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esa es la historia.",
+          "audioSlug": "esa_es_la_historia"
+        }
+      ]
     }
   ]
 }

@@ -131,6 +131,42 @@
           "audioSlug": "vivo_en_el_campo"
         }
       ]
+    },
+    {
+      "id": "sitios_el_bar_esta_cerrado",
+      "source": "The bar is closed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El bar está cerrado.",
+          "audioSlug": "el_bar_esta_cerrado"
+        }
+      ]
+    },
+    {
+      "id": "sitios_necesito_espacio",
+      "source": "I need space.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito espacio.",
+          "audioSlug": "necesito_espacio"
+        }
+      ]
+    },
+    {
+      "id": "sitios_este_es_mi_sitio",
+      "source": "This is my spot.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este es mi sitio.",
+          "audioSlug": "este_es_mi_sitio"
+        }
+      ]
     }
   ]
 }

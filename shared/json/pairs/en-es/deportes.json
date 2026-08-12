@@ -179,6 +179,18 @@
           "audioSlug": "corro_tres_kilometros_cada_dia"
         }
       ]
+    },
+    {
+      "id": "deportes_nuestro_equipo_gano",
+      "source": "Our team won.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nuestro equipo ganó.",
+          "audioSlug": "nuestro_equipo_gano"
+        }
+      ]
     }
   ]
 }

@@ -377,6 +377,18 @@
           "audioSlug": "soy_de_la_costa"
         }
       ]
+    },
+    {
+      "id": "personal_info_que_edad_tienes",
+      "source": "How old are you?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué edad tienes?",
+          "audioSlug": "que_edad_tienes"
+        }
+      ]
     }
   ]
 }

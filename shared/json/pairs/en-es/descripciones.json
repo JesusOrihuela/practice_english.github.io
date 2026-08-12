@@ -331,6 +331,30 @@
           "audioSlug": "es_una_lengua_indigena"
         }
       ]
+    },
+    {
+      "id": "descripciones_su_color_es_rojo",
+      "source": "Its color is red.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su color es rojo.",
+          "audioSlug": "su_color_es_rojo"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_no_es_natural",
+      "source": "It's not natural.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No es natural.",
+          "audioSlug": "no_es_natural"
+        }
+      ]
     }
   ]
 }

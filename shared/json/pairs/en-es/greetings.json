@@ -1051,6 +1051,18 @@
           "audioSlug": "es_un_gusto"
         }
       ]
+    },
+    {
+      "id": "greetings_gracias_senor",
+      "source": "Thank you, sir.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Gracias, señor.",
+          "audioSlug": "gracias_senor"
+        }
+      ]
     }
   ]
 }
