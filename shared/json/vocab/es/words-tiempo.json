@@ -287,6 +287,42 @@
       "gloss_example": {
         "en": "The building is from another century."
       }
+    },
+    {
+      "id": "invierno",
+      "term": "invierno",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Estación más fría del año.",
+      "example": "En invierno nieva mucho.",
+      "translations": {
+        "en": "winter"
+      },
+      "gloss": {
+        "en": "The coldest season of the year."
+      },
+      "gloss_example": {
+        "en": "It snows a lot in winter."
+      }
+    },
+    {
+      "id": "clima",
+      "term": "clima",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Condiciones del tiempo de un lugar.",
+      "example": "El clima aquí es cálido.",
+      "translations": {
+        "en": "climate"
+      },
+      "gloss": {
+        "en": "The typical weather conditions of a place."
+      },
+      "gloss_example": {
+        "en": "The climate here is warm."
+      }
     }
   ]
 }

@@ -377,6 +377,42 @@
       "gloss_example": {
         "en": "This region produces good wine."
       }
+    },
+    {
+      "id": "turista",
+      "term": "turista",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que viaja por placer.",
+      "example": "Los turistas visitaron el museo.",
+      "translations": {
+        "en": "tourist"
+      },
+      "gloss": {
+        "en": "A person who travels for pleasure."
+      },
+      "gloss_example": {
+        "en": "The tourists visited the museum."
+      }
+    },
+    {
+      "id": "iglesia",
+      "term": "iglesia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Edificio donde la gente reza.",
+      "example": "La iglesia está en la plaza.",
+      "translations": {
+        "en": "church"
+      },
+      "gloss": {
+        "en": "A building where people pray."
+      },
+      "gloss_example": {
+        "en": "The church is on the square."
+      }
     }
   ]
 }

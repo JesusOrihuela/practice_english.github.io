@@ -449,6 +449,42 @@
       "gloss_example": {
         "en": "The customer paid by card."
       }
+    },
+    {
+      "id": "director",
+      "term": "director / directora",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que dirige una empresa u organización.",
+      "example": "La directora habló con el equipo.",
+      "translations": {
+        "en": "director"
+      },
+      "gloss": {
+        "en": "A person who manages a company or organization."
+      },
+      "gloss_example": {
+        "en": "The director spoke with the team."
+      }
+    },
+    {
+      "id": "compania",
+      "term": "compañía",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Empresa que hace negocios.",
+      "example": "Trabaja en una compañía grande.",
+      "translations": {
+        "en": "company"
+      },
+      "gloss": {
+        "en": "A business that trades."
+      },
+      "gloss_example": {
+        "en": "She works at a large company."
+      }
     }
   ]
 }

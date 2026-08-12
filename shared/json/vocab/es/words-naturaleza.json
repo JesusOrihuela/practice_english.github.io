@@ -431,6 +431,42 @@
       "gloss_example": {
         "en": "The sea is calm."
       }
+    },
+    {
+      "id": "aire",
+      "term": "aire",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mezcla de gases que respiramos.",
+      "example": "El aire de la montaña es puro.",
+      "translations": {
+        "en": "air"
+      },
+      "gloss": {
+        "en": "The mix of gases we breathe."
+      },
+      "gloss_example": {
+        "en": "The mountain air is pure."
+      }
+    },
+    {
+      "id": "cielo",
+      "term": "cielo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Espacio que vemos sobre nuestras cabezas.",
+      "example": "El cielo está despejado hoy.",
+      "translations": {
+        "en": "sky"
+      },
+      "gloss": {
+        "en": "The space we see above us."
+      },
+      "gloss_example": {
+        "en": "The sky is clear today."
+      }
     }
   ]
 }
