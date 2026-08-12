@@ -82,8 +82,19 @@ empirically (see the `T` object in the tool) and refined as content grows.
 
 ## The workflow
 
-1. **Authoring a batch** — for each candidate, run `classify` to place it in the right
-   category the first time (or learn it's homeless → omit / new category).
+1. **Authoring a batch — `classify` is MANDATORY** for every new phrase/word, so content
+   is categorized right the FIRST time (prevention) instead of accumulating debt that
+   later needs cleanup rounds:
+   - **CONFIDENT** → place it in the suggested category.
+   - **AMBIGUOUS** → the tool shows the category distribution of the nearest items; choose
+     by the intended SCENARIO the item teaches, using the scope rubric + tie-break rules
+     (`category-scopes.json`). This is expected for generic phrases ("the water is cold"):
+     their category is the author's intended situation, which no text-only classifier can
+     recover — `classify` surfaces the ambiguity honestly instead of guessing.
+   - **HOMELESS** → omit, or propose a new category.
+   Because new content is prevented (here) and mechanical failures are blocked in CI (§B),
+   the retrospective audit (below) becomes a one-time debt payment + a cheap incremental
+   spot-check — not endless rounds.
 2. **CI** — `check-taxonomy` + `check-content` block mechanical failures on push/PR.
 3. **After the batch** — run `semantic-audit` (incremental or full), triage the ranked
    report: move (`move-item`) / rename / merge dup / split category / omit. Then the
