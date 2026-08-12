@@ -383,6 +383,54 @@
           "audioSlug": "te_quiero_animar"
         }
       ]
+    },
+    {
+      "id": "conversacion_lo_lei_en_el_periodico",
+      "source": "I read it in the newspaper.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lo leí en el periódico.",
+          "audioSlug": "lo_lei_en_el_periodico"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_compre_una_revista",
+      "source": "I bought a magazine.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré una revista.",
+          "audioSlug": "compre_una_revista"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_lei_una_carta",
+      "source": "I read a letter.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Leí una carta.",
+          "audioSlug": "lei_una_carta"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_dame_un_ejemplo",
+      "source": "Give me an example.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Dame un ejemplo.",
+          "audioSlug": "dame_un_ejemplo"
+        }
+      ]
     }
   ]
 }

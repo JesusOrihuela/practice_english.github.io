@@ -119,6 +119,30 @@
           "audioSlug": "trabajo_de_lunes_a_viernes"
         }
       ]
+    },
+    {
+      "id": "oficina_este_es_mi_proyecto",
+      "source": "This is my project.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este es mi proyecto.",
+          "audioSlug": "este_es_mi_proyecto"
+        }
+      ]
+    },
+    {
+      "id": "oficina_tiene_experiencia",
+      "source": "Do you have experience?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tiene experiencia?",
+          "audioSlug": "tiene_experiencia"
+        }
+      ]
     }
   ]
 }

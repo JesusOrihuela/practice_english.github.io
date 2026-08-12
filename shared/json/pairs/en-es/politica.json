@@ -131,6 +131,42 @@
           "audioSlug": "cada_voto_cuenta"
         }
       ]
+    },
+    {
+      "id": "politica_la_guerra_continua",
+      "source": "The war goes on.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La guerra continúa.",
+          "audioSlug": "la_guerra_continua"
+        }
+      ]
+    },
+    {
+      "id": "politica_el_rey_viene",
+      "source": "The king is coming.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El rey viene.",
+          "audioSlug": "el_rey_viene"
+        }
+      ]
+    },
+    {
+      "id": "politica_somos_la_sociedad",
+      "source": "We are the society.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Somos la sociedad.",
+          "audioSlug": "somos_la_sociedad"
+        }
+      ]
     }
   ]
 }

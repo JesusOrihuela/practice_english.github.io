@@ -587,6 +587,18 @@
           "audioSlug": "estoy_enfermo"
         }
       ]
+    },
+    {
+      "id": "health_hui_de_la_muerte",
+      "source": "I escaped death.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Huí de la muerte.",
+          "audioSlug": "hui_de_la_muerte"
+        }
+      ]
     }
   ]
 }

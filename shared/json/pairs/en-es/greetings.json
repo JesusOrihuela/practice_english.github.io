@@ -1027,6 +1027,18 @@
           "audioSlug": "ve_a_saludar_a_los_invitados"
         }
       ]
+    },
+    {
+      "id": "greetings_mucho_exito",
+      "source": "Good luck!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Mucho éxito!",
+          "audioSlug": "mucho_exito"
+        }
+      ]
     }
   ]
 }

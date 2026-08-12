@@ -845,6 +845,30 @@
           "audioSlug": "debes_mantener_la_calma"
         }
       ]
+    },
+    {
+      "id": "emociones_no_mi_amor",
+      "source": "No, my love.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No, mi amor.",
+          "audioSlug": "no_mi_amor"
+        }
+      ]
+    },
+    {
+      "id": "emociones_dame_un_beso",
+      "source": "Give me a kiss.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Dame un beso.",
+          "audioSlug": "dame_un_beso"
+        }
+      ]
     }
   ]
 }
