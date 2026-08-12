@@ -250,6 +250,19 @@ existing registration points:
 - **Anglicism / regional / grammar content checks** — `CONTENT_RULES` in `audit.mjs`
   (add a key per target language; a template is in the file).
 
+### Project rule: nothing hardcoded
+
+Pair, phrase-topic and vocab-deck **lists are DERIVED** from the content tree
+(`topics.json` / filesystem) via `tools/lib-content.mjs` (Node ESM) — or inline the same
+way in CJS (`fix-phrase-ids.js`) and Python (`generate-audio-tgt.py`). No tool holds a
+hardcoded `PAIRS`/`PHRASE_TOPICS`/`VOCAB_TOPICS` array, and no tool gates logic on a pair
+literal (`pair === 'es-en'`) — derive the target with `pair.split('-')[1]`. So adding or
+removing a pair, topic or deck is a single content change with **zero tool edits**.
+Per-language *facts* (this document) are the exception that proves the rule: they are not
+"lists", they live one place per language in the profile / detectors, never scattered as
+`lang === 'xx'` branches. Sweep with `grep -n "'es-en'\|'en-es'" tools/` before finishing
+any new/refactored tool.
+
 ---
 
 ## 4. Checklist — adding a target language `xx`
