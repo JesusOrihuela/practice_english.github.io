@@ -23,23 +23,27 @@
    Waivers (persistent, tracked) → tools/semantic-audit-waivers.json.
    Rationale + how to triage: docs/CONTENT-QUALITY.md
    ============================================================ */
-import { pipeline } from '@huggingface/transformers';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { makeEmbedder, cos, centroid as meanVec, MODEL } from './lib-embed.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DERIVED = path.join(ROOT, 'tools/sources/derived');
 const CACHE_FILE = path.join(DERIVED, 'semantic-embeddings-cache.json');
 const REPORT_FILE = path.join(DERIVED, 'semantic-audit-report.json');
 const WAIVER_FILE = path.join(ROOT, 'tools/semantic-audit-waivers.json');
-const MODEL = 'Xenova/paraphrase-multilingual-MiniLM-L12-v2';
 
 const args = process.argv.slice(2);
 const argVal = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 const TOP = parseInt(argVal('--top', '30'), 10);
 const DO_DUP = !args.includes('--no-dup');
+// Incremental mode: --only <comma-substrings> reports flags ONLY for items whose key
+// matches (e.g. a pair, a topic, or an id) — cheap per-batch prospective run. Centroids
+// are still built from ALL items (the anchor must see the full picture).
+const ONLY = (argVal('--only', '') || '').split(',').map(s => s.trim()).filter(Boolean);
+const inScope = (key) => ONLY.length === 0 || ONLY.some(s => key.includes(s));
 // Thresholds — calibrated to be conservative (favor precision; the human confirms).
 const T = {
   homeless: 0.32,   // sim to nearest category CENTROID below this ⇒ fits no category
@@ -49,7 +53,7 @@ const T = {
   faithLow: 0.20,   // source↔target / term↔definition below this ⇒ low fidelity. Cross-
                     // lingual sim of FAITHFUL idiomatic translations is wide (0.2–0.85),
                     // so only near-zero (true "riddle" anti-pattern of Rule 14) is flagged.
-  cohesionLow: 0.28,// topical category mean-to-centroid below this ⇒ possibly non-atomic
+  cohesionLow: 0.40,// topical category mean-to-centroid below this ⇒ possibly non-atomic
   knn: 7,
 };
 
@@ -101,19 +105,9 @@ for (const lang of fs.readdirSync(path.join(ROOT, 'shared/json/vocab'))) {
   }
 }
 
-// ── embedding (with disk cache keyed by text hash) ────────────
-const cache = fs.existsSync(CACHE_FILE) ? JSON.parse(fs.readFileSync(CACHE_FILE, 'utf8')) : {};
-let extractor = null;
-async function embed(text) {
-  const h = contentHash('e:' + text);
-  if (cache[h]) return cache[h];
-  if (!extractor) { process.stderr.write(`(cargando ${MODEL}…)\n`); extractor = await pipeline('feature-extraction', MODEL); }
-  const o = await extractor(text, { pooling: 'mean', normalize: true });
-  const v = Array.from(o.data);
-  cache[h] = v;
-  return v;
-}
-const cos = (a, b) => { let d = 0; for (let i = 0; i < a.length; i++) d += a[i] * b[i]; return d; };
+// ── embedding (shared lib-embed: disk cache + multilingual model) ─────────────
+const E = makeEmbedder(CACHE_FILE);
+const embed = E.embed;
 
 // anchors
 const anchorVec = { phrase: {}, vocab: {} };
@@ -127,7 +121,7 @@ for (const it of items) {
   if (it.kind === 'vocab' && it.definition) it.defVec = await embed(it.definition);
   if (++done % 500 === 0) process.stderr.write(`  embebidos ${done}/${items.length}\n`);
 }
-fs.writeFileSync(CACHE_FILE, JSON.stringify(cache));
+E.save();
 
 // ── category CENTROIDS (topical only) — the anchor is the mean of a category's own
 //    members (phrase-like, matches members far better than an abstract scope
@@ -138,14 +132,10 @@ const report = { model: MODEL, thresholds: T, generatedAt: new Date().toISOStrin
   misplaced: [], ambiguous: [], homeless: [], faithLow: [], duplicates: [], cohesion: [], newCategoryClusters: [] };
 const catItems = {};
 for (const it of items) (catItems[it.kind + ':' + it.category] ||= []).push(it);
-const centroid = {};   // "kind:cat" (topical) -> normalized mean vec
+const centroid = {};   // "kind:cat" (topical) -> normalized mean vec (via lib-embed)
 for (const [ck, list] of Object.entries(catItems)) {
   if (axisOf[ck] !== 'topical') continue;
-  const dim = list[0].vec.length, c = new Array(dim).fill(0);
-  for (const it of list) for (let d = 0; d < dim; d++) c[d] += it.vec[d];
-  let nrm = 0; for (let d = 0; d < dim; d++) nrm += c[d] * c[d]; nrm = Math.sqrt(nrm) || 1;
-  for (let d = 0; d < dim; d++) c[d] /= nrm;
-  centroid[ck] = c;
+  centroid[ck] = meanVec(list.map(it => it.vec));
 }
 const centroidsFor = (kind) => Object.entries(centroid).filter(([ck]) => ck.startsWith(kind + ':'));
 
@@ -162,11 +152,11 @@ for (const it of items) {
   const margin = s1 - s2;
   const hash = contentHash(it.text);
 
-  if (s1 < T.homeless) { if (!isWaived(it.key, 'homeless', hash)) report.homeless.push({ key: it.key, category: it.category, top1: c1, sim: +s1.toFixed(3), text: it.text }); continue; }
+  if (s1 < T.homeless) { if (!isWaived(it.key, 'homeless', hash) && inScope(it.key)) report.homeless.push({ key: it.key, category: it.category, top1: c1, sim: +s1.toFixed(3), text: it.text }); continue; }
   if (c1 !== it.category && (s1 - assignedSim) >= T.misMargin && margin >= T.margin) {
     it._mis = { to: c1, s1, assignedSim, margin };   // corroborated by kNN below
   } else if (margin < T.margin && assignedRank > 0 && assignedRank <= 1) {
-    if (!isWaived(it.key, 'ambiguous', hash))
+    if (!isWaived(it.key, 'ambiguous', hash) && inScope(it.key))
       report.ambiguous.push({ key: it.key, category: it.category, between: cents.slice(0, 3).map(([id, s]) => `${id}:${s.toFixed(2)}`), text: it.text });
   }
 }
@@ -182,7 +172,7 @@ for (const it of items) {
   const knnTop = Object.entries(counts).sort((a, b) => b[1] - a[1])[0];
   const knnAgrees = knnTop && knnTop[0] !== it.category && knnTop[1] >= Math.ceil(T.knn / 2);
   const hash = contentHash(it.text);
-  if (isWaived(it.key, 'misplaced', hash)) continue;
+  if (isWaived(it.key, 'misplaced', hash) || !inScope(it.key)) continue;
   const rec = { key: it.key, from: it.category, to: it._mis.to, axis: it.axis,
     sim: +it._mis.s1.toFixed(3), assignedSim: +it._mis.assignedSim.toFixed(3),
     knn: knnTop ? `${knnTop[0]}×${knnTop[1]}/${T.knn}` : '—', confident: !!knnAgrees, text: it.text };
@@ -195,14 +185,14 @@ for (const it of items) {
   const hash = contentHash(it.text);
   if (it.kind === 'phrase' && it.srcVec) {
     const s = cos(it.vec, it.srcVec);
-    if (s < T.faithLow && !isWaived(it.key, 'faith', hash))
+    if (s < T.faithLow && !isWaived(it.key, 'faith', hash) && inScope(it.key))
       report.faithLow.push({ key: it.key, kind: 'source↔target', sim: +s.toFixed(3), source: it.source, target: it.text });
   }
   if (it.kind === 'vocab' && it.defVec) {
     const s = cos(it.vec, it.defVec);   // note: it.vec = term+def, so compare term alone
     const termVec = it.term ? await embed(it.term) : null;
     const st = termVec ? cos(termVec, it.defVec) : 1;
-    if (st < T.faithLow && !isWaived(it.key, 'faith', hash))
+    if (st < T.faithLow && !isWaived(it.key, 'faith', hash) && inScope(it.key))
       report.faithLow.push({ key: it.key, kind: 'term↔definition', sim: +st.toFixed(3), term: it.term, definition: it.definition });
   }
 }
@@ -220,6 +210,7 @@ if (DO_DUP) {
       if (na === nb) continue;   // exact dup already caught by check-content
       const hash = contentHash(arr[i].text + '|' + arr[j].text);
       if (isWaived(arr[i].key + '|' + arr[j].key, 'dup', hash)) continue;
+      if (!inScope(arr[i].key) && !inScope(arr[j].key)) continue;
       report.duplicates.push({ a: arr[i].key, b: arr[j].key, sim: +s.toFixed(3),
         kind: jacc(na, nb) > 0.5 ? 'near-dup' : 'paraphrase', textA: arr[i].text, textB: arr[j].text });
     }
