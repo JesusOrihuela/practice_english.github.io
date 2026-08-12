@@ -19,12 +19,21 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = join(__dirname, '..', 'shared', 'json');
 
 const PAIRS = ['es-en', 'en-es'];
-const TOPICS = [
-  'emociones', 'greetings', 'restaurant', 'kitchen', 'gym', 'technology',
-  'supermarket', 'accommodation', 'accountability', 'movies',
-  'music', 'theater', 'museums', 'transportation', 'airport', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta'
-];
+// Phrase topics are DERIVED per pair from its topics.json (t.phrase) — no hardcoded
+// list to drift (this is how fiesta and any future topic flow in automatically).
+function phraseTopicsFor(pair) {
+  return JSON.parse(readFileSync(join(BASE, 'pairs', pair, 'topics.json'), 'utf8'))
+    .topics.filter(t => t.phrase).map(t => t.id);
+}
+// Normalize text for exact-duplicate detection: lowercase, strip accents + punctuation,
+// collapse whitespace. Deterministic; no model. (ñ folds to n via NFD — fine for dup keys.)
+function norm(s) {
+  return (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim();
+}
+// Collectors for the cross-file exact-duplicate check (per pair, phrases).
+const phraseTexts = {};
+for (const p of PAIRS) phraseTexts[p] = new Map();   // normText -> [{topic,id}]
 
 // R15: ID suffix patterns that indicate generic/non-descriptive IDs
 const GENERIC_ID_RE = /(_\d+$|_new$|_alt$|_b[12]_\d+|_c[12]_\d+|_a[12]_\d+)/;
@@ -52,7 +61,7 @@ function flag(pair, topic, id, field, rule, msg) {
 }
 
 for (const pair of PAIRS) {
-  for (const topic of TOPICS) {
+  for (const topic of phraseTopicsFor(pair)) {
     const filepath = join(BASE, 'pairs', pair, `${topic}.json`);
     let data;
     try {
@@ -64,6 +73,13 @@ for (const pair of PAIRS) {
 
     for (const phrase of data.phrases) {
       const id = phrase.id || '(no id)';
+
+      // DUP — collect normalized practiced text for the cross-file duplicate check.
+      const _t0 = norm(phrase.target && phrase.target[0] && phrase.target[0].text);
+      if (_t0) {
+        if (!phraseTexts[pair].has(_t0)) phraseTexts[pair].set(_t0, []);
+        phraseTexts[pair].get(_t0).push({ topic, id });
+      }
 
       // R15 — Generic ID suffix
       if (GENERIC_ID_RE.test(id)) {
@@ -165,6 +181,51 @@ for (const pair of PAIRS) {
         // Note: en-es tips in Spanish without accented chars are valid; no heuristic check applied.
       }
     }
+  }
+}
+
+// DUP — exact-duplicate practiced phrase within a pair (same normalized target text,
+// even if the id/topic differ). Scoped to ONE pair — never across pairs (content is
+// independent per pair).
+for (const pair of PAIRS) {
+  for (const [, list] of phraseTexts[pair]) {
+    if (list.length > 1)
+      flag(pair, list[0].topic, list.map(x => x.id).join(' , '), 'target[0].text', 'DUP',
+        `Duplicate practiced phrase across: ${list.map(x => x.topic + '/' + x.id).join(', ')}`);
+  }
+}
+
+// Vocab checks (target-centric, one lang at a time): exact-duplicate / cross-deck
+// term uniqueness (a term lives in ONE deck per target language) + POS↔deck convention.
+const VOCAB_BASE = join(BASE, 'vocab');
+let vocabLangs = [];
+try { vocabLangs = readdirSync(VOCAB_BASE); } catch { /* no vocab dir */ }
+for (const lang of vocabLangs) {
+  const dir = join(VOCAB_BASE, lang);
+  let files;
+  try { files = readdirSync(dir).filter(f => f.endsWith('.json')); } catch { continue; }
+  const termSeen = new Map();   // normTerm -> [{deck,id}]
+  for (const f of files) {
+    const deck = f === 'words.json' ? 'general' : f.replace(/^words-/, '').replace(/\.json$/, '');
+    let words;
+    try { words = JSON.parse(readFileSync(join(dir, f), 'utf8')).words || []; } catch { continue; }
+    for (const w of words) {
+      const nt = norm(w.term);
+      if (nt) {
+        if (!termSeen.has(nt)) termSeen.set(nt, []);
+        termSeen.get(nt).push({ deck, id: w.id });
+      }
+      // POS↔deck: verbos_* must be Verb, adjetivos_* must be Adjective.
+      const expect = /^verbos_/.test(deck) ? 'Verb' : /^adjetivos_/.test(deck) ? 'Adjective' : null;
+      if (expect && w.category !== expect)
+        flag('vocab/' + lang, deck, w.id, 'category', 'POS',
+          `category "${w.category}" ≠ deck convention "${expect}"`);
+    }
+  }
+  for (const [, list] of termSeen) {
+    if (list.length > 1)
+      flag('vocab/' + lang, list[0].deck, list.map(x => x.id).join(' , '), 'term', 'DUP',
+        `Duplicate/cross-deck term across: ${list.map(x => x.deck + '/' + x.id).join(', ')}`);
   }
 }
 
