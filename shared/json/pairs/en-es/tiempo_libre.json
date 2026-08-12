@@ -1,18 +1,6 @@
 {
   "phrases": [
     {
-      "id": "tiempo_libre_quiero_jugar",
-      "source": "I want to play.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Quiero jugar.",
-          "audioSlug": "quiero_jugar"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_no_se_bailar",
       "source": "I can't dance.",
       "level": "A2",
@@ -21,54 +9,6 @@
         {
           "text": "No sé bailar.",
           "audioSlug": "no_se_bailar"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_hoy_hay_una_fiesta",
-      "source": "There is a party today.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Hoy hay una fiesta.",
-          "audioSlug": "hoy_hay_una_fiesta"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_vamos_a_celebrar_juntos",
-      "source": "Let's celebrate together.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Vamos a celebrar juntos.",
-          "audioSlug": "vamos_a_celebrar_juntos"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_quiero_disfrutar_el_momento",
-      "source": "I want to enjoy the moment.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Quiero disfrutar el momento.",
-          "audioSlug": "quiero_disfrutar_el_momento"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_nos_vamos_a_divertir",
-      "source": "We're going to have fun.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Nos vamos a divertir.",
-          "audioSlug": "nos_vamos_a_divertir"
         }
       ]
     },

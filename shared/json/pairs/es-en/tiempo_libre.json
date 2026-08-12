@@ -1,54 +1,6 @@
 {
   "phrases": [
     {
-      "id": "tiempo_libre_i_want_to_play",
-      "source": "Quiero jugar.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I want to play.",
-          "audioSlug": "i_want_to_play"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_come_and_dance_with_me",
-      "source": "Ven a bailar conmigo.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Come and dance with me.",
-          "audioSlug": "come_and_dance_with_me"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_i_love_a_good_party",
-      "source": "Me encanta una buena fiesta.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "I love a good party.",
-          "audioSlug": "i_love_a_good_party"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_lets_celebrate_together",
-      "source": "Celebremos juntos.",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Let's celebrate together.",
-          "audioSlug": "let_s_celebrate_together"
-        }
-      ]
-    },
-    {
       "id": "tiempo_libre_i_like_to_paint",
       "source": "Me gusta pintar.",
       "level": "A2",
@@ -117,18 +69,6 @@
         {
           "text": "Will you join our club?",
           "audioSlug": "will_you_join_our_club"
-        }
-      ]
-    },
-    {
-      "id": "tiempo_libre_have_fun",
-      "source": "¡Diviértete!",
-      "level": "A2",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Have fun.",
-          "audioSlug": "have_fun"
         }
       ]
     }

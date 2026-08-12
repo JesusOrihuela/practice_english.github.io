@@ -42,6 +42,7 @@ const AppTopics = (() => {
     { id: 'animales',               label: 'Animales',                   labelEn: 'Animals',                    emoji: '🐾', phrase: true,  vocab: false, level: 'A2', order: 37 },
     { id: 'deportes',               label: 'Deportes',                   labelEn: 'Sports',                     emoji: '⚽', phrase: true,  vocab: false, level: 'A2', order: 32 },
     { id: 'tiempo_libre',           label: 'Pasatiempos',                labelEn: 'Hobbies',                    emoji: '🎨', phrase: true,  vocab: false, level: 'A2', order: 31 },
+    { id: 'fiesta',                 label: 'Fiestas y diversión',        labelEn: 'Parties & Fun',              emoji: '🎉', phrase: true,  vocab: false, level: 'A2', order: 31 },
     { id: 'health',                 label: 'Salud',                      labelEn: 'Health',                     emoji: '🩺', phrase: true,  vocab: true, level: 'A2', order: 19 },
     { id: 'cuerpo',                 label: 'Cuerpo',                     labelEn: 'Body',                       emoji: '🦵', phrase: true,  vocab: false, level: 'A2', order: 20 },
     { id: 'supermarket',            label: 'Supermercado',               labelEn: 'Supermarket',                emoji: '🛒', phrase: true,  vocab: true, level: 'A2', order: 21 },

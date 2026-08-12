@@ -50,6 +50,7 @@ const AppPath = (() => {
     { id: 'animales',               level: 'A2', emoji: '🐾', label: 'Animales',                   labelEn: 'Animals',                    order: 37 },
     { id: 'deportes',               level: 'A2', emoji: '⚽', label: 'Deportes',                   labelEn: 'Sports',                     order: 32 },
     { id: 'tiempo_libre',           level: 'A2', emoji: '🎨', label: 'Pasatiempos',                labelEn: 'Hobbies',                    order: 31 },
+    { id: 'fiesta',                 level: 'A2', emoji: '🎉', label: 'Fiestas y diversión',        labelEn: 'Parties & Fun',              order: 31 },
     { id: 'health',                 level: 'A2', emoji: '🩺', label: 'Salud',                      labelEn: 'Health',                     order: 19 },
     { id: 'cuerpo',                 level: 'A2', emoji: '🦵', label: 'Cuerpo',                     labelEn: 'Body',                       order: 20 },
     { id: 'supermarket',            level: 'A2', emoji: '🛒', label: 'Supermercado',               labelEn: 'Supermarket',                order: 21 },
