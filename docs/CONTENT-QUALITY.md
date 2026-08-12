@@ -94,12 +94,14 @@ empirically (see the `T` object in the tool) and refined as content grows.
 ## Triage notes (reduce, don't over-trust)
 
 - Confirm **every** semantic flag by hand — the layer ranks suspects, it does not decide.
-- **Misplacement is reliable for VOCAB, noisy for PHRASES.** A vocab entry is one concept,
-  so a wrong deck stands out (an airport in `lugares`, a business term in `supermarket`).
-  A phrase is situational and *mentions* several domains ("the water is cold" → the model
-  pulls it to `weather`; "hotel breakfast included" → `restaurant`), so its primary meaning
-  usually stays put and the flag is a false positive. Triage vocab misplacements first;
-  waive the situational phrase flags.
+- **Misplacement + homeless run for VOCAB ONLY** (a deliberate design decision). A vocab
+  entry is one concept, so a wrong deck stands out and the signal is reliable. A PHRASE is
+  situational and *mentions* several domains ("the water is cold" → `weather`; "hotel
+  breakfast included" → `restaurant`), so topical similarity is dominated by false
+  positives — flagging phrases would flood the report. **Phrase categorization quality is
+  handled by prevention (`classify` at author-time) + human judgment + the deterministic
+  checks, not by this audit.** Phrases still get the reliable phrase signals: duplication
+  and source↔target fidelity.
 - **Removing a duplicate never lowers coverage** (the kept copy has the same lemmas).
   **Removing a homeless item** can; re-run `coverage --gate` and, if needed, cover the
   lemma with a well-placed replacement before closing the batch.

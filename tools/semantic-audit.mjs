@@ -146,11 +146,15 @@ for (const [ck, list] of Object.entries(catItems)) {
 const centroidsFor = (kind) => Object.entries(centroid).filter(([ck]) => ck.startsWith(kind + ':'));
 
 for (const it of items) {
-  // Axis gate (plan §C-quinquies): topical-centroid tests apply ONLY to topical
-  // categories. functional (survival, conversacion…) and property (verbos_*,
-  // adjetivos_*, general, objetos) are dispersed BY DESIGN; their validity is
-  // covered by POS↔deck (deterministic) + duplication.
-  if (it.axis !== 'topical') continue;
+  // Gate 1 — axis (plan §C-quinquies): topical-centroid tests apply ONLY to topical
+  // categories. functional/property are dispersed BY DESIGN.
+  // Gate 2 — VOCAB ONLY: a vocab entry is ONE concept, so a wrong deck stands out and
+  // the signal is reliable. A PHRASE is situational and MENTIONS several domains ("the
+  // water is cold" → weather; "hotel breakfast included" → restaurant), so topical
+  // similarity is dominated by false positives. Phrase categorization is handled by
+  // author-time `classify.mjs` (prevention) + human judgment + the deterministic checks,
+  // NOT by this (noisy) signal. Phrases still get duplication + fidelity below.
+  if (it.axis !== 'topical' || it.kind !== 'vocab') continue;
   const cents = centroidsFor(it.kind).map(([ck, v]) => [ck.split(':')[1], cos(it.vec, v)]).sort((a, b) => b[1] - a[1]);
   const [c1, s1] = cents[0], [, s2] = cents[1] || ['', 0];
   const assignedSim = centroid[it.kind + ':' + it.category] ? cos(it.vec, centroid[it.kind + ':' + it.category]) : 0;
@@ -256,8 +260,8 @@ const sec = (title, arr, fmt) => {
   if (n(arr) > TOP) console.log(`  … +${n(arr) - TOP} más (ver reporte)`);
   console.log('');
 };
-sec('MISPLACEMENT (confiado primero)', report.misplaced, r => `${r.confident ? '‼' : '?'} ${r.key}  ${r.from} → ${r.to}  (sim ${r.sim} vs asignada ${r.assignedSim}, kNN ${r.knn})  "${r.text}"`);
-sec('HOMELESS (candidatos a quitar / categoría nueva)', report.homeless, r => `${r.key}  best=${r.top1}:${r.sim}  "${r.text}"`);
+sec('MISPLACEMENT (vocab; confiado primero)', report.misplaced, r => `${r.confident ? '‼' : '?'} ${r.key}  ${r.from} → ${r.to}  (sim ${r.sim} vs asignada ${r.assignedSim}, kNN ${r.knn})  "${r.text}"`);
+sec('HOMELESS vocab (candidatos a quitar / categoría nueva)', report.homeless, r => `${r.key}  best=${r.top1}:${r.sim}  "${r.text}"`);
 sec('NEW-CATEGORY CLUSTERS', report.newCategoryClusters, c => `${c.length} ítems: ${c.slice(0, 6).join(', ')}${c.length > 6 ? '…' : ''}`);
 sec('FIDELIDAD BAJA (source↔target / term↔def)', report.faithLow, r => `${r.key}  ${r.kind} sim=${r.sim}  ${r.source || r.term} ⟷ ${r.target || r.definition}`);
 sec('DUPLICACIÓN SEMÁNTICA (paráfrasis/sinónimo)', report.duplicates, r => `[${r.kind} ${r.sim}] ${r.a} ⟷ ${r.b}  "${r.textA}" / "${r.textB}"`);
