@@ -581,6 +581,18 @@
           "audioSlug": "el_autobus_es_lento"
         }
       ]
+    },
+    {
+      "id": "transportation_perdi_el_autobus",
+      "source": "I missed the bus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdí el autobús.",
+          "audioSlug": "perdi_el_autobus"
+        }
+      ]
     }
   ]
 }

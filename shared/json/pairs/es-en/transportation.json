@@ -571,6 +571,18 @@
           "audioSlug": "her_car_is_red"
         }
       ]
+    },
+    {
+      "id": "transportation_i_missed_the_bus",
+      "source": "Perdí el autobús.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I missed the bus.",
+          "audioSlug": "i_missed_the_bus"
+        }
+      ]
     }
   ]
 }
