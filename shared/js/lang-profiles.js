@@ -57,6 +57,7 @@
   // ── English (en) ──────────────────────────────────────────────
   const en = {
     name: 'English',
+    grammaticalGender: false,   // no grammatical gender → no gender-variant enrichment.
     foldPreserve: '',   // English has no letters that folding would destroy → pure ASCII fold.
     // Cloze blank exclusions (3+ letters; 1–2-letter words are dropped by a length filter).
     clozeStopWords: [
@@ -151,6 +152,7 @@
   // ── Spanish (es) ──────────────────────────────────────────────
   const es = {
     name: 'Spanish',
+    grammaticalGender: true,   // masc/fem agreement → gender-variant enrichment applies (Rule 10).
     foldPreserve: 'ñ',   // 'ñ' is a distinct letter (año ≠ ano); fold á→a etc. but keep ñ.
     // Spanish function words in UNACCENTED form (the fold step removes accents first).
     clozeStopWords: [

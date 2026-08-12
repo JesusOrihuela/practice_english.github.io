@@ -177,11 +177,13 @@ for (const pair of PAIRS) {
           flag(pair, topic, id, 'grammar', 'R11', `Anti-pedagogical pattern (states what, not why): "${tip}"`);
         }
 
-        // R11 — Language mismatch: es-en pair target is English, so tip must NOT contain Spanish-specific chars
-        if (pair === 'es-en' && SPANISH_CHARS_RE.test(tip)) {
-          flag(pair, topic, id, 'grammar', 'R11', `Spanish characters in es-en tip (target is English): "${tip}"`);
+        // R11 — Language mismatch: when the TARGET is English, the tip (written in the
+        // target language) must NOT contain Spanish-specific chars. Derived from the
+        // pair id (no hardcoded pair) so any X→en pair is checked, and other targets
+        // (whose tips legitimately carry accents) are not falsely flagged.
+        if (pair.split('-')[1] === 'en' && SPANISH_CHARS_RE.test(tip)) {
+          flag(pair, topic, id, 'grammar', 'R11', `Spanish characters in a tip whose target is English: "${tip}"`);
         }
-        // Note: en-es tips in Spanish without accented chars are valid; no heuristic check applied.
       }
     }
   }

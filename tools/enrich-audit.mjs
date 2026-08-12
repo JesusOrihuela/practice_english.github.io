@@ -32,6 +32,7 @@ import { readFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { allPhraseTopics } from './lib-content.mjs';
+import AppLangProfiles from '../shared/js/lang-profiles.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT      = join(__dirname, '..');
@@ -107,8 +108,9 @@ function auditPhrases(topic) {
     const forms = p.target || [];
     const base = forms[0]?.text || '';
 
-    // 1. gender (en-es only)
-    if (targetLang === 'es' && !hasGenderCoverage(forms)) {
+    // 1. gender — only for target languages WITH grammatical gender (from lang-profiles,
+    // not a hardcoded 'es'); any future gendered target enables it by setting the flag.
+    if (AppLangProfiles.get(targetLang) && AppLangProfiles.get(targetLang).grammaticalGender && !hasGenderCoverage(forms)) {
       const gw = findGenderedWord(base);
       if (gw && PERSONAL_CLAUSE.test(base)) {
         flags.push({ topic, id: p.id, kind: 'gender', detail: `adjetivo con género "${gw}" sin forma opuesta`, text: base });

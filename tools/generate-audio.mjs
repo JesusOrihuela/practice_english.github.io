@@ -43,7 +43,7 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync, unlinkSync } from '
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
-import { allPhraseTopics, allVocabDecks } from './lib-content.mjs';
+import { discoverPairs, allPhraseTopics, allVocabDecks } from './lib-content.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -184,10 +184,9 @@ function flattenAlts(data) {
 const ALL_SOURCES = [];
 
 // ── English phrase sources ───────────────────────────────────────────────────
-// English (Kokoro voices) is the target language only for these pairs. Add a
-// pair id here if a new pair whose target is English is introduced (e.g. fr-en);
-// no other change is needed.
-const EN_TARGET_PAIRS = ['es-en'];
+// English (Kokoro voices) applies to every pair whose TARGET is English — DERIVED
+// from the content tree (no hardcoded pair list), so a new X→en pair flows in.
+const EN_TARGET_PAIRS = discoverPairs().filter(p => p.split('-')[1] === 'en');
 
 EN_TARGET_PAIRS.forEach(pair => {
   PHRASE_TOPICS.forEach(id => {

@@ -172,12 +172,15 @@ for (const [pair, lang, label] of PAIRS) {
 // The NGSL (2801 curated learner lemmas) excludes the profanity/fillers/proper
 // nouns that pollute the OpenSubtitles list, so it is the meaningful target for
 // "% of everyday communication covered".
+// The NGSL is the English list, so this block runs for the pair whose TARGET is
+// English — derived (no hardcoded pair), so any X→en pair works.
+const enPair = PAIR_ARG || discoverPairs().find(p => p.split('-')[1] === 'en');
 const ngslPath = join(ROOT, 'tools/sources/derived/ngsl-en.json');
-if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
+if (fs.existsSync(ngslPath) && enPair && enPair.split('-')[1] === 'en' && (!PAIR_ARG || PAIR_ARG === enPair)) {
   const ngsl = JSON.parse(fs.readFileSync(ngslPath, 'utf8')).ranks;
-  const crAll     = coveredRanksEn(contentWords('es-en', 'en', 'all'), ngsl);
-  const crPhrases = coveredRanksEn(contentWords('es-en', 'en', 'phrases'), ngsl);
-  const crVocab   = coveredRanksEn(contentWords('es-en', 'en', 'vocab'), ngsl);
+  const crAll     = coveredRanksEn(contentWords(enPair, 'en', 'all'), ngsl);
+  const crPhrases = coveredRanksEn(contentWords(enPair, 'en', 'phrases'), ngsl);
+  const crVocab   = coveredRanksEn(contentWords(enPair, 'en', 'vocab'), ngsl);
   const igEn = ignoreFor('en');
   const igFnEn = unionSet(igEn, functionFor('en'));  // vocab channel: also drop function words
   console.log(`\n=== Ingles vs NGSL (lista pedagogica, ${Object.keys(ngsl).length} lemmas) ===`);
@@ -208,8 +211,10 @@ if (fs.existsSync(ngslPath) && (!PAIR_ARG || PAIR_ARG === 'es-en')) {
 // index is NOT committed (see build-elelex.mjs / .gitignore); build it locally.
 // Since ELELex is lemmatised and content has inflected forms, lookupRank maps
 // each content surface word back toward its lemma (plural/gender/enclitic).
+// ELELex is the Spanish list → runs for the pair whose TARGET is Spanish (derived).
+const esPair = PAIR_ARG || discoverPairs().find(p => p.split('-')[1] === 'es');
 const elelexPath = join(ROOT, 'tools/sources/derived/elelex-es.json');
-if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
+if (fs.existsSync(elelexPath) && esPair && esPair.split('-')[1] === 'es' && (!PAIR_ARG || PAIR_ARG === esPair)) {
   const elelex = JSON.parse(fs.readFileSync(elelexPath, 'utf8'));
   const ranks = elelex.ranks;
   const byRank = {};
@@ -229,9 +234,9 @@ if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
     }
     return { covered, total, pct: 100 * covered / total, missing };
   }
-  const usedAll     = contentWords('en-es', 'es', 'all');
-  const usedPhrases = contentWords('en-es', 'es', 'phrases');
-  const usedVocab   = contentWords('en-es', 'es', 'vocab');
+  const usedAll     = contentWords(esPair, 'es', 'all');
+  const usedPhrases = contentWords(esPair, 'es', 'phrases');
+  const usedVocab   = contentWords(esPair, 'es', 'vocab');
   const igEs = ignoreFor('es');
   const igFnEs = unionSet(igEs, functionFor('es'));  // vocab channel: also drop function words
   console.log(`\n=== Espanol vs ELELex (lexico pedagogico CEFR, ${elelex.count} lemmas) ===`);
@@ -260,9 +265,9 @@ if (fs.existsSync(elelexPath) && (!PAIR_ARG || PAIR_ARG === 'en-es')) {
 // core. NGSL (en) is committed so this runs in CI; ELELex (es) is CC BY-NC-SA and
 // only present locally, so the es gate is a local-only check.
 if (GATE) {
-  const scope = PAIR_ARG === 'es-en' ? ['en']
-              : PAIR_ARG === 'en-es' ? ['es']
-              : ['en', 'es'];
+  // Target languages to gate: the pair's target (if --pair), else all present — derived.
+  const scope = PAIR_ARG ? [PAIR_ARG.split('-')[1]]
+              : [...new Set(discoverPairs().map(p => p.split('-')[1]))];
   console.log(`\n=== GATE — cobertura del top-1000 ≥ ${MIN}% en AMBOS canales (frases y vocab) ===`);
   let failed = false;
   for (const lang of scope) {
