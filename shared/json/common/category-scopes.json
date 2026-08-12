@@ -1,0 +1,1592 @@
+{
+  "_comment": "Canonical machine-readable category taxonomy. Single source of truth for category scope; anchors the semantic audit (tools/semantic-audit.mjs) and the deterministic taxonomy check (tools/check-taxonomy.mjs). axis: topical|functional|property (see docs/CONTENT-QUALITY.md). Examples are real content items in both languages.",
+  "tieBreak": [
+    "Most-specific domain wins (airport > transportation, kitchen > supermarket).",
+    "Situational beats functional: a phrase that clearly fits a situational topic goes there even if it involves talking/opining.",
+    "Classify by meaning, not by the verb.",
+    "A real irreducible tie means the item should be OMITTED rather than forced.",
+    "Vocab by POS + theme: verbs to verbos_*, adjectives to adjetivos_*, colors to colores, nouns to their theme deck, or general/Conceptos ONLY for a pure abstract concept."
+  ],
+  "categories": [
+    {
+      "id": "greetings",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Greeting, farewell, introducing oneself, and courtesy formulas (hello, goodbye, thanks, please).",
+      "examples": {
+        "en": [
+          "Hello, how are you today?",
+          "Good morning, it's nice to see you.",
+          "Hi there, how's your day going?",
+          "Good afternoon, how have you been?"
+        ],
+        "es": [
+          "Hola, ¿cómo estás?",
+          "Hola, ¿qué tal?",
+          "¿Cómo estás hoy?",
+          "¿Cómo te va?"
+        ]
+      }
+    },
+    {
+      "id": "survival",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Language-survival metalanguage to get by: ask to repeat, what a word means, how to say something.",
+      "examples": {
+        "en": [
+          "I don't understand.",
+          "Can you repeat that, please?",
+          "How do you say this in Spanish?",
+          "What does this word mean?"
+        ],
+        "es": [
+          "No entiendo.",
+          "¿Puedes repetir, por favor?",
+          "¿Cómo se dice esto en español?",
+          "¿Qué significa esta palabra?"
+        ]
+      }
+    },
+    {
+      "id": "personal_info",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Talking about one's own identity: name, age, origin, job, contact details.",
+      "examples": {
+        "en": [
+          "Hi, I'm Ana. And you?",
+          "How old are you?",
+          "I'm twenty-five years old.",
+          "Where are you from?"
+        ],
+        "es": [
+          "Hola, soy Ana. ¿Y tú?",
+          "¿Cuántos años tienes?",
+          "Tengo veinticinco años.",
+          "¿De dónde eres?"
+        ]
+      }
+    },
+    {
+      "id": "daily_routine",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Habitual everyday actions and daily schedule (wake up, work, meals, sleep).",
+      "examples": {
+        "en": [
+          "What time do you get up?",
+          "I get up at seven.",
+          "I have breakfast at eight.",
+          "I go to work by bus."
+        ],
+        "es": [
+          "¿A qué hora te levantas?",
+          "Me levanto a las siete.",
+          "Desayuno a las ocho.",
+          "Voy al trabajo en autobús."
+        ]
+      }
+    },
+    {
+      "id": "calendario",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Clock time, days, dates and the calendar.",
+      "examples": {
+        "en": [
+          "What time is it?",
+          "Today is Monday.",
+          "What day is it today?",
+          "What time do you have?"
+        ],
+        "es": [
+          "¿Qué hora es?",
+          "Hoy es lunes.",
+          "¿Qué día es hoy?",
+          "¿Qué hora tienes?"
+        ]
+      }
+    },
+    {
+      "id": "family",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Family members, relatives and people's relationships and roles.",
+      "examples": {
+        "en": [
+          "This is my family.",
+          "I have two brothers and one sister.",
+          "My father is a doctor.",
+          "My mother works at a school."
+        ],
+        "es": [
+          "Esta es mi familia.",
+          "Tengo dos hermanos y una hermana.",
+          "Mi padre es médico.",
+          "Mi madre trabaja en una escuela."
+        ]
+      }
+    },
+    {
+      "id": "emociones",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Moods and feelings (happy, sad, nervous, excited).",
+      "examples": {
+        "en": [
+          "I'm sad.",
+          "I'm happy.",
+          "I'm excited.",
+          "I'm bored."
+        ],
+        "es": [
+          "Estoy triste.",
+          "Estoy feliz.",
+          "Estoy emocionada.",
+          "Estoy aburrida."
+        ]
+      }
+    },
+    {
+      "id": "hogar",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "The home: rooms, furniture and household spaces.",
+      "examples": {
+        "en": [
+          "The room is clean.",
+          "The room is dark.",
+          "The bed is soft.",
+          "Close the door when you leave."
+        ],
+        "es": [
+          "Eres mi invitado.",
+          "El salón es grande.",
+          "La pared es blanca.",
+          "Es una mesa de madera."
+        ]
+      }
+    },
+    {
+      "id": "vestimenta",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Clothing and getting dressed (shirt, shoes, wearing clothes).",
+      "examples": {
+        "en": [
+          "His shirt is blue.",
+          "Put on your shoes.",
+          "Take off your coat.",
+          "I like that blue shirt."
+        ],
+        "es": [
+          "Su camisa es azul.",
+          "Es un vestido lindo.",
+          "Ponte los zapatos.",
+          "Quítate el abrigo."
+        ]
+      }
+    },
+    {
+      "id": "restaurant",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Eating out at a restaurant: menu, ordering, the bill.",
+      "examples": {
+        "en": [
+          "Can we see the menu, please?",
+          "Do you have any vegetarian options?",
+          "What do you recommend as a specialty of the house?",
+          "Could you tell me about today's specials?"
+        ],
+        "es": [
+          "¿Podemos ver el menú, por favor?",
+          "¿Tienen alguna opción vegetariana?",
+          "¿Qué recomienda como especialidad de la casa?",
+          "¿Podría hablarme de las especialidades de hoy?"
+        ]
+      }
+    },
+    {
+      "id": "weather",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Atmospheric weather (sunny, rain, cold, hot).",
+      "examples": {
+        "en": [
+          "What's the weather like?",
+          "It's sunny.",
+          "It's raining.",
+          "It's very cold today."
+        ],
+        "es": [
+          "¿Qué tiempo hace?",
+          "Hace sol.",
+          "Está lloviendo.",
+          "Hoy hace mucho frío."
+        ]
+      }
+    },
+    {
+      "id": "conversacion",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Communication acts and exchanging or expressing opinions in conversation.",
+      "examples": {
+        "en": [
+          "Talk to me.",
+          "Ask Tom.",
+          "Answer me.",
+          "Let me explain."
+        ],
+        "es": [
+          "¿Podemos hablar?",
+          "¿Puedo preguntar algo?",
+          "No supe qué responder.",
+          "¿Alguien puede contestar?"
+        ]
+      }
+    },
+    {
+      "id": "cotidianidad",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Everyday-life situations of one's own routine: being late or in a rush, bodily needs, errands and general daily self-tasks.",
+      "examples": {
+        "en": [
+          "I am late.",
+          "I need to go to the bathroom.",
+          "It's late, I have to go.",
+          "I'm running late."
+        ],
+        "es": [
+          "Voy a colocar los libros.",
+          "Necesito ir al baño.",
+          "Es tarde, tengo que irme.",
+          "Me falta tiempo."
+        ]
+      }
+    },
+    {
+      "id": "emergencias",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Emergencies and problems: losing things, accidents, calling for help or the police.",
+      "examples": {
+        "en": [
+          "I lost my passport.",
+          "Can you call the police?",
+          "I can't find my phone.",
+          "Call an ambulance!"
+        ],
+        "es": [
+          "Perdí mi pasaporte.",
+          "¿Puede llamar a la policía?",
+          "No encuentro mi teléfono.",
+          "Hubo un accidente."
+        ]
+      }
+    },
+    {
+      "id": "descripciones",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Describing qualities of things with ser/estar plus an adjective (easy, big, expensive), including nationality and origin.",
+      "examples": {
+        "en": [
+          "This is easy.",
+          "This is difficult.",
+          "This place is huge.",
+          "The cup is full."
+        ],
+        "es": [
+          "Es difícil.",
+          "Es enorme.",
+          "Es un libro antiguo.",
+          "Está lleno."
+        ]
+      }
+    },
+    {
+      "id": "describiendo_personas",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Describing people's qualities and appearance (smart, kind, tall).",
+      "examples": {
+        "en": [
+          "She is a smart girl.",
+          "He is a good boy.",
+          "He is a nice guy.",
+          "He is a kind man."
+        ],
+        "es": [
+          "Es un buen chico.",
+          "Ese señor es muy amable.",
+          "Es un hombre honrado.",
+          "Es una mujer muy fuerte."
+        ]
+      }
+    },
+    {
+      "id": "pensamientos_opiniones",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Thoughts and opinions: believing, doubting, agreeing, reasoning, judging.",
+      "examples": {
+        "en": [
+          "I doubt it.",
+          "I agree with you.",
+          "I suppose so.",
+          "I didn't realize that."
+        ],
+        "es": [
+          "Lo dudo mucho.",
+          "Estoy de acuerdo contigo.",
+          "Supongo que sí.",
+          "Quiero saber tu opinión."
+        ]
+      }
+    },
+    {
+      "id": "planes",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Intentions, decisions, wishes, promises and goals.",
+      "examples": {
+        "en": [
+          "You decide.",
+          "Choose one.",
+          "Let me try.",
+          "I hope so."
+        ],
+        "es": [
+          "Tengo que decidir.",
+          "Dime cuál elegir.",
+          "Déjame intentarlo.",
+          "Voy a esperar."
+        ]
+      }
+    },
+    {
+      "id": "health",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Body health, illness, symptoms and medical care.",
+      "examples": {
+        "en": [
+          "How are you feeling?",
+          "I don't feel well.",
+          "I have a headache.",
+          "My stomach hurts."
+        ],
+        "es": [
+          "¿Cómo te sientes?",
+          "No me siento bien.",
+          "Me duele la cabeza.",
+          "Me duele el estómago."
+        ]
+      }
+    },
+    {
+      "id": "cuerpo",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Body parts and the physical body.",
+      "examples": {
+        "en": [
+          "Her hair is very long.",
+          "My heart is beating fast.",
+          "Her skin is very soft.",
+          "The brain is amazing."
+        ],
+        "es": [
+          "Tengo el pelo muy largo.",
+          "El corazón late rápido.",
+          "Su piel es muy suave.",
+          "Tengo los ojos azules."
+        ]
+      }
+    },
+    {
+      "id": "supermarket",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Grocery shopping at the supermarket (aisles, shopping list, checkout).",
+      "examples": {
+        "en": [
+          "Have you made the grocery list yet?",
+          "I need to buy milk, bread and eggs.",
+          "Don't forget to buy fruits and vegetables for the week.",
+          "This supermarket is very expensive, let's go to another one."
+        ],
+        "es": [
+          "¿Ya hiciste la lista del supermercado?",
+          "Necesito comprar leche, pan y huevos.",
+          "¡No te olvides de comprar las frutas y verduras para la semana!",
+          "Este supermercado está muy caro, vamos a otro."
+        ]
+      }
+    },
+    {
+      "id": "kitchen",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Cooking, recipes, ingredients and kitchen utensils.",
+      "examples": {
+        "en": [
+          "Do we have enough eggs for the recipe?",
+          "Pass me the cutting board.",
+          "Where do we keep the measuring cups?",
+          "Can you pass me the spatula?"
+        ],
+        "es": [
+          "¿Tenemos suficientes huevos para la receta?",
+          "Pásame la tabla de cortar.",
+          "¿Dónde guardamos las tazas de medir?",
+          "¿Me pasas la espátula?"
+        ]
+      }
+    },
+    {
+      "id": "transportation",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Getting around by transport (bus, taxi, train, station).",
+      "examples": {
+        "en": [
+          "Order a taxi for tomorrow morning.",
+          "Where is the taxi stand?",
+          "How do I get to the bus stop from here?",
+          "Where is the nearest bus stop?"
+        ],
+        "es": [
+          "Pide un taxi para mañana por la mañana.",
+          "¿Dónde está la parada de taxis?",
+          "¿Cómo llego a la parada de autobús desde aquí?",
+          "¿Dónde está la parada de autobús más cercana?"
+        ]
+      }
+    },
+    {
+      "id": "directions",
+      "kind": "phrase",
+      "axis": "functional",
+      "scope": "Asking for and giving directions to a place.",
+      "examples": {
+        "en": [
+          "How do I get to the station?",
+          "Where is the bank?",
+          "Is it far from here?",
+          "Go straight ahead."
+        ],
+        "es": [
+          "¿Cómo llego a la estación?",
+          "¿Dónde está el banco?",
+          "¿Está lejos de aquí?",
+          "Sigue todo recto."
+        ]
+      }
+    },
+    {
+      "id": "sitios",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Generic places and settlements (town, city, square, neighborhood) not covered by a more specific place topic.",
+      "examples": {
+        "en": [
+          "It is a small village.",
+          "The town is quiet.",
+          "It has a central location.",
+          "It is a public place."
+        ],
+        "es": [
+          "Nos vemos en la plaza.",
+          "Vivo en este barrio.",
+          "Vivo en una comunidad pequeña.",
+          "Es un lugar muy bonito."
+        ]
+      }
+    },
+    {
+      "id": "viajes",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Travel and trips in general (planning or dreaming of traveling).",
+      "examples": {
+        "en": [
+          "I love trips.",
+          "Did you have a good trip?",
+          "I want to travel abroad.",
+          "Where will you spend your vacation?"
+        ],
+        "es": [
+          "Sueño con viajar por el mundo.",
+          "Vamos a planear el viaje.",
+          "Me encanta viajar.",
+          "Estoy de vacaciones."
+        ]
+      }
+    },
+    {
+      "id": "airport",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Air travel at the airport (flight, luggage, boarding, passport).",
+      "examples": {
+        "en": [
+          "What time is our flight?",
+          "I need to check my luggage.",
+          "The waiting room is on the ground floor.",
+          "I prefer a window seat."
+        ],
+        "es": [
+          "¿A qué hora sale nuestro vuelo?",
+          "Necesito facturar mi equipaje.",
+          "La sala de espera está en la planta baja.",
+          "Prefiero un asiento junto a la ventana."
+        ]
+      }
+    },
+    {
+      "id": "accommodation",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Lodging: hotels, reservations, rooms and amenities.",
+      "examples": {
+        "en": [
+          "Is breakfast included?",
+          "Could you provide extra towels in the room?",
+          "What services does the hotel have?",
+          "Is there a minibar in the room?"
+        ],
+        "es": [
+          "¿Está incluido el desayuno?",
+          "¿Podría traerme toallas adicionales para la habitación?",
+          "¿Qué servicios tiene el hotel?",
+          "¿Hay minibar en la habitación?"
+        ]
+      }
+    },
+    {
+      "id": "profesiones",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Jobs, professions and professional roles (doctor, author, business partner).",
+      "examples": {
+        "en": [
+          "He is a young officer.",
+          "She is a famous author.",
+          "He is a secret agent.",
+          "She is a fair judge."
+        ],
+        "es": [
+          "Es mi socio.",
+          "Es un escritor famoso.",
+          "Es un buen detective.",
+          "Es un gran pintor."
+        ]
+      }
+    },
+    {
+      "id": "estudios",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Studies and education: school, university, subjects, learning, knowledge.",
+      "examples": {
+        "en": [
+          "We start next term.",
+          "Education is very important.",
+          "She does research.",
+          "I study at the university."
+        ],
+        "es": [
+          "La educación es importante.",
+          "Estudio en la universidad.",
+          "Es mi compañero de clase.",
+          "Estudio para el examen."
+        ]
+      }
+    },
+    {
+      "id": "tiempo_libre",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Hobbies and leisure pastimes: arts as a hobby, reading, culture, walks, light activity.",
+      "examples": {
+        "en": [
+          "I like to paint.",
+          "I like to draw.",
+          "Reading is a good activity.",
+          "They talked about culture."
+        ],
+        "es": [
+          "No sé bailar.",
+          "Vamos a pasear.",
+          "Me gusta el baile.",
+          "Leo una novela."
+        ]
+      }
+    },
+    {
+      "id": "fiesta",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Fun and parties: playing, dancing, celebrating, having fun.",
+      "examples": {
+        "en": [
+          "I want to play.",
+          "Come and dance with me.",
+          "I love a good party.",
+          "Let's celebrate together."
+        ],
+        "es": [
+          "Quiero jugar.",
+          "Hoy hay una fiesta.",
+          "Vamos a celebrar juntos.",
+          "Quiero disfrutar el momento."
+        ]
+      }
+    },
+    {
+      "id": "deportes",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Sports and physical competition (playing, winning, teams, matches).",
+      "examples": {
+        "en": [
+          "I like sport.",
+          "I want to win.",
+          "We might lose.",
+          "I lost the game."
+        ],
+        "es": [
+          "Me gusta el deporte.",
+          "Quiero ganar.",
+          "Odio perder.",
+          "Fin del juego."
+        ]
+      }
+    },
+    {
+      "id": "movies",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Movies and series (watching, cinema, actors, plots).",
+      "examples": {
+        "en": [
+          "I didn't like the ending of that movie.",
+          "I want to go to the movies this weekend, what movie do you want to see?",
+          "This actor is very good, I like all his movies.",
+          "Are you watching the new Netflix series?"
+        ],
+        "es": [
+          "No me gustó el final de esa película.",
+          "Quiero ir al cine este fin de semana, ¿qué película quieres ver?",
+          "Este actor es muy bueno, me gustan todas sus películas.",
+          "¿Estás viendo la nueva serie de Netflix?"
+        ]
+      }
+    },
+    {
+      "id": "music",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Music (songs, singers, concerts, listening).",
+      "examples": {
+        "en": [
+          "Skip that song.",
+          "I really like that song, I listen to it all the time.",
+          "That's my favorite song.",
+          "We should go to a concert this year."
+        ],
+        "es": [
+          "Sáltate esa canción.",
+          "Esa canción me gusta mucho, la escucho todo el tiempo.",
+          "Esa es mi canción favorita.",
+          "Deberíamos ir a un concierto este año."
+        ]
+      }
+    },
+    {
+      "id": "museums",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Museums and the visual or literary arts (exhibitions, painting, photography, stories, novels).",
+      "examples": {
+        "en": [
+          "Do you want to go to an art exhibition with me?",
+          "The photography exhibition was very interesting.",
+          "I would like to go to the new museum that opened in the city.",
+          "Have you been to the new exhibition at the contemporary art museum?"
+        ],
+        "es": [
+          "¿Quieres ir a una exposición de arte conmigo?",
+          "La exposición de fotografías fue muy interesante.",
+          "Me gustaría ir al nuevo museo que abrieron en la ciudad.",
+          "¿Has ido a la nueva exposición del museo de arte contemporáneo?"
+        ]
+      }
+    },
+    {
+      "id": "naturaleza_lugares",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Nature and natural landscapes: plants, sky, water, mountains, sea, the environment.",
+      "examples": {
+        "en": [
+          "What a tall mountain!",
+          "I like the beach.",
+          "My garden is small.",
+          "The river is wide."
+        ],
+        "es": [
+          "Vamos a la montaña.",
+          "Vamos a la playa.",
+          "La Tierra gira.",
+          "Estoy en el jardín."
+        ]
+      }
+    },
+    {
+      "id": "animales",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Animals (pets, wild animals and their traits).",
+      "examples": {
+        "en": [
+          "It is a wild animal.",
+          "A dog runs fast.",
+          "My cat sleeps a lot.",
+          "It is a small bird."
+        ],
+        "es": [
+          "Es un animal salvaje.",
+          "Vi un perro en la calle.",
+          "Mi gato duerme mucho.",
+          "Es un pájaro pequeño."
+        ]
+      }
+    },
+    {
+      "id": "technology",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Technology and devices: internet, software, phones, digital tools.",
+      "examples": {
+        "en": [
+          "Could you send me that document by email?",
+          "I need to charge my phone, do you have a charger?",
+          "Can you help me set up my new printer?",
+          "What is the WiFi password?"
+        ],
+        "es": [
+          "¿Podrías enviarme ese documento por correo electrónico?",
+          "Necesito cargar mi teléfono, ¿tienes un cargador?",
+          "¿Puedes ayudarme a configurar mi nueva impresora?",
+          "¿Cuál es la contraseña del WiFi?"
+        ]
+      }
+    },
+    {
+      "id": "oficina",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Office and workplace: meetings, projects, administrative tasks.",
+      "examples": {
+        "en": [
+          "Let's start the meeting.",
+          "When is the meeting scheduled?",
+          "We have a new client.",
+          "This is my office."
+        ],
+        "es": [
+          "Empecemos la reunión.",
+          "¿Cuándo está programada la reunión?",
+          "Es importante considerar las nuevas tendencias del mercado.",
+          "Tenemos un nuevo cliente."
+        ]
+      }
+    },
+    {
+      "id": "economia",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Economy, money, business and commerce.",
+      "examples": {
+        "en": [
+          "I have no money.",
+          "Business is slow.",
+          "I want to buy it.",
+          "Let me pay."
+        ],
+        "es": [
+          "No tengo dinero.",
+          "Su negocio va bien.",
+          "Tenemos una empresa.",
+          "Quiero comprarlo."
+        ]
+      }
+    },
+    {
+      "id": "gym",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Exercise and fitness at the gym (machines, form, repetitions, workout).",
+      "examples": {
+        "en": [
+          "Can you show me how to properly use this machine?",
+          "What is the correct form for doing this exercise?",
+          "Increase the elevation of the treadmill.",
+          "Increase the speed of the treadmill."
+        ],
+        "es": [
+          "¿Puedes mostrarme cómo usar correctamente esta máquina?",
+          "¿Cuál es la forma correcta para hacer este ejercicio?",
+          "Aumenta la inclinación de la caminadora.",
+          "Aumenta la velocidad de la caminadora."
+        ]
+      }
+    },
+    {
+      "id": "politica",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Politics, government and public or social affairs (voting, the state, law, society).",
+      "examples": {
+        "en": [
+          "It is a political issue.",
+          "It is a free state.",
+          "It was a long campaign.",
+          "Is this legal?"
+        ],
+        "es": [
+          "Es un tema político.",
+          "Voy a votar mañana.",
+          "El presidente dio un discurso.",
+          "Hay elecciones este año."
+        ]
+      }
+    },
+    {
+      "id": "theater",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Theater and the performing arts (plays, opera, the stage).",
+      "examples": {
+        "en": [
+          "The play was very moving.",
+          "I didn't think I would enjoy the opera so much.",
+          "I'd like to buy tickets for tonight's show.",
+          "Where can I find the theater?"
+        ],
+        "es": [
+          "La obra de teatro fue muy conmovedora.",
+          "No pensé que la ópera me gustaría tanto.",
+          "Me gustaría comprar entradas para el espectáculo de esta noche.",
+          "¿Dónde puedo encontrar el teatro?"
+        ]
+      }
+    },
+    {
+      "id": "accountability",
+      "kind": "phrase",
+      "axis": "topical",
+      "scope": "Professional accounting and finance (financial reports, budget, audits).",
+      "examples": {
+        "en": [
+          "The financial reports have been reviewed.",
+          "We need to adjust the budget.",
+          "The sales figures have increased.",
+          "We are facing a cash flow problem."
+        ],
+        "es": [
+          "Se han revisado los informes financieros.",
+          "Necesitamos ajustar el presupuesto.",
+          "Las cifras de ventas han aumentado.",
+          "Estamos enfrentando un problema de flujo de efectivo."
+        ]
+      }
+    },
+    {
+      "id": "accommodation",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of lodging and hotels.",
+      "examples": {
+        "en": [
+          "hotel",
+          "hotel room",
+          "reservation",
+          "hostel"
+        ],
+        "es": [
+          "hotel",
+          "habitación de hotel",
+          "reserva",
+          "hostal / albergue"
+        ]
+      }
+    },
+    {
+      "id": "accountability",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of professional accounting and finance.",
+      "examples": {
+        "en": [
+          "deadline",
+          "commitment",
+          "milestone",
+          "feedback"
+        ],
+        "es": [
+          "fecha límite / plazo",
+          "compromiso",
+          "hito",
+          "retroalimentación"
+        ]
+      }
+    },
+    {
+      "id": "adjetivos_avanzados",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Advanced (B1 and up) adjectives of any theme.",
+      "examples": {
+        "en": [
+          "abundant",
+          "adequate",
+          "ambitious",
+          "appropriate"
+        ],
+        "es": [
+          "abundante",
+          "adecuado",
+          "ambicioso",
+          "apropiado"
+        ]
+      }
+    },
+    {
+      "id": "adjetivos_basicos",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Basic (A1-A2) adjectives of any theme.",
+      "examples": {
+        "en": [
+          "accurate",
+          "anxious",
+          "broad",
+          "capable"
+        ],
+        "es": [
+          "preciso",
+          "ansioso",
+          "amplio",
+          "capaz"
+        ]
+      }
+    },
+    {
+      "id": "airport",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of air travel and the airport.",
+      "examples": {
+        "en": [
+          "flight",
+          "passport",
+          "gate",
+          "luggage"
+        ],
+        "es": [
+          "vuelo",
+          "pasaporte",
+          "puerta de embarque",
+          "equipaje"
+        ]
+      }
+    },
+    {
+      "id": "cantidad",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Quantity, measure and number words.",
+      "examples": {
+        "en": [
+          "number",
+          "amount",
+          "half",
+          "group"
+        ],
+        "es": [
+          "vuelta",
+          "resto",
+          "par",
+          "medida"
+        ]
+      }
+    },
+    {
+      "id": "colores",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Colors.",
+      "examples": {
+        "en": [
+          "color",
+          "black",
+          "red",
+          "blue"
+        ],
+        "es": [
+          "color",
+          "negro",
+          "verde",
+          "rojo"
+        ]
+      }
+    },
+    {
+      "id": "educacion",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of education and studies.",
+      "examples": {
+        "en": [
+          "university",
+          "science",
+          "study",
+          "teach"
+        ],
+        "es": [
+          "universidad",
+          "ciencia",
+          "estudiar",
+          "enseñar"
+        ]
+      }
+    },
+    {
+      "id": "emociones",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of emotions and feelings.",
+      "examples": {
+        "en": [
+          "luck",
+          "fear",
+          "dream",
+          "joy"
+        ],
+        "es": [
+          "suerte",
+          "miedo",
+          "sueño",
+          "alegría"
+        ]
+      }
+    },
+    {
+      "id": "family",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of family members and people.",
+      "examples": {
+        "en": [
+          "child",
+          "boy",
+          "girl",
+          "baby"
+        ],
+        "es": [
+          "niño / niña",
+          "niño",
+          "niña / chica",
+          "bebé"
+        ]
+      }
+    },
+    {
+      "id": "greetings",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Greeting and courtesy nouns.",
+      "examples": {
+        "en": [
+          "introduction",
+          "casual",
+          "formal",
+          "farewell"
+        ],
+        "es": [
+          "presentación",
+          "informal / casual",
+          "formal",
+          "despedida"
+        ]
+      }
+    },
+    {
+      "id": "gym",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of exercise and fitness.",
+      "examples": {
+        "en": [
+          "repetition",
+          "cardio",
+          "posture",
+          "routine"
+        ],
+        "es": [
+          "repetición",
+          "cardio",
+          "postura",
+          "rutina"
+        ]
+      }
+    },
+    {
+      "id": "health",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of health, the body and illness.",
+      "examples": {
+        "en": [
+          "head",
+          "face",
+          "hair",
+          "heart"
+        ],
+        "es": [
+          "cabeza",
+          "cara / rostro",
+          "pelo / cabello",
+          "corazón"
+        ]
+      }
+    },
+    {
+      "id": "juegos",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of games and play.",
+      "examples": {
+        "en": [
+          "game",
+          "party",
+          "ball",
+          "toy"
+        ],
+        "es": [
+          "juego / partido",
+          "aventura",
+          "fiesta",
+          "pelota"
+        ]
+      }
+    },
+    {
+      "id": "kitchen",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of cooking, food preparation and utensils.",
+      "examples": {
+        "en": [
+          "recipe",
+          "ingredient",
+          "boil",
+          "blend"
+        ],
+        "es": [
+          "receta",
+          "ingrediente",
+          "hervir",
+          "mezclar / licuar"
+        ]
+      }
+    },
+    {
+      "id": "lengua",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of language and communication (word, letter, message).",
+      "examples": {
+        "en": [
+          "letter",
+          "term",
+          "word",
+          "question"
+        ],
+        "es": [
+          "carta / letra",
+          "término",
+          "lengua",
+          "frase"
+        ]
+      }
+    },
+    {
+      "id": "lugares",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of places and geography.",
+      "examples": {
+        "en": [
+          "town",
+          "world",
+          "city",
+          "street"
+        ],
+        "es": [
+          "pueblo",
+          "mundo",
+          "espacio",
+          "biblioteca"
+        ]
+      }
+    },
+    {
+      "id": "movies",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of film and cinema.",
+      "examples": {
+        "en": [
+          "movie",
+          "actor",
+          "cinema",
+          "series"
+        ],
+        "es": [
+          "película",
+          "actor / actriz",
+          "cine",
+          "serie"
+        ]
+      }
+    },
+    {
+      "id": "museums",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of the visual or literary arts and museums.",
+      "examples": {
+        "en": [
+          "story",
+          "novel",
+          "painter",
+          "art"
+        ],
+        "es": [
+          "cuento / historia",
+          "novela",
+          "pintor / pintora",
+          "cultura"
+        ]
+      }
+    },
+    {
+      "id": "music",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of music.",
+      "examples": {
+        "en": [
+          "song",
+          "singer",
+          "concert",
+          "playlist"
+        ],
+        "es": [
+          "canción",
+          "cantante",
+          "concierto",
+          "lista de reproducción / playlist"
+        ]
+      }
+    },
+    {
+      "id": "naturaleza",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of nature (animals, plants, natural elements).",
+      "examples": {
+        "en": [
+          "animal",
+          "tree",
+          "plant",
+          "star"
+        ],
+        "es": [
+          "animal",
+          "árbol",
+          "planta",
+          "estrella"
+        ]
+      }
+    },
+    {
+      "id": "objetos",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Concrete generic physical objects with no thematic home.",
+      "examples": {
+        "en": [
+          "object",
+          "thing",
+          "ring",
+          "clock"
+        ],
+        "es": [
+          "cosa",
+          "imagen",
+          "sonido",
+          "nombre"
+        ]
+      }
+    },
+    {
+      "id": "restaurant",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of eating out.",
+      "examples": {
+        "en": [
+          "appetizer",
+          "table reservation",
+          "menu",
+          "waiter"
+        ],
+        "es": [
+          "aperitivo",
+          "reserva de mesa",
+          "menú",
+          "mesero / camarero"
+        ]
+      }
+    },
+    {
+      "id": "ropa",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of clothing.",
+      "examples": {
+        "en": [
+          "clothes",
+          "shirt",
+          "pants",
+          "dress"
+        ],
+        "es": [
+          "ropa",
+          "moda",
+          "zapato",
+          "traje"
+        ]
+      }
+    },
+    {
+      "id": "sociedad_politica",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of society and politics.",
+      "examples": {
+        "en": [
+          "country",
+          "government",
+          "law",
+          "president"
+        ],
+        "es": [
+          "país",
+          "gobierno",
+          "ley",
+          "presidente / presidenta"
+        ]
+      }
+    },
+    {
+      "id": "supermarket",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of grocery shopping.",
+      "examples": {
+        "en": [
+          "aisle",
+          "checkout counter",
+          "coupon",
+          "discount"
+        ],
+        "es": [
+          "pasillo",
+          "caja registradora",
+          "cupón",
+          "descuento"
+        ]
+      }
+    },
+    {
+      "id": "technology",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of technology and devices.",
+      "examples": {
+        "en": [
+          "device",
+          "software",
+          "password",
+          "browser"
+        ],
+        "es": [
+          "dispositivo",
+          "software",
+          "contraseña",
+          "navegador"
+        ]
+      }
+    },
+    {
+      "id": "theater",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of theater and the performing arts.",
+      "examples": {
+        "en": [
+          "theater",
+          "play",
+          "museum",
+          "exhibition"
+        ],
+        "es": [
+          "teatro",
+          "obra de teatro",
+          "museo",
+          "exposición"
+        ]
+      }
+    },
+    {
+      "id": "tiempo",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of time and the calendar.",
+      "examples": {
+        "en": [
+          "age",
+          "history",
+          "minute",
+          "period"
+        ],
+        "es": [
+          "edad",
+          "historia",
+          "minuto",
+          "futuro"
+        ]
+      }
+    },
+    {
+      "id": "trabajo",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of work, business and the economy.",
+      "examples": {
+        "en": [
+          "job",
+          "worker",
+          "career",
+          "industry"
+        ],
+        "es": [
+          "trabajo / empleo",
+          "trabajador / trabajadora",
+          "industria",
+          "comercio"
+        ]
+      }
+    },
+    {
+      "id": "transportation",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of transport and getting around.",
+      "examples": {
+        "en": [
+          "bus",
+          "taxi",
+          "station",
+          "stop"
+        ],
+        "es": [
+          "autobús / bus",
+          "taxi",
+          "estación",
+          "parada"
+        ]
+      }
+    },
+    {
+      "id": "verbos_avanzados",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Advanced (B1 and up) verbs of any theme.",
+      "examples": {
+        "en": [
+          "accomplish",
+          "acquire",
+          "advocate",
+          "analyze"
+        ],
+        "es": [
+          "lograr",
+          "adquirir",
+          "defender",
+          "analizar"
+        ]
+      }
+    },
+    {
+      "id": "verbos_basicos",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Basic (A1-A2) verbs of any theme.",
+      "examples": {
+        "en": [
+          "adapt",
+          "admire",
+          "assume",
+          "commit"
+        ],
+        "es": [
+          "adaptarse",
+          "admirar",
+          "asumir",
+          "comprometerse"
+        ]
+      }
+    },
+    {
+      "id": "general",
+      "kind": "vocab",
+      "axis": "property",
+      "scope": "Pure abstract concept nouns only (idea, reason, benefit, challenge); never concrete objects or domain nouns.",
+      "examples": {
+        "en": [
+          "benefit",
+          "challenge",
+          "debate",
+          "influence"
+        ],
+        "es": [
+          "beneficio",
+          "desafio",
+          "debate",
+          "influencia"
+        ]
+      }
+    }
+  ]
+}
