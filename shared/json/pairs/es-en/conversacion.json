@@ -489,6 +489,18 @@
           "audioSlug": "get_to_the_point"
         }
       ]
+    },
+    {
+      "id": "conversacion_this_is_a_newspaper",
+      "source": "Esto es un periódico.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is a newspaper.",
+          "audioSlug": "this_is_a_newspaper"
+        }
+      ]
     }
   ]
 }

@@ -107,6 +107,30 @@
           "audioSlug": "this_is_an_important_event"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_will_you_join_our_club",
+      "source": "¿Te unirás a nuestro club?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Will you join our club?",
+          "audioSlug": "will_you_join_our_club"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_have_fun",
+      "source": "¡Diviértete!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Have fun.",
+          "audioSlug": "have_fun"
+        }
+      ]
     }
   ]
 }

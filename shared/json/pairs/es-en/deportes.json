@@ -179,6 +179,30 @@
           "audioSlug": "i_run_in_the_park_in_the_mornings"
         }
       ]
+    },
+    {
+      "id": "deportes_i_practice_sports",
+      "source": "Practico deportes.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I practice sports.",
+          "audioSlug": "i_practice_sports"
+        }
+      ]
+    },
+    {
+      "id": "deportes_the_race_is_over",
+      "source": "La carrera ha terminado.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The race is over.",
+          "audioSlug": "the_race_is_over"
+        }
+      ]
     }
   ]
 }

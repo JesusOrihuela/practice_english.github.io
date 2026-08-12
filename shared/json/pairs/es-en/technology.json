@@ -1201,6 +1201,18 @@
           "audioSlug": "this_phone_is_cheap"
         }
       ]
+    },
+    {
+      "id": "technology_this_is_a_new_model",
+      "source": "Este es un modelo nuevo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This is a new model.",
+          "audioSlug": "this_is_a_new_model"
+        }
+      ]
     }
   ]
 }

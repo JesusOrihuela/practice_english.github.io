@@ -185,6 +185,18 @@
           "audioSlug": "everyone_has_a_role_to_play"
         }
       ]
+    },
+    {
+      "id": "oficina_sign_here",
+      "source": "Firma aquí.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sign here.",
+          "audioSlug": "sign_here"
+        }
+      ]
     }
   ]
 }
