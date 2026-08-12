@@ -341,6 +341,42 @@
       "gloss_example": {
         "en": "The children play in the park."
       }
+    },
+    {
+      "id": "banco",
+      "term": "banco",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde se guarda y se presta dinero.",
+      "example": "Fui al banco a sacar dinero.",
+      "translations": {
+        "en": "bank"
+      },
+      "gloss": {
+        "en": "A place where money is kept and lent."
+      },
+      "gloss_example": {
+        "en": "I went to the bank to withdraw money."
+      }
+    },
+    {
+      "id": "region",
+      "term": "región",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Zona amplia de tierra con rasgos propios.",
+      "example": "Esta región produce buen vino.",
+      "translations": {
+        "en": "region"
+      },
+      "gloss": {
+        "en": "A large area of land with its own features."
+      },
+      "gloss_example": {
+        "en": "This region produces good wine."
+      }
     }
   ]
 }

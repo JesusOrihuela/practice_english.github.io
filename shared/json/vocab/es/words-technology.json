@@ -719,6 +719,42 @@
       "gloss_example": {
         "en": "An ad came up on the screen."
       }
+    },
+    {
+      "id": "internet",
+      "term": "internet",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Red mundial que conecta computadoras.",
+      "example": "Busqué la receta en internet.",
+      "translations": {
+        "en": "internet"
+      },
+      "gloss": {
+        "en": "The global network that connects computers."
+      },
+      "gloss_example": {
+        "en": "I looked up the recipe on the internet."
+      }
+    },
+    {
+      "id": "television",
+      "term": "televisión / televisor",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato que muestra programas con imagen y sonido.",
+      "example": "Vimos las noticias en la televisión.",
+      "translations": {
+        "en": "television"
+      },
+      "gloss": {
+        "en": "A device that shows programs with pictures and sound."
+      },
+      "gloss_example": {
+        "en": "We watched the news on television."
+      }
     }
   ]
 }

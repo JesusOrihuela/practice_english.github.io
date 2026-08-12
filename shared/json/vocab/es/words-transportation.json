@@ -773,6 +773,60 @@
       "gloss_example": {
         "en": "My car is blue."
       }
+    },
+    {
+      "id": "bicicleta",
+      "term": "bicicleta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo de dos ruedas que se mueve con pedales.",
+      "example": "Voy al trabajo en bicicleta.",
+      "translations": {
+        "en": "bicycle"
+      },
+      "gloss": {
+        "en": "A two-wheeled vehicle moved by pedals."
+      },
+      "gloss_example": {
+        "en": "I go to work by bicycle."
+      }
+    },
+    {
+      "id": "barco",
+      "term": "barco",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo que viaja por el agua.",
+      "example": "Cruzamos el río en barco.",
+      "translations": {
+        "en": "boat / ship"
+      },
+      "gloss": {
+        "en": "A vehicle that travels on water."
+      },
+      "gloss_example": {
+        "en": "We crossed the river by boat."
+      }
+    },
+    {
+      "id": "tren",
+      "term": "tren",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo que viaja sobre rieles.",
+      "example": "Tomé el tren de la mañana.",
+      "translations": {
+        "en": "train"
+      },
+      "gloss": {
+        "en": "A vehicle that travels on rails."
+      },
+      "gloss_example": {
+        "en": "I took the morning train."
+      }
     }
   ]
 }

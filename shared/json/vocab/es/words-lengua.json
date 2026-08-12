@@ -233,6 +233,42 @@
       "gloss_example": {
         "en": "I speak Spanish."
       }
+    },
+    {
+      "id": "respuesta",
+      "term": "respuesta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lo que se dice al responder una pregunta.",
+      "example": "Todavía espero tu respuesta.",
+      "translations": {
+        "en": "answer / reply"
+      },
+      "gloss": {
+        "en": "Something you say in reply to a question."
+      },
+      "gloss_example": {
+        "en": "I am still waiting for your answer."
+      }
+    },
+    {
+      "id": "idioma",
+      "term": "idioma",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lengua que habla un pueblo o país.",
+      "example": "Ella aprende un idioma nuevo.",
+      "translations": {
+        "en": "language"
+      },
+      "gloss": {
+        "en": "The language spoken by a people or country."
+      },
+      "gloss_example": {
+        "en": "She is learning a new language."
+      }
     }
   ]
 }
