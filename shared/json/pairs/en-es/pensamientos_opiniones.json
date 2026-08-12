@@ -323,6 +323,54 @@
           "audioSlug": "esa_es_la_realidad"
         }
       ]
+    },
+    {
+      "id": "pensamientos_opiniones_no_tiene_importancia",
+      "source": "It doesn't matter.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No tiene importancia.",
+          "audioSlug": "no_tiene_importancia"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_fui_alli_por_necesidad",
+      "source": "I went there out of necessity.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fui allí por necesidad.",
+          "audioSlug": "fui_alli_por_necesidad"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_la_situacion_es_seria",
+      "source": "The situation is serious.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La situación es seria.",
+          "audioSlug": "la_situacion_es_seria"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_opiniones_acepto_mi_idea",
+      "source": "He accepted my idea.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Él aceptó mi idea.",
+          "audioSlug": "el_acepto_mi_idea"
+        }
+      ]
     }
   ]
 }

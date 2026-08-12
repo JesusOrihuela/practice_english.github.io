@@ -869,6 +869,18 @@
           "audioSlug": "dame_un_beso"
         }
       ]
+    },
+    {
+      "id": "emociones_llore",
+      "source": "I cried.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lloré.",
+          "audioSlug": "llore"
+        }
+      ]
     }
   ]
 }

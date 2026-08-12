@@ -431,6 +431,42 @@
           "audioSlug": "dame_un_ejemplo"
         }
       ]
+    },
+    {
+      "id": "conversacion_sigue_mi_consejo",
+      "source": "Follow my advice.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sigue mi consejo.",
+          "audioSlug": "sigue_mi_consejo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_agradezco_tu_interes",
+      "source": "I appreciate your interest.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Agradezco tu interés.",
+          "audioSlug": "agradezco_tu_interes"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_de_acuerdo",
+      "source": "I agree.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "De acuerdo.",
+          "audioSlug": "de_acuerdo"
+        }
+      ]
     }
   ]
 }

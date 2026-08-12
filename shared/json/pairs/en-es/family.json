@@ -525,6 +525,30 @@
           "audioSlug": "cuando_es_la_boda"
         }
       ]
+    },
+    {
+      "id": "family_tenemos_una_relacion",
+      "source": "We have a relationship.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tenemos una relación.",
+          "audioSlug": "tenemos_una_relacion"
+        }
+      ]
+    },
+    {
+      "id": "family_tenemos_visita",
+      "source": "We have a visitor.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tenemos visita.",
+          "audioSlug": "tenemos_visita"
+        }
+      ]
     }
   ]
 }

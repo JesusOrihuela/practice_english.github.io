@@ -539,6 +539,18 @@
           "audioSlug": "me_encanta_cantar"
         }
       ]
+    },
+    {
+      "id": "music_me_gusta_la_musica_disco",
+      "source": "I like disco music.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta la música disco.",
+          "audioSlug": "me_gusta_la_musica_disco"
+        }
+      ]
     }
   ]
 }

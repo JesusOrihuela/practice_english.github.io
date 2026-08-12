@@ -203,6 +203,18 @@
           "audioSlug": "alguien_se_desmayo"
         }
       ]
+    },
+    {
+      "id": "emergencias_ayuda",
+      "source": "Help!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Ayuda!",
+          "audioSlug": "ayuda"
+        }
+      ]
     }
   ]
 }
