@@ -521,6 +521,42 @@
       "gloss_example": {
         "en": "She built a successful career in journalism."
       }
+    },
+    {
+      "id": "supplier",
+      "term": "proveedor",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Empresa o persona que proporciona bienes a un minorista o negocio para su reventa o uso.",
+      "example": "El supermercado trabaja con más de doscientos proveedores aprobados en varios países.",
+      "translations": {
+        "en": "supplier"
+      },
+      "gloss": {
+        "en": "A company or individual that provides goods to a retailer or business for resale or use"
+      },
+      "gloss_example": {
+        "en": "The supermarket works with over two hundred approved suppliers across multiple countries."
+      }
+    },
+    {
+      "id": "procurement",
+      "term": "aprovisionamiento / compras",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso formal mediante el cual una empresa busca y adquiere bienes o servicios de proveedores externos, gestionando contratos y condiciones.",
+      "example": "El equipo de aprovisionamiento negocia contratos a largo plazo para asegurar precios estables con los proveedores clave.",
+      "translations": {
+        "en": "procurement"
+      },
+      "gloss": {
+        "en": "The formal process by which a business sources and purchases goods or services from external suppliers"
+      },
+      "gloss_example": {
+        "en": "The procurement team negotiates long-term contracts to secure stable pricing from key suppliers."
+      }
     }
   ]
 }
