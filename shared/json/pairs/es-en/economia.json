@@ -179,6 +179,18 @@
           "audioSlug": "the_market_is_big"
         }
       ]
+    },
+    {
+      "id": "economia_the_stock_market_is_up",
+      "source": "La bolsa está en alza.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The stock market is up.",
+          "audioSlug": "the_stock_market_is_up"
+        }
+      ]
     }
   ]
 }

@@ -501,6 +501,30 @@
           "audioSlug": "this_is_a_newspaper"
         }
       ]
+    },
+    {
+      "id": "conversacion_i_bought_a_magazine",
+      "source": "Compré una revista.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I bought a magazine.",
+          "audioSlug": "i_bought_a_magazine"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_this_news_is_official",
+      "source": "Esta noticia es oficial.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This news is official.",
+          "audioSlug": "this_news_is_official"
+        }
+      ]
     }
   ]
 }

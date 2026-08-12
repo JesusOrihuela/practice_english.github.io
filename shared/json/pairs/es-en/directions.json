@@ -335,6 +335,18 @@
           "audioSlug": "where_is_the_exit"
         }
       ]
+    },
+    {
+      "id": "directions_enter_here",
+      "source": "¡Entra aquí!",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Enter here!",
+          "audioSlug": "enter_here"
+        }
+      ]
     }
   ]
 }

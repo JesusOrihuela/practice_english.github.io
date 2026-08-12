@@ -179,6 +179,18 @@
           "audioSlug": "turn_off_the_light_before_sleeping"
         }
       ]
+    },
+    {
+      "id": "hogar_fix_the_clock",
+      "source": "Arregla el reloj.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fix the clock.",
+          "audioSlug": "fix_the_clock"
+        }
+      ]
     }
   ]
 }

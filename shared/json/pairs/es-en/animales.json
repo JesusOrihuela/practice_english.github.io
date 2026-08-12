@@ -71,6 +71,18 @@
           "audioSlug": "the_cat_is_black"
         }
       ]
+    },
+    {
+      "id": "animales_is_that_dog_male_or_female",
+      "source": "¿Ese perro es macho o hembra?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Is that dog male or female?",
+          "audioSlug": "is_that_dog_male_or_female"
+        }
+      ]
     }
   ]
 }
