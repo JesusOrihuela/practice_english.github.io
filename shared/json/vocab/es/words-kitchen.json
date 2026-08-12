@@ -521,6 +521,42 @@
       "gloss_example": {
         "en": "I don't put sugar in my coffee."
       }
+    },
+    {
+      "id": "aceite",
+      "term": "aceite",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Líquido graso que se usa para cocinar.",
+      "example": "Añade aceite a la sartén.",
+      "translations": {
+        "en": "oil"
+      },
+      "gloss": {
+        "en": "A fatty liquid used for cooking."
+      },
+      "gloss_example": {
+        "en": "Add oil to the pan."
+      }
+    },
+    {
+      "id": "botella",
+      "term": "botella",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Recipiente alto para guardar líquidos.",
+      "example": "Compré una botella de agua.",
+      "translations": {
+        "en": "bottle"
+      },
+      "gloss": {
+        "en": "A tall container for holding liquids."
+      },
+      "gloss_example": {
+        "en": "I bought a bottle of water."
+      }
     }
   ]
 }

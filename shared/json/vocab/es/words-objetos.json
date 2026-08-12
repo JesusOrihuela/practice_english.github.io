@@ -233,6 +233,42 @@
       "gloss_example": {
         "en": "There is a strange object on the table."
       }
+    },
+    {
+      "id": "ventana",
+      "term": "ventana",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Abertura en la pared que deja entrar luz.",
+      "example": "Abre la ventana, por favor.",
+      "translations": {
+        "en": "window"
+      },
+      "gloss": {
+        "en": "An opening in a wall that lets in light."
+      },
+      "gloss_example": {
+        "en": "Open the window, please."
+      }
+    },
+    {
+      "id": "regalo",
+      "term": "regalo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cosa que se da a alguien por gusto.",
+      "example": "Le compré un regalo.",
+      "translations": {
+        "en": "gift"
+      },
+      "gloss": {
+        "en": "Something given to someone as a present."
+      },
+      "gloss_example": {
+        "en": "I bought her a gift."
+      }
     }
   ]
 }

@@ -89,6 +89,42 @@
       "gloss_example": {
         "en": "I like the design of this page."
       }
+    },
+    {
+      "id": "arte",
+      "term": "arte",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Creación de obras bellas como pintura o música.",
+      "example": "Me encanta el arte moderno.",
+      "translations": {
+        "en": "art"
+      },
+      "gloss": {
+        "en": "The creation of beautiful works such as painting or music."
+      },
+      "gloss_example": {
+        "en": "I love modern art."
+      }
+    },
+    {
+      "id": "pintura",
+      "term": "pintura",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Obra hecha con colores sobre una superficie.",
+      "example": "Esa pintura es muy famosa.",
+      "translations": {
+        "en": "painting"
+      },
+      "gloss": {
+        "en": "A work made with colors on a surface."
+      },
+      "gloss_example": {
+        "en": "That painting is very famous."
+      }
     }
   ]
 }
