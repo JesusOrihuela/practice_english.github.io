@@ -40,6 +40,7 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import { loadFreq, tokenize, lookupRank } from './lib-freq.mjs';
 import AppLangProfiles from '../shared/js/lang-profiles.js';
+import { discoverPairs } from './lib-content.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -136,7 +137,8 @@ function coveredRanksEn(used, ranks) {
   return s;
 }
 
-const PAIRS = [['en-es','es','Espanol (par en-es)'], ['es-en','en','Ingles (par es-en)']]
+// Derived: [pairId, targetLang, label] per pair — no hardcoded pair list.
+const PAIRS = discoverPairs().map(p => [p, p.split('-')[1], `par ${p} (objetivo ${p.split('-')[1]})`])
   .filter(([p]) => !PAIR_ARG || p === PAIR_ARG);
 
 for (const [pair, lang, label] of PAIRS) {

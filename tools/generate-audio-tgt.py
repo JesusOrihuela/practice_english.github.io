@@ -140,26 +140,42 @@ LANG_VOICE_MAPS = {
 
 FFMPEG = imageio_ffmpeg.get_ffmpeg_exe()
 
-PHRASE_TOPICS = [
-    'greetings', 'emociones', 'restaurant', 'supermarket', 'kitchen',
-    'transportation', 'airport', 'accommodation',
-    'movies', 'music', 'theater', 'museums',
-    'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-    'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'fiesta', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-]
+# Topic lists DERIVED from the content tree — no hardcoded lists, so a new/removed
+# phrase topic, vocab deck or pair flows in automatically (adapts to new languages too).
+_JSON_DIR = Path(__file__).parent.parent / 'shared' / 'json'
+
+
+def _all_phrase_topics():
+    s = set()
+    pairs = _JSON_DIR / 'pairs'
+    if pairs.is_dir():
+        for p in pairs.iterdir():
+            tj = p / 'topics.json'
+            if tj.is_file():
+                for t in json.loads(tj.read_text(encoding='utf-8')).get('topics', []):
+                    if t.get('phrase'):
+                        s.add(t['id'])
+    return sorted(s)
+
+
+def _all_vocab_decks():
+    s = set()
+    vocab = _JSON_DIR / 'vocab'
+    if vocab.is_dir():
+        for lang in vocab.iterdir():
+            if lang.is_dir():
+                for f in lang.glob('words*.json'):
+                    s.add('general' if f.name == 'words.json' else f.stem[len('words-'):])
+    return sorted(s)
+
+
+PHRASE_TOPICS = _all_phrase_topics()
 
 # Vocab topics = topics with a words-{topic}.json file. Declared explicitly because
 # 'society' is vocab-only (not a phrase topic) and several phrase topics are phrase-only
 # (no vocabulary file). Mirrors VOCAB_TOPICS in shared/js/topics.js and tools/audit.mjs.
-VOCAB_TOPICS = [
-    'verbos_basicos', 'verbos_avanzados', 'adjetivos_basicos', 'adjetivos_avanzados',
-    'colores', 'naturaleza', 'tiempo', 'lugares', 'cantidad', 'juegos', 'ropa', 'lengua',
-    'sociedad_politica', 'trabajo', 'educacion', 'objetos',
-    'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
-    'transportation', 'airport', 'accommodation',
-    'movies', 'music', 'theater', 'museums',
-    'gym', 'technology', 'accountability',
-]
+# general deck (words.json) uses the `vocab` audio path (handled separately) → excluded.
+VOCAB_TOPICS = [d for d in _all_vocab_decks() if d != 'general']
 
 ROOT  = Path(__file__).parent.parent  # practice_english.github.io/
 JSON  = ROOT / 'shared' / 'json'

@@ -26,8 +26,11 @@ const path = require('path');
 const root  = path.join(__dirname, '..');
 const CHECK = process.argv.includes('--check');
 
-const PAIRS       = ['es-en', 'en-es'];
-const VOCAB_LANGS = ['en', 'es'];
+// Derived from the content tree — no hardcoded pair/lang lists (CJS derives inline).
+const PAIRS = fs.readdirSync(path.join(root, 'shared', 'json', 'pairs'))
+  .filter(p => fs.existsSync(path.join(root, 'shared', 'json', 'pairs', p, 'topics.json'))).sort();
+const VOCAB_LANGS = fs.readdirSync(path.join(root, 'shared', 'json', 'vocab'))
+  .filter(l => fs.statSync(path.join(root, 'shared', 'json', 'vocab', l)).isDirectory()).sort();
 
 // ── Derive topic lists from the content (single source of truth) ─────────────
 

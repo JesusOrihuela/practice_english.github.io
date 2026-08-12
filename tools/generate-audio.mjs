@@ -43,6 +43,7 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync, unlinkSync } from '
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
+import { allPhraseTopics, allVocabDecks } from './lib-content.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -127,25 +128,13 @@ const SPEED  = 0.95;
 
 const MANIFEST_PATH = resolve(__dirname, '../shared/audio/.manifest.json');
 
-/** All phrase topic IDs (each maps to shared/json/{id}.json) */
-const PHRASE_TOPICS = [
-  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'fiesta', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-];
+/** All phrase topic IDs — DERIVED (no hardcoded list). */
+const PHRASE_TOPICS = allPhraseTopics();
 
-/** All vocabulary topic IDs (each maps to shared/json/pairs/{pairId}/vocab/words-{id}.json) */
-const VOCAB_TOPICS = [
-  'verbos_basicos', 'verbos_avanzados', 'adjetivos_basicos', 'adjetivos_avanzados',
-  'colores', 'naturaleza', 'tiempo', 'lugares', 'cantidad', 'juegos', 'ropa', 'lengua',
-  'sociedad_politica', 'trabajo', 'educacion', 'objetos',
-  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability',
-];
+/** All vocab deck IDs — DERIVED. The general deck (words.json) uses the `vocab`
+ *  audio path, not `vocab_general`, and is handled by the --topic vocab path, so it
+ *  is excluded here (this loop only covers the vocab_{deck} directories). */
+const VOCAB_TOPICS = allVocabDecks().filter(d => d !== 'general');
 
 // ── Parse CLI arguments ────────────────────────────────────────────────────
 

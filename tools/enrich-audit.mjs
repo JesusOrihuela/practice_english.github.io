@@ -31,18 +31,14 @@
 import { readFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { allPhraseTopics } from './lib-content.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT      = join(__dirname, '..');
 const PAIRS_DIR = join(ROOT, 'shared', 'json', 'pairs');
 const DERIVED   = join(__dirname, 'sources', 'derived');
 
-const PHRASE_TOPICS = [
-  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-];
+const PHRASE_TOPICS = allPhraseTopics();   // derived — no hardcoded list
 
 // Gendered state/role adjectives & participles (masculine base). If a phrase's
 // text carries one of these (in either gender) inside a personal estar/ser

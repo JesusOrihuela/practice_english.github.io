@@ -39,6 +39,7 @@
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
+import { discoverPairs, pairMeta, allPhraseTopics, allVocabDecks, vocabLangs } from './lib-content.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT      = join(__dirname, '..');
@@ -49,30 +50,17 @@ const AUDIO_DIR = join(ROOT, 'shared', 'audio');
 // To add a new pair: add one entry here. All loops and path resolution is driven
 // by this array — no other changes needed in this file (unless new rules are needed).
 
-const PAIRS = [
-  { id: 'es-en', sourceLang: 'es', targetLang: 'en' },
-  { id: 'en-es', sourceLang: 'en', targetLang: 'es' },
-];
+// All DERIVED (lib-content.mjs) — no hardcoded pair/topic/deck/lang lists. A new
+// pair, phrase topic or vocab deck flows in automatically; the {id, sourceLang,
+// targetLang} shape is preserved via pairMeta.
+const PAIRS = discoverPairs().map(pairMeta);
 
-// ─── TOPIC LISTS ─────────────────────────────────────────────────────────────
+// ─── TOPIC LISTS (derived) ───────────────────────────────────────────────────
 
-const PHRASE_TOPICS = [
-  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'fiesta', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-];
-
-const VOCAB_TOPICS = [
-  'general', 'verbos_basicos', 'verbos_avanzados', 'adjetivos_basicos', 'adjetivos_avanzados',
-  'colores', 'naturaleza', 'tiempo', 'lugares', 'cantidad', 'juegos', 'ropa', 'lengua',
-  'sociedad_politica', 'trabajo', 'educacion', 'objetos',
-  'greetings', 'family', 'emociones', 'health', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums', 'gym', 'technology', 'accountability',
-];
-// Vocabulary is target-centric: shared/json/vocab/{targetLang}/ (English + Spanish today).
-const VOCAB_LANGS = ['en', 'es'];
+const PHRASE_TOPICS = allPhraseTopics();
+const VOCAB_TOPICS = allVocabDecks();
+// Vocabulary is target-centric: shared/json/vocab/{targetLang}/.
+const VOCAB_LANGS = vocabLangs();
 
 // ─── AUDIO VOICE LEADERS (ONE PER LANGUAGE) ──────────────────────────────────
 

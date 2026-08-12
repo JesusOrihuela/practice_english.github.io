@@ -26,6 +26,7 @@ import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { createHash } from 'crypto';
+import { discoverPairs, allPhraseTopics } from './lib-content.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const JSON_DIR  = resolve(__dirname, '../shared/json');
@@ -54,15 +55,8 @@ const slugify = s => {
 
 // ── Configuration ─────────────────────────────────────────────────────────────
 
-const PHRASE_TOPICS = [
-  'emociones', 'greetings', 'restaurant', 'supermarket', 'kitchen',
-  'transportation', 'airport', 'accommodation',
-  'movies', 'music', 'theater', 'museums',
-  'gym', 'technology', 'accountability', 'personal_info', 'family', 'daily_routine', 'health', 'weather', 'directions', 'survival',
-  'descripciones',  'economia', 'oficina', 'profesiones', 'describiendo_personas', 'sitios', 'planes', 'tiempo_libre', 'naturaleza_lugares', 'conversacion', 'cotidianidad', 'pensamientos_opiniones', 'viajes', 'animales', 'deportes', 'cuerpo', 'estudios', 'politica', 'emergencias', 'calendario', 'hogar', 'vestimenta',
-];
-
-const PAIRS = ['es-en', 'en-es'];
+const PHRASE_TOPICS = allPhraseTopics();   // derived — no hardcoded list
+const PAIRS = discoverPairs();
 
 const args   = process.argv.slice(2);
 const dryRun = args.includes('--dry');
