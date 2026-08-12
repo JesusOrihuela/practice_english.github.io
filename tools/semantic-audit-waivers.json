@@ -10,6 +10,11 @@
     "en-es/gym_i_feel_a_pain_in_my":                     { "kinds": ["misplaced"], "reason": "workout pain — gym communication, correctly in gym" },
     "es-en/gym_im_sore":                                 { "kinds": ["misplaced"], "reason": "post-workout soreness — gym communication" },
     "en-es/gym_monthly_membership_price":                { "kinds": ["misplaced"], "reason": "gym membership price question — situational, correctly in gym" },
+    "es/transportation/barco":                           { "kinds": ["misplaced"], "reason": "FALSE positive — a boat IS transport; model pulls to naturaleza via 'agua'" },
+    "es/naturaleza/energia":                             { "kinds": ["misplaced"], "reason": "energy (natural/renewable) — correctly in naturaleza; model pulls to gym via 'movimiento/calor'" },
+    "es/kitchen/knead":                                  { "kinds": ["misplaced"], "reason": "FALSE positive — kneading dough is cooking; model pulls to gym via 'trabajar con firmeza/manos'" },
+    "es/supermarket/huevo":                              { "kinds": ["misplaced"], "reason": "grocery item — correctly in supermarket" },
+    "es/kitchen/azucar":                                 { "kinds": ["misplaced"], "reason": "cooking ingredient — correctly in kitchen" },
 
     "en-es/health_i_have_a_cold|en-es/weather_im_cold":  { "kinds": ["dup"], "reason": "FALSE positive — different meanings (illness 'estoy resfriada' vs temperature 'tengo frío'); model conflates 'cold'" },
     "es-en/health_i_have_a_cold|es-en/weather_im_cold":  { "kinds": ["dup"], "reason": "FALSE positive — different meanings (illness vs temperature)" },

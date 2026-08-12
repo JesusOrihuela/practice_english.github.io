@@ -307,24 +307,6 @@
       }
     },
     {
-      "id": "aeropuerto",
-      "term": "aeropuerto",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Lugar de donde salen y a donde llegan los aviones.",
-      "example": "Llegamos temprano al aeropuerto.",
-      "translations": {
-        "en": "airport"
-      },
-      "gloss": {
-        "en": "A place where planes take off and land"
-      },
-      "gloss_example": {
-        "en": "We arrived early at the airport."
-      }
-    },
-    {
       "id": "parque",
       "term": "parque",
       "level": "A1",
@@ -430,6 +412,42 @@
       },
       "gloss_example": {
         "en": "It is a quiet, safe neighborhood."
+      }
+    },
+    {
+      "id": "square",
+      "term": "plaza",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Espacio público abierto en una ciudad.",
+      "example": "El mercado se pone en la plaza principal.",
+      "translations": {
+        "en": "square"
+      },
+      "gloss": {
+        "en": "An open public space in a town or city."
+      },
+      "gloss_example": {
+        "en": "The market is held in the main square."
+      }
+    },
+    {
+      "id": "housing",
+      "term": "vivienda",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Edificios donde vive la gente.",
+      "example": "La vivienda es cara en esta ciudad.",
+      "translations": {
+        "en": "housing"
+      },
+      "gloss": {
+        "en": "Buildings where people live."
+      },
+      "gloss_example": {
+        "en": "Housing is expensive in this city."
       }
     }
   ]
