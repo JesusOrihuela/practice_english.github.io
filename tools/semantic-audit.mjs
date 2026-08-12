@@ -61,10 +61,16 @@ const T = {
 const waivers = fs.existsSync(WAIVER_FILE)
   ? JSON.parse(fs.readFileSync(WAIVER_FILE, 'utf8')) : { items: {} };
 const contentHash = (s) => crypto.createHash('sha1').update(s || '').digest('hex').slice(0, 12);
+// A waiver value may be `true` (waive every signal for this key) or an object
+// { kinds?: string[], hash?: string, reason?: string }. With `hash`, a changed item
+// re-flags. Dup keys are the two item keys SORTED (order-independent).
 const isWaived = (key, kind, hash) => {
   const w = waivers.items[key];
-  return w && (!w.hash || w.hash === hash) && (!w.kinds || w.kinds.includes(kind));
+  if (!w) return false;
+  if (w === true) return true;
+  return (!w.hash || w.hash === hash) && (!w.kinds || w.kinds.includes(kind));
 };
+const dupKey = (a, b) => [a, b].sort().join('|');
 
 // ── load taxonomy + content ───────────────────────────────────
 const scopes = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared/json/common/category-scopes.json'), 'utf8'));
@@ -209,7 +215,7 @@ if (DO_DUP) {
       const na = norm(arr[i].text), nb = norm(arr[j].text);
       if (na === nb) continue;   // exact dup already caught by check-content
       const hash = contentHash(arr[i].text + '|' + arr[j].text);
-      if (isWaived(arr[i].key + '|' + arr[j].key, 'dup', hash)) continue;
+      if (isWaived(dupKey(arr[i].key, arr[j].key), 'dup', hash)) continue;
       if (!inScope(arr[i].key) && !inScope(arr[j].key)) continue;
       report.duplicates.push({ a: arr[i].key, b: arr[j].key, sim: +s.toFixed(3),
         kind: jacc(na, nb) > 0.5 ? 'near-dup' : 'paraphrase', textA: arr[i].text, textB: arr[j].text });

@@ -1,1 +1,19 @@
-{ "_comment": "Persistent, human-reviewed waivers for semantic-audit.mjs. Key by item key (or a|b for dup); optional hash (content sha1[:12]) so a changed item re-flags; optional kinds[] to waive only some signals.", "items": {} }
+{
+  "_comment": "Persistent, human-reviewed waivers for semantic-audit.mjs. Key by item key (misplaced/homeless/faith/ambiguous) or by the two item keys SORTED and joined with '|' (dup). Value: true (waive all), or { kinds?, hash?, reason? }. With `hash` (content sha1[:12]) a changed item re-flags. See docs/CONTENT-QUALITY.md.",
+  "items": {
+    "es/supermarket/arroz":                              { "kinds": ["misplaced"], "reason": "grocery item — correctly in supermarket; model pulls to kitchen via the cooking definition" },
+    "es/supermarket/pescado":                            { "kinds": ["misplaced"], "reason": "grocery item — correctly in supermarket" },
+    "es/airport/destination":                            { "kinds": ["misplaced"], "reason": "flight destination — a travel term, correctly in airport" },
+    "es-en/restaurant_could_you_turn_down_the_music":    { "kinds": ["misplaced"], "reason": "restaurant request about the music — situational, correctly in restaurant" },
+    "en-es/restaurant_could_you_turn_down_the_music":    { "kinds": ["misplaced"], "reason": "restaurant request about the music — situational, correctly in restaurant" },
+    "es-en/gym_i_feel_a_pain_in_my":                     { "kinds": ["misplaced"], "reason": "workout pain — gym communication, correctly in gym" },
+    "en-es/gym_i_feel_a_pain_in_my":                     { "kinds": ["misplaced"], "reason": "workout pain — gym communication, correctly in gym" },
+    "es-en/gym_im_sore":                                 { "kinds": ["misplaced"], "reason": "post-workout soreness — gym communication" },
+    "en-es/gym_monthly_membership_price":                { "kinds": ["misplaced"], "reason": "gym membership price question — situational, correctly in gym" },
+
+    "en-es/health_i_have_a_cold|en-es/weather_im_cold":  { "kinds": ["dup"], "reason": "FALSE positive — different meanings (illness 'estoy resfriada' vs temperature 'tengo frío'); model conflates 'cold'" },
+    "es-en/health_i_have_a_cold|es-en/weather_im_cold":  { "kinds": ["dup"], "reason": "FALSE positive — different meanings (illness vs temperature)" },
+    "en-es/personal_info_how_old_are_you|en-es/personal_info_que_edad_tienes": { "kinds": ["dup"], "reason": "legitimate synonyms teaching DIFFERENT vocabulary (años vs edad); both natural and useful" },
+    "en-es/emociones_estoy_contenta|en-es/emociones_im_happy": { "kinds": ["dup"], "reason": "legitimate near-synonyms (feliz/contenta) — both worth teaching" }
+  }
+}
