@@ -11,14 +11,17 @@
 // Read-only — does NOT modify any files.
 // Usage: node tools/check-content.mjs
 
-import { readFileSync, readdirSync } from 'fs';
+import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = join(__dirname, '..', 'shared', 'json');
 
-const PAIRS = ['es-en', 'en-es'];
+// Pairs are DERIVED from the content tree (every dir with a topics.json) — nothing
+// hardcoded, so a new pair is checked automatically and a removed one drops out.
+const PAIRS = readdirSync(join(BASE, 'pairs'))
+  .filter(p => existsSync(join(BASE, 'pairs', p, 'topics.json')));
 // Phrase topics are DERIVED per pair from its topics.json (t.phrase) — no hardcoded
 // list to drift (this is how fiesta and any future topic flow in automatically).
 function phraseTopicsFor(pair) {
