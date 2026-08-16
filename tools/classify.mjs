@@ -46,8 +46,9 @@ const JSON_OUT = args.includes('--json');
 if (!TEXT) { console.error('ERROR: --text required'); process.exit(1); }
 
 const scopes = JSON.parse(fs.readFileSync(path.join(ROOT, 'shared/json/common/category-scopes.json'), 'utf8'));
-const axisOf = {};
-for (const c of scopes.categories) axisOf[c.kind + ':' + c.id] = c.axis;
+const axisOf = {}, scopeText = {};
+for (const c of scopes.categories) { axisOf[c.kind + ':' + c.id] = c.axis; scopeText[c.kind + ':' + c.id] = c.scope; }
+const tieBreak = scopes.tieBreak || [];
 
 const E = makeEmbedder(CACHE_FILE);
 
@@ -91,7 +92,8 @@ const verdict = homeless ? 'homeless' : confident ? 'confident' : 'ambiguous';
 
 if (JSON_OUT) {
   console.log(JSON.stringify({ kind: KIND, text: TEXT, verdict, meanSim: +meanTopSim.toFixed(3),
-    distribution: ranked.slice(0, 5).map(([category, s]) => ({ category, share: +s.toFixed(2) })) }, null, 2));
+    distribution: ranked.slice(0, 5).map(([category, s]) => ({ category, share: +s.toFixed(2), scope: scopeText[KIND + ':' + category] || null })),
+    tieBreak: verdict === 'ambiguous' ? tieBreak : undefined }, null, 2));
 } else {
   console.log(`\nCandidato (${KIND}): "${TEXT}"${DEF ? ` — "${DEF}"` : ''}`);
   console.log(`Veredicto: ${verdict.toUpperCase()}  (afinidad media ${meanTopSim.toFixed(2)} sobre ${K} vecinos)`);
@@ -100,7 +102,17 @@ if (JSON_OUT) {
   else if (confident)
     console.log(`  ✓ Sugerencia clara: ${top[0]}`);
   else
-    console.log(`  ? AMBIGUO entre ${ranked.slice(0, 3).map(([c]) => c).join(' / ')} → decide por el ESCENARIO que enseña la frase (rúbrica: category-scopes.json).`);
+    console.log(`  ? AMBIGUO entre ${ranked.slice(0, 3).map(([c]) => c).join(' / ')} → decide por el ESCENARIO que enseña la frase.`);
   console.log('\nDistribución de las categorías de los vecinos más parecidos:');
   for (const [cat, s] of ranked.slice(0, 5)) console.log(`  ${(s * 100).toFixed(0).padStart(3)}%  ${cat}`);
+  // For ambiguous cases, put the rubric inline so the decider (human or agent) has the
+  // candidate scopes + tie-break rules right here — no need to open category-scopes.json.
+  if (!confident && !homeless) {
+    console.log('\nAlcance de las candidatas (para decidir por significado, no por palabras que menciona):');
+    for (const [cat] of ranked.slice(0, 3)) console.log(`  • ${cat}: ${scopeText[KIND + ':' + cat] || '(sin scope)'}`);
+    if (tieBreak.length) {
+      console.log('\nReglas de desempate:');
+      for (const r of tieBreak) console.log(`  – ${r}`);
+    }
+  }
 }
