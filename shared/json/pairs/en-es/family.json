@@ -85,18 +85,6 @@
       ]
     },
     {
-      "id": "family_shes_my_best_friend",
-      "source": "She's my best friend.",
-      "level": "A1",
-      "grammar": null,
-      "target": [
-        {
-          "text": "Es mi mejor amiga.",
-          "audioSlug": "es_mi_mejor_amiga"
-        }
-      ]
-    },
-    {
       "id": "family_my_son_is_five",
       "source": "My son is five years old.",
       "level": "A1",
@@ -396,13 +384,23 @@
     },
     {
       "id": "family_es_mi_mejor_amigo",
-      "source": "He is my best friend.",
+      "source": "This is my best friend.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
           "text": "Es mi mejor amigo.",
-          "audioSlug": "es_mi_mejor_amigo"
+          "audioSlug": "es_mi_mejor_amigo",
+          "labels": {
+            "gender": "masculino"
+          }
+        },
+        {
+          "text": "Es mi mejor amiga.",
+          "audioSlug": "es_mi_mejor_amiga",
+          "labels": {
+            "gender": "femenino"
+          }
         }
       ]
     },
