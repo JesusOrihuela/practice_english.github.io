@@ -791,6 +791,24 @@
       "gloss_example": {
         "es": "El contrato estipula que el hotel indemnizará a los huéspedes por las pérdidas causadas por negligencia del personal."
       }
+    },
+    {
+      "id": "deposit",
+      "term": "deposit",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "An amount of money paid in advance as security, returned when no damage is found at checkout",
+      "example": "The hotel required a deposit of $100 on the credit card at check-in.",
+      "translations": {
+        "es": "depósito / fianza"
+      },
+      "gloss": {
+        "es": "Cantidad de dinero pagada por adelantado como garantía, que se devuelve si no hay daños al realizar la salida."
+      },
+      "gloss_example": {
+        "es": "El hotel solicitó un depósito de 100 dólares en la tarjeta de crédito al registrarse."
+      }
     }
   ]
 }

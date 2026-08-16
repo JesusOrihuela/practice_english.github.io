@@ -126,6 +126,36 @@
         "dup"
       ],
       "reason": "legitimate near-synonyms (feliz/contenta) — both worth teaching"
+    },
+    "en/transportation/airplane": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "a vehicle — grouped with the other modes (bus/taxi/train) in transportation; model → airport via flies/air"
+    },
+    "es/lugares/world": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "the world is a place/scope — correctly in lugares; model → naturaleza via Tierra"
+    },
+    "es/trabajo/office": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "an office is a WORK place — a work-domain noun, correctly in trabajo; model → lugares via Lugar"
+    },
+    "en/lugares/road": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "a geographic way/place — correctly in lugares; model → transportation via cars"
+    },
+    "es/accountability/capital": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "a finance concept — kept in accountability, consistent with credit/account/deposit; model → trabajo"
     }
   }
 }
