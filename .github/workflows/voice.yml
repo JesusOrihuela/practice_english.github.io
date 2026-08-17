@@ -1,0 +1,78 @@
+name: Voice (TTS/STT) checks
+
+# End-to-end check of the Speaking voice feature in headless Chromium with a fake
+# microphone fed a real phrase WAV: verifies Kokoro TTS (esm.sh) and Whisper STT
+# (jsdelivr) load and run under the CSP, and that a transcription reaches a real
+# result — the path the plain smoke can't reach, and where the CSP worker-src bug
+# hid. Gated on the files that affect it (Speaking, the TTS/STT glue, the page CSP,
+# the test) so the slow model-download run doesn't fire on every push. Also
+# manually runnable via the Actions tab.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'speaking/**'
+      - 'shared/js/tts.js'
+      - 'shared/js/tts-worker.js'
+      - 'shared/js/stt-worker.js'
+      - 'shared/js/audio-player.js'
+      - 'tests/smoke-voice.mjs'
+      - '**/html/*.html'          # the Content-Security-Policy lives in each page <head>
+  pull_request:
+    branches: [main]
+    paths:
+      - 'speaking/**'
+      - 'shared/js/tts.js'
+      - 'shared/js/tts-worker.js'
+      - 'shared/js/stt-worker.js'
+      - 'shared/js/audio-player.js'
+      - 'tests/smoke-voice.mjs'
+      - '**/html/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: voice-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout (Speaking + one audio topic for the fake mic + tests)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            index
+            lang
+            shared/js
+            shared/css
+            shared/json
+            speaking
+            shared/audio/es-en/greetings
+            tests
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install deps (playwright-core)
+        run: npm ci
+
+      - name: Install Chrome
+        id: setup-chrome
+        uses: browser-actions/setup-chrome@v1
+
+      # Models load from third-party CDNs, so a transient network hiccup shouldn't red
+      # the build — retry a couple of times before failing.
+      - name: Voice E2E (TTS + STT under CSP)
+        run: for i in 1 2 3; do node tests/smoke-voice.mjs && exit 0; echo "retry $i…"; sleep 8; done; exit 1
+        env:
+          PW_CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+          PW_CHANNEL: chrome
