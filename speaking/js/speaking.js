@@ -557,9 +557,12 @@ function _onSttError(errMsg) {
   if (sd) sd.textContent = errMsg || AppLang.t('generic_error');
   const fb = document.getElementById('speaking-feedback');
   if (fb) { fb.className = 'speaking-feedback incorrect'; fb.classList.remove('hidden'); }
-  document.getElementById('tryAnotherButton').classList.remove('hidden');
-  document.getElementById('tryAnotherButton').disabled = false;
-  showRatingArea();
+  // A transcription failure is NOT a completed attempt — offer RETRY, not "Siguiente".
+  // (Advancing is only for a correct answer or a mic-permission error, where the user
+  // genuinely can't record.) Keep the advance button hidden so an error never looks done.
+  document.getElementById('tryAnotherButton').classList.add('hidden');
+  document.getElementById('tryAnotherButton').disabled = true;
+  showRatingArea();   // shows only "try again"; nothing was rated (no Progress.rate on error)
 }
 
 /* ---- Result Display ---- */
