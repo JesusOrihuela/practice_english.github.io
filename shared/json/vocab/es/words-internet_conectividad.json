@@ -1,0 +1,166 @@
+{
+  "words": [
+    {
+      "id": "internet",
+      "term": "internet",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Red mundial que conecta computadoras.",
+      "example": "Busqué la receta en internet.",
+      "translations": {
+        "en": "internet"
+      },
+      "gloss": {
+        "en": "The global network that connects computers."
+      },
+      "gloss_example": {
+        "en": "I looked up the recipe on the internet."
+      }
+    },
+    {
+      "id": "browser",
+      "term": "navegador",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Programa que se usa para acceder y navegar por internet.",
+      "example": "Chrome y Firefox son los navegadores web más populares.",
+      "translations": {
+        "en": "browser"
+      },
+      "gloss": {
+        "en": "A program used to access and navigate the internet"
+      },
+      "gloss_example": {
+        "en": "Chrome and Firefox are the most popular web browsers."
+      }
+    },
+    {
+      "id": "correo",
+      "term": "correo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mensaje que se envía por internet o por carta.",
+      "example": "Te mandé un correo ayer.",
+      "translations": {
+        "en": "email / mail"
+      },
+      "gloss": {
+        "en": "A message sent over the internet or by letter"
+      },
+      "gloss_example": {
+        "en": "I sent you an email yesterday."
+      }
+    },
+    {
+      "id": "network",
+      "term": "red",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Grupo de computadoras o personas conectadas entre sí.",
+      "example": "La red de la oficina estuvo caída toda la mañana.",
+      "translations": {
+        "en": "network"
+      },
+      "gloss": {
+        "en": "A group of computers or people connected together."
+      },
+      "gloss_example": {
+        "en": "The office network was down all morning."
+      }
+    },
+    {
+      "id": "wireless",
+      "term": "inalámbrico",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que usa señales de radio en lugar de cables para transmitir datos.",
+      "example": "El hotel ofrece internet inalámbrico gratuito en todo el edificio.",
+      "translations": {
+        "en": "wireless"
+      },
+      "gloss": {
+        "en": "Using radio signals instead of cables to transmit data"
+      },
+      "gloss_example": {
+        "en": "The hotel offers free wireless internet throughout the building."
+      }
+    },
+    {
+      "id": "upload",
+      "term": "subir / cargar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Enviar datos desde tu dispositivo a internet.",
+      "example": "Necesito subir el documento a la carpeta compartida.",
+      "translations": {
+        "en": "upload"
+      },
+      "gloss": {
+        "en": "To transfer data from your device to the internet or a server"
+      },
+      "gloss_example": {
+        "en": "I need to upload the document to the shared folder."
+      }
+    },
+    {
+      "id": "download",
+      "term": "descargar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Transferir datos desde internet o un servidor a tu dispositivo.",
+      "example": "Puedes descargar la aplicación gratis desde la tienda.",
+      "translations": {
+        "en": "download"
+      },
+      "gloss": {
+        "en": "To transfer data from the internet or a server to your device"
+      },
+      "gloss_example": {
+        "en": "You can download the app for free from the store."
+      }
+    },
+    {
+      "id": "bandwidth",
+      "term": "ancho de banda",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "La cantidad de datos que pueden transferirse por una red en un tiempo determinado.",
+      "example": "Ver videos en 4K en línea requiere mucho ancho de banda.",
+      "translations": {
+        "en": "bandwidth"
+      },
+      "gloss": {
+        "en": "The amount of data that can be transferred over a network in a given time"
+      },
+      "gloss_example": {
+        "en": "Streaming videos in 4K requires a lot of bandwidth."
+      }
+    },
+    {
+      "id": "latency",
+      "term": "latencia",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El retraso entre el envío de una solicitud y la recepción de una respuesta en una red.",
+      "example": "Una latencia alta hace que las videollamadas se sientan lentas y poco naturales.",
+      "translations": {
+        "en": "latency"
+      },
+      "gloss": {
+        "en": "The delay between sending a request and receiving a response"
+      },
+      "gloss_example": {
+        "en": "High latency makes video calls feel laggy and unnatural."
+      }
+    }
+  ]
+}

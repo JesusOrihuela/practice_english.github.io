@@ -989,6 +989,60 @@
       "gloss_example": {
         "en": "That makes no sense."
       }
+    },
+    {
+      "id": "material",
+      "term": "material",
+      "definition": "Sustancia con la que se hace algo.",
+      "example": "La mesa es de un material resistente.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "material"
+      },
+      "gloss": {
+        "en": "The substance something is made of."
+      },
+      "gloss_example": {
+        "en": "The table is made of a strong material."
+      }
+    },
+    {
+      "id": "tecnologia",
+      "term": "tecnología",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Uso del conocimiento científico para crear herramientas.",
+      "example": "La tecnología avanza rápido.",
+      "translations": {
+        "en": "technology"
+      },
+      "gloss": {
+        "en": "The use of scientific knowledge for practical tools."
+      },
+      "gloss_example": {
+        "en": "Technology advances quickly."
+      }
+    },
+    {
+      "id": "communication",
+      "term": "comunicación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Acción de compartir información entre personas.",
+      "example": "Una buena comunicación mejora el trabajo en equipo.",
+      "translations": {
+        "en": "communication"
+      },
+      "gloss": {
+        "en": "The act of sharing information between people."
+      },
+      "gloss_example": {
+        "en": "Good communication improves teamwork."
+      }
     }
   ]
 }

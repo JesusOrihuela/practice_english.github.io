@@ -1,0 +1,256 @@
+{
+  "words": [
+    {
+      "id": "software",
+      "term": "software",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Programas y aplicaciones que funcionan en una computadora o dispositivo.",
+      "example": "Asegúrate de actualizar el software regularmente por seguridad.",
+      "translations": {
+        "en": "software"
+      },
+      "gloss": {
+        "en": "Programs and applications that run on a computer or device"
+      },
+      "gloss_example": {
+        "en": "Make sure you update your software regularly for security."
+      }
+    },
+    {
+      "id": "application",
+      "term": "aplicación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Programa de computadora para una tarea concreta.",
+      "example": "Esta aplicación te ayuda a editar fotos.",
+      "translations": {
+        "en": "application"
+      },
+      "gloss": {
+        "en": "A computer program designed for a particular task."
+      },
+      "gloss_example": {
+        "en": "This application helps you edit photos."
+      }
+    },
+    {
+      "id": "update",
+      "term": "actualización",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Versión más reciente de un software que corrige problemas o añade funciones.",
+      "example": "La última actualización de seguridad corrigió varios errores críticos.",
+      "translations": {
+        "en": "update"
+      },
+      "gloss": {
+        "en": "A newer version of software that fixes problems or adds features"
+      },
+      "gloss_example": {
+        "en": "The latest security update fixed several critical bugs."
+      }
+    },
+    {
+      "id": "storage",
+      "term": "almacenamiento",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "El espacio disponible para guardar datos en un dispositivo o en la nube.",
+      "example": "Necesito más espacio de almacenamiento para todas mis fotos y videos.",
+      "translations": {
+        "en": "storage"
+      },
+      "gloss": {
+        "en": "The space available to keep data on a device or in the cloud"
+      },
+      "gloss_example": {
+        "en": "I need more storage space for all my photos and videos."
+      }
+    },
+    {
+      "id": "compatible",
+      "term": "compatible",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que puede funcionar junto a otro sistema o dispositivo sin problemas.",
+      "example": "Verifica si el software es compatible con tu sistema operativo.",
+      "translations": {
+        "en": "compatible"
+      },
+      "gloss": {
+        "en": "Able to work together with another system or device without problems"
+      },
+      "gloss_example": {
+        "en": "Check whether the software is compatible with your operating system."
+      }
+    },
+    {
+      "id": "function",
+      "term": "función",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Propósito o tarea para la que sirve algo.",
+      "example": "Cada botón tiene una función diferente.",
+      "translations": {
+        "en": "function"
+      },
+      "gloss": {
+        "en": "The purpose or job that something is designed to do."
+      },
+      "gloss_example": {
+        "en": "Each button has a different function."
+      }
+    },
+    {
+      "id": "notification",
+      "term": "notificación",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Alerta o mensaje que una aplicación o sistema envía a tu dispositivo.",
+      "example": "Desactivé todas las notificaciones para concentrarme en mi trabajo.",
+      "translations": {
+        "en": "notification"
+      },
+      "gloss": {
+        "en": "An alert or message sent by an app or system to your device"
+      },
+      "gloss_example": {
+        "en": "I turned off all notifications to focus on my work."
+      }
+    },
+    {
+      "id": "cache",
+      "term": "caché",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Almacenamiento temporal que guarda datos recientemente usados para acelerar futuras cargas.",
+      "example": "Limpiar la caché del navegador puede solucionar muchos problemas de carga.",
+      "translations": {
+        "en": "cache"
+      },
+      "gloss": {
+        "en": "Temporary storage that saves recently accessed data to make future loading faster"
+      },
+      "gloss_example": {
+        "en": "Clearing your browser's cache can fix many loading problems."
+      }
+    },
+    {
+      "id": "subscription",
+      "term": "suscripción",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Modelo de pago recurrente que da acceso a un servicio o software durante un período determinado.",
+      "example": "El software cambió de compra única a una suscripción mensual.",
+      "translations": {
+        "en": "subscription"
+      },
+      "gloss": {
+        "en": "A recurring payment model that gives access to a service or software for a set period"
+      },
+      "gloss_example": {
+        "en": "The software switched from a one-time purchase to a monthly subscription."
+      }
+    },
+    {
+      "id": "ecosystem",
+      "term": "ecosistema",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Conjunto de dispositivos, aplicaciones y servicios de una misma empresa diseñados para funcionar en armonía.",
+      "example": "Pasarse a Android significa abandonar el ecosistema de Apple.",
+      "translations": {
+        "en": "ecosystem"
+      },
+      "gloss": {
+        "en": "A group of devices, apps, and services from one company designed to work together"
+      },
+      "gloss_example": {
+        "en": "Switching to Android means leaving the Apple ecosystem behind."
+      }
+    },
+    {
+      "id": "algorithm",
+      "term": "algoritmo",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Conjunto de reglas paso a paso que una computadora sigue para resolver un problema.",
+      "example": "Las plataformas de redes sociales usan algoritmos para decidir qué contenido ves.",
+      "translations": {
+        "en": "algorithm"
+      },
+      "gloss": {
+        "en": "A set of step-by-step rules a computer follows to solve a problem"
+      },
+      "gloss_example": {
+        "en": "Social media platforms use algorithms to decide what content you see."
+      }
+    },
+    {
+      "id": "obsolescence",
+      "term": "obsolescencia",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "El proceso gradual de quedarse obsoleto o dejar de ser útil, especialmente en tecnología.",
+      "example": "La obsolescencia programada significa que los nuevos modelos de teléfono están diseñados para hacer que los anteriores parezcan lentos.",
+      "translations": {
+        "en": "obsolescence"
+      },
+      "gloss": {
+        "en": "The gradual process of becoming outdated or no longer useful, especially in technology"
+      },
+      "gloss_example": {
+        "en": "Planned obsolescence means new phone models are designed to make older ones feel slow."
+      }
+    },
+    {
+      "id": "legacy",
+      "term": "heredado / obsoleto",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Describe tecnología o software antiguos que siguen en uso pero se consideran obsoletos.",
+      "example": "Muchos bancos todavía dependen de sistemas heredados que son demasiado costosos de reemplazar.",
+      "translations": {
+        "en": "legacy"
+      },
+      "gloss": {
+        "en": "Describes older technology or software still in use but considered outdated"
+      },
+      "gloss_example": {
+        "en": "Many banks still rely on legacy systems that are too expensive to replace."
+      }
+    },
+    {
+      "id": "proprietary",
+      "term": "propietario / privativo",
+      "level": "C2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Que es propiedad exclusiva de una empresa y no está disponible para uso o modificación pública.",
+      "example": "El dispositivo solo funciona con el cable de carga propietario del fabricante.",
+      "translations": {
+        "en": "proprietary"
+      },
+      "gloss": {
+        "en": "Owned and controlled exclusively by a company, not open for public use or modification"
+      },
+      "gloss_example": {
+        "en": "The device only works with the manufacturer's proprietary charging cable."
+      }
+    }
+  ]
+}

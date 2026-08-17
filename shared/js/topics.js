@@ -56,7 +56,7 @@ const AppTopics = (() => {
     { id: 'economia',               label: 'Economía',                   labelEn: 'Economy',                    emoji: '💰', phrase: true,  vocab: false, level: 'B1', order: 40 },
     { id: 'oficina',                label: 'Oficina',                    labelEn: 'Office',                     emoji: '💼', phrase: true,  vocab: false, level: 'B1', order: 39 },
     { id: 'politica',               label: 'Política',                   labelEn: 'Politics',                   emoji: '🏛️', phrase: true,  vocab: false, level: 'B1', order: 42 },
-    { id: 'technology',             label: 'Tecnología',                 labelEn: 'Technology',                 emoji: '💻', phrase: true,  vocab: true, level: 'B1', order: 38 },
+    { id: 'technology',             label: 'Tecnología',                 labelEn: 'Technology',                 emoji: '💻', phrase: true,  vocab: false, level: 'B1', order: 38 },
     { id: 'gym',                    label: 'Gimnasio',                   labelEn: 'Gym',                        emoji: '💪', phrase: true,  vocab: true, level: 'B1', order: 41 },
     { id: 'theater',                label: 'Teatro',                     labelEn: 'Theater',                    emoji: '🎭', phrase: true,  vocab: true, level: 'B1', order: 43 },
     { id: 'accountability',         label: 'Contabilidad',               labelEn: 'Accounting',                 emoji: '📊', phrase: true,  vocab: true, level: 'B2', order: 44 },
@@ -77,6 +77,10 @@ const AppTopics = (() => {
     { id: 'trabajo',             label: 'Trabajo y Economía',   labelEn: 'Work & Economy',          emoji: '💼', phrase: false, vocab: true, vocabOrder: 14 },
     { id: 'educacion',           label: 'Educación',            labelEn: 'Education',               emoji: '🎓', phrase: false, vocab: true, vocabOrder: 15 },
     { id: 'objetos',            label: 'Objetos y cosas',      labelEn: 'Objects & Things',        emoji: '📦', phrase: false, vocab: true, vocabOrder: 16 },
+    { id: 'dispositivos',          label: 'Dispositivos',         labelEn: 'Devices',                 emoji: '📱', phrase: false, vocab: true, vocabOrder: 17 },
+    { id: 'internet_conectividad', label: 'Internet y Conexión',  labelEn: 'Internet & Connectivity', emoji: '🌐', phrase: false, vocab: true, vocabOrder: 18 },
+    { id: 'software_apps',         label: 'Software y Apps',      labelEn: 'Software & Apps',         emoji: '🖥️', phrase: false, vocab: true, vocabOrder: 19 },
+    { id: 'ciberseguridad',        label: 'Ciberseguridad',       labelEn: 'Cybersecurity',           emoji: '🔒', phrase: false, vocab: true, vocabOrder: 20 },
   ];
 
   const _view = t => ({ id: t.id, label: t.label, labelEn: t.labelEn, emoji: t.emoji });

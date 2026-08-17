@@ -1,0 +1,94 @@
+{
+  "words": [
+    {
+      "id": "telefono",
+      "term": "teléfono",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato para hablar a distancia.",
+      "example": "Mi teléfono es nuevo.",
+      "translations": {
+        "en": "phone"
+      },
+      "gloss": {
+        "en": "A device to talk from far away."
+      },
+      "gloss_example": {
+        "en": "My phone is new."
+      }
+    },
+    {
+      "id": "foto",
+      "term": "foto",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Imagen tomada con una cámara.",
+      "example": "Te tomo una foto.",
+      "translations": {
+        "en": "photo"
+      },
+      "gloss": {
+        "en": "An image taken with a camera."
+      },
+      "gloss_example": {
+        "en": "I'll take a photo of you."
+      }
+    },
+    {
+      "id": "device",
+      "term": "dispositivo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato electrónico como un teléfono, tableta o computadora.",
+      "example": "Mi dispositivo se quedó sin batería durante la reunión.",
+      "translations": {
+        "en": "device"
+      },
+      "gloss": {
+        "en": "An electronic gadget such as a phone, tablet, or computer"
+      },
+      "gloss_example": {
+        "en": "My device ran out of battery during the meeting."
+      }
+    },
+    {
+      "id": "television",
+      "term": "televisión / televisor",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato que muestra programas con imagen y sonido.",
+      "example": "Vimos las noticias en la televisión.",
+      "translations": {
+        "en": "television"
+      },
+      "gloss": {
+        "en": "A device that shows programs with pictures and sound."
+      },
+      "gloss_example": {
+        "en": "We watched the news on television."
+      }
+    },
+    {
+      "id": "radio",
+      "term": "radio",
+      "definition": "Aparato que transmite sonido y programas.",
+      "example": "Escucho las noticias en la radio.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "radio"
+      },
+      "gloss": {
+        "en": "A device that broadcasts sound and shows."
+      },
+      "gloss_example": {
+        "en": "I listen to the news on the radio."
+      }
+    }
+  ]
+}

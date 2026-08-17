@@ -1,0 +1,220 @@
+{
+  "words": [
+    {
+      "id": "password",
+      "term": "password",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A secret word or code used to gain access to a system",
+      "example": "Never share your password with anyone.",
+      "translations": {
+        "es": "contraseña"
+      },
+      "gloss": {
+        "es": "Código secreto que se usa para acceder a un sistema."
+      },
+      "gloss_example": {
+        "es": "Nunca compartas tu contraseña con nadie."
+      }
+    },
+    {
+      "id": "biometric",
+      "term": "biometric",
+      "level": "B2",
+      "category": "Adjective",
+      "difficulty": "hard",
+      "definition": "Using unique physical traits, like a fingerprint or face, to verify identity",
+      "example": "Most modern smartphones support biometric login.",
+      "translations": {
+        "es": "biométrico"
+      },
+      "gloss": {
+        "es": "Que usa características físicas únicas, como huellas digitales o el rostro, para verificar la identidad de una persona."
+      },
+      "gloss_example": {
+        "es": "La mayoría de los teléfonos modernos admiten inicio de sesión biométrico."
+      }
+    },
+    {
+      "id": "encryption",
+      "term": "encryption",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The process of converting data into a secret code to protect it",
+      "example": "End-to-end encryption keeps your messages private and secure.",
+      "translations": {
+        "es": "cifrado"
+      },
+      "gloss": {
+        "es": "El proceso de convertir datos en un código secreto para protegerlos del acceso no autorizado."
+      },
+      "gloss_example": {
+        "es": "El cifrado de extremo a extremo mantiene tus mensajes privados y seguros."
+      }
+    },
+    {
+      "id": "malware",
+      "term": "malware",
+      "level": "B2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Harmful software designed to damage systems or steal information",
+      "example": "The antivirus program detected malware on the computer.",
+      "translations": {
+        "es": "software malicioso"
+      },
+      "gloss": {
+        "es": "Software dañino diseñado para perjudicar sistemas o robar información."
+      },
+      "gloss_example": {
+        "es": "El programa antivirus detectó software malicioso en la computadora."
+      }
+    },
+    {
+      "id": "ransomware",
+      "term": "ransomware",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Malicious software that encrypts a victim's files and demands payment to restore access",
+      "example": "The hospital was forced offline for days after a ransomware attack.",
+      "translations": {
+        "es": "ransomware"
+      },
+      "gloss": {
+        "es": "Software malicioso que cifra los archivos de una víctima y exige un pago para restaurar el acceso."
+      },
+      "gloss_example": {
+        "es": "El hospital tuvo que desconectarse varios días tras un ataque de ransomware."
+      }
+    },
+    {
+      "id": "phishing",
+      "term": "phishing",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A scam that tricks people into giving personal data through fake emails or websites",
+      "example": "She almost clicked a phishing link that looked like a message from her bank.",
+      "translations": {
+        "es": "suplantación de identidad"
+      },
+      "gloss": {
+        "es": "Estafa que engaña a las personas para que entreguen sus datos personales mediante correos o sitios web falsos."
+      },
+      "gloss_example": {
+        "es": "Casi hizo clic en un enlace de suplantación de identidad que parecía un mensaje de su banco."
+      }
+    },
+    {
+      "id": "vulnerability",
+      "term": "vulnerability",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A weakness in a system that can be exploited by attackers",
+      "example": "The team patched a critical vulnerability before it was discovered publicly.",
+      "translations": {
+        "es": "vulnerabilidad"
+      },
+      "gloss": {
+        "es": "Una debilidad en un sistema que puede ser aprovechada por atacantes para causar daño o acceder sin autorización."
+      },
+      "gloss_example": {
+        "es": "El equipo corrigió una vulnerabilidad crítica antes de que fuera descubierta públicamente."
+      }
+    },
+    {
+      "id": "data_breach",
+      "term": "data breach",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A security incident in which private information is accessed or exposed without authorization",
+      "example": "The company notified users after a data breach exposed their passwords.",
+      "translations": {
+        "es": "filtración de datos"
+      },
+      "gloss": {
+        "es": "Incidente de seguridad en el que información privada es accedida o expuesta sin autorización."
+      },
+      "gloss_example": {
+        "es": "La empresa notificó a los usuarios tras una filtración de datos que expuso sus contraseñas."
+      }
+    },
+    {
+      "id": "cybersecurity",
+      "term": "cybersecurity",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The practice of protecting computers, networks, and data from digital attacks and unauthorized access",
+      "example": "The company hired a cybersecurity firm after the ransomware attack.",
+      "translations": {
+        "es": "ciberseguridad"
+      },
+      "gloss": {
+        "es": "La práctica de proteger computadoras, redes y datos frente a ataques digitales y accesos no autorizados."
+      },
+      "gloss_example": {
+        "es": "La empresa contrató una firma de ciberseguridad tras el ataque de ransomware."
+      }
+    },
+    {
+      "id": "surveillance",
+      "term": "surveillance",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "The systematic monitoring of individuals or groups, typically by governments or corporations, often through digital means",
+      "example": "Activists raised concerns about mass surveillance enabled by facial recognition software.",
+      "translations": {
+        "es": "vigilancia"
+      },
+      "gloss": {
+        "es": "El monitoreo sistemático de individuos o grupos, típicamente por gobiernos o corporaciones, a menudo a través de medios digitales."
+      },
+      "gloss_example": {
+        "es": "Los activistas expresaron preocupación por la vigilancia masiva habilitada por el software de reconocimiento facial."
+      }
+    },
+    {
+      "id": "dark_pattern",
+      "term": "dark pattern",
+      "level": "C1",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "A deceptive interface design that manipulates users into actions they did not intend",
+      "example": "Hiding the unsubscribe button is a classic dark pattern.",
+      "translations": {
+        "es": "patrón engañoso"
+      },
+      "gloss": {
+        "es": "Diseño de interfaz engañoso que manipula a los usuarios para que realicen acciones que no tenían intención de hacer."
+      },
+      "gloss_example": {
+        "es": "Ocultar el botón de cancelar suscripción es un patrón engañoso clásico."
+      }
+    },
+    {
+      "id": "algorithmic_bias",
+      "term": "algorithmic bias",
+      "level": "C2",
+      "category": "Noun",
+      "difficulty": "hard",
+      "definition": "Systematic errors in an algorithm's outputs that produce unfair or discriminatory results, often due to biased training data",
+      "example": "Researchers found algorithmic bias in the hiring tool, which penalized women's résumés.",
+      "translations": {
+        "es": "sesgo algorítmico"
+      },
+      "gloss": {
+        "es": "Errores sistemáticos en los resultados de un algoritmo que producen resultados injustos o discriminatorios, a menudo por datos de entrenamiento sesgados."
+      },
+      "gloss_example": {
+        "es": "Los investigadores encontraron sesgo algorítmico en la herramienta de contratación, que penalizaba los currículums de mujeres."
+      }
+    }
+  ]
+}

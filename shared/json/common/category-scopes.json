@@ -1429,22 +1429,82 @@
       }
     },
     {
-      "id": "technology",
+      "id": "dispositivos",
       "kind": "vocab",
       "axis": "topical",
-      "scope": "Nouns of technology and devices.",
+      "scope": "Nouns of electronic devices and hardware.",
       "examples": {
         "en": [
-          "device",
-          "software",
-          "password",
-          "browser"
+          "phone",
+          "computer",
+          "screen",
+          "television"
         ],
         "es": [
+          "teléfono",
           "dispositivo",
+          "televisión",
+          "radio"
+        ]
+      }
+    },
+    {
+      "id": "internet_conectividad",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of the internet, the web and connectivity.",
+      "examples": {
+        "en": [
+          "browser",
+          "network",
+          "wireless",
+          "bandwidth"
+        ],
+        "es": [
+          "internet",
+          "navegador",
+          "red",
+          "inalámbrico"
+        ]
+      }
+    },
+    {
+      "id": "software_apps",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of software, applications and data.",
+      "examples": {
+        "en": [
           "software",
+          "application",
+          "file",
+          "algorithm"
+        ],
+        "es": [
+          "software",
+          "aplicación",
+          "actualización",
+          "algoritmo"
+        ]
+      }
+    },
+    {
+      "id": "ciberseguridad",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns of cybersecurity, digital threats and privacy.",
+      "examples": {
+        "en": [
+          "password",
+          "encryption",
+          "malware",
+          "phishing"
+        ],
+        "es": [
           "contraseña",
-          "navegador"
+          "cifrado",
+          "software malicioso",
+          "suplantación de identidad"
         ]
       }
     },
