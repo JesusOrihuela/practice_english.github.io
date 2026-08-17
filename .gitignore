@@ -46,3 +46,7 @@ CLAUDE.md
 Thumbs.db
 desktop.ini
 tools/.image-keys.json
+
+# Python bytecode
+__pycache__/
+*.pyc
