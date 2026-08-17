@@ -153,8 +153,11 @@ const PathSession = (() => {
     // Proficiency-aware new card ordering
     const _CEFR_MID_PS = { A1: 0.083, A2: 0.250, B1: 0.417, B2: 0.583, C1: 0.750, C2: 0.917 };
     const _userProf    = (typeof AppProficiency !== 'undefined') ? AppProficiency.get() : 0.167;
-    const _prefRaw     = localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences'));
-    const _prefSet     = new Set(_prefRaw ? JSON.parse(_prefRaw) : []);
+    let _prefSet;
+    try {
+      const _prefRaw = localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences'));
+      _prefSet = new Set(_prefRaw ? JSON.parse(_prefRaw) : []);
+    } catch (e) { _prefSet = new Set(); }   // corrupt value must not break the queue build
 
     topics.forEach(function (t) {
       const topicId   = t.id;

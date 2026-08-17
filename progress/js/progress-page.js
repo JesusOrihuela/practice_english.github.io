@@ -96,7 +96,9 @@ function renderLangPair() {
 function renderTopicPrefs() {
   const container = document.getElementById('prog-prefs-bubbles');
   if (!container || typeof AppTopics === 'undefined') return;
-  const saved = new Set(JSON.parse(localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences')) || '[]'));
+  let saved;
+  try { saved = new Set(JSON.parse(localStorage.getItem(AppLangPair.storageKey('pe_topic_preferences')) || '[]')); }
+  catch (e) { saved = new Set(); }   // corrupt value must not break the progress page
   AppTopics.PHRASE_TOPICS.forEach(t => {
     const btn = document.createElement('button');
     btn.type = 'button';
@@ -255,7 +257,13 @@ async function renderExerciseMatrix() {
     th.className = 'ex-grid-th';
     th.setAttribute('role', 'columnheader');
     th.setAttribute('aria-label', a.label);
-    th.innerHTML = '<span aria-hidden="true">' + a.emoji + '</span><span class="ex-grid-th-label">' + a.label + '</span>';
+    const emojiEl = document.createElement('span');
+    emojiEl.setAttribute('aria-hidden', 'true');
+    emojiEl.textContent = a.emoji;
+    const labelEl = document.createElement('span');
+    labelEl.className = 'ex-grid-th-label';
+    labelEl.textContent = a.label;
+    th.replaceChildren(emojiEl, labelEl);
     hdrRow.appendChild(th);
   });
   container.appendChild(hdrRow);

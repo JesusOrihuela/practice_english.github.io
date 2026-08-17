@@ -12,6 +12,14 @@
 const IMG_CACHE   = 'pe-images-v2'; // photos/icons: stale-while-revalidate
 const AUDIO_CACHE = 'pe-audio';     // pre-generated WAV: cache-first forever (slug-named, immutable)
 const APP_CACHE   = 'pe-app';       // HTML/JS/CSS/JSON: network-first, cached for offline
+const APP_CACHE_MAX = 250;          // cap network-first growth (all visited JSON would accumulate otherwise)
+
+// FIFO trim: cache.keys() preserves insertion order, so deleting the oldest entries
+// beyond the cap keeps the network-first cache bounded without tracking access times.
+async function trimCache(cache, max) {
+  const keys = await cache.keys();
+  for (let i = 0; i < keys.length - max; i++) await cache.delete(keys[i]);
+}
 
 const isImage = url =>
   url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg|ico)$/i) !== null;
@@ -141,7 +149,8 @@ self.addEventListener('fetch', event => {
       .then(response => {
         if (response && response.status === 200) {
           const clone = response.clone();
-          caches.open(APP_CACHE).then(cache => cache.put(event.request, clone));
+          caches.open(APP_CACHE).then(cache =>
+            cache.put(event.request, clone).then(() => trimCache(cache, APP_CACHE_MAX)));
         }
         return response;
       })

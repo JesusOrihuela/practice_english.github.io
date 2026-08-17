@@ -29,7 +29,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pair = AppLangPair.getActive();
   const titleEl = document.querySelector('.trans-title');
   if (titleEl) {
-    titleEl.innerHTML = AppLang.t('translation_title', { lang: '<span>' + pair.target.localName + '</span>' });
+    // The title template carries an intended <span> around the language name, so it
+    // must go through innerHTML — escape the interpolated value as defense-in-depth.
+    const escName = String(pair.target.localName).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    titleEl.innerHTML = AppLang.t('translation_title', { lang: '<span>' + escName + '</span>' });
   }
   const subEl = document.querySelector('.trans-subtitle');
   if (subEl) {
