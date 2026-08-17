@@ -73,3 +73,9 @@ tools/semantic-audit-waivers.json
 docs/CONTENT-QUALITY.md
 docs/IMAGE-QUALITY.md
 docs/LANGUAGE-PROFILES.md
+tools/audio-asr-audit.mjs
+tools/audio-audit-waivers.json
+tools/audio-embeddings-cache.json
+docs/AUDIO-QUALITY.md
+tools/gloss-audit.mjs
+tools/gloss-embeddings-cache.json
