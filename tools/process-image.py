@@ -9,12 +9,33 @@ letterbox/pillarbox bars. The crop offset along the over-sized axis maximizes ed
 energy (entropy crop), which tends to keep the subject in frame instead of slicing
 it off. Pillow + numpy (both present). No network.
 """
-import sys
+import sys, json
 import numpy as np
 from PIL import Image, ImageFilter
 
 JPG = (1280, 720)
 WEBP = (800, 450)
+BAR_STD = 1.5
+
+def _facts(im):
+    """Border thickness per edge + sharpness + average-hash of a PIL image."""
+    g = np.asarray(im.convert('L'), dtype=np.float64)
+    def run(lines):
+        n = 0
+        for ln in lines:
+            if ln.std() <= BAR_STD:
+                n += 1
+            else:
+                break
+        return n
+    lap = (-4 * g + np.roll(g, 1, 0) + np.roll(g, -1, 0)
+           + np.roll(g, 1, 1) + np.roll(g, -1, 1))[1:-1, 1:-1]
+    a = np.asarray(im.convert('L').resize((8, 8), Image.BILINEAR), dtype=np.float64)
+    bits = (a > a.mean()).flatten(); v = 0
+    for b in bits:
+        v = (v << 1) | int(b)
+    return {'sharp': round(float(lap.var()), 1), 'ahash': format(v, '016x'),
+            'border': {'t': run(g), 'b': run(g[::-1]), 'l': run(g.T), 'r': run(g.T[::-1])}}
 
 def _best_offset(energy, span):
     """Offset in [0, len-span] whose window has the most edge energy."""
@@ -51,8 +72,10 @@ def main():
         im = im.convert('RGB')
     big = cover(im, *JPG)
     big.save(out_base + '.jpg', 'JPEG', quality=82, optimize=True)
-    big.resize(WEBP, Image.LANCZOS).save(out_base + '.webp', 'WEBP', quality=80, method=6)
-    print('wrote', out_base + '.jpg', out_base + '.webp')
+    small = big.resize(WEBP, Image.LANCZOS)
+    small.save(out_base + '.webp', 'WEBP', quality=80, method=6)
+    # Emit the webp's quality facts so the caller can reject bordered/blurry picks.
+    print(json.dumps(_facts(small)))
 
 if __name__ == '__main__':
     main()

@@ -31,7 +31,7 @@ fs.mkdirSync(TMP, { recursive: true });
 const args = process.argv.slice(2);
 const argAll = (n) => args.reduce((a, v, i) => (args[i - 1] === n ? [...a, v] : a), []);
 const argVal = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-const N = +argVal('--n', 18), MIN_REL = +argVal('--min-rel', 0.24), DRY = args.includes('--dry');
+const N = +argVal('--n', 18), MIN_REL = +argVal('--min-rel', 0.22), DRY = args.includes('--dry');
 
 let wantTopics = argAll('--topic');
 const listFile = argVal('--list', '');
@@ -69,8 +69,9 @@ async function commons(query) {
   }).filter((x) => x.url && x.w >= 800 && x.h * 1 <= x.w * 1.4);  // large, not extreme portrait
 }
 
-/** A clean search keyword from an English label: the part before "&"/"/"/","  */
-function queryFor(topic) { return topic.labelEn.split(/[&/,]/)[0].trim(); }
+/** A clean search keyword from an English label: the part before "&"/"/"/","
+    An explicit --q overrides it (useful for abstract topics with weak labels). */
+function queryFor(topic) { return argVal('--q', '') || topic.labelEn.split(/[&/,]/)[0].trim(); }
 
 /** Optional higher-quality source. Key from $PIXABAY_KEY or the gitignored
     tools/.image-keys.json — never committed. Absent → Commons is used. */
@@ -112,6 +113,32 @@ function activitiesFor(topic) {
 const KEY = pixabayKey();
 console.log(`fuente: ${KEY ? 'Pixabay (key detectada)' : 'Wikimedia Commons (sin key)'}`);
 const credits = fs.existsSync(CREDITS) ? JSON.parse(fs.readFileSync(CREDITS, 'utf8')) : {};
+const PROC = path.join(ROOT, 'tools/process-image.py');
+const PROBE = path.join(ROOT, 'tools/img-probe.py');
+const usedAhash = new Set();  // avoid reusing a photo across topics (global, persistent)
+
+// Seed usedAhash with the ahashes of every EXISTING topic image except the ones being
+// regenerated now — so new picks never collide with images kept for other topics.
+{
+  const regen = new Set(wantTopics);
+  const keep = [];
+  for (const c of L.cells()) if (fs.existsSync(c.webp) && !regen.has(c.topic.id)) keep.push(c.webp);
+  if (keep.length) {
+    try {
+      const out = execFileSync('python', [PROBE], { input: keep.join('\n'), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+      for (const f of Object.values(JSON.parse(out))) if (f.ahash) usedAhash.add(f.ahash);
+    } catch { /* best-effort seeding */ }
+  }
+}
+
+/** Cover-crop a raw download to a temp base and return its quality facts, or null. */
+function processAndProbe(raw, base) {
+  try {
+    const out = execFileSync('python', [PROC, raw, base], { encoding: 'utf8' });
+    return JSON.parse(out.trim().split('\n').pop());  // {sharp, ahash, border}
+  } catch { return null; }
+}
+const isBordered = (b) => Math.max(b.t, b.b) >= 9 || Math.max(b.l, b.r) >= 16;  // ≥2% of webp edge
 
 for (const id of wantTopics) {
   const topic = byId[id];
@@ -126,23 +153,27 @@ for (const id of wantTopics) {
   catch (e) { console.error(`  ⚠ fuente falló: ${e.message}`); continue; }
 
   const scored = [];
+  let rejected = 0;
   for (const c of cands) {
-    const tmp = path.join(TMP, `${id}-${c.id}`.replace(/[^\w-]/g, '') + '.img');
+    const raw = path.join(TMP, `${id}-${c.id}`.replace(/[^\w-]/g, '') + '.img');
+    const base = path.join(TMP, `${id}-${c.id}`.replace(/[^\w-]/g, '') + '-p');
     try {
-      await download(c.url, tmp);
-      const rel = cos(await imgEmb(tmp), tvec);
-      scored.push({ c, tmp, rel });
+      await download(c.url, raw);
+      const fx = processAndProbe(raw, base);                       // cover-crop + quality facts
+      if (!fx || isBordered(fx.border) || fx.sharp < 5 || usedAhash.has(fx.ahash)) { rejected++; await sleep(150); continue; }
+      const rel = cos(await imgEmb(base + '.webp'), tvec);         // relevance of the FINAL image
+      scored.push({ c, base, rel, ahash: fx.ahash });
     } catch { /* skip unreachable/undecodable candidate */ }
-    await sleep(250);  // pace the CDN to avoid 429
+    await sleep(150);
   }
   scored.sort((a, b) => b.rel - a.rel);
   const passing = scored.filter((s) => s.rel >= MIN_REL);
-  console.log(`  candidatos: ${scored.length} descargados, ${passing.length} ≥ ${MIN_REL}`);
-  for (const s of scored.slice(0, 5)) console.log(`    ${s.rel.toFixed(3)}  ${(s.c.title || '').slice(0, 48)}  [${s.c.license} · ${s.c.source}]`);
+  console.log(`  candidatos: ${scored.length} ok (${rejected} rechazados por encuadre/nitidez/dup), ${passing.length} ≥ ${MIN_REL}`);
+  for (const s of scored.slice(0, 5)) console.log(`    ${s.rel.toFixed(3)}  ${(s.c.title || '').slice(0, 44)}  [${s.c.license} · ${s.c.source}]`);
 
   if (DRY) continue;
   if (passing.length === 0) {
-    console.error(`  ⚠ 0 candidatos ≥ ${MIN_REL} — revisa a mano o ajusta el keyword; NO se escribió nada`);
+    console.error(`  ⚠ 0 candidatos válidos ≥ ${MIN_REL} — revisa a mano o ajusta el keyword; NO se escribió nada`);
     continue;
   }
   // one distinct candidate per activity; if fewer pass than activities, cycle the
@@ -151,9 +182,11 @@ for (const id of wantTopics) {
     console.error(`  ⚠ solo ${passing.length} candidato(s) válido(s) para ${acts.length} actividades — se repetirán los mejores`);
   const chosen = acts.map((_, i) => passing[i % passing.length]);
   acts.forEach((act, i) => {
-    const { c, tmp } = chosen[i];
+    const { c, base, ahash } = chosen[i];
     const outBase = path.join(ROOT, act, 'img', id);
-    execFileSync('python', [path.join(ROOT, 'tools/process-image.py'), tmp, outBase], { stdio: 'pipe' });
+    fs.copyFileSync(base + '.jpg', outBase + '.jpg');             // already processed + probed
+    fs.copyFileSync(base + '.webp', outBase + '.webp');
+    usedAhash.add(ahash);
     credits[`${act}/img/${id}`] = { title: c.title || null, creator: c.creator || null, license: c.license, source: c.source, landing: c.landing };
     console.log(`    ✓ ${act}/img/${id}  (rel ${chosen[i].rel.toFixed(3)}, ${c.license})`);
   });

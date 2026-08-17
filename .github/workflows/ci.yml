@@ -76,6 +76,43 @@ jobs:
       - name: Category taxonomy conforms (check-taxonomy.mjs)
         run: node tools/check-taxonomy.mjs
 
+  # Topic-card images: every (activity, topic) slot must have both jpg (1280×720)
+  # and webp (800×450), correctly framed (no letterbox/pillarbox bar), sharp, unique
+  # within an activity, present, and free of orphans. Verified by check-images.mjs +
+  # img-probe.py (Pillow+numpy). Keeps the image set from silently regressing (wrong
+  # dims, missing, duplicate, or bordered pictures). Relevance is audited separately
+  # (audit-images.mjs, CLIP) — dev-time and advisory, so not part of the CI gate.
+  images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (images + JS + tools)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            cloze/img
+            dictation/img
+            quiz/img
+            scramble/img
+            speaking/img
+            translation/img
+            vocabulary/img
+            shared/js
+            shared/json/common
+            tools
+          sparse-checkout-cone-mode: true
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Pillow + numpy
+        run: pip install --quiet pillow numpy
+      - name: Topic images valid (check-images.mjs)
+        run: node tools/check-images.mjs
+
   # i18n standard: no hardcoded UI text in HTML — every translatable element is
   # empty with a data-i18n* attribute, filled from lang/ui.js by AppI18nDom. This
   # job fails if any page hardcodes text or uses a key missing from a language block.

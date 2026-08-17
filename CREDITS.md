@@ -56,6 +56,20 @@ functional exponents are referenced; the structured seed lives at
 - Source: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/
 - Public reference material (Instituto Cervantes)
 
+## Topic images
+
+The photos on the topic cards (`{activity}/img/{topic}.jpg` / `.webp`) are sourced and
+quality-gated by `tools/fetch-topic-images.mjs` (see `docs/IMAGE-QUALITY.md`): candidates
+are fetched from a Creative-Commons / royalty-free provider, scored for on-topic relevance
+with CLIP, cover-cropped, and checked for framing.
+
+- **Default provider: [Pixabay](https://pixabay.com)** — Pixabay Content License
+  (royalty-free, no attribution required, commercial use OK). Recorded per-image in the
+  gitignored `tools/sources/derived/image-credits.json` for provenance.
+- **Fallback provider: [Wikimedia Commons](https://commons.wikimedia.org)** — used when no
+  API key is configured; images keep their individual CC licenses and authors (captured in
+  the same manifest for attribution).
+
 ## Reference inventories consulted (no data redistributed)
 
 Used to guide selection and CEFR levelling; not bundled:

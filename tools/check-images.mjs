@@ -23,7 +23,7 @@ import * as L from './lib-images.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const REPORT = process.argv.includes('--report');
 // Thresholds (conservative → zero false positives for CI).
-const T = { borderFrac: 0.02, sharpFloor: 12 };
+const T = { borderFrac: 0.02, sharpFloor: 5 };  // catches flat placeholders; soft photos (clouds, sky) pass
 
 const issues = [];
 const flag = (rel, rule, msg) => issues.push({ rel, rule, msg });
