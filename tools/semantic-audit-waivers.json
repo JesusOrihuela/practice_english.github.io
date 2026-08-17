@@ -156,6 +156,252 @@
         "misplaced"
       ],
       "reason": "a finance concept — kept in accountability, consistent with credit/account/deposit; model → trabajo"
+    },
+    "es/supermarket/pan": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "artículo de compra — se queda en supermarket (par de arroz/huevo/leche); modelo tira a kitchen por horneado/harina"
+    },
+    "es/supermarket/leche": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "artículo de compra — se queda en supermarket"
+    },
+    "es/supermarket/bebida": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "artículo de compra — se queda en supermarket; modelo → restaurant por beber"
+    },
+    "es/kitchen/comida": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "comida/cocina — se queda en kitchen; adyacencia situacional con restaurant"
+    },
+    "es/naturaleza/agua": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "elemento natural — se queda en naturaleza; modelo → restaurant por bebida"
+    },
+    "es/music/lyrics": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "letra de canción — término de música; modelo → lengua por palabras"
+    },
+    "es/health/suffer": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "sufrir/padecer — verbo de salud (dolor/enfermedad); modelo → emociones por sentir"
+    },
+    "es/health/accidente": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "suceso de salud — se queda en health; modelo → emociones por malo/inesperado"
+    },
+    "es/airport/delay": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "retraso de vuelo — término núcleo de aeropuerto/viaje"
+    },
+    "es/airport/currency": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "dinero para el viaje — escalera temática de aeropuerto; modelo → accountability"
+    },
+    "en/airport/currency": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "travel money — airport themed ladder"
+    },
+    "en/airport/contraband": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "contrabando — término aduanero, se queda en airport"
+    },
+    "es/airport/biometrics": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "seguridad de aeropuerto — se queda en airport; def re-anclable pero el tema es correcto"
+    },
+    "en/airport/biometrics": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "airport security — kept in airport"
+    },
+    "es/airport/maleta": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "equipaje de viaje — se queda en airport; modelo → ropa por la ropa que lleva dentro"
+    },
+    "es/technology/anuncio": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "publicidad/medios — se queda en technology (par de internet/television)"
+    },
+    "es/technology/tecnologia": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "epónimo del mazo technology; modelo → educacion por conocimiento científico"
+    },
+    "es/accountability/deadline": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "fecha límite de negocio — se queda en accountability; modelo → tiempo"
+    },
+    "es/accountability/initiative": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "iniciativa de negocio — se queda en accountability"
+    },
+    "en/trabajo/investment": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "inversión — negocio/economía (trabajo scope); modelo → accountability(finanzas)"
+    },
+    "es/trabajo/precio": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "precio — negocio/economía (trabajo)"
+    },
+    "es/trabajo/project": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "proyecto de trabajo — se queda en trabajo"
+    },
+    "en/supermarket/cashier": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "cajero — trabajador situacional del supermercado"
+    },
+    "en/gym/player": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "jugador — contexto de deporte (gym); modelo → juegos"
+    },
+    "en/family/member": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "miembro de la familia — se queda en family; def genérica pero el tema es familia"
+    },
+    "es/greetings/acquaintance": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "conocido — relación social en saludos; modelo → family"
+    },
+    "en/greetings/acquaintance": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "acquaintance — social relation in greetings"
+    },
+    "es/educacion/libro": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "libro — material de estudio (educacion); modelo → lengua"
+    },
+    "en/music/tour": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "gira de conciertos — término de música; modelo → theater"
+    },
+    "en/sociedad_politica/agent": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "agente/representante en la vida pública — se queda en sociedad_politica"
+    },
+    "en/sociedad_politica/security": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "seguridad pública/nacional — se queda en sociedad_politica; modelo → technology(ciberseg.)"
+    },
+    "en/sociedad_politica/population": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "población — término de sociedad; modelo → lugares por lugar"
+    },
+    "es/sociedad_politica/population": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "población — término de sociedad"
+    },
+    "es/sociedad_politica/crisis": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "crisis social/política — se queda en sociedad_politica; modelo → emociones"
+    },
+    "en/sociedad_politica/environment": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "medio ambiente como tema social/político — NO se mueve a naturaleza (duplicaría nature)"
+    },
+    "es/accommodation/building": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "edificio — clúster hogar de accommodation; modelo → lugares"
+    },
+    "en/accommodation/misrepresentation": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "anclado a listing/reserva de hotel — se queda en accommodation"
+    },
+    "es/lugares/biblioteca": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "una biblioteca ES un lugar — se queda en lugares; modelo → educacion por libros"
+    },
+    "es/transportation/airplane": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "avión — modo de transporte (par de bus/taxi/tren); modelo → naturaleza por aire/vuela"
+    },
+    "en/transportation/fly": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "volar — verbo de transporte; modelo → airport"
+    },
+    "en/technology/latency": {
+      "kinds": [
+        "misplaced"
+      ],
+      "reason": "latencia de red — término de tecnología; modelo → accountability por delay/request"
     }
   }
 }
