@@ -1,0 +1,52 @@
+name: Audio checks
+
+# Deterministic audio-content gate: every .wav decodes, is not silent/clipped, lasts a
+# sane duration, and each slug carries exactly the voice set its language declares
+# (tools/check-audio.mjs). Gated on paths so the heavy shared/audio checkout only runs
+# when audio, content, the language voice sets, or the checker itself change — not on
+# every push.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shared/audio/**'
+      - 'shared/json/**'
+      - 'shared/js/lang-profiles.js'
+      - 'tools/check-audio.mjs'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'shared/audio/**'
+      - 'shared/json/**'
+      - 'shared/js/lang-profiles.js'
+      - 'tools/check-audio.mjs'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audio-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (audio + JS + tools)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            shared/audio
+            shared/js
+            tools
+          sparse-checkout-cone-mode: true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Pure Node — parses the WAV header + PCM directly, no Python.
+      - name: Audio signal + voice-set valid (check-audio.mjs)
+        run: node tools/check-audio.mjs

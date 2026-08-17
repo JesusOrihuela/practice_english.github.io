@@ -51,6 +51,7 @@ for (const code of targets) {
   if (typeof p.foldPreserve !== 'string') fail(`${label} — foldPreserve must be a string (use '' for none)`);
   if (!isNonEmptyArray(p.clozeStopWords)) fail(`${label} — clozeStopWords is empty; cloze would blank function words`);
   if (!isNonEmptyArray(p.functionWords))  fail(`${label} — functionWords is empty; the vocab coverage channel would be wrong`);
+  if (!isNonEmptyArray(p.voices))         fail(`${label} — voices is empty; check-audio can't validate this language's audio voice set`);
   if (!Array.isArray(p.ignoreTokens))     fail(`${label} — ignoreTokens must be an array (may be empty)`);
   if (!Array.isArray(p.grammarTipLabels)) fail(`${label} — grammarTipLabels must be an array`);
   else if (p.grammarTipLabels.length === 0) warn(`${label} — grammarTipLabels empty: no learning-mode grammar chip for this language`);
