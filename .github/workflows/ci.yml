@@ -147,6 +147,11 @@ jobs:
       - name: No hardcoded UI text + keys resolve (check-i18n.mjs)
         run: node tools/check-i18n.mjs
 
+      # Accessibility gate: <html lang>, img alt, accessible names on controls/inputs,
+      # no duplicate ids. Deterministic; complements the broad Lighthouse a11y audit.
+      - name: Accessibility checks (check-a11y.mjs)
+        run: node tools/check-a11y.mjs
+
   # Core-vocabulary rule (TWO CHANNELS): the target language must teach ≥ 90% of the
   # pedagogical top-1000 with PHRASES alone AND with VOCAB alone — the core taught
   # both in context (phrases) and in isolation (vocab). Phrases are measured over the
