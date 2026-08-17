@@ -50,3 +50,26 @@ tools/.image-keys.json
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Dev-only tooling + docs (local only — not product, not run by CI)
+tools/fetch-topic-images.mjs
+tools/audit-images.mjs
+tools/semantic-audit.mjs
+tools/classify.mjs
+tools/move-item.mjs
+tools/build-candidates.mjs
+tools/build-candidates-cover.mjs
+tools/enrich-audit.mjs
+tools/assign-alt-slugs.mjs
+tools/reconcile.mjs
+tools/generate-audio.mjs
+tools/audit-hook.mjs
+tools/generate-audio-tgt.py
+tools/process-image.py
+tools/lib-clip.mjs
+tools/lib-embed.mjs
+tools/image-audit-waivers.json
+tools/semantic-audit-waivers.json
+docs/CONTENT-QUALITY.md
+docs/IMAGE-QUALITY.md
+docs/LANGUAGE-PROFILES.md
