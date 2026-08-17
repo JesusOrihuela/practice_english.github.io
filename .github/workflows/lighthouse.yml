@@ -1,11 +1,11 @@
 name: Lighthouse
 
-# Report-only performance/accessibility/best-practices/SEO audit of the live
-# site, run automatically after every successful GitHub Pages deployment.
-# Uses the same Lighthouse engine as pagespeed.web.dev. It does NOT block
-# merges or deploys — it only reports, so scores can be tracked per change.
-# Add assertions/thresholds later (see the commented block) once scores are
-# stable enough to gate on.
+# Performance/accessibility/best-practices/SEO audit of the live site, run
+# automatically after every successful GitHub Pages deployment (same engine as
+# pagespeed.web.dev). Now GATED: .github/lighthouserc.json asserts per-category
+# minimum scores, calibrated a couple points below the live scores (perf 0.92,
+# a11y 0.96, best-practices 0.96, seo 1.00) so normal variance doesn't false-fail.
+# Post-deploy, so a red run flags a regression to fix — it doesn't block the deploy.
 
 on:
   deployment_status:
@@ -36,5 +36,4 @@ jobs:
           runs: 3                     # median of 3 runs for stable numbers
           uploadArtifacts: true       # save the full HTML report as a run artifact
           temporaryPublicStorage: true # also print a shareable report link in the logs
-          # To enforce thresholds later, add a budget/assertions file and reference it:
-          # budgetPath: ./.github/lighthouse-budget.json
+          configPath: ./.github/lighthouserc.json  # per-category minimum-score assertions (gate)
