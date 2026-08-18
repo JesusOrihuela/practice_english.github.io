@@ -1439,6 +1439,276 @@
       "gloss_example": {
         "en": "What a lovely dress."
       }
+    },
+    {
+      "id": "fat",
+      "term": "gordo / gorda",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene mucho peso o volumen en el cuerpo.",
+      "example": "El gato está un poco gordo.",
+      "translations": {
+        "en": "fat"
+      },
+      "gloss": {
+        "en": "Having a lot of body weight or volume"
+      },
+      "gloss_example": {
+        "en": "The cat is a little fat."
+      }
+    },
+    {
+      "id": "ugly",
+      "term": "feo / fea",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no resulta agradable a la vista.",
+      "example": "Ese edificio nuevo es bastante feo.",
+      "translations": {
+        "en": "ugly"
+      },
+      "gloss": {
+        "en": "Not pleasant to look at"
+      },
+      "gloss_example": {
+        "en": "That new building is quite ugly."
+      }
+    },
+    {
+      "id": "thin",
+      "term": "delgado / delgada",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene poco peso o poco grosor.",
+      "example": "Mi hermana es alta y delgada.",
+      "translations": {
+        "en": "thin"
+      },
+      "gloss": {
+        "en": "Having little weight or thickness"
+      },
+      "gloss_example": {
+        "en": "My sister is tall and thin."
+      }
+    },
+    {
+      "id": "bald",
+      "term": "calvo / calva",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no tiene pelo en la cabeza.",
+      "example": "Mi abuelo se quedó calvo muy joven.",
+      "translations": {
+        "en": "bald"
+      },
+      "gloss": {
+        "en": "Having no hair on the head"
+      },
+      "gloss_example": {
+        "en": "My grandfather went bald very young."
+      }
+    },
+    {
+      "id": "nice_person",
+      "term": "simpático / simpática",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que es agradable y trata bien a los demás.",
+      "example": "La vecina nueva es muy simpática.",
+      "translations": {
+        "en": "nice"
+      },
+      "gloss": {
+        "en": "Pleasant and kind to others"
+      },
+      "gloss_example": {
+        "en": "The new neighbor is very nice."
+      }
+    },
+    {
+      "id": "unfriendly",
+      "term": "antipático / antipática",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no es agradable en el trato con los demás.",
+      "example": "El portero es un poco antipático.",
+      "translations": {
+        "en": "unfriendly"
+      },
+      "gloss": {
+        "en": "Not pleasant to deal with"
+      },
+      "gloss_example": {
+        "en": "The doorman is a little unfriendly."
+      }
+    },
+    {
+      "id": "shy",
+      "term": "tímido / tímida",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que siente vergüenza al hablar o actuar ante otros.",
+      "example": "De niño era muy tímido.",
+      "translations": {
+        "en": "shy"
+      },
+      "gloss": {
+        "en": "Feeling embarrassed to speak or act in front of others"
+      },
+      "gloss_example": {
+        "en": "As a child he was very shy."
+      }
+    },
+    {
+      "id": "generous",
+      "term": "generoso / generosa",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que comparte con los demás sin esperar nada a cambio.",
+      "example": "Es muy generoso con sus amigos.",
+      "translations": {
+        "en": "generous"
+      },
+      "gloss": {
+        "en": "Willing to share without expecting anything in return"
+      },
+      "gloss_example": {
+        "en": "He is very generous with his friends."
+      }
+    },
+    {
+      "id": "selfish",
+      "term": "egoísta",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que solo piensa en su propio interés.",
+      "example": "No seas egoísta y comparte el postre.",
+      "translations": {
+        "en": "selfish"
+      },
+      "gloss": {
+        "en": "Thinking only of one's own interest"
+      },
+      "gloss_example": {
+        "en": "Do not be selfish and share the dessert."
+      }
+    },
+    {
+      "id": "sociable",
+      "term": "sociable",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que disfruta estar y hablar con otras personas.",
+      "example": "Mi hija es muy sociable en la escuela.",
+      "translations": {
+        "en": "sociable"
+      },
+      "gloss": {
+        "en": "Enjoying being with and talking to other people"
+      },
+      "gloss_example": {
+        "en": "My daughter is very sociable at school."
+      }
+    },
+    {
+      "id": "optimistic",
+      "term": "optimista",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que ve el lado positivo de las cosas.",
+      "example": "Aunque las cosas van mal, sigue optimista.",
+      "translations": {
+        "en": "optimistic"
+      },
+      "gloss": {
+        "en": "Seeing the positive side of things"
+      },
+      "gloss_example": {
+        "en": "Even though things are going badly, she stays optimistic."
+      }
+    },
+    {
+      "id": "dirty",
+      "term": "sucio / sucia",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene manchas o no está limpio.",
+      "example": "Los platos están sucios en el fregadero.",
+      "translations": {
+        "en": "dirty"
+      },
+      "gloss": {
+        "en": "Having stains or not clean"
+      },
+      "gloss_example": {
+        "en": "The dishes are dirty in the sink."
+      }
+    },
+    {
+      "id": "dry",
+      "term": "seco / seca",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no tiene agua ni humedad.",
+      "example": "La ropa ya está seca.",
+      "translations": {
+        "en": "dry"
+      },
+      "gloss": {
+        "en": "Having no water or moisture"
+      },
+      "gloss_example": {
+        "en": "The clothes are already dry."
+      }
+    },
+    {
+      "id": "boring",
+      "term": "aburrido / aburrida",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que no resulta interesante ni divertido.",
+      "example": "La reunión fue larga y aburrida.",
+      "translations": {
+        "en": "boring"
+      },
+      "gloss": {
+        "en": "Not interesting or fun"
+      },
+      "gloss_example": {
+        "en": "The meeting was long and boring."
+      }
+    },
+    {
+      "id": "sick",
+      "term": "enfermo / enferma",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene una enfermedad o no está bien de salud.",
+      "example": "Hoy no fui a trabajar porque estoy enfermo.",
+      "translations": {
+        "en": "sick"
+      },
+      "gloss": {
+        "en": "Having an illness or not being in good health"
+      },
+      "gloss_example": {
+        "en": "I did not go to work today because I am sick."
+      }
     }
   ]
 }
