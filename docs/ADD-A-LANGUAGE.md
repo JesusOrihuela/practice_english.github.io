@@ -96,6 +96,16 @@ the checklist so nothing is tribal when a new pair is added.
 - Grammar-tip length; anti-pedagogical patterns (Rule 11).
 
 ### Author judgment (not reliably gateable — apply by hand, per language)
+- **Variant completeness (RULE)** — if a phrase has ANY labelled variant, EVERY variant and
+  combination that genuinely exists must be present: gender, region, register, AND their
+  combinations. A phrase with a gendered speaker *and* a region-varying word has all
+  region×gender forms (e.g. 4 forms), each `target[]` carrying the full `labels: { region,
+  gender }`. Regions are as fine as reality: not only España/Latinoamérica or US/UK, but
+  country/zone variants where they differ (e.g. *palta* in much of South America vs *aguacate*
+  in Mexico/Spain; Australian English; etc.). Never ship only one axis or one region when more
+  genuinely exist. The adaptive badge and the post-answer "other variants" list surface them
+  all (`AppFeedback.applyVariantBadge` / `buildAltNote`); `AppFlags.region(name)` gives each
+  region a flag or a zone silhouette.
 - **Grammatical gender modeling** (Rule 10 / 16) — only for a target with grammatical gender
   (`grammaticalGender: true`). Base-gender conventions: 1st-person "I am [adj]" → base
   **feminine** + masculine variant; 2nd-person "you are [adj]?" → base **masculine** + feminine
