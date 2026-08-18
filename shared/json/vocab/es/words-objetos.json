@@ -305,6 +305,132 @@
       "gloss_example": {
         "en": "Put the glass on the table."
       }
+    },
+    {
+      "id": "pencil",
+      "term": "lápiz",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Instrumento para escribir o dibujar con mina de grafito.",
+      "example": "Dibujó un mapa con un lápiz.",
+      "translations": {
+        "en": "pencil"
+      },
+      "gloss": {
+        "en": "A tool for writing or drawing with graphite"
+      },
+      "gloss_example": {
+        "en": "She drew a map with a pencil."
+      }
+    },
+    {
+      "id": "pen",
+      "term": "bolígrafo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Instrumento para escribir con tinta.",
+      "example": "Firmé el papel con un bolígrafo azul.",
+      "translations": {
+        "en": "pen"
+      },
+      "gloss": {
+        "en": "A tool for writing with ink"
+      },
+      "gloss_example": {
+        "en": "I signed the paper with a blue pen."
+      }
+    },
+    {
+      "id": "eraser",
+      "term": "goma de borrar",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto que sirve para borrar lo escrito con lápiz.",
+      "example": "Usa la goma para borrar el error.",
+      "translations": {
+        "en": "eraser"
+      },
+      "gloss": {
+        "en": "An object used to erase pencil marks"
+      },
+      "gloss_example": {
+        "en": "Use the eraser to remove the mistake."
+      }
+    },
+    {
+      "id": "soap",
+      "term": "jabón",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Producto que se usa para lavar y limpiar.",
+      "example": "Se lavó las manos con agua y jabón.",
+      "translations": {
+        "en": "soap"
+      },
+      "gloss": {
+        "en": "A product used for washing and cleaning"
+      },
+      "gloss_example": {
+        "en": "He washed his hands with soap and water."
+      }
+    },
+    {
+      "id": "wallet",
+      "term": "cartera / billetera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto pequeño para llevar dinero y documentos.",
+      "example": "Guardo las tarjetas en la cartera.",
+      "translations": {
+        "en": "wallet"
+      },
+      "gloss": {
+        "en": "A small holder for money and documents"
+      },
+      "gloss_example": {
+        "en": "I keep my cards in my wallet."
+      }
+    },
+    {
+      "id": "handbag",
+      "term": "bolso",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bolsa con asas para llevar objetos personales.",
+      "example": "Metió el teléfono en el bolso.",
+      "translations": {
+        "en": "handbag"
+      },
+      "gloss": {
+        "en": "A bag with handles for personal items"
+      },
+      "gloss_example": {
+        "en": "She put the phone in her handbag."
+      }
+    },
+    {
+      "id": "watch",
+      "term": "reloj",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto que muestra la hora.",
+      "example": "Miró el reloj para ver la hora.",
+      "translations": {
+        "en": "watch"
+      },
+      "gloss": {
+        "en": "An object that shows the time"
+      },
+      "gloss_example": {
+        "en": "He looked at his watch to check the time."
+      }
     }
   ]
 }
