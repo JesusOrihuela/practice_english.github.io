@@ -593,6 +593,258 @@
       "gloss_example": {
         "en": "An ad came up on the screen."
       }
+    },
+    {
+      "id": "lawyer",
+      "term": "abogado / abogada",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que defiende a otros y da consejo sobre leyes.",
+      "example": "El abogado revisó el contrato con cuidado.",
+      "translations": {
+        "en": "lawyer"
+      },
+      "gloss": {
+        "en": "A person who advises and represents others in legal matters"
+      },
+      "gloss_example": {
+        "en": "The lawyer reviewed the contract carefully."
+      }
+    },
+    {
+      "id": "nurse",
+      "term": "enfermero / enfermera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que cuida a los enfermos en un hospital.",
+      "example": "La enfermera me puso la vacuna.",
+      "translations": {
+        "en": "nurse"
+      },
+      "gloss": {
+        "en": "A person who cares for the sick in a hospital"
+      },
+      "gloss_example": {
+        "en": "The nurse gave me the vaccine."
+      }
+    },
+    {
+      "id": "salesperson",
+      "term": "vendedor / vendedora",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que vende productos en una tienda.",
+      "example": "El vendedor me mostró varios modelos.",
+      "translations": {
+        "en": "salesperson"
+      },
+      "gloss": {
+        "en": "A person who sells products in a shop"
+      },
+      "gloss_example": {
+        "en": "The salesperson showed me several models."
+      }
+    },
+    {
+      "id": "engineer",
+      "term": "ingeniero / ingeniera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que diseña y construye máquinas u obras.",
+      "example": "La ingeniera dirige el proyecto del puente.",
+      "translations": {
+        "en": "engineer"
+      },
+      "gloss": {
+        "en": "A person who designs and builds machines or structures"
+      },
+      "gloss_example": {
+        "en": "The engineer leads the bridge project."
+      }
+    },
+    {
+      "id": "cook",
+      "term": "cocinero / cocinera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que prepara la comida en un restaurante.",
+      "example": "El cocinero preparó un plato delicioso.",
+      "translations": {
+        "en": "cook"
+      },
+      "gloss": {
+        "en": "A person who prepares food in a restaurant"
+      },
+      "gloss_example": {
+        "en": "The cook prepared a delicious dish."
+      }
+    },
+    {
+      "id": "taxi_driver",
+      "term": "taxista",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que conduce un taxi para llevar pasajeros.",
+      "example": "El taxista nos llevó al aeropuerto.",
+      "translations": {
+        "en": "taxi driver"
+      },
+      "gloss": {
+        "en": "A person who drives a taxi to carry passengers"
+      },
+      "gloss_example": {
+        "en": "The taxi driver took us to the airport."
+      }
+    },
+    {
+      "id": "firefighter",
+      "term": "bombero / bombera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que apaga incendios y ayuda en emergencias.",
+      "example": "Los bomberos llegaron muy rápido.",
+      "translations": {
+        "en": "firefighter"
+      },
+      "gloss": {
+        "en": "A person who puts out fires and helps in emergencies"
+      },
+      "gloss_example": {
+        "en": "The firefighters arrived very quickly."
+      }
+    },
+    {
+      "id": "architect",
+      "term": "arquitecto / arquitecta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que diseña edificios y casas.",
+      "example": "La arquitecta dibujó los planos de la casa.",
+      "translations": {
+        "en": "architect"
+      },
+      "gloss": {
+        "en": "A person who designs buildings and houses"
+      },
+      "gloss_example": {
+        "en": "The architect drew the plans for the house."
+      }
+    },
+    {
+      "id": "mechanic",
+      "term": "mecánico / mecánica",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que arregla coches y máquinas.",
+      "example": "El mecánico arregló el motor rápidamente.",
+      "translations": {
+        "en": "mechanic"
+      },
+      "gloss": {
+        "en": "A person who repairs cars and machines"
+      },
+      "gloss_example": {
+        "en": "The mechanic fixed the engine quickly."
+      }
+    },
+    {
+      "id": "photographer",
+      "term": "fotógrafo / fotógrafa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que toma fotografías como profesión.",
+      "example": "La fotógrafa tomó las fotos de la boda.",
+      "translations": {
+        "en": "photographer"
+      },
+      "gloss": {
+        "en": "A person who takes photographs as a profession"
+      },
+      "gloss_example": {
+        "en": "The photographer took the wedding photos."
+      }
+    },
+    {
+      "id": "pilot",
+      "term": "piloto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que conduce un avión.",
+      "example": "El piloto anunció el despegue.",
+      "translations": {
+        "en": "pilot"
+      },
+      "gloss": {
+        "en": "A person who flies an aircraft"
+      },
+      "gloss_example": {
+        "en": "The pilot announced the takeoff."
+      }
+    },
+    {
+      "id": "driver",
+      "term": "conductor / conductora",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que maneja un vehículo.",
+      "example": "El conductor del autobús fue muy amable.",
+      "translations": {
+        "en": "driver"
+      },
+      "gloss": {
+        "en": "A person who operates a vehicle"
+      },
+      "gloss_example": {
+        "en": "The bus driver was very kind."
+      }
+    },
+    {
+      "id": "employee",
+      "term": "empleado / empleada",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que trabaja para una empresa o persona.",
+      "example": "La empleada atendió a los clientes con amabilidad.",
+      "translations": {
+        "en": "employee"
+      },
+      "gloss": {
+        "en": "A person who works for a company or person"
+      },
+      "gloss_example": {
+        "en": "The employee served the customers kindly."
+      }
+    },
+    {
+      "id": "civil_servant",
+      "term": "funcionario / funcionaria",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona que trabaja para el gobierno o el Estado.",
+      "example": "El funcionario selló mis documentos.",
+      "translations": {
+        "en": "civil servant"
+      },
+      "gloss": {
+        "en": "A person who works for the government"
+      },
+      "gloss_example": {
+        "en": "The civil servant stamped my documents."
+      }
     }
   ]
 }
