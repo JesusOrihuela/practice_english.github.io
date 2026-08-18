@@ -56,6 +56,14 @@ for (const code of targets) {
   if (!Array.isArray(p.grammarTipLabels)) fail(`${label} — grammarTipLabels must be an array`);
   else if (p.grammarTipLabels.length === 0) warn(`${label} — grammarTipLabels empty: no learning-mode grammar chip for this language`);
   if (!p.frequency || !p.frequency.list)  fail(`${label} — frequency.list is required (which pedagogical list governs the coverage gate)`);
+  if (!p.tts || !p.tts.engine)            fail(`${label} — tts.engine is required (audio generator: 'kokoro' | 'edge')`);
+  // Coverage must gate this language IN CI → it needs a COMMITTED frequency index + floor.
+  if (!p.frequency || !p.frequency.gateIndex) {
+    fail(`${label} — frequency.gateIndex is required (committed index for the CI coverage gate)`);
+  } else if (!fs.existsSync(path.join(ROOT, 'tools/sources/derived', p.frequency.gateIndex))) {
+    fail(`${label} — frequency.gateIndex "${p.frequency.gateIndex}" is not committed in tools/sources/derived/ — coverage can't gate ${code} in CI`);
+  }
+  if (!p.frequency || typeof p.frequency.gateFloor !== 'number') fail(`${label} — frequency.gateFloor (number %) is required for the coverage gate`);
 
   // 2. Node grammar detectors.
   if (!DETECTORS[code]) fail(`${label} — NO detector block in tools/lang-detectors.mjs (grammar evidence would be empty)`);

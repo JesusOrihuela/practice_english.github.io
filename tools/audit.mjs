@@ -40,8 +40,17 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 import { discoverPairs, pairMeta, allPhraseTopics, allVocabDecks, vocabLangs } from './lib-content.mjs';
+import AppLangProfiles from '../shared/js/lang-profiles.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// The audio generator per language comes from its profile (tts.engine) — no hardcoded
+// `=== 'en'`. Used only to print the "run: …" hint when audio is missing.
+function genCmdFor(lang, topic) {
+  return AppLangProfiles.get(lang)?.tts?.engine === 'kokoro'
+    ? `node tools/generate-audio.mjs --topic ${topic}`
+    : `python tools/generate-audio-tgt.py --lang ${lang} --topic ${topic}`;
+}
 const ROOT      = join(__dirname, '..');
 const JSON_DIR  = join(ROOT, 'shared', 'json');
 const AUDIO_DIR = join(ROOT, 'shared', 'audio');
@@ -459,9 +468,7 @@ function checkPhraseAudioAlignment(topic, pairId, targetLangCode) {
   const leaderVoice = LANG_VOICE_LEADERS[targetLangCode];
   if (!leaderVoice) return;
 
-  const genCmd = targetLangCode === 'en'
-    ? `node tools/generate-audio.mjs --topic ${topic}`
-    : `python tools/generate-audio-tgt.py --lang ${targetLangCode} --topic ${topic}`;
+  const genCmd = genCmdFor(targetLangCode, topic);
 
   // Collect all (phraseId, slug) pairs that need audio
   const expected = [];
@@ -519,9 +526,7 @@ function checkVocabAudioAlignment(lang, topic) {
 
   if (found !== words.length) {
     const missing = words.length - found;
-    const genCmd = lang === 'en'
-      ? `node tools/generate-audio.mjs --topic ${audioSubdir}`
-      : `python tools/generate-audio-tgt.py --lang ${lang} --topic ${audioSubdir}`;
+    const genCmd = genCmdFor(lang, audioSubdir);
     issue(fileRef, null, `audio_${lang}`,
       `${lang.toUpperCase()} mismatch: ${missing} ${leaderVoice} files missing of ${words.length} — run: ${genCmd}`);
   }

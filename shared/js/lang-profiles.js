@@ -59,6 +59,7 @@
     name: 'English',
     grammaticalGender: false,   // no grammatical gender → no gender-variant enrichment.
     voices: ['af_bella', 'af_heart', 'am_michael', 'bf_emma'],   // TTS voices spoken for this language (audio filename suffixes).
+    tts: { engine: 'kokoro' },   // audio generator: 'kokoro' (generate-audio.mjs) | 'edge' (generate-audio-tgt.py)
     foldPreserve: '',   // English has no letters that folding would destroy → pure ASCII fold.
     // Cloze blank exclusions (3+ letters; 1–2-letter words are dropped by a length filter).
     clozeStopWords: [
@@ -157,6 +158,7 @@
     name: 'Spanish',
     grammaticalGender: true,   // masc/fem agreement → gender-variant enrichment applies (Rule 10).
     voices: ['ef_dora', 'em_alex', 'em_santa'],   // TTS voices spoken for this language (audio filename suffixes).
+    tts: { engine: 'edge' },   // audio generator: 'kokoro' (generate-audio.mjs) | 'edge' (generate-audio-tgt.py)
     foldPreserve: 'ñ',   // 'ñ' is a distinct letter (año ≠ ano); fold á→a etc. but keep ñ.
     // Spanish function words in UNACCENTED form (the fold step removes accents first).
     clozeStopWords: [
