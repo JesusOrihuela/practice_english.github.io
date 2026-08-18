@@ -184,7 +184,7 @@ const AppFlags = (() => {
   // Simplified, recognisable zone silhouettes (fill = currentColor, so they inherit the pill
   // colour and stay theme-aware). Add zones (Sudamérica, El Caribe, etc.) here as needed.
   const REGION_SHAPES = {
-    latinoamerica: `<svg viewBox="0 0 50 74" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M6 10 L14 7 L20 10 L19 16 L24 20 L22 24 L28 27 L33 29 L40 28 L45 32 L44 40 L40 52 L34 60 L30 68 L27 74 L25 66 L24 54 L20 44 L15 36 L18 30 L14 26 L12 22 L8 18 Z"/></svg>`,
+    latinoamerica: `<svg viewBox="0 0 50 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M17 5 L23 4 L27 8 L25 12 L31 15 L39 19 L43 28 L39 39 L33 51 L28 61 L23 72 L20 61 L19 50 L14 41 L11 31 L13 24 L9 19 L15 14 L18 10 Z"/></svg>`,
   };
 
   const _fold = (s) => (s || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');

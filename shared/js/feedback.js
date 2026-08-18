@@ -193,27 +193,30 @@ const AppFeedback = (() => {
       return chip;
     }
 
+    // COMBINED label across ALL dimensions a form carries (gender · region · register ·
+    // loanword), so every variant/combination is shown distinctly — a form that is both
+    // feminine AND from Spain reads "Femenino · España", never collapsed to just one axis.
     function labelFor(alt) {
       const labs = alt.labels || {};
+      const parts = [];
       if (labs.gender !== undefined) {
-        if (labs.gender === 'masculino' || labs.gender === 'masculine') return t('alt_note_gender_m');
-        if (labs.gender === 'femenino' || labs.gender === 'feminine')   return t('alt_note_gender_f');
-        return t('alt_note_gender_n');
+        parts.push(labs.gender === 'masculino' || labs.gender === 'masculine' ? t('alt_note_gender_m')
+                 : labs.gender === 'femenino'  || labs.gender === 'feminine'  ? t('alt_note_gender_f')
+                 : t('alt_note_gender_n'));
       }
-      if (labs.region !== undefined) return t('alt_note_regional').replace('{region}', labs.region || '');
-      if (labs.loanword !== undefined) return t('alt_note_loanword');
-      if (labs.register !== undefined) {
-        return labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i');
-      }
-      return '';  // unlabeled form — chip shows text only
+      if (labs.region !== undefined && labs.region !== '') parts.push(labs.region);
+      if (labs.register !== undefined) parts.push(labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
+      if (labs.loanword !== undefined) parts.push(t('alt_note_loanword'));
+      return parts.join(' · ');  // '' for an unlabeled form → chip shows text only
     }
 
-    /* Group by label so forms sharing the same label appear as one chip. */
+    /* One chip per DISTINCT combined label, so all combinations appear (no cross-dimension
+       merge). Forms with an identical full label collapse into one chip (true duplicates). */
     const groupMap = new Map(); // labelText → texts[]
     for (const alt of typed) {
       const label = labelFor(alt);
       if (!groupMap.has(label)) groupMap.set(label, []);
-      groupMap.get(label).push(alt.text);
+      if (!groupMap.get(label).includes(alt.text)) groupMap.get(label).push(alt.text);
     }
     for (const [labelText, texts] of groupMap) {
       frag.appendChild(makeChip(labelText, texts));
@@ -244,7 +247,12 @@ const AppFeedback = (() => {
     const labels = (form && form.labels) || {};
     const gender = labels.gender;
     const region = labels.region;
-    if (!gender && (region === undefined || region === '')) { if (wrap) wrap.remove(); return; }
+    if (!gender && (region === undefined || region === '')) {
+      if (wrap) wrap.remove();
+      container.classList.remove('has-variant-badge');   // release the reserved top space
+      return;
+    }
+    container.classList.add('has-variant-badge');         // reserve room so the badge never crowds the text
     if (!wrap) {
       wrap = document.createElement('span');
       wrap.className = 'variant-badges';
