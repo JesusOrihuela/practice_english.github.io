@@ -1396,12 +1396,22 @@ body.path-mode {
 
 /* Gender-of-the-shown-variant badge (multi-gender targets) — floats
    top-left, mirroring the CEFR badge on the right */
-.gender-phrase-badge {
+/* Top-left flex wrap holding the adaptive variant pills (gender and/or region). */
+.variant-badges {
   position: absolute;
   top: 14px;
   left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  max-width: calc(100% - 32px);
   pointer-events: none;
   user-select: none;
+}
+
+.gender-phrase-badge,
+.region-phrase-badge {
   font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.4;
@@ -1410,5 +1420,21 @@ body.path-mode {
   background: var(--clr-surface-2);
   border: 1px solid var(--clr-border);
   color: var(--clr-text-muted);
+}
+
+/* Region pill: SVG flag (never emoji) + region name. */
+.region-phrase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 6px;
+}
+
+.region-phrase-badge svg {
+  width: 15px;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 

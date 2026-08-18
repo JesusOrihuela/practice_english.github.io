@@ -233,24 +233,61 @@ const AppFeedback = (() => {
    * future gendered target works automatically. Removes the badge when the
    * active form carries no gender label.
    */
+  // Region label → flag code (AppFlags SVG, never emoji). Regions with no single-country
+  // flag (e.g. "Latinoamérica") show the name alone. Data-driven, so a new region only
+  // needs an entry here to get a flag.
+  const REGION_FLAG = {
+    'España': 'es', 'Espana': 'es',
+    'UK': 'gb', 'Reino Unido': 'gb',
+    'US': 'us', 'EE. UU.': 'us', 'EE.UU.': 'us', 'Estados Unidos': 'us',
+    'México': 'mx', 'Mexico': 'mx',
+    'Francia': 'fr', 'Alemania': 'de', 'Italia': 'it', 'Brasil': 'br', 'Portugal': 'pt',
+  };
+
+  // Adaptive variant badge(s): shows which VARIANT the learner is currently seeing —
+  // gender (♀/♂/Neutro) and/or region (flag + name). Both live in a top-left flex wrap so
+  // they coexist. Driven purely by the picked form's labels — no branching by language, so
+  // any gendered/regional target works. Removes itself when the form carries no variant label.
   function applyVariantBadge(containerId, form) {
     const container = document.getElementById(containerId);
     if (!container) return;
-    let badge = container.querySelector('.gender-phrase-badge');
-    const gender = form && form.labels && form.labels.gender;
-    if (!gender) { if (badge) badge.remove(); return; }
-    if (!badge) {
-      badge = document.createElement('span');
-      badge.className = 'gender-phrase-badge';
+    let wrap = container.querySelector('.variant-badges');
+    const labels = (form && form.labels) || {};
+    const gender = labels.gender;
+    const region = labels.region;
+    if (!gender && (region === undefined || region === '')) { if (wrap) wrap.remove(); return; }
+    if (!wrap) {
+      wrap = document.createElement('span');
+      wrap.className = 'variant-badges';
       container.style.position = 'relative';
-      container.appendChild(badge);
+      container.appendChild(wrap);
     }
-    const key = gender === 'masculino' ? 'alt_note_gender_m'
-              : gender === 'femenino'  ? 'alt_note_gender_f'
-              : gender === 'neutro'    ? 'alt_note_gender_n' : null;
-    const label = key ? AppLang.t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
-    const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
-    badge.textContent = sym + label;
+    wrap.textContent = '';
+
+    if (gender) {
+      const b = document.createElement('span');
+      b.className = 'gender-phrase-badge';
+      const key = gender === 'masculino' ? 'alt_note_gender_m'
+                : gender === 'femenino'  ? 'alt_note_gender_f'
+                : gender === 'neutro'    ? 'alt_note_gender_n' : null;
+      const label = key ? AppLang.t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
+      const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
+      b.textContent = sym + label;
+      wrap.appendChild(b);
+    }
+    if (region !== undefined && region !== '') {
+      const b = document.createElement('span');
+      b.className = 'region-phrase-badge';
+      const code = REGION_FLAG[region];
+      if (code && typeof AppFlags !== 'undefined') {
+        const flag = AppFlags.single(code);
+        if (flag) b.appendChild(flag);
+      }
+      const txt = document.createElement('span');
+      txt.textContent = region;
+      b.appendChild(txt);
+      wrap.appendChild(b);
+    }
   }
 
   return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge };
