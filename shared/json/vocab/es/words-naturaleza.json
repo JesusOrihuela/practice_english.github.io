@@ -503,6 +503,186 @@
       "gloss_example": {
         "en": "We spent the summer on the coast."
       }
+    },
+    {
+      "id": "horse",
+      "term": "caballo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal grande que se usa para montar o tirar de cargas.",
+      "example": "El caballo corre por el campo.",
+      "translations": {
+        "en": "horse"
+      },
+      "gloss": {
+        "en": "A large animal used for riding or pulling loads"
+      },
+      "gloss_example": {
+        "en": "The horse runs across the field."
+      }
+    },
+    {
+      "id": "cat",
+      "term": "gato",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal doméstico pequeño que maúlla y caza ratones.",
+      "example": "El gato duerme en el sofá.",
+      "translations": {
+        "en": "cat"
+      },
+      "gloss": {
+        "en": "A small pet that meows and hunts mice"
+      },
+      "gloss_example": {
+        "en": "The cat sleeps on the sofa."
+      }
+    },
+    {
+      "id": "pig",
+      "term": "cerdo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal de granja del que se obtiene carne.",
+      "example": "El cerdo se revuelca en el barro.",
+      "translations": {
+        "en": "pig"
+      },
+      "gloss": {
+        "en": "A farm animal raised for meat"
+      },
+      "gloss_example": {
+        "en": "The pig rolls in the mud."
+      }
+    },
+    {
+      "id": "fish_animal",
+      "term": "pez",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal que vive en el agua y respira por branquias.",
+      "example": "En el río hay muchos peces.",
+      "translations": {
+        "en": "fish"
+      },
+      "gloss": {
+        "en": "An animal that lives in water and breathes through gills"
+      },
+      "gloss_example": {
+        "en": "There are many fish in the river."
+      }
+    },
+    {
+      "id": "fly_insect",
+      "term": "mosca",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Insecto pequeño con alas que vuela cerca de la comida.",
+      "example": "Una mosca entró por la ventana.",
+      "translations": {
+        "en": "fly"
+      },
+      "gloss": {
+        "en": "A small winged insect that flies near food"
+      },
+      "gloss_example": {
+        "en": "A fly came in through the window."
+      }
+    },
+    {
+      "id": "spider",
+      "term": "araña",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Animal de ocho patas que teje telas para cazar.",
+      "example": "Vi una araña en el techo.",
+      "translations": {
+        "en": "spider"
+      },
+      "gloss": {
+        "en": "An eight-legged animal that spins webs to hunt"
+      },
+      "gloss_example": {
+        "en": "I saw a spider on the ceiling."
+      }
+    },
+    {
+      "id": "mosquito",
+      "term": "mosquito",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Insecto pequeño que pica y chupa sangre.",
+      "example": "El mosquito me picó en el brazo.",
+      "translations": {
+        "en": "mosquito"
+      },
+      "gloss": {
+        "en": "A small insect that bites and sucks blood"
+      },
+      "gloss_example": {
+        "en": "The mosquito bit me on the arm."
+      }
+    },
+    {
+      "id": "moon",
+      "term": "luna",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cuerpo que brilla en el cielo por la noche.",
+      "example": "Esta noche la luna está muy grande.",
+      "translations": {
+        "en": "moon"
+      },
+      "gloss": {
+        "en": "The body that shines in the sky at night"
+      },
+      "gloss_example": {
+        "en": "Tonight the moon is very big."
+      }
+    },
+    {
+      "id": "forest",
+      "term": "bosque",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar con muchos árboles juntos.",
+      "example": "Dimos un paseo por el bosque.",
+      "translations": {
+        "en": "forest"
+      },
+      "gloss": {
+        "en": "A place with many trees together"
+      },
+      "gloss_example": {
+        "en": "We took a walk through the forest."
+      }
+    },
+    {
+      "id": "desert",
+      "term": "desierto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar muy seco con arena y poca vegetación.",
+      "example": "En el desierto casi nunca llueve.",
+      "translations": {
+        "en": "desert"
+      },
+      "gloss": {
+        "en": "A very dry place with sand and little vegetation"
+      },
+      "gloss_example": {
+        "en": "It almost never rains in the desert."
+      }
     }
   ]
 }

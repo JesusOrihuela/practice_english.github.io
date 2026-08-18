@@ -2447,6 +2447,132 @@
       "gloss_example": {
         "en": "The trees surround the house."
       }
+    },
+    {
+      "id": "stay",
+      "term": "quedarse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Permanecer en un lugar o estado.",
+      "example": "Prefiero quedarme en casa esta noche.",
+      "translations": {
+        "en": "stay"
+      },
+      "gloss": {
+        "en": "To remain in a place or state"
+      },
+      "gloss_example": {
+        "en": "I prefer to stay home tonight."
+      }
+    },
+    {
+      "id": "put_on",
+      "term": "ponerse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Vestirse con una prenda o pasar a un nuevo estado.",
+      "example": "Se puso el abrigo antes de salir.",
+      "translations": {
+        "en": "put on"
+      },
+      "gloss": {
+        "en": "To dress in a garment or enter a new state"
+      },
+      "gloss_example": {
+        "en": "He put on his coat before leaving."
+      }
+    },
+    {
+      "id": "undo",
+      "term": "deshacer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Destruir o deshacer lo que estaba hecho.",
+      "example": "Tuvo que deshacer la maleta al volver.",
+      "translations": {
+        "en": "undo"
+      },
+      "gloss": {
+        "en": "To destroy or reverse what was done"
+      },
+      "gloss_example": {
+        "en": "She had to unpack the suitcase when she got back."
+      }
+    },
+    {
+      "id": "fail_exam",
+      "term": "suspender",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "No aprobar un examen o detener algo temporalmente.",
+      "example": "Suspendió el examen y tiene que repetirlo.",
+      "translations": {
+        "en": "fail"
+      },
+      "gloss": {
+        "en": "To not pass an exam or stop something temporarily"
+      },
+      "gloss_example": {
+        "en": "He failed the exam and has to retake it."
+      }
+    },
+    {
+      "id": "pass_exam",
+      "term": "aprobar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Pasar un examen o dar algo por bueno.",
+      "example": "Aprobó todas las materias este año.",
+      "translations": {
+        "en": "pass"
+      },
+      "gloss": {
+        "en": "To pass an exam or accept something as good"
+      },
+      "gloss_example": {
+        "en": "She passed all her subjects this year."
+      }
+    },
+    {
+      "id": "work_as",
+      "term": "dedicarse",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ocuparse de una actividad o profesión.",
+      "example": "Se dedica a la enseñanza desde hace años.",
+      "translations": {
+        "en": "work as"
+      },
+      "gloss": {
+        "en": "To engage in an activity or profession"
+      },
+      "gloss_example": {
+        "en": "She has worked in teaching for years."
+      }
+    },
+    {
+      "id": "separate",
+      "term": "separarse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Alejarse de algo o terminar una relación de pareja.",
+      "example": "Sus padres se separaron el año pasado.",
+      "translations": {
+        "en": "separate"
+      },
+      "gloss": {
+        "en": "To move apart or end a relationship"
+      },
+      "gloss_example": {
+        "en": "His parents separated last year."
+      }
     }
   ]
 }
