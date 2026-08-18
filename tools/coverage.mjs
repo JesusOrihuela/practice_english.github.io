@@ -265,10 +265,10 @@ if (fs.existsSync(elelexPath) && esPair && esPair.split('-')[1] === 'es' && (!PA
 
 // ── Unified GATE computation for EVERY target language ────────────────────────
 // Each language's gate reads the COMMITTEABLE index its profile declares
-// (frequency.gateIndex) — NGSL for en, FrequencyWords for es, {lang}-freq for future
+// (frequency.gateIndex) — NGSL for en, PCIC (es-core.json) for es, {lang}-freq for future
 // langs — so coverage gates every language in CI (no "local only" per language). Runs
 // after the detailed display blocks and is the single source of the gate values (for
-// en it recomputes the same number; for es it uses the committed FrequencyWords index
+// en it recomputes the same number; for es it uses the committed PCIC-curated CEFR index
 // instead of the non-committeable ELELex). Nothing hardcoded: langs from discoverPairs,
 // index + floor from lang-profiles.
 for (const pair of (PAIR_ARG ? [PAIR_ARG] : discoverPairs())) {

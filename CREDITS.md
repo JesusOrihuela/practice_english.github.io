@@ -44,20 +44,24 @@ with `tools/sources/fetch-sources.sh`, then `tools/sources/build-elelex.mjs`).
 ### FrequencyWords (Hermit Dave) — CC BY-SA 3.0
 Word-frequency lists from the OpenSubtitles 2018 corpus. Used as a *frequency
 signal* for CEFR-band difficulty during reconciliation (`tools/reconcile.mjs`),
-and — for the Spanish coverage gate — **lemmatized and re-ranked** into a
-committed derived index (`tools/sources/derived/es-core.json`, built by
-`tools/sources/build-freq-es.py` with `simplemma`). That index is a derivative of
-FrequencyWords and is redistributed here under the same **CC BY-SA 3.0**. The raw
-50k lists themselves are not committed. (Spanish's CEFR-graded ELELex is CC
-BY-NC-SA → not committeable, so it stays a local-only reference.)
+and — for the Spanish coverage gate — as the **intra-level ordering key** of the
+PCIC-curated core index (`tools/sources/derived/es-core.json`; see PCIC below).
+The raw 50k lists themselves are not committed.
 - Repository: https://github.com/hermitdave/FrequencyWords
 - License: Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
 
 ### Plan Curricular del Instituto Cervantes (PCIC)
 Official Spanish reference inventories (functions, notions) used to decide which
-communicative functions and topics to cover, and at which CEFR level. Only short
-functional exponents are referenced; the structured seed lives at
-`tools/sources/derived/pcic-greetings.json`.
+communicative functions and topics to cover, and at which CEFR level. Two uses:
+- Per-topic functional/notional seeds (`tools/sources/derived/pcic-*.json`).
+- **The Spanish coverage-gate core index** (`tools/sources/derived/es-core.json`,
+  built by `tools/sources/build-pcic-core.py`): the PCIC Inventario de nociones
+  (generales + específicas, A1-B2) provides the curated CEFR **membership + grade**;
+  FrequencyWords provides only the within-level frequency order; tokens are
+  lemmatized with `simplemma`. This is the single curated + committeable + CEFR
+  list that governs the Spanish gate in CI (project rule: one such list per
+  language). Spanish's CEFR-graded ELELex (CC BY-NC-SA) is a better-formatted
+  metric but not committeable, so it stays a local-only cross-check, never the gate.
 - Source: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/
 - Public reference material (Instituto Cervantes)
 

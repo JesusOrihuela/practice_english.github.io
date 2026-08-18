@@ -234,16 +234,21 @@
       [/g[eé]nero|concuerda en (g[eé]nero|singular|plural)/i, 'Concordancia', 'gender_adjective_agreement'],
     ],
     frequency: {
-      list: 'FrequencyWords (lemmatized)',
-      cefrGraded: false,
-      committed: true,   // committeable index (CC BY-SA 3.0) → Spanish gate runs in CI.
-      note: 'FrequencyWords (Hermit Dave, OpenSubtitles) lemmatized with simplemma — CC BY-SA 3.0.',
+      list: 'PCIC (Instituto Cervantes)',
+      cefrGraded: true,
+      committed: true,   // committeable index (public reference) → Spanish gate runs in CI.
+      note: 'PCIC Inventario de nociones (A1-B2) — membresía + grado CEFR (referencia pública ' +
+            'Instituto Cervantes); orden intra-nivel por FrequencyWords (CC BY-SA). Build: ' +
+            'tools/sources/build-pcic-core.py. Es la única lista curada+committeable+CEFR del es.',
       gateIndex: 'es-core.json',   // committed derived index the coverage GATE reads (CI)
-      // Floor calibrated to THIS yardstick (raw lemma-frequency ~74%/60% live), like the
-      // English 86 = live−2. It is a regression guard, not comparable across languages.
-      gateFloor: 55,
-      // ELELex (CEFR-graded, CC BY-NC-SA) is a better pedagogical metric but NOT committeable
-      // → it stays a LOCAL-only reference shown when tools/sources/derived/elelex-es.json exists.
+      // The top-1000 is the official A1-A2 vocabulary curriculum (CEFR-first ordering). Live
+      // coverage is ~67%/51% today; the north-star is the 88% sweet-spot (comunicación cotidiana).
+      // gateFloor is a RATCHET (regression guard just below live) that we raise as content grows
+      // toward 88 — not a hard 88 (that would keep CI red mid-build).
+      gateFloor: 49,
+      targetFloor: 88,   // north-star coverage the ongoing content curation builds toward.
+      // ELELex (CEFR-graded, CC BY-NC-SA) is NOT committeable → stays a LOCAL-only cross-check
+      // shown when tools/sources/derived/elelex-es.json exists. It is NOT the gate.
       localIndex: 'elelex-es.json',
     },
   };
