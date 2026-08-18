@@ -88,6 +88,7 @@ const MIN  = parseFloat(argVal('--min') || '80');
 // with phrases alone AND with vocab alone.
 const gatePhrases = {};  // targetLang → top-1000 phrase-only coverage % (teachable)
 const gateVocab   = {};  // targetLang → top-1000 vocab-only  coverage % (teachable)
+const gateMissing = {};  // targetLang → { phrases: [lemma…], vocab: [lemma…] } (rank-ordered)
 
 // Collect the distinct content words used by a pair, restricted to a channel:
 //   'phrases' — only phrase target[].text
@@ -280,8 +281,27 @@ for (const pair of (PAIR_ARG ? [PAIR_ARG] : discoverPairs())) {
   const ranks = JSON.parse(fs.readFileSync(giPath, 'utf8')).ranks;
   const ig = ignoreFor(lang), igFn = unionSet(ig, functionFor(lang));
   const list = Object.entries(ranks).filter(([, r]) => r <= 1000).map(([w]) => w);
-  gatePhrases[lang] = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'phrases'), lang, ranks), ig).pct;
-  gateVocab[lang]   = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'vocab'), lang, ranks), igFn).pct;
+  const ph = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'phrases'), lang, ranks), ig);
+  const vo = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'vocab'), lang, ranks), igFn);
+  gatePhrases[lang] = ph.pct;
+  gateVocab[lang]   = vo.pct;
+  const byRank = (a, b) => (ranks[a] ?? 1e9) - (ranks[b] ?? 1e9);
+  gateMissing[lang] = { phrases: [...ph.missing].sort(byRank), vocab: [...vo.missing].sort(byRank) };
+}
+
+// ── --gate-missing: dump the actionable, rank-ordered gap list per channel ────
+// The exact words the committed-index gate counts as missing (phrase channel = full
+// teachable top-1000; vocab channel = content words only), most-frequent first. Feeds
+// build-candidates-cover.mjs / vocab authoring when raising a language toward 88%.
+if (args.includes('--gate-missing')) {
+  const langs = PAIR_ARG ? [PAIR_ARG.split('-')[1]] : Object.keys(gateMissing);
+  for (const lang of langs) {
+    const m = gateMissing[lang] || { phrases: [], vocab: [] };
+    console.log(`\n=== ${lang}: faltantes del top-1000 (orden por rango = prioridad) ===`);
+    console.log(`  PHRASES (${m.phrases.length}):\n  ${m.phrases.join(' ')}`);
+    console.log(`  VOCAB-content (${m.vocab.length}):\n  ${m.vocab.join(' ')}`);
+  }
+  process.exit(0);
 }
 
 // ── GATE — enforce the core-vocabulary rule (top-1000 ≥ floor%) ───────────────
