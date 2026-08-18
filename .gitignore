@@ -26,6 +26,7 @@ tools/sources/derived/*
 !tools/sources/derived/core-inventory-*.json
 !tools/sources/derived/*-provenance.json
 !tools/sources/derived/ngsl-*.json
+!tools/sources/derived/es-core.json
 
 # ── Audio files (pre-generated, ~399 MB) ──────────────────────
 # Generated locally with: node tools/generate-audio.mjs

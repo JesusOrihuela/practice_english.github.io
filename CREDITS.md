@@ -42,9 +42,14 @@ with `tools/sources/fetch-sources.sh`, then `tools/sources/build-elelex.mjs`).
 - License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
 
 ### FrequencyWords (Hermit Dave) — CC BY-SA 3.0
-Word-frequency lists from the OpenSubtitles 2018 corpus, used only as a
-*frequency signal* to estimate CEFR-band difficulty during content
-reconciliation (`tools/reconcile.mjs`). No frequency list is redistributed here.
+Word-frequency lists from the OpenSubtitles 2018 corpus. Used as a *frequency
+signal* for CEFR-band difficulty during reconciliation (`tools/reconcile.mjs`),
+and — for the Spanish coverage gate — **lemmatized and re-ranked** into a
+committed derived index (`tools/sources/derived/es-core.json`, built by
+`tools/sources/build-freq-es.py` with `simplemma`). That index is a derivative of
+FrequencyWords and is redistributed here under the same **CC BY-SA 3.0**. The raw
+50k lists themselves are not committed. (Spanish's CEFR-graded ELELex is CC
+BY-NC-SA → not committeable, so it stays a local-only reference.)
 - Repository: https://github.com/hermitdave/FrequencyWords
 - License: Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
 

@@ -152,15 +152,15 @@ jobs:
       - name: Accessibility checks (check-a11y.mjs)
         run: node tools/check-a11y.mjs
 
-  # Core-vocabulary rule (TWO CHANNELS): the target language must teach ≥ 90% of the
-  # pedagogical top-1000 with PHRASES alone AND with VOCAB alone — the core taught
-  # both in context (phrases) and in isolation (vocab). Phrases are measured over the
-  # full teachable top-1000; vocab over content words only (closed-class function
-  # words are excluded — they cannot be flashcards). Premise: the ~1000 most frequent
-  # units cover ~88% of everyday speech. English uses NGSL (committed). Spanish uses
-  # ELELex (CC BY-NC-SA, not committed) so its gate runs LOCALLY only — see
-  # coverage.mjs. This job is a visible signal, not (yet) a required check: coverage
-  # is being raised toward the target. Make it required in branch protection once green.
+  # Core-vocabulary rule (TWO CHANNELS): every target language must teach ≥ its floor of
+  # the top-1000 core with PHRASES alone AND with VOCAB alone — the core taught both in
+  # context (phrases) and in isolation (vocab). Runs for EVERY language (derived from the
+  # pairs), each against a COMMITTED frequency index (frequency.gateIndex in lang-profiles:
+  # NGSL for en, a lemmatized FrequencyWords core for es) with a per-language floor
+  # (frequency.gateFloor). No "local only" per language: a language without a committed
+  # index fails the gate. (Spanish's CEFR-graded ELELex is CC BY-NC-SA → local-only
+  # reference, never the gate.) Floors are ratcheting regression guards kept a couple
+  # points below live coverage, not comparable across languages (different yardsticks).
   coverage:
     runs-on: ubuntu-latest
     steps:
@@ -178,17 +178,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      # Required check. --min is a RATCHETING REGRESSION FLOOR, not the target: it
-      # blocks a merge that drops English coverage below the floor in either channel,
-      # kept a couple points below live coverage so routine edits don't lock main. The
-      # quality TARGET is ~88% (stretch beyond the 80% sweet spot), pursued additively
-      # in batches; the floor is raised toward its end state of 86% (= target − 2) as
-      # coverage climbs, and must never sit above current coverage (that would be an
-      # unmet gate, not a regression guard). The es-en pair reached the ~88% quality
-      # target in BOTH channels (vocab ~88%, phrases ~88%), so the floor is now at its
-      # end state of 86% (= target − 2). Spanish (ELELex, CC BY-NC-SA) is local only.
-      - name: Core-vocabulary coverage floor (EN, NGSL top-1000 >= 86% in BOTH channels)
-        run: node tools/coverage.mjs --pair es-en --gate --min 86
+      # Gates ALL languages, each against its committed index at its per-language floor
+      # (lang-profiles frequency.gateFloor). No --pair / --min → derives the pairs and
+      # reads each floor from the profile.
+      - name: Core-vocabulary coverage floor (every language, top-1000 in BOTH channels)
+        run: node tools/coverage.mjs --gate
 
   # Browser smoke suite (tests/smoke.mjs): runs the app in headless Chromium and
   # checks the things static checks can't — the answer loop, feedback rendering,

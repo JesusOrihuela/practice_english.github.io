@@ -130,12 +130,14 @@ function channelCov(list, ranks, coveredRanks, exclude) {
   return { covered: teachable.length - missing.length, total: teachable.length,
            pct: 100 * (teachable.length - missing.length) / teachable.length, missing };
 }
-// Ranks reachable from a used-set through light morphology (English NGSL).
-function coveredRanksEn(used, ranks) {
+// Ranks reachable from a used-set through light morphology — language-parameterized
+// (lookupRank handles per-language forms). coveredRanksEn kept as the English alias.
+function coveredRanks(used, lang, ranks) {
   const s = new Set();
-  for (const w of used) { const r = lookupRank(w, 'en', ranks); if (r != null) s.add(r); }
+  for (const w of used) { const r = lookupRank(w, lang, ranks); if (r != null) s.add(r); }
   return s;
 }
+function coveredRanksEn(used, ranks) { return coveredRanks(used, 'en', ranks); }
 
 // Derived: [pairId, targetLang, label] per pair — no hardcoded pair list.
 const PAIRS = discoverPairs().map(p => [p, p.split('-')[1], `par ${p} (objetivo ${p.split('-')[1]})`])
@@ -143,7 +145,9 @@ const PAIRS = discoverPairs().map(p => [p, p.split('-')[1], `par ${p} (objetivo 
 
 for (const [pair, lang, label] of PAIRS) {
   let FREQ;
-  try { FREQ = loadFreq(lang); } catch (e) { console.error('ERROR: ' + e.message); continue; }
+  // The raw {lang}-freq.json bands display is a local dev nicety (those lists are
+  // gitignored); the GATE uses the committed index instead, so just skip if absent.
+  try { FREQ = loadFreq(lang); } catch { continue; }
   const ranks = FREQ.ranks;
   const byBand = {};
   for (const N of BANDS) byBand[N] = [];
@@ -259,29 +263,54 @@ if (fs.existsSync(elelexPath) && esPair && esPair.split('-')[1] === 'es' && (!PA
   }
 }
 
-// ── GATE — enforce the core-vocabulary rule (top-1000 ≥ MIN%) ─────────────────
+// ── Unified GATE computation for EVERY target language ────────────────────────
+// Each language's gate reads the COMMITTEABLE index its profile declares
+// (frequency.gateIndex) — NGSL for en, FrequencyWords for es, {lang}-freq for future
+// langs — so coverage gates every language in CI (no "local only" per language). Runs
+// after the detailed display blocks and is the single source of the gate values (for
+// en it recomputes the same number; for es it uses the committed FrequencyWords index
+// instead of the non-committeable ELELex). Nothing hardcoded: langs from discoverPairs,
+// index + floor from lang-profiles.
+for (const pair of (PAIR_ARG ? [PAIR_ARG] : discoverPairs())) {
+  const lang = pair.split('-')[1];
+  const gi = AppLangProfiles.get(lang)?.frequency?.gateIndex;
+  if (!gi) continue;                                   // enforcement: handled in the GATE block
+  const giPath = join(ROOT, 'tools/sources/derived', gi);
+  if (!fs.existsSync(giPath)) continue;
+  const ranks = JSON.parse(fs.readFileSync(giPath, 'utf8')).ranks;
+  const ig = ignoreFor(lang), igFn = unionSet(ig, functionFor(lang));
+  const list = Object.entries(ranks).filter(([, r]) => r <= 1000).map(([w]) => w);
+  gatePhrases[lang] = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'phrases'), lang, ranks), ig).pct;
+  gateVocab[lang]   = channelCov(list, ranks, coveredRanks(contentWords(pair, lang, 'vocab'), lang, ranks), igFn).pct;
+}
+
+// ── GATE — enforce the core-vocabulary rule (top-1000 ≥ floor%) ───────────────
 // The premise: knowing the ~1000 most frequent units covers ~88% of everyday
 // communication. A pair is only "complete" when its target language teaches that
-// core. NGSL (en) is committed so this runs in CI; ELELex (es) is CC BY-NC-SA and
-// only present locally, so the es gate is a local-only check.
+// core. Every language gates in CI against its committed index; the floor is per
+// language (frequency.gateFloor), overridable with --min.
 if (GATE) {
   // Target languages to gate: the pair's target (if --pair), else all present — derived.
   const scope = PAIR_ARG ? [PAIR_ARG.split('-')[1]]
               : [...new Set(discoverPairs().map(p => p.split('-')[1]))];
-  console.log(`\n=== GATE — cobertura del top-1000 ≥ ${MIN}% en AMBOS canales (frases y vocab) ===`);
+  const minOverride = argVal('--min') != null;
+  console.log(`\n=== GATE — cobertura del top-1000 en AMBOS canales (frases y vocab), piso por idioma ===`);
   let failed = false;
   for (const lang of scope) {
+    // Enforcement: every gated language MUST declare a committed index. Missing tables
+    // ⇒ no committeable index (frequency.gateIndex) ⇒ the language can't gate in CI → fail.
     if (!(lang in gatePhrases) || !(lang in gateVocab)) {
-      console.error(`  ✗ ${lang}: lista de frecuencia no disponible (no se pudo medir). ` +
-        `${lang === 'es' ? 'Descarga ELELex: tools/sources/fetch-sources.sh + build-elelex.mjs' : ''}`);
+      console.error(`  ✗ ${lang}: sin índice de frecuencia committeado (lang-profiles frequency.gateIndex + ` +
+        `tools/sources/derived/*) — el idioma no puede gatearse en CI.`);
       failed = true; continue;
     }
+    const floor = minOverride ? MIN : (AppLangProfiles.get(lang)?.frequency?.gateFloor ?? MIN);
     for (const [channel, table] of [['frases', gatePhrases], ['vocab', gateVocab]]) {
       const pct = table[lang];
-      const ok = pct >= MIN;
+      const ok = pct >= floor;
       if (!ok) failed = true;
-      console.log(`  ${ok ? '✓' : '✗'} ${lang} · ${channel}: ${pct.toFixed(1)}% ${ok ? '≥' : '<'} ${MIN}%` +
-        (ok ? '' : `  → faltan ${(MIN - pct).toFixed(1)} puntos; ver faltantes arriba`));
+      console.log(`  ${ok ? '✓' : '✗'} ${lang} · ${channel}: ${pct.toFixed(1)}% ${ok ? '≥' : '<'} ${floor}%` +
+        (ok ? '' : `  → faltan ${(floor - pct).toFixed(1)} puntos; ver faltantes arriba`));
     }
   }
   console.log(failed ? '\nGATE: FALLA — el par no cumple la premisa del núcleo ~1000 en ambos canales.'

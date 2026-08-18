@@ -147,6 +147,8 @@
       cefrGraded: false,
       committed: true,   // NGSL ships in the repo → the English gate runs in CI.
       note: 'New General Service List (Browne et al.) — 2801 curated learner lemmas.',
+      gateIndex: 'ngsl-en.json',   // committed derived index the coverage GATE reads (CI)
+      gateFloor: 86,               // CI floor: cover ≥ this % of the top-1000 in both channels
     },
   };
 
@@ -230,10 +232,17 @@
       [/g[eé]nero|concuerda en (g[eé]nero|singular|plural)/i, 'Concordancia', 'gender_adjective_agreement'],
     ],
     frequency: {
-      list: 'ELELex',
-      cefrGraded: true,
-      committed: false,  // ELELex is CC BY-NC-SA → Spanish gate runs LOCAL ONLY.
-      note: 'ELELex (CEFRLex, François et al.) — CEFR-graded Spanish lemma list.',
+      list: 'FrequencyWords (lemmatized)',
+      cefrGraded: false,
+      committed: true,   // committeable index (CC BY-SA 3.0) → Spanish gate runs in CI.
+      note: 'FrequencyWords (Hermit Dave, OpenSubtitles) lemmatized with simplemma — CC BY-SA 3.0.',
+      gateIndex: 'es-core.json',   // committed derived index the coverage GATE reads (CI)
+      // Floor calibrated to THIS yardstick (raw lemma-frequency ~74%/60% live), like the
+      // English 86 = live−2. It is a regression guard, not comparable across languages.
+      gateFloor: 55,
+      // ELELex (CEFR-graded, CC BY-NC-SA) is a better pedagogical metric but NOT committeable
+      // → it stays a LOCAL-only reference shown when tools/sources/derived/elelex-es.json exists.
+      localIndex: 'elelex-es.json',
     },
   };
 
