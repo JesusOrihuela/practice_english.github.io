@@ -341,6 +341,168 @@
       "gloss_example": {
         "en": "It is very hot today."
       }
+    },
+    {
+      "id": "today",
+      "term": "hoy",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "En el día en que estamos ahora.",
+      "example": "Hoy tenemos una reunión importante.",
+      "translations": {
+        "en": "today"
+      },
+      "gloss": {
+        "en": "On this present day"
+      },
+      "gloss_example": {
+        "en": "We have an important meeting today."
+      }
+    },
+    {
+      "id": "yesterday",
+      "term": "ayer",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "En el día anterior a hoy.",
+      "example": "Ayer llovió toda la tarde.",
+      "translations": {
+        "en": "yesterday"
+      },
+      "gloss": {
+        "en": "On the day before today"
+      },
+      "gloss_example": {
+        "en": "It rained all afternoon yesterday."
+      }
+    },
+    {
+      "id": "afternoon",
+      "term": "tarde",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Parte del día entre el mediodía y la noche.",
+      "example": "Por la tarde salimos a caminar.",
+      "translations": {
+        "en": "afternoon"
+      },
+      "gloss": {
+        "en": "The part of the day between noon and evening"
+      },
+      "gloss_example": {
+        "en": "In the afternoon we go out for a walk."
+      }
+    },
+    {
+      "id": "early",
+      "term": "temprano",
+      "level": "A1",
+      "category": "Adverb",
+      "difficulty": "easy",
+      "definition": "En las primeras horas o antes de lo esperado.",
+      "example": "Mañana debo levantarme temprano.",
+      "translations": {
+        "en": "early"
+      },
+      "gloss": {
+        "en": "In the first hours or before the expected time"
+      },
+      "gloss_example": {
+        "en": "Tomorrow I have to get up early."
+      }
+    },
+    {
+      "id": "second_time",
+      "term": "segundo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad de tiempo que equivale a una parte muy pequeña de un minuto.",
+      "example": "Espera un segundo, por favor.",
+      "translations": {
+        "en": "second"
+      },
+      "gloss": {
+        "en": "A unit of time, a small fraction of a minute"
+      },
+      "gloss_example": {
+        "en": "Wait a second, please."
+      }
+    },
+    {
+      "id": "midday",
+      "term": "mediodía",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Momento central del día, alrededor de las doce.",
+      "example": "Comemos al mediodía.",
+      "translations": {
+        "en": "midday"
+      },
+      "gloss": {
+        "en": "The middle of the day, around twelve"
+      },
+      "gloss_example": {
+        "en": "We eat at midday."
+      }
+    },
+    {
+      "id": "autumn",
+      "term": "otoño",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Estación del año entre el verano y el invierno.",
+      "example": "En otoño caen las hojas de los árboles.",
+      "translations": {
+        "en": "autumn"
+      },
+      "gloss": {
+        "en": "The season between summer and winter"
+      },
+      "gloss_example": {
+        "en": "In autumn the leaves fall from the trees."
+      }
+    },
+    {
+      "id": "spring_season",
+      "term": "primavera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Estación del año entre el invierno y el verano.",
+      "example": "En primavera florecen las plantas.",
+      "translations": {
+        "en": "spring"
+      },
+      "gloss": {
+        "en": "The season between winter and summer"
+      },
+      "gloss_example": {
+        "en": "In spring the plants bloom."
+      }
+    },
+    {
+      "id": "christmas",
+      "term": "Navidad",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Fiesta que celebra el nacimiento de Jesús el 25 de diciembre.",
+      "example": "Pasamos la Navidad en familia.",
+      "translations": {
+        "en": "Christmas"
+      },
+      "gloss": {
+        "en": "The holiday celebrating the birth of Jesus on December 25th"
+      },
+      "gloss_example": {
+        "en": "We spend Christmas with the family."
+      }
     }
   ]
 }
