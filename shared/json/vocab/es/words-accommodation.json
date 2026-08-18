@@ -665,6 +665,312 @@
       "gloss_example": {
         "en": "My room has a large window."
       }
+    },
+    {
+      "id": "bathroom",
+      "term": "baño",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Habitación con inodoro y lavabo para asearse.",
+      "example": "El baño está al final del pasillo.",
+      "translations": {
+        "en": "bathroom"
+      },
+      "gloss": {
+        "en": "A room with a toilet and sink for washing"
+      },
+      "gloss_example": {
+        "en": "The bathroom is at the end of the hall."
+      }
+    },
+    {
+      "id": "staircase",
+      "term": "escalera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Serie de escalones para subir y bajar.",
+      "example": "Subimos por la escalera hasta el tercer piso.",
+      "translations": {
+        "en": "stairs"
+      },
+      "gloss": {
+        "en": "A set of steps for going up and down"
+      },
+      "gloss_example": {
+        "en": "We went up the stairs to the third floor."
+      }
+    },
+    {
+      "id": "shower",
+      "term": "ducha",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde el agua cae para lavarse el cuerpo.",
+      "example": "Me doy una ducha rápida por la mañana.",
+      "translations": {
+        "en": "shower"
+      },
+      "gloss": {
+        "en": "A place where water falls to wash the body"
+      },
+      "gloss_example": {
+        "en": "I take a quick shower in the morning."
+      }
+    },
+    {
+      "id": "sofa",
+      "term": "sofá",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Asiento cómodo y largo para varias personas.",
+      "example": "Vemos la televisión en el sofá.",
+      "translations": {
+        "en": "sofa"
+      },
+      "gloss": {
+        "en": "A long, comfortable seat for several people"
+      },
+      "gloss_example": {
+        "en": "We watch television on the sofa."
+      }
+    },
+    {
+      "id": "armchair",
+      "term": "sillón",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Asiento individual con brazos y respaldo.",
+      "example": "Mi abuelo lee en su sillón.",
+      "translations": {
+        "en": "armchair"
+      },
+      "gloss": {
+        "en": "A single seat with arms and a back"
+      },
+      "gloss_example": {
+        "en": "My grandfather reads in his armchair."
+      }
+    },
+    {
+      "id": "wardrobe",
+      "term": "armario",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mueble con puertas para guardar ropa u objetos.",
+      "example": "Guardo la ropa en el armario.",
+      "translations": {
+        "en": "wardrobe"
+      },
+      "gloss": {
+        "en": "A piece of furniture with doors for storing clothes"
+      },
+      "gloss_example": {
+        "en": "I keep my clothes in the wardrobe."
+      }
+    },
+    {
+      "id": "bedroom",
+      "term": "dormitorio",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Habitación donde se duerme.",
+      "example": "El dormitorio tiene una cama grande.",
+      "translations": {
+        "en": "bedroom"
+      },
+      "gloss": {
+        "en": "The room where one sleeps"
+      },
+      "gloss_example": {
+        "en": "The bedroom has a big bed."
+      }
+    },
+    {
+      "id": "terrace",
+      "term": "terraza",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Espacio abierto de una casa, sin techo.",
+      "example": "Desayunamos en la terraza cuando hace sol.",
+      "translations": {
+        "en": "terrace"
+      },
+      "gloss": {
+        "en": "An open, roofless area of a house"
+      },
+      "gloss_example": {
+        "en": "We have breakfast on the terrace when it is sunny."
+      }
+    },
+    {
+      "id": "garage",
+      "term": "garaje",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar cerrado donde se guarda el auto.",
+      "example": "Dejó el auto en el garaje.",
+      "translations": {
+        "en": "garage"
+      },
+      "gloss": {
+        "en": "An enclosed place where a car is kept"
+      },
+      "gloss_example": {
+        "en": "She left the car in the garage."
+      }
+    },
+    {
+      "id": "elevator",
+      "term": "ascensor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Máquina que sube y baja personas entre pisos.",
+      "example": "El ascensor no funciona hoy.",
+      "translations": {
+        "en": "elevator"
+      },
+      "gloss": {
+        "en": "A machine that carries people between floors"
+      },
+      "gloss_example": {
+        "en": "The elevator is not working today."
+      }
+    },
+    {
+      "id": "heating",
+      "term": "calefacción",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sistema que calienta una casa o edificio.",
+      "example": "En invierno encendemos la calefacción.",
+      "translations": {
+        "en": "heating"
+      },
+      "gloss": {
+        "en": "A system that warms a house or building"
+      },
+      "gloss_example": {
+        "en": "In winter we turn on the heating."
+      }
+    },
+    {
+      "id": "fridge",
+      "term": "nevera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Electrodoméstico que mantiene fríos los alimentos.",
+      "example": "Guarda la leche en la nevera.",
+      "translations": {
+        "en": "fridge"
+      },
+      "gloss": {
+        "en": "An appliance that keeps food cold"
+      },
+      "gloss_example": {
+        "en": "Keep the milk in the fridge."
+      }
+    },
+    {
+      "id": "washing_machine",
+      "term": "lavadora",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Máquina que lava la ropa.",
+      "example": "Pon la ropa sucia en la lavadora.",
+      "translations": {
+        "en": "washing machine"
+      },
+      "gloss": {
+        "en": "A machine that washes clothes"
+      },
+      "gloss_example": {
+        "en": "Put the dirty clothes in the washing machine."
+      }
+    },
+    {
+      "id": "microwave",
+      "term": "microondas",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato que calienta la comida con rapidez.",
+      "example": "Calienta la sopa en el microondas.",
+      "translations": {
+        "en": "microwave"
+      },
+      "gloss": {
+        "en": "A device that heats food quickly"
+      },
+      "gloss_example": {
+        "en": "Heat the soup in the microwave."
+      }
+    },
+    {
+      "id": "bookshelf",
+      "term": "estantería",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mueble con tablas para poner libros u objetos.",
+      "example": "Los libros están en la estantería.",
+      "translations": {
+        "en": "bookshelf"
+      },
+      "gloss": {
+        "en": "Furniture with boards for holding books or objects"
+      },
+      "gloss_example": {
+        "en": "The books are on the bookshelf."
+      }
+    },
+    {
+      "id": "bathtub",
+      "term": "bañera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Recipiente grande para bañarse con agua.",
+      "example": "El niño juega en la bañera.",
+      "translations": {
+        "en": "bathtub"
+      },
+      "gloss": {
+        "en": "A large container for bathing with water"
+      },
+      "gloss_example": {
+        "en": "The child plays in the bathtub."
+      }
+    },
+    {
+      "id": "washbasin",
+      "term": "lavabo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pila con grifo para lavarse las manos y la cara.",
+      "example": "Se lavó las manos en el lavabo.",
+      "translations": {
+        "en": "washbasin"
+      },
+      "gloss": {
+        "en": "A basin with a tap for washing hands and face"
+      },
+      "gloss_example": {
+        "en": "She washed her hands in the washbasin."
+      }
     }
   ]
 }
