@@ -521,6 +521,330 @@
       "gloss_example": {
         "en": "What drink do you want?"
       }
+    },
+    {
+      "id": "tea",
+      "term": "té",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bebida caliente que se hace con hojas en agua.",
+      "example": "Por la mañana tomo un té.",
+      "translations": {
+        "en": "tea"
+      },
+      "gloss": {
+        "en": "A hot drink made by soaking leaves in water"
+      },
+      "gloss_example": {
+        "en": "In the morning I have tea."
+      }
+    },
+    {
+      "id": "sandwich",
+      "term": "sándwich",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Comida hecha con dos rebanadas de pan y relleno.",
+      "example": "Preparé un sándwich de jamón y queso.",
+      "translations": {
+        "en": "sandwich"
+      },
+      "gloss": {
+        "en": "Food made with two slices of bread and a filling"
+      },
+      "gloss_example": {
+        "en": "I made a ham and cheese sandwich."
+      }
+    },
+    {
+      "id": "ham",
+      "term": "jamón",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Carne curada que se saca de la pierna del cerdo.",
+      "example": "Compré jamón para los sándwiches.",
+      "translations": {
+        "en": "ham"
+      },
+      "gloss": {
+        "en": "Cured meat from the leg of a pig"
+      },
+      "gloss_example": {
+        "en": "I bought ham for the sandwiches."
+      }
+    },
+    {
+      "id": "cheese",
+      "term": "queso",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento sólido que se hace con leche.",
+      "example": "Me gusta el queso en la pizza.",
+      "translations": {
+        "en": "cheese"
+      },
+      "gloss": {
+        "en": "A solid food made from milk"
+      },
+      "gloss_example": {
+        "en": "I like cheese on pizza."
+      }
+    },
+    {
+      "id": "onion",
+      "term": "cebolla",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Verdura redonda de capas y olor fuerte.",
+      "example": "La receta lleva media cebolla.",
+      "translations": {
+        "en": "onion"
+      },
+      "gloss": {
+        "en": "A round vegetable with layers and a strong smell"
+      },
+      "gloss_example": {
+        "en": "The recipe uses half an onion."
+      }
+    },
+    {
+      "id": "garlic",
+      "term": "ajo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Planta de sabor fuerte que se usa para cocinar.",
+      "example": "Añade un diente de ajo a la salsa.",
+      "translations": {
+        "en": "garlic"
+      },
+      "gloss": {
+        "en": "A strong-flavored plant used in cooking"
+      },
+      "gloss_example": {
+        "en": "Add a clove of garlic to the sauce."
+      }
+    },
+    {
+      "id": "carrot",
+      "term": "zanahoria",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Verdura larga y naranja que crece bajo la tierra.",
+      "example": "El conejo come zanahorias.",
+      "translations": {
+        "en": "carrot"
+      },
+      "gloss": {
+        "en": "A long orange vegetable that grows underground"
+      },
+      "gloss_example": {
+        "en": "The rabbit eats carrots."
+      }
+    },
+    {
+      "id": "strawberry",
+      "term": "fresa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Fruta pequeña, roja y dulce.",
+      "example": "Compré fresas para el postre.",
+      "translations": {
+        "en": "strawberry"
+      },
+      "gloss": {
+        "en": "A small, red, sweet fruit"
+      },
+      "gloss_example": {
+        "en": "I bought strawberries for dessert."
+      }
+    },
+    {
+      "id": "banana",
+      "term": "plátano",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Fruta alargada y amarilla.",
+      "example": "Como un plátano después del ejercicio.",
+      "translations": {
+        "en": "banana"
+      },
+      "gloss": {
+        "en": "A long yellow fruit"
+      },
+      "gloss_example": {
+        "en": "I eat a banana after exercising."
+      }
+    },
+    {
+      "id": "apple",
+      "term": "manzana",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Fruta redonda, dulce o ácida, de piel roja o verde.",
+      "example": "Una manzana al día es saludable.",
+      "translations": {
+        "en": "apple"
+      },
+      "gloss": {
+        "en": "A round fruit with red or green skin"
+      },
+      "gloss_example": {
+        "en": "An apple a day is healthy."
+      }
+    },
+    {
+      "id": "yogurt",
+      "term": "yogur",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento cremoso que se hace con leche fermentada.",
+      "example": "Desayuno yogur con fruta.",
+      "translations": {
+        "en": "yogurt"
+      },
+      "gloss": {
+        "en": "A creamy food made from fermented milk"
+      },
+      "gloss_example": {
+        "en": "I have yogurt with fruit for breakfast."
+      }
+    },
+    {
+      "id": "ice_cream",
+      "term": "helado",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Postre dulce y frío hecho con leche o agua.",
+      "example": "En verano tomamos helado.",
+      "translations": {
+        "en": "ice cream"
+      },
+      "gloss": {
+        "en": "A sweet, cold dessert made with milk or water"
+      },
+      "gloss_example": {
+        "en": "In summer we have ice cream."
+      }
+    },
+    {
+      "id": "cookie",
+      "term": "galleta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Dulce pequeño y crujiente hecho al horno.",
+      "example": "Mojó las galletas en la leche.",
+      "translations": {
+        "en": "cookie"
+      },
+      "gloss": {
+        "en": "A small, crunchy baked sweet"
+      },
+      "gloss_example": {
+        "en": "She dipped the cookies in the milk."
+      }
+    },
+    {
+      "id": "butter",
+      "term": "mantequilla",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Grasa suave que se hace con la leche.",
+      "example": "Untó mantequilla en el pan.",
+      "translations": {
+        "en": "butter"
+      },
+      "gloss": {
+        "en": "A soft fat made from milk"
+      },
+      "gloss_example": {
+        "en": "He spread butter on the bread."
+      }
+    },
+    {
+      "id": "flour",
+      "term": "harina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Polvo que se hace de los cereales para cocinar.",
+      "example": "Necesitas harina para hacer el pastel.",
+      "translations": {
+        "en": "flour"
+      },
+      "gloss": {
+        "en": "A powder made from grains, used in cooking"
+      },
+      "gloss_example": {
+        "en": "You need flour to make the cake."
+      }
+    },
+    {
+      "id": "salt",
+      "term": "sal",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sustancia blanca que da sabor salado a la comida.",
+      "example": "Le falta un poco de sal a la sopa.",
+      "translations": {
+        "en": "salt"
+      },
+      "gloss": {
+        "en": "A white substance that gives food a salty taste"
+      },
+      "gloss_example": {
+        "en": "The soup needs a little more salt."
+      }
+    },
+    {
+      "id": "sauce",
+      "term": "salsa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Líquido espeso que acompaña a la comida.",
+      "example": "La pasta lleva salsa de tomate.",
+      "translations": {
+        "en": "sauce"
+      },
+      "gloss": {
+        "en": "A thick liquid served with food"
+      },
+      "gloss_example": {
+        "en": "The pasta comes with tomato sauce."
+      }
+    },
+    {
+      "id": "chicken_meat",
+      "term": "pollo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Carne del ave que se come con frecuencia.",
+      "example": "Cenamos pollo con arroz.",
+      "translations": {
+        "en": "chicken"
+      },
+      "gloss": {
+        "en": "The meat of a common bird, often eaten"
+      },
+      "gloss_example": {
+        "en": "We had chicken with rice for dinner."
+      }
     }
   ]
 }
