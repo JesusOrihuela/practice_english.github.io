@@ -250,8 +250,8 @@
       // The top-1000 is the official A1-A2 vocabulary curriculum (CEFR-first ordering). Live
       // coverage is ~67%/51% today; the north-star is the 88% sweet-spot (comunicación cotidiana).
       // gateFloor is a RATCHET (regression guard just below live) that we raise as content grows
-      // toward 88 — not a hard 88 (that would keep CI red mid-build).
-      gateFloor: 49,
+      // toward 88 — not a hard 88 (that would keep CI red mid-build). Live ~62/67 (Aug 2026).
+      gateFloor: 60,
       targetFloor: 88,   // north-star coverage the ongoing content curation builds toward.
       // ELELex (CEFR-graded, CC BY-NC-SA) is NOT committeable → stays a LOCAL-only cross-check
       // shown when tools/sources/derived/elelex-es.json exists. It is NOT the gate.

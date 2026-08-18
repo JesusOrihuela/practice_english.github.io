@@ -413,6 +413,150 @@
       "gloss_example": {
         "en": "Housing is expensive in this city."
       }
+    },
+    {
+      "id": "right_side",
+      "term": "derecha",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lado del cuerpo opuesto al corazón.",
+      "example": "Gira a la derecha en la esquina.",
+      "translations": {
+        "en": "right"
+      },
+      "gloss": {
+        "en": "The side of the body opposite the heart"
+      },
+      "gloss_example": {
+        "en": "Turn right at the corner."
+      }
+    },
+    {
+      "id": "left_side",
+      "term": "izquierda",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lado del cuerpo donde está el corazón.",
+      "example": "El banco está a la izquierda.",
+      "translations": {
+        "en": "left"
+      },
+      "gloss": {
+        "en": "The side of the body where the heart is"
+      },
+      "gloss_example": {
+        "en": "The bank is on the left."
+      }
+    },
+    {
+      "id": "north",
+      "term": "norte",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto cardinal que señala hacia arriba en el mapa.",
+      "example": "El viento viene del norte.",
+      "translations": {
+        "en": "north"
+      },
+      "gloss": {
+        "en": "The cardinal point that points up on a map"
+      },
+      "gloss_example": {
+        "en": "The wind comes from the north."
+      }
+    },
+    {
+      "id": "south",
+      "term": "sur",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto cardinal opuesto al norte.",
+      "example": "Viajamos al sur en verano.",
+      "translations": {
+        "en": "south"
+      },
+      "gloss": {
+        "en": "The cardinal point opposite the north"
+      },
+      "gloss_example": {
+        "en": "We travel south in summer."
+      }
+    },
+    {
+      "id": "west",
+      "term": "oeste",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto cardinal por donde se pone el sol.",
+      "example": "La costa oeste es muy bonita.",
+      "translations": {
+        "en": "west"
+      },
+      "gloss": {
+        "en": "The cardinal point where the sun sets"
+      },
+      "gloss_example": {
+        "en": "The west coast is very beautiful."
+      }
+    },
+    {
+      "id": "outskirts",
+      "term": "afueras",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Zona que rodea una ciudad, lejos del centro.",
+      "example": "Viven en las afueras de la ciudad.",
+      "translations": {
+        "en": "outskirts"
+      },
+      "gloss": {
+        "en": "The area surrounding a city, far from the center"
+      },
+      "gloss_example": {
+        "en": "They live on the outskirts of the city."
+      }
+    },
+    {
+      "id": "town_hall",
+      "term": "ayuntamiento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Edificio donde trabaja el gobierno de una ciudad.",
+      "example": "Fui al ayuntamiento a pedir un documento.",
+      "translations": {
+        "en": "town hall"
+      },
+      "gloss": {
+        "en": "The building where a city government works"
+      },
+      "gloss_example": {
+        "en": "I went to the town hall to request a document."
+      }
+    },
+    {
+      "id": "cathedral",
+      "term": "catedral",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Iglesia principal y grande de una ciudad.",
+      "example": "Visitamos la catedral del centro.",
+      "translations": {
+        "en": "cathedral"
+      },
+      "gloss": {
+        "en": "The main, large church of a city"
+      },
+      "gloss_example": {
+        "en": "We visited the cathedral downtown."
+      }
     }
   ]
 }
