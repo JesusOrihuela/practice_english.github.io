@@ -249,9 +249,17 @@ function checkRegionalTerms(text, file, id, field, rules, isAlternatives = false
   if (!text || !rules || isAlternatives) return;
   for (const { pattern, neutral, region } of rules.regionalTerms) {
     if (pattern.test(text)) {
+      // Policy (user): regional variants are welcome and useful — but if ONE variant is
+      // shown, ALL must be shown (no single region favored). So a regional term is fine
+      // when its neutral variant co-occurs in the same field (e.g. a slash term
+      // "papa / patata", or a phrase that lists both). Only a LONE regional term — the
+      // neutral absent — is flagged. Match the neutral root with optional plural -s.
+      const neutralRe = new RegExp('\\b' + neutral.replace(/s$/, '') + 's?\\b', 'i');
+      if (neutralRe.test(text)) continue;
       const match = text.match(pattern)?.[0];
       issue(file, id, field,
-        `regional term (${region}) "${match}" — use neutral "${neutral}" in base; ${region} variant goes in target alternatives (Rule 4)`);
+        `lone regional term (${region}) "${match}" — present its neutral variant too so all are shown ` +
+        `(e.g. "${neutral} / ${match}"), or use the neutral "${neutral}" (Rule 4)`);
     }
   }
 }
