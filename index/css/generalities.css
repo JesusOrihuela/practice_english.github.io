@@ -1438,6 +1438,15 @@ body.path-mode {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
+/* Zone silhouette (e.g. Latinoamérica): portrait shape, so size by height; no flag chrome. */
+.region-phrase-badge .region-silhouette {
+  width: auto;
+  height: 14px;
+  border-radius: 0;
+  box-shadow: none;
+  opacity: 0.85;
+}
+
 /* Compact flex cards (Scramble hint row, Dictation controls) have no room for an absolute
    top-left overlay — there the badges flow as a full-width top row instead, so they never
    cover the text and wrap responsively on narrow screens. Tall cards (Speaking/Cloze

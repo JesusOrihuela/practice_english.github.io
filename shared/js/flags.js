@@ -169,5 +169,39 @@ const AppFlags = (() => {
     return _svgEl(DEFS[code], 'flag-single');
   }
 
-  return { stack, single };
+  /* ---------- Regions (variant labels) ---------- */
+
+  // A region LABEL maps either to a single-country flag OR, for multi-country zones with no
+  // single flag, to a stylised silhouette. Extensible: a new region only needs an entry here
+  // (a country code below, or a shape in REGION_SHAPES). Keys are accent-folded + lowercased.
+  const REGION_CODE = {
+    'espana': 'es', 'uk': 'gb', 'reino unido': 'gb',
+    'us': 'us', 'usa': 'us', 'ee. uu.': 'us', 'ee.uu.': 'us', 'estados unidos': 'us',
+    'mexico': 'mx', 'francia': 'fr', 'alemania': 'de', 'italia': 'it', 'brasil': 'br',
+    'portugal': 'pt',
+  };
+
+  // Simplified, recognisable zone silhouettes (fill = currentColor, so they inherit the pill
+  // colour and stay theme-aware). Add zones (Sudamérica, El Caribe, etc.) here as needed.
+  const REGION_SHAPES = {
+    latinoamerica: `<svg viewBox="0 0 50 74" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M6 10 L14 7 L20 10 L19 16 L24 20 L22 24 L28 27 L33 29 L40 28 L45 32 L44 40 L40 52 L34 60 L30 68 L27 74 L25 66 L24 54 L20 44 L15 36 L18 30 L14 26 L12 22 L8 18 Z"/></svg>`,
+  };
+
+  const _fold = (s) => (s || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+  /**
+   * Returns the SVG element for a region variant LABEL — a country flag or a zone silhouette —
+   * or null when the region has no visual (caller then shows the name alone).
+   * @param {string} name — region label as authored (e.g. 'España', 'UK', 'Latinoamérica')
+   */
+  function region(name) {
+    const key = _fold(name);
+    if (!key) return null;
+    const code = REGION_CODE[key];
+    if (code && DEFS[code]) return _svgEl(DEFS[code], 'flag-single');
+    if (REGION_SHAPES[key]) return _svgEl(REGION_SHAPES[key], 'region-silhouette');
+    return null;
+  }
+
+  return { stack, single, region };
 })();

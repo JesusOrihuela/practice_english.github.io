@@ -233,17 +233,6 @@ const AppFeedback = (() => {
    * future gendered target works automatically. Removes the badge when the
    * active form carries no gender label.
    */
-  // Region label → flag code (AppFlags SVG, never emoji). Regions with no single-country
-  // flag (e.g. "Latinoamérica") show the name alone. Data-driven, so a new region only
-  // needs an entry here to get a flag.
-  const REGION_FLAG = {
-    'España': 'es', 'Espana': 'es',
-    'UK': 'gb', 'Reino Unido': 'gb',
-    'US': 'us', 'EE. UU.': 'us', 'EE.UU.': 'us', 'Estados Unidos': 'us',
-    'México': 'mx', 'Mexico': 'mx',
-    'Francia': 'fr', 'Alemania': 'de', 'Italia': 'it', 'Brasil': 'br', 'Portugal': 'pt',
-  };
-
   // Adaptive variant badge(s): shows which VARIANT the learner is currently seeing —
   // gender (♀/♂/Neutro) and/or region (flag + name). Both live in a top-left flex wrap so
   // they coexist. Driven purely by the picked form's labels — no branching by language, so
@@ -278,9 +267,8 @@ const AppFeedback = (() => {
     if (region !== undefined && region !== '') {
       const b = document.createElement('span');
       b.className = 'region-phrase-badge';
-      const code = REGION_FLAG[region];
-      if (code && typeof AppFlags !== 'undefined') {
-        const flag = AppFlags.single(code);
+      if (typeof AppFlags !== 'undefined' && AppFlags.region) {
+        const flag = AppFlags.region(region);   // country flag OR zone silhouette (or null)
         if (flag) b.appendChild(flag);
       }
       const txt = document.createElement('span');
