@@ -521,6 +521,240 @@
       "gloss_example": {
         "en": "The doctor examined the patient."
       }
+    },
+    {
+      "id": "tooth",
+      "term": "diente",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cada una de las piezas duras y blancas de la boca.",
+      "example": "Me lavo los dientes después de comer.",
+      "translations": {
+        "en": "tooth"
+      },
+      "gloss": {
+        "en": "Each of the hard white pieces in the mouth"
+      },
+      "gloss_example": {
+        "en": "I brush my teeth after eating."
+      }
+    },
+    {
+      "id": "ear",
+      "term": "oído",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Órgano del cuerpo que sirve para escuchar.",
+      "example": "Me duele el oído derecho.",
+      "translations": {
+        "en": "ear"
+      },
+      "gloss": {
+        "en": "The organ used for hearing"
+      },
+      "gloss_example": {
+        "en": "My right ear hurts."
+      }
+    },
+    {
+      "id": "throat",
+      "term": "garganta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Parte interior del cuello por donde pasan la comida y el aire.",
+      "example": "Me duele la garganta cuando estoy resfriado.",
+      "translations": {
+        "en": "throat"
+      },
+      "gloss": {
+        "en": "The inner part of the neck for food and air"
+      },
+      "gloss_example": {
+        "en": "My throat hurts when I have a cold."
+      }
+    },
+    {
+      "id": "stomach",
+      "term": "estómago",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Órgano donde se digiere la comida.",
+      "example": "Me duele el estómago después de comer tanto.",
+      "translations": {
+        "en": "stomach"
+      },
+      "gloss": {
+        "en": "The organ where food is digested"
+      },
+      "gloss_example": {
+        "en": "My stomach hurts after eating so much."
+      }
+    },
+    {
+      "id": "neck",
+      "term": "cuello",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Parte del cuerpo que une la cabeza con el tronco.",
+      "example": "Giró el cuello para mirar atrás.",
+      "translations": {
+        "en": "neck"
+      },
+      "gloss": {
+        "en": "The body part joining the head to the trunk"
+      },
+      "gloss_example": {
+        "en": "He turned his neck to look back."
+      }
+    },
+    {
+      "id": "finger",
+      "term": "dedo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cada una de las partes largas de la mano o el pie.",
+      "example": "Se hizo daño en un dedo.",
+      "translations": {
+        "en": "finger"
+      },
+      "gloss": {
+        "en": "Each of the long parts of the hand or foot"
+      },
+      "gloss_example": {
+        "en": "She hurt one of her fingers."
+      }
+    },
+    {
+      "id": "flu",
+      "term": "gripe",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Enfermedad con fiebre, tos y dolor de cuerpo.",
+      "example": "Está en cama con gripe.",
+      "translations": {
+        "en": "flu"
+      },
+      "gloss": {
+        "en": "An illness with fever, cough, and body aches"
+      },
+      "gloss_example": {
+        "en": "He is in bed with the flu."
+      }
+    },
+    {
+      "id": "fever",
+      "term": "fiebre",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Temperatura del cuerpo más alta de lo normal.",
+      "example": "El niño tiene fiebre y no va a la escuela.",
+      "translations": {
+        "en": "fever"
+      },
+      "gloss": {
+        "en": "A body temperature higher than normal"
+      },
+      "gloss_example": {
+        "en": "The child has a fever and is not going to school."
+      }
+    },
+    {
+      "id": "cough",
+      "term": "tos",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Expulsión brusca y ruidosa del aire de los pulmones.",
+      "example": "Tengo tos desde ayer.",
+      "translations": {
+        "en": "cough"
+      },
+      "gloss": {
+        "en": "A sudden, noisy expulsion of air from the lungs"
+      },
+      "gloss_example": {
+        "en": "I have had a cough since yesterday."
+      }
+    },
+    {
+      "id": "allergy",
+      "term": "alergia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Reacción del cuerpo a algo que no tolera.",
+      "example": "Tengo alergia al polen en primavera.",
+      "translations": {
+        "en": "allergy"
+      },
+      "gloss": {
+        "en": "A reaction of the body to something it cannot tolerate"
+      },
+      "gloss_example": {
+        "en": "I have a pollen allergy in spring."
+      }
+    },
+    {
+      "id": "ambulance",
+      "term": "ambulancia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo que lleva a los enfermos al hospital.",
+      "example": "La ambulancia llegó en pocos minutos.",
+      "translations": {
+        "en": "ambulance"
+      },
+      "gloss": {
+        "en": "A vehicle that takes the sick to the hospital"
+      },
+      "gloss_example": {
+        "en": "The ambulance arrived in a few minutes."
+      }
+    },
+    {
+      "id": "urgency",
+      "term": "urgencia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Atención médica que no puede esperar.",
+      "example": "Lo llevaron a urgencias del hospital.",
+      "translations": {
+        "en": "emergency care"
+      },
+      "gloss": {
+        "en": "Medical care that cannot wait"
+      },
+      "gloss_example": {
+        "en": "They took him to the hospital emergency room."
+      }
+    },
+    {
+      "id": "emergency",
+      "term": "emergencia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Situación grave e inesperada que requiere ayuda rápida.",
+      "example": "En caso de emergencia, llama a este número.",
+      "translations": {
+        "en": "emergency"
+      },
+      "gloss": {
+        "en": "A serious, unexpected situation that needs quick help"
+      },
+      "gloss_example": {
+        "en": "In case of emergency, call this number."
+      }
     }
   ]
 }
