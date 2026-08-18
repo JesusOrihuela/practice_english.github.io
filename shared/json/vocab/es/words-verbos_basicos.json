@@ -2249,6 +2249,240 @@
       "gloss_example": {
         "en": "We fly to Madrid next week."
       }
+    },
+    {
+      "id": "return",
+      "term": "volver",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ir otra vez al lugar de donde se salió.",
+      "example": "Voy a volver a casa después del trabajo.",
+      "translations": {
+        "en": "return"
+      },
+      "gloss": {
+        "en": "To go back to a place one came from"
+      },
+      "gloss_example": {
+        "en": "I am going to return home after work."
+      }
+    },
+    {
+      "id": "sign",
+      "term": "firmar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Escribir el nombre propio en un documento para aprobarlo.",
+      "example": "Debes firmar el contrato al final.",
+      "translations": {
+        "en": "sign"
+      },
+      "gloss": {
+        "en": "To write one's name on a document to approve it"
+      },
+      "gloss_example": {
+        "en": "You must sign the contract at the end."
+      }
+    },
+    {
+      "id": "have_breakfast",
+      "term": "desayunar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar la primera comida del día por la mañana.",
+      "example": "Me gusta desayunar fruta y café.",
+      "translations": {
+        "en": "have breakfast"
+      },
+      "gloss": {
+        "en": "To eat the first meal of the day in the morning"
+      },
+      "gloss_example": {
+        "en": "I like to have fruit and coffee for breakfast."
+      }
+    },
+    {
+      "id": "have_afternoon_snack",
+      "term": "merendar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Tomar una comida ligera por la tarde.",
+      "example": "Los niños suelen merendar al salir del colegio.",
+      "translations": {
+        "en": "have an afternoon snack"
+      },
+      "gloss": {
+        "en": "To eat a light meal in the afternoon"
+      },
+      "gloss_example": {
+        "en": "The children usually have a snack after school."
+      }
+    },
+    {
+      "id": "swim",
+      "term": "nadar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Moverse en el agua usando el cuerpo.",
+      "example": "Aprendí a nadar en el mar.",
+      "translations": {
+        "en": "swim"
+      },
+      "gloss": {
+        "en": "To move through water using the body"
+      },
+      "gloss_example": {
+        "en": "I learned to swim in the sea."
+      }
+    },
+    {
+      "id": "send",
+      "term": "mandar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Enviar algo a alguien o pedirle que haga algo.",
+      "example": "Te voy a mandar un mensaje esta noche.",
+      "translations": {
+        "en": "send"
+      },
+      "gloss": {
+        "en": "To send something to someone or give an order"
+      },
+      "gloss_example": {
+        "en": "I am going to send you a message tonight."
+      }
+    },
+    {
+      "id": "last",
+      "term": "durar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Continuar existiendo o sucediendo durante un tiempo.",
+      "example": "La película dura casi tres horas.",
+      "translations": {
+        "en": "last"
+      },
+      "gloss": {
+        "en": "To continue existing or happening for a time"
+      },
+      "gloss_example": {
+        "en": "The movie lasts almost three hours."
+      }
+    },
+    {
+      "id": "commit_mistake",
+      "term": "cometer",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Hacer o causar algo negativo, como un error o un delito.",
+      "example": "Es fácil cometer un error cuando tienes prisa.",
+      "translations": {
+        "en": "commit"
+      },
+      "gloss": {
+        "en": "To do or cause something negative, such as a mistake"
+      },
+      "gloss_example": {
+        "en": "It is easy to make a mistake when you are in a hurry."
+      }
+    },
+    {
+      "id": "ride",
+      "term": "montar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Subirse a un animal o vehículo, o armar algo juntando sus piezas.",
+      "example": "Vamos a montar en bicicleta por el parque.",
+      "translations": {
+        "en": "ride"
+      },
+      "gloss": {
+        "en": "To get on an animal or vehicle, or to assemble something"
+      },
+      "gloss_example": {
+        "en": "We are going to ride bikes through the park."
+      }
+    },
+    {
+      "id": "reserve",
+      "term": "reservar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Pedir que algo se guarde para usarlo después.",
+      "example": "Quiero reservar una mesa para dos personas.",
+      "translations": {
+        "en": "reserve"
+      },
+      "gloss": {
+        "en": "To arrange for something to be kept for later use"
+      },
+      "gloss_example": {
+        "en": "I want to reserve a table for two people."
+      }
+    },
+    {
+      "id": "complete",
+      "term": "completar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Terminar algo o añadir lo que le falta.",
+      "example": "Tienes que completar el formulario con tus datos.",
+      "translations": {
+        "en": "complete"
+      },
+      "gloss": {
+        "en": "To finish something or add what is missing"
+      },
+      "gloss_example": {
+        "en": "You have to complete the form with your details."
+      }
+    },
+    {
+      "id": "consult",
+      "term": "consultar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Buscar información o pedir consejo sobre algo.",
+      "example": "Voy a consultar el horario en la página web.",
+      "translations": {
+        "en": "consult"
+      },
+      "gloss": {
+        "en": "To look up information or ask for advice"
+      },
+      "gloss_example": {
+        "en": "I am going to check the schedule on the website."
+      }
+    },
+    {
+      "id": "review",
+      "term": "repasar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Volver a mirar algo para recordarlo o corregirlo.",
+      "example": "Necesito repasar mis apuntes antes del examen.",
+      "translations": {
+        "en": "review"
+      },
+      "gloss": {
+        "en": "To go over something again to remember or correct it"
+      },
+      "gloss_example": {
+        "en": "I need to review my notes before the exam."
+      }
     }
   ]
 }
