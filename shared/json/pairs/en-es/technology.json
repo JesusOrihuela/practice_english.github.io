@@ -1185,6 +1185,46 @@
           "audioSlug": "debes_marcar_el_numero"
         }
       ]
+    },
+    {
+      "id": "technology_worried_lost_cell_phone",
+      "source": "I am worried because I lost my cell phone.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy preocupada porque perdí mi celular.",
+          "labels": {
+            "region": "Latinoamérica",
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_preocupada_porque_perdi_mi_celular"
+        },
+        {
+          "text": "Estoy preocupado porque perdí mi celular.",
+          "labels": {
+            "region": "Latinoamérica",
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_preocupado_porque_perdi_mi_celular"
+        },
+        {
+          "text": "Estoy preocupada porque perdí mi móvil.",
+          "labels": {
+            "region": "España",
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_preocupada_porque_perdi_mi_movil"
+        },
+        {
+          "text": "Estoy preocupado porque perdí mi móvil.",
+          "labels": {
+            "region": "España",
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_preocupado_porque_perdi_mi_movil"
+        }
+      ]
     }
   ]
 }
