@@ -14,6 +14,7 @@
 import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import AppLangProfiles from '../shared/js/lang-profiles.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = join(__dirname, '..', 'shared', 'json');
@@ -50,8 +51,20 @@ const GENERIC_ID_RE = /(_\d+$|_new$|_alt$|_b[12]_\d+|_c[12]_\d+|_a[12]_\d+)/;
 // R11: Anti-pedagogical patterns (describes what, not why/how)
 const ANTI_PEDAGOGY_RE = /\b(esta frase usa|this sentence uses|uses the|esta oración|este enunciado usa)\b/i;
 
-// R11: Spanish-character heuristic for wrong-language tip detection
-const SPANISH_CHARS_RE = /[áéíóúüñÁÉÍÓÚÜÑ¿¡]/;
+// R11: wrong-language detection — non-ASCII letters/marks in a target-language text
+// that are NOT part of that language's alphabet (lang-profiles `nativeChars`). Returns a
+// string of the distinct offending chars (or '' if none). Fully derived per language, so
+// any target inherits the check by declaring nativeChars; no hardcoded charset or pair.
+function wrongLangChars(text, targetCode) {
+  const native = AppLangProfiles.nativeChars(targetCode);
+  const bad = new Set();
+  for (const ch of (text || '')) {
+    if (ch.charCodeAt(0) < 128) continue;                 // ASCII always allowed
+    if (native.includes(ch.toLowerCase())) continue;      // native letter/mark of this language
+    if (/[\p{L}\p{M}]/u.test(ch) || ch === '¿' || ch === '¡') bad.add(ch);  // letter/diacritic/inverted mark → foreign
+  }
+  return [...bad].join('');
+}
 
 // R17: Terminal punctuation
 const TERMINAL_RE = /[.?!]$/;
@@ -60,6 +73,15 @@ const TERMINAL_RE = /[.?!]$/;
 const OLD_SCHEMA_FIELDS = ['audioIdx', 'hint', 'note', 'region'];
 // Valid labels keys in the new schema
 const VALID_LABEL_KEYS = new Set(['gender', 'region', 'register', 'loanword']);
+
+// Valid VALUES for the closed-vocabulary label keys (Rule 16 §8 — labels must use the exact
+// documented values, not near-synonyms: gender 'femenino' not 'female', register 'formal' not
+// 'formell'). These enums are Spanish-language metadata, fixed across all pairs/target languages,
+// so validating them is language-agnostic. 'region' and 'loanword' are free strings (not listed).
+const VALID_LABEL_VALUES = {
+  gender: new Set(['masculino', 'femenino', 'neutro']),
+  register: new Set(['formal', 'informal']),
+};
 // audioSlug length cap — must match SLUG_MAX in assign-alt-slugs.mjs and the generators.
 const SLUG_MAX = 100;
 
@@ -146,10 +168,14 @@ for (const pair of PAIRS) {
 
         // schema — validate labels keys
         if (form.labels !== undefined) {
-          for (const key of Object.keys(form.labels)) {
+          for (const [key, value] of Object.entries(form.labels)) {
             if (!VALID_LABEL_KEYS.has(key)) {
               flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
                 `Unknown label key "${key}" — valid keys: ${[...VALID_LABEL_KEYS].join(', ')}`);
+            } else if (VALID_LABEL_VALUES[key] && !VALID_LABEL_VALUES[key].has(value)) {
+              // Rule 16 §8 — closed-vocabulary value must match exactly (catches 'female', 'f', etc.)
+              flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
+                `Invalid ${key} value "${value}" — must be one of: ${[...VALID_LABEL_VALUES[key]].join(', ')}`);
             }
           }
         }
@@ -183,12 +209,14 @@ for (const pair of PAIRS) {
           flag(pair, topic, id, 'grammar', 'R11', `Anti-pedagogical pattern (states what, not why): "${tip}"`);
         }
 
-        // R11 — Language mismatch: when the TARGET is English, the tip (written in the
-        // target language) must NOT contain Spanish-specific chars. Derived from the
-        // pair id (no hardcoded pair) so any X→en pair is checked, and other targets
-        // (whose tips legitimately carry accents) are not falsely flagged.
-        if (pair.split('-')[1] === 'en' && SPANISH_CHARS_RE.test(tip)) {
-          flag(pair, topic, id, 'grammar', 'R11', `Spanish characters in a tip whose target is English: "${tip}"`);
+        // R11 — Language mismatch: the tip is written in the TARGET language, so any
+        // non-ASCII letter/mark OUTSIDE that language's nativeChars (lang-profiles) is a
+        // wrong-language slip. Fully derived — English (nativeChars '') flags any accent/
+        // ¿¡; Spanish allows áéíóúüñ¿¡ but would flag e.g. a stray ç; a new target inherits
+        // the check by declaring its nativeChars. No hardcoded pair or charset.
+        const foreign = wrongLangChars(tip, pair.split('-')[1]);
+        if (foreign) {
+          flag(pair, topic, id, 'grammar', 'R11', `Characters foreign to the target language (${foreign}) in tip: "${tip}"`);
         }
       }
     }

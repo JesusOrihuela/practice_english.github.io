@@ -325,7 +325,7 @@ function auditPhraseFile(topic, pairId, sourceLang, targetLang) {
 
 // ─── VOCAB FILE AUDIT (per-pair — word selection and CEFR levels diverge) ────
 
-function auditVocabFile(lang, topic, esRules) {
+function auditVocabFile(lang, topic) {
   const filename = topic === 'general' ? 'words.json' : `words-${topic}.json`;
   const file = `shared/json/vocab/${lang}/${filename}`;
   const absPath = join(ROOT, file);
@@ -355,18 +355,20 @@ function auditVocabFile(lang, topic, esRules) {
     ];
     for (const [key, text] of allText) checkEmDash(text, file, id, key);
 
-    // Anglicisms / regional terms apply to Spanish text wherever it lives: the
-    // target fields when this is the Spanish vocab, plus any Spanish source gloss.
-    if (esRules) {
-      const spanishFields = [];
-      if (lang === 'es') spanishFields.push(['term', w.term], ['definition', w.definition], ['example', w.example]);
-      if (w.translations?.es)  spanishFields.push(['translations.es',  w.translations.es]);
-      if (w.gloss?.es)         spanishFields.push(['gloss.es',         w.gloss.es]);
-      if (w.gloss_example?.es) spanishFields.push(['gloss_example.es', w.gloss_example.es]);
-      for (const [key, text] of spanishFields) {
-        checkAnglicisms(text, file, id, key, esRules);
-        checkRegionalTerms(text, file, id, key, esRules, false);
-      }
+    // Anglicisms / regional terms: check every field in the language it is written in,
+    // against that language's CONTENT_RULES. Target fields (term/definition/example) are in
+    // `lang`; each translations/gloss entry is in its own source-language code. Fully
+    // per-language — a new language inherits the checks by adding its CONTENT_RULES block.
+    const langFields = [
+      [lang, 'term', w.term], [lang, 'definition', w.definition], [lang, 'example', w.example],
+      ...['translations', 'gloss', 'gloss_example'].flatMap(f =>
+        Object.entries(w[f] || {}).map(([code, val]) => [code, `${f}.${code}`, val])),
+    ];
+    for (const [code, key, text] of langFields) {
+      const rules = CONTENT_RULES[code];
+      if (!rules || text == null) continue;
+      checkAnglicisms(text, file, id, key, rules);
+      checkRegionalTerms(text, file, id, key, rules, false);
     }
   }
 }
@@ -567,7 +569,7 @@ if (fileArg) {
     }
   } else if (isVocab) {
     const topic = base === 'words.json' ? 'general' : base.replace('words-', '').replace('.json', '');
-    auditVocabFile(topic, CONTENT_RULES.es);
+    auditVocabFile(parentDir, topic);   // parentDir = the vocab/{lang}/ folder = target language
   }
 } else {
   // ── Full audit ──
@@ -577,7 +579,7 @@ if (fileArg) {
     auditPlacementFile(id);
   }
 
-  for (const lang of VOCAB_LANGS) for (const t of VOCAB_TOPICS) auditVocabFile(lang, t, CONTENT_RULES.es);
+  for (const lang of VOCAB_LANGS) for (const t of VOCAB_TOPICS) auditVocabFile(lang, t);
 
   if (!quick) {
     for (const { id, targetLang } of PAIRS) {

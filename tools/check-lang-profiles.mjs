@@ -49,6 +49,7 @@ for (const code of targets) {
   // 1. Profile presence + shape.
   if (!p) { fail(`${label} — NO profile in shared/js/lang-profiles.js`); continue; }
   if (typeof p.foldPreserve !== 'string') fail(`${label} — foldPreserve must be a string (use '' for none)`);
+  if (typeof p.nativeChars !== 'string') fail(`${label} — nativeChars must be a string (non-ASCII letters/marks the language uses; '' for pure ASCII) — check-content's wrong-language tip check reads it`);
   if (!isNonEmptyArray(p.clozeStopWords)) fail(`${label} — clozeStopWords is empty; cloze would blank function words`);
   if (!isNonEmptyArray(p.functionWords))  fail(`${label} — functionWords is empty; the vocab coverage channel would be wrong`);
   if (!isNonEmptyArray(p.voices))         fail(`${label} — voices is empty; check-audio can't validate this language's audio voice set`);

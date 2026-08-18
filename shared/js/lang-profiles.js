@@ -16,6 +16,10 @@
                                    they are DISTINCT LETTERS, not accented vowels
                                    (Spanish 'ñ': año ≠ ano). '' = fold everything
                                    to ASCII (English). See normalise() in text-utils.
+     nativeChars     : string   — non-ASCII letters/marks the language legitimately
+                                   uses (lowercase). A target-language text field with
+                                   a non-ASCII letter OUTSIDE this set is a wrong-language
+                                   signal (check-content R11 tip check). '' = pure ASCII.
      clozeStopWords  : string[] — words unsuitable as a cloze blank (function
                                    words, pronouns, wh-words). The blank must fall
                                    on a CONTENT word for the generation effect
@@ -61,6 +65,7 @@
     voices: ['af_bella', 'af_heart', 'am_michael', 'bf_emma'],   // TTS voices spoken for this language (audio filename suffixes).
     tts: { engine: 'kokoro' },   // audio generator: 'kokoro' (generate-audio.mjs) | 'edge' (generate-audio-tgt.py)
     foldPreserve: '',   // English has no letters that folding would destroy → pure ASCII fold.
+    nativeChars: '',   // non-ASCII letters/marks this language legitimately uses (lowercase); English is pure ASCII, so any accented/¿¡ char in an English text field is a wrong-language signal (check-content R11).
     // Cloze blank exclusions (3+ letters; 1–2-letter words are dropped by a length filter).
     clozeStopWords: [
       'a', 'an', 'the', 'in', 'on', 'at', 'to', 'of', 'is', 'are', 'was', 'were', 'be', 'been',
@@ -160,6 +165,7 @@
     voices: ['ef_dora', 'em_alex', 'em_santa'],   // TTS voices spoken for this language (audio filename suffixes).
     tts: { engine: 'edge' },   // audio generator: 'kokoro' (generate-audio.mjs) | 'edge' (generate-audio-tgt.py)
     foldPreserve: 'ñ',   // 'ñ' is a distinct letter (año ≠ ano); fold á→a etc. but keep ñ.
+    nativeChars: 'áéíóúüñ¿¡',   // non-ASCII letters/marks Spanish legitimately uses (lowercase, incl. inverted marks); other non-ASCII letters in Spanish text signal a wrong-language slip (check-content R11).
     // Spanish function words in UNACCENTED form (the fold step removes accents first).
     clozeStopWords: [
       'los', 'las', 'una', 'unos', 'unas', 'del',
@@ -274,6 +280,8 @@
     codes: function () { return Object.keys(PROFILES); },
     /** Graphemes to preserve during accent-folding ('' if none). */
     foldPreserve: function (code) { const p = PROFILES[code]; return p ? (p.foldPreserve || '') : ''; },
+    /** Non-ASCII letters/marks the language legitimately uses ('' if pure ASCII). */
+    nativeChars: function (code) { const p = PROFILES[code]; return p ? (p.nativeChars || '') : ''; },
     /** Cloze blank-exclusion set (falls back to empty). */
     clozeStopWords: function (code) { const p = PROFILES[code]; return new Set(p ? p.clozeStopWords : []); },
     /** Closed-class function-word set (coverage vocab channel). */
