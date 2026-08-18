@@ -1438,3 +1438,17 @@ body.path-mode {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
+/* Compact flex cards (Scramble hint row, Dictation controls) have no room for an absolute
+   top-left overlay — there the badges flow as a full-width top row instead, so they never
+   cover the text and wrap responsively on narrow screens. Tall cards (Speaking/Cloze
+   phrase-card) keep the absolute top-left placement, where there is space. */
+.hint-card { flex-wrap: wrap; }
+.hint-card .variant-badges,
+.audio-controls .variant-badges {
+  position: static;
+  order: -1;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2px;
+}
+
