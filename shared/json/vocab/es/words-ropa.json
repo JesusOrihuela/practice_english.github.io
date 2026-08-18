@@ -179,6 +179,222 @@
       "gloss_example": {
         "en": "I can't find my other sock."
       }
+    },
+    {
+      "id": "skirt",
+      "term": "falda",
+      "definition": "Prenda de vestir que cuelga desde la cintura.",
+      "example": "Ella lleva una falda azul.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "skirt"
+      },
+      "gloss": {
+        "en": "A garment that hangs from the waist"
+      },
+      "gloss_example": {
+        "en": "She is wearing a blue skirt."
+      }
+    },
+    {
+      "id": "sweater",
+      "term": "suéter / jersey",
+      "definition": "Prenda de lana que cubre el torso y los brazos.",
+      "example": "Me puse un suéter porque hacía frío.",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "sweater"
+      },
+      "gloss": {
+        "en": "A knitted garment for the upper body"
+      },
+      "gloss_example": {
+        "en": "I put on a sweater because it was cold."
+      }
+    },
+    {
+      "id": "scarf",
+      "term": "bufanda",
+      "definition": "Prenda larga que se pone alrededor del cuello para abrigarse.",
+      "example": "En invierno uso una bufanda de lana.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "scarf"
+      },
+      "gloss": {
+        "en": "A long garment worn around the neck for warmth"
+      },
+      "gloss_example": {
+        "en": "In winter I wear a wool scarf."
+      }
+    },
+    {
+      "id": "cap",
+      "term": "gorra",
+      "definition": "Prenda que cubre la cabeza y tiene visera.",
+      "example": "Lleva una gorra para el sol.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "cap"
+      },
+      "gloss": {
+        "en": "A head covering with a visor"
+      },
+      "gloss_example": {
+        "en": "He wears a cap for the sun."
+      }
+    },
+    {
+      "id": "hat_beanie",
+      "term": "gorro",
+      "definition": "Prenda que cubre la cabeza y no tiene visera.",
+      "example": "El niño lleva un gorro de lana.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "hat"
+      },
+      "gloss": {
+        "en": "A head covering without a visor"
+      },
+      "gloss_example": {
+        "en": "The boy wears a wool hat."
+      }
+    },
+    {
+      "id": "boot",
+      "term": "bota",
+      "definition": "Calzado que cubre el pie y parte de la pierna.",
+      "example": "Necesito botas para la lluvia.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "boot"
+      },
+      "gloss": {
+        "en": "Footwear that covers the foot and part of the leg"
+      },
+      "gloss_example": {
+        "en": "I need boots for the rain."
+      }
+    },
+    {
+      "id": "blouse",
+      "term": "blusa",
+      "definition": "Prenda ligera que cubre la parte de arriba del cuerpo.",
+      "example": "Compró una blusa blanca.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "blouse"
+      },
+      "gloss": {
+        "en": "A light garment for the upper body"
+      },
+      "gloss_example": {
+        "en": "She bought a white blouse."
+      }
+    },
+    {
+      "id": "pajamas",
+      "term": "pijama",
+      "definition": "Ropa cómoda que se usa para dormir.",
+      "example": "Se puso el pijama antes de acostarse.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "pajamas"
+      },
+      "gloss": {
+        "en": "Comfortable clothes worn for sleeping"
+      },
+      "gloss_example": {
+        "en": "He put on his pajamas before going to bed."
+      }
+    },
+    {
+      "id": "tie",
+      "term": "corbata",
+      "definition": "Tira de tela que se anuda al cuello sobre la camisa.",
+      "example": "El novio llevaba una corbata elegante.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "tie"
+      },
+      "gloss": {
+        "en": "A strip of cloth tied around the neck over a shirt"
+      },
+      "gloss_example": {
+        "en": "The groom wore an elegant tie."
+      }
+    },
+    {
+      "id": "coat",
+      "term": "abrigo",
+      "definition": "Prenda larga y gruesa que protege del frío.",
+      "example": "Ponte el abrigo, hace mucho frío.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "coat"
+      },
+      "gloss": {
+        "en": "A long, thick garment that protects from the cold"
+      },
+      "gloss_example": {
+        "en": "Put on your coat, it is very cold."
+      }
+    },
+    {
+      "id": "glove",
+      "term": "guante",
+      "definition": "Prenda que cubre la mano y los dedos.",
+      "example": "Uso guantes cuando hace frío.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "glove"
+      },
+      "gloss": {
+        "en": "A garment that covers the hand and fingers"
+      },
+      "gloss_example": {
+        "en": "I use gloves when it is cold."
+      }
+    },
+    {
+      "id": "umbrella",
+      "term": "paraguas",
+      "definition": "Objeto que protege de la lluvia.",
+      "example": "Lleva el paraguas porque va a llover.",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "translations": {
+        "en": "umbrella"
+      },
+      "gloss": {
+        "en": "An object that protects from the rain"
+      },
+      "gloss_example": {
+        "en": "Take the umbrella because it is going to rain."
+      }
     }
   ]
 }
