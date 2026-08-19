@@ -14,35 +14,35 @@
     },
     {
       "id": "movies_go_cinema_weekend",
-      "source": "Quiero ir al cine este fin de semana, ¿qué película quieres ver?",
+      "source": "Quiero ir al cine este fin de semana.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "I want to go to the movies this weekend, what movie do you want to see?",
-          "audioSlug": "i_want_to_go_to_the_movies_this_weekend_what_movie_do_you_want_to_see",
+          "text": "I want to go to the movies this weekend.",
           "labels": {
             "region": "US"
-          }
+          },
+          "audioSlug": "i_want_to_go_to_the_movies_this_weekend"
         },
         {
-          "text": "I want to go to the cinema this weekend, what movie do you want to see?",
-          "audioSlug": "i_want_to_go_to_the_cinema_this_weekend_what_movie_do_you_want_to_see",
+          "text": "I want to go to the cinema this weekend.",
           "labels": {
             "region": "UK"
-          }
+          },
+          "audioSlug": "i_want_to_go_to_the_cinema_this_weekend"
         }
       ]
     },
     {
       "id": "movies_good_actor",
-      "source": "Este actor es muy bueno, me gustan todas sus películas.",
+      "source": "Este actor es muy bueno y me gustan sus películas.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "This actor is very good, I like all his movies.",
-          "audioSlug": "this_actor_is_very_good_i_like_all_his_movies"
+          "text": "This actor is great and I like his movies.",
+          "audioSlug": "this_actor_is_great_and_i_like_his_movies"
         }
       ]
     },
@@ -104,23 +104,23 @@
     },
     {
       "id": "movies_looking_new_series",
-      "source": "Estoy buscando una nueva serie para ver, ¿me recomiendas alguna?",
+      "source": "¿Puedes recomendarme una nueva serie para ver?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I'm looking for a new series to watch, can you recommend one?",
-          "audioSlug": "i_m_looking_for_a_new_series_to_watch_can_you_recommend_one",
+          "text": "Can you recommend a new series to watch?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "can_you_recommend_a_new_series_to_watch"
         },
         {
-          "text": "I'm looking for a new series to watch, could you recommend one?",
-          "audioSlug": "i_m_looking_for_a_new_series_to_watch_could_you_recommend_one",
+          "text": "Could you recommend a new series to watch?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "could_you_recommend_a_new_series_to_watch"
         }
       ]
     },
@@ -148,35 +148,35 @@
     },
     {
       "id": "movies_new_director_movie",
-      "source": "Hay una nueva película de mi director favorito, tengo que verla.",
+      "source": "Mi director favorito tiene una nueva película.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "There is a new movie by my favorite director, I have to watch it.",
-          "audioSlug": "there_is_a_new_movie_by_my_favorite_director_i_have_to_watch_it",
+          "text": "My favorite director has a new movie to watch.",
           "labels": {
             "region": "US"
-          }
+          },
+          "audioSlug": "my_favorite_director_has_a_new_movie_to_watch"
         },
         {
-          "text": "There is a new film by my favorite director, I have to watch it.",
-          "audioSlug": "there_is_a_new_film_by_my_favorite_director_i_have_to_watch_it",
+          "text": "My favorite director has a new film to watch.",
           "labels": {
             "region": "UK"
-          }
+          },
+          "audioSlug": "my_favorite_director_has_a_new_film_to_watch"
         }
       ]
     },
     {
       "id": "movies_disappointed_last_season",
-      "source": "No me gustó la última temporada de esa serie, me decepcionó.",
+      "source": "La última temporada de esa serie me decepcionó.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I didn't like the last season of that series, it disappointed me.",
-          "audioSlug": "i_didn_t_like_the_last_season_of_that_series_it_disappointed_me"
+          "text": "The last season of that series disappointed me.",
+          "audioSlug": "the_last_season_of_that_series_disappointed_me"
         }
       ]
     },
@@ -194,13 +194,13 @@
     },
     {
       "id": "movies_dont_understand_popularity",
-      "source": "No me gusta esa serie, no entiendo por qué es tan popular.",
+      "source": "No entiendo por qué esa serie es tan popular.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I don't like that series, I don't understand why it's so popular.",
-          "audioSlug": "i_don_t_like_that_series_i_don_t_understand_why_it_s_so_popular"
+          "text": "I do not understand why that series is so popular.",
+          "audioSlug": "i_do_not_understand_why_that_series_is_so_popular"
         }
       ]
     },
@@ -245,30 +245,30 @@
       "grammar": null,
       "target": [
         {
-          "text": "I prefer to watch movies in the cinema than at home.",
-          "audioSlug": "i_prefer_to_watch_movies_in_the_cinema_than_at_home",
+          "text": "I prefer to watch movies at the cinema.",
           "labels": {
             "region": "US"
-          }
+          },
+          "audioSlug": "i_prefer_to_watch_movies_at_the_cinema"
         },
         {
-          "text": "I prefer to watch films in the cinema than at home.",
-          "audioSlug": "i_prefer_to_watch_films_in_the_cinema_than_at_home",
+          "text": "I prefer to watch films at the cinema.",
           "labels": {
             "region": "UK"
-          }
+          },
+          "audioSlug": "i_prefer_to_watch_films_at_the_cinema"
         }
       ]
     },
     {
       "id": "movies_film_festival_city",
-      "source": "Hay un nuevo festival de cine en la ciudad, ¿vamos?",
+      "source": "Hay un nuevo festival de cine en la ciudad.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "There is a new film festival in the city, shall we go?",
-          "audioSlug": "there_is_a_new_film_festival_in_the_city_shall_we_go"
+          "text": "There is a new film festival in the city.",
+          "audioSlug": "there_is_a_new_film_festival_in_the_city"
         }
       ]
     },
@@ -346,13 +346,13 @@
     },
     {
       "id": "movies_sequel_live_up_original",
-      "source": "La secuela tenía un mayor presupuesto, pero nunca estuvo del todo a la altura del original.",
+      "source": "La secuela tenía más presupuesto pero no estuvo a la altura del original.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The sequel had a bigger budget, but never quite lived up to the original.",
-          "audioSlug": "the_sequel_had_a_bigger_budget_but_never_quite_lived_up_to_the_original"
+          "text": "The sequel had a bigger budget but never lived up to the original.",
+          "audioSlug": "the_sequel_had_a_bigger_budget_but_never_lived_up_to_the_original"
         }
       ]
     },
@@ -370,25 +370,25 @@
     },
     {
       "id": "movies_soundtrack_adds_atmosphere",
-      "source": "La banda sonora realmente contribuye a la atmósfera. Sin la música, esas escenas no funcionarían.",
+      "source": "La banda sonora aporta mucho a la atmósfera de esas escenas.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The soundtrack really adds to the atmosphere. Without the music, those scenes wouldn't work.",
-          "audioSlug": "the_soundtrack_really_adds_to_the_atmosphere_without_the_music_those_scenes_wouldn_t_work"
+          "text": "The soundtrack really adds to the atmosphere of those scenes.",
+          "audioSlug": "the_soundtrack_really_adds_to_the_atmosphere_of_those_scenes"
         }
       ]
     },
     {
       "id": "movies_casting_was_perfect_choice",
-      "source": "Tuve dudas sobre el reparto, pero ese actor resultó ser perfecto.",
+      "source": "Dudé del reparto pero ese actor resultó perfecto.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "I had doubts about the casting, but that actor turned out to be perfect.",
-          "audioSlug": "i_had_doubts_about_the_casting_but_that_actor_turned_out_to_be_perfect"
+          "text": "I doubted the casting but that actor turned out perfect.",
+          "audioSlug": "i_doubted_the_casting_but_that_actor_turned_out_perfect"
         }
       ]
     },
@@ -418,13 +418,13 @@
     },
     {
       "id": "movies_character_motivations_hard_to_believe",
-      "source": "La trama era interesante, pero las motivaciones de los personajes eran difíciles de creer.",
+      "source": "Las motivaciones de los personajes eran difíciles de creer.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The plot was interesting, but the characters' motivations were hard to believe.",
-          "audioSlug": "the_plot_was_interesting_but_the_characters_motivations_were_hard_to_believe"
+          "text": "The characters motivations were hard to believe.",
+          "audioSlug": "the_characters_motivations_were_hard_to_believe"
         }
       ]
     },
@@ -478,25 +478,25 @@
     },
     {
       "id": "movies_oscars_best_picture_overhyped",
-      "source": "Ganó la Mejor Película en los Óscar, pero sinceramente creo que estaba sobrevalorada.",
+      "source": "Ganó Mejor Película pero creo que estaba sobrevalorada.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "It won Best Picture at the Oscars, but honestly I thought it was overhyped.",
-          "audioSlug": "it_won_best_picture_at_the_oscars_but_honestly_i_thought_it_was_overhyped"
+          "text": "It won Best Picture but I thought it was overhyped.",
+          "audioSlug": "it_won_best_picture_but_i_thought_it_was_overhyped"
         }
       ]
     },
     {
       "id": "movies_unreliable_narrator_keeps_guessing",
-      "source": "La película usa un narrador poco fiable, lo que te mantiene cuestionando qué pasó realmente en todo momento.",
+      "source": "El narrador poco fiable te hace cuestionar lo que realmente pasó.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "The film uses an unreliable narrator, which keeps you questioning what actually happened throughout.",
-          "audioSlug": "the_film_uses_an_unreliable_narrator_which_keeps_you_questioning_what_actually_happened_throughout"
+          "text": "The film unreliable narrator keeps you questioning what actually happened.",
+          "audioSlug": "the_film_unreliable_narrator_keeps_you_questioning_what_actually_happened"
         }
       ]
     },
@@ -550,13 +550,13 @@
     },
     {
       "id": "movies_performances_script_characters",
-      "source": "Las actuaciones fueron sobresalientes, pero el guion no logró desarrollar a los personajes secundarios.",
+      "source": "El guion no logró desarrollar a los personajes secundarios.",
       "level": "C1",
       "grammar": "'Failed to + infinitive' to express falling short of an expected task",
       "target": [
         {
-          "text": "The performances were outstanding, but the script failed to develop the supporting characters.",
-          "audioSlug": "the_performances_were_outstanding_but_the_script_failed_to_develop_the_supporting_characters"
+          "text": "The script failed to develop the supporting characters.",
+          "audioSlug": "the_script_failed_to_develop_the_supporting_characters"
         }
       ]
     },

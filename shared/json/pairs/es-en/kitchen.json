@@ -228,25 +228,25 @@
     },
     {
       "id": "kitchen_we_need_to_take_the_meat",
-      "source": "Hay que sacar la carne del congelador con anticipación.",
+      "source": "Hay que sacar la carne del congelador con tiempo.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "We need to take the meat out of the freezer in advance.",
-          "audioSlug": "we_need_to_take_the_meat_out_of_the_freezer_in_advance"
+          "text": "We need to take the meat out of the freezer.",
+          "audioSlug": "we_need_to_take_the_meat_out_of_the_freezer"
         }
       ]
     },
     {
       "id": "kitchen_the_spices_and_condiments_are_in",
-      "source": "Las especias y los condimentos están en el gabinete junto al fregadero.",
+      "source": "Las especias están en el gabinete junto al fregadero.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "The spices and condiments are in the cabinet next to the sink.",
-          "audioSlug": "the_spices_and_condiments_are_in_the_cabinet_next_to_the_sink"
+          "text": "The spices are in the cabinet next to the sink.",
+          "audioSlug": "the_spices_are_in_the_cabinet_next_to_the_sink"
         }
       ]
     },
@@ -354,13 +354,13 @@
     },
     {
       "id": "kitchen_the_rolling_pin_to_flatten_the",
-      "source": "El rodillo para aplanar la masa está en el cajón.",
+      "source": "El rodillo está en el cajón.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "The rolling pin to flatten the dough is in the drawer.",
-          "audioSlug": "the_rolling_pin_to_flatten_the_dough_is_in_the_drawer"
+          "text": "The rolling pin is in the drawer.",
+          "audioSlug": "the_rolling_pin_is_in_the_drawer"
         }
       ]
     },
@@ -390,13 +390,13 @@
     },
     {
       "id": "kitchen_where_do_we_keep_the_plastic",
-      "source": "¿Dónde guardamos el envoltorio de plástico para cubrir las sobras?",
+      "source": "¿Dónde guardamos el plástico para envolver?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Where do we keep the plastic wrap to cover the leftovers?",
-          "audioSlug": "where_do_we_keep_the_plastic_wrap_to_cover_the_leftovers"
+          "text": "Where do we keep the plastic wrap?",
+          "audioSlug": "where_do_we_keep_the_plastic_wrap"
         }
       ]
     },
@@ -544,13 +544,13 @@
     },
     {
       "id": "kitchen_add_a_little_sugar_to_the",
-      "source": "Agrega un poco de azúcar a la salsa para equilibrar el sabor.",
+      "source": "Agrega un poco de azúcar a la salsa.",
       "level": "A2",
       "grammar": "The imperative gives direct recipe instructions: 'chop', 'add', 'fold'.",
       "target": [
         {
-          "text": "Add a little sugar to the sauce to balance the flavor.",
-          "audioSlug": "add_a_little_sugar_to_the_sauce_to_balance_the_flavor"
+          "text": "Add a little sugar to the sauce.",
+          "audioSlug": "add_a_little_sugar_to_the_sauce"
         }
       ]
     },
@@ -602,13 +602,13 @@
     },
     {
       "id": "kitchen_im_going_to_make_chicken_and",
-      "source": "Voy a preparar arroz con pollo, es mi receta favorita.",
+      "source": "Voy a hacer pollo con arroz esta noche.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I'm going to make chicken and rice, it's my favorite recipe.",
-          "audioSlug": "i_m_going_to_make_chicken_and_rice_it_s_my_favorite_recipe"
+          "text": "I am going to make chicken and rice tonight.",
+          "audioSlug": "i_am_going_to_make_chicken_and_rice_tonight"
         }
       ]
     },
@@ -648,13 +648,13 @@
     },
     {
       "id": "kitchen_the_pan_is_too_hot_lower",
-      "source": "La sartén está demasiado caliente, baja un poco el fuego.",
+      "source": "Baja el fuego porque la sartén está muy caliente.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "The pan is too hot, so lower the heat a bit.",
-          "audioSlug": "the_pan_is_too_hot_so_lower_the_heat_a_bit"
+          "text": "Lower the heat because the pan is too hot.",
+          "audioSlug": "lower_the_heat_because_the_pan_is_too_hot"
         }
       ]
     },
@@ -744,23 +744,23 @@
     },
     {
       "id": "kitchen_while_i_remove_the_fish_bones",
-      "source": "Mientras le quito las espinas al pescado, ¿puedes precalentar el horno?",
+      "source": "¿Puedes precalentar el horno mientras limpio el pescado?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "While I remove the fish bones, could you preheat the oven?",
-          "audioSlug": "while_i_remove_the_fish_bones_could_you_preheat_the_oven",
+          "text": "Could you preheat the oven while I clean the fish?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "could_you_preheat_the_oven_while_i_clean_the_fish"
         },
         {
-          "text": "While I remove the fish bones, can you preheat the oven?",
-          "audioSlug": "while_i_remove_the_fish_bones_can_you_preheat_the_oven",
+          "text": "Can you preheat the oven while I clean the fish?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "can_you_preheat_the_oven_while_i_clean_the_fish"
         }
       ]
     },
@@ -934,13 +934,13 @@
     },
     {
       "id": "kitchen_before_cooking_pasta_we_have_to",
-      "source": "Antes de cocer pasta tenemos que esperar a que el agua empiece a hervir.",
+      "source": "Hay que esperar a que el agua hierva.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Before cooking pasta, we have to wait for the water to boil.",
-          "audioSlug": "before_cooking_pasta_we_have_to_wait_for_the_water_to_boil"
+          "text": "We have to wait for the water to boil.",
+          "audioSlug": "we_have_to_wait_for_the_water_to_boil"
         }
       ]
     },
@@ -970,13 +970,13 @@
     },
     {
       "id": "kitchen_i_prefer_to_use_the_electric",
-      "source": "Prefiero usar el horno eléctrico al microondas para calentar la comida.",
+      "source": "Prefiero el horno eléctrico al microondas.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I prefer to use the electric oven over the microwave to heat up the food.",
-          "audioSlug": "i_prefer_to_use_the_electric_oven_over_the_microwave_to_heat_up_the_food"
+          "text": "I prefer the electric oven over the microwave.",
+          "audioSlug": "i_prefer_the_electric_oven_over_the_microwave"
         }
       ]
     },
@@ -1066,13 +1066,13 @@
     },
     {
       "id": "kitchen_the_pan_is_in_the_sink",
-      "source": "La sartén está en el fregadero porque la usé ayer.",
+      "source": "La sartén está en el fregadero.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "The pan is in the sink because I used it yesterday.",
-          "audioSlug": "the_pan_is_in_the_sink_because_i_used_it_yesterday"
+          "text": "The pan is in the sink.",
+          "audioSlug": "the_pan_is_in_the_sink"
         }
       ]
     },
@@ -1258,13 +1258,13 @@
     },
     {
       "id": "kitchen_caramelized_onions_deglaze_balsamic",
-      "source": "Una vez que hayas caramelizado las cebollas, desglasa con vinagre balsámico para dar profundidad y equilibrar el dulzor.",
+      "source": "Carameliza las cebollas y desglasa con vinagre balsámico para dar profundidad.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Once you've caramelized the onions, deglaze with balsamic vinegar to add depth and balance the sweetness.",
-          "audioSlug": "once_you_ve_caramelized_the_onions_deglaze_with_balsamic_vinegar_to_add_depth_and_balance_t_7f6eedd1"
+          "text": "Caramelize the onions and deglaze with balsamic vinegar for depth.",
+          "audioSlug": "caramelize_the_onions_and_deglaze_with_balsamic_vinegar_for_depth"
         }
       ]
     },
@@ -1330,13 +1330,13 @@
     },
     {
       "id": "kitchen_cure_salmon_salt_sugar_dill",
-      "source": "Para curar el salmón, cúbrelo con sal, azúcar y eneldo y refrigéralo durante dos días.",
+      "source": "Cubre el salmón con sal, azúcar y eneldo para curarlo.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "To cure salmon, coat it in salt, sugar, and dill and refrigerate for two days.",
-          "audioSlug": "to_cure_salmon_coat_it_in_salt_sugar_and_dill_and_refrigerate_for_two_days"
+          "text": "Coat the salmon in salt, sugar and dill to cure it.",
+          "audioSlug": "coat_the_salmon_in_salt_sugar_and_dill_to_cure_it"
         }
       ]
     },
