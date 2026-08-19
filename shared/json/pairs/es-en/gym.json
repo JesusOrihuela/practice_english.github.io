@@ -140,23 +140,23 @@
     },
     {
       "id": "gym_can_you_give_me_some_tips",
-      "source": "¿Puedes darme algunos consejos para mejorar mi técnica en este ejercicio?",
+      "source": "¿Puedes darme consejos para mejorar mi técnica?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Can you give me some tips to improve my technique on this exercise?",
-          "audioSlug": "can_you_give_me_some_tips_to_improve_my_technique_on_this_exercise",
+          "text": "Could you give me tips to improve my technique?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "could_you_give_me_tips_to_improve_my_technique"
         },
         {
-          "text": "Could you give me some tips to improve my technique on this exercise?",
-          "audioSlug": "could_you_give_me_some_tips_to_improve_my_technique_on_this_exercise",
+          "text": "Can you give me tips to improve my technique?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "can_you_give_me_tips_to_improve_my_technique"
         }
       ]
     },
@@ -278,13 +278,13 @@
     },
     {
       "id": "gym_should_i_follow_any_kind_of",
-      "source": "¿Debería seguir algún tipo de rutina para acabar mi entrenamiento?",
+      "source": "¿Debo seguir una rutina para terminar mi entrenamiento?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Should I follow any kind of routine to finish my workout?",
-          "audioSlug": "should_i_follow_any_kind_of_routine_to_finish_my_workout"
+          "text": "Should I follow a routine to finish my workout?",
+          "audioSlug": "should_i_follow_a_routine_to_finish_my_workout"
         }
       ]
     },
@@ -336,23 +336,23 @@
     },
     {
       "id": "gym_show_me_adjust_resistance",
-      "source": "¿Puedes mostrarme cómo ajustar la resistencia en esta máquina?",
+      "source": "¿Puedes mostrarme cómo ajustar la resistencia?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Can you show me how to adjust the resistance on this machine?",
-          "audioSlug": "can_you_show_me_how_to_adjust_the_resistance_on_this_machine",
+          "text": "Could you show me how to adjust the resistance?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "could_you_show_me_how_to_adjust_the_resistance"
         },
         {
-          "text": "Could you show me how to adjust the resistance on this machine?",
-          "audioSlug": "could_you_show_me_how_to_adjust_the_resistance_on_this_machine",
+          "text": "Can you show me how to adjust the resistance?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "can_you_show_me_how_to_adjust_the_resistance"
         }
       ]
     },
@@ -394,13 +394,13 @@
     },
     {
       "id": "gym_is_there_a_specific_order_i",
-      "source": "¿Hay un orden específico que debería seguir al usar las máquinas?",
+      "source": "¿Hay un orden específico para las máquinas?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Is there a specific order I should follow when using the machines?",
-          "audioSlug": "is_there_a_specific_order_i_should_follow_when_using_the_machines"
+          "text": "Is there a specific order for the machines?",
+          "audioSlug": "is_there_a_specific_order_for_the_machines"
         }
       ]
     },
@@ -464,13 +464,13 @@
     },
     {
       "id": "gym_is_it_okay_if_i_use",
-      "source": "¿Está bien si uso este banco para mi próxima serie?",
+      "source": "¿Está bien si uso este banco?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Is it okay if I use this bench for my next set?",
-          "audioSlug": "is_it_okay_if_i_use_this_bench_for_my_next_set"
+          "text": "Is it okay if I use this bench?",
+          "audioSlug": "is_it_okay_if_i_use_this_bench"
         }
       ]
     },
@@ -782,13 +782,13 @@
     },
     {
       "id": "gym_push_with_your_heels_not_with",
-      "source": "Empuja con los talones, no con las puntas de los pies.",
+      "source": "Empuja con los talones, no con las puntas.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Push with your heels, not with the tips of your toes.",
-          "audioSlug": "push_with_your_heels_not_with_the_tips_of_your_toes"
+          "text": "Push with your heels, not your toes.",
+          "audioSlug": "push_with_your_heels_not_your_toes"
         }
       ]
     },
@@ -962,25 +962,25 @@
     },
     {
       "id": "gym_hiit_cardiovascular_endurance",
-      "source": "He empezado a incorporar HIIT en mi rutina semanal para mejorar mi resistencia cardiovascular.",
+      "source": "Incorporé HIIT a mi rutina para mejorar mi resistencia cardiovascular.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "I've started incorporating HIIT into my weekly routine to improve cardiovascular endurance.",
-          "audioSlug": "i_ve_started_incorporating_hiit_into_my_weekly_routine_to_improve_cardiovascular_endurance"
+          "text": "I added HIIT to my routine to improve cardiovascular endurance.",
+          "audioSlug": "i_added_hiit_to_my_routine_to_improve_cardiovascular_endurance"
         }
       ]
     },
     {
       "id": "gym_knee_injury_high_impact_avoid",
-      "source": "Me estoy recuperando de una lesión de rodilla, así que necesito evitar cualquier ejercicio de alto impacto por ahora.",
+      "source": "Me recupero de una lesión de rodilla y debo evitar el alto impacto.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "I'm recovering from a knee injury, so I must avoid high-impact exercise for now.",
-          "audioSlug": "i_m_recovering_from_a_knee_injury_so_i_must_avoid_high_impact_exercise_for_now"
+          "text": "I am recovering from a knee injury and must avoid high-impact exercise.",
+          "audioSlug": "i_am_recovering_from_a_knee_injury_and_must_avoid_high_impact_exercise"
         }
       ]
     },
@@ -998,13 +998,13 @@
     },
     {
       "id": "gym_macronutrients_protein_training_load",
-      "source": "He estado rastreando mi ingesta de macronutrientes y ajustando mi consumo de proteínas según la carga de entrenamiento.",
+      "source": "Ajusto mi consumo de proteínas según la carga de entrenamiento.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "I've been tracking my macronutrient intake and adjusting my protein consumption based on training load.",
-          "audioSlug": "i_ve_been_tracking_my_macronutrient_intake_and_adjusting_my_protein_consumption_based_on_tr_bc095e5f"
+          "text": "I adjust my protein intake based on the training load.",
+          "audioSlug": "i_adjust_my_protein_intake_based_on_the_training_load"
         }
       ]
     },
@@ -1022,25 +1022,25 @@
     },
     {
       "id": "gym_overtraining_recovery_as_important",
-      "source": "El sobreentrenamiento puede ser contraproducente, pues la recuperación adecuada es tan importante como el entrenamiento en sí.",
+      "source": "La recuperación es tan importante como el propio entrenamiento.",
       "level": "C1",
       "grammar": "'Just as + adjective + as' for expressing equal importance",
       "target": [
         {
-          "text": "Overtraining can be counterproductive, since adequate recovery is just as important as training itself.",
-          "audioSlug": "overtraining_can_be_counterproductive_since_adequate_recovery_is_just_as_important_as_train_23f0fdb9"
+          "text": "Recovery is just as important as the training itself.",
+          "audioSlug": "recovery_is_just_as_important_as_the_training_itself"
         }
       ]
     },
     {
       "id": "gym_progressive_overload_adaptations",
-      "source": "Mi plan de entrenamiento usa sobrecarga progresiva, aumentando gradualmente la resistencia para seguir provocando adaptaciones.",
+      "source": "Mi plan usa sobrecarga progresiva para seguir provocando adaptaciones.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "My training plan uses progressive overload, gradually increasing resistance to continue eliciting adaptations.",
-          "audioSlug": "my_training_plan_uses_progressive_overload_gradually_increasing_resistance_to_continue_elic_64fb8340"
+          "text": "My plan uses progressive overload to keep driving adaptations.",
+          "audioSlug": "my_plan_uses_progressive_overload_to_keep_driving_adaptations"
         }
       ]
     },
@@ -1106,13 +1106,13 @@
     },
     {
       "id": "gym_mobility_end_range_strength",
-      "source": "El trabajo de movilidad no es solo estirarse. Se trata de desarrollar fuerza y control en posiciones de rango final.",
+      "source": "El trabajo de movilidad desarrolla fuerza y control en rangos extremos.",
       "level": "C1",
       "grammar": "'Not just X, it's about + gerund' reframes a misconception to show the broader purpose.",
       "target": [
         {
-          "text": "Mobility work isn't just stretching. It's about building strength and control at end-range positions.",
-          "audioSlug": "mobility_work_isn_t_just_stretching_it_s_about_building_strength_and_control_at_end_range_positions"
+          "text": "Mobility work builds strength and control at end-range positions.",
+          "audioSlug": "mobility_work_builds_strength_and_control_at_end_range_positions"
         }
       ]
     },

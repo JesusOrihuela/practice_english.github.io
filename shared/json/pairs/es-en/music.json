@@ -14,13 +14,13 @@
     },
     {
       "id": "music_favorite_song_always",
-      "source": "Esa canción me gusta mucho, la escucho todo el tiempo.",
+      "source": "Me gusta mucho esa canción y la escucho seguido.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "I really like that song, I listen to it all the time.",
-          "audioSlug": "i_really_like_that_song_i_listen_to_it_all_the_time"
+          "text": "I love that song and listen to it often.",
+          "audioSlug": "i_love_that_song_and_listen_to_it_often"
         }
       ]
     },
@@ -60,13 +60,13 @@
     },
     {
       "id": "music_new_concert_band",
-      "source": "Hay un nuevo concierto de mi banda favorita, tengo que ir.",
+      "source": "Mi banda favorita tiene un nuevo concierto próximamente.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "There is a new concert by my favorite band, I have to go.",
-          "audioSlug": "there_is_a_new_concert_by_my_favorite_band_i_have_to_go"
+          "text": "My favorite band has a new concert coming up.",
+          "audioSlug": "my_favorite_band_has_a_new_concert_coming_up"
         }
       ]
     },
@@ -84,13 +84,13 @@
     },
     {
       "id": "music_podcast_recommendation",
-      "source": "No sé qué pódcast escuchar, ¿me recomiendas alguno?",
+      "source": "¿Puedes recomendarme un pódcast para escuchar?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I don't know what podcast to listen to, can you recommend one?",
-          "audioSlug": "i_don_t_know_what_podcast_to_listen_to_can_you_recommend_one"
+          "text": "Can you recommend a podcast to listen to?",
+          "audioSlug": "can_you_recommend_a_podcast_to_listen_to"
         }
       ]
     },
@@ -216,12 +216,12 @@
     },
     {
       "id": "music_concert_sound_mix_terrible",
-      "source": "La energía era increíble, pero la mezcla de sonido era terrible.",
+      "source": "La energía era increíble pero la mezcla de sonido era terrible.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The energy was incredible, but the sound mix was terrible.",
+          "text": "The energy was incredible but the sound mix was terrible.",
           "audioSlug": "the_energy_was_incredible_but_the_sound_mix_was_terrible"
         }
       ]
@@ -252,13 +252,13 @@
     },
     {
       "id": "music_started_late_still_impressive",
-      "source": "No empezó a tocar el piano hasta los treinta años, lo que hace su técnica aún más impresionante.",
+      "source": "Aprendió piano a los treinta y su técnica impresiona aún más.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "She started playing piano in her thirties, which makes her technique even more impressive.",
-          "audioSlug": "she_started_playing_piano_in_her_thirties_which_makes_her_technique_even_more_impressive"
+          "text": "She learned piano in her thirties and her technique is even more impressive.",
+          "audioSlug": "she_learned_piano_in_her_thirties_and_her_technique_is_even_more_impressive"
         }
       ]
     },
@@ -348,25 +348,25 @@
     },
     {
       "id": "music_overproduction_works_against_core",
-      "source": "El sonido sobreproducido en realidad va en detrimento del núcleo emocional de la canción, creando una frialdad no intencionada.",
+      "source": "La sobreproducción va en detrimento del núcleo emocional de la canción.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "The overproduced sound actually works against the song's emotional core, creating an unintended coldness.",
-          "audioSlug": "the_overproduced_sound_actually_works_against_the_song_s_emotional_core_creating_an_uninten_dd3985bf"
+          "text": "The overproduced sound works against the song emotional core.",
+          "audioSlug": "the_overproduced_sound_works_against_the_song_emotional_core"
         }
       ]
     },
     {
       "id": "music_live_spontaneity_studio_cant_capture",
-      "source": "Hay una espontaneidad en las grabaciones en vivo que los álbumes de estudio rara vez capturan, por muy refinados que sean técnicamente.",
+      "source": "Las grabaciones en vivo tienen una espontaneidad que el estudio rara vez capta.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "There's a spontaneity in live recordings that studio albums rarely capture, however technically refined they are.",
-          "audioSlug": "there_s_a_spontaneity_in_live_recordings_that_studio_albums_rarely_capture_however_technica_526047c2"
+          "text": "Live recordings have a spontaneity that studio albums rarely capture.",
+          "audioSlug": "live_recordings_have_a_spontaneity_that_studio_albums_rarely_capture"
         }
       ]
     },
@@ -408,13 +408,13 @@
     },
     {
       "id": "music_chord_progression_unsettling",
-      "source": "La progresión de acordes es poco convencional, lo que le da a la pista su cualidad inquietante característica.",
+      "source": "La progresión de acordes poco convencional da a la pista su cualidad inquietante.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "The chord progression is unconventional, which gives the track its distinctively unsettling quality.",
-          "audioSlug": "the_chord_progression_is_unconventional_which_gives_the_track_its_distinctively_unsettling_quality"
+          "text": "The unconventional chord progression gives the track its unsettling quality.",
+          "audioSlug": "the_unconventional_chord_progression_gives_the_track_its_unsettling_quality"
         }
       ]
     },
