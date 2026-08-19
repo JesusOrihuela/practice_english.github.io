@@ -164,7 +164,17 @@
       "target": [
         {
           "text": "Ayúdame a pelar las zanahorias y las papas.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "ayudame_a_pelar_las_zanahorias_y_las_papas"
+        },
+        {
+          "text": "Ayúdame a pelar las zanahorias y las patatas.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "ayudame_a_pelar_las_zanahorias_y_las_patatas"
         }
       ]
     },
@@ -187,8 +197,25 @@
       "grammar": null,
       "target": [
         {
+          "text": "¿Tenemos extracto de vainilla para el pastel?",
+          "labels": {
+            "region": "México y Centroamérica"
+          },
+          "audioSlug": "tenemos_extracto_de_vainilla_para_el_pastel"
+        },
+        {
           "text": "¿Tenemos extracto de vainilla para la tarta?",
+          "labels": {
+            "region": "España"
+          },
           "audioSlug": "tenemos_extracto_de_vainilla_para_la_tarta"
+        },
+        {
+          "text": "¿Tenemos extracto de vainilla para la torta?",
+          "labels": {
+            "region": "Sudamérica"
+          },
+          "audioSlug": "tenemos_extracto_de_vainilla_para_la_torta"
         }
       ]
     },
@@ -524,7 +551,24 @@
       "target": [
         {
           "text": "Saca la comida del refrigerador.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "saca_la_comida_del_refrigerador"
+        },
+        {
+          "text": "Saca la comida del frigorífico.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "saca_la_comida_del_frigorifico"
+        },
+        {
+          "text": "Saca la comida de la heladera.",
+          "labels": {
+            "region": "Río de la Plata"
+          },
+          "audioSlug": "saca_la_comida_de_la_heladera"
         }
       ]
     },
@@ -740,7 +784,17 @@
       "target": [
         {
           "text": "Se pelan las papas y luego se cortan en rodajas.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "se_pelan_las_papas_y_luego_se_cortan_en_rodajas"
+        },
+        {
+          "text": "Se pelan las patatas y luego se cortan en rodajas.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "se_pelan_las_patatas_y_luego_se_cortan_en_rodajas"
         }
       ]
     },
@@ -788,7 +842,17 @@
       "target": [
         {
           "text": "Las papas se fríen en aceite caliente.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "las_papas_se_frien_en_aceite_caliente"
+        },
+        {
+          "text": "Las patatas se fríen en aceite caliente.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "las_patatas_se_frien_en_aceite_caliente"
         }
       ]
     },
