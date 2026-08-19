@@ -41,52 +41,64 @@ const GATE = process.argv.includes('--gate');
 // matched as whole words), the region LABEL to use, and the countries it covers (provenance).
 // Only include genuine region splits of everyday vocabulary. `neutralLabel` groups pan-regional
 // members (e.g. "Latinoamérica") so a two-way split reads cleanly.
+// PROVENANCE: `countries` come from the Diccionario de americanismos (ASALE) per-sense country
+// marks — fetched with `node tools/damer-provenance.mjs <term>:<meaning>` — NOT guessed; the
+// Spain/general term is España (es) from the DLE. `label` is the display region. Country codes
+// with no flag asset yet (gt,hn,sv,ni,cr,pa,cu,do,pr,py,ec) are still recorded for provenance;
+// the badge shows the label text alone until the flag exists (AppFlags.region → null fallback).
 const LEXICON = {
   es: [
-    { name: 'car',        members: [
-      { words: ['coche'],  label: 'España',        countries: ['es'] },
-      { words: ['carro'],  label: 'Latinoamérica', countries: ['mx', 'co', 've'] },
-      { words: ['auto'],   label: 'Cono Sur',      countries: ['ar', 'cl', 'uy'] } ] },
-    { name: 'cellphone',  members: [
+    { name: 'car',        members: [    // DAMER carro=Automóvil: us,mx,gt,hn,sv,ni,pa,cu,do,pr,co,ve,pe
+      { words: ['coche'],  label: 'España',                  countries: ['es'] },
+      { words: ['carro'],  label: 'América (salvo Cono Sur)', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'pa', 'cu', 'do', 'pr', 'co', 've', 'pe'] },
+      { words: ['auto'],   label: 'Cono Sur',                countries: ['ar', 'cl', 'uy'] } ] },
+    { name: 'cellphone',  members: [    // DAMER celular=Teléfono portátil: pan-latinoamericano (19 países)
       { words: ['móvil'],   label: 'España',        countries: ['es'] },
-      { words: ['celular'], label: 'Latinoamérica', countries: ['mx', 'ar', 'co'] } ] },
-    { name: 'computer',   members: [
+      { words: ['celular'], label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
+    { name: 'computer',   members: [    // DAMER computador=Ordenador personal; computadora general Latam
       { words: ['ordenador'],   label: 'España',        countries: ['es'] },
-      { words: ['computadora', 'computador'], label: 'Latinoamérica', countries: ['mx', 'ar', 'co'] } ] },
-    { name: 'potato',     members: [
+      { words: ['computadora', 'computador'], label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'pa', 'do', 've', 'pe', 'cl', 'co', 'ar'] } ] },
+    { name: 'potato',     members: [    // DAMER papa=Tubérculo: pan-latinoamericano (19 países)
       { words: ['patata', 'patatas'], label: 'España',        countries: ['es'] },
-      { words: ['papa', 'papas'],     label: 'Latinoamérica', countries: ['mx', 'ar', 'co'] } ] },
-    { name: 'avocado',    members: [
-      { words: ['aguacate'], label: 'México/España',  countries: ['mx', 'co', 've', 'es'] },
-      { words: ['palta'],    label: 'Sudamérica',     countries: ['ar', 'cl', 'pe', 'bo', 'uy'] } ] },
-    { name: 'fridge',     members: [
-      { words: ['nevera', 'frigorífico'], label: 'España',        countries: ['es'] },
-      { words: ['refrigerador', 'heladera'], label: 'Latinoamérica', countries: ['mx', 'ar'] } ] },
-    { name: 'juice',      members: [
+      { words: ['papa', 'papas'],     label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
+    { name: 'avocado',    members: [    // DAMER palta=Fruto del aguacate: gt,ec,pe,bo,cl,ar,uy
+      { words: ['aguacate'], label: 'México y España',  countries: ['mx', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'es'] },
+      { words: ['palta'],    label: 'Sudamérica andina y Cono Sur', countries: ['gt', 'ec', 'pe', 'bo', 'cl', 'ar', 'uy'] } ] },
+    { name: 'fridge',     members: [    // DLE frigorífico=España; heladera=Río de la Plata; refrigerador general Latam
+      { words: ['frigorífico'], label: 'España',        countries: ['es'] },
+      { words: ['refrigerador', 'refrigeradora'], label: 'Latinoamérica', countries: ['mx', 'pe', 'cl', 'co', 've', 'ec'] },
+      { words: ['heladera'], label: 'Río de la Plata', countries: ['ar', 'uy', 'py'] } ] },
+    { name: 'juice',      members: [    // DLE zumo=España; jugo general Latam para bebida de fruta
       { words: ['zumo'], label: 'España',        countries: ['es'] },
-      { words: ['jugo'], label: 'Latinoamérica', countries: ['mx', 'ar', 'co'] } ] },
-    { name: 'pool',       members: [
-      { words: ['piscina'], label: 'España/general', countries: ['es', 'co'] },
-      { words: ['alberca'], label: 'México',         countries: ['mx'] },
-      { words: ['pileta'],  label: 'Río de la Plata', countries: ['ar', 'uy'] } ] },
-    { name: 'bus',        members: [
-      { words: ['autobús'],  label: 'España',        countries: ['es'] },
-      { words: ['camión'],   label: 'México',        countries: ['mx'] },
-      { words: ['colectivo'], label: 'Argentina',    countries: ['ar'] } ] },
-    { name: 'cake',       members: [
-      { words: ['tarta'],           label: 'España',        countries: ['es'] },
-      { words: ['pastel', 'torta'], label: 'Latinoamérica', countries: ['mx', 'ar', 'co'] } ] },
+      { words: ['jugo'], label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
+    { name: 'pool',       members: [    // DAMER alberca=Estanque: mx,gt,hn,ni,pa,bo; pileta Río de la Plata
+      { words: ['piscina'], label: 'España y gran parte de América', countries: ['es', 'co', 've', 'pe', 'cl', 'ec'] },
+      { words: ['alberca'], label: 'México y Centroamérica', countries: ['mx', 'gt', 'hn', 'ni', 'pa'] },
+      { words: ['pileta'],  label: 'Río de la Plata', countries: ['ar', 'uy', 'py'] } ] },
+    { name: 'bus',        members: [    // autobús/bus = neutral standard; camión=Mx, colectivo=Ar, guagua=Caribe
+      { words: ['autobús', 'bus'], label: 'general',   countries: ['es', 'co', 'pe', 've'] },
+      { words: ['camión'],         label: 'México',    countries: ['mx'] },
+      { words: ['colectivo'],      label: 'Argentina', countries: ['ar'] },
+      { words: ['guagua'],         label: 'Caribe',    countries: ['cu', 'do', 'pr'] } ] },
+    { name: 'cake',       members: [    // DAMER torta=Pastel grande: excluye México (allí torta=sándwich)
+      { words: ['tarta'],  label: 'España',                countries: ['es'] },
+      { words: ['pastel'], label: 'México y Centroamérica', countries: ['mx', 'gt', 'sv', 'cr', 'cu', 'do', 'pr'] },
+      { words: ['torta'],  label: 'Sudamérica',            countries: ['ni', 'pa', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
   ],
+  // English US/UK. Only CLEAN binary splits where the region marker is unambiguous. Polysemous or
+  // register-neutral words are deliberately EXCLUDED (they produced mostly false positives):
+  //  • film/movie — "film" is neutral-standard everywhere (film festival, Best Foreign Film), not a
+  //    reliable UK marker; "movie" is understood universally. Not a must-teach split.
+  //  • rent/hire, grocery/shopping — "rent"/"shopping" are polysemous (rent a flat; go shopping).
+  // "the bill"/"the check" are anchored to the restaurant NOUN sense so the verb "to check", the
+  // "check-in/check-out" compounds, and "check" = cheque no longer false-positive.
   en: [
-    { name: 'film',     members: [
-      { words: ['movie', 'movies'], label: 'US', countries: ['us'] },
-      { words: ['film', 'films'],   label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
     { name: 'fries',    members: [
       { words: ['fries'], label: 'US', countries: ['us'] },
       { words: ['chips'], label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
     { name: 'bill',     members: [
-      { words: ['check'], label: 'US', countries: ['us'] },
-      { words: ['bill'],  label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
+      { words: ['the check', 'the tab'], label: 'US', countries: ['us'] },
+      { words: ['the bill'],             label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
     { name: 'cart',     members: [
       { words: ['cart', 'carts'],       label: 'US', countries: ['us'] },
       { words: ['trolley', 'trolleys'], label: 'UK', countries: ['gb', 'au', 'nz'] } ] },
@@ -108,12 +120,6 @@ const LEXICON = {
     { name: 'truck',    members: [
       { words: ['truck'], label: 'US', countries: ['us'] },
       { words: ['lorry'], label: 'UK', countries: ['gb'] } ] },
-    { name: 'grocery',  members: [
-      { words: ['grocery'],  label: 'US', countries: ['us'] },
-      { words: ['shopping'], label: 'UK', countries: ['gb', 'au', 'nz'] } ] },
-    { name: 'rent',     members: [
-      { words: ['rent'], label: 'US', countries: ['us'] },
-      { words: ['hire'], label: 'UK', countries: ['gb', 'au', 'nz'] } ] },
   ],
 };
 

@@ -65,6 +65,15 @@ communicative functions and topics to cover, and at which CEFR level. Two uses:
 - Source: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/
 - Public reference material (Instituto Cervantes)
 
+### Diccionario de americanismos (ASALE)
+Authoritative regional provenance for the Spanish variant lexicon (`tools/check-variants.mjs`):
+each sense (acepción) is marked with the countries where it is used. Queried per term with
+`tools/damer-provenance.mjs` (parses the public entry's structured metadata) to ground which
+countries each regional word covers (e.g. *palta* = gt,ec,pe,bo,cl,ar,uy; *carro* = the Automóvil
+sense excludes the Cono Sur; *papa*/*celular* = pan-Latin-American). No dictionary data is bundled.
+- Source: https://www.asale.org/damer/ (Asociación de Academias de la Lengua Española)
+- Public reference material (ASALE). Spain/general terms are levelled from the DLE.
+
 ### National flags (`shared/img/flags/`)
 Faithful national flag SVGs used for the region/variant badges. National flags are in the
 **public domain** (government works); files sourced from Wikimedia Commons.
