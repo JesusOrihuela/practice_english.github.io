@@ -1438,13 +1438,12 @@ body.path-mode {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-/* Zone silhouette (e.g. Latinoamérica): portrait shape, so size by height; no flag chrome. */
+/* Zone globe locator (e.g. Latinoamérica): round, so size square; no flag chrome. */
 .region-phrase-badge .region-silhouette {
-  width: auto;
-  height: 14px;
-  border-radius: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
   box-shadow: none;
-  opacity: 0.85;
 }
 
 /* Tall cards: when a variant badge is present, reserve extra space ABOVE the phrase (so a

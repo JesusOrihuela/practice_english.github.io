@@ -184,7 +184,9 @@ const AppFlags = (() => {
   // Simplified, recognisable zone silhouettes (fill = currentColor, so they inherit the pill
   // colour and stay theme-aware). Add zones (Sudamérica, El Caribe, etc.) here as needed.
   const REGION_SHAPES = {
-    latinoamerica: `<svg viewBox="0 0 50 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="currentColor" d="M17 5 L23 4 L27 8 L25 12 L31 15 L39 19 L43 28 L39 39 L33 51 L28 61 L23 72 L20 61 L19 50 L14 41 L11 31 L13 24 L9 19 L15 14 L18 10 Z"/></svg>`,
+    // Orthographic-globe locator: grey sphere + the region highlighted (like a Wikimedia
+    // "(orthographic projection)" map). A fuller/real coastline asset can replace this path.
+    latinoamerica: `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#dbe0e6"/><circle cx="20" cy="20" r="19" fill="none" stroke="#b8c0ca" stroke-width="1"/><path fill="#3f8f5b" d="M16 8 L21 7 L24 10 L22 13 L27 15 L30 20 L27 26 L23 31 L20 35 L18 30 L17 25 L14 21 L13 16 L15 12 Z"/></svg>`,
   };
 
   const _fold = (s) => (s || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
