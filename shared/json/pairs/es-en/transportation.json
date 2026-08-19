@@ -36,13 +36,13 @@
     },
     {
       "id": "transportation_how_get_bus_stop",
-      "source": "¿Cómo llego a la parada de autobús desde aquí?",
+      "source": "¿Cómo llego a la parada de autobús?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "How do I get to the bus stop from here?",
-          "audioSlug": "how_do_i_get_to_the_bus_stop_from_here"
+          "text": "How do I get to the bus stop?",
+          "audioSlug": "how_do_i_get_to_the_bus_stop"
         }
       ]
     },
@@ -142,13 +142,13 @@
     },
     {
       "id": "transportation_metro_faster_than_bus",
-      "source": "¿El metro es más rápido que el autobús a esta hora del día?",
+      "source": "¿El metro es más rápido que el autobús ahora?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Is the metro faster than the bus at this time of day?",
-          "audioSlug": "is_the_metro_faster_than_the_bus_at_this_time_of_day"
+          "text": "Is the metro faster than the bus right now?",
+          "audioSlug": "is_the_metro_faster_than_the_bus_right_now"
         }
       ]
     },
@@ -166,13 +166,13 @@
     },
     {
       "id": "transportation_weekly_travel_pass",
-      "source": "Me gustaría comprar un pase semanal de transporte para la ciudad.",
+      "source": "Me gustaría comprar un pase semanal de transporte.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I'd like to buy a weekly travel pass for the city.",
-          "audioSlug": "i_d_like_to_buy_a_weekly_travel_pass_for_the_city"
+          "text": "I would like to buy a weekly travel pass.",
+          "audioSlug": "i_would_like_to_buy_a_weekly_travel_pass"
         }
       ]
     },
@@ -226,13 +226,13 @@
     },
     {
       "id": "transportation_carpooling_cuts_commute_costs",
-      "source": "Mis colegas y yo hemos empezado a compartir carro para ir al trabajo, lo que reduce los costos del traslado.",
+      "source": "Comparto el viaje al trabajo con colegas para reducir costos.",
       "level": "B2",
       "grammar": "Present perfect 'have started + gerund' describes a recently established habit.",
       "target": [
         {
-          "text": "My colleagues and I have started carpooling to work, which cuts our commute costs.",
-          "audioSlug": "my_colleagues_and_i_have_started_carpooling_to_work_which_cuts_our_commute_costs"
+          "text": "My colleagues and I carpool to work to cut commute costs.",
+          "audioSlug": "my_colleagues_and_i_carpool_to_work_to_cut_commute_costs"
         }
       ]
     },
@@ -310,13 +310,13 @@
     },
     {
       "id": "transportation_rideshare_late_arrival",
-      "source": "El conductor llega en siete minutos, pero yo necesito salir en cinco.",
+      "source": "El conductor está a siete minutos pero yo salgo en cinco.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The driver is seven minutes away, but I need to leave in five.",
-          "audioSlug": "the_driver_is_seven_minutes_away_but_i_need_to_leave_in_five"
+          "text": "The driver is seven minutes away but I leave in five.",
+          "audioSlug": "the_driver_is_seven_minutes_away_but_i_leave_in_five"
         }
       ]
     },

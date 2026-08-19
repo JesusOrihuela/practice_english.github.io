@@ -378,13 +378,13 @@
     },
     {
       "id": "restaurant_is_there_a_limit_to_the",
-      "source": "¿Hay un límite de personas para una reserva?",
+      "source": "¿Hay un límite de personas por reservación?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Is there a limit to the number of people for a reservation?",
-          "audioSlug": "is_there_a_limit_to_the_number_of_people_for_a_reservation"
+          "text": "Is there a limit on people per reservation?",
+          "audioSlug": "is_there_a_limit_on_people_per_reservation"
         }
       ]
     },
@@ -734,23 +734,23 @@
     },
     {
       "id": "restaurant_could_i_have_my_salad_with",
-      "source": "¿Podría servirme la ensalada con el aderezo aparte?",
+      "source": "¿Podría ponerme el aderezo aparte, por favor?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Could I have my salad with the dressing on the side?",
-          "audioSlug": "could_i_have_my_salad_with_the_dressing_on_the_side",
+          "text": "Could I have the dressing on the side, please?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "could_i_have_the_dressing_on_the_side_please"
         },
         {
-          "text": "Can I have my salad with the dressing on the side?",
-          "audioSlug": "can_i_have_my_salad_with_the_dressing_on_the_side",
+          "text": "Can I have the dressing on the side?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "can_i_have_the_dressing_on_the_side"
         }
       ]
     },
@@ -918,13 +918,13 @@
     },
     {
       "id": "restaurant_steak_wrong_doneness",
-      "source": "Pedí el filete poco hecho, pero está muy hecho. ¿Podrían llevárselo?",
+      "source": "Pedí este filete poco hecho pero llegó muy hecho.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "I ordered medium-rare, but this steak is well-done. Could you send it back?",
-          "audioSlug": "i_ordered_medium_rare_but_this_steak_is_well_done_could_you_send_it_back"
+          "text": "I ordered this steak medium-rare but it came well-done.",
+          "audioSlug": "i_ordered_this_steak_medium_rare_but_it_came_well_done"
         }
       ]
     },
@@ -1038,13 +1038,13 @@
     },
     {
       "id": "restaurant_price_discrepancy_charged",
-      "source": "El servicio fue excelente, pero hay una discrepancia entre el precio del menú y nuestra cuenta.",
+      "source": "Hay una discrepancia entre el precio del menú y nuestra cuenta.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "The service was excellent, but there's a discrepancy between the menu price and our bill.",
-          "audioSlug": "the_service_was_excellent_but_there_s_a_discrepancy_between_the_menu_price_and_our_bill"
+          "text": "There is a discrepancy between the menu price and our bill.",
+          "audioSlug": "there_is_a_discrepancy_between_the_menu_price_and_our_bill"
         }
       ]
     },
