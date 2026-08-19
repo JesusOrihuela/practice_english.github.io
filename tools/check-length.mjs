@@ -46,8 +46,11 @@ const RUNON_CONNECTOR =
 
 function isRunOn(text) {
   const commas = (text.match(/,/g) || []).length;
-  if (commas >= 2) return 'multiple commas (≥2) — likely several ideas';
+  // A comma directly followed by a clause connector = two clauses glued together. (≥2 commas
+  // alone is NOT flagged: natural short phrases — "Muy bien, gracias, ¿y tú?" — use commas as
+  // pauses, not clause joins. Only ≥3 commas, a strong signal of several ideas, is flagged.)
   if (commas >= 1 && RUNON_CONNECTOR.test(text)) return 'comma + clause connector — likely a run-on';
+  if (commas >= 3) return 'many commas (≥3) — likely several ideas';
   return null;
 }
 
