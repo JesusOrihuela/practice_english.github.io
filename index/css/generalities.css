@@ -1430,20 +1430,26 @@ body.path-mode {
   padding-left: 6px;
 }
 
-.region-phrase-badge svg {
-  width: 15px;
+/* Real national flag(s) inside the region pill — a single flag or a responsive cluster. */
+.region-phrase-badge .flag-img {
+  width: 16px;
   height: auto;
   display: block;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
-/* Zone globe locator (e.g. Latinoamérica): round, so size square; no flag chrome. */
-.region-phrase-badge .region-silhouette {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  box-shadow: none;
+.region-phrase-badge .flag-cluster {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.region-phrase-badge .flag-more {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
 }
 
 /* Tall cards: when a variant badge is present, reserve extra space ABOVE the phrase (so a

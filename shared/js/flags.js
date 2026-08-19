@@ -169,41 +169,64 @@ const AppFlags = (() => {
     return _svgEl(DEFS[code], 'flag-single');
   }
 
-  /* ---------- Regions (variant labels) ---------- */
+  /* ---------- Regions / variants → REAL national flags (cluster) ---------- */
 
-  // A region LABEL maps either to a single-country flag OR, for multi-country zones with no
-  // single flag, to a stylised silhouette. Extensible: a new region only needs an entry here
-  // (a country code below, or a shape in REGION_SHAPES). Keys are accent-folded + lowercased.
-  const REGION_CODE = {
-    'espana': 'es', 'uk': 'gb', 'reino unido': 'gb',
-    'us': 'us', 'usa': 'us', 'ee. uu.': 'us', 'ee.uu.': 'us', 'estados unidos': 'us',
-    'mexico': 'mx', 'francia': 'fr', 'alemania': 'de', 'italia': 'it', 'brasil': 'br',
-    'portugal': 'pt',
-  };
-
-  // Simplified, recognisable zone silhouettes (fill = currentColor, so they inherit the pill
-  // colour and stay theme-aware). Add zones (Sudamérica, El Caribe, etc.) here as needed.
-  const REGION_SHAPES = {
-    // Orthographic-globe locator: grey sphere + the region highlighted (like a Wikimedia
-    // "(orthographic projection)" map). A fuller/real coastline asset can replace this path.
-    latinoamerica: `<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#dbe0e6"/><circle cx="20" cy="20" r="19" fill="none" stroke="#b8c0ca" stroke-width="1"/><path fill="#3f8f5b" d="M16 8 L21 7 L24 10 L22 13 L27 15 L30 20 L27 26 L23 31 L20 35 L18 30 L17 25 L14 21 L13 16 L15 12 Z"/></svg>`,
-  };
+  // Base path to the flag assets, derived from THIS script's own URL so it resolves at any page
+  // depth (GitHub Pages subpath, local, …): .../shared/js/flags.js → .../shared/img/flags/
+  const _scriptSrc = (document.currentScript && document.currentScript.src) ||
+    ([].map.call(document.scripts, s => s.src).find(s => /\/flags\.js(\?|$)/.test(s))) || '';
+  const FLAG_BASE = _scriptSrc.replace(/[^/]*$/, '').replace(/\/js\/$/, '/img/flags/');
 
   const _fold = (s) => (s || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
-  /**
-   * Returns the SVG element for a region variant LABEL — a country flag or a zone silhouette —
-   * or null when the region has no visual (caller then shows the name alone).
-   * @param {string} name — region label as authored (e.g. 'España', 'UK', 'Latinoamérica')
-   */
-  function region(name) {
-    const key = _fold(name);
-    if (!key) return null;
-    const code = REGION_CODE[key];
-    if (code && DEFS[code]) return _svgEl(DEFS[code], 'flag-single');
-    if (REGION_SHAPES[key]) return _svgEl(REGION_SHAPES[key], 'region-silhouette');
-    return null;
+  // A region/variant LABEL → the country code(s) it covers. One country → one flag; several →
+  // a flag cluster (works for any set, even antipodal like US+Australia). A new region/variant
+  // needs an entry here + its flag asset in shared/img/flags/. A macro-zone with no country
+  // list returns null → the caller shows the name alone.
+  const REGION_MAP = {
+    'espana': ['es'], 'uk': ['gb'], 'reino unido': ['gb'],
+    'us': ['us'], 'usa': ['us'], 'ee. uu.': ['us'], 'ee.uu.': ['us'], 'estados unidos': ['us'],
+    'mexico': ['mx'], 'argentina': ['ar'], 'chile': ['cl'], 'peru': ['pe'], 'bolivia': ['bo'],
+    'uruguay': ['uy'], 'colombia': ['co'], 'venezuela': ['ve'], 'australia': ['au'],
+    // Country-precise lexical variants (ready; the content audit assigns these to phrases):
+    'palta': ['ar', 'cl', 'pe', 'bo', 'uy'],
+    'aguacate': ['mx', 'co', 've', 'es'],
+  };
+
+  /** A single real flag as an <img> from the asset dir (never inlined; emblem flags are big). */
+  function flagImg(code) {
+    const img = document.createElement('img');
+    img.src = FLAG_BASE + code + '.svg';
+    img.className = 'flag-img'; img.alt = '';
+    img.setAttribute('aria-hidden', 'true'); img.loading = 'lazy';
+    return img;
   }
 
-  return { stack, single, region };
+  /** Cluster of real flags for a multi-country variant: first `max` + "+N"; wraps responsively. */
+  function cluster(codes, max) {
+    max = max || 3;
+    const wrap = document.createElement('span');
+    wrap.className = 'flag-cluster';
+    (codes || []).slice(0, max).forEach(c => wrap.appendChild(flagImg(c)));
+    if ((codes || []).length > max) {
+      const more = document.createElement('span');
+      more.className = 'flag-more';
+      more.textContent = '+' + (codes.length - max);
+      wrap.appendChild(more);
+    }
+    return wrap;
+  }
+
+  /**
+   * Visual for a region/variant LABEL: one real flag, a flag cluster (multi-country), or null
+   * (macro-zone with no country list → caller shows the name alone).
+   * @param {string} name — label as authored (e.g. 'España', 'UK', 'palta')
+   */
+  function region(name) {
+    const codes = REGION_MAP[_fold(name)];
+    if (!codes || !codes.length) return null;
+    return codes.length === 1 ? flagImg(codes[0]) : cluster(codes);
+  }
+
+  return { stack, single, region, cluster, flagImg };
 })();
