@@ -74,23 +74,23 @@
     },
     {
       "id": "theater_actors_incredible_performance",
-      "source": "The actors were incredible. I didn't expect such a strong performance.",
+      "source": "The actors were incredible in a very powerful performance.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Los actores estaban increíbles, aunque no esperaba una actuación tan poderosa.",
-          "audioSlug": "los_actores_estaban_increibles_aunque_no_esperaba_una_actuacion_tan_poderosa",
+          "text": "Los actores estuvieron increíbles en una actuación muy poderosa.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "los_actores_estuvieron_increibles_en_una_actuacion_muy_poderosa"
         },
         {
-          "text": "Las actrices estaban increíbles, aunque no esperaba una actuación tan poderosa.",
-          "audioSlug": "las_actrices_estaban_increibles_aunque_no_esperaba_una_actuacion_tan_poderosa",
+          "text": "Las actrices estuvieron increíbles en una actuación muy poderosa.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "las_actrices_estuvieron_increibles_en_una_actuacion_muy_poderosa"
         }
       ]
     },
@@ -142,25 +142,25 @@
     },
     {
       "id": "theater_standing_ovation_deserved",
-      "source": "The cast received a standing ovation, absolutely deserved after a performance like that.",
+      "source": "The cast received a well-deserved standing ovation.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "El reparto recibió una ovación de pie, completamente merecida después de una actuación así.",
-          "audioSlug": "el_reparto_recibio_una_ovacion_de_pie_completamente_merecida_despues_de_una_actuacion_asi"
+          "text": "El reparto recibió una ovación de pie muy merecida.",
+          "audioSlug": "el_reparto_recibio_una_ovacion_de_pie_muy_merecida"
         }
       ]
     },
     {
       "id": "theater_original_much_stronger_revival",
-      "source": "I saw both productions. The original was much stronger, the revival losing something essential.",
+      "source": "The original version was much stronger than the new production.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Vi ambas versiones, y la original era mucho más sólida que la nueva producción.",
-          "audioSlug": "vi_ambas_versiones_y_la_original_era_mucho_mas_solida_que_la_nueva_produccion"
+          "text": "La versión original era mucho más sólida que la nueva producción.",
+          "audioSlug": "la_version_original_era_mucho_mas_solida_que_la_nueva_produccion"
         }
       ]
     },
@@ -190,13 +190,13 @@
     },
     {
       "id": "theater_rehearsal_documentary_changed_experience",
-      "source": "A documentary about the rehearsal process completely changed how I experienced the show.",
+      "source": "A documentary about the rehearsals changed how I experienced the show.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Un documental sobre el proceso de ensayo cambió completamente cómo experimenté el espectáculo.",
-          "audioSlug": "un_documental_sobre_el_proceso_de_ensayo_cambio_completamente_como_experimente_el_espectaculo"
+          "text": "Un documental sobre los ensayos cambió cómo viví el espectáculo.",
+          "audioSlug": "un_documental_sobre_los_ensayos_cambio_como_vivi_el_espectaculo"
         }
       ]
     },
@@ -282,35 +282,35 @@
     },
     {
       "id": "theater_monologue_extraordinary_restraint",
-      "source": "The third-act monologue demanded an extraordinary emotional range, delivered with remarkable restraint.",
+      "source": "The third-act monologue demanded extraordinary emotional range.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "El monólogo del tercer acto exigía un alcance emocional extraordinario, interpretado con notable contención.",
-          "audioSlug": "el_monologo_del_tercer_acto_exigia_un_alcance_emocional_extraordinario_interpretado_con_not_45ce30ec"
+          "text": "El monólogo del tercer acto exigía un alcance emocional extraordinario.",
+          "audioSlug": "el_monologo_del_tercer_acto_exigia_un_alcance_emocional_extraordinario"
         }
       ]
     },
     {
       "id": "theater_subverts_expectations_first_scene",
-      "source": "What makes this production stand out is how the director subverts expectations from scene one.",
+      "source": "The director subverts expectations from the first scene.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Esta producción destaca porque el director subvierte las expectativas del público desde la primera escena.",
-          "audioSlug": "esta_produccion_destaca_porque_el_director_subvierte_las_expectativas_del_publico_desde_la_56d1183d",
+          "text": "El director subvierte las expectativas desde la primera escena.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "el_director_subvierte_las_expectativas_desde_la_primera_escena"
         },
         {
-          "text": "Esta producción destaca porque la directora subvierte las expectativas del público desde la primera escena.",
-          "audioSlug": "esta_produccion_destaca_porque_la_directora_subvierte_las_expectativas_del_publico_desde_la_90100d53",
+          "text": "La directora subvierte las expectativas desde la primera escena.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "la_directora_subvierte_las_expectativas_desde_la_primera_escena"
         }
       ]
     },
@@ -328,25 +328,25 @@
     },
     {
       "id": "theater_ambiguous_ending_interpretations",
-      "source": "The play's ambiguous ending invites multiple interpretations, which is precisely what makes it so memorable.",
+      "source": "The ambiguous ending invites multiple interpretations.",
       "level": "C1",
       "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
       "target": [
         {
-          "text": "El final ambiguo invita a múltiples interpretaciones, y eso es exactamente lo que la hace memorable.",
-          "audioSlug": "el_final_ambiguo_invita_a_multiples_interpretaciones_y_eso_es_exactamente_lo_que_la_hace_memorable"
+          "text": "El final ambiguo invita a múltiples interpretaciones.",
+          "audioSlug": "el_final_ambiguo_invita_a_multiples_interpretaciones"
         }
       ]
     },
     {
       "id": "theater_two_tickets",
-      "source": "Two tickets for tonight's show, please.",
+      "source": "Two tickets for tonight show, please.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Dos entradas para la función de esta noche, por favor.",
-          "audioSlug": "dos_entradas_para_la_funcion_de_esta_noche_por_favor"
+          "text": "Dos entradas para la función de esta noche.",
+          "audioSlug": "dos_entradas_para_la_funcion_de_esta_noche"
         }
       ]
     },
