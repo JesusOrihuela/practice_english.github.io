@@ -152,7 +152,24 @@
       "target": [
         {
           "text": "Voy a alquilar un carro.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "voy_a_alquilar_un_carro"
+        },
+        {
+          "text": "Voy a alquilar un coche.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "voy_a_alquilar_un_coche"
+        },
+        {
+          "text": "Voy a alquilar un auto.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "voy_a_alquilar_un_auto"
         }
       ]
     },

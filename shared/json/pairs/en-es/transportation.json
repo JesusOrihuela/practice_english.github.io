@@ -80,17 +80,24 @@
       "target": [
         {
           "text": "No sé dónde conseguir un carro de alquiler.",
-          "audioSlug": "no_se_donde_conseguir_un_carro_de_alquiler",
           "labels": {
             "region": "Latinoamérica"
-          }
+          },
+          "audioSlug": "no_se_donde_conseguir_un_carro_de_alquiler"
         },
         {
           "text": "No sé dónde conseguir un coche de alquiler.",
-          "audioSlug": "no_se_donde_conseguir_un_coche_de_alquiler",
           "labels": {
             "region": "España"
-          }
+          },
+          "audioSlug": "no_se_donde_conseguir_un_coche_de_alquiler"
+        },
+        {
+          "text": "No sé dónde conseguir un auto de alquiler.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "no_se_donde_conseguir_un_auto_de_alquiler"
         }
       ]
     },
@@ -222,7 +229,24 @@
       "target": [
         {
           "text": "Mis colegas y yo compartimos carro al trabajo para reducir los costos del traslado.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "mis_colegas_y_yo_compartimos_carro_al_trabajo_para_reducir_los_costos_del_traslado"
+        },
+        {
+          "text": "Mis colegas y yo compartimos coche al trabajo para reducir los costos del traslado.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "mis_colegas_y_yo_compartimos_coche_al_trabajo_para_reducir_los_costos_del_traslado"
+        },
+        {
+          "text": "Mis colegas y yo compartimos auto al trabajo para reducir los costos del traslado.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "mis_colegas_y_yo_compartimos_auto_al_trabajo_para_reducir_los_costos_del_traslado"
         }
       ]
     },

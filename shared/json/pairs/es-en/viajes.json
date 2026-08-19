@@ -44,7 +44,17 @@
       "target": [
         {
           "text": "Where will you spend your vacation?",
+          "labels": {
+            "region": "US"
+          },
           "audioSlug": "where_will_you_spend_your_vacation"
+        },
+        {
+          "text": "Where will you spend your holiday?",
+          "labels": {
+            "region": "UK"
+          },
+          "audioSlug": "where_will_you_spend_your_holiday"
         }
       ]
     },
@@ -116,7 +126,17 @@
       "target": [
         {
           "text": "I'm planning my next vacation.",
+          "labels": {
+            "region": "US"
+          },
           "audioSlug": "i_m_planning_my_next_vacation"
+        },
+        {
+          "text": "I'm planning my next holiday.",
+          "labels": {
+            "region": "UK"
+          },
+          "audioSlug": "i_m_planning_my_next_holiday"
         }
       ]
     },

@@ -96,9 +96,9 @@ const LEXICON = {
     { name: 'fries',    members: [
       { words: ['fries'], label: 'US', countries: ['us'] },
       { words: ['chips'], label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
-    { name: 'bill',     members: [
-      { words: ['the check', 'the tab'], label: 'US', countries: ['us'] },
-      { words: ['the bill'],             label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
+    // ('bill'/'check' removed — even anchored, "the bill" is neutral for a hotel/invoice and only
+    //  the restaurant DINING sense splits US check / UK bill; the two genuine restaurant phrases
+    //  are completed by hand. Context can't be told apart deterministically.)
     { name: 'cart',     members: [
       { words: ['cart', 'carts'],       label: 'US', countries: ['us'] },
       { words: ['trolley', 'trolleys'], label: 'UK', countries: ['gb', 'au', 'nz'] } ] },
@@ -108,9 +108,9 @@ const LEXICON = {
     { name: 'gas',      members: [
       { words: ['gasoline'], label: 'US', countries: ['us'] },
       { words: ['petrol'],   label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
-    { name: 'elevator', members: [
+    { name: 'elevator', members: [    // 'lift' anchored to the NOUN — the bare verb "to lift" is not a variant
       { words: ['elevator'], label: 'US', countries: ['us'] },
-      { words: ['lift'],     label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
+      { words: ['the lift', 'a lift'], label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
     { name: 'apartment', members: [
       { words: ['apartment'], label: 'US', countries: ['us'] },
       { words: ['flat'],      label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },

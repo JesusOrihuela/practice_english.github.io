@@ -80,7 +80,17 @@
       "target": [
         {
           "text": "I live in a small apartment.",
+          "labels": {
+            "region": "US"
+          },
           "audioSlug": "i_live_in_a_small_apartment"
+        },
+        {
+          "text": "I live in a small flat.",
+          "labels": {
+            "region": "UK"
+          },
+          "audioSlug": "i_live_in_a_small_flat"
         }
       ]
     },

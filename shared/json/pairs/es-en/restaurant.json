@@ -156,7 +156,17 @@
       "target": [
         {
           "text": "Is it possible to split the bill?",
+          "labels": {
+            "region": "UK"
+          },
           "audioSlug": "is_it_possible_to_split_the_bill"
+        },
+        {
+          "text": "Is it possible to split the check?",
+          "labels": {
+            "region": "US"
+          },
+          "audioSlug": "is_it_possible_to_split_the_check"
         }
       ]
     },
@@ -202,7 +212,17 @@
       "target": [
         {
           "text": "Is the tip included in the bill?",
+          "labels": {
+            "region": "UK"
+          },
           "audioSlug": "is_the_tip_included_in_the_bill"
+        },
+        {
+          "text": "Is the tip included in the check?",
+          "labels": {
+            "region": "US"
+          },
+          "audioSlug": "is_the_tip_included_in_the_check"
         }
       ]
     },

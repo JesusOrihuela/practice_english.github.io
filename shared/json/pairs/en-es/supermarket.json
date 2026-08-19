@@ -402,7 +402,24 @@
       "target": [
         {
           "text": "Busco un pastel para una fiesta de cumpleaños.",
+          "labels": {
+            "region": "México y Centroamérica"
+          },
           "audioSlug": "busco_un_pastel_para_una_fiesta_de_cumpleanos"
+        },
+        {
+          "text": "Busco una tarta para una fiesta de cumpleaños.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "busco_una_tarta_para_una_fiesta_de_cumpleanos"
+        },
+        {
+          "text": "Busco una torta para una fiesta de cumpleaños.",
+          "labels": {
+            "region": "Sudamérica"
+          },
+          "audioSlug": "busco_una_torta_para_una_fiesta_de_cumpleanos"
         }
       ]
     },

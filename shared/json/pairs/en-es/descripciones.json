@@ -244,7 +244,24 @@
       "target": [
         {
           "text": "Es un carro japonés.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "es_un_carro_japones"
+        },
+        {
+          "text": "Es un coche japonés.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "es_un_coche_japones"
+        },
+        {
+          "text": "Es un auto japonés.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "es_un_auto_japones"
         }
       ]
     },
