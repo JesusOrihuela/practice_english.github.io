@@ -110,13 +110,13 @@
     },
     {
       "id": "gym_can_you_give_me_some_tips",
-      "source": "Can you give me some tips to improve my technique on this exercise?",
+      "source": "Can you give me tips to improve my technique?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Puedes darme algunos consejos para mejorar mi técnica en este ejercicio?",
-          "audioSlug": "puedes_darme_algunos_consejos_para_mejorar_mi_tecnica_en_este_ejercicio"
+          "text": "¿Puedes darme consejos para mejorar mi técnica?",
+          "audioSlug": "puedes_darme_consejos_para_mejorar_mi_tecnica"
         }
       ]
     },
@@ -694,13 +694,13 @@
     },
     {
       "id": "gym_push_with_your_heels_not_with",
-      "source": "Push with your heels, not with the tips of your toes.",
+      "source": "Push with your heels, not your toes.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Empuja con los talones, no con las puntas de los pies.",
-          "audioSlug": "empuja_con_los_talones_no_con_las_puntas_de_los_pies"
+          "text": "Empuja con los talones, no con las puntas.",
+          "audioSlug": "empuja_con_los_talones_no_con_las_puntas"
         }
       ]
     },
@@ -874,13 +874,13 @@
     },
     {
       "id": "gym_hiit_cardiovascular_endurance",
-      "source": "I've started incorporating HIIT into my weekly routine to improve cardiovascular endurance.",
+      "source": "I added HIIT to my routine to improve cardiovascular endurance.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "He empezado a incorporar HIIT en mi rutina semanal para mejorar mi resistencia cardiovascular.",
-          "audioSlug": "he_empezado_a_incorporar_hiit_en_mi_rutina_semanal_para_mejorar_mi_resistencia_cardiovascular"
+          "text": "Incorporé HIIT a mi rutina para mejorar mi resistencia cardiovascular.",
+          "audioSlug": "incorpore_hiit_a_mi_rutina_para_mejorar_mi_resistencia_cardiovascular"
         }
       ]
     },
@@ -898,35 +898,35 @@
     },
     {
       "id": "gym_periodization_hypertrophy_strength",
-      "source": "My coach recommended a periodization approach, alternating between hypertrophy and strength phases.",
+      "source": "My trainer recommended periodization with hypertrophy and strength phases.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Mi entrenador me recomendó un enfoque de periodización, alternando entre fases de hipertrofia y de fuerza.",
-          "audioSlug": "mi_entrenador_me_recomendo_un_enfoque_de_periodizacion_alternando_entre_fases_de_hipertrofi_9da7559c",
+          "text": "Mi entrenador me recomendó periodización con fases de hipertrofia y fuerza.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "mi_entrenador_me_recomendo_periodizacion_con_fases_de_hipertrofia_y_fuerza"
         },
         {
-          "text": "Mi entrenadora me recomendó un enfoque de periodización, alternando entre fases de hipertrofia y de fuerza.",
-          "audioSlug": "mi_entrenadora_me_recomendo_un_enfoque_de_periodizacion_alternando_entre_fases_de_hipertrof_4d8a966f",
+          "text": "Mi entrenadora me recomendó periodización con fases de hipertrofia y fuerza.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "mi_entrenadora_me_recomendo_periodizacion_con_fases_de_hipertrofia_y_fuerza"
         }
       ]
     },
     {
       "id": "gym_macronutrients_protein_training_load",
-      "source": "I've been tracking my macronutrient intake and adjusting my protein consumption based on training load.",
+      "source": "I adjust my protein intake according to the training load.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Registro mi ingesta de macronutrientes y ajusto el consumo de proteínas según la carga de entrenamiento.",
-          "audioSlug": "registro_mi_ingesta_de_macronutrientes_y_ajusto_el_consumo_de_proteinas_segun_la_carga_de_e_d82193ea"
+          "text": "Ajusto mi consumo de proteínas según la carga de entrenamiento.",
+          "audioSlug": "ajusto_mi_consumo_de_proteinas_segun_la_carga_de_entrenamiento"
         }
       ]
     },
@@ -944,25 +944,25 @@
     },
     {
       "id": "gym_overtraining_recovery_as_important",
-      "source": "Overtraining can be counterproductive, since adequate recovery is just as important as training itself.",
+      "source": "Recovery is as important as the training itself.",
       "level": "C1",
       "grammar": "'Tan + adjetivo + como' expresa equivalencia entre dos elementos.",
       "target": [
         {
-          "text": "El sobreentrenamiento puede ser contraproducente, pues la recuperación es tan importante como el entrenamiento en sí.",
-          "audioSlug": "el_sobreentrenamiento_puede_ser_contraproducente_pues_la_recuperacion_es_tan_importante_com_80116655"
+          "text": "La recuperación es tan importante como el propio entrenamiento.",
+          "audioSlug": "la_recuperacion_es_tan_importante_como_el_propio_entrenamiento"
         }
       ]
     },
     {
       "id": "gym_progressive_overload_adaptations",
-      "source": "My training plan uses progressive overload, gradually increasing resistance to continue eliciting adaptations.",
+      "source": "My plan uses progressive overload to keep driving adaptations.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Mi plan de entrenamiento usa sobrecarga progresiva, aumentando gradualmente la resistencia para seguir provocando adaptaciones.",
-          "audioSlug": "mi_plan_de_entrenamiento_usa_sobrecarga_progresiva_aumentando_gradualmente_la_resistencia_p_483a25af"
+          "text": "Mi plan usa sobrecarga progresiva para seguir provocando adaptaciones.",
+          "audioSlug": "mi_plan_usa_sobrecarga_progresiva_para_seguir_provocando_adaptaciones"
         }
       ]
     },
@@ -1050,13 +1050,13 @@
     },
     {
       "id": "gym_sport_specific_transfer_performance",
-      "source": "My training must match my sport's demands if I want it to transfer to actual performance.",
+      "source": "My training must fit my sport to transfer to real performance.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Mi entrenamiento debe ajustarse a las exigencias de mi deporte para transferirse al rendimiento real.",
-          "audioSlug": "mi_entrenamiento_debe_ajustarse_a_las_exigencias_de_mi_deporte_para_transferirse_al_rendimiento_real"
+          "text": "Mi entrenamiento debe ajustarse a mi deporte para transferirse al rendimiento real.",
+          "audioSlug": "mi_entrenamiento_debe_ajustarse_a_mi_deporte_para_transferirse_al_rendimiento_real"
         }
       ]
     },
