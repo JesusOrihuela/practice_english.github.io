@@ -14,13 +14,13 @@
     },
     {
       "id": "music_favorite_song_always",
-      "source": "I really like that song, I listen to it all the time.",
+      "source": "I really like that song and I listen to it all the time.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Esa canción me gusta mucho, la escucho todo el tiempo.",
-          "audioSlug": "esa_cancion_me_gusta_mucho_la_escucho_todo_el_tiempo"
+          "text": "Me gusta mucho esa canción y la escucho siempre.",
+          "audioSlug": "me_gusta_mucho_esa_cancion_y_la_escucho_siempre"
         }
       ]
     },
@@ -50,13 +50,13 @@
     },
     {
       "id": "music_new_concert_band",
-      "source": "There is a new concert by my favorite band, I have to go.",
+      "source": "My favorite band has a new concert and I want to go.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Hay un nuevo concierto de mi banda favorita, tengo que ir.",
-          "audioSlug": "hay_un_nuevo_concierto_de_mi_banda_favorita_tengo_que_ir"
+          "text": "Mi banda favorita tiene un nuevo concierto y quiero ir.",
+          "audioSlug": "mi_banda_favorita_tiene_un_nuevo_concierto_y_quiero_ir"
         }
       ]
     },
@@ -158,13 +158,13 @@
     },
     {
       "id": "music_opening_act_surprised",
-      "source": "The opening act was surprisingly good. I hadn't heard of them before.",
+      "source": "The opening act was a very pleasant surprise.",
       "level": "B2",
       "grammar": "'Nunca había oído hablar' usa el pluscuamperfecto; indica que el desconocimiento es anterior al concierto.",
       "target": [
         {
-          "text": "El grupo telonero estuvo sorprendentemente bien, aunque nunca había oído hablar de ellos antes.",
-          "audioSlug": "el_grupo_telonero_estuvo_sorprendentemente_bien_aunque_nunca_habia_oido_hablar_de_ellos_antes"
+          "text": "El grupo telonero fue una sorpresa muy agradable.",
+          "audioSlug": "el_grupo_telonero_fue_una_sorpresa_muy_agradable"
         }
       ]
     },
@@ -206,12 +206,12 @@
     },
     {
       "id": "music_concert_sound_mix_terrible",
-      "source": "The energy was incredible, but the sound mix was terrible.",
+      "source": "The energy was incredible but the sound mix was terrible.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "La energía era increíble, pero la mezcla de sonido era terrible.",
+          "text": "La energía era increíble pero la mezcla de sonido era terrible.",
           "audioSlug": "la_energia_era_increible_pero_la_mezcla_de_sonido_era_terrible"
         }
       ]
@@ -230,25 +230,25 @@
     },
     {
       "id": "music_acoustic_version_reveals_songwriting",
-      "source": "I prefer the acoustic version. Stripping it down reveals how strong the songwriting is.",
+      "source": "The acoustic version reveals how strong the songwriting is.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Prefiero la versión acústica, porque simplificarla revela lo sólida que es la composición.",
-          "audioSlug": "prefiero_la_version_acustica_porque_simplificarla_revela_lo_solida_que_es_la_composicion"
+          "text": "La versión acústica revela lo sólida que es la composición.",
+          "audioSlug": "la_version_acustica_revela_lo_solida_que_es_la_composicion"
         }
       ]
     },
     {
       "id": "music_started_late_still_impressive",
-      "source": "She started playing piano in her thirties, which makes her technique even more impressive.",
+      "source": "She learned piano at thirty and her technique is even more impressive.",
       "level": "B2",
       "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
       "target": [
         {
-          "text": "No aprendió piano hasta los treinta, lo que hace su técnica aún más impresionante.",
-          "audioSlug": "no_aprendio_piano_hasta_los_treinta_lo_que_hace_su_tecnica_aun_mas_impresionante"
+          "text": "Aprendió piano a los treinta y su técnica impresiona aún más.",
+          "audioSlug": "aprendio_piano_a_los_treinta_y_su_tecnica_impresiona_aun_mas"
         }
       ]
     },
@@ -326,25 +326,25 @@
     },
     {
       "id": "music_concept_album_narrative_arc",
-      "source": "This is a concept album in the truest sense, with every track feeding into a larger arc.",
+      "source": "Every track on this concept album adds to the narrative arc.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Este es un álbum conceptual en sentido estricto, pues cada pista aporta al arco narrativo global.",
-          "audioSlug": "este_es_un_album_conceptual_en_sentido_estricto_pues_cada_pista_aporta_al_arco_narrativo_global"
+          "text": "Cada pista de este álbum conceptual aporta al arco narrativo.",
+          "audioSlug": "cada_pista_de_este_album_conceptual_aporta_al_arco_narrativo"
         }
       ]
     },
     {
       "id": "music_overproduction_works_against_core",
-      "source": "The overproduced sound actually works against the song's emotional core, creating an unintended coldness.",
+      "source": "Overproduction works against the emotional core of the song.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "La sobreproducción va en detrimento del núcleo emocional de la canción, creando una frialdad no deseada.",
-          "audioSlug": "la_sobreproduccion_va_en_detrimento_del_nucleo_emocional_de_la_cancion_creando_una_frialdad_7ec8db3e"
+          "text": "La sobreproducción va en detrimento del núcleo emocional de la canción.",
+          "audioSlug": "la_sobreproduccion_va_en_detrimento_del_nucleo_emocional_de_la_cancion"
         }
       ]
     },
@@ -374,13 +374,13 @@
     },
     {
       "id": "music_blends_traditional_contemporary",
-      "source": "What strikes me most is how seamlessly this album blends traditional and contemporary influences.",
+      "source": "This album fluidly blends traditional and contemporary influences.",
       "level": "C1",
       "grammar": "'Lo que + verbo' funciona como sujeto nominalizado; equivale al inglés 'what + verb'.",
       "target": [
         {
-          "text": "Lo que más me impacta es lo fluidamente que este álbum fusiona influencias tradicionales y contemporáneas.",
-          "audioSlug": "lo_que_mas_me_impacta_es_lo_fluidamente_que_este_album_fusiona_influencias_tradicionales_y_86ea9414"
+          "text": "Este álbum fusiona con fluidez influencias tradicionales y contemporáneas.",
+          "audioSlug": "este_album_fusiona_con_fluidez_influencias_tradicionales_y_contemporaneas"
         }
       ]
     },
@@ -398,13 +398,13 @@
     },
     {
       "id": "music_chord_progression_unsettling",
-      "source": "The chord progression is unconventional, which gives the track its distinctively unsettling quality.",
+      "source": "The unconventional chord progression gives the track its unsettling quality.",
       "level": "C1",
       "grammar": "'Lo que + verbo' nominaliza una idea y equivale al inglés 'what + verbo'.",
       "target": [
         {
-          "text": "La progresión de acordes es poco convencional, lo que da a la pista su cualidad inquietante.",
-          "audioSlug": "la_progresion_de_acordes_es_poco_convencional_lo_que_da_a_la_pista_su_cualidad_inquietante"
+          "text": "La progresión de acordes poco convencional da a la pista su cualidad inquietante.",
+          "audioSlug": "la_progresion_de_acordes_poco_convencional_da_a_la_pista_su_cualidad_inquietante"
         }
       ]
     },
