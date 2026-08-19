@@ -684,13 +684,13 @@
     },
     {
       "id": "greetings_allow_me_to_introduce_dr",
-      "source": "Permítame presentarle al Dr. Martínez, quien dirigirá la sesión de esta tarde.",
+      "source": "Permítame presentarle al Dr. Martínez, nuestro líder de sesión de hoy.",
       "level": "B2",
       "grammar": "'Please allow me to introduce' is a formal third-party introduction phrase.",
       "target": [
         {
-          "text": "Please allow me to introduce Dr. Martínez, who will lead the session this afternoon.",
-          "audioSlug": "please_allow_me_to_introduce_dr_martinez_who_will_lead_the_session_this_afternoon"
+          "text": "Allow me to introduce Dr. Martínez, our session leader today.",
+          "audioSlug": "allow_me_to_introduce_dr_martinez_our_session_leader_today"
         }
       ]
     },
@@ -720,13 +720,13 @@
     },
     {
       "id": "greetings_pleasure_introduce_keynote_speaker",
-      "source": "Es un placer presentar a nuestro/a conferenciante principal, cuyo trabajo ha dado forma a este campo.",
+      "source": "Es un placer presentar a nuestro conferencista principal.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "It is my pleasure to introduce our keynote speaker, whose work has shaped this field.",
-          "audioSlug": "it_is_my_pleasure_to_introduce_our_keynote_speaker_whose_work_has_shaped_this_field"
+          "text": "It is my pleasure to introduce our keynote speaker.",
+          "audioSlug": "it_is_my_pleasure_to_introduce_our_keynote_speaker"
         }
       ]
     },

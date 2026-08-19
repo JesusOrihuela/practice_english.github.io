@@ -2,13 +2,13 @@
   "phrases": [
     {
       "id": "museums_art_exhibition_invite",
-      "source": "¿Quieres ir a una exposición de arte conmigo?",
+      "source": "¿Quieres ir a una exposición de arte?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Do you want to go to an art exhibition with me?",
-          "audioSlug": "do_you_want_to_go_to_an_art_exhibition_with_me"
+          "text": "Do you want to go to an art exhibition?",
+          "audioSlug": "do_you_want_to_go_to_an_art_exhibition"
         }
       ]
     },
@@ -26,23 +26,23 @@
     },
     {
       "id": "museums_visit_new_museum",
-      "source": "Me gustaría ir al nuevo museo que abrieron en la ciudad.",
+      "source": "Me gustaría visitar el nuevo museo que acaban de abrir.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I would like to go to the new museum that opened in the city.",
-          "audioSlug": "i_would_like_to_go_to_the_new_museum_that_opened_in_the_city",
+          "text": "I would like to visit the new museum that just opened.",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "i_would_like_to_visit_the_new_museum_that_just_opened"
         },
         {
-          "text": "I'd like to go to the new museum that opened in the city.",
-          "audioSlug": "i_d_like_to_go_to_the_new_museum_that_opened_in_the_city",
+          "text": "I'd like to visit the new museum that just opened.",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "i_d_like_to_visit_the_new_museum_that_just_opened"
         }
       ]
     },
@@ -72,13 +72,13 @@
     },
     {
       "id": "museums_exhibition_accessible_multiple_levels",
-      "source": "La exposición funcionaba en múltiples niveles, desde el disfrute casual hasta la lectura detallada de cada descripción.",
+      "source": "La exposición funcionaba en varios niveles, del disfrute casual a la lectura atenta.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "The exhibition worked at multiple levels, from casual enjoyment to reading every caption carefully.",
-          "audioSlug": "the_exhibition_worked_at_multiple_levels_from_casual_enjoyment_to_reading_every_caption_carefully"
+          "text": "The exhibition worked at multiple levels, from casual enjoyment to careful reading.",
+          "audioSlug": "the_exhibition_worked_at_multiple_levels_from_casual_enjoyment_to_careful_reading"
         }
       ]
     },

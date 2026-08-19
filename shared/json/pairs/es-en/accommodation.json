@@ -234,23 +234,23 @@
     },
     {
       "id": "accommodation_book_room_two_nights",
-      "source": "¿Podrías ayudarme a reservar una habitación de hotel para dos noches?",
+      "source": "¿Podrías ayudarme a reservar una habitación para dos noches?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Could you help me book a hotel room for two nights?",
-          "audioSlug": "could_you_help_me_book_a_hotel_room_for_two_nights",
+          "text": "Could you help me book a room for two nights?",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "could_you_help_me_book_a_room_for_two_nights"
         },
         {
-          "text": "Can you help me book a hotel room for two nights?",
-          "audioSlug": "can_you_help_me_book_a_hotel_room_for_two_nights",
+          "text": "Can you help me book a room for two nights?",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "can_you_help_me_book_a_room_for_two_nights"
         }
       ]
     },
