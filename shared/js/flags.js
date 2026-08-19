@@ -210,7 +210,7 @@ const AppFlags = (() => {
 
   /** Cluster of real flags for a multi-country variant: first `max` + "+N"; wraps responsively. */
   function cluster(codes, max) {
-    max = max || 3;
+    max = max || 5;
     const wrap = document.createElement('span');
     wrap.className = 'flag-cluster';
     (codes || []).slice(0, max).forEach(c => wrap.appendChild(flagImg(c)));

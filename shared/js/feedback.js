@@ -203,7 +203,7 @@ const AppFeedback = (() => {
       // language (the gender label from its own value, e.g. "Femenino"), never mixing the
       // UI language ("Feminine") with a content region name ("Latinoamérica").
       if (labs.gender) parts.push(_capitalize(labs.gender));
-      if (labs.region !== undefined && labs.region !== '') parts.push(labs.region);
+      if (labs.region !== undefined && labs.region !== '') parts.push(_capitalize(labs.region));
       if (labs.register !== undefined) parts.push(labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
       if (labs.loanword !== undefined) parts.push(t('alt_note_loanword'));
       return parts.join(' · ');  // '' for an unlabeled form → chip shows text only
@@ -278,7 +278,7 @@ const AppFeedback = (() => {
         if (flag) b.appendChild(flag);
       }
       const txt = document.createElement('span');
-      txt.textContent = region;
+      txt.textContent = _capitalize(region);   // sentence-case the variant label ("aguacate" → "Aguacate")
       b.appendChild(txt);
       wrap.appendChild(b);
     }
