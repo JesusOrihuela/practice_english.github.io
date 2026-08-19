@@ -26,13 +26,13 @@
     },
     {
       "id": "supermarket_dont_forget_to_buy_fruits_and",
-      "source": "Don't forget to buy fruits and vegetables for the week.",
+      "source": "Do not forget to buy fruits and vegetables!",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "¡No te olvides de comprar las frutas y verduras para la semana!",
-          "audioSlug": "no_te_olvides_de_comprar_las_frutas_y_verduras_para_la_semana"
+          "text": "¡No olvides comprar frutas y verduras!",
+          "audioSlug": "no_olvides_comprar_frutas_y_verduras"
         }
       ]
     },
@@ -199,8 +199,8 @@
       "grammar": null,
       "target": [
         {
-          "text": "¿Me puedes ayudar a alcanzar ese producto de la estantería?",
-          "audioSlug": "me_puedes_ayudar_a_alcanzar_ese_producto_de_la_estanteria"
+          "text": "¿Me ayudas a alcanzar ese producto del estante?",
+          "audioSlug": "me_ayudas_a_alcanzar_ese_producto_del_estante"
         }
       ]
     },
@@ -324,13 +324,13 @@
     },
     {
       "id": "supermarket_you_have_to_go_to_the",
-      "source": "You have to go to the supermarket earlier to avoid the lines.",
+      "source": "You have to go to the supermarket early to avoid the lines.",
       "level": "A2",
       "grammar": "'Hay que + infinitivo' expresa obligación impersonal; no tiene sujeto explícito.",
       "target": [
         {
-          "text": "Hay que ir al supermercado más temprano para evitar las colas.",
-          "audioSlug": "hay_que_ir_al_supermercado_mas_temprano_para_evitar_las_colas"
+          "text": "Hay que ir al supermercado temprano para evitar las filas.",
+          "audioSlug": "hay_que_ir_al_supermercado_temprano_para_evitar_las_filas"
         }
       ]
     },
@@ -492,13 +492,13 @@
     },
     {
       "id": "supermarket_i_dont_like_this_supermarket_the",
-      "source": "I don't like this supermarket, the prices are very high.",
+      "source": "I do not like this supermarket because it is expensive.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "No me gusta este supermercado, los precios son muy altos.",
-          "audioSlug": "no_me_gusta_este_supermercado_los_precios_son_muy_altos"
+          "text": "No me gusta este supermercado porque es muy caro.",
+          "audioSlug": "no_me_gusta_este_supermercado_porque_es_muy_caro"
         }
       ]
     },
@@ -646,37 +646,37 @@
     },
     {
       "id": "supermarket_escalate_staff_assurance_not_honored",
-      "source": "Please escalate this. I was assured the promotional price would be honored, but it wasn't.",
+      "source": "They assured me they would honor the promotional price and did not.",
       "level": "C1",
       "grammar": "'Respetarían' usa el condicional para referir una promesa hecha en el pasado.",
       "target": [
         {
-          "text": "Por favor, escale esto, me aseguraron que respetarían el precio promocional, pero no fue así.",
-          "audioSlug": "por_favor_escale_esto_me_aseguraron_que_respetarian_el_precio_promocional_pero_no_fue_asi"
+          "text": "Me aseguraron que respetarían el precio promocional y no lo cumplieron.",
+          "audioSlug": "me_aseguraron_que_respetarian_el_precio_promocional_y_no_lo_cumplieron"
         }
       ]
     },
     {
       "id": "supermarket_online_listing_out_of_stock_delivery",
-      "source": "Your site shows this as available, but it's been out all week. When will you restock?",
+      "source": "Your site shows it available but it has been out of stock for a week.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Su sitio lo muestra como disponible, pero lleva toda la semana sin stock, ¿cuándo reponen?",
-          "audioSlug": "su_sitio_lo_muestra_como_disponible_pero_lleva_toda_la_semana_sin_stock_cuando_reponen"
+          "text": "Su sitio lo muestra disponible pero lleva una semana agotado.",
+          "audioSlug": "su_sitio_lo_muestra_disponible_pero_lleva_una_semana_agotado"
         }
       ]
     },
     {
       "id": "supermarket_price_match_cheaper_elsewhere",
-      "source": "Do you have a price-match policy? I found this item cheaper at another store.",
+      "source": "Do you match the price if I find the item cheaper elsewhere?",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Tienen política de igualar precios, pues encontré este artículo más barato en otra tienda?",
-          "audioSlug": "tienen_politica_de_igualar_precios_pues_encontre_este_articulo_mas_barato_en_otra_tienda"
+          "text": "¿Igualan el precio si encuentro el artículo más barato en otra tienda?",
+          "audioSlug": "igualan_el_precio_si_encuentro_el_articulo_mas_barato_en_otra_tienda"
         }
       ]
     },
