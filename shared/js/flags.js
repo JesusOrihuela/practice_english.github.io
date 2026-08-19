@@ -155,18 +155,17 @@ const AppFlags = (() => {
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
-    if (DEFS[back])  wrap.appendChild(_svgEl(DEFS[back],  'flag-back'));
-    if (DEFS[front]) wrap.appendChild(_svgEl(DEFS[front], 'flag-front'));
+    if (back)  wrap.appendChild(flagImg(back,  'flag-back'));
+    if (front) wrap.appendChild(flagImg(front, 'flag-front'));
     return wrap;
   }
 
   /**
-   * Returns a single SVG flag element (no stacking).
+   * Returns a single real flag as an <img> from the asset dir.
    * @param {string} code — country code (e.g. 'us')
    */
   function single(code) {
-    if (!DEFS[code]) return document.createElement('span');
-    return _svgEl(DEFS[code], 'flag-single');
+    return flagImg(code, 'flag-single');
   }
 
   /* ---------- Regions / variants → REAL national flags (cluster) ---------- */
@@ -201,10 +200,10 @@ const AppFlags = (() => {
   };
 
   /** A single real flag as an <img> from the asset dir (never inlined; emblem flags are big). */
-  function flagImg(code) {
+  function flagImg(code, cls) {
     const img = document.createElement('img');
     img.src = FLAG_BASE + code + '.svg';
-    img.className = 'flag-img'; img.alt = '';
+    img.className = cls || 'flag-img'; img.alt = '';
     img.setAttribute('aria-hidden', 'true'); img.loading = 'lazy';
     return img;
   }
