@@ -26,23 +26,23 @@
     },
     {
       "id": "movies_good_actor",
-      "source": "This actor is very good and I like their films.",
+      "source": "This actor is good and I like their films.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Este actor es muy bueno y me gustan sus películas.",
+          "text": "Este actor es bueno y me gustan sus películas.",
           "labels": {
             "gender": "masculino"
           },
-          "audioSlug": "este_actor_es_muy_bueno_y_me_gustan_sus_peliculas"
+          "audioSlug": "este_actor_es_bueno_y_me_gustan_sus_peliculas"
         },
         {
-          "text": "Esta actriz es muy buena y me gustan sus películas.",
+          "text": "Esta actriz es buena y me gustan sus películas.",
           "labels": {
             "gender": "femenino"
           },
-          "audioSlug": "esta_actriz_es_muy_buena_y_me_gustan_sus_peliculas"
+          "audioSlug": "esta_actriz_es_buena_y_me_gustan_sus_peliculas"
         }
       ]
     },
