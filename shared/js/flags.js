@@ -176,6 +176,7 @@ const AppFlags = (() => {
   const _scriptSrc = (document.currentScript && document.currentScript.src) ||
     ([].map.call(document.scripts, s => s.src).find(s => /\/flags\.js(\?|$)/.test(s))) || '';
   const FLAG_BASE = _scriptSrc.replace(/[^/]*$/, '').replace(/\/js\/$/, '/img/flags/');
+  const REGION_BASE = FLAG_BASE.replace(/\/flags\/$/, '/regions/');   // shared/img/regions/
 
   const _fold = (s) => (s || '').trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 
@@ -191,6 +192,12 @@ const AppFlags = (() => {
     // Country-precise lexical variants (ready; the content audit assigns these to phrases):
     'palta': ['ar', 'cl', 'pe', 'bo', 'uy'],
     'aguacate': ['mx', 'co', 've', 'es'],
+  };
+
+  // Contiguous MACRO-regions (fit in one hemisphere) → a real orthographic-globe asset, since
+  // a flag cluster of ~20 countries would be absurd. Country-precise sets use flags (above).
+  const REGION_GLOBE = {
+    'latinoamerica': 'latinoamerica.svg',
   };
 
   /** A single real flag as an <img> from the asset dir (never inlined; emblem flags are big). */
@@ -223,9 +230,18 @@ const AppFlags = (() => {
    * @param {string} name — label as authored (e.g. 'España', 'UK', 'palta')
    */
   function region(name) {
-    const codes = REGION_MAP[_fold(name)];
-    if (!codes || !codes.length) return null;
-    return codes.length === 1 ? flagImg(codes[0]) : cluster(codes);
+    const key = _fold(name);
+    const codes = REGION_MAP[key];
+    if (codes && codes.length) return codes.length === 1 ? flagImg(codes[0]) : cluster(codes);
+    const globe = REGION_GLOBE[key];
+    if (globe) {
+      const img = document.createElement('img');
+      img.src = REGION_BASE + globe;
+      img.className = 'region-globe'; img.alt = '';
+      img.setAttribute('aria-hidden', 'true'); img.loading = 'lazy';
+      return img;
+    }
+    return null;   // unknown label → caller shows the name alone
   }
 
   return { stack, single, region, cluster, flagImg };

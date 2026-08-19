@@ -71,6 +71,12 @@ Faithful national flag SVGs used for the region/variant badges. National flags a
 - Source: https://commons.wikimedia.org/ (Special:FilePath/Flag_of_*.svg)
 - License: Public domain
 
+### Orthographic region maps (`shared/img/regions/`)
+Real orthographic-projection locator maps for contiguous macro-regions (e.g. Latinoamérica),
+used in the variant badge. Sourced from Wikimedia Commons.
+- Source: https://commons.wikimedia.org/ (e.g. Latin America (orthographic projection).svg)
+- License: Creative Commons Attribution-ShareAlike (CC BY-SA), per each file's Commons page.
+
 ## Topic images
 
 The photos on the topic cards (`{activity}/img/{topic}.jpg` / `.webp`) are sourced and
