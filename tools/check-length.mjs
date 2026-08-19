@@ -12,8 +12,10 @@
      • run-on — a comma joining independent clauses (comma + clause connector, or ≥2 commas):
                 a phrase that is really several phrases glued together, not one idea.
 
-   ADVISORY: prints findings, exits 0 by default (does NOT fail CI while the backlog is fixed).
-   Pass --gate to exit 1 on any violation (wire into CI once the content is clean).
+   RULE: a phrase must satisfy BOTH the word limit AND the character limit (and not be a run-on)
+   for its CEFR level — both must pass, not either. New/edited phrases must comply.
+   Currently advisory: exits 0 by default (does NOT fail CI while the existing backlog is fixed);
+   pass --gate to exit 1 on any violation (wire into CI once the content is clean).
 
    Usage:  node tools/check-length.mjs          # report
            node tools/check-length.mjs --gate   # fail on any violation

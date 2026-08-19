@@ -1470,7 +1470,7 @@ body.path-mode {
    applied on variant phrases, so non-variant phrases keep their normal padding. */
 .phrase-card.has-variant-badge {
   padding-top: 3rem;
-  padding-bottom: 1.75rem;
+  padding-bottom: 3rem;   /* match the top space (above phrase == below translation) */
 }
 
 /* Compact flex cards (Scramble hint row, Dictation controls) have no room for an absolute
@@ -1494,8 +1494,8 @@ body.path-mode {
   margin-bottom: 0.75rem;   /* Dictation: clear separation from the Listen button below */
 }
 
-/* Scramble's hint row is tighter — less gap between the tags and the hint text. */
+/* Scramble's hint row is tighter — minimal gap between the tags and the hint text. */
 .hint-card .variant-badges {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.2rem;
 }
 
