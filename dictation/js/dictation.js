@@ -266,7 +266,9 @@ function checkAnswer() {
   const altNoteEl    = document.getElementById('alt-note');
   const altDividerEl = document.getElementById('alt-note-divider');
   if (isCorrect && altNoteEl) {
-    const altsToShow = forms.filter(f => _norm(f.text) !== _norm(_expected));
+    // Exclude only the exact form just answered (by identity), so every OTHER distinct
+    // variant/combination is shown — filtering by normalised text could collide and drop one.
+    const altsToShow = forms.filter(f => f.audioSlug !== (_activePicked && _activePicked.audioSlug));
     const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
     if (frag) {
       altNoteEl.textContent = '';

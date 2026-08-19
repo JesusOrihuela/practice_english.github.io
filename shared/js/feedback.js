@@ -199,11 +199,10 @@ const AppFeedback = (() => {
     function labelFor(alt) {
       const labs = alt.labels || {};
       const parts = [];
-      if (labs.gender !== undefined) {
-        parts.push(labs.gender === 'masculino' || labs.gender === 'masculine' ? t('alt_note_gender_m')
-                 : labs.gender === 'femenino'  || labs.gender === 'feminine'  ? t('alt_note_gender_f')
-                 : t('alt_note_gender_n'));
-      }
+      // Gender + region describe a TARGET-language variant, so both read in the target
+      // language (the gender label from its own value, e.g. "Femenino"), never mixing the
+      // UI language ("Feminine") with a content region name ("Latinoamérica").
+      if (labs.gender) parts.push(_capitalize(labs.gender));
       if (labs.region !== undefined && labs.region !== '') parts.push(labs.region);
       if (labs.register !== undefined) parts.push(labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
       if (labs.loanword !== undefined) parts.push(t('alt_note_loanword'));
@@ -236,6 +235,8 @@ const AppFeedback = (() => {
    * future gendered target works automatically. Removes the badge when the
    * active form carries no gender label.
    */
+  const _capitalize = (s) => (s || '').charAt(0).toUpperCase() + (s || '').slice(1);
+
   // Adaptive variant badge(s): shows which VARIANT the learner is currently seeing —
   // gender (♀/♂/Neutro) and/or region (flag + name). Both live in a top-left flex wrap so
   // they coexist. Driven purely by the picked form's labels — no branching by language, so
@@ -264,12 +265,9 @@ const AppFeedback = (() => {
     if (gender) {
       const b = document.createElement('span');
       b.className = 'gender-phrase-badge';
-      const key = gender === 'masculino' ? 'alt_note_gender_m'
-                : gender === 'femenino'  ? 'alt_note_gender_f'
-                : gender === 'neutro'    ? 'alt_note_gender_n' : null;
-      const label = key ? AppLang.t(key) : (gender.charAt(0).toUpperCase() + gender.slice(1));
+      // Target-language gender term (from the label value), so it never mixes with the region.
       const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
-      b.textContent = sym + label;
+      b.textContent = sym + _capitalize(gender);
       wrap.appendChild(b);
     }
     if (region !== undefined && region !== '') {

@@ -609,7 +609,9 @@ function displayResult(text, confidence) {
     const altNoteEl    = document.getElementById('alt-note');
     const altDividerEl = document.getElementById('alt-note-divider');
     if (altNoteEl) {
-      const altsToShow = forms.filter(f => _norm(f.text) !== _norm(originalPhrase));
+      // Exclude only the exact form just practiced (by identity), so every OTHER distinct
+      // variant/combination is shown — filtering by normalised text could collide and drop one.
+      const altsToShow = forms.filter(f => f.audioSlug !== (_activePicked && _activePicked.audioSlug));
       const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
       if (frag) {
         altNoteEl.textContent = '';

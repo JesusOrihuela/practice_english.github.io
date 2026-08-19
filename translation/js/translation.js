@@ -326,7 +326,9 @@ function checkAnswer() {
   const altNoteEl    = document.getElementById('alt-note');
   const altDividerEl = document.getElementById('alt-note-divider');
   if (isCorrect && altNoteEl) {
-    const altsToShow = forms.filter(f => _norm(f.text) !== _norm(_matchedText));
+    // Exclude only the exact form the user wrote (exact text, not normalised — normalising
+    // could collide between variants and drop a distinct combination that should be shown).
+    const altsToShow = forms.filter(f => f.text !== _matchedText);
     const frag = AppFeedback.buildAltNote(altsToShow, AppLang.t.bind(AppLang), null);
     if (frag) {
       altNoteEl.textContent = '';
