@@ -14,35 +14,35 @@
     },
     {
       "id": "movies_go_cinema_weekend",
-      "source": "I want to go to the movies this weekend, what movie do you want to see?",
+      "source": "I want to go to the movies this weekend.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Quiero ir al cine este fin de semana, ¿qué película quieres ver?",
-          "audioSlug": "quiero_ir_al_cine_este_fin_de_semana_que_pelicula_quieres_ver"
+          "text": "Quiero ir al cine este fin de semana.",
+          "audioSlug": "quiero_ir_al_cine_este_fin_de_semana"
         }
       ]
     },
     {
       "id": "movies_good_actor",
-      "source": "This actor is very good, I like all his movies.",
+      "source": "This actor is very good and I like their films.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Este actor es muy bueno, me gustan todas sus películas.",
-          "audioSlug": "este_actor_es_muy_bueno_me_gustan_todas_sus_peliculas",
+          "text": "Este actor es muy bueno y me gustan sus películas.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "este_actor_es_muy_bueno_y_me_gustan_sus_peliculas"
         },
         {
-          "text": "Esta actriz es muy buena, me gustan todas sus películas.",
-          "audioSlug": "esta_actriz_es_muy_buena_me_gustan_todas_sus_peliculas",
+          "text": "Esta actriz es muy buena y me gustan sus películas.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "esta_actriz_es_muy_buena_y_me_gustan_sus_peliculas"
         }
       ]
     },
@@ -108,35 +108,35 @@
     },
     {
       "id": "movies_new_director_movie",
-      "source": "There is a new movie by my favorite director, I have to watch it.",
+      "source": "My favorite director has a new movie and I want to see it.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Hay una nueva película de mi director favorito, tengo que verla.",
-          "audioSlug": "hay_una_nueva_pelicula_de_mi_director_favorito_tengo_que_verla",
+          "text": "Mi director favorito tiene una nueva película y quiero verla.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "mi_director_favorito_tiene_una_nueva_pelicula_y_quiero_verla"
         },
         {
-          "text": "Hay una nueva película de mi directora favorita, tengo que verla.",
-          "audioSlug": "hay_una_nueva_pelicula_de_mi_directora_favorita_tengo_que_verla",
+          "text": "Mi directora favorita tiene una nueva película y quiero verla.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "mi_directora_favorita_tiene_una_nueva_pelicula_y_quiero_verla"
         }
       ]
     },
     {
       "id": "movies_disappointed_last_season",
-      "source": "I didn't like the last season of that series, it disappointed me.",
+      "source": "The last season of that series disappointed me.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "No me gustó la última temporada de esa serie, me decepcionó.",
-          "audioSlug": "no_me_gusto_la_ultima_temporada_de_esa_serie_me_decepciono"
+          "text": "La última temporada de esa serie me decepcionó.",
+          "audioSlug": "la_ultima_temporada_de_esa_serie_me_decepciono"
         }
       ]
     },
@@ -154,13 +154,13 @@
     },
     {
       "id": "movies_dont_understand_popularity",
-      "source": "I don't like that series, I don't understand why it's so popular.",
+      "source": "I do not understand why that series is so popular.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "No me gusta esa serie, no entiendo por qué es tan popular.",
-          "audioSlug": "no_me_gusta_esa_serie_no_entiendo_por_que_es_tan_popular"
+          "text": "No entiendo por qué esa serie es tan popular.",
+          "audioSlug": "no_entiendo_por_que_esa_serie_es_tan_popular"
         }
       ]
     },
@@ -296,25 +296,25 @@
     },
     {
       "id": "movies_sequel_live_up_original",
-      "source": "The sequel had a bigger budget, but never quite lived up to the original.",
+      "source": "The sequel had a bigger budget but did not live up to the original.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "La secuela tenía más presupuesto, pero nunca estuvo a la altura del original.",
-          "audioSlug": "la_secuela_tenia_mas_presupuesto_pero_nunca_estuvo_a_la_altura_del_original"
+          "text": "La secuela tenía más presupuesto pero no estuvo a la altura del original.",
+          "audioSlug": "la_secuela_tenia_mas_presupuesto_pero_no_estuvo_a_la_altura_del_original"
         }
       ]
     },
     {
       "id": "movies_prefer_subtitles_dubbing",
-      "source": "I always watch foreign films with subtitles rather than dubbing. You miss so much.",
+      "source": "I watch foreign films with subtitles instead of dubbed.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Siempre veo películas extranjeras con subtítulos en lugar de dobladas, porque pierdes muchísimo.",
-          "audioSlug": "siempre_veo_peliculas_extranjeras_con_subtitulos_en_lugar_de_dobladas_porque_pierdes_muchisimo"
+          "text": "Veo las películas extranjeras con subtítulos en lugar de dobladas.",
+          "audioSlug": "veo_las_peliculas_extranjeras_con_subtitulos_en_lugar_de_dobladas"
         }
       ]
     },
@@ -332,23 +332,23 @@
     },
     {
       "id": "movies_casting_was_perfect_choice",
-      "source": "I had doubts about the casting, but that actor turned out to be perfect.",
+      "source": "I doubted the casting but that actor turned out perfect.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Tuve dudas sobre el reparto, pero ese actor resultó ser perfecto.",
-          "audioSlug": "tuve_dudas_sobre_el_reparto_pero_ese_actor_resulto_ser_perfecto",
+          "text": "Dudé del reparto pero ese actor resultó perfecto.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "dude_del_reparto_pero_ese_actor_resulto_perfecto"
         },
         {
-          "text": "Tuve dudas sobre el reparto, pero esa actriz resultó ser perfecta.",
-          "audioSlug": "tuve_dudas_sobre_el_reparto_pero_esa_actriz_resulto_ser_perfecta",
+          "text": "Dudé del reparto pero esa actriz resultó perfecta.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "dude_del_reparto_pero_esa_actriz_resulto_perfecta"
         }
       ]
     },
@@ -378,13 +378,13 @@
     },
     {
       "id": "movies_character_motivations_hard_to_believe",
-      "source": "The plot was interesting, but the characters' motivations were hard to believe.",
+      "source": "The characters motivations were hard to believe.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "La trama era interesante, pero las motivaciones de los personajes eran difíciles de creer.",
-          "audioSlug": "la_trama_era_interesante_pero_las_motivaciones_de_los_personajes_eran_dificiles_de_creer"
+          "text": "Las motivaciones de los personajes eran difíciles de creer.",
+          "audioSlug": "las_motivaciones_de_los_personajes_eran_dificiles_de_creer"
         }
       ]
     },
@@ -448,13 +448,13 @@
     },
     {
       "id": "movies_oscars_best_picture_overhyped",
-      "source": "It won Best Picture at the Oscars, but honestly I thought it was overhyped.",
+      "source": "It won the Oscar for Best Picture but I think it was overhyped.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Ganó la Mejor Película en los Óscar, pero sinceramente creo que estaba sobrevalorada.",
-          "audioSlug": "gano_la_mejor_pelicula_en_los_oscar_pero_sinceramente_creo_que_estaba_sobrevalorada"
+          "text": "Ganó el Óscar a Mejor Película pero creo que estaba sobrevalorada.",
+          "audioSlug": "gano_el_oscar_a_mejor_pelicula_pero_creo_que_estaba_sobrevalorada"
         }
       ]
     },
@@ -472,25 +472,25 @@
     },
     {
       "id": "movies_subtext_more_powerful_than_dialogue",
-      "source": "The most powerful moments rely on subtext. What's left unsaid carries more weight than dialogue.",
+      "source": "What is left unsaid carries more weight than the dialogue.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "El subtexto domina los mejores momentos, y lo no dicho tiene más peso que el diálogo.",
-          "audioSlug": "el_subtexto_domina_los_mejores_momentos_y_lo_no_dicho_tiene_mas_peso_que_el_dialogo"
+          "text": "Lo no dicho tiene más peso que el diálogo en los mejores momentos.",
+          "audioSlug": "lo_no_dicho_tiene_mas_peso_que_el_dialogo_en_los_mejores_momentos"
         }
       ]
     },
     {
       "id": "movies_character_arc_fully_earned",
-      "source": "By the final act, the character's transformation felt fully earned. Nothing seemed forced.",
+      "source": "The character transformation felt fully earned by the final act.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Para el acto final, la transformación del personaje se sentía completamente justificada y nada parecía forzado.",
-          "audioSlug": "para_el_acto_final_la_transformacion_del_personaje_se_sentia_completamente_justificada_y_na_e21979ed"
+          "text": "La transformación del personaje se sentía justificada en el acto final.",
+          "audioSlug": "la_transformacion_del_personaje_se_sentia_justificada_en_el_acto_final"
         }
       ]
     },
@@ -530,13 +530,13 @@
     },
     {
       "id": "movies_performances_script_characters",
-      "source": "The performances were outstanding, but the script failed to develop the supporting characters.",
+      "source": "The script failed to develop the secondary characters.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Las actuaciones fueron sobresalientes, pero el guion no logró desarrollar a los personajes secundarios.",
-          "audioSlug": "las_actuaciones_fueron_sobresalientes_pero_el_guion_no_logro_desarrollar_a_los_personajes_s_74d580c3"
+          "text": "El guion no logró desarrollar a los personajes secundarios.",
+          "audioSlug": "el_guion_no_logro_desarrollar_a_los_personajes_secundarios"
         }
       ]
     },
@@ -554,13 +554,13 @@
     },
     {
       "id": "movies_two_tickets",
-      "source": "Two tickets for the eight o'clock showing, please.",
+      "source": "Two tickets for the eight o clock show.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Dos boletos para la función de las ocho, por favor.",
-          "audioSlug": "dos_boletos_para_la_funcion_de_las_ocho_por_favor"
+          "text": "Dos boletos para la función de las ocho.",
+          "audioSlug": "dos_boletos_para_la_funcion_de_las_ocho"
         }
       ]
     },
