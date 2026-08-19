@@ -1403,6 +1403,28 @@
           "audioSlug": "el_agua_esta_fria"
         }
       ]
+    },
+    {
+      "id": "kitchen_salad_with_avocado",
+      "source": "I am going to make a salad with avocado.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy a hacer una ensalada con palta.",
+          "labels": {
+            "region": "palta"
+          },
+          "audioSlug": "voy_a_hacer_una_ensalada_con_palta"
+        },
+        {
+          "text": "Voy a hacer una ensalada con aguacate.",
+          "labels": {
+            "region": "aguacate"
+          },
+          "audioSlug": "voy_a_hacer_una_ensalada_con_aguacate"
+        }
+      ]
     }
   ]
 }
