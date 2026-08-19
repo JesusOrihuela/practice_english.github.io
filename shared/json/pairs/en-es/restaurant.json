@@ -706,25 +706,25 @@
     },
     {
       "id": "restaurant_steak_wrong_doneness",
-      "source": "I ordered medium-rare, but this steak is well-done. Could you send it back?",
+      "source": "The steak I ordered rare came well done.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Pedí el filete poco hecho, pero está muy hecho, ¿podrían llevárselo?",
-          "audioSlug": "pedi_el_filete_poco_hecho_pero_esta_muy_hecho_podrian_llevarselo"
+          "text": "El filete que pedí poco hecho llegó muy hecho.",
+          "audioSlug": "el_filete_que_pedi_poco_hecho_llego_muy_hecho"
         }
       ]
     },
     {
       "id": "restaurant_wine_wrong_selection",
-      "source": "The wine we were served doesn't match our selection. Could you check the bottle?",
+      "source": "The wine we were served does not match our selection.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "El vino que nos sirvieron no coincide con nuestra selección, ¿podrían verificar la botella?",
-          "audioSlug": "el_vino_que_nos_sirvieron_no_coincide_con_nuestra_seleccion_podrian_verificar_la_botella"
+          "text": "El vino que nos sirvieron no coincide con nuestra selección.",
+          "audioSlug": "el_vino_que_nos_sirvieron_no_coincide_con_nuestra_seleccion"
         }
       ]
     },
@@ -764,13 +764,13 @@
     },
     {
       "id": "restaurant_ingredients_sourced_local_organic",
-      "source": "Could you tell me where the ingredients are sourced? I prefer locally grown, organic produce.",
+      "source": "Could you tell me the provenance of these ingredients?",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "¿Podría decirme el origen de los ingredientes, pues prefiero productos locales y orgánicos?",
-          "audioSlug": "podria_decirme_el_origen_de_los_ingredientes_pues_prefiero_productos_locales_y_organicos"
+          "text": "¿Puede indicarme la procedencia de estos ingredientes?",
+          "audioSlug": "puede_indicarme_la_procedencia_de_estos_ingredientes"
         }
       ]
     },
@@ -822,13 +822,13 @@
     },
     {
       "id": "restaurant_wine_acidity_fish_pairing",
-      "source": "Could you describe the wine's profile? I want good acidity to pair with the fish.",
+      "source": "I am looking for a wine with good acidity to pair with the fish.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "¿Podría describir el perfil del vino, pues busco buena acidez para maridar con el pescado?",
-          "audioSlug": "podria_describir_el_perfil_del_vino_pues_busco_buena_acidez_para_maridar_con_el_pescado"
+          "text": "Busco un vino con buena acidez para maridar con el pescado.",
+          "audioSlug": "busco_un_vino_con_buena_acidez_para_maridar_con_el_pescado"
         }
       ]
     },
@@ -846,13 +846,13 @@
     },
     {
       "id": "restaurant_price_discrepancy_charged",
-      "source": "The service was excellent, but there's a discrepancy between the menu price and our bill.",
+      "source": "There is a discrepancy between the menu price and our bill.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "El servicio fue excelente, pero hay una discrepancia entre el precio del menú y nuestra cuenta.",
-          "audioSlug": "el_servicio_fue_excelente_pero_hay_una_discrepancia_entre_el_precio_del_menu_y_nuestra_cuenta"
+          "text": "Hay una discrepancia entre el precio del menú y nuestra cuenta.",
+          "audioSlug": "hay_una_discrepancia_entre_el_precio_del_menu_y_nuestra_cuenta"
         }
       ]
     },
