@@ -108,13 +108,13 @@
     },
     {
       "id": "transportation_taxi_fare_city",
-      "source": "What is the taxi fare to the city center?",
+      "source": "What is the taxi fare to the center?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Cuál es la tarifa de un taxi al centro de la ciudad?",
-          "audioSlug": "cual_es_la_tarifa_de_un_taxi_al_centro_de_la_ciudad"
+          "text": "¿Cuál es la tarifa de un taxi al centro?",
+          "audioSlug": "cual_es_la_tarifa_de_un_taxi_al_centro"
         }
       ]
     },
@@ -132,13 +132,13 @@
     },
     {
       "id": "transportation_metro_faster_than_bus",
-      "source": "Is the metro faster than the bus at this time of day?",
+      "source": "Is the metro faster than the bus right now?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿El metro es más rápido que el autobús a esta hora del día?",
-          "audioSlug": "el_metro_es_mas_rapido_que_el_autobus_a_esta_hora_del_dia"
+          "text": "¿El metro es más rápido que el autobús ahora?",
+          "audioSlug": "el_metro_es_mas_rapido_que_el_autobus_ahora"
         }
       ]
     },
@@ -156,13 +156,13 @@
     },
     {
       "id": "transportation_weekly_travel_pass",
-      "source": "I'd like to buy a weekly travel pass for the city.",
+      "source": "I would like to buy a weekly transport pass.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Me gustaría comprar un pase semanal de transporte para la ciudad.",
-          "audioSlug": "me_gustaria_comprar_un_pase_semanal_de_transporte_para_la_ciudad"
+          "text": "Me gustaría comprar un pase semanal de transporte.",
+          "audioSlug": "me_gustaria_comprar_un_pase_semanal_de_transporte"
         }
       ]
     },
@@ -180,13 +180,13 @@
     },
     {
       "id": "transportation_call_cab_station",
-      "source": "Could you call me a cab? I must leave in twenty minutes.",
+      "source": "Could you call me a taxi to leave in twenty minutes?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Podría llamarme un taxi porque tengo que salir en veinte minutos?",
-          "audioSlug": "podria_llamarme_un_taxi_porque_tengo_que_salir_en_veinte_minutos"
+          "text": "¿Podría llamarme un taxi para salir en veinte minutos?",
+          "audioSlug": "podria_llamarme_un_taxi_para_salir_en_veinte_minutos"
         }
       ]
     },
@@ -300,23 +300,23 @@
     },
     {
       "id": "transportation_rideshare_late_arrival",
-      "source": "The driver is seven minutes away, but I need to leave in five.",
+      "source": "The driver arrives in seven minutes but I leave in five.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "El conductor llega en siete minutos, pero yo necesito salir en cinco.",
-          "audioSlug": "el_conductor_llega_en_siete_minutos_pero_yo_necesito_salir_en_cinco",
+          "text": "El conductor tarda siete minutos y yo salgo en cinco.",
           "labels": {
             "gender": "masculino"
-          }
+          },
+          "audioSlug": "el_conductor_tarda_siete_minutos_y_yo_salgo_en_cinco"
         },
         {
-          "text": "La conductora llega en siete minutos, pero yo necesito salir en cinco.",
-          "audioSlug": "la_conductora_llega_en_siete_minutos_pero_yo_necesito_salir_en_cinco",
+          "text": "La conductora tarda siete minutos y yo salgo en cinco.",
           "labels": {
             "gender": "femenino"
-          }
+          },
+          "audioSlug": "la_conductora_tarda_siete_minutos_y_yo_salgo_en_cinco"
         }
       ]
     },
@@ -404,13 +404,13 @@
     },
     {
       "id": "transportation_penalty_charge_signage",
-      "source": "I'd like to formally dispute this penalty charge. The parking restriction signage was inadequate.",
+      "source": "I would like to formally dispute this penalty because the signage was insufficient.",
       "level": "C2",
       "grammar": null,
       "target": [
         {
-          "text": "Quisiera impugnar formalmente esta sanción porque la señalización de la restricción de estacionamiento era insuficiente.",
-          "audioSlug": "quisiera_impugnar_formalmente_esta_sancion_porque_la_senalizacion_de_la_restriccion_de_esta_fc7c14a7"
+          "text": "Quisiera impugnar esta sanción porque la señalización era insuficiente.",
+          "audioSlug": "quisiera_impugnar_esta_sancion_porque_la_senalizacion_era_insuficiente"
         }
       ]
     },
