@@ -65,6 +65,12 @@ communicative functions and topics to cover, and at which CEFR level. Two uses:
 - Source: https://cvc.cervantes.es/ensenanza/biblioteca_ele/plan_curricular/
 - Public reference material (Instituto Cervantes)
 
+### National flags (`shared/img/flags/`)
+Faithful national flag SVGs used for the region/variant badges. National flags are in the
+**public domain** (government works); files sourced from Wikimedia Commons.
+- Source: https://commons.wikimedia.org/ (Special:FilePath/Flag_of_*.svg)
+- License: Public domain
+
 ## Topic images
 
 The photos on the topic cards (`{activity}/img/{topic}.jpg` / `.webp`) are sourced and
