@@ -56,7 +56,17 @@
       "target": [
         {
           "text": "Espera, mi computadora se está actualizando.",
-          "audioSlug": "espera_mi_computadora_se_esta_actualizando"
+          "audioSlug": "espera_mi_computadora_se_esta_actualizando",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "Espera, mi ordenador se está actualizando.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "espera_mi_ordenador_se_esta_actualizando"
         }
       ]
     },
@@ -80,7 +90,17 @@
       "target": [
         {
           "text": "¿Sabes cómo transferir fotos del teléfono a la computadora?",
-          "audioSlug": "sabes_como_transferir_fotos_del_telefono_a_la_computadora"
+          "audioSlug": "sabes_como_transferir_fotos_del_telefono_a_la_computadora",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "¿Sabes cómo transferir fotos del teléfono al ordenador?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "sabes_como_transferir_fotos_del_telefono_al_ordenador"
         }
       ]
     },
@@ -236,7 +256,17 @@
       "target": [
         {
           "text": "¿Cómo hago una captura de pantalla en mi celular?",
-          "audioSlug": "como_hago_una_captura_de_pantalla_en_mi_celular"
+          "audioSlug": "como_hago_una_captura_de_pantalla_en_mi_celular",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "¿Cómo hago una captura de pantalla en mi móvil?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "como_hago_una_captura_de_pantalla_en_mi_movil"
         }
       ]
     },
@@ -452,7 +482,17 @@
       "target": [
         {
           "text": "¿Qué celular me recomiendas?",
-          "audioSlug": "que_celular_me_recomiendas"
+          "audioSlug": "que_celular_me_recomiendas",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "¿Qué móvil me recomiendas?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "que_movil_me_recomiendas"
         }
       ]
     },
@@ -572,7 +612,17 @@
       "target": [
         {
           "text": "Estoy buscando un software para grabar la pantalla de mi computadora.",
-          "audioSlug": "estoy_buscando_un_software_para_grabar_la_pantalla_de_mi_computadora"
+          "audioSlug": "estoy_buscando_un_software_para_grabar_la_pantalla_de_mi_computadora",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "Estoy buscando un software para grabar la pantalla de mi ordenador.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "estoy_buscando_un_software_para_grabar_la_pantalla_de_mi_ordenador"
         }
       ]
     },
@@ -680,7 +730,17 @@
       "target": [
         {
           "text": "La batería de este celular podría ser mejor.",
-          "audioSlug": "la_bateria_de_este_celular_podria_ser_mejor"
+          "audioSlug": "la_bateria_de_este_celular_podria_ser_mejor",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "La batería de este móvil podría ser mejor.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "la_bateria_de_este_movil_podria_ser_mejor"
         }
       ]
     },
@@ -704,7 +764,17 @@
       "target": [
         {
           "text": "¿Cómo puedo cambiar el idioma del teclado de la computadora?",
-          "audioSlug": "como_puedo_cambiar_el_idioma_del_teclado_de_la_computadora"
+          "audioSlug": "como_puedo_cambiar_el_idioma_del_teclado_de_la_computadora",
+          "labels": {
+            "region": "Latinoamérica"
+          }
+        },
+        {
+          "text": "¿Cómo puedo cambiar el idioma del teclado del ordenador?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "como_puedo_cambiar_el_idioma_del_teclado_del_ordenador"
         }
       ]
     },
