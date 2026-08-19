@@ -194,13 +194,13 @@
     },
     {
       "id": "accommodation_book_room_two_nights",
-      "source": "Could you help me book a hotel room for two nights?",
+      "source": "Can you help me book a room for two nights?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Podrías ayudarme a reservar una habitación de hotel para dos noches?",
-          "audioSlug": "podrias_ayudarme_a_reservar_una_habitacion_de_hotel_para_dos_noches"
+          "text": "¿Puedes ayudarme a reservar una habitación para dos noches?",
+          "audioSlug": "puedes_ayudarme_a_reservar_una_habitacion_para_dos_noches"
         }
       ]
     },
@@ -290,13 +290,13 @@
     },
     {
       "id": "accommodation_store_luggage",
-      "source": "Is there a place to store luggage after check-out?",
+      "source": "Where can I store my luggage after checkout?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Hay algún lugar donde guardar el equipaje después de la salida?",
-          "audioSlug": "hay_algun_lugar_donde_guardar_el_equipaje_despues_de_la_salida"
+          "text": "¿Dónde puedo guardar el equipaje después de la salida?",
+          "audioSlug": "donde_puedo_guardar_el_equipaje_despues_de_la_salida"
         }
       ]
     },
@@ -326,12 +326,12 @@
     },
     {
       "id": "accommodation_room_sea_view",
-      "source": "I'd prefer a sea-view room, even if it costs more.",
+      "source": "I would prefer a room with a sea view even if it costs more.",
       "level": "B1",
       "grammar": "'Aunque + subjuntivo' expresa concesión cuando la condición es hipotética.",
       "target": [
         {
-          "text": "Preferiría una habitación con vista al mar, aunque cueste más.",
+          "text": "Preferiría una habitación con vista al mar aunque cueste más.",
           "audioSlug": "preferiria_una_habitacion_con_vista_al_mar_aunque_cueste_mas"
         }
       ]
@@ -434,49 +434,49 @@
     },
     {
       "id": "accommodation_room_service_wrong_order",
-      "source": "My room service arrived with the wrong items. Please send the correct meal up.",
+      "source": "My room service came with the wrong items.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Mi servicio a la habitación llegó con artículos equivocados, ¿pueden enviar lo correcto pronto?",
-          "audioSlug": "mi_servicio_a_la_habitacion_llego_con_articulos_equivocados_pueden_enviar_lo_correcto_pronto"
+          "text": "Mi servicio a la habitación llegó con los artículos equivocados.",
+          "audioSlug": "mi_servicio_a_la_habitacion_llego_con_los_articulos_equivocados"
         }
       ]
     },
     {
       "id": "accommodation_upgrade_special_occasion",
-      "source": "Are there any room upgrades available for my stay? I'm celebrating a special occasion.",
+      "source": "Is there a room upgrade available for a special occasion?",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Hay mejoras de habitación disponibles para mi estadía, pues estoy celebrando una ocasión especial?",
-          "audioSlug": "hay_mejoras_de_habitacion_disponibles_para_mi_estadia_pues_estoy_celebrando_una_ocasion_especial"
+          "text": "¿Hay una mejora de habitación disponible para una ocasión especial?",
+          "audioSlug": "hay_una_mejora_de_habitacion_disponible_para_una_ocasion_especial"
         }
       ]
     },
     {
       "id": "accommodation_group_discount_block",
-      "source": "We're twelve guests. Is there a group discount or a block rate?",
+      "source": "Is there a group discount or room block for twelve people?",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Somos doce personas, ¿hay descuento para grupos o bloque de habitaciones a tarifa reducida?",
-          "audioSlug": "somos_doce_personas_hay_descuento_para_grupos_o_bloque_de_habitaciones_a_tarifa_reducida"
+          "text": "¿Hay descuento de grupo o bloque de habitaciones para doce personas?",
+          "audioSlug": "hay_descuento_de_grupo_o_bloque_de_habitaciones_para_doce_personas"
         }
       ]
     },
     {
       "id": "accommodation_room_not_cleaned_discount",
-      "source": "My room wasn't cleaned during my stay. I'd like to request a partial refund.",
+      "source": "I request a partial refund because my room was not cleaned.",
       "level": "B2",
       "grammar": "'No fue limpiada' usa la pasiva perifrástica; equivale a la pasiva refleja 'no se limpió'.",
       "target": [
         {
-          "text": "Mi habitación no fue limpiada durante mi estadía, así que pido un reembolso parcial.",
-          "audioSlug": "mi_habitacion_no_fue_limpiada_durante_mi_estadia_asi_que_pido_un_reembolso_parcial"
+          "text": "Pido un reembolso parcial porque no limpiaron mi habitación.",
+          "audioSlug": "pido_un_reembolso_parcial_porque_no_limpiaron_mi_habitacion"
         }
       ]
     },
@@ -612,25 +612,25 @@
     },
     {
       "id": "accommodation_itemize_bill_expense",
-      "source": "Could you itemize the bill? I need a detailed receipt for my company's expense report.",
+      "source": "Could you itemize the bill for my company expense report?",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "¿Podría desglosar la factura, pues necesito un recibo para el informe de gastos de mi empresa?",
-          "audioSlug": "podria_desglosar_la_factura_pues_necesito_un_recibo_para_el_informe_de_gastos_de_mi_empresa"
+          "text": "¿Podría desglosar la factura para el informe de gastos de mi empresa?",
+          "audioSlug": "podria_desglosar_la_factura_para_el_informe_de_gastos_de_mi_empresa"
         }
       ]
     },
     {
       "id": "accommodation_retrieve_valuables_safe",
-      "source": "I submitted a valuables declaration at check-in. I'd like to retrieve them from the safe.",
+      "source": "I would like to retrieve my valuables from the safe.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Presenté una declaración de objetos de valor al registrarme, me gustaría recuperarlos de la caja fuerte.",
-          "audioSlug": "presente_una_declaracion_de_objetos_de_valor_al_registrarme_me_gustaria_recuperarlos_de_la_8828f57c"
+          "text": "Me gustaría recuperar mis objetos de valor de la caja fuerte.",
+          "audioSlug": "me_gustaria_recuperar_mis_objetos_de_valor_de_la_caja_fuerte"
         }
       ]
     },
