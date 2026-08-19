@@ -1469,8 +1469,8 @@ body.path-mode {
    long phrase never crowds the absolute badge) and a bit more BELOW the translation. Only
    applied on variant phrases, so non-variant phrases keep their normal padding. */
 .phrase-card.has-variant-badge {
-  padding-top: 3.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 1.75rem;
 }
 
 /* Compact flex cards (Scramble hint row, Dictation controls) have no room for an absolute
@@ -1491,6 +1491,11 @@ body.path-mode {
   order: -1;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 0.75rem;   /* clear separation from the Listen button / hint row below */
+  margin-bottom: 0.75rem;   /* Dictation: clear separation from the Listen button below */
+}
+
+/* Scramble's hint row is tighter — less gap between the tags and the hint text. */
+.hint-card .variant-badges {
+  margin-bottom: 0.4rem;
 }
 
