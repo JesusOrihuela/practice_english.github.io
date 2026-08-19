@@ -123,29 +123,76 @@ function memberInText(member, text) {
   return member.words.some(w => wordRe(w).test(text));
 }
 
-// Gendered PREDICATE terms (Spanish) — GRAMMATICAL, not dialectal. A phrase describing the
-// SPEAKER/ADDRESSEE with one of these should offer both gender forms (Rule 10). Masc lemma;
-// matched in -o/-a(/-s) form inside a 1st/2nd-person predicate ("estoy/soy/estás/eres … -o/-a").
-const GENDER_ES = [
-  'cansado', 'contento', 'enfermo', 'listo', 'seguro', 'nervioso', 'preocupado', 'emocionado',
-  'aburrido', 'ocupado', 'perdido', 'asustado', 'enojado', 'molesto', 'sorprendido', 'orgulloso',
-  'agradecido', 'encantado', 'resfriado', 'mareado', 'casado', 'soltero', 'divorciado',
-  'enfermero', 'maestro', 'ingeniero', 'profesor', 'abogado', 'cocinero', 'camarero',
-  'director', 'gerente', 'vendedor', 'arquitecto', 'dueño',
+// Gendered PERSON references (Spanish) — GRAMMATICAL, not dialectal. When a phrase names a person
+// whose gender can vary, both gender forms should exist (Rule 10). Coverage is DELIBERATELY broad:
+// 3rd-person person-nouns ("ese muchacho/esa muchacha", "mi vecino/vecina") AND nominalised plural
+// adjectives ("los más lentos/las más lentas") — not only 1st/2nd-person predicates. Two suppressors
+// keep the findings actionable (only genuine within-phrase variants remain), both documented inline:
+//   • sourceFixesGender() — the English source already fixes the gender (he/husband/boy/a name).
+//   • masculine-plural-only nouns — "hijos/hermanos/abuelos" are the standard generic for a group
+//     (Rule 14.4 excludes masculine plurals for groups); the feminine plural would change meaning.
+// Curated PERSON terms with -o/-a gender — split so we can gate the polysemous adjectives:
+//  • NOUNS always signal a person (muchacho, esposo, profesor…) → any form flags.
+//  • ADJECTIVES are polysemous (listo=ready, rápido=fast object, bajo=under) so they only flag in
+//    a PERSON context: a 1st/2nd-person predicate ("estoy/soy … cansado") or a nominalisation
+//    ("los/las más lentos"). This covers "ese muchacho/esa muchacha" (noun) and "los más lentos/
+//    las más lentas" (nominalised adj) while excluding "el balance está listo", "análisis rápido".
+const PERSON_NOUN_ES = [
+  'muchacho', 'niño', 'chico', 'hermano', 'amigo', 'hijo', 'abuelo', 'tío', 'sobrino', 'nieto',
+  'novio', 'esposo', 'compañero', 'vecino', 'alumno', 'jugador', 'conductor', 'pasajero',
+  'ciudadano', 'empleado', 'jefe', 'dueño', 'profesor', 'maestro', 'doctor', 'enfermero',
+  'ingeniero', 'abogado', 'cocinero', 'camarero', 'director', 'gerente', 'vendedor', 'arquitecto',
+  'bombero', 'panadero', 'peluquero', 'carpintero',
+  // ('cartero' omitted — its -a form collides with "cartera" = wallet, a common false positive.)
 ];
-// 1st/2nd-person SINGULAR predicate only: there the speaker/addressee's gender is inherently
-// variable (→ needs both forms). 3rd person ("es/está + noun") is excluded — a noun subject
-// fixes the gender ("ese muchacho es listo" is not variable).
-const GENDER_COPULA = /\b(estoy|soy|est[aá]s|eres|me siento|te ves|ser[eé]|seas|est[eé]s|quiero ser|quieres ser|voy a ser|vas a ser)\b/i;
-// A gendered lemma (masc -o) as its -o/-a(/-s) forms, whole word.
+const PERSON_ADJ_ES = [
+  'listo', 'lento', 'rápido', 'alto', 'gordo', 'delgado', 'guapo', 'feo', 'rubio', 'moreno',
+  'calvo', 'simpático', 'antipático', 'nervioso', 'contento', 'cansado', 'enfermo', 'aburrido',
+  'ocupado', 'preocupado', 'emocionado', 'orgulloso', 'callado', 'tímido', 'curioso', 'honesto',
+  'generoso', 'perezoso', 'casado', 'soltero', 'divorciado', 'viudo', 'sorprendido', 'asustado',
+  'enojado', 'molesto', 'mareado', 'resfriado', 'agradecido',
+];
+// Person context for adjectives: 1st/2nd-person predicate, or "el/la/los/las (más|menos) …".
+const PERSON_CTX = /\b(estoy|soy|est[aá]s|eres|me siento|te ves|ser[eé]|seas|est[eé]s)\b|\b(el|la|los|las)\s+(m[aá]s|menos)\s/i;
+// A person lemma (masc -o) as its -o/-os/-a/-as forms, whole word.
 const genderLemmaRe = (lemma) => {
   const stem = lemma.replace(/o$/, '');
   return new RegExp('(^|[^\\p{L}])' + stem + '[oa]s?($|[^\\p{L}])', 'iu');
 };
-function gestureGendered(text) {   // → the lemma matched in a personal predicate, or null
-  if (!GENDER_COPULA.test(text)) return null;
-  for (const lemma of GENDER_ES) if (genderLemmaRe(lemma).test(text)) return lemma;
+function gestureGendered(text) {   // → the person term matched, or null
+  // NOUNS: flag the SINGULAR (vecino→vecina is a real variant) or an explicit feminine plural.
+  // A masculine-plural-only noun (hijos = children, abuelos = grandparents, hermanos = siblings) is
+  // the STANDARD generic for a group — Rule 14.4 excludes "masculine plurals for groups" → skip.
+  for (const l of PERSON_NOUN_ES) {
+    const stem = l.replace(/o$/, '');
+    const sg = new RegExp('(^|[^\\p{L}])' + stem + '[oa]($|[^\\p{L}])', 'iu');
+    const plFem = new RegExp('(^|[^\\p{L}])' + stem + 'as($|[^\\p{L}])', 'iu');
+    if (sg.test(text) || plFem.test(text)) return l;
+    // else (masculine-plural-only, or no match) → not a within-phrase variant; keep scanning.
+  }
+  // ADJECTIVES (nominalised): keep plural too — "los más lentos/las más lentas" IS a real agreement
+  // variant of one concept (unlike a plural noun, whose feminine changes the meaning).
+  if (PERSON_CTX.test(text)) for (const l of PERSON_ADJ_ES) if (genderLemmaRe(l).test(text)) return l;
   return null;
+}
+
+// Does the SOURCE already fix the person's gender? (source language = English here — the only
+// source that reaches the gender block, since the target must be Spanish.) A gendered pronoun /
+// kinship / role noun, or a proper name (mid-sentence capital), means the single-gender Spanish
+// is a FAITHFUL translation, not a missing variant (Rule 10/14.4). Only a gender-NEUTRAL source
+// (neighbor, friend, teacher, cousin, they, the person) that Spanish must render in one gender is
+// a genuine missing-variant case (→ both forms as variants). Keeps "Mi vecino ← My neighbor" (real)
+// while dropping "Ese muchacho ← That boy", "Su esposo ← Her husband", "mi amiga Ana" (source-fixed).
+const EN_GENDER_WORDS = /\b(he|him|his|she|her|hers|son|daughter|brother|sister|uncle|aunt|husband|wife|boyfriend|girlfriend|grand(mother|father|ma|pa)|granny|mother|father|mom|mum|dad|nephew|niece|king|queen|prince|princess|actor|actress|waiter|waitress|host|hostess|widow|widower|groom|bride|boy|girl|man|men|woman|women|lady|ladies|gentleman|guy|sir|madam|mister|mrs|mr|ms|monk|nun)\b/i;
+function sourceFixesGender(src) {
+  if (!src) return false;
+  if (EN_GENDER_WORDS.test(src)) return true;
+  const words = src.split(/\s+/);          // a proper name (mid-sentence capital) fixes the gender
+  for (let i = 1; i < words.length; i++) {
+    if (/[.?!]$/.test(words[i - 1])) continue;                 // skip token after sentence break
+    if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]/.test(words[i])) return true;  // mid-sentence Capital → name
+  }
+  return false;
 }
 const anyRegionMember = (lex, text) => lex.some(set => set.members.some(m => memberInText(m, text)));
 
@@ -180,12 +227,13 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       // (2) GENDER completeness (es) — a phrase describing the speaker/addressee with a gendered
       //     predicate, but no gender variant.
       const gLemma = lang === 'es' ? gestureGendered(allText) : null;
-      if (gLemma && !hasGender) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" sin variante masculino/femenino` });
+      const genderMissing = gLemma && !hasGender && !sourceFixesGender(p.source);
+      if (genderMissing) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" (source no fija género) sin variante masculino/femenino` });
 
       // (3) COMBINATIONS — one dimension present, the other genuinely applies too.
       if (hasGender && !hasRegion && anyRegionMember(lex, allText))
         findings.push({ ...base, type: 'combo', detail: 'tiene GÉNERO y usa un término región-variable → falta la dimensión REGIÓN (región×género)' });
-      if (hasRegion && !hasGender && gLemma)
+      if (hasRegion && genderMissing)
         findings.push({ ...base, type: 'combo', detail: `tiene REGIÓN y un predicado con género ("${gLemma}") → falta la dimensión GÉNERO (región×género)` });
     }
   }

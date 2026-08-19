@@ -104,7 +104,17 @@ the checklist so nothing is tribal when a new pair is added.
   Spanish → **Diccionario de americanismos (ASALE)** (`asale.org/damer/<term>`, marks each sense's
   countries) + DLE for Spain; English → standard dictionary US/UK/AU marks + documented
   British-vs-American comparisons; a NEW language → that language's authoritative regional
-  dictionary. Cite the source in `CREDITS.md`. Gender is grammatical (rule-based, not sourced). A phrase with a gendered speaker *and* a region-varying word has all
+  dictionary. Cite the source in `CREDITS.md`. **Gender is grammatical (rule-based, not sourced),
+  and the detector's coverage is broad on purpose:** it flags any person whose gender can vary —
+  3rd-person person-nouns (*ese muchacho/esa muchacha*, *mi vecino/vecina*) AND nominalised plural
+  adjectives (*los más lentos/las más lentas*), via a curated person-term lexicon (nouns always;
+  polysemous adjectives only in a person context — a 1st/2nd-person predicate or *los/las más …*).
+  Two suppressors keep it actionable so only genuine within-phrase variants surface: (a) the SOURCE
+  already fixes the gender (English *he/husband/boy* or a proper name → the single-gender translation
+  is faithful, Rule 10/14.4), and (b) masculine-plural-only nouns (*hijos/hermanos/abuelos* = the
+  standard generic for a group, which Rule 14.4 excludes). A gender-neutral source that the target
+  must render in one gender (*My neighbor…* → *vecino/vecina*) is the real missing-variant case.
+  A phrase with a gendered speaker *and* a region-varying word has all
   region×gender forms (e.g. 4 forms), each `target[]` carrying the full `labels: { region,
   gender }`. Regions are as fine as reality: not only España/Latinoamérica or US/UK, but
   country/zone variants where they differ (e.g. *palta* in much of South America vs *aguacate*
