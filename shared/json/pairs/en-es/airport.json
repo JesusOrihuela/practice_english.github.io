@@ -50,13 +50,13 @@
     },
     {
       "id": "airport_boarding_pass_gate",
-      "source": "I need to show my boarding pass at the gate.",
+      "source": "I must show my boarding pass at the gate.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Necesito mostrar mi pase de abordar en la puerta de embarque.",
-          "audioSlug": "necesito_mostrar_mi_pase_de_abordar_en_la_puerta_de_embarque"
+          "text": "Debo mostrar mi pase de abordar en la puerta.",
+          "audioSlug": "debo_mostrar_mi_pase_de_abordar_en_la_puerta"
         }
       ]
     },
@@ -110,13 +110,13 @@
     },
     {
       "id": "airport_direct_or_connecting",
-      "source": "Is there a direct flight to New York, or do I have to connect?",
+      "source": "Is there a direct flight or do I have to connect?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "¿Hay un vuelo directo a Nueva York, o tengo que hacer escala?",
-          "audioSlug": "hay_un_vuelo_directo_a_nueva_york_o_tengo_que_hacer_escala"
+          "text": "¿Hay un vuelo directo o tengo que hacer escala?",
+          "audioSlug": "hay_un_vuelo_directo_o_tengo_que_hacer_escala"
         }
       ]
     },
@@ -134,13 +134,13 @@
     },
     {
       "id": "airport_request_seat_front",
-      "source": "I'd like a seat closer to the front of the plane, please.",
+      "source": "I would like a seat at the front.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Me gustaría un asiento cerca de la parte delantera, por favor.",
-          "audioSlug": "me_gustaria_un_asiento_cerca_de_la_parte_delantera_por_favor"
+          "text": "Me gustaría un asiento en la parte delantera.",
+          "audioSlug": "me_gustaria_un_asiento_en_la_parte_delantera"
         }
       ]
     },
@@ -182,25 +182,25 @@
     },
     {
       "id": "airport_security_liquids_confiscated",
-      "source": "My sunscreen was confiscated at security. Liquids over 100ml aren't allowed in carry-on.",
+      "source": "They confiscated my sunscreen for exceeding the liquid limit.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Me confiscaron el protector solar, que supera los 100 ml permitidos en mano.",
-          "audioSlug": "me_confiscaron_el_protector_solar_que_supera_los_100_ml_permitidos_en_mano"
+          "text": "Me confiscaron el protector solar por superar el límite de líquidos.",
+          "audioSlug": "me_confiscaron_el_protector_solar_por_superar_el_limite_de_liquidos"
         }
       ]
     },
     {
       "id": "airport_priority_boarding_boarded_together",
-      "source": "I paid for priority boarding, but everyone boarded at the same time anyway.",
+      "source": "I paid for priority boarding and everyone still boarded together.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "Pagué por embarque prioritario, pero de todas formas todos abordaron al mismo tiempo.",
-          "audioSlug": "pague_por_embarque_prioritario_pero_de_todas_formas_todos_abordaron_al_mismo_tiempo"
+          "text": "Pagué por embarque prioritario y aun así todos abordaron juntos.",
+          "audioSlug": "pague_por_embarque_prioritario_y_aun_asi_todos_abordaron_juntos"
         }
       ]
     },
@@ -336,13 +336,13 @@
     },
     {
       "id": "airport_seat_assignment_not_booked",
-      "source": "I booked an exit-row seat but was assigned a standard economy seat. I'd like this corrected.",
+      "source": "I booked an exit row but they assigned me standard economy.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Reservé fila de salida, pero me asignaron economía estándar y necesito que lo corrijan.",
-          "audioSlug": "reserve_fila_de_salida_pero_me_asignaron_economia_estandar_y_necesito_que_lo_corrijan"
+          "text": "Reservé fila de salida y me asignaron economía estándar.",
+          "audioSlug": "reserve_fila_de_salida_y_me_asignaron_economia_estandar"
         }
       ]
     },
@@ -444,13 +444,13 @@
     },
     {
       "id": "airport_partner_airline_baggage_liability",
-      "source": "The connecting flight was operated by a partner airline. Does that affect liability for my delayed baggage?",
+      "source": "Does the partner airline that operated the connection cover my delayed baggage?",
       "level": "C2",
       "grammar": null,
       "target": [
         {
-          "text": "El vuelo de conexión fue operado por una aerolínea asociada, ¿eso afecta la responsabilidad por mi equipaje retrasado?",
-          "audioSlug": "el_vuelo_de_conexion_fue_operado_por_una_aerolinea_asociada_eso_afecta_la_responsabilidad_p_f3881273"
+          "text": "¿La aerolínea asociada que operó la conexión responde por mi equipaje retrasado?",
+          "audioSlug": "la_aerolinea_asociada_que_opero_la_conexion_responde_por_mi_equipaje_retrasado"
         }
       ]
     },
