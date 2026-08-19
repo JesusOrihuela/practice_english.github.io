@@ -96,9 +96,15 @@ the checklist so nothing is tribal when a new pair is added.
 - Grammar-tip length; anti-pedagogical patterns (Rule 11).
 
 ### Author judgment (not reliably gateable — apply by hand, per language)
-- **Variant completeness (RULE)** — if a phrase has ANY labelled variant, EVERY variant and
-  combination that genuinely exists must be present: gender, region, register, AND their
-  combinations. A phrase with a gendered speaker *and* a region-varying word has all
+- **Variant completeness (RULE + PROCESS)** — if a phrase has ANY labelled variant, EVERY variant
+  and combination that genuinely exists must be present: gender, region, register, AND their
+  combinations. The detector `tools/check-variants.mjs` FINDS phrases missing region/gender
+  variants (region-lexicon-driven + gendered-predicate rule); run it and curate to zero.
+  **The region lexicon's provenance MUST come from an authoritative source, not a guess:**
+  Spanish → **Diccionario de americanismos (ASALE)** (`asale.org/damer/<term>`, marks each sense's
+  countries) + DLE for Spain; English → standard dictionary US/UK/AU marks + documented
+  British-vs-American comparisons; a NEW language → that language's authoritative regional
+  dictionary. Cite the source in `CREDITS.md`. Gender is grammatical (rule-based, not sourced). A phrase with a gendered speaker *and* a region-varying word has all
   region×gender forms (e.g. 4 forms), each `target[]` carrying the full `labels: { region,
   gender }`. Regions are as fine as reality: not only España/Latinoamérica or US/UK, but
   country/zone variants where they differ (e.g. *palta* in much of South America vs *aguacate*

@@ -14,8 +14,17 @@
    It is the front-(2) audit instrument, analogous to check-length for front (1). Advisory:
    exits 0 by default (curate the flagged phrases); --gate to fail once the backlog is closed.
 
-   The LEXICON is a curated, committeable asset (like NGSL/PCIC for coverage). Extend it with
-   more region-variable everyday terms as content grows; add a language block for a new target.
+   LEXICON SOURCING RULE (authoritative, like PCIC/NGSL for coverage) — the region provenance
+   (which countries use each variant) MUST come from an authoritative reference, not a guess:
+     • Spanish → **Diccionario de americanismos (ASALE)** — https://www.asale.org/damer/<term> —
+       which marks each sense with its countries (Mx, Ar, Ch, Pe, Bo, Ur, Co, Ve…); Spain usage
+       from the DLE (dle.rae.es). Cite in CREDITS.md.
+     • English → the US/UK/AU marks of standard dictionaries (Oxford/Cambridge) and the
+       documented British-vs-American vocabulary comparisons.
+     • A NEW target language → that language's authoritative dialectal/regional dictionary.
+   NOTE: the country lists below are a working seed and must be VERIFIED against DAMER/DLE (the
+   fetch is feasible — see tools/damer-provenance if present) before the front-(2) curation is
+   final. Gender is GRAMMATICAL (not sourced) — its detection is rule-based below.
 
    Usage:  node tools/check-variants.mjs           # report
            node tools/check-variants.mjs --gate     # fail on any finding
@@ -114,6 +123,32 @@ function memberInText(member, text) {
   return member.words.some(w => wordRe(w).test(text));
 }
 
+// Gendered PREDICATE terms (Spanish) — GRAMMATICAL, not dialectal. A phrase describing the
+// SPEAKER/ADDRESSEE with one of these should offer both gender forms (Rule 10). Masc lemma;
+// matched in -o/-a(/-s) form inside a 1st/2nd-person predicate ("estoy/soy/estás/eres … -o/-a").
+const GENDER_ES = [
+  'cansado', 'contento', 'enfermo', 'listo', 'seguro', 'nervioso', 'preocupado', 'emocionado',
+  'aburrido', 'ocupado', 'perdido', 'asustado', 'enojado', 'molesto', 'sorprendido', 'orgulloso',
+  'agradecido', 'encantado', 'resfriado', 'mareado', 'casado', 'soltero', 'divorciado',
+  'enfermero', 'maestro', 'ingeniero', 'profesor', 'abogado', 'cocinero', 'camarero',
+  'director', 'gerente', 'vendedor', 'arquitecto', 'dueño',
+];
+// 1st/2nd-person SINGULAR predicate only: there the speaker/addressee's gender is inherently
+// variable (→ needs both forms). 3rd person ("es/está + noun") is excluded — a noun subject
+// fixes the gender ("ese muchacho es listo" is not variable).
+const GENDER_COPULA = /\b(estoy|soy|est[aá]s|eres|me siento|te ves|ser[eé]|seas|est[eé]s|quiero ser|quieres ser|voy a ser|vas a ser)\b/i;
+// A gendered lemma (masc -o) as its -o/-a(/-s) forms, whole word.
+const genderLemmaRe = (lemma) => {
+  const stem = lemma.replace(/o$/, '');
+  return new RegExp('(^|[^\\p{L}])' + stem + '[oa]s?($|[^\\p{L}])', 'iu');
+};
+function gestureGendered(text) {   // → the lemma matched in a personal predicate, or null
+  if (!GENDER_COPULA.test(text)) return null;
+  for (const lemma of GENDER_ES) if (genderLemmaRe(lemma).test(text)) return lemma;
+  return null;
+}
+const anyRegionMember = (lex, text) => lex.some(set => set.members.some(m => memberInText(m, text)));
+
 const findings = [];
 for (const pair of fs.readdirSync(PAIRS_DIR)) {
   const dir = path.join(PAIRS_DIR, pair);
@@ -128,30 +163,44 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
     for (const p of (data.phrases || [])) {
       const forms = (p.target || []);
       const allText = forms.map(t => t.text || '').join('  ');
+      const hasGender = forms.some(t => t.labels && t.labels.gender !== undefined);
+      const hasRegion = forms.some(t => t.labels && t.labels.region !== undefined);
+      const base = { pair, topic: f.replace('.json', ''), id: p.id };
+
+      // (1) REGION completeness — a region-variable word present without all its variants.
       for (const set of lex) {
-        // Which members' words appear anywhere in the phrase's forms?
         const present = set.members.filter(m => memberInText(m, allText));
-        if (present.length === 0) continue;
-        // Which members are MISSING (their word never appears in any form)?
+        if (!present.length) continue;
         const missing = set.members.filter(m => !present.includes(m));
-        if (missing.length > 0) {
-          findings.push({
-            pair, topic: f.replace('.json', ''), id: p.id, set: set.name,
-            has: present.map(m => m.label).join('/'),
-            missing: missing.map(m => `${m.words[0]} [${m.label}: ${m.countries.join(',')}]`).join('  '),
-          });
-        }
+        if (missing.length) findings.push({ ...base, type: 'region', set: set.name,
+          has: present.map(m => m.label).join('/'),
+          detail: missing.map(m => `${m.words[0]} [${m.label}: ${m.countries.join(',')}]`).join('  ') });
       }
+
+      // (2) GENDER completeness (es) — a phrase describing the speaker/addressee with a gendered
+      //     predicate, but no gender variant.
+      const gLemma = lang === 'es' ? gestureGendered(allText) : null;
+      if (gLemma && !hasGender) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" sin variante masculino/femenino` });
+
+      // (3) COMBINATIONS — one dimension present, the other genuinely applies too.
+      if (hasGender && !hasRegion && anyRegionMember(lex, allText))
+        findings.push({ ...base, type: 'combo', detail: 'tiene GÉNERO y usa un término región-variable → falta la dimensión REGIÓN (región×género)' });
+      if (hasRegion && !hasGender && gLemma)
+        findings.push({ ...base, type: 'combo', detail: `tiene REGIÓN y un predicado con género ("${gLemma}") → falta la dimensión GÉNERO (región×género)` });
     }
   }
 }
 
-findings.sort((a, b) => (a.pair + a.topic).localeCompare(b.pair + b.topic));
-console.log(`Completitud de variantes — ${findings.length} frase(s) a las que les FALTAN variantes regionales:`);
+const order = { region: 0, gender: 1, combo: 2 };
+findings.sort((a, b) => (order[a.type] - order[b.type]) || (a.pair + a.topic).localeCompare(b.pair + b.topic));
+const counts = { region: 0, gender: 0, combo: 0 };
+for (const x of findings) counts[x.type]++;
+console.log(`Completitud de variantes — ${findings.length} hallazgo(s)  ` +
+  `(región ${counts.region}, género ${counts.gender}, combinación ${counts.combo}):`);
 for (const x of findings) {
-  console.log(`  [${x.pair} ${x.topic}] ${x.id}  (set: ${x.set}; tiene: ${x.has})`);
-  console.log(`     faltan: ${x.missing}`);
+  console.log(`  [${x.type.toUpperCase()}] [${x.pair} ${x.topic}] ${x.id}${x.set ? ' (set: ' + x.set + '; tiene: ' + x.has + ')' : ''}`);
+  console.log(`     ${x.detail}`);
 }
-if (!findings.length) console.log('  ✓ todas las frases con términos región-variables ofrecen sus variantes.');
+if (!findings.length) console.log('  ✓ todas las frases con variantes están completas (región, género y combinaciones).');
 
-if (GATE && findings.length) { console.log(`\n✗ ${findings.length} frase(s) con variantes incompletas.`); process.exit(1); }
+if (GATE && findings.length) { console.log(`\n✗ ${findings.length} hallazgo(s) de variantes incompletas.`); process.exit(1); }
