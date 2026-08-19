@@ -103,8 +103,8 @@
       "grammar": null,
       "target": [
         {
-          "text": "Las bandejas para hornear están en la repisa de arriba.",
-          "audioSlug": "las_bandejas_para_hornear_estan_en_la_repisa_de_arriba"
+          "text": "Las bandejas para hornear están en la repisa superior.",
+          "audioSlug": "las_bandejas_para_hornear_estan_en_la_repisa_superior"
         }
       ]
     },
@@ -230,13 +230,13 @@
     },
     {
       "id": "kitchen_the_spices_and_condiments_are_in",
-      "source": "The spices and condiments are in the cabinet next to the sink.",
+      "source": "The spices are in the cabinet by the sink.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "Las especias y los condimentos están en el gabinete junto al fregadero.",
-          "audioSlug": "las_especias_y_los_condimentos_estan_en_el_gabinete_junto_al_fregadero"
+          "text": "Las especias están en el gabinete junto al fregadero.",
+          "audioSlug": "las_especias_estan_en_el_gabinete_junto_al_fregadero"
         }
       ]
     },
@@ -302,13 +302,13 @@
     },
     {
       "id": "kitchen_the_recipe_calls_for_brown_sugar",
-      "source": "The recipe calls for brown sugar instead of white sugar.",
+      "source": "The recipe uses brown sugar instead of white.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "En la receta se utiliza azúcar morena en lugar de azúcar blanca.",
-          "audioSlug": "en_la_receta_se_utiliza_azucar_morena_en_lugar_de_azucar_blanca"
+          "text": "La receta usa azúcar morena en vez de blanca.",
+          "audioSlug": "la_receta_usa_azucar_morena_en_vez_de_blanca"
         }
       ]
     },
@@ -326,13 +326,13 @@
     },
     {
       "id": "kitchen_whats_the_difference_between_a_pot",
-      "source": "What's the difference between a pot and a pan?",
+      "source": "What is the difference between a pot and a pan?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "¿Cuál es la diferencia entre una cacerola y una sartén?",
-          "audioSlug": "cual_es_la_diferencia_entre_una_cacerola_y_una_sarten"
+          "text": "¿Qué diferencia hay entre una cacerola y una sartén?",
+          "audioSlug": "que_diferencia_hay_entre_una_cacerola_y_una_sarten"
         }
       ]
     },
@@ -350,13 +350,13 @@
     },
     {
       "id": "kitchen_where_do_we_keep_the_plastic",
-      "source": "Where do we keep the plastic wrap to cover the leftovers?",
+      "source": "Where do we keep the plastic wrap for leftovers?",
       "level": "A1",
       "grammar": "'¿Dónde está?' (singular) y '¿dónde están?' (plural) para preguntar ubicación.",
       "target": [
         {
-          "text": "¿Dónde guardamos el envoltorio de plástico para cubrir las sobras?",
-          "audioSlug": "donde_guardamos_el_envoltorio_de_plastico_para_cubrir_las_sobras"
+          "text": "¿Dónde guardamos el plástico para cubrir las sobras?",
+          "audioSlug": "donde_guardamos_el_plastico_para_cubrir_las_sobras"
         }
       ]
     },
@@ -494,13 +494,13 @@
     },
     {
       "id": "kitchen_add_a_little_sugar_to_the",
-      "source": "Add a little sugar to the sauce to balance the flavor.",
+      "source": "Add a little sugar to the sauce.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Agrega un poco de azúcar a la salsa para equilibrar el sabor.",
-          "audioSlug": "agrega_un_poco_de_azucar_a_la_salsa_para_equilibrar_el_sabor"
+          "text": "Agrega un poco de azúcar a la salsa.",
+          "audioSlug": "agrega_un_poco_de_azucar_a_la_salsa"
         }
       ]
     },
@@ -578,13 +578,13 @@
     },
     {
       "id": "kitchen_the_pan_is_too_hot_lower",
-      "source": "The pan is too hot, so lower the heat a bit.",
+      "source": "Lower the heat because the pan is too hot.",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "La sartén está demasiado caliente, baja un poco el fuego.",
-          "audioSlug": "la_sarten_esta_demasiado_caliente_baja_un_poco_el_fuego"
+          "text": "Baja el fuego porque la sartén está muy caliente.",
+          "audioSlug": "baja_el_fuego_porque_la_sarten_esta_muy_caliente"
         }
       ]
     },
@@ -650,13 +650,13 @@
     },
     {
       "id": "kitchen_let_the_pizza_dough_rest_before",
-      "source": "Let the pizza dough rest before stretching it.",
+      "source": "Let the pizza dough rest before rolling it out.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Hay que dejar reposar la masa de la pizza antes de estirarla.",
-          "audioSlug": "hay_que_dejar_reposar_la_masa_de_la_pizza_antes_de_estirarla"
+          "text": "Deja reposar la masa de pizza antes de estirarla.",
+          "audioSlug": "deja_reposar_la_masa_de_pizza_antes_de_estirarla"
         }
       ]
     },
@@ -674,13 +674,13 @@
     },
     {
       "id": "kitchen_while_i_remove_the_fish_bones",
-      "source": "While I remove the fish bones, could you preheat the oven?",
+      "source": "Can you preheat the oven while I clean the fish?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Mientras le quito las espinas al pescado, ¿puedes precalentar el horno?",
-          "audioSlug": "mientras_le_quito_las_espinas_al_pescado_puedes_precalentar_el_horno"
+          "text": "¿Puedes precalentar el horno mientras limpio el pescado?",
+          "audioSlug": "puedes_precalentar_el_horno_mientras_limpio_el_pescado"
         }
       ]
     },
@@ -847,8 +847,8 @@
       "grammar": null,
       "target": [
         {
-          "text": "La mejor guarnición para el pollo es el puré de papa.",
-          "audioSlug": "la_mejor_guarnicion_para_el_pollo_es_el_pure_de_papa"
+          "text": "La mejor guarnición para el pollo es el puré.",
+          "audioSlug": "la_mejor_guarnicion_para_el_pollo_es_el_pure"
         }
       ]
     },
@@ -890,13 +890,13 @@
     },
     {
       "id": "kitchen_i_prefer_to_use_the_electric",
-      "source": "I prefer to use the electric oven over the microwave to heat up the food.",
+      "source": "I prefer the electric oven over the microwave for heating.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Prefiero usar el horno eléctrico al microondas para calentar la comida.",
-          "audioSlug": "prefiero_usar_el_horno_electrico_al_microondas_para_calentar_la_comida"
+          "text": "Prefiero el horno eléctrico al microondas para calentar.",
+          "audioSlug": "prefiero_el_horno_electrico_al_microondas_para_calentar"
         }
       ]
     },
@@ -1142,13 +1142,13 @@
     },
     {
       "id": "kitchen_emulsified_vinaigrette_add_oil_slowly",
-      "source": "The key to a well-emulsified vinaigrette is adding the oil very slowly while whisking constantly.",
+      "source": "Add the oil very slowly while whisking to emulsify the vinaigrette.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "La clave de una vinagreta emulsionada es añadir el aceite muy despacio mientras se bate constantemente.",
-          "audioSlug": "la_clave_de_una_vinagreta_emulsionada_es_anadir_el_aceite_muy_despacio_mientras_se_bate_con_3e9feef9"
+          "text": "Añade el aceite muy despacio mientras bates para emulsionar la vinagreta.",
+          "audioSlug": "anade_el_aceite_muy_despacio_mientras_bates_para_emulsionar_la_vinagreta"
         }
       ]
     },
@@ -1178,13 +1178,13 @@
     },
     {
       "id": "kitchen_caramelized_onions_deglaze_balsamic",
-      "source": "Once you've caramelized the onions, deglaze with balsamic vinegar to add depth and balance the sweetness.",
+      "source": "Caramelize the onions and deglaze with balsamic for depth.",
       "level": "C1",
       "grammar": null,
       "target": [
         {
-          "text": "Tras caramelizar las cebollas, desglasa con vinagre balsámico para dar profundidad y equilibrar el dulzor.",
-          "audioSlug": "tras_caramelizar_las_cebollas_desglasa_con_vinagre_balsamico_para_dar_profundidad_y_equilib_8383654c"
+          "text": "Carameliza las cebollas y desglasa con vinagre balsámico para dar profundidad.",
+          "audioSlug": "carameliza_las_cebollas_y_desglasa_con_vinagre_balsamico_para_dar_profundidad"
         }
       ]
     },
