@@ -1465,6 +1465,6 @@ body.path-mode {
   order: -1;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 2px;
+  margin-bottom: 0.75rem;   /* clear separation from the Listen button / hint row below */
 }
 
