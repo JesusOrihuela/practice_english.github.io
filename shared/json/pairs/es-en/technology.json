@@ -24,13 +24,13 @@
     },
     {
       "id": "technology_i_need_to_charge_my_phone",
-      "source": "Necesito cargar mi teléfono, ¿tienes un cargador?",
+      "source": "¿Tienes un cargador para mi teléfono?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "I need to charge my phone, do you have a charger?",
-          "audioSlug": "i_need_to_charge_my_phone_do_you_have_a_charger"
+          "text": "Do you have a charger for my phone?",
+          "audioSlug": "do_you_have_a_charger_for_my_phone"
         }
       ]
     },
@@ -82,35 +82,35 @@
     },
     {
       "id": "technology_tomorrow_we_are_going_to_have",
-      "source": "Mañana vamos a hacer una videollamada con la familia.",
+      "source": "Mañana tenemos una videollamada con la familia.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Tomorrow we are going to have a video call with the family.",
-          "audioSlug": "tomorrow_we_are_going_to_have_a_video_call_with_the_family",
+          "text": "Tomorrow we will have a video call with the family.",
           "labels": {
             "register": "formal"
-          }
+          },
+          "audioSlug": "tomorrow_we_will_have_a_video_call_with_the_family"
         },
         {
-          "text": "Tomorrow we're going to have a video call with the family.",
-          "audioSlug": "tomorrow_we_re_going_to_have_a_video_call_with_the_family",
+          "text": "Tomorrow we'll have a video call with the family.",
           "labels": {
             "register": "informal"
-          }
+          },
+          "audioSlug": "tomorrow_we_ll_have_a_video_call_with_the_family"
         }
       ]
     },
     {
       "id": "technology_do_you_know_how_i_can",
-      "source": "¿Sabes cómo puedo transferir fotos de mi teléfono a la computadora?",
+      "source": "¿Sabes cómo transferir fotos a la computadora?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Do you know how I can transfer photos from my phone to my computer?",
-          "audioSlug": "do_you_know_how_i_can_transfer_photos_from_my_phone_to_my_computer"
+          "text": "Do you know how to transfer photos to my computer?",
+          "audioSlug": "do_you_know_how_to_transfer_photos_to_my_computer"
         }
       ]
     },
@@ -246,13 +246,13 @@
     },
     {
       "id": "technology_i_want_to_buy_a_camera",
-      "source": "Quiero comprar una cámara, ¿cuál es la mejor opción?",
+      "source": "¿Cuál es la mejor cámara para comprar?",
       "level": "A1",
       "grammar": null,
       "target": [
         {
-          "text": "I want to buy a camera, what is the best option?",
-          "audioSlug": "i_want_to_buy_a_camera_what_is_the_best_option"
+          "text": "What is the best camera to buy?",
+          "audioSlug": "what_is_the_best_camera_to_buy"
         }
       ]
     },
@@ -304,13 +304,13 @@
     },
     {
       "id": "technology_i_recommend_using_a_strong_and",
-      "source": "Te recomiendo usar una contraseña segura y única para cada cuenta.",
+      "source": "Usa una contraseña segura y única para cada cuenta.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I recommend using a strong and unique password for each account.",
-          "audioSlug": "i_recommend_using_a_strong_and_unique_password_for_each_account"
+          "text": "Use a strong, unique password for each account.",
+          "audioSlug": "use_a_strong_unique_password_for_each_account"
         }
       ]
     },
@@ -364,13 +364,13 @@
     },
     {
       "id": "technology_i_really_liked_this_image_im",
-      "source": "Esta imagen me gustó mucho, la voy a poner de fondo de pantalla.",
+      "source": "Voy a poner esta imagen de fondo de pantalla.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I really liked this image, I'm going to set it as my wallpaper.",
-          "audioSlug": "i_really_liked_this_image_i_m_going_to_set_it_as_my_wallpaper"
+          "text": "I am going to set this image as my wallpaper.",
+          "audioSlug": "i_am_going_to_set_this_image_as_my_wallpaper"
         }
       ]
     },
@@ -592,25 +592,25 @@
     },
     {
       "id": "technology_do_you_know_how_to_use",
-      "source": "¿Sabes cómo usar Photoshop para editar esta imagen?",
+      "source": "¿Sabes cómo editar esta imagen en Photoshop?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "Do you know how to use Photoshop to edit this image?",
-          "audioSlug": "do_you_know_how_to_use_photoshop_to_edit_this_image"
+          "text": "Do you know how to edit this image in Photoshop?",
+          "audioSlug": "do_you_know_how_to_edit_this_image_in_photoshop"
         }
       ]
     },
     {
       "id": "technology_i_cant_open_this_pdf_file",
-      "source": "No puedo abrir este archivo PDF, ¿necesito un programa especial?",
+      "source": "¿Necesito un programa especial para abrir este PDF?",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "I can't open this PDF file, do I need a special program?",
-          "audioSlug": "i_can_t_open_this_pdf_file_do_i_need_a_special_program"
+          "text": "Do I need a special program to open this PDF?",
+          "audioSlug": "do_i_need_a_special_program_to_open_this_pdf"
         }
       ]
     },
@@ -640,13 +640,13 @@
     },
     {
       "id": "technology_this_powerpoint_presentation_is_very_boring",
-      "source": "Esta presentación de PowerPoint está muy aburrida, hay que mejorarla.",
+      "source": "Esta presentación de PowerPoint está muy aburrida.",
       "level": "A2",
       "grammar": null,
       "target": [
         {
-          "text": "This PowerPoint presentation is very boring, we need to improve it.",
-          "audioSlug": "this_powerpoint_presentation_is_very_boring_we_need_to_improve_it"
+          "text": "This PowerPoint presentation is very boring.",
+          "audioSlug": "this_powerpoint_presentation_is_very_boring"
         }
       ]
     },
@@ -820,37 +820,37 @@
     },
     {
       "id": "technology_the_app_was_requesting_access_to",
-      "source": "La aplicación pedía mis contactos y ubicación, así que decidí no instalarla.",
+      "source": "No instalé la aplicación porque pedía mis contactos y ubicación.",
       "level": "B2",
       "grammar": "Past continuous for an action in progress at a key decision moment",
       "target": [
         {
-          "text": "The app was requesting my contacts and location, so I didn't install it.",
-          "audioSlug": "the_app_was_requesting_my_contacts_and_location_so_i_didn_t_install_it"
+          "text": "I did not install the app because it requested my contacts and location.",
+          "audioSlug": "i_did_not_install_the_app_because_it_requested_my_contacts_and_location"
         }
       ]
     },
     {
       "id": "technology_my_storage_is_almost_full_so",
-      "source": "Mi almacenamiento está casi lleno, así que necesito borrar archivos o actualizar mi plan.",
+      "source": "Mi almacenamiento está casi lleno y necesito borrar archivos.",
       "level": "B2",
       "grammar": null,
       "target": [
         {
-          "text": "My storage is almost full, so I need to delete files or upgrade.",
-          "audioSlug": "my_storage_is_almost_full_so_i_need_to_delete_files_or_upgrade"
+          "text": "My storage is almost full and I need to delete files.",
+          "audioSlug": "my_storage_is_almost_full_and_i_need_to_delete_files"
         }
       ]
     },
     {
       "id": "technology_i_switched_to_a_monthly_subscription",
-      "source": "Cambié a una suscripción mensual en lugar de comprar el software de una vez porque las actualizaciones están incluidas.",
+      "source": "Cambié a suscripción mensual porque incluye actualizaciones.",
       "level": "B2",
       "grammar": "'Instead of + gerund' to contrast alternatives",
       "target": [
         {
-          "text": "I switched to a monthly subscription instead of buying outright because updates are included.",
-          "audioSlug": "i_switched_to_a_monthly_subscription_instead_of_buying_outright_because_updates_are_included"
+          "text": "I switched to a monthly subscription because it includes updates.",
+          "audioSlug": "i_switched_to_a_monthly_subscription_because_it_includes_updates"
         }
       ]
     },
@@ -964,13 +964,13 @@
     },
     {
       "id": "technology_the_algorithm_keeps_recommending_content",
-      "source": "El algoritmo sigue recomendándome contenido basado en mi comportamiento pasado, lo que hace difícil descubrir algo nuevo.",
+      "source": "El algoritmo solo me recomienda contenido según mi comportamiento pasado.",
       "level": "C1",
       "grammar": "'Keep + gerund' describes a persistent, recurring pattern.",
       "target": [
         {
-          "text": "The algorithm keeps recommending content based on past behavior, making it hard to discover anything new.",
-          "audioSlug": "the_algorithm_keeps_recommending_content_based_on_past_behavior_making_it_hard_to_discover_05a651fd"
+          "text": "The algorithm only recommends content based on my past behavior.",
+          "audioSlug": "the_algorithm_only_recommends_content_based_on_my_past_behavior"
         }
       ]
     },
@@ -1024,13 +1024,13 @@
     },
     {
       "id": "technology_working_remotely_requires_not_just",
-      "source": "Trabajar de forma remota requiere no solo una conexión confiable, sino también las herramientas adecuadas para la colaboración asíncrona.",
+      "source": "El trabajo remoto requiere buena conexión y herramientas para la colaboración asíncrona.",
       "level": "C1",
       "grammar": "'Not just... but also' for additive emphasis",
       "target": [
         {
-          "text": "Working remotely requires not just a reliable connection, but also the right tools for asynchronous collaboration.",
-          "audioSlug": "working_remotely_requires_not_just_a_reliable_connection_but_also_the_right_tools_for_async_b9c4d4bc"
+          "text": "Remote work requires a reliable connection and tools for asynchronous collaboration.",
+          "audioSlug": "remote_work_requires_a_reliable_connection_and_tools_for_asynchronous_collaboration"
         }
       ]
     },
@@ -1072,13 +1072,13 @@
     },
     {
       "id": "technology_clearing_the_cache_usually_fixes",
-      "source": "Limpiar la caché suele solucionar los problemas de carga, pero el problema sigue volviendo.",
+      "source": "Limpiar la caché suele solucionar los problemas de carga pero siguen volviendo.",
       "level": "C1",
       "grammar": "A gerund can act as the sentence subject: 'Clearing the cache usually fixes…'.",
       "target": [
         {
-          "text": "Clearing the cache usually fixes loading issues, but the problem keeps coming back.",
-          "audioSlug": "clearing_the_cache_usually_fixes_loading_issues_but_the_problem_keeps_coming_back"
+          "text": "Clearing the cache usually fixes loading issues but they keep returning.",
+          "audioSlug": "clearing_the_cache_usually_fixes_loading_issues_but_they_keep_returning"
         }
       ]
     },
@@ -1096,13 +1096,13 @@
     },
     {
       "id": "technology_im_considering_switching_ecosystems_but",
-      "source": "Estoy pensando en cambiar de ecosistema, pero transferir todos mis datos es una gran preocupación.",
+      "source": "Pienso cambiar de ecosistema pero transferir mis datos me preocupa.",
       "level": "C1",
       "grammar": "'Consider + gerund' for weighing an option",
       "target": [
         {
-          "text": "I'm considering switching ecosystems, but transferring all my data is a big concern.",
-          "audioSlug": "i_m_considering_switching_ecosystems_but_transferring_all_my_data_is_a_big_concern"
+          "text": "I am considering switching ecosystems but transferring my data worries me.",
+          "audioSlug": "i_am_considering_switching_ecosystems_but_transferring_my_data_worries_me"
         }
       ]
     },
