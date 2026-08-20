@@ -71,12 +71,12 @@ const LEXICON = {
     { name: 'juice',      members: [    // DLE zumo=España; jugo general Latam para bebida de fruta
       { words: ['zumo'], label: 'España',        countries: ['es'] },
       { words: ['jugo'], label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
-    { name: 'pool',       members: [    // DAMER alberca=Estanque: mx,gt,hn,ni,pa,bo; pileta Río de la Plata
-      { words: ['piscina'], label: 'España y gran parte de América', countries: ['es', 'co', 've', 'pe', 'cl', 'ec'] },
+    { name: 'pool',       members: [    // piscina neutral; DAMER alberca=Estanque mx,gt,hn,ni,pa; pileta Río de la Plata
+      { words: ['piscina'], label: 'General', neutral: true, countries: ['es', 'co', 've', 'pe', 'cl', 'ec'] },
       { words: ['alberca'], label: 'México y Centroamérica', countries: ['mx', 'gt', 'hn', 'ni', 'pa'] },
       { words: ['pileta'],  label: 'Río de la Plata', countries: ['ar', 'uy', 'py'] } ] },
-    { name: 'bus',        members: [    // autobús/bus = neutral standard; camión=Mx, colectivo=Ar, guagua=Caribe
-      { words: ['autobús', 'bus'], label: 'general',   countries: ['es', 'co', 'pe', 've'] },
+    { name: 'bus',        members: [    // autobús/bus neutral (panhispánico); camión=Mx, colectivo=Ar, guagua=Caribe
+      { words: ['autobús', 'bus'], label: 'General', neutral: true, countries: ['es', 'co', 'pe', 've'] },
       { words: ['camión'],         label: 'México',    countries: ['mx'] },
       { words: ['colectivo'],      label: 'Argentina', countries: ['ar'] },
       { words: ['guagua'],         label: 'Caribe',    countries: ['cu', 'do', 'pr'] } ] },
@@ -221,11 +221,16 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       const base = { pair, topic: f.replace('.json', ''), id: p.id };
 
       // (1) REGION completeness — a region-variable word present without all its variants.
+      //     A LONE NEUTRAL base (autobús, piscina) is fine everywhere → not flagged; only a REGIONAL
+      //     term missing its siblings is. When the full set IS shown, the neutral is a first-class
+      //     labelled variant with its own badge (rule: "si hay neutra, que también salga").
       for (const set of lex) {
         const present = set.members.filter(m => memberInText(m, allText));
         if (!present.length) continue;
         const missing = set.members.filter(m => !present.includes(m));
-        if (missing.length) findings.push({ ...base, type: 'region', set: set.name,
+        if (!missing.length) continue;                                  // complete
+        if (present.every(m => m.neutral)) continue;                    // only the neutral base → OK
+        findings.push({ ...base, type: 'region', set: set.name,
           has: present.map(m => m.label).join('/'),
           detail: missing.map(m => `${m.words[0]} [${m.label}: ${m.countries.join(',')}]`).join('  ') });
       }

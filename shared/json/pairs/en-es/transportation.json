@@ -506,7 +506,31 @@
       "target": [
         {
           "text": "¿Cuándo pasa el próximo autobús?",
+          "labels": {
+            "region": "General"
+          },
           "audioSlug": "cuando_pasa_el_proximo_autobus"
+        },
+        {
+          "text": "¿Cuándo pasa el próximo camión?",
+          "labels": {
+            "region": "México"
+          },
+          "audioSlug": "cuando_pasa_el_proximo_camion"
+        },
+        {
+          "text": "¿Cuándo pasa el próximo colectivo?",
+          "labels": {
+            "region": "Argentina"
+          },
+          "audioSlug": "cuando_pasa_el_proximo_colectivo"
+        },
+        {
+          "text": "¿Cuándo pasa la próxima guagua?",
+          "labels": {
+            "region": "Caribe"
+          },
+          "audioSlug": "cuando_pasa_la_proxima_guagua"
         }
       ]
     },

@@ -140,7 +140,24 @@
       "target": [
         {
           "text": "¿Hay piscina en el hotel?",
+          "labels": {
+            "region": "General"
+          },
           "audioSlug": "hay_piscina_en_el_hotel"
+        },
+        {
+          "text": "¿Hay alberca en el hotel?",
+          "labels": {
+            "region": "México y Centroamérica"
+          },
+          "audioSlug": "hay_alberca_en_el_hotel"
+        },
+        {
+          "text": "¿Hay pileta en el hotel?",
+          "labels": {
+            "region": "Río de la Plata"
+          },
+          "audioSlug": "hay_pileta_en_el_hotel"
         }
       ]
     },

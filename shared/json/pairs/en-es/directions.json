@@ -234,7 +234,31 @@
       "target": [
         {
           "text": "¿Dónde está la parada de autobús?",
+          "labels": {
+            "region": "General"
+          },
           "audioSlug": "donde_esta_la_parada_de_autobus"
+        },
+        {
+          "text": "¿Dónde está la parada del camión?",
+          "labels": {
+            "region": "México"
+          },
+          "audioSlug": "donde_esta_la_parada_del_camion"
+        },
+        {
+          "text": "¿Dónde está la parada del colectivo?",
+          "labels": {
+            "region": "Argentina"
+          },
+          "audioSlug": "donde_esta_la_parada_del_colectivo"
+        },
+        {
+          "text": "¿Dónde está la parada de la guagua?",
+          "labels": {
+            "region": "Caribe"
+          },
+          "audioSlug": "donde_esta_la_parada_de_la_guagua"
         }
       ]
     },

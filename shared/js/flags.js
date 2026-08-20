@@ -190,12 +190,17 @@ const AppFlags = (() => {
     'uruguay': ['uy'], 'colombia': ['co'], 'venezuela': ['ve'], 'australia': ['au'],
     // Macro-zones whose member flags all exist → a clean flag cluster.
     'cono sur': ['ar', 'cl', 'uy'], 'rio de la plata': ['ar', 'uy'],
+    'mexico y espana': ['mx', 'es'],
+    'sudamerica andina y cono sur': ['pe', 'bo', 'cl', 'ar', 'uy'],
   };
 
   // Contiguous MACRO-regions (fit in one hemisphere) → a real orthographic-globe asset, since
   // a flag cluster of ~20 countries would be absurd. Country-precise sets use flags (above).
   const REGION_GLOBE = {
     'latinoamerica': 'latinoamerica.svg',
+    // The neutral / pan-Hispanic variety is a first-class labelled variant with its own badge
+    // (a world globe, distinct from the Latin-America locator map) — shown like any country/region.
+    'general': 'general.svg', 'neutro': 'general.svg', 'panhispanico': 'general.svg',
   };
 
   /** A single real flag as an <img> from the asset dir (never inlined; emblem flags are big). */
