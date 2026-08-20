@@ -216,7 +216,17 @@
       "target": [
         {
           "text": "Mi vecino es muy simpático.",
+          "labels": {
+            "gender": "masculino"
+          },
           "audioSlug": "mi_vecino_es_muy_simpatico"
+        },
+        {
+          "text": "Mi vecina es muy simpática.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "mi_vecina_es_muy_simpatica"
         }
       ]
     },
