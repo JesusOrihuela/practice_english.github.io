@@ -1709,6 +1709,186 @@
       "gloss_example": {
         "en": "I did not go to work today because I am sick."
       }
+    },
+    {
+      "id": "intelligent",
+      "term": "inteligente",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que aprende, entiende y razona con facilidad.",
+      "example": "Mi hermana es muy inteligente y resuelve problemas difíciles.",
+      "translations": {
+        "en": "intelligent"
+      },
+      "gloss": {
+        "en": "Good at learning, understanding and reasoning."
+      },
+      "gloss_example": {
+        "en": "My sister is very intelligent and solves difficult problems."
+      }
+    },
+    {
+      "id": "hot_temperature",
+      "term": "caliente",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene una temperatura alta.",
+      "example": "Ten cuidado, la sopa está muy caliente.",
+      "translations": {
+        "en": "hot"
+      },
+      "gloss": {
+        "en": "Having a high temperature."
+      },
+      "gloss_example": {
+        "en": "Be careful, the soup is very hot."
+      }
+    },
+    {
+      "id": "cheerful",
+      "term": "alegre",
+      "level": "A1",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que siente o muestra alegría.",
+      "example": "Es una persona alegre que siempre sonríe.",
+      "translations": {
+        "en": "cheerful"
+      },
+      "gloss": {
+        "en": "Feeling or showing happiness."
+      },
+      "gloss_example": {
+        "en": "She is a cheerful person who always smiles."
+      }
+    },
+    {
+      "id": "married",
+      "term": "casado / casada",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que se ha casado y tiene esposa o esposo.",
+      "example": "Mi tío está casado desde hace diez años.",
+      "translations": {
+        "en": "married"
+      },
+      "gloss": {
+        "en": "Having a wife or husband."
+      },
+      "gloss_example": {
+        "en": "My uncle has been married for ten years."
+      }
+    },
+    {
+      "id": "single_unmarried",
+      "term": "soltero / soltera",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que no se ha casado.",
+      "example": "Todavía está soltero y vive con sus padres.",
+      "translations": {
+        "en": "single"
+      },
+      "gloss": {
+        "en": "Not married."
+      },
+      "gloss_example": {
+        "en": "He is still single and lives with his parents."
+      }
+    },
+    {
+      "id": "widowed",
+      "term": "viudo / viuda",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que ha perdido a su esposa o esposo por muerte.",
+      "example": "Su abuela quedó viuda muy joven.",
+      "translations": {
+        "en": "widowed"
+      },
+      "gloss": {
+        "en": "Having lost one's spouse to death."
+      },
+      "gloss_example": {
+        "en": "Her grandmother was widowed very young."
+      }
+    },
+    {
+      "id": "divorced",
+      "term": "divorciado / divorciada",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que ha terminado legalmente su matrimonio.",
+      "example": "Están divorciados pero siguen siendo amigos.",
+      "translations": {
+        "en": "divorced"
+      },
+      "gloss": {
+        "en": "Having legally ended one's marriage."
+      },
+      "gloss_example": {
+        "en": "They are divorced but are still friends."
+      }
+    },
+    {
+      "id": "wide",
+      "term": "ancho / ancha",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene mucha distancia de un lado a otro.",
+      "example": "La avenida es muy ancha y tiene seis carriles.",
+      "translations": {
+        "en": "wide"
+      },
+      "gloss": {
+        "en": "Having a large distance from side to side."
+      },
+      "gloss_example": {
+        "en": "The avenue is very wide and has six lanes."
+      }
+    },
+    {
+      "id": "narrow",
+      "term": "estrecho / estrecha",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene poca distancia de un lado a otro.",
+      "example": "El pasillo es tan estrecho que solo cabe una persona.",
+      "translations": {
+        "en": "narrow"
+      },
+      "gloss": {
+        "en": "Having a small distance from side to side."
+      },
+      "gloss_example": {
+        "en": "The hallway is so narrow that only one person fits."
+      }
+    },
+    {
+      "id": "medium_size",
+      "term": "mediano / mediana",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De tamaño intermedio, ni grande ni pequeño.",
+      "example": "Quiero una camiseta de talla mediana.",
+      "translations": {
+        "en": "medium"
+      },
+      "gloss": {
+        "en": "Of intermediate size, neither big nor small."
+      },
+      "gloss_example": {
+        "en": "I want a medium-size shirt."
+      }
     }
   ]
 }
