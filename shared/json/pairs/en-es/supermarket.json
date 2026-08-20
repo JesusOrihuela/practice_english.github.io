@@ -756,6 +756,30 @@
           "audioSlug": "puedo_pagar_en_efectivo"
         }
       ]
+    },
+    {
+      "id": "supermarket_el_platano_es_mi_fruta_favorita",
+      "source": "The banana is my favourite fruit.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El plátano es mi fruta favorita.",
+          "audioSlug": "el_platano_es_mi_fruta_favorita"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_comi_una_manzana_roja",
+      "source": "I ate a red apple.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Comí una manzana roja.",
+          "audioSlug": "comi_una_manzana_roja"
+        }
+      ]
     }
   ]
 }

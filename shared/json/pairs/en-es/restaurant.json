@@ -985,6 +985,66 @@
           "audioSlug": "es_un_plato_sano"
         }
       ]
+    },
+    {
+      "id": "restaurant_comi_un_bocadillo_de_jamon",
+      "source": "I had a ham roll.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Comí un bocadillo de jamón.",
+          "audioSlug": "comi_un_bocadillo_de_jamon"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_preparo_una_tortilla",
+      "source": "I make an omelette for dinner.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Preparo una tortilla para la cena.",
+          "audioSlug": "preparo_una_tortilla_para_la_cena"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_me_gusta_el_sandwich_de_queso",
+      "source": "I like the cheese sandwich.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta el sándwich de queso.",
+          "audioSlug": "me_gusta_el_sandwich_de_queso"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_de_postre_un_helado_de_chocolate",
+      "source": "For dessert we ordered a chocolate ice cream.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "De postre pedimos un helado de chocolate.",
+          "audioSlug": "de_postre_pedimos_un_helado_de_chocolate"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_la_paella_lleva_arroz",
+      "source": "The paella has rice and seafood.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La paella lleva arroz y mariscos.",
+          "audioSlug": "la_paella_lleva_arroz_y_mariscos"
+        }
+      ]
     }
   ]
 }

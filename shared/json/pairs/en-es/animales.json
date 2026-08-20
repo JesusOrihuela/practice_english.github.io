@@ -71,6 +71,78 @@
           "audioSlug": "el_gato_es_negro"
         }
       ]
+    },
+    {
+      "id": "animales_el_caballo_corre_por_el_campo",
+      "source": "The horse runs across the field.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El caballo corre por el campo.",
+          "audioSlug": "el_caballo_corre_por_el_campo"
+        }
+      ]
+    },
+    {
+      "id": "animales_el_cerdo_vive_en_la_granja",
+      "source": "The pig lives on the farm.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El cerdo vive en la granja.",
+          "audioSlug": "el_cerdo_vive_en_la_granja"
+        }
+      ]
+    },
+    {
+      "id": "animales_hay_un_pez_en_el_agua",
+      "source": "There is a fish in the water.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay un pez en el agua.",
+          "audioSlug": "hay_un_pez_en_el_agua"
+        }
+      ]
+    },
+    {
+      "id": "animales_una_mosca_entro_por_la_ventana",
+      "source": "A fly came in through the window.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Una mosca entró por la ventana.",
+          "audioSlug": "una_mosca_entro_por_la_ventana"
+        }
+      ]
+    },
+    {
+      "id": "animales_le_tengo_miedo_a_las_aranas",
+      "source": "I am afraid of spiders.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Les tengo miedo a las arañas.",
+          "audioSlug": "les_tengo_miedo_a_las_aranas"
+        }
+      ]
+    },
+    {
+      "id": "animales_un_mosquito_me_pico",
+      "source": "A mosquito bit me on the arm.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Un mosquito me picó en el brazo.",
+          "audioSlug": "un_mosquito_me_pico_en_el_brazo"
+        }
+      ]
     }
   ]
 }
