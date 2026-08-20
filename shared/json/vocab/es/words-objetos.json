@@ -557,6 +557,78 @@
       "gloss_example": {
         "en": "I need a new toothbrush."
       }
+    },
+    {
+      "id": "metal",
+      "term": "metal",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Material duro y brillante como el hierro o el oro.",
+      "example": "La caja está hecha de metal.",
+      "translations": {
+        "en": "metal"
+      },
+      "gloss": {
+        "en": "A hard, shiny material like iron or gold."
+      },
+      "gloss_example": {
+        "en": "The box is made of metal."
+      }
+    },
+    {
+      "id": "plastic",
+      "term": "plástico",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Material ligero y flexible hecho por el ser humano.",
+      "example": "Estas sillas son de plástico.",
+      "translations": {
+        "en": "plastic"
+      },
+      "gloss": {
+        "en": "A light, flexible man-made material."
+      },
+      "gloss_example": {
+        "en": "These chairs are made of plastic."
+      }
+    },
+    {
+      "id": "glass_material",
+      "term": "cristal / vidrio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Material duro y transparente que se rompe con facilidad.",
+      "example": "La ventana es de cristal.",
+      "translations": {
+        "en": "glass"
+      },
+      "gloss": {
+        "en": "A hard, transparent material that breaks easily."
+      },
+      "gloss_example": {
+        "en": "The window is made of glass."
+      }
+    },
+    {
+      "id": "fabric_cloth",
+      "term": "tela",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Material flexible con que se hace la ropa.",
+      "example": "Esta camisa es de una tela muy suave.",
+      "translations": {
+        "en": "fabric"
+      },
+      "gloss": {
+        "en": "The flexible material clothes are made of."
+      },
+      "gloss_example": {
+        "en": "This shirt is made of a very soft fabric."
+      }
     }
   ]
 }

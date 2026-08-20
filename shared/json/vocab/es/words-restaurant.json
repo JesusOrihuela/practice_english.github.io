@@ -737,6 +737,60 @@
       "gloss_example": {
         "en": "I ordered a fillet with fries."
       }
+    },
+    {
+      "id": "paella_dish",
+      "term": "paella",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Plato de arroz con carne, pescado o verduras, típico de España.",
+      "example": "El domingo comimos una paella enorme en familia.",
+      "translations": {
+        "en": "paella"
+      },
+      "gloss": {
+        "en": "A rice dish with meat, fish or vegetables, typical of Spain."
+      },
+      "gloss_example": {
+        "en": "On Sunday we had a huge paella with the family."
+      }
+    },
+    {
+      "id": "cream_food",
+      "term": "crema",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento espeso y suave hecho con leche o nata.",
+      "example": "De postre pedimos una crema de chocolate.",
+      "translations": {
+        "en": "cream"
+      },
+      "gloss": {
+        "en": "A thick, smooth food made with milk or cream."
+      },
+      "gloss_example": {
+        "en": "For dessert we ordered a chocolate cream."
+      }
+    },
+    {
+      "id": "champagne",
+      "term": "champán",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Vino con burbujas que se toma para celebrar.",
+      "example": "Abrimos una botella de champán en la fiesta.",
+      "translations": {
+        "en": "champagne"
+      },
+      "gloss": {
+        "en": "A sparkling wine drunk to celebrate."
+      },
+      "gloss_example": {
+        "en": "We opened a bottle of champagne at the party."
+      }
     }
   ]
 }

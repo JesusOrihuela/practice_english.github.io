@@ -665,6 +665,60 @@
       "gloss_example": {
         "en": "She took part in a singing contest."
       }
+    },
+    {
+      "id": "guitar",
+      "term": "guitarra",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Instrumento musical de cuerdas que se toca con los dedos.",
+      "example": "Aprendí a tocar la guitarra de niño.",
+      "translations": {
+        "en": "guitar"
+      },
+      "gloss": {
+        "en": "A stringed musical instrument played with the fingers."
+      },
+      "gloss_example": {
+        "en": "I learned to play the guitar as a child."
+      }
+    },
+    {
+      "id": "piano",
+      "term": "piano",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Instrumento musical grande con teclas blancas y negras.",
+      "example": "Ella toca el piano en un grupo de jazz.",
+      "translations": {
+        "en": "piano"
+      },
+      "gloss": {
+        "en": "A large musical instrument with black and white keys."
+      },
+      "gloss_example": {
+        "en": "She plays the piano in a jazz band."
+      }
+    },
+    {
+      "id": "violin",
+      "term": "violín",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Instrumento musical de cuerdas que se toca con un arco.",
+      "example": "El violín es difícil de aprender.",
+      "translations": {
+        "en": "violin"
+      },
+      "gloss": {
+        "en": "A stringed musical instrument played with a bow."
+      },
+      "gloss_example": {
+        "en": "The violin is hard to learn."
+      }
     }
   ]
 }

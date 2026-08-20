@@ -665,6 +665,132 @@
       "gloss_example": {
         "en": "In the square there is a very old monument."
       }
+    },
+    {
+      "id": "palace",
+      "term": "palacio",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Edificio grande y lujoso donde vive un rey o gobierna un país.",
+      "example": "Visitamos el palacio real en el centro de la ciudad.",
+      "translations": {
+        "en": "palace"
+      },
+      "gloss": {
+        "en": "A large, luxurious building where a king lives or a country is governed."
+      },
+      "gloss_example": {
+        "en": "We visited the royal palace in the city centre."
+      }
+    },
+    {
+      "id": "castle",
+      "term": "castillo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Edificio antiguo con muros fuertes construido para defenderse.",
+      "example": "El castillo está en lo alto de la montaña.",
+      "translations": {
+        "en": "castle"
+      },
+      "gloss": {
+        "en": "An old building with strong walls built for defence."
+      },
+      "gloss_example": {
+        "en": "The castle sits at the top of the mountain."
+      }
+    },
+    {
+      "id": "factory",
+      "term": "fábrica",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Lugar donde se fabrican productos en grandes cantidades.",
+      "example": "Mi tío trabaja en una fábrica de coches.",
+      "translations": {
+        "en": "factory"
+      },
+      "gloss": {
+        "en": "A place where products are made in large quantities."
+      },
+      "gloss_example": {
+        "en": "My uncle works in a car factory."
+      }
+    },
+    {
+      "id": "gym_place",
+      "term": "gimnasio",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar con máquinas para hacer ejercicio.",
+      "example": "Voy al gimnasio tres veces por semana.",
+      "translations": {
+        "en": "gym"
+      },
+      "gloss": {
+        "en": "A place with machines for exercising."
+      },
+      "gloss_example": {
+        "en": "I go to the gym three times a week."
+      }
+    },
+    {
+      "id": "cafe_place",
+      "term": "cafetería",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde se sirven café, bebidas y comidas ligeras.",
+      "example": "Quedamos en la cafetería de la esquina.",
+      "translations": {
+        "en": "cafe"
+      },
+      "gloss": {
+        "en": "A place serving coffee, drinks and light meals."
+      },
+      "gloss_example": {
+        "en": "We are meeting at the cafe on the corner."
+      }
+    },
+    {
+      "id": "academy",
+      "term": "academia",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Centro privado donde se enseña una materia o habilidad.",
+      "example": "Estudio inglés en una academia por las tardes.",
+      "translations": {
+        "en": "academy"
+      },
+      "gloss": {
+        "en": "A private centre where a subject or skill is taught."
+      },
+      "gloss_example": {
+        "en": "I study English at an academy in the afternoons."
+      }
+    },
+    {
+      "id": "street_corner",
+      "term": "esquina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Punto donde se juntan dos calles.",
+      "example": "La tienda está en la esquina de mi calle.",
+      "translations": {
+        "en": "corner"
+      },
+      "gloss": {
+        "en": "The point where two streets meet."
+      },
+      "gloss_example": {
+        "en": "The shop is on the corner of my street."
+      }
     }
   ]
 }

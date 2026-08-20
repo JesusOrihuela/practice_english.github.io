@@ -1043,6 +1043,78 @@
       "gloss_example": {
         "en": "Good communication improves teamwork."
       }
+    },
+    {
+      "id": "plan_noun",
+      "term": "plan",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Idea sobre cómo hacer algo en el futuro.",
+      "example": "Tenemos un plan para las vacaciones de verano.",
+      "translations": {
+        "en": "plan"
+      },
+      "gloss": {
+        "en": "An idea about how to do something in the future."
+      },
+      "gloss_example": {
+        "en": "We have a plan for the summer holidays."
+      }
+    },
+    {
+      "id": "error_noun",
+      "term": "error",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cosa que se hace mal o de forma equivocada.",
+      "example": "Cometí un error en el cálculo final.",
+      "translations": {
+        "en": "mistake"
+      },
+      "gloss": {
+        "en": "Something done wrongly or incorrectly."
+      },
+      "gloss_example": {
+        "en": "I made a mistake in the final calculation."
+      }
+    },
+    {
+      "id": "distance",
+      "term": "distancia",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Espacio que hay entre dos puntos o lugares.",
+      "example": "Hay una gran distancia entre las dos ciudades.",
+      "translations": {
+        "en": "distance"
+      },
+      "gloss": {
+        "en": "The space between two points or places."
+      },
+      "gloss_example": {
+        "en": "There is a great distance between the two cities."
+      }
+    },
+    {
+      "id": "safety_security",
+      "term": "seguridad",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Estado en el que no hay peligro ni riesgo.",
+      "example": "La seguridad de los niños es lo más importante.",
+      "translations": {
+        "en": "safety"
+      },
+      "gloss": {
+        "en": "A state in which there is no danger or risk."
+      },
+      "gloss_example": {
+        "en": "The safety of the children is the most important thing."
+      }
     }
   ]
 }

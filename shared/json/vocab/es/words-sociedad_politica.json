@@ -701,6 +701,60 @@
       "gloss_example": {
         "en": "The queen greeted the people from the balcony."
       }
+    },
+    {
+      "id": "prince_princess",
+      "term": "príncipe / princesa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Hijo o hija de un rey o de una reina.",
+      "example": "El príncipe visitó la ciudad la semana pasada.",
+      "translations": {
+        "en": "prince"
+      },
+      "gloss": {
+        "en": "The son or daughter of a king or queen."
+      },
+      "gloss_example": {
+        "en": "The prince visited the city last week."
+      }
+    },
+    {
+      "id": "minister",
+      "term": "ministro / ministra",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que dirige un área importante del gobierno.",
+      "example": "La ministra de Salud anunció una nueva medida.",
+      "translations": {
+        "en": "minister"
+      },
+      "gloss": {
+        "en": "A person who leads an important area of government."
+      },
+      "gloss_example": {
+        "en": "The Health minister announced a new measure."
+      }
+    },
+    {
+      "id": "politician",
+      "term": "político / política",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que se dedica a gobernar o a la política.",
+      "example": "El político dio un discurso en la plaza.",
+      "translations": {
+        "en": "politician"
+      },
+      "gloss": {
+        "en": "A person who governs or works in politics."
+      },
+      "gloss_example": {
+        "en": "The politician gave a speech in the square."
+      }
     }
   ]
 }
