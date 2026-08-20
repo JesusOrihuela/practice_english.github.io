@@ -249,11 +249,10 @@
       gateIndex: 'es-core.json',   // committed derived index the coverage GATE reads (CI)
       // The top-1000 is the official A1-A2 vocabulary curriculum (CEFR-first ordering). Live
       // coverage is ~67%/51% today; the north-star is the 88% sweet-spot (comunicación cotidiana).
-      // gateFloor is a RATCHET (regression guard just below live) that we raise as content grows
-      // toward 88 — not a hard 88 (that would keep CI red mid-build). Live: vocab 88.2%, phrases
-      // 66.7% (Aug 2026) — vocab channel already at the sweet spot; phrases is the binding channel,
-      // so the floor sits just below it and rises as phrase coverage grows.
-      gateFloor: 65,
+      // gateFloor is a RATCHET (regression guard just below live) that we raise as content grows.
+      // Live (Aug 2026): vocab 88.2%, phrases 89.1% — BOTH channels reached the 88% sweet spot, so
+      // the floor now sits at 86 (just below live, matching English), guarding the milestone.
+      gateFloor: 86,
       targetFloor: 88,   // north-star coverage the ongoing content curation builds toward.
       // ELELex (CEFR-graded, CC BY-NC-SA) is NOT committeable → stays a LOCAL-only cross-check
       // shown when tools/sources/derived/elelex-es.json exists. It is NOT the gate.
