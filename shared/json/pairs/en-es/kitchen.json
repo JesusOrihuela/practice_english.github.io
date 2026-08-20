@@ -1501,6 +1501,18 @@
           "audioSlug": "compre_una_botella_de_agua"
         }
       ]
+    },
+    {
+      "id": "kitchen_compre_una_docena_de_huevos",
+      "source": "I bought a dozen eggs.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré una docena de huevos.",
+          "audioSlug": "compre_una_docena_de_huevos"
+        }
+      ]
     }
   ]
 }

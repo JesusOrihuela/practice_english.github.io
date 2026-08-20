@@ -623,6 +623,42 @@
           "audioSlug": "puedes_andar"
         }
       ]
+    },
+    {
+      "id": "health_tengo_gripe_y_fiebre",
+      "source": "I have the flu and a fever.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo gripe y fiebre.",
+          "audioSlug": "tengo_gripe_y_fiebre"
+        }
+      ]
+    },
+    {
+      "id": "health_fuimos_a_urgencias",
+      "source": "We went to the emergency room.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fuimos a urgencias anoche.",
+          "audioSlug": "fuimos_a_urgencias_anoche"
+        }
+      ]
+    },
+    {
+      "id": "health_el_medico_receto_un_medicamento",
+      "source": "The doctor prescribed a medicine.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El médico recetó un medicamento.",
+          "audioSlug": "el_medico_receto_un_medicamento"
+        }
+      ]
     }
   ]
 }

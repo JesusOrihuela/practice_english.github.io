@@ -321,6 +321,54 @@
           "audioSlug": "necesito_jabon_para_lavarme"
         }
       ]
+    },
+    {
+      "id": "hogar_salimos_a_la_terraza",
+      "source": "We go out to the terrace for fresh air.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salimos a la terraza a tomar el aire.",
+          "audioSlug": "salimos_a_la_terraza_a_tomar_el_aire"
+        }
+      ]
+    },
+    {
+      "id": "hogar_los_libros_estan_en_la_estanteria",
+      "source": "The books are on the shelf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los libros están en la estantería.",
+          "audioSlug": "los_libros_estan_en_la_estanteria"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_banera_es_muy_grande",
+      "source": "The bathtub is very big.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La bañera es muy grande.",
+          "audioSlug": "la_banera_es_muy_grande"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_lavadora_no_funciona",
+      "source": "The washing machine is not working.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La lavadora no funciona.",
+          "audioSlug": "la_lavadora_no_funciona"
+        }
+      ]
     }
   ]
 }

@@ -381,6 +381,66 @@
           "audioSlug": "da_un_paso_atras"
         }
       ]
+    },
+    {
+      "id": "directions_el_sur_del_pais_es_calido",
+      "source": "The south of the country is warmer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El sur del país es más cálido.",
+          "audioSlug": "el_sur_del_pais_es_mas_calido"
+        }
+      ]
+    },
+    {
+      "id": "directions_el_sol_se_pone_por_el_oeste",
+      "source": "The sun sets in the west.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El sol se pone por el oeste.",
+          "audioSlug": "el_sol_se_pone_por_el_oeste"
+        }
+      ]
+    },
+    {
+      "id": "directions_el_gato_esta_encima_de_la_mesa",
+      "source": "The cat is on top of the table.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El gato está encima de la mesa.",
+          "audioSlug": "el_gato_esta_encima_de_la_mesa"
+        }
+      ]
+    },
+    {
+      "id": "directions_hay_arboles_alrededor_de_la_casa",
+      "source": "There are trees around the house.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay árboles alrededor de la casa.",
+          "audioSlug": "hay_arboles_alrededor_de_la_casa"
+        }
+      ]
+    },
+    {
+      "id": "directions_ponte_delante_de_mi",
+      "source": "Stand in front of me.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ponte delante de mí.",
+          "audioSlug": "ponte_delante_de_mi"
+        }
+      ]
     }
   ]
 }

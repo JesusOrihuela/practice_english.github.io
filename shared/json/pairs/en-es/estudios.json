@@ -335,6 +335,18 @@
           "audioSlug": "pague_la_matricula_del_curso"
         }
       ]
+    },
+    {
+      "id": "estudios_llevo_la_mochila_al_colegio",
+      "source": "I take the backpack to school.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llevo la mochila al colegio.",
+          "audioSlug": "llevo_la_mochila_al_colegio"
+        }
+      ]
     }
   ]
 }
