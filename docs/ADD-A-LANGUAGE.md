@@ -122,6 +122,17 @@ the checklist so nothing is tribal when a new pair is added.
   genuinely exist. The adaptive badge and the post-answer "other variants" list surface them
   all (`AppFeedback.applyVariantBadge` / `buildAltNote`); `AppFlags.region(name)` gives each
   region a flag or a zone silhouette.
+  - **Neutral / pan-regional variety is itself a first-class variant (RULE).** When a set has a
+    neutral term used across the whole language area (Spanish *autobús*, *piscina* — valid
+    everywhere), it is NOT an unlabelled base: it is shown as a labelled variant ("General") with
+    its **own badge** — a world-globe SVG (`shared/img/regions/general.svg`, wired in
+    `REGION_GLOBE`), distinct from a country flag or a macro-zone locator map — exactly like the
+    country/region variants. Teach the finer sub-regional flavours (e.g. *camión*/*colectivo*/
+    *guagua* for bus) on a **canonical** phrase or two per set rather than on every phrase, so the
+    learner meets each variant without the same 4 forms repeating across the topic. The detector
+    marks the neutral member `neutral: true`: a **lone neutral base is valid** (not flagged), but a
+    lone REGIONAL term still requires its siblings. A set with no neutral term (Latam↔Spain splits
+    like *celular/móvil*, or three-way *carro/coche/auto*) has every member carry its own region.
 - **Grammatical gender modeling** (Rule 10 / 16) — only for a target with grammatical gender
   (`grammaticalGender: true`). Base-gender conventions: 1st-person "I am [adj]" → base
   **feminine** + masculine variant; 2nd-person "you are [adj]?" → base **masculine** + feminine
