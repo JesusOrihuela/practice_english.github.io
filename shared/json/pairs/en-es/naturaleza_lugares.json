@@ -263,6 +263,42 @@
           "audioSlug": "volvera_a_crecer"
         }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_el_bosque_esta_lleno_de_arboles",
+      "source": "The forest is full of trees.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El bosque está lleno de árboles.",
+          "audioSlug": "el_bosque_esta_lleno_de_arboles"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_desierto_es_muy_seco",
+      "source": "The desert is very dry.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El desierto es muy seco.",
+          "audioSlug": "el_desierto_es_muy_seco"
+        }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_la_luna_brilla_en_el_cielo",
+      "source": "The moon shines in the sky.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La luna brilla en el cielo.",
+          "audioSlug": "la_luna_brilla_en_el_cielo"
+        }
+      ]
     }
   ]
 }

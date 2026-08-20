@@ -641,6 +641,52 @@
           "audioSlug": "perdi_el_autobus"
         }
       ]
+    },
+    {
+      "id": "transportation_voy_al_trabajo_en_moto",
+      "source": "I go to work by motorcycle.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy al trabajo en moto.",
+          "audioSlug": "voy_al_trabajo_en_moto"
+        }
+      ]
+    },
+    {
+      "id": "transportation_busco_estacionamiento",
+      "source": "I am looking for parking nearby.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Busco estacionamiento cerca.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "busco_estacionamiento_cerca"
+        },
+        {
+          "text": "Busco aparcamiento cerca.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "busco_aparcamiento_cerca"
+        }
+      ]
+    },
+    {
+      "id": "transportation_el_hotel_esta_en_una_avenida",
+      "source": "The hotel is on a wide avenue.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El hotel está en una avenida ancha.",
+          "audioSlug": "el_hotel_esta_en_una_avenida_ancha"
+        }
+      ]
     }
   ]
 }

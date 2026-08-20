@@ -167,6 +167,126 @@
           "audioSlug": "este_es_mi_sitio"
         }
       ]
+    },
+    {
+      "id": "sitios_el_monumento_esta_en_la_plaza",
+      "source": "The monument is in the square.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El monumento está en la plaza.",
+          "audioSlug": "el_monumento_esta_en_la_plaza"
+        }
+      ]
+    },
+    {
+      "id": "sitios_visitamos_la_catedral",
+      "source": "We visited the old cathedral.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Visitamos la catedral antigua.",
+          "audioSlug": "visitamos_la_catedral_antigua"
+        }
+      ]
+    },
+    {
+      "id": "sitios_el_palacio_tiene_un_jardin",
+      "source": "The palace has a large garden.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El palacio tiene un gran jardín.",
+          "audioSlug": "el_palacio_tiene_un_gran_jardin"
+        }
+      ]
+    },
+    {
+      "id": "sitios_el_castillo_esta_en_la_colina",
+      "source": "The castle is on the hill.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El castillo está en la colina.",
+          "audioSlug": "el_castillo_esta_en_la_colina"
+        }
+      ]
+    },
+    {
+      "id": "sitios_mi_tio_trabaja_en_una_fabrica",
+      "source": "My uncle works in a factory.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi tío trabaja en una fábrica.",
+          "audioSlug": "mi_tio_trabaja_en_una_fabrica"
+        }
+      ]
+    },
+    {
+      "id": "sitios_salimos_a_la_discoteca",
+      "source": "We went out to the nightclub on Saturday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Salimos a la discoteca el sábado.",
+          "audioSlug": "salimos_a_la_discoteca_el_sabado"
+        }
+      ]
+    },
+    {
+      "id": "sitios_tomamos_cafe_en_la_cafeteria",
+      "source": "We had coffee at the cafe.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tomamos café en la cafetería.",
+          "audioSlug": "tomamos_cafe_en_la_cafeteria"
+        }
+      ]
+    },
+    {
+      "id": "sitios_fue_a_la_comisaria",
+      "source": "He went to the police station to report the theft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fue a la comisaría a denunciar el robo.",
+          "audioSlug": "fue_a_la_comisaria_a_denunciar_el_robo"
+        }
+      ]
+    },
+    {
+      "id": "sitios_compre_el_libro_en_la_libreria",
+      "source": "I bought the book at the bookshop.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré el libro en la librería.",
+          "audioSlug": "compre_el_libro_en_la_libreria"
+        }
+      ]
+    },
+    {
+      "id": "sitios_el_ayuntamiento_esta_en_el_centro",
+      "source": "The town hall is in the centre.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El ayuntamiento está en el centro.",
+          "audioSlug": "el_ayuntamiento_esta_en_el_centro"
+        }
+      ]
     }
   ]
 }
