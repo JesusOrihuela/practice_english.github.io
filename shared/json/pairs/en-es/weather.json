@@ -335,6 +335,42 @@
           "audioSlug": "siento_mucho_frio"
         }
       ]
+    },
+    {
+      "id": "weather_la_nieve_cubrio_las_montanas",
+      "source": "The snow covered the mountains.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La nieve cubrió las montañas.",
+          "audioSlug": "la_nieve_cubrio_las_montanas"
+        }
+      ]
+    },
+    {
+      "id": "weather_habia_niebla_en_la_carretera",
+      "source": "There was fog on the road.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Había niebla en la carretera.",
+          "audioSlug": "habia_niebla_en_la_carretera"
+        }
+      ]
+    },
+    {
+      "id": "weather_la_tormenta_duro_toda_la_noche",
+      "source": "The storm lasted all night.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La tormenta duró toda la noche.",
+          "audioSlug": "la_tormenta_duro_toda_la_noche"
+        }
+      ]
     }
   ]
 }

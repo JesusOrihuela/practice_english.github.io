@@ -155,6 +155,42 @@
           "audioSlug": "mueve_los_dedos"
         }
       ]
+    },
+    {
+      "id": "cuerpo_me_duele_el_cuello",
+      "source": "My neck hurts.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me duele el cuello.",
+          "audioSlug": "me_duele_el_cuello"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_mi_padre_tiene_barba",
+      "source": "My father has a beard.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi padre tiene barba.",
+          "audioSlug": "mi_padre_tiene_barba"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_mi_abuelo_tiene_bigote",
+      "source": "My grandfather has a white moustache.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi abuelo tiene un bigote blanco.",
+          "audioSlug": "mi_abuelo_tiene_un_bigote_blanco"
+        }
+      ]
     }
   ]
 }

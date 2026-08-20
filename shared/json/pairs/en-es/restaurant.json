@@ -1045,6 +1045,90 @@
           "audioSlug": "la_paella_lleva_arroz_y_mariscos"
         }
       ]
+    },
+    {
+      "id": "restaurant_prepare_cordero_asado",
+      "source": "I made roast lamb on Sunday.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Preparé cordero asado el domingo.",
+          "audioSlug": "prepare_cordero_asado_el_domingo"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_tomamos_el_te_a_las_cinco",
+      "source": "We have tea at five.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tomamos el té a las cinco.",
+          "audioSlug": "tomamos_el_te_a_las_cinco"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_los_ninos_toman_la_merienda",
+      "source": "The children have their afternoon snack at five.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los niños toman la merienda a las cinco.",
+          "audioSlug": "los_ninos_toman_la_merienda_a_las_cinco"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_brindamos_con_champan",
+      "source": "We toasted with champagne.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Brindamos con champán.",
+          "audioSlug": "brindamos_con_champan"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_preparo_un_coctel_con_ron",
+      "source": "He made a cocktail with rum.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Preparó un cóctel con ron.",
+          "audioSlug": "preparo_un_coctel_con_ron"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_pidio_una_ginebra",
+      "source": "She ordered a gin with tonic.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pidió una ginebra con tónica.",
+          "audioSlug": "pidio_una_ginebra_con_tonica"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_de_postre_hay_crema",
+      "source": "For dessert there is chocolate cream.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "De postre hay crema de chocolate.",
+          "audioSlug": "de_postre_hay_crema_de_chocolate"
+        }
+      ]
     }
   ]
 }

@@ -780,6 +780,93 @@
           "audioSlug": "comi_una_manzana_roja"
         }
       ]
+    },
+    {
+      "id": "supermarket_compre_una_lata_de_atun",
+      "source": "I bought a can of tuna.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré una lata de atún.",
+          "audioSlug": "compre_una_lata_de_atun"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_el_yogur_esta_en_el_refrigerador",
+      "source": "The yoghurt is in the fridge.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El yogur está en el refrigerador.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "el_yogur_esta_en_el_refrigerador"
+        },
+        {
+          "text": "El yogur está en el frigorífico.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "el_yogur_esta_en_el_frigorifico"
+        },
+        {
+          "text": "El yogur está en la heladera.",
+          "labels": {
+            "region": "Río de la Plata"
+          },
+          "audioSlug": "el_yogur_esta_en_la_heladera"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_unto_mermelada_en_el_pan",
+      "source": "I spread jam on the bread.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Unto mermelada en el pan.",
+          "audioSlug": "unto_mermelada_en_el_pan"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_compre_ternera_para_el_guiso",
+      "source": "I bought veal for the stew.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré ternera para el guiso.",
+          "audioSlug": "compre_ternera_para_el_guiso"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_bebo_un_jugo_de_naranja",
+      "source": "I drink an orange juice.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Bebo un jugo de naranja.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "bebo_un_jugo_de_naranja"
+        },
+        {
+          "text": "Bebo un zumo de naranja.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "bebo_un_zumo_de_naranja"
+        }
+      ]
     }
   ]
 }

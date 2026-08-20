@@ -191,6 +191,54 @@
           "audioSlug": "nuestro_equipo_gano"
         }
       ]
+    },
+    {
+      "id": "deportes_juego_al_tenis_los_sabados",
+      "source": "I play tennis on Saturdays.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Juego al tenis los sábados.",
+          "audioSlug": "juego_al_tenis_los_sabados"
+        }
+      ]
+    },
+    {
+      "id": "deportes_mi_equipo_de_baloncesto_gano",
+      "source": "My basketball team won.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi equipo de baloncesto ganó.",
+          "audioSlug": "mi_equipo_de_baloncesto_gano"
+        }
+      ]
+    },
+    {
+      "id": "deportes_hago_gimnasia_por_la_manana",
+      "source": "I do gymnastics in the morning.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hago gimnasia por la mañana.",
+          "audioSlug": "hago_gimnasia_por_la_manana"
+        }
+      ]
+    },
+    {
+      "id": "deportes_en_invierno_vamos_a_esquiar",
+      "source": "In winter we go skiing.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En invierno vamos a esquiar.",
+          "audioSlug": "en_invierno_vamos_a_esquiar"
+        }
+      ]
     }
   ]
 }
