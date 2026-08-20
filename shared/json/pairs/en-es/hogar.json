@@ -309,6 +309,18 @@
           "audioSlug": "la_calefaccion_esta_encendida"
         }
       ]
+    },
+    {
+      "id": "hogar_necesito_jabon_para_lavarme",
+      "source": "I need soap to wash myself.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito jabón para lavarme.",
+          "audioSlug": "necesito_jabon_para_lavarme"
+        }
+      ]
     }
   ]
 }

@@ -189,7 +189,7 @@ function gestureGendered(text) {   // → the person term matched, or null
 // (neighbor, friend, teacher, cousin, they, the person) that Spanish must render in one gender is
 // a genuine missing-variant case (→ both forms as variants). Keeps "Mi vecino ← My neighbor" (real)
 // while dropping "Ese muchacho ← That boy", "Su esposo ← Her husband", "mi amiga Ana" (source-fixed).
-const EN_GENDER_WORDS = /\b(he|him|his|she|her|hers|son|daughter|brother|sister|uncle|aunt|husband|wife|boyfriend|girlfriend|grand(mother|father|ma|pa)|granny|mother|father|mom|mum|dad|nephew|niece|king|queen|prince|princess|actor|actress|waiter|waitress|host|hostess|widow|widower|groom|bride|boy|girl|man|men|woman|women|lady|ladies|gentleman|guy|sir|madam|mister|mrs|mr|ms|monk|nun)\b/i;
+const EN_GENDER_WORDS = /\b(he|him|his|she|her|hers|son|daughter|brother|sister|uncle|aunt|husband|wife|boyfriend|girlfriend|grand(mother|father|ma|pa|son|daughter)|granny|mother|father|mom|mum|dad|nephew|niece|king|queen|prince|princess|actor|actress|waiter|waitress|host|hostess|widow|widower|groom|bride|boy|girl|man|men|woman|women|lady|ladies|gentleman|guy|sir|madam|mister|mrs|mr|ms|monk|nun)\b/i;
 function sourceFixesGender(src) {
   if (!src) return false;
   if (EN_GENDER_WORDS.test(src)) return true;
