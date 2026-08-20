@@ -273,6 +273,42 @@
           "audioSlug": "el_garaje_esta_debajo_del_edificio"
         }
       ]
+    },
+    {
+      "id": "hogar_el_bano_tiene_una_ducha_grande",
+      "source": "The bathroom has a big shower.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El baño tiene una ducha grande.",
+          "audioSlug": "el_bano_tiene_una_ducha_grande"
+        }
+      ]
+    },
+    {
+      "id": "hogar_me_lavo_las_manos_en_el_lavabo",
+      "source": "I wash my hands in the sink.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me lavo las manos en el lavabo.",
+          "audioSlug": "me_lavo_las_manos_en_el_lavabo"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_calefaccion_esta_encendida",
+      "source": "The heating is on.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La calefacción está encendida.",
+          "audioSlug": "la_calefaccion_esta_encendida"
+        }
+      ]
     }
   ]
 }

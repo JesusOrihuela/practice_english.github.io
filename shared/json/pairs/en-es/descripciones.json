@@ -420,6 +420,54 @@
           "audioSlug": "los_zapatos_son_marrones"
         }
       ]
+    },
+    {
+      "id": "descripciones_ese_edificio_es_feo",
+      "source": "That building is very ugly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ese edificio es muy feo.",
+          "audioSlug": "ese_edificio_es_muy_feo"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_el_rio_es_ancho",
+      "source": "The river is very wide.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El río es muy ancho.",
+          "audioSlug": "el_rio_es_muy_ancho"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_la_calle_es_estrecha",
+      "source": "The street is narrow.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La calle es estrecha.",
+          "audioSlug": "la_calle_es_estrecha"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_quiero_un_cafe_mediano",
+      "source": "I want a medium coffee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero un café mediano.",
+          "audioSlug": "quiero_un_cafe_mediano"
+        }
+      ]
     }
   ]
 }
