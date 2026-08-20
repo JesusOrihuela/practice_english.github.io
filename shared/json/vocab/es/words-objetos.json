@@ -467,6 +467,96 @@
       "gloss_example": {
         "en": "We looked at the map to find the way."
       }
+    },
+    {
+      "id": "drinking_glass",
+      "term": "vaso",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Recipiente sin asa que sirve para beber.",
+      "example": "Me bebí un vaso de agua fría.",
+      "translations": {
+        "en": "glass"
+      },
+      "gloss": {
+        "en": "A container without a handle used for drinking."
+      },
+      "gloss_example": {
+        "en": "I drank a glass of cold water."
+      }
+    },
+    {
+      "id": "cup_mug",
+      "term": "taza",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Recipiente con asa para tomar bebidas calientes.",
+      "example": "Tomo una taza de café por la mañana.",
+      "translations": {
+        "en": "cup"
+      },
+      "gloss": {
+        "en": "A container with a handle for hot drinks."
+      },
+      "gloss_example": {
+        "en": "I have a cup of coffee in the morning."
+      }
+    },
+    {
+      "id": "wine_glass",
+      "term": "copa",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vaso con pie que se usa sobre todo para el vino.",
+      "example": "Brindamos con una copa de vino.",
+      "translations": {
+        "en": "wine glass"
+      },
+      "gloss": {
+        "en": "A stemmed glass used mainly for wine."
+      },
+      "gloss_example": {
+        "en": "We toasted with a glass of wine."
+      }
+    },
+    {
+      "id": "backpack",
+      "term": "mochila",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bolsa que se lleva a la espalda con dos correas.",
+      "example": "Guardo los libros en la mochila.",
+      "translations": {
+        "en": "backpack"
+      },
+      "gloss": {
+        "en": "A bag carried on the back with two straps."
+      },
+      "gloss_example": {
+        "en": "I keep the books in the backpack."
+      }
+    },
+    {
+      "id": "brush_tool",
+      "term": "cepillo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto con cerdas que sirve para limpiar o peinar.",
+      "example": "Necesito un cepillo nuevo para los dientes.",
+      "translations": {
+        "en": "brush"
+      },
+      "gloss": {
+        "en": "An object with bristles used to clean or comb."
+      },
+      "gloss_example": {
+        "en": "I need a new toothbrush."
+      }
     }
   ]
 }

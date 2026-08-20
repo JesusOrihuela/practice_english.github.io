@@ -863,6 +863,114 @@
       "gloss_example": {
         "en": "We fry potatoes for dinner."
       }
+    },
+    {
+      "id": "fruit_generic",
+      "term": "fruta",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento dulce que da una planta, como la manzana o la naranja.",
+      "example": "Como fruta fresca después de cada comida.",
+      "translations": {
+        "en": "fruit"
+      },
+      "gloss": {
+        "en": "The sweet food a plant gives, like an apple or an orange."
+      },
+      "gloss_example": {
+        "en": "I eat fresh fruit after every meal."
+      }
+    },
+    {
+      "id": "lamb_meat",
+      "term": "cordero",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Carne de la cría de la oveja.",
+      "example": "Preparamos cordero asado para la cena de Navidad.",
+      "translations": {
+        "en": "lamb"
+      },
+      "gloss": {
+        "en": "The meat of a young sheep."
+      },
+      "gloss_example": {
+        "en": "We made roast lamb for the Christmas dinner."
+      }
+    },
+    {
+      "id": "salmon",
+      "term": "salmón",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pez de carne rosada que se come muy a menudo.",
+      "example": "Cené salmón a la plancha con verduras.",
+      "translations": {
+        "en": "salmon"
+      },
+      "gloss": {
+        "en": "A fish with pink flesh that is often eaten."
+      },
+      "gloss_example": {
+        "en": "I had grilled salmon with vegetables for dinner."
+      }
+    },
+    {
+      "id": "tuna",
+      "term": "atún",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pez grande de mar cuya carne se vende fresca o en lata.",
+      "example": "Hice una ensalada con atún y huevo.",
+      "translations": {
+        "en": "tuna"
+      },
+      "gloss": {
+        "en": "A large sea fish sold fresh or canned."
+      },
+      "gloss_example": {
+        "en": "I made a salad with tuna and egg."
+      }
+    },
+    {
+      "id": "cereal",
+      "term": "cereal",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Alimento de granos como el trigo o el maíz, común en el desayuno.",
+      "example": "Los niños desayunan cereal con leche.",
+      "translations": {
+        "en": "cereal"
+      },
+      "gloss": {
+        "en": "A food of grains like wheat or corn, common at breakfast."
+      },
+      "gloss_example": {
+        "en": "The children have cereal with milk for breakfast."
+      }
+    },
+    {
+      "id": "black_pepper",
+      "term": "pimienta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Especia picante que se usa para dar sabor a la comida.",
+      "example": "Añade un poco de sal y pimienta a la sopa.",
+      "translations": {
+        "en": "pepper"
+      },
+      "gloss": {
+        "en": "A hot spice used to flavour food."
+      },
+      "gloss_example": {
+        "en": "Add a little salt and pepper to the soup."
+      }
     }
   ]
 }

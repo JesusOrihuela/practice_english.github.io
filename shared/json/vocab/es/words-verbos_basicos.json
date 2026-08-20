@@ -2555,6 +2555,78 @@
       "gloss_example": {
         "en": "It almost never snows in my city."
       }
+    },
+    {
+      "id": "to_hate",
+      "term": "odiar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Sentir un rechazo muy fuerte hacia alguien o algo.",
+      "example": "Odio levantarme temprano los domingos.",
+      "translations": {
+        "en": "to hate"
+      },
+      "gloss": {
+        "en": "To feel a very strong dislike for someone or something."
+      },
+      "gloss_example": {
+        "en": "I hate getting up early on Sundays."
+      }
+    },
+    {
+      "id": "to_get_angry",
+      "term": "enfadarse / enojarse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Ponerse de mal humor por algo que molesta.",
+      "example": "Se enojó porque llegamos tarde.",
+      "translations": {
+        "en": "to get angry"
+      },
+      "gloss": {
+        "en": "To become upset because of something annoying."
+      },
+      "gloss_example": {
+        "en": "He got angry because we arrived late."
+      }
+    },
+    {
+      "id": "to_draw",
+      "term": "dibujar",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Representar algo con líneas sobre una superficie.",
+      "example": "A mi hija le gusta dibujar animales.",
+      "translations": {
+        "en": "to draw"
+      },
+      "gloss": {
+        "en": "To represent something with lines on a surface."
+      },
+      "gloss_example": {
+        "en": "My daughter likes to draw animals."
+      }
+    },
+    {
+      "id": "to_guess",
+      "term": "adivinar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Acertar algo sin tener información segura.",
+      "example": "¿Puedes adivinar cuántos años tengo?",
+      "translations": {
+        "en": "to guess"
+      },
+      "gloss": {
+        "en": "To get something right without sure information."
+      },
+      "gloss_example": {
+        "en": "Can you guess how old I am?"
+      }
     }
   ]
 }

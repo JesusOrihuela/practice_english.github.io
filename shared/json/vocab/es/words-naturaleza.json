@@ -701,6 +701,114 @@
       "gloss_example": {
         "en": "It is very windy at the beach today."
       }
+    },
+    {
+      "id": "rain_noun",
+      "term": "lluvia",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Agua que cae de las nubes.",
+      "example": "La lluvia no nos dejó salir al parque.",
+      "translations": {
+        "en": "rain"
+      },
+      "gloss": {
+        "en": "Water that falls from the clouds."
+      },
+      "gloss_example": {
+        "en": "The rain kept us from going to the park."
+      }
+    },
+    {
+      "id": "snow_noun",
+      "term": "nieve",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Agua congelada que cae del cielo en copos blancos.",
+      "example": "Los niños jugaron en la nieve toda la tarde.",
+      "translations": {
+        "en": "snow"
+      },
+      "gloss": {
+        "en": "Frozen water that falls from the sky in white flakes."
+      },
+      "gloss_example": {
+        "en": "The children played in the snow all afternoon."
+      }
+    },
+    {
+      "id": "cloud",
+      "term": "nube",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Masa blanca o gris que flota en el cielo.",
+      "example": "El cielo estaba lleno de nubes grises.",
+      "translations": {
+        "en": "cloud"
+      },
+      "gloss": {
+        "en": "A white or grey mass floating in the sky."
+      },
+      "gloss_example": {
+        "en": "The sky was full of grey clouds."
+      }
+    },
+    {
+      "id": "storm",
+      "term": "tormenta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Tiempo con viento fuerte, lluvia y a veces truenos.",
+      "example": "La tormenta duró toda la noche.",
+      "translations": {
+        "en": "storm"
+      },
+      "gloss": {
+        "en": "Weather with strong wind, rain and sometimes thunder."
+      },
+      "gloss_example": {
+        "en": "The storm lasted all night."
+      }
+    },
+    {
+      "id": "ice",
+      "term": "hielo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Agua que se ha congelado y está dura y fría.",
+      "example": "Puse hielo en la bebida para enfriarla.",
+      "translations": {
+        "en": "ice"
+      },
+      "gloss": {
+        "en": "Water that has frozen and is hard and cold."
+      },
+      "gloss_example": {
+        "en": "I put ice in the drink to cool it."
+      }
+    },
+    {
+      "id": "fog",
+      "term": "niebla",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Nube baja que dificulta ver a lo lejos.",
+      "example": "Por la mañana había mucha niebla en la carretera.",
+      "translations": {
+        "en": "fog"
+      },
+      "gloss": {
+        "en": "A low cloud that makes it hard to see far."
+      },
+      "gloss_example": {
+        "en": "In the morning there was thick fog on the road."
+      }
     }
   ]
 }

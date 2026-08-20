@@ -107,6 +107,78 @@
       "gloss_example": {
         "en": "I recorded a video of the party with my phone."
       }
+    },
+    {
+      "id": "cellphone_device",
+      "term": "celular / móvil",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Teléfono que se puede llevar a cualquier parte.",
+      "example": "Dejé el celular cargando en la cocina.",
+      "translations": {
+        "en": "cell phone"
+      },
+      "gloss": {
+        "en": "A telephone you can carry anywhere."
+      },
+      "gloss_example": {
+        "en": "I left the cell phone charging in the kitchen."
+      }
+    },
+    {
+      "id": "computer_device",
+      "term": "computadora / ordenador",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Máquina que procesa datos y ejecuta programas.",
+      "example": "Trabajo todo el día frente a la computadora.",
+      "translations": {
+        "en": "computer"
+      },
+      "gloss": {
+        "en": "A machine that processes data and runs programs."
+      },
+      "gloss_example": {
+        "en": "I work in front of the computer all day."
+      }
+    },
+    {
+      "id": "laptop",
+      "term": "portátil / laptop",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Computadora pequeña que se puede llevar y usar en cualquier lugar.",
+      "example": "Llevo el portátil a la oficina todos los días.",
+      "translations": {
+        "en": "laptop"
+      },
+      "gloss": {
+        "en": "A small computer you can carry and use anywhere."
+      },
+      "gloss_example": {
+        "en": "I take the laptop to the office every day."
+      }
+    },
+    {
+      "id": "camera",
+      "term": "cámara",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Aparato para tomar fotos o grabar vídeos.",
+      "example": "Compré una cámara nueva para el viaje.",
+      "translations": {
+        "en": "camera"
+      },
+      "gloss": {
+        "en": "A device for taking photos or recording videos."
+      },
+      "gloss_example": {
+        "en": "I bought a new camera for the trip."
+      }
     }
   ]
 }
