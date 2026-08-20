@@ -504,6 +504,18 @@
           "audioSlug": "el_material_de_la_mesa_es_madera"
         }
       ]
+    },
+    {
+      "id": "descripciones_la_caja_es_cuadrada",
+      "source": "The box is square.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La caja es cuadrada.",
+          "audioSlug": "la_caja_es_cuadrada"
+        }
+      ]
     }
   ]
 }

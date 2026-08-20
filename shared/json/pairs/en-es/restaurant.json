@@ -1165,6 +1165,18 @@
           "audioSlug": "pedimos_unas_tapas_para_compartir"
         }
       ]
+    },
+    {
+      "id": "restaurant_la_mesa_ya_esta_reservada",
+      "source": "The table is already reserved.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La mesa ya está reservada.",
+          "audioSlug": "la_mesa_ya_esta_reservada"
+        }
+      ]
     }
   ]
 }

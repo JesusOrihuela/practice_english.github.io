@@ -311,6 +311,30 @@
           "audioSlug": "la_ciudad_tiene_un_millon_de_habitantes"
         }
       ]
+    },
+    {
+      "id": "politica_el_ejercito_desfilo_por_la_ciudad",
+      "source": "The army marched through the city.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El ejército desfiló por la ciudad.",
+          "audioSlug": "el_ejercito_desfilo_por_la_ciudad"
+        }
+      ]
+    },
+    {
+      "id": "politica_la_princesa_saludo_desde_el_balcon",
+      "source": "The princess waved from the balcony.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La princesa saludó desde el balcón.",
+          "audioSlug": "la_princesa_saludo_desde_el_balcon"
+        }
+      ]
     }
   ]
 }

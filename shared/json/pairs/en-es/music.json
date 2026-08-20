@@ -551,6 +551,18 @@
           "audioSlug": "me_gusta_la_musica_disco"
         }
       ]
+    },
+    {
+      "id": "music_toca_el_violin_en_la_orquesta",
+      "source": "She plays the violin in the orchestra.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Toca el violín en la orquesta.",
+          "audioSlug": "toca_el_violin_en_la_orquesta"
+        }
+      ]
     }
   ]
 }
