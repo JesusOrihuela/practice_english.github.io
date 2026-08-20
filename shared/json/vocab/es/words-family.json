@@ -611,6 +611,96 @@
       "gloss_example": {
         "en": "The whole family had dinner together."
       }
+    },
+    {
+      "id": "cousin",
+      "term": "primo / prima",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Hijo o hija de un tío o una tía.",
+      "example": "Mi primo vive en otra ciudad.",
+      "translations": {
+        "en": "cousin"
+      },
+      "gloss": {
+        "en": "The child of one uncle or aunt."
+      },
+      "gloss_example": {
+        "en": "My cousin lives in another city."
+      }
+    },
+    {
+      "id": "nephew_niece",
+      "term": "sobrino / sobrina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Hijo o hija de un hermano o una hermana.",
+      "example": "Cuido a mi sobrino los fines de semana.",
+      "translations": {
+        "en": "nephew"
+      },
+      "gloss": {
+        "en": "The child of one brother or sister."
+      },
+      "gloss_example": {
+        "en": "I look after my nephew on weekends."
+      }
+    },
+    {
+      "id": "grandchild",
+      "term": "nieto / nieta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Hijo o hija de un hijo o una hija.",
+      "example": "Los abuelos juegan con su nieto en el parque.",
+      "translations": {
+        "en": "grandchild"
+      },
+      "gloss": {
+        "en": "The child of one son or daughter."
+      },
+      "gloss_example": {
+        "en": "The grandparents play with their grandchild in the park."
+      }
+    },
+    {
+      "id": "surname",
+      "term": "apellido",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Nombre de familia que se hereda de los padres.",
+      "example": "Mi apellido es difícil de pronunciar.",
+      "translations": {
+        "en": "surname"
+      },
+      "gloss": {
+        "en": "The family name inherited from the parents."
+      },
+      "gloss_example": {
+        "en": "My surname is hard to pronounce."
+      }
+    },
+    {
+      "id": "birth_event",
+      "term": "nacimiento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Momento en que una persona empieza a vivir.",
+      "example": "La fecha de nacimiento aparece en el documento.",
+      "translations": {
+        "en": "birth"
+      },
+      "gloss": {
+        "en": "The moment when a person begins to live."
+      },
+      "gloss_example": {
+        "en": "The date of birth appears on the document."
+      }
     }
   ]
 }

@@ -377,6 +377,60 @@
       "gloss_example": {
         "en": "I go to school."
       }
+    },
+    {
+      "id": "primary_school",
+      "term": "colegio",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar donde los niños van a estudiar.",
+      "example": "Los niños salen del colegio a las tres.",
+      "translations": {
+        "en": "school"
+      },
+      "gloss": {
+        "en": "A place where children go to study."
+      },
+      "gloss_example": {
+        "en": "The children leave school at three."
+      }
+    },
+    {
+      "id": "high_school",
+      "term": "instituto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Centro donde los jóvenes estudian la educación secundaria.",
+      "example": "Mi hija empieza el instituto este año.",
+      "translations": {
+        "en": "high school"
+      },
+      "gloss": {
+        "en": "A place where teenagers study secondary education."
+      },
+      "gloss_example": {
+        "en": "My daughter starts high school this year."
+      }
+    },
+    {
+      "id": "lesson",
+      "term": "lección",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cada una de las partes en que se divide lo que se enseña.",
+      "example": "Hoy estudiamos la lección de matemáticas.",
+      "translations": {
+        "en": "lesson"
+      },
+      "gloss": {
+        "en": "Each of the parts into which teaching is divided."
+      },
+      "gloss_example": {
+        "en": "Today we study the math lesson."
+      }
     }
   ]
 }

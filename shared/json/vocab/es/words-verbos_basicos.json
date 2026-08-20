@@ -2483,6 +2483,42 @@
       "gloss_example": {
         "en": "I need to review my notes before the exam."
       }
+    },
+    {
+      "id": "get_up",
+      "term": "levantarse",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Ponerse de pie o salir de la cama.",
+      "example": "Me levanto muy temprano todos los días.",
+      "translations": {
+        "en": "to get up"
+      },
+      "gloss": {
+        "en": "To stand up or get out of bed."
+      },
+      "gloss_example": {
+        "en": "I get up very early every day."
+      }
+    },
+    {
+      "id": "to_rain",
+      "term": "llover",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Caer agua de las nubes.",
+      "example": "Va a llover, lleva un paraguas.",
+      "translations": {
+        "en": "to rain"
+      },
+      "gloss": {
+        "en": "For water to fall from the clouds."
+      },
+      "gloss_example": {
+        "en": "It is going to rain, take an umbrella."
+      }
     }
   ]
 }

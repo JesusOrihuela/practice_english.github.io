@@ -467,6 +467,42 @@
       "gloss_example": {
         "en": "I invite you to my party."
       }
+    },
+    {
+      "id": "sir_title",
+      "term": "señor",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Forma de cortesía para dirigirse a un hombre adulto.",
+      "example": "Buenos días, señor, ¿en qué puedo ayudarle?",
+      "translations": {
+        "en": "sir"
+      },
+      "gloss": {
+        "en": "A polite way to address an adult man."
+      },
+      "gloss_example": {
+        "en": "Good morning, sir, how can I help you?"
+      }
+    },
+    {
+      "id": "madam_title",
+      "term": "señora",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Forma de cortesía para dirigirse a una mujer adulta.",
+      "example": "La señora pidió la cuenta al camarero.",
+      "translations": {
+        "en": "madam"
+      },
+      "gloss": {
+        "en": "A polite way to address an adult woman."
+      },
+      "gloss_example": {
+        "en": "The lady asked the waiter for the bill."
+      }
     }
   ]
 }

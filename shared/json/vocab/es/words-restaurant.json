@@ -593,6 +593,96 @@
       "gloss_example": {
         "en": "A glass of red wine."
       }
+    },
+    {
+      "id": "restaurant_place",
+      "term": "restaurante",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar público donde se sirven comidas a cambio de dinero.",
+      "example": "Cenamos en un restaurante italiano del centro.",
+      "translations": {
+        "en": "restaurant"
+      },
+      "gloss": {
+        "en": "A public place where meals are served for money."
+      },
+      "gloss_example": {
+        "en": "We had dinner at an Italian restaurant downtown."
+      }
+    },
+    {
+      "id": "soup",
+      "term": "sopa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Plato líquido caliente que se toma con cuchara.",
+      "example": "En invierno me gusta tomar sopa caliente.",
+      "translations": {
+        "en": "soup"
+      },
+      "gloss": {
+        "en": "A hot liquid dish eaten with a spoon."
+      },
+      "gloss_example": {
+        "en": "In winter I like to have hot soup."
+      }
+    },
+    {
+      "id": "salad",
+      "term": "ensalada",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Plato frío de verduras crudas mezcladas.",
+      "example": "Pedí una ensalada de tomate y lechuga.",
+      "translations": {
+        "en": "salad"
+      },
+      "gloss": {
+        "en": "A cold dish of mixed raw vegetables."
+      },
+      "gloss_example": {
+        "en": "I ordered a tomato and lettuce salad."
+      }
+    },
+    {
+      "id": "dessert",
+      "term": "postre",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Comida dulce que se toma al final de una comida.",
+      "example": "De postre hay helado o fruta.",
+      "translations": {
+        "en": "dessert"
+      },
+      "gloss": {
+        "en": "A sweet food eaten at the end of a meal."
+      },
+      "gloss_example": {
+        "en": "For dessert there is ice cream or fruit."
+      }
+    },
+    {
+      "id": "burger",
+      "term": "hamburguesa",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Bocadillo de carne picada dentro de un pan redondo.",
+      "example": "El niño pidió una hamburguesa con papas.",
+      "translations": {
+        "en": "burger"
+      },
+      "gloss": {
+        "en": "A patty of ground meat inside a round bun."
+      },
+      "gloss_example": {
+        "en": "The child ordered a burger with fries."
+      }
     }
   ]
 }

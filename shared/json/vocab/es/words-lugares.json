@@ -557,6 +557,42 @@
       "gloss_example": {
         "en": "We visited the cathedral downtown."
       }
+    },
+    {
+      "id": "road_highway",
+      "term": "carretera",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Camino ancho preparado para que circulen los coches.",
+      "example": "La carretera hacia la costa estaba muy transitada.",
+      "translations": {
+        "en": "road"
+      },
+      "gloss": {
+        "en": "A wide road built for cars to travel on."
+      },
+      "gloss_example": {
+        "en": "The road to the coast was very busy."
+      }
+    },
+    {
+      "id": "port_harbor",
+      "term": "puerto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Lugar de la costa donde llegan y salen los barcos.",
+      "example": "El barco llegó al puerto por la mañana.",
+      "translations": {
+        "en": "port"
+      },
+      "gloss": {
+        "en": "A coastal place where ships arrive and depart."
+      },
+      "gloss_example": {
+        "en": "The ship arrived at the port in the morning."
+      }
     }
   ]
 }
