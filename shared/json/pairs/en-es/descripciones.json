@@ -372,6 +372,54 @@
           "audioSlug": "no_es_natural"
         }
       ]
+    },
+    {
+      "id": "descripciones_el_sol_es_amarillo",
+      "source": "The sun is yellow.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El sol es amarillo.",
+          "audioSlug": "el_sol_es_amarillo"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_la_flor_es_naranja",
+      "source": "The flower is orange.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La flor es naranja.",
+          "audioSlug": "la_flor_es_naranja"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_el_gato_es_gris",
+      "source": "The cat is grey.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El gato es gris.",
+          "audioSlug": "el_gato_es_gris"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_los_zapatos_son_marrones",
+      "source": "The shoes are brown.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los zapatos son marrones.",
+          "audioSlug": "los_zapatos_son_marrones"
+        }
+      ]
     }
   ]
 }

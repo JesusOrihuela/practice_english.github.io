@@ -191,6 +191,76 @@
           "audioSlug": "me_quito_el_sombrero"
         }
       ]
+    },
+    {
+      "id": "vestimenta_llevo_un_pantalon_negro",
+      "source": "I am wearing black trousers.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Llevo un pantalón negro.",
+          "audioSlug": "llevo_un_pantalon_negro"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_su_falda_es_roja",
+      "source": "Her skirt is red.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Su falda es roja.",
+          "audioSlug": "su_falda_es_roja"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_necesito_un_sueter",
+      "source": "I need a sweater for winter.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito un suéter para el invierno.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "necesito_un_sueter_para_el_invierno"
+        },
+        {
+          "text": "Necesito un jersey para el invierno.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "necesito_un_jersey_para_el_invierno"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_los_calcetines_son_blancos",
+      "source": "The socks are white.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los calcetines son blancos.",
+          "audioSlug": "los_calcetines_son_blancos"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_lleva_una_gorra_azul",
+      "source": "He is wearing a blue cap.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Lleva una gorra azul.",
+          "audioSlug": "lleva_una_gorra_azul"
+        }
+      ]
     }
   ]
 }

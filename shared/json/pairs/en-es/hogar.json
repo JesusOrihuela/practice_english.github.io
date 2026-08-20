@@ -213,6 +213,66 @@
           "audioSlug": "apaga_la_luz_antes_de_dormir"
         }
       ]
+    },
+    {
+      "id": "hogar_el_sofa_es_comodo",
+      "source": "The sofa is very comfortable.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El sofá es muy cómodo.",
+          "audioSlug": "el_sofa_es_muy_comodo"
+        }
+      ]
+    },
+    {
+      "id": "hogar_hay_un_sillon_junto_a_la_ventana",
+      "source": "There is an armchair next to the window.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay un sillón junto a la ventana.",
+          "audioSlug": "hay_un_sillon_junto_a_la_ventana"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_ascensor_no_funciona",
+      "source": "The elevator is not working today.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El ascensor no funciona hoy.",
+          "audioSlug": "el_ascensor_no_funciona_hoy"
+        }
+      ]
+    },
+    {
+      "id": "hogar_subimos_por_la_escalera",
+      "source": "We go up the stairs.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Subimos por la escalera.",
+          "audioSlug": "subimos_por_la_escalera"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_garaje_esta_debajo_del_edificio",
+      "source": "The garage is under the building.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El garaje está debajo del edificio.",
+          "audioSlug": "el_garaje_esta_debajo_del_edificio"
+        }
+      ]
     }
   ]
 }
