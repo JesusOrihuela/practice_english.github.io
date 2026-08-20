@@ -953,6 +953,96 @@
       "gloss_example": {
         "en": "Unemployment rose last year in the region."
       }
+    },
+    {
+      "id": "judge",
+      "term": "juez / jueza",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que decide en un juicio quién tiene razón.",
+      "example": "El juez escuchó a las dos partes con atención.",
+      "translations": {
+        "en": "judge"
+      },
+      "gloss": {
+        "en": "A person who decides who is right in a trial."
+      },
+      "gloss_example": {
+        "en": "The judge listened carefully to both sides."
+      }
+    },
+    {
+      "id": "chef",
+      "term": "chef / cocinero jefe",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cocinero principal de un restaurante.",
+      "example": "El chef preparó un menú especial para la noche.",
+      "translations": {
+        "en": "chef"
+      },
+      "gloss": {
+        "en": "The head cook of a restaurant."
+      },
+      "gloss_example": {
+        "en": "The chef prepared a special menu for the evening."
+      }
+    },
+    {
+      "id": "butcher",
+      "term": "carnicero / carnicera",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que corta y vende carne.",
+      "example": "El carnicero preparó los filetes para la cena.",
+      "translations": {
+        "en": "butcher"
+      },
+      "gloss": {
+        "en": "A person who cuts and sells meat."
+      },
+      "gloss_example": {
+        "en": "The butcher prepared the steaks for dinner."
+      }
+    },
+    {
+      "id": "entrepreneur",
+      "term": "empresario / empresaria",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que crea o dirige una empresa.",
+      "example": "La empresaria abrió tres tiendas en un año.",
+      "translations": {
+        "en": "businessperson"
+      },
+      "gloss": {
+        "en": "A person who starts or runs a company."
+      },
+      "gloss_example": {
+        "en": "The businesswoman opened three shops in one year."
+      }
+    },
+    {
+      "id": "credit_finance",
+      "term": "crédito",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Dinero que un banco presta y hay que devolver.",
+      "example": "Pidió un crédito para comprar el carro.",
+      "translations": {
+        "en": "credit"
+      },
+      "gloss": {
+        "en": "Money a bank lends that must be paid back."
+      },
+      "gloss_example": {
+        "en": "He asked for a credit to buy the car."
+      }
     }
   ]
 }

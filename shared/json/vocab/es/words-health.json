@@ -755,6 +755,42 @@
       "gloss_example": {
         "en": "In case of emergency, call this number."
       }
+    },
+    {
+      "id": "hunger",
+      "term": "hambre",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ganas o necesidad de comer.",
+      "example": "Tengo mucha hambre, vamos a almorzar.",
+      "translations": {
+        "en": "hunger"
+      },
+      "gloss": {
+        "en": "The wish or need to eat."
+      },
+      "gloss_example": {
+        "en": "I am very hungry, let us have lunch."
+      }
+    },
+    {
+      "id": "thirst",
+      "term": "sed",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ganas o necesidad de beber.",
+      "example": "Después de correr siempre tengo sed.",
+      "translations": {
+        "en": "thirst"
+      },
+      "gloss": {
+        "en": "The wish or need to drink."
+      },
+      "gloss_example": {
+        "en": "After running I am always thirsty."
+      }
     }
   ]
 }

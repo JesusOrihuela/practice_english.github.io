@@ -197,6 +197,114 @@
       "gloss_example": {
         "en": "It has a round shape."
       }
+    },
+    {
+      "id": "kilometer",
+      "term": "kilómetro",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Medida de distancia igual a mil metros.",
+      "example": "El pueblo está a diez kilómetros de aquí.",
+      "translations": {
+        "en": "kilometer"
+      },
+      "gloss": {
+        "en": "A measure of distance equal to a thousand metres."
+      },
+      "gloss_example": {
+        "en": "The village is ten kilometers from here."
+      }
+    },
+    {
+      "id": "centimeter",
+      "term": "centímetro",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Medida de longitud igual a la centésima parte de un metro.",
+      "example": "La caja mide veinte centímetros de ancho.",
+      "translations": {
+        "en": "centimeter"
+      },
+      "gloss": {
+        "en": "A measure of length equal to one hundredth of a metre."
+      },
+      "gloss_example": {
+        "en": "The box is twenty centimeters wide."
+      }
+    },
+    {
+      "id": "liter",
+      "term": "litro",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Medida para líquidos igual a mil mililitros.",
+      "example": "Compré dos litros de leche.",
+      "translations": {
+        "en": "liter"
+      },
+      "gloss": {
+        "en": "A measure for liquids equal to a thousand millilitres."
+      },
+      "gloss_example": {
+        "en": "I bought two liters of milk."
+      }
+    },
+    {
+      "id": "gram",
+      "term": "gramo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad pequeña para medir el peso.",
+      "example": "La receta lleva cien gramos de azúcar.",
+      "translations": {
+        "en": "gram"
+      },
+      "gloss": {
+        "en": "A small unit for measuring weight."
+      },
+      "gloss_example": {
+        "en": "The recipe uses one hundred grams of sugar."
+      }
+    },
+    {
+      "id": "kilogram",
+      "term": "kilo / kilogramo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Unidad de peso igual a mil gramos.",
+      "example": "Pesé un kilo de manzanas en la balanza.",
+      "translations": {
+        "en": "kilogram"
+      },
+      "gloss": {
+        "en": "A unit of weight equal to a thousand grams."
+      },
+      "gloss_example": {
+        "en": "I weighed a kilo of apples on the scale."
+      }
+    },
+    {
+      "id": "dozen",
+      "term": "docena",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Conjunto de doce unidades.",
+      "example": "Necesito una docena de huevos para el pastel.",
+      "translations": {
+        "en": "dozen"
+      },
+      "gloss": {
+        "en": "A group of twelve units."
+      },
+      "gloss_example": {
+        "en": "I need a dozen eggs for the cake."
+      }
     }
   ]
 }

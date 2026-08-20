@@ -1115,6 +1115,60 @@
       "gloss_example": {
         "en": "The safety of the children is the most important thing."
       }
+    },
+    {
+      "id": "agreement",
+      "term": "acuerdo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Decisión común a la que llegan dos o más personas.",
+      "example": "Llegamos a un acuerdo sobre el precio.",
+      "translations": {
+        "en": "agreement"
+      },
+      "gloss": {
+        "en": "A common decision reached by two or more people."
+      },
+      "gloss_example": {
+        "en": "We reached an agreement about the price."
+      }
+    },
+    {
+      "id": "appointment_date",
+      "term": "cita",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Momento fijado para verse con alguien.",
+      "example": "Tengo una cita con el médico el lunes.",
+      "translations": {
+        "en": "appointment"
+      },
+      "gloss": {
+        "en": "A fixed time to meet someone."
+      },
+      "gloss_example": {
+        "en": "I have an appointment with the doctor on Monday."
+      }
+    },
+    {
+      "id": "noise",
+      "term": "ruido",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sonido fuerte o molesto.",
+      "example": "El ruido de la calle no me deja dormir.",
+      "translations": {
+        "en": "noise"
+      },
+      "gloss": {
+        "en": "A loud or unpleasant sound."
+      },
+      "gloss_example": {
+        "en": "The noise from the street keeps me awake."
+      }
     }
   ]
 }

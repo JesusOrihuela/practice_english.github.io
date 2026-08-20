@@ -971,6 +971,78 @@
       "gloss_example": {
         "en": "She washed her hands in the washbasin."
       }
+    },
+    {
+      "id": "apartment_place",
+      "term": "apartamento / departamento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vivienda dentro de un edificio de varias plantas.",
+      "example": "Alquilamos un apartamento cerca de la playa.",
+      "translations": {
+        "en": "apartment"
+      },
+      "gloss": {
+        "en": "A home inside a building with several floors."
+      },
+      "gloss_example": {
+        "en": "We rented an apartment near the beach."
+      }
+    },
+    {
+      "id": "ceiling_roof",
+      "term": "techo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Parte de arriba que cubre una habitación o un edificio.",
+      "example": "La lámpara cuelga del techo del salón.",
+      "translations": {
+        "en": "ceiling"
+      },
+      "gloss": {
+        "en": "The upper part that covers a room or building."
+      },
+      "gloss_example": {
+        "en": "The lamp hangs from the ceiling of the living room."
+      }
+    },
+    {
+      "id": "floor_ground",
+      "term": "suelo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Superficie por la que se camina dentro de un lugar.",
+      "example": "Se cayó al suelo pero no se hizo daño.",
+      "translations": {
+        "en": "floor"
+      },
+      "gloss": {
+        "en": "The surface you walk on inside a place."
+      },
+      "gloss_example": {
+        "en": "He fell to the floor but was not hurt."
+      }
+    },
+    {
+      "id": "swimming_pool",
+      "term": "piscina",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Depósito grande de agua donde la gente se baña o nada.",
+      "example": "Los niños se bañan en la piscina del hotel.",
+      "translations": {
+        "en": "swimming pool"
+      },
+      "gloss": {
+        "en": "A large water basin where people swim or bathe."
+      },
+      "gloss_example": {
+        "en": "The children swim in the hotel pool."
+      }
     }
   ]
 }

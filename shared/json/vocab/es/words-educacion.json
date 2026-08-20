@@ -431,6 +431,60 @@
       "gloss_example": {
         "en": "Today we study the math lesson."
       }
+    },
+    {
+      "id": "grade_note",
+      "term": "nota",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Número o letra que indica el resultado de un examen.",
+      "example": "Sacó una buena nota en el examen de historia.",
+      "translations": {
+        "en": "grade"
+      },
+      "gloss": {
+        "en": "A number or letter showing the result of an exam."
+      },
+      "gloss_example": {
+        "en": "She got a good grade on the history exam."
+      }
+    },
+    {
+      "id": "notebook",
+      "term": "cuaderno",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Conjunto de hojas unidas donde se escribe.",
+      "example": "Apunté la tarea en mi cuaderno.",
+      "translations": {
+        "en": "notebook"
+      },
+      "gloss": {
+        "en": "A set of joined sheets for writing."
+      },
+      "gloss_example": {
+        "en": "I wrote the homework in my notebook."
+      }
+    },
+    {
+      "id": "dictionary",
+      "term": "diccionario",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Libro que explica el significado de las palabras.",
+      "example": "Busqué la palabra en el diccionario.",
+      "translations": {
+        "en": "dictionary"
+      },
+      "gloss": {
+        "en": "A book that explains the meaning of words."
+      },
+      "gloss_example": {
+        "en": "I looked up the word in the dictionary."
+      }
     }
   ]
 }

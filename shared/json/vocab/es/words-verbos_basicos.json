@@ -2627,6 +2627,78 @@
       "gloss_example": {
         "en": "Can you guess how old I am?"
       }
+    },
+    {
+      "id": "to_wash_oneself",
+      "term": "lavarse",
+      "level": "A1",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Limpiarse con agua una parte del cuerpo.",
+      "example": "Me lavo las manos antes de comer.",
+      "translations": {
+        "en": "to wash"
+      },
+      "gloss": {
+        "en": "To clean a part of one's body with water."
+      },
+      "gloss_example": {
+        "en": "I wash my hands before eating."
+      }
+    },
+    {
+      "id": "to_shower",
+      "term": "ducharse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "easy",
+      "definition": "Lavarse el cuerpo bajo el chorro de la ducha.",
+      "example": "Me ducho todas las mañanas antes del trabajo.",
+      "translations": {
+        "en": "to shower"
+      },
+      "gloss": {
+        "en": "To wash the body under the shower."
+      },
+      "gloss_example": {
+        "en": "I shower every morning before work."
+      }
+    },
+    {
+      "id": "to_feel",
+      "term": "sentirse",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Estar de una manera física o de ánimo.",
+      "example": "Hoy me siento mucho mejor que ayer.",
+      "translations": {
+        "en": "to feel"
+      },
+      "gloss": {
+        "en": "To be in a certain physical or emotional state."
+      },
+      "gloss_example": {
+        "en": "Today I feel much better than yesterday."
+      }
+    },
+    {
+      "id": "to_weigh",
+      "term": "pesar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Tener cierto peso, o medir el peso de algo.",
+      "example": "El paquete pesa dos kilos.",
+      "translations": {
+        "en": "to weigh"
+      },
+      "gloss": {
+        "en": "To have a certain weight, or to measure it."
+      },
+      "gloss_example": {
+        "en": "The package weighs two kilos."
+      }
     }
   ]
 }
