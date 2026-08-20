@@ -393,6 +393,66 @@
           "audioSlug": "yo_suelo_caminar"
         }
       ]
+    },
+    {
+      "id": "daily_routine_me_levanto_a_las_siete",
+      "source": "I get up at seven in the morning.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me levanto a las siete de la mañana.",
+          "audioSlug": "me_levanto_a_las_siete_de_la_manana"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_me_lavo_la_cara",
+      "source": "I wash my face with cold water.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me lavo la cara con agua fría.",
+          "audioSlug": "me_lavo_la_cara_con_agua_fria"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_me_ducho_antes_de_desayunar",
+      "source": "I shower before breakfast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me ducho antes de desayunar.",
+          "audioSlug": "me_ducho_antes_de_desayunar"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_me_siento_a_leer_un_rato",
+      "source": "I sit down to read for a while.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me siento a leer un rato.",
+          "audioSlug": "me_siento_a_leer_un_rato"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_los_domingos_me_quedo_en_casa",
+      "source": "On Sundays I stay at home.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los domingos me quedo en casa.",
+          "audioSlug": "los_domingos_me_quedo_en_casa"
+        }
+      ]
     }
   ]
 }

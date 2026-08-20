@@ -167,6 +167,54 @@
           "audioSlug": "donde_esta_el_resto"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_coge_el_paraguas",
+      "source": "Take the umbrella, it is going to rain.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Coge el paraguas, va a llover.",
+          "audioSlug": "coge_el_paraguas_va_a_llover"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_mandame_un_mensaje",
+      "source": "Send me a message when you arrive.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mándame un mensaje cuando llegues.",
+          "audioSlug": "mandame_un_mensaje_cuando_llegues"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_merendamos_fruta",
+      "source": "We have fruit as an afternoon snack.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Merendamos fruta por la tarde.",
+          "audioSlug": "merendamos_fruta_por_la_tarde"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_odio_esperar_en_la_fila",
+      "source": "I hate waiting in line.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Odio esperar en la fila.",
+          "audioSlug": "odio_esperar_en_la_fila"
+        }
+      ]
     }
   ]
 }

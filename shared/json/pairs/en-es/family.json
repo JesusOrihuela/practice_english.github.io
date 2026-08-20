@@ -559,6 +559,30 @@
           "audioSlug": "veo_un_nino"
         }
       ]
+    },
+    {
+      "id": "family_mis_padres_se_separaron",
+      "source": "My parents separated years ago.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mis padres se separaron hace años.",
+          "audioSlug": "mis_padres_se_separaron_hace_anos"
+        }
+      ]
+    },
+    {
+      "id": "family_le_voy_a_regalar_un_libro",
+      "source": "I am going to give her a book as a gift.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Le voy a regalar un libro.",
+          "audioSlug": "le_voy_a_regalar_un_libro"
+        }
+      ]
     }
   ]
 }

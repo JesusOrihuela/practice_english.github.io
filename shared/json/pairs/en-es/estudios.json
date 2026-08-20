@@ -275,6 +275,54 @@
           "audioSlug": "busco_la_palabra_en_el_diccionario"
         }
       ]
+    },
+    {
+      "id": "estudios_tengo_que_repasar_la_leccion",
+      "source": "I have to review the lesson.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo que repasar la lección.",
+          "audioSlug": "tengo_que_repasar_la_leccion"
+        }
+      ]
+    },
+    {
+      "id": "estudios_voy_a_consultar_el_diccionario",
+      "source": "I am going to check the dictionary.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy a consultar el diccionario.",
+          "audioSlug": "voy_a_consultar_el_diccionario"
+        }
+      ]
+    },
+    {
+      "id": "estudios_complete_el_ejercicio_a_tiempo",
+      "source": "I completed the exercise on time.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Completé el ejercicio a tiempo.",
+          "audioSlug": "complete_el_ejercicio_a_tiempo"
+        }
+      ]
+    },
+    {
+      "id": "estudios_casi_suspendo_el_examen",
+      "source": "I almost failed the exam.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Casi suspendo el examen.",
+          "audioSlug": "casi_suspendo_el_examen"
+        }
+      ]
     }
   ]
 }
