@@ -305,6 +305,60 @@
       "gloss_example": {
         "en": "I need a dozen eggs for the cake."
       }
+    },
+    {
+      "id": "hundred",
+      "term": "cien / ciento",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Número que sigue al noventa y nueve.",
+      "example": "En la sala había cien personas.",
+      "translations": {
+        "en": "hundred"
+      },
+      "gloss": {
+        "en": "The number after ninety-nine."
+      },
+      "gloss_example": {
+        "en": "There were a hundred people in the room."
+      }
+    },
+    {
+      "id": "two_hundred",
+      "term": "doscientos",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Número igual a dos veces cien.",
+      "example": "El libro tiene doscientas páginas.",
+      "translations": {
+        "en": "two hundred"
+      },
+      "gloss": {
+        "en": "The number equal to two times a hundred."
+      },
+      "gloss_example": {
+        "en": "The book has two hundred pages."
+      }
+    },
+    {
+      "id": "euro",
+      "term": "euro",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Moneda que se usa en muchos países de Europa.",
+      "example": "El café cuesta dos euros.",
+      "translations": {
+        "en": "euro"
+      },
+      "gloss": {
+        "en": "The currency used in many European countries."
+      },
+      "gloss_example": {
+        "en": "The coffee costs two euros."
+      }
     }
   ]
 }

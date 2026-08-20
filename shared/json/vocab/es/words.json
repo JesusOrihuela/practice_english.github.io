@@ -1169,6 +1169,78 @@
       "gloss_example": {
         "en": "The noise from the street keeps me awake."
       }
+    },
+    {
+      "id": "view_sight",
+      "term": "vista",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lo que se ve desde un lugar.",
+      "example": "Desde el balcón hay una vista preciosa del mar.",
+      "translations": {
+        "en": "view"
+      },
+      "gloss": {
+        "en": "What can be seen from a place."
+      },
+      "gloss_example": {
+        "en": "From the balcony there is a beautiful view of the sea."
+      }
+    },
+    {
+      "id": "visit",
+      "term": "visita",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Acción de ir a ver a alguien o un lugar.",
+      "example": "Recibimos la visita de unos amigos el fin de semana.",
+      "translations": {
+        "en": "visit"
+      },
+      "gloss": {
+        "en": "The act of going to see someone or a place."
+      },
+      "gloss_example": {
+        "en": "We had a visit from some friends over the weekend."
+      }
+    },
+    {
+      "id": "photograph",
+      "term": "fotografía / foto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Imagen que se obtiene con una cámara.",
+      "example": "Guardo las fotografías del viaje en el teléfono.",
+      "translations": {
+        "en": "photograph"
+      },
+      "gloss": {
+        "en": "An image taken with a camera."
+      },
+      "gloss_example": {
+        "en": "I keep the photographs from the trip on my phone."
+      }
+    },
+    {
+      "id": "discussion_argument",
+      "term": "discusión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Intercambio de opiniones, a veces con desacuerdo.",
+      "example": "Tuvieron una discusión sobre el resultado del partido.",
+      "translations": {
+        "en": "argument"
+      },
+      "gloss": {
+        "en": "An exchange of opinions, sometimes in disagreement."
+      },
+      "gloss_example": {
+        "en": "They had an argument about the result of the game."
+      }
     }
   ]
 }

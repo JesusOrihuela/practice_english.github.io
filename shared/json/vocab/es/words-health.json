@@ -791,6 +791,60 @@
       "gloss_example": {
         "en": "After running I am always thirsty."
       }
+    },
+    {
+      "id": "beard",
+      "term": "barba",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pelo que crece en la cara de los hombres.",
+      "example": "Se dejó crecer la barba en invierno.",
+      "translations": {
+        "en": "beard"
+      },
+      "gloss": {
+        "en": "The hair that grows on men's faces."
+      },
+      "gloss_example": {
+        "en": "He grew a beard in winter."
+      }
+    },
+    {
+      "id": "moustache",
+      "term": "bigote",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pelo que crece sobre el labio de arriba.",
+      "example": "Mi abuelo tiene un bigote blanco.",
+      "translations": {
+        "en": "moustache"
+      },
+      "gloss": {
+        "en": "The hair that grows above the upper lip."
+      },
+      "gloss_example": {
+        "en": "My grandfather has a white moustache."
+      }
+    },
+    {
+      "id": "virus",
+      "term": "virus",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Ser diminuto que causa enfermedades.",
+      "example": "Un virus le provocó fiebre durante unos días.",
+      "translations": {
+        "en": "virus"
+      },
+      "gloss": {
+        "en": "A tiny organism that causes diseases."
+      },
+      "gloss_example": {
+        "en": "A virus gave him a fever for a few days."
+      }
     }
   ]
 }

@@ -449,6 +449,60 @@
       "gloss_example": {
         "en": "He bought new underpants."
       }
+    },
+    {
+      "id": "uniform",
+      "term": "uniforme",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ropa igual que llevan las personas de un mismo grupo.",
+      "example": "Los alumnos llevan uniforme en ese colegio.",
+      "translations": {
+        "en": "uniform"
+      },
+      "gloss": {
+        "en": "Identical clothes worn by people of the same group."
+      },
+      "gloss_example": {
+        "en": "The students wear a uniform at that school."
+      }
+    },
+    {
+      "id": "tissue_scarf",
+      "term": "pañuelo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Trozo de tela o papel para limpiarse o adornarse.",
+      "example": "Sacó un pañuelo para limpiarse la nariz.",
+      "translations": {
+        "en": "handkerchief"
+      },
+      "gloss": {
+        "en": "A piece of cloth or paper to clean oneself or as decoration."
+      },
+      "gloss_example": {
+        "en": "She took out a handkerchief to wipe her nose."
+      }
+    },
+    {
+      "id": "clothing_size",
+      "term": "talla",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Medida de una prenda de ropa.",
+      "example": "Necesito una talla más grande de esta camisa.",
+      "translations": {
+        "en": "size"
+      },
+      "gloss": {
+        "en": "The measurement of a piece of clothing."
+      },
+      "gloss_example": {
+        "en": "I need a bigger size of this shirt."
+      }
     }
   ]
 }

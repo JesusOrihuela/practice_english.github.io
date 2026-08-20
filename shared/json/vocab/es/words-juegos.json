@@ -143,6 +143,24 @@
       "gloss_example": {
         "en": "The basketball team won yesterday's game."
       }
+    },
+    {
+      "id": "chess",
+      "term": "ajedrez",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Juego de mesa para dos personas con fichas sobre un tablero.",
+      "example": "Mi abuelo me enseñó a jugar al ajedrez.",
+      "translations": {
+        "en": "chess"
+      },
+      "gloss": {
+        "en": "A board game for two people with pieces on a board."
+      },
+      "gloss_example": {
+        "en": "My grandfather taught me to play chess."
+      }
     }
   ]
 }

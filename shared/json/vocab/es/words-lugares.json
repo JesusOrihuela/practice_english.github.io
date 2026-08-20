@@ -827,6 +827,42 @@
       "gloss_example": {
         "en": "The hotel is on a very busy avenue."
       }
+    },
+    {
+      "id": "statue",
+      "term": "estatua",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Figura de una persona o animal hecha de piedra o metal.",
+      "example": "En el parque hay una estatua de un poeta famoso.",
+      "translations": {
+        "en": "statue"
+      },
+      "gloss": {
+        "en": "A figure of a person or animal made of stone or metal."
+      },
+      "gloss_example": {
+        "en": "In the park there is a statue of a famous poet."
+      }
+    },
+    {
+      "id": "police_station",
+      "term": "comisaría",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Oficina donde trabaja la policía.",
+      "example": "Fue a la comisaría a denunciar el robo.",
+      "translations": {
+        "en": "police station"
+      },
+      "gloss": {
+        "en": "The office where the police work."
+      },
+      "gloss_example": {
+        "en": "He went to the police station to report the theft."
+      }
     }
   ]
 }

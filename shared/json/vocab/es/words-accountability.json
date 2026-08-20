@@ -737,6 +737,42 @@
       "gloss_example": {
         "en": "How much is this book worth?"
       }
+    },
+    {
+      "id": "cheque",
+      "term": "cheque",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Papel del banco con el que se paga una cantidad de dinero.",
+      "example": "Pagó el alquiler con un cheque.",
+      "translations": {
+        "en": "check"
+      },
+      "gloss": {
+        "en": "A bank paper used to pay an amount of money."
+      },
+      "gloss_example": {
+        "en": "He paid the rent with a check."
+      }
+    },
+    {
+      "id": "cash",
+      "term": "efectivo",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Dinero en billetes y monedas.",
+      "example": "Prefiero pagar en efectivo y no con tarjeta.",
+      "translations": {
+        "en": "cash"
+      },
+      "gloss": {
+        "en": "Money in notes and coins."
+      },
+      "gloss_example": {
+        "en": "I prefer to pay in cash rather than by card."
+      }
     }
   ]
 }
