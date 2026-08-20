@@ -287,6 +287,66 @@
           "audioSlug": "ella_es_arquitecta"
         }
       ]
+    },
+    {
+      "id": "profesiones_mi_hermana_es_vendedora",
+      "source": "My sister is a saleswoman.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi hermana es vendedora.",
+          "audioSlug": "mi_hermana_es_vendedora"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_mi_tio_es_piloto",
+      "source": "My uncle is a pilot.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi tío es piloto.",
+          "audioSlug": "mi_tio_es_piloto"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_mi_padre_es_matematico",
+      "source": "My father is a mathematician.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi padre es matemático.",
+          "audioSlug": "mi_padre_es_matematico"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_el_carnicero_corta_la_carne",
+      "source": "The butcher cuts the meat.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El carnicero corta la carne.",
+          "audioSlug": "el_carnicero_corta_la_carne"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_el_empresario_abrio_una_tienda",
+      "source": "The businessman opened a shop.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El empresario abrió una tienda.",
+          "audioSlug": "el_empresario_abrio_una_tienda"
+        }
+      ]
     }
   ]
 }

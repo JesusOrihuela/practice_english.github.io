@@ -468,6 +468,30 @@
           "audioSlug": "quiero_un_cafe_mediano"
         }
       ]
+    },
+    {
+      "id": "descripciones_la_mesa_es_de_cristal",
+      "source": "The table is made of glass.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La mesa es de cristal.",
+          "audioSlug": "la_mesa_es_de_cristal"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_el_puente_es_de_metal",
+      "source": "The bridge is made of metal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El puente es de metal.",
+          "audioSlug": "el_puente_es_de_metal"
+        }
+      ]
     }
   ]
 }

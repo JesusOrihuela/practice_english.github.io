@@ -244,6 +244,30 @@
           "audioSlug": "hay_que_deshacer_las_maletas"
         }
       ]
+    },
+    {
+      "id": "viajes_reserve_el_viaje_en_una_agencia",
+      "source": "I booked the trip at a travel agency.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Reservé el viaje en una agencia.",
+          "audioSlug": "reserve_el_viaje_en_una_agencia"
+        }
+      ]
+    },
+    {
+      "id": "viajes_hicimos_una_excursion_al_campo",
+      "source": "We took a trip to the countryside.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hicimos una excursión al campo.",
+          "audioSlug": "hicimos_una_excursion_al_campo"
+        }
+      ]
     }
   ]
 }

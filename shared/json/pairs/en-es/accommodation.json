@@ -782,6 +782,30 @@
           "audioSlug": "es_posible_una_salida_tardia"
         }
       ]
+    },
+    {
+      "id": "accommodation_el_alojamiento_incluye_desayuno",
+      "source": "The lodging includes breakfast.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El alojamiento incluye desayuno.",
+          "audioSlug": "el_alojamiento_incluye_desayuno"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_nos_quedamos_en_una_pension",
+      "source": "We stayed in a small guesthouse.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos quedamos en una pensión pequeña.",
+          "audioSlug": "nos_quedamos_en_una_pension_pequena"
+        }
+      ]
     }
   ]
 }

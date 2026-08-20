@@ -1129,6 +1129,30 @@
           "audioSlug": "de_postre_hay_crema_de_chocolate"
         }
       ]
+    },
+    {
+      "id": "restaurant_comemos_en_un_restaurante_chino",
+      "source": "We eat at a Chinese restaurant.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Comemos en un restaurante chino.",
+          "audioSlug": "comemos_en_un_restaurante_chino"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_compre_una_barra_de_pan",
+      "source": "I bought a loaf of bread.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Compré una barra de pan.",
+          "audioSlug": "compre_una_barra_de_pan"
+        }
+      ]
     }
   ]
 }

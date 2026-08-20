@@ -227,6 +227,42 @@
           "audioSlug": "guardo_el_pasaporte_en_el_maletin"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_hay_bastante_comida",
+      "source": "There is enough food.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay bastante comida.",
+          "audioSlug": "hay_bastante_comida"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_no_queda_ninguno",
+      "source": "There is not a single one left.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No queda ninguno.",
+          "audioSlug": "no_queda_ninguno"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_no_te_enfades",
+      "source": "Do not get angry.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No te enfades.",
+          "audioSlug": "no_te_enfades"
+        }
+      ]
     }
   ]
 }

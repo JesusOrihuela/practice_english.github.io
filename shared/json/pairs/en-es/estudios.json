@@ -347,6 +347,42 @@
           "audioSlug": "llevo_la_mochila_al_colegio"
         }
       ]
+    },
+    {
+      "id": "estudios_el_nino_hizo_un_dibujo",
+      "source": "I made a drawing of my family.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hice un dibujo de mi familia.",
+          "audioSlug": "hice_un_dibujo_de_mi_familia"
+        }
+      ]
+    },
+    {
+      "id": "estudios_marca_la_respuesta_con_una_cruz",
+      "source": "Mark the answer with a cross.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Marca la respuesta con una cruz.",
+          "audioSlug": "marca_la_respuesta_con_una_cruz"
+        }
+      ]
+    },
+    {
+      "id": "estudios_estudio_en_una_academia",
+      "source": "I study at a language academy.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estudio en una academia de idiomas.",
+          "audioSlug": "estudio_en_una_academia_de_idiomas"
+        }
+      ]
     }
   ]
 }

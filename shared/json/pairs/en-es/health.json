@@ -659,6 +659,18 @@
           "audioSlug": "el_medico_receto_un_medicamento"
         }
       ]
+    },
+    {
+      "id": "health_hoy_me_siento_peor",
+      "source": "Today I feel worse.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hoy me siento peor.",
+          "audioSlug": "hoy_me_siento_peor"
+        }
+      ]
     }
   ]
 }
