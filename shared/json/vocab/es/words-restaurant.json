@@ -683,6 +683,42 @@
       "gloss_example": {
         "en": "The child ordered a burger with fries."
       }
+    },
+    {
+      "id": "filled_roll",
+      "term": "bocadillo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pan abierto por la mitad con comida dentro.",
+      "example": "Para el desayuno comí un bocadillo de queso.",
+      "translations": {
+        "en": "filled roll"
+      },
+      "gloss": {
+        "en": "A split piece of bread with food inside."
+      },
+      "gloss_example": {
+        "en": "For breakfast I had a cheese roll."
+      }
+    },
+    {
+      "id": "omelette",
+      "term": "tortilla",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Comida hecha con huevos batidos y fritos.",
+      "example": "Mi madre prepara una tortilla de papas deliciosa.",
+      "translations": {
+        "en": "omelette"
+      },
+      "gloss": {
+        "en": "A food made from beaten, fried eggs."
+      },
+      "gloss_example": {
+        "en": "My mother makes a delicious potato omelette."
+      }
     }
   ]
 }

@@ -665,6 +665,42 @@
       "gloss_example": {
         "en": "The meeting is at ten."
       }
+    },
+    {
+      "id": "religion",
+      "term": "religión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Conjunto de creencias sobre lo divino y su culto.",
+      "example": "En el mundo existen muchas religiones diferentes.",
+      "translations": {
+        "en": "religion"
+      },
+      "gloss": {
+        "en": "A set of beliefs about the divine and its worship."
+      },
+      "gloss_example": {
+        "en": "There are many different religions in the world."
+      }
+    },
+    {
+      "id": "queen",
+      "term": "reina",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Mujer que gobierna un reino o esposa de un rey.",
+      "example": "La reina saludó a la gente desde el balcón.",
+      "translations": {
+        "en": "queen"
+      },
+      "gloss": {
+        "en": "A woman who rules a kingdom or a king's wife."
+      },
+      "gloss_example": {
+        "en": "The queen greeted the people from the balcony."
+      }
     }
   ]
 }

@@ -593,6 +593,78 @@
       "gloss_example": {
         "en": "The ship arrived at the port in the morning."
       }
+    },
+    {
+      "id": "pharmacy",
+      "term": "farmacia",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Tienda donde se venden medicinas.",
+      "example": "Necesito ir a la farmacia a comprar aspirinas.",
+      "translations": {
+        "en": "pharmacy"
+      },
+      "gloss": {
+        "en": "A shop where medicines are sold."
+      },
+      "gloss_example": {
+        "en": "I need to go to the pharmacy to buy aspirin."
+      }
+    },
+    {
+      "id": "supermarket_place",
+      "term": "supermercado",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Tienda grande donde se compra comida y otros productos.",
+      "example": "Voy al supermercado los viernes por la tarde.",
+      "translations": {
+        "en": "supermarket"
+      },
+      "gloss": {
+        "en": "A large shop selling food and other products."
+      },
+      "gloss_example": {
+        "en": "I go to the supermarket on Friday afternoons."
+      }
+    },
+    {
+      "id": "nightclub",
+      "term": "discoteca",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Lugar donde la gente va a bailar por la noche.",
+      "example": "Salimos a la discoteca a celebrar su cumpleaños.",
+      "translations": {
+        "en": "nightclub"
+      },
+      "gloss": {
+        "en": "A place where people go to dance at night."
+      },
+      "gloss_example": {
+        "en": "We went out to the nightclub to celebrate her birthday."
+      }
+    },
+    {
+      "id": "monument",
+      "term": "monumento",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Obra pública construida para recordar a una persona o un hecho.",
+      "example": "En la plaza hay un monumento muy antiguo.",
+      "translations": {
+        "en": "monument"
+      },
+      "gloss": {
+        "en": "A public structure built to remember a person or event."
+      },
+      "gloss_example": {
+        "en": "In the square there is a very old monument."
+      }
     }
   ]
 }

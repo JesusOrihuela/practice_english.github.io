@@ -845,6 +845,114 @@
       "gloss_example": {
         "en": "The civil servant stamped my documents."
       }
+    },
+    {
+      "id": "mathematician",
+      "term": "matemático / matemática",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que se dedica al estudio de las matemáticas.",
+      "example": "El matemático explicó la fórmula a los estudiantes.",
+      "translations": {
+        "en": "mathematician"
+      },
+      "gloss": {
+        "en": "A person who studies mathematics."
+      },
+      "gloss_example": {
+        "en": "The mathematician explained the formula to the students."
+      }
+    },
+    {
+      "id": "buyer",
+      "term": "comprador / compradora",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que compra algo, sobre todo para una empresa.",
+      "example": "El comprador negoció un mejor precio con el proveedor.",
+      "translations": {
+        "en": "buyer"
+      },
+      "gloss": {
+        "en": "A person who buys something, especially for a company."
+      },
+      "gloss_example": {
+        "en": "The buyer negotiated a better price with the supplier."
+      }
+    },
+    {
+      "id": "clerk_admin",
+      "term": "administrativo / administrativa",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que hace tareas de oficina en una empresa.",
+      "example": "La administrativa organiza los documentos de la oficina.",
+      "translations": {
+        "en": "administrative clerk"
+      },
+      "gloss": {
+        "en": "A person who does office tasks in a company."
+      },
+      "gloss_example": {
+        "en": "The administrative clerk organizes the office documents."
+      }
+    },
+    {
+      "id": "profession",
+      "term": "profesión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Trabajo para el que una persona se ha preparado.",
+      "example": "La medicina es una profesión muy exigente.",
+      "translations": {
+        "en": "profession"
+      },
+      "gloss": {
+        "en": "A job for which a person has trained."
+      },
+      "gloss_example": {
+        "en": "Medicine is a very demanding profession."
+      }
+    },
+    {
+      "id": "advertising",
+      "term": "publicidad",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Conjunto de mensajes para dar a conocer y vender productos.",
+      "example": "La empresa gasta mucho dinero en publicidad.",
+      "translations": {
+        "en": "advertising"
+      },
+      "gloss": {
+        "en": "Messages used to make products known and sell them."
+      },
+      "gloss_example": {
+        "en": "The company spends a lot of money on advertising."
+      }
+    },
+    {
+      "id": "unemployment",
+      "term": "desempleo / paro",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Situación de la persona que no tiene trabajo.",
+      "example": "El desempleo subió el año pasado en la región.",
+      "translations": {
+        "en": "unemployment"
+      },
+      "gloss": {
+        "en": "The situation of a person who has no job."
+      },
+      "gloss_example": {
+        "en": "Unemployment rose last year in the region."
+      }
     }
   ]
 }

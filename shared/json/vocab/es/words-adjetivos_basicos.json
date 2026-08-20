@@ -1889,6 +1889,42 @@
       "gloss_example": {
         "en": "I want a medium-size shirt."
       }
+    },
+    {
+      "id": "dark_haired",
+      "term": "moreno / morena",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene el pelo o la piel de color oscuro.",
+      "example": "Mi hermana es morena y tiene los ojos negros.",
+      "translations": {
+        "en": "dark-haired"
+      },
+      "gloss": {
+        "en": "Having dark hair or skin."
+      },
+      "gloss_example": {
+        "en": "My sister is dark-haired and has black eyes."
+      }
+    },
+    {
+      "id": "blond",
+      "term": "rubio / rubia",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que tiene el pelo de color claro, casi amarillo.",
+      "example": "El niño rubio se parece mucho a su padre.",
+      "translations": {
+        "en": "blond"
+      },
+      "gloss": {
+        "en": "Having light, almost yellow hair."
+      },
+      "gloss_example": {
+        "en": "The blond boy looks a lot like his father."
+      }
     }
   ]
 }

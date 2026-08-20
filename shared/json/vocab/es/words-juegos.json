@@ -107,6 +107,42 @@
       "gloss_example": {
         "en": "We play soccer on Sundays."
       }
+    },
+    {
+      "id": "tennis",
+      "term": "tenis",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Deporte en que dos personas se lanzan una pelota con raquetas.",
+      "example": "Los sábados juego al tenis con un amigo.",
+      "translations": {
+        "en": "tennis"
+      },
+      "gloss": {
+        "en": "A sport where two people hit a ball with rackets."
+      },
+      "gloss_example": {
+        "en": "On Saturdays I play tennis with a friend."
+      }
+    },
+    {
+      "id": "basketball",
+      "term": "baloncesto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Deporte en que dos equipos meten un balón en una canasta alta.",
+      "example": "El equipo de baloncesto ganó el partido de ayer.",
+      "translations": {
+        "en": "basketball"
+      },
+      "gloss": {
+        "en": "A sport where two teams put a ball into a high hoop."
+      },
+      "gloss_example": {
+        "en": "The basketball team won yesterday's game."
+      }
     }
   ]
 }

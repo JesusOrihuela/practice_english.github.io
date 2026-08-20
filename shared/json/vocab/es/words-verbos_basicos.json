@@ -2519,6 +2519,42 @@
       "gloss_example": {
         "en": "It is going to rain, take an umbrella."
       }
+    },
+    {
+      "id": "to_ski",
+      "term": "esquiar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Deslizarse por la nieve con unos esquís.",
+      "example": "En invierno vamos a la montaña a esquiar.",
+      "translations": {
+        "en": "to ski"
+      },
+      "gloss": {
+        "en": "To glide over snow on skis."
+      },
+      "gloss_example": {
+        "en": "In winter we go to the mountains to ski."
+      }
+    },
+    {
+      "id": "to_snow",
+      "term": "nevar",
+      "level": "A2",
+      "category": "Verb",
+      "difficulty": "medium",
+      "definition": "Caer nieve desde el cielo.",
+      "example": "En mi ciudad casi nunca nieva.",
+      "translations": {
+        "en": "to snow"
+      },
+      "gloss": {
+        "en": "For snow to fall from the sky."
+      },
+      "gloss_example": {
+        "en": "It almost never snows in my city."
+      }
     }
   ]
 }
