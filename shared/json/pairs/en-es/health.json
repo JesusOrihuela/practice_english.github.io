@@ -671,6 +671,18 @@
           "audioSlug": "hoy_me_siento_peor"
         }
       ]
+    },
+    {
+      "id": "health_la_herida_tardo_en_sanar",
+      "source": "The wound took a while to heal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La herida tardó en sanar.",
+          "audioSlug": "la_herida_tardo_en_sanar"
+        }
+      ]
     }
   ]
 }

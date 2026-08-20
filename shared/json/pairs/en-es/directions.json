@@ -441,6 +441,30 @@
           "audioSlug": "ponte_delante_de_mi"
         }
       ]
+    },
+    {
+      "id": "directions_vivo_por_alla_cerca_del_rio",
+      "source": "I live over there, near the river.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo por allá, cerca del río.",
+          "audioSlug": "vivo_por_alla_cerca_del_rio"
+        }
+      ]
+    },
+    {
+      "id": "directions_ven_aca_por_favor",
+      "source": "Come here, please.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ven acá, por favor.",
+          "audioSlug": "ven_aca_por_favor"
+        }
+      ]
     }
   ]
 }

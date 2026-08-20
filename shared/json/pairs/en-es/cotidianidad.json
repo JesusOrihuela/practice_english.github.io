@@ -263,6 +263,42 @@
           "audioSlug": "no_te_enfades"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_los_ninos_se_banan_en_el_rio",
+      "source": "The children bathe in the river.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los niños se bañan en el río.",
+          "audioSlug": "los_ninos_se_banan_en_el_rio"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_el_plato_esta_sucio",
+      "source": "The plate is dirty.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El plato está sucio.",
+          "audioSlug": "el_plato_esta_sucio"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_recibi_una_llamada_importante",
+      "source": "I got an important call.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Recibí una llamada importante.",
+          "audioSlug": "recibi_una_llamada_importante"
+        }
+      ]
     }
   ]
 }

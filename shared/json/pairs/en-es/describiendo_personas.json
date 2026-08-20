@@ -397,6 +397,42 @@
           "audioSlug": "mi_tio_es_calvo"
         }
       ]
+    },
+    {
+      "id": "describiendo_personas_mi_abuela_quedo_viuda",
+      "source": "My grandmother became a widow.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi abuela quedó viuda.",
+          "audioSlug": "mi_abuela_quedo_viuda"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_es_una_persona_alegre",
+      "source": "She is a very cheerful person.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una persona muy alegre.",
+          "audioSlug": "es_una_persona_muy_alegre"
+        }
+      ]
+    },
+    {
+      "id": "describiendo_personas_el_nino_es_rubio",
+      "source": "The boy is blond.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El niño es rubio.",
+          "audioSlug": "el_nino_es_rubio"
+        }
+      ]
     }
   ]
 }

@@ -369,6 +369,18 @@
           "audioSlug": "la_camisa_es_de_una_tela_suave"
         }
       ]
+    },
+    {
+      "id": "vestimenta_saque_un_panuelo_del_bolsillo",
+      "source": "I took a handkerchief out of my pocket.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Saqué un pañuelo del bolsillo.",
+          "audioSlug": "saque_un_panuelo_del_bolsillo"
+        }
+      ]
     }
   ]
 }

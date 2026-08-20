@@ -453,6 +453,30 @@
           "audioSlug": "los_domingos_me_quedo_en_casa"
         }
       ]
+    },
+    {
+      "id": "daily_routine_normalmente_ceno_a_las_ocho",
+      "source": "I usually have dinner at eight.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Normalmente ceno a las ocho.",
+          "audioSlug": "normalmente_ceno_a_las_ocho"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_los_viernes_me_acuesto_tarde",
+      "source": "On Fridays I go to bed late.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los viernes me acuesto tarde.",
+          "audioSlug": "los_viernes_me_acuesto_tarde"
+        }
+      ]
     }
   ]
 }
