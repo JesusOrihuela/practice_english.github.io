@@ -971,6 +971,78 @@
       "gloss_example": {
         "en": "Add a little salt and pepper to the soup."
       }
+    },
+    {
+      "id": "veal",
+      "term": "ternero / ternera",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Carne de la cría de la vaca.",
+      "example": "Compré ternera para hacer un guiso.",
+      "translations": {
+        "en": "veal"
+      },
+      "gloss": {
+        "en": "The meat of a young cow."
+      },
+      "gloss_example": {
+        "en": "I bought veal to make a stew."
+      }
+    },
+    {
+      "id": "jam",
+      "term": "mermelada",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Dulce espeso hecho de fruta cocida con azúcar.",
+      "example": "Unto mermelada de fresa en el pan.",
+      "translations": {
+        "en": "jam"
+      },
+      "gloss": {
+        "en": "A thick sweet made of fruit cooked with sugar."
+      },
+      "gloss_example": {
+        "en": "I spread strawberry jam on the bread."
+      }
+    },
+    {
+      "id": "vanilla",
+      "term": "vainilla",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Sabor dulce y aromático que se usa en postres.",
+      "example": "Compré un helado de vainilla.",
+      "translations": {
+        "en": "vanilla"
+      },
+      "gloss": {
+        "en": "A sweet, aromatic flavour used in desserts."
+      },
+      "gloss_example": {
+        "en": "I bought a vanilla ice cream."
+      }
+    },
+    {
+      "id": "juice_drink",
+      "term": "jugo / zumo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Líquido que se saca de una fruta.",
+      "example": "Desayuno un jugo de naranja natural.",
+      "translations": {
+        "en": "juice"
+      },
+      "gloss": {
+        "en": "The liquid taken from a fruit."
+      },
+      "gloss_example": {
+        "en": "For breakfast I have a fresh orange juice."
+      }
     }
   ]
 }

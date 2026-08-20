@@ -755,6 +755,78 @@
       "gloss_example": {
         "en": "The politician gave a speech in the square."
       }
+    },
+    {
+      "id": "christian",
+      "term": "cristiano / cristiana",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que sigue la religión de Jesucristo.",
+      "example": "En ese pueblo la mayoría son cristianos.",
+      "translations": {
+        "en": "Christian"
+      },
+      "gloss": {
+        "en": "A person who follows the religion of Jesus Christ."
+      },
+      "gloss_example": {
+        "en": "In that town most people are Christian."
+      }
+    },
+    {
+      "id": "muslim",
+      "term": "musulmán / musulmana",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que sigue la religión del islam.",
+      "example": "Los musulmanes rezan cinco veces al día.",
+      "translations": {
+        "en": "Muslim"
+      },
+      "gloss": {
+        "en": "A person who follows the religion of Islam."
+      },
+      "gloss_example": {
+        "en": "Muslims pray five times a day."
+      }
+    },
+    {
+      "id": "jewish_person",
+      "term": "judío / judía",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que sigue la religión judía.",
+      "example": "La comunidad judía celebra sus propias fiestas.",
+      "translations": {
+        "en": "Jewish"
+      },
+      "gloss": {
+        "en": "A person who follows the Jewish religion."
+      },
+      "gloss_example": {
+        "en": "The Jewish community celebrates its own holidays."
+      }
+    },
+    {
+      "id": "buddhist",
+      "term": "budista",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que sigue la religión del budismo.",
+      "example": "El monje budista vive en un templo tranquilo.",
+      "translations": {
+        "en": "Buddhist"
+      },
+      "gloss": {
+        "en": "A person who follows the religion of Buddhism."
+      },
+      "gloss_example": {
+        "en": "The Buddhist monk lives in a quiet temple."
+      }
     }
   ]
 }

@@ -791,6 +791,42 @@
       "gloss_example": {
         "en": "The shop is on the corner of my street."
       }
+    },
+    {
+      "id": "address_direction",
+      "term": "dirección",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Datos del lugar donde vive o está alguien.",
+      "example": "Escribe tu dirección en el formulario.",
+      "translations": {
+        "en": "address"
+      },
+      "gloss": {
+        "en": "The details of where someone lives or is located."
+      },
+      "gloss_example": {
+        "en": "Write your address on the form."
+      }
+    },
+    {
+      "id": "avenue",
+      "term": "avenida",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Calle ancha y larga, a menudo con árboles.",
+      "example": "El hotel está en una avenida muy transitada.",
+      "translations": {
+        "en": "avenue"
+      },
+      "gloss": {
+        "en": "A wide, long street, often with trees."
+      },
+      "gloss_example": {
+        "en": "The hotel is on a very busy avenue."
+      }
     }
   ]
 }

@@ -629,6 +629,42 @@
       "gloss_example": {
         "en": "This shirt is made of a very soft fabric."
       }
+    },
+    {
+      "id": "package",
+      "term": "paquete",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cosa envuelta para guardarla o enviarla.",
+      "example": "Llegó un paquete para ti por correo.",
+      "translations": {
+        "en": "package"
+      },
+      "gloss": {
+        "en": "Something wrapped to store or send it."
+      },
+      "gloss_example": {
+        "en": "A package arrived for you by mail."
+      }
+    },
+    {
+      "id": "planner_agenda",
+      "term": "agenda",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Libreta donde se apuntan citas y cosas por hacer.",
+      "example": "Apunté la reunión en mi agenda.",
+      "translations": {
+        "en": "planner"
+      },
+      "gloss": {
+        "en": "A notebook for writing appointments and things to do."
+      },
+      "gloss_example": {
+        "en": "I wrote the meeting in my planner."
+      }
     }
   ]
 }

@@ -701,6 +701,42 @@
       "gloss_example": {
         "en": "The date of birth appears on the document."
       }
+    },
+    {
+      "id": "twin",
+      "term": "gemelo / gemela",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Hermano que nació al mismo tiempo y es igual que otro.",
+      "example": "Mis primos son gemelos y se parecen mucho.",
+      "translations": {
+        "en": "twin"
+      },
+      "gloss": {
+        "en": "A sibling born at the same time and identical to another."
+      },
+      "gloss_example": {
+        "en": "My cousins are twins and look very alike."
+      }
+    },
+    {
+      "id": "teenager",
+      "term": "adolescente",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona joven que ya no es niño pero aún no es adulto.",
+      "example": "Su hijo es un adolescente de quince años.",
+      "translations": {
+        "en": "teenager"
+      },
+      "gloss": {
+        "en": "A young person no longer a child but not yet an adult."
+      },
+      "gloss_example": {
+        "en": "Their son is a fifteen-year-old teenager."
+      }
     }
   ]
 }

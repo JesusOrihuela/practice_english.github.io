@@ -773,6 +773,42 @@
       "gloss_example": {
         "en": "I took the morning train."
       }
+    },
+    {
+      "id": "motorcycle",
+      "term": "moto / motocicleta",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vehículo de dos ruedas con motor.",
+      "example": "Va al trabajo en moto todos los días.",
+      "translations": {
+        "en": "motorcycle"
+      },
+      "gloss": {
+        "en": "A two-wheeled vehicle with a motor."
+      },
+      "gloss_example": {
+        "en": "He rides a motorcycle to work every day."
+      }
+    },
+    {
+      "id": "wheel",
+      "term": "rueda",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pieza redonda que gira y permite mover un vehículo.",
+      "example": "Una rueda del coche está pinchada.",
+      "translations": {
+        "en": "wheel"
+      },
+      "gloss": {
+        "en": "A round part that turns and lets a vehicle move."
+      },
+      "gloss_example": {
+        "en": "One wheel of the car is flat."
+      }
     }
   ]
 }

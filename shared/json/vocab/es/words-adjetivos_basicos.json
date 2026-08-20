@@ -1925,6 +1925,78 @@
       "gloss_example": {
         "en": "The blond boy looks a lot like his father."
       }
+    },
+    {
+      "id": "german_nat",
+      "term": "alemán / alemana",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De Alemania o relacionado con ese país.",
+      "example": "Compró un carro alemán muy caro.",
+      "translations": {
+        "en": "German"
+      },
+      "gloss": {
+        "en": "From Germany or related to that country."
+      },
+      "gloss_example": {
+        "en": "He bought a very expensive German car."
+      }
+    },
+    {
+      "id": "japanese_nat",
+      "term": "japonés / japonesa",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De Japón o relacionado con ese país.",
+      "example": "Me encanta la comida japonesa.",
+      "translations": {
+        "en": "Japanese"
+      },
+      "gloss": {
+        "en": "From Japan or related to that country."
+      },
+      "gloss_example": {
+        "en": "I love Japanese food."
+      }
+    },
+    {
+      "id": "chinese_nat",
+      "term": "chino / china",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "De China o relacionado con ese país.",
+      "example": "Estudia chino desde hace dos años.",
+      "translations": {
+        "en": "Chinese"
+      },
+      "gloss": {
+        "en": "From China or related to that country."
+      },
+      "gloss_example": {
+        "en": "She has been studying Chinese for two years."
+      }
+    },
+    {
+      "id": "moroccan_nat",
+      "term": "marroquí",
+      "level": "B1",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "De Marruecos o relacionado con ese país.",
+      "example": "Probamos un té marroquí muy dulce.",
+      "translations": {
+        "en": "Moroccan"
+      },
+      "gloss": {
+        "en": "From Morocco or related to that country."
+      },
+      "gloss_example": {
+        "en": "We tried a very sweet Moroccan tea."
+      }
     }
   ]
 }

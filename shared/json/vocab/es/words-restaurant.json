@@ -791,6 +791,78 @@
       "gloss_example": {
         "en": "We opened a bottle of champagne at the party."
       }
+    },
+    {
+      "id": "pasta",
+      "term": "pasta",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Comida de harina y agua como los espaguetis o los macarrones.",
+      "example": "De primero comí pasta con salsa de tomate.",
+      "translations": {
+        "en": "pasta"
+      },
+      "gloss": {
+        "en": "A food of flour and water like spaghetti or macaroni."
+      },
+      "gloss_example": {
+        "en": "For the first course I had pasta with tomato sauce."
+      }
+    },
+    {
+      "id": "rum",
+      "term": "ron",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Bebida alcohólica fuerte hecha de caña de azúcar.",
+      "example": "Prepararon un cóctel con ron y limón.",
+      "translations": {
+        "en": "rum"
+      },
+      "gloss": {
+        "en": "A strong alcoholic drink made from sugar cane."
+      },
+      "gloss_example": {
+        "en": "They made a cocktail with rum and lime."
+      }
+    },
+    {
+      "id": "gin",
+      "term": "ginebra",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Bebida alcohólica fuerte y transparente con sabor a hierbas.",
+      "example": "Pidió una ginebra con agua tónica.",
+      "translations": {
+        "en": "gin"
+      },
+      "gloss": {
+        "en": "A strong, clear alcoholic drink flavoured with herbs."
+      },
+      "gloss_example": {
+        "en": "She ordered a gin with tonic water."
+      }
+    },
+    {
+      "id": "red_wine",
+      "term": "tinto / vino tinto",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Vino de color rojo hecho con uvas oscuras.",
+      "example": "Con la carne pedimos una copa de tinto.",
+      "translations": {
+        "en": "red wine"
+      },
+      "gloss": {
+        "en": "Red wine made from dark grapes."
+      },
+      "gloss_example": {
+        "en": "With the meat we ordered a glass of red wine."
+      }
     }
   ]
 }

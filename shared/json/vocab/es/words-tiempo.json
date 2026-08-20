@@ -521,6 +521,42 @@
       "gloss_example": {
         "en": "In the morning I drink coffee and read the newspaper."
       }
+    },
+    {
+      "id": "past_time",
+      "term": "pasado",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Tiempo que ya ocurrió antes de ahora.",
+      "example": "En el pasado esta ciudad era muy pequeña.",
+      "translations": {
+        "en": "past"
+      },
+      "gloss": {
+        "en": "The time that already happened before now."
+      },
+      "gloss_example": {
+        "en": "In the past this city was very small."
+      }
+    },
+    {
+      "id": "a_while",
+      "term": "rato",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Espacio corto de tiempo.",
+      "example": "Descansamos un rato después de caminar.",
+      "translations": {
+        "en": "a while"
+      },
+      "gloss": {
+        "en": "A short space of time."
+      },
+      "gloss_example": {
+        "en": "We rested for a while after walking."
+      }
     }
   ]
 }
