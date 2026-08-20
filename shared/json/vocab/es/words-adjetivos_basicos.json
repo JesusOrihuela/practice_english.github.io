@@ -2015,6 +2015,78 @@
       "gloss_example": {
         "en": "My sister has been vegetarian for years."
       }
+    },
+    {
+      "id": "useful",
+      "term": "útil",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que sirve para algo o resulta de provecho.",
+      "example": "Este diccionario es muy útil para estudiar.",
+      "translations": {
+        "en": "useful"
+      },
+      "gloss": {
+        "en": "That serves a purpose or is of benefit."
+      },
+      "gloss_example": {
+        "en": "This dictionary is very useful for studying."
+      }
+    },
+    {
+      "id": "specific",
+      "term": "específico / específica",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "medium",
+      "definition": "Que se refiere a algo concreto y no general.",
+      "example": "Dame una fecha específica para la reunión.",
+      "translations": {
+        "en": "specific"
+      },
+      "gloss": {
+        "en": "Referring to something concrete and not general."
+      },
+      "gloss_example": {
+        "en": "Give me a specific date for the meeting."
+      }
+    },
+    {
+      "id": "individual_adj",
+      "term": "individual",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que es para una sola persona o cosa.",
+      "example": "Reservé una habitación individual en el hotel.",
+      "translations": {
+        "en": "individual"
+      },
+      "gloss": {
+        "en": "For a single person or thing."
+      },
+      "gloss_example": {
+        "en": "I booked an individual room at the hotel."
+      }
+    },
+    {
+      "id": "electric",
+      "term": "eléctrico / eléctrica",
+      "level": "A2",
+      "category": "Adjective",
+      "difficulty": "easy",
+      "definition": "Que funciona con electricidad.",
+      "example": "Compraron un carro eléctrico nuevo.",
+      "translations": {
+        "en": "electric"
+      },
+      "gloss": {
+        "en": "That works with electricity."
+      },
+      "gloss_example": {
+        "en": "They bought a new electric car."
+      }
     }
   ]
 }

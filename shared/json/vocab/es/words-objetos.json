@@ -719,6 +719,42 @@
       "gloss_example": {
         "en": "The child made a drawing of his family."
       }
+    },
+    {
+      "id": "tool",
+      "term": "herramienta",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Objeto que sirve para hacer un trabajo con las manos.",
+      "example": "Necesito una herramienta para apretar el tornillo.",
+      "translations": {
+        "en": "tool"
+      },
+      "gloss": {
+        "en": "An object used to do work with the hands."
+      },
+      "gloss_example": {
+        "en": "I need a tool to tighten the screw."
+      }
+    },
+    {
+      "id": "stamp",
+      "term": "sello",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Papel pequeño que se pega en las cartas para enviarlas.",
+      "example": "Pegué un sello en el sobre antes de enviarlo.",
+      "translations": {
+        "en": "stamp"
+      },
+      "gloss": {
+        "en": "A small paper stuck on letters to send them."
+      },
+      "gloss_example": {
+        "en": "I put a stamp on the envelope before sending it."
+      }
     }
   ]
 }
