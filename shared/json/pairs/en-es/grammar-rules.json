@@ -231,7 +231,8 @@
       "topics": [
         "profesiones",
         "personal_info",
-        "family"
+        "family",
+        "descripciones"
       ],
       "title_en": "To Be — Identity and permanent traits"
     },
@@ -457,17 +458,17 @@
         "music",
         "accountability",
         "restaurant",
-        "transportation",
         "supermarket",
-        "theater",
+        "transportation",
         "family",
         "descripciones",
         "airport",
+        "theater",
         "survival",
         "daily_routine",
+        "vestimenta",
         "weather",
-        "viajes",
-        "accommodation"
+        "viajes"
       ],
       "title_en": "To Be — Location and temporary states"
     },
@@ -574,7 +575,9 @@
       "topics": [
         "technology",
         "daily_routine",
+        "vestimenta",
         "accountability",
+        "estudios",
         "supermarket",
         "transportation",
         "gym",
@@ -582,19 +585,16 @@
         "health",
         "survival",
         "personal_info",
-        "airport",
+        "restaurant",
         "family",
+        "kitchen",
         "directions",
-        "estudios",
+        "sitios",
         "music",
         "oficina",
-        "greetings",
-        "vestimenta",
-        "restaurant",
         "cotidianidad",
         "planes",
-        "kitchen",
-        "sitios",
+        "airport",
         "movies"
       ],
       "title_en": "Present tense — Regular -ar verbs"
@@ -706,23 +706,23 @@
       "related_phrases": [],
       "topics": [
         "weather",
-        "music",
         "daily_routine",
         "movies",
+        "music",
         "personal_info",
-        "airport",
-        "gym",
         "family",
-        "sitios",
+        "airport",
+        "estudios",
         "deportes",
+        "gym",
+        "transportation",
+        "sitios",
+        "animales",
         "greetings",
         "survival",
         "hogar",
-        "restaurant",
         "supermarket",
-        "transportation",
-        "technology",
-        "theater"
+        "technology"
       ],
       "title_en": "Present tense — Regular -er and -ir verbs"
     },
@@ -1046,16 +1046,20 @@
         "movies",
         "accountability",
         "airport",
-        "technology",
+        "politica",
         "deportes",
+        "technology",
+        "restaurant",
+        "health",
         "supermarket",
         "kitchen",
         "transportation",
-        "politica",
-        "cotidianidad",
         "accommodation",
+        "family",
+        "cotidianidad",
         "music",
-        "museums"
+        "museums",
+        "animales"
       ],
       "title_en": "Simple past — Regular verbs"
     },
@@ -1160,16 +1164,15 @@
       ],
       "related_phrases": [],
       "topics": [
-        "accountability",
         "greetings",
+        "accountability",
         "restaurant",
-        "movies",
         "theater",
         "music",
         "technology",
         "cotidianidad",
         "descripciones",
-        "airport"
+        "movies"
       ],
       "title_en": "Simple past — Common irregular verbs"
     },
@@ -1282,8 +1285,7 @@
         "greetings",
         "supermarket",
         "transportation",
-        "movies",
-        "theater"
+        "movies"
       ],
       "title_en": "Imperfect past — Habits and descriptions"
     },
@@ -1396,8 +1398,7 @@
         "greetings",
         "supermarket",
         "transportation",
-        "movies",
-        "theater"
+        "movies"
       ],
       "title_en": "Imperfect vs. Simple past — Contrast"
     },
@@ -1823,14 +1824,13 @@
         "accommodation",
         "transportation",
         "survival",
-        "supermarket",
-        "weather",
         "technology",
+        "weather",
+        "supermarket",
         "accountability",
         "greetings",
         "hogar",
-        "kitchen",
-        "airport"
+        "kitchen"
       ],
       "title_en": "For — Cause, means, and duration"
     },
@@ -1943,13 +1943,14 @@
         "kitchen",
         "technology",
         "accountability",
-        "transportation",
+        "restaurant",
         "gym",
         "theater",
-        "restaurant",
+        "transportation",
+        "vestimenta",
+        "supermarket",
         "accommodation",
-        "movies",
-        "supermarket"
+        "movies"
       ],
       "title_en": "For — Purpose, destination, and deadline"
     },
@@ -2060,9 +2061,8 @@
       "related_phrases": [],
       "topics": [
         "movies",
-        "technology",
-        "greetings",
-        "kitchen"
+        "kitchen",
+        "economia"
       ],
       "title_en": "Direct object pronouns"
     },
@@ -2285,13 +2285,13 @@
         "greetings",
         "emociones",
         "airport",
-        "supermarket",
-        "transportation",
         "accommodation",
+        "transportation",
         "technology",
         "personal_info",
-        "movies",
+        "supermarket",
         "accountability",
+        "movies",
         "theater",
         "survival",
         "directions",
@@ -2525,9 +2525,11 @@
       "topics": [
         "music",
         "supermarket",
-        "movies",
         "viajes",
-        "deportes"
+        "tiempo_libre",
+        "deportes",
+        "movies",
+        "technology"
       ],
       "title_en": "Gustar — Verb that works backwards"
     },
@@ -2629,17 +2631,19 @@
       "related_phrases": [],
       "topics": [
         "restaurant",
-        "accommodation",
         "kitchen",
+        "accommodation",
         "supermarket",
         "gym",
         "airport",
         "transportation",
-        "movies",
-        "technology",
+        "hogar",
         "emergencias",
         "planes",
+        "directions",
+        "movies",
         "museums",
+        "technology",
         "theater"
       ],
       "title_en": "Hay — Expressing existence"
@@ -2745,11 +2749,11 @@
         "describiendo_personas",
         "descripciones",
         "kitchen",
+        "hogar",
         "health",
         "supermarket",
-        "hogar",
-        "cuerpo",
         "naturaleza_lugares",
+        "cuerpo",
         "technology",
         "gym",
         "accountability"
@@ -2855,13 +2859,14 @@
         "planes",
         "movies",
         "emociones",
-        "conversacion",
         "pensamientos_opiniones",
         "technology",
-        "gym",
-        "restaurant",
+        "conversacion",
         "health",
+        "gym",
+        "daily_routine",
         "supermarket",
+        "accommodation",
         "estudios",
         "fiesta",
         "music",
@@ -2967,18 +2972,19 @@
       ],
       "related_phrases": [],
       "topics": [
-        "airport",
         "kitchen",
+        "airport",
         "gym",
         "accommodation",
-        "movies",
-        "technology",
-        "theater",
-        "accountability",
         "hogar",
         "weather",
         "descripciones",
-        "transportation"
+        "supermarket",
+        "movies",
+        "theater",
+        "accountability",
+        "transportation",
+        "technology"
       ],
       "title_en": "Simple Future — Plans and predictions"
     },
@@ -3194,8 +3200,8 @@
         "greetings",
         "accountability",
         "airport",
-        "gym",
-        "technology"
+        "technology",
+        "gym"
       ],
       "title_en": "Present Perfect — Recent past with haber"
     },
@@ -3402,8 +3408,7 @@
       "related_phrases": [],
       "topics": [
         "accountability",
-        "technology",
-        "airport"
+        "technology"
       ],
       "title_en": "Passive Voice — ser + participle and se pasiva"
     },
@@ -3503,7 +3508,6 @@
       ],
       "related_phrases": [],
       "topics": [
-        "music",
         "greetings",
         "pensamientos_opiniones",
         "supermarket"
@@ -3805,7 +3809,8 @@
       ],
       "related_phrases": [],
       "topics": [
-        "kitchen"
+        "kitchen",
+        "technology"
       ],
       "title_en": "Advanced Subjunctive — Sequence and nuance"
     },

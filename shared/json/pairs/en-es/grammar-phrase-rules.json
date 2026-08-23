@@ -6,9 +6,6 @@
   "accommodation_atm_hotel": [
     "hay_existence"
   ],
-  "accommodation_book_room_two_nights": [
-    "condicional_simple"
-  ],
   "accommodation_breakfast_included": [
     "present_ar_verbs"
   ],
@@ -38,6 +35,9 @@
   "accommodation_early_checkin_policy": [
     "question_cual_vs_que",
     "question_words"
+  ],
+  "accommodation_el_alojamiento_incluye_desayuno": [
+    "present_ar_verbs"
   ],
   "accommodation_extend_stay_price": [
     "question_words"
@@ -83,8 +83,7 @@
   ],
   "accommodation_itemize_bill_expense": [
     "condicional_simple",
-    "para_purpose_destination",
-    "present_ar_verbs"
+    "para_purpose_destination"
   ],
   "accommodation_late_checkout_policy": [
     "question_cual_vs_que",
@@ -112,6 +111,9 @@
   "accommodation_pool_hotel": [
     "hay_existence"
   ],
+  "accommodation_quiero_una_habitacion_doble": [
+    "stem_changing_eie"
+  ],
   "accommodation_recommend_restaurant": [
     "condicional_simple"
   ],
@@ -133,8 +135,7 @@
     "imperfect_vs_preterite"
   ],
   "accommodation_room_not_cleaned_discount": [
-    "preterite_irregular",
-    "voz_pasiva"
+    "preterite_regular"
   ],
   "accommodation_room_sea_view": [
     "condicional_simple",
@@ -160,8 +161,7 @@
     "hay_existence"
   ],
   "accommodation_store_luggage": [
-    "clausulas_relativo",
-    "hay_existence"
+    "question_words"
   ],
   "accommodation_transport_options": [
     "hay_existence",
@@ -172,9 +172,7 @@
     "preterite_regular"
   ],
   "accommodation_upgrade_special_occasion": [
-    "estar_location_states",
-    "hay_existence",
-    "para_purpose_destination"
+    "hay_existence"
   ],
   "accommodation_vat_invoice_accounting": [
     "present_ar_verbs"
@@ -255,10 +253,6 @@
   ],
   "accountability_payment_due": [
     "present_ar_verbs"
-  ],
-  "accountability_restatement_prior_period_accounting_standard": [
-    "preterite_irregular",
-    "voz_pasiva"
   ],
   "accountability_salary_is_paid_in_cash_check": [
     "present_ar_verbs",
@@ -366,9 +360,6 @@
   "airport_baggage_claim_flight": [
     "question_words"
   ],
-  "airport_boarding_pass_gate": [
-    "present_ar_verbs"
-  ],
   "airport_cancelled_rebook_today": [
     "present_ar_verbs",
     "preterite_irregular",
@@ -431,8 +422,7 @@
     "preterite_regular"
   ],
   "airport_partner_airline_baggage_liability": [
-    "preterite_irregular",
-    "voz_pasiva"
+    "preterite_regular"
   ],
   "airport_prefer_window_seat": [
     "present_er_ir_verbs",
@@ -447,14 +437,11 @@
   ],
   "airport_request_seat_front": [
     "condicional_simple",
-    "futuro_simple",
-    "por_cause_means_duration"
+    "futuro_simple"
   ],
   "airport_seat_assignment_not_booked": [
     "estar_location_states",
-    "present_ar_verbs",
-    "preterite_regular",
-    "subjunctive_present_wishes"
+    "preterite_regular"
   ],
   "airport_seat_changed_no_notice": [
     "futuro_simple",
@@ -465,7 +452,6 @@
     "preterito_perfecto"
   ],
   "airport_security_liquids_confiscated": [
-    "futuro_simple",
     "preterite_regular"
   ],
   "airport_transit_zone_restrictions": [
@@ -502,8 +488,23 @@
   "airport_which_terminal_departs": [
     "present_er_ir_verbs"
   ],
+  "animales_el_caballo_corre_por_el_campo": [
+    "present_er_ir_verbs"
+  ],
+  "animales_el_cerdo_vive_en_la_granja": [
+    "present_er_ir_verbs"
+  ],
+  "animales_hay_un_pez_en_el_agua": [
+    "hay_existence"
+  ],
   "animales_mi_gato_duerme_mucho": [
     "present_er_ir_verbs"
+  ],
+  "animales_un_mosquito_me_pico": [
+    "preterite_regular"
+  ],
+  "animales_una_mosca_entro_por_la_ventana": [
+    "preterite_regular"
   ],
   "calendario_es_medianoche": [
     "ser_time_events"
@@ -569,14 +570,26 @@
   "conversacion_te_quiero_animar": [
     "stem_changing_eie"
   ],
+  "conversacion_todavia_no_he_terminado": [
+    "preterito_perfecto"
+  ],
   "cotidianidad_donde_esta_el_resto": [
     "question_words"
+  ],
+  "cotidianidad_hay_bastante_comida": [
+    "hay_existence"
   ],
   "cotidianidad_hoy_fue_un_dia_largo": [
     "preterite_irregular"
   ],
   "cotidianidad_hoy_tengo_mucho_trabajo": [
     "present_ar_verbs"
+  ],
+  "cotidianidad_mandame_un_mensaje": [
+    "subjuntivo_avanzado"
+  ],
+  "cotidianidad_merendamos_fruta": [
+    "por_cause_means_duration"
   ],
   "cotidianidad_necesito_ir_al_bano": [
     "present_ar_verbs"
@@ -659,6 +672,22 @@
     "por_cause_means_duration",
     "present_er_ir_verbs"
   ],
+  "daily_routine_los_viernes_me_acuesto_tarde": [
+    "reflexive_verbs_daily_routine"
+  ],
+  "daily_routine_me_ducho_antes_de_desayunar": [
+    "reflexive_verbs_daily_routine"
+  ],
+  "daily_routine_me_lavo_la_cara": [
+    "reflexive_verbs_daily_routine"
+  ],
+  "daily_routine_me_levanto_a_las_siete": [
+    "reflexive_verbs_daily_routine"
+  ],
+  "daily_routine_me_siento_a_leer_un_rato": [
+    "reflexive_verbs_emotions",
+    "stem_changing_eie"
+  ],
   "daily_routine_me_visto_rapido": [
     "reflexive_verbs_daily_routine"
   ],
@@ -699,8 +728,15 @@
   "deportes_gano_un_premio": [
     "preterite_regular"
   ],
+  "deportes_hago_gimnasia_por_la_manana": [
+    "por_cause_means_duration",
+    "present_er_ir_verbs"
+  ],
   "deportes_me_gusta_el_deporte": [
     "gustar_structure"
+  ],
+  "deportes_mi_equipo_de_baloncesto_gano": [
+    "preterite_regular"
   ],
   "deportes_no_me_interesa_el_futbol": [
     "gustar_structure"
@@ -717,6 +753,9 @@
   "deportes_tom_gano_la_carrera": [
     "futuro_simple",
     "preterite_regular"
+  ],
+  "describiendo_personas_el_nino_es_listo": [
+    "ser_estar_adjectives"
   ],
   "describiendo_personas_eres_fuerte": [
     "ser_estar_adjectives"
@@ -736,6 +775,9 @@
   "describiendo_personas_ese_senor_es_muy_amable": [
     "ser_estar_adjectives"
   ],
+  "describiendo_personas_mi_abuela_quedo_viuda": [
+    "preterite_regular"
+  ],
   "describiendo_personas_soy_vieja": [
     "ser_estar_adjectives"
   ],
@@ -744,6 +786,12 @@
   ],
   "descripciones_el_cuarto_esta_limpio": [
     "ser_estar_adjectives"
+  ],
+  "descripciones_el_material_de_la_mesa_es_madera": [
+    "futuro_simple"
+  ],
+  "descripciones_el_puente_es_de_metal": [
+    "ser_identity"
   ],
   "descripciones_es_dificil": [
     "ser_estar_adjectives"
@@ -777,11 +825,23 @@
   "descripciones_la_caja_es_muy_ligera": [
     "futuro_simple"
   ],
+  "descripciones_la_mesa_es_de_cristal": [
+    "ser_identity"
+  ],
+  "descripciones_quiero_un_cafe_mediano": [
+    "stem_changing_eie"
+  ],
   "directions_can_you_show_me_the_way": [
     "present_ar_verbs"
   ],
   "directions_donde_esta_la_salida": [
     "question_words"
+  ],
+  "directions_el_sol_se_pone_por_el_oeste": [
+    "reflexive_verbs_emotions"
+  ],
+  "directions_hay_arboles_alrededor_de_la_casa": [
+    "hay_existence"
   ],
   "directions_how_long_walk": [
     "question_words"
@@ -800,6 +860,12 @@
     "futuro_simple",
     "present_ar_verbs"
   ],
+  "directions_ven_aca_por_favor": [
+    "por_cause_means_duration"
+  ],
+  "directions_vivo_por_alla_cerca_del_rio": [
+    "present_er_ir_verbs"
+  ],
   "directions_where_is_the_bank": [
     "question_words"
   ],
@@ -809,6 +875,10 @@
   "economia_quiero_comprarlo": [
     "direct_object_pronouns",
     "stem_changing_eie"
+  ],
+  "economia_recibi_un_paquete_con_la_compra": [
+    "direct_object_pronouns",
+    "present_ar_verbs"
   ],
   "emergencias_ayuda_por_favor": [
     "por_cause_means_duration"
@@ -979,10 +1049,25 @@
     "estar_location_states",
     "question_words"
   ],
+  "estudios_abre_el_libro_en_la_pagina_diez": [
+    "present_er_ir_verbs"
+  ],
   "estudios_aprendo_algo_nuevo_cada_dia": [
     "present_er_ir_verbs"
   ],
+  "estudios_el_nino_hizo_un_dibujo": [
+    "preterite_irregular"
+  ],
+  "estudios_el_profesor_escribe_en_la_pizarra": [
+    "present_er_ir_verbs"
+  ],
+  "estudios_escribo_con_un_boligrafo": [
+    "present_er_ir_verbs"
+  ],
   "estudios_estudio_en_la_universidad": [
+    "present_ar_verbs"
+  ],
+  "estudios_estudio_en_una_academia": [
     "present_ar_verbs"
   ],
   "estudios_estudio_para_el_examen": [
@@ -998,7 +1083,19 @@
   "estudios_la_educacion_es_importante": [
     "ser_estar_adjectives"
   ],
+  "estudios_llevo_la_mochila_al_colegio": [
+    "present_ar_verbs"
+  ],
+  "estudios_mi_hija_estudia_en_el_instituto": [
+    "present_ar_verbs"
+  ],
   "estudios_necesito_un_cuaderno_nuevo": [
+    "present_ar_verbs"
+  ],
+  "estudios_necesito_un_lapiz": [
+    "present_ar_verbs"
+  ],
+  "estudios_uso_la_goma_para_borrar": [
     "present_ar_verbs"
   ],
   "family_are_you_married_single": [
@@ -1007,6 +1104,9 @@
   ],
   "family_cuando_es_la_boda": [
     "question_words"
+  ],
+  "family_el_nacimiento_de_su_hija": [
+    "preterite_irregular"
   ],
   "family_es_mi_vecino": [
     "ser_identity"
@@ -1027,8 +1127,15 @@
   "family_live_with_partner": [
     "present_er_ir_verbs"
   ],
+  "family_mi_nieto_empezo_el_colegio": [
+    "preterite_regular"
+  ],
   "family_mi_papa_trabaja_mucho": [
     "present_ar_verbs"
+  ],
+  "family_mis_padres_se_separaron": [
+    "present_er_ir_verbs",
+    "preterite_regular"
   ],
   "family_my_aunt_lives_in_the_city": [
     "present_er_ir_verbs"
@@ -1056,6 +1163,9 @@
   ],
   "fiesta_hoy_hay_una_fiesta": [
     "hay_existence"
+  ],
+  "fiesta_nadie_llego_tarde": [
+    "preterite_regular"
   ],
   "fiesta_quiero_disfrutar_el_momento": [
     "stem_changing_eie"
@@ -1175,11 +1285,12 @@
   "greetings_ive_had_better_days": [
     "preterito_perfecto"
   ],
+  "greetings_la_senora_pregunto_por_la_salida": [
+    "preterite_regular"
+  ],
   "greetings_looking_forward_introduction_work_precedes": [
-    "direct_object_pronouns",
     "imperfect_habits_descriptions",
-    "imperfect_vs_preterite",
-    "present_ar_verbs"
+    "imperfect_vs_preterite"
   ],
   "greetings_morning_hope_youre_doing_well": [
     "subjunctive_present_wishes"
@@ -1257,9 +1368,6 @@
   "gym_free_weights_vs_machines_stability": [
     "present_er_ir_verbs",
     "stem_changing_eie"
-  ],
-  "gym_hiit_cardiovascular_endurance": [
-    "preterito_perfecto"
   ],
   "gym_how_can_i_book_a_class": [
     "question_words"
@@ -1438,9 +1546,16 @@
   "health_do_you_have_pain": [
     "question_words"
   ],
+  "health_el_medico_receto_un_medicamento": [
+    "preterite_regular"
+  ],
   "health_estoy_enferma": [
     "estar_location_states",
     "ser_estar_adjectives"
+  ],
+  "health_hoy_me_siento_peor": [
+    "reflexive_verbs_emotions",
+    "stem_changing_eie"
   ],
   "health_i_dont_feel_well": [
     "reflexive_verbs_emotions",
@@ -1476,6 +1591,9 @@
   "health_im_tired_all_time": [
     "estar_location_states",
     "ser_estar_adjectives"
+  ],
+  "health_la_herida_tardo_en_sanar": [
+    "preterite_regular"
   ],
   "health_me_entro_algo_en_el_ojo": [
     "preterite_regular"
@@ -1515,11 +1633,29 @@
   "hogar_hay_que_limpiar_la_cocina": [
     "hay_existence"
   ],
+  "hogar_hay_un_sillon_junto_a_la_ventana": [
+    "hay_existence"
+  ],
+  "hogar_la_banera_es_muy_grande": [
+    "ser_estar_adjectives"
+  ],
+  "hogar_los_libros_estan_en_la_estanteria": [
+    "estar_location_states"
+  ],
   "hogar_los_muebles_son_nuevos": [
     "ser_estar_adjectives"
   ],
+  "hogar_me_lavo_las_manos_en_el_lavabo": [
+    "reflexive_verbs_daily_routine"
+  ],
+  "hogar_necesito_jabon_para_lavarme": [
+    "present_ar_verbs"
+  ],
   "hogar_sientete_como_en_tu_casa": [
     "present_er_ir_verbs"
+  ],
+  "hogar_subimos_por_la_escalera": [
+    "futuro_simple"
   ],
   "hogar_vivo_en_un_apartamento_pequeno": [
     "present_er_ir_verbs"
@@ -1582,10 +1718,12 @@
     "subjuntivo_avanzado"
   ],
   "kitchen_let_the_pizza_dough_rest_before": [
-    "direct_object_pronouns",
-    "hay_existence"
+    "direct_object_pronouns"
   ],
   "kitchen_reducing_the_sauce_will_take_time": [
+    "futuro_simple"
+  ],
+  "kitchen_take_the_food_out_of_the": [
     "futuro_simple"
   ],
   "kitchen_the_baking_sheets_are_on_the": [
@@ -1620,6 +1758,9 @@
   ],
   "kitchen_the_pan_is_too_hot_lower": [
     "ser_estar_adjectives"
+  ],
+  "kitchen_the_recipe_calls_for_brown_sugar": [
+    "present_ar_verbs"
   ],
   "kitchen_the_sandwich_maker_is_in_the": [
     "futuro_simple"
@@ -1679,7 +1820,7 @@
     "hay_existence"
   ],
   "kitchen_whats_the_difference_between_a_pot": [
-    "question_cual_vs_que",
+    "hay_existence",
     "question_words"
   ],
   "kitchen_where_are_the_clean_dishes": [
@@ -1704,11 +1845,7 @@
     "preterite_regular"
   ],
   "movies_casting_was_perfect_choice": [
-    "preterite_irregular",
     "preterite_regular"
-  ],
-  "movies_character_arc_fully_earned": [
-    "para_purpose_destination"
   ],
   "movies_classic_movie": [
     "direct_object_pronouns"
@@ -1717,7 +1854,6 @@
     "preterite_regular"
   ],
   "movies_dont_understand_popularity": [
-    "gustar_structure",
     "present_er_ir_verbs",
     "stem_changing_eie"
   ],
@@ -1729,7 +1865,6 @@
     "hay_existence"
   ],
   "movies_go_cinema_weekend": [
-    "question_words",
     "stem_changing_eie"
   ],
   "movies_good_actor": [
@@ -1748,7 +1883,7 @@
   ],
   "movies_new_director_movie": [
     "direct_object_pronouns",
-    "hay_existence"
+    "stem_changing_eie"
   ],
   "movies_nominated_best_foreign_film": [
     "futuro_simple",
@@ -1769,7 +1904,6 @@
     "preterite_regular"
   ],
   "movies_performances_script_characters": [
-    "preterite_irregular",
     "preterite_regular"
   ],
   "movies_prefer_cinema_home": [
@@ -1806,8 +1940,7 @@
     "subjuntivo_avanzado"
   ],
   "movies_two_tickets": [
-    "para_purpose_destination",
-    "por_cause_means_duration"
+    "para_purpose_destination"
   ],
   "movies_unreliable_narrator_keeps_guessing": [
     "present_ar_verbs",
@@ -1878,23 +2011,12 @@
     "preterite_regular",
     "question_words"
   ],
-  "music_acoustic_version_reveals_songwriting": [
-    "direct_object_pronouns",
-    "present_er_ir_verbs",
-    "stem_changing_eie"
-  ],
   "music_add_song_playlist": [
     "condicional_simple",
     "estar_location_states"
   ],
-  "music_blends_traditional_contemporary": [
-    "clausulas_relativo"
-  ],
   "music_catchy": [
     "estar_location_states"
-  ],
-  "music_chord_progression_unsettling": [
-    "clausulas_relativo"
   ],
   "music_classical_pianist_switched_jazz": [
     "present_er_ir_verbs",
@@ -1959,11 +2081,10 @@
     "preterite_regular"
   ],
   "music_new_concert_band": [
-    "hay_existence"
+    "stem_changing_eie"
   ],
   "music_opening_act_surprised": [
-    "preterite_irregular",
-    "subjuntivo_avanzado"
+    "preterite_irregular"
   ],
   "music_podcasts_while_exercise": [
     "gustar_structure",
@@ -1971,10 +2092,6 @@
   ],
   "music_song_special_memory": [
     "estar_location_states"
-  ],
-  "music_started_late_still_impressive": [
-    "clausulas_relativo",
-    "present_er_ir_verbs"
   ],
   "music_turn_down": [
     "por_cause_means_duration"
@@ -1992,6 +2109,9 @@
   ],
   "naturaleza_lugares_amo_la_naturaleza": [
     "present_ar_verbs"
+  ],
+  "naturaleza_lugares_el_bosque_esta_lleno_de_arboles": [
+    "ser_estar_adjectives"
   ],
   "naturaleza_lugares_el_lago_es_muy_grande": [
     "ser_estar_adjectives"
@@ -2050,6 +2170,9 @@
   ],
   "pensamientos_opiniones_no_me_importa_esperar": [
     "gustar_structure"
+  ],
+  "pensamientos_opiniones_no_quiero_cometer_el_mismo_error": [
+    "stem_changing_eie"
   ],
   "pensamientos_opiniones_pienso_en_mi_futuro": [
     "stem_changing_eie"
@@ -2166,6 +2289,9 @@
   "planes_no_quiero_provocar_problemas": [
     "stem_changing_eie"
   ],
+  "planes_organizamos_una_actividad": [
+    "para_purpose_destination"
+  ],
   "planes_prefiero_quedarme_en_casa": [
     "present_er_ir_verbs",
     "stem_changing_eie"
@@ -2174,6 +2300,9 @@
     "stem_changing_eie"
   ],
   "planes_quiero_participar": [
+    "stem_changing_eie"
+  ],
+  "planes_quiero_proponer_una_idea": [
     "stem_changing_eie"
   ],
   "planes_quiero_realizar_mi_sueno": [
@@ -2185,8 +2314,17 @@
   "politica_el_alcalde_visito_el_pueblo": [
     "preterite_regular"
   ],
+  "politica_el_ejercito_desfilo_por_la_ciudad": [
+    "preterite_regular"
+  ],
   "politica_el_gobierno_aprobo_una_ley": [
     "preterite_regular"
+  ],
+  "politica_el_juez_escucho_a_las_partes": [
+    "preterite_regular"
+  ],
+  "politica_el_monje_budista_vive_en_un_templo": [
+    "present_er_ir_verbs"
   ],
   "politica_el_partido_gano_las_elecciones": [
     "preterite_regular"
@@ -2194,17 +2332,29 @@
   "politica_el_presidente_dio_un_discurso": [
     "preterite_irregular"
   ],
+  "politica_el_principe_visito_la_ciudad": [
+    "preterite_regular"
+  ],
   "politica_hay_elecciones_este_ano": [
     "hay_existence"
   ],
   "politica_la_politica_me_interesa_mucho": [
     "gustar_structure"
   ],
+  "politica_la_princesa_saludo_desde_el_balcon": [
+    "preterite_regular"
+  ],
+  "politica_la_reina_saludo_a_la_gente": [
+    "preterite_regular"
+  ],
   "politica_muchos_jovenes_votan_por_primera_vez": [
     "futuro_simple"
   ],
   "politica_que_es_la_libertad": [
     "question_words"
+  ],
+  "profesiones_ella_es_enfermera": [
+    "futuro_simple"
   ],
   "profesiones_es_mi_socio": [
     "ser_identity"
@@ -2308,6 +2458,9 @@
     "condicional_simple",
     "por_cause_means_duration"
   ],
+  "restaurant_de_postre_hay_crema": [
+    "hay_existence"
+  ],
   "restaurant_dish_not_matching_description": [
     "condicional_simple",
     "present_ar_verbs"
@@ -2324,11 +2477,6 @@
   ],
   "restaurant_ill_have_the_chicken": [
     "por_cause_means_duration"
-  ],
-  "restaurant_ingredients_sourced_local_organic": [
-    "condicional_simple",
-    "present_er_ir_verbs",
-    "stem_changing_eie"
   ],
   "restaurant_is_it_possible_to_have_my": [
     "para_purpose_destination"
@@ -2364,6 +2512,12 @@
   "restaurant_is_there_a_time_limit_for": [
     "hay_existence"
   ],
+  "restaurant_la_paella_lleva_arroz": [
+    "present_ar_verbs"
+  ],
+  "restaurant_me_gusta_el_sandwich_de_queso": [
+    "gustar_structure"
+  ],
   "restaurant_no_reservation_wait_time": [
     "hay_existence",
     "question_words"
@@ -2371,9 +2525,15 @@
   "restaurant_personalized_dessert_occasion": [
     "estar_location_states"
   ],
+  "restaurant_preparo_un_coctel_con_ron": [
+    "preterite_regular"
+  ],
+  "restaurant_preparo_una_tortilla": [
+    "para_purpose_destination",
+    "present_ar_verbs"
+  ],
   "restaurant_price_discrepancy_charged": [
-    "hay_existence",
-    "preterite_irregular"
+    "hay_existence"
   ],
   "restaurant_private_dining_business": [
     "condicional_simple",
@@ -2387,6 +2547,9 @@
   ],
   "restaurant_sommelier_provenance_barolo": [
     "condicional_simple"
+  ],
+  "restaurant_steak_wrong_doneness": [
+    "preterite_regular"
   ],
   "restaurant_tasting_menu_chef_selections": [
     "condicional_simple",
@@ -2404,7 +2567,6 @@
     "question_words"
   ],
   "restaurant_wine_acidity_fish_pairing": [
-    "condicional_simple",
     "preterite_irregular"
   ],
   "restaurant_wine_wrong_selection": [
@@ -2416,6 +2578,15 @@
   ],
   "sitios_el_bar_esta_cerrado": [
     "ser_estar_adjectives"
+  ],
+  "sitios_fue_a_la_comisaria": [
+    "preterite_irregular"
+  ],
+  "sitios_la_estatua_es_de_bronce": [
+    "ser_identity"
+  ],
+  "sitios_mi_tio_trabaja_en_una_fabrica": [
+    "present_ar_verbs"
   ],
   "sitios_necesito_espacio": [
     "present_ar_verbs"
@@ -2431,6 +2602,9 @@
   ],
   "supermarket_are_these_grapes_organic": [
     "estar_location_states"
+  ],
+  "supermarket_bebo_un_jugo_de_naranja": [
+    "present_er_ir_verbs"
   ],
   "supermarket_buy_new_toothbrush": [
     "present_ar_verbs"
@@ -2449,16 +2623,18 @@
     "condicional_simple",
     "present_ar_verbs"
   ],
+  "supermarket_compre_ternera_para_el_guiso": [
+    "futuro_simple",
+    "para_purpose_destination"
+  ],
   "supermarket_customer_service_lodge_complaint": [
     "clausulas_relativo",
     "hay_existence"
   ],
-  "supermarket_dont_forget_to_buy_fruits_and": [
-    "para_purpose_destination"
+  "supermarket_el_yogur_esta_en_el_refrigerador": [
+    "futuro_simple"
   ],
   "supermarket_escalate_staff_assurance_not_honored": [
-    "por_cause_means_duration",
-    "preterite_irregular",
     "preterite_regular"
   ],
   "supermarket_expiration_date": [
@@ -2515,9 +2691,7 @@
     "preterite_regular"
   ],
   "supermarket_online_listing_out_of_stock_delivery": [
-    "present_ar_verbs",
-    "present_er_ir_verbs",
-    "question_words"
+    "present_ar_verbs"
   ],
   "supermarket_overcharged_promotional_price_not_applied": [
     "preterite_regular"
@@ -2716,14 +2890,15 @@
     "present_ar_verbs"
   ],
   "technology_i_really_liked_this_image_im": [
-    "direct_object_pronouns",
-    "estar_location_states",
-    "preterite_regular"
+    "estar_location_states"
   ],
   "technology_i_received_a_phishing_email": [
     "futuro_simple",
     "imperfect_habits_descriptions",
     "imperfect_vs_preterite"
+  ],
+  "technology_i_recommend_using_a_strong_and": [
+    "present_ar_verbs"
   ],
   "technology_i_requested_a_copy_of_all_data": [
     "preterite_irregular"
@@ -2741,13 +2916,18 @@
     "stem_changing_eie"
   ],
   "technology_im_considering_switching_ecosystems_but": [
-    "estar_location_states"
+    "reflexive_verbs_emotions",
+    "stem_changing_eie"
   ],
   "technology_im_looking_for_software_to_record": [
     "estar_location_states"
   ],
   "technology_is_there_a_way_to_block": [
     "hay_existence"
+  ],
+  "technology_me_gusta_navegar_por_internet": [
+    "gustar_structure",
+    "por_cause_means_duration"
   ],
   "technology_my_storage_is_almost_full_so": [
     "present_ar_verbs"
@@ -2763,10 +2943,8 @@
   ],
   "technology_the_app_uses_dark_patterns_to": [
     "para_purpose_destination",
-    "present_ar_verbs"
-  ],
-  "technology_the_app_was_requesting_access_to": [
-    "direct_object_pronouns"
+    "present_ar_verbs",
+    "subjuntivo_avanzado"
   ],
   "technology_the_battery_life_significantly_improved_after": [
     "preterite_regular"
@@ -2782,11 +2960,6 @@
   "technology_the_devices_firmware_needs_to": [
     "present_ar_verbs"
   ],
-  "technology_the_legacy_system_is_no_longer": [
-    "clausulas_relativo",
-    "futuro_simple",
-    "voz_pasiva"
-  ],
   "technology_the_streaming_quality_drops_when": [
     "present_ar_verbs"
   ],
@@ -2794,9 +2967,7 @@
     "preterito_perfecto"
   ],
   "technology_this_powerpoint_presentation_is_very_boring": [
-    "direct_object_pronouns",
-    "estar_location_states",
-    "hay_existence"
+    "estar_location_states"
   ],
   "technology_turn_on_the_scanner_i_need": [
     "present_ar_verbs"
@@ -2825,16 +2996,14 @@
     "para_purpose_destination",
     "present_ar_verbs"
   ],
+  "technology_worried_lost_cell_phone": [
+    "estar_location_states"
+  ],
   "technology_you_should_look_it_up_on": [
     "direct_object_pronouns"
   ],
   "theater_actors_incredible_performance": [
-    "imperfect_habits_descriptions",
-    "imperfect_vs_preterite"
-  ],
-  "theater_ambiguous_ending_interpretations": [
-    "clausulas_relativo",
-    "present_er_ir_verbs"
+    "preterite_regular"
   ],
   "theater_box_office": [
     "question_words"
@@ -2884,7 +3053,6 @@
     "preterite_irregular"
   ],
   "theater_subverts_expectations_first_scene": [
-    "estar_location_states",
     "futuro_simple"
   ],
   "theater_tickets_saturday": [
@@ -2893,8 +3061,7 @@
   ],
   "theater_two_tickets": [
     "estar_location_states",
-    "para_purpose_destination",
-    "por_cause_means_duration"
+    "para_purpose_destination"
   ],
   "theater_want_to_see_play": [
     "stem_changing_eie"
@@ -2921,6 +3088,9 @@
     "present_er_ir_verbs"
   ],
   "tiempo_libre_me_gusta_el_baile": [
+    "gustar_structure"
+  ],
+  "tiempo_libre_me_gusta_la_literatura": [
     "gustar_structure"
   ],
   "transportation_accessible_wheelchair_vehicle": [
@@ -2979,9 +3149,6 @@
   "transportation_luggage_locker_station": [
     "subjuntivo_avanzado"
   ],
-  "transportation_metro_faster_than_bus": [
-    "estar_location_states"
-  ],
   "transportation_metro_map_navigate": [
     "condicional_simple",
     "direct_object_pronouns"
@@ -3018,7 +3185,7 @@
     "condicional_simple"
   ],
   "transportation_rideshare_late_arrival": [
-    "present_ar_verbs"
+    "present_er_ir_verbs"
   ],
   "transportation_right_bus_for": [
     "para_purpose_destination"
@@ -3045,9 +3212,11 @@
   "transportation_turn_on_meter": [
     "por_cause_means_duration"
   ],
+  "transportation_voy_al_trabajo_en_moto": [
+    "present_ar_verbs"
+  ],
   "transportation_weekly_travel_pass": [
-    "condicional_simple",
-    "para_purpose_destination"
+    "condicional_simple"
   ],
   "transportation_when_next_bus": [
     "question_words"
@@ -3067,13 +3236,45 @@
   "vestimenta_este_vestido_es_muy_bonito": [
     "ser_estar_adjectives"
   ],
+  "vestimenta_la_camisa_es_de_tela_suave": [
+    "ser_identity"
+  ],
+  "vestimenta_lleva_un_gorro_de_lana": [
+    "present_ar_verbs"
+  ],
   "vestimenta_lleva_un_sombrero_negro": [
     "present_ar_verbs"
+  ],
+  "vestimenta_lleva_una_gorra_azul": [
+    "present_ar_verbs"
+  ],
+  "vestimenta_llevo_botas_para_la_lluvia": [
+    "para_purpose_destination",
+    "present_ar_verbs"
+  ],
+  "vestimenta_llevo_el_bolso_al_hombro": [
+    "present_ar_verbs"
+  ],
+  "vestimenta_llevo_un_pantalon_negro": [
+    "present_ar_verbs"
+  ],
+  "vestimenta_los_ninos_estan_en_pijama": [
+    "estar_location_states"
   ],
   "vestimenta_me_gusta_esa_camisa_azul": [
     "gustar_structure"
   ],
+  "vestimenta_me_pongo_la_bufanda": [
+    "present_er_ir_verbs"
+  ],
   "vestimenta_necesito_comprar_ropa_nueva": [
+    "present_ar_verbs"
+  ],
+  "vestimenta_necesito_guantes_en_invierno": [
+    "present_ar_verbs"
+  ],
+  "vestimenta_necesito_un_sueter": [
+    "para_purpose_destination",
     "present_ar_verbs"
   ],
   "vestimenta_puedo_probarme_esta_chaqueta": [
@@ -3100,6 +3301,9 @@
   "viajes_estoy_planeando_mis_proximas_vacaciones": [
     "estar_location_states"
   ],
+  "viajes_hay_que_deshacer_las_maletas": [
+    "hay_existence"
+  ],
   "viajes_me_encanta_conocer_lugares_nuevos": [
     "gustar_structure"
   ],
@@ -3121,6 +3325,9 @@
   "weather_forecast_tomorrow": [
     "question_cual_vs_que",
     "question_words"
+  ],
+  "weather_habia_niebla_en_la_carretera": [
+    "futuro_simple"
   ],
   "weather_in_summer_it_is_very_hot": [
     "present_er_ir_verbs"
@@ -3146,6 +3353,9 @@
   ],
   "weather_its_windy": [
     "present_er_ir_verbs"
+  ],
+  "weather_la_tormenta_duro_toda_la_noche": [
+    "preterite_regular"
   ],
   "weather_love_spring": [
     "futuro_simple",

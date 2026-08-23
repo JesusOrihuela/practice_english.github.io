@@ -400,7 +400,7 @@
     "questions_wh"
   ],
   "airport_boarding_pass_gate": [
-    "verb_infinitive"
+    "modal_must_obligation"
   ],
   "airport_cancelled_rebook_today": [
     "simple_past",
@@ -424,8 +424,7 @@
     "simple_past"
   ],
   "airport_direct_or_connecting": [
-    "modal_must_obligation",
-    "verb_infinitive"
+    "modal_must_obligation"
   ],
   "airport_duty_exceeded_pay_here": [
     "modal_can_ability",
@@ -483,6 +482,9 @@
     "present_perfect_experience",
     "questions_wh",
     "simple_past"
+  ],
+  "airport_request_seat_front": [
+    "prepositions_place"
   ],
   "airport_seat_assignment_not_booked": [
     "simple_past"
@@ -933,9 +935,6 @@
   "fiesta_i_want_to_play": [
     "verb_infinitive"
   ],
-  "greetings_allow_me_to_introduce_dr": [
-    "future_will_going_to"
-  ],
   "greetings_been_ages_how_keeping": [
     "present_perfect_experience",
     "questions_wh"
@@ -1055,10 +1054,6 @@
   "greetings_nice_to_meet_you_im_glad": [
     "simple_past"
   ],
-  "greetings_pleasure_introduce_keynote_speaker": [
-    "present_perfect_experience",
-    "simple_past"
-  ],
   "greetings_pleasure_meeting_follow_up": [
     "future_will_going_to",
     "simple_past"
@@ -1142,7 +1137,6 @@
     "verb_infinitive"
   ],
   "gym_hiit_cardiovascular_endurance": [
-    "present_perfect_experience",
     "simple_past"
   ],
   "gym_how_can_i_book_a_class": [
@@ -1195,10 +1189,6 @@
   "gym_increase_the_speed_of_the_treadmill": [
     "simple_past"
   ],
-  "gym_is_there_a_specific_order_i": [
-    "modal_should_advice",
-    "questions_wh"
-  ],
   "gym_is_there_a_warmup_i_should": [
     "modal_should_advice"
   ],
@@ -1210,17 +1200,10 @@
     "present_continuous_now"
   ],
   "gym_macronutrients_protein_training_load": [
-    "present_perfect_experience",
     "simple_past"
-  ],
-  "gym_mobility_end_range_strength": [
-    "verb_gerund"
   ],
   "gym_monthly_membership_price": [
     "questions_wh"
-  ],
-  "gym_overtraining_recovery_as_important": [
-    "modal_can_ability"
   ],
   "gym_periodization_hypertrophy_strength": [
     "prepositions_place",
@@ -1234,6 +1217,9 @@
     "present_perfect_experience",
     "simple_past",
     "verb_infinitive"
+  ],
+  "gym_progressive_overload_adaptations": [
+    "verb_gerund"
   ],
   "gym_rpe_scale_autoregulation": [
     "simple_past"
@@ -1395,7 +1381,6 @@
   "kitchen_before_cooking_pasta_we_have_to": [
     "modal_must_obligation",
     "prepositions_after_verbs",
-    "verb_gerund",
     "verb_infinitive"
   ],
   "kitchen_blanch_vegetables_before_stir_fry": [
@@ -1414,9 +1399,6 @@
   ],
   "kitchen_can_you_pass_me_the_spatula": [
     "modal_can_ability"
-  ],
-  "kitchen_caramelized_onions_deglaze_balsamic": [
-    "simple_past"
   ],
   "kitchen_could_you_chop_the_vegetables_into": [
     "modal_can_ability"
@@ -1628,7 +1610,6 @@
     "simple_past"
   ],
   "movies_character_motivations_hard_to_believe": [
-    "past_continuous",
     "simple_past"
   ],
   "movies_classic_movie": [
@@ -1645,22 +1626,16 @@
     "questions_wh"
   ],
   "movies_go_cinema_weekend": [
-    "questions_wh",
     "verb_infinitive"
   ],
   "movies_good_movie_recommend": [
     "modal_should_advice"
   ],
   "movies_looking_new_series": [
-    "modal_can_ability",
-    "present_continuous_now"
+    "modal_can_ability"
   ],
   "movies_midnight_premiere_sells_out": [
     "modal_should_advice"
-  ],
-  "movies_new_director_movie": [
-    "modal_must_obligation",
-    "verb_infinitive"
   ],
   "movies_nominated_best_foreign_film": [
     "present_perfect_experience",
@@ -1670,7 +1645,6 @@
     "simple_past"
   ],
   "movies_performances_script_characters": [
-    "past_continuous",
     "simple_past"
   ],
   "movies_prefer_subtitles_dubbing": [
@@ -1790,7 +1764,8 @@
     "questions_wh"
   ],
   "music_favorite_song_always": [
-    "prepositions_after_verbs"
+    "prepositions_after_verbs",
+    "present_simple_habits"
   ],
   "music_festival_lineup_disappointing": [
     "present_continuous_now"
@@ -1815,10 +1790,6 @@
     "comparatives_short",
     "simple_past"
   ],
-  "music_live_spontaneity_studio_cant_capture": [
-    "discourse_markers_advanced",
-    "simple_past"
-  ],
   "music_love_this_song_who_sings": [
     "questions_wh"
   ],
@@ -1828,10 +1799,6 @@
   "music_new_album_disappointment": [
     "simple_past"
   ],
-  "music_new_concert_band": [
-    "modal_must_obligation",
-    "verb_infinitive"
-  ],
   "music_opening_act_surprised": [
     "simple_past"
   ],
@@ -1840,8 +1807,7 @@
   ],
   "music_podcast_recommendation": [
     "modal_can_ability",
-    "prepositions_after_verbs",
-    "questions_wh"
+    "prepositions_after_verbs"
   ],
   "music_podcasts_while_exercise": [
     "verb_gerund"
@@ -2162,8 +2128,7 @@
     "simple_past"
   ],
   "restaurant_price_discrepancy_charged": [
-    "prepositions_place",
-    "simple_past"
+    "prepositions_place"
   ],
   "restaurant_private_dining_business": [
     "present_continuous_now",
@@ -2179,7 +2144,6 @@
     "verb_infinitive"
   ],
   "restaurant_steak_wrong_doneness": [
-    "modal_can_ability",
     "simple_past"
   ],
   "restaurant_tasting_menu_chef_selections": [
@@ -2214,8 +2178,7 @@
     "modal_can_ability"
   ],
   "supermarket_can_you_help_me_reach_that": [
-    "modal_can_ability",
-    "prepositions_place"
+    "modal_can_ability"
   ],
   "supermarket_check_stockroom_out_of_shelf": [
     "modal_can_ability",
@@ -2279,9 +2242,7 @@
     "simple_past"
   ],
   "supermarket_online_listing_out_of_stock_delivery": [
-    "future_will_going_to",
-    "present_perfect_experience",
-    "questions_wh"
+    "present_perfect_experience"
   ],
   "supermarket_overcharged_promotional_price_not_applied": [
     "simple_past"
@@ -2332,10 +2293,6 @@
   ],
   "supermarket_where_is_the_personal_hygiene_products": [
     "questions_wh"
-  ],
-  "supermarket_you_have_to_go_to_the": [
-    "modal_must_obligation",
-    "verb_infinitive"
   ],
   "survival_can_you_help": [
     "modal_can_ability"
@@ -2401,7 +2358,8 @@
     "simple_past"
   ],
   "technology_clearing_the_cache_usually_fixes": [
-    "present_simple_habits"
+    "present_simple_habits",
+    "verb_gerund"
   ],
   "technology_could_you_send_me_that_document": [
     "modal_can_ability"
@@ -2410,7 +2368,6 @@
     "modal_can_ability"
   ],
   "technology_do_you_know_how_i_can": [
-    "modal_can_ability",
     "questions_wh"
   ],
   "technology_do_you_know_how_to_use": [
@@ -2455,9 +2412,6 @@
     "modal_can_ability",
     "questions_wh"
   ],
-  "technology_i_cant_open_this_pdf_file": [
-    "modal_can_ability"
-  ],
   "technology_i_enabled_biometric_authentication_so": [
     "simple_past"
   ],
@@ -2470,23 +2424,16 @@
   "technology_i_need_to_back_up_my": [
     "verb_infinitive"
   ],
-  "technology_i_need_to_charge_my_phone": [
-    "verb_infinitive"
-  ],
   "technology_i_need_to_download_this_program": [
     "verb_infinitive"
   ],
   "technology_i_really_liked_this_image_im": [
     "future_will_going_to",
     "present_continuous_now",
-    "simple_past",
     "verb_infinitive"
   ],
   "technology_i_received_a_phishing_email": [
     "simple_past"
-  ],
-  "technology_i_recommend_using_a_strong_and": [
-    "verb_gerund"
   ],
   "technology_i_requested_a_copy_of_all_data": [
     "past_continuous",
@@ -2497,16 +2444,13 @@
     "present_simple_habits"
   ],
   "technology_i_switched_to_a_monthly_subscription": [
-    "passive_present_simple",
-    "simple_past",
-    "verb_gerund"
+    "simple_past"
   ],
   "technology_i_use_a_separate_browser_profile": [
     "verb_gerund"
   ],
   "technology_i_want_to_buy_a_camera": [
-    "questions_wh",
-    "verb_infinitive"
+    "questions_wh"
   ],
   "technology_i_want_to_increase_the_brightness": [
     "verb_infinitive"
@@ -2537,7 +2481,6 @@
     "simple_past"
   ],
   "technology_the_app_was_requesting_access_to": [
-    "past_continuous",
     "simple_past"
   ],
   "technology_the_app_works_better_than_the": [
@@ -2580,13 +2523,8 @@
   "technology_the_wifi_is_not_working_can": [
     "modal_can_ability"
   ],
-  "technology_this_powerpoint_presentation_is_very_boring": [
-    "verb_infinitive"
-  ],
   "technology_tomorrow_we_are_going_to_have": [
-    "future_will_going_to",
-    "present_continuous_now",
-    "verb_infinitive"
+    "future_will_going_to"
   ],
   "technology_turn_on_the_scanner_i_need": [
     "phrasal_common",
@@ -2639,10 +2577,6 @@
   "theater_how_long_performance": [
     "questions_wh"
   ],
-  "theater_lighting_sound_immersive": [
-    "simple_past",
-    "verb_gerund"
-  ],
   "theater_monologue_extraordinary_restraint": [
     "simple_past"
   ],
@@ -2656,6 +2590,7 @@
     "simple_past"
   ],
   "theater_original_much_stronger_revival": [
+    "comparatives_short",
     "simple_past"
   ],
   "theater_outdoor_atmosphere_different": [
@@ -2745,10 +2680,6 @@
   "transportation_cancelled_train_refund": [
     "simple_past"
   ],
-  "transportation_carpooling_cuts_commute_costs": [
-    "present_perfect_experience",
-    "simple_past"
-  ],
   "transportation_cycling_lane_shared_road": [
     "simple_past"
   ],
@@ -2806,9 +2737,6 @@
   ],
   "transportation_rental_liability_provisions": [
     "verb_gerund",
-    "verb_infinitive"
-  ],
-  "transportation_rideshare_late_arrival": [
     "verb_infinitive"
   ],
   "transportation_subway_single_fare": [
