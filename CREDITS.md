@@ -74,6 +74,21 @@ sense excludes the Cono Sur; *papa*/*celular* = pan-Latin-American). No dictiona
 - Source: https://www.asale.org/damer/ (Asociación de Academias de la Lengua Española)
 - Public reference material (ASALE). Spain/general terms are levelled from the DLE.
 
+### Variant system — academic sources
+The multi-dimensional variant system (`shared/js/variant-dimensions.js` registry;
+`tools/check-variants.mjs`) is grounded in published references, not intuition:
+- **Gender / number / concordancia** — RAE & ASALE, *Nueva gramática de la lengua española* (NGLE)
+  and the *Diccionario de la lengua española* (DLE): which words inflect, and what must agree
+  (article + noun + adjective + participle + verb).
+- **Region provenance** — *Diccionario de americanismos* (ASALE) + DLE (see the DAMER entry above).
+- **Register / forms of address** — pragmatics & sociolinguistics of *tú/usted/vos* and formal vs
+  informal registers.
+- **Variant PRESENTATION** — Tinkham (1993, 1997), Waring (1997) and Webb (2007) on interference
+  when semantically related words / synonyms are taught together: lexical variants (region/register)
+  are shown as one PRIMARY form + labelled recognition variants, while inflectional variants
+  (gender/number) are taught as one concept's agreement pattern.
+No copyrighted text from these works is bundled; they inform the rules and the curated lexicons.
+
 ### National flags (`shared/img/flags/`)
 Faithful national flag SVGs used for the region/variant badges. National flags are in the
 **public domain** (government works); files sourced from Wikimedia Commons.
