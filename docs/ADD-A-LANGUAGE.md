@@ -95,7 +95,26 @@ the checklist so nothing is tribal when a new pair is added.
 - Wrong-language characters in grammar tips (needs `nativeChars`, §1).
 - Grammar-tip length; anti-pedagogical patterns (Rule 11).
 
-### Author judgment (not reliably gateable — apply by hand, per language)
+### The variant system (OPEN — the replication backbone)
+Variants (gender, region, number, register, loanword — and anything a future language needs) are
+driven by ONE data-driven registry, `shared/js/variant-dimensions.js` (dual-mode: browser + Node).
+To give a new language its own axes (grammatical case, honorifics, noun class, evidentiality…), add
+a dimension THERE — no code change: `check-content` validates its label values, `feedback.js` badges
+it and lists it in the post-answer combinations, and `check-variants` checks its completeness, all
+from the registry. Each dimension declares `kind`: **inflectional** (gender/number — forms of one
+lemma, shown as the dictionary-style slash pattern / taught as the agreement rule) or **lexical**
+(region/register/loanword — different words, shown as one PRIMARY + labelled recognition variants, to
+avoid synonym interference — Tinkham/Waring/Webb). Two structural facts, both registry-validated:
+- **Phrases** may carry a per-form `source` (`target[].source`): the L1 hint shown adapts to the
+  variant on screen when the variant changes the REFERENT (`El niño es listo.`←`The boy is smart.` /
+  `La niña es lista.`←`The girl is smart.`); speaker-determined variants keep one combined source
+  (`I have a cold.`→`Estoy resfriado/a.`). The 5 phrase activities read the picked form's source.
+- **Vocab words** may carry structured `variants[]` (`{text, labels, primary?}`) so words — not only
+  phrases — have their variants, identified; `check-variants` scans them, and the flashcard renders
+  the kind-differentiated display. `coverage.mjs` counts `variants[].text`.
+- **Inflectional agreement (concordancia)** — a gender/number variant differs ONLY by recognised
+  inflection (article + noun + adjective + verb all agree); `check-variants` enforces it.
+
 - **Variant completeness (RULE + PROCESS)** — if a phrase has ANY labelled variant, EVERY variant
   and combination that genuinely exists must be present: gender, region, register, AND their
   combinations. The detector `tools/check-variants.mjs` FINDS phrases missing region/gender
