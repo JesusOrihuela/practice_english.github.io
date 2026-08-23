@@ -15,6 +15,7 @@ import { readFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import AppLangProfiles from '../shared/js/lang-profiles.js';
+import AppVariantDims from '../shared/js/variant-dimensions.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = join(__dirname, '..', 'shared', 'json');
@@ -71,17 +72,12 @@ const TERMINAL_RE = /[.?!]$/;
 
 // Schema: old fields that should not exist after migration
 const OLD_SCHEMA_FIELDS = ['audioIdx', 'hint', 'note', 'region'];
-// Valid labels keys in the new schema
-const VALID_LABEL_KEYS = new Set(['gender', 'region', 'register', 'loanword']);
-
-// Valid VALUES for the closed-vocabulary label keys (Rule 16 §8 — labels must use the exact
-// documented values, not near-synonyms: gender 'femenino' not 'female', register 'formal' not
-// 'formell'). These enums are Spanish-language metadata, fixed across all pairs/target languages,
-// so validating them is language-agnostic. 'region' and 'loanword' are free strings (not listed).
-const VALID_LABEL_VALUES = {
-  gender: new Set(['masculino', 'femenino', 'neutro']),
-  register: new Set(['formal', 'informal']),
-};
+// Valid label keys + closed value sets come from the OPEN variant-dimension registry
+// (shared/js/variant-dimensions.js) — NOT hardcoded here. A new language adds a dimension there
+// (case, honorific, noun class…) and it becomes valid content with no edit to this file. Open
+// dimensions (region, loanword) accept any non-empty string; closed ones (gender, number,
+// register) validate against their value set (Rule 16 §8 — 'femenino' not 'female').
+const VALID_LABEL_KEYS = new Set(AppVariantDims.keys());
 // audioSlug length cap — must match SLUG_MAX in assign-alt-slugs.mjs and the generators.
 const SLUG_MAX = 100;
 
@@ -172,10 +168,10 @@ for (const pair of PAIRS) {
             if (!VALID_LABEL_KEYS.has(key)) {
               flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
                 `Unknown label key "${key}" — valid keys: ${[...VALID_LABEL_KEYS].join(', ')}`);
-            } else if (VALID_LABEL_VALUES[key] && !VALID_LABEL_VALUES[key].has(value)) {
+            } else if (!AppVariantDims.isOpen(key) && !AppVariantDims.isValidValue(key, value)) {
               // Rule 16 §8 — closed-vocabulary value must match exactly (catches 'female', 'f', etc.)
               flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
-                `Invalid ${key} value "${value}" — must be one of: ${[...VALID_LABEL_VALUES[key]].join(', ')}`);
+                `Invalid ${key} value "${value}" — must be one of: ${AppVariantDims.values(key).join(', ')}`);
             }
           }
         }
