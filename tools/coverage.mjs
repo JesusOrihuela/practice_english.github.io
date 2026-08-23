@@ -114,7 +114,11 @@ function contentWords(pair, lang, scope = 'all') {
       if (!file.endsWith('.json')) continue;
       const d = JSON.parse(fs.readFileSync(join(vdir, file), 'utf8'));
       for (const wobj of (d.words || [])) {
+        // term = the displayed headword (the primary form for a lexical-variant word); the
+        // structured variants[] carry the other forms (patata, móvil…) — count them too, so moving
+        // a lexical variant out of the slash term into variants[] never drops it from coverage.
         for (const w of tokenize(wobj.term || '')) words.add(w);
+        for (const v of (wobj.variants || [])) for (const w of tokenize(v.text || '')) words.add(w);
       }
     }
   }

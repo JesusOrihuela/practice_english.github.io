@@ -704,7 +704,7 @@
     },
     {
       "id": "coche",
-      "term": "carro / coche / auto",
+      "term": "carro",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -718,7 +718,28 @@
       },
       "gloss_example": {
         "en": "My car is blue."
-      }
+      },
+      "variants": [
+        {
+          "text": "carro",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "primary": true
+        },
+        {
+          "text": "coche",
+          "labels": {
+            "region": "España"
+          }
+        },
+        {
+          "text": "auto",
+          "labels": {
+            "region": "Cono Sur"
+          }
+        }
+      ]
     },
     {
       "id": "bicicleta",

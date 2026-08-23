@@ -200,7 +200,7 @@
     },
     {
       "id": "sweater",
-      "term": "suéter / jersey",
+      "term": "suéter",
       "definition": "Prenda de lana que cubre el torso y los brazos.",
       "example": "Me puse un suéter porque hacía frío.",
       "level": "A1",
@@ -214,7 +214,22 @@
       },
       "gloss_example": {
         "en": "I put on a sweater because it was cold."
-      }
+      },
+      "variants": [
+        {
+          "text": "suéter",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "primary": true
+        },
+        {
+          "text": "jersey",
+          "labels": {
+            "region": "España"
+          }
+        }
+      ]
     },
     {
       "id": "scarf",

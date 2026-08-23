@@ -110,7 +110,7 @@
     },
     {
       "id": "cellphone_device",
-      "term": "celular / móvil",
+      "term": "celular",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -124,11 +124,26 @@
       },
       "gloss_example": {
         "en": "I left the cell phone charging in the kitchen."
-      }
+      },
+      "variants": [
+        {
+          "text": "celular",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "primary": true
+        },
+        {
+          "text": "móvil",
+          "labels": {
+            "region": "España"
+          }
+        }
+      ]
     },
     {
       "id": "computer_device",
-      "term": "computadora / ordenador",
+      "term": "computadora",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -142,7 +157,22 @@
       },
       "gloss_example": {
         "en": "I work in front of the computer all day."
-      }
+      },
+      "variants": [
+        {
+          "text": "computadora",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "primary": true
+        },
+        {
+          "text": "ordenador",
+          "labels": {
+            "region": "España"
+          }
+        }
+      ]
     },
     {
       "id": "laptop",

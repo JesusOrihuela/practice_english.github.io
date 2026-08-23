@@ -307,8 +307,18 @@ const AppFeedback = (() => {
      (Tinkham/Waring/Webb). Returns a DocumentFragment, or null when there is nothing to show. */
   function buildWordVariants(variants, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
+    const D = _dims();
+    // Recognition strip = the NON-primary LEXICAL variants (region/register/loanword). Inflectional
+    // variants (gender/number) are shown as the dictionary-style slash headword (term), not here —
+    // the kind-differentiated presentation: lexical = primary + recognition, inflectional = pattern.
+    const shown = variants.filter(v => {
+      if (v && v.primary) return false;
+      const labs = (v && v.labels) || {};
+      return Object.keys(labs).some(dim => (D ? D.kind(dim) : (dim === 'region' || dim === 'register' || dim === 'loanword' ? 'lexical' : 'inflectional')) === 'lexical');
+    });
+    if (shown.length === 0) return null;
     const frag = document.createDocumentFragment();
-    for (const v of variants) {
+    for (const v of shown) {
       const labs = (v && v.labels) || {};
       const chip = document.createElement('span');
       chip.className = 'alt-chip';
