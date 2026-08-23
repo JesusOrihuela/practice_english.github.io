@@ -1166,6 +1166,14 @@ body.path-mode {
   color: var(--clr-text);
 }
 
+/* Vocab flashcard variant recognition strip: labelled chips (region flag / gender pill + text). */
+.word-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
 .alt-chip-label {
   font-size: 0.7rem;
   font-weight: 700;

@@ -431,6 +431,7 @@
       fc_definition_label:        'Definición',
       fc_example_label:           'Ejemplo',
       fc_spanish_label:           '{sourceName}',
+      fc_variants_label:          'Variantes',
       next_word_aria:             'Continuar a la siguiente palabra',
       flashcard_flip_aria:        'Tarjeta — presiona Enter o Espacio para voltear',
       // Quiz
@@ -952,6 +953,7 @@
       fc_definition_label:        'Definition',
       fc_example_label:           'Example',
       fc_spanish_label:           '{sourceName}',
+      fc_variants_label:          'Variants',
       next_word_aria:             'Go to the next word',
       flashcard_flip_aria:        'Flashcard — press Enter or Space to flip',
       // Quiz

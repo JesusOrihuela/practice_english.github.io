@@ -168,6 +168,16 @@ function showCard(index) {
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 
+  // Structured variants (recognition strip): show each labelled form (region flag / gender pill /…)
+  // so the learner MEETS them without them competing as production targets (interference-safe).
+  const _vBlock = document.getElementById('fc-variants-block');
+  const _vHost  = document.getElementById('word-variants');
+  if (_vHost) _vHost.textContent = '';
+  const _vFrag = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
+    ? AppFeedback.buildWordVariants(word.variants, AppLang.t) : null;
+  if (_vFrag && _vHost) { _vHost.appendChild(_vFrag); _vBlock && _vBlock.classList.remove('hidden'); }
+  else if (_vBlock) { _vBlock.classList.add('hidden'); }
+
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
   _showCefrBadge(word.level, 'flashcard-front');

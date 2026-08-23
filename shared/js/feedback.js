@@ -300,5 +300,46 @@ const AppFeedback = (() => {
     }
   }
 
-  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge };
+  /* Recognition strip for a VOCAB word's structured variants[]: one chip per variant, each with
+     its combined label (region flag / gender pill / generic pill, registry-driven) + the variant
+     text. Used on the flashcard back so the learner MEETS every variant ("also: patata 🇪🇸",
+     "niña ♀") without them competing as production targets — the interference-safe presentation
+     (Tinkham/Waring/Webb). Returns a DocumentFragment, or null when there is nothing to show. */
+  function buildWordVariants(variants, t) {
+    if (!Array.isArray(variants) || variants.length === 0) return null;
+    const frag = document.createDocumentFragment();
+    for (const v of variants) {
+      const labs = (v && v.labels) || {};
+      const chip = document.createElement('span');
+      chip.className = 'alt-chip';
+      for (const dim of _dimOrder()) {
+        const val = labs[dim];
+        if (val === undefined || val === '') continue;
+        const style = _dimBadge(dim);
+        const badge = document.createElement('span');
+        if (style === 'flag') {
+          badge.className = 'region-phrase-badge';
+          if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) badge.appendChild(fl); }
+          const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
+        } else if (style === 'gender') {
+          badge.className = 'gender-phrase-badge';
+          badge.textContent = (val === 'femenino' ? '♀ ' : val === 'masculino' ? '♂ ' : '') + _capitalize(val);
+        } else {
+          badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
+          badge.textContent = (dim === 'register')
+            ? (val === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'))
+            : _capitalize(val);
+        }
+        chip.appendChild(badge);
+      }
+      const txt = document.createElement('span');
+      txt.className = 'alt-chip-text';
+      txt.textContent = (v && v.text) || '';
+      chip.appendChild(txt);
+      frag.appendChild(chip);
+    }
+    return frag;
+  }
+
+  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge, buildWordVariants };
 })();

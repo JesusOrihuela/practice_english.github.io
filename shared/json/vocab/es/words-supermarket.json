@@ -862,7 +862,22 @@
       },
       "gloss_example": {
         "en": "We fry potatoes for dinner."
-      }
+      },
+      "variants": [
+        {
+          "text": "papa",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "primary": true
+        },
+        {
+          "text": "patata",
+          "labels": {
+            "region": "España"
+          }
+        }
+      ]
     },
     {
       "id": "fruit_generic",

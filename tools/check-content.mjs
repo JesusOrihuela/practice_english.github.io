@@ -276,6 +276,34 @@ for (const lang of vocabLangs) {
         if (!gl || !String(gl).trim())
           flag('vocab/' + lang, deck, w.id, `gloss.${src}`, 'R-gloss', `Missing/empty gloss for source "${src}"`);
       }
+
+      // Structured word variants (optional): each carries text + registry-valid labels; a
+      // multi-variant word marks exactly one primary (the headword association — the rest are
+      // labelled recognition variants, to avoid synonym interference). Labels validated against
+      // the same open dimension registry as phrases.
+      if (w.variants !== undefined) {
+        if (!Array.isArray(w.variants)) {
+          flag('vocab/' + lang, deck, w.id, 'variants', 'schema', 'variants must be an array');
+        } else {
+          let primaries = 0;
+          w.variants.forEach((v, vi) => {
+            if (!v || typeof v.text !== 'string' || !v.text.trim())
+              flag('vocab/' + lang, deck, w.id, `variants[${vi}].text`, 'schema', 'variant text must be a non-empty string');
+            if (v && v.primary === true) primaries++;
+            const labs = (v && v.labels) || {};
+            if (Object.keys(labs).length === 0)
+              flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels`, 'schema', 'every variant must carry labels');
+            for (const [k, val] of Object.entries(labs)) {
+              if (!VALID_LABEL_KEYS.has(k))
+                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${k}`, 'schema', `Unknown label key "${k}"`);
+              else if (!AppVariantDims.isOpen(k) && !AppVariantDims.isValidValue(k, val))
+                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${k}`, 'schema', `Invalid ${k} value "${val}"`);
+            }
+          });
+          if (w.variants.length > 1 && primaries !== 1)
+            flag('vocab/' + lang, deck, w.id, 'variants', 'schema', `multi-variant word needs exactly one primary:true (found ${primaries})`);
+        }
+      }
     }
   }
   for (const [, list] of termSeen) {
