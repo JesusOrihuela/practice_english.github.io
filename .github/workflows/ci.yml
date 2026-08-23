@@ -46,6 +46,19 @@ jobs:
       - name: Content audit (audit.mjs --quick)
         run: node tools/audit.mjs --quick
 
+      # Variant completeness: if a phrase or word offers one variant of a set it must offer ALL
+      # genuine ones (region across countries/zones, both genders for a variable-gender person,
+      # and their combinations) — in phrases AND vocab, driven by the open dimension registry +
+      # the DAMER/DLE-sourced region lexicon. Fails on any incomplete set.
+      - name: Variant completeness (check-variants.mjs --gate)
+        run: node tools/check-variants.mjs --gate
+
+      # Phrase atomicity + length: every phrase is ONE idea within its CEFR word AND character
+      # limits (matters most for Dictation — pure working-memory transcription). Fails on run-ons
+      # or over-limit phrases.
+      - name: Phrase atomicity + length (check-length.mjs --gate)
+        run: node tools/check-length.mjs --gate
+
       # Grammar↔phrase evidence: (a) every rule's `topics` must equal the topics
       # whose phrases exercise the structure, and (b) grammar-phrase-rules.json (the
       # per-phrase rule map that drives the learning-mode grammar chip) must match

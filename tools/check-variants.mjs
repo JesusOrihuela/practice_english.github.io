@@ -250,6 +250,56 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
   }
 }
 
+// ── VOCAB scan — words carry variants too: a person noun needs BOTH genders (niño/niña); a
+// region-variable word needs all its regional forms (papa/patata). allText = term + every
+// variants[].text; the English gloss (translations.en) is the L1 anchor that can fix gender,
+// exactly like a phrase source. So the user's rule "las palabras también deben cumplir variantes,
+// y que se identifiquen" is enforced, not only phrases.
+const VOCAB_BASE = path.join(ROOT, 'shared/json/vocab');
+const bothGendersPresent = (lemma, text) => {
+  if (/o$/.test(lemma)) {                       // -o nouns: masc = stem+o, fem = stem+a (niño/niña)
+    const stem = lemma.slice(0, -1);
+    return new RegExp('(^|[^\\p{L}])' + stem + 'os?($|[^\\p{L}])', 'iu').test(text)
+        && new RegExp('(^|[^\\p{L}])' + stem + 'as?($|[^\\p{L}])', 'iu').test(text);
+  }
+  // consonant-ending nouns (jugador/jugadora, profesor/profesora): masc = bare, fem = +a.
+  return new RegExp('(^|[^\\p{L}])' + lemma + '(es)?($|[^\\p{L}])', 'iu').test(text)
+      && new RegExp('(^|[^\\p{L}])' + lemma + 'as?($|[^\\p{L}])', 'iu').test(text);
+};
+for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])) {
+  const lex = LEXICON[lang];
+  if (!lex) continue;
+  const vdir = path.join(VOCAB_BASE, lang);
+  if (!fs.statSync(vdir).isDirectory()) continue;
+  for (const f of fs.readdirSync(vdir)) {
+    if (!f.endsWith('.json')) continue;
+    let data;
+    try { data = JSON.parse(fs.readFileSync(path.join(vdir, f), 'utf8')); } catch { continue; }
+    const deck = f === 'words.json' ? 'general' : f.replace(/^words-/, '').replace(/\.json$/, '');
+    for (const w of (data.words || [])) {
+      const variants = w.variants || [];
+      const allText = [w.term, ...variants.map(v => v.text || '')].join('  ');
+      const enGloss = (w.translations && w.translations.en) || '';
+      const base = { pair: 'vocab/' + lang, topic: deck, id: w.id };
+
+      for (const set of lex) {           // REGION completeness (same rule as phrases)
+        const present = set.members.filter(m => memberInText(m, allText));
+        if (!present.length) continue;
+        const missing = set.members.filter(m => !present.includes(m));
+        if (!missing.length || present.every(m => m.neutral)) continue;
+        findings.push({ ...base, type: 'region', set: set.name, has: present.map(m => m.label).join('/'),
+          detail: missing.map(m => `${m.words[0]} [${m.label}: ${m.countries.join(',')}]`).join('  ') });
+      }
+
+      // GENDER — a person noun present but NOT in both gender forms, and the English gloss doesn't
+      // fix the gender (gloss "child" is neutral → needs niño/niña; "man" fixes it → single is fine).
+      const gLemma = lang === 'es' ? gestureGendered(allText) : null;
+      if (gLemma && !bothGendersPresent(gLemma, allText) && !sourceFixesGender(enGloss))
+        findings.push({ ...base, type: 'gender', detail: `término con género "${gLemma}" (gloss "${enGloss}" no fija género) sin ambas formas masculino/femenino` });
+    }
+  }
+}
+
 const order = { region: 0, gender: 1, combo: 2 };
 findings.sort((a, b) => (order[a.type] - order[b.type]) || (a.pair + a.topic).localeCompare(b.pair + b.topic));
 const counts = { region: 0, gender: 0, combo: 0 };
