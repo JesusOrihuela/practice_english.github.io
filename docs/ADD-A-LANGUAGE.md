@@ -133,6 +133,15 @@ the checklist so nothing is tribal when a new pair is added.
     marks the neutral member `neutral: true`: a **lone neutral base is valid** (not flagged), but a
     lone REGIONAL term still requires its siblings. A set with no neutral term (Latam↔Spain splits
     like *celular/móvil*, or three-way *carro/coche/auto*) has every member carry its own region.
+  - **RULE — create ALL the region assets.** When a pair introduces region labels you must provide the
+    real SVG assets they resolve to: a **country flag** per country (`shared/img/flags/<iso2>.svg`,
+    public-domain from Wikimedia Commons), a **flag cluster** for a multi-country zone (just its member
+    flags — `AppFlags.cluster` shows up to 5 + "+N"), and a **macro-zone globe**
+    (`shared/img/regions/*.svg`) for a continent-scale label, plus the neutral **General** globe. Map
+    each label → codes/globe in `AppFlags.REGION_MAP` / `REGION_GLOBE` (`shared/js/flags.js`). No label
+    may silently fall back to bare text. `tools/check-assets.mjs --gate` (CI `images` job) fails if any
+    region label used in content lacks its asset — identifying and creating every needed asset is part
+    of adding a language, not an afterthought.
 - **Grammatical gender modeling** (Rule 10 / 16) — only for a target with grammatical gender
   (`grammaticalGender: true`). Base-gender conventions: 1st-person "I am [adj]" → base
   **feminine** + masculine variant; 2nd-person "you are [adj]?" → base **masculine** + feminine

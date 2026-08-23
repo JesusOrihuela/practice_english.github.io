@@ -109,8 +109,9 @@ jobs:
             speaking/img
             translation/img
             vocabulary/img
+            shared/img
             shared/js
-            shared/json/common
+            shared/json
             tools
           sparse-checkout-cone-mode: true
       - name: Set up Node
@@ -125,6 +126,10 @@ jobs:
         run: pip install --quiet pillow numpy
       - name: Topic images valid (check-images.mjs)
         run: node tools/check-images.mjs
+      # Variant assets: every region/variant label used in content must have its real SVG (country
+      # flag, flag cluster, or macro-zone globe) — no label silently falls back to bare text.
+      - name: Variant assets present (check-assets.mjs)
+        run: node tools/check-assets.mjs --gate
 
   # i18n standard: no hardcoded UI text in HTML — every translatable element is
   # empty with a data-i18n* attribute, filled from lang/ui.js by AppI18nDom. This

@@ -188,10 +188,14 @@ const AppFlags = (() => {
     'us': ['us'], 'usa': ['us'], 'ee. uu.': ['us'], 'ee.uu.': ['us'], 'estados unidos': ['us'],
     'mexico': ['mx'], 'argentina': ['ar'], 'chile': ['cl'], 'peru': ['pe'], 'bolivia': ['bo'],
     'uruguay': ['uy'], 'colombia': ['co'], 'venezuela': ['ve'], 'australia': ['au'],
-    // Macro-zones whose member flags all exist → a clean flag cluster.
+    // Macro-zones whose member flags all exist → a clean flag cluster (cluster() caps at 5 + "+N").
     'cono sur': ['ar', 'cl', 'uy'], 'rio de la plata': ['ar', 'uy'],
     'mexico y espana': ['mx', 'es'],
     'sudamerica andina y cono sur': ['pe', 'bo', 'cl', 'ar', 'uy'],
+    'caribe': ['cu', 'do', 'pr'],
+    'mexico y centroamerica': ['mx', 'gt', 'hn', 'ni', 'pa'],
+    'sudamerica': ['co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'],
+    'centroamerica': ['gt', 'hn', 'sv', 'ni', 'cr', 'pa'],
   };
 
   // Contiguous MACRO-regions (fit in one hemisphere) → a real orthographic-globe asset, since
