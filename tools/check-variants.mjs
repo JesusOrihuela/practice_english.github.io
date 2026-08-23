@@ -202,6 +202,72 @@ function sourceFixesGender(src) {
 }
 const anyRegionMember = (lex, text) => lex.some(set => set.members.some(m => memberInText(m, text)));
 
+// ── CONCORDANCIA (agreement): two forms that differ in exactly ONE inflectional dimension
+// (gender or number) must differ ONLY by recognised inflection — article + noun + adjective + verb
+// all agreeing, nothing else. Catches a form where a word was NOT agreed ("La niña es listo") or a
+// non-inflectional change slipped in. Deterministic morphology + a small irregular allowlist.
+const _w = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/^[^\p{L}]+|[^\p{L}]+$/gu, '');
+const GENDER_ARTS = { el: 'la', los: 'las', un: 'una', unos: 'unas', este: 'esta', estos: 'estas', ese: 'esa', esos: 'esas', aquel: 'aquella', aquellos: 'aquellas', el2: 'ella', ellos: 'ellas', uno: 'una', nuestro: 'nuestra', nuestros: 'nuestras', vuestro: 'vuestra' };
+const NUMBER_ARTS = { el: 'los', la: 'las', un: 'unos', una: 'unas', este: 'estos', esta: 'estas', ese: 'esos', esa: 'esas', mi: 'mis', tu: 'tus', su: 'sus' };
+const IRREGULAR_GENDER = [['actor', 'actriz'], ['rey', 'reina'], ['hombre', 'mujer'], ['padre', 'madre'], ['yerno', 'nuera'], ['heroe', 'heroina'], ['principe', 'princesa'], ['emperador', 'emperatriz'], ['caballo', 'yegua'], ['toro', 'vaca'], ['papa', 'mama'], ['varon', 'hembra'],
+  // plural irregulars (the check runs on the surface words, so list both numbers)
+  ['actores', 'actrices'], ['reyes', 'reinas'], ['hombres', 'mujeres'], ['padres', 'madres'], ['heroes', 'heroinas'], ['principes', 'princesas'], ['emperadores', 'emperatrices']];
+// Spanish preposition+article contractions expand so word alignment matches the feminine ("a la"):
+// "al" = "a el", "del" = "de el". Without this, "al niño" (2) vs "a la niña" (3) looks like a length change.
+const expandContractions = (t) => t.replace(/\bal\b/gi, 'a el').replace(/\bdel\b/gi, 'de el');
+function isGenderInfl(a, b) {
+  const la = _w(a), lb = _w(b); if (la === lb) return true;
+  if (GENDER_ARTS[la] === lb || GENDER_ARTS[lb] === la) return true;
+  if (IRREGULAR_GENDER.some(([m, f]) => (la === m && lb === f) || (la === f && lb === m))) return true;
+  if (la.length > 1 && lb.length > 1 && la.slice(0, -1) === lb.slice(0, -1) &&
+      ((la.endsWith('o') && lb.endsWith('a')) || (la.endsWith('a') && lb.endsWith('o')))) return true;   // niño/niña
+  if (la.length > 2 && lb.length > 2 && la.slice(0, -2) === lb.slice(0, -2) &&
+      ((la.endsWith('os') && lb.endsWith('as')) || (la.endsWith('as') && lb.endsWith('os')))) return true; // niños/niñas
+  if (lb === la + 'a' || la === lb + 'a') return true;   // profesor/profesora, español/española
+  return false;
+}
+function isNumberInfl(a, b) {
+  const la = _w(a), lb = _w(b); if (la === lb) return true;
+  if (NUMBER_ARTS[la] === lb || NUMBER_ARTS[lb] === la) return true;
+  if (lb === la + 's' || la === lb + 's') return true;   // niña/niñas
+  if (lb === la + 'es' || la === lb + 'es') return true; // profesor/profesores
+  return false;
+}
+// → null if the pair agrees cleanly, else a human reason string.
+function concordMismatch(textA, textB, dim) {
+  const wa = expandContractions(textA).split(/\s+/).filter(Boolean), wb = expandContractions(textB).split(/\s+/).filter(Boolean);
+  if (wa.length !== wb.length)
+    return `las formas ${dim} difieren en nº de palabras (${wa.length}≠${wb.length}) — deben diferir solo por flexión`;
+  const ok = dim === 'gender' ? isGenderInfl : isNumberInfl;
+  for (let i = 0; i < wa.length; i++) {
+    if (_w(wa[i]) === _w(wb[i])) continue;
+    if (!ok(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
+  }
+  return null;
+}
+// A person adjective left in the WRONG gender inside a gender variant (the "La niña es listo" bug):
+// the differing-words check above misses it because the adjective is IDENTICAL in both forms. Safe
+// subset of PERSON_ADJ (excludes words that double as invariable adverbs: rápido/lento/alto/bajo).
+const RETAINED_ADJ = PERSON_ADJ_ES.filter(a => !['rápido', 'lento', 'alto', 'bajo'].includes(a));
+function retainedAdjMismatch(mascText, femText) {
+  for (const lemma of RETAINED_ADJ) {
+    const stem = lemma.replace(/o$/, '');
+    const masc = new RegExp('(^|[^\\p{L}])' + stem + 'os?($|[^\\p{L}])', 'iu');
+    const fem = new RegExp('(^|[^\\p{L}])' + stem + 'as?($|[^\\p{L}])', 'iu');
+    if (masc.test(femText)) return `adjetivo "${lemma}" en masculino dentro de la forma femenina (sin concordar)`;
+    if (fem.test(mascText)) return `adjetivo "${lemma}" en femenino dentro de la forma masculina (sin concordar)`;
+  }
+  return null;
+}
+const _inflDims = ['gender', 'number'];
+// The single dimension in which two label sets differ, or null if not exactly one.
+function soleDiffDim(la, lb) {
+  const keys = new Set([...Object.keys(la || {}), ...Object.keys(lb || {})]);
+  let diff = null;
+  for (const k of keys) { if ((la || {})[k] !== (lb || {})[k]) { if (diff) return null; diff = k; } }
+  return diff;
+}
+
 const findings = [];
 for (const pair of fs.readdirSync(PAIRS_DIR)) {
   const dir = path.join(PAIRS_DIR, pair);
@@ -246,6 +312,22 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
         findings.push({ ...base, type: 'combo', detail: 'tiene GÉNERO y usa un término región-variable → falta la dimensión REGIÓN (región×género)' });
       if (hasRegion && genderMissing)
         findings.push({ ...base, type: 'combo', detail: `tiene REGIÓN y un predicado con género ("${gLemma}") → falta la dimensión GÉNERO (región×género)` });
+
+      // (4) CONCORDANCIA — a pair of forms differing in exactly one inflectional dimension
+      //     (gender/number) must differ ONLY by recognised inflection (art+noun+adj+verb agree).
+      for (let a = 0; a < forms.length; a++) for (let b = a + 1; b < forms.length; b++) {
+        const dim = soleDiffDim(forms[a].labels, forms[b].labels);
+        if (dim && _inflDims.includes(dim)) {
+          const m = concordMismatch(forms[a].text || '', forms[b].text || '', dim);
+          if (m) findings.push({ ...base, type: 'concord', detail: m });
+          else if (dim === 'gender') {          // also catch a retained wrong-gender adjective
+            const fa = forms[a].labels || {}, fb = forms[b].labels || {};
+            const masc = fa.gender === 'masculino' ? forms[a].text : fb.gender === 'masculino' ? forms[b].text : null;
+            const fem = fa.gender === 'femenino' ? forms[a].text : fb.gender === 'femenino' ? forms[b].text : null;
+            if (masc && fem) { const r = retainedAdjMismatch(masc, fem); if (r) findings.push({ ...base, type: 'concord', detail: r }); }
+          }
+        }
+      }
     }
   }
 }
@@ -300,12 +382,12 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
   }
 }
 
-const order = { region: 0, gender: 1, combo: 2 };
+const order = { region: 0, gender: 1, combo: 2, concord: 3 };
 findings.sort((a, b) => (order[a.type] - order[b.type]) || (a.pair + a.topic).localeCompare(b.pair + b.topic));
-const counts = { region: 0, gender: 0, combo: 0 };
+const counts = { region: 0, gender: 0, combo: 0, concord: 0 };
 for (const x of findings) counts[x.type]++;
 console.log(`Completitud de variantes — ${findings.length} hallazgo(s)  ` +
-  `(región ${counts.region}, género ${counts.gender}, combinación ${counts.combo}):`);
+  `(región ${counts.region}, género ${counts.gender}, combinación ${counts.combo}, concordancia ${counts.concord}):`);
 for (const x of findings) {
   console.log(`  [${x.type.toUpperCase()}] [${x.pair} ${x.topic}] ${x.id}${x.set ? ' (set: ' + x.set + '; tiene: ' + x.has + ')' : ''}`);
   console.log(`     ${x.detail}`);
