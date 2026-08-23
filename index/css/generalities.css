@@ -1416,7 +1416,8 @@ body.path-mode {
 }
 
 .gender-phrase-badge,
-.region-phrase-badge {
+.region-phrase-badge,
+.variant-phrase-badge {
   font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.4;

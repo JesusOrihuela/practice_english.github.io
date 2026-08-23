@@ -152,14 +152,14 @@ const AppFeedback = (() => {
                        causes an extra chip showing the base phrase.
      Returns a DocumentFragment or null if there is nothing to show. */
   function buildAltNote(alts, t, basePhraseIfAlt) {
-    // Priority by primary label dimension (lower = shown first)
-    const PRIORITY = { loanword: 0, region: 1, gender: 2, register: 3 };
+    // Priority by primary label dimension (from the registry; lower = shown first).
+    const _prio = (k) => { const D = _dims(); return D ? D.priority(k) : ({ loanword: 0, region: 1, gender: 2, number: 3, register: 4 }[k] ?? 99); };
 
     function _altPriority(alt) {
       const labs = alt.labels || {};
       const keys = Object.keys(labs);
       if (!keys.length) return 99;
-      return Math.min(...keys.map(k => PRIORITY[k] ?? 99));
+      return Math.min(...keys.map(k => _prio(k)));
     }
 
     const typed = (alts || [])
@@ -196,16 +196,20 @@ const AppFeedback = (() => {
     // COMBINED label across ALL dimensions a form carries (gender · region · register ·
     // loanword), so every variant/combination is shown distinctly — a form that is both
     // feminine AND from Spain reads "Femenino · España", never collapsed to just one axis.
+    // COMBINED label across ALL dimensions the form carries, in registry order — so a form that is
+    // both feminine AND from Spain reads "España · Femenino", a plural feminine "Femenino · Plural",
+    // and any FUTURE dimension appears automatically. Gender/region/number read in their own value
+    // (target-language metadata); register/loanword use the localized UI strings.
     function labelFor(alt) {
       const labs = alt.labels || {};
       const parts = [];
-      // Gender + region describe a TARGET-language variant, so both read in the target
-      // language (the gender label from its own value, e.g. "Femenino"), never mixing the
-      // UI language ("Feminine") with a content region name ("Latinoamérica").
-      if (labs.gender) parts.push(_capitalize(labs.gender));
-      if (labs.region !== undefined && labs.region !== '') parts.push(_capitalize(labs.region));
-      if (labs.register !== undefined) parts.push(labs.register === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
-      if (labs.loanword !== undefined) parts.push(t('alt_note_loanword'));
+      for (const dim of _dimOrder()) {
+        const v = labs[dim];
+        if (v === undefined || v === '') continue;
+        if (dim === 'register') parts.push(v === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
+        else if (dim === 'loanword') parts.push(t('alt_note_loanword'));
+        else parts.push(_capitalize(v));   // gender, region, number, + any future axis
+      }
       return parts.join(' · ');  // '' for an unlabeled form → chip shows text only
     }
 
@@ -241,14 +245,21 @@ const AppFeedback = (() => {
   // gender (♀/♂/Neutro) and/or region (flag + name). Both live in a top-left flex wrap so
   // they coexist. Driven purely by the picked form's labels — no branching by language, so
   // any gendered/regional target works. Removes itself when the form carries no variant label.
+  // The variant-dimension registry (shared/js/variant-dimensions.js) drives which axes exist, their
+  // order, and each one's badge style — so gender, region, register, number, and ANY future
+  // dimension render with no change here. Falls back to a fixed order if the registry isn't loaded.
+  const _dims = () => (typeof AppVariantDims !== 'undefined') ? AppVariantDims : null;
+  const _dimOrder = () => { const D = _dims(); return D ? D.ordered() : ['loanword', 'region', 'gender', 'number', 'register']; };
+  const _dimBadge = (d) => { const D = _dims(); return D ? D.badge(d) : (d === 'gender' ? 'gender' : d === 'region' ? 'flag' : 'pill'); };
+
   function applyVariantBadge(containerId, form) {
     const container = document.getElementById(containerId);
     if (!container) return;
     let wrap = container.querySelector('.variant-badges');
     const labels = (form && form.labels) || {};
-    const gender = labels.gender;
-    const region = labels.region;
-    if (!gender && (region === undefined || region === '')) {
+    // Every registered dimension present on this form, in registry (priority) order.
+    const present = _dimOrder().filter(d => labels[d] !== undefined && labels[d] !== '');
+    if (present.length === 0) {
       if (wrap) wrap.remove();
       container.classList.remove('has-variant-badge');   // release the reserved top space
       return;
@@ -262,24 +273,29 @@ const AppFeedback = (() => {
     }
     wrap.textContent = '';
 
-    if (gender) {
+    for (const dim of present) {
+      const val = labels[dim];
+      const style = _dimBadge(dim);
       const b = document.createElement('span');
-      b.className = 'gender-phrase-badge';
-      // Target-language gender term (from the label value), so it never mixes with the region.
-      const sym = gender === 'femenino' ? '♀ ' : gender === 'masculino' ? '♂ ' : '';
-      b.textContent = sym + _capitalize(gender);
-      wrap.appendChild(b);
-    }
-    if (region !== undefined && region !== '') {
-      const b = document.createElement('span');
-      b.className = 'region-phrase-badge';
-      if (typeof AppFlags !== 'undefined' && AppFlags.region) {
-        const flag = AppFlags.region(region);   // country flag OR zone silhouette (or null)
-        if (flag) b.appendChild(flag);
+      if (style === 'flag') {
+        // Region: SVG flag / cluster / zone globe (never emoji) + region name.
+        b.className = 'region-phrase-badge';
+        if (typeof AppFlags !== 'undefined' && AppFlags.region) {
+          const flag = AppFlags.region(val);
+          if (flag) b.appendChild(flag);
+        }
+        const txt = document.createElement('span');
+        txt.textContent = _capitalize(val);   // "aguacate" → "Aguacate"
+        b.appendChild(txt);
+      } else if (style === 'gender') {
+        b.className = 'gender-phrase-badge';
+        const sym = val === 'femenino' ? '♀ ' : val === 'masculino' ? '♂ ' : '';
+        b.textContent = sym + _capitalize(val);   // target-language gender term
+      } else {
+        // 'pill' | 'text' — number (Singular/Plural), register (Formal/Informal), or any future axis.
+        b.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
+        b.textContent = _capitalize(val);
       }
-      const txt = document.createElement('span');
-      txt.textContent = _capitalize(region);   // sentence-case the variant label ("aguacate" → "Aguacate")
-      b.appendChild(txt);
       wrap.appendChild(b);
     }
   }
