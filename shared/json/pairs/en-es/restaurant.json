@@ -1177,6 +1177,50 @@
           "audioSlug": "la_mesa_ya_esta_reservada"
         }
       ]
+    },
+    {
+      "id": "restaurant_el_mesero_es_muy_amable",
+      "source": "The waiter is very nice.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El mesero es muy amable.",
+          "source": "The waiter is very nice.",
+          "labels": {
+            "gender": "masculino",
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "el_mesero_es_muy_amable"
+        },
+        {
+          "text": "La mesera es muy amable.",
+          "source": "The waitress is very nice.",
+          "labels": {
+            "gender": "femenino",
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "la_mesera_es_muy_amable"
+        },
+        {
+          "text": "El camarero es muy amable.",
+          "source": "The waiter is very nice.",
+          "labels": {
+            "gender": "masculino",
+            "region": "España"
+          },
+          "audioSlug": "el_camarero_es_muy_amable"
+        },
+        {
+          "text": "La camarera es muy amable.",
+          "source": "The waitress is very nice.",
+          "labels": {
+            "gender": "femenino",
+            "region": "España"
+          },
+          "audioSlug": "la_camarera_es_muy_amable"
+        }
+      ]
     }
   ]
 }
