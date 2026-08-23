@@ -433,6 +433,30 @@
           "audioSlug": "el_nino_es_rubio"
         }
       ]
+    },
+    {
+      "id": "describiendo_personas_el_nino_es_listo",
+      "source": "The boy is smart.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El niño es listo.",
+          "source": "The boy is smart.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "el_nino_es_listo"
+        },
+        {
+          "text": "La niña es lista.",
+          "source": "The girl is smart.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "la_nina_es_lista"
+        }
+      ]
     }
   ]
 }

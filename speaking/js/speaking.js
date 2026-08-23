@@ -200,7 +200,8 @@ function showPhrase(index) {
   _activeAudioSlug = _activePicked.audioSlug;
 
   document.getElementById('Phrase').textContent     = _activePicked.text;
-  document.getElementById('Traduction').textContent = translations[index] || '';
+  // Per-form source: the picked form's own hint when present (referent-determined variants), else phrase source.
+  document.getElementById('Traduction').textContent = (_activePicked && _activePicked.source) || translations[index] || '';
   attemptDone = false;
   const wrap = document.getElementById('grammar-chip-wrap');
   if (wrap) wrap.classList.add('hidden');

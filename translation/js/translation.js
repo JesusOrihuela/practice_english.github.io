@@ -19,6 +19,7 @@ let contractionMap = {};
 // Populated in showPhrase(); used in checkAnswer() for display and chip filtering.
 let _currentExpected = '';
 let _currentAudioSlug = null; // audioSlug of the picked form
+let _currentPickedSource = null; // the picked form's own source, if any (referent-determined variant)
 
 // ---- Init ----
 
@@ -205,8 +206,12 @@ function showPhrase(index) {
   const _picked = Progress.pickVariant(cardIds[index], _pool) || _pool[0] || { text: '', audioSlug: null };
   _currentExpected = _picked.text;
   _currentAudioSlug = _picked.audioSlug ?? null;
+  _currentPickedSource = _picked.source || null;
 
-  document.getElementById('spanish-phrase').textContent = translations[index] || '—';
+  // Per-form source: when the picked form carries its own source (referent-determined variant,
+  // e.g. "The girl is smart."), the prompt shows THAT specific form so it is unambiguous; the
+  // checker (below) then accepts only forms sharing that source. Otherwise the phrase-level source.
+  document.getElementById('spanish-phrase').textContent = _currentPickedSource || translations[index] || '—';
   document.getElementById('trans-input').value           = '';
   document.getElementById('trans-input').disabled        = false;
   document.getElementById('check-btn').disabled          = false;
@@ -257,7 +262,13 @@ function checkAnswer() {
   document.getElementById('check-btn').disabled = true;
 
   const _norm = s => AppText.normalise(s, contractionMap);
-  const forms = formPools[currentIndex] || [];
+  const allForms = formPools[currentIndex] || [];
+  // When the prompt is a per-form (referent-determined) source, only forms sharing that source are
+  // valid answers — "The girl is smart." must not accept "El niño es listo." Speaker-determined
+  // variants (no per-form source) keep accepting any form, preserving the intended generality.
+  const forms = _currentPickedSource
+    ? allForms.filter(f => (f.source || null) === _currentPickedSource)
+    : allForms;
   const isCorrect = forms.some(f => _norm(raw) === _norm(f.text));
   _lastCorrect = isCorrect;
 

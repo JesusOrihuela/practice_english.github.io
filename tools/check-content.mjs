@@ -142,6 +142,17 @@ for (const pair of PAIRS) {
           flag(pair, topic, id, `target[${i}].text`, 'R17', `Missing terminal punctuation: "${form.text}"`);
         }
 
+        // Per-form source (referent-determined variant, e.g. "The girl is smart."): optional, but
+        // when present it is the L1 hint shown for THIS form, so it must be a real, punctuated
+        // sentence like the phrase source (faithfulness is author judgment; format is checked).
+        if (form.source !== undefined) {
+          if (typeof form.source !== 'string' || form.source.trim() === '') {
+            flag(pair, topic, id, `target[${i}].source`, 'schema', `Per-form source must be a non-empty string`);
+          } else if (!TERMINAL_RE.test(form.source.trimEnd())) {
+            flag(pair, topic, id, `target[${i}].source`, 'R17', `Missing terminal punctuation in per-form source: "${form.source}"`);
+          }
+        }
+
         // schema — residual old fields
         for (const f of OLD_SCHEMA_FIELDS) {
           if (form[f] !== undefined) {

@@ -200,7 +200,9 @@ function showPhrase(index) {
   _activeForm   = Progress.pickVariant(cardIds[index], _pool) || _pool[0];
   shuffledTiles = scrambleWords(_activeForm.text);
 
-  document.getElementById('hint-text').textContent = translations[index] || '';
+  // Per-form source: show the picked form's own hint when it has one (referent-determined
+  // variants, e.g. "La niña es lista." ← "The girl is smart."); else the phrase-level source.
+  document.getElementById('hint-text').textContent = (_activeForm && _activeForm.source) || translations[index] || '';
   document.getElementById('scramble-feedback').classList.add('hidden');
   document.getElementById('scramble-diff').textContent = '';
   document.getElementById('next-btn').classList.add('hidden');

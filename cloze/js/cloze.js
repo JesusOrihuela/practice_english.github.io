@@ -224,7 +224,8 @@ function showPhrase(startIndex) {
     host.appendChild(blank);
     if (parts.length > 1) host.appendChild(document.createTextNode(parts.slice(1).join('___')));
   })();
-  document.getElementById('translation-text').textContent = translations[currentIndex] || '';
+  // Per-form source: the picked form's own hint when present (referent-determined variants), else phrase source.
+  document.getElementById('translation-text').textContent = (_activePickedForm && _activePickedForm.source) || translations[currentIndex] || '';
   document.getElementById('cloze-input').value            = '';
   document.getElementById('cloze-input').disabled         = false;
   document.getElementById('check-btn').disabled           = false;
