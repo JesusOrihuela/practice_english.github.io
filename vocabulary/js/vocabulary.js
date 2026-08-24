@@ -11,6 +11,7 @@ let vocabTopicKey   = '';  // SRS prefix
 let words           = [];
 let cardIds         = [];
 let currentIndex    = 0;
+let _currentPickedForm = null;  // the rotated form shown for a lexical-variant word this round
 let isFlipped       = false;
 
 // ---- Init ----
@@ -44,8 +45,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   function _playCurrentWord(e) {
     e.stopPropagation(); // prevent card flip
     const word = words[currentIndex];
-    if (word) {
-      AppAudio.play(currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId, word.id, word.term);
+    if (!word) return;
+    const _topic = currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId;
+    // Play the ROTATED form when the card is a lexical-variant word; else the term.
+    if (_currentPickedForm && _currentPickedForm.audioSlug) {
+      AppAudio.play(_topic, _currentPickedForm.audioSlug, _currentPickedForm.text);
+    } else {
+      AppAudio.play(_topic, word.id, word.term);
     }
   }
   document.getElementById('listen-btn').addEventListener('click', _playCurrentWord);
@@ -155,7 +161,23 @@ function showCard(index) {
   const _srcCode     = AppLangPair.getActive().source.code;
   // Capitalize the first letter of EVERY slash-separated form ("carta / letra" → "Carta / Letra").
   const _capParts    = (s) => (s || '').replace(/(^|\/\s*)(\p{L})/gu, (m, p, c) => p + c.toUpperCase());
-  const _displayWord = _capParts(word.term);
+
+  // Rotation: a LEXICAL-variant word (region/synonym…) shows ONE form per session — no base, like
+  // phrases, coverage-aware via pickVariant. INFLECTIONAL words (slash term, no variants[]) show the
+  // pattern (term). The recognition strip then lists the OTHER forms.
+  _currentPickedForm = null;
+  const _lexical = (word.variants || []).filter(v =>
+    Object.keys((v && v.labels) || {}).some(d => (typeof AppVariantDims !== 'undefined' && AppVariantDims.kind(d)) === 'lexical'));
+  let _headword = word.term;
+  if (_lexical.length > 1 && typeof Progress !== 'undefined' && Progress.pickVariant) {
+    const _picked = Progress.pickVariant(cardIds[index], word.variants) || word.variants[0];
+    if (_picked) {
+      _currentPickedForm = _picked;
+      _headword = _picked.text;
+      if (Progress.recordVariant && _picked.audioSlug) Progress.recordVariant(cardIds[index], _picked.audioSlug);
+    }
+  }
+  const _displayWord = _capParts(_headword);
   const _displayHint = word.translations?.[_srcCode] || '';
 
   // Front
@@ -176,7 +198,7 @@ function showCard(index) {
   const _vHost  = document.getElementById('word-variants');
   if (_vHost) _vHost.textContent = '';
   const _vFrag = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
-    ? AppFeedback.buildWordVariants(word.variants, AppLang.t) : null;
+    ? AppFeedback.buildWordVariants(word.variants, _currentPickedForm ? _currentPickedForm.text : null, AppLang.t) : null;
   if (_vFrag && _vHost) { _vHost.appendChild(_vFrag); _vBlock && _vBlock.classList.remove('hidden'); }
   else if (_vBlock) { _vBlock.classList.add('hidden'); }
 

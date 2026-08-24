@@ -528,17 +528,23 @@ function checkVocabAudioAlignment(lang, topic) {
   if (!existsSync(jsonPath) || !existsSync(audioPath)) return;
   const words = (JSON.parse(readFileSync(jsonPath, 'utf8')).words) ?? [];
 
-  let found = 0;
+  // A word with variants[] has audio PER FORM ({audioSlug}-voice.wav, the rotation flashcard); a
+  // plain word has one file ({id}-voice.wav). Expected = the sum of both.
+  let found = 0, expected = 0;
   for (const w of words) {
-    if (existsSync(join(audioPath, `${w.id}-${leaderVoice}.wav`))) found++;
+    const slugs = (w.variants && w.variants.length)
+      ? w.variants.map(v => v.audioSlug).filter(Boolean)
+      : [w.id];
+    expected += slugs.length;
+    for (const slug of slugs) if (existsSync(join(audioPath, `${slug}-${leaderVoice}.wav`))) found++;
   }
   if (found === 0) return;  // not yet generated for this language
 
-  if (found !== words.length) {
-    const missing = words.length - found;
+  if (found !== expected) {
+    const missing = expected - found;
     const genCmd = genCmdFor(lang, audioSubdir);
     issue(fileRef, null, `audio_${lang}`,
-      `${lang.toUpperCase()} mismatch: ${missing} ${leaderVoice} files missing of ${words.length} — run: ${genCmd}`);
+      `${lang.toUpperCase()} mismatch: ${missing} ${leaderVoice} files missing of ${expected} — run: ${genCmd}`);
   }
 }
 

@@ -306,16 +306,16 @@ const AppFeedback = (() => {
      text. Used on the flashcard back so the learner MEETS every variant ("also: patata 🇪🇸",
      "niña ♀") without them competing as production targets — the interference-safe presentation
      (Tinkham/Waring/Webb). Returns a DocumentFragment, or null when there is nothing to show. */
-  function buildWordVariants(variants, t) {
+  function buildWordVariants(variants, currentText, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
     const D = _dims();
-    // Recognition strip = the NON-primary LEXICAL variants (region/register/loanword). Inflectional
-    // variants (gender/number) are shown as the dictionary-style slash headword (term), not here —
-    // the kind-differentiated presentation: lexical = primary + recognition, inflectional = pattern.
+    // Recognition strip = the LEXICAL variants (region/register/synonym/loanword) OTHER than the one
+    // currently shown as the rotated headword. Inflectional variants (gender/number) are shown as the
+    // dictionary-style slash headword, not here — the kind-differentiated presentation.
     const shown = variants.filter(v => {
-      if (v && v.primary) return false;
+      if (currentText && v && v.text === currentText) return false;   // don't repeat the headword
       const labs = (v && v.labels) || {};
-      return Object.keys(labs).some(dim => (D ? D.kind(dim) : (dim === 'region' || dim === 'register' || dim === 'loanword' ? 'lexical' : 'inflectional')) === 'lexical');
+      return Object.keys(labs).some(dim => (D ? D.kind(dim) : (dim === 'region' || dim === 'register' || dim === 'loanword' || dim === 'synonym' ? 'lexical' : 'inflectional')) === 'lexical');
     });
     if (shown.length === 0) return null;
     const frag = document.createDocumentFragment();

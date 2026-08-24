@@ -130,13 +130,15 @@
           "text": "celular",
           "labels": {
             "region": "Latinoamérica"
-          }
+          },
+          "audioSlug": "celular"
         },
         {
           "text": "móvil",
           "labels": {
             "region": "España"
-          }
+          },
+          "audioSlug": "movil"
         }
       ]
     },
@@ -162,13 +164,15 @@
           "text": "computadora",
           "labels": {
             "region": "Latinoamérica"
-          }
+          },
+          "audioSlug": "computadora"
         },
         {
           "text": "ordenador",
           "labels": {
             "region": "España"
-          }
+          },
+          "audioSlug": "ordenador"
         }
       ]
     },
