@@ -326,6 +326,7 @@ const AppFeedback = (() => {
       for (const dim of _dimOrder()) {
         const val = labs[dim];
         if (val === undefined || val === '') continue;
+        if (dim === 'synonym') continue;   // no "Also" pill — the VARIANTS heading already says it; show the form alone
         const style = _dimBadge(dim);
         const badge = document.createElement('span');
         if (style === 'flag') {

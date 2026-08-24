@@ -178,7 +178,7 @@ function showCard(index) {
     }
   }
   const _displayWord = _capParts(_headword);
-  const _displayHint = word.translations?.[_srcCode] || '';
+  const _displayHint = _capParts(word.translations?.[_srcCode] || '');   // capitalize like the headword ("Kilogram")
 
   // Front
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
