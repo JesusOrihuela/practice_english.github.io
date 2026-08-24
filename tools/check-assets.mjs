@@ -24,10 +24,10 @@ const REGIONS_DIR = path.join(ROOT, 'shared/img/regions');
 const flagsSrc = fs.readFileSync(path.join(ROOT, 'shared/js/flags.js'), 'utf8');
 // REGION_MAP entries: 'key': ['xx','yy'] → country codes; REGION_GLOBE: 'key': 'file.svg'.
 const region2codes = {};
-for (const m of flagsSrc.matchAll(/'([a-z0-9. ]+)':\s*\[([^\]]*)\]/g))
+for (const m of flagsSrc.matchAll(/'([a-z0-9.() ]+)':\s*\[([^\]]*)\]/g))
   region2codes[m[1]] = (m[2].match(/'([a-z]{2})'/g) || []).map(s => s.replace(/'/g, ''));
 const region2globe = {};
-for (const m of flagsSrc.matchAll(/'([a-z0-9 ]+)':\s*'([a-z-]+\.svg)'/g)) region2globe[m[1]] = m[2];
+for (const m of flagsSrc.matchAll(/'([a-z0-9() ]+)':\s*'([a-z-]+\.svg)'/g)) region2globe[m[1]] = m[2];
 
 const fold = (s) => s.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const flagFiles = new Set(fs.readdirSync(FLAGS_DIR).filter(f => f.endsWith('.svg')).map(f => f.replace('.svg', '')));

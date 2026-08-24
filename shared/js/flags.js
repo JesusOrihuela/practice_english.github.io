@@ -202,6 +202,9 @@ const AppFlags = (() => {
   // a flag cluster of ~20 countries would be absurd. Country-precise sets use flags (above).
   const REGION_GLOBE = {
     'latinoamerica': 'latinoamerica.svg',
+    // "carro" zone (DAMER): all of Latin America except the Cono Sur (which says "auto"). The Latin-
+    // America globe is the closest locator; the label text carries the precise exclusion.
+    'america (salvo cono sur)': 'latinoamerica.svg',
     // The neutral / pan-Hispanic variety is a first-class labelled variant with its own badge
     // (a world globe, distinct from the Latin-America locator map) — shown like any country/region.
     'general': 'general.svg', 'neutro': 'general.svg', 'panhispanico': 'general.svg',
