@@ -20,7 +20,17 @@
       "target": [
         {
           "text": "¿Cuántos años tienes?",
-          "audioSlug": "cuantos_anos_tienes"
+          "audioSlug": "cuantos_anos_tienes",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuántos años tiene?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cuantos_anos_tiene"
         }
       ]
     },
@@ -44,7 +54,17 @@
       "target": [
         {
           "text": "¿De dónde eres?",
-          "audioSlug": "de_donde_eres"
+          "audioSlug": "de_donde_eres",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿De dónde es usted?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "de_donde_es_usted"
         }
       ]
     },
@@ -92,7 +112,17 @@
       "target": [
         {
           "text": "¿A qué te dedicas?",
-          "audioSlug": "a_que_te_dedicas"
+          "audioSlug": "a_que_te_dedicas",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿A qué se dedica?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "a_que_se_dedica"
         }
       ]
     },
@@ -150,7 +180,17 @@
       "target": [
         {
           "text": "¿Cuál es tu número de teléfono?",
-          "audioSlug": "cual_es_tu_numero_de_telefono"
+          "audioSlug": "cual_es_tu_numero_de_telefono",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuál es su número de teléfono?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cual_es_su_numero_de_telefono"
         }
       ]
     },
@@ -162,7 +202,17 @@
       "target": [
         {
           "text": "¿Me das tu número?",
-          "audioSlug": "me_das_tu_numero"
+          "audioSlug": "me_das_tu_numero",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Me da su número?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "me_da_su_numero"
         }
       ]
     },
@@ -218,7 +268,17 @@
       "target": [
         {
           "text": "¿Cuál es tu correo electrónico?",
-          "audioSlug": "cual_es_tu_correo_electronico"
+          "audioSlug": "cual_es_tu_correo_electronico",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuál es su correo electrónico?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cual_es_su_correo_electronico"
         }
       ]
     },
@@ -230,7 +290,17 @@
       "target": [
         {
           "text": "¿Cómo se escribe tu nombre?",
-          "audioSlug": "como_se_escribe_tu_nombre"
+          "audioSlug": "como_se_escribe_tu_nombre",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cómo se escribe su nombre?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_se_escribe_su_nombre"
         }
       ]
     },
@@ -302,7 +372,17 @@
       "target": [
         {
           "text": "¿Cuál es tu dirección?",
-          "audioSlug": "cual_es_tu_direccion"
+          "audioSlug": "cual_es_tu_direccion",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuál es su dirección?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cual_es_su_direccion"
         }
       ]
     },
@@ -314,7 +394,17 @@
       "target": [
         {
           "text": "¿Cuál es tu nacionalidad?",
-          "audioSlug": "cual_es_tu_nacionalidad"
+          "audioSlug": "cual_es_tu_nacionalidad",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuál es su nacionalidad?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cual_es_su_nacionalidad"
         }
       ]
     },
@@ -386,7 +476,17 @@
       "target": [
         {
           "text": "¿Qué edad tienes?",
-          "audioSlug": "que_edad_tienes"
+          "audioSlug": "que_edad_tienes",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Qué edad tiene?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "que_edad_tiene"
         }
       ]
     },

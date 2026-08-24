@@ -138,7 +138,17 @@
       "target": [
         {
           "text": "¿Me lo puedes mostrar en el mapa?",
-          "audioSlug": "me_lo_puedes_mostrar_en_el_mapa"
+          "audioSlug": "me_lo_puedes_mostrar_en_el_mapa",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Me lo puede mostrar en el mapa?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "me_lo_puede_mostrar_en_el_mapa"
         }
       ]
     },
@@ -462,7 +472,17 @@
       "target": [
         {
           "text": "Ven acá, por favor.",
-          "audioSlug": "ven_aca_por_favor"
+          "audioSlug": "ven_aca_por_favor",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Venga acá, por favor.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "venga_aca_por_favor"
         }
       ]
     }

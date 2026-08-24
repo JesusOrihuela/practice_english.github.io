@@ -206,7 +206,17 @@
       "target": [
         {
           "text": "¡Que te mejores pronto!",
-          "audioSlug": "que_te_mejores_pronto"
+          "audioSlug": "que_te_mejores_pronto",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¡Que se mejore pronto!",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "que_se_mejore_pronto"
         }
       ]
     },
@@ -252,7 +262,17 @@
       "target": [
         {
           "text": "Deberías cuidar tu salud.",
-          "audioSlug": "deberias_cuidar_tu_salud"
+          "audioSlug": "deberias_cuidar_tu_salud",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Debería cuidar su salud.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "deberia_cuidar_su_salud"
         }
       ]
     },
@@ -276,7 +296,17 @@
       "target": [
         {
           "text": "¿Dónde te duele?",
-          "audioSlug": "donde_te_duele"
+          "audioSlug": "donde_te_duele",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Dónde le duele?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "donde_le_duele"
         }
       ]
     },
@@ -324,7 +354,17 @@
       "target": [
         {
           "text": "¿Tienes algún dolor?",
-          "audioSlug": "tienes_algun_dolor"
+          "audioSlug": "tienes_algun_dolor",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Tiene algún dolor?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "tiene_algun_dolor"
         }
       ]
     },
@@ -526,7 +566,17 @@
       "target": [
         {
           "text": "Cuida tu salud.",
-          "audioSlug": "cuida_tu_salud"
+          "audioSlug": "cuida_tu_salud",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Cuide su salud.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cuide_su_salud"
         }
       ]
     },
@@ -620,7 +670,17 @@
       "target": [
         {
           "text": "¿Puedes andar?",
-          "audioSlug": "puedes_andar"
+          "audioSlug": "puedes_andar",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Puede andar?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_andar"
         }
       ]
     },

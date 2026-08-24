@@ -212,7 +212,17 @@
       "target": [
         {
           "text": "¿Puedes repetir eso?",
-          "audioSlug": "puedes_repetir_eso"
+          "audioSlug": "puedes_repetir_eso",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Puede repetir eso?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_repetir_eso"
         }
       ]
     },
@@ -308,7 +318,17 @@
       "target": [
         {
           "text": "Dime la verdad.",
-          "audioSlug": "dime_la_verdad"
+          "audioSlug": "dime_la_verdad",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Dígame la verdad.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "digame_la_verdad"
         }
       ]
     },
@@ -320,7 +340,17 @@
       "target": [
         {
           "text": "¿Qué te preocupa?",
-          "audioSlug": "que_te_preocupa"
+          "audioSlug": "que_te_preocupa",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Qué le preocupa?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "que_le_preocupa"
         }
       ]
     },
@@ -368,7 +398,17 @@
       "target": [
         {
           "text": "Puedes disponer de mi ayuda.",
-          "audioSlug": "puedes_disponer_de_mi_ayuda"
+          "audioSlug": "puedes_disponer_de_mi_ayuda",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Puede disponer de mi ayuda.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_disponer_de_mi_ayuda"
         }
       ]
     },
@@ -428,7 +468,17 @@
       "target": [
         {
           "text": "Dame un ejemplo.",
-          "audioSlug": "dame_un_ejemplo"
+          "audioSlug": "dame_un_ejemplo",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Deme un ejemplo.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "deme_un_ejemplo"
         }
       ]
     },
@@ -452,7 +502,17 @@
       "target": [
         {
           "text": "Agradezco tu interés.",
-          "audioSlug": "agradezco_tu_interes"
+          "audioSlug": "agradezco_tu_interes",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Agradezco su interés.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "agradezco_su_interes"
         }
       ]
     },
