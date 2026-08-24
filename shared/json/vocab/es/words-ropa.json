@@ -428,7 +428,23 @@
       },
       "gloss_example": {
         "en": "She put the underwear in the drawer."
-      }
+      },
+      "variants": [
+        {
+          "text": "calzón",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "calzon"
+        },
+        {
+          "text": "braga",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "braga"
+        }
+      ]
     },
     {
       "id": "bra",
@@ -446,7 +462,23 @@
       },
       "gloss_example": {
         "en": "She bought a bra in her size."
-      }
+      },
+      "variants": [
+        {
+          "text": "sostén",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "sosten"
+        },
+        {
+          "text": "sujetador",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "sujetador"
+        }
+      ]
     },
     {
       "id": "underpants",

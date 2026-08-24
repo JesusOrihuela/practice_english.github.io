@@ -70,7 +70,23 @@
       },
       "gloss_example": {
         "en": "The waiter recommended the salmon dish."
-      }
+      },
+      "variants": [
+        {
+          "text": "mesero",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "mesero"
+        },
+        {
+          "text": "camarero",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "camarero"
+        }
+      ]
     },
     {
       "id": "tip",

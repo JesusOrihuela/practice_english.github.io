@@ -88,7 +88,23 @@
       },
       "gloss_example": {
         "en": "I saved my e-ticket on my phone so I wouldn't lose it."
-      }
+      },
+      "variants": [
+        {
+          "text": "boleto",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "boleto"
+        },
+        {
+          "text": "billete",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "billete"
+        }
+      ]
     },
     {
       "id": "boarding",

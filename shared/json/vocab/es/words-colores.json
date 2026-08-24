@@ -196,7 +196,23 @@
       },
       "gloss_example": {
         "en": "He has brown eyes."
-      }
+      },
+      "variants": [
+        {
+          "text": "café",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "cafe"
+        },
+        {
+          "text": "marrón",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "marron"
+        }
+      ]
     },
     {
       "id": "pink",

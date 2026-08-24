@@ -556,7 +556,23 @@
       },
       "gloss_example": {
         "en": "She drives to work every day."
-      }
+      },
+      "variants": [
+        {
+          "text": "conducir",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "conducir"
+        },
+        {
+          "text": "manejar",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "manejar"
+        }
+      ]
     },
     {
       "id": "trip",

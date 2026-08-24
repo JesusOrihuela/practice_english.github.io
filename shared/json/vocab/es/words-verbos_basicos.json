@@ -2590,7 +2590,23 @@
       },
       "gloss_example": {
         "en": "He got angry because we arrived late."
-      }
+      },
+      "variants": [
+        {
+          "text": "enfadarse",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "enfadarse"
+        },
+        {
+          "text": "enojarse",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "enojarse"
+        }
+      ]
     },
     {
       "id": "to_draw",
