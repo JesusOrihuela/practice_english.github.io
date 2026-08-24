@@ -188,6 +188,7 @@ function showCard(index) {
   // Back — definition/example are the target-language (monolingual) forms; fall
   // back to the source-language gloss for entries that lack a monolingual form.
   document.getElementById('fc-back-word').textContent    = _displayWord;
+  _renderCurrentFormBadge(_currentPickedForm);   // tag the shown form's own variety (e.g. España)
   document.getElementById('word-definition').textContent = word.definition || (word.gloss?.[_srcCode] || '');
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
@@ -206,6 +207,35 @@ function showCard(index) {
   document.getElementById('back-to-path')?.classList.add('hidden');
   _showCefrBadge(word.level, 'flashcard-front');
   _showCefrBadge(word.level, 'flashcard-back');
+}
+
+// Badge for the SHOWN rotated form's own variant (region flag / register pill), placed inline next to
+// the word so the learner sees WHICH variety the headword is (e.g. "Ordenador · España"), not only
+// the others. Mirrors the exercise variant badge. Gender never reaches here — a gender word keeps the
+// dictionary-slash headword and does not rotate, so `form` is null and no badge is shown.
+function _renderCurrentFormBadge(form) {
+  const host = document.getElementById('fc-back-word');
+  if (!host) return;
+  const labels = (form && form.labels) || {};
+  const dims = Object.keys(labels).filter(k => labels[k] !== undefined && labels[k] !== '');
+  if (!dims.length) return;                       // gender/single-form word → word already tells all
+  const wrap = document.createElement('span');
+  wrap.className = 'fc-word-badge';
+  for (const dim of dims) {
+    const val = labels[dim];
+    const b = document.createElement('span');
+    if (dim === 'region') {
+      b.className = 'region-phrase-badge';
+      if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) b.appendChild(fl); }
+      const t = document.createElement('span'); t.textContent = val; b.appendChild(t);
+    } else {
+      b.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
+      b.textContent = dim === 'register' ? (val === 'formal' ? AppLang.t('alt_note_register_f') : AppLang.t('alt_note_register_i'))
+                    : dim === 'loanword' ? AppLang.t('alt_note_loanword') : val;
+    }
+    wrap.appendChild(b);
+  }
+  host.appendChild(wrap);
 }
 
 function _showCefrBadge(level, containerId) {

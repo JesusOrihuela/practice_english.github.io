@@ -143,6 +143,19 @@
   color: var(--clr-primary);
   margin-bottom: 16px;
   letter-spacing: 0.01em;
+  /* word + its region/register badge sit on one baseline-aligned row */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* The shown form's own variant tag (region flag / register pill), inline next to the word — so the
+   learner sees WHICH variety the headword is (e.g. "Ordenador · España"), not only the others. */
+.fc-word-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .fc-label {
@@ -193,6 +206,21 @@
   font-size: 0.95rem;
   font-weight: 400;
   color: var(--clr-text-muted);
+}
+
+/* Other regional/register forms (recognition strip). A clean, separated, LEFT-aligned section —
+   not a lone centred pill glued under the translation. */
+.fc-variants-block {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--clr-border);
+}
+.word-variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+  justify-content: flex-start;
 }
 
 .listen-btn-back {
