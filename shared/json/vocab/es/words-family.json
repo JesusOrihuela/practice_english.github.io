@@ -236,12 +236,12 @@
     },
     {
       "id": "male",
-      "term": "masculino / hombre",
+      "term": "masculino",
       "level": "B1",
       "category": "Adjective",
       "difficulty": "medium",
       "definition": "Del sexo que no da a luz.",
-      "example": "El formulario preguntaba si era hombre o mujer.",
+      "example": "Marcó la casilla del sexo masculino en el formulario.",
       "translations": {
         "en": "male"
       },
@@ -249,17 +249,17 @@
         "en": "Belonging to the sex that does not give birth."
       },
       "gloss_example": {
-        "en": "The form asked whether I was male or female."
+        "en": "He checked the male box on the form."
       }
     },
     {
       "id": "female",
-      "term": "femenino / mujer",
+      "term": "femenino",
       "level": "B1",
       "category": "Adjective",
       "difficulty": "medium",
       "definition": "Del sexo que puede dar a luz.",
-      "example": "La mayoría de las estudiantes de la clase son mujeres.",
+      "example": "Marcó la casilla del sexo femenino en el formulario.",
       "translations": {
         "en": "female"
       },
@@ -267,7 +267,7 @@
         "en": "Belonging to the sex that can give birth."
       },
       "gloss_example": {
-        "en": "Most of the students in the class are female."
+        "en": "She checked the female box on the form."
       }
     },
     {
@@ -736,6 +736,24 @@
       },
       "gloss_example": {
         "en": "Their son is a fifteen-year-old teenager."
+      }
+    },
+    {
+      "id": "woman",
+      "term": "mujer",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Persona adulta de sexo femenino.",
+      "example": "Esa mujer trabaja en el hospital.",
+      "translations": {
+        "en": "woman"
+      },
+      "gloss": {
+        "en": "An adult female person."
+      },
+      "gloss_example": {
+        "en": "That woman works at the hospital."
       }
     }
   ]
