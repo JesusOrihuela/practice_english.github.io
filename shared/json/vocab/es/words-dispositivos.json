@@ -110,7 +110,7 @@
     },
     {
       "id": "cellphone_device",
-      "term": "celular",
+      "term": "celular / móvil",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -130,8 +130,7 @@
           "text": "celular",
           "labels": {
             "region": "Latinoamérica"
-          },
-          "primary": true
+          }
         },
         {
           "text": "móvil",
@@ -143,7 +142,7 @@
     },
     {
       "id": "computer_device",
-      "term": "computadora",
+      "term": "computadora / ordenador",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -163,8 +162,7 @@
           "text": "computadora",
           "labels": {
             "region": "Latinoamérica"
-          },
-          "primary": true
+          }
         },
         {
           "text": "ordenador",

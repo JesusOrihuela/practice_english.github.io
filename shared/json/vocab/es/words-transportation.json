@@ -704,7 +704,7 @@
     },
     {
       "id": "coche",
-      "term": "carro",
+      "term": "carro / coche / auto",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -724,8 +724,7 @@
           "text": "carro",
           "labels": {
             "region": "Latinoamérica"
-          },
-          "primary": true
+          }
         },
         {
           "text": "coche",
