@@ -128,37 +128,6 @@ const PhraseBrowser = (() => {
         chip.appendChild(badge);
       }
 
-      // Hidden-variant tag — a LEXICAL variant dimension the chip text doesn't reveal (gender rides
-      // in the source slash; register/loanword don't). Registry-driven: any future lexical dim shows
-      // automatically. It sits on the L1 (source) side, so it signals e.g. "this phrase has a
-      // formal AND informal version" WITHOUT spoiling the target. Synonym is skipped (a
-      // "sinónimo/sinónimo" tag carries no information).
-      const _fset = (forms && forms[i]) || [];
-      if (!isWordList && _fset.length > 1) {
-        const D = (typeof AppVariantDims !== 'undefined') ? AppVariantDims : null;
-        const _lex = new Set();
-        _fset.forEach(f => Object.keys((f && f.labels) || {}).forEach(k => {
-          const kind = D ? D.kind(k) : (k === 'gender' || k === 'number' ? 'inflectional' : 'lexical');
-          if (kind === 'lexical' && k !== 'synonym') _lex.add(k);
-        }));
-        _lex.forEach(dim => {
-          // Compact per-dimension label — never the joined values (region names run long and would
-          // blow out the chip). Register shows its two poles (Formal/Informal); the rest a short tag.
-          let label;
-          if (dim === 'register') label = AppLang.t('alt_note_register_f') + '/' + AppLang.t('alt_note_register_i');
-          else if (dim === 'region') label = AppLang.t('pb_tag_region');
-          else if (dim === 'loanword') label = AppLang.t('pb_tag_loanword');
-          else label = dim;
-          if (!label) return;
-          const tag = document.createElement('span');
-          tag.className = 'pb-chip-tag pb-chip-tag--' + dim;
-          tag.setAttribute('aria-hidden', 'true');   // read via the chip's aria-label instead
-          tag.textContent = label;
-          chip.appendChild(tag);
-          chip.setAttribute('aria-label', chip.getAttribute('aria-label') + ' · ' + label);
-        });
-      }
-
       // Coverage indicator — one pip per form, filled = practiced. A single-form
       // phrase shows one pip (practiced-or-not); a multi-form phrase shows N pips
       // (gender/region/register coverage). One consistent indicator — no separate
