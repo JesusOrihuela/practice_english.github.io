@@ -2,8 +2,9 @@
    variant-dimensions.js — the OPEN, data-driven registry of variant dimensions.
 
    A "variant dimension" is an axis along which a phrase form or a vocab word can vary: gender,
-   region, number, register, loanword — and, for a FUTURE language, anything else it needs
-   (grammatical case, noun class, honorifics, evidentiality…). This registry is the ONE place that
+   region, register, loanword — and, for a FUTURE language, anything else it needs (number for a
+   language whose plural is more than "+s", grammatical case, noun class, honorifics, evidentiality…).
+   This registry is the ONE place that
    knowledge lives. Adding a dimension (or a value) here makes it valid content, badge-able, and
    completeness-checkable WITH NO CODE CHANGE — the replicability backbone of the variant system.
 
@@ -13,7 +14,7 @@
      • tools/check-variants.mjs  → per-dimension completeness (which forms must coexist).
 
    Per dimension:
-     kind        'inflectional' (forms of ONE lemma: gender, number — taught together as the
+     kind        'inflectional' (forms of ONE lemma, e.g. gender — taught together as the
                  agreement pattern) | 'lexical' (DIFFERENT words for the same meaning: region,
                  register, loanword — one PRIMARY form + the rest as tagged recognition variants,
                  to avoid synonym interference — Tinkham 1993/1997, Waring 1997, Webb 2007).
@@ -22,8 +23,8 @@
      badge       visual style hint: 'gender' (♀/♂ pill) | 'flag' (country flag/cluster/globe) |
                  'pill' (text pill) | 'text'.
      appliesTo   '*' = every language, or a list of language codes that have this dimension.
-     agreement   (inflectional only) the elements that MUST co-vary — a gender/number variant must
-                 change ALL of these, not just the head word ("el niño listo" → "los niños listos").
+     agreement   (inflectional only) the elements that MUST co-vary — a gender variant must
+                 change ALL of these, not just the head word ("el niño listo" → "la niña lista").
 
    Academic sources (cited in CREDITS.md / docs/ADD-A-LANGUAGE.md): RAE/NGLE (gender, number,
    concordancia), DAMER + DLE (region provenance), pragmatics/sociolinguistics (register / forms of
@@ -37,14 +38,16 @@
     region:   { kind: 'lexical',      open: true,                              priority: 1, badge: 'flag',   appliesTo: '*' },
     gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es'],
                 agreement: ['articulo', 'sustantivo', 'adjetivo', 'participio', 'pronombre'] },
-    number:   { kind: 'inflectional', values: ['singular', 'plural'],          priority: 3, badge: 'pill',   appliesTo: ['es'],
-                agreement: ['articulo', 'sustantivo', 'adjetivo', 'verbo'] },
-    register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 4, badge: 'pill',   appliesTo: '*' },
+    register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 3, badge: 'pill',   appliesTo: '*' },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
-    // takes the primary + recognition presentation ("also: albergue") — which is what the synonym-
+    // takes the rotation + recognition presentation ("also: albergue") — which is what the synonym-
     // interference research prescribes, unlike showing them as co-equal slash targets. A single
     // token value (the badge reads "también"/"also"). Added data-only — proof the registry is open.
-    synonym:  { kind: 'lexical',      values: ['sinónimo'],                    priority: 5, badge: 'pill',   appliesTo: '*' },
+    synonym:  { kind: 'lexical',      values: ['sinónimo'],                    priority: 4, badge: 'pill',   appliesTo: '*' },
+    // A FUTURE language adds its own axes HERE, data-only (proven by the evidentiality openness test):
+    // e.g. number (singular/plural) for a language whose plural is more than "+s", grammatical case,
+    // noun class, honorifics, evidentiality. Not defined until a language actually uses it — so the
+    // registry never advertises a dimension with zero content.
   };
 
   const AppVariantDims = {

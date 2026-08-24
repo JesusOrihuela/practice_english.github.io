@@ -208,7 +208,6 @@ const anyRegionMember = (lex, text) => lex.some(set => set.members.some(m => mem
 // non-inflectional change slipped in. Deterministic morphology + a small irregular allowlist.
 const _w = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/^[^\p{L}]+|[^\p{L}]+$/gu, '');
 const GENDER_ARTS = { el: 'la', los: 'las', un: 'una', unos: 'unas', este: 'esta', estos: 'estas', ese: 'esa', esos: 'esas', aquel: 'aquella', aquellos: 'aquellas', el2: 'ella', ellos: 'ellas', uno: 'una', nuestro: 'nuestra', nuestros: 'nuestras', vuestro: 'vuestra' };
-const NUMBER_ARTS = { el: 'los', la: 'las', un: 'unos', una: 'unas', este: 'estos', esta: 'estas', ese: 'esos', esa: 'esas', mi: 'mis', tu: 'tus', su: 'sus' };
 const IRREGULAR_GENDER = [['actor', 'actriz'], ['rey', 'reina'], ['hombre', 'mujer'], ['padre', 'madre'], ['yerno', 'nuera'], ['heroe', 'heroina'], ['principe', 'princesa'], ['emperador', 'emperatriz'], ['caballo', 'yegua'], ['toro', 'vaca'], ['papa', 'mama'], ['varon', 'hembra'],
   // plural irregulars (the check runs on the surface words, so list both numbers)
   ['actores', 'actrices'], ['reyes', 'reinas'], ['hombres', 'mujeres'], ['padres', 'madres'], ['heroes', 'heroinas'], ['principes', 'princesas'], ['emperadores', 'emperatrices']];
@@ -226,19 +225,12 @@ function isGenderInfl(a, b) {
   if (lb === la + 'a' || la === lb + 'a') return true;   // profesor/profesora, español/española
   return false;
 }
-function isNumberInfl(a, b) {
-  const la = _w(a), lb = _w(b); if (la === lb) return true;
-  if (NUMBER_ARTS[la] === lb || NUMBER_ARTS[lb] === la) return true;
-  if (lb === la + 's' || la === lb + 's') return true;   // niña/niñas
-  if (lb === la + 'es' || la === lb + 'es') return true; // profesor/profesores
-  return false;
-}
 // → null if the pair agrees cleanly, else a human reason string.
 function concordMismatch(textA, textB, dim) {
   const wa = expandContractions(textA).split(/\s+/).filter(Boolean), wb = expandContractions(textB).split(/\s+/).filter(Boolean);
   if (wa.length !== wb.length)
     return `las formas ${dim} difieren en nº de palabras (${wa.length}≠${wb.length}) — deben diferir solo por flexión`;
-  const ok = dim === 'gender' ? isGenderInfl : isNumberInfl;
+  const ok = isGenderInfl;   // gender is the only inflectional dimension in use
   for (let i = 0; i < wa.length; i++) {
     if (_w(wa[i]) === _w(wb[i])) continue;
     if (!ok(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
@@ -259,7 +251,7 @@ function retainedAdjMismatch(mascText, femText) {
   }
   return null;
 }
-const _inflDims = ['gender', 'number'];
+const _inflDims = ['gender'];   // the inflectional dimensions in use (number is not a content dimension)
 // The single dimension in which two label sets differ, or null if not exactly one.
 function soleDiffDim(la, lb) {
   const keys = new Set([...Object.keys(la || {}), ...Object.keys(lb || {})]);

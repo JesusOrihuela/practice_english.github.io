@@ -195,10 +195,13 @@ registry-validated:
   borrowed form `loanword`, the native one `synonym`/`region`). But NEVER invent a calque nobody says
   (that is the No-extranjerismos rule below), and a fully RAE-accepted borrowing (*software*, *wifi*,
   *pódcast*) is simply the term — no variant. Lexical → rotates; badge "préstamo/loanword".
-- **Number (singular/plural)** — NOT used as a content dimension by decision: plurals are authored as
-  SEPARATE phrases, never `number` variants (the lemmatised coverage core doesn't distinguish them and
-  plural is a grammar competency). The dimension stays defined in the registry for a FUTURE language
-  whose plural is more than a "+s" suffix.
+- **Number (singular/plural)** — for Spanish this is NOT a content dimension and is deliberately NOT
+  in the registry: plurals are authored as SEPARATE phrases/words, never `number` variants (the
+  lemmatised coverage core doesn't distinguish them and plural is a grammar competency, taught in the
+  Grammar section). A registry must never advertise a dimension with zero content. A FUTURE language
+  whose plural is more than a "+s" suffix adds `number` back data-only (one registry line — the
+  evidentiality openness test proves a new dimension needs no code), with `agreement`
+  ['articulo','sustantivo','adjetivo','verbo'] so every plural variant changes the WHOLE concordance.
 - **How variants appear in the INDEX (`PhraseBrowser`)** — the phrase index shows the L1 `source`
   (never the target, to avoid spoilers), so lexical variants (region/register/synonym/loanword) are
   NOT spelled out there; they surface only as **coverage pips** — one pip per form (a tú/usted phrase =
