@@ -153,7 +153,9 @@ function showCard(index) {
   document.getElementById('flashcard').classList.remove('flipped');
 
   const _srcCode     = AppLangPair.getActive().source.code;
-  const _displayWord = word.term;
+  // Capitalize the first letter of EVERY slash-separated form ("carta / letra" → "Carta / Letra").
+  const _capParts    = (s) => (s || '').replace(/(^|\/\s*)(\p{L})/gu, (m, p, c) => p + c.toUpperCase());
+  const _displayWord = _capParts(word.term);
   const _displayHint = word.translations?.[_srcCode] || '';
 
   // Front

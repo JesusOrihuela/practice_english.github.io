@@ -80,7 +80,8 @@ const PhraseBrowser = (() => {
       let mainText, subText;
       if (isWordList) {
         const _raw = (traductions && traductions[i]) ? traductions[i] : (item.term || item.word);
-        mainText = _raw ? _raw.charAt(0).toUpperCase() + _raw.slice(1) : _raw;
+        // Capitalize the first letter of EVERY slash-separated form ("carta / letra" → "Carta / Letra").
+        mainText = _raw ? _raw.replace(/(^|\/\s*)(\p{L})/gu, (m, p, c) => p + c.toUpperCase()) : _raw;
         const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
         subText  = item.category
           ? (typeof AppLang !== 'undefined' ? AppLang.t(_POS[item.category] || item.category) : item.category)
