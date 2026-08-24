@@ -42,7 +42,17 @@
       "target": [
         {
           "text": "¿Cómo estás hoy?",
-          "audioSlug": "como_estas_hoy"
+          "audioSlug": "como_estas_hoy",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cómo está hoy?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_esta_hoy"
         }
       ]
     },
@@ -54,7 +64,17 @@
       "target": [
         {
           "text": "¿Cómo te va?",
-          "audioSlug": "como_te_va"
+          "audioSlug": "como_te_va",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cómo le va?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_le_va"
         }
       ]
     },
@@ -124,7 +144,17 @@
       "target": [
         {
           "text": "Y tú, ¿cómo estás?",
-          "audioSlug": "y_tu_como_estas"
+          "audioSlug": "y_tu_como_estas",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Y usted, ¿cómo está?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "y_usted_como_esta"
         }
       ]
     },
@@ -170,7 +200,17 @@
       "target": [
         {
           "text": "¿Cómo te llamas?",
-          "audioSlug": "como_te_llamas"
+          "audioSlug": "como_te_llamas",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cómo se llama?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_se_llama"
         }
       ]
     },
@@ -338,7 +378,17 @@
       "target": [
         {
           "text": "Buenas noches, ¿cómo ha estado tu día?",
-          "audioSlug": "buenas_noches_como_ha_estado_tu_dia"
+          "audioSlug": "buenas_noches_como_ha_estado_tu_dia",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Buenas noches, ¿cómo ha estado su día?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "buenas_noches_como_ha_estado_su_dia"
         }
       ]
     },
@@ -602,7 +652,17 @@
       "target": [
         {
           "text": "¿Cómo te ha ido hoy?",
-          "audioSlug": "como_te_ha_ido_hoy"
+          "audioSlug": "como_te_ha_ido_hoy",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cómo le ha ido hoy?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_le_ha_ido_hoy"
         }
       ]
     },
@@ -868,7 +928,17 @@
       "target": [
         {
           "text": "Espero no estar interrumpiendo, ¿tienes un momento?",
-          "audioSlug": "espero_no_estar_interrumpiendo_tienes_un_momento"
+          "audioSlug": "espero_no_estar_interrumpiendo_tienes_un_momento",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Espero no estar interrumpiendo, ¿tiene un momento?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "espero_no_estar_interrumpiendo_tiene_un_momento"
         }
       ]
     },
@@ -892,7 +962,17 @@
       "target": [
         {
           "text": "Saluda a tu familia de mi parte, por favor.",
-          "audioSlug": "saluda_a_tu_familia_de_mi_parte_por_favor"
+          "audioSlug": "saluda_a_tu_familia_de_mi_parte_por_favor",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Salude a su familia de mi parte, por favor.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "salude_a_su_familia_de_mi_parte_por_favor"
         }
       ]
     },
@@ -964,7 +1044,17 @@
       "target": [
         {
           "text": "Te deseo mucha suerte.",
-          "audioSlug": "te_deseo_mucha_suerte"
+          "audioSlug": "te_deseo_mucha_suerte",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Le deseo mucha suerte.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "le_deseo_mucha_suerte"
         }
       ]
     },
@@ -988,7 +1078,17 @@
       "target": [
         {
           "text": "Te presento a mi amiga Ana.",
-          "audioSlug": "te_presento_a_mi_amiga_ana"
+          "audioSlug": "te_presento_a_mi_amiga_ana",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Le presento a mi amiga Ana.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "le_presento_a_mi_amiga_ana"
         }
       ]
     },
