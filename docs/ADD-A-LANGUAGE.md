@@ -47,6 +47,13 @@ are CC BY-**NC**-SA may only be a LOCAL cross-check (`frequency.localIndex`), ne
     pure ASCII). Drives the wrong-language check for grammar tips (`check-content` R11).
 - **Detector block** in `tools/lang-detectors.mjs` (grammar evidence) — required by
   `check-lang-profiles`.
+- **Gender-detector block** in `tools/gender-detectors.mjs` — REQUIRED (and gated by
+  `check-lang-profiles`) whenever the profile has `grammaticalGender: true`. A self-contained object
+  per language (`personNouns`, `personAdjs`, `personCtx`, `arts`, `irregular`, and its OWN morphology
+  methods `gestureGendered`/`isGenderInfl`/`bothGendersPresent`/`retainedAdjMismatch` — gender
+  inflection differs per language, so the language provides it, and `check-variants` stays generic).
+  A non-gendered target (English) needs none. This is what makes gender detection perfil-driven: a new
+  gendered language adds a block here, zero edits to the audit tools.
 - **Committed frequency index** at `tools/sources/derived/<gateIndex>` — see §0 for the rule
   and the build pattern (`build-pcic-core.py` for es, `ngsl-en.json` for en). Calibrate
   `gateFloor` a couple points below live coverage (a **ratchet** you raise as content grows);

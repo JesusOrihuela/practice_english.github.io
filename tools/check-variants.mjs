@@ -32,6 +32,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { GENDER } from './gender-detectors.mjs';   // per-target-language gender detection (perfil-driven)
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAIRS_DIR = path.join(ROOT, 'shared/json/pairs');
@@ -114,9 +115,9 @@ const LEXICON = {
     { name: 'apartment', members: [
       { words: ['apartment'], label: 'US', countries: ['us'] },
       { words: ['flat'],      label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
-    { name: 'vacation', members: [
-      { words: ['vacation'], label: 'US', countries: ['us'] },
-      { words: ['holiday'],  label: 'UK', countries: ['gb', 'au', 'nz', 'ie'] } ] },
+    // ('vacation'/'holiday' removed — "holiday" is POLYSEMOUS (US "public holiday" = día festivo, vs
+    //  UK "holiday" = vacation), so it false-positives on the público sense, e.g. the vocab entry
+    //  "holiday" = día festivo. Per the anti-polysemy policy above, a word with two senses is excluded.)
     { name: 'truck',    members: [
       { words: ['truck'], label: 'US', countries: ['us'] },
       { words: ['lorry'], label: 'UK', countries: ['gb'] } ] },
@@ -137,50 +138,8 @@ function memberInText(member, text) {
 //   • sourceFixesGender() — the English source already fixes the gender (he/husband/boy/a name).
 //   • masculine-plural-only nouns — "hijos/hermanos/abuelos" are the standard generic for a group
 //     (Rule 14.4 excludes masculine plurals for groups); the feminine plural would change meaning.
-// Curated PERSON terms with -o/-a gender — split so we can gate the polysemous adjectives:
-//  • NOUNS always signal a person (muchacho, esposo, profesor…) → any form flags.
-//  • ADJECTIVES are polysemous (listo=ready, rápido=fast object, bajo=under) so they only flag in
-//    a PERSON context: a 1st/2nd-person predicate ("estoy/soy … cansado") or a nominalisation
-//    ("los/las más lentos"). This covers "ese muchacho/esa muchacha" (noun) and "los más lentos/
-//    las más lentas" (nominalised adj) while excluding "el balance está listo", "análisis rápido".
-const PERSON_NOUN_ES = [
-  'muchacho', 'niño', 'chico', 'hermano', 'amigo', 'hijo', 'abuelo', 'tío', 'sobrino', 'nieto',
-  'novio', 'esposo', 'compañero', 'vecino', 'alumno', 'jugador', 'conductor', 'pasajero',
-  'ciudadano', 'empleado', 'jefe', 'dueño', 'profesor', 'maestro', 'doctor', 'enfermero',
-  'ingeniero', 'abogado', 'cocinero', 'camarero', 'director', 'gerente', 'vendedor', 'arquitecto',
-  'bombero', 'panadero', 'peluquero', 'carpintero',
-  // ('cartero' omitted — its -a form collides with "cartera" = wallet, a common false positive.)
-];
-const PERSON_ADJ_ES = [
-  'listo', 'lento', 'rápido', 'alto', 'gordo', 'delgado', 'guapo', 'feo', 'rubio', 'moreno',
-  'calvo', 'simpático', 'antipático', 'nervioso', 'contento', 'cansado', 'enfermo', 'aburrido',
-  'ocupado', 'preocupado', 'emocionado', 'orgulloso', 'callado', 'tímido', 'curioso', 'honesto',
-  'generoso', 'perezoso', 'casado', 'soltero', 'divorciado', 'viudo', 'sorprendido', 'asustado',
-  'enojado', 'molesto', 'mareado', 'resfriado', 'agradecido',
-];
-// Person context for adjectives: 1st/2nd-person predicate, or "el/la/los/las (más|menos) …".
-const PERSON_CTX = /\b(estoy|soy|est[aá]s|eres|me siento|te ves|ser[eé]|seas|est[eé]s)\b|\b(el|la|los|las)\s+(m[aá]s|menos)\s/i;
-// A person lemma (masc -o) as its -o/-os/-a/-as forms, whole word.
-const genderLemmaRe = (lemma) => {
-  const stem = lemma.replace(/o$/, '');
-  return new RegExp('(^|[^\\p{L}])' + stem + '[oa]s?($|[^\\p{L}])', 'iu');
-};
-function gestureGendered(text) {   // → the person term matched, or null
-  // NOUNS: flag the SINGULAR (vecino→vecina is a real variant) or an explicit feminine plural.
-  // A masculine-plural-only noun (hijos = children, abuelos = grandparents, hermanos = siblings) is
-  // the STANDARD generic for a group — Rule 14.4 excludes "masculine plurals for groups" → skip.
-  for (const l of PERSON_NOUN_ES) {
-    const stem = l.replace(/o$/, '');
-    const sg = new RegExp('(^|[^\\p{L}])' + stem + '[oa]($|[^\\p{L}])', 'iu');
-    const plFem = new RegExp('(^|[^\\p{L}])' + stem + 'as($|[^\\p{L}])', 'iu');
-    if (sg.test(text) || plFem.test(text)) return l;
-    // else (masculine-plural-only, or no match) → not a within-phrase variant; keep scanning.
-  }
-  // ADJECTIVES (nominalised): keep plural too — "los más lentos/las más lentas" IS a real agreement
-  // variant of one concept (unlike a plural noun, whose feminine changes the meaning).
-  if (PERSON_CTX.test(text)) for (const l of PERSON_ADJ_ES) if (genderLemmaRe(l).test(text)) return l;
-  return null;
-}
+// Person-noun / person-adjective lexicons and the gender morphology now live per TARGET language in
+// tools/gender-detectors.mjs (GENDER[lang]) — a new gendered language adds a block there, not here.
 
 // Does the SOURCE already fix the person's gender? (source language = English here — the only
 // source that reaches the gender block, since the target must be Spanish.) A gendered pronoun /
@@ -207,47 +166,18 @@ const anyRegionMember = (lex, text) => lex.some(set => set.members.some(m => mem
 // all agreeing, nothing else. Catches a form where a word was NOT agreed ("La niña es listo") or a
 // non-inflectional change slipped in. Deterministic morphology + a small irregular allowlist.
 const _w = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/^[^\p{L}]+|[^\p{L}]+$/gu, '');
-const GENDER_ARTS = { el: 'la', los: 'las', un: 'una', unos: 'unas', este: 'esta', estos: 'estas', ese: 'esa', esos: 'esas', aquel: 'aquella', aquellos: 'aquellas', el2: 'ella', ellos: 'ellas', uno: 'una', nuestro: 'nuestra', nuestros: 'nuestras', vuestro: 'vuestra' };
-const IRREGULAR_GENDER = [['actor', 'actriz'], ['rey', 'reina'], ['hombre', 'mujer'], ['padre', 'madre'], ['yerno', 'nuera'], ['heroe', 'heroina'], ['principe', 'princesa'], ['emperador', 'emperatriz'], ['caballo', 'yegua'], ['toro', 'vaca'], ['papa', 'mama'], ['varon', 'hembra'],
-  // plural irregulars (the check runs on the surface words, so list both numbers)
-  ['actores', 'actrices'], ['reyes', 'reinas'], ['hombres', 'mujeres'], ['padres', 'madres'], ['heroes', 'heroinas'], ['principes', 'princesas'], ['emperadores', 'emperatrices']];
 // Spanish preposition+article contractions expand so word alignment matches the feminine ("a la"):
 // "al" = "a el", "del" = "de el". Without this, "al niño" (2) vs "a la niña" (3) looks like a length change.
 const expandContractions = (t) => t.replace(/\bal\b/gi, 'a el').replace(/\bdel\b/gi, 'de el');
-function isGenderInfl(a, b) {
-  const la = _w(a), lb = _w(b); if (la === lb) return true;
-  if (GENDER_ARTS[la] === lb || GENDER_ARTS[lb] === la) return true;
-  if (IRREGULAR_GENDER.some(([m, f]) => (la === m && lb === f) || (la === f && lb === m))) return true;
-  if (la.length > 1 && lb.length > 1 && la.slice(0, -1) === lb.slice(0, -1) &&
-      ((la.endsWith('o') && lb.endsWith('a')) || (la.endsWith('a') && lb.endsWith('o')))) return true;   // niño/niña
-  if (la.length > 2 && lb.length > 2 && la.slice(0, -2) === lb.slice(0, -2) &&
-      ((la.endsWith('os') && lb.endsWith('as')) || (la.endsWith('as') && lb.endsWith('os')))) return true; // niños/niñas
-  if (lb === la + 'a' || la === lb + 'a') return true;   // profesor/profesora, español/española
-  return false;
-}
-// → null if the pair agrees cleanly, else a human reason string.
-function concordMismatch(textA, textB, dim) {
+// → null if the pair agrees cleanly, else a human reason string. `G` is the target language's gender
+// detector (GENDER[lang]); the inflection test is the language's own (G.isGenderInfl).
+function concordMismatch(textA, textB, dim, G) {
   const wa = expandContractions(textA).split(/\s+/).filter(Boolean), wb = expandContractions(textB).split(/\s+/).filter(Boolean);
   if (wa.length !== wb.length)
     return `las formas ${dim} difieren en nº de palabras (${wa.length}≠${wb.length}) — deben diferir solo por flexión`;
-  const ok = isGenderInfl;   // gender is the only inflectional dimension in use
   for (let i = 0; i < wa.length; i++) {
     if (_w(wa[i]) === _w(wb[i])) continue;
-    if (!ok(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
-  }
-  return null;
-}
-// A person adjective left in the WRONG gender inside a gender variant (the "La niña es listo" bug):
-// the differing-words check above misses it because the adjective is IDENTICAL in both forms. Safe
-// subset of PERSON_ADJ (excludes words that double as invariable adverbs: rápido/lento/alto/bajo).
-const RETAINED_ADJ = PERSON_ADJ_ES.filter(a => !['rápido', 'lento', 'alto', 'bajo'].includes(a));
-function retainedAdjMismatch(mascText, femText) {
-  for (const lemma of RETAINED_ADJ) {
-    const stem = lemma.replace(/o$/, '');
-    const masc = new RegExp('(^|[^\\p{L}])' + stem + 'os?($|[^\\p{L}])', 'iu');
-    const fem = new RegExp('(^|[^\\p{L}])' + stem + 'as?($|[^\\p{L}])', 'iu');
-    if (masc.test(femText)) return `adjetivo "${lemma}" en masculino dentro de la forma femenina (sin concordar)`;
-    if (fem.test(mascText)) return `adjetivo "${lemma}" en femenino dentro de la forma masculina (sin concordar)`;
+    if (!G.isGenderInfl(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
   }
   return null;
 }
@@ -266,6 +196,7 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
   if (!fs.statSync(dir).isDirectory()) continue;
   const lang = pair.split('-')[1];
   const lex = LEXICON[lang];
+  const G = GENDER[lang];   // the target language's gender detector (undefined ⇒ no grammatical gender)
   if (!lex) continue;
   for (const f of fs.readdirSync(dir)) {
     if (!f.endsWith('.json') || ['grammar-rules.json', 'placement.json', 'topics.json'].includes(f)) continue;
@@ -295,7 +226,7 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
 
       // (2) GENDER completeness (es) — a phrase describing the speaker/addressee with a gendered
       //     predicate, but no gender variant.
-      const gLemma = lang === 'es' ? gestureGendered(allText) : null;
+      const gLemma = G ? G.gestureGendered(allText) : null;
       const genderMissing = gLemma && !hasGender && !sourceFixesGender(p.source);
       if (genderMissing) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" (source no fija género) sin variante masculino/femenino` });
 
@@ -309,14 +240,14 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       //     (gender/number) must differ ONLY by recognised inflection (art+noun+adj+verb agree).
       for (let a = 0; a < forms.length; a++) for (let b = a + 1; b < forms.length; b++) {
         const dim = soleDiffDim(forms[a].labels, forms[b].labels);
-        if (dim && _inflDims.includes(dim)) {
-          const m = concordMismatch(forms[a].text || '', forms[b].text || '', dim);
+        if (dim && _inflDims.includes(dim) && G) {
+          const m = concordMismatch(forms[a].text || '', forms[b].text || '', dim, G);
           if (m) findings.push({ ...base, type: 'concord', detail: m });
           else if (dim === 'gender') {          // also catch a retained wrong-gender adjective
             const fa = forms[a].labels || {}, fb = forms[b].labels || {};
             const masc = fa.gender === 'masculino' ? forms[a].text : fb.gender === 'masculino' ? forms[b].text : null;
             const fem = fa.gender === 'femenino' ? forms[a].text : fb.gender === 'femenino' ? forms[b].text : null;
-            if (masc && fem) { const r = retainedAdjMismatch(masc, fem); if (r) findings.push({ ...base, type: 'concord', detail: r }); }
+            if (masc && fem) { const r = G.retainedAdjMismatch(masc, fem); if (r) findings.push({ ...base, type: 'concord', detail: r }); }
           }
         }
       }
@@ -330,18 +261,9 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
 // exactly like a phrase source. So the user's rule "las palabras también deben cumplir variantes,
 // y que se identifiquen" is enforced, not only phrases.
 const VOCAB_BASE = path.join(ROOT, 'shared/json/vocab');
-const bothGendersPresent = (lemma, text) => {
-  if (/o$/.test(lemma)) {                       // -o nouns: masc = stem+o, fem = stem+a (niño/niña)
-    const stem = lemma.slice(0, -1);
-    return new RegExp('(^|[^\\p{L}])' + stem + 'os?($|[^\\p{L}])', 'iu').test(text)
-        && new RegExp('(^|[^\\p{L}])' + stem + 'as?($|[^\\p{L}])', 'iu').test(text);
-  }
-  // consonant-ending nouns (jugador/jugadora, profesor/profesora): masc = bare, fem = +a.
-  return new RegExp('(^|[^\\p{L}])' + lemma + '(es)?($|[^\\p{L}])', 'iu').test(text)
-      && new RegExp('(^|[^\\p{L}])' + lemma + 'as?($|[^\\p{L}])', 'iu').test(text);
-};
 for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])) {
   const lex = LEXICON[lang];
+  const G = GENDER[lang];   // the target language's gender detector (undefined ⇒ no grammatical gender)
   if (!lex) continue;
   const vdir = path.join(VOCAB_BASE, lang);
   if (!fs.statSync(vdir).isDirectory()) continue;
@@ -367,17 +289,17 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
 
       // GENDER — a person noun present but NOT in both gender forms, and the English gloss doesn't
       // fix the gender (gloss "child" is neutral → needs niño/niña; "man" fixes it → single is fine).
-      const gLemma = lang === 'es' ? gestureGendered(allText) : null;
-      if (gLemma && !bothGendersPresent(gLemma, allText) && !sourceFixesGender(enGloss))
+      const gLemma = G ? G.gestureGendered(allText) : null;
+      if (gLemma && !G.bothGendersPresent(gLemma, allText) && !sourceFixesGender(enGloss))
         findings.push({ ...base, type: 'gender', detail: `término con género "${gLemma}" (gloss "${enGloss}" no fija género) sin ambas formas masculino/femenino` });
 
       // MISLABEL — a LEXICAL variant set (synonym/loanword) whose forms are actually a gender
       // inflection of one lemma (inglés/inglesa) must NOT rotate: gender is the dictionary-slash
       // pattern, not a rotating recognition variant. Catches the class of bug where the migration
       // detector missed a gender pair and structured it as a rotating synonym.
-      if (lang === 'es' && variants.length === 2) {
+      if (G && variants.length === 2) {
         const lexical = variants.every(v => v.labels && ('synonym' in v.labels || 'loanword' in v.labels) && !('gender' in v.labels));
-        if (lexical && isGenderInfl(variants[0].text || '', variants[1].text || ''))
+        if (lexical && G.isGenderInfl(variants[0].text || '', variants[1].text || ''))
           findings.push({ ...base, type: 'gender',
             detail: `"${variants[0].text}" / "${variants[1].text}" es flexión de GÉNERO etiquetada como léxica (sinónimo/préstamo) → debe ser barra de género, no rotar` });
       }

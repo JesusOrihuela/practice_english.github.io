@@ -66,13 +66,11 @@ const EN_IRREGULAR = {
   understood: 'understand', left: 'leave',
 };
 
-// Best (lowest) rank found for a surface word, trying light morphological
-// fallbacks for the given language. `ranks` is the {word: rank} map.
-export function lookupRank(word, lang, ranks) {
-  const direct = ranks[word];
-  if (direct != null) return direct;
-  const cands = new Set();
-  if (lang === 'es') {
+// Light morphological fallbacks, keyed by language — a NEW language adds its block here (no
+// `lang === 'xx'` branch to edit). Each fn adds lemma candidates for a surface word to `cands`.
+// The English block is the default fallback (suffix stripping) for any language without its own.
+const MORPH = {
+  es: (word, cands) => {
     let base = word;
     for (let i = 0; i < 2; i++) {
       const hit = ES_ENCLITICS.find(s => base.length - s.length >= 3 && base.endsWith(s));
@@ -85,9 +83,9 @@ export function lookupRank(word, lang, ranks) {
     if (word.endsWith('a'))  cands.add(word.slice(0, -1) + 'o');
     if (word.endsWith('es') && word.length > 4) cands.add(word.slice(0, -2));
     if (word.endsWith('s')  && word.length > 3) cands.add(word.slice(0, -1));
-    // Verb → infinitive reconstruction. A direct dictionary hit already returned
-    // above, so a homograph noun/adverb (solo, costa, caso) never reaches here — this
-    // only fires for genuine conjugated forms not present as their own lemma.
+    // Verb → infinitive reconstruction. A direct dictionary hit already returned in lookupRank,
+    // so a homograph noun/adverb (solo, costa, caso) never reaches here — this only fires for
+    // genuine conjugated forms not present as their own lemma.
     const addInf = (stem) => { cands.add(stem + 'ar'); cands.add(stem + 'er'); cands.add(stem + 'ir'); };
     if (word.endsWith('ando')) cands.add(word.slice(0, -4) + 'ar');
     if (word.endsWith('iendo') || word.endsWith('yendo')) { cands.add(word.slice(0, -5) + 'er'); cands.add(word.slice(0, -5) + 'ir'); }
@@ -103,13 +101,23 @@ export function lookupRank(word, lang, ranks) {
         if (und !== st) addInf(und);
       }
     }
-  } else {
+  },
+  en: (word, cands) => {
     if (word.endsWith('s') && word.length > 3) { cands.add(word.slice(0, -1)); if (word.endsWith('es')) cands.add(word.slice(0, -2)); if (word.endsWith('ies')) cands.add(word.slice(0, -3) + 'y'); }
     if (word.endsWith('ed') && word.length > 4) { cands.add(word.slice(0, -1)); cands.add(word.slice(0, -2)); if (word.endsWith('ied')) cands.add(word.slice(0, -3) + 'y'); }
     if (word.endsWith('ing') && word.length > 5) { cands.add(word.slice(0, -3)); cands.add(word.slice(0, -3) + 'e'); }
     const past = EN_IRREGULAR[word];
     if (past) cands.add(past);
-  }
+  },
+};
+
+// Best (lowest) rank found for a surface word, trying the language's light morphological
+// fallbacks. `ranks` is the {word: rank} map.
+export function lookupRank(word, lang, ranks) {
+  const direct = ranks[word];
+  if (direct != null) return direct;
+  const cands = new Set();
+  (MORPH[lang] || MORPH.en)(word, cands);   // English-style suffix stripping is the safe default
   let best = null;
   for (const c of cands) {
     const r = ranks[c];

@@ -25,6 +25,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import AppLangProfiles from '../shared/js/lang-profiles.js';
 import { DETECTORS } from './lang-detectors.mjs';
+import { GENDER } from './gender-detectors.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAIRS_DIR = path.join(ROOT, 'shared/json/pairs');
@@ -68,6 +69,15 @@ for (const code of targets) {
 
   // 2. Node grammar detectors.
   if (!DETECTORS[code]) fail(`${label} — NO detector block in tools/lang-detectors.mjs (grammar evidence would be empty)`);
+
+  // 2b. Gender detector — a target with grammatical gender MUST have a gender-detector block so
+  // check-variants can enforce gender completeness/concordance without hardcoding the language.
+  if (p.grammaticalGender) {
+    const g = GENDER[code];
+    if (!g) fail(`${label} — grammaticalGender:true but NO block in tools/gender-detectors.mjs (check-variants can't detect gender variants)`);
+    else if (!isNonEmptyArray(g.personNouns) || typeof g.gestureGendered !== 'function' || typeof g.isGenderInfl !== 'function')
+      fail(`${label} — gender-detector block is incomplete (needs personNouns[] + gestureGendered/isGenderInfl/bothGendersPresent/retainedAdjMismatch)`);
+  }
 
   // 3. grammarTipLabels ruleIds must exist in the grammar rules of this target's pairs.
   const ruleIds = new Set();
