@@ -520,7 +520,23 @@
       },
       "gloss_example": {
         "en": "From the tone of the letter, we can infer that she was deeply disappointed."
-      }
+      },
+      "variants": [
+        {
+          "text": "inferir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "inferir"
+        },
+        {
+          "text": "deducir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "deducir"
+        }
+      ]
     },
     {
       "id": "scrutinize",
@@ -538,7 +554,23 @@
       },
       "gloss_example": {
         "en": "The auditors scrutinized every transaction from the past five years."
-      }
+      },
+      "variants": [
+        {
+          "text": "escudriñar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "escudrinar"
+        },
+        {
+          "text": "examinar minuciosamente",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "examinar_minuciosamente"
+        }
+      ]
     },
     {
       "id": "reconcile",
@@ -556,7 +588,23 @@
       },
       "gloss_example": {
         "en": "It is difficult to reconcile his public statements with his actual voting record."
-      }
+      },
+      "variants": [
+        {
+          "text": "reconciliar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "reconciliar"
+        },
+        {
+          "text": "conciliar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "conciliar"
+        }
+      ]
     },
     {
       "id": "discern",
@@ -574,7 +622,23 @@
       },
       "gloss_example": {
         "en": "Even experienced critics struggle to discern genuine talent from mere novelty."
-      }
+      },
+      "variants": [
+        {
+          "text": "discernir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "discernir"
+        },
+        {
+          "text": "distinguir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "distinguir"
+        }
+      ]
     },
     {
       "id": "circumvent",
@@ -592,7 +656,23 @@
       },
       "gloss_example": {
         "en": "The new regulation was designed to prevent companies from circumventing tax obligations."
-      }
+      },
+      "variants": [
+        {
+          "text": "eludir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "eludir"
+        },
+        {
+          "text": "sortear",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sortear"
+        }
+      ]
     },
     {
       "id": "preclude",
@@ -610,7 +690,23 @@
       },
       "gloss_example": {
         "en": "His prior conviction effectively precludes him from holding public office."
-      }
+      },
+      "variants": [
+        {
+          "text": "impedir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "impedir"
+        },
+        {
+          "text": "excluir de antemano",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "excluir_de_antemano"
+        }
+      ]
     },
     {
       "id": "grow",

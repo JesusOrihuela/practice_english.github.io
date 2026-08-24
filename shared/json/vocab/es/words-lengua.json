@@ -322,7 +322,23 @@
       },
       "gloss_example": {
         "en": "Write a sentence with the new word."
-      }
+      },
+      "variants": [
+        {
+          "text": "oración",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "oracion"
+        },
+        {
+          "text": "frase",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "frase"
+        }
+      ]
     }
   ]
 }

@@ -16,7 +16,23 @@
       },
       "gloss_example": {
         "en": "We need to submit the full report before the deadline on Friday."
-      }
+      },
+      "variants": [
+        {
+          "text": "fecha límite",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "fecha_limite"
+        },
+        {
+          "text": "plazo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "plazo"
+        }
+      ]
     },
     {
       "id": "commitment",
@@ -304,7 +320,23 @@
       },
       "gloss_example": {
         "en": "Under the accrual method, revenue is recognized when a service is delivered, not when invoiced."
-      }
+      },
+      "variants": [
+        {
+          "text": "devengo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "devengo"
+        },
+        {
+          "text": "acumulación contable",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "acumulacion_contable"
+        }
+      ]
     },
     {
       "id": "liability",
@@ -394,7 +426,23 @@
       },
       "gloss_example": {
         "en": "The project budget includes a ten-percent contingency for unforeseen costs."
-      }
+      },
+      "variants": [
+        {
+          "text": "contingencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "contingencia"
+        },
+        {
+          "text": "reserva",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "reserva"
+        }
+      ]
     },
     {
       "id": "depreciation",
@@ -448,7 +496,23 @@
       },
       "gloss_example": {
         "en": "Rent, utilities, and administrative salaries are all classified as overhead."
-      }
+      },
+      "variants": [
+        {
+          "text": "gastos generales",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "gastos_generales"
+        },
+        {
+          "text": "gastos indirectos",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "gastos_indirectos"
+        }
+      ]
     },
     {
       "id": "liquidity",
@@ -538,7 +602,23 @@
       },
       "gloss_example": {
         "en": "The auditor applied a materiality threshold of one percent of total assets to guide the audit scope."
-      }
+      },
+      "variants": [
+        {
+          "text": "materialidad",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "materialidad"
+        },
+        {
+          "text": "importancia relativa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "importancia_relativa"
+        }
+      ]
     },
     {
       "id": "hedging",
@@ -556,7 +636,23 @@
       },
       "gloss_example": {
         "en": "Currency hedging protected the firm from losses when the dollar weakened sharply."
-      }
+      },
+      "variants": [
+        {
+          "text": "cobertura",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cobertura"
+        },
+        {
+          "text": "hedging",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "hedging"
+        }
+      ]
     },
     {
       "id": "fund",

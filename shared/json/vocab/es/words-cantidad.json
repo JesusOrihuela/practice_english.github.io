@@ -160,7 +160,23 @@
       },
       "gloss_example": {
         "en": "Have a piece of bread."
-      }
+      },
+      "variants": [
+        {
+          "text": "trozo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "trozo"
+        },
+        {
+          "text": "pieza",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pieza"
+        }
+      ]
     },
     {
       "id": "lado",
@@ -286,7 +302,23 @@
       },
       "gloss_example": {
         "en": "I weighed a kilo of apples on the scale."
-      }
+      },
+      "variants": [
+        {
+          "text": "kilo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "kilo"
+        },
+        {
+          "text": "kilogramo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "kilogramo"
+        }
+      ]
     },
     {
       "id": "dozen",

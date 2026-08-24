@@ -70,7 +70,23 @@
       },
       "gloss_example": {
         "en": "She made a playlist for the road trip with all her favorite songs."
-      }
+      },
+      "variants": [
+        {
+          "text": "lista de reproducción",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "lista_de_reproduccion"
+        },
+        {
+          "text": "playlist",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "playlist"
+        }
+      ]
     },
     {
       "id": "band",
@@ -88,7 +104,23 @@
       },
       "gloss_example": {
         "en": "The band has been touring Europe for three months."
-      }
+      },
+      "variants": [
+        {
+          "text": "banda",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "banda"
+        },
+        {
+          "text": "grupo musical",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "grupo_musical"
+        }
+      ]
     },
     {
       "id": "album",
@@ -106,7 +138,23 @@
       },
       "gloss_example": {
         "en": "Their latest album became the best-selling record of the year."
-      }
+      },
+      "variants": [
+        {
+          "text": "álbum",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "album"
+        },
+        {
+          "text": "disco",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "disco"
+        }
+      ]
     },
     {
       "id": "lyrics",
@@ -160,7 +208,23 @@
       },
       "gloss_example": {
         "en": "The song has such a catchy beat that you can't help dancing."
-      }
+      },
+      "variants": [
+        {
+          "text": "ritmo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "ritmo"
+        },
+        {
+          "text": "beat",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "beat"
+        }
+      ]
     },
     {
       "id": "genre",
@@ -196,7 +260,23 @@
       },
       "gloss_example": {
         "en": "Everyone in the crowd sang along to the chorus of the hit song."
-      }
+      },
+      "variants": [
+        {
+          "text": "coro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "coro"
+        },
+        {
+          "text": "estribillo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "estribillo"
+        }
+      ]
     },
     {
       "id": "melody",
@@ -268,7 +348,23 @@
       },
       "gloss_example": {
         "en": "Hip-hop producers built an entire art form around creative sampling."
-      }
+      },
+      "variants": [
+        {
+          "text": "sampling",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "sampling"
+        },
+        {
+          "text": "sampleo",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "sampleo"
+        }
+      ]
     },
     {
       "id": "pitch",
@@ -286,7 +382,23 @@
       },
       "gloss_example": {
         "en": "She has perfect pitch and can identify any musical note without a reference."
-      }
+      },
+      "variants": [
+        {
+          "text": "tono",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tono"
+        },
+        {
+          "text": "altura tonal",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "altura_tonal"
+        }
+      ]
     },
     {
       "id": "setlist",
@@ -322,7 +434,23 @@
       },
       "gloss_example": {
         "en": "The venue holds over ten thousand people and has incredible acoustics."
-      }
+      },
+      "variants": [
+        {
+          "text": "recinto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "recinto"
+        },
+        {
+          "text": "sala de conciertos",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sala_de_conciertos"
+        }
+      ]
     },
     {
       "id": "remix",
@@ -340,7 +468,23 @@
       },
       "gloss_example": {
         "en": "The DJ's remix of that 90s hit was even more popular than the original."
-      }
+      },
+      "variants": [
+        {
+          "text": "remix",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "remix"
+        },
+        {
+          "text": "remezcla",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "remezcla"
+        }
+      ]
     },
     {
       "id": "virtuoso",
@@ -484,7 +628,23 @@
       },
       "gloss_example": {
         "en": "The erasure of Black artists from early rock and roll history has been extensively documented."
-      }
+      },
+      "variants": [
+        {
+          "text": "borramiento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "borramiento"
+        },
+        {
+          "text": "invisibilización",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "invisibilizacion"
+        }
+      ]
     },
     {
       "id": "polyrhythm",

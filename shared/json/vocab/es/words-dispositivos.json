@@ -70,7 +70,23 @@
       },
       "gloss_example": {
         "en": "We watched the news on television."
-      }
+      },
+      "variants": [
+        {
+          "text": "televisión",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "television"
+        },
+        {
+          "text": "televisor",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "televisor"
+        }
+      ]
     },
     {
       "id": "radio",
@@ -192,7 +208,23 @@
       },
       "gloss_example": {
         "en": "I take the laptop to the office every day."
-      }
+      },
+      "variants": [
+        {
+          "text": "portátil",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "portatil"
+        },
+        {
+          "text": "laptop",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "laptop"
+        }
+      ]
     },
     {
       "id": "camera",

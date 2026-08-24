@@ -142,7 +142,23 @@
       },
       "gloss_example": {
         "en": "The plot of the novel was full of surprising twists."
-      }
+      },
+      "variants": [
+        {
+          "text": "trama",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "trama"
+        },
+        {
+          "text": "argumento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "argumento"
+        }
+      ]
     },
     {
       "id": "documentary",
@@ -268,7 +284,23 @@
       },
       "gloss_example": {
         "en": "The film has an incredible cast of internationally famous actors."
-      }
+      },
+      "variants": [
+        {
+          "text": "reparto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "reparto"
+        },
+        {
+          "text": "elenco",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "elenco"
+        }
+      ]
     },
     {
       "id": "adaptation",
@@ -304,7 +336,23 @@
       },
       "gloss_example": {
         "en": "Nobody saw that plot twist coming. It completely changed our understanding of the main character."
-      }
+      },
+      "variants": [
+        {
+          "text": "giro argumental",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "giro_argumental"
+        },
+        {
+          "text": "giro de trama",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "giro_de_trama"
+        }
+      ]
     },
     {
       "id": "protagonist",
@@ -376,7 +424,23 @@
       },
       "gloss_example": {
         "en": "The studio invested heavily in the blockbuster, hoping it would dominate the summer box office."
-      }
+      },
+      "variants": [
+        {
+          "text": "taquillero",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "taquillero"
+        },
+        {
+          "text": "superproducción",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "superproduccion"
+        }
+      ]
     },
     {
       "id": "subplot",
@@ -412,7 +476,23 @@
       },
       "gloss_example": {
         "en": "Water is used as a recurring motif throughout the film to symbolize transformation."
-      }
+      },
+      "variants": [
+        {
+          "text": "motivo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "motivo"
+        },
+        {
+          "text": "leitmotiv",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "leitmotiv"
+        }
+      ]
     },
     {
       "id": "unreliable_narrator",
@@ -520,7 +600,23 @@
       },
       "gloss_example": {
         "en": "She is considered an auteur because every film she makes reflects her distinct style."
-      }
+      },
+      "variants": [
+        {
+          "text": "autor",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "autor"
+        },
+        {
+          "text": "cineasta con estilo propio",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cineasta_con_estilo_propio"
+        }
+      ]
     },
     {
       "id": "intertextuality",
@@ -628,7 +724,23 @@
       },
       "gloss_example": {
         "en": "The documentary was seen as a polemic against the pharmaceutical industry."
-      }
+      },
+      "variants": [
+        {
+          "text": "polémica",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "polemica"
+        },
+        {
+          "text": "crítica apasionada",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "critica_apasionada"
+        }
+      ]
     },
     {
       "id": "character",

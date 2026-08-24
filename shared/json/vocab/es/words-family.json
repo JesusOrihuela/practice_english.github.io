@@ -52,7 +52,23 @@
       },
       "gloss_example": {
         "en": "The girl drew a picture of her family."
-      }
+      },
+      "variants": [
+        {
+          "text": "niña",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "nina"
+        },
+        {
+          "text": "chica",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "chica"
+        }
+      ]
     },
     {
       "id": "baby",
@@ -178,7 +194,23 @@
       },
       "gloss_example": {
         "en": "Her husband cooks dinner every evening."
-      }
+      },
+      "variants": [
+        {
+          "text": "esposo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "esposo"
+        },
+        {
+          "text": "marido",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "marido"
+        }
+      ]
     },
     {
       "id": "marry",
@@ -214,7 +246,23 @@
       },
       "gloss_example": {
         "en": "A friendly guy helped me carry the boxes."
-      }
+      },
+      "variants": [
+        {
+          "text": "tipo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tipo"
+        },
+        {
+          "text": "hombre",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "hombre"
+        }
+      ]
     },
     {
       "id": "generation",
@@ -466,7 +514,23 @@
       },
       "gloss_example": {
         "en": "Many people came to the concert."
-      }
+      },
+      "variants": [
+        {
+          "text": "gente",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "gente"
+        },
+        {
+          "text": "personas",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "personas"
+        }
+      ]
     },
     {
       "id": "invitado",

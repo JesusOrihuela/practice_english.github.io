@@ -34,7 +34,23 @@
       },
       "gloss_example": {
         "en": "He washed his face before breakfast."
-      }
+      },
+      "variants": [
+        {
+          "text": "cara",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cara"
+        },
+        {
+          "text": "rostro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "rostro"
+        }
+      ]
     },
     {
       "id": "hair",
@@ -52,7 +68,23 @@
       },
       "gloss_example": {
         "en": "She brushed her long hair every morning."
-      }
+      },
+      "variants": [
+        {
+          "text": "pelo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pelo"
+        },
+        {
+          "text": "cabello",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cabello"
+        }
+      ]
     },
     {
       "id": "heart",
@@ -196,7 +228,23 @@
       },
       "gloss_example": {
         "en": "Many patients suffer from headaches after the surgery."
-      }
+      },
+      "variants": [
+        {
+          "text": "sufrir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sufrir"
+        },
+        {
+          "text": "padecer",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "padecer"
+        }
+      ]
     },
     {
       "id": "drug",

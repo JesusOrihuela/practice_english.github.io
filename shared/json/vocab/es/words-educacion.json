@@ -160,7 +160,23 @@
       },
       "gloss_example": {
         "en": "Cooking is a useful skill to learn."
-      }
+      },
+      "variants": [
+        {
+          "text": "habilidad",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "habilidad"
+        },
+        {
+          "text": "destreza",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "destreza"
+        }
+      ]
     },
     {
       "id": "degree",
@@ -178,7 +194,23 @@
       },
       "gloss_example": {
         "en": "He earned a degree in engineering."
-      }
+      },
+      "variants": [
+        {
+          "text": "título",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "titulo"
+        },
+        {
+          "text": "grado",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "grado"
+        }
+      ]
     },
     {
       "id": "subject",
@@ -196,7 +228,23 @@
       },
       "gloss_example": {
         "en": "History is my favorite subject."
-      }
+      },
+      "variants": [
+        {
+          "text": "materia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "materia"
+        },
+        {
+          "text": "asignatura",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "asignatura"
+        }
+      ]
     },
     {
       "id": "writer",

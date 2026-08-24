@@ -232,7 +232,23 @@
       },
       "gloss_example": {
         "en": "There is no reason to worry."
-      }
+      },
+      "variants": [
+        {
+          "text": "razón",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "razon"
+        },
+        {
+          "text": "motivo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "motivo"
+        }
+      ]
     },
     {
       "id": "result",
@@ -304,7 +320,23 @@
       },
       "gloss_example": {
         "en": "The first rule is to arrive on time."
-      }
+      },
+      "variants": [
+        {
+          "text": "regla",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "regla"
+        },
+        {
+          "text": "norma",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "norma"
+        }
+      ]
     },
     {
       "id": "situation",
@@ -340,7 +372,23 @@
       },
       "gloss_example": {
         "en": "The concert was the biggest event of the year."
-      }
+      },
+      "variants": [
+        {
+          "text": "evento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "evento"
+        },
+        {
+          "text": "acontecimiento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "acontecimiento"
+        }
+      ]
     },
     {
       "id": "decision",
@@ -376,7 +424,23 @@
       },
       "gloss_example": {
         "en": "Parents play a key role in education."
-      }
+      },
+      "variants": [
+        {
+          "text": "papel",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "papel"
+        },
+        {
+          "text": "rol",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "rol"
+        }
+      ]
     },
     {
       "id": "detail",
@@ -466,7 +530,23 @@
       },
       "gloss_example": {
         "en": "She passed her driving test."
-      }
+      },
+      "variants": [
+        {
+          "text": "prueba",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "prueba"
+        },
+        {
+          "text": "examen",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "examen"
+        }
+      ]
     },
     {
       "id": "truth",
@@ -1222,7 +1302,23 @@
       },
       "gloss_example": {
         "en": "I keep the photographs from the trip on my phone."
-      }
+      },
+      "variants": [
+        {
+          "text": "fotografía",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "fotografia"
+        },
+        {
+          "text": "foto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "foto"
+        }
+      ]
     },
     {
       "id": "discussion_argument",

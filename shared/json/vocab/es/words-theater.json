@@ -106,7 +106,23 @@
       },
       "gloss_example": {
         "en": "The evening performance received a standing ovation from the audience."
-      }
+      },
+      "variants": [
+        {
+          "text": "actuación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "actuacion"
+        },
+        {
+          "text": "función",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "funcion"
+        }
+      ]
     },
     {
       "id": "gallery",
@@ -160,7 +176,23 @@
       },
       "gloss_example": {
         "en": "The audience gave the cast a standing ovation at the end of the show."
-      }
+      },
+      "variants": [
+        {
+          "text": "público",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "publico"
+        },
+        {
+          "text": "audiencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "audiencia"
+        }
+      ]
     },
     {
       "id": "ticket",
@@ -178,7 +210,23 @@
       },
       "gloss_example": {
         "en": "Tickets for the opening night sold out within hours of going on sale."
-      }
+      },
+      "variants": [
+        {
+          "text": "entrada",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "entrada"
+        },
+        {
+          "text": "boleto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "boleto"
+        }
+      ]
     },
     {
       "id": "intermission",
@@ -214,7 +262,23 @@
       },
       "gloss_example": {
         "en": "The set was a simple arrangement of chairs and a single lamp, yet it felt completely real."
-      }
+      },
+      "variants": [
+        {
+          "text": "escenografía",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "escenografia"
+        },
+        {
+          "text": "set",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "set"
+        }
+      ]
     },
     {
       "id": "rehearsal",
@@ -250,7 +314,23 @@
       },
       "gloss_example": {
         "en": "The cast received three curtain calls on opening night."
-      }
+      },
+      "variants": [
+        {
+          "text": "llamada a escena",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "llamada_a_escena"
+        },
+        {
+          "text": "saludo final",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "saludo_final"
+        }
+      ]
     },
     {
       "id": "retrospective",
@@ -340,7 +420,23 @@
       },
       "gloss_example": {
         "en": "The director's unconventional staging placed the audience on three sides of the stage."
-      }
+      },
+      "variants": [
+        {
+          "text": "puesta en escena",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "puesta_en_escena"
+        },
+        {
+          "text": "montaje",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "montaje"
+        }
+      ]
     },
     {
       "id": "playwright",
@@ -376,7 +472,23 @@
       },
       "gloss_example": {
         "en": "The actors spent weeks studying the script before rehearsals even began."
-      }
+      },
+      "variants": [
+        {
+          "text": "guion",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "guion"
+        },
+        {
+          "text": "libreto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "libreto"
+        }
+      ]
     },
     {
       "id": "curator",
@@ -394,7 +506,23 @@
       },
       "gloss_example": {
         "en": "The curator's choices for the exhibition were bold and deliberately provocative."
-      }
+      },
+      "variants": [
+        {
+          "text": "curador",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "curador"
+        },
+        {
+          "text": "conservador",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "conservador"
+        }
+      ]
     },
     {
       "id": "immersive",
@@ -574,7 +702,23 @@
       },
       "gloss_example": {
         "en": "The exhibition critically examined the commodification of indigenous art by Western galleries."
-      }
+      },
+      "variants": [
+        {
+          "text": "mercantilización",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "mercantilizacion"
+        },
+        {
+          "text": "cosificación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cosificacion"
+        }
+      ]
     },
     {
       "id": "postmodern",
@@ -610,7 +754,23 @@
       },
       "gloss_example": {
         "en": "The museum refused to purchase the painting because its provenance could not be verified."
-      }
+      },
+      "variants": [
+        {
+          "text": "procedencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "procedencia"
+        },
+        {
+          "text": "historial de propiedad",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "historial_de_propiedad"
+        }
+      ]
     }
   ]
 }

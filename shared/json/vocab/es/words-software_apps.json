@@ -232,7 +232,23 @@
       },
       "gloss_example": {
         "en": "Many banks still rely on legacy systems that are too expensive to replace."
-      }
+      },
+      "variants": [
+        {
+          "text": "heredado",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "heredado"
+        },
+        {
+          "text": "obsoleto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "obsoleto"
+        }
+      ]
     },
     {
       "id": "proprietary",
@@ -250,7 +266,23 @@
       },
       "gloss_example": {
         "en": "The device only works with the manufacturer's proprietary charging cable."
-      }
+      },
+      "variants": [
+        {
+          "text": "propietario",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "propietario"
+        },
+        {
+          "text": "privativo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "privativo"
+        }
+      ]
     }
   ]
 }

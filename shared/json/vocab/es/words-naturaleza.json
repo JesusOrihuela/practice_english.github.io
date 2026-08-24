@@ -88,7 +88,23 @@
       },
       "gloss_example": {
         "en": "The farmer owns a large piece of land."
-      }
+      },
+      "variants": [
+        {
+          "text": "tierra",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tierra"
+        },
+        {
+          "text": "terreno",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "terreno"
+        }
+      ]
     },
     {
       "id": "nature",
@@ -232,7 +248,23 @@
       },
       "gloss_example": {
         "en": "A small bird sang outside the window."
-      }
+      },
+      "variants": [
+        {
+          "text": "pájaro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pajaro"
+        },
+        {
+          "text": "ave",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "ave"
+        }
+      ]
     },
     {
       "id": "lake",

@@ -70,7 +70,23 @@
       },
       "gloss_example": {
         "en": "Blend the fruits together to make a thick smoothie."
-      }
+      },
+      "variants": [
+        {
+          "text": "mezclar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "mezclar"
+        },
+        {
+          "text": "licuar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "licuar"
+        }
+      ]
     },
     {
       "id": "preheat",
@@ -322,7 +338,23 @@
       },
       "gloss_example": {
         "en": "Braise the short ribs for three hours until the meat falls off the bone."
-      }
+      },
+      "variants": [
+        {
+          "text": "brasear",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "brasear"
+        },
+        {
+          "text": "estofar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "estofar"
+        }
+      ]
     },
     {
       "id": "render",
@@ -340,7 +372,23 @@
       },
       "gloss_example": {
         "en": "Render the duck fat slowly before raising the heat to crisp the skin."
-      }
+      },
+      "variants": [
+        {
+          "text": "derretir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "derretir"
+        },
+        {
+          "text": "fundir la grasa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "fundir_la_grasa"
+        }
+      ]
     },
     {
       "id": "blanch",
@@ -358,7 +406,23 @@
       },
       "gloss_example": {
         "en": "Blanch the green beans for two minutes to preserve their color and crunch."
-      }
+      },
+      "variants": [
+        {
+          "text": "blanquear",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "blanquear"
+        },
+        {
+          "text": "escaldar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "escaldar"
+        }
+      ]
     },
     {
       "id": "spherification",
@@ -448,7 +512,23 @@
       },
       "gloss_example": {
         "en": "Fold the beaten egg whites into the chocolate mixture with a large spatula."
-      }
+      },
+      "variants": [
+        {
+          "text": "envolver",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "envolver"
+        },
+        {
+          "text": "incorporar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "incorporar"
+        }
+      ]
     },
     {
       "id": "umami",

@@ -88,7 +88,23 @@
       },
       "gloss_example": {
         "en": "Keep your receipt in case you need to return the item."
-      }
+      },
+      "variants": [
+        {
+          "text": "recibo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "recibo"
+        },
+        {
+          "text": "ticket",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "ticket"
+        }
+      ]
     },
     {
       "id": "expiration",
@@ -124,7 +140,23 @@
       },
       "gloss_example": {
         "en": "Organic vegetables tend to cost more than conventionally grown ones."
-      }
+      },
+      "variants": [
+        {
+          "text": "orgánico",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "organico"
+        },
+        {
+          "text": "ecológico",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "ecologico"
+        }
+      ]
     },
     {
       "id": "promotion",
@@ -142,7 +174,23 @@
       },
       "gloss_example": {
         "en": "The supermarket is running a buy-one-get-one promotion this week."
-      }
+      },
+      "variants": [
+        {
+          "text": "promoción",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "promocion"
+        },
+        {
+          "text": "oferta",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "oferta"
+        }
+      ]
     },
     {
       "id": "loyalty",
@@ -178,7 +226,23 @@
       },
       "gloss_example": {
         "en": "It is much cheaper to buy rice and pasta in bulk."
-      }
+      },
+      "variants": [
+        {
+          "text": "al por mayor",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "al_por_mayor"
+        },
+        {
+          "text": "a granel",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "a_granel"
+        }
+      ]
     },
     {
       "id": "generic",
@@ -196,7 +260,23 @@
       },
       "gloss_example": {
         "en": "Generic painkillers contain the same active ingredient as branded ones."
-      }
+      },
+      "variants": [
+        {
+          "text": "genérico",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "generico"
+        },
+        {
+          "text": "marca blanca",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "marca_blanca"
+        }
+      ]
     },
     {
       "id": "perishable",
@@ -232,7 +312,23 @@
       },
       "gloss_example": {
         "en": "The restaurant buys its produce at wholesale prices to save money."
-      }
+      },
+      "variants": [
+        {
+          "text": "mayorista",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "mayorista"
+        },
+        {
+          "text": "al por mayor",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "al_por_mayor"
+        }
+      ]
     },
     {
       "id": "allergen",
@@ -286,7 +382,23 @@
       },
       "gloss_example": {
         "en": "The supermarket's markup on premium organic lines is significantly higher than on standard products."
-      }
+      },
+      "variants": [
+        {
+          "text": "margen",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "margen"
+        },
+        {
+          "text": "sobrecoste",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sobrecoste"
+        }
+      ]
     },
     {
       "id": "recall",
@@ -340,7 +452,23 @@
       },
       "gloss_example": {
         "en": "The store introduced new security measures after shrinkage rates rose significantly last quarter."
-      }
+      },
+      "variants": [
+        {
+          "text": "merma",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "merma"
+        },
+        {
+          "text": "pérdida de inventario",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "perdida_de_inventario"
+        }
+      ]
     },
     {
       "id": "supply_chain",

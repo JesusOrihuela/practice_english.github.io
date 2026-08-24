@@ -394,7 +394,23 @@
       },
       "gloss_example": {
         "en": "This soup is really tasty."
-      }
+      },
+      "variants": [
+        {
+          "text": "rico",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "rico"
+        },
+        {
+          "text": "sabroso",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sabroso"
+        }
+      ]
     },
     {
       "id": "content_adj",
@@ -1960,7 +1976,23 @@
       },
       "gloss_example": {
         "en": "I love Japanese food."
-      }
+      },
+      "variants": [
+        {
+          "text": "japonés",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "japones"
+        },
+        {
+          "text": "japonesa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "japonesa"
+        }
+      ]
     },
     {
       "id": "chinese_nat",

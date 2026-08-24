@@ -106,7 +106,23 @@
       },
       "gloss_example": {
         "en": "Running long distances requires considerable stamina and mental focus."
-      }
+      },
+      "variants": [
+        {
+          "text": "resistencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "resistencia"
+        },
+        {
+          "text": "aguante",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "aguante"
+        }
+      ]
     },
     {
       "id": "flexibility",
@@ -196,7 +212,23 @@
       },
       "gloss_example": {
         "en": "Cycling and swimming are excellent activities for building endurance."
-      }
+      },
+      "variants": [
+        {
+          "text": "aguante",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "aguante"
+        },
+        {
+          "text": "resistencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "resistencia"
+        }
+      ]
     },
     {
       "id": "spotter",
@@ -358,7 +390,23 @@
       },
       "gloss_example": {
         "en": "After eight weeks of hard training, scheduling a deload week is essential."
-      }
+      },
+      "variants": [
+        {
+          "text": "semana de descarga",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "semana_de_descarga"
+        },
+        {
+          "text": "deload",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "deload"
+        }
+      ]
     },
     {
       "id": "biomechanics",
@@ -466,7 +514,23 @@
       },
       "gloss_example": {
         "en": "I could barely walk the day after leg day. Classic DOMS."
-      }
+      },
+      "variants": [
+        {
+          "text": "agujetas",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "agujetas"
+        },
+        {
+          "text": "dolor muscular tardío",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "dolor_muscular_tardio"
+        }
+      ]
     },
     {
       "id": "compound_movement",
@@ -538,7 +602,23 @@
       },
       "gloss_example": {
         "en": "The final score was two to one."
-      }
+      },
+      "variants": [
+        {
+          "text": "marcador",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "marcador"
+        },
+        {
+          "text": "puntuación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "puntuacion"
+        }
+      ]
     },
     {
       "id": "goal",

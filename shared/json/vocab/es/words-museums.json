@@ -16,7 +16,23 @@
       },
       "gloss_example": {
         "en": "My grandfather told us a funny story."
-      }
+      },
+      "variants": [
+        {
+          "text": "cuento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cuento"
+        },
+        {
+          "text": "historia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "historia"
+        }
+      ]
     },
     {
       "id": "novel",

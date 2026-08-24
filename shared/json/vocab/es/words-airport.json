@@ -122,7 +122,23 @@
       },
       "gloss_example": {
         "en": "Boarding begins forty-five minutes before the scheduled departure."
-      }
+      },
+      "variants": [
+        {
+          "text": "embarque",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "embarque"
+        },
+        {
+          "text": "abordaje",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "abordaje"
+        }
+      ]
     },
     {
       "id": "check_in",
@@ -140,7 +156,23 @@
       },
       "gloss_example": {
         "en": "Online check-in opens 24 hours before the flight departs."
-      }
+      },
+      "variants": [
+        {
+          "text": "registro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "registro"
+        },
+        {
+          "text": "facturación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "facturacion"
+        }
+      ]
     },
     {
       "id": "delay",
@@ -158,7 +190,23 @@
       },
       "gloss_example": {
         "en": "The delay was caused by bad weather at the destination airport."
-      }
+      },
+      "variants": [
+        {
+          "text": "retraso",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "retraso"
+        },
+        {
+          "text": "demora",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "demora"
+        }
+      ]
     },
     {
       "id": "currency",
@@ -176,7 +224,23 @@
       },
       "gloss_example": {
         "en": "Make sure to exchange your currency before arriving at your destination."
-      }
+      },
+      "variants": [
+        {
+          "text": "divisa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "divisa"
+        },
+        {
+          "text": "moneda",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "moneda"
+        }
+      ]
     },
     {
       "id": "destination",
@@ -302,7 +366,23 @@
       },
       "gloss_example": {
         "en": "Immigration queues can be very long at busy international airports."
-      }
+      },
+      "variants": [
+        {
+          "text": "inmigración",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "inmigracion"
+        },
+        {
+          "text": "control migratorio",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "control_migratorio"
+        }
+      ]
     },
     {
       "id": "baggage_claim",
@@ -338,7 +418,23 @@
       },
       "gloss_example": {
         "en": "Because the flight was overbooked, a passenger was asked to take the next one in exchange for a voucher."
-      }
+      },
+      "variants": [
+        {
+          "text": "sobrevendido",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sobrevendido"
+        },
+        {
+          "text": "con exceso de reservas",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "con_exceso_de_reservas"
+        }
+      ]
     },
     {
       "id": "upgrade",
@@ -374,7 +470,23 @@
       },
       "gloss_example": {
         "en": "Each affected passenger received a meal voucher for the airport restaurant."
-      }
+      },
+      "variants": [
+        {
+          "text": "vale",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "vale"
+        },
+        {
+          "text": "bono de compensación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "bono_de_compensacion"
+        }
+      ]
     },
     {
       "id": "duty_free",
@@ -392,7 +504,23 @@
       },
       "gloss_example": {
         "en": "She bought perfume and chocolate at the duty-free shop before boarding."
-      }
+      },
+      "variants": [
+        {
+          "text": "libre de impuestos",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "libre_de_impuestos"
+        },
+        {
+          "text": "duty-free",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "duty_free"
+        }
+      ]
     },
     {
       "id": "biometrics",
@@ -446,7 +574,23 @@
       },
       "gloss_example": {
         "en": "The route is serviced by three different carriers, including one budget airline."
-      }
+      },
+      "variants": [
+        {
+          "text": "aerolínea",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "aerolinea"
+        },
+        {
+          "text": "transportista",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "transportista"
+        }
+      ]
     },
     {
       "id": "overbooking",
@@ -464,7 +608,23 @@
       },
       "gloss_example": {
         "en": "Overbooking is common in the airline industry but can leave confirmed passengers without a seat."
-      }
+      },
+      "variants": [
+        {
+          "text": "sobreventa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sobreventa"
+        },
+        {
+          "text": "overbooking",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "overbooking"
+        }
+      ]
     },
     {
       "id": "repatriation",
@@ -536,7 +696,23 @@
       },
       "gloss_example": {
         "en": "The captain reviewed the passenger manifest to confirm everyone was on board."
-      }
+      },
+      "variants": [
+        {
+          "text": "lista de pasajeros",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "lista_de_pasajeros"
+        },
+        {
+          "text": "manifiesto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "manifiesto"
+        }
+      ]
     },
     {
       "id": "force_majeure",

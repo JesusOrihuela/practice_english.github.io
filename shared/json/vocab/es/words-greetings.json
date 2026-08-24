@@ -34,7 +34,23 @@
       },
       "gloss_example": {
         "en": "We had a casual conversation over coffee in the break room."
-      }
+      },
+      "variants": [
+        {
+          "text": "informal",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "informal"
+        },
+        {
+          "text": "casual",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "casual"
+        }
+      ]
     },
     {
       "id": "formal",
@@ -196,7 +212,23 @@
       },
       "gloss_example": {
         "en": "The new manager is very approachable and always has time to listen."
-      }
+      },
+      "variants": [
+        {
+          "text": "accesible",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "accesible"
+        },
+        {
+          "text": "tratable",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tratable"
+        }
+      ]
     },
     {
       "id": "etiquette",
@@ -214,7 +246,23 @@
       },
       "gloss_example": {
         "en": "Knowing proper business etiquette is essential at international events."
-      }
+      },
+      "variants": [
+        {
+          "text": "etiqueta",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "etiqueta"
+        },
+        {
+          "text": "protocolo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "protocolo"
+        }
+      ]
     },
     {
       "id": "cordial",
@@ -286,7 +334,23 @@
       },
       "gloss_example": {
         "en": "She quickly established a rapport with the clients, making them feel at ease."
-      }
+      },
+      "variants": [
+        {
+          "text": "rapport",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "rapport"
+        },
+        {
+          "text": "buena relación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "buena_relacion"
+        }
+      ]
     },
     {
       "id": "salutation",
@@ -358,7 +422,23 @@
       },
       "gloss_example": {
         "en": "His calm and professional demeanor immediately put the interviewers at ease."
-      }
+      },
+      "variants": [
+        {
+          "text": "comportamiento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "comportamiento"
+        },
+        {
+          "text": "actitud",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "actitud"
+        }
+      ]
     },
     {
       "id": "decorum",
@@ -376,7 +456,23 @@
       },
       "gloss_example": {
         "en": "The ceremony was conducted with great decorum, as befitted the occasion."
-      }
+      },
+      "variants": [
+        {
+          "text": "decoro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "decoro"
+        },
+        {
+          "text": "compostura",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "compostura"
+        }
+      ]
     },
     {
       "id": "deference",
@@ -394,7 +490,23 @@
       },
       "gloss_example": {
         "en": "She spoke with deference to the senior partner, careful not to overstep."
-      }
+      },
+      "variants": [
+        {
+          "text": "deferencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "deferencia"
+        },
+        {
+          "text": "respeto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "respeto"
+        }
+      ]
     },
     {
       "id": "propriety",
@@ -412,7 +524,23 @@
       },
       "gloss_example": {
         "en": "He observed every rule of propriety during the formal reception."
-      }
+      },
+      "variants": [
+        {
+          "text": "decencia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "decencia"
+        },
+        {
+          "text": "corrección social",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "correccion_social"
+        }
+      ]
     },
     {
       "id": "felicitation",

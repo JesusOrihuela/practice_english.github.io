@@ -104,7 +104,23 @@
       },
       "gloss_example": {
         "en": "I left my room key at the front desk before going to the pool."
-      }
+      },
+      "variants": [
+        {
+          "text": "llave",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "llave"
+        },
+        {
+          "text": "tarjeta llave",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tarjeta_llave"
+        }
+      ]
     },
     {
       "id": "checkout",
@@ -246,7 +262,23 @@
       },
       "gloss_example": {
         "en": "The hotel's amenities include a rooftop pool and a full-service spa."
-      }
+      },
+      "variants": [
+        {
+          "text": "instalaciones",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "instalaciones"
+        },
+        {
+          "text": "servicios",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "servicios"
+        }
+      ]
     },
     {
       "id": "complimentary",
@@ -264,7 +296,23 @@
       },
       "gloss_example": {
         "en": "The hotel offered complimentary breakfast to all guests on weekends."
-      }
+      },
+      "variants": [
+        {
+          "text": "gratuito",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "gratuito"
+        },
+        {
+          "text": "de cortesía",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "de_cortesia"
+        }
+      ]
     },
     {
       "id": "suite",
@@ -370,7 +418,23 @@
       },
       "gloss_example": {
         "en": "The hotel required a deposit of $100 on the credit card at check-in."
-      }
+      },
+      "variants": [
+        {
+          "text": "depósito",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "deposito"
+        },
+        {
+          "text": "fianza",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "fianza"
+        }
+      ]
     },
     {
       "id": "occupancy",
@@ -494,7 +558,23 @@
       },
       "gloss_example": {
         "en": "Guests signing the waiver acknowledge that the hotel is not liable for injuries in the gym."
-      }
+      },
+      "variants": [
+        {
+          "text": "exención",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "exencion"
+        },
+        {
+          "text": "renuncia de responsabilidad",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "renuncia_de_responsabilidad"
+        }
+      ]
     },
     {
       "id": "corporate_rate",
@@ -548,7 +628,23 @@
       },
       "gloss_example": {
         "en": "She argued that the listing constituted misrepresentation and demanded a full refund."
-      }
+      },
+      "variants": [
+        {
+          "text": "representación falsa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "representacion_falsa"
+        },
+        {
+          "text": "engaño publicitario",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "engano_publicitario"
+        }
+      ]
     },
     {
       "id": "arbitration",
@@ -584,7 +680,23 @@
       },
       "gloss_example": {
         "en": "Damage charges are assessed at the hotel's sole discretion, with no fixed schedule."
-      }
+      },
+      "variants": [
+        {
+          "text": "discreción",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "discrecion"
+        },
+        {
+          "text": "potestad",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "potestad"
+        }
+      ]
     },
     {
       "id": "remittance",
@@ -602,7 +714,30 @@
       },
       "gloss_example": {
         "en": "Please arrange remittance within fourteen days of receipt of the invoice."
-      }
+      },
+      "variants": [
+        {
+          "text": "remesa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "remesa"
+        },
+        {
+          "text": "pago",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pago"
+        },
+        {
+          "text": "remisión de pago",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "remision_de_pago"
+        }
+      ]
     },
     {
       "id": "bed",
@@ -674,7 +809,23 @@
       },
       "gloss_example": {
         "en": "We watched a movie in the living room."
-      }
+      },
+      "variants": [
+        {
+          "text": "salón",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "salon"
+        },
+        {
+          "text": "sala",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sala"
+        }
+      ]
     },
     {
       "id": "madera",
@@ -1068,7 +1219,23 @@
       },
       "gloss_example": {
         "en": "We rented an apartment near the beach."
-      }
+      },
+      "variants": [
+        {
+          "text": "apartamento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "apartamento"
+        },
+        {
+          "text": "departamento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "departamento"
+        }
+      ]
     },
     {
       "id": "ceiling_roof",

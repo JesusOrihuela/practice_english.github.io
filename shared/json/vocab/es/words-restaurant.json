@@ -392,7 +392,23 @@
       },
       "gloss_example": {
         "en": "The sommelier explained how the terroir of the Burgundy region shapes the wine's minerality."
-      }
+      },
+      "variants": [
+        {
+          "text": "terruño",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "terruno"
+        },
+        {
+          "text": "terroir",
+          "labels": {
+            "loanword": ""
+          },
+          "audioSlug": "terroir"
+        }
+      ]
     },
     {
       "id": "gastronomy",
@@ -446,7 +462,23 @@
       },
       "gloss_example": {
         "en": "The critic praised the wine for its silky mouthfeel and long, complex finish."
-      }
+      },
+      "variants": [
+        {
+          "text": "textura en boca",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "textura_en_boca"
+        },
+        {
+          "text": "sensación en boca",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sensacion_en_boca"
+        }
+      ]
     },
     {
       "id": "beer",
@@ -878,7 +910,23 @@
       },
       "gloss_example": {
         "en": "With the meat we ordered a glass of red wine."
-      }
+      },
+      "variants": [
+        {
+          "text": "tinto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tinto"
+        },
+        {
+          "text": "vino tinto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "vino_tinto"
+        }
+      ]
     },
     {
       "id": "tapa_snack",

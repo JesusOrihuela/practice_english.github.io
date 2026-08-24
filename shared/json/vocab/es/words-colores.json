@@ -230,7 +230,23 @@
       },
       "gloss_example": {
         "en": "The flowers are pink."
-      }
+      },
+      "variants": [
+        {
+          "text": "rosado",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "rosado"
+        },
+        {
+          "text": "rosa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "rosa"
+        }
+      ]
     }
   ]
 }

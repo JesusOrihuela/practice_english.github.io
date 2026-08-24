@@ -394,7 +394,23 @@
       },
       "gloss_example": {
         "en": "I keep my cards in my wallet."
-      }
+      },
+      "variants": [
+        {
+          "text": "cartera",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cartera"
+        },
+        {
+          "text": "billetera",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "billetera"
+        }
+      ]
     },
     {
       "id": "handbag",
@@ -610,7 +626,23 @@
       },
       "gloss_example": {
         "en": "The window is made of glass."
-      }
+      },
+      "variants": [
+        {
+          "text": "cristal",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cristal"
+        },
+        {
+          "text": "vidrio",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "vidrio"
+        }
+      ]
     },
     {
       "id": "fabric_cloth",

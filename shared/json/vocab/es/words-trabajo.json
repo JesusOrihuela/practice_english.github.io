@@ -16,7 +16,23 @@
       },
       "gloss_example": {
         "en": "He found a new job at a local bank."
-      }
+      },
+      "variants": [
+        {
+          "text": "trabajo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "trabajo"
+        },
+        {
+          "text": "empleo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "empleo"
+        }
+      ]
     },
     {
       "id": "worker",
@@ -88,7 +104,23 @@
       },
       "gloss_example": {
         "en": "She works for a law firm downtown."
-      }
+      },
+      "variants": [
+        {
+          "text": "empresa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "empresa"
+        },
+        {
+          "text": "firma",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "firma"
+        }
+      ]
     },
     {
       "id": "office",
@@ -556,7 +588,23 @@
       },
       "gloss_example": {
         "en": "The procurement team negotiates long-term contracts to secure stable pricing from key suppliers."
-      }
+      },
+      "variants": [
+        {
+          "text": "aprovisionamiento",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "aprovisionamiento"
+        },
+        {
+          "text": "compras",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "compras"
+        }
+      ]
     },
     {
       "id": "cashier",
@@ -952,7 +1000,23 @@
       },
       "gloss_example": {
         "en": "Unemployment rose last year in the region."
-      }
+      },
+      "variants": [
+        {
+          "text": "desempleo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "desempleo"
+        },
+        {
+          "text": "paro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "paro"
+        }
+      ]
     },
     {
       "id": "judge",

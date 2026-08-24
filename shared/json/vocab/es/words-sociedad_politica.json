@@ -178,7 +178,23 @@
       },
       "gloss_example": {
         "en": "The case will be heard in court next month."
-      }
+      },
+      "variants": [
+        {
+          "text": "tribunal",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tribunal"
+        },
+        {
+          "text": "corte",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "corte"
+        }
+      ]
     },
     {
       "id": "society",

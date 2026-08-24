@@ -106,7 +106,23 @@
       },
       "gloss_example": {
         "en": "I need to upload the document to the shared folder."
-      }
+      },
+      "variants": [
+        {
+          "text": "subir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "subir"
+        },
+        {
+          "text": "cargar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "cargar"
+        }
+      ]
     },
     {
       "id": "download",

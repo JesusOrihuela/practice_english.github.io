@@ -16,7 +16,23 @@
       },
       "gloss_example": {
         "en": "Take the bus from the city center. It stops right outside the museum."
-      }
+      },
+      "variants": [
+        {
+          "text": "autobús",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "autobus"
+        },
+        {
+          "text": "bus",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "bus"
+        }
+      ]
     },
     {
       "id": "taxi",
@@ -88,7 +104,23 @@
       },
       "gloss_example": {
         "en": "The metro is the fastest way to cross the city during rush hour."
-      }
+      },
+      "variants": [
+        {
+          "text": "metro",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "metro"
+        },
+        {
+          "text": "subterráneo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "subterraneo"
+        }
+      ]
     },
     {
       "id": "fare",
@@ -106,7 +138,23 @@
       },
       "gloss_example": {
         "en": "The bus fare has increased significantly since last year."
-      }
+      },
+      "variants": [
+        {
+          "text": "tarifa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tarifa"
+        },
+        {
+          "text": "pasaje",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pasaje"
+        }
+      ]
     },
     {
       "id": "route",
@@ -142,7 +190,23 @@
       },
       "gloss_example": {
         "en": "You'll need to make a transfer at Central Station to reach the airport."
-      }
+      },
+      "variants": [
+        {
+          "text": "trasbordo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "trasbordo"
+        },
+        {
+          "text": "traslado",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "traslado"
+        }
+      ]
     },
     {
       "id": "schedule",
@@ -196,7 +260,23 @@
       },
       "gloss_example": {
         "en": "Your train departs from platform 7 in five minutes."
-      }
+      },
+      "variants": [
+        {
+          "text": "andén",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "anden"
+        },
+        {
+          "text": "plataforma",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "plataforma"
+        }
+      ]
     },
     {
       "id": "carpool",
@@ -250,7 +330,23 @@
       },
       "gloss_example": {
         "en": "Passengers delayed by more than two hours are entitled to claim compensation under EU regulations."
-      }
+      },
+      "variants": [
+        {
+          "text": "compensación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "compensacion"
+        },
+        {
+          "text": "indemnización",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "indemnizacion"
+        }
+      ]
     },
     {
       "id": "congestion",
@@ -268,7 +364,23 @@
       },
       "gloss_example": {
         "en": "Heavy congestion on the motorway added 45 minutes to the journey."
-      }
+      },
+      "variants": [
+        {
+          "text": "congestión",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "congestion"
+        },
+        {
+          "text": "tráfico",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "trafico"
+        }
+      ]
     },
     {
       "id": "bypass",
@@ -286,7 +398,30 @@
       },
       "gloss_example": {
         "en": "Taking the bypass saved us twenty minutes compared to driving through the city."
-      }
+      },
+      "variants": [
+        {
+          "text": "variante",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "variante"
+        },
+        {
+          "text": "desvío",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "desvio"
+        },
+        {
+          "text": "circunvalación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "circunvalacion"
+        }
+      ]
     },
     {
       "id": "interchange",
@@ -304,7 +439,23 @@
       },
       "gloss_example": {
         "en": "The city's main interchange connects the metro, bus, and regional rail services."
-      }
+      },
+      "variants": [
+        {
+          "text": "intercambiador",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "intercambiador"
+        },
+        {
+          "text": "nodo de transporte",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "nodo_de_transporte"
+        }
+      ]
     },
     {
       "id": "ridesharing",
@@ -340,7 +491,23 @@
       },
       "gloss_example": {
         "en": "The taxi driver applied a surcharge for the journey during a public holiday."
-      }
+      },
+      "variants": [
+        {
+          "text": "recargo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "recargo"
+        },
+        {
+          "text": "sobrecargo",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sobrecargo"
+        }
+      ]
     },
     {
       "id": "infrastructure",
@@ -394,7 +561,23 @@
       },
       "gloss_example": {
         "en": "Without government subsidies, bus fares would be unaffordable for low-income passengers."
-      }
+      },
+      "variants": [
+        {
+          "text": "subvención",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "subvencion"
+        },
+        {
+          "text": "subsidio",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "subsidio"
+        }
+      ]
     },
     {
       "id": "penalty",
@@ -412,7 +595,23 @@
       },
       "gloss_example": {
         "en": "He received a penalty for failing to validate his ticket before boarding."
-      }
+      },
+      "variants": [
+        {
+          "text": "multa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "multa"
+        },
+        {
+          "text": "sanción",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "sancion"
+        }
+      ]
     },
     {
       "id": "liability",
@@ -484,7 +683,23 @@
       },
       "gloss_example": {
         "en": "London's congestion pricing zone has cut central traffic by over 30 percent."
-      }
+      },
+      "variants": [
+        {
+          "text": "tarifas por congestión",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "tarifas_por_congestion"
+        },
+        {
+          "text": "peaje urbano",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "peaje_urbano"
+        }
+      ]
     },
     {
       "id": "intermodal",
@@ -538,7 +753,23 @@
       },
       "gloss_example": {
         "en": "The government awarded a new franchise to operate the northern rail line."
-      }
+      },
+      "variants": [
+        {
+          "text": "concesión",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "concesion"
+        },
+        {
+          "text": "franquicia",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "franquicia"
+        }
+      ]
     },
     {
       "id": "drive",
@@ -829,7 +1060,23 @@
       },
       "gloss_example": {
         "en": "He rides a motorcycle to work every day."
-      }
+      },
+      "variants": [
+        {
+          "text": "moto",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "moto"
+        },
+        {
+          "text": "motocicleta",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "motocicleta"
+        }
+      ]
     },
     {
       "id": "wheel",

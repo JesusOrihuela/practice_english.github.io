@@ -304,7 +304,23 @@
       },
       "gloss_example": {
         "en": "She became a doctor after six years."
-      }
+      },
+      "variants": [
+        {
+          "text": "convertirse",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "convertirse"
+        },
+        {
+          "text": "volverse",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "volverse"
+        }
+      ]
     },
     {
       "id": "happen",
@@ -322,7 +338,23 @@
       },
       "gloss_example": {
         "en": "The accident happened near the bridge."
-      }
+      },
+      "variants": [
+        {
+          "text": "pasar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "pasar"
+        },
+        {
+          "text": "suceder",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "suceder"
+        }
+      ]
     },
     {
       "id": "remember",
@@ -394,7 +426,23 @@
       },
       "gloss_example": {
         "en": "You can choose any dessert you like."
-      }
+      },
+      "variants": [
+        {
+          "text": "elegir",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "elegir"
+        },
+        {
+          "text": "escoger",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "escoger"
+        }
+      ]
     },
     {
       "id": "querer",
@@ -2732,7 +2780,23 @@
       },
       "gloss_example": {
         "en": "He had to face many problems alone."
-      }
+      },
+      "variants": [
+        {
+          "text": "enfrentar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "enfrentar"
+        },
+        {
+          "text": "afrontar",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "afrontar"
+        }
+      ]
     }
   ]
 }
