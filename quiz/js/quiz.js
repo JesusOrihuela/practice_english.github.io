@@ -174,7 +174,9 @@ function showQuestion(index) {
   // Disabled for cognates — trivially obvious answers like "formal/formal" defeat the purpose.
   _translationMode = !_isCognate(word) && (CEFR_ORDER[word.level] ?? 99) <= 1;
 
-  document.getElementById('quiz-word').textContent     = word.term;
+  // Capitalise the first letter of EVERY slash-separated form ("tribunal / corte" → "Tribunal / Corte")
+  // to match the flashcard's headword styling.
+  document.getElementById('quiz-word').textContent     = (word.term || '').replace(/(^|\/\s*)(\p{L})/gu, (m, p, c) => p + c.toUpperCase());
   const _POS_Q = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
   document.getElementById('quiz-category').textContent = word.category ? AppLang.t(_POS_Q[word.category] || word.category) : '';
   document.getElementById('word-card').className       = 'word-card';

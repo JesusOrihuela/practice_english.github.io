@@ -99,6 +99,11 @@
   color: var(--clr-text);
   line-height: 1.1;
   margin-bottom: 20px;
+  /* word + its region/register badge on one row (badge stays small beside the large word) */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .listen-btn {

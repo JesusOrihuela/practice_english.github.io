@@ -346,7 +346,7 @@ const AppFeedback = (() => {
       }
       const txt = document.createElement('span');
       txt.className = 'alt-chip-text';
-      txt.textContent = (v && v.text) || '';
+      txt.textContent = _capitalize((v && v.text) || '');   // match the capitalised headword ("Corte")
       chip.appendChild(txt);
       frag.appendChild(chip);
     }

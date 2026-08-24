@@ -184,11 +184,12 @@ function showCard(index) {
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
   document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
   document.getElementById('word-text').textContent = _displayWord;
+  _renderCurrentFormBadge('word-text', _currentPickedForm);   // front: tag the shown variety too
 
   // Back — definition/example are the target-language (monolingual) forms; fall
   // back to the source-language gloss for entries that lack a monolingual form.
   document.getElementById('fc-back-word').textContent    = _displayWord;
-  _renderCurrentFormBadge(_currentPickedForm);   // tag the shown form's own variety (e.g. España)
+  _renderCurrentFormBadge('fc-back-word', _currentPickedForm);   // back: tag the shown variety
   document.getElementById('word-definition').textContent = word.definition || (word.gloss?.[_srcCode] || '');
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
@@ -212,13 +213,17 @@ function showCard(index) {
 // Badge for the SHOWN rotated form's own variant (region flag / register pill), placed inline next to
 // the word so the learner sees WHICH variety the headword is (e.g. "Ordenador · España"), not only
 // the others. Mirrors the exercise variant badge. Gender never reaches here — a gender word keeps the
-// dictionary-slash headword and does not rotate, so `form` is null and no badge is shown.
-function _renderCurrentFormBadge(form) {
-  const host = document.getElementById('fc-back-word');
+// dictionary-slash headword and does not rotate, so `form` is null and no badge is shown. The `synonym`
+// dimension is skipped: "sinónimo" on the headword says nothing (the "Also …" strip already covers it)
+// and only clutters — only INFORMATIVE varieties (region/register/loanword) get a headword badge.
+function _renderCurrentFormBadge(hostId, form) {
+  const host = document.getElementById(hostId);
   if (!host) return;
+  const old = host.querySelector('.fc-word-badge');
+  if (old) old.remove();
   const labels = (form && form.labels) || {};
-  const dims = Object.keys(labels).filter(k => labels[k] !== undefined && labels[k] !== '');
-  if (!dims.length) return;                       // gender/single-form word → word already tells all
+  const dims = Object.keys(labels).filter(k => labels[k] !== undefined && labels[k] !== '' && k !== 'synonym');
+  if (!dims.length) return;                       // gender / synonym / single-form → word tells all
   const wrap = document.createElement('span');
   wrap.className = 'fc-word-badge';
   for (const dim of dims) {
