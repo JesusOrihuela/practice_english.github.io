@@ -80,3 +80,6 @@ tools/audio-embeddings-cache.json
 docs/AUDIO-QUALITY.md
 tools/gloss-audit.mjs
 tools/gloss-embeddings-cache.json
+
+# Audio text-hash manifest (staleness safeguard; local dev tooling, like .manifest.json)
+shared/audio/.text-hashes.json
