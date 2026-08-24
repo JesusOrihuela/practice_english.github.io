@@ -8,7 +8,17 @@
       "target": [
         {
           "text": "¿Podrías enviarme ese documento por correo electrónico?",
-          "audioSlug": "podrias_enviarme_ese_documento_por_correo_electronico"
+          "audioSlug": "podrias_enviarme_ese_documento_por_correo_electronico",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Podría enviarme ese documento por correo electrónico?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "podria_enviarme_ese_documento_por_correo_electronico"
         }
       ]
     },
@@ -32,7 +42,17 @@
       "target": [
         {
           "text": "¿Puedes ayudarme a configurar mi nueva impresora?",
-          "audioSlug": "puedes_ayudarme_a_configurar_mi_nueva_impresora"
+          "audioSlug": "puedes_ayudarme_a_configurar_mi_nueva_impresora",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Puede ayudarme a configurar mi nueva impresora?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_ayudarme_a_configurar_mi_nueva_impresora"
         }
       ]
     },
@@ -112,7 +132,17 @@
       "target": [
         {
           "text": "¿Puedes copiarme en ese correo electrónico?",
-          "audioSlug": "puedes_copiarme_en_ese_correo_electronico"
+          "audioSlug": "puedes_copiarme_en_ese_correo_electronico",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Puede copiarme en ese correo electrónico?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_copiarme_en_ese_correo_electronico"
         }
       ]
     },
@@ -434,7 +464,17 @@
       "target": [
         {
           "text": "No funciona el WiFi, ¿lo puedes reiniciar?",
-          "audioSlug": "no_funciona_el_wifi_lo_puedes_reiniciar"
+          "audioSlug": "no_funciona_el_wifi_lo_puedes_reiniciar",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "No funciona el WiFi, ¿lo puede reiniciar?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "no_funciona_el_wifi_lo_puede_reiniciar"
         }
       ]
     },
@@ -588,7 +628,17 @@
       "target": [
         {
           "text": "¿Sabes cómo usar Photoshop para editar esta imagen?",
-          "audioSlug": "sabes_como_usar_photoshop_para_editar_esta_imagen"
+          "audioSlug": "sabes_como_usar_photoshop_para_editar_esta_imagen",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Sabe cómo usar Photoshop para editar esta imagen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "sabe_como_usar_photoshop_para_editar_esta_imagen"
         }
       ]
     },

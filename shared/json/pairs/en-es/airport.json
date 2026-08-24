@@ -260,7 +260,17 @@
       "target": [
         {
           "text": "Debes pasar por inmigración antes de poder recoger tu equipaje.",
-          "audioSlug": "debes_pasar_por_inmigracion_antes_de_poder_recoger_tu_equipaje"
+          "audioSlug": "debes_pasar_por_inmigracion_antes_de_poder_recoger_tu_equipaje",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Debe pasar por inmigración antes de poder recoger su equipaje.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "debe_pasar_por_inmigracion_antes_de_poder_recoger_su_equipaje"
         }
       ]
     },
@@ -594,7 +604,17 @@
       "target": [
         {
           "text": "Muestra tu documento de identidad.",
-          "audioSlug": "muestra_tu_documento_de_identidad"
+          "audioSlug": "muestra_tu_documento_de_identidad",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Muestre su documento de identidad.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "muestre_su_documento_de_identidad"
         }
       ]
     }

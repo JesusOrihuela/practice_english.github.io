@@ -20,7 +20,17 @@
       "target": [
         {
           "text": "Dime cuál elegir.",
-          "audioSlug": "dime_cual_elegir"
+          "audioSlug": "dime_cual_elegir",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Dígame cuál elegir.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "digame_cual_elegir"
         }
       ]
     },
@@ -116,7 +126,17 @@
       "target": [
         {
           "text": "Acepto tu oferta.",
-          "audioSlug": "acepto_tu_oferta"
+          "audioSlug": "acepto_tu_oferta",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Acepto su oferta.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "acepto_su_oferta"
         }
       ]
     },
@@ -368,7 +388,17 @@
       "target": [
         {
           "text": "Dame otra oportunidad.",
-          "audioSlug": "dame_otra_oportunidad"
+          "audioSlug": "dame_otra_oportunidad",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Deme otra oportunidad.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "deme_otra_oportunidad"
         }
       ]
     },

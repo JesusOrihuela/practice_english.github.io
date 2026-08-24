@@ -90,7 +90,17 @@
       "target": [
         {
           "text": "¿Puedes abrir la ventana?",
-          "audioSlug": "puedes_abrir_la_ventana"
+          "audioSlug": "puedes_abrir_la_ventana",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Puede abrir la ventana?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_abrir_la_ventana"
         }
       ]
     },

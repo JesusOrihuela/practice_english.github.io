@@ -590,7 +590,17 @@
       "target": [
         {
           "text": "¿Sabes conducir?",
-          "audioSlug": "sabes_conducir"
+          "audioSlug": "sabes_conducir",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Sabe conducir?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "sabe_conducir"
         }
       ]
     },

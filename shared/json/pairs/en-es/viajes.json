@@ -140,7 +140,17 @@
       "target": [
         {
           "text": "Disfruta tu viaje.",
-          "audioSlug": "disfruta_tu_viaje"
+          "audioSlug": "disfruta_tu_viaje",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Disfrute su viaje.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "disfrute_su_viaje"
         }
       ]
     },
@@ -217,7 +227,17 @@
       "target": [
         {
           "text": "¿Cuánto pesa tu maleta?",
-          "audioSlug": "cuanto_pesa_tu_maleta"
+          "audioSlug": "cuanto_pesa_tu_maleta",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "¿Cuánto pesa su maleta?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "cuanto_pesa_su_maleta"
         }
       ]
     },
@@ -229,7 +249,17 @@
       "target": [
         {
           "text": "Guarda tu pasaporte en un lugar seguro.",
-          "audioSlug": "guarda_tu_pasaporte_en_un_lugar_seguro"
+          "audioSlug": "guarda_tu_pasaporte_en_un_lugar_seguro",
+          "labels": {
+            "register": "informal"
+          }
+        },
+        {
+          "text": "Guarde su pasaporte en un lugar seguro.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "guarde_su_pasaporte_en_un_lugar_seguro"
         }
       ]
     },
