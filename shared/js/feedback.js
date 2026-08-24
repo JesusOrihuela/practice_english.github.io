@@ -208,6 +208,7 @@ const AppFeedback = (() => {
         if (v === undefined || v === '') continue;
         if (dim === 'register') parts.push(v === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
         else if (dim === 'loanword') parts.push(t('alt_note_loanword'));
+        else if (dim === 'synonym') parts.push(t('alt_note_synonym'));
         else parts.push(_capitalize(v));   // gender, region, number, + any future axis
       }
       return parts.join(' · ');  // '' for an unlabeled form → chip shows text only
@@ -336,8 +337,9 @@ const AppFeedback = (() => {
           badge.textContent = (val === 'femenino' ? '♀ ' : val === 'masculino' ? '♂ ' : '') + _capitalize(val);
         } else {
           badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-          badge.textContent = (dim === 'register')
-            ? (val === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'))
+          badge.textContent = (dim === 'register') ? (val === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'))
+            : (dim === 'synonym') ? t('alt_note_synonym')
+            : (dim === 'loanword') ? t('alt_note_loanword')
             : _capitalize(val);
         }
         chip.appendChild(badge);

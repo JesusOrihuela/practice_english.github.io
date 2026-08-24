@@ -56,7 +56,7 @@
     },
     {
       "id": "hostel",
-      "term": "hostal / albergue",
+      "term": "hostal",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -70,7 +70,22 @@
       },
       "gloss_example": {
         "en": "She stayed in a hostel to save money during her backpacking trip."
-      }
+      },
+      "variants": [
+        {
+          "text": "hostal",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "primary": true
+        },
+        {
+          "text": "albergue",
+          "labels": {
+            "synonym": "sinónimo"
+          }
+        }
+      ]
     },
     {
       "id": "key",
@@ -287,7 +302,7 @@
     },
     {
       "id": "tariff",
-      "term": "tarifa / arancel",
+      "term": "tarifa",
       "level": "B2",
       "category": "Noun",
       "difficulty": "hard",
@@ -301,7 +316,22 @@
       },
       "gloss_example": {
         "en": "The hotel's tariff varies by season, with peak rates in summer."
-      }
+      },
+      "variants": [
+        {
+          "text": "tarifa",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "primary": true
+        },
+        {
+          "text": "arancel",
+          "labels": {
+            "synonym": "sinónimo"
+          }
+        }
+      ]
     },
     {
       "id": "concierge",
@@ -395,7 +425,7 @@
     },
     {
       "id": "complaint",
-      "term": "queja / reclamación",
+      "term": "queja",
       "level": "C1",
       "category": "Noun",
       "difficulty": "hard",
@@ -409,7 +439,22 @@
       },
       "gloss_example": {
         "en": "She filed a formal complaint about the noise and received a discount on her bill."
-      }
+      },
+      "variants": [
+        {
+          "text": "queja",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "primary": true
+        },
+        {
+          "text": "reclamación",
+          "labels": {
+            "synonym": "sinónimo"
+          }
+        }
+      ]
     },
     {
       "id": "liability",
@@ -665,7 +710,7 @@
     },
     {
       "id": "cuarto",
-      "term": "cuarto / habitación",
+      "term": "habitación",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -679,7 +724,22 @@
       },
       "gloss_example": {
         "en": "My room has a large window."
-      }
+      },
+      "variants": [
+        {
+          "text": "habitación",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "primary": true
+        },
+        {
+          "text": "cuarto",
+          "labels": {
+            "synonym": "sinónimo"
+          }
+        }
+      ]
     },
     {
       "id": "bathroom",

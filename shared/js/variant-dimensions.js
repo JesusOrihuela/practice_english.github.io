@@ -40,6 +40,11 @@
     number:   { kind: 'inflectional', values: ['singular', 'plural'],          priority: 3, badge: 'pill',   appliesTo: ['es'],
                 agreement: ['articulo', 'sustantivo', 'adjetivo', 'verbo'] },
     register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 4, badge: 'pill',   appliesTo: '*' },
+    // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
+    // takes the primary + recognition presentation ("also: albergue") — which is what the synonym-
+    // interference research prescribes, unlike showing them as co-equal slash targets. A single
+    // token value (the badge reads "también"/"also"). Added data-only — proof the registry is open.
+    synonym:  { kind: 'lexical',      values: ['sinónimo'],                    priority: 5, badge: 'pill',   appliesTo: '*' },
   };
 
   const AppVariantDims = {
