@@ -103,15 +103,19 @@ a dimension THERE — no code change: `check-content` validates its label values
 it and lists it in the post-answer combinations, and `check-variants` checks its completeness, all
 from the registry. Each dimension declares `kind`: **inflectional** (gender/number — forms of one
 lemma, shown as the dictionary-style slash pattern / taught as the agreement rule) or **lexical**
-(region/register/loanword — different words, shown as one PRIMARY + labelled recognition variants, to
-avoid synonym interference — Tinkham/Waring/Webb). Two structural facts, both registry-validated:
+(region/register/synonym/loanword — different words, shown by ROTATION: one form per session
+(`Progress.pickVariant`, least-practiced first — there is NO "base" form) + the others as labelled
+recognition variants, to avoid synonym interference — Tinkham/Waring/Webb). Two structural facts, both
+registry-validated:
 - **Phrases** may carry a per-form `source` (`target[].source`): the L1 hint shown adapts to the
   variant on screen when the variant changes the REFERENT (`El niño es listo.`←`The boy is smart.` /
   `La niña es lista.`←`The girl is smart.`); speaker-determined variants keep one combined source
   (`I have a cold.`→`Estoy resfriado/a.`). The 5 phrase activities read the picked form's source.
-- **Vocab words** may carry structured `variants[]` (`{text, labels, primary?}`) so words — not only
+- **Vocab words** may carry structured `variants[]` (`{text, labels, audioSlug}`) so words — not only
   phrases — have their variants, identified; `check-variants` scans them, and the flashcard renders
-  the kind-differentiated display. `coverage.mjs` counts `variants[].text`.
+  the kind-differentiated display. LEXICAL variant words ROTATE (no base — `Progress.pickVariant`, like
+  phrases) with per-form audio; INFLECTIONAL (gender) stay the dictionary slash and do not rotate.
+  `coverage.mjs` counts `variants[].text`.
 - **Inflectional agreement (concordancia)** — a gender/number variant differs ONLY by recognised
   inflection (article + noun + adjective + verb all agree); `check-variants` enforces it.
 
@@ -174,6 +178,34 @@ avoid synonym interference — Tinkham/Waring/Webb). Two structural facts, both 
   gender fixed by the target, grammatical gender of nouns, generic 3rd-person, or masculine
   plurals for groups. (Applies to gendered SOURCE languages; the source is display-only, no
   audio.)
+- **Register (formal/informal — tú/usted for es)** — add the T-V / politeness variant ONLY where
+  BOTH registers genuinely occur: first-encounter, service (customer↔staff), addressing a stranger,
+  doctor↔patient, courtesy. Intimate/emotional lines stay informal-only (single form) — never force
+  the formal. Direction: the informal form is `target[0]`; the formal is the labelled variant; both
+  carry `labels.register`. In vocab, a genuinely higher-register synonym (*cabello/pelo*, *rostro/cara*,
+  *padecer/sufrir*) is `register`, not plain `synonym`. Lexical → it rotates; badge is a text pill
+  ("Formal"/"Informal"); the source is SHARED (L1 rarely marks T-V, so no per-form source).
+- **Synonym** — for interchangeable near-synonyms with the SAME meaning, region AND register
+  (*razón/motivo*, *elegir/escoger*). **False-merge test (critical):** if the forms carry DIFFERENT
+  meanings under one L1 gloss they are NOT synonyms — SPLIT them into separate cards (*carta/letra*;
+  *drug* = medicamento vs droga). Verify each form against the entry's own definition/example before
+  merging. Lexical → rotates; the recognition strip tags the others "también/also".
+- **Loanword (as a variant)** — when a native term coexists with a widely-used borrowing
+  (*portátil/laptop*, *sobreventa/overbooking*) the borrowed form may be a `loanword` variant (label the
+  borrowed form `loanword`, the native one `synonym`/`region`). But NEVER invent a calque nobody says
+  (that is the No-extranjerismos rule below), and a fully RAE-accepted borrowing (*software*, *wifi*,
+  *pódcast*) is simply the term — no variant. Lexical → rotates; badge "préstamo/loanword".
+- **Number (singular/plural)** — NOT used as a content dimension by decision: plurals are authored as
+  SEPARATE phrases, never `number` variants (the lemmatised coverage core doesn't distinguish them and
+  plural is a grammar competency). The dimension stays defined in the registry for a FUTURE language
+  whose plural is more than a "+s" suffix.
+- **How variants appear in the INDEX (`PhraseBrowser`)** — the phrase index shows the L1 `source`
+  (never the target, to avoid spoilers), so lexical variants (region/register/synonym/loanword) are
+  NOT spelled out there; they surface only as **coverage pips** — one pip per form (a tú/usted phrase =
+  2 pips), filled as each form is practised. GENDER is the exception: it rides in the `source` slash
+  (*resfriado/a*, *Ellos/Ellas*, Rule 14.4) so it IS visible in the phrase index. The vocab index shows
+  the `term` = the slash of ALL forms (*Pelo / Cabello*, *Carro / Coche / Auto*), so every dimension is
+  visible there.
 - **No extranjerismos** (Rule 4) — no loanwords where a genuine native term exists; if none
   exists, remove the entry rather than invent a calque. Use the language's authoritative
   dictionary (RAE for es, Merriam-Webster for en). Encode the concrete replacements in the
