@@ -1008,6 +1008,27 @@ body.path-mode {
   order: 3;
 }
 
+/* Hidden-variant tag (register / loanword …) — signals a phrase teaches a lexical variant the
+   source text doesn't show (e.g. tú/usted). Sits on the L1 side, between text and pips, so it never
+   spoils the target. Registry-driven, so a future lexical dimension gets a pill for free. */
+.pb-chip-tag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-full);
+  padding: 1px 7px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  order: 3;
+}
+.pb-chip-tag--register {
+  color: var(--activity-clr, var(--clr-primary));
+  border-color: var(--activity-clr, var(--clr-primary));
+}
+
 /* CEFR level badge inside phrase/word browser chips — always the
    rightmost element, flush to the chip edge (variant pips sit before it). */
 .pb-chip-cefr {
