@@ -378,6 +378,17 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
       const gLemma = lang === 'es' ? gestureGendered(allText) : null;
       if (gLemma && !bothGendersPresent(gLemma, allText) && !sourceFixesGender(enGloss))
         findings.push({ ...base, type: 'gender', detail: `término con género "${gLemma}" (gloss "${enGloss}" no fija género) sin ambas formas masculino/femenino` });
+
+      // MISLABEL — a LEXICAL variant set (synonym/loanword) whose forms are actually a gender
+      // inflection of one lemma (inglés/inglesa) must NOT rotate: gender is the dictionary-slash
+      // pattern, not a rotating recognition variant. Catches the class of bug where the migration
+      // detector missed a gender pair and structured it as a rotating synonym.
+      if (lang === 'es' && variants.length === 2) {
+        const lexical = variants.every(v => v.labels && ('synonym' in v.labels || 'loanword' in v.labels) && !('gender' in v.labels));
+        if (lexical && isGenderInfl(variants[0].text || '', variants[1].text || ''))
+          findings.push({ ...base, type: 'gender',
+            detail: `"${variants[0].text}" / "${variants[1].text}" es flexión de GÉNERO etiquetada como léxica (sinónimo/préstamo) → debe ser barra de género, no rotar` });
+      }
     }
   }
 }
