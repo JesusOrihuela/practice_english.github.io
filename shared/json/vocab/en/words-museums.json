@@ -89,6 +89,114 @@
       "gloss_example": {
         "es": "A ella le gusta pintar paisajes."
       }
+    },
+    {
+      "id": "sculpture",
+      "term": "sculpture",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A work of art made by carving or shaping material.",
+      "example": "The museum has a famous marble sculpture.",
+      "translations": {
+        "es": "escultura"
+      },
+      "gloss": {
+        "es": "Obra de arte hecha tallando o modelando un material."
+      },
+      "gloss_example": {
+        "es": "El museo tiene una famosa escultura de mármol."
+      }
+    },
+    {
+      "id": "artist",
+      "term": "artist",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A person who creates art.",
+      "example": "The artist painted for hours.",
+      "translations": {
+        "es": "artista"
+      },
+      "gloss": {
+        "es": "Persona que crea arte."
+      },
+      "gloss_example": {
+        "es": "El artista pintó durante horas."
+      }
+    },
+    {
+      "id": "portrait",
+      "term": "portrait",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A painting or photo of a person.",
+      "example": "She sat for a portrait.",
+      "translations": {
+        "es": "retrato"
+      },
+      "gloss": {
+        "es": "Pintura o foto de una persona."
+      },
+      "gloss_example": {
+        "es": "Ella posó para un retrato."
+      }
+    },
+    {
+      "id": "sketch",
+      "term": "sketch",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A quick, rough drawing.",
+      "example": "He made a sketch of the building.",
+      "translations": {
+        "es": "boceto"
+      },
+      "gloss": {
+        "es": "Dibujo rápido y sin detalle."
+      },
+      "gloss_example": {
+        "es": "Hizo un boceto del edificio."
+      }
+    },
+    {
+      "id": "frame_art",
+      "term": "frame",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The border around a picture.",
+      "example": "The painting has a golden frame.",
+      "translations": {
+        "es": "marco"
+      },
+      "gloss": {
+        "es": "El borde que rodea un cuadro."
+      },
+      "gloss_example": {
+        "es": "El cuadro tiene un marco dorado."
+      }
+    },
+    {
+      "id": "mural",
+      "term": "mural",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A large painting made on a wall.",
+      "example": "The mural covers the whole wall.",
+      "translations": {
+        "es": "mural"
+      },
+      "gloss": {
+        "es": "Pintura grande hecha sobre un muro."
+      },
+      "gloss_example": {
+        "es": "El mural cubre toda la pared."
+      }
     }
   ]
 }

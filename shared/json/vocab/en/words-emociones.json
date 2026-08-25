@@ -107,6 +107,114 @@
       "gloss_example": {
         "es": "Su visita fue una linda sorpresa."
       }
+    },
+    {
+      "id": "anger",
+      "term": "anger",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A strong feeling of being upset or annoyed.",
+      "example": "He spoke with anger in his voice.",
+      "translations": {
+        "es": "enojo"
+      },
+      "gloss": {
+        "es": "Sentimiento fuerte de molestia o disgusto."
+      },
+      "gloss_example": {
+        "es": "Habló con enojo en la voz."
+      }
+    },
+    {
+      "id": "sadness",
+      "term": "sadness",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The feeling of being unhappy.",
+      "example": "A wave of sadness came over her.",
+      "translations": {
+        "es": "tristeza"
+      },
+      "gloss": {
+        "es": "El sentimiento de estar triste."
+      },
+      "gloss_example": {
+        "es": "Le vino una ola de tristeza."
+      }
+    },
+    {
+      "id": "pride",
+      "term": "pride",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A feeling of satisfaction in your achievements.",
+      "example": "She looked at her work with pride.",
+      "translations": {
+        "es": "orgullo"
+      },
+      "gloss": {
+        "es": "Satisfacción por los propios logros."
+      },
+      "gloss_example": {
+        "es": "Miró su trabajo con orgullo."
+      }
+    },
+    {
+      "id": "relief",
+      "term": "relief",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "The good feeling when a problem ends.",
+      "example": "I felt relief when the test was over.",
+      "translations": {
+        "es": "alivio"
+      },
+      "gloss": {
+        "es": "La sensación buena cuando un problema termina."
+      },
+      "gloss_example": {
+        "es": "Sentí alivio cuando terminó el examen."
+      }
+    },
+    {
+      "id": "shame",
+      "term": "shame",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A painful feeling of guilt.",
+      "example": "He felt shame after the mistake.",
+      "translations": {
+        "es": "vergüenza"
+      },
+      "gloss": {
+        "es": "Sentimiento doloroso de culpa."
+      },
+      "gloss_example": {
+        "es": "Sintió vergüenza después del error."
+      }
+    },
+    {
+      "id": "gratitude",
+      "term": "gratitude",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A feeling of being thankful.",
+      "example": "She expressed her gratitude to the team.",
+      "translations": {
+        "es": "gratitud"
+      },
+      "gloss": {
+        "es": "Sentimiento de agradecimiento."
+      },
+      "gloss_example": {
+        "es": "Expresó su gratitud al equipo."
+      }
     }
   ]
 }

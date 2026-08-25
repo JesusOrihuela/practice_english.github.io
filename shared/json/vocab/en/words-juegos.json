@@ -89,6 +89,114 @@
       "gloss_example": {
         "es": "El partido de fútbol terminó en empate."
       }
+    },
+    {
+      "id": "board_game",
+      "term": "board",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A flat surface used to play some games.",
+      "example": "Set up the board before we start.",
+      "translations": {
+        "es": "tablero"
+      },
+      "gloss": {
+        "es": "Superficie plana donde se juegan algunos juegos."
+      },
+      "gloss_example": {
+        "es": "Prepara el tablero antes de empezar."
+      }
+    },
+    {
+      "id": "puzzle",
+      "term": "puzzle",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A game that tests your cleverness.",
+      "example": "She solved the puzzle quickly.",
+      "translations": {
+        "es": "rompecabezas"
+      },
+      "gloss": {
+        "es": "Juego que pone a prueba tu ingenio."
+      },
+      "gloss_example": {
+        "es": "Ella resolvió el rompecabezas rápido."
+      }
+    },
+    {
+      "id": "prize",
+      "term": "prize",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Something you win in a game or contest.",
+      "example": "He won the first prize.",
+      "translations": {
+        "es": "premio"
+      },
+      "gloss": {
+        "es": "Algo que se gana en un juego o concurso."
+      },
+      "gloss_example": {
+        "es": "Él ganó el primer premio."
+      }
+    },
+    {
+      "id": "chess",
+      "term": "chess",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A strategy game played on a checkered board.",
+      "example": "They played chess all afternoon.",
+      "translations": {
+        "es": "ajedrez"
+      },
+      "gloss": {
+        "es": "Juego de estrategia sobre un tablero cuadriculado."
+      },
+      "gloss_example": {
+        "es": "Jugaron ajedrez toda la tarde."
+      }
+    },
+    {
+      "id": "riddle",
+      "term": "riddle",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A puzzling question asked as a game.",
+      "example": "Can you solve this riddle?",
+      "translations": {
+        "es": "acertijo"
+      },
+      "gloss": {
+        "es": "Pregunta ingeniosa que se plantea como juego."
+      },
+      "gloss_example": {
+        "es": "¿Puedes resolver este acertijo?"
+      }
+    },
+    {
+      "id": "trophy",
+      "term": "trophy",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A cup or prize given for winning.",
+      "example": "She lifted the trophy proudly.",
+      "translations": {
+        "es": "trofeo"
+      },
+      "gloss": {
+        "es": "Copa o premio que se da al ganar."
+      },
+      "gloss_example": {
+        "es": "Levantó el trofeo con orgullo."
+      }
     }
   ]
 }

@@ -177,6 +177,60 @@
       "gloss_example": {
         "en": "High latency makes video calls feel laggy and unnatural."
       }
+    },
+    {
+      "id": "link",
+      "term": "enlace",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Dirección que lleva a una página web.",
+      "example": "Haz clic en el enlace para continuar.",
+      "translations": {
+        "en": "link"
+      },
+      "gloss": {
+        "en": "An address that takes you to a web page."
+      },
+      "gloss_example": {
+        "en": "Click the link to continue."
+      }
+    },
+    {
+      "id": "server",
+      "term": "servidor",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Computadora que provee datos a otras en una red.",
+      "example": "El servidor está caído esta mañana.",
+      "translations": {
+        "en": "server"
+      },
+      "gloss": {
+        "en": "A computer that provides data to others on a network."
+      },
+      "gloss_example": {
+        "en": "The server is down this morning."
+      }
+    },
+    {
+      "id": "connection",
+      "term": "conexión",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "El enlace que permite acceder a internet.",
+      "example": "La conexión está lenta hoy.",
+      "translations": {
+        "en": "connection"
+      },
+      "gloss": {
+        "en": "The link that lets you access the internet."
+      },
+      "gloss_example": {
+        "en": "The connection is slow today."
+      }
     }
   ]
 }

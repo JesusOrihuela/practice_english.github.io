@@ -141,6 +141,96 @@
       "gloss_example": {
         "en": "That painting is very famous."
       }
+    },
+    {
+      "id": "sculpture",
+      "term": "escultura",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Obra de arte hecha tallando o modelando un material.",
+      "example": "El museo tiene una escultura de mármol.",
+      "translations": {
+        "en": "sculpture"
+      },
+      "gloss": {
+        "en": "A work of art made by carving or shaping material."
+      },
+      "gloss_example": {
+        "en": "The museum has a marble sculpture."
+      }
+    },
+    {
+      "id": "portrait",
+      "term": "retrato",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Pintura o foto de una persona.",
+      "example": "El artista hizo su retrato.",
+      "translations": {
+        "en": "portrait"
+      },
+      "gloss": {
+        "en": "A painting or photo of a person."
+      },
+      "gloss_example": {
+        "en": "The artist made his portrait."
+      }
+    },
+    {
+      "id": "canvas",
+      "term": "lienzo",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Tela sobre la que se pinta.",
+      "example": "El pintor preparó el lienzo.",
+      "translations": {
+        "en": "canvas"
+      },
+      "gloss": {
+        "en": "The cloth surface on which a picture is painted."
+      },
+      "gloss_example": {
+        "en": "The painter prepared the canvas."
+      }
+    },
+    {
+      "id": "mural",
+      "term": "mural",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Pintura grande hecha sobre un muro.",
+      "example": "El mural cubre toda la pared.",
+      "translations": {
+        "en": "mural"
+      },
+      "gloss": {
+        "en": "A large painting made on a wall."
+      },
+      "gloss_example": {
+        "en": "The mural covers the whole wall."
+      }
+    },
+    {
+      "id": "sculptor",
+      "term": "escultor / escultora",
+      "level": "B1",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "Persona que hace esculturas.",
+      "example": "El escultor talla la piedra con cuidado.",
+      "translations": {
+        "en": "sculptor"
+      },
+      "gloss": {
+        "en": "A person who makes sculptures."
+      },
+      "gloss_example": {
+        "en": "The sculptor carves the stone carefully."
+      }
     }
   ]
 }

@@ -161,6 +161,60 @@
       "gloss_example": {
         "en": "My grandfather taught me to play chess."
       }
+    },
+    {
+      "id": "dice",
+      "term": "dado",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cubo con puntos que se usa en juegos.",
+      "example": "Lanza el dado para avanzar.",
+      "translations": {
+        "en": "dice"
+      },
+      "gloss": {
+        "en": "A small cube with dots used in games."
+      },
+      "gloss_example": {
+        "en": "Roll the dice to move."
+      }
+    },
+    {
+      "id": "board_game",
+      "term": "tablero",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Superficie plana donde se juega.",
+      "example": "Coloca las fichas en el tablero.",
+      "translations": {
+        "en": "board"
+      },
+      "gloss": {
+        "en": "A flat surface used to play some games."
+      },
+      "gloss_example": {
+        "en": "Place the pieces on the board."
+      }
+    },
+    {
+      "id": "card_game",
+      "term": "naipe",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Cada carta de la baraja de juego.",
+      "example": "Reparte los naipes entre los jugadores.",
+      "translations": {
+        "en": "card"
+      },
+      "gloss": {
+        "en": "A piece of stiff paper used in games."
+      },
+      "gloss_example": {
+        "en": "Deal the cards to the players."
+      }
     }
   ]
 }

@@ -125,6 +125,96 @@
       "gloss_example": {
         "es": "No encuentro el otro calcetín."
       }
+    },
+    {
+      "id": "shoe",
+      "term": "shoe",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Something you wear on your foot.",
+      "example": "I need a new pair of shoes.",
+      "translations": {
+        "es": "zapato"
+      },
+      "gloss": {
+        "es": "Algo que se usa en el pie."
+      },
+      "gloss_example": {
+        "es": "Necesito un par de zapatos nuevos."
+      }
+    },
+    {
+      "id": "skirt",
+      "term": "skirt",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A piece of clothing that hangs from the waist.",
+      "example": "She wore a long skirt.",
+      "translations": {
+        "es": "falda"
+      },
+      "gloss": {
+        "es": "Prenda que cuelga desde la cintura."
+      },
+      "gloss_example": {
+        "es": "Ella llevaba una falda larga."
+      }
+    },
+    {
+      "id": "glove",
+      "term": "glove",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A covering for the hand.",
+      "example": "Wear gloves in the snow.",
+      "translations": {
+        "es": "guante"
+      },
+      "gloss": {
+        "es": "Prenda que cubre la mano."
+      },
+      "gloss_example": {
+        "es": "Usa guantes en la nieve."
+      }
+    },
+    {
+      "id": "scarf",
+      "term": "scarf",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A piece of cloth worn around the neck.",
+      "example": "He wrapped a scarf around his neck.",
+      "translations": {
+        "es": "bufanda"
+      },
+      "gloss": {
+        "es": "Tela que se lleva alrededor del cuello."
+      },
+      "gloss_example": {
+        "es": "Se envolvió una bufanda en el cuello."
+      }
+    },
+    {
+      "id": "belt",
+      "term": "belt",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A strip worn around the waist.",
+      "example": "This belt is too tight.",
+      "translations": {
+        "es": "cinturón"
+      },
+      "gloss": {
+        "es": "Tira que se lleva en la cintura."
+      },
+      "gloss_example": {
+        "es": "Este cinturón está muy apretado."
+      }
     }
   ]
 }

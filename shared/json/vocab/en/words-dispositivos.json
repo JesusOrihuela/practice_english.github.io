@@ -89,6 +89,114 @@
       "gloss_example": {
         "es": "Vieron las noticias en la televisión."
       }
+    },
+    {
+      "id": "charger",
+      "term": "charger",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device used to recharge a battery.",
+      "example": "I forgot my phone charger at home.",
+      "translations": {
+        "es": "cargador"
+      },
+      "gloss": {
+        "es": "Aparato que se usa para recargar una batería."
+      },
+      "gloss_example": {
+        "es": "Olvidé el cargador del teléfono en casa."
+      }
+    },
+    {
+      "id": "keyboard",
+      "term": "keyboard",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "The set of keys used to type on a computer.",
+      "example": "This keyboard is very quiet.",
+      "translations": {
+        "es": "teclado"
+      },
+      "gloss": {
+        "es": "Conjunto de teclas para escribir en una computadora."
+      },
+      "gloss_example": {
+        "es": "Este teclado es muy silencioso."
+      }
+    },
+    {
+      "id": "mouse_device",
+      "term": "mouse",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A small device that moves the cursor on a screen.",
+      "example": "Click the left button on the mouse.",
+      "translations": {
+        "es": "ratón"
+      },
+      "gloss": {
+        "es": "Aparato pequeño que mueve el cursor en la pantalla."
+      },
+      "gloss_example": {
+        "es": "Haz clic en el botón izquierdo del ratón."
+      }
+    },
+    {
+      "id": "speaker_device",
+      "term": "speaker",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device that produces sound.",
+      "example": "The speaker on this laptop is loud.",
+      "translations": {
+        "es": "altavoz"
+      },
+      "gloss": {
+        "es": "Aparato que produce sonido."
+      },
+      "gloss_example": {
+        "es": "El altavoz de esta laptop suena fuerte."
+      }
+    },
+    {
+      "id": "camera",
+      "term": "camera",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "A device for taking photos or videos.",
+      "example": "My phone has a great camera.",
+      "translations": {
+        "es": "cámara"
+      },
+      "gloss": {
+        "es": "Aparato para tomar fotos o videos."
+      },
+      "gloss_example": {
+        "es": "Mi teléfono tiene una gran cámara."
+      }
+    },
+    {
+      "id": "printer",
+      "term": "printer",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "medium",
+      "definition": "A machine that prints documents on paper.",
+      "example": "The printer is out of ink.",
+      "translations": {
+        "es": "impresora"
+      },
+      "gloss": {
+        "es": "Máquina que imprime documentos en papel."
+      },
+      "gloss_example": {
+        "es": "La impresora se quedó sin tinta."
+      }
     }
   ]
 }
