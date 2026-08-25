@@ -143,6 +143,54 @@
           "audioSlug": "tiene_experiencia"
         }
       ]
+    },
+    {
+      "id": "oficina_send_me_the_report",
+      "source": "Please send me the report.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Por favor envíame el informe.",
+          "audioSlug": "por_favor_enviame_el_informe"
+        }
+      ]
+    },
+    {
+      "id": "oficina_meeting_at_ten",
+      "source": "The meeting is at ten o'clock.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La reunión es a las diez.",
+          "audioSlug": "la_reunion_es_a_las_diez"
+        }
+      ]
+    },
+    {
+      "id": "oficina_print_this_document",
+      "source": "Can you print this document?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes imprimir este documento?",
+          "audioSlug": "puedes_imprimir_este_documento"
+        }
+      ]
+    },
+    {
+      "id": "oficina_boss_in_meeting",
+      "source": "My boss is in a meeting.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi jefe está en una reunión.",
+          "audioSlug": "mi_jefe_esta_en_una_reunion"
+        }
+      ]
     }
   ]
 }

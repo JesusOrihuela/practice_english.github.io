@@ -95,6 +95,102 @@
           "audioSlug": "acepte_la_invitacion_a_la_boda"
         }
       ]
+    },
+    {
+      "id": "fiesta_happy_birthday",
+      "source": "Happy birthday!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Feliz cumpleaños!",
+          "audioSlug": "feliz_cumpleanos"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_lets_throw_a_party",
+      "source": "Let's throw a party.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hagamos una fiesta.",
+          "audioSlug": "hagamos_una_fiesta"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_party_starts_at_eight",
+      "source": "The party starts at eight.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La fiesta empieza a las ocho.",
+          "audioSlug": "la_fiesta_empieza_a_las_ocho"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_we_danced_all_night",
+      "source": "We danced all night.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Bailamos toda la noche.",
+          "audioSlug": "bailamos_toda_la_noche"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_blow_out_the_candles",
+      "source": "Blow out the candles.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sopla las velas.",
+          "audioSlug": "sopla_las_velas"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_cheers_everyone",
+      "source": "Cheers, everyone!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¡Salud a todos!",
+          "audioSlug": "salud_a_todos"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_its_a_surprise_party",
+      "source": "It's a surprise party.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Es una fiesta sorpresa.",
+          "audioSlug": "es_una_fiesta_sorpresa"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_lets_make_a_toast",
+      "source": "Let's make a toast.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hagamos un brindis.",
+          "audioSlug": "hagamos_un_brindis"
+        }
+      ]
     }
   ]
 }

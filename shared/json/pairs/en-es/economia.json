@@ -143,6 +143,54 @@
           "audioSlug": "el_propietario_subio_el_alquiler"
         }
       ]
+    },
+    {
+      "id": "economia_prices_went_up",
+      "source": "Prices went up this year.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los precios subieron este año.",
+          "audioSlug": "los_precios_subieron_este_ano"
+        }
+      ]
+    },
+    {
+      "id": "economia_company_reported_profit",
+      "source": "The company reported a profit.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La empresa reportó una ganancia.",
+          "audioSlug": "la_empresa_reporto_una_ganancia"
+        }
+      ]
+    },
+    {
+      "id": "economia_reduce_our_expenses",
+      "source": "We need to reduce our expenses.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesitamos reducir nuestros gastos.",
+          "audioSlug": "necesitamos_reducir_nuestros_gastos"
+        }
+      ]
+    },
+    {
+      "id": "economia_economy_growing_slowly",
+      "source": "The economy is growing slowly.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La economía crece lentamente.",
+          "audioSlug": "la_economia_crece_lentamente"
+        }
+      ]
     }
   ]
 }

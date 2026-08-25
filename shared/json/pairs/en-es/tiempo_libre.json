@@ -143,6 +143,54 @@
           "audioSlug": "la_montana_rusa_es_la_mejor_atraccion"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_do_you_have_hobbies",
+      "source": "Do you have any hobbies?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienes algún pasatiempo?",
+          "audioSlug": "tienes_algun_pasatiempo"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_lets_go_hiking",
+      "source": "Let's go hiking on Saturday.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vamos de excursión el sábado.",
+          "audioSlug": "vamos_de_excursion_el_sabado"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_enjoy_reading_before_bed",
+      "source": "I enjoy reading before bed.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Disfruto leer antes de dormir.",
+          "audioSlug": "disfruto_leer_antes_de_dormir"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_what_do_you_do_for_fun",
+      "source": "What do you do for fun?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué haces para divertirte?",
+          "audioSlug": "que_haces_para_divertirte"
+        }
+      ]
     }
   ]
 }

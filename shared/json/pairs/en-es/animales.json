@@ -143,6 +143,54 @@
           "audioSlug": "un_mosquito_me_pico_en_el_brazo"
         }
       ]
+    },
+    {
+      "id": "animales_dog_barking_loudly",
+      "source": "The dog is barking loudly.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El perro está ladrando fuerte.",
+          "audioSlug": "el_perro_esta_ladrando_fuerte"
+        }
+      ]
+    },
+    {
+      "id": "animales_birds_fly_south",
+      "source": "Birds fly south in winter.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los pájaros vuelan al sur en invierno.",
+          "audioSlug": "los_pajaros_vuelan_al_sur_en_invierno"
+        }
+      ]
+    },
+    {
+      "id": "animales_cat_likes_climb_trees",
+      "source": "My cat likes to climb trees.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A mi gato le gusta trepar árboles.",
+          "audioSlug": "a_mi_gato_le_gusta_trepar_arboles"
+        }
+      ]
+    },
+    {
+      "id": "animales_rabbit_hopped_away",
+      "source": "The rabbit hopped away quickly.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El conejo se alejó saltando rápido.",
+          "audioSlug": "el_conejo_se_alejo_saltando_rapido"
+        }
+      ]
     }
   ]
 }
