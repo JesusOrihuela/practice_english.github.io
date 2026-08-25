@@ -69,7 +69,7 @@ var AppGrammarChip = (function () {
       _lvl = {}; _title = {};
       (res[1].rules || []).forEach(function (r) {
         _lvl[r.id]   = (ORDER[r.level] != null) ? ORDER[r.level] : null;
-        _title[r.id] = (tgt === 'es' ? r.title_es : r.title_en) || r.title || r.id;
+        _title[r.id] = r['title_' + tgt] || r.title_en || r.title || r.id;   // per-target, generic
       });
       _loaded = true;
     });

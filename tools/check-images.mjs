@@ -11,8 +11,10 @@
      • unique       — no two topics in one activity share the same image (ahash)
    and that no orphan image exists for a demoted/removed topic.
 
-   Pixel facts come from tools/img-probe.py (Pillow+numpy) in one pass. Report-only
-   with --report; exits 1 on any issue otherwise (for the CI `validate` job).
+   Pixel facts come from tools/img-probe.py (Pillow+numpy) in one pass. Topic images are an OPTIONAL
+   enhancement (the cards degrade gracefully via onerror), so a MISSING image is advisory and does not
+   fail CI; a PRESENT image that is corrupt/mis-sized/barred/blurry/duplicate, or an orphan, IS a
+   failure (exit 1). --strict also requires presence; --report never exits 1.
    ============================================================ */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -73,15 +75,33 @@ for (const c of cells) {
 // 4) Orphans.
 for (const o of orphans) flag(`${o.act}/img/${o.id}`, 'orphan', `imagen sin tema esperado (¿tema removido/degradado?)`);
 
-// 5) Report.
+// 5) Report. MISSING is ADVISORY — topic images are an optional enhancement and the topic cards
+//    degrade gracefully (topic-grid.js loads the image with onerror="this.remove()"), so a missing
+//    image must not block CI. Everything else (corrupt/dims/border/blurry/duplicate/orphan) is a
+//    QUALITY failure: an image that IS present must be valid. `--strict` also requires presence.
+const STRICT  = process.argv.includes('--strict');
+const missing = issues.filter(i => i.rule === 'missing');
+const hard    = issues.filter(i => i.rule !== 'missing');
+
 if (issues.length === 0) { console.log(`✓ check-images: ${cells.length} celdas — ALL CLEAR`); process.exit(0); }
-const byRule = {};
-for (const i of issues) (byRule[i.rule] ||= []).push(i);
-console.log(`✗ check-images: ${issues.length} problemas en ${cells.length} celdas\n`);
-for (const rule of Object.keys(byRule).sort()) {
-  console.log(`── ${rule} (${byRule[rule].length}) ──`);
-  for (const i of byRule[rule].slice(0, REPORT ? 999 : 12)) console.log(`  ${i.rel}: ${i.msg}`);
-  if (!REPORT && byRule[rule].length > 12) console.log(`  … +${byRule[rule].length - 12} más (usa --report)`);
-  console.log('');
+
+if (hard.length) {
+  const byRule = {};
+  for (const i of hard) (byRule[i.rule] ||= []).push(i);
+  console.log(`✗ check-images: ${hard.length} problema(s) de calidad en ${cells.length} celdas\n`);
+  for (const rule of Object.keys(byRule).sort()) {
+    console.log(`── ${rule} (${byRule[rule].length}) ──`);
+    for (const i of byRule[rule].slice(0, REPORT ? 999 : 12)) console.log(`  ${i.rel}: ${i.msg}`);
+    if (!REPORT && byRule[rule].length > 12) console.log(`  … +${byRule[rule].length - 12} más (usa --report)`);
+    console.log('');
+  }
 }
-process.exit(REPORT ? 0 : 1);
+if (missing.length) {
+  const lvl = STRICT ? '✗' : '·';
+  console.log(`${lvl} ${missing.length} imagen(es) de tema ausente(s) — ${STRICT ? 'requeridas (--strict)' : 'advisory: las tarjetas degradan sin imagen'}.`);
+  console.log(`  Puebla con: node tools/fetch-topic-images.mjs`);
+}
+if (!hard.length && !(STRICT && missing.length)) console.log(`  ✓ toda imagen PRESENTE es válida (${missing.length} ausente(s), advisory).`);
+
+const blocking = hard.length + (STRICT ? missing.length : 0);
+process.exit((blocking > 0 && !REPORT) ? 1 : 0);
