@@ -575,6 +575,54 @@
           "audioSlug": "tuvimos_una_discusion_larga"
         }
       ]
+    },
+    {
+      "id": "conversacion_ya_habia_comido",
+      "source": "I had already eaten when you arrived.",
+      "level": "C1",
+      "grammar": "El pluscuamperfecto (había + participio) marca una acción anterior a otra pasada.",
+      "target": [
+        {
+          "text": "Ya había comido cuando llegaste.",
+          "audioSlug": "ya_habia_comido_cuando_llegaste"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_ya_se_habian_ido",
+      "source": "When I arrived, they had already left.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cuando llegué, ellos ya se habían ido.",
+          "audioSlug": "cuando_llegue_ellos_ya_se_habian_ido"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_me_dijo_que_llegaria",
+      "source": "He told me he would arrive late.",
+      "level": "C2",
+      "grammar": "En estilo indirecto el tiempo del verbo cambia (llegará pasa a llegaría).",
+      "target": [
+        {
+          "text": "Me dijo que llegaría tarde.",
+          "audioSlug": "me_dijo_que_llegaria_tarde"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_pregunto_si_terminamos",
+      "source": "She asked if we had finished the work.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos preguntó si habíamos terminado el trabajo.",
+          "audioSlug": "nos_pregunto_si_habiamos_terminado_el_trabajo"
+        }
+      ]
     }
   ]
 }

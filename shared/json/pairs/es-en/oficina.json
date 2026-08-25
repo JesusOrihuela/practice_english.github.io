@@ -233,6 +233,30 @@
           "audioSlug": "everyone_was_present_though_a_few_left_early"
         }
       ]
+    },
+    {
+      "id": "oficina_recommends_that_he_arrive",
+      "source": "El gerente recomienda que llegue temprano.",
+      "level": "C1",
+      "grammar": "After 'recommend that', use the base form (formal subjunctive): 'that he arrive'.",
+      "target": [
+        {
+          "text": "The manager recommends that he arrive early.",
+          "audioSlug": "the_manager_recommends_that_he_arrive_early"
+        }
+      ]
+    },
+    {
+      "id": "oficina_essential_everyone_be_on_time",
+      "source": "Es esencial que todos lleguen a tiempo.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It is essential that everyone be on time.",
+          "audioSlug": "it_is_essential_that_everyone_be_on_time"
+        }
+      ]
     }
   ]
 }

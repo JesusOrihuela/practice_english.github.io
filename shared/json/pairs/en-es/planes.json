@@ -449,6 +449,30 @@
           "audioSlug": "quizas_llueva_manana"
         }
       ]
+    },
+    {
+      "id": "planes_habre_terminado_manana",
+      "source": "By tomorrow I will have finished the report.",
+      "level": "C2",
+      "grammar": "El futuro perfecto (habré + participio) expresa una acción futura ya completada.",
+      "target": [
+        {
+          "text": "Para mañana habré terminado el informe.",
+          "audioSlug": "para_manana_habre_terminado_el_informe"
+        }
+      ]
+    },
+    {
+      "id": "planes_habremos_ahorrado",
+      "source": "By December we will have saved enough.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En diciembre habremos ahorrado lo suficiente.",
+          "audioSlug": "en_diciembre_habremos_ahorrado_lo_suficiente"
+        }
+      ]
     }
   ]
 }

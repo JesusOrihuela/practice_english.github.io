@@ -597,6 +597,102 @@
           "audioSlug": "yes_that_s_quite_true"
         }
       ]
+    },
+    {
+      "id": "conversacion_had_already_left",
+      "source": "Ella ya se había ido cuando llegué.",
+      "level": "B2",
+      "grammar": "The past perfect (had + past participle) marks an action completed before another past action.",
+      "target": [
+        {
+          "text": "She had already left when I arrived.",
+          "audioSlug": "she_had_already_left_when_i_arrived"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_had_never_seen_angry",
+      "source": "Nunca lo había visto tan enojado.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I had never seen him so angry before.",
+          "audioSlug": "i_had_never_seen_him_so_angry_before"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_if_known_would_called",
+      "source": "Si lo hubiera sabido, te habría llamado.",
+      "level": "B2",
+      "grammar": "The third conditional (if + past perfect, would have) describes an unreal past.",
+      "target": [
+        {
+          "text": "If I had known, I would have called you.",
+          "audioSlug": "if_i_had_known_i_would_have_called_you"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_if_asked_would_helped",
+      "source": "Si me hubieran preguntado, los habría ayudado.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If they had asked, I would have helped them.",
+          "audioSlug": "if_they_had_asked_i_would_have_helped_them"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_ran_into_old_friend",
+      "source": "Me encontré con un viejo amigo en el centro.",
+      "level": "B2",
+      "grammar": "'Run into' is an idiomatic phrasal verb meaning to meet someone by chance.",
+      "target": [
+        {
+          "text": "I ran into an old friend downtown.",
+          "audioSlug": "i_ran_into_an_old_friend_downtown"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_come_up_with_idea",
+      "source": "Se nos ocurrió una gran idea juntos.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We came up with a great idea together.",
+          "audioSlug": "we_came_up_with_a_great_idea_together"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_love_coffee_so_does_she",
+      "source": "Me encanta el café, y a ella también.",
+      "level": "C2",
+      "grammar": "'So do/does + subject' avoids repeating the verb (substitution).",
+      "target": [
+        {
+          "text": "I love coffee, and so does she.",
+          "audioSlug": "i_love_coffee_and_so_does_she"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_can_swim_so_can_i",
+      "source": "Él sabe nadar, y yo también.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He can swim, and so can I.",
+          "audioSlug": "he_can_swim_and_so_can_i"
+        }
+      ]
     }
   ]
 }

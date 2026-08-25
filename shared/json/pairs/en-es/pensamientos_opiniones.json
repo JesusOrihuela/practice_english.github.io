@@ -395,6 +395,30 @@
           "audioSlug": "puedes_adivinar_que_regalo_es"
         }
       ]
+    },
+    {
+      "id": "pensamientos_sin_embargo_fallas",
+      "source": "However, the plan had serious flaws.",
+      "level": "C2",
+      "grammar": "Sin embargo introduce un contraste (marcador del discurso).",
+      "target": [
+        {
+          "text": "Sin embargo, el plan tenía fallas graves.",
+          "audioSlug": "sin_embargo_el_plan_tenia_fallas_graves"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_por_lo_tanto_cambiamos",
+      "source": "Therefore, we decided to change the plan.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Por lo tanto, decidimos cambiar de plan.",
+          "audioSlug": "por_lo_tanto_decidimos_cambiar_de_plan"
+        }
+      ]
     }
   ]
 }

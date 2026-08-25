@@ -1213,6 +1213,30 @@
           "audioSlug": "this_is_a_new_model"
         }
       ]
+    },
+    {
+      "id": "technology_if_press_button_starts",
+      "source": "Si presionas este botón, la máquina se enciende.",
+      "level": "A2",
+      "grammar": "The zero conditional (if + present, present) states a general truth or automatic result.",
+      "target": [
+        {
+          "text": "If you press this button, the machine starts.",
+          "audioSlug": "if_you_press_this_button_the_machine_starts"
+        }
+      ]
+    },
+    {
+      "id": "technology_if_battery_dies_screen_off",
+      "source": "Si la batería se agota, la pantalla se apaga.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If the battery dies, the screen turns off.",
+          "audioSlug": "if_the_battery_dies_the_screen_turns_off"
+        }
+      ]
     }
   ]
 }

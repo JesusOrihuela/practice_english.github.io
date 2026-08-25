@@ -383,6 +383,78 @@
           "audioSlug": "perhaps_each_individual_sees_it_differently"
         }
       ]
+    },
+    {
+      "id": "pensamientos_never_before_had_seen",
+      "source": "Nunca había visto tal talento.",
+      "level": "C1",
+      "grammar": "After a negative adverbial (never, rarely), the auxiliary comes before the subject (inversion).",
+      "target": [
+        {
+          "text": "Never before had I seen such talent.",
+          "audioSlug": "never_before_had_i_seen_such_talent"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_rarely_do_we_see",
+      "source": "Rara vez vemos tal dedicación.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Rarely do we see such dedication.",
+          "audioSlug": "rarely_do_we_see_such_dedication"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_if_studied_would_be",
+      "source": "Si hubiera estudiado más, hoy sería ingeniero/a.",
+      "level": "C1",
+      "grammar": "A mixed conditional links a past condition to a present result.",
+      "target": [
+        {
+          "text": "If I had studied more, I would be an engineer today.",
+          "audioSlug": "if_i_had_studied_more_i_would_be_an_engineer_today"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_if_listened_would_not_be_lost",
+      "source": "Si hubiera escuchado, ahora no estaría perdida.",
+      "level": "C1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If she had listened, she would not be lost now.",
+          "audioSlug": "if_she_had_listened_she_would_not_be_lost_now"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_however_serious_flaws",
+      "source": "Sin embargo, el plan tenía fallas graves.",
+      "level": "C2",
+      "grammar": "'However' contrasts with a previous idea (an advanced discourse marker).",
+      "target": [
+        {
+          "text": "However, the plan had serious flaws.",
+          "audioSlug": "however_the_plan_had_serious_flaws"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_therefore_different_approach",
+      "source": "Por lo tanto, elegimos un enfoque diferente.",
+      "level": "C2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Therefore, we chose a different approach.",
+          "audioSlug": "therefore_we_chose_a_different_approach"
+        }
+      ]
     }
   ]
 }

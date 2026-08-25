@@ -323,6 +323,54 @@
           "audioSlug": "i_m_not_able_to_decide_either_way"
         }
       ]
+    },
+    {
+      "id": "planes_if_rains_will_stay",
+      "source": "Si llueve mañana, me quedaré en casa.",
+      "level": "B1",
+      "grammar": "The first conditional (if + present, will + verb) is for a real future possibility.",
+      "target": [
+        {
+          "text": "If it rains tomorrow, I will stay home.",
+          "audioSlug": "if_it_rains_tomorrow_i_will_stay_home"
+        }
+      ]
+    },
+    {
+      "id": "planes_if_leave_now_arrive",
+      "source": "Si salimos ahora, llegaremos a tiempo.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If we leave now, we will arrive on time.",
+          "audioSlug": "if_we_leave_now_we_will_arrive_on_time"
+        }
+      ]
+    },
+    {
+      "id": "planes_if_were_rich_would_travel",
+      "source": "Si fuera rico/a, viajaría por el mundo.",
+      "level": "B1",
+      "grammar": "The second conditional (if + past, would) describes an unreal situation.",
+      "target": [
+        {
+          "text": "If I were rich, I would travel the world.",
+          "audioSlug": "if_i_were_rich_i_would_travel_the_world"
+        }
+      ]
+    },
+    {
+      "id": "planes_if_more_time_would_learn",
+      "source": "Si tuviera más tiempo, aprendería a pintar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "If I had more time, I would learn to paint.",
+          "audioSlug": "if_i_had_more_time_i_would_learn_to_paint"
+        }
+      ]
     }
   ]
 }

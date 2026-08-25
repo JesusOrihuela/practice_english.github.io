@@ -562,13 +562,29 @@
   "conversacion_at_least_we_tried": [
     "simple_past"
   ],
+  "conversacion_can_swim_so_can_i": [
+    "ellipsis_substitution",
+    "modal_can_ability"
+  ],
   "conversacion_can_you_define_it": [
     "modal_can_ability"
   ],
   "conversacion_can_you_repeat_that": [
     "modal_can_ability"
   ],
+  "conversacion_come_up_with_idea": [
+    "phrasal_idiomatic",
+    "simple_past"
+  ],
   "conversacion_did_tom_mention_me": [
+    "simple_past"
+  ],
+  "conversacion_had_already_left": [
+    "past_perfect",
+    "simple_past"
+  ],
+  "conversacion_had_never_seen_angry": [
+    "present_simple_habits",
     "simple_past"
   ],
   "conversacion_he_gave_a_speech": [
@@ -599,8 +615,32 @@
   "conversacion_i_want_to_warn_you": [
     "verb_infinitive"
   ],
+  "conversacion_if_asked_would_helped": [
+    "conditional_second",
+    "conditional_third",
+    "conditional_zero",
+    "mixed_conditionals",
+    "past_perfect",
+    "present_perfect_experience",
+    "simple_past"
+  ],
+  "conversacion_if_known_would_called": [
+    "conditional_second",
+    "conditional_third",
+    "conditional_zero",
+    "mixed_conditionals",
+    "present_perfect_experience",
+    "simple_past"
+  ],
   "conversacion_is_there_anything_i_can_do_for_you": [
     "modal_can_ability"
+  ],
+  "conversacion_love_coffee_so_does_she": [
+    "ellipsis_substitution"
+  ],
+  "conversacion_ran_into_old_friend": [
+    "phrasal_idiomatic",
+    "simple_past"
   ],
   "conversacion_such_a_good_idea": [
     "simple_past"
@@ -685,6 +725,14 @@
   "daily_routine_usually_coffee": [
     "prepositions_time",
     "present_simple_habits"
+  ],
+  "daily_routine_was_cooking_when_called": [
+    "past_continuous",
+    "simple_past"
+  ],
+  "daily_routine_was_walking_when_rained": [
+    "past_continuous",
+    "simple_past"
   ],
   "daily_routine_weekends": [
     "present_simple_habits",
@@ -1869,6 +1917,10 @@
   "naturaleza_lugares_we_must_protect_the_environment": [
     "modal_must_obligation"
   ],
+  "oficina_essential_everyone_be_on_time": [
+    "cleft_sentences",
+    "subjunctive_formal"
+  ],
   "oficina_everyone_was_present": [
     "simple_past"
   ],
@@ -1878,8 +1930,33 @@
   "oficina_i_will_attend_the_meeting": [
     "future_will_going_to"
   ],
+  "oficina_recommends_that_he_arrive": [
+    "subjunctive_formal"
+  ],
   "oficina_when_is_the_meeting_scheduled": [
     "questions_wh",
+    "simple_past"
+  ],
+  "pensamientos_however_serious_flaws": [
+    "discourse_markers_advanced",
+    "simple_past"
+  ],
+  "pensamientos_if_listened_would_not_be_lost": [
+    "conditional_second",
+    "conditional_zero",
+    "past_perfect",
+    "simple_past"
+  ],
+  "pensamientos_if_studied_would_be": [
+    "conditional_second",
+    "conditional_zero",
+    "mixed_conditionals",
+    "past_perfect",
+    "simple_past"
+  ],
+  "pensamientos_never_before_had_seen": [
+    "inversion_negative_adverbials",
+    "present_simple_habits",
     "simple_past"
   ],
   "pensamientos_opiniones_can_you_imagine_that": [
@@ -1902,6 +1979,12 @@
   ],
   "pensamientos_opiniones_you_must_prove_it": [
     "modal_must_obligation"
+  ],
+  "pensamientos_rarely_do_we_see": [
+    "inversion_negative_adverbials"
+  ],
+  "pensamientos_therefore_different_approach": [
+    "discourse_markers_advanced"
   ],
   "personal_info_are_you_married": [
     "simple_past"
@@ -1960,6 +2043,28 @@
   ],
   "planes_i_want_to_propose_a_plan": [
     "verb_infinitive"
+  ],
+  "planes_if_leave_now_arrive": [
+    "conditional_first",
+    "conditional_zero",
+    "future_will_going_to"
+  ],
+  "planes_if_more_time_would_learn": [
+    "conditional_second",
+    "conditional_zero",
+    "simple_past",
+    "verb_infinitive"
+  ],
+  "planes_if_rains_will_stay": [
+    "conditional_first",
+    "conditional_zero",
+    "future_will_going_to"
+  ],
+  "planes_if_were_rich_would_travel": [
+    "conditional_second",
+    "conditional_zero",
+    "simple_past",
+    "subjunctive_formal"
   ],
   "planes_it_was_a_good_opportunity": [
     "simple_past"
@@ -2477,6 +2582,12 @@
   ],
   "technology_i_want_to_increase_the_brightness": [
     "verb_infinitive"
+  ],
+  "technology_if_battery_dies_screen_off": [
+    "conditional_zero"
+  ],
+  "technology_if_press_button_starts": [
+    "conditional_zero"
   ],
   "technology_im_considering_switching_ecosystems_but": [
     "present_continuous_now"

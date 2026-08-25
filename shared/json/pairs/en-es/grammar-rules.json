@@ -592,6 +592,7 @@
         "sitios",
         "music",
         "oficina",
+        "conversacion",
         "cotidianidad",
         "planes",
         "airport",
@@ -1056,6 +1057,7 @@
         "transportation",
         "accommodation",
         "family",
+        "conversacion",
         "cotidianidad",
         "music",
         "museums",
@@ -1170,6 +1172,7 @@
         "theater",
         "music",
         "technology",
+        "conversacion",
         "cotidianidad",
         "descripciones",
         "movies"
@@ -3611,7 +3614,9 @@
         }
       ],
       "related_phrases": [],
-      "topics": [],
+      "topics": [
+        "conversacion"
+      ],
       "title_en": "Pluperfect — The past before the past"
     },
     {
@@ -3709,7 +3714,9 @@
         }
       ],
       "related_phrases": [],
-      "topics": [],
+      "topics": [
+        "planes"
+      ],
       "title_en": "Future Perfect — Completed future actions"
     },
     {
@@ -3916,7 +3923,9 @@
         }
       ],
       "related_phrases": [],
-      "topics": [],
+      "topics": [
+        "pensamientos_opiniones"
+      ],
       "title_en": "Discourse Markers — Connecting ideas in speech and writing"
     },
     {
@@ -4015,7 +4024,9 @@
         }
       ],
       "related_phrases": [],
-      "topics": [],
+      "topics": [
+        "conversacion"
+      ],
       "title_en": "Reported Speech — Indirect style tense shifts"
     }
   ]

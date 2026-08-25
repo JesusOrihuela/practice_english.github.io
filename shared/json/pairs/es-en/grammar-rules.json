@@ -492,22 +492,24 @@
         "gym",
         "greetings",
         "transportation",
+        "conversacion",
         "music",
         "supermarket",
         "accommodation",
         "restaurant",
         "kitchen",
         "politica",
-        "conversacion",
+        "pensamientos_opiniones",
         "emergencias",
         "health",
         "museums",
         "personal_info",
         "family",
+        "planes",
         "directions",
         "survival",
+        "daily_routine",
         "cotidianidad",
-        "pensamientos_opiniones",
         "estudios",
         "deportes",
         "oficina"
@@ -641,7 +643,9 @@
           ]
         }
       ],
-      "topics": []
+      "topics": [
+        "daily_routine"
+      ]
     },
     {
       "id": "present_perfect_experience",
@@ -783,6 +787,7 @@
         "supermarket",
         "airport",
         "gym",
+        "conversacion",
         "kitchen",
         "movies",
         "music",
@@ -927,6 +932,7 @@
         "kitchen",
         "technology",
         "weather",
+        "planes",
         "restaurant",
         "viajes",
         "gym"
@@ -1065,7 +1071,10 @@
           "contrast": "'I wish I could take that job.' — situación hipotética actual (presente), no pasado."
         }
       ],
-      "topics": []
+      "topics": [
+        "conversacion",
+        "pensamientos_opiniones"
+      ]
     },
     {
       "id": "article_a_an",
@@ -2030,7 +2039,12 @@
           "contrast": "No necesitas will ni would en el zero conditional — las dos partes son siempre Present Simple."
         }
       ],
-      "topics": []
+      "topics": [
+        "planes",
+        "conversacion",
+        "pensamientos_opiniones",
+        "technology"
+      ]
     },
     {
       "id": "conditional_first",
@@ -2162,7 +2176,9 @@
           "contrast": "'Call me if you will need' = incorrecto. Siempre Present Simple tras if."
         }
       ],
-      "topics": []
+      "topics": [
+        "planes"
+      ]
     },
     {
       "id": "conditional_second",
@@ -2295,7 +2311,11 @@
           "contrast": "Esta estructura 'If I were you, I would/wouldn't...' es la forma más común de dar consejos en inglés."
         }
       ],
-      "topics": []
+      "topics": [
+        "conversacion",
+        "pensamientos_opiniones",
+        "planes"
+      ]
     },
     {
       "id": "conditional_third",
@@ -2429,7 +2449,9 @@
           "contrast": "Could have gone = habrían tenido la opción. Might have gone = quizás habrían ido. Would have gone = habrían ido (mayor certeza)."
         }
       ],
-      "topics": []
+      "topics": [
+        "conversacion"
+      ]
     },
     {
       "id": "passive_present_simple",
@@ -3122,9 +3144,9 @@
         "transportation",
         "airport",
         "gym",
+        "planes",
         "supermarket",
         "conversacion",
-        "planes",
         "health",
         "restaurant",
         "cotidianidad",
@@ -3993,7 +4015,9 @@
           "contrast": "*put up with* (tolerate) vs *put up* (erect/hang): 'We put up a shelf.'"
         }
       ],
-      "topics": []
+      "topics": [
+        "conversacion"
+      ]
     },
     {
       "id": "inversion_negative_adverbials",
@@ -4016,7 +4040,9 @@
         }
       ],
       "tips": "This structure is formal and literary. It emphasizes the adverbial and creates a dramatic effect. Common in written English, speeches, and formal presentations.",
-      "topics": []
+      "topics": [
+        "pensamientos_opiniones"
+      ]
     },
     {
       "id": "mixed_conditionals",
@@ -4035,7 +4061,9 @@
         }
       ],
       "tips": "Mixed conditionals express regret about the past and its present consequences. The if-clause uses past perfect; the result clause uses would + base verb.",
-      "topics": []
+      "topics": [
+        "conversacion"
+      ]
     },
     {
       "id": "subjunctive_formal",
@@ -4058,7 +4086,9 @@
         }
       ],
       "tips": "Use the base form: he submit (not he submits). More common in American English; British English often uses should + infinitive instead.",
-      "topics": []
+      "topics": [
+        "oficina"
+      ]
     },
     {
       "id": "nominalization",
@@ -4132,7 +4162,9 @@
         }
       ],
       "tips": "Do so substitutes a verb phrase when the subject differs. I might do (British English) omits the repeated verb phrase. Common in formal spoken and written English.",
-      "topics": []
+      "topics": [
+        "conversacion"
+      ]
     },
     {
       "id": "discourse_markers_advanced",
@@ -4155,7 +4187,9 @@
         }
       ],
       "tips": "These markers are confined to formal writing, legal documents, and academic prose. Overusing them in speech sounds unnatural. Master their precise meaning before using them.",
-      "topics": []
+      "topics": [
+        "pensamientos_opiniones"
+      ]
     }
   ]
 }

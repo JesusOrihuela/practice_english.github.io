@@ -323,6 +323,30 @@
           "audioSlug": "sometimes_i_sit_down_and_read"
         }
       ]
+    },
+    {
+      "id": "daily_routine_was_cooking_when_called",
+      "source": "Estaba preparando la cena cuando llamaste.",
+      "level": "B1",
+      "grammar": "'Was/were + -ing' is the past continuous, an action in progress interrupted by another.",
+      "target": [
+        {
+          "text": "I was cooking dinner when you called.",
+          "audioSlug": "i_was_cooking_dinner_when_you_called"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_was_walking_when_rained",
+      "source": "Iba caminando al trabajo cuando empezó a llover.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I was walking to work when it started to rain.",
+          "audioSlug": "i_was_walking_to_work_when_it_started_to_rain"
+        }
+      ]
     }
   ]
 }
