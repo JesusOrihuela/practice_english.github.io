@@ -175,6 +175,42 @@
           "audioSlug": "keep_your_passport_in_a_safe_place"
         }
       ]
+    },
+    {
+      "id": "viajes_flight_leaves_at_noon",
+      "source": "Nuestro vuelo sale al mediodía.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Our flight leaves at noon.",
+          "audioSlug": "our_flight_leaves_at_noon"
+        }
+      ]
+    },
+    {
+      "id": "viajes_passport_ready",
+      "source": "¿Tienes tu pasaporte listo?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Do you have your passport ready?",
+          "audioSlug": "do_you_have_your_passport_ready"
+        }
+      ]
+    },
+    {
+      "id": "viajes_traveling_by_train",
+      "source": "Viajamos en tren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We are traveling by train.",
+          "audioSlug": "we_are_traveling_by_train"
+        }
+      ]
     }
   ]
 }

@@ -155,6 +155,42 @@
           "audioSlug": "can_you_pick_it_up"
         }
       ]
+    },
+    {
+      "id": "cotidianidad_brush_teeth_morning",
+      "source": "Me lavo los dientes cada mañana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I brush my teeth every morning.",
+          "audioSlug": "i_brush_my_teeth_every_morning"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_takes_bus_to_work",
+      "source": "Ella toma el autobús al trabajo.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She takes the bus to work.",
+          "audioSlug": "she_takes_the_bus_to_work"
+        }
+      ]
+    },
+    {
+      "id": "cotidianidad_have_dinner_at_seven",
+      "source": "Cenamos a las siete.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We have dinner at seven.",
+          "audioSlug": "we_have_dinner_at_seven"
+        }
+      ]
     }
   ]
 }

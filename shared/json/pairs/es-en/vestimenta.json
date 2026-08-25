@@ -167,6 +167,30 @@
           "audioSlug": "i_have_a_ring"
         }
       ]
+    },
+    {
+      "id": "vestimenta_jacket_too_big",
+      "source": "Esta chaqueta me queda muy grande.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This jacket is too big for me.",
+          "audioSlug": "this_jacket_is_too_big_for_me"
+        }
+      ]
+    },
+    {
+      "id": "vestimenta_wear_uniform_to_school",
+      "source": "Uso uniforme para la escuela.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I wear a uniform to school.",
+          "audioSlug": "i_wear_a_uniform_to_school"
+        }
+      ]
     }
   ]
 }

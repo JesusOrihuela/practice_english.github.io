@@ -119,6 +119,78 @@
           "audioSlug": "i_love_my_country"
         }
       ]
+    },
+    {
+      "id": "sitios_library_next_to_park",
+      "source": "La biblioteca está junto al parque.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The library is next to the park.",
+          "audioSlug": "the_library_is_next_to_the_park"
+        }
+      ]
+    },
+    {
+      "id": "sitios_meet_at_town_square",
+      "source": "Encontrémonos en la plaza del pueblo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let's meet at the town square.",
+          "audioSlug": "let_s_meet_at_the_town_square"
+        }
+      ]
+    },
+    {
+      "id": "sitios_station_far_from_here",
+      "source": "La estación está lejos de aquí.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The station is far from here.",
+          "audioSlug": "the_station_is_far_from_here"
+        }
+      ]
+    },
+    {
+      "id": "sitios_bank_on_the_corner",
+      "source": "Hay un banco en la esquina.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "There is a bank on the corner.",
+          "audioSlug": "there_is_a_bank_on_the_corner"
+        }
+      ]
+    },
+    {
+      "id": "sitios_market_opens_early",
+      "source": "El mercado abre temprano.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The market opens early.",
+          "audioSlug": "the_market_opens_early"
+        }
+      ]
+    },
+    {
+      "id": "sitios_neighborhood_very_quiet",
+      "source": "Este barrio es muy tranquilo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "This neighborhood is very quiet.",
+          "audioSlug": "this_neighborhood_is_very_quiet"
+        }
+      ]
     }
   ]
 }

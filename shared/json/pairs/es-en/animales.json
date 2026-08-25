@@ -83,6 +83,114 @@
           "audioSlug": "is_that_dog_male_or_female"
         }
       ]
+    },
+    {
+      "id": "animales_dog_barking_loudly",
+      "source": "El perro está ladrando fuerte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The dog is barking loudly.",
+          "audioSlug": "the_dog_is_barking_loudly"
+        }
+      ]
+    },
+    {
+      "id": "animales_cats_sleep_most_day",
+      "source": "Los gatos duermen casi todo el día.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cats sleep most of the day.",
+          "audioSlug": "cats_sleep_most_of_the_day"
+        }
+      ]
+    },
+    {
+      "id": "animales_birds_fly_south",
+      "source": "Los pájaros vuelan al sur en invierno.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Birds fly south in winter.",
+          "audioSlug": "birds_fly_south_in_winter"
+        }
+      ]
+    },
+    {
+      "id": "animales_saw_elephant_zoo",
+      "source": "Vi un elefante en el zoológico.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "I saw an elephant at the zoo.",
+          "audioSlug": "i_saw_an_elephant_at_the_zoo"
+        }
+      ]
+    },
+    {
+      "id": "animales_horse_ran_field",
+      "source": "El caballo corrió por el campo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The horse ran across the field.",
+          "audioSlug": "the_horse_ran_across_the_field"
+        }
+      ]
+    },
+    {
+      "id": "animales_fish_live_in_water",
+      "source": "Los peces viven en el agua.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Fish live in water.",
+          "audioSlug": "fish_live_in_water"
+        }
+      ]
+    },
+    {
+      "id": "animales_cat_likes_climb_trees",
+      "source": "A mi gato le gusta trepar árboles.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My cat likes to climb trees.",
+          "audioSlug": "my_cat_likes_to_climb_trees"
+        }
+      ]
+    },
+    {
+      "id": "animales_cows_give_milk",
+      "source": "Las vacas nos dan leche.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cows give us milk.",
+          "audioSlug": "cows_give_us_milk"
+        }
+      ]
+    },
+    {
+      "id": "animales_rabbit_hopped_away",
+      "source": "El conejo se alejó saltando rápido.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The rabbit hopped away quickly.",
+          "audioSlug": "the_rabbit_hopped_away_quickly"
+        }
+      ]
     }
   ]
 }

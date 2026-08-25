@@ -95,6 +95,102 @@
           "audioSlug": "i_love_my_career"
         }
       ]
+    },
+    {
+      "id": "profesiones_works_as_a_nurse",
+      "source": "Ella trabaja como enfermera.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She works as a nurse.",
+          "audioSlug": "she_works_as_a_nurse"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_father_is_engineer",
+      "source": "Mi padre es ingeniero.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My father is an engineer.",
+          "audioSlug": "my_father_is_an_engineer"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_teacher_explained_lesson",
+      "source": "El profesor explicó la lección.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The teacher explained the lesson.",
+          "audioSlug": "the_teacher_explained_the_lesson"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_wants_to_become_doctor",
+      "source": "Quiere ser médico.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "He wants to become a doctor.",
+          "audioSlug": "he_wants_to_become_a_doctor"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_chef_prepared_meal",
+      "source": "El chef preparó una comida deliciosa.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The chef prepared a delicious meal.",
+          "audioSlug": "the_chef_prepared_a_delicious_meal"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_firefighter_saved_cat",
+      "source": "Un bombero salvó al gato.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "A firefighter saved the cat.",
+          "audioSlug": "a_firefighter_saved_the_cat"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_lawyer_reviewed_contract",
+      "source": "El abogado revisó el contrato.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The lawyer reviewed the contract.",
+          "audioSlug": "the_lawyer_reviewed_the_contract"
+        }
+      ]
+    },
+    {
+      "id": "profesiones_sister_is_scientist",
+      "source": "Mi hermana es científica.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My sister is a scientist.",
+          "audioSlug": "my_sister_is_a_scientist"
+        }
+      ]
     }
   ]
 }

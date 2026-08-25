@@ -59,6 +59,138 @@
           "audioSlug": "have_fun"
         }
       ]
+    },
+    {
+      "id": "fiesta_happy_birthday",
+      "source": "¡Feliz cumpleaños!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Happy birthday!",
+          "audioSlug": "happy_birthday"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_lets_throw_a_party",
+      "source": "Hagamos una fiesta.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let's throw a party.",
+          "audioSlug": "let_s_throw_a_party"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_party_starts_at_eight",
+      "source": "La fiesta empieza a las ocho.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The party starts at eight.",
+          "audioSlug": "the_party_starts_at_eight"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_bring_a_gift_for_host",
+      "source": "Trae un regalo para el anfitrión.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Bring a gift for the host.",
+          "audioSlug": "bring_a_gift_for_the_host"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_we_danced_all_night",
+      "source": "Bailamos toda la noche.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "We danced all night.",
+          "audioSlug": "we_danced_all_night"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_can_i_invite_friends",
+      "source": "¿Puedo invitar a mis amigos?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Can I invite my friends?",
+          "audioSlug": "can_i_invite_my_friends"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_blow_out_the_candles",
+      "source": "Sopla las velas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Blow out the candles.",
+          "audioSlug": "blow_out_the_candles"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_cheers_everyone",
+      "source": "¡Salud a todos!",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cheers, everyone!",
+          "audioSlug": "cheers_everyone"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_decorations_look_beautiful",
+      "source": "Las decoraciones se ven hermosas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "The decorations look beautiful.",
+          "audioSlug": "the_decorations_look_beautiful"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_its_a_surprise_party",
+      "source": "Es una fiesta sorpresa.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "It's a surprise party.",
+          "audioSlug": "it_s_a_surprise_party"
+        }
+      ]
+    },
+    {
+      "id": "fiesta_lets_make_a_toast",
+      "source": "Hagamos un brindis.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Let's make a toast.",
+          "audioSlug": "let_s_make_a_toast"
+        }
+      ]
     }
   ]
 }

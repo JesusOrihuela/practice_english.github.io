@@ -167,6 +167,30 @@
           "audioSlug": "move_your_fingers"
         }
       ]
+    },
+    {
+      "id": "cuerpo_head_hurts_a_little",
+      "source": "Me duele un poco la cabeza.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "My head hurts a little.",
+          "audioSlug": "my_head_hurts_a_little"
+        }
+      ]
+    },
+    {
+      "id": "cuerpo_she_has_beautiful_eyes",
+      "source": "Ella tiene ojos hermosos.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "She has beautiful eyes.",
+          "audioSlug": "she_has_beautiful_eyes"
+        }
+      ]
     }
   ]
 }
