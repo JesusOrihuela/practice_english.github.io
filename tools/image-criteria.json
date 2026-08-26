@@ -9,13 +9,17 @@
   },
   "topics": {
     "greetings": {
-      "q": "two people shaking hands business meeting",
+      "q": "people greeting handshake waving fist bump high five",
       "positive": [
         "two people shaking hands",
-        "people greeting each other"
+        "a person waving hello with their hand",
+        "two people doing a friendly fist bump",
+        "a high five between two people"
       ],
       "negative": [
-        "a single person alone"
+        "text",
+        "a logo",
+        "an illustration"
       ],
       "block": [],
       "source": "pixabay"
