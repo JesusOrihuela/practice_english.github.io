@@ -37,7 +37,10 @@ const AppTopicGrid = (() => {
       const btn = document.createElement('button');
       btn.className = 'img-topic-card';
       btn.dataset.theme = topic.id;
-      btn.style.animationDelay = (i * 0.06) + 's';
+      // Capped stagger: a subtle cascade, but the WHOLE grid finishes entering in ~0.25s
+      // instead of (i * 0.06)s — which with ~45 topics left later cards at opacity:0 for
+      // up to ~2.7s, making the grid look like it loaded "in pieces".
+      btn.style.animationDelay = Math.min(i * 0.02, 0.25) + 's';
       const imgSrc = '../img/' + topic.id + '.webp';
       btn.innerHTML =
         '<div class="img-topic-card__img-wrap">' +
@@ -62,5 +65,34 @@ const AppTopicGrid = (() => {
     });
   }
 
-  return { build };
+  /**
+   * Fill #topic-grid with placeholder skeleton cards so the picker never shows an
+   * empty gap under its title/subtitle while topics.json loads. build() clears these.
+   * @param {number} [n=12] - how many placeholders (enough to fill the visible area).
+   */
+  function skeleton(n) {
+    const grid = document.getElementById('topic-grid');
+    if (!grid || grid.children.length) return;   // don't overwrite a built grid
+    grid.className = 'img-topic-grid';
+    let html = '';
+    for (let i = 0; i < (n || 12); i++) {
+      html +=
+        '<div class="img-topic-card img-topic-card--skeleton" aria-hidden="true">' +
+          '<div class="img-topic-card__img-wrap sk-shimmer"></div>' +
+          '<div class="img-topic-card__body">' +
+            '<span class="sk-line sk-shimmer" style="width:70%"></span>' +
+            '<span class="sk-line sk-shimmer" style="width:40%;height:9px"></span>' +
+          '</div>' +
+        '</div>';
+    }
+    grid.innerHTML = html;
+  }
+
+  // Auto-render skeletons as soon as the DOM is ready (before the activity's async
+  // AppTopics.load() + build() resolve), for every activity that has a #topic-grid.
+  if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => skeleton());
+  }
+
+  return { build, skeleton };
 })();

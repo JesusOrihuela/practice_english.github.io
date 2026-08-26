@@ -928,6 +928,13 @@
   box-shadow: 0 24px 60px rgba(0,0,0,0.22), 0 4px 12px rgba(0,0,0,0.08);
   width: 100%;
   max-width: 460px;
+  /* Cap to the viewport (overlay adds 16px padding each side) and lay the modal
+     out as a column so a tall step (e.g. the topic list) scrolls INSIDE it via
+     .ob-inner instead of overflowing the screen. */
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  display: flex;
+  flex-direction: column;
   padding: 0;
   overflow: hidden;
   position: relative;
@@ -974,6 +981,12 @@
 /* ---- Inner content wrapper ---- */
 .ob-inner {
   padding: 28px 30px 26px;
+  /* Scroll the content here (not the modal) when a step is taller than the
+     viewport; flex:1 + min-height:0 lets it shrink so any footer stripe stays put. */
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ---- Progress dots ---- */

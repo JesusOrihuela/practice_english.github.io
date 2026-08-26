@@ -755,6 +755,23 @@ body.path-mode {
 .img-topic-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
 .img-topic-card:active { transform: scale(0.97); }
 
+/* Loading skeleton — placeholder cards fill the grid the instant the header shows,
+   so the subtitle never sits alone above an empty gap while topics.json loads. They
+   share the real card's box (same img-wrap 16/9 + body), so swapping in real cards
+   causes no layout shift. Rendered by AppTopicGrid on DOMContentLoaded, cleared by build(). */
+.img-topic-card--skeleton { cursor: default; pointer-events: none; opacity: 1; animation: none; border-left-color: var(--clr-border); }
+.sk-shimmer { position: relative; overflow: hidden; background: var(--clr-border); }
+.sk-shimmer::after {
+  content: ''; position: absolute; inset: 0; transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  animation: skShimmer 1.3s ease-in-out infinite;
+}
+@keyframes skShimmer { 100% { transform: translateX(100%); } }
+.img-topic-card--skeleton .img-topic-card__img-wrap { background: var(--clr-border); }
+.sk-line { display: block; height: 12px; border-radius: 6px; }
+.sk-line + .sk-line { margin-top: 8px; }
+@media (prefers-reduced-motion: reduce) { .sk-shimmer::after { animation: none; } }
+
 /* Per-topic accent colors */
 .img-topic-card[data-theme="greetings"]       { --topic-clr: #2563EB; }
 .img-topic-card[data-theme="emociones"]       { --topic-clr: #DB2777; }

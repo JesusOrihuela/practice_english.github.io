@@ -15,7 +15,26 @@
      4. Returning to a long-open tab triggers an extra update() check, so users
         who leave the app open still pick up deploys when they come back.
 */
-if ('serviceWorker' in navigator) {
+// Dev hosts: never run the SW. On localhost the SW's image cache (and its
+// stale-while-revalidate delay) hides fresh local changes on a normal reload,
+// forcing hard-resets / DevTools cache tricks. So on localhost we UNREGISTER any
+// existing SW and never register — with no SW its caches are no longer served, so a
+// plain reload shows the current files from disk. We do NOT delete Cache API entries:
+// that would nuke the transformers-cache (Kokoro/Whisper models, ~130 MB) and force a
+// re-download on every page. Production (GitHub Pages) is unaffected: it registers
+// below and keeps offline + performance caching.
+const _isDevHost = ['localhost', '127.0.0.1', '[::1]', '::1'].includes(location.hostname);
+
+if ('serviceWorker' in navigator && _isDevHost) {
+  // Force the browser to re-fetch service-worker.js: the new SW detects localhost and
+  // self-destructs (unregister + reload). update() is what actually dislodges an already-
+  // active SW that a plain unregister() can't remove while it still controls the page.
+  navigator.serviceWorker.getRegistrations()
+    .then(regs => { if (regs.length) regs.forEach(r => r.update().catch(() => {})); })
+    .catch(() => {});
+}
+
+if ('serviceWorker' in navigator && !_isDevHost) {
   // Only auto-reload when a controller already existed on load — i.e. a real
   // update, not the first install.
   const hadController = !!navigator.serviceWorker.controller;

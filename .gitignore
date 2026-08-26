@@ -69,6 +69,8 @@ tools/audit-hook.mjs
 tools/generate-audio-tgt.py
 tools/process-image.py
 tools/lib-clip.mjs
+tools/lib-image-score.mjs
+tools/img-probe.py
 tools/lib-embed.mjs
 tools/image-audit-waivers.json
 tools/semantic-audit-waivers.json

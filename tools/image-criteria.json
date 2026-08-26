@@ -1,0 +1,748 @@
+{
+  "_global": {
+    "minPos": 0.17,
+    "margin": -0.03,
+    "negative": [
+      "a mannequin or doll",
+      "a cartoon, drawing or illustration"
+    ]
+  },
+  "topics": {
+    "greetings": {
+      "q": "two people shaking hands business meeting",
+      "positive": [
+        "two people shaking hands",
+        "people greeting each other"
+      ],
+      "negative": [
+        "a single person alone"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "personal_info": {
+      "q": "person filling out paper form document",
+      "positive": [
+        "person filling out paper form document"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "family": {
+      "q": "happy family together at home",
+      "positive": [
+        "happy family together at home"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "emociones": {
+      "q": "happy excited person face closeup portrait",
+      "positive": [
+        "a close up of a human face showing a strong emotion",
+        "a smiling, crying or angry person"
+      ],
+      "negative": [
+        "a full body shot",
+        "a crowd of people",
+        "a drawn emoji"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "daily_routine": {
+      "q": "person morning routine brushing teeth breakfast",
+      "positive": [
+        "a person's morning routine",
+        "an alarm clock by a bed",
+        "a person brushing teeth"
+      ],
+      "negative": [
+        "a wall clock or calendar"
+      ],
+      "block": [
+        "clock",
+        "calendar",
+        "watch",
+        "hourglass"
+      ],
+      "source": "pixabay"
+    },
+    "cotidianidad": {
+      "q": "person doing housework chores daily activity home",
+      "positive": [
+        "a person doing an everyday household activity",
+        "person doing housework chores daily activity home"
+      ],
+      "negative": [
+        "a clock or a calendar",
+        "a family portrait"
+      ],
+      "block": [
+        "clock",
+        "calendar",
+        "family",
+        "watch"
+      ],
+      "source": "pixabay"
+    },
+    "survival": {
+      "q": "lost tourist looking at map confused street",
+      "positive": [
+        "a lost tourist looking at a map",
+        "a confused traveler asking for directions"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "weather": {
+      "q": "Weather",
+      "positive": [
+        "a photo of weather"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "restaurant": {
+      "q": "restaurant interior dining hall ambiance people",
+      "positive": [
+        "the interior of a restaurant with tables",
+        "a restaurant dining room"
+      ],
+      "negative": [
+        "a bar counter with drinks",
+        "a printed menu",
+        "a waiter"
+      ],
+      "block": [
+        "bar",
+        "menu",
+        "waiter",
+        "pub",
+        "cocktail"
+      ],
+      "source": "pixabay"
+    },
+    "descripciones": {
+      "q": "material texture surface pattern close up",
+      "positive": [
+        "textures and materials",
+        "a close up of a surface or pattern"
+      ],
+      "negative": [
+        "a person",
+        "people"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "describiendo_personas": {
+      "q": "close up portrait smiling person face",
+      "positive": [
+        "a close up portrait of a person's face",
+        "a headshot of one person"
+      ],
+      "negative": [
+        "a crowd of people"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "profesiones": {
+      "q": "different profession workers uniforms",
+      "positive": [
+        "different profession workers uniforms"
+      ],
+      "negative": [
+        "a single person portrait"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "estudios": {
+      "q": "classroom full of students studying teacher lesson",
+      "positive": [
+        "students inside a classroom with a teacher"
+      ],
+      "negative": [
+        "a school building exterior",
+        "a graduation ceremony",
+        "a single book"
+      ],
+      "block": [
+        "graduation",
+        "building",
+        "exterior",
+        "library",
+        "online"
+      ],
+      "source": "pixabay"
+    },
+    "conversacion": {
+      "q": "news anchor television studio broadcast",
+      "positive": [
+        "a news anchor in a television studio",
+        "a radio microphone or a podcast",
+        "a newspaper",
+        "a person speaking into a microphone"
+      ],
+      "negative": [
+        "two people just chatting",
+        "a mobile phone"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "pensamientos_opiniones": {
+      "q": "pensive person hand on chin thinking",
+      "positive": [
+        "a pensive person thinking",
+        "a person with a thoughtful expression"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "planes": {
+      "q": "business team planning meeting whiteboard",
+      "positive": [
+        "a business team planning at a whiteboard",
+        "a person making a decision",
+        "a checklist or an agenda"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "viajes": {
+      "q": "suitcase travel luggage airplane",
+      "positive": [
+        "suitcase travel luggage airplane"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "directions": {
+      "q": "wooden signpost many arrows pointing directions",
+      "positive": [
+        "a signpost with direction arrows pointing to places"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "sitios": {
+      "q": "famous landmark monument building city",
+      "positive": [
+        "a famous landmark or monument",
+        "a well known tourist building"
+      ],
+      "negative": [
+        "a single small object"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "vestimenta": {
+      "q": "clothes on hangers wardrobe",
+      "positive": [
+        "clothes on hangers wardrobe"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "hogar": {
+      "q": "cozy living room home interior",
+      "positive": [
+        "a cozy living room",
+        "the interior of a home"
+      ],
+      "negative": [
+        "an office interior"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "calendario": {
+      "q": "wall calendar and clock",
+      "positive": [
+        "wall calendar and clock"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "emergencias": {
+      "q": "ambulance emergency vehicle",
+      "positive": [
+        "ambulance emergency vehicle"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "naturaleza_lugares": {
+      "q": "landscape mountains forest lake",
+      "positive": [
+        "landscape mountains forest lake"
+      ],
+      "negative": [
+        "a single flower closeup"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "animales": {
+      "q": "animals dog cat wildlife",
+      "positive": [
+        "animals dog cat wildlife"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "deportes": {
+      "q": "people playing soccer sport",
+      "positive": [
+        "people playing soccer sport"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "tiempo_libre": {
+      "q": "person hobby playing guitar painting",
+      "positive": [
+        "person hobby playing guitar painting"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "fiesta": {
+      "q": "adults party celebration friends toasting",
+      "positive": [
+        "adults celebrating at a party",
+        "people toasting drinks at a party"
+      ],
+      "negative": [
+        "a children's birthday party",
+        "kids balloons"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "health": {
+      "q": "doctor with patient stethoscope",
+      "positive": [
+        "a doctor examining a patient",
+        "a nurse or healthcare scene"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "cuerpo": {
+      "q": "human eye close up macro iris",
+      "positive": [
+        "a close up of a human eye",
+        "a close up of a human hand",
+        "a close up of a human leg",
+        "a human body part"
+      ],
+      "negative": [
+        "a mannequin or doll",
+        "a full body scene of a whole person",
+        "a human face",
+        "gym muscles fitness"
+      ],
+      "block": [
+        "makeup",
+        "cosmetic",
+        "cat",
+        "animal",
+        "dog"
+      ],
+      "source": "pixabay"
+    },
+    "supermarket": {
+      "q": "supermarket aisle shelves shopping cart",
+      "positive": [
+        "supermarket aisle shelves shopping cart"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "kitchen": {
+      "q": "modern kitchen interior counter stove",
+      "positive": [
+        "modern kitchen interior counter stove"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "transportation": {
+      "q": "public transport bus train city",
+      "positive": [
+        "a bus, train or cars on a city street",
+        "public transport"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "airport": {
+      "q": "airport terminal airplane gate",
+      "positive": [
+        "airport terminal airplane gate"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "accommodation": {
+      "q": "hotel building exterior facade",
+      "positive": [
+        "a hotel room with a bed",
+        "a hotel building exterior"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "movies": {
+      "q": "cinema movie theater interior seats screen",
+      "positive": [
+        "cinema movie theater interior seats screen"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "music": {
+      "q": "musical instruments concert stage",
+      "positive": [
+        "musical instruments concert stage"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "museums": {
+      "q": "art museum gallery interior paintings on wall",
+      "positive": [
+        "a museum interior with paintings on the walls",
+        "an art gallery"
+      ],
+      "negative": [
+        "a single painting closeup"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "economia": {
+      "q": "stock market trading financial district",
+      "positive": [
+        "stock market trading financial district"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "oficina": {
+      "q": "home office desk workspace laptop",
+      "positive": [
+        "home office desk workspace laptop"
+      ],
+      "negative": [
+        "a skyscraper exterior"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "politica": {
+      "q": "parliament plenary session assembly",
+      "positive": [
+        "politicians in a parliament session",
+        "a ballot box or voting",
+        "a politician speaking at a podium"
+      ],
+      "negative": [
+        "a building exterior",
+        "a city skyline",
+        "a monument"
+      ],
+      "block": [
+        "building",
+        "facade",
+        "exterior",
+        "aerial",
+        "map",
+        "logo",
+        "coat of arms"
+      ],
+      "source": "commons"
+    },
+    "technology": {
+      "q": "modern technology laptop phone devices",
+      "positive": [
+        "modern technology laptop phone devices"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "gym": {
+      "q": "gym interior fitness equipment",
+      "positive": [
+        "a gym interior with fitness equipment",
+        "a person working out at a gym"
+      ],
+      "negative": [
+        "a single dumbbell closeup"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "theater": {
+      "q": "theater stage red curtain actors performance drama",
+      "positive": [
+        "a theater stage with red curtains",
+        "actors performing a play on a stage",
+        "theater comedy and tragedy masks"
+      ],
+      "negative": [
+        "carnival or venetian masks",
+        "a cinema or movie theater",
+        "a music concert",
+        "a building facade"
+      ],
+      "block": [
+        "cinema",
+        "movie",
+        "carnival",
+        "venetian",
+        "masquerade",
+        "building",
+        "facade",
+        "drawing",
+        "cartoon",
+        "poster"
+      ],
+      "source": "pixabay"
+    },
+    "accountability": {
+      "q": "accountant calculator financial documents",
+      "positive": [
+        "accountant calculator financial documents"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "general": {
+      "q": "lightbulb idea concept brain",
+      "positive": [
+        "lightbulb idea concept brain"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "verbos_basicos": {
+      "q": "people walking running everyday activity",
+      "positive": [
+        "people walking running everyday activity"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "verbos_avanzados": {
+      "q": "business people working office meeting",
+      "positive": [
+        "business people working office meeting"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "adjetivos_basicos": {
+      "q": "big small colorful contrasting objects",
+      "positive": [
+        "big small colorful contrasting objects"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "adjetivos_avanzados": {
+      "q": "luxury elegant modern interior design",
+      "positive": [
+        "luxury elegant modern interior design"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "colores": {
+      "q": "Colors",
+      "positive": [
+        "a photo of colors"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "naturaleza": {
+      "q": "nature landscape forest green",
+      "positive": [
+        "nature landscape forest green"
+      ],
+      "negative": [
+        "a single flower closeup"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "tiempo": {
+      "q": "clock hourglass calendar time",
+      "positive": [
+        "clock hourglass calendar time"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "lugares": {
+      "q": "city skyline landmarks buildings",
+      "positive": [
+        "a city skyline",
+        "famous landmarks and buildings"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "cantidad": {
+      "q": "Quantity",
+      "positive": [
+        "a photo of quantity & measure"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "juegos": {
+      "q": "board game dice pieces play",
+      "positive": [
+        "board game dice pieces play"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "ropa": {
+      "q": "fashion clothing rack store",
+      "positive": [
+        "fashion clothing rack store"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "lengua": {
+      "q": "letters alphabet speech communication",
+      "positive": [
+        "letters alphabet speech communication"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "sociedad_politica": {
+      "q": "crowd of people society public square",
+      "positive": [
+        "crowd of people society public square"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "trabajo": {
+      "q": "people working office business money",
+      "positive": [
+        "people working office business money"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "educacion": {
+      "q": "graduation students classroom books",
+      "positive": [
+        "students in a classroom",
+        "a graduation"
+      ],
+      "negative": [
+        "a school building exterior",
+        "a single book"
+      ],
+      "block": [],
+      "source": "pixabay"
+    },
+    "objetos": {
+      "q": "everyday objects things collection",
+      "positive": [
+        "everyday objects things collection"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "dispositivos": {
+      "q": "electronic devices phone laptop tablet",
+      "positive": [
+        "electronic devices phone laptop tablet"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "internet_conectividad": {
+      "q": "wifi router network connected devices",
+      "positive": [
+        "wifi router network connected devices"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "software_apps": {
+      "q": "smartphone apps screen software",
+      "positive": [
+        "smartphone apps screen software"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    },
+    "ciberseguridad": {
+      "q": "padlock on keyboard cyber security",
+      "positive": [
+        "padlock on keyboard cyber security"
+      ],
+      "negative": [],
+      "block": [],
+      "source": "pixabay"
+    }
+  }
+}

@@ -9,10 +9,18 @@
 // forever would pin the old one permanently. They are served
 // stale-while-revalidate instead, and the cache name carries a version so a
 // bump force-purges stale images when one is intentionally replaced.
-const IMG_CACHE   = 'pe-images-v2'; // photos/icons: stale-while-revalidate
+const IMG_CACHE   = 'pe-images-v3'; // photos/icons: stale-while-revalidate (bumped: 178 topic images replaced)
 const AUDIO_CACHE = 'pe-audio';     // pre-generated WAV: cache-first forever (slug-named, immutable)
 const APP_CACHE   = 'pe-app';       // HTML/JS/CSS/JSON: network-first, cached for offline
 const APP_CACHE_MAX = 250;          // cap network-first growth (all visited JSON would accumulate otherwise)
+
+// Dev kill-switch: on localhost the SW must not run — its image cache hides fresh local
+// changes and complicates review. A SW already active can't be removed from the page just
+// by unregistering in the page script, so the SW removes ITSELF here: on activate it drops
+// its own pe-* caches (NEVER the transformers-cache holding the ~130 MB ML models), then
+// unregisters and reloads open tabs. In fetch it stops intercepting so requests hit the
+// (no-cache, revalidating) dev server directly. Production is unaffected.
+const IS_DEV = ['localhost', '127.0.0.1', '[::1]', '::1'].includes(self.location.hostname);
 
 // FIFO trim: cache.keys() preserves insertion order, so deleting the oldest entries
 // beyond the cap keeps the network-first cache bounded without tracking access times.
@@ -51,6 +59,7 @@ const SHELL = [
 // Install: pre-cache the app shell so the first offline visit works,
 // then activate immediately (skipWaiting after caching, not before).
 self.addEventListener('install', event => {
+  if (IS_DEV) { self.skipWaiting(); return; }
   event.waitUntil(
     caches.open(APP_CACHE)
       // Revalidate against the server so a freshly-installed SW never precaches a
@@ -62,6 +71,18 @@ self.addEventListener('install', event => {
 
 // Activate: delete any old versioned caches (pe-v1 … pe-v9), then claim clients
 self.addEventListener('activate', event => {
+  if (IS_DEV) {
+    // Self-destruct on localhost: drop only this SW's own caches (keep the ML models),
+    // unregister, then reload open tabs so they run with no SW (fresh from disk).
+    event.waitUntil((async () => {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter(k => k.startsWith('pe-')).map(k => caches.delete(k)));
+      await self.registration.unregister();
+      const clients = await self.clients.matchAll({ type: 'window' });
+      for (const c of clients) { try { c.navigate(c.url); } catch { /* ignore */ } }
+    })());
+    return;
+  }
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(
@@ -95,6 +116,7 @@ self.addEventListener('notificationclick', event => {
 //   Images      → cache-first (large files, never change after upload)
 //   Everything  → network-first, fall back to cache when offline
 self.addEventListener('fetch', event => {
+  if (IS_DEV) return;              // dev: don't intercept — hit the dev server directly
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
