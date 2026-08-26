@@ -53,6 +53,12 @@
 (function () {
   try {
     var de = document.documentElement;
+    // Inject the cloak rule INLINE (not relying on the external stylesheet, which on a
+    // cold load may not be applied yet when the class is added — leaving the hardcoded
+    // subtitle painted alone). Runs in <head> before the body paints.
+    var cs = document.createElement('style');
+    cs.textContent = 'html.lang-cloak body{visibility:hidden}';
+    (document.head || de).appendChild(cs);
     de.classList.add('lang-cloak');
     var revealed = false;
     var reveal = function () { if (revealed) return; revealed = true; de.classList.remove('lang-cloak'); };
