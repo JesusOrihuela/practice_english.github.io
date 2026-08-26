@@ -613,12 +613,14 @@
       "source": "pixabay"
     },
     "naturaleza": {
-      "q": "nature landscape forest green",
+      "q": "flowers fruits plants close up",
       "positive": [
-        "nature landscape forest green"
+        "flowers, fruits and plants",
+        "a close up of a flower or a fruit"
       ],
       "negative": [
-        "a single flower closeup"
+        "a wide landscape panorama",
+        "mountains and sky"
       ],
       "block": [],
       "source": "pixabay"
@@ -633,10 +635,10 @@
       "source": "pixabay"
     },
     "lugares": {
-      "q": "city skyline landmarks buildings",
+      "q": "famous tourist landmarks monuments city",
       "positive": [
-        "a city skyline",
-        "famous landmarks and buildings"
+        "a famous tourist landmark or monument",
+        "a well known city skyline with landmarks"
       ],
       "negative": [],
       "block": [],
