@@ -63,6 +63,11 @@ const AppTopicGrid = (() => {
         })
         .catch(() => {});
     });
+
+    // Cards are in the DOM now — reveal the page (see page-title.js). On picker pages this
+    // is what lifts the cloak, so header + grid appear together instead of the subtitle
+    // showing alone above an empty grid while this async build was pending.
+    if (typeof window !== 'undefined' && typeof window.__revealPage === 'function') window.__revealPage();
   }
 
   /**

@@ -736,8 +736,9 @@ body.path-mode {
   text-align: left;
   font-family: 'Raleway', sans-serif;
   padding: 0;
-  opacity: 0;
-  animation: slideUp 0.5s ease-out forwards;
+  /* No entrance fade: the page stays cloaked until the grid is built (page-title.js +
+     topic-grid.js), so cards must be fully opaque the instant the cloak lifts — a fade
+     would make the grid look empty while cards animated in. */
   transition: transform var(--transition), box-shadow var(--transition);
 }
 

@@ -54,8 +54,16 @@
   try {
     var de = document.documentElement;
     de.classList.add('lang-cloak');
-    var reveal = function () { de.classList.remove('lang-cloak'); };
-    document.addEventListener('DOMContentLoaded', reveal);
-    setTimeout(reveal, 2000);  // failsafe
+    var revealed = false;
+    var reveal = function () { if (revealed) return; revealed = true; de.classList.remove('lang-cloak'); };
+    // Exposed so AppTopicGrid.build() can reveal the page the moment the topic grid is
+    // populated — on picker pages we wait for that instead of DOMContentLoaded, so the
+    // header/subtitle never paints above an empty grid (the async grid build lands ~200ms
+    // after DOMContentLoaded on a cold load). Pages without a grid reveal on DCL as before.
+    window.__revealPage = reveal;
+    document.addEventListener('DOMContentLoaded', function () {
+      if (!document.getElementById('topic-grid')) reveal();
+    });
+    setTimeout(reveal, 2000);  // failsafe — content is never stuck hidden even if build never runs
   } catch (e) { /* never let cloaking break the page */ }
 })();
