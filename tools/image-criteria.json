@@ -260,10 +260,13 @@
     "hogar": {
       "q": "cozy living room home interior",
       "positive": [
-        "a cozy living room",
-        "the interior of a home"
+        "a cozy living room with furniture",
+        "the full interior of a home",
+        "a house exterior"
       ],
       "negative": [
+        "a single sofa or couch by itself",
+        "a single armchair",
         "an office interior"
       ],
       "block": [],
