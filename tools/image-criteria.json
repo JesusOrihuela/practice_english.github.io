@@ -568,38 +568,57 @@
       "source": "pixabay"
     },
     "verbos_basicos": {
-      "q": "people walking running everyday activity",
+      "q": "baby crawling toddler walking first steps",
       "positive": [
-        "people walking running everyday activity"
+        "a baby crawling on the floor",
+        "a toddler taking first steps",
+        "a simple basic action"
       ],
-      "negative": [],
+      "negative": [
+        "text",
+        "a logo"
+      ],
       "block": [],
       "source": "pixabay"
     },
     "verbos_avanzados": {
-      "q": "business people working office meeting",
+      "q": "athlete running sprinting fast",
       "positive": [
-        "business people working office meeting"
+        "a person running or sprinting fast",
+        "an athlete in intense action"
       ],
-      "negative": [],
+      "negative": [
+        "text",
+        "a logo"
+      ],
       "block": [],
       "source": "pixabay"
     },
     "adjetivos_basicos": {
-      "q": "big small colorful contrasting objects",
+      "q": "smooth plain flat surface texture",
       "positive": [
-        "big small colorful contrasting objects"
+        "a smooth plain flat surface",
+        "a simple even texture"
       ],
-      "negative": [],
+      "negative": [
+        "a rough or patterned texture",
+        "a person",
+        "text"
+      ],
       "block": [],
       "source": "pixabay"
     },
     "adjetivos_avanzados": {
-      "q": "luxury elegant modern interior design",
+      "q": "rough ornate decorated carved texture pattern",
       "positive": [
-        "luxury elegant modern interior design"
+        "a rough or ornate decorated texture",
+        "an intricate carved or patterned surface"
       ],
-      "negative": [],
+      "negative": [
+        "a plain smooth flat surface",
+        "a person",
+        "text"
+      ],
       "block": [],
       "source": "pixabay"
     },
