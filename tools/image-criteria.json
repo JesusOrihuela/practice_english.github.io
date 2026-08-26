@@ -21,11 +21,18 @@
       "source": "pixabay"
     },
     "personal_info": {
-      "q": "person filling out paper form document",
+      "q": "hand filling application form with a pen",
       "positive": [
-        "person filling out paper form document"
+        "a hand filling out a form with a pen",
+        "a person writing on an application form",
+        "signing a document with a pen"
       ],
-      "negative": [],
+      "negative": [
+        "a school exam or test",
+        "a stack of file folders",
+        "an open book",
+        "a computer screen"
+      ],
       "block": [],
       "source": "pixabay"
     },
