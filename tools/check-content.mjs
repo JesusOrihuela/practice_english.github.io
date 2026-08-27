@@ -72,12 +72,11 @@ const TERMINAL_RE = /[.?!]$/;
 
 // Schema: old fields that should not exist after migration
 const OLD_SCHEMA_FIELDS = ['audioIdx', 'hint', 'note', 'region'];
-// Valid label keys + closed value sets come from the OPEN variant-dimension registry
-// (shared/js/variant-dimensions.js) — NOT hardcoded here. A new language adds a dimension there
-// (case, honorific, noun class…) and it becomes valid content with no edit to this file. Open
-// dimensions (region, loanword) accept any non-empty string; closed ones (gender, number,
-// register) validate against their value set (Rule 16 §8 — 'femenino' not 'female').
-const VALID_LABEL_KEYS = new Set(AppVariantDims.keys());
+// Label validation (keys + closed value sets) is delegated to the OPEN variant-dimension registry
+// via AppVariantDims.validateLabels() — NOT hardcoded here. A new language adds a dimension in
+// shared/js/variant-dimensions.js (case, honorific, noun class…) and it becomes valid content with
+// no edit to this file. Open dims (region, loanword) accept any non-empty string; closed ones
+// (gender, register…) validate against their value set (Rule 16 §8 — 'femenino' not 'female').
 // audioSlug length cap — must match SLUG_MAX in assign-alt-slugs.mjs and the generators.
 const SLUG_MAX = 100;
 
@@ -173,17 +172,16 @@ for (const pair of PAIRS) {
             `Form in multi-target phrase missing "labels" — all forms must describe their variant dimension`);
         }
 
-        // schema — validate labels keys
+        // schema — validate labels keys/values via the registry's own validator (single arbiter;
+        // Rule 16 §8 — a closed value must match exactly, catching 'female', 'f', etc.).
         if (form.labels !== undefined) {
-          for (const [key, value] of Object.entries(form.labels)) {
-            if (!VALID_LABEL_KEYS.has(key)) {
-              flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
-                `Unknown label key "${key}" — valid keys: ${[...VALID_LABEL_KEYS].join(', ')}`);
-            } else if (!AppVariantDims.isOpen(key) && !AppVariantDims.isValidValue(key, value)) {
-              // Rule 16 §8 — closed-vocabulary value must match exactly (catches 'female', 'f', etc.)
-              flag(pair, topic, id, `target[${i}].labels.${key}`, 'schema',
-                `Invalid ${key} value "${value}" — must be one of: ${AppVariantDims.values(key).join(', ')}`);
-            }
+          for (const e of AppVariantDims.validateLabels(form.labels)) {
+            if (e.code === 'unknown-key')
+              flag(pair, topic, id, `target[${i}].labels.${e.key}`, 'schema',
+                `Unknown label key "${e.key}" — valid keys: ${AppVariantDims.keys().join(', ')}`);
+            else
+              flag(pair, topic, id, `target[${i}].labels.${e.key}`, 'schema',
+                `Invalid ${e.key} value "${e.value}" — must be one of: ${AppVariantDims.values(e.key).join(', ')}`);
           }
         }
 
@@ -291,11 +289,11 @@ for (const lang of vocabLangs) {
             const labs = (v && v.labels) || {};
             if (Object.keys(labs).length === 0)
               flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels`, 'schema', 'every variant must carry labels');
-            for (const [k, val] of Object.entries(labs)) {
-              if (!VALID_LABEL_KEYS.has(k))
-                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${k}`, 'schema', `Unknown label key "${k}"`);
-              else if (!AppVariantDims.isOpen(k) && !AppVariantDims.isValidValue(k, val))
-                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${k}`, 'schema', `Invalid ${k} value "${val}"`);
+            for (const e of AppVariantDims.validateLabels(labs)) {
+              if (e.code === 'unknown-key')
+                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${e.key}`, 'schema', `Unknown label key "${e.key}"`);
+              else
+                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${e.key}`, 'schema', `Invalid ${e.key} value "${e.value}"`);
             }
           });
         }

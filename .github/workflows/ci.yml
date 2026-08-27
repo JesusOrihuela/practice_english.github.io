@@ -46,6 +46,14 @@ jobs:
       - name: Content audit (audit.mjs --quick)
         run: node tools/audit.mjs --quick
 
+      # Variant framework openness: a dimension defined ONLY in the registry
+      # (shared/js/variant-dimensions.js) must be valid content, badge-able, and completeness-
+      # checkable with NO other code change — the guarantee that any future language can add its
+      # own axis (case, number, aspect, honorific…) data-only. Registers a fictitious dimension at
+      # runtime and asserts the generic machinery handles it. Fails if a consumer hardcodes dims.
+      - name: Variant registry openness (variant-openness.mjs)
+        run: node tools/variant-openness.mjs
+
       # Variant completeness: if a phrase or word offers one variant of a set it must offer ALL
       # genuine ones (region across countries/zones, both genders for a variable-gender person,
       # and their combinations) — in phrases AND vocab, driven by the open dimension registry +

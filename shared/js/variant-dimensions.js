@@ -81,6 +81,18 @@
       if (DIMENSIONS[d].open) return typeof v === 'string' && v.trim() !== '';
       return (DIMENSIONS[d].values || []).indexOf(v) !== -1;
     },
+    /** Validate a labels object against the registry — the ONE validator both check-content and
+        the openness test call, so a dimension added here is accepted with zero validator code.
+        Returns [] when clean, else [{ key, value, code:'unknown-key'|'invalid-value' }]. */
+    validateLabels: function (labels) {
+      const errs = [];
+      for (const key of Object.keys(labels || {})) {
+        const value = labels[key];
+        if (!this.has(key)) errs.push({ key: key, value: value, code: 'unknown-key' });
+        else if (!this.isOpen(key) && !this.isValidValue(key, value)) errs.push({ key: key, value: value, code: 'invalid-value' });
+      }
+      return errs;
+    },
   };
 
   if (typeof window !== 'undefined') window.AppVariantDims = AppVariantDims;

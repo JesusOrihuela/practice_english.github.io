@@ -108,7 +108,11 @@ driven by ONE data-driven registry, `shared/js/variant-dimensions.js` (dual-mode
 To give a new language its own axes (grammatical case, honorifics, noun class, evidentiality…), add
 a dimension THERE — no code change: `check-content` validates its label values, `feedback.js` badges
 it and lists it in the post-answer combinations, and `check-variants` checks its completeness, all
-from the registry. Each dimension declares `kind`: **inflectional** (gender/number — forms of one
+from the registry. **This openness is CI-enforced by `tools/variant-openness.mjs`** (validate job):
+it registers a fictitious dimension at runtime and asserts the registry API, `validateLabels` (the
+exact validator `check-content` runs), and `feedback.js`'s badge row all handle it with no code
+change — so a consumer that hardcodes dimensions is caught and the guarantee can never silently
+regress. Each dimension declares `kind`: **inflectional** (gender/number — forms of one
 lemma, shown as the dictionary-style slash pattern / taught as the agreement rule) or **lexical**
 (region/register/synonym/loanword — different words, shown by ROTATION: one form per session
 (`Progress.pickVariant`, least-practiced first — there is NO "base" form) + the others as labelled
