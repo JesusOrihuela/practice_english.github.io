@@ -61,7 +61,10 @@
     (document.head || de).appendChild(cs);
     de.classList.add('lang-cloak');
     var revealed = false;
-    var reveal = function () { if (revealed) return; revealed = true; de.classList.remove('lang-cloak'); };
+    // Removing lang-cloak makes the body visible; adding page-in (same frame) starts the
+    // orchestrated entrance (title → subtitle → cards) defined in generalities.css. Because
+    // the grid is already built when this runs, it is a pure reveal — nothing pops in empty.
+    var reveal = function () { if (revealed) return; revealed = true; de.classList.remove('lang-cloak'); de.classList.add('page-in'); };
     // Exposed so AppTopicGrid.build() can reveal the page the moment the topic grid is
     // populated — on picker pages we wait for that instead of DOMContentLoaded, so the
     // header/subtitle never paints above an empty grid (the async grid build lands ~200ms

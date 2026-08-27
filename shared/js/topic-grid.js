@@ -37,10 +37,11 @@ const AppTopicGrid = (() => {
       const btn = document.createElement('button');
       btn.className = 'img-topic-card';
       btn.dataset.theme = topic.id;
-      // No per-card stagger: the whole grid fades in together (one animation) instead of a
-      // cascade that, with ~45 topics, left later cards invisible for up to ~2.7s and made
-      // the grid look like it loaded "in pieces". Inline 0s overrides the CSS nth-child delays.
-      btn.style.animationDelay = '0s';
+      // Orchestrated-reveal stagger (only fires under .page-in, once the grid is fully built
+      // and the cloak lifts — see generalities.css / page-title.js). Base 0.18s lets the
+      // header (title 0s → subtitle 0.09s) land first; the per-card step is CAPPED at 12
+      // cards (~0.6s max) so ~45 topics cascade in order without a long, piecemeal tail.
+      btn.style.animationDelay = (0.18 + Math.min(i, 12) * 0.035).toFixed(3) + 's';
       const imgSrc = '../img/' + topic.id + '.webp';
       btn.innerHTML =
         '<div class="img-topic-card__img-wrap">' +

@@ -226,6 +226,10 @@ footer {
   0%, 100% { transform: scale(1); }
   50%       { transform: scale(1.03); }
 }
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
 
 @media (max-width: 480px) {
   .footer-content { flex-direction: column; text-align: center; gap: 8px; }
@@ -736,22 +740,26 @@ body.path-mode {
   text-align: left;
   font-family: 'Raleway', sans-serif;
   padding: 0;
-  /* No entrance fade: the page stays cloaked until the grid is built (page-title.js +
-     topic-grid.js), so cards must be fully opaque the instant the cloak lifts — a fade
-     would make the grid look empty while cards animated in. */
+  /* Cards are fully opaque by default. The orchestrated entrance below runs only once
+     the page is revealed (.page-in, added when the cloak lifts and the grid is already
+     built) — so there is never an empty grid animating in, just an ordered reveal. */
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.img-topic-card:nth-child(1)  { animation-delay: 0.04s; }
-.img-topic-card:nth-child(2)  { animation-delay: 0.08s; }
-.img-topic-card:nth-child(3)  { animation-delay: 0.12s; }
-.img-topic-card:nth-child(4)  { animation-delay: 0.16s; }
-.img-topic-card:nth-child(5)  { animation-delay: 0.20s; }
-.img-topic-card:nth-child(6)  { animation-delay: 0.24s; }
-.img-topic-card:nth-child(7)  { animation-delay: 0.28s; }
-.img-topic-card:nth-child(8)  { animation-delay: 0.32s; }
-.img-topic-card:nth-child(9)  { animation-delay: 0.36s; }
-.img-topic-card:nth-child(10) { animation-delay: 0.40s; }
+/* ---- Orchestrated picker reveal (title → subtitle → cards) ----
+   Gated on .page-in, which page-title.js adds the instant it lifts the cloak — by then the
+   whole picker (header + all cards) is already in the DOM, so this is a pure entrance
+   animation with nothing missing. The header wrapper class differs per activity, so target
+   by structure: #topic-picker > header-div > (h1, p), then the grid cards. Per-card delay is
+   set inline (capped) in topic-grid.js. */
+.page-in #topic-picker > div:first-child > h1 { animation: revealUp .5s ease both; }
+.page-in #topic-picker > div:first-child > p  { animation: revealUp .5s ease .09s both; }
+.page-in #topic-grid > .img-topic-card         { animation: revealUp .45s ease both; }
+@media (prefers-reduced-motion: reduce) {
+  .page-in #topic-picker > div:first-child > h1,
+  .page-in #topic-picker > div:first-child > p,
+  .page-in #topic-grid > .img-topic-card { animation: none; }
+}
 
 .img-topic-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); }
 .img-topic-card:active { transform: scale(0.97); }
