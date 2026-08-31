@@ -269,7 +269,15 @@ async function renderExerciseMatrix() {
   container.appendChild(hdrRow);
 
   // ── Topic rows ────────────────────────────────────────────
-  AppPath.getTopicStatuses().forEach(function (topic) {
+  // Show EVERY category the active pair has: its phrase topics (with phrase + vocab activities)
+  // PLUS its vocab-only decks (family, verbos_basicos, …) which have no phrases — their phrase
+  // columns read n/a and Vocabulary/Quiz show progress. Both lists derive from the pair's
+  // topics.json, so a divergent pair (en-de) shows exactly its own decks, nothing from other pairs.
+  const _phraseRows = AppPath.getTopicStatuses();
+  const _phraseIds  = new Set(_phraseRows.map(function (t) { return t.id; }));
+  const _vocabOnly  = (typeof AppTopics !== 'undefined' ? (AppTopics.VOCAB_TOPICS || []) : [])
+    .filter(function (t) { return !_phraseIds.has(t.id); });
+  _phraseRows.concat(_vocabOnly).forEach(function (topic) {
     const phraseIds = Progress.getPhraseIds(topic.id);
     const vocabIds  = Progress.getVocabIds(topic.id);
 
