@@ -1183,7 +1183,7 @@ body.path-mode {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 5px 14px;
+  padding: 5px 14px 5px 8px;   /* a touch less on the left (the badge already has its own inset) */
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-full);
