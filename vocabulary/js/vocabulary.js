@@ -47,9 +47,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     const word = words[currentIndex];
     if (!word) return;
     const _topic = currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId;
-    // Play the ROTATED form when the card is a lexical-variant word; else the term.
+    // Play the ROTATED form when the card is a lexical-variant word (celular/móvil). For an
+    // INFLECTIONAL-variant word (slash term like "das Kind / die Kinder", not rotated) the generator
+    // emits per-variant files, NOT a term-id file, so play the first (canonical) variant's audio.
+    // Otherwise (no variants) play the term keyed by the word id.
     if (_currentPickedForm && _currentPickedForm.audioSlug) {
       AppAudio.play(_topic, _currentPickedForm.audioSlug, _currentPickedForm.text);
+    } else if (Array.isArray(word.variants) && word.variants.length && word.variants[0].audioSlug) {
+      AppAudio.play(_topic, word.variants[0].audioSlug, word.variants[0].text);
     } else {
       AppAudio.play(_topic, word.id, word.term);
     }
