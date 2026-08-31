@@ -90,6 +90,12 @@ jobs:
       - name: Language profiles complete (check-lang-profiles.mjs)
         run: node tools/check-lang-profiles.mjs
 
+      # Per-pair RUNTIME completeness: every pair's declared flags have SVG assets, every grammar
+      # rule's category is defined (else an empty Grammar grid), and placement exists. Catches the
+      # class of gaps the first divergent pair (en-de) exposed by hand, before a user sees them.
+      - name: Pair completeness (check-pair-completeness.mjs)
+        run: node tools/check-pair-completeness.mjs
+
       # Category taxonomy (shared/json/common/category-scopes.json) is the single
       # source of truth for every category's scope; it must stay in sync with the
       # actual content (no orphan scopes, no unscoped category) and every phrase id

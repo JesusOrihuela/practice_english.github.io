@@ -64,6 +64,19 @@ are CC BY-**NC**-SA may only be a LOCAL cross-check (`frequency.localIndex`), ne
 - **Content**: `shared/json/pairs/<pair>/*.json` (+ `topics.json`, `grammar-rules.json`) and
   target-language vocab in `shared/json/vocab/<lang>/`. The deterministic gates
   (`check-content`, `check-taxonomy`, `check-audio`, `check-i18n`) then apply automatically.
+- **Pair runtime completeness** (`check-pair-completeness.mjs`) — the runtime assets/wiring shared
+  code assumes exist (the class of gaps the first divergent pair, en-de, exposed by hand):
+  - **Flags**: every code in the pair's `source.flags` / `target.flags` (`lang-pair.js`) has a real
+    `shared/img/flags/<code>.svg`. A missing asset shows a blank flag in the badge/picker.
+  - **Grammar categories**: every `rule.category` in `grammar-rules.json` is defined in that file's
+    `categories[]` — otherwise `grammar.js` renders an **empty grid** (only deep-linked `?rule=`
+    works). A `grammar-rules.json` with rules MUST ship a `categories[]`.
+  - **Placement**: the pair has a `placement.json` with a non-empty `questions[]`.
+  - **Quiz viability** (warning): each vocab deck has ≥ 4 words so the Quiz can build 4 options.
+  - *Infra note:* the topic/path loaders (`topics.js`, `path.js`) are hardened to be robust to
+    `<script>` order and to not cache an attempt made before their deps are defined — a divergent
+    pair no longer silently falls back to the default topic list. Keep the documented order anyway
+    (`topic-data.js` → `topics.js` → `path.js`).
 
 ## 2. Not gated — do these by hand (no check can infer them)
 - **`shared/js/lang-pair.js` `PAIRS`**: add the pair (flags, `name`, `localName`) — display

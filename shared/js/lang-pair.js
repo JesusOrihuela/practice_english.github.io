@@ -54,7 +54,8 @@ const AppLangPair = (() => {
   // ── Active pair ───────────────────────────────────────────────
 
   function getActive() {
-    var stored = localStorage.getItem(ACTIVE_KEY);
+    // localStorage is absent in Node (the pair-completeness gate loads this module) → default pair.
+    var stored = (typeof localStorage !== 'undefined') ? localStorage.getItem(ACTIVE_KEY) : null;
     return PAIRS.find(function (p) { return p.id === stored; }) || PAIRS[0];
   }
 
@@ -97,6 +98,7 @@ const AppLangPair = (() => {
   ];
 
   (function _migrate() {
+    if (typeof localStorage === 'undefined') return;   // Node (tooling) — nothing to migrate.
     var pairId = getActive().id;
     _KEYS_TO_MIGRATE.forEach(function (key) {
       var newKey = key + '__' + pairId;
@@ -145,9 +147,13 @@ const AppLangPair = (() => {
     header.appendChild(badge);
   }
 
-  document.addEventListener('DOMContentLoaded', _injectBadge);
+  if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', _injectBadge);
 
   // ── Public API ────────────────────────────────────────────────
   return { getActive, setActive, getAll, storageKey, grammarKey };
 
 })();
+
+// Dual-mode: expose to Node tooling (getAll() reads no localStorage) so the pair-completeness
+// gate can validate each pair's declared flags/voices without duplicating the PAIRS list.
+if (typeof module !== 'undefined' && module.exports) module.exports = AppLangPair;
