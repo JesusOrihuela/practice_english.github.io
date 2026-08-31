@@ -157,6 +157,30 @@ function _beginExercise(idx) {
 
 // ---- Card Display ----
 
+// Level-adaptive definition with an L1/L2 toggle. l1 = source-language gloss, l2 = target-language
+// definition. A1/A2 default to L1, B1+ to L2; the toggle (shown only when BOTH exist) swaps them and
+// offers the OTHER language in its label. If only one exists, it shows that and hides the toggle.
+function _setupDefinition(l1, l2, level) {
+  const defEl  = document.getElementById('word-definition');
+  const toggle = document.getElementById('fc-def-toggle');
+  if (!defEl) return;
+  const pair    = AppLangPair.getActive();
+  const srcName = pair.source.localName || pair.source.name;
+  const tgtName = pair.target.localName || pair.target.name;
+  const hasBoth = !!l1 && !!l2;
+  const beginner = (CEFR_ORDER[level] ?? 99) <= 1;   // A1/A2
+  let showL1 = hasBoth ? beginner : !!l1;            // if only one exists, show it
+  const render = () => {
+    defEl.textContent = showL1 ? (l1 || l2) : (l2 || l1);
+    if (toggle) {
+      toggle.classList.toggle('hidden', !hasBoth);
+      toggle.textContent = AppLang.t('fc_def_toggle', { lang: showL1 ? tgtName : srcName });
+    }
+  };
+  render();
+  if (toggle) toggle.onclick = hasBoth ? (() => { showL1 = !showL1; render(); }) : null;
+}
+
 function showCard(index) {
   const word = words[index];
   if (!word) return;
@@ -195,7 +219,11 @@ function showCard(index) {
   // back to the source-language gloss for entries that lack a monolingual form.
   document.getElementById('fc-back-word').textContent    = _displayWord;
   _renderCurrentFormBadge('fc-back-word', _currentPickedForm);   // back: tag the shown variety
-  document.getElementById('word-definition').textContent = word.definition || (word.gloss?.[_srcCode] || '');
+  // Definition: L1 (source-language gloss) vs L2 (target-language definition). Default follows the
+  // CEFR level — A1/A2 lead with L1 (the learner can't yet parse an L2 definition), B1+ lead with L2
+  // (monolingual) — and a toggle swaps to the other. The L1 translation stays visible below as the
+  // safety net so no external lookup is ever needed. (Laufer & Shmueli 1997.)
+  _setupDefinition((word.gloss && word.gloss[_srcCode]) || '', word.definition || '', word.level);
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 

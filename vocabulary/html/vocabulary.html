@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../index/css/generalities.css?v=acb7c371">
-    <link rel="stylesheet" href="../css/vocabulary.css?v=bc341218">
+    <link rel="stylesheet" href="../css/vocabulary.css?v=b97468ee">
     <style>:root { --activity-clr: #0EA5E9; --activity-clr-light: #E0F2FE; }</style>
     <link rel="icon" href="../../index/img/ico/favicon.ico">
     <link rel="manifest" href="../../manifest.json">
@@ -28,7 +28,7 @@
 
     <!-- Language scripts: must be in <head> so LangUI is set before body renders -->
     <script src="../../shared/js/lang-pair.js?v=8d17993d"></script>
-    <script src="../../lang/ui.js?v=a2300ecf"></script>
+    <script src="../../lang/ui.js?v=6e5a2caf"></script>
     <script src="../../lang/target/en.js?v=2cd78c3d"></script>
     <script src="../../shared/js/lang.js?v=d2e47532"></script>
     <script src="../../shared/js/i18n-dom.js?v=1278e66a"></script>
@@ -107,7 +107,10 @@
                         <div class="fc-back-word" id="fc-back-word"></div>
                         <button class="listen-btn listen-btn-back" id="listen-btn-back" aria-label="Escuchar pronunciación" data-i18n-aria="listen_pronunciation_aria" data-i18n="listen_btn_label"></button>
                         <div class="fc-definition-block">
-                            <span class="fc-label" data-i18n="fc_definition_label">Definición</span>
+                            <div class="fc-def-head">
+                                <span class="fc-label" data-i18n="fc_definition_label">Definición</span>
+                                <button class="fc-def-toggle hidden" id="fc-def-toggle" type="button"></button>
+                            </div>
                             <div class="word-definition" id="word-definition"></div>
                         </div>
                         <div class="fc-divider"></div>
@@ -163,7 +166,7 @@
     <script src="../../shared/js/activity.js?v=25f417d6"></script>
     <script src="../../shared/js/session-bar.js?v=2d4beeba"></script>
     <script src="../../shared/js/app-ui.js?v=bfbfa889"></script>
-    <script src="../js/vocabulary.js?v=be2e7998"></script>
+    <script src="../js/vocabulary.js?v=1e8b2f49"></script>
     <script src="../../shared/js/network-status.js?v=b94cd881"></script>
     <script src="../../shared/js/theme.js?v=362c3938"></script>
     <script src="../../shared/js/milestones.js?v=cd178b62"></script>

@@ -287,11 +287,6 @@ function goToPhase(p) {
   phase = p;
   updatePhaseDots();
 
-  // Step-back button: available from phase 1 onward (nothing before phase 0), and not past the
-  // production phase. Hidden in path mode, where PathSession drives navigation.
-  const backBtn = document.getElementById('phase-back-btn');
-  if (backBtn) backBtn.classList.toggle('hidden', p < 1 || p > 4 || _pathMode);
-
   // Hide all phases
   PHASE_IDS.forEach(id => {
     const el = document.getElementById(id);
@@ -306,6 +301,25 @@ function goToPhase(p) {
   if (p === 3) { buildPhase4(); }
   if (p === 4) { buildPhase5(); }
   if (p === 5) { buildPhaseComplete(); }
+
+  _placeBack();
+}
+
+// Put the step-back button into the visible phase's action row so it sits at the SAME height as the
+// "next" button — gray on the LEFT, next stays blue on the RIGHT (space-between). Dynamic phases
+// (structured input / production) have no static action row, so it gets its own bottom-left row.
+// Shown from phase 1 to production; hidden at the context phase, at completion, and in path mode.
+function _placeBack() {
+  const back = document.getElementById('phase-back-btn');
+  if (!back) return;
+  const show = phase >= 1 && phase <= 4 && !_pathMode;
+  back.classList.toggle('hidden', !show);
+  if (!show) return;
+  const section = document.getElementById(PHASE_IDS[phase]);
+  if (!section) return;
+  const actions = section.querySelector('.phase-actions');
+  if (actions) { actions.classList.add('phase-actions--split'); actions.insertBefore(back, actions.firstChild); }
+  else { back.classList.add('phase-back-btn--standalone'); section.appendChild(back); }
 }
 
 function updatePhaseDots() {

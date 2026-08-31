@@ -297,6 +297,16 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
   Hard → `lapses ≥ 1` → not Done), so getting a rule wrong no longer marks it complete.
 - **No user-facing text hardcoded in CSS `content:`** — it can't be localized. Grammar's "The rule"
   divider uses `content: attr(data-label)` fed from `AppLang.t()`, not a literal string.
+- **Vocab definitions — dual + level-adaptive + toggle (comprehensible at any level).** Every word
+  ships BOTH an L1 gloss (`gloss.<src>`, source language) and an L2 `definition` (target language).
+  The flashcard shows the L1 gloss by default at A1/A2 and the L2 definition at B1+, with a toggle
+  (`#fc-def-toggle`) to swap; the L1 translation stays visible below as the safety net (no external
+  lookup needed). **Content rule:** the **L2 definition must use CONTROLLED "defining vocabulary" at
+  or below the entry's level** (the Longman/Oxford learner-dictionary principle) so a B1 word never
+  gets a B2+ definition — and every word must carry both `gloss.<src>` and `definition`.
+- **Grammar step-back + pass-gated skip** (shared, every pair): a `#phase-back-btn` returns to an
+  earlier phase (gray, left of the blue "next", same row); the re-entry SKIP is set only when the
+  learner PASSED (quality ≥ 3) — a failed learner sees the full lesson again.
 - **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
   The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
   reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in

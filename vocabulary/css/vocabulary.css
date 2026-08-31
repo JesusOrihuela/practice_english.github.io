@@ -173,6 +173,31 @@
   margin-bottom: 4px;
 }
 
+.fc-def-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.fc-def-head .fc-label { margin-bottom: 0; }
+.fc-def-toggle {
+  flex-shrink: 0;
+  background: var(--activity-clr-light, #EDE9FE);
+  color: var(--activity-clr, var(--clr-primary));
+  border: none;
+  border-radius: var(--radius-full, 999px);
+  font-family: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 3px 11px;
+  cursor: pointer;
+}
+.fc-def-toggle:hover { filter: brightness(0.96); }
+.fc-def-toggle.hidden { display: none; }
+
 .fc-definition-block {
   margin-bottom: 14px;
 }

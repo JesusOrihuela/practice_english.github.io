@@ -350,23 +350,25 @@
 
 .reentry-icon { font-size: 1rem; flex-shrink: 0; }
 
-/* Step-back button (return to a previous phase) */
+/* Step-back button — sits at the SAME height as the "next" button (gray, left) via the
+   .phase-actions--split row; next stays blue on the right. */
+.phase-actions--split { justify-content: space-between; }
 .phase-back-btn {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   background: none;
   border: none;
-  color: var(--clr-primary);
+  color: var(--clr-text-muted, #6b7280);
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  padding: 6px 2px;
-  margin: 0 0 12px;
+  padding: 8px 6px;
+  border-radius: var(--radius-sm, 6px);
 }
-.phase-back-btn:hover { text-decoration: underline; }
+.phase-back-btn:hover { color: var(--clr-text); background: rgba(0,0,0,0.04); }
+.phase-back-btn--standalone { margin-top: 16px; }   /* dynamic phases: own bottom-left row */
 .phase-back-btn.hidden { display: none; }
 
 /* ── Phase Section ── */
