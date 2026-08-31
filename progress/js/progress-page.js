@@ -65,13 +65,13 @@ function renderLangPair() {
     const flagRow = document.createElement('span');
     flagRow.className = 'lp-card__flags';
     if (typeof AppFlags !== 'undefined') {
-      flagRow.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+      flagRow.appendChild(AppFlags.langFlags(pair.source.flags));
       const arrow = document.createElement('span');
       arrow.className   = 'lp-card__arrow';
       arrow.setAttribute('aria-hidden', 'true');
       arrow.textContent = '→';
       flagRow.appendChild(arrow);
-      flagRow.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+      flagRow.appendChild(AppFlags.langFlags(pair.target.flags));
     }
     card.appendChild(flagRow);
 

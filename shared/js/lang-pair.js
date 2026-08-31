@@ -16,7 +16,9 @@ const AppLangPair = (() => {
 
   // ── Available pairs ───────────────────────────────────────────
   // Add new pairs here when new source/target languages are supported.
-  // flags: [back, front] — matches AppFlags.stack(back, front) keys in flags.js.
+  // flags: a language's flag code(s) — ONE, TWO or THREE, whatever represents it (Finnish/Icelandic
+  //   may need just ['fi']/['is']; Spanish/German two; a language could need three). AppFlags.langFlags()
+  //   renders any count (1 = single, 2 = overlapping stack, 3+ = cluster) — never assume exactly two.
   const PAIRS = [
     {
       id:          'es-en',
@@ -136,13 +138,13 @@ const AppLangPair = (() => {
       (typeof AppLang !== 'undefined') ? AppLang.t('lang_switch_aria', { pair: pair.label }) : pair.label);
     badge.setAttribute('title', pair.label);
 
-    badge.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+    badge.appendChild(AppFlags.langFlags(pair.source.flags));
     var sep = document.createElement('span');
     sep.className   = 'lp-badge__sep';
     sep.setAttribute('aria-hidden', 'true');
     sep.textContent = '→';
     badge.appendChild(sep);
-    badge.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+    badge.appendChild(AppFlags.langFlags(pair.target.flags));
 
     header.appendChild(badge);
   }

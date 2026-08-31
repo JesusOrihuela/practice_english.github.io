@@ -161,6 +161,23 @@ const AppFlags = (() => {
   }
 
   /**
+   * Render a language's flag set for ANY count (a language may need 1, 2 or 3+ flags — Finnish/
+   * Icelandic 1, Spanish/German 2, or a triple). Dispatches by count so callers never assume two:
+   * 1 → a single flag, 2 → the overlapping stack (compact pair look), 3+ → a side-by-side cluster.
+   * @param {string[]} codes — the language's flag codes (from PAIRS' source.flags / target.flags).
+   */
+  function langFlags(codes) {
+    const list = (codes || []).filter(Boolean);
+    if (list.length === 2) return stack(list[0], list[1]);
+    if (list.length >= 3)  return cluster(list);
+    const wrap = document.createElement('span');
+    wrap.className = 'flag-stack';
+    wrap.setAttribute('aria-hidden', 'true');
+    if (list[0]) wrap.appendChild(flagImg(list[0], 'flag-single'));
+    return wrap;
+  }
+
+  /**
    * Returns a single real flag as an <img> from the asset dir.
    * @param {string} code — country code (e.g. 'us')
    */
@@ -259,5 +276,5 @@ const AppFlags = (() => {
     return null;   // unknown label → caller shows the name alone
   }
 
-  return { stack, single, region, cluster, flagImg };
+  return { stack, single, region, cluster, flagImg, langFlags };
 })();

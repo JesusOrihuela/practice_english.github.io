@@ -331,9 +331,9 @@
         </div>
     </footer>
 
-    <script src="shared/js/flags.js?v=5e0a3864"></script>
+    <script src="shared/js/flags.js?v=0fd1c66e"></script>
     <script src="shared/js/cefr.js?v=4737c1d0"></script>
-    <script src="shared/js/lang-pair.js?v=8d17993d"></script>
+    <script src="shared/js/lang-pair.js?v=f6472d42"></script>
     <script src="shared/js/proficiency.js?v=5fd50d9f"></script>
     <script src="shared/js/topics.js?v=1e8988f9"></script>
     <script src="lang/ui.js?v=992dedc0"></script>
@@ -674,13 +674,13 @@
             if (pair.source.code === _lang) card.classList.add('lp-picker-card--suggested');
 
             if (typeof AppFlags !== 'undefined') {
-              card.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+              card.appendChild(AppFlags.langFlags(pair.source.flags));
               var arrow = document.createElement('span');
               arrow.className = 'lp-picker-card__arrow';
               arrow.setAttribute('aria-hidden', 'true');
               arrow.textContent = '→';
               card.appendChild(arrow);
-              card.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+              card.appendChild(AppFlags.langFlags(pair.target.flags));
             }
 
             var label = document.createElement('span');

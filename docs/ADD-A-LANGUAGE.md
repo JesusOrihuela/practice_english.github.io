@@ -269,9 +269,14 @@ Until en-de, every pair shared English/Spanish as source AND target, so shared c
 assumed the DEFAULT lists/assets never broke. A divergent pair exposes them. All of these are now
 either **CI-gated** or **structurally fixed** — a new pair should not meet them again, but know them:
 
-- **Flags need SVG ASSETS, not just codes.** `AppFlags.stack()` loads `shared/img/flags/<code>.svg`.
-  Every code in a pair's `source.flags`/`target.flags` AND every `region` label's mapped code
-  (`flags.js` `REGION_MAP`) must have a real SVG. *Gated:* `check-pair-completeness`.
+- **Flags need SVG ASSETS, not just codes.** Every code in a pair's `source.flags`/`target.flags`
+  AND every `region` label's mapped code (`flags.js` `REGION_MAP`) must have a real
+  `shared/img/flags/<code>.svg`. *Gated:* `check-pair-completeness`.
+- **A language uses 1, 2 or 3+ flags — never assume two.** `source.flags`/`target.flags` is a list of
+  ANY length (Finnish/Icelandic may want just `['fi']`/`['is']`; Spanish/German two; a language could
+  need three). Render with **`AppFlags.langFlags(codes)`** (1 = single, 2 = overlapping stack, 3+ =
+  cluster) — never `stack(flags[0], flags[1])`. The definition switch uses the FRONT flag
+  (`flags[flags.length-1]`), also count-agnostic.
 - **`grammar-rules.json` MUST ship `categories[]`** covering every rule's `category`, or the Grammar
   page renders an EMPTY grid (only deep-linked `?rule=` works). *Gated:* `check-pair-completeness`.
 - **A pair needs `placement.json`** with questions. *Gated:* `check-pair-completeness`.
