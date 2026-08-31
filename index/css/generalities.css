@@ -1182,8 +1182,8 @@ body.path-mode {
 .alt-chip {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 8px;
+  gap: 8px;
+  padding: 5px 14px;
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-full);
