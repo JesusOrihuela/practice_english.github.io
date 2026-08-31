@@ -184,6 +184,11 @@ const AppFlags = (() => {
   // needs an entry here + its flag asset in shared/img/flags/. A macro-zone with no country
   // list returns null → the caller shows the name alone.
   const REGION_MAP = {
+    // German-speaking regions (DACH) — de/at/ch flag assets exist in shared/img/flags/.
+    'deutschland': ['de'], 'alemania': ['de'], 'germany': ['de'],
+    'osterreich': ['at'], 'austria': ['at'],
+    'schweiz': ['ch'], 'suiza': ['ch'], 'switzerland': ['ch'],
+    'dach': ['de', 'at', 'ch'],
     'espana': ['es'], 'uk': ['gb'], 'reino unido': ['gb'],
     'us': ['us'], 'usa': ['us'], 'ee. uu.': ['us'], 'ee.uu.': ['us'], 'estados unidos': ['us'],
     'mexico': ['mx'], 'argentina': ['ar'], 'chile': ['cl'], 'peru': ['pe'], 'bolivia': ['bo'],

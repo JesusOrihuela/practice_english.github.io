@@ -112,6 +112,9 @@ const DETECTORS = {
   // are a clean, unambiguous accusative signal. German letters incl. umlauts/ß in the boundaries.
   de: {
     akkusativ_articles: /(?<![A-Za-zÄÖÜäöüß])(den|einen|keinen)(?![A-Za-zÄÖÜäöüß])/i,
+    // Separable verb: a separable prefix sitting at the END of a main clause ("… stehe früh auf.").
+    separable_verbs: /(?<![A-Za-zÄÖÜäöüß])(auf|an|ein|mit|vor|zu|ab|aus|nach|her|hin|weg|los|zurück|zusammen)\s*[.!?]*\s*$/i,
+    gender_articles: null,   // der/die/das are ubiquitous → no reliable regex; hand-curated (kept, no evidence)
   },
 };
 

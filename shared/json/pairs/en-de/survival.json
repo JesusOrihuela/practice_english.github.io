@@ -101,6 +101,86 @@
           "audioSlug": "wo_ist_die_toilette"
         }
       ]
+    },
+    {
+      "id": "survival_the_street_is_big",
+      "source": "The street is very big.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Die Straße ist sehr groß.",
+          "audioSlug": "die_stra_e_ist_sehr_gro"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_get_up_early",
+      "source": "I get up early.",
+      "level": "A2",
+      "grammar": "Trennbare Verben stellen die Vorsilbe ans Satzende, hier 'auf'.",
+      "target": [
+        {
+          "text": "Ich stehe früh auf.",
+          "audioSlug": "ich_stehe_fruh_auf"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_arrive_in_january",
+      "source": "I arrive in January.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ich komme im Januar an.",
+          "labels": {
+            "region": "Deutschland"
+          },
+          "audioSlug": "ich_komme_im_januar_an"
+        },
+        {
+          "text": "Ich komme im Jänner an.",
+          "labels": {
+            "region": "Österreich"
+          },
+          "audioSlug": "ich_komme_im_janner_an"
+        }
+      ]
+    },
+    {
+      "id": "survival_my_cell_phone_is_broken",
+      "source": "My cell phone is broken.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mein Handy ist kaputt.",
+          "labels": {
+            "loanword": "Anglizismus"
+          },
+          "audioSlug": "mein_handy_ist_kaputt"
+        },
+        {
+          "text": "Mein Mobiltelefon ist kaputt.",
+          "labels": {
+            "synonym": "sinónimo"
+          },
+          "audioSlug": "mein_mobiltelefon_ist_kaputt"
+        }
+      ]
+    },
+    {
+      "id": "survival_the_insurance_is_important",
+      "source": "The car liability insurance is very important.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Die Kraftfahrzeughaftpflichtversicherung ist sehr wichtig.",
+          "audioSlug": "die_kraftfahrzeughaftpflichtversicherung_ist_sehr_wichtig"
+        }
+      ]
     }
   ]
 }

@@ -315,7 +315,9 @@
     ignoreTokens: ['äh', 'ähm', 'hm', 'na', 'tja', 'ach', 'oh'],
     // Authored German tip → German rule id (only ruleIds that exist in en-de/grammar-rules.json).
     grammarTipLabels: [
-      [/akkusativ|den bestimmten artikel|wen oder was/i, 'Akkusativ', 'akkusativ_articles'],
+      [/trennbar|vorsilbe|separable/i, 'Trennbare Verben', 'separable_verbs'],
+      [/akkusativ|wen oder was/i, 'Akkusativ', 'akkusativ_articles'],
+      [/genus|geschlecht|der, die, das/i, 'Genus', 'gender_articles'],
     ],
     frequency: {
       list: 'Goethe-Institut Wortliste (A1/A2)',

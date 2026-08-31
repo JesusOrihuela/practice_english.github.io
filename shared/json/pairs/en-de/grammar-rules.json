@@ -1,6 +1,26 @@
 {
   "categories": [
-    { "id": "cases", "label_en": "Grammatical Cases", "label_es": "Casos gramaticales", "emoji": "🎯", "color": "#2563EB" }
+    {
+      "id": "cases",
+      "label_en": "Grammatical Cases",
+      "label_es": "Casos gramaticales",
+      "emoji": "🎯",
+      "color": "#2563EB"
+    },
+    {
+      "id": "gender",
+      "label_en": "Gender & Articles",
+      "label_es": "Género y artículos",
+      "emoji": "🚻",
+      "color": "#DB2777"
+    },
+    {
+      "id": "verbs",
+      "label_en": "Verbs",
+      "label_es": "Verbos",
+      "emoji": "🏃",
+      "color": "#16A34A"
+    }
   ],
   "rules": [
     {
@@ -79,6 +99,152 @@
       ],
       "related_phrases": [],
       "topics": []
+    },
+    {
+      "id": "gender_articles",
+      "category": "gender",
+      "level": "A1",
+      "title": "The Three Genders — der, die, das",
+      "title_en": "The Three Genders — der, die, das",
+      "title_es": "Los tres géneros — der, die, das",
+      "explanation": "Every German noun has one of **three** genders, shown by its article: masculine **der**, feminine **die**, and neuter **das**. The gender belongs to the word, so learn each noun with its article. Feminine job/role nouns often add **-in** (der Lehrer, die Lehrerin).",
+      "context_dialogue": [
+        {
+          "speaker": "LEA",
+          "text": "**Der** Mann und **die** Frau lesen.",
+          "highlight": true
+        },
+        {
+          "speaker": "JAN",
+          "text": "Und **das** Kind spielt.",
+          "highlight": true
+        },
+        {
+          "speaker": "LEA",
+          "text": "Meine Schwester ist **die** Lehrerin hier.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which article goes with 'Kind', der, die or das?",
+          "placeholder": "e.g. der / die / das..."
+        },
+        {
+          "q": "How is the feminine of 'der Lehrer' formed?",
+          "placeholder": "e.g. add -in..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Das Kind spielt.",
+          "question": "Why is the article 'das'?",
+          "options": [
+            "Because 'Kind' is a neuter noun",
+            "Because 'Kind' is plural",
+            "Because 'Kind' is feminine",
+            "Because 'Kind' is masculine"
+          ],
+          "correct": 0,
+          "feedback": "'Kind' is neuter, so it takes the neuter article 'das'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ Frau arbeitet.",
+          "answer": "die",
+          "accepted": [
+            "die"
+          ],
+          "feedback_why": "'Frau' is feminine, so it takes 'die'.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ Mann liest.",
+          "answer": "der",
+          "accepted": [
+            "der"
+          ],
+          "feedback_why": "'Mann' is masculine, so it takes 'der'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "separable_verbs",
+      "category": "verbs",
+      "level": "A2",
+      "title": "Separable Verbs",
+      "title_en": "Separable Verbs",
+      "title_es": "Verbos separables",
+      "explanation": "Many German verbs have a **separable prefix** (auf, an, ein, mit, aus…). In a main clause the prefix detaches and moves to the **end**: aufstehen becomes 'Ich **stehe** früh **auf**.' Ankommen becomes 'Ich **komme** morgen **an**.'",
+      "context_dialogue": [
+        {
+          "speaker": "MIA",
+          "text": "Wann **stehst** du **auf**?",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Ich **stehe** um sieben Uhr **auf**.",
+          "highlight": true
+        },
+        {
+          "speaker": "MIA",
+          "text": "Der Zug **kommt** um acht **an**.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Where does the prefix 'auf' go in the sentence?",
+          "placeholder": "e.g. at the end..."
+        },
+        {
+          "q": "What is the base verb of 'stehe ... auf'?",
+          "placeholder": "e.g. aufstehen..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Ich stehe früh auf.",
+          "question": "Why is 'auf' at the end of the sentence?",
+          "options": [
+            "Because 'aufstehen' is a separable verb and the prefix detaches",
+            "Because 'auf' is a preposition here",
+            "Because the sentence is a question",
+            "Because 'auf' is the subject"
+          ],
+          "correct": 0,
+          "feedback": "'aufstehen' is separable, so in a main clause the prefix 'auf' moves to the end."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Ich stehe um sieben Uhr ___.",
+          "answer": "auf",
+          "accepted": [
+            "auf"
+          ],
+          "feedback_why": "The separable prefix of 'aufstehen' goes to the end.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Der Zug kommt um acht ___.",
+          "answer": "an",
+          "accepted": [
+            "an"
+          ],
+          "feedback_why": "The separable prefix of 'ankommen' goes to the end.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "survival"
+      ]
     }
   ]
 }

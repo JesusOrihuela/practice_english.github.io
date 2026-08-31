@@ -17,6 +17,22 @@
       ]
     },
     {
+      "id": "bruder",
+      "term": "der Bruder / die Brüder",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein männliches Geschwister.",
+      "example": "Mein Bruder wohnt in Berlin.",
+      "translations": { "en": "brother" },
+      "gloss": { "en": "A male sibling." },
+      "gloss_example": { "en": "My brother lives in Berlin." },
+      "variants": [
+        { "text": "der Bruder", "labels": { "number": "singular" }, "audioSlug": "der_bruder" },
+        { "text": "die Brüder", "labels": { "number": "plural" }, "audioSlug": "die_brueder" }
+      ]
+    },
+    {
       "id": "frau",
       "term": "die Frau / die Frauen",
       "level": "A1",
@@ -33,24 +49,8 @@
       ]
     },
     {
-      "id": "mann",
-      "term": "der Mann / den Mann",
-      "level": "A1",
-      "category": "Noun",
-      "difficulty": "easy",
-      "definition": "Ein erwachsener männlicher Mensch.",
-      "example": "Der Mann liest eine Zeitung.",
-      "translations": { "en": "man" },
-      "gloss": { "en": "An adult male human being." },
-      "gloss_example": { "en": "The man reads a newspaper." },
-      "variants": [
-        { "text": "der Mann", "labels": { "case": "nominativ" }, "audioSlug": "der_mann" },
-        { "text": "den Mann", "labels": { "case": "akkusativ" }, "audioSlug": "den_mann" }
-      ]
-    },
-    {
       "id": "vater",
-      "term": "der Vater / den Vater",
+      "term": "der Vater / die Väter",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -60,8 +60,26 @@
       "gloss": { "en": "A male parent." },
       "gloss_example": { "en": "The father reads a book." },
       "variants": [
-        { "text": "der Vater", "labels": { "case": "nominativ" }, "audioSlug": "der_vater" },
-        { "text": "den Vater", "labels": { "case": "akkusativ" }, "audioSlug": "den_vater" }
+        { "text": "der Vater", "labels": { "number": "singular" }, "audioSlug": "der_vater" },
+        { "text": "die Väter", "labels": { "number": "plural" }, "audioSlug": "die_vaeter" }
+      ]
+    },
+    {
+      "id": "mann",
+      "term": "der Mann / den Mann / dem Mann / des Mannes",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein erwachsener männlicher Mensch.",
+      "example": "Der Mann liest eine Zeitung.",
+      "translations": { "en": "man" },
+      "gloss": { "en": "An adult male human being." },
+      "gloss_example": { "en": "The man reads a newspaper." },
+      "variants": [
+        { "text": "der Mann", "labels": { "case": "nominativ" }, "audioSlug": "der_mann" },
+        { "text": "den Mann", "labels": { "case": "akkusativ" }, "audioSlug": "den_mann" },
+        { "text": "dem Mann", "labels": { "case": "dativ" }, "audioSlug": "dem_mann" },
+        { "text": "des Mannes", "labels": { "case": "genitiv" }, "audioSlug": "des_mannes" }
       ]
     }
   ]

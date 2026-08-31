@@ -138,8 +138,20 @@ registry-validated:
 - **Vocab words** may carry structured `variants[]` (`{text, labels, audioSlug}`) so words — not only
   phrases — have their variants, identified; `check-variants` scans them, and the flashcard renders
   the kind-differentiated display. LEXICAL variant words ROTATE (no base — `Progress.pickVariant`, like
-  phrases) with per-form audio; INFLECTIONAL (gender) stay the dictionary slash and do not rotate.
-  `coverage.mjs` counts `variants[].text`.
+  phrases) with per-form audio; INFLECTIONAL (gender/number/case) stay the dictionary slash and do not
+  rotate. `coverage.mjs` counts `variants[].text`. **Audio for an inflectional-variant vocab word**:
+  the generator emits ONE file per variant (`audioSlug`), not a term-id file, so the flashcard plays
+  the FIRST variant's audio (the player handles this) — never rely on a `{wordId}.wav` for a word
+  that has `variants[]`.
+- **Variant vs. grammar phenomenon (decide before authoring)** — a **variant dimension** is a
+  speaker/lexical CHOICE for the same slot (register du/Sie, gender -in Lehrer/Lehrerin, region
+  Januar/Jänner, number sing/plural, case forms of a noun, loanword Handy/Mobiltelefon). A **grammar
+  phenomenon** is determined by the sentence, not chosen: inherent noun gender (der/die/das),
+  attributive-adjective concordancia (gén×caso×núm endings), separable verbs / V2 word order. Those
+  are NOT variants — they go in **`grammar-rules.json`** (a rule + a `lang-detectors` regex + a
+  `grammarTipLabels` mapping), never as `labels`. Trying to force them into `target[]` variants breaks
+  the "differ by one inflection" concordancia invariant. (The registry still *supports* every value —
+  e.g. `gender:neutro` — proven by `variant-openness`; you just may not have a natural variant for it.)
 - **Inflectional agreement (concordancia)** — a gender/number variant differs ONLY by recognised
   inflection (article + noun + adjective + verb all agree); `check-variants` enforces it.
 
@@ -248,6 +260,45 @@ registry-validated:
   non-CEFR language (JLPT/HSK) add a mapping table in `lang-pair.js` and keep `level` a string.
 - **Atomicity / categorization** (category-scopes) — every phrase/word in exactly one category
   by meaning; run `classify` before adding; omit rather than force a homeless item.
+
+---
+
+## 4c. Infrastructure invariants & pitfalls (the first divergent pair, en-de, hit every one)
+
+Until en-de, every pair shared English/Spanish as source AND target, so shared code that silently
+assumed the DEFAULT lists/assets never broke. A divergent pair exposes them. All of these are now
+either **CI-gated** or **structurally fixed** — a new pair should not meet them again, but know them:
+
+- **Flags need SVG ASSETS, not just codes.** `AppFlags.stack()` loads `shared/img/flags/<code>.svg`.
+  Every code in a pair's `source.flags`/`target.flags` AND every `region` label's mapped code
+  (`flags.js` `REGION_MAP`) must have a real SVG. *Gated:* `check-pair-completeness`.
+- **`grammar-rules.json` MUST ship `categories[]`** covering every rule's `category`, or the Grammar
+  page renders an EMPTY grid (only deep-linked `?rule=` works). *Gated:* `check-pair-completeness`.
+- **A pair needs `placement.json`** with questions. *Gated:* `check-pair-completeness`.
+- **A vocab deck needs ≥ 4 words** or the Quiz can't build 4 options. *Warned:* `check-pair-completeness`.
+- **Topic lists come from the pair's `topics.json`, loaded async.** `topics.js`/`path.js` loaders are
+  now hardened: they don't cache an attempt made before their deps (`AppData`/`AppTopics`) are defined,
+  and are robust to `<script>` order — so a divergent pair no longer falls back to the 45-topic default
+  in the grids OR the Progress summary. Keep the documented order anyway
+  (`topic-data.js` → `topics.js` → `path.js`).
+- **The Progress summary shows the pair's phrase topics AND its vocab-only decks** (each pair its own).
+- **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
+  The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
+  reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in
+  sync (same slug ids). `check-audio` then validates the files exist.
+- **`SLUG_MAX` (100)** truncates+hashes long slugs — but the phrase char limit (Rule 5) is also 100, so
+  natural content rarely triggers it; a single long German compound in a normal sentence stays well
+  under. It's enforced by `check-content`; don't author an over-limit phrase just to exercise it.
+- **Node-loading a browser module**: a tool that `require()`s a shared `.js` (e.g. the pair gate reads
+  `lang-pair.js`) needs that file to be dual-mode (`module.exports`) AND guard `window`/`document`/
+  `localStorage` behind `typeof … !== 'undefined'`. `lang-profiles.js`, `variant-dimensions.js` and
+  `lang-pair.js` follow this.
+
+**After adding a pair, the green bar is:** `check-content`, `check-pair-completeness`,
+`check-lang-profiles`, `check-variants --gate`, `check-length --gate`, `variant-openness`,
+`check-i18n`, `check-a11y`, `check-images`, `check-taxonomy`, `audit`, `coverage --gate`,
+`fix-phrase-ids --check`, `grammar-topics --check` — plus a headless smoke of every activity + the
+Progress summary + the pair badge flags.
 
 ---
 
