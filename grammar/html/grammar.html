@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../index/css/generalities.css?v=acb7c371">
-    <link rel="stylesheet" href="../css/grammar.css?v=a9be8a41">
+    <link rel="stylesheet" href="../css/grammar.css?v=a2067b62">
     <style>:root { --activity-clr: #7C3AED; --activity-clr-light: #EDE9FE; }</style>
     <link rel="icon" href="../../index/img/ico/favicon.ico">
     <link rel="manifest" href="../../manifest.json">
@@ -148,9 +148,9 @@
                 <div class="noticing-card" id="noticing-card">
                     <!-- Filled by JS -->
                 </div>
-                <div class="phase-actions noticing-actions">
-                    <span class="noticing-progress" id="noticing-progress" aria-live="polite"></span>
-                    <button class="secondary-btn" id="noticing-show-btn" disabled data-i18n="noticing_show_btn">Ver explicación</button>
+                <span class="noticing-progress" id="noticing-progress" aria-live="polite"></span>
+                <div class="phase-actions">
+                    <button class="primary-btn" id="noticing-show-btn" disabled data-i18n="noticing_show_btn">Ver explicación</button>
                 </div>
             </section>
 
@@ -180,6 +180,7 @@
                 <div class="structured-card" id="structured-card">
                     <!-- Filled by JS -->
                 </div>
+                <div class="phase-actions" id="structured-actions"><!-- back + dynamic next --></div>
             </section>
 
             <!-- ── PHASE 5: FITB Production ── -->
@@ -193,6 +194,7 @@
                 <div class="production-card" id="production-card">
                     <!-- Filled by JS -->
                 </div>
+                <div class="phase-actions" id="production-actions"><!-- back + dynamic next --></div>
             </section>
 
             <!-- ── Complete / Rating ── -->
@@ -233,7 +235,7 @@
     <script src="../../shared/js/theme.js?v=362c3938"></script>
     <script src="../../shared/js/path.js?v=5e59d625"></script>
     <script src="../../shared/js/path-session.js?v=678a282f"></script>
-    <script src="../js/grammar.js?v=5e33d5c9"></script>
+    <script src="../js/grammar.js?v=ae326e48"></script>
     <script src="../../shared/js/milestones.js?v=cd178b62"></script>
     <script src="../../shared/js/nav.js?v=645731b6"></script>
     <script src="../../shared/js/sw-register.js?v=e2653dc4"></script>

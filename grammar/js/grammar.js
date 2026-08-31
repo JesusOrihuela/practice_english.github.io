@@ -317,9 +317,8 @@ function _placeBack() {
   if (!show) return;
   const section = document.getElementById(PHASE_IDS[phase]);
   if (!section) return;
-  const actions = section.querySelector('.phase-actions');
+  const actions = section.querySelector('.phase-actions');   // every phase 1-4 has one
   if (actions) { actions.classList.add('phase-actions--split'); actions.insertBefore(back, actions.firstChild); }
-  else { back.classList.add('phase-back-btn--standalone'); section.appendChild(back); }
 }
 
 function updatePhaseDots() {
@@ -514,6 +513,8 @@ function showStructuredItem(idx) {
   const card = document.getElementById('structured-card');
   if (!card) return;
   card.innerHTML = '';
+  // Drop the previous item's Next button from the action bar (back stays) while this item is unanswered.
+  document.querySelectorAll('#structured-actions .structured-next-btn').forEach(x => x.remove());
 
   const sentEl = document.createElement('div');
   sentEl.className = 'structured-sentence';
@@ -562,11 +563,13 @@ function showStructuredItem(idx) {
         }
       };
 
+      const bar = document.getElementById('structured-actions');
+      bar.querySelectorAll('.structured-next-btn').forEach(x => x.remove());
       const nextBtn = document.createElement('button');
       nextBtn.className   = 'structured-next-btn';
       nextBtn.textContent = AppLang.t('btn_next');
       nextBtn.addEventListener('click', advance);
-      card.appendChild(nextBtn);
+      bar.appendChild(nextBtn);   // in the action bar → same row as back (space-between)
       nextBtn.focus();
     });
 
@@ -651,11 +654,13 @@ function showProductionItem(idx) {
   fbEl.className = 'production-feedback';
   card.appendChild(fbEl);
 
-  // Next button
+  // Next button — in the action bar (same row as back), hidden until the answer is checked.
+  const pBar = document.getElementById('production-actions');
+  pBar.querySelectorAll('.production-next-btn').forEach(x => x.remove());
   const nextBtn = document.createElement('button');
   nextBtn.className   = 'production-next-btn';
   nextBtn.textContent = idx + 1 < total ? AppLang.t('btn_next') : AppLang.t('btn_results');
-  card.appendChild(nextBtn);
+  pBar.appendChild(nextBtn);
 
   // Focus first input
   if (inputs.length > 0) inputs[0].focus();
