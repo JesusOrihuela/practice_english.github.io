@@ -307,6 +307,13 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
 - **Grammar step-back + pass-gated skip** (shared, every pair): a `#phase-back-btn` returns to an
   earlier phase (gray, left of the blue "next", same row); the re-entry SKIP is set only when the
   learner PASSED (quality ≥ 3) — a failed learner sees the full lesson again.
+- **Grammar buttons + spacing are ONE system** (shared, every pair). Forward buttons are all the
+  same solid-blue button on the RIGHT; the single back button is the same shape in gray on the LEFT;
+  both live in a `.phase-actions` row per phase (`--split` = space-between, tops aligned). Vertical
+  rhythm comes from a SINGLE source — `.phase-section:not(.hidden)` is a flex column with `gap:16px`,
+  so header/card/counter/progress/actions are all 16px apart; do NOT add per-element vertical margins
+  inside a phase (they fight the gap and make the buttons look detached). A dynamic phase's Next is
+  appended to its `.phase-actions` bar (`#structured-actions`/`#production-actions`), never the card.
 - **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
   The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
   reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in

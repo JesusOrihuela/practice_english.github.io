@@ -389,7 +389,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
 }
 
 .phase-num {
@@ -420,8 +420,17 @@
 }
 
 /* ── Phase Actions ── */
+/* Single vertical rhythm for a phase: every direct child of the visible section is spaced by ONE
+   gap, so the header, card, counter, progress and action row all sit an equal distance apart (no
+   per-element margins fighting each other). Keep this the ONLY source of vertical spacing here. */
+.phase-section:not(.hidden) {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .phase-actions {
-  margin-top: 20px;
+  margin-top: 0;   /* rhythm comes from the section gap, not a per-element margin */
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -582,7 +591,7 @@
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--clr-text-muted);
-  margin: 12px 2px 0;
+  margin: 0 2px;
 }
 
 .noticing-progress--partial { color: var(--clr-primary); }
@@ -727,7 +736,7 @@ blockquote.rule-tip {
   border: 1px solid var(--clr-border);
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  margin-bottom: 14px;
+  margin-bottom: 0;
   align-self: flex-start;
 }
 
@@ -861,7 +870,7 @@ blockquote.rule-tip {
   border: 1px solid var(--clr-border);
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  margin-bottom: 14px;
+  margin-bottom: 0;
   align-self: flex-start;
 }
 
