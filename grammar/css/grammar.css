@@ -675,7 +675,7 @@ blockquote.rule-tip {
 }
 
 .rule-divider::after {
-  content: 'La regla';
+  content: attr(data-label);
   position: absolute;
   top: 50%;
   left: 50%;

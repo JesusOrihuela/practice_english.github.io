@@ -57,11 +57,18 @@
       alt_note_gender_f:      'Femenino',
       alt_note_gender_n:      'Neutro',
       alt_note_regional:      '{region}',
-      alt_note_loanword:      'Uso común',
-      alt_note_synonym:       'También',
+      alt_note_loanword:      'Préstamo',
+      alt_note_synonym:       'Sinónimo',
       alt_note_register_f:    'Formal',
       alt_note_register_i:    'Informal',
+      alt_note_number_s:      'Singular',
+      alt_note_number_p:      'Plural',
+      alt_note_case_nom:      'Nominativo',
+      alt_note_case_akk:      'Acusativo',
+      alt_note_case_dat:      'Dativo',
+      alt_note_case_gen:      'Genitivo',
       alt_note_base_shown:    'También',
+      rule_reveal_label:      'La regla',
 
       // ── Errores de carga ────────────────────────────────────────
       error_loading:          '⚠️ Error al cargar el tema. Revisa tu conexión.',
@@ -149,7 +156,7 @@
 
       // ── Gramática ───────────────────────────────────────────────
       grammar_note_label:     'Nota de gramática',
-      reentry_banner_msg:     'Reanudando desde <strong>Comprensión + Producción</strong> — contexto y regla ya vistos',
+      reentry_banner_msg:     'Ya viste la intro y la regla — <strong>vas directo a practicar</strong>',
       grammar_topic_label:    'Gramática para este tema',
       coming_soon:            'Próximamente',
       coming_soon_body:       'Estamos preparando contenido para esta categoría.',
@@ -623,11 +630,18 @@
       alt_note_gender_f:      'Feminine',
       alt_note_gender_n:      'Neutral',
       alt_note_regional:      '{region}',
-      alt_note_loanword:      'Common usage',
-      alt_note_synonym:       'Also',
+      alt_note_loanword:      'Loanword',
+      alt_note_synonym:       'Synonym',
       alt_note_register_f:    'Formal',
       alt_note_register_i:    'Informal',
+      alt_note_number_s:      'Singular',
+      alt_note_number_p:      'Plural',
+      alt_note_case_nom:      'Nominative',
+      alt_note_case_akk:      'Accusative',
+      alt_note_case_dat:      'Dative',
+      alt_note_case_gen:      'Genitive',
       alt_note_base_shown:    'Also',
+      rule_reveal_label:      'The rule',
 
       // ── Load errors ───────────────────────────────────────────
       error_loading:          '⚠️ Error loading topic. Check your connection.',
@@ -715,7 +729,7 @@
 
       // ── Grammar ───────────────────────────────────────────────
       grammar_note_label:     'Grammar note',
-      reentry_banner_msg:     'Resuming from <strong>Comprehension + Production</strong> — context and rule already seen',
+      reentry_banner_msg:     'You already saw the intro and the rule — <strong>going straight to practice</strong>',
       grammar_topic_label:    'Grammar for this topic',
       coming_soon:            'Coming Soon',
       coming_soon_body:       'We\'re preparing content for this category.',

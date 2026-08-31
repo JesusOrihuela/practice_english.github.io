@@ -451,6 +451,7 @@ function buildPhase3() {
     const divider = document.createElement('div');
     divider.className = 'rule-divider';
     divider.setAttribute('aria-hidden', 'true');
+    divider.setAttribute('data-label', AppLang.t('rule_reveal_label'));   // i18n (source language), not hardcoded in CSS
     card.appendChild(divider);
   }
 

@@ -253,6 +253,32 @@ const AppFeedback = (() => {
   const _dimOrder = () => { const D = _dims(); return D ? D.ordered() : ['loanword', 'region', 'gender', 'number', 'register']; };
   const _dimBadge = (d) => { const D = _dims(); return D ? D.badge(d) : (d === 'gender' ? 'gender' : d === 'region' ? 'flag' : 'pill'); };
 
+  // A variant tag is METALANGUAGE (Formal, Feminine, Nominative…), so it is shown in the learner's
+  // SOURCE language (via AppLang), and EVERY axis carries a small icon (like gender's ♀/♂), not just
+  // gender. Region keeps its flag + the region name (a proper noun). Any future/unknown axis falls
+  // back to the capitalized raw value.
+  const _VAL_KEY = {
+    gender:   { femenino: 'alt_note_gender_f', masculino: 'alt_note_gender_m', neutro: 'alt_note_gender_n' },
+    register: { formal: 'alt_note_register_f', informal: 'alt_note_register_i' },
+    number:   { singular: 'alt_note_number_s', plural: 'alt_note_number_p' },
+    case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen' },
+  };
+  const _DIM_KEY = { loanword: 'alt_note_loanword', synonym: 'alt_note_synonym' };
+  const _SYM = {
+    gender:   { femenino: '♀', masculino: '♂', neutro: '⚲' },
+    register: { formal: '🎩', informal: '💬' },
+    number: '🔢', case: '🎯', loanword: '🌐', synonym: '🔁',
+  };
+  function _variantLabel(dim, val) {
+    const t = (typeof AppLang !== 'undefined') ? AppLang.t.bind(AppLang) : (k => k);
+    let label;
+    if (_VAL_KEY[dim] && _VAL_KEY[dim][val]) label = t(_VAL_KEY[dim][val]);
+    else if (_DIM_KEY[dim]) label = t(_DIM_KEY[dim]);
+    else label = _capitalize(val);
+    const sym = (_SYM[dim] && typeof _SYM[dim] === 'object') ? _SYM[dim][val] : _SYM[dim];
+    return (sym ? sym + ' ' : '') + label;
+  }
+
   function applyVariantBadge(containerId, form) {
     const container = document.getElementById(containerId);
     if (!container) return;
@@ -286,16 +312,16 @@ const AppFeedback = (() => {
           if (flag) b.appendChild(flag);
         }
         const txt = document.createElement('span');
-        txt.textContent = _capitalize(val);   // "aguacate" → "Aguacate"
+        txt.textContent = _capitalize(val);   // region name (proper noun) beside the flag
         b.appendChild(txt);
       } else if (style === 'gender') {
         b.className = 'gender-phrase-badge';
-        const sym = val === 'femenino' ? '♀ ' : val === 'masculino' ? '♂ ' : '';
-        b.textContent = sym + _capitalize(val);   // target-language gender term
+        b.textContent = _variantLabel(dim, val);   // ♀/♂/⚲ + source-language term
       } else {
-        // 'pill' | 'text' — number (Singular/Plural), register (Formal/Informal), or any future axis.
+        // 'pill' | 'text' — register, number, case, loanword, synonym, or any future axis: each gets
+        // its icon + the source-language label.
         b.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-        b.textContent = _capitalize(val);
+        b.textContent = _variantLabel(dim, val);
       }
       wrap.appendChild(b);
     }
@@ -309,14 +335,10 @@ const AppFeedback = (() => {
   function buildWordVariants(variants, currentText, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
     const D = _dims();
-    // Recognition strip = the LEXICAL variants (region/register/synonym/loanword) OTHER than the one
-    // currently shown as the rotated headword. Inflectional variants (gender/number) are shown as the
-    // dictionary-style slash headword, not here — the kind-differentiated presentation.
-    const shown = variants.filter(v => {
-      if (currentText && v && v.text === currentText) return false;   // don't repeat the headword
-      const labs = (v && v.labels) || {};
-      return Object.keys(labs).some(dim => (D ? D.kind(dim) : (dim === 'region' || dim === 'register' || dim === 'loanword' || dim === 'synonym' ? 'lexical' : 'inflectional')) === 'lexical');
-    });
+    // One chip per variant (LEXICAL and INFLECTIONAL alike) OTHER than the one currently shown as the
+    // headword — so an inflectional set (der/den/dem/des Mann) is no longer an unlabelled slash: each
+    // form appears with its case/number tag, and lexical variants keep their recognition tag.
+    const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
     const frag = document.createDocumentFragment();
     for (const v of shown) {
@@ -335,13 +357,10 @@ const AppFeedback = (() => {
           const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
         } else if (style === 'gender') {
           badge.className = 'gender-phrase-badge';
-          badge.textContent = (val === 'femenino' ? '♀ ' : val === 'masculino' ? '♂ ' : '') + _capitalize(val);
+          badge.textContent = _variantLabel(dim, val);
         } else {
           badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-          badge.textContent = (dim === 'register') ? (val === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'))
-            : (dim === 'synonym') ? t('alt_note_synonym')
-            : (dim === 'loanword') ? t('alt_note_loanword')
-            : _capitalize(val);
+          badge.textContent = _variantLabel(dim, val);
         }
         chip.appendChild(badge);
       }

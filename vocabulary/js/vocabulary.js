@@ -52,10 +52,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     // emits per-variant files, NOT a term-id file, so play the first (canonical) variant's audio.
     // Otherwise (no variants) play the term keyed by the word id.
     if (_currentPickedForm && _currentPickedForm.audioSlug) {
-      AppAudio.play(_topic, _currentPickedForm.audioSlug, _currentPickedForm.text);
-    } else if (Array.isArray(word.variants) && word.variants.length && word.variants[0].audioSlug) {
-      AppAudio.play(_topic, word.variants[0].audioSlug, word.variants[0].text);
+      AppAudio.play(_topic, _currentPickedForm.audioSlug, _currentPickedForm.text);   // lexical rotation
     } else {
+      // No rotation (plain word OR an inflectional slash term): play the term keyed by the word id —
+      // the generator emits it and the slash is read as a comma, so ALL inflected forms are spoken.
       AppAudio.play(_topic, word.id, word.term);
     }
   }
