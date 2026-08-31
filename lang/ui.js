@@ -69,6 +69,8 @@
       alt_note_case_gen:      'Genitivo',
       alt_note_base_shown:    'También',
       rule_reveal_label:      'La regla',
+      phase_back_btn:         '← Paso anterior',
+      phase_back_aria:        'Volver al paso anterior',
 
       // ── Errores de carga ────────────────────────────────────────
       error_loading:          '⚠️ Error al cargar el tema. Revisa tu conexión.',
@@ -642,6 +644,8 @@
       alt_note_case_gen:      'Genitive',
       alt_note_base_shown:    'Also',
       rule_reveal_label:      'The rule',
+      phase_back_btn:         '← Previous step',
+      phase_back_aria:        'Back to the previous step',
 
       // ── Load errors ───────────────────────────────────────────
       error_loading:          '⚠️ Error loading topic. Check your connection.',

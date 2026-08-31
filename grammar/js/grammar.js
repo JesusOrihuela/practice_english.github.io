@@ -51,6 +51,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     showRules(currentRule?.category);
   });
 
+  // Step-back: return to any earlier phase (re-read the rule / context) if a doubt arises.
+  document.getElementById('phase-back-btn').addEventListener('click', () => {
+    if (phase > 0) goToPhase(phase - 1);
+  });
+
   document.getElementById('context-next-btn').addEventListener('click', () => goToPhase(1));
   document.getElementById('noticing-show-btn').addEventListener('click', () => {
     // Capture answers before the textareas leave the DOM view
@@ -281,6 +286,11 @@ function startExercise(rule) {
 function goToPhase(p) {
   phase = p;
   updatePhaseDots();
+
+  // Step-back button: available from phase 1 onward (nothing before phase 0), and not past the
+  // production phase. Hidden in path mode, where PathSession drives navigation.
+  const backBtn = document.getElementById('phase-back-btn');
+  if (backBtn) backBtn.classList.toggle('hidden', p < 1 || p > 4 || _pathMode);
 
   // Hide all phases
   PHASE_IDS.forEach(id => {
@@ -714,7 +724,10 @@ function buildPhaseComplete() {
   // Record progress immediately so it's saved even if the user never taps Continue
   if (!_progressSaved) {
     _progressSaved = true;
-    if (prodCorrect < total && currentAutoQuality < 5) {
+    // Only skip the lesson (show the re-entry banner + jump to practice) NEXT time if the learner
+    // PASSED this round (quality ≥ 3 = ≥50%). If they failed, clear it so they see the FULL lesson
+    // again — a failed learner needs the context and rule, not just more drilling.
+    if (currentAutoQuality >= 3) {
       setReentryPhase(cardId);
     } else {
       clearReentryPhase(cardId);
@@ -850,7 +863,7 @@ function finishAndRate(quality) {
   // Progress already saved in buildPhaseComplete(); only re-rate if quality differs
   if (!_progressSaved) {
     _progressSaved = true;
-    if (prodCorrect < total && quality < 5) {
+    if (quality >= 3) {          // passed → skip lesson next time; failed → full lesson next time
       setReentryPhase(cardId);
     } else {
       clearReentryPhase(cardId);

@@ -344,12 +344,30 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: var(--clr-text);
-  margin-bottom: 4px;
+  margin: 4px 0 20px;   /* consistent vertical rhythm — not glued to the phase title below */
   animation: fadeIn 0.3s ease-out both;
 }
 
 .reentry-icon { font-size: 1rem; flex-shrink: 0; }
-.reentry-icon { font-size: 1rem; flex-shrink: 0; }
+
+/* Step-back button (return to a previous phase) */
+.phase-back-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: var(--clr-primary);
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 2px;
+  margin: 0 0 12px;
+}
+.phase-back-btn:hover { text-decoration: underline; }
+.phase-back-btn.hidden { display: none; }
 
 /* ── Phase Section ── */
 .phase-section {
