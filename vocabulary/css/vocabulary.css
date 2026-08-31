@@ -173,30 +173,40 @@
   margin-bottom: 4px;
 }
 
-.fc-def-head {
+/* Definition row: the definition text (left) + a two-flag language switch (right), vertically
+   centered on the SAME line as the definition. */
+.fc-def-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 4px;
+  gap: 12px;
 }
-.fc-def-head .fc-label { margin-bottom: 0; }
-.fc-def-toggle {
+.fc-def-row .word-definition { flex: 1; }
+.fc-def-switch {
   flex-shrink: 0;
-  background: var(--activity-clr-light, #EDE9FE);
-  color: var(--activity-clr, var(--clr-primary));
-  border: none;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
   border-radius: var(--radius-full, 999px);
-  font-family: inherit;
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: none;
-  letter-spacing: 0;
-  padding: 3px 11px;
-  cursor: pointer;
 }
-.fc-def-toggle:hover { filter: brightness(0.96); }
-.fc-def-toggle.hidden { display: none; }
+.fc-def-switch.hidden { display: none; }
+.fc-def-side {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 9px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-full, 999px);
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity var(--transition, .2s), background var(--transition, .2s);
+}
+.fc-def-side img { width: 22px; height: 15px; display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+.fc-def-side:hover { opacity: 0.75; }
+.fc-def-side--active { opacity: 1; background: var(--clr-surface); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.12)); }
 
 .fc-definition-block {
   margin-bottom: 14px;

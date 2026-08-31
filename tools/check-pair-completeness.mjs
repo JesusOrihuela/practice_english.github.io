@@ -92,6 +92,33 @@ if (fs.existsSync(VOCAB_DIR)) {
   }
 }
 
+// 5. VOCAB DEFINITIONS — every word needs BOTH the L2 `definition` (target) AND an L1 `gloss.<src>`
+// (source) for each source language that learns it, so the flashcard's level-adaptive L1/L2 toggle
+// always has both sides. Enforced per pair (each pair independent).
+const sourcesByTarget = {};
+for (const pr of pairs) {
+  const t = pr.target && pr.target.code, s = pr.source && pr.source.code;
+  if (t && s) (sourcesByTarget[t] = sourcesByTarget[t] || new Set()).add(s);
+}
+if (fs.existsSync(VOCAB_DIR)) {
+  for (const lang of fs.readdirSync(VOCAB_DIR)) {
+    const srcs = sourcesByTarget[lang];
+    const vdir = path.join(VOCAB_DIR, lang);
+    if (!srcs || !fs.statSync(vdir).isDirectory()) continue;
+    for (const f of fs.readdirSync(vdir)) {
+      if (!f.endsWith('.json')) continue;
+      let words; try { words = JSON.parse(fs.readFileSync(path.join(vdir, f), 'utf8')).words || []; } catch { continue; }
+      for (const w of words) {
+        if (!(w.definition && String(w.definition).trim()))
+          fail(`vocab/${lang}/${f} word "${w.id}" — missing L2 "definition" (the flashcard def toggle needs it)`);
+        for (const s of srcs)
+          if (!(w.gloss && w.gloss[s] && String(w.gloss[s]).trim()))
+            fail(`vocab/${lang}/${f} word "${w.id}" — missing L1 "gloss.${s}" (the def toggle needs it for the ${s}-${lang} pair)`);
+      }
+    }
+  }
+}
+
 // ── Report ──
 console.log(`Completitud de pares — ${pairs.length} par(es): ${pairs.map(p => p.id).join(', ')}`);
 for (const w of warns) console.log(`  ⚠ ${w}`);

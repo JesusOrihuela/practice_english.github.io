@@ -303,7 +303,11 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
   (`#fc-def-toggle`) to swap; the L1 translation stays visible below as the safety net (no external
   lookup needed). **Content rule:** the **L2 definition must use CONTROLLED "defining vocabulary" at
   or below the entry's level** (the Longman/Oxford learner-dictionary principle) so a B1 word never
-  gets a B2+ definition — and every word must carry both `gloss.<src>` and `definition`.
+  gets a B2+ definition — and every word must carry both `gloss.<src>` and `definition`. This is
+  **CI-enforced by `check-pair-completeness`**: for every pair, each vocab word of its target must have
+  the L2 `definition` AND the L1 `gloss.<source>` (per pair, independently) — else the switch has no
+  second side. The toggle is a **two-flag switch** (source flag left, target flag right, active one
+  highlighted) on the definition line, driven by the pair's own `source`/`target` flags.
 - **Grammar step-back + pass-gated skip** (shared, every pair): a `#phase-back-btn` returns to an
   earlier phase (gray, left of the blue "next", same row); the re-entry SKIP is set only when the
   learner PASSED (quality ≥ 3) — a failed learner sees the full lesson again.

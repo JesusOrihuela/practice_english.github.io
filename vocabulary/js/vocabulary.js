@@ -157,28 +157,46 @@ function _beginExercise(idx) {
 
 // ---- Card Display ----
 
-// Level-adaptive definition with an L1/L2 toggle. l1 = source-language gloss, l2 = target-language
-// definition. A1/A2 default to L1, B1+ to L2; the toggle (shown only when BOTH exist) swaps them and
-// offers the OTHER language in its label. If only one exists, it shows that and hides the toggle.
+// Level-adaptive definition with a two-flag SWITCH. l1 = source-language gloss, l2 = target-language
+// definition. A1/A2 default to L1 (source), B1+ to L2 (target). The switch shows two flags — source
+// on the LEFT, target on the RIGHT — with the active one highlighted; tapping a flag shows that
+// language's definition (intuitive: the flag says which language). Shown only when BOTH exist.
 function _setupDefinition(l1, l2, level) {
-  const defEl  = document.getElementById('word-definition');
-  const toggle = document.getElementById('fc-def-toggle');
+  const defEl = document.getElementById('word-definition');
+  const sw    = document.getElementById('fc-def-switch');
+  const l1Btn = document.getElementById('fc-def-l1');
+  const l2Btn = document.getElementById('fc-def-l2');
   if (!defEl) return;
   const pair    = AppLangPair.getActive();
-  const srcName = pair.source.localName || pair.source.name;
-  const tgtName = pair.target.localName || pair.target.name;
   const hasBoth = !!l1 && !!l2;
   const beginner = (CEFR_ORDER[level] ?? 99) <= 1;   // A1/A2
-  let showL1 = hasBoth ? beginner : !!l1;            // if only one exists, show it
+  let showL1 = hasBoth ? beginner : !!l1;            // if only one exists, show it (switch hidden)
+
   const render = () => {
     defEl.textContent = showL1 ? (l1 || l2) : (l2 || l1);
-    if (toggle) {
-      toggle.classList.toggle('hidden', !hasBoth);
-      toggle.textContent = AppLang.t('fc_def_toggle', { lang: showL1 ? tgtName : srcName });
+    if (sw) {
+      sw.classList.toggle('hidden', !hasBoth);
+      if (l1Btn) l1Btn.classList.toggle('fc-def-side--active', showL1);
+      if (l2Btn) l2Btn.classList.toggle('fc-def-side--active', !showL1);
     }
   };
+
+  if (sw && hasBoth) {
+    // Representative flag per side = the pair's FRONT flag (last in [back, front]).
+    const srcCode = (pair.source.flags && pair.source.flags[pair.source.flags.length - 1]) || pair.source.code;
+    const tgtCode = (pair.target.flags && pair.target.flags[pair.target.flags.length - 1]) || pair.target.code;
+    const fill = (btn, code, langName, cb) => {
+      if (!btn) return;
+      btn.textContent = '';
+      if (typeof AppFlags !== 'undefined' && AppFlags.single) btn.appendChild(AppFlags.single(code));
+      btn.setAttribute('aria-label', AppLang.t('fc_def_show', { lang: langName }));
+      btn.title = langName;
+      btn.onclick = cb;
+    };
+    fill(l1Btn, srcCode, pair.source.localName || pair.source.name, () => { showL1 = true;  render(); });
+    fill(l2Btn, tgtCode, pair.target.localName || pair.target.name, () => { showL1 = false; render(); });
+  }
   render();
-  if (toggle) toggle.onclick = hasBoth ? (() => { showL1 = !showL1; render(); }) : null;
 }
 
 function showCard(index) {
