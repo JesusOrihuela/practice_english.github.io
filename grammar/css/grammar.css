@@ -354,14 +354,22 @@
    Every FORWARD button is the same solid-blue button on the RIGHT; the single BACK button is the
    same shape/height in GRAY on the LEFT; the action row spreads them (space-between). */
 .phase-actions.phase-actions--split { justify-content: space-between; }
+/* Every button (forward AND back) carries a 1px border so the border-box height matches EXACTLY —
+   the back button's visible gray border no longer makes it taller than the borderless forward ones. */
+.primary-btn,
+.secondary-btn,
+.structured-next-btn,
+.production-next-btn {
+  border: 1px solid transparent;
+}
 /* All forward buttons share one look (override the outlined "secondary" and the smaller dynamic ones). */
 .secondary-btn,
 .structured-next-btn,
 .production-next-btn {
   padding: 12px 24px;
+  font-size: 0.9rem;
   color: #fff;
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
-  border: none;
   margin-top: 0;
 }
 .phase-back-btn {
@@ -748,6 +756,9 @@ blockquote.rule-tip {
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
   padding: 24px 22px;
+  display: flex;              /* uniform internal rhythm — one gap, equal top/bottom padding */
+  flex-direction: column;
+  gap: 16px;
   animation: fadeInScale 0.35s ease-out both;
 }
 
@@ -843,14 +854,14 @@ blockquote.rule-tip {
 
 /* Next button after structured-input answer — same style as production-next-btn */
 .structured-next-btn {
-  margin-top: 14px;
-  padding: 10px 22px;
+  margin-top: 0;
+  padding: 12px 24px;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
-  border: none;
+  border: 1px solid transparent;   /* match the back button's border-box height */
   border-radius: var(--radius-md);
   cursor: pointer;
   animation: fadeIn 0.25s ease-out both;
@@ -882,6 +893,9 @@ blockquote.rule-tip {
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
   padding: 24px 22px;
+  display: flex;              /* uniform internal rhythm — one gap, equal top/bottom padding */
+  flex-direction: column;
+  gap: 16px;
   animation: fadeInScale 0.35s ease-out both;
 }
 
@@ -889,7 +903,6 @@ blockquote.rule-tip {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--clr-text);
-  margin-bottom: 16px;
   line-height: 1.6;
   padding: 14px 16px;
   background: var(--clr-surface-2);
@@ -1051,14 +1064,14 @@ blockquote.rule-tip {
 .feedback-contrast::before { content: '↔ '; }
 
 .production-next-btn {
-  margin-top: 14px;
-  padding: 10px 22px;
+  margin-top: 0;
+  padding: 12px 24px;
   font-family: 'Raleway', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 700;
   color: #fff;
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-dark) 100%);
-  border: none;
+  border: 1px solid transparent;   /* match the back button's border-box height */
   border-radius: var(--radius-md);
   cursor: pointer;
   display: none;

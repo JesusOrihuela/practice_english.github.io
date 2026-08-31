@@ -133,7 +133,9 @@ function buildCategoryGrid() {
     const rulesInCat = allRules.filter(r => r.category === cat.id);
     const cardIds    = rulesInCat.map(r => 'grammar_' + cat.id + '_' + r.id);
     const _cards     = Progress.getAllCards();
-    const seen       = cardIds.filter(id => _cards && _cards[id] && _cards[id].reps > 0).length;
+    // "Learned" counts PASSED rules only (lapses === 0), same criterion as a rule's ✓ Done — a
+    // failed round rates Hard and leaves lapses ≥ 1, so it does NOT count here.
+    const seen       = cardIds.filter(id => { const c = _cards && _cards[id]; return c && c.reps > 0 && (c.lapses || 0) === 0; }).length;
 
     const btn = document.createElement('button');
     btn.className = 'category-card';
