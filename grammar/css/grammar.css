@@ -586,13 +586,15 @@
   gap: 12px;
 }
 
+/* The "Answer N to continue" hint lives in the CENTER of the action row (back left, next right),
+   so it never adds an extra vertical gap. Empty → removed entirely. */
 .noticing-progress {
-  display: block;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--clr-text-muted);
-  margin: 0 2px;
+  text-align: center;
 }
+.noticing-progress:empty { display: none; }
 
 .noticing-progress--partial { color: var(--clr-primary); }
 .noticing-progress--done    { color: var(--clr-success); }

@@ -314,6 +314,10 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
   so header/card/counter/progress/actions are all 16px apart; do NOT add per-element vertical margins
   inside a phase (they fight the gap and make the buttons look detached). A dynamic phase's Next is
   appended to its `.phase-actions` bar (`#structured-actions`/`#production-actions`), never the card.
+  A per-phase hint (noticing's "Answer N to continue") goes INSIDE the action row (centered between
+  back and next), never on its own line — an own line adds a gap slot and desyncs the card→button
+  distance from the other phases. On RE-ENTRY (skip to practice), still build the earlier phases so
+  the step-back button reveals them populated, not empty.
 - **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
   The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
   reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in

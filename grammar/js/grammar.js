@@ -270,8 +270,11 @@ function startExercise(rule) {
   setReentryBanner(reentry === REENTRY_PHASE);
 
   if (reentry === REENTRY_PHASE) {
-    // Skip context / noticing / rule — user has seen them.
-    // Phase dots 0-2 rendered as done, jump straight to Structured Input.
+    // Skip context / noticing / rule — user has seen them. But still BUILD the earlier phases so that
+    // the step-back button reveals them populated instead of empty (their build runs only here, not
+    // in goToPhase). Then jump straight to Structured Input.
+    buildPhase1();
+    buildPhase2();
     phase = REENTRY_PHASE;          // set before updatePhaseDots
     updatePhaseDots();
     goToPhase(REENTRY_PHASE);       // builds phase 4
