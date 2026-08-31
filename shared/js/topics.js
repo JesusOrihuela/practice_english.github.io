@@ -105,8 +105,11 @@ const AppTopics = (() => {
   // Load the active pair's topics.json and override the default in place.
   function load() {
     if (_loadPromise) return _loadPromise;
-    const p = (typeof AppData !== 'undefined') ? AppData.get('topics') : Promise.reject();
-    _loadPromise = p.then(data => {
+    // Script-order safety: if AppData isn't defined yet (this script loaded before topic-data.js),
+    // reject WITHOUT caching so a later call — after all scripts are parsed — actually fetches the
+    // pair's topics.json. Caching the failure here left a divergent pair stuck on the default list.
+    if (typeof AppData === 'undefined') return Promise.reject(new Error('AppData not ready'));
+    _loadPromise = AppData.get('topics').then(data => {
       const records = (data && Array.isArray(data.topics) && data.topics.length) ? data.topics : _DEFAULT_RECORDS;
       _records = records;
       const d = _derive(records);

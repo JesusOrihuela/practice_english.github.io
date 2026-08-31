@@ -578,15 +578,17 @@ const AppPath = (() => {
   let _loadPromise = null;
   function load() {
     if (_loadPromise) return _loadPromise;
-    const base = (typeof AppTopics !== 'undefined' && AppTopics.load) ? AppTopics.load() : Promise.resolve();
-    _loadPromise = base.then(() => {
-      const recs = (typeof AppTopics !== 'undefined' && AppTopics.getRecords ? AppTopics.getRecords() : [])
-        .filter(t => t.phrase);
+    // Script-order safety: if AppTopics isn't ready yet (this script loaded before topics.js),
+    // resolve WITHOUT caching so a later call — after all scripts are parsed — rebuilds TOPICS from
+    // the pair's records. Caching the empty attempt left a divergent pair's summary on the default list.
+    if (typeof AppTopics === 'undefined' || !AppTopics.load) return Promise.resolve();
+    _loadPromise = AppTopics.load().then(() => {
+      const recs = (AppTopics.getRecords ? AppTopics.getRecords() : []).filter(t => t.phrase);
       if (!recs.length) return;
       const rebuilt = recs.slice().sort((a, b) => a.order - b.order)
         .map(t => ({ id: t.id, level: t.level, emoji: t.emoji, label: t.label, labelEn: t.labelEn, order: t.order }));
       TOPICS.length = 0; TOPICS.push(...rebuilt);
-    }).catch(() => {});
+    }).catch(() => { _loadPromise = null; });   // on failure (deps not ready), don't cache — allow retry
     return _loadPromise;
   }
 
