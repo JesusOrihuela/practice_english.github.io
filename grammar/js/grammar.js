@@ -206,7 +206,11 @@ function showRules(categoryId) {
     const cardId  = 'grammar_' + categoryId + '_' + rule.id;
     const cards   = Progress.getAllCards();
     const card    = cards && cards[cardId];
-    const isDone  = card && card.reps > 0;
+    // "Done" (green ✓) means PASSED, not merely attempted. A failed round rates Hard (quality 1),
+    // which resets reps and increments lapses; a pass (quality ≥ 3) decrements lapses toward 0. So a
+    // rule you got wrong stays lapses ≥ 1 → not Done, until you pass it. (The blue "studied" badge
+    // elsewhere stays reps-based — you DID study it — but Done is the stronger claim.)
+    const isDone  = card && card.reps > 0 && (card.lapses || 0) === 0;
 
     const btn = document.createElement('button');
     btn.className = 'rule-row';

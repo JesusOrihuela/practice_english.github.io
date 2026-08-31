@@ -282,6 +282,21 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
   in the grids OR the Progress summary. Keep the documented order anyway
   (`topic-data.js` → `topics.js` → `path.js`).
 - **The Progress summary shows the pair's phrase topics AND its vocab-only decks** (each pair its own).
+- **Variant tags are METALANGUAGE → source language + an icon, for EVERY pair.** `feedback.js`
+  renders every badge (`applyVariantBadge`, `buildWordVariants`) via `AppLang.t()` in the learner's
+  SOURCE language (never the raw registry value — "Feminine"/"Femenino" by source, not always
+  "Femenino"), capitalized, each axis with a small icon (gender ♀/♂/⚲, register 🎩/💬, number 🔢,
+  case 🎯, loanword 🌐, synonym 🔁; region uses its flag). A NEW dimension value needs an
+  `alt_note_<dim>_<val>` key in EVERY `lang/ui.js` source block + an icon in `feedback.js`'s `_SYM`.
+  Inflectional variants (case/number/gender) are shown as labelled chips too (der/den/dem/des Mann →
+  each with its case tag), not just an unlabelled slash headword.
+- **Vocab audio of an inflectional slash term reads ALL forms**: the generator emits the term
+  (`wordId`) audio (slash → comma → every inflection spoken); the flashcard plays it for non-rotated
+  words. Lexical variants keep per-form rotation audio.
+- **Grammar "✓ Done" means PASSED, not attempted**: it gates on `lapses === 0` (a failed round rates
+  Hard → `lapses ≥ 1` → not Done), so getting a rule wrong no longer marks it complete.
+- **No user-facing text hardcoded in CSS `content:`** — it can't be localized. Grammar's "The rule"
+  divider uses `content: attr(data-label)` fed from `AppLang.t()`, not a literal string.
 - **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
   The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
   reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in
