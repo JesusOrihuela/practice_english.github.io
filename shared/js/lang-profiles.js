@@ -260,7 +260,78 @@
     },
   };
 
-  const PROFILES = { en, es };
+  // ── German (de) — STRESS-TEST target (en-de), intentionally minimal/non-shippable ──
+  const de = {
+    name: 'German',
+    grammaticalGender: true,   // der/die/das + person -in → gender-variant enrichment applies.
+    voices: ['df_hedda', 'dm_conrad'],   // edge-tts de-DE voices (see generate-audio-tgt.py).
+    tts: { engine: 'edge' },
+    // Umlauts and ß are phonemic/meaning-bearing (schon≠schön, Straße): preserve them as distinct
+    // letters so answer-checking stays strict, exactly like Spanish keeps ñ. (ae/oe/ue/ss keyboard
+    // fallbacks are a future UX refinement, out of scope for the stress-test pair.)
+    foldPreserve: 'äöüß',
+    nativeChars: 'äöüß',
+    // Cloze must blank a CONTENT word, never these closed-class German words.
+    clozeStopWords: [
+      'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines', 'kein', 'keine',
+      'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'mich', 'dich', 'ihn', 'uns', 'euch', 'mir', 'dir', 'ihm', 'ihnen', 'man',
+      'mein', 'dein', 'sein', 'unser', 'euer',
+      'und', 'oder', 'aber', 'denn', 'sondern', 'weil', 'dass', 'wenn', 'ob', 'als', 'damit', 'obwohl',
+      'in', 'an', 'auf', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen', 'mit', 'ohne', 'für', 'gegen',
+      'um', 'durch', 'aus', 'bei', 'nach', 'seit', 'von', 'zu', 'bis',
+      'bin', 'bist', 'ist', 'sind', 'seid', 'habe', 'hast', 'hat', 'haben',
+      'nicht', 'nur', 'auch', 'schon', 'noch', 'sehr',
+      // wh-words — blanking these yields trivial gaps
+      'was', 'wann', 'wo', 'wer', 'wie', 'warum', 'welche', 'welcher', 'welches',
+    ],
+    // Closed-class German words excluded from the VOCAB coverage denominator.
+    functionWords: [
+      // Artikel / Determinative
+      'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines',
+      'kein', 'keine', 'keinen', 'keinem', 'keiner', 'dieser', 'diese', 'dieses', 'diesen', 'diesem',
+      'jeder', 'jede', 'jedes', 'jeden', 'jener', 'jene', 'jenes', 'welcher', 'welche', 'welches',
+      'alle', 'alles', 'viele', 'viel', 'wenige', 'wenig', 'manche', 'einige', 'mehr', 'weniger',
+      // Pronomen
+      'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'mich', 'dich', 'ihn', 'uns', 'euch',
+      'mir', 'dir', 'ihm', 'ihnen', 'ihrer', 'seiner', 'man', 'jemand', 'niemand', 'etwas', 'nichts',
+      'mein', 'meine', 'dein', 'deine', 'sein', 'seine', 'unser', 'unsere', 'euer', 'eure',
+      // Präpositionen
+      'in', 'an', 'auf', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen', 'mit', 'ohne', 'für',
+      'gegen', 'um', 'durch', 'aus', 'bei', 'nach', 'seit', 'von', 'zu', 'bis', 'ab', 'gegenüber',
+      'trotz', 'während', 'wegen', 'statt', 'innerhalb', 'außerhalb',
+      // Konjunktionen
+      'und', 'oder', 'aber', 'denn', 'sondern', 'weil', 'dass', 'wenn', 'als', 'ob', 'damit', 'obwohl',
+      'sowie', 'sowohl', 'entweder', 'weder', 'noch', 'falls', 'sobald', 'solange', 'bevor', 'nachdem',
+      // Hilfs- / Modalverben
+      'bin', 'bist', 'ist', 'sind', 'seid', 'war', 'waren', 'sein', 'habe', 'hast', 'hat', 'haben', 'hatte', 'hatten',
+      'werde', 'wirst', 'wird', 'werden', 'wurde', 'wurden', 'kann', 'kannst', 'können', 'konnte',
+      'muss', 'musst', 'müssen', 'musste', 'will', 'willst', 'wollen', 'wollte', 'soll', 'sollen',
+      'darf', 'darfst', 'dürfen', 'mag', 'möchte', 'möchten',
+      // Negation / grammatische Adverbien / Partikeln
+      'nicht', 'nein', 'ja', 'doch', 'nur', 'auch', 'schon', 'noch', 'sehr', 'hier', 'da', 'dort',
+      'jetzt', 'dann', 'immer', 'nie', 'oft', 'manchmal', 'wieder', 'sehr', 'zu', 'so', 'mal', 'etwa',
+      'wo', 'was', 'wer', 'wann', 'wie', 'warum', 'wohin', 'woher',
+    ],
+    ignoreTokens: ['äh', 'ähm', 'hm', 'na', 'tja', 'ach', 'oh'],
+    // Authored German tip → German rule id (only ruleIds that exist in en-de/grammar-rules.json).
+    grammarTipLabels: [
+      [/akkusativ|den bestimmten artikel|wen oder was/i, 'Akkusativ', 'akkusativ_articles'],
+    ],
+    frequency: {
+      list: 'Goethe-Institut Wortliste (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until it is promoted to a real, coverage-complete
+      // pair. check-lang-profiles + coverage.mjs both honor this flag.
+      stressTest: true,
+      note: 'Goethe-Institut Zertifikat A1/A2 Wortliste (CEFR-graded, public reference). The full ' +
+            'committeable top-1000 index is built when this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.

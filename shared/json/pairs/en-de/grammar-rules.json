@@ -1,0 +1,81 @@
+{
+  "rules": [
+    {
+      "id": "akkusativ_articles",
+      "category": "cases",
+      "level": "A1",
+      "title": "The Accusative Case — Articles",
+      "title_en": "The Accusative Case — Articles",
+      "title_es": "El caso acusativo — Artículos",
+      "explanation": "German marks the direct object with the **accusative** case. Only the **masculine** article changes: **der** becomes **den**, and **ein** becomes **einen** (feminine, neuter and plural articles stay the same). Ask **wen oder was?** (whom or what?) to find the object. Example: Ich habe **einen** Bruder. Ich sehe **den** Mann.",
+      "context_dialogue": [
+        {
+          "speaker": "ANNA",
+          "text": "Ich suche **einen** Kellner.",
+          "highlight": true
+        },
+        {
+          "speaker": "TOM",
+          "text": "Dort ist **der** Kellner. Ich sehe **den** Mann am Fenster.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANNA",
+          "text": "Gut. Hast du **einen** Kugelschreiber?",
+          "highlight": true
+        },
+        {
+          "speaker": "TOM",
+          "text": "Ja, ich habe **einen** Kugelschreiber.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "Which article changes shape when the noun is the object, der or die?",
+          "placeholder": "e.g. der / die / das..."
+        },
+        {
+          "q": "What form does 'ein' take in the accusative for a masculine noun?",
+          "placeholder": "e.g. ein / eine / einen..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Ich habe einen Bruder.",
+          "question": "Why is 'einen' used instead of 'ein'?",
+          "options": [
+            "Because 'Bruder' is a masculine direct object (accusative)",
+            "Because 'Bruder' is plural",
+            "Because 'Bruder' is the subject",
+            "Because 'Bruder' is feminine"
+          ],
+          "correct": 0,
+          "feedback": "'Bruder' is the object of 'haben', so the masculine article takes the accusative form 'einen'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Ich sehe ___ Mann.",
+          "answer": "den",
+          "accepted": [
+            "den"
+          ],
+          "feedback_why": "'Mann' is the masculine direct object, so 'der' becomes 'den' in the accusative.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ich habe ___ Bruder.",
+          "answer": "einen",
+          "accepted": [
+            "einen"
+          ],
+          "feedback_why": "'Bruder' is the masculine object of 'haben', so 'ein' becomes 'einen'.",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

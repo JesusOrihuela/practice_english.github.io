@@ -142,6 +142,13 @@ const CONTENT_RULES = {
     },
   },
 
+  de: {
+    label: 'German',
+    anglicisms: [],      // German accepts many loanwords (Computer, Internet, E-Mail); none flagged in the minimal stress-test set.
+    regionalTerms: [],   // DE/AT/CH regional splits live in target[] with labels.region, not flagged as errors here.
+    grammarChecks: null,
+  },
+
   // ─── TEMPLATE FOR A NEW TARGET LANGUAGE ──────────────────────────────────
   // fr: {
   //   label: 'French',

@@ -34,6 +34,16 @@ const AppLangPair = (() => {
       ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
       sttLanguage: 'spanish',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): exercises the framework's new variant
+      // dimensions (number, case) + 3-way gender and du/Sie register with a German target.
+      id:          'en-de',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
+      target:      { code: 'de', flags: ['de', 'at'], name: 'Deutsch', localName: 'Deutsch' },
+      label:       'English → Deutsch',
+      ttsVoices:   ['df_hedda', 'dm_conrad'],
+      sttLanguage: 'german',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

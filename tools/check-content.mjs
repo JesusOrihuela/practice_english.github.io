@@ -175,10 +175,14 @@ for (const pair of PAIRS) {
         // schema — validate labels keys/values via the registry's own validator (single arbiter;
         // Rule 16 §8 — a closed value must match exactly, catching 'female', 'f', etc.).
         if (form.labels !== undefined) {
-          for (const e of AppVariantDims.validateLabels(form.labels)) {
+          const tgt = pair.split('-')[1];
+          for (const e of AppVariantDims.validateLabels(form.labels, tgt)) {
             if (e.code === 'unknown-key')
               flag(pair, topic, id, `target[${i}].labels.${e.key}`, 'schema',
                 `Unknown label key "${e.key}" — valid keys: ${AppVariantDims.keys().join(', ')}`);
+            else if (e.code === 'not-applicable')
+              flag(pair, topic, id, `target[${i}].labels.${e.key}`, 'schema',
+                `Label "${e.key}" does not apply to target "${tgt}" (dimension appliesTo excludes it)`);
             else
               flag(pair, topic, id, `target[${i}].labels.${e.key}`, 'schema',
                 `Invalid ${e.key} value "${e.value}" — must be one of: ${AppVariantDims.values(e.key).join(', ')}`);
@@ -289,9 +293,11 @@ for (const lang of vocabLangs) {
             const labs = (v && v.labels) || {};
             if (Object.keys(labs).length === 0)
               flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels`, 'schema', 'every variant must carry labels');
-            for (const e of AppVariantDims.validateLabels(labs)) {
+            for (const e of AppVariantDims.validateLabels(labs, lang)) {
               if (e.code === 'unknown-key')
                 flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${e.key}`, 'schema', `Unknown label key "${e.key}"`);
+              else if (e.code === 'not-applicable')
+                flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${e.key}`, 'schema', `Label "${e.key}" does not apply to target "${lang}"`);
               else
                 flag('vocab/' + lang, deck, w.id, `variants[${vi}].labels.${e.key}`, 'schema', `Invalid ${e.key} value "${e.value}"`);
             }

@@ -77,6 +77,12 @@ try {
     badKey.length === 1 && badKey[0].code === 'unknown-key');
   check('validateLabels accepts a COMBINED label mixing the new dimension with an existing one',
     AppVariantDims.validateLabels({ region: 'España', [PROBE]: 'directo' }).length === 0);
+  // appliesTo enforcement (validateLabels with a target lang): applies for its lang, rejected elsewhere.
+  check('validateLabels enforces appliesTo — accepted for the dimension\'s own language',
+    AppVariantDims.validateLabels({ [PROBE]: 'directo' }, 'xx').length === 0);
+  const notApp = AppVariantDims.validateLabels({ [PROBE]: 'directo' }, 'es');
+  check('validateLabels enforces appliesTo — REJECTED for a language that lacks the dimension',
+    notApp.length === 1 && notApp[0].code === 'not-applicable');
 
   // 3 — Rendering: feedback.js must consult the registry, not a hardcoded dimension list.
   const fb = fs.readFileSync(path.join(ROOT, 'shared/js/feedback.js'), 'utf8');

@@ -1,0 +1,106 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Excuse me, do you speak English?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Entschuldigung, sprichst du Englisch?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "entschuldigung_sprichst_du_englisch"
+        },
+        {
+          "text": "Entschuldigung, sprechen Sie Englisch?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "entschuldigung_sprechen_sie_englisch"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Can you help me?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Kannst du mir helfen?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "kannst_du_mir_helfen"
+        },
+        {
+          "text": "Können Sie mir helfen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "konnen_sie_mir_helfen"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ich bin Student.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ich_bin_student"
+        },
+        {
+          "text": "Ich bin Studentin.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ich_bin_studentin"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_have_a_brother",
+      "source": "I have a brother.",
+      "level": "A1",
+      "grammar": "Im Akkusativ wird der maskuline Artikel zu 'einen' oder 'den'.",
+      "target": [
+        {
+          "text": "Ich habe einen Bruder.",
+          "audioSlug": "ich_habe_einen_bruder"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "I don't understand.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ich verstehe nicht.",
+          "audioSlug": "ich_verstehe_nicht"
+        }
+      ]
+    },
+    {
+      "id": "survival_where_is_the_bathroom",
+      "source": "Where is the bathroom?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Wo ist die Toilette?",
+          "audioSlug": "wo_ist_die_toilette"
+        }
+      ]
+    }
+  ]
+}

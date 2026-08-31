@@ -1,0 +1,36 @@
+{
+  "words": [
+    {
+      "id": "kind",
+      "term": "das Kind / die Kinder",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein junger Mensch, der noch nicht erwachsen ist.",
+      "example": "Das Kind spielt im Garten.",
+      "translations": { "en": "child" },
+      "gloss": { "en": "A young human being who is not yet an adult." },
+      "gloss_example": { "en": "The child plays in the garden." },
+      "variants": [
+        { "text": "das Kind", "labels": { "number": "singular" }, "audioSlug": "das_kind" },
+        { "text": "die Kinder", "labels": { "number": "plural" }, "audioSlug": "die_kinder" }
+      ]
+    },
+    {
+      "id": "mann",
+      "term": "der Mann / den Mann",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein erwachsener männlicher Mensch.",
+      "example": "Der Mann liest eine Zeitung.",
+      "translations": { "en": "man" },
+      "gloss": { "en": "An adult male human being." },
+      "gloss_example": { "en": "The man reads a newspaper." },
+      "variants": [
+        { "text": "der Mann", "labels": { "case": "nominativ" }, "audioSlug": "der_mann" },
+        { "text": "den Mann", "labels": { "case": "akkusativ" }, "audioSlug": "den_mann" }
+      ]
+    }
+  ]
+}

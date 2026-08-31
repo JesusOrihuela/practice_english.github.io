@@ -36,18 +36,26 @@
   const DIMENSIONS = {
     loanword: { kind: 'lexical',      open: true,                              priority: 0, badge: 'text',   appliesTo: '*' },
     region:   { kind: 'lexical',      open: true,                              priority: 1, badge: 'flag',   appliesTo: '*' },
-    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es'],
+    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es', 'de'],
                 agreement: ['articulo', 'sustantivo', 'adjetivo', 'participio', 'pronombre'] },
-    register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 3, badge: 'pill',   appliesTo: '*' },
+    // NUMBER (singular/plural) — a content dimension only where the plural is more than a bare "+s"
+    // and drives real agreement (German: article + noun umlaut/ending + adjective + verb all co-vary,
+    // das Kind ist → die Kinder sind). Added data-only for the en-de stress-test pair.
+    number:   { kind: 'inflectional', values: ['singular', 'plural'],          priority: 3, badge: 'pill',   appliesTo: ['de'],
+                agreement: ['artikel', 'nomen', 'adjektiv', 'verb'] },
+    // CASE (grammatical case) — inflectional axis German marks on the article/adjective (der→den in
+    // the accusative). A NEW dimension proving the registry is open: no consumer hardcodes it.
+    case:     { kind: 'inflectional', values: ['nominativ', 'akkusativ', 'dativ', 'genitiv'], priority: 4, badge: 'pill', appliesTo: ['de'],
+                agreement: ['artikel', 'adjektiv', 'pronomen'] },
+    register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 5, badge: 'pill',   appliesTo: '*' },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
     // takes the rotation + recognition presentation ("also: albergue") — which is what the synonym-
     // interference research prescribes, unlike showing them as co-equal slash targets. A single
     // token value (the badge reads "también"/"also"). Added data-only — proof the registry is open.
-    synonym:  { kind: 'lexical',      values: ['sinónimo'],                    priority: 4, badge: 'pill',   appliesTo: '*' },
-    // A FUTURE language adds its own axes HERE, data-only (proven by the evidentiality openness test):
-    // e.g. number (singular/plural) for a language whose plural is more than "+s", grammatical case,
-    // noun class, honorifics, evidentiality. Not defined until a language actually uses it — so the
-    // registry never advertises a dimension with zero content.
+    synonym:  { kind: 'lexical',      values: ['sinónimo'],                    priority: 6, badge: 'pill',   appliesTo: '*' },
+    // A FUTURE language adds its own axes HERE, data-only (proven by the openness test):
+    // noun class, honorifics, evidentiality, aspect… Not defined until a language actually uses it —
+    // so the registry never advertises a dimension with zero content.
   };
 
   const AppVariantDims = {
@@ -83,13 +91,16 @@
     },
     /** Validate a labels object against the registry — the ONE validator both check-content and
         the openness test call, so a dimension added here is accepted with zero validator code.
-        Returns [] when clean, else [{ key, value, code:'unknown-key'|'invalid-value' }]. */
-    validateLabels: function (labels) {
+        When `lang` (the target-language code) is given, also enforces `appliesTo`: a dimension the
+        language does not declare is rejected (e.g. `number` on Spanish). Returns [] when clean,
+        else [{ key, value, code:'unknown-key'|'not-applicable'|'invalid-value' }]. */
+    validateLabels: function (labels, lang) {
       const errs = [];
       for (const key of Object.keys(labels || {})) {
         const value = labels[key];
-        if (!this.has(key)) errs.push({ key: key, value: value, code: 'unknown-key' });
-        else if (!this.isOpen(key) && !this.isValidValue(key, value)) errs.push({ key: key, value: value, code: 'invalid-value' });
+        if (!this.has(key)) { errs.push({ key: key, value: value, code: 'unknown-key' }); continue; }
+        if (lang && !this.appliesTo(key, lang)) { errs.push({ key: key, value: value, code: 'not-applicable' }); continue; }
+        if (!this.isOpen(key) && !this.isValidValue(key, value)) errs.push({ key: key, value: value, code: 'invalid-value' });
       }
       return errs;
     },

@@ -109,4 +109,50 @@ const es = {
   },
 };
 
-export const GENDER = { es };
+// ── German ──────────────────────────────────────────────────────────────────
+// Person gender in German: masculine base + feminine in -in (der Lehrer / die Lehrerin), plus
+// article gender (der/die, ein/eine) and a few suppletive pairs (Mann/Frau). The morphology is
+// wholly unlike Spanish -o/-a, which is exactly why it lives in its own block (the tool stays
+// generic). NOTE: _w() folds umlauts (NFD), so lemmas are matched umlaut-agnostically; person
+// nouns are chosen with plain -in feminines to keep raw-text detection reliable in the stress-test.
+const de = {
+  personNouns: [
+    'lehrer', 'student', 'freund', 'kollege', 'nachbar', 'kellner', 'chef', 'partner',
+    'schüler', 'mieter', 'besucher', 'sänger', 'spieler', 'verkäufer', 'fahrer', 'arbeiter',
+  ],
+  personAdjs: [],   // German adjective agreement is case/gender/number-complex → not person-context-flagged here.
+  personCtx: /\b(ich bin|du bist|er ist|sie ist|ein|eine)\b/i,
+  // Nominative + accusative masc→fem article/determiner map (both directions checked in isGenderInfl).
+  arts: { der: 'die', den: 'die', ein: 'eine', einen: 'eine', dieser: 'diese', diesen: 'diese',
+          mein: 'meine', dein: 'deine', sein: 'seine', kein: 'keine', keinen: 'keine',
+          jeder: 'jede', welcher: 'welche', unser: 'unsere' },
+  irregular: [
+    ['mann', 'frau'], ['vater', 'mutter'], ['bruder', 'schwester'], ['sohn', 'tochter'],
+    ['junge', 'madchen'], ['herr', 'frau'], ['onkel', 'tante'], ['opa', 'oma'], ['neffe', 'nichte'],
+  ],
+
+  gestureGendered(text) {
+    // A person noun present as masculine base or feminine (+in / +innen) → its gender can vary.
+    for (const l of this.personNouns) {
+      if (reWord(l).test(text) || reWord(l + 'in').test(text) || reWord(l + 'innen').test(text)) return l;
+    }
+    return null;
+  },
+
+  isGenderInfl(a, b) {
+    const la = _w(a), lb = _w(b); if (la === lb) return true;
+    if (this.arts[la] === lb || this.arts[lb] === la) return true;
+    if (this.irregular.some(([m, f]) => (la === m && lb === f) || (la === f && lb === m))) return true;
+    if (lb === la + 'in' || la === lb + 'in') return true;           // Lehrer/Lehrerin
+    if (lb === la + 'innen' || la === lb + 'innen') return true;     // Lehrer/Lehrerinnen (pl.)
+    return false;
+  },
+
+  bothGendersPresent(lemma, text) {
+    return reWord(lemma).test(text) && reWord(lemma + 'in').test(text);
+  },
+
+  retainedAdjMismatch() { return null; },   // adj concordance (strong/weak/mixed) out of scope for the stress-test slice.
+};
+
+export const GENDER = { es, de };

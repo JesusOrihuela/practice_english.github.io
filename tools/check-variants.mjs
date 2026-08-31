@@ -33,6 +33,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { GENDER } from './gender-detectors.mjs';   // per-target-language gender detection (perfil-driven)
+import AppVariantDims from '../shared/js/variant-dimensions.js';   // the open dimension registry (inflectional dims are data-driven)
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAIRS_DIR = path.join(ROOT, 'shared/json/pairs');
@@ -173,15 +174,25 @@ const expandContractions = (t) => t.replace(/\bal\b/gi, 'a el').replace(/\bdel\b
 // detector (GENDER[lang]); the inflection test is the language's own (G.isGenderInfl).
 function concordMismatch(textA, textB, dim, G) {
   const wa = expandContractions(textA).split(/\s+/).filter(Boolean), wb = expandContractions(textB).split(/\s+/).filter(Boolean);
+  // Structural invariant for EVERY inflectional dimension: the two forms must have the same word
+  // count — they may differ only by inflection, never by adding/removing words.
   if (wa.length !== wb.length)
     return `las formas ${dim} difieren en nº de palabras (${wa.length}≠${wb.length}) — deben diferir solo por flexión`;
-  for (let i = 0; i < wa.length; i++) {
-    if (_w(wa[i]) === _w(wb[i])) continue;
-    if (!G.isGenderInfl(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
+  // Deep per-word check only where the target ships a morphology detector for the dimension: gender
+  // is verified via the language's own detector; number/case rely on the structural invariant above
+  // until their morphology detectors are added (a future increment — see docs/LANGUAGE-PROFILES.md).
+  if (dim === 'gender' && G) {
+    for (let i = 0; i < wa.length; i++) {
+      if (_w(wa[i]) === _w(wb[i])) continue;
+      if (!G.isGenderInfl(wa[i], wb[i])) return `"${wa[i]}" / "${wb[i]}" no es una flexión de ${dim} (¿palabra sin concordar?)`;
+    }
   }
   return null;
 }
-const _inflDims = ['gender'];   // the inflectional dimensions in use (number is not a content dimension)
+// Inflectional variant dimensions the registry declares for a target language (data-driven → number,
+// case, … join automatically without editing this tool). Concordancia applies to two forms differing
+// in exactly one of these.
+const inflDimsFor = (lang) => AppVariantDims.keys().filter(d => AppVariantDims.kind(d) === 'inflectional' && AppVariantDims.appliesTo(d, lang));
 // The single dimension in which two label sets differ, or null if not exactly one.
 function soleDiffDim(la, lb) {
   const keys = new Set([...Object.keys(la || {}), ...Object.keys(lb || {})]);
@@ -195,9 +206,12 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
   const dir = path.join(PAIRS_DIR, pair);
   if (!fs.statSync(dir).isDirectory()) continue;
   const lang = pair.split('-')[1];
-  const lex = LEXICON[lang];
+  const lex = LEXICON[lang] || [];   // region lexicon (empty for a language with no region splits yet)
   const G = GENDER[lang];   // the target language's gender detector (undefined ⇒ no grammatical gender)
-  if (!lex) continue;
+  // Process the language if there is ANYTHING to check: region splits, a gender detector, or any
+  // inflectional dimension (gender/number/case…) the registry declares for it. Don't skip a gendered
+  // or case/number language just because it has no region lexicon yet.
+  if (!lex.length && !G && !inflDimsFor(lang).length) continue;
   for (const f of fs.readdirSync(dir)) {
     if (!f.endsWith('.json') || ['grammar-rules.json', 'placement.json', 'topics.json'].includes(f)) continue;
     let data;
@@ -240,10 +254,10 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       //     (gender/number) must differ ONLY by recognised inflection (art+noun+adj+verb agree).
       for (let a = 0; a < forms.length; a++) for (let b = a + 1; b < forms.length; b++) {
         const dim = soleDiffDim(forms[a].labels, forms[b].labels);
-        if (dim && _inflDims.includes(dim) && G) {
+        if (dim && inflDimsFor(lang).includes(dim)) {
           const m = concordMismatch(forms[a].text || '', forms[b].text || '', dim, G);
           if (m) findings.push({ ...base, type: 'concord', detail: m });
-          else if (dim === 'gender') {          // also catch a retained wrong-gender adjective
+          else if (dim === 'gender' && G) {          // also catch a retained wrong-gender adjective
             const fa = forms[a].labels || {}, fb = forms[b].labels || {};
             const masc = fa.gender === 'masculino' ? forms[a].text : fb.gender === 'masculino' ? forms[b].text : null;
             const fem = fa.gender === 'femenino' ? forms[a].text : fb.gender === 'femenino' ? forms[b].text : null;
@@ -262,9 +276,9 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
 // y que se identifiquen" is enforced, not only phrases.
 const VOCAB_BASE = path.join(ROOT, 'shared/json/vocab');
 for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])) {
-  const lex = LEXICON[lang];
+  const lex = LEXICON[lang] || [];   // region lexicon (empty for a language with no region splits yet)
   const G = GENDER[lang];   // the target language's gender detector (undefined ⇒ no grammatical gender)
-  if (!lex) continue;
+  if (!lex.length && !G && !inflDimsFor(lang).length) continue;   // process gendered/case/number langs too
   const vdir = path.join(VOCAB_BASE, lang);
   if (!fs.statSync(vdir).isDirectory()) continue;
   for (const f of fs.readdirSync(vdir)) {

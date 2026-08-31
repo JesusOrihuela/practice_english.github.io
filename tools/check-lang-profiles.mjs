@@ -60,7 +60,13 @@ for (const code of targets) {
   if (!p.frequency || !p.frequency.list)  fail(`${label} — frequency.list is required (which pedagogical list governs the coverage gate)`);
   if (!p.tts || !p.tts.engine)            fail(`${label} — tts.engine is required (audio generator: 'kokoro' | 'edge')`);
   // Coverage must gate this language IN CI → it needs a COMMITTED frequency index + floor.
-  if (!p.frequency || !p.frequency.gateIndex) {
+  // EXCEPTION: a stress-test pair (frequency.stressTest:true) is intentionally minimal and
+  // NOT shippable → exempt from the coverage gate, so it needs no committed top-1000 index
+  // (only a gateFloor, typically 0). Promoting it to a real pair means dropping the flag and
+  // committing the index. coverage.mjs honors the same flag.
+  if (p.frequency && p.frequency.stressTest) {
+    /* exempt from the coverage gate — no committed frequency index required */
+  } else if (!p.frequency || !p.frequency.gateIndex) {
     fail(`${label} — frequency.gateIndex is required (committed index for the CI coverage gate)`);
   } else if (!fs.existsSync(path.join(ROOT, 'tools/sources/derived', p.frequency.gateIndex))) {
     fail(`${label} — frequency.gateIndex "${p.frequency.gateIndex}" is not committed in tools/sources/derived/ — coverage can't gate ${code} in CI`);

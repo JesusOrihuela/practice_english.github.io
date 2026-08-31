@@ -105,6 +105,14 @@ const DETECTORS = {
     ellipsis_substitution: /\b(so (do|does|did|am|is|are|was|were|have|has|had|will|can|could|would) (I|we|they|he|she|it)|neither (do|does|did|am|is|are|can|will) (I|we|they|he|she)|me too|me neither)\b/i,
     discourse_markers_advanced: /\b(however|therefore|nevertheless|furthermore|moreover|consequently|in addition|on the other hand|as a result|in contrast|thus)\b/i,
   },
+
+  // ── German target (en-de) — STRESS-TEST, minimal ──────────────
+  // One rule for the pipeline test: the accusative case marked on the masculine article.
+  // "den"/"einen"/"keinen" appear ONLY in the accusative (nominative is der/ein/kein), so they
+  // are a clean, unambiguous accusative signal. German letters incl. umlauts/ß in the boundaries.
+  de: {
+    akkusativ_articles: /(?<![A-Za-zÄÖÜäöüß])(den|einen|keinen)(?![A-Za-zÄÖÜäöüß])/i,
+  },
 };
 
 export { DETECTORS };

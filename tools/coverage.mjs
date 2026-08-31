@@ -315,10 +315,15 @@ if (args.includes('--gate-missing')) {
 // language (frequency.gateFloor), overridable with --min.
 if (GATE) {
   // Target languages to gate: the pair's target (if --pair), else all present — derived.
-  const scope = PAIR_ARG ? [PAIR_ARG.split('-')[1]]
+  const allScope = PAIR_ARG ? [PAIR_ARG.split('-')[1]]
               : [...new Set(discoverPairs().map(p => p.split('-')[1]))];
+  // STRESS-TEST languages (frequency.stressTest) are intentionally minimal / non-shippable →
+  // exempt from the coverage gate (they carry no committed top-1000 index). Reported, not gated.
+  const scope = allScope.filter(lang => !AppLangProfiles.get(lang)?.frequency?.stressTest);
+  const exempt = allScope.filter(lang => AppLangProfiles.get(lang)?.frequency?.stressTest);
   const minOverride = argVal('--min') != null;
   console.log(`\n=== GATE — cobertura del top-1000 en AMBOS canales (frases y vocab), piso por idioma ===`);
+  for (const lang of exempt) console.log(`  • ${lang}: exento (par stress-test, no-shippable) — sin gate de cobertura`);
   let failed = false;
   for (const lang of scope) {
     // Enforcement: every gated language MUST declare a committed index. Missing tables

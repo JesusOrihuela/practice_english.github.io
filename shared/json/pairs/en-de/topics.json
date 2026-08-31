@@ -1,0 +1,6 @@
+{
+  "topics": [
+    { "id": "survival", "label": "Sobrevivir", "labelEn": "Language Survival", "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 1 },
+    { "id": "family",   "label": "Familia",    "labelEn": "Family",            "emoji": "👪", "phrase": false, "vocab": true,  "level": "A1", "order": 2, "vocabOrder": 0 }
+  ]
+}
