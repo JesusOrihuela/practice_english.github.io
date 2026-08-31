@@ -17,6 +17,22 @@
       ]
     },
     {
+      "id": "frau",
+      "term": "die Frau / die Frauen",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein erwachsener weiblicher Mensch.",
+      "example": "Die Frau arbeitet im Büro.",
+      "translations": { "en": "woman" },
+      "gloss": { "en": "An adult female human being." },
+      "gloss_example": { "en": "The woman works in the office." },
+      "variants": [
+        { "text": "die Frau", "labels": { "number": "singular" }, "audioSlug": "die_frau" },
+        { "text": "die Frauen", "labels": { "number": "plural" }, "audioSlug": "die_frauen" }
+      ]
+    },
+    {
       "id": "mann",
       "term": "der Mann / den Mann",
       "level": "A1",
@@ -30,6 +46,22 @@
       "variants": [
         { "text": "der Mann", "labels": { "case": "nominativ" }, "audioSlug": "der_mann" },
         { "text": "den Mann", "labels": { "case": "akkusativ" }, "audioSlug": "den_mann" }
+      ]
+    },
+    {
+      "id": "vater",
+      "term": "der Vater / den Vater",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Ein männlicher Elternteil.",
+      "example": "Der Vater liest ein Buch.",
+      "translations": { "en": "father" },
+      "gloss": { "en": "A male parent." },
+      "gloss_example": { "en": "The father reads a book." },
+      "variants": [
+        { "text": "der Vater", "labels": { "case": "nominativ" }, "audioSlug": "der_vater" },
+        { "text": "den Vater", "labels": { "case": "akkusativ" }, "audioSlug": "den_vater" }
       ]
     }
   ]
