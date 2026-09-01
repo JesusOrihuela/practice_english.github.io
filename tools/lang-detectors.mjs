@@ -116,6 +116,16 @@ const DETECTORS = {
     separable_verbs: /(?<![A-Za-zÄÖÜäöüß])(auf|an|ein|mit|vor|zu|ab|aus|nach|her|hin|weg|los|zurück|zusammen)\s*[.!?]*\s*$/i,
     gender_articles: null,   // der/die/das are ubiquitous → no reliable regex; hand-curated (kept, no evidence)
   },
+
+  // ── Finnish target (en-fi) — STRESS-TEST, minimal ─────────────
+  // The partitive is the one rule. It has NO reliable regex: its endings (-a/-ä, -ta/-tä, -tta/-ttä)
+  // collide massively with nominatives (talo, kala) and other cases, so a detector would mis-tag.
+  // Like German gender_articles it maps to null → hand-curated; the rule teaches from its own
+  // self-contained context/examples, not from phrase evidence. (Finnish letters incl. ä/ö in a
+  // future detector's boundaries.)
+  fi: {
+    partitive: null,
+  },
 };
 
 export { DETECTORS };

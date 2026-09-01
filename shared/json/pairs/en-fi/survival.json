@@ -1,0 +1,60 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Excuse me, do you speak English?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Anteeksi, puhutko englantia?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "anteeksi_puhutko_englantia"
+        },
+        {
+          "text": "Anteeksi, puhutteko englantia?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "anteeksi_puhutteko_englantia"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Can you help me?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voitko auttaa minua?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "voitko_auttaa_minua"
+        },
+        {
+          "text": "Voitteko auttaa minua?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "voitteko_auttaa_minua"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "I don't understand.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En ymmärrä.",
+          "audioSlug": "en_ymmarra"
+        }
+      ]
+    }
+  ]
+}

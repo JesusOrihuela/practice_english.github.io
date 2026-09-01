@@ -1,0 +1,76 @@
+{
+  "words": [
+    {
+      "id": "talo",
+      "term": "talo",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Rakennus, jossa ihmiset asuvat.",
+      "example": "Talo on iso.",
+      "translations": { "en": "house" },
+      "gloss": { "en": "A building where people live." },
+      "gloss_example": { "en": "The house is big." },
+      "variants": [
+        { "text": "talo",    "labels": { "case": "nominatiivi" }, "audioSlug": "talo" },
+        { "text": "talon",   "labels": { "case": "genetiivi" },   "audioSlug": "talon" },
+        { "text": "taloa",   "labels": { "case": "partitiivi" },  "audioSlug": "taloa" },
+        { "text": "talossa", "labels": { "case": "inessiivi" },   "audioSlug": "talossa" }
+      ]
+    },
+    {
+      "id": "kaupunki",
+      "term": "kaupunki",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Iso paikka, jossa asuu paljon ihmisiä.",
+      "example": "Helsinki on iso kaupunki.",
+      "translations": { "en": "city" },
+      "gloss": { "en": "A large place where many people live." },
+      "gloss_example": { "en": "Helsinki is a big city." },
+      "variants": [
+        { "text": "kaupunki",    "labels": { "case": "nominatiivi" }, "audioSlug": "kaupunki" },
+        { "text": "kaupungin",   "labels": { "case": "genetiivi" },   "audioSlug": "kaupungin" },
+        { "text": "kaupunkia",   "labels": { "case": "partitiivi" },  "audioSlug": "kaupunkia" },
+        { "text": "kaupungissa", "labels": { "case": "inessiivi" },   "audioSlug": "kaupungissa" }
+      ]
+    },
+    {
+      "id": "kyla",
+      "term": "kylä",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Pieni paikka maalla, jossa asuu vähän ihmisiä.",
+      "example": "Kylä on hyvin pieni.",
+      "translations": { "en": "village" },
+      "gloss": { "en": "A small country place where few people live." },
+      "gloss_example": { "en": "The village is very small." },
+      "variants": [
+        { "text": "kylä",    "labels": { "case": "nominatiivi" }, "audioSlug": "kyla" },
+        { "text": "kylän",   "labels": { "case": "genetiivi" },   "audioSlug": "kylan" },
+        { "text": "kylää",   "labels": { "case": "partitiivi" },  "audioSlug": "kylaa" },
+        { "text": "kylässä", "labels": { "case": "inessiivi" },   "audioSlug": "kylassa" }
+      ]
+    },
+    {
+      "id": "jarvi",
+      "term": "järvi",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Iso vesialue maalla.",
+      "example": "Järvi on syvä ja kylmä.",
+      "translations": { "en": "lake" },
+      "gloss": { "en": "A large area of water on land." },
+      "gloss_example": { "en": "The lake is deep and cold." },
+      "variants": [
+        { "text": "järvi",    "labels": { "case": "nominatiivi" }, "audioSlug": "jarvi" },
+        { "text": "järven",   "labels": { "case": "genetiivi" },   "audioSlug": "jarven" },
+        { "text": "järveä",   "labels": { "case": "partitiivi" },  "audioSlug": "jarvea" },
+        { "text": "järvessä", "labels": { "case": "inessiivi" },   "audioSlug": "jarvessa" }
+      ]
+    }
+  ]
+}

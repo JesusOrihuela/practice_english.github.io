@@ -1,0 +1,90 @@
+{
+  "categories": [
+    {
+      "id": "cases",
+      "label_en": "Grammatical Cases",
+      "label_es": "Casos gramaticales",
+      "emoji": "🎯",
+      "color": "#2563EB"
+    }
+  ],
+  "rules": [
+    {
+      "id": "partitive",
+      "category": "cases",
+      "level": "A2",
+      "title": "The Partitive Case",
+      "title_en": "The Partitive Case",
+      "title_es": "El caso partitivo",
+      "explanation": "Finnish marks an object that is **partial, uncountable or unbounded** — and any object after a **negation** — with the **partitive** case. The ending is **-a / -ä**, **-ta / -tä** or **-tta / -ttä**, and the choice between **a** and **ä** follows **vowel harmony**: back-vowel words take **-a** (talo → talo**a**), front-vowel words take **-ä** (kylä → kylä**ä**). Compare the whole and the part: **Juon vettä** (I drink [some] water) sees the object as unbounded, so 'vesi' becomes 'vettä'.",
+      "context_dialogue": [
+        {
+          "speaker": "ANNA",
+          "text": "Mitä sinä juot?",
+          "highlight": false
+        },
+        {
+          "speaker": "BEN",
+          "text": "Juon **vettä**.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANNA",
+          "text": "Puhutko **englantia**?",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Puhun vähän **suomea**.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        {
+          "q": "In 'Juon vettä', which word is the object in the partitive?",
+          "placeholder": "e.g. vettä..."
+        },
+        {
+          "q": "'talo' has back vowels. Does its partitive take -a or -ä?",
+          "placeholder": "e.g. -a / -ä..."
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Juon vettä.",
+          "question": "Why is 'vettä' in the partitive?",
+          "options": [
+            "The object is an unbounded, uncountable amount (some water)",
+            "It is the subject of the sentence",
+            "It is plural",
+            "It shows possession"
+          ],
+          "correct": 0,
+          "feedback": "An unbounded or partial object (some water) takes the partitive, so 'vesi' becomes 'vettä'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Puhun ___. (englanti = English)",
+          "answer": "englantia",
+          "accepted": [
+            "englantia"
+          ],
+          "feedback_why": "The object of 'puhua' is unbounded, so 'englanti' takes the partitive '-a' (back-vowel harmony).",
+          "contrast": ""
+        },
+        {
+          "sentence": "Juon ___. (vesi = water)",
+          "answer": "vettä",
+          "accepted": [
+            "vettä"
+          ],
+          "feedback_why": "'vesi' is an uncountable object here, so it takes the partitive 'vettä' (front-vowel harmony).",
+          "contrast": ""
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

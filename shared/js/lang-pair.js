@@ -46,6 +46,18 @@ const AppLangPair = (() => {
       ttsVoices:   ['df_hedda', 'dm_conrad'],
       sttLanguage: 'german',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): the opposite pole to en-de — a target with NO
+      // grammatical gender and an extreme case system (partitive + local cases), vowel harmony and
+      // agglutination. Also the first pair whose target is ONE flag (Finland), proving langFlags()
+      // never assumes exactly two.
+      id:          'en-fi',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
+      target:      { code: 'fi', flags: ['fi'],       name: 'Suomi',   localName: 'suomi'   },
+      label:       'English → Suomi',
+      ttsVoices:   ['fif_noora', 'fim_harri'],
+      sttLanguage: 'finnish',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

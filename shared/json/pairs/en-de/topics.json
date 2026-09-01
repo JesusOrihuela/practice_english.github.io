@@ -1,6 +1,12 @@
 {
   "topics": [
-    { "id": "survival", "label": "Sobrevivir", "labelEn": "Language Survival", "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 1 },
-    { "id": "family",   "label": "Familia",    "labelEn": "Family",            "emoji": "👪", "phrase": false, "vocab": true,  "level": "A1", "order": 2, "vocabOrder": 0 }
+    { "id": "survival",      "label": "Sobrevivir",     "labelEn": "Language Survival", "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 1 },
+    { "id": "personal_info", "label": "Información Personal", "labelEn": "Personal Information", "emoji": "🪪", "phrase": true, "vocab": false, "level": "A1", "order": 2 },
+    { "id": "family",        "label": "Familia",        "labelEn": "Family",            "emoji": "👪", "phrase": true,  "vocab": true,  "level": "A1", "order": 3, "vocabOrder": 0 },
+    { "id": "calendario",    "label": "La Hora y la Fecha", "labelEn": "Time & Date",    "emoji": "🗓️", "phrase": true, "vocab": false, "level": "A1", "order": 4 },
+    { "id": "descripciones", "label": "Descripciones",   "labelEn": "Descriptions",      "emoji": "🔍", "phrase": true,  "vocab": false, "level": "A1", "order": 5 },
+    { "id": "daily_routine", "label": "Rutina Diaria",   "labelEn": "Daily Routine",     "emoji": "🕐", "phrase": true,  "vocab": false, "level": "A2", "order": 6 },
+    { "id": "technology",    "label": "Tecnología",      "labelEn": "Technology",        "emoji": "💻", "phrase": true,  "vocab": false, "level": "A2", "order": 7 },
+    { "id": "economia",      "label": "Economía",        "labelEn": "Economy",           "emoji": "💰", "phrase": true,  "vocab": false, "level": "B2", "order": 8 }
   ]
 }

@@ -333,7 +333,71 @@
     },
   };
 
-  const PROFILES = { en, es, de };
+  // ── Finnish (fi) — STRESS-TEST target (en-fi), intentionally minimal/non-shippable ──
+  // The OPPOSITE pole to German: NO grammatical gender (the gender-variant path must cleanly
+  // skip), and an extreme case system (15 cases; the pair exercises a minimal slice incl. the
+  // partitive) with vowel harmony (ä/ö) and agglutination (case endings stack onto the stem).
+  const fi = {
+    name: 'Finnish',
+    grammaticalGender: false,   // Finnish has NO grammatical gender → gender-variant enrichment must skip cleanly.
+    voices: ['fif_noora', 'fim_harri'],   // edge-tts fi-FI voices (see generate-audio-tgt.py).
+    tts: { engine: 'edge' },
+    // ä and ö are distinct front vowels (not accented a/o — talo≠tälö, and vowel harmony depends on
+    // them), and å is a letter of the Finnish alphabet (Swedish loans): preserve all three so
+    // answer-checking stays strict, exactly like Spanish keeps ñ and German keeps äöüß.
+    foldPreserve: 'äöå',
+    nativeChars: 'äöå',
+    // Cloze must blank a CONTENT word, never these closed-class Finnish words.
+    clozeStopWords: [
+      'minä', 'sinä', 'hän', 'me', 'te', 'he', 'se', 'ne', 'tämä', 'tuo', 'nämä', 'nuo',
+      'minua', 'sinua', 'häntä', 'meitä', 'teitä', 'heitä', 'sitä', 'niitä',
+      'minun', 'sinun', 'hänen', 'meidän', 'teidän', 'heidän', 'sen',
+      'ja', 'tai', 'sekä', 'mutta', 'vaan', 'että', 'jotta', 'koska', 'kun', 'jos', 'vaikka', 'kuin', 'eli', 'sillä',
+      'ei', 'en', 'et', 'emme', 'ette', 'eivät',
+      'on', 'ovat', 'olen', 'olet', 'olemme', 'olette', 'oli', 'ollut',
+      'myös', 'vain', 'jo', 'vielä', 'nyt', 'sitten', 'aina', 'kyllä', 'ehkä',
+      // wh-words — blanking these yields trivial gaps
+      'mikä', 'mitä', 'kuka', 'ketä', 'missä', 'mistä', 'mihin', 'milloin', 'miksi', 'miten', 'kuinka', 'kumpi',
+    ],
+    // Closed-class Finnish words excluded from the VOCAB coverage denominator.
+    functionWords: [
+      // pronominit (persoona / demonstratiivi / relatiivi / interrogatiivi)
+      'minä', 'sinä', 'hän', 'me', 'te', 'he', 'se', 'ne', 'tämä', 'tuo', 'nämä', 'nuo', 'joka', 'mikä', 'kuka', 'itse',
+      'minua', 'sinua', 'häntä', 'meitä', 'teitä', 'heitä', 'sitä', 'niitä',
+      'minun', 'sinun', 'hänen', 'meidän', 'teidän', 'heidän', 'sen', 'niiden',
+      'minulla', 'sinulla', 'hänellä', 'meillä', 'teillä', 'heillä',
+      'ketä', 'kenen', 'kumpi', 'jokin', 'joku', 'kaikki', 'moni', 'muu', 'sama', 'toinen',
+      // konjunktiot
+      'ja', 'tai', 'sekä', 'mutta', 'vaan', 'että', 'jotta', 'koska', 'kun', 'jos', 'vaikka', 'kuin', 'eli', 'sillä', 'joko', 'sekä',
+      // kieltoverbi + olla
+      'ei', 'en', 'et', 'emme', 'ette', 'eivät', 'älä', 'älkää',
+      'on', 'ovat', 'olen', 'olet', 'olemme', 'olette', 'oli', 'olivat', 'ollut', 'olla',
+      // adpositiot / partikkelit / adverbit
+      'kanssa', 'jälkeen', 'edessä', 'takana', 'alla', 'päällä', 'vieressä', 'luona', 'ilman', 'varten',
+      'myös', 'vain', 'jo', 'vielä', 'nyt', 'sitten', 'aina', 'usein', 'joskus', 'koskaan', 'kyllä', 'ehkä', 'niin', 'näin',
+      // interrogatiivit
+      'mikä', 'mitä', 'missä', 'mistä', 'mihin', 'milloin', 'miksi', 'miten', 'kuinka',
+    ],
+    ignoreTokens: ['öö', 'hmm', 'aha', 'no', 'niin', 'tuota'],
+    // Authored Finnish tip → Finnish rule id (only ruleIds that exist in en-fi/grammar-rules.json).
+    grammarTipLabels: [
+      [/partitiiv|partitive|osaobjekt/i, 'Partitiivi', 'partitive'],
+    ],
+    frequency: {
+      list: 'Kotus / YKI (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until promoted to a real, coverage-complete pair.
+      stressTest: true,
+      note: 'Kotimaisten kielten keskus (Kotus) reference grammar + YKI (National Certificate of ' +
+            'Language Proficiency) A1/A2 word stock. The committeable top-1000 index is built when ' +
+            'this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de, fi };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.

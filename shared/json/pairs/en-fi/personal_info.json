@@ -1,0 +1,28 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Olen opiskelija.",
+          "audioSlug": "olen_opiskelija"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_live_in_the_city",
+      "source": "I live in the city.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Asun kaupungissa.",
+          "audioSlug": "asun_kaupungissa"
+        }
+      ]
+    }
+  ]
+}

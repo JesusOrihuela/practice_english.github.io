@@ -261,7 +261,8 @@ const AppFeedback = (() => {
     gender:   { femenino: 'alt_note_gender_f', masculino: 'alt_note_gender_m', neutro: 'alt_note_gender_n' },
     register: { formal: 'alt_note_register_f', informal: 'alt_note_register_i' },
     number:   { singular: 'alt_note_number_s', plural: 'alt_note_number_p' },
-    case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen' },
+    case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen',
+                nominatiivi: 'alt_note_case_nom', partitiivi: 'alt_note_case_part', genetiivi: 'alt_note_case_gen', inessiivi: 'alt_note_case_iness' },
   };
   const _DIM_KEY = { loanword: 'alt_note_loanword', synonym: 'alt_note_synonym' };
   const _SYM = {

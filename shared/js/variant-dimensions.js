@@ -43,9 +43,16 @@
     // das Kind ist → die Kinder sind). Added data-only for the en-de stress-test pair.
     number:   { kind: 'inflectional', values: ['singular', 'plural'],          priority: 3, badge: 'pill',   appliesTo: ['de'],
                 agreement: ['artikel', 'nomen', 'adjektiv', 'verb'] },
-    // CASE (grammatical case) — inflectional axis German marks on the article/adjective (der→den in
-    // the accusative). A NEW dimension proving the registry is open: no consumer hardcodes it.
-    case:     { kind: 'inflectional', values: ['nominativ', 'akkusativ', 'dativ', 'genitiv'], priority: 4, badge: 'pill', appliesTo: ['de'],
+    // CASE (grammatical case) — inflectional axis a language marks on the noun/article/adjective.
+    // Value names are LANGUAGE-SPECIFIC (German der→den accusative; Finnish talo→talossa inessive),
+    // so the closed set is the UNION of the case systems in use — German's 4 + Finnish's (a minimal
+    // slice of its 15: nominative, partitive, genitive, inessive). appliesTo gates which language may
+    // use the dimension at all; the union of values is harmless because no pair authors another
+    // language's case names. A NEW dimension proving the registry is open: no consumer hardcodes it.
+    case:     { kind: 'inflectional',
+                values: ['nominativ', 'akkusativ', 'dativ', 'genitiv',
+                         'nominatiivi', 'partitiivi', 'genetiivi', 'inessiivi'],
+                priority: 4, badge: 'pill', appliesTo: ['de', 'fi'],
                 agreement: ['artikel', 'adjektiv', 'pronomen'] },
     register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 5, badge: 'pill',   appliesTo: '*' },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it

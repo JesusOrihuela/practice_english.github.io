@@ -106,6 +106,16 @@ These are the authoring rules that recur for every language. Some are gated (det
 the rest are author judgment — apply them by hand. The full prose lives in `CLAUDE.md`; this is
 the checklist so nothing is tribal when a new pair is added.
 
+- **Genuine categorization over filling a bucket.** Every phrase/word goes in the category its
+  MEANING belongs to, never the one that's convenient to demonstrate a feature. A category with a
+  SINGLE phrase or word is valid and preferred over piling unrelated items into one (`en-de` first
+  shipped 11 phrases in `survival`; only 4 were survival — the rest were split into `personal_info`,
+  `family`, `descripciones`, `daily_routine`, `calendario`, `technology`, `economia`, one phrase
+  each). Categories reuse existing topic ids so their shared images/`_ID_MAP` wiring already exist.
+  Recategorizing a phrase = move it to the correct `<topic>.json`, rename its id to the `<topic>_`
+  prefix, AND move its `shared/audio/<pair>/<topic>/` wav files (the audioSlug is unchanged, so no
+  regen). Then `grammar-topics --write` + `fix-phrase-ids` pick it up.
+
 ### Gated automatically (no thought needed — CI enforces)
 - Em dash / colon / semicolon ban; terminal punctuation; word-count by CEFR (Rule 5/6/17).
 - Duplicate IDs; duplicate practiced phrases; `_ID_MAP` freshness; taxonomy/scope.
@@ -327,10 +337,30 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
   back and next), never on its own line — an own line adds a gap slot and desyncs the card→button
   distance from the other phases. On RE-ENTRY (skip to practice), still build the earlier phases so
   the step-back button reveals them populated, not empty.
-- **TTS voice availability**: edge-tts retires voices (de's `BerndNeural` was gone → use `ConradNeural`).
-  The generator prints `ERR … No audio was received` per missing voice — never assume "0 errors" without
-  reading the run. Keep `lang-profiles.voices`, `lang-pair.ttsVoices`, and the generator's voice map in
-  sync (same slug ids). `check-audio` then validates the files exist.
+- **TTS voice availability**: edge-tts retires voices (de's `BerndNeural`, then fi's `SelmaNeural`, both
+  gone → `ConradNeural` / `NooraNeural`). The failure is silent-ish: the generator prints `ERR … No audio
+  was received` per missing voice and still says `Done`, so **never trust the summary without reading the
+  ERR lines** (a whole voice can fail while its pair partner succeeds — half the files written). Confirm
+  the current list with `edge-tts --list-voices | grep <locale>` BEFORE authoring, then keep
+  `lang-profiles.voices`, `lang-pair.ttsVoices`, `audit.LANG_VOICE_LEADERS`, and BOTH generators'
+  voice maps (`generate-audio-tgt.py`, `generate-audio.mjs`) in sync (same slug ids). `check-audio` then
+  validates the files exist.
+- **Article-less language → `term` = the lemma, not a slash list.** The vocab audio generator emits a
+  `{wordId}` file speaking the whole `term` PLUS a `{audioSlug}` file per variant. German dodges a
+  collision because its slash term carries articles (`der Mann`≠bare `mann`). A language with no articles
+  (Finnish `talo`) would collide the id-file with the nominative-variant slug. Use the **dictionary lemma**
+  (nominative singular) as `term` and put the inflected forms in `variants[]` — then the id-file and the
+  nominative-variant file are the SAME text (harmless), and the case chips still rotate. (Finnish lemma =
+  nominative singular anyway, so this is also the linguistically correct citation form.)
+- **A target with NO grammatical gender** (`grammaticalGender:false`, e.g. Finnish): the gender dimension
+  must NOT be in `case`/gender `appliesTo` for it, and `validateLabels({gender…}, lang)` returns
+  `not-applicable` — the gender-variant path skips cleanly. Do not author gender variants; a role noun
+  like "student" is ONE form (`Olen opiskelija`), unlike German `Student/Studentin`.
+- **Case values are language-specific.** `case` is one shared dimension but German's 4 and Finnish's
+  (a slice of its 15: `nominatiivi/partitiivi/genetiivi/inessiivi`) are DIFFERENT value strings; the
+  registry's closed set is their UNION, gated per language by `appliesTo`. Add a badge i18n key
+  (`alt_note_case_*` in `lang/ui.js`) + a `feedback._VAL_KEY.case` mapping for each new value, in the
+  learner's SOURCE language.
 - **`SLUG_MAX` (100)** truncates+hashes long slugs — but the phrase char limit (Rule 5) is also 100, so
   natural content rarely triggers it; a single long German compound in a normal sentence stays well
   under. It's enforced by `check-content`; don't author an over-limit phrase just to exercise it.

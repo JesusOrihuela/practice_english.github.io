@@ -1,0 +1,26 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ich bin Student.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ich_bin_student"
+        },
+        {
+          "text": "Ich bin Studentin.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ich_bin_studentin"
+        }
+      ]
+    }
+  ]
+}

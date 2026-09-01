@@ -85,7 +85,7 @@ const LANG_VOICE_LEADERS = {
   sv: 'svf_sofie',
   no: 'nof_pernille',
   da: 'daf_christel',
-  fi: 'fif_selma',
+  fi: 'fif_noora',
   cs: 'csf_vlasta',
   lv: 'lvf_everita',
   lt: 'ltf_ona',
@@ -146,6 +146,13 @@ const CONTENT_RULES = {
     label: 'German',
     anglicisms: [],      // German accepts many loanwords (Computer, Internet, E-Mail); none flagged in the minimal stress-test set.
     regionalTerms: [],   // DE/AT/CH regional splits live in target[] with labels.region, not flagged as errors here.
+    grammarChecks: null,
+  },
+
+  fi: {
+    label: 'Finnish',
+    anglicisms: [],      // Finnish borrows freely in speech; none flagged in the minimal stress-test set.
+    regionalTerms: [],   // no regional split authored for the stress-test pair.
     grammarChecks: null,
   },
 
