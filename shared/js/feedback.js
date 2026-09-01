@@ -271,27 +271,30 @@ const AppFeedback = (() => {
   // value where the axis is a two/three-way choice (gender, register). A NEW dimension that wants an
   // icon adds an entry here keyed by its registry id; without one the tag simply shows text only, so
   // the registry stays open. viewBox 0 0 16 16, sized to the pill's font via .variant-ico (CSS).
-  const _svg = (inner) =>
+  // `color` tints the whole glyph (stroke + any currentColor fill) with a semantic hue that reads on
+  // both light and dark badge grounds; omit it to inherit the muted text color.
+  const _svg = (inner, color) =>
     '<svg class="variant-ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" ' +
-    'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"' +
+    (color ? ' style="color:' + color + '"' : '') + '>' +
     inner + '</svg>';
   // Geometry note: every glyph's visual bounding box is centered on y≈8 (roughly y3–y13) so the icon
   // sits vertically centered beside the label — a top-heavy glyph (e.g. a hat drawn high) reads as
   // "floating". Keep new icons balanced the same way.
   const _ICON = {
     gender: {
-      femenino:  _svg('<circle cx="8" cy="5.8" r="3"/><path d="M8 8.8V13.5M5.8 11.4h4.4"/>'),
-      masculino: _svg('<circle cx="7" cy="9.2" r="3"/><path d="M9.1 7.1 12.5 3.7M9.8 3.5H13V6.7"/>'),
-      neutro:    _svg('<circle cx="8" cy="6.5" r="3"/><path d="M8 9.5V13.5"/>'),
+      femenino:  _svg('<circle cx="8" cy="5.8" r="3"/><path d="M8 8.8V13.5M5.8 11.4h4.4"/>', '#DB2777'),
+      masculino: _svg('<circle cx="7" cy="9.2" r="3"/><path d="M9.1 7.1 12.5 3.7M9.8 3.5H13V6.7"/>', '#2563EB'),
+      neutro:    _svg('<circle cx="8" cy="6.5" r="3"/><path d="M8 9.5V13.5"/>', '#7C3AED'),
     },
     register: {
-      formal:   _svg('<path d="M5 11V6C5 5.4 5.5 5 6 5h4c.5 0 1 .4 1 1v5"/><path d="M2.7 11.3h10.6M5 9h6"/>'),
-      informal: _svg('<rect x="2.5" y="3.5" width="11" height="7" rx="2"/><path d="M6 10.5 5.2 13 8.4 10.5"/>'),
+      formal:   _svg('<path d="M5 11V6C5 5.4 5.5 5 6 5h4c.5 0 1 .4 1 1v5"/><path d="M2.7 11.3h10.6M5 9h6"/>', '#4F46E5'),
+      informal: _svg('<rect x="2.5" y="3.5" width="11" height="7" rx="2"/><path d="M6 10.5 5.2 13 8.4 10.5"/>', '#0D9488'),
     },
-    number:   _svg('<path d="M6 3.2 5 12.8M11 3.2 10 12.8M3.2 6.4h9.6M2.7 9.6h9.6"/>'),
-    case:     _svg('<circle cx="8" cy="8" r="5.3"/><circle cx="8" cy="8" r="2.7"/><circle cx="8" cy="8" r="0.7" fill="currentColor" stroke="none"/>'),
-    loanword: _svg('<circle cx="8" cy="8" r="5.3"/><path d="M2.7 8h10.6M8 2.7c2 1.9 2 8.7 0 10.6M8 2.7c-2 1.9-2 8.7 0 10.6"/>'),
-    synonym:  _svg('<path d="M4 6.6A4 4 0 0 1 11.4 5"/><path d="M11 2.4 11.6 5.3 8.7 4.9"/><path d="M12 9.4A4 4 0 0 1 4.6 11"/><path d="M5 13.6 4.4 10.7 7.3 11.1"/>'),
+    number:   _svg('<path d="M6 3.2 5 12.8M11 3.2 10 12.8M3.2 6.4h9.6M2.7 9.6h9.6"/>', '#D97706'),
+    case:     _svg('<circle cx="8" cy="8" r="5.3"/><circle cx="8" cy="8" r="2.7"/><circle cx="8" cy="8" r="0.7" fill="currentColor" stroke="none"/>', '#2563EB'),
+    loanword: _svg('<circle cx="8" cy="8" r="5.3"/><path d="M2.7 8h10.6M8 2.7c2 1.9 2 8.7 0 10.6M8 2.7c-2 1.9-2 8.7 0 10.6"/>', '#059669'),
+    synonym:  _svg('<path d="M4 6.6A4 4 0 0 1 11.4 5"/><path d="M11 2.4 11.6 5.3 8.7 4.9"/><path d="M12 9.4A4 4 0 0 1 4.6 11"/><path d="M5 13.6 4.4 10.7 7.3 11.1"/>', '#7C3AED'),
   };
   function _iconMarkup(dim, val) {
     const e = _ICON[dim];

@@ -171,7 +171,9 @@ const AppFlags = (() => {
     if (list.length === 2) return stack(list[0], list[1]);
     if (list.length >= 3)  return cluster(list);
     const wrap = document.createElement('span');
-    wrap.className = 'flag-stack';
+    // A lone flag must not inherit the 30×21 two-flag stack box (it would sit top-aligned and read as
+    // "floating high"); flag-stack--one shrink-wraps + centers it so the parent's align-items centers it.
+    wrap.className = 'flag-stack flag-stack--one';
     wrap.setAttribute('aria-hidden', 'true');
     if (list[0]) wrap.appendChild(flagImg(list[0], 'flag-single'));
     return wrap;

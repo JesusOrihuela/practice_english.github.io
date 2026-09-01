@@ -22,7 +22,7 @@ const AppLangPair = (() => {
   const PAIRS = [
     {
       id:          'es-en',
-      source:      { code: 'es', flags: ['es', 'mx'], name: 'Español', localName: 'español' },
+      source:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'español' },
       target:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'inglés'  },
       label:       'Español → English',
       ttsVoices:   ['af_heart', 'af_bella', 'bf_emma', 'am_michael'],
@@ -31,7 +31,7 @@ const AppLangPair = (() => {
     {
       id:          'en-es',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
-      target:      { code: 'es', flags: ['es', 'mx'], name: 'Español', localName: 'español' },
+      target:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'español' },
       label:       'English → Español',
       ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
       sttLanguage: 'spanish',

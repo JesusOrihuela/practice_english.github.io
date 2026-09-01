@@ -1263,6 +1263,17 @@ body.path-mode {
 
 .flag-single { width: 22px; height: auto; border-radius: 2px; display: block; }
 
+/* A single flag (1-flag language, e.g. Finnish): shrink-wrap the stack box and center the flag so it
+   sits vertically centered in the badge instead of top-aligned in the 30×21 two-flag box. */
+.flag-stack--one { width: auto; height: auto; display: inline-flex; align-items: center; }
+
+/* A 3+-flag language (e.g. Spanish es/mx/ar) renders as a cluster in the pair badge — give it and its
+   flags a size here (the region pill has its own, more specific, cluster rules). */
+.flag-cluster { display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0; }
+.flag-cluster .flag-img { width: 18px; height: auto; border-radius: 2px; display: block;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
+.flag-more { font-size: 0.62rem; font-weight: 700; color: var(--clr-text-muted); }
+
 /* ---- Related Phrases (Grammar Workshop completion) ---- */
 .related-phrases {
   margin-top: 20px;
