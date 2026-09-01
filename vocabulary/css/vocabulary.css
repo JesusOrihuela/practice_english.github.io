@@ -196,7 +196,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 9px;
+  padding: 3px 7px;
   border: none;
   background: none;
   border-radius: var(--radius-full, 999px);
@@ -204,7 +204,10 @@
   opacity: 0.4;
   transition: opacity var(--transition, .2s), background var(--transition, .2s);
 }
-.fc-def-side img { width: 22px; height: 15px; display: block; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,0.06); }
+/* Smaller flags in the compact toggle: scale the whole stack down (flags + overlap together),
+   and pull the layout box in so the pill hugs them instead of feeling cramped. */
+.fc-def-side .flag-stack { transform: scale(0.7); transform-origin: center; margin: -3px -5px; }
+.fc-def-side img { display: block; border-radius: 2px; }
 .fc-def-side:hover { opacity: 0.75; }
 .fc-def-side--active { opacity: 1; background: var(--clr-surface); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.12)); }
 

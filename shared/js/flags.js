@@ -166,30 +166,31 @@ const AppFlags = (() => {
    * 1 → a single flag, 2 → the overlapping stack (compact pair look), 3+ → a side-by-side cluster.
    * @param {string[]} codes — the language's flag codes (from PAIRS' source.flags / target.flags).
    */
-  // A language's flags as ONE overlapping stack, for ANY count (1, 2, 3+). Layers step right by DX and
-  // ZIGZAG vertically as a PEAK in the middle: the centre flag sits highest AND on top, the flags to
-  // each side step down and go behind it, and the trailing flag (e.g. Argentina in es/mx/ar) is hindmost.
-  // The wrap is sized to the cascade so the parent's align-items:center centers it as a unit.
+  // A language's flags as ONE overlapping DIAGONAL stack, for ANY count (1, 2, 3+). Layers step right
+  // by DX and ZIGZAG vertically (even layers high, odd layers low). The low (odd) layers sit in FRONT
+  // and the high (even) ones behind — so with es/mx/ar the middle flag (México) is superimposed LOW and
+  // on top, España behind it, and the trailing flag (Argentina) is hindmost. A 2-flag pair keeps the
+  // original look: back flag top-left, front flag offset down-right and on top. The wrap is sized to the
+  // cascade so the parent's align-items:center centers it as a unit. All layers render at ONE fixed box
+  // (.flag-layer object-fit) so flags of different aspect ratios (US 1.9:1 vs DE 1.5:1) look the same size.
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
     const n = list.length;
-    const DX = 12, DY = 7, FW = 22, FH = 15;   // layer step (x, peak y) + one flag's rendered size
-    const mid = (n - 1) / 2;
+    const DX = 8, DY = 5, FW = 22, FH = 14;   // layer step (x, zigzag y) + one flag's fixed box
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
     list.forEach(function (code, i) {
       var img = flagImg(code, 'flag-layer');
-      var dist = Math.abs(i - mid);                 // 0 at the centre, larger toward the ends
+      var low = i % 2;                              // odd layers dip down and sit in front
       img.style.left = (i * DX) + 'px';
-      img.style.top  = (dist * DY) + 'px';          // centre flag highest (y=0), ends step down
-      // Centre flag frontmost; ties (equal distance) resolve so a LATER flag goes further back.
-      img.style.zIndex = String(Math.round((mid - dist) * 100) - i + 100);
+      img.style.top  = (low ? DY : 0) + 'px';
+      img.style.zIndex = String((low ? 1000 : 0) - i + 500);   // low in front; later goes further back
       wrap.appendChild(img);
     });
     if (n) {
       wrap.style.width  = (FW + (n - 1) * DX) + 'px';
-      wrap.style.height = (FH + mid * DY) + 'px';
+      wrap.style.height = (FH + (n > 1 ? DY : 0)) + 'px';
     }
     return wrap;
   }

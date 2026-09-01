@@ -1267,7 +1267,8 @@ body.path-mode {
 .flag-layer {
   position: absolute;
   width: 22px;
-  height: auto;
+  height: 14px;              /* FIXED box (not height:auto) so flags of different aspect ratios */
+  object-fit: cover;         /* (US 1.9:1, GB 1.67:1, DE 1.5:1) all render the SAME size */
   border-radius: 2px;
   display: block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.3);
