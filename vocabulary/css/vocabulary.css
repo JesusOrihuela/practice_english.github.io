@@ -105,6 +105,20 @@
   flex-wrap: wrap;
   gap: 12px;
 }
+/* When the front shows the word's FORMS (all variants, each tagged) instead of a single large word:
+   a centered, normal-size stack of the grouped tagged chips. */
+.word-text.word-text--variants {
+  font-size: 1.05rem;
+  font-weight: 600;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+.word-text--variants .word-variants,
+.word-text--variants .alt-group { align-items: center; }
+.word-text--variants .alt-group-row { justify-content: center; }
+.word-text--variants .alt-group-label { text-align: center; }
 
 .listen-btn {
   display: inline-flex;

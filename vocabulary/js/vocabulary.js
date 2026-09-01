@@ -230,13 +230,19 @@ function showCard(index) {
   // Front
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
   document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
-  document.getElementById('word-text').textContent = _displayWord;
-  _renderCurrentFormBadge('word-text', _currentPickedForm);   // front: tag the shown variety too
+  // Front shows the word's FORMS: ALL variants, each with its tag (grouped — grammatical forms vs
+  // alternative words), consistent for every word; or the plain term when the word has no variants.
+  const _wtEl = document.getElementById('word-text');
+  _wtEl.textContent = '';
+  _wtEl.classList.remove('word-text--variants');
+  const _frontFrag = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
+    ? AppFeedback.buildWordVariants(word.variants, null, AppLang.t) : null;
+  if (_frontFrag) { _wtEl.classList.add('word-text--variants'); _wtEl.appendChild(_frontFrag); }
+  else { _wtEl.textContent = _displayWord; _renderCurrentFormBadge('word-text', _currentPickedForm); }
 
-  // Back — definition/example are the target-language (monolingual) forms; fall
-  // back to the source-language gloss for entries that lack a monolingual form.
-  document.getElementById('fc-back-word').textContent    = _displayWord;
-  _renderCurrentFormBadge('fc-back-word', _currentPickedForm);   // back: tag the shown variety
+  // Back is the MEANING side: the word's identity (its lemma/term) + definition/example/translation.
+  document.getElementById('fc-back-word').textContent = _frontFrag ? _capParts(word.term || '') : _displayWord;
+  if (!_frontFrag) _renderCurrentFormBadge('fc-back-word', _currentPickedForm);
   // Definition: L1 (source-language gloss) vs L2 (target-language definition). Default follows the
   // CEFR level — A1/A2 lead with L1 (the learner can't yet parse an L2 definition), B1+ lead with L2
   // (monolingual) — and a toggle swaps to the other. The L1 translation stays visible below as the
@@ -245,15 +251,12 @@ function showCard(index) {
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 
-  // Structured variants (recognition strip): show each labelled form (region flag / gender pill /…)
-  // so the learner MEETS them without them competing as production targets (interference-safe).
+  // Variants now live on the FRONT (all forms, each tagged), so the back's separate breakdown would
+  // just duplicate them — keep the back for the meaning only.
   const _vBlock = document.getElementById('fc-variants-block');
   const _vHost  = document.getElementById('word-variants');
   if (_vHost) _vHost.textContent = '';
-  const _vFrag = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
-    ? AppFeedback.buildWordVariants(word.variants, _currentPickedForm ? _currentPickedForm.text : null, AppLang.t) : null;
-  if (_vFrag && _vHost) { _vHost.appendChild(_vFrag); _vBlock && _vBlock.classList.remove('hidden'); }
-  else if (_vBlock) { _vBlock.classList.add('hidden'); }
+  if (_vBlock) _vBlock.classList.add('hidden');
 
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');
