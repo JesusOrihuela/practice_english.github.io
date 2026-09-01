@@ -589,6 +589,26 @@
       }
     },
     {
+      "id": "profesiones",
+      "kind": "vocab",
+      "axis": "topical",
+      "scope": "Nouns naming jobs and professions (waiter, teacher, salesperson, baker).",
+      "examples": {
+        "en": [
+          "waiter",
+          "teacher",
+          "salesperson",
+          "baker"
+        ],
+        "es": [
+          "camarero / mesero",
+          "profesor",
+          "vendedor",
+          "panadero"
+        ]
+      }
+    },
+    {
       "id": "estudios",
       "kind": "phrase",
       "axis": "topical",

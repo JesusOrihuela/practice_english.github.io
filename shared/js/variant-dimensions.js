@@ -51,7 +51,7 @@
     // language's case names. A NEW dimension proving the registry is open: no consumer hardcodes it.
     case:     { kind: 'inflectional',
                 values: ['nominativ', 'akkusativ', 'dativ', 'genitiv',
-                         'nominatiivi', 'partitiivi', 'genetiivi', 'inessiivi'],
+                         'nominatiivi', 'partitiivi', 'genetiivi', 'inessiivi', 'elatiivi', 'illatiivi'],
                 priority: 4, badge: 'pill', appliesTo: ['de', 'fi'],
                 agreement: ['artikel', 'adjektiv', 'pronomen'] },
     register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 5, badge: 'pill',   appliesTo: '*' },

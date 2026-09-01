@@ -1462,6 +1462,23 @@ body.path-mode {
   color: var(--clr-text-muted);
 }
 
+/* Variant tags carry a crisp inline-SVG icon (never an emoji) + the source-language label.
+   The icon inherits the pill's muted color via currentColor and sits centered beside the text. */
+.gender-phrase-badge,
+.variant-phrase-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 6px;
+}
+
+.variant-ico {
+  width: 0.95em;
+  height: 0.95em;
+  flex: 0 0 auto;
+  display: block;
+}
+
 /* Region pill: SVG flag (never emoji) + region name. */
 .region-phrase-badge {
   display: inline-flex;

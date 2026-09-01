@@ -163,6 +163,58 @@ try {
     check(errs.length === 0, `load ${url} — no page errors (${errs[0] || ''})`);
     await page.close();
   }
+
+  // ── 4. Divergent stress-test pairs (en-de, en-fi) load every screen with no JS
+  //    errors — the app derives topics/grammar/vocab per pair, so a pair-specific
+  //    break (missing content, bad script order, absent dimension) surfaces here.
+  for (const pair of ['en-de', 'en-fi']) {
+    console.log(`Stress-test pair — ${pair}`);
+    for (const url of [
+      '/index.html', '/my-learning/html/my-learning.html', '/progress/html/progress.html',
+      '/grammar/html/grammar.html', '/vocabulary/html/vocabulary.html', '/placement/html/placement.html',
+      '/speaking/html/speaking.html',
+    ]) {
+      const page = await browser.newPage();
+      const errs = []; page.on('pageerror', e => errs.push(e.message));
+      await page.addInitScript(p => { localStorage.setItem('pe_active_pair', p); }, pair);
+      await page.goto(BASE + url, { waitUntil: 'load' });
+      await page.waitForTimeout(400);
+      check(errs.length === 0, `${pair}: load ${url} — no page errors (${errs[0] || ''})`);
+      await page.close();
+    }
+  }
+
+  // ── 5. Variant tags render an inline-SVG ICON, never an emoji. Call the app's own
+  //    AppFeedback.buildWordVariants in-page (deterministic — no card-flip flake) with a
+  //    number/case variant set and assert the chips carry <svg class="variant-ico"> and
+  //    contain no emoji codepoint. Guards the "usa iconos, no emojis" requirement.
+  {
+    console.log('Variant tags — inline-SVG icons, not emoji');
+    const page = await browser.newPage();
+    const errs = []; page.on('pageerror', e => errs.push(e.message));
+    await page.addInitScript(() => { localStorage.setItem('pe_active_pair', 'en-de'); }, null);
+    await page.goto(BASE + '/vocabulary/html/vocabulary.html?topic=family', { waitUntil: 'domcontentloaded' });
+    await page.waitForTimeout(300);
+    const r = await page.evaluate(() => {
+      if (typeof AppFeedback === 'undefined' || !AppFeedback.buildWordVariants) return { skip: true };
+      const t = (k) => (typeof AppLang !== 'undefined' ? AppLang.t(k) : k);
+      const frag = AppFeedback.buildWordVariants(
+        [{ text: 'die Kinder', labels: { number: 'plural' } },
+         { text: 'den Mann',   labels: { case: 'akkusativ' } },
+         { text: 'die Lehrerin', labels: { gender: 'femenino' } }],
+        'das Kind', t);
+      const div = document.createElement('div'); if (frag) div.appendChild(frag);
+      return {
+        hasSvg: !!div.querySelector('svg.variant-ico'),
+        emoji: /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{2190}-\u{21FF}\u{2B00}-\u{2BFF}]/u.test(div.textContent || ''),
+        n: div.querySelectorAll('svg.variant-ico').length,
+      };
+    });
+    check(errs.length === 0, `variant tags: no page errors (${errs[0] || ''})`);
+    check(!r.skip && r.hasSvg, `variant tags render an <svg class="variant-ico"> (${r.n || 0} icons)`);
+    check(!r.skip && !r.emoji, 'variant tags contain NO emoji codepoint');
+    await page.close();
+  }
 } finally {
   await browser.close();
   server.close();

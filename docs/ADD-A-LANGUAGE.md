@@ -292,17 +292,24 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
 - **A pair needs `placement.json`** with questions. *Gated:* `check-pair-completeness`.
 - **A vocab deck needs ≥ 4 words** or the Quiz can't build 4 options. *Warned:* `check-pair-completeness`.
 - **Topic lists come from the pair's `topics.json`, loaded async.** `topics.js`/`path.js` loaders are
-  now hardened: they don't cache an attempt made before their deps (`AppData`/`AppTopics`) are defined,
+  hardened: they don't cache an attempt made before their deps (`AppData`/`AppTopics`) are defined,
   and are robust to `<script>` order — so a divergent pair no longer falls back to the 45-topic default
-  in the grids OR the Progress summary. Keep the documented order anyway
-  (`topic-data.js` → `topics.js` → `path.js`).
+  in the grids OR the Progress summary. **Still keep the order `topic-data.js` → `topics.js` → `path.js`
+  on EVERY page (index.html included).** `topics.js` eager-calls `load()` at parse; if `topic-data.js`
+  (which defines `AppData`) hasn't loaded yet, that call rejects and — with no synchronous consumer to
+  catch it — surfaces as an unhandled-rejection **pageerror** ("AppData not ready"). Functionally the
+  page recovers (a later `load()` retries), but the error is real: the browser smoke suite fails on it.
+  index.html shipped `topics.js` in `<head>` (before `topic-data.js` at body-end) and hit exactly this.
 - **The Progress summary shows the pair's phrase topics AND its vocab-only decks** (each pair its own).
-- **Variant tags are METALANGUAGE → source language + an icon, for EVERY pair.** `feedback.js`
-  renders every badge (`applyVariantBadge`, `buildWordVariants`) via `AppLang.t()` in the learner's
-  SOURCE language (never the raw registry value — "Feminine"/"Femenino" by source, not always
-  "Femenino"), capitalized, each axis with a small icon (gender ♀/♂/⚲, register 🎩/💬, number 🔢,
-  case 🎯, loanword 🌐, synonym 🔁; region uses its flag). A NEW dimension value needs an
-  `alt_note_<dim>_<val>` key in EVERY `lang/ui.js` source block + an icon in `feedback.js`'s `_SYM`.
+- **Variant tags are METALANGUAGE → source language + an inline-SVG ICON (never an emoji), for EVERY
+  pair.** `feedback.js` renders every badge (`applyVariantBadge`, `buildWordVariants`) via `AppLang.t()`
+  in the learner's SOURCE language (never the raw registry value — "Feminine"/"Femenino" by source, not
+  always "Femenino"), capitalized, each axis with a crisp **inline SVG** icon from `feedback.js`'s
+  `_ICON` map (theme-aware via `currentColor`, sized by `.variant-ico`): gender ♀/♂/⚲, register
+  top-hat/speech-bubble, number, case (bullseye), loanword (globe), synonym (cycle); region uses its
+  flag. **Do NOT use emoji** — the smoke suite asserts variant tags contain no emoji codepoint. A NEW
+  dimension value needs an `alt_note_<dim>_<val>` key in EVERY `lang/ui.js` source block + (optionally)
+  an SVG in `feedback.js`'s `_ICON`; with no icon the tag simply shows text, so the registry stays open.
   Inflectional variants (case/number/gender) are shown as labelled chips too (der/den/dem/des Mann →
   each with its case tag), not just an unlabelled slash headword.
 - **Vocab audio of an inflectional slash term reads ALL forms**: the generator emits the term
@@ -372,8 +379,9 @@ either **CI-gated** or **structurally fixed** — a new pair should not meet the
 **After adding a pair, the green bar is:** `check-content`, `check-pair-completeness`,
 `check-lang-profiles`, `check-variants --gate`, `check-length --gate`, `variant-openness`,
 `check-i18n`, `check-a11y`, `check-images`, `check-taxonomy`, `audit`, `coverage --gate`,
-`fix-phrase-ids --check`, `grammar-topics --check` — plus a headless smoke of every activity + the
-Progress summary + the pair badge flags.
+`fix-phrase-ids --check`, `grammar-topics --check` — plus the browser smoke suite (`npm test`), which
+now loads every screen for es-en, en-es AND each stress-test pair (en-de, en-fi) with zero page errors,
+and asserts variant tags render inline-SVG icons with no emoji.
 
 ---
 

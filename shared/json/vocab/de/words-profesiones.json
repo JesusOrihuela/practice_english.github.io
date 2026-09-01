@@ -1,0 +1,70 @@
+{
+  "words": [
+    {
+      "id": "kellner",
+      "term": "der Kellner / die Kellnerin",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Eine Person, die im Restaurant Essen und Getränke serviert.",
+      "example": "Der Kellner bringt das Essen.",
+      "translations": { "en": "waiter" },
+      "gloss": { "en": "A person who serves food and drinks in a restaurant." },
+      "gloss_example": { "en": "The waiter brings the food." },
+      "variants": [
+        { "text": "der Kellner",   "labels": { "gender": "masculino", "case": "nominativ", "number": "singular" }, "audioSlug": "der_kellner" },
+        { "text": "den Kellner",   "labels": { "gender": "masculino", "case": "akkusativ", "number": "singular" }, "audioSlug": "den_kellner" },
+        { "text": "die Kellner",   "labels": { "gender": "masculino", "case": "nominativ", "number": "plural" },   "audioSlug": "die_kellner" },
+        { "text": "die Kellnerin", "labels": { "gender": "femenino",  "case": "nominativ", "number": "singular" }, "audioSlug": "die_kellnerin" }
+      ]
+    },
+    {
+      "id": "lehrer",
+      "term": "der Lehrer / die Lehrerin",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Eine Person, die in der Schule unterrichtet.",
+      "example": "Der Lehrer erklärt die Aufgabe.",
+      "translations": { "en": "teacher" },
+      "gloss": { "en": "A person who teaches at a school." },
+      "gloss_example": { "en": "The teacher explains the task." },
+      "variants": [
+        { "text": "der Lehrer",    "labels": { "gender": "masculino" }, "audioSlug": "der_lehrer" },
+        { "text": "die Lehrerin",  "labels": { "gender": "femenino" },  "audioSlug": "die_lehrerin" }
+      ]
+    },
+    {
+      "id": "verkaeufer",
+      "term": "der Verkäufer / die Verkäuferin",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Eine Person, die in einem Geschäft Waren verkauft.",
+      "example": "Der Verkäufer hilft dem Kunden.",
+      "translations": { "en": "salesperson" },
+      "gloss": { "en": "A person who sells goods in a shop." },
+      "gloss_example": { "en": "The salesperson helps the customer." },
+      "variants": [
+        { "text": "der Verkäufer",   "labels": { "gender": "masculino" }, "audioSlug": "der_verkaufer" },
+        { "text": "die Verkäuferin", "labels": { "gender": "femenino" },  "audioSlug": "die_verkauferin" }
+      ]
+    },
+    {
+      "id": "baecker",
+      "term": "der Bäcker / die Bäckerin",
+      "level": "A2",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Eine Person, die Brot und Brötchen backt.",
+      "example": "Der Bäcker backt frisches Brot.",
+      "translations": { "en": "baker" },
+      "gloss": { "en": "A person who bakes bread and rolls." },
+      "gloss_example": { "en": "The baker bakes fresh bread." },
+      "variants": [
+        { "text": "der Bäcker",   "labels": { "gender": "masculino" }, "audioSlug": "der_backer" },
+        { "text": "die Bäckerin", "labels": { "gender": "femenino" },  "audioSlug": "die_backerin" }
+      ]
+    }
+  ]
+}

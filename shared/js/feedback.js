@@ -262,22 +262,53 @@ const AppFeedback = (() => {
     register: { formal: 'alt_note_register_f', informal: 'alt_note_register_i' },
     number:   { singular: 'alt_note_number_s', plural: 'alt_note_number_p' },
     case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen',
-                nominatiivi: 'alt_note_case_nom', partitiivi: 'alt_note_case_part', genetiivi: 'alt_note_case_gen', inessiivi: 'alt_note_case_iness' },
+                nominatiivi: 'alt_note_case_nom', partitiivi: 'alt_note_case_part', genetiivi: 'alt_note_case_gen',
+                inessiivi: 'alt_note_case_iness', elatiivi: 'alt_note_case_elat', illatiivi: 'alt_note_case_illat' },
   };
   const _DIM_KEY = { loanword: 'alt_note_loanword', synonym: 'alt_note_synonym' };
-  const _SYM = {
-    gender:   { femenino: '♀', masculino: '♂', neutro: '⚲' },
-    register: { formal: '🎩', informal: '💬' },
-    number: '🔢', case: '🎯', loanword: '🌐', synonym: '🔁',
+
+  // Inline-SVG ICONS (never emoji): crisp, theme-aware (currentColor), one per dimension — or per
+  // value where the axis is a two/three-way choice (gender, register). A NEW dimension that wants an
+  // icon adds an entry here keyed by its registry id; without one the tag simply shows text only, so
+  // the registry stays open. viewBox 0 0 16 16, sized to the pill's font via .variant-ico (CSS).
+  const _svg = (inner) =>
+    '<svg class="variant-ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" ' +
+    'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">' +
+    inner + '</svg>';
+  const _ICON = {
+    gender: {
+      femenino:  _svg('<circle cx="8" cy="6" r="3.3"/><path d="M8 9.3V15M5.6 12.4h4.8"/>'),
+      masculino: _svg('<circle cx="6.6" cy="9.4" r="3.3"/><path d="M9 7l4-4M10 3h3v3"/>'),
+      neutro:    _svg('<circle cx="8" cy="6" r="3.3"/><path d="M8 9.3V15"/>'),
+    },
+    register: {
+      formal:   _svg('<path d="M5 9V4.2C5 3.5 5.5 3 6.2 3h3.6c.7 0 1.2.5 1.2 1.2V9"/><path d="M2.5 9.3h11M5 7.1h6"/>'),
+      informal: _svg('<rect x="2.3" y="3" width="11.4" height="7" rx="2"/><path d="M5.6 10 4.7 12.7 8.1 10"/>'),
+    },
+    number:   _svg('<path d="M6 2.8 5 13.2M11 2.8 10 13.2M3 6h11M2.5 10h11"/>'),
+    case:     _svg('<circle cx="8" cy="8" r="6"/><circle cx="8" cy="8" r="3"/><circle cx="8" cy="8" r="0.7" fill="currentColor" stroke="none"/>'),
+    loanword: _svg('<circle cx="8" cy="8" r="6"/><path d="M2.2 8h11.6M8 2.2c1.9 2 1.9 9.6 0 11.6M8 2.2c-1.9 2-1.9 9.6 0 11.6"/>'),
+    synonym:  _svg('<path d="M3.7 7a4.4 4.4 0 0 1 7.8-1.7"/><path d="M11.5 2.6l.1 2.9-2.9-.2"/><path d="M12.3 9a4.4 4.4 0 0 1-7.8 1.7"/><path d="M4.5 13.4l-.1-2.9 2.9.2"/>'),
   };
-  function _variantLabel(dim, val) {
+  function _iconMarkup(dim, val) {
+    const e = _ICON[dim];
+    return (e && typeof e === 'object' && !e.length) ? (e[val] || null) : (e || null);
+  }
+  /** The tag's TEXT only (source-language metalanguage), no icon. */
+  function _variantLabelText(dim, val) {
     const t = (typeof AppLang !== 'undefined') ? AppLang.t.bind(AppLang) : (k => k);
-    let label;
-    if (_VAL_KEY[dim] && _VAL_KEY[dim][val]) label = t(_VAL_KEY[dim][val]);
-    else if (_DIM_KEY[dim]) label = t(_DIM_KEY[dim]);
-    else label = _capitalize(val);
-    const sym = (_SYM[dim] && typeof _SYM[dim] === 'object') ? _SYM[dim][val] : _SYM[dim];
-    return (sym ? sym + ' ' : '') + label;
+    if (_VAL_KEY[dim] && _VAL_KEY[dim][val]) return t(_VAL_KEY[dim][val]);
+    if (_DIM_KEY[dim]) return t(_DIM_KEY[dim]);
+    return _capitalize(val);
+  }
+  /** Fill a badge element with [icon] + [label], the icon an inline SVG (never emoji). */
+  function _fillVariantBadge(el, dim, val) {
+    el.textContent = '';
+    const mk = _iconMarkup(dim, val);
+    if (mk) { const ico = document.createElement('span'); ico.innerHTML = mk; el.appendChild(ico.firstChild); }
+    const lbl = document.createElement('span');
+    lbl.textContent = _variantLabelText(dim, val);
+    el.appendChild(lbl);
   }
 
   function applyVariantBadge(containerId, form) {
@@ -317,12 +348,12 @@ const AppFeedback = (() => {
         b.appendChild(txt);
       } else if (style === 'gender') {
         b.className = 'gender-phrase-badge';
-        b.textContent = _variantLabel(dim, val);   // ♀/♂/⚲ + source-language term
+        _fillVariantBadge(b, dim, val);   // SVG gender icon + source-language term
       } else {
         // 'pill' | 'text' — register, number, case, loanword, synonym, or any future axis: each gets
-        // its icon + the source-language label.
+        // its inline-SVG icon + the source-language label.
         b.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-        b.textContent = _variantLabel(dim, val);
+        _fillVariantBadge(b, dim, val);
       }
       wrap.appendChild(b);
     }
@@ -358,10 +389,10 @@ const AppFeedback = (() => {
           const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
         } else if (style === 'gender') {
           badge.className = 'gender-phrase-badge';
-          badge.textContent = _variantLabel(dim, val);
+          _fillVariantBadge(badge, dim, val);
         } else {
           badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-          badge.textContent = _variantLabel(dim, val);
+          _fillVariantBadge(badge, dim, val);
         }
         chip.appendChild(badge);
       }

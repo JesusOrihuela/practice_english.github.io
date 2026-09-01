@@ -1,0 +1,33 @@
+{
+  "phrases": [
+    {
+      "id": "restaurant_i_take_a_bread_roll",
+      "source": "I'll take a bread roll.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ich nehme ein Brötchen.",
+          "labels": {
+            "region": "Deutschland"
+          },
+          "audioSlug": "ich_nehme_ein_brotchen"
+        },
+        {
+          "text": "Ich nehme eine Semmel.",
+          "labels": {
+            "region": "Österreich"
+          },
+          "audioSlug": "ich_nehme_eine_semmel"
+        },
+        {
+          "text": "Ich nehme ein Brötli.",
+          "labels": {
+            "region": "Schweiz"
+          },
+          "audioSlug": "ich_nehme_ein_brotli"
+        }
+      ]
+    }
+  ]
+}

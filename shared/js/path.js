@@ -70,9 +70,6 @@ const AppPath = (() => {
     { id: 'accountability',         level: 'B2', emoji: '📊', label: 'Contabilidad',               labelEn: 'Accounting',                 order: 44 },
   ];
 
-  // ── Grammar rule count (matches grammar-rules.json "rules" array length) ─
-  const GRAMMAR_TOTAL = 35;
-
   // ── Activity definitions ─────────────────────────────────────────────────
   const ACTIVITIES = [
     {
@@ -600,7 +597,6 @@ const AppPath = (() => {
     load,
     ACTIVITIES,
     SECONDARY_ACTIVITIES,
-    GRAMMAR_TOTAL,
     GUIDE_THRESHOLD,
     COMPLETE_THRESHOLD,
     getTopicStatuses,
