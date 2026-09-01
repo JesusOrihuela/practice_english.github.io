@@ -176,7 +176,10 @@ const AppFlags = (() => {
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
     const n = list.length;
-    const DX = 8, DY = 5, FW = 22, FH = 14;   // layer step (x, zigzag y) + one flag's fixed box
+    // DX/DY = layer step (x, zigzag y). FW = width reserved for the trailing flag; flags vary in width
+    // (height is fixed, width follows aspect), so reserve enough for the widest so it never overruns
+    // the wrap into the arrow/next element. FH = fixed flag height.
+    const DX = 8, DY = 5, FW = 26, FH = 14;
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');

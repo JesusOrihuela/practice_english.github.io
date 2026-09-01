@@ -382,14 +382,17 @@ const AppFeedback = (() => {
     return 'lexical';
   }
 
-  function _variantChip(v) {
+  // One variant as TWO aligned cells appended to a grid table: [its tag(s)] | [the form]. No outer
+  // "chip" wrapper — a single tag pill + the form, so tags and forms line up in columns and there is
+  // no bubble-inside-a-bubble.
+  function _variantCells(v, tbl) {
     const labs = (v && v.labels) || {};
-    const chip = document.createElement('span');
-    chip.className = 'alt-chip';
+    const tags = document.createElement('span');
+    tags.className = 'variant-tags';
     for (const dim of _dimOrder()) {
       const val = labs[dim];
       if (val === undefined || val === '') continue;
-      if (dim === 'synonym') continue;   // no "Also" pill — the group label already says it; show the form alone
+      if (dim === 'synonym') continue;   // the group label already says "alternative words"
       const style = _dimBadge(dim);
       const badge = document.createElement('span');
       if (style === 'flag') {
@@ -403,25 +406,24 @@ const AppFeedback = (() => {
         badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
         _fillVariantBadge(badge, dim, val);
       }
-      chip.appendChild(badge);
+      tags.appendChild(badge);
     }
-    const txt = document.createElement('span');
-    txt.className = 'alt-chip-text';
-    txt.textContent = _capitalize((v && v.text) || '');   // match the capitalised headword ("Corte")
-    chip.appendChild(txt);
-    return chip;
+    const form = document.createElement('span');
+    form.className = 'variant-form';
+    form.textContent = _capitalize((v && v.text) || '');
+    tbl.appendChild(tags);
+    tbl.appendChild(form);
   }
 
   function buildWordVariants(variants, currentText, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
-    // One chip per variant OTHER than the one currently shown as the headword.
     const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
     const tt = (typeof t === 'function') ? t : (k => k);
     const frag = document.createDocumentFragment();
 
     // GROUP by kind with an explanatory caption, so the learner understands WHY the variants differ —
-    // grammatical FORMS of one word vs ALTERNATIVE WORDS — instead of just seeing "different tags".
+    // grammatical FORMS of one word vs ALTERNATIVE WORDS — and each group is a tag|form aligned table.
     function group(items, labelKey) {
       if (!items.length) return;
       const g = document.createElement('div');
@@ -430,10 +432,10 @@ const AppFeedback = (() => {
       lbl.className = 'alt-group-label';
       lbl.textContent = tt(labelKey);
       g.appendChild(lbl);
-      const row = document.createElement('div');
-      row.className = 'alt-group-row';
-      items.forEach(v => row.appendChild(_variantChip(v)));
-      g.appendChild(row);
+      const tbl = document.createElement('div');
+      tbl.className = 'variant-table';
+      items.forEach(v => _variantCells(v, tbl));
+      g.appendChild(tbl);
       frag.appendChild(g);
     }
     group(shown.filter(v => _variantKind(v && v.labels) === 'inflectional'), 'var_group_forms');

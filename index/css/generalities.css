@@ -1266,9 +1266,8 @@ body.path-mode {
    inline per layer; the wrap (.flag-stack) is sized to the whole cascade so it centers as a unit. */
 .flag-layer {
   position: absolute;
-  width: 22px;
-  height: 14px;              /* FIXED box (not height:auto) so flags of different aspect ratios */
-  object-fit: cover;         /* (US 1.9:1, GB 1.67:1, DE 1.5:1) all render the SAME size */
+  height: 14px;              /* SAME height for every flag; width follows the flag's own aspect ratio */
+  width: auto;               /* (no stretching — a square flag like Switzerland stays square) */
   border-radius: 2px;
   display: block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.3);
@@ -1490,6 +1489,17 @@ body.path-mode {
   display: block;
 }
 
+/* Variant list as an aligned TWO-COLUMN table: [tag(s)] | [form]. One tag pill + the form (no outer
+   chip bubble), and the tags/forms line up in columns so it reads like a clean declension list. */
+.variant-table {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 9px 14px;
+  align-items: center;
+}
+.variant-tags { display: inline-flex; gap: 5px; justify-content: flex-end; flex-wrap: wrap; }
+.variant-form { font-weight: 600; font-style: italic; color: var(--clr-text); text-align: left; }
+
 /* Region pill: SVG flag (never emoji) + region name. */
 .region-phrase-badge {
   display: inline-flex;
@@ -1500,8 +1510,8 @@ body.path-mode {
 
 /* Real national flag(s) inside the region pill — a single flag or a responsive cluster. */
 .region-phrase-badge .flag-img {
-  width: 16px;
-  height: auto;
+  height: 11px;             /* same height for every region flag; width follows aspect (square stays square) */
+  width: auto;
   display: block;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);

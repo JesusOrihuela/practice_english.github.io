@@ -128,7 +128,13 @@ function startTopic(topicId, pathMode, pathCard) {
         cardIds,
         topicLabel: topicObj ? AppTopics.getLabel(topicObj) : topicId,
         pickerEl: document.getElementById('topic-picker'),
-        traductions: _tagged.map(w => w.term),
+        // The index label shows the word's VERSIONS: every variant form joined by " / " (each
+        // capitalised), or the plain term when the word has no variants — so the list keeps showing
+        // "Das Kind / Die Kinder", "Der Mann / Den Mann / …" as it did before the lemma change.
+        traductions: _tagged.map(w => {
+          const s = (w.variants && w.variants.length) ? w.variants.map(v => v.text).join(' / ') : (w.term || '');
+          return s.replace(/(^|\/\s*)(\p{L})/gu, (m, p, c) => p + c.toUpperCase());
+        }),
         cefrLevels: _tagged.map(x => x.level || null),
         onStart: idx => _beginExercise(idx),
       };
