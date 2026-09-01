@@ -166,25 +166,26 @@ const AppFlags = (() => {
    * 1 → a single flag, 2 → the overlapping stack (compact pair look), 3+ → a side-by-side cluster.
    * @param {string[]} codes — the language's flag codes (from PAIRS' source.flags / target.flags).
    */
-  // A language's flags as ONE overlapping stack, for ANY count (1, 2, 3+). Each flag is an absolutely
-  // positioned layer offset diagonally from the previous; the wrap is sized to the whole cascade so the
-  // parent's align-items:center centers it as a unit (a lone flag is a 1-layer stack — no top-align bug).
+  // A language's flags as ONE overlapping stack, for ANY count (1, 2, 3+). Layers step right by DX and
+  // ZIGZAG vertically (alternating baseline) so every flag stays visible; the FIRST flag sits on top and
+  // each later one goes further BACK (so the trailing flag — e.g. Argentina in es/mx/ar — is hindmost).
+  // The wrap is sized to the whole cascade so the parent's align-items:center centers it as a unit.
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
-    const DX = 8, DY = 5, FW = 22, FH = 15;   // layer step (x,y) + one flag's rendered size
+    const DX = 10, DY = 6, FW = 22, FH = 15;   // layer step (x, zigzag y) + one flag's rendered size
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
     list.forEach(function (code, i) {
       var img = flagImg(code, 'flag-layer');
       img.style.left = (i * DX) + 'px';
-      img.style.top  = (i * DY) + 'px';
-      img.style.zIndex = String(i + 1);
+      img.style.top  = ((i % 2) * DY) + 'px';       // zigzag: even layers high, odd layers low
+      img.style.zIndex = String(list.length - i);   // first flag on top → last flag hindmost
       wrap.appendChild(img);
     });
     if (list.length) {
       wrap.style.width  = (FW + (list.length - 1) * DX) + 'px';
-      wrap.style.height = (FH + (list.length - 1) * DY) + 'px';
+      wrap.style.height = (FH + (list.length > 1 ? DY : 0)) + 'px';
     }
     return wrap;
   }
