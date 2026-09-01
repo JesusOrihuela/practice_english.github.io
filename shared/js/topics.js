@@ -26,7 +26,7 @@ const AppTopics = (() => {
     { id: 'restaurant',             label: 'Restaurante',                labelEn: 'Restaurant',                 emoji: '🍽️', phrase: true,  vocab: true, vocabOrder: 15, level: 'A1', order: 10 },
     { id: 'descripciones',          label: 'Descripciones',              labelEn: 'Descriptions',               emoji: '🔍', phrase: true,  vocab: false, level: 'A2', order: 15 },
     { id: 'describiendo_personas',  label: 'Describiendo Personas',      labelEn: 'Describing People',          emoji: '🧑', phrase: true,  vocab: false, level: 'A2', order: 16 },
-    { id: 'profesiones',            label: 'Profesiones',                labelEn: 'Professions',                emoji: '👔', phrase: true,  vocab: false, level: 'A2', order: 29 },
+    { id: 'profesiones',            label: 'Profesiones',                labelEn: 'Professions',                emoji: '👔', phrase: true,  vocab: true,  level: 'A2', order: 29 },
     { id: 'estudios',               label: 'Educación',                  labelEn: 'Education',                  emoji: '🎓', phrase: true,  vocab: false, level: 'A2', order: 30 },
     { id: 'conversacion',           label: 'Comunicación',               labelEn: 'Communication',              emoji: '💬', phrase: true,  vocab: false, level: 'A2', order: 12 },
     { id: 'pensamientos_opiniones', label: 'Pensamientos y Opiniones',   labelEn: 'Thoughts & Opinions',        emoji: '🧠', phrase: true,  vocab: false, level: 'A2', order: 17 },
