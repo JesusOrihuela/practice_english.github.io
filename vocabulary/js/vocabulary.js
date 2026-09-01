@@ -182,19 +182,19 @@ function _setupDefinition(l1, l2, level) {
   };
 
   if (sw && hasBoth) {
-    // Representative flag per side = the pair's FRONT flag (last in [back, front]).
-    const srcCode = (pair.source.flags && pair.source.flags[pair.source.flags.length - 1]) || pair.source.code;
-    const tgtCode = (pair.target.flags && pair.target.flags[pair.target.flags.length - 1]) || pair.target.code;
-    const fill = (btn, code, langName, cb) => {
+    // Each side shows the language's OWN flag(s) — the same 1/2/3-flag stack that represents the pair
+    // (Spanish es/mx/ar, English us/gb), not a single flag — via AppFlags.langFlags.
+    const fill = (btn, flags, code, langName, cb) => {
       if (!btn) return;
       btn.textContent = '';
-      if (typeof AppFlags !== 'undefined' && AppFlags.single) btn.appendChild(AppFlags.single(code));
+      if (typeof AppFlags !== 'undefined' && AppFlags.langFlags)
+        btn.appendChild(AppFlags.langFlags((flags && flags.length) ? flags : [code]));
       btn.setAttribute('aria-label', AppLang.t('fc_def_show', { lang: langName }));
       btn.title = langName;
       btn.onclick = cb;
     };
-    fill(l1Btn, srcCode, pair.source.localName || pair.source.name, () => { showL1 = true;  render(); });
-    fill(l2Btn, tgtCode, pair.target.localName || pair.target.name, () => { showL1 = false; render(); });
+    fill(l1Btn, pair.source.flags, pair.source.code, pair.source.localName || pair.source.name, () => { showL1 = true;  render(); });
+    fill(l2Btn, pair.target.flags, pair.target.code, pair.target.localName || pair.target.name, () => { showL1 = false; render(); });
   }
   render();
 }
