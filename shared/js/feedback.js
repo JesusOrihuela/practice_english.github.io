@@ -370,44 +370,74 @@ const AppFeedback = (() => {
      text. Used on the flashcard back so the learner MEETS every variant ("also: patata 🇪🇸",
      "niña ♀") without them competing as production targets — the interference-safe presentation
      (Tinkham/Waring/Webb). Returns a DocumentFragment, or null when there is nothing to show. */
+  // Which KIND a variant belongs to, for grouping: 'inflectional' if it carries ANY inflectional-axis
+  // label (gender/number/case — forms of the SAME word), else 'lexical' (region/register/loanword/
+  // synonym — a DIFFERENT word for the same meaning). Registry-driven, so a future axis groups itself.
+  function _variantKind(labs) {
+    const D = _dims();
+    for (const k of Object.keys(labs || {})) {
+      if (labs[k] === undefined || labs[k] === '') continue;
+      if (D && D.kind(k) === 'inflectional') return 'inflectional';
+    }
+    return 'lexical';
+  }
+
+  function _variantChip(v) {
+    const labs = (v && v.labels) || {};
+    const chip = document.createElement('span');
+    chip.className = 'alt-chip';
+    for (const dim of _dimOrder()) {
+      const val = labs[dim];
+      if (val === undefined || val === '') continue;
+      if (dim === 'synonym') continue;   // no "Also" pill — the group label already says it; show the form alone
+      const style = _dimBadge(dim);
+      const badge = document.createElement('span');
+      if (style === 'flag') {
+        badge.className = 'region-phrase-badge';
+        if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) badge.appendChild(fl); }
+        const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
+      } else if (style === 'gender') {
+        badge.className = 'gender-phrase-badge';
+        _fillVariantBadge(badge, dim, val);
+      } else {
+        badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
+        _fillVariantBadge(badge, dim, val);
+      }
+      chip.appendChild(badge);
+    }
+    const txt = document.createElement('span');
+    txt.className = 'alt-chip-text';
+    txt.textContent = _capitalize((v && v.text) || '');   // match the capitalised headword ("Corte")
+    chip.appendChild(txt);
+    return chip;
+  }
+
   function buildWordVariants(variants, currentText, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
-    const D = _dims();
-    // One chip per variant (LEXICAL and INFLECTIONAL alike) OTHER than the one currently shown as the
-    // headword — so an inflectional set (der/den/dem/des Mann) is no longer an unlabelled slash: each
-    // form appears with its case/number tag, and lexical variants keep their recognition tag.
+    // One chip per variant OTHER than the one currently shown as the headword.
     const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
+    const tt = (typeof t === 'function') ? t : (k => k);
     const frag = document.createDocumentFragment();
-    for (const v of shown) {
-      const labs = (v && v.labels) || {};
-      const chip = document.createElement('span');
-      chip.className = 'alt-chip';
-      for (const dim of _dimOrder()) {
-        const val = labs[dim];
-        if (val === undefined || val === '') continue;
-        if (dim === 'synonym') continue;   // no "Also" pill — the VARIANTS heading already says it; show the form alone
-        const style = _dimBadge(dim);
-        const badge = document.createElement('span');
-        if (style === 'flag') {
-          badge.className = 'region-phrase-badge';
-          if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) badge.appendChild(fl); }
-          const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
-        } else if (style === 'gender') {
-          badge.className = 'gender-phrase-badge';
-          _fillVariantBadge(badge, dim, val);
-        } else {
-          badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-          _fillVariantBadge(badge, dim, val);
-        }
-        chip.appendChild(badge);
-      }
-      const txt = document.createElement('span');
-      txt.className = 'alt-chip-text';
-      txt.textContent = _capitalize((v && v.text) || '');   // match the capitalised headword ("Corte")
-      chip.appendChild(txt);
-      frag.appendChild(chip);
+
+    // GROUP by kind with an explanatory caption, so the learner understands WHY the variants differ —
+    // grammatical FORMS of one word vs ALTERNATIVE WORDS — instead of just seeing "different tags".
+    function group(items, labelKey) {
+      if (!items.length) return;
+      const g = document.createElement('div');
+      g.className = 'alt-group';
+      const lbl = document.createElement('div');
+      lbl.className = 'alt-group-label';
+      lbl.textContent = tt(labelKey);
+      g.appendChild(lbl);
+      const row = document.createElement('div');
+      row.className = 'alt-group-row';
+      items.forEach(v => row.appendChild(_variantChip(v)));
+      g.appendChild(row);
+      frag.appendChild(g);
     }
+    group(shown.filter(v => _variantKind(v && v.labels) === 'inflectional'), 'var_group_forms');
+    group(shown.filter(v => _variantKind(v && v.labels) !== 'inflectional'), 'var_group_alt');
     return frag;
   }
 

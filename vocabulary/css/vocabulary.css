@@ -257,11 +257,22 @@
 }
 .word-variants {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   margin-top: 6px;
-  justify-content: flex-start;
 }
+/* Variants are grouped by KIND so the learner sees WHY they differ: grammatical FORMS of one word
+   (case/number/gender) vs ALTERNATIVE WORDS for the same meaning (region/register/loanword). */
+.alt-group { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.alt-group-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+.alt-group-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .listen-btn-back {
   margin-bottom: 16px;

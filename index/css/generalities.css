@@ -1235,9 +1235,8 @@ body.path-mode {
 .flag-stack {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 21px;
   flex-shrink: 0;
+  /* width/height set inline by AppFlags.langFlags, sized to the flag cascade (1, 2 or 3+ flags). */
 }
 
 /* Real flag <img> assets need an explicit size (the files have large intrinsic sizes). */
@@ -1263,16 +1262,16 @@ body.path-mode {
 
 .flag-single { width: 22px; height: auto; border-radius: 2px; display: block; }
 
-/* A single flag (1-flag language, e.g. Finnish): shrink-wrap the stack box and center the flag so it
-   sits vertically centered in the badge instead of top-aligned in the 30×21 two-flag box. */
-.flag-stack--one { width: auto; height: auto; display: inline-flex; align-items: center; }
-
-/* A 3+-flag language (e.g. Spanish es/mx/ar) renders as a cluster in the pair badge — give it and its
-   flags a size here (the region pill has its own, more specific, cluster rules). */
-.flag-cluster { display: inline-flex; align-items: center; gap: 3px; flex-shrink: 0; }
-.flag-cluster .flag-img { width: 18px; height: auto; border-radius: 2px; display: block;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
-.flag-more { font-size: 0.62rem; font-weight: 700; color: var(--clr-text-muted); }
+/* One layer of an overlapping flag stack (AppFlags.langFlags, any count). left/top/z-index are set
+   inline per layer; the wrap (.flag-stack) is sized to the whole cascade so it centers as a unit. */
+.flag-layer {
+  position: absolute;
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
 
 /* ---- Related Phrases (Grammar Workshop completion) ---- */
 .related-phrases {
@@ -1484,8 +1483,8 @@ body.path-mode {
 }
 
 .variant-ico {
-  width: 0.95em;
-  height: 0.95em;
+  width: 1.15em;
+  height: 1.15em;
   flex: 0 0 auto;
   display: block;
 }

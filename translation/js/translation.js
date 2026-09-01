@@ -43,12 +43,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Build lang badge with shared flag module
   const badge = document.getElementById('lang-badge');
   if (badge && typeof AppFlags !== 'undefined') {
-    badge.appendChild(AppFlags.stack(pair.source.flags[0], pair.source.flags[1]));
+    badge.appendChild(AppFlags.langFlags(pair.source.flags));
     const arrow = document.createElement('span');
     arrow.setAttribute('aria-hidden', 'true');
     arrow.textContent = '→';
     badge.appendChild(arrow);
-    badge.appendChild(AppFlags.stack(pair.target.flags[0], pair.target.flags[1]));
+    badge.appendChild(AppFlags.langFlags(pair.target.flags));
   }
 
   AppData.get('word-equivalents')

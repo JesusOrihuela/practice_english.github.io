@@ -166,16 +166,26 @@ const AppFlags = (() => {
    * 1 → a single flag, 2 → the overlapping stack (compact pair look), 3+ → a side-by-side cluster.
    * @param {string[]} codes — the language's flag codes (from PAIRS' source.flags / target.flags).
    */
+  // A language's flags as ONE overlapping stack, for ANY count (1, 2, 3+). Each flag is an absolutely
+  // positioned layer offset diagonally from the previous; the wrap is sized to the whole cascade so the
+  // parent's align-items:center centers it as a unit (a lone flag is a 1-layer stack — no top-align bug).
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
-    if (list.length === 2) return stack(list[0], list[1]);
-    if (list.length >= 3)  return cluster(list);
+    const DX = 8, DY = 5, FW = 22, FH = 15;   // layer step (x,y) + one flag's rendered size
     const wrap = document.createElement('span');
-    // A lone flag must not inherit the 30×21 two-flag stack box (it would sit top-aligned and read as
-    // "floating high"); flag-stack--one shrink-wraps + centers it so the parent's align-items centers it.
-    wrap.className = 'flag-stack flag-stack--one';
+    wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
-    if (list[0]) wrap.appendChild(flagImg(list[0], 'flag-single'));
+    list.forEach(function (code, i) {
+      var img = flagImg(code, 'flag-layer');
+      img.style.left = (i * DX) + 'px';
+      img.style.top  = (i * DY) + 'px';
+      img.style.zIndex = String(i + 1);
+      wrap.appendChild(img);
+    });
+    if (list.length) {
+      wrap.style.width  = (FW + (list.length - 1) * DX) + 'px';
+      wrap.style.height = (FH + (list.length - 1) * DY) + 'px';
+    }
     return wrap;
   }
 
