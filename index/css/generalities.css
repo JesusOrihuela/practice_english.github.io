@@ -1494,29 +1494,35 @@ body.path-mode {
 .variant-table {
   display: grid;
   grid-template-columns: max-content max-content;
-  gap: 10px 16px;
-  align-items: baseline;
+  row-gap: 14px;
+  column-gap: 18px;
+  align-items: center;
 }
 .variant-form {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--clr-text);
   text-align: left;
   white-space: nowrap;
+  line-height: 1.1;
 }
 .variant-meta {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--clr-text-muted);
   letter-spacing: 0.02em;
 }
 .variant-meta-item { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
-.variant-meta-item + .variant-meta-item::before { content: "·"; margin-right: 10px; opacity: 0.55; }
+.variant-meta-item + .variant-meta-item::before { content: "·"; margin-right: 12px; opacity: 0.5; }
 .variant-meta-item .variant-ico { width: 1em; height: 1em; }
-.variant-meta-item .flag-img { height: 10px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
+/* Region flag/globe/cluster inside a tag stays TINY (never the full-size globe map — no overflow). */
+.variant-meta-item .flag-img,
+.variant-meta-item .region-globe { height: 11px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
+.variant-meta-item .flag-cluster { display: inline-flex; align-items: center; gap: 2px; }
+.variant-meta-item .flag-cluster .flag-img { height: 10px; box-shadow: none; }
 
 /* Region pill: SVG flag (never emoji) + region name. */
 .region-phrase-badge {

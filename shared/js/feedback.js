@@ -395,7 +395,6 @@ const AppFeedback = (() => {
     for (const dim of _dimOrder()) {
       const val = labs[dim];
       if (val === undefined || val === '') continue;
-      if (dim === 'synonym') continue;   // the group label already says "alternative words"
       const item = document.createElement('span');
       item.className = 'variant-meta-item';
       if (_dimBadge(dim) === 'flag') {

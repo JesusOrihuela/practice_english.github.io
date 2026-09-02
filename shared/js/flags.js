@@ -172,29 +172,30 @@ const AppFlags = (() => {
   const FLAG_AR = { us: 1.9, gb: 1.667, mx: 1.75, ar: 1.6, ch: 1.0 };
   const _flagW = (code, h) => Math.round((FLAG_AR[code] || 1.5) * h);
 
-  // A language's flags as ONE overlapping stack, for ANY count. Height is fixed, width follows each
-  // flag's aspect. Layout by count:
-  //   1 → single, centered.
-  //   2 → diagonal: back flag top-left, front flag down-right and on top.
-  //   3 → three levels (staircase): backmost flag top-LEFT, second middle-RIGHT, front flag
-  //       bottom-CENTER and superimposed on top.
-  // The wrapper is sized to the flags' real bounding box (tight) so the parent centers it with no lean.
+  // A language's flags as ONE overlapping stack, for ANY count. Every flag is the SAME height; width
+  // follows each flag's aspect. The wrapper is ALWAYS the same fixed height (HC) regardless of count —
+  // so a 3-flag badge is never taller than a 1/2-flag one — and its width is the flags' real bounding
+  // box (so the badge content is horizontally centered, no lean). Layout by count:
+  //   1 → single, centered.        2 → diagonal: back top-left, front down-right + on top.
+  //   3 → three levels (staircase): the MIDDLE flag (e.g. México in es/mx/ar) is at the bottom-centre
+  //       and ON TOP (never covered); the LAST flag (Argentina) is top-left and hindmost; the FIRST is
+  //       middle-right. All three fit inside HC (smaller vertical step than 2-flag), never taller.
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
     const n = list.length;
-    const DX = 9, DY = 6, FH = 14;
+    const DX = 9, DY = 4, FH = 14, HC = FH + 2 * DY;   // HC = fixed wrapper height for ANY count
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
     if (!n) return wrap;
 
-    // pos[i] = { x, y, z } per flag (i = 0 first … n-1 last).
+    // pos[i] = { x, y, z } per flag (i = 0 first … n-1 last). y is measured from the top of the layout.
     let pos;
     if (n === 3) {
       pos = [
-        { x: DX,     y: 2 * DY, z: 3 },   // i0: front, bottom-center (superimposed)
-        { x: 2 * DX, y: DY,     z: 2 },   // i1: middle-right
-        { x: 0,      y: 0,      z: 1 },   // i2: back, top-left
+        { x: 2 * DX, y: DY,     z: 2 },   // i0: middle-right
+        { x: DX,     y: 2 * DY, z: 3 },   // i1 (middle flag): bottom-centre, ON TOP (uncovered)
+        { x: 0,      y: 0,      z: 1 },   // i2 (last): top-left, hindmost
       ];
     } else {
       pos = list.map(function (c, i) {
@@ -203,23 +204,23 @@ const AppFlags = (() => {
       });
     }
 
-    // Real bounding box (widths vary), then shift so the leftmost flag sits at x=0 → tight, centered.
+    // Bounding box (widths vary); centre the layout vertically inside the fixed HC.
     var minX = Infinity, maxX = -Infinity, maxY = 0;
     list.forEach(function (code, i) {
-      var w = _flagW(code, FH);
-      minX = Math.min(minX, pos[i].x);
-      maxX = Math.max(maxX, pos[i].x + w);
       maxY = Math.max(maxY, pos[i].y);
+      minX = Math.min(minX, pos[i].x);
+      maxX = Math.max(maxX, pos[i].x + _flagW(code, FH));
     });
+    var offY = (HC - (FH + maxY)) / 2;
     list.forEach(function (code, i) {
       var img = flagImg(code, 'flag-layer');
       img.style.left = (pos[i].x - minX) + 'px';
-      img.style.top  = pos[i].y + 'px';
+      img.style.top  = (offY + pos[i].y) + 'px';
       img.style.zIndex = String(pos[i].z);
       wrap.appendChild(img);
     });
     wrap.style.width  = (maxX - minX) + 'px';
-    wrap.style.height = (FH + maxY) + 'px';
+    wrap.style.height = HC + 'px';
     return wrap;
   }
 

@@ -215,6 +215,31 @@ try {
     check(!r.skip && !r.emoji, 'variant tags contain NO emoji codepoint');
     await page.close();
   }
+
+  // ── 6. Listen plays EVERY variant form, not just the first (regression: a word with variants used
+  //    to sound only its first form). Open a multi-form card, stub AppAudio.play to record each slug,
+  //    click Listen, and assert it was called once per form.
+  {
+    console.log('Audio — Listen plays every variant form');
+    const page = await browser.newPage();
+    const errs = []; page.on('pageerror', e => errs.push(e.message));
+    await page.addInitScript(() => localStorage.setItem('pe_active_pair', 'en-de'));
+    await page.goto(BASE + '/vocabulary/html/vocabulary.html?topic=family', { waitUntil: 'load' });
+    await page.waitForSelector('.pb-chip', { timeout: 8000 }).catch(() => {});
+    await page.click('.pb-chip').catch(() => {});          // open the first card (das Kind — 2 forms)
+    await page.waitForTimeout(400);
+    const plays = await page.evaluate(async () => {
+      if (typeof AppAudio === 'undefined') return -1;
+      window.__plays = [];
+      AppAudio.play = function (t, slug) { window.__plays.push(slug); return Promise.resolve(); };
+      const btn = document.getElementById('listen-btn'); if (btn) btn.click();
+      await new Promise(r => setTimeout(r, 500));
+      return window.__plays.length;
+    });
+    check(errs.length === 0, `audio: no page errors (${errs[0] || ''})`);
+    check(plays >= 2, `Listen plays EVERY variant form, not just the first (played ${plays})`);
+    await page.close();
+  }
 } finally {
   await browser.close();
   server.close();
