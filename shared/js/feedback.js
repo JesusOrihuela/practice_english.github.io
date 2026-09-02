@@ -382,37 +382,34 @@ const AppFeedback = (() => {
     return 'lexical';
   }
 
-  // One variant as TWO aligned cells appended to a grid table: [its tag(s)] | [the form]. No outer
-  // "chip" wrapper — a single tag pill + the form, so tags and forms line up in columns and there is
-  // no bubble-inside-a-bubble.
+  // One variant as TWO aligned cells appended to a grid table: [the FORM, prominent] | [its tag(s) as a
+  // small muted label]. Form-first, reads like a dictionary entry; no pill-in-pill. The tag keeps its
+  // small colour icon but drops the pill background so it stays subtle beside the bigger form.
   function _variantCells(v, tbl) {
     const labs = (v && v.labels) || {};
-    const tags = document.createElement('span');
-    tags.className = 'variant-tags';
+    const form = document.createElement('span');
+    form.className = 'variant-form';
+    form.textContent = _capitalize((v && v.text) || '');
+    const meta = document.createElement('span');
+    meta.className = 'variant-meta';
     for (const dim of _dimOrder()) {
       const val = labs[dim];
       if (val === undefined || val === '') continue;
       if (dim === 'synonym') continue;   // the group label already says "alternative words"
-      const style = _dimBadge(dim);
-      const badge = document.createElement('span');
-      if (style === 'flag') {
-        badge.className = 'region-phrase-badge';
-        if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) badge.appendChild(fl); }
-        const tx = document.createElement('span'); tx.textContent = _capitalize(val); badge.appendChild(tx);
-      } else if (style === 'gender') {
-        badge.className = 'gender-phrase-badge';
-        _fillVariantBadge(badge, dim, val);
+      const item = document.createElement('span');
+      item.className = 'variant-meta-item';
+      if (_dimBadge(dim) === 'flag') {
+        if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) item.appendChild(fl); }
+        const tx = document.createElement('span'); tx.textContent = _capitalize(val); item.appendChild(tx);
       } else {
-        badge.className = 'variant-phrase-badge variant-phrase-badge--' + dim;
-        _fillVariantBadge(badge, dim, val);
+        const mk = _iconMarkup(dim, val);
+        if (mk) { const ico = document.createElement('span'); ico.innerHTML = mk; item.appendChild(ico.firstChild); }
+        const tx = document.createElement('span'); tx.textContent = _variantLabelText(dim, val); item.appendChild(tx);
       }
-      tags.appendChild(badge);
+      meta.appendChild(item);
     }
-    const form = document.createElement('span');
-    form.className = 'variant-form';
-    form.textContent = _capitalize((v && v.text) || '');
-    tbl.appendChild(tags);
     tbl.appendChild(form);
+    tbl.appendChild(meta);
   }
 
   function buildWordVariants(variants, currentText, t) {
