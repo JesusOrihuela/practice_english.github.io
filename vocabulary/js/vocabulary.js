@@ -42,20 +42,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     AppTopicGrid.build(_vocabGridOpts());
   }
 
-  function _playCurrentWord(e) {
+  let _playSeq = 0;
+  async function _playCurrentWord(e) {
     e.stopPropagation(); // prevent card flip
     const word = words[currentIndex];
     if (!word) return;
     const _topic = currentTopicId === 'general' ? 'vocab' : 'vocab_' + currentTopicId;
-    // Play the ROTATED form when the card is a lexical-variant word (celular/móvil). For an
-    // INFLECTIONAL-variant word (slash term like "das Kind / die Kinder", not rotated) the generator
-    // emits per-variant files, NOT a term-id file, so play the first (canonical) variant's audio.
-    // Otherwise (no variants) play the term keyed by the word id.
-    if (_currentPickedForm && _currentPickedForm.audioSlug) {
-      AppAudio.play(_topic, _currentPickedForm.audioSlug, _currentPickedForm.text);   // lexical rotation
+    // A word with variants shows ALL its forms on the front, so Listen plays EVERY form in sequence
+    // (der Mann, den Mann, dem Mann, des Mannes) — not just the first. A re-click starts a new
+    // sequence (the token guard stops the old one). A plain word plays its term.
+    if (word.variants && word.variants.length) {
+      const tok = ++_playSeq;
+      for (const v of word.variants) {
+        if (tok !== _playSeq) return;                         // superseded by a newer click
+        if (v && v.audioSlug) await AppAudio.play(_topic, v.audioSlug, v.text);
+      }
     } else {
-      // No rotation (plain word OR an inflectional slash term): play the term keyed by the word id —
-      // the generator emits it and the slash is read as a comma, so ALL inflected forms are spoken.
       AppAudio.play(_topic, word.id, word.term);
     }
   }
