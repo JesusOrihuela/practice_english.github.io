@@ -183,39 +183,40 @@ const AppFlags = (() => {
   function langFlags(codes) {
     const list = (codes || []).filter(Boolean);
     const n = list.length;
-    const DX = 9, DY = 4, FH = 14, HC = FH + 2 * DY;   // HC = fixed wrapper height for ANY count
+    const FH = 14, HC = 22;                     // fixed flag height + fixed wrapper height (any count)
+    const w = (i) => _flagW(list[i], FH);       // each flag's own width (aspect-based)
     const wrap = document.createElement('span');
     wrap.className = 'flag-stack';
     wrap.setAttribute('aria-hidden', 'true');
     if (!n) return wrap;
 
-    // pos[i] = { x, y, z } per flag (i = 0 first … n-1 last). y is measured from the top of the layout.
-    let pos;
-    if (n === 3) {
-      pos = [
-        { x: 2 * DX, y: DY,     z: 2 },   // i0: middle-right
-        { x: DX,     y: 2 * DY, z: 3 },   // i1 (middle flag): bottom-centre, ON TOP (uncovered)
-        { x: 0,      y: 0,      z: 1 },   // i2 (last): top-left, hindmost
-      ];
+    // Overlap by HALF the covered flag's width so EXACTLY half of every covered flag shows, whatever
+    // its aspect. Flags share one vertical line (clean half, no partial-vertical-overlap artefact).
+    // pos[i] = { x, z }. n=3: the MIDDLE flag (México in es/mx/ar) is front-centre and ON TOP, covering
+    // the inner half of each neighbour; the last (Argentina) is behind on the left, the first on the
+    // right. n=2: the second flag covers the first's right half and sits on top.
+    let pos = [];
+    if (n === 1) {
+      pos[0] = { x: 0, z: 1 };
+    } else if (n === 2) {
+      pos[0] = { x: 0,        z: 1 };
+      pos[1] = { x: w(0) / 2, z: 2 };                     // covers flag 0's right half
+    } else if (n === 3) {
+      pos[2] = { x: 0,                          z: 1 };   // last (ar): back, left
+      pos[1] = { x: w(2) / 2,                   z: 3 };   // middle (mx): front, covers ar's right half
+      pos[0] = { x: w(2) / 2 + w(1) - w(0) / 2, z: 2 };   // first (es): right, mx covers its left half
     } else {
-      pos = list.map(function (c, i) {
-        var low = i % 2;   // even top/back, odd down-right/front
-        return { x: i * DX, y: low ? DY : 0, z: (low ? 1000 : 0) - i + 500 };
-      });
+      let x = 0;                                          // 4+: half-overlap cascade, later on top
+      for (let i = 0; i < n; i++) { pos[i] = { x: x, z: i + 1 }; x += w(i) / 2; }
     }
 
-    // Bounding box (widths vary); centre the layout vertically inside the fixed HC.
-    var minX = Infinity, maxX = -Infinity, maxY = 0;
-    list.forEach(function (code, i) {
-      maxY = Math.max(maxY, pos[i].y);
-      minX = Math.min(minX, pos[i].x);
-      maxX = Math.max(maxX, pos[i].x + _flagW(code, FH));
-    });
-    var offY = (HC - (FH + maxY)) / 2;
+    var minX = Infinity, maxX = -Infinity;
+    list.forEach(function (code, i) { minX = Math.min(minX, pos[i].x); maxX = Math.max(maxX, pos[i].x + w(i)); });
+    var top = (HC - FH) / 2;                              // one shared, vertically centred line
     list.forEach(function (code, i) {
       var img = flagImg(code, 'flag-layer');
       img.style.left = (pos[i].x - minX) + 'px';
-      img.style.top  = (offY + pos[i].y) + 'px';
+      img.style.top  = top + 'px';
       img.style.zIndex = String(pos[i].z);
       wrap.appendChild(img);
     });
