@@ -75,6 +75,14 @@ jobs:
       - name: Grammar topics + phrase-rule map reflect evidence (grammar-topics.mjs --check)
         run: node tools/grammar-topics.mjs --check
 
+      # Grammar rule completeness & comprehension: every rule must populate all five
+      # Focus-on-Form phases (context/notice/rule/structured/production) and every
+      # learner-facing target sentence (dialogue turn, structured-input, quiz) must
+      # carry a source-language `translation` — so grammar is never a wall of text nor
+      # an opaque sentence in a distant target. Spec: docs/GRAMMAR.md.
+      - name: Grammar rules complete + glossed (check-grammar.mjs)
+        run: node tools/check-grammar.mjs
+
       # Mi Aprendizaje path completeness: _ID_MAP in progress.js (the topic→phraseIds /
       # vocabIds lookup the path session builder reads) must match the content. Derived
       # from topics.json + the vocab files, so a new category/phrase/word flows in

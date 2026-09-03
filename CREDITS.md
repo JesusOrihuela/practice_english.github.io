@@ -89,6 +89,21 @@ The multi-dimensional variant system (`shared/js/variant-dimensions.js` registry
   (gender/number) are taught as one concept's agreement pattern.
 No copyrighted text from these works is bundled; they inform the rules and the curated lexicons.
 
+### Grammar system — academic sources
+The grammar activity (`grammar/`, `shared/json/pairs/{pair}/grammar-rules.json`) is a five-phase
+Focus-on-Form sequence, and its rule selection/leveling is grounded in a recognized CEFR inventory
+per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrighted text is bundled.
+- **Pedagogical model** — Schmidt (1990, noticing); VanPatten (1996/2004, processing instruction /
+  structured input); Adair-Hauck & Donato (2002, PACE); Long (1991, focus on form); Swain (1985,
+  output); Slamecka & Graf (1978, generation effect); Krashen (1985) & Sharwood Smith (1993, input /
+  input enhancement); Laufer & Girsai (2008, L1 in form-focused instruction — grounds the L1 gloss).
+- **English rule inventory / leveling** — English Grammar Profile (Cambridge University Press &
+  Cambridge Assessment, Cambridge Learner Corpus); reference: *Practical English Usage* (Swan).
+- **Spanish rule inventory / leveling** — Plan Curricular del Instituto Cervantes (PCIC), "Gramática";
+  reference: *Nueva gramática de la lengua española* (NGLE, RAE & ASALE).
+- **German** — Goethe-Institut / *Profil deutsch* CEFR descriptors; reference: *Duden — Die Grammatik*.
+- **Finnish** — CEFR descriptors (YKI/EOI); reference: *Iso suomen kielioppi* (VISK, SKS).
+
 ### National flags (`shared/img/flags/`)
 Faithful national flag SVGs used for the region/variant badges. National flags are in the
 **public domain** (government works); files sourced from Wikimedia Commons.

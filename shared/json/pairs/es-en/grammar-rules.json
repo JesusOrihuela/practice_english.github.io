@@ -4400,7 +4400,7 @@
       "category": "advanced_syntax",
       "level": "C1",
       "title": "Inversion after negative adverbials",
-      "explanation": "When a sentence begins with a negative or restrictive adverbial (Never, Not only, Hardly, Seldom), the subject and auxiliary verb are inverted. This structure is formal and creates strong emphasis.",
+      "explanation": "Cuando una oración empieza con un adverbio negativo o restrictivo (**Never, Not only, Hardly, Seldom, Rarely, No sooner**), el sujeto y el verbo auxiliar se **invierten**, igual que en una pregunta: *Never have I seen...*, *Not only did she sing...*. Es una estructura **formal** que da mucho énfasis.",
       "examples": [
         {
           "en": "Never have I seen such dedication.",
@@ -4419,16 +4419,82 @@
       "topics": [
         "pensamientos_opiniones"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Ana",
+          "text": "How was the awards ceremony last night?",
+          "translation": "¿Qué tal la ceremonia de premios anoche?",
+          "highlight": false
+        },
+        {
+          "speaker": "Tom",
+          "text": "**Never have I seen** such an emotional speech. **Not only did she thank** her team, but she also dedicated the prize to her mentor.",
+          "translation": "Nunca he visto un discurso tan emotivo. No solo agradeció a su equipo, sino que también dedicó el premio a su mentor.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "**Seldom do we witness** such humility.",
+          "translation": "Pocas veces presenciamos tanta humildad.",
+          "highlight": true
+        },
+        {
+          "speaker": "Tom",
+          "text": "**Hardly had she finished** speaking when the whole room stood up.",
+          "translation": "Apenas había terminado de hablar cuando toda la sala se puso de pie.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "Never have I seen such a beautiful sunset.",
+          "translation": "Nunca he visto un atardecer tan hermoso.",
+          "question": "¿Por qué se invierten 'have' e 'I'?",
+          "options": [
+            "Porque la oración empieza con un adverbio negativo (Never)",
+            "Porque es una pregunta",
+            "Porque 'I' es el objeto",
+            "Porque el verbo es irregular"
+          ],
+          "correct": 0,
+          "feedback": "Al empezar con un adverbio negativo (Never), el auxiliar va antes del sujeto: 'Never have I seen'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Not only ___ she sing, but she also danced. (did)",
+          "translation": "No solo cantó, sino que también bailó.",
+          "answer": "did",
+          "accepted": [
+            "did"
+          ],
+          "feedback_why": "Tras 'Not only' al inicio se invierte con el auxiliar: 'Not only did she sing'.",
+          "contrast": "Sin inversión sería más informal: 'She not only sang, but also danced.'"
+        },
+        {
+          "sentence": "Never ___ I heard such an incredible story. (have)",
+          "translation": "Nunca había oído una historia tan increíble.",
+          "answer": "have",
+          "accepted": [
+            "have"
+          ],
+          "feedback_why": "'Never' al inicio invierte sujeto y auxiliar: 'Never have I heard'.",
+          "contrast": "Orden normal, sin énfasis: 'I have never heard...'."
+        }
+      ],
+      "title_es": "Inversión tras adverbios negativos",
+      "noticing_prompts": [
+        "Fíjate en 'Never have I seen'. ¿Qué orden tienen el sujeto (I) y el auxiliar (have)?",
+        "En 'Not only did she thank', ¿el verbo principal va en forma base o conjugada?",
+        "¿Qué tono crea esta inversión: informal o formal y enfático?"
+      ]
     },
     {
       "id": "mixed_conditionals",
       "category": "conditionals",
       "level": "C1",
       "title": "Mixed conditionals",
-      "explanation": "Mixed conditionals combine elements from different conditional types. The most common: past condition + present result (if + past perfect, would + infinitive), used when a past event has a consequence in the present.",
+      "explanation": "Los **condicionales mixtos** combinan tiempos de tipos distintos. El más común mezcla una **condición pasada** con un **resultado presente**: *If + past perfect, would + infinitivo*. Ejemplo: *If I had studied medicine, I would be a doctor now* (no estudié, así que ahora no lo soy).",
       "examples": [
         {
           "en": "If I had studied medicine, I would be a doctor now.",
@@ -4443,16 +4509,84 @@
       "topics": [
         "conversacion"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Sara",
+          "text": "You seem tired lately. Everything okay?",
+          "translation": "Te noto cansado últimamente. ¿Todo bien?",
+          "highlight": false
+        },
+        {
+          "speaker": "Leo",
+          "text": "**If I had chosen** a job closer to home, **I wouldn't be** so exhausted now.",
+          "translation": "Si hubiera elegido un trabajo más cerca de casa, ahora no estaría tan agotado.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sara",
+          "text": "True. And **if you weren't** so committed, **you would have quit** months ago.",
+          "translation": "Es verdad. Y si no fueras tan comprometido, habrías renunciado hace meses.",
+          "highlight": true
+        },
+        {
+          "speaker": "Leo",
+          "text": "Exactly. **If I had known** the commute would be this hard, **I would think** twice today.",
+          "translation": "Exacto. Si hubiera sabido que el trayecto sería tan duro, hoy lo pensaría dos veces.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "If I had saved more money, I would travel now.",
+          "translation": "Si hubiera ahorrado más dinero, ahora viajaría.",
+          "question": "¿Qué relación expresa esta oración?",
+          "options": [
+            "Una condición pasada con un resultado en el presente",
+            "Una condición y un resultado, ambos en el futuro",
+            "Un hábito del pasado",
+            "Una condición y un resultado, ambos en el pasado"
+          ],
+          "correct": 0,
+          "feedback": "Condición pasada (had saved) + resultado presente (would travel now): un condicional mixto."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "If she ___ (not / miss) the flight, she would be here now.",
+          "translation": "Si no hubiera perdido el vuelo, ahora estaría aquí.",
+          "answer": "hadn't missed",
+          "accepted": [
+            "hadn't missed",
+            "had not missed"
+          ],
+          "feedback_why": "Condición pasada en past perfect: 'If she hadn't missed the flight, she would be here now'.",
+          "contrast": "Resultado presente: would + infinitivo ('would be')."
+        },
+        {
+          "sentence": "If I had learned to drive, I ___ (buy) a car now.",
+          "translation": "Si hubiera aprendido a manejar, ahora compraría un carro.",
+          "answer": "would buy",
+          "accepted": [
+            "would buy",
+            "'d buy"
+          ],
+          "feedback_why": "Resultado presente de una condición pasada: would + infinitivo ('would buy').",
+          "contrast": "La condición usa past perfect: 'If I had learned...'."
+        }
+      ],
+      "title_es": "Condicionales mixtos",
+      "noticing_prompts": [
+        "En 'If I had chosen..., I wouldn't be...', ¿la condición se refiere al pasado o al presente?",
+        "¿Y el resultado 'I wouldn't be so exhausted now' se refiere al pasado o al presente?",
+        "¿Qué tiempo se usa tras 'If' para la condición pasada?"
+      ]
     },
     {
       "id": "subjunctive_formal",
       "category": "advanced_syntax",
       "level": "C1",
       "title": "Formal subjunctive",
-      "explanation": "The formal subjunctive uses the base form of a verb after expressions of necessity, demand, or recommendation: It is essential that, require that, suggest that, insist that. The base form is used regardless of person.",
+      "explanation": "En inglés formal, tras verbos y expresiones de **necesidad, petición o recomendación** (*suggest, recommend, insist, require, demand; it is essential/important that*) se usa la **forma base** del verbo, sin conjugar y sin -s: *I suggest that he **be** on time*, *It is essential that she **arrive** early*.",
       "examples": [
         {
           "en": "It is essential that every member submit the report on time.",
@@ -4471,16 +4605,76 @@
       "topics": [
         "oficina"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "HR",
+          "text": "The committee reviewed your proposal for the new hire.",
+          "translation": "El comité revisó tu propuesta para la nueva contratación.",
+          "highlight": false
+        },
+        {
+          "speaker": "Mia",
+          "text": "Good. I recommend that the candidate **start** in March, and I insist that she **be** given a proper induction.",
+          "translation": "Bien. Recomiendo que la candidata empiece en marzo, e insisto en que se le dé una inducción adecuada.",
+          "highlight": true
+        },
+        {
+          "speaker": "HR",
+          "text": "Understood. It is essential that every new employee **complete** the training first.",
+          "translation": "Entendido. Es esencial que cada empleado nuevo complete primero la capacitación.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "It is essential that he be present at the meeting.",
+          "translation": "Es esencial que él esté presente en la reunión.",
+          "question": "¿Por qué se usa 'be' y no 'is'?",
+          "options": [
+            "Es el subjuntivo formal: forma base tras 'it is essential that'",
+            "Es un error gramatical",
+            "Porque 'he' es plural",
+            "Porque la oración está en pasado"
+          ],
+          "correct": 0,
+          "feedback": "Tras expresiones de necesidad (it is essential that) se usa la forma base: 'he be present'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "The doctor recommended that she ___ (take) the medicine daily.",
+          "translation": "El médico recomendó que ella tomara la medicina a diario.",
+          "answer": "take",
+          "accepted": [
+            "take"
+          ],
+          "feedback_why": "Tras 'recommend that' se usa la forma base sin -s: 'that she take'.",
+          "contrast": "Sin subjuntivo (informal): 'that she takes'."
+        },
+        {
+          "sentence": "We require that every applicant ___ (be) over eighteen. (base form)",
+          "translation": "Exigimos que todo solicitante sea mayor de dieciocho años.",
+          "answer": "be",
+          "accepted": [
+            "be"
+          ],
+          "feedback_why": "Tras 'require that' el subjuntivo usa la forma base 'be', sin importar la persona.",
+          "contrast": "Indicativo sería 'is', pero el registro formal pide 'be'."
+        }
+      ],
+      "title_es": "El subjuntivo formal",
+      "noticing_prompts": [
+        "En 'I recommend that the candidate start', ¿por qué es 'start' y no 'starts'?",
+        "En 'I insist that she be given', ¿qué forma del verbo 'be' se usa?",
+        "¿Este registro es formal o informal?"
+      ]
     },
     {
       "id": "nominalization",
       "category": "advanced_syntax",
       "level": "C1",
       "title": "Nominalization",
-      "explanation": "Nominalization turns verbs or adjectives into nouns: to decide -> the decision; to analyze -> the analysis; accurate -> accuracy. It makes language more formal and concise.",
+      "explanation": "La **nominalización** convierte verbos o adjetivos en **sustantivos**: *to decide → the **decision***, *to analyze → the **analysis***, *accurate → **accuracy***. Hace el lenguaje más **formal y conciso**, típico de textos académicos y profesionales.",
       "examples": [
         {
           "en": "The committee made a decision to postpone the vote.",
@@ -4499,16 +4693,82 @@
       "topics": [
         "accountability"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Boss",
+          "text": "Why did the project fall behind?",
+          "translation": "¿Por qué se retrasó el proyecto?",
+          "highlight": false
+        },
+        {
+          "speaker": "Ana",
+          "text": "The main issue was the **delay** in the **approval** of the budget.",
+          "translation": "El problema principal fue el retraso en la aprobación del presupuesto.",
+          "highlight": true
+        },
+        {
+          "speaker": "Boss",
+          "text": "I see. So the **decision** to wait caused a loss of time.",
+          "translation": "Entiendo. Así que la decisión de esperar causó una pérdida de tiempo.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ana",
+          "text": "Exactly. A faster **response** would have improved our **performance**.",
+          "translation": "Exacto. Una respuesta más rápida habría mejorado nuestro desempeño.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "The analysis of the data took two weeks.",
+          "translation": "El análisis de los datos tomó dos semanas.",
+          "question": "¿Qué es 'analysis' en esta oración?",
+          "options": [
+            "La nominalización del verbo 'to analyze'",
+            "Un verbo en presente",
+            "Un adjetivo",
+            "Un adverbio"
+          ],
+          "correct": 0,
+          "feedback": "'Analysis' es el sustantivo derivado de 'to analyze': una nominalización que da tono formal."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "They announced the closure of the factory. (from: to close)",
+          "translation": "Anunciaron el cierre de la fábrica.",
+          "answer": "closure",
+          "accepted": [
+            "closure"
+          ],
+          "feedback_why": "'Closure' es la nominalización de 'to close', más formal que 'they announced they would close it'.",
+          "contrast": "Versión verbal: 'They announced that they would close the factory.'"
+        },
+        {
+          "sentence": "The ___ of the new policy improved safety. (introduce)",
+          "translation": "La introducción de la nueva política mejoró la seguridad.",
+          "answer": "introduction",
+          "accepted": [
+            "introduction"
+          ],
+          "feedback_why": "'Introduction' nominaliza 'to introduce', concentrando la idea en un sustantivo.",
+          "contrast": "Versión verbal: 'When they introduced the new policy, safety improved.'"
+        }
+      ],
+      "title_es": "La nominalización",
+      "noticing_prompts": [
+        "'The delay in the approval': ¿de qué verbos vienen 'delay' y 'approval'?",
+        "'The decision to wait': ¿qué verbo se esconde en 'decision'?",
+        "¿El lenguaje con sustantivos suena más formal o más informal?"
+      ]
     },
     {
       "id": "cleft_sentences",
       "category": "advanced_syntax",
       "level": "C2",
       "title": "Cleft sentences",
-      "explanation": "Cleft sentences split a simple sentence into two clauses to emphasize one element. It-clefts: It is/was + focus + that/who. Wh-clefts: What + clause + is/was + focus.",
+      "explanation": "Las **oraciones hendidas** dividen una oración simple en dos partes para **enfatizar** un elemento. Con *it*: *It was **John** who called* (no otra persona). Con *what*: *What I need is **more time***. Sirven para destacar información nueva o corregir.",
       "examples": [
         {
           "en": "It was the director’s staging that made the production so memorable.",
@@ -4528,16 +4788,82 @@
         "calendario",
         "accommodation"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Sam",
+          "text": "So Marta organized the whole event?",
+          "translation": "¿Entonces Marta organizó todo el evento?",
+          "highlight": false
+        },
+        {
+          "speaker": "Ivy",
+          "text": "Actually, **it was Diego who** booked the venue. **What Marta did was** design the program.",
+          "translation": "En realidad, fue Diego quien reservó el lugar. Lo que hizo Marta fue diseñar el programa.",
+          "highlight": true
+        },
+        {
+          "speaker": "Sam",
+          "text": "I see. **What we really need now is** more volunteers.",
+          "translation": "Ya veo. Lo que de verdad necesitamos ahora son más voluntarios.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ivy",
+          "text": "Agreed. **It's the volunteers who** make the difference.",
+          "translation": "De acuerdo. Son los voluntarios quienes marcan la diferencia.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "It was in Paris that they first met.",
+          "translation": "Fue en París donde se conocieron.",
+          "question": "¿Qué elemento enfatiza esta oración hendida?",
+          "options": [
+            "El lugar (in Paris)",
+            "La persona que habla",
+            "El tiempo verbal",
+            "Que es una pregunta"
+          ],
+          "correct": 0,
+          "feedback": "La estructura 'It was ... that' destaca el lugar: 'It was in Paris that they first met'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ I admire most is her honesty. (What)",
+          "translation": "Lo que más admiro es su honestidad.",
+          "answer": "What",
+          "accepted": [
+            "What"
+          ],
+          "feedback_why": "Las hendidas con 'what' empiezan por 'What + oración + is/was + foco': 'What I admire most is...'.",
+          "contrast": "Sin énfasis: 'I admire her honesty most.'"
+        },
+        {
+          "sentence": "It ___ my brother who fixed the car, not me. (was)",
+          "translation": "Fue mi hermano quien arregló el carro, no yo.",
+          "answer": "was",
+          "accepted": [
+            "was"
+          ],
+          "feedback_why": "La hendida con 'it' usa 'It was + foco + who/that': 'It was my brother who fixed the car'.",
+          "contrast": "Sin hendir: 'My brother fixed the car.'"
+        }
+      ],
+      "title_es": "Oraciones hendidas (cleft)",
+      "noticing_prompts": [
+        "'It was Diego who booked the venue': ¿qué elemento se está enfatizando?",
+        "'What Marta did was design the program': ¿cómo empieza esta oración hendida?",
+        "¿Por qué usarías esta estructura en lugar de 'Diego booked the venue'?"
+      ]
     },
     {
       "id": "ellipsis_substitution",
       "category": "advanced_syntax",
       "level": "C2",
       "title": "Ellipsis and substitution",
-      "explanation": "Ellipsis omits words understood from context. Substitution replaces a clause with do so, one, or that. Both make language economical and natural.",
+      "explanation": "La **elipsis** omite palabras que se entienden por el contexto: *I can come if you want me to (come)*. La **sustitución** reemplaza una parte con *do so, one, so* o *that*: *I need a pen. Do you have **one**?*; *Is it raining? I think **so***. Ambas hacen el inglés más económico y natural.",
       "examples": [
         {
           "en": "Will you attend the conference? — I might do.",
@@ -4556,16 +4882,82 @@
       "topics": [
         "conversacion"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Kim",
+          "text": "Are you coming to the meeting later?",
+          "translation": "¿Vas a venir a la reunión más tarde?",
+          "highlight": false
+        },
+        {
+          "speaker": "Ray",
+          "text": "I'd love to, but I can't. Sara is, though.",
+          "translation": "Me encantaría, pero no puedo. Sara sí, eso sí.",
+          "highlight": true
+        },
+        {
+          "speaker": "Kim",
+          "text": "Do you have the report? I forgot mine and I need **one**.",
+          "translation": "¿Tienes el informe? Olvidé el mío y necesito uno.",
+          "highlight": true
+        },
+        {
+          "speaker": "Ray",
+          "text": "I think **so**. If not, I'll print another. **So do** I need a copy, actually.",
+          "translation": "Creo que sí. Si no, imprimo otro. Yo también necesito una copia, de hecho.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "A: Will it rain tomorrow? B: I hope not.",
+          "translation": "A: ¿Lloverá mañana? B: Espero que no.",
+          "question": "¿Qué reemplaza 'not' en 'I hope not'?",
+          "options": [
+            "La oración completa 'it will not rain tomorrow'",
+            "El sujeto 'it'",
+            "El verbo 'hope'",
+            "Nada, es un error"
+          ],
+          "correct": 0,
+          "feedback": "'Not' sustituye a toda la oración negativa: 'I hope it will not rain tomorrow' → 'I hope not'."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "I don't have a pen. Do you have ___? (one)",
+          "translation": "No tengo bolígrafo. ¿Tienes uno?",
+          "answer": "one",
+          "accepted": [
+            "one"
+          ],
+          "feedback_why": "'One' sustituye a 'a pen' para no repetir el sustantivo: 'Do you have one?'.",
+          "contrast": "Sin sustitución (repetitivo): 'Do you have a pen?'"
+        },
+        {
+          "sentence": "A: Is the shop open? B: I think ___. (so)",
+          "translation": "A: ¿Está abierta la tienda? B: Creo que sí.",
+          "answer": "so",
+          "accepted": [
+            "so"
+          ],
+          "feedback_why": "'So' reemplaza la oración completa 'the shop is open': 'I think so'.",
+          "contrast": "Versión completa: 'I think the shop is open.'"
+        }
+      ],
+      "title_es": "Elipsis y sustitución",
+      "noticing_prompts": [
+        "'I'd love to, but I can't': ¿qué palabras se omiten después de 'to' y 'can't'?",
+        "'I need one': ¿qué sustantivo reemplaza 'one'?",
+        "'I think so': ¿qué idea completa reemplaza 'so'?"
+      ]
     },
     {
       "id": "discourse_markers_advanced",
       "category": "advanced_syntax",
       "level": "C2",
       "title": "Advanced discourse markers",
-      "explanation": "Advanced discourse markers signal contrast, concession, condition, or scope. Examples: Nevertheless, Notwithstanding, Insofar as, Whereas, Inasmuch as, By the same token.",
+      "explanation": "Los **conectores avanzados** señalan contraste, concesión o alcance en registro formal: **Nevertheless / Nonetheless** (sin embargo), **Whereas** (mientras que), **Moreover / Furthermore** (además), **Hence / Thus** (por lo tanto), **Insofar as** (en la medida en que). Suelen ir al inicio de la oración, seguidos de coma.",
       "examples": [
         {
           "en": "The results were promising; nevertheless, further testing is required.",
@@ -4584,9 +4976,75 @@
       "topics": [
         "pensamientos_opiniones"
       ],
-      "context_dialogue": [],
-      "structured_input": [],
-      "quiz": []
+      "context_dialogue": [
+        {
+          "speaker": "Chair",
+          "text": "The results this quarter were mixed.",
+          "translation": "Los resultados de este trimestre fueron mixtos.",
+          "highlight": false
+        },
+        {
+          "speaker": "CFO",
+          "text": "Sales rose in Europe. **Whereas** in Asia they fell, our margins improved overall.",
+          "translation": "Las ventas subieron en Europa. Mientras que en Asia cayeron, nuestros márgenes mejoraron en general.",
+          "highlight": true
+        },
+        {
+          "speaker": "Chair",
+          "text": "The costs were high. **Nevertheless**, we met our targets.",
+          "translation": "Los costos fueron altos. Sin embargo, cumplimos nuestros objetivos.",
+          "highlight": true
+        },
+        {
+          "speaker": "CFO",
+          "text": "**Moreover**, cash flow is stable. **Hence**, I recommend maintaining the strategy.",
+          "translation": "Además, el flujo de caja es estable. Por lo tanto, recomiendo mantener la estrategia.",
+          "highlight": true
+        }
+      ],
+      "structured_input": [
+        {
+          "sentence": "The plan was risky. Nevertheless, the board approved it.",
+          "translation": "El plan era arriesgado. Sin embargo, la junta lo aprobó.",
+          "question": "¿Qué relación expresa 'Nevertheless'?",
+          "options": [
+            "Contraste o concesión (a pesar del riesgo)",
+            "Causa y efecto",
+            "Adición de información",
+            "Orden temporal"
+          ],
+          "correct": 0,
+          "feedback": "'Nevertheless' introduce un contraste: a pesar del riesgo, se aprobó el plan."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Sales grew in the north, ___ they dropped in the south. (whereas)",
+          "translation": "Las ventas crecieron en el norte, mientras que cayeron en el sur.",
+          "answer": "whereas",
+          "accepted": [
+            "whereas"
+          ],
+          "feedback_why": "'Whereas' contrasta dos situaciones paralelas: 'grew in the north, whereas they dropped in the south'.",
+          "contrast": "Un conector informal de contraste sería 'but'."
+        },
+        {
+          "sentence": "The evidence is weak. ___, the theory remains popular. (Nonetheless)",
+          "translation": "La evidencia es débil. No obstante, la teoría sigue siendo popular.",
+          "answer": "Nonetheless",
+          "accepted": [
+            "Nonetheless"
+          ],
+          "feedback_why": "'Nonetheless' (formal) marca concesión: a pesar de la evidencia débil, la teoría persiste.",
+          "contrast": "Equivale a 'Nevertheless'; informal sería 'Still' o 'Even so'."
+        }
+      ],
+      "title_es": "Conectores del discurso avanzados",
+      "noticing_prompts": [
+        "'Nevertheless, we met our targets': ¿qué relación marca (contraste, causa o adición)?",
+        "'Hence, I recommend...': ¿'hence' expresa consecuencia o contraste?",
+        "¿Estos conectores suenan formales o informales?"
+      ]
     }
   ]
 }
