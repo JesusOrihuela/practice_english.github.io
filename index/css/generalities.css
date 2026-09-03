@@ -1499,7 +1499,6 @@ body.path-mode {
   overflow: hidden;
   background: var(--clr-surface);
   width: 100%;
-  max-width: 460px;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.06));
 }
 .variant-table + .variant-table { margin-top: 12px; }
@@ -1529,19 +1528,24 @@ body.path-mode {
   border-bottom: 1px solid var(--clr-border);
 }
 .variant-row:last-child { border-bottom: none; }
-/* Card BACK: compact reference of the forms — "form (label)" per variant, so you can tell which is
-   which, small and inline (not the whole boxed table). */
-.variant-compact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
-.variant-compact-item { display: inline-flex; align-items: baseline; gap: 5px; }
-.variant-compact-item strong { font-weight: 700; color: var(--clr-text); }
-.variant-compact-label {
-  font-size: 0.66rem;
+/* Card BACK: compact reference of the forms — each form followed by the SAME icon+label tag used on
+   the front, but sized to sit in the flow of the other back values (ENGLISH / EXAMPLE), so the line
+   reads as part of the page, not as an oversized independent element. */
+.variant-compact { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 0.9rem; }
+.variant-compact-item { display: inline-flex; align-items: center; gap: 6px; }
+.variant-compact-form { font-weight: 600; color: var(--clr-text); }
+.variant-compact-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
   color: var(--clr-text-muted);
 }
-.variant-compact-sep { color: var(--clr-text-muted); opacity: 0.5; }
+.variant-compact-tag .variant-ico { width: 0.95em; height: 0.95em; }
+.variant-compact-tag .flag-img,
+.variant-compact-tag .region-globe { height: 10px; width: auto; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08); }
+.variant-compact-sep { color: var(--clr-text-muted); opacity: 0.45; }
 .variant-form {
   font-size: 1.2rem;
   font-weight: 700;

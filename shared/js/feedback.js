@@ -455,11 +455,24 @@ const AppFeedback = (() => {
       if (i) { const sep = document.createElement('span'); sep.className = 'variant-compact-sep'; sep.textContent = '·'; wrap.appendChild(sep); }
       const item = document.createElement('span');
       item.className = 'variant-compact-item';
-      const f = document.createElement('strong'); f.textContent = _capitalize((v && v.text) || ''); item.appendChild(f);
+      const f = document.createElement('span'); f.className = 'variant-compact-form'; f.textContent = _capitalize((v && v.text) || ''); item.appendChild(f);
+      // Same icon+label tag as the front rows, kept small so the line blends with the other back values.
       const labs = (v && v.labels) || {};
-      const parts = [];
-      for (const dim of _dimOrder()) { const val = labs[dim]; if (val === undefined || val === '') continue; parts.push(_variantLabelText(dim, val)); }
-      if (parts.length) { const lb = document.createElement('span'); lb.className = 'variant-compact-label'; lb.textContent = parts.join(', '); item.appendChild(lb); }
+      for (const dim of _dimOrder()) {
+        const val = labs[dim];
+        if (val === undefined || val === '') continue;
+        const tag = document.createElement('span');
+        tag.className = 'variant-compact-tag';
+        if (_dimBadge(dim) === 'flag') {
+          if (typeof AppFlags !== 'undefined' && AppFlags.region) { const fl = AppFlags.region(val); if (fl) tag.appendChild(fl); }
+          const tx = document.createElement('span'); tx.textContent = _capitalize(val); tag.appendChild(tx);
+        } else {
+          const mk = _iconMarkup(dim, val);
+          if (mk) { const ico = document.createElement('span'); ico.innerHTML = mk; tag.appendChild(ico.firstChild); }
+          const tx = document.createElement('span'); tx.textContent = _variantLabelText(dim, val); tag.appendChild(tx);
+        }
+        item.appendChild(tag);
+      }
       wrap.appendChild(item);
     });
     return wrap;
