@@ -101,7 +101,7 @@ per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrigh
   Cambridge Assessment, Cambridge Learner Corpus); reference: *Practical English Usage* (Swan).
 - **Spanish rule inventory / leveling** — Plan Curricular del Instituto Cervantes (PCIC), "Gramática";
   reference: *Nueva gramática de la lengua española* (NGLE, RAE & ASALE).
-- **German** — Goethe-Institut / *Profil deutsch* CEFR descriptors; reference: *Duden — Die Grammatik*.
+- **German** — Goethe-Institut / *Profile deutsch* CEFR descriptors; reference: *Duden — Die Grammatik*.
 - **Finnish** — CEFR descriptors (YKI/EOI); reference: *Iso suomen kielioppi* (VISK, SKS).
 
 ### National flags (`shared/img/flags/`)

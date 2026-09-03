@@ -55,10 +55,13 @@ grammatical form is what the learner supplies.
 
 ## 2. Where the content comes from (sources per language)
 
-Grammar content is **grounded in a recognized reference for each target language**, not authored by
-intuition — the same principle as phrases (Tatoeba + frequency) and vocab (NGSL/PCIC). "Grounded"
-means: which structures exist at which CEFR level is taken from the authority below, and the
-explanations/examples are checked against it. No copyrighted text from these works is bundled.
+Rule selection and CEFR leveling are **governed by a recognized reference for each target language** —
+the same principle as vocab (NGSL/PCIC). This table is the **authority a rule's `level` must answer
+to**: it is the standard against which new rules are written and existing rules are reconciled (which
+structures belong at which level, and which structures belong in the curriculum at all). It is a
+policy, not a claim that every legacy rule was mechanically derived from these lists; where a current
+rule's level cannot be justified against the inventory below, the rule is re-leveled or cut. No
+copyrighted text from these works is bundled.
 
 | Target | CEFR rule inventory / leveling | Reference grammar (facts & examples) |
 |--------|--------------------------------|--------------------------------------|

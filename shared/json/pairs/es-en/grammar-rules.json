@@ -4473,7 +4473,7 @@
         },
         {
           "sentence": "Never ___ I heard such an incredible story. (have)",
-          "translation": "Nunca había oído una historia tan increíble.",
+          "translation": "Nunca he oído una historia tan increíble.",
           "answer": "have",
           "accepted": [
             "have"
@@ -4903,8 +4903,8 @@
         },
         {
           "speaker": "Ray",
-          "text": "I think **so**. If not, I'll print another. **So do** I need a copy, actually.",
-          "translation": "Creo que sí. Si no, imprimo otro. Yo también necesito una copia, de hecho.",
+          "text": "I think **so**. If not, I'll print another **one**.",
+          "translation": "Creo que sí. Si no, imprimo otra.",
           "highlight": true
         }
       ],
@@ -4985,8 +4985,8 @@
         },
         {
           "speaker": "CFO",
-          "text": "Sales rose in Europe. **Whereas** in Asia they fell, our margins improved overall.",
-          "translation": "Las ventas subieron en Europa. Mientras que en Asia cayeron, nuestros márgenes mejoraron en general.",
+          "text": "Sales rose in Europe, **whereas** in Asia they fell slightly.",
+          "translation": "Las ventas subieron en Europa, mientras que en Asia cayeron un poco.",
           "highlight": true
         },
         {
