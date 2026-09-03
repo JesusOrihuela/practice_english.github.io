@@ -443,16 +443,26 @@ const AppFeedback = (() => {
     return frag;
   }
 
-  // Compact one-line forms for the card BACK: the variant forms joined by "·" (no box), so the back
-  // references the alternatives without repeating the whole table. Returns a span, or null.
+  // Compact forms for the card BACK: each variant as "form (label)" so you can tell WHICH variant it is,
+  // joined by "·" — a small reference, not the whole boxed table. Returns a span, or null.
   function buildWordVariantsCompact(variants, currentText, t) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
     const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
-    const span = document.createElement('span');
-    span.className = 'variant-compact';
-    span.textContent = shown.map(v => _capitalize((v && v.text) || '')).join('  ·  ');
-    return span;
+    const wrap = document.createElement('span');
+    wrap.className = 'variant-compact';
+    shown.forEach((v, i) => {
+      if (i) { const sep = document.createElement('span'); sep.className = 'variant-compact-sep'; sep.textContent = '·'; wrap.appendChild(sep); }
+      const item = document.createElement('span');
+      item.className = 'variant-compact-item';
+      const f = document.createElement('strong'); f.textContent = _capitalize((v && v.text) || ''); item.appendChild(f);
+      const labs = (v && v.labels) || {};
+      const parts = [];
+      for (const dim of _dimOrder()) { const val = labs[dim]; if (val === undefined || val === '') continue; parts.push(_variantLabelText(dim, val)); }
+      if (parts.length) { const lb = document.createElement('span'); lb.className = 'variant-compact-label'; lb.textContent = parts.join(', '); item.appendChild(lb); }
+      wrap.appendChild(item);
+    });
+    return wrap;
   }
 
   return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge, buildWordVariants, buildWordVariantsCompact };

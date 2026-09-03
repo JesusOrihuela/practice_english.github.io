@@ -1498,9 +1498,11 @@ body.path-mode {
   border-radius: 12px;
   overflow: hidden;
   background: var(--clr-surface);
-  min-width: 280px;
+  width: 100%;
+  max-width: 460px;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.06));
 }
+.variant-table + .variant-table { margin-top: 12px; }
 /* Connected header inside the box: POS (left) + group label (right) — belongs to the box, not floating. */
 .variant-thead {
   display: flex;
@@ -1527,8 +1529,19 @@ body.path-mode {
   border-bottom: 1px solid var(--clr-border);
 }
 .variant-row:last-child { border-bottom: none; }
-/* Card BACK: a compact one-line reference of the forms (matches the other back values' text style). */
-.variant-compact { font-weight: 600; color: var(--clr-text); }
+/* Card BACK: compact reference of the forms — "form (label)" per variant, so you can tell which is
+   which, small and inline (not the whole boxed table). */
+.variant-compact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.variant-compact-item { display: inline-flex; align-items: baseline; gap: 5px; }
+.variant-compact-item strong { font-weight: 700; color: var(--clr-text); }
+.variant-compact-label {
+  font-size: 0.66rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--clr-text-muted);
+}
+.variant-compact-sep { color: var(--clr-text-muted); opacity: 0.5; }
 .variant-form {
   font-size: 1.2rem;
   font-weight: 700;

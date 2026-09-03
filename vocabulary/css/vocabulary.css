@@ -55,7 +55,7 @@
   position: relative;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
-  padding: 48px 28px;
+  padding: 34px 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,10 +110,12 @@
 .word-text.word-text--variants {
   font-size: 1.05rem;
   font-weight: 600;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   justify-content: center;
+  margin-bottom: 22px;
 }
 .word-text--variants .word-variants,
 .word-text--variants .alt-group { align-items: center; }
@@ -160,7 +162,7 @@
   font-size: 1rem;
   font-weight: 800;
   color: var(--clr-primary);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   letter-spacing: 0.01em;
   /* word + its region/register badge sit on one baseline-aligned row */
   display: flex;
@@ -226,7 +228,7 @@
 .fc-def-side--active { opacity: 1; background: var(--clr-surface); box-shadow: var(--shadow-sm, 0 1px 3px rgba(0,0,0,0.12)); }
 
 .fc-definition-block {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .word-definition {
@@ -239,11 +241,11 @@
 .fc-divider {
   height: 1px;
   background: var(--clr-border);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .fc-example-block {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .word-example {
@@ -268,8 +270,8 @@
 /* Other regional/register forms (recognition strip). A clean, separated, LEFT-aligned section —
    not a lone centred pill glued under the translation. */
 .fc-variants-block {
-  margin-top: 16px;
-  padding-top: 14px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid var(--clr-border);
 }
 .word-variants {
@@ -292,7 +294,7 @@
 .alt-group-row { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .listen-btn-back {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   align-self: flex-start;
 }
 
