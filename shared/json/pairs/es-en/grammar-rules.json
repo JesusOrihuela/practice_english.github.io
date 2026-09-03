@@ -90,26 +90,31 @@
         {
           "speaker": "Ana",
           "text": "What time do you wake up on weekdays?",
+          "translation": "¿A qué hora te levantas los días de semana?",
           "highlight": false
         },
         {
           "speaker": "Tom",
           "text": "I **wake up** at 6:30. I **go** for a run before breakfast.",
+          "translation": "Me levanto a las seis y media. Salgo a correr antes del desayuno.",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "Every day? That sounds exhausting!",
+          "translation": "¿Todos los días? ¡Eso suena agotador!",
           "highlight": false
         },
         {
           "speaker": "Tom",
           "text": "Well, my body **works** better when I exercise. I **feel** more focused.",
+          "translation": "Bueno, mi cuerpo funciona mejor cuando hago ejercicio. Me siento más concentrado.",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "I understand. I **drink** coffee first — I **need** it to function.",
+          "translation": "Entiendo. Yo primero tomo café, lo necesito para funcionar.",
           "highlight": true
         }
       ],
@@ -122,6 +127,7 @@
       "structured_input": [
         {
           "sentence": "She teaches English at a university.",
+          "translation": "Ella enseña inglés en una universidad.",
           "question": "¿Qué comunica esta oración?",
           "options": [
             "Está enseñando en este momento",
@@ -134,6 +140,7 @@
         },
         {
           "sentence": "Water boils at 100 degrees Celsius.",
+          "translation": "El agua hierve a 100 grados Celsius.",
           "question": "¿Por qué se usa Present Simple aquí?",
           "options": [
             "Es algo que está pasando ahora",
@@ -146,6 +153,7 @@
         },
         {
           "sentence": "I don't drink alcohol. I prefer juice.",
+          "translation": "No tomo alcohol. Prefiero el jugo.",
           "question": "¿Qué nos dice sobre esta persona?",
           "options": [
             "No bebió alcohol hoy",
@@ -160,6 +168,7 @@
       "quiz": [
         {
           "sentence": "He ___ (work) at a hospital. He's a doctor.",
+          "translation": "Él trabaja en un hospital. Es médico.",
           "answer": "works",
           "accepted": [
             "works"
@@ -169,6 +178,7 @@
         },
         {
           "sentence": "She ___ (not eat) meat. She's vegetarian.",
+          "translation": "Ella no come carne. Es vegetariana.",
           "answer": "doesn't eat",
           "accepted": [
             "doesn't eat",
@@ -179,6 +189,7 @@
         },
         {
           "sentence": "The sun ___ (rise) in the east.",
+          "translation": "El sol sale por el este.",
           "answer": "rises",
           "accepted": [
             "rises"
@@ -188,6 +199,7 @@
         },
         {
           "sentence": "We ___ (have) class every Monday.",
+          "translation": "Tenemos clase todos los lunes.",
           "answer": "have",
           "accepted": [
             "have"
@@ -197,6 +209,7 @@
         },
         {
           "sentence": "___ you ___ (speak) any other languages?",
+          "translation": "¿Hablas otros idiomas?",
           "answer": "Do / speak",
           "accepted": [
             "Do speak",
@@ -227,26 +240,31 @@
         {
           "speaker": "Mia",
           "text": "Hey, are you busy right now?",
+          "translation": "Oye, ¿estás ocupado ahora mismo?",
           "highlight": false
         },
         {
           "speaker": "Jake",
           "text": "Kind of — **I'm working** on a report. What's up?",
+          "translation": "Más o menos, estoy trabajando en un informe. ¿Qué pasa?",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "The team **is waiting** for you in the meeting room.",
+          "translation": "El equipo te está esperando en la sala de reuniones.",
           "highlight": true
         },
         {
           "speaker": "Jake",
           "text": "Oh no! **I'm coming**, **I'm coming**. **I'm just saving** my file.",
+          "translation": "¡Ay, no! Ya voy, ya voy. Solo estoy guardando mi archivo.",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "Hurry! **They're starting** without you.",
+          "translation": "¡Apúrate! Están empezando sin ti.",
           "highlight": true
         }
       ],
@@ -259,6 +277,7 @@
       "structured_input": [
         {
           "sentence": "Look! The children are playing in the garden.",
+          "translation": "¡Mira! Los niños están jugando en el jardín.",
           "question": "¿Qué implica 'Look!' sobre cuándo ocurre la acción?",
           "options": [
             "Los niños juegan todos los días",
@@ -271,6 +290,7 @@
         },
         {
           "sentence": "I'm reading a great book this week.",
+          "translation": "Esta semana estoy leyendo un libro buenísimo.",
           "question": "¿Significa esto que está leyendo en este segundo exacto?",
           "options": [
             "Sí, está leyendo el libro ahora mismo",
@@ -283,6 +303,7 @@
         },
         {
           "sentence": "Why are you wearing a suit today? You never wear suits.",
+          "translation": "¿Por qué llevas traje hoy? Nunca usas traje.",
           "question": "¿Qué contraste gramatical hay en esta oración?",
           "options": [
             "Dos Present Continuous",
@@ -297,6 +318,7 @@
       "quiz": [
         {
           "sentence": "Shhh! The baby ___ (sleep). Don't make noise.",
+          "translation": "¡Shhh! El bebé está durmiendo. No hagas ruido.",
           "answer": "is sleeping",
           "accepted": [
             "is sleeping",
@@ -307,6 +329,7 @@
         },
         {
           "sentence": "Why ___ you ___ (cry)? What happened?",
+          "translation": "¿Por qué estás llorando? ¿Qué pasó?",
           "answer": "are / crying",
           "accepted": [
             "are crying"
@@ -316,6 +339,7 @@
         },
         {
           "sentence": "I can't talk right now — I ___ (drive).",
+          "translation": "No puedo hablar ahora, estoy manejando.",
           "answer": "am driving",
           "accepted": [
             "am driving",
@@ -326,6 +350,7 @@
         },
         {
           "sentence": "They ___ (not watch) TV. They ___ (study) for exams.",
+          "translation": "No están viendo la tele. Están estudiando para los exámenes.",
           "answer": "aren't watching / are studying",
           "accepted": [
             "aren't watching / are studying",
@@ -336,6 +361,7 @@
         },
         {
           "sentence": "She ___ (get) better every day. The doctor is happy.",
+          "translation": "Ella está mejorando cada día. El médico está contento.",
           "answer": "is getting",
           "accepted": [
             "is getting",
@@ -372,26 +398,31 @@
         {
           "speaker": "Sam",
           "text": "How was your weekend?",
+          "translation": "¿Qué tal tu fin de semana?",
           "highlight": false
         },
         {
           "speaker": "Lily",
           "text": "Amazing! I **went** to a concert on Friday. The band **played** for three hours.",
+          "translation": "¡Increíble! El viernes fui a un concierto. La banda tocó durante tres horas.",
           "highlight": true
         },
         {
           "speaker": "Sam",
           "text": "Nice! **Did** you **go** with friends?",
+          "translation": "¡Qué bien! ¿Fuiste con amigos?",
           "highlight": true
         },
         {
           "speaker": "Lily",
           "text": "Yes, I **went** with my sister. We **got** there early and **found** great seats.",
+          "translation": "Sí, fui con mi hermana. Llegamos temprano y encontramos muy buenos asientos.",
           "highlight": true
         },
         {
           "speaker": "Sam",
           "text": "I **stayed** home. I **didn't do** anything fun.",
+          "translation": "Yo me quedé en casa. No hice nada divertido.",
           "highlight": true
         }
       ],
@@ -404,6 +435,7 @@
       "structured_input": [
         {
           "sentence": "She called me three times yesterday.",
+          "translation": "Ella me llamó tres veces ayer.",
           "question": "¿Qué indica 'yesterday' sobre la acción?",
           "options": [
             "La acción ocurre ahora",
@@ -416,6 +448,7 @@
         },
         {
           "sentence": "I didn't sleep well last night.",
+          "translation": "Anoche no dormí bien.",
           "question": "¿Cuál es la estructura de la negación en Simple Past?",
           "options": [
             "didn't + verbo-ed",
@@ -428,6 +461,7 @@
         },
         {
           "sentence": "They met in college and got married five years later.",
+          "translation": "Se conocieron en la universidad y se casaron cinco años después.",
           "question": "¿Por qué se usa Simple Past y no Present Perfect aquí?",
           "options": [
             "Porque son eventos recientes",
@@ -442,6 +476,7 @@
       "quiz": [
         {
           "sentence": "I ___ (see) a great movie last night.",
+          "translation": "Anoche vi una película buenísima.",
           "answer": "saw",
           "accepted": [
             "saw"
@@ -451,6 +486,7 @@
         },
         {
           "sentence": "She ___ (not / come) to the party. She was sick.",
+          "translation": "Ella no vino a la fiesta. Estaba enferma.",
           "answer": "didn't come",
           "accepted": [
             "didn't come",
@@ -461,6 +497,7 @@
         },
         {
           "sentence": "___ he ___ (call) you back after the meeting?",
+          "translation": "¿Te devolvió la llamada después de la reunión?",
           "answer": "Did / call",
           "accepted": [
             "Did call",
@@ -471,6 +508,7 @@
         },
         {
           "sentence": "We ___ (travel) to Mexico last summer and ___ (love) it.",
+          "translation": "El verano pasado viajamos a México y nos encantó.",
           "answer": "travelled / loved",
           "accepted": [
             "traveled / loved",
@@ -481,6 +519,7 @@
         },
         {
           "sentence": "The class ___ (start) late because the teacher ___ (lose) her notes.",
+          "translation": "La clase empezó tarde porque la profesora perdió sus apuntes.",
           "answer": "started / lost",
           "accepted": [
             "started / lost"
@@ -538,26 +577,31 @@
         {
           "speaker": "Ana",
           "text": "I called you at 8 last night. Why didn't you answer?",
+          "translation": "Te llamé a las ocho anoche. ¿Por qué no contestaste?",
           "highlight": false
         },
         {
           "speaker": "Tom",
           "text": "Sorry! I **was cooking** dinner and I didn't hear my phone.",
+          "translation": "¡Perdón! Estaba preparando la cena y no escuché el teléfono.",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "No worries. What **were** you **making**?",
+          "translation": "No te preocupes. ¿Qué estabas haciendo?",
           "highlight": true
         },
         {
           "speaker": "Tom",
           "text": "Pasta. It **was taking** forever. The water **wasn't boiling** fast enough.",
+          "translation": "Pasta. Estaba tardando muchísimo. El agua no hervía lo bastante rápido.",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "Ha! While you **were cooking**, I **was waiting** for your call.",
+          "translation": "¡Ja! Mientras tú cocinabas, yo esperaba tu llamada.",
           "highlight": true
         }
       ],
@@ -570,6 +614,7 @@
       "structured_input": [
         {
           "sentence": "She was reading when the lights went out.",
+          "translation": "Ella estaba leyendo cuando se fue la luz.",
           "question": "¿Cuál es la acción que estaba en progreso cuando ocurrió otra?",
           "options": [
             "'went out' — ocurrió mientras la otra seguía",
@@ -582,6 +627,7 @@
         },
         {
           "sentence": "While they were playing football, it started to rain.",
+          "translation": "Mientras jugaban al fútbol, empezó a llover.",
           "question": "¿Cuál es la función de 'while' aquí?",
           "options": [
             "Indica una acción completada antes de otra",
@@ -594,6 +640,7 @@
         },
         {
           "sentence": "I wasn't listening, so I missed the announcement.",
+          "translation": "No estaba prestando atención, así que me perdí el anuncio.",
           "question": "¿Qué forma se usa para la negación del Past Continuous?",
           "options": [
             "didn't + verbo-ing",
@@ -608,6 +655,7 @@
       "quiz": [
         {
           "sentence": "I ___ (study) when my roommate came home.",
+          "translation": "Estaba estudiando cuando mi compañero de cuarto llegó a casa.",
           "blanks": [
             {
               "answer": [
@@ -619,6 +667,7 @@
         },
         {
           "sentence": "While she ___ (drive) to work, she heard the news on the radio.",
+          "translation": "Mientras manejaba al trabajo, escuchó la noticia en la radio.",
           "blanks": [
             {
               "answer": [
@@ -630,6 +679,7 @@
         },
         {
           "sentence": "They ___ (not/watch) TV — they were doing homework.",
+          "translation": "No estaban viendo la tele, estaban haciendo la tarea.",
           "blanks": [
             {
               "answer": [
@@ -642,6 +692,7 @@
         },
         {
           "sentence": "___ you ___ (wait) long when the taxi arrived?",
+          "translation": "¿Llevabas mucho esperando cuando llegó el taxi?",
           "blanks": [
             {
               "answer": [
@@ -670,26 +721,31 @@
         {
           "speaker": "Host",
           "text": "**Have** you ever **been** to South America?",
+          "translation": "¿Alguna vez has estado en Sudamérica?",
           "highlight": true
         },
         {
           "speaker": "Eva",
           "text": "Yes! **I've visited** Brazil and Colombia. They're incredible.",
+          "translation": "¡Sí! He visitado Brasil y Colombia. Son increíbles.",
           "highlight": true
         },
         {
           "speaker": "Host",
           "text": "What about Argentina?",
+          "translation": "¿Y Argentina?",
           "highlight": false
         },
         {
           "speaker": "Eva",
           "text": "No, **I've never been** there, but **I've always wanted** to go.",
+          "translation": "No, nunca he estado ahí, pero siempre he querido ir.",
           "highlight": true
         },
         {
           "speaker": "Host",
           "text": "I know, I know. **I've just booked** a trip there for March. I'm so excited.",
+          "translation": "Lo sé, lo sé. Acabo de reservar un viaje ahí para marzo. Estoy muy emocionado.",
           "highlight": true
         }
       ],
@@ -702,6 +758,7 @@
       "structured_input": [
         {
           "sentence": "I've lost my keys. Can you help me look?",
+          "translation": "He perdido mis llaves. ¿Me ayudas a buscarlas?",
           "question": "¿Por qué se usa Present Perfect aquí y no Simple Past?",
           "options": [
             "Fue hace mucho tiempo",
@@ -714,6 +771,7 @@
         },
         {
           "sentence": "Have you ever tried sushi?",
+          "translation": "¿Alguna vez has probado el sushi?",
           "question": "¿A qué período de tiempo se refiere 'ever' aquí?",
           "options": [
             "A un día específico del pasado",
@@ -726,6 +784,7 @@
         },
         {
           "sentence": "She has just arrived. She's still at the door.",
+          "translation": "Ella acaba de llegar. Todavía está en la puerta.",
           "question": "¿Qué indica 'just' en Present Perfect?",
           "options": [
             "Hace mucho tiempo",
@@ -740,6 +799,7 @@
       "quiz": [
         {
           "sentence": "I ___ never ___ (try) Indian food. Is it spicy?",
+          "translation": "Nunca he probado la comida india. ¿Es picante?",
           "answer": "have / tried",
           "accepted": [
             "have tried",
@@ -750,6 +810,7 @@
         },
         {
           "sentence": "She ___ (already / finish) the report. You can read it now.",
+          "translation": "Ella ya terminó el informe. Ya puedes leerlo.",
           "answer": "has already finished",
           "accepted": [
             "has already finished",
@@ -760,6 +821,7 @@
         },
         {
           "sentence": "___ you ___ (see) that new film yet?",
+          "translation": "¿Ya viste esa película nueva?",
           "answer": "Have / seen",
           "accepted": [
             "Have seen",
@@ -770,6 +832,7 @@
         },
         {
           "sentence": "They ___ (live) in this city for ten years.",
+          "translation": "Han vivido en esta ciudad durante diez años.",
           "answer": "have lived",
           "accepted": [
             "have lived",
@@ -780,6 +843,7 @@
         },
         {
           "sentence": "I ___ (just / get) home. I'm exhausted.",
+          "translation": "Acabo de llegar a casa. Estoy agotado.",
           "answer": "have just got",
           "accepted": [
             "have just got",
@@ -818,26 +882,31 @@
         {
           "speaker": "Lena",
           "text": "Look at those clouds! It's **going to** rain.",
+          "translation": "¡Mira esas nubes! Va a llover.",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "You think so? Maybe **I'll take** an umbrella just in case.",
+          "translation": "¿Tú crees? Quizás lleve un paraguas por si acaso.",
           "highlight": true
         },
         {
           "speaker": "Lena",
           "text": "Actually, **I'm going to drive** today. Do you want a ride?",
+          "translation": "En realidad, hoy voy a manejar. ¿Quieres que te lleve?",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "Yes please! **I'll meet** you at the lobby at 8.",
+          "translation": "¡Sí, por favor! Te veo en el vestíbulo a las ocho.",
           "highlight": true
         },
         {
           "speaker": "Lena",
           "text": "Perfect. **I'm going to stop** for coffee first though.",
+          "translation": "Perfecto. Aunque primero voy a parar por un café.",
           "highlight": true
         }
       ],
@@ -850,6 +919,7 @@
       "structured_input": [
         {
           "sentence": "A: 'We need someone to present tomorrow.' B: 'I'll do it.'",
+          "translation": "A: 'Necesitamos a alguien que presente mañana.' B: 'Yo lo hago.'",
           "question": "¿Por qué usa 'will' y no 'going to' aquí?",
           "options": [
             "Porque es una predicción con evidencia",
@@ -862,6 +932,7 @@
         },
         {
           "sentence": "She's going to have a baby in July.",
+          "translation": "Ella va a tener un bebé en julio.",
           "question": "¿Qué tipo de futuro es este?",
           "options": [
             "Decisión espontánea",
@@ -874,6 +945,7 @@
         },
         {
           "sentence": "I think technology will change education dramatically.",
+          "translation": "Creo que la tecnología cambiará la educación drásticamente.",
           "question": "¿Por qué 'will' y no 'going to'?",
           "options": [
             "Es una decisión espontánea",
@@ -888,6 +960,7 @@
       "quiz": [
         {
           "sentence": "A: 'The phone is ringing.' B: 'I ___ (answer) it.'",
+          "translation": "A: 'Está sonando el teléfono.' B: 'Yo contesto.'",
           "answer": "I'll answer",
           "accepted": [
             "I'll answer",
@@ -898,6 +971,7 @@
         },
         {
           "sentence": "Watch out! That box ___ (fall)!",
+          "translation": "¡Cuidado! ¡Esa caja se va a caer!",
           "answer": "is going to fall",
           "accepted": [
             "is going to fall",
@@ -908,6 +982,7 @@
         },
         {
           "sentence": "We ___ (visit) my grandparents next weekend. It's already planned.",
+          "translation": "Vamos a visitar a mis abuelos el próximo fin de semana. Ya está planeado.",
           "answer": "are going to visit",
           "accepted": [
             "are going to visit",
@@ -918,6 +993,7 @@
         },
         {
           "sentence": "I think it ___ (be) a close game tonight.",
+          "translation": "Creo que será un partido reñido esta noche.",
           "answer": "will be",
           "accepted": [
             "will be",
@@ -928,6 +1004,7 @@
         },
         {
           "sentence": "A: 'We're out of milk.' B: 'Don't worry, I ___ (get) some on my way home.'",
+          "translation": "A: 'Se nos acabó la leche.' B: 'No te preocupes, compro un poco de camino a casa.'",
           "answer": "I'll get",
           "accepted": [
             "I'll get",
@@ -962,26 +1039,31 @@
         {
           "speaker": "Nora",
           "text": "When I arrived at the cinema, the film **had already started**.",
+          "translation": "Cuando llegué al cine, la película ya había empezado.",
           "highlight": true
         },
         {
           "speaker": "Mike",
           "text": "Oh no! **Had** you **bought** the tickets in advance?",
+          "translation": "¡Ay, no! ¿Habías comprado las entradas con antelación?",
           "highlight": true
         },
         {
           "speaker": "Nora",
           "text": "Yes, **I had booked** them online two days before.",
+          "translation": "Sí, las había reservado por internet dos días antes.",
           "highlight": true
         },
         {
           "speaker": "Mike",
           "text": "At least you **hadn't wasted** your money. You could still watch most of it.",
+          "translation": "Al menos no habías desperdiciado tu dinero. Aún pudiste ver la mayor parte.",
           "highlight": true
         },
         {
           "speaker": "Nora",
           "text": "True. But I wish I **had left** earlier. The traffic was terrible.",
+          "translation": "Es cierto. Pero ojalá hubiera salido antes. El tráfico estaba terrible.",
           "highlight": true
         }
       ],
@@ -994,6 +1076,7 @@
       "structured_input": [
         {
           "sentence": "She was nervous because she had never spoken in public before.",
+          "translation": "Estaba nerviosa porque nunca había hablado en público antes.",
           "question": "¿Cuál acción ocurrió primero cronológicamente?",
           "options": [
             "Estar nerviosa",
@@ -1006,6 +1089,7 @@
         },
         {
           "sentence": "By the time the ambulance arrived, the patient had already recovered.",
+          "translation": "Para cuando llegó la ambulancia, el paciente ya se había recuperado.",
           "question": "¿Qué comunica 'had already recovered'?",
           "options": [
             "El paciente se recuperó después de la llegada",
@@ -1018,6 +1102,7 @@
         },
         {
           "sentence": "I wish I had studied harder for the exam.",
+          "translation": "Ojalá hubiera estudiado más para el examen.",
           "question": "¿Qué expresa 'I wish + had + participio'?",
           "options": [
             "Un plan para el futuro",
@@ -1032,6 +1117,7 @@
       "quiz": [
         {
           "sentence": "When we got to the restaurant, all the tables ___ (already / take).",
+          "translation": "Cuando llegamos al restaurante, todas las mesas ya estaban ocupadas.",
           "answer": "had already been taken",
           "accepted": [
             "had already been taken",
@@ -1042,6 +1128,7 @@
         },
         {
           "sentence": "She ___ (not / eat) anything all day, so she was starving.",
+          "translation": "Ella no había comido nada en todo el día, así que estaba muerta de hambre.",
           "answer": "hadn't eaten",
           "accepted": [
             "hadn't eaten",
@@ -1052,6 +1139,7 @@
         },
         {
           "sentence": "I recognized her because we ___ (meet) before.",
+          "translation": "La reconocí porque ya nos habíamos conocido antes.",
           "answer": "had met",
           "accepted": [
             "had met"
@@ -1061,6 +1149,7 @@
         },
         {
           "sentence": "By the time he called, I ___ (already / leave) the office.",
+          "translation": "Para cuando llamó, yo ya había salido de la oficina.",
           "answer": "had already left",
           "accepts": [
             "had already left"
@@ -1073,6 +1162,7 @@
         },
         {
           "sentence": "I wish I ___ (take) that job offer. It was a great opportunity.",
+          "translation": "Ojalá hubiera aceptado esa oferta de trabajo. Era una gran oportunidad.",
           "answer": "had taken",
           "accepted": [
             "had taken"
@@ -1097,26 +1187,31 @@
         {
           "speaker": "Kai",
           "text": "What do you do for **a** living?",
+          "translation": "¿A qué te dedicas?",
           "highlight": true
         },
         {
           "speaker": "Bea",
           "text": "I'm **an** architect. I work for **a** small firm downtown.",
+          "translation": "Soy arquitecto. Trabajo en una empresa pequeña del centro.",
           "highlight": true
         },
         {
           "speaker": "Kai",
           "text": "**An** architect — how interesting! Is it **a** difficult career?",
+          "translation": "¡Arquitecto, qué interesante! ¿Es una carrera difícil?",
           "highlight": true
         },
         {
           "speaker": "Bea",
           "text": "It has **an** intense academic side, but also **a** very creative one.",
+          "translation": "Tiene un lado académico intenso, pero también uno muy creativo.",
           "highlight": true
         },
         {
           "speaker": "Kai",
           "text": "I'd love to design **a** house someday. Just as **a** hobby, of course.",
+          "translation": "Me encantaría diseñar una casa algún día. Solo como pasatiempo, claro.",
           "highlight": true
         }
       ],
@@ -1129,6 +1224,7 @@
       "structured_input": [
         {
           "sentence": "She bought a European car and an umbrella.",
+          "translation": "Ella compró un carro europeo y un paraguas.",
           "question": "¿Por qué 'a European' si European empieza con vocal?",
           "options": [
             "Es un error gramatical",
@@ -1141,6 +1237,7 @@
         },
         {
           "sentence": "He's an honest man with an MBA.",
+          "translation": "Es un hombre honesto con un MBA.",
           "question": "¿Por qué 'an honest' y 'an MBA'?",
           "options": [
             "H y M son vocales",
@@ -1153,6 +1250,7 @@
         },
         {
           "sentence": "I need a doctor. I have a terrible headache.",
+          "translation": "Necesito un médico. Tengo un dolor de cabeza terrible.",
           "question": "¿Qué comunican 'a doctor' y 'a headache' en este contexto?",
           "options": [
             "Un médico específico que ya conoces",
@@ -1167,6 +1265,7 @@
       "quiz": [
         {
           "sentence": "She's ___ engineer at ___ international company.",
+          "translation": "Ella es ingeniera en una empresa internacional.",
           "answer": "an / an",
           "accepted": [
             "an / an"
@@ -1176,6 +1275,7 @@
         },
         {
           "sentence": "It took ___ hour to get there by ___ bus.",
+          "translation": "Llegar allí tomó una hora en autobús.",
           "answer": "an / a",
           "accepted": [
             "an / a"
@@ -1185,6 +1285,7 @@
         },
         {
           "sentence": "He wants to be ___ actor or ___ musician.",
+          "translation": "Él quiere ser actor o músico.",
           "answer": "an / a",
           "accepted": [
             "an / a"
@@ -1194,6 +1295,7 @@
         },
         {
           "sentence": "I have ___ idea that might solve ___ problem.",
+          "translation": "Tengo una idea que podría resolver un problema.",
           "answer": "an / a",
           "accepted": [
             "an / a"
@@ -1203,6 +1305,7 @@
         },
         {
           "sentence": "There was ___ unusual smell coming from ___ old building.",
+          "translation": "Salía un olor extraño de un edificio viejo.",
           "answer": "an / an",
           "accepted": [
             "an / an"
@@ -1229,26 +1332,31 @@
         {
           "speaker": "Rex",
           "text": "Did you watch **the** match last night?",
+          "translation": "¿Viste el partido anoche?",
           "highlight": true
         },
         {
           "speaker": "Fran",
           "text": "Yes! **The** final score was incredible — 3 to 2 in **the** last minute.",
+          "translation": "¡Sí! El marcador final fue increíble, 3 a 2 en el último minuto.",
           "highlight": true
         },
         {
           "speaker": "Rex",
           "text": "**The** goalkeeper saved two penalties. He was amazing.",
+          "translation": "El portero atajó dos penales. Estuvo increíble.",
           "highlight": true
         },
         {
           "speaker": "Fran",
           "text": "I think **the** team deserves to be in **the** final.",
+          "translation": "Creo que el equipo merece estar en la final.",
           "highlight": true
         },
         {
           "speaker": "Rex",
           "text": "Agreed. **The** stadium was packed — 80,000 people!",
+          "translation": "De acuerdo. El estadio estaba lleno, ¡80,000 personas!",
           "highlight": true
         }
       ],
@@ -1261,6 +1369,7 @@
       "structured_input": [
         {
           "sentence": "I saw a dog and a cat. The dog was friendly, but the cat ran away.",
+          "translation": "Vi un perro y un gato. El perro era amigable, pero el gato salió corriendo.",
           "question": "¿Por qué cambia de 'a dog' a 'the dog'?",
           "options": [
             "Porque dog empieza con consonante",
@@ -1273,6 +1382,7 @@
         },
         {
           "sentence": "Can you close the door, please?",
+          "translation": "¿Puedes cerrar la puerta, por favor?",
           "question": "¿Por qué 'the door' si no se mencionó antes?",
           "options": [
             "Error gramatical — debería ser 'a door'",
@@ -1285,6 +1395,7 @@
         },
         {
           "sentence": "The president announced new policies today.",
+          "translation": "El presidente anunció nuevas políticas hoy.",
           "question": "¿Por qué 'The president' sin haberlo mencionado antes?",
           "options": [
             "Error — debería ser 'A president'",
@@ -1299,6 +1410,7 @@
       "quiz": [
         {
           "sentence": "I bought a new laptop. ___ laptop has a great keyboard.",
+          "translation": "Compré una computadora portátil nueva. La computadora tiene un teclado excelente.",
           "answer": "The",
           "accepted": [
             "The",
@@ -1309,6 +1421,7 @@
         },
         {
           "sentence": "She's ___ best student in the class.",
+          "translation": "Ella es la mejor estudiante de la clase.",
           "answer": "the",
           "accepted": [
             "the",
@@ -1319,6 +1432,7 @@
         },
         {
           "sentence": "Can you turn off ___ light? I want to sleep.",
+          "translation": "¿Puedes apagar la luz? Quiero dormir.",
           "answer": "the",
           "accepted": [
             "the",
@@ -1329,6 +1443,7 @@
         },
         {
           "sentence": "___ Earth is ___ only planet in our solar system with liquid water.",
+          "translation": "La Tierra es el único planeta de nuestro sistema solar con agua líquida.",
           "answer": "The / the",
           "accepted": [
             "The / the",
@@ -1339,6 +1454,7 @@
         },
         {
           "sentence": "I spoke to ___ manager. She said ___ problem would be fixed today.",
+          "translation": "Hablé con la gerente. Dijo que el problema se resolvería hoy.",
           "answer": "the / the",
           "accepted": [
             "the / the"
@@ -1366,26 +1482,31 @@
         {
           "speaker": "Zoe",
           "text": "Do you like **music**? I love **jazz** and **classical music**.",
+          "translation": "¿Te gusta la música? A mí me encanta el jazz y la música clásica.",
           "highlight": true
         },
         {
           "speaker": "Alex",
           "text": "I love **music** in general. I also play **guitar**.",
+          "translation": "Me encanta la música en general. También toco la guitarra.",
           "highlight": true
         },
         {
           "speaker": "Zoe",
           "text": "Wow! Did you study **music** at **university**?",
+          "translation": "¡Vaya! ¿Estudiaste música en la universidad?",
           "highlight": true
         },
         {
           "speaker": "Alex",
           "text": "No, I'm self-taught. I learned by watching videos on the **internet**.",
+          "translation": "No, soy autodidacta. Aprendí viendo videos en internet.",
           "highlight": true
         },
         {
           "speaker": "Zoe",
           "text": "**Life** is full of surprises. I hope to learn **piano** someday too.",
+          "translation": "La vida está llena de sorpresas. Espero aprender piano algún día también.",
           "highlight": true
         }
       ],
@@ -1398,6 +1519,7 @@
       "structured_input": [
         {
           "sentence": "Children need love and stability to grow well.",
+          "translation": "Los niños necesitan amor y estabilidad para crecer bien.",
           "question": "¿Por qué no hay artículo delante de 'love' y 'stability'?",
           "options": [
             "Es un error — debería ser 'the love'",
@@ -1410,6 +1532,7 @@
         },
         {
           "sentence": "She goes to church every Sunday. The church is near her house.",
+          "translation": "Ella va a la iglesia todos los domingos. La iglesia queda cerca de su casa.",
           "question": "¿Por qué 'goes to church' pero 'The church is near'?",
           "options": [
             "Error en la segunda oración",
@@ -1422,6 +1545,7 @@
         },
         {
           "sentence": "Dogs make great pets. However, the dog next door barks all night.",
+          "translation": "Los perros son excelentes mascotas. Sin embargo, el perro de al lado ladra toda la noche.",
           "question": "¿Qué diferencia hay entre 'Dogs' y 'the dog'?",
           "options": [
             "Dogs = plural, the dog = singular — sin diferencia de significado",
@@ -1436,6 +1560,7 @@
       "quiz": [
         {
           "sentence": "I had ___ breakfast at 7 and then went to ___ work.",
+          "translation": "Desayuné a las siete y luego fui al trabajo.",
           "answer": "Ø (no article) / Ø (no article)",
           "accepted": [
             "breakfast / work",
@@ -1448,6 +1573,7 @@
         },
         {
           "sentence": "___ honesty is the best policy.",
+          "translation": "La honestidad es la mejor política.",
           "answer": "Ø (no article)",
           "accepted": [
             "Honesty",
@@ -1460,6 +1586,7 @@
         },
         {
           "sentence": "She speaks ___ Spanish and ___ French fluently.",
+          "translation": "Ella habla español y francés con fluidez.",
           "answer": "Ø / Ø",
           "accepted": [
             "Spanish / French",
@@ -1472,6 +1599,7 @@
         },
         {
           "sentence": "He's in ___ hospital recovering from surgery.",
+          "translation": "Él está en el hospital recuperándose de una cirugía.",
           "answer": "Ø (no article)",
           "accepted": [
             "hospital",
@@ -1483,6 +1611,7 @@
         },
         {
           "sentence": "___ teachers in this school work incredibly hard.",
+          "translation": "Los profesores de esta escuela trabajan muchísimo.",
           "answer": "The",
           "accepted": [
             "The",
@@ -1508,26 +1637,31 @@
         {
           "speaker": "Leo",
           "text": "**Can** you help me move this sofa?",
+          "translation": "¿Puedes ayudarme a mover este sofá?",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "Sure! I **can** move that easily — I go to the gym.",
+          "translation": "¡Claro! Puedo moverlo fácilmente, voy al gimnasio.",
           "highlight": true
         },
         {
           "speaker": "Leo",
           "text": "**Can** your brother come too? We **can't** do it alone.",
+          "translation": "¿Puede venir tu hermano también? No podemos hacerlo solos.",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "He **can't** today — he's working. But my sister **can**.",
+          "translation": "Él no puede hoy, está trabajando. Pero mi hermana sí puede.",
           "highlight": true
         },
         {
           "speaker": "Leo",
           "text": "Perfect. Three people **can** definitely manage it.",
+          "translation": "Perfecto. Entre tres personas sin duda podemos con esto.",
           "highlight": true
         }
       ],
@@ -1540,6 +1674,7 @@
       "structured_input": [
         {
           "sentence": "She can speak four languages.",
+          "translation": "Ella puede hablar cuatro idiomas.",
           "question": "¿Qué expresa 'can' aquí?",
           "options": [
             "Permiso para hablar",
@@ -1552,6 +1687,7 @@
         },
         {
           "sentence": "Can I open the window? It's hot in here.",
+          "translation": "¿Puedo abrir la ventana? Hace calor aquí dentro.",
           "question": "¿Qué uso de can es este?",
           "options": [
             "Habilidad física",
@@ -1564,6 +1700,7 @@
         },
         {
           "sentence": "I can't find my wallet anywhere.",
+          "translation": "No encuentro mi billetera por ninguna parte.",
           "question": "¿Qué expresa can't aquí?",
           "options": [
             "No tiene permiso para buscar",
@@ -1578,6 +1715,7 @@
       "quiz": [
         {
           "sentence": "He ___ play the piano really well. He's been practicing for years.",
+          "translation": "Él sabe tocar el piano muy bien. Lleva años practicando.",
           "answer": "can",
           "accepted": [
             "can"
@@ -1587,6 +1725,7 @@
         },
         {
           "sentence": "I ___ hear you — there's too much noise here.",
+          "translation": "No puedo escucharte, hay demasiado ruido aquí.",
           "answer": "can't",
           "accepted": [
             "can't",
@@ -1598,6 +1737,7 @@
         },
         {
           "sentence": "___ you swim? I need a swimming partner.",
+          "translation": "¿Sabes nadar? Necesito un compañero para nadar.",
           "answer": "Can",
           "accepted": [
             "Can"
@@ -1607,6 +1747,7 @@
         },
         {
           "sentence": "We ___ meet on Thursday or Friday — both days work for me.",
+          "translation": "Podemos vernos el jueves o el viernes, ambos días me sirven.",
           "answer": "can",
           "accepted": [
             "can"
@@ -1616,6 +1757,7 @@
         },
         {
           "sentence": "Sorry, you ___ park here. It's a no-parking zone.",
+          "translation": "Lo siento, no puedes estacionarte aquí. Es zona prohibida.",
           "answer": "can't",
           "accepted": [
             "can't",
@@ -1659,26 +1801,31 @@
         {
           "speaker": "Dr. Patel",
           "text": "You **should** drink more water — at least 2 liters a day.",
+          "translation": "Deberías tomar más agua, al menos dos litros al día.",
           "highlight": true
         },
         {
           "speaker": "Pat",
           "text": "I know, I know. I **should** exercise more too.",
+          "translation": "Lo sé, lo sé. También debería hacer más ejercicio.",
           "highlight": true
         },
         {
           "speaker": "Dr. Patel",
           "text": "You **shouldn't** sit at your desk for more than an hour without a break.",
+          "translation": "No deberías estar sentado en tu escritorio más de una hora sin un descanso.",
           "highlight": true
         },
         {
           "speaker": "Pat",
           "text": "**Should** I take vitamins? My energy levels are low.",
+          "translation": "¿Debería tomar vitaminas? Tengo la energía muy baja.",
           "highlight": true
         },
         {
           "speaker": "Dr. Patel",
           "text": "You **should** get a blood test first. We **shouldn't** guess.",
+          "translation": "Primero deberías hacerte un análisis de sangre. No deberíamos adivinar.",
           "highlight": true
         }
       ],
@@ -1691,6 +1838,7 @@
       "structured_input": [
         {
           "sentence": "You should apologize to her. What you said was unkind.",
+          "translation": "Deberías disculparte con ella. Lo que dijiste fue cruel.",
           "question": "¿Qué expresa 'should' aquí?",
           "options": [
             "Obligación legal",
@@ -1703,6 +1851,7 @@
         },
         {
           "sentence": "Students shouldn't use their phones during class.",
+          "translation": "Los estudiantes no deberían usar el teléfono durante la clase.",
           "question": "¿Qué transmite shouldn't aquí?",
           "options": [
             "Está legalmente prohibido",
@@ -1715,6 +1864,7 @@
         },
         {
           "sentence": "Should we book the hotel in advance?",
+          "translation": "¿Deberíamos reservar el hotel con antelación?",
           "question": "¿Qué función tiene Should en esta pregunta?",
           "options": [
             "Pide permiso",
@@ -1729,6 +1879,7 @@
       "quiz": [
         {
           "sentence": "You look tired. You ___ go to bed earlier.",
+          "translation": "Te ves cansado. Deberías acostarte más temprano.",
           "answer": "should",
           "accepted": [
             "should"
@@ -1738,6 +1889,7 @@
         },
         {
           "sentence": "He ___ eat so much sugar. It's bad for his health.",
+          "translation": "Él no debería comer tanta azúcar. Es malo para su salud.",
           "answer": "shouldn't",
           "accepted": [
             "shouldn't",
@@ -1748,6 +1900,7 @@
         },
         {
           "sentence": "___ I call him now or is it too late?",
+          "translation": "¿Debería llamarlo ahora o ya es muy tarde?",
           "answer": "Should",
           "accepted": [
             "Should"
@@ -1757,6 +1910,7 @@
         },
         {
           "sentence": "You've been working for 5 hours. You ___ take a break.",
+          "translation": "Llevas cinco horas trabajando. Deberías tomarte un descanso.",
           "answer": "should",
           "accepted": [
             "should"
@@ -1766,6 +1920,7 @@
         },
         {
           "sentence": "Children ___ play outside more and spend less time on screens.",
+          "translation": "Los niños deberían jugar más al aire libre y pasar menos tiempo frente a las pantallas.",
           "answer": "should",
           "accepted": [
             "should"
@@ -1795,26 +1950,31 @@
         {
           "speaker": "Boss",
           "text": "All staff **must** complete the safety training by Friday.",
+          "translation": "Todo el personal debe completar la capacitación de seguridad antes del viernes.",
           "highlight": true
         },
         {
           "speaker": "Ali",
           "text": "Understood. Do we **have to** do it online or can we do it in person?",
+          "translation": "Entendido. ¿Tenemos que hacerla en línea o podemos hacerla en persona?",
           "highlight": true
         },
         {
           "speaker": "Boss",
           "text": "You **have to** do it online — the in-person sessions are full.",
+          "translation": "Tienen que hacerla en línea, las sesiones presenciales están llenas.",
           "highlight": true
         },
         {
           "speaker": "Ali",
           "text": "And what about the new employees? They **must** register first, right?",
+          "translation": "¿Y los empleados nuevos? Deben registrarse primero, ¿verdad?",
           "highlight": true
         },
         {
           "speaker": "Boss",
           "text": "Exactly. They **have to** create an account before accessing the platform.",
+          "translation": "Exacto. Tienen que crear una cuenta antes de acceder a la plataforma.",
           "highlight": true
         }
       ],
@@ -1827,6 +1987,7 @@
       "structured_input": [
         {
           "sentence": "You must not share your password with anyone.",
+          "translation": "No debes compartir tu contraseña con nadie.",
           "question": "¿Qué expresa 'must not' aquí?",
           "options": [
             "No es necesario hacerlo",
@@ -1839,6 +2000,7 @@
         },
         {
           "sentence": "You don't have to wear a tie. It's casual Friday.",
+          "translation": "No tienes que llevar corbata. Es viernes informal.",
           "question": "¿Qué expresa 'don't have to' aquí?",
           "options": [
             "Está prohibido usar corbata",
@@ -1851,6 +2013,7 @@
         },
         {
           "sentence": "I must call my mother — I haven't spoken to her in weeks.",
+          "translation": "Tengo que llamar a mi madre, no he hablado con ella en semanas.",
           "question": "¿Quién genera la obligación de llamar?",
           "options": [
             "Una regla externa (ley o empresa)",
@@ -1865,6 +2028,7 @@
       "quiz": [
         {
           "sentence": "Passengers ___ fasten their seatbelts before takeoff.",
+          "translation": "Los pasajeros deben abrocharse el cinturón antes del despegue.",
           "answer": "must",
           "accepted": [
             "must",
@@ -1875,6 +2039,7 @@
         },
         {
           "sentence": "You ___ worry about the cost. I'll pay for everything.",
+          "translation": "No tienes que preocuparte por el costo. Yo pago todo.",
           "answer": "don't have to",
           "accepted": [
             "don't have to",
@@ -1885,6 +2050,7 @@
         },
         {
           "sentence": "In some countries, you ___ drive on the left side of the road.",
+          "translation": "En algunos países tienes que manejar por el lado izquierdo de la carretera.",
           "answer": "have to",
           "accepted": [
             "have to",
@@ -1895,6 +2061,7 @@
         },
         {
           "sentence": "You ___ be quiet in a library.",
+          "translation": "Debes guardar silencio en una biblioteca.",
           "answer": "must",
           "accepted": [
             "must",
@@ -1905,6 +2072,7 @@
         },
         {
           "sentence": "She ___ book in advance — she can just show up.",
+          "translation": "Ella no tiene que reservar con antelación, puede simplemente presentarse.",
           "answer": "doesn't have to",
           "accepted": [
             "doesn't have to",
@@ -1935,26 +2103,31 @@
         {
           "speaker": "Prof",
           "text": "**If you mix** red and blue, **you get** purple. That's basic color theory.",
+          "translation": "Si mezclas rojo y azul, obtienes morado. Es teoría básica del color.",
           "highlight": true
         },
         {
           "speaker": "Kim",
           "text": "And **if you freeze** water, **it becomes** solid, right?",
+          "translation": "Y si congelas el agua, se vuelve sólida, ¿verdad?",
           "highlight": true
         },
         {
           "speaker": "Prof",
           "text": "Exactly. **If the temperature drops** below zero, **water freezes**.",
+          "translation": "Exacto. Si la temperatura baja de cero, el agua se congela.",
           "highlight": true
         },
         {
           "speaker": "Kim",
           "text": "What about plants? What happens **if they don't get** sunlight?",
+          "translation": "¿Y las plantas? ¿Qué pasa si no reciben luz solar?",
           "highlight": true
         },
         {
           "speaker": "Prof",
           "text": "**If plants don't receive** light, **they die**. It's essential for photosynthesis.",
+          "translation": "Si las plantas no reciben luz, mueren. Es esencial para la fotosíntesis.",
           "highlight": true
         }
       ],
@@ -1967,6 +2140,7 @@
       "structured_input": [
         {
           "sentence": "If you don't water plants, they die.",
+          "translation": "Si no riegas las plantas, se mueren.",
           "question": "¿Por qué se usa el condicional cero aquí?",
           "options": [
             "Es una situación hipotética poco probable",
@@ -1979,6 +2153,7 @@
         },
         {
           "sentence": "When I'm nervous, I talk too fast.",
+          "translation": "Cuando estoy nervioso, hablo demasiado rápido.",
           "question": "¿Qué tipo de verdad expresa esta oración?",
           "options": [
             "Una ley científica",
@@ -1991,6 +2166,7 @@
         },
         {
           "sentence": "If you press this button, the light turns on.",
+          "translation": "Si presionas este botón, la luz se enciende.",
           "question": "¿Se puede cambiar el orden de la oración?",
           "options": [
             "No, 'if' siempre va al principio",
@@ -2005,6 +2181,7 @@
       "quiz": [
         {
           "sentence": "If you heat metal, it ___ (expand).",
+          "translation": "Si calientas el metal, se expande.",
           "answer": "expands",
           "accepted": [
             "expands"
@@ -2014,6 +2191,7 @@
         },
         {
           "sentence": "If I ___ (not / sleep) enough, I feel terrible the next day.",
+          "translation": "Si no duermo lo suficiente, me siento fatal al día siguiente.",
           "answer": "don't sleep",
           "accepted": [
             "don't sleep"
@@ -2023,6 +2201,7 @@
         },
         {
           "sentence": "Babies ___ (cry) if they are hungry. It's their only way to communicate.",
+          "translation": "Los bebés lloran si tienen hambre. Es su única forma de comunicarse.",
           "answer": "cry",
           "accepted": [
             "cry"
@@ -2032,6 +2211,7 @@
         },
         {
           "sentence": "If you ___ (not / wear) sunscreen, your skin burns.",
+          "translation": "Si no usas protector solar, tu piel se quema.",
           "answer": "don't wear",
           "accepted": [
             "don't wear"
@@ -2041,6 +2221,7 @@
         },
         {
           "sentence": "The screen ___ (go) black if the battery ___ (die).",
+          "translation": "La pantalla se pone negra si la batería se agota.",
           "answer": "goes / dies",
           "accepted": [
             "goes / dies"
@@ -2070,26 +2251,31 @@
         {
           "speaker": "Tara",
           "text": "**If we leave** now, **we'll catch** the train.",
+          "translation": "Si salimos ahora, alcanzaremos el tren.",
           "highlight": true
         },
         {
           "speaker": "Ben",
           "text": "I just need five more minutes. **If I'm late**, **I'll take** a taxi.",
+          "translation": "Solo necesito cinco minutos más. Si llego tarde, tomaré un taxi.",
           "highlight": true
         },
         {
           "speaker": "Tara",
           "text": "**If you take** a taxi, **it'll cost** a fortune at this hour!",
+          "translation": "¡Si tomas un taxi, costará una fortuna a esta hora!",
           "highlight": true
         },
         {
           "speaker": "Ben",
           "text": "You're right. **If we miss** the train, what **will** we do?",
+          "translation": "Tienes razón. Si perdemos el tren, ¿qué haremos?",
           "highlight": true
         },
         {
           "speaker": "Tara",
           "text": "**We'll** figure something out. But we **won't miss** it **if we leave** NOW.",
+          "translation": "Ya se nos ocurrirá algo. Pero no lo perderemos si salimos AHORA.",
           "highlight": true
         }
       ],
@@ -2102,6 +2288,7 @@
       "structured_input": [
         {
           "sentence": "If it rains tomorrow, we'll cancel the picnic.",
+          "translation": "Si llueve mañana, cancelaremos el picnic.",
           "question": "¿Por qué se usa Present Simple después de 'if' y no 'will rain'?",
           "options": [
             "Porque it es singular",
@@ -2114,6 +2301,7 @@
         },
         {
           "sentence": "If you finish early, you can leave.",
+          "translation": "Si terminas temprano, puedes irte.",
           "question": "¿Es obligatorio usar 'will' en el resultado del primer condicional?",
           "options": [
             "Sí, siempre will",
@@ -2126,6 +2314,7 @@
         },
         {
           "sentence": "She'll get the job if she performs well in the interview.",
+          "translation": "Ella conseguirá el trabajo si le va bien en la entrevista.",
           "question": "¿Es posible o imposible que ella consiga el trabajo?",
           "options": [
             "Es imposible — es solo una fantasía",
@@ -2140,6 +2329,7 @@
       "quiz": [
         {
           "sentence": "If she ___ (study) hard, she'll pass the exam.",
+          "translation": "Si ella estudia mucho, aprobará el examen.",
           "answer": "studies",
           "accepted": [
             "studies"
@@ -2149,6 +2339,7 @@
         },
         {
           "sentence": "They ___ (miss) the bus if they don't hurry.",
+          "translation": "Perderán el autobús si no se apuran.",
           "answer": "will miss",
           "accepted": [
             "will miss",
@@ -2159,6 +2350,7 @@
         },
         {
           "sentence": "If I ___ (not / finish) this report today, my boss will be angry.",
+          "translation": "Si no termino este informe hoy, mi jefe se enojará.",
           "answer": "don't finish",
           "accepted": [
             "don't finish"
@@ -2168,6 +2360,7 @@
         },
         {
           "sentence": "What ___ you ___ (do) if you win the lottery?",
+          "translation": "¿Qué harás si ganas la lotería?",
           "answer": "will / do",
           "accepted": [
             "will do",
@@ -2178,6 +2371,7 @@
         },
         {
           "sentence": "Call me if you ___ (need) anything.",
+          "translation": "Llámame si necesitas algo.",
           "answer": "need",
           "accepted": [
             "need"
@@ -2203,26 +2397,31 @@
         {
           "speaker": "Jay",
           "text": "**If I were** rich, **I would travel** the world.",
+          "translation": "Si fuera rico, viajaría por el mundo.",
           "highlight": true
         },
         {
           "speaker": "Sue",
           "text": "**I would buy** a house by the beach **if I had** the money.",
+          "translation": "Compraría una casa junto a la playa si tuviera el dinero.",
           "highlight": true
         },
         {
           "speaker": "Jay",
           "text": "What **would** you **do** **if you could** live anywhere?",
+          "translation": "¿Qué harías si pudieras vivir en cualquier lugar?",
           "highlight": true
         },
         {
           "speaker": "Sue",
           "text": "**I would move** to New Zealand. **If I lived** there, **I'd learn** to surf.",
+          "translation": "Me mudaría a Nueva Zelanda. Si viviera ahí, aprendería a surfear.",
           "highlight": true
         },
         {
           "speaker": "Jay",
           "text": "**If I were** you, **I'd start** saving now. Dreams can become reality!",
+          "translation": "Si yo fuera tú, empezaría a ahorrar ya. ¡Los sueños pueden hacerse realidad!",
           "highlight": true
         }
       ],
@@ -2235,6 +2434,7 @@
       "structured_input": [
         {
           "sentence": "If I knew the answer, I would tell you.",
+          "translation": "Si supiera la respuesta, te la diría.",
           "question": "¿Sabe la persona la respuesta?",
           "options": [
             "Sí, la sabe",
@@ -2247,6 +2447,7 @@
         },
         {
           "sentence": "If I were you, I would apologize immediately.",
+          "translation": "Si yo fuera tú, me disculparía de inmediato.",
           "question": "¿Por qué 'were' y no 'was'?",
           "options": [
             "I es plural",
@@ -2259,6 +2460,7 @@
         },
         {
           "sentence": "She would exercise more if she had more free time.",
+          "translation": "Ella haría más ejercicio si tuviera más tiempo libre.",
           "question": "¿Tiene ella tiempo libre actualmente?",
           "options": [
             "Sí, tiene mucho",
@@ -2273,6 +2475,7 @@
       "quiz": [
         {
           "sentence": "If I ___ (be) taller, I would play basketball professionally.",
+          "translation": "Si fuera más alto, jugaría al baloncesto profesionalmente.",
           "answer": "were",
           "accepted": [
             "were",
@@ -2283,6 +2486,7 @@
         },
         {
           "sentence": "She ___ (travel) more if she didn't have so many responsibilities.",
+          "translation": "Ella viajaría más si no tuviera tantas responsabilidades.",
           "answer": "would travel",
           "accepted": [
             "would travel",
@@ -2293,6 +2497,7 @@
         },
         {
           "sentence": "What ___ you ___ (do) if you lost your job tomorrow?",
+          "translation": "¿Qué harías si perdieras tu trabajo mañana?",
           "answer": "would / do",
           "accepted": [
             "would do",
@@ -2303,6 +2508,7 @@
         },
         {
           "sentence": "If he ___ (have) more confidence, he ___ (apply) for the promotion.",
+          "translation": "Si él tuviera más confianza, solicitaría el ascenso.",
           "answer": "had / would apply",
           "accepted": [
             "had / would apply"
@@ -2312,6 +2518,7 @@
         },
         {
           "sentence": "I ___ (not / buy) that house if I ___ (be) in your position.",
+          "translation": "Yo no compraría esa casa si estuviera en tu lugar.",
           "answer": "wouldn't buy / were",
           "accepted": [
             "wouldn't buy / were",
@@ -2341,26 +2548,31 @@
         {
           "speaker": "Rio",
           "text": "**If I had studied** medicine, **I would have become** a doctor.",
+          "translation": "Si hubiera estudiado medicina, me habría convertido en médico.",
           "highlight": true
         },
         {
           "speaker": "Ada",
           "text": "You could have been a great doctor! Why didn't you?",
+          "translation": "¡Podrías haber sido un gran médico! ¿Por qué no lo hiciste?",
           "highlight": false
         },
         {
           "speaker": "Rio",
           "text": "My parents couldn't afford it. **If they had had** more money, **things would have been** different.",
+          "translation": "Mis padres no podían pagarlo. Si hubieran tenido más dinero, las cosas habrían sido diferentes.",
           "highlight": true
         },
         {
           "speaker": "Ada",
           "text": "**If I hadn't taken** that gap year, **I wouldn't have met** my husband.",
+          "translation": "Si no hubiera tomado ese año sabático, no habría conocido a mi esposo.",
           "highlight": true
         },
         {
           "speaker": "Rio",
           "text": "Funny how life works. **If things had gone** differently, we **might not be** friends today!",
+          "translation": "Qué curiosa es la vida. ¡Si las cosas hubieran salido diferente, quizás hoy no seríamos amigos!",
           "highlight": true
         }
       ],
@@ -2373,6 +2585,7 @@
       "structured_input": [
         {
           "sentence": "If she had arrived on time, she would have got the job.",
+          "translation": "Si ella hubiera llegado a tiempo, habría conseguido el trabajo.",
           "question": "¿Llegó ella a tiempo?",
           "options": [
             "Sí, llegó puntual",
@@ -2385,6 +2598,7 @@
         },
         {
           "sentence": "We wouldn't have got lost if we had used a map.",
+          "translation": "No nos habríamos perdido si hubiéramos usado un mapa.",
           "question": "¿Se perdieron realmente?",
           "options": [
             "No, no se perdieron",
@@ -2397,6 +2611,7 @@
         },
         {
           "sentence": "If you had told me earlier, I might have been able to help.",
+          "translation": "Si me lo hubieras dicho antes, quizás habría podido ayudar.",
           "question": "¿Qué expresa 'might have been able' en lugar de 'would have been able'?",
           "options": [
             "Es un error — debería ser would",
@@ -2411,6 +2626,7 @@
       "quiz": [
         {
           "sentence": "If you ___ (invite) me, I would have come to the party.",
+          "translation": "Si me hubieras invitado, habría ido a la fiesta.",
           "answer": "had invited",
           "accepted": [
             "had invited"
@@ -2420,6 +2636,7 @@
         },
         {
           "sentence": "She ___ (not / fail) the test if she had studied.",
+          "translation": "Ella no habría reprobado el examen si hubiera estudiado.",
           "answer": "wouldn't have failed",
           "accepted": [
             "wouldn't have failed",
@@ -2430,6 +2647,7 @@
         },
         {
           "sentence": "If they ___ (leave) earlier, they ___ (catch) the train.",
+          "translation": "Si hubieran salido antes, habrían alcanzado el tren.",
           "answer": "had left / would have caught",
           "accepted": [
             "had left / would have caught"
@@ -2439,6 +2657,7 @@
         },
         {
           "sentence": "I ___ (be) a better player if I ___ (practice) more as a child.",
+          "translation": "Habría sido mejor jugador si hubiera practicado más de niño.",
           "answer": "would have been / had practised",
           "accepted": [
             "would have been / had practiced",
@@ -2449,6 +2668,7 @@
         },
         {
           "sentence": "If the weather hadn't been so bad, we ___ (go) to the beach.",
+          "translation": "Si el clima no hubiera estado tan malo, habríamos ido a la playa.",
           "answer": "would have gone",
           "accepted": [
             "would have gone",
@@ -2476,26 +2696,31 @@
         {
           "speaker": "Tour",
           "text": "This bridge was designed in 1889. It **is visited** by millions of tourists every year.",
+          "translation": "Este puente fue diseñado en 1889. Es visitado por millones de turistas cada año.",
           "highlight": true
         },
         {
           "speaker": "Kim",
           "text": "Amazing! **Is it maintained** by the city government?",
+          "translation": "¡Increíble! ¿Lo mantiene el gobierno de la ciudad?",
           "highlight": true
         },
         {
           "speaker": "Tour",
           "text": "Yes, it **is inspected** regularly and **is repainted** every five years.",
+          "translation": "Sí, se inspecciona con regularidad y se vuelve a pintar cada cinco años.",
           "highlight": true
         },
         {
           "speaker": "Kim",
           "text": "What language **is spoken** in this region?",
+          "translation": "¿Qué idioma se habla en esta región?",
           "highlight": true
         },
         {
           "speaker": "Tour",
           "text": "French **is spoken** here, but English **is widely understood** too.",
+          "translation": "Aquí se habla francés, pero el inglés también se entiende ampliamente.",
           "highlight": true
         }
       ],
@@ -2508,6 +2733,7 @@
       "structured_input": [
         {
           "sentence": "Coffee is grown in Brazil and Colombia.",
+          "translation": "El café se cultiva en Brasil y Colombia.",
           "question": "¿Por qué es más natural la voz pasiva aquí?",
           "options": [
             "Para enfatizar quién lo cultiva",
@@ -2520,6 +2746,7 @@
         },
         {
           "sentence": "The report is checked by the manager before it is sent.",
+          "translation": "El informe lo revisa el gerente antes de enviarlo.",
           "question": "¿Qué función tiene 'by the manager' aquí?",
           "options": [
             "Es obligatorio en toda pasiva",
@@ -2532,6 +2759,7 @@
         },
         {
           "sentence": "Mistakes are made. Nobody is perfect.",
+          "translation": "Se cometen errores. Nadie es perfecto.",
           "question": "¿Por qué se usa la pasiva en 'Mistakes are made'?",
           "options": [
             "Porque mistakes es plural",
@@ -2546,6 +2774,7 @@
       "quiz": [
         {
           "sentence": "English ___ (speak) all over the world.",
+          "translation": "El inglés se habla en todo el mundo.",
           "answer": "is spoken",
           "accepted": [
             "is spoken"
@@ -2555,6 +2784,7 @@
         },
         {
           "sentence": "These products ___ (make) in Germany.",
+          "translation": "Estos productos se fabrican en Alemania.",
           "answer": "are made",
           "accepted": [
             "are made"
@@ -2564,6 +2794,7 @@
         },
         {
           "sentence": "The office ___ (clean) every evening by the cleaning staff.",
+          "translation": "La oficina la limpia el personal de limpieza cada noche.",
           "answer": "is cleaned",
           "accepted": [
             "is cleaned"
@@ -2573,6 +2804,7 @@
         },
         {
           "sentence": "___ English ___ (teach) here?",
+          "translation": "¿Se enseña inglés aquí?",
           "answer": "Is / taught",
           "accepted": [
             "Is taught",
@@ -2583,6 +2815,7 @@
         },
         {
           "sentence": "The results ___ (not / know) yet.",
+          "translation": "Los resultados todavía no se conocen.",
           "answer": "are not known",
           "accepted": [
             "are not known",
@@ -2609,26 +2842,31 @@
         {
           "speaker": "HR",
           "text": "**What** is your name, and **where** are you from originally?",
+          "translation": "¿Cómo te llamas y de dónde eres originalmente?",
           "highlight": true
         },
         {
           "speaker": "Nina",
           "text": "Nina Rodríguez. I'm from Mexico City, but I live in Madrid now.",
+          "translation": "Nina Rodríguez. Soy de la Ciudad de México, pero ahora vivo en Madrid.",
           "highlight": false
         },
         {
           "speaker": "HR",
           "text": "Great. **Why** did you apply for this position?",
+          "translation": "Muy bien. ¿Por qué solicitaste este puesto?",
           "highlight": true
         },
         {
           "speaker": "Nina",
           "text": "I want to grow in marketing. I've always loved creative work.",
+          "translation": "Quiero crecer en marketing. Siempre me ha encantado el trabajo creativo.",
           "highlight": false
         },
         {
           "speaker": "HR",
           "text": "**How long** have you worked in the industry, and **which** companies have you worked for?",
+          "translation": "¿Cuánto tiempo llevas trabajando en el sector y para qué empresas has trabajado?",
           "highlight": true
         }
       ],
@@ -2641,6 +2879,7 @@
       "structured_input": [
         {
           "sentence": "What does she do for a living?",
+          "translation": "¿A qué se dedica ella?",
           "question": "¿Cuál es el orden correcto de los elementos en esta pregunta?",
           "options": [
             "What + sujeto + verbo principal",
@@ -2653,6 +2892,7 @@
         },
         {
           "sentence": "Who told you about the meeting?",
+          "translation": "¿Quién te contó sobre la reunión?",
           "question": "¿Por qué no hay auxiliar (did) en esta pregunta?",
           "options": [
             "Es un error gramatical",
@@ -2665,6 +2905,7 @@
         },
         {
           "sentence": "How long have you been waiting?",
+          "translation": "¿Cuánto tiempo llevas esperando?",
           "question": "¿Qué información pide 'How long'?",
           "options": [
             "La distancia",
@@ -2679,6 +2920,7 @@
       "quiz": [
         {
           "sentence": "___ do you usually go to bed?",
+          "translation": "¿A qué hora te acuestas normalmente?",
           "answer": "What time / When",
           "accepted": [
             "What time",
@@ -2689,6 +2931,7 @@
         },
         {
           "sentence": "___ did she leave the party so early?",
+          "translation": "¿Por qué se fue ella de la fiesta tan temprano?",
           "answer": "Why",
           "accepted": [
             "Why"
@@ -2698,6 +2941,7 @@
         },
         {
           "sentence": "___ of these two options do you prefer?",
+          "translation": "¿Cuál de estas dos opciones prefieres?",
           "answer": "Which",
           "accepted": [
             "Which"
@@ -2707,6 +2951,7 @@
         },
         {
           "sentence": "___ has been helping you with the project?",
+          "translation": "¿Quién te ha estado ayudando con el proyecto?",
           "answer": "Who",
           "accepted": [
             "Who"
@@ -2716,6 +2961,7 @@
         },
         {
           "sentence": "___ long have you been studying English?",
+          "translation": "¿Cuánto tiempo llevas estudiando inglés?",
           "answer": "How",
           "accepted": [
             "How"
@@ -2762,26 +3008,31 @@
         {
           "speaker": "Pia",
           "text": "This laptop is **cheaper than** the MacBook, but is it **better**?",
+          "translation": "Esta computadora portátil es más barata que la MacBook, pero ¿es mejor?",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "Well, the MacBook is **faster** and **lighter than** this one.",
+          "translation": "Bueno, la MacBook es más rápida y más liviana que esta.",
           "highlight": true
         },
         {
           "speaker": "Pia",
           "text": "But this one has a **bigger** screen. That's **more important** to me.",
+          "translation": "Pero esta tiene una pantalla más grande. Eso es más importante para mí.",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "True. And the battery lasts **longer**. I think it's **more practical** for you.",
+          "translation": "Es cierto. Y la batería dura más. Creo que es más práctica para ti.",
           "highlight": true
         },
         {
           "speaker": "Pia",
           "text": "The price is much **lower** too. I think this is the **smarter** choice.",
+          "translation": "El precio también es mucho más bajo. Creo que esta es la opción más inteligente.",
           "highlight": true
         }
       ],
@@ -2794,6 +3045,7 @@
       "structured_input": [
         {
           "sentence": "The new phone is more expensive than the old model.",
+          "translation": "El teléfono nuevo es más caro que el modelo viejo.",
           "question": "¿Por qué 'more expensive' y no 'expensiver'?",
           "options": [
             "Error — 'expensiver' es correcto",
@@ -2806,6 +3058,7 @@
         },
         {
           "sentence": "She's a better cook than her brother.",
+          "translation": "Ella cocina mejor que su hermano.",
           "question": "¿Cuál es el comparativo regular de 'good'?",
           "options": [
             "Gooder",
@@ -2818,6 +3071,7 @@
         },
         {
           "sentence": "The red car is much faster than the blue one.",
+          "translation": "El carro rojo es mucho más rápido que el azul.",
           "question": "¿Qué función tiene 'much' en 'much faster'?",
           "options": [
             "Es el comparativo de 'many'",
@@ -2832,6 +3086,7 @@
       "quiz": [
         {
           "sentence": "My new apartment is ___ (big) ___ my old one.",
+          "translation": "Mi apartamento nuevo es más grande que el anterior.",
           "answer": "bigger than",
           "accepted": [
             "bigger than"
@@ -2841,6 +3096,7 @@
         },
         {
           "sentence": "This exercise is ___ (difficult) ___ the previous one.",
+          "translation": "Este ejercicio es más difícil que el anterior.",
           "answer": "more difficult than",
           "accepted": [
             "more difficult than"
@@ -2850,6 +3106,7 @@
         },
         {
           "sentence": "She speaks English ___ (fluently) ___ her sister.",
+          "translation": "Ella habla inglés con más fluidez que su hermana.",
           "answer": "more fluently than",
           "accepted": [
             "more fluently than"
@@ -2859,6 +3116,7 @@
         },
         {
           "sentence": "The situation is getting ___ (bad).",
+          "translation": "La situación está empeorando.",
           "answer": "worse",
           "accepted": [
             "worse"
@@ -2868,6 +3126,7 @@
         },
         {
           "sentence": "This road is ___ (narrow) ___ it looks on the map.",
+          "translation": "Esta carretera es más angosta de lo que parece en el mapa.",
           "answer": "narrower than",
           "accepted": [
             "narrower than"
@@ -2893,26 +3152,31 @@
         {
           "speaker": "Cole",
           "text": "I **enjoy cooking** for friends. It's very relaxing.",
+          "translation": "Disfruto cocinar para amigos. Es muy relajante.",
           "highlight": true
         },
         {
           "speaker": "Amy",
           "text": "Really? I **avoid cooking** as much as possible. I don't **mind eating** out.",
+          "translation": "¿En serio? Yo evito cocinar lo más posible. No me molesta comer fuera.",
           "highlight": true
         },
         {
           "speaker": "Cole",
           "text": "Have you **considered taking** a cooking class? You might enjoy it.",
+          "translation": "¿Has considerado tomar una clase de cocina? Podría gustarte.",
           "highlight": true
         },
         {
           "speaker": "Amy",
           "text": "I've thought about it, but I **keep putting** it off.",
+          "translation": "Lo he pensado, pero lo sigo posponiendo.",
           "highlight": true
         },
         {
           "speaker": "Cole",
           "text": "**Stop making** excuses! You'd finish it in a few weeks. I'd **suggest starting** with pasta.",
+          "translation": "¡Deja de poner excusas! Lo terminarías en unas semanas. Yo sugeriría empezar con pasta.",
           "highlight": true
         }
       ],
@@ -2925,6 +3189,7 @@
       "structured_input": [
         {
           "sentence": "She admitted taking the money.",
+          "translation": "Ella admitió haber tomado el dinero.",
           "question": "¿Por qué 'taking' y no 'to take' después de 'admitted'?",
           "options": [
             "Porque -ing es siempre más correcto",
@@ -2937,6 +3202,7 @@
         },
         {
           "sentence": "Have you considered moving to a different city?",
+          "translation": "¿Has considerado mudarte a otra ciudad?",
           "question": "¿Qué significa 'consider + gerundio'?",
           "options": [
             "Acabar de hacer algo",
@@ -2949,6 +3215,7 @@
         },
         {
           "sentence": "I don't mind waiting if you need more time.",
+          "translation": "No me molesta esperar si necesitas más tiempo.",
           "question": "¿Qué expresa 'don't mind + gerundio'?",
           "options": [
             "Le molesta mucho esperar",
@@ -2963,6 +3230,7 @@
       "quiz": [
         {
           "sentence": "I really enjoy ___ (listen) to jazz in the evenings.",
+          "translation": "Disfruto mucho escuchar jazz por las noches.",
           "answer": "listening",
           "accepted": [
             "listening"
@@ -2972,6 +3240,7 @@
         },
         {
           "sentence": "She keeps ___ (make) the same mistake.",
+          "translation": "Ella sigue cometiendo el mismo error.",
           "answer": "making",
           "accepted": [
             "making"
@@ -2981,6 +3250,7 @@
         },
         {
           "sentence": "Have you finished ___ (write) the report?",
+          "translation": "¿Ya terminaste de escribir el informe?",
           "answer": "writing",
           "accepted": [
             "writing"
@@ -2990,6 +3260,7 @@
         },
         {
           "sentence": "They recommended ___ (take) the coastal route.",
+          "translation": "Recomendaron tomar la ruta costera.",
           "answer": "taking",
           "accepted": [
             "taking"
@@ -2999,6 +3270,7 @@
         },
         {
           "sentence": "Stop ___ (worry)! Everything will be fine.",
+          "translation": "¡Deja de preocuparte! Todo va a salir bien.",
           "answer": "worrying",
           "accepted": [
             "worrying"
@@ -3033,26 +3305,31 @@
         {
           "speaker": "Marc",
           "text": "I **want to apply** for that scholarship. Do you think I should?",
+          "translation": "Quiero solicitar esa beca. ¿Crees que debería?",
           "highlight": true
         },
         {
           "speaker": "Liv",
           "text": "Definitely! You **need to prepare** a strong application though.",
+          "translation": "¡Sin duda! Aunque necesitas preparar una solicitud sólida.",
           "highlight": true
         },
         {
           "speaker": "Marc",
           "text": "I've **decided to ask** Professor Hall for a recommendation letter.",
+          "translation": "He decidido pedirle al profesor Hall una carta de recomendación.",
           "highlight": true
         },
         {
           "speaker": "Liv",
           "text": "Good idea. And don't **forget to include** your research projects.",
+          "translation": "Buena idea. Y no olvides incluir tus proyectos de investigación.",
           "highlight": true
         },
         {
           "speaker": "Marc",
           "text": "Right. I also **hope to get** an interview. I'd **love to study** abroad.",
+          "translation": "Cierto. También espero conseguir una entrevista. Me encantaría estudiar en el extranjero.",
           "highlight": true
         }
       ],
@@ -3065,6 +3342,7 @@
       "structured_input": [
         {
           "sentence": "She agreed to help with the event.",
+          "translation": "Ella aceptó ayudar con el evento.",
           "question": "¿Cuál es la estructura después de 'agree'?",
           "options": [
             "agree + -ing",
@@ -3077,6 +3355,7 @@
         },
         {
           "sentence": "They managed to solve the problem in time.",
+          "translation": "Lograron resolver el problema a tiempo.",
           "question": "¿Qué significa 'managed to + infinitivo'?",
           "options": [
             "Intentaron hacer algo",
@@ -3089,6 +3368,7 @@
         },
         {
           "sentence": "I can't afford to buy a new car right now.",
+          "translation": "No puedo permitirme comprar un carro nuevo ahora mismo.",
           "question": "¿Qué expresa 'afford to' aquí?",
           "options": [
             "Tener miedo de hacer algo",
@@ -3103,6 +3383,7 @@
       "quiz": [
         {
           "sentence": "She decided ___ (change) her career after the pandemic.",
+          "translation": "Ella decidió cambiar de carrera después de la pandemia.",
           "answer": "to change",
           "accepted": [
             "to change"
@@ -3112,6 +3393,7 @@
         },
         {
           "sentence": "I forgot ___ (lock) the door. I have to go back.",
+          "translation": "Olvidé cerrar la puerta con llave. Tengo que regresar.",
           "answer": "to lock",
           "accepted": [
             "to lock"
@@ -3121,6 +3403,7 @@
         },
         {
           "sentence": "Do you think he'll manage ___ (finish) on time?",
+          "translation": "¿Crees que logrará terminar a tiempo?",
           "answer": "to finish",
           "accepted": [
             "to finish"
@@ -3130,6 +3413,7 @@
         },
         {
           "sentence": "We can't afford ___ (make) any more mistakes.",
+          "translation": "No podemos permitirnos cometer más errores.",
           "answer": "to make",
           "accepted": [
             "to make"
@@ -3139,6 +3423,7 @@
         },
         {
           "sentence": "She promised ___ (call) when she arrived.",
+          "translation": "Ella prometió llamar cuando llegara.",
           "answer": "to call",
           "accepted": [
             "to call"
@@ -3186,26 +3471,31 @@
         {
           "speaker": "Mia",
           "text": "The meeting is **on** Monday **at** 9 a.m.",
+          "translation": "La reunión es el lunes a las nueve de la mañana.",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "Can we move it to Tuesday? I have a dentist appointment **in** the morning.",
+          "translation": "¿Podemos pasarla al martes? Tengo cita con el dentista en la mañana.",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "Sure. What about **at** 10?",
+          "translation": "Claro. ¿Qué tal a las diez?",
           "highlight": true
         },
         {
           "speaker": "Dan",
           "text": "Perfect. And the deadline is **in** March, right?",
+          "translation": "Perfecto. Y la fecha límite es en marzo, ¿verdad?",
           "highlight": true
         },
         {
           "speaker": "Mia",
           "text": "Yes, **on** the 15th. We have plenty of time.",
+          "translation": "Sí, el día quince. Tenemos tiempo de sobra.",
           "highlight": true
         }
       ],
@@ -3227,6 +3517,7 @@
       "structured_input": [
         {
           "sentence": "I was born ___ 1998.",
+          "translation": "Nací en 1998.",
           "question": "Which preposition correctly fills the blank?",
           "options": [
             "at",
@@ -3239,6 +3530,7 @@
         },
         {
           "sentence": "The party starts ___ 8 p.m. ___ Saturday.",
+          "translation": "La fiesta empieza a las ocho de la noche el sábado.",
           "question": "Which pair of prepositions is correct?",
           "options": [
             "in / on",
@@ -3251,6 +3543,7 @@
         },
         {
           "sentence": "She usually goes to the gym ___ the afternoon.",
+          "translation": "Ella suele ir al gimnasio por la tarde.",
           "question": "Which preposition is correct?",
           "options": [
             "at",
@@ -3265,6 +3558,7 @@
       "quiz": [
         {
           "sentence": "The conference is ___ Monday morning.",
+          "translation": "La conferencia es el lunes por la mañana.",
           "answer": "on",
           "accepted": [
             "on"
@@ -3274,6 +3568,7 @@
         },
         {
           "sentence": "I always drink tea ___ night.",
+          "translation": "Siempre tomo té por la noche.",
           "answer": "at",
           "accepted": [
             "at"
@@ -3283,6 +3578,7 @@
         },
         {
           "sentence": "We met ___ 2019.",
+          "translation": "Nos conocimos en 2019.",
           "answer": "in",
           "accepted": [
             "in"
@@ -3292,6 +3588,7 @@
         },
         {
           "sentence": "The deadline is ___ the 30th.",
+          "translation": "La fecha límite es el día treinta.",
           "answer": "on",
           "accepted": [
             "on"
@@ -3301,6 +3598,7 @@
         },
         {
           "sentence": "The train leaves ___ exactly noon.",
+          "translation": "El tren sale justo al mediodía.",
           "answer": "at",
           "accepted": [
             "at"
@@ -3328,26 +3626,31 @@
         {
           "speaker": "Leo",
           "text": "Where are you? I'm **at** the coffee shop on Main Street.",
+          "translation": "¿Dónde estás? Estoy en la cafetería de la calle principal.",
           "highlight": true
         },
         {
           "speaker": "Sara",
           "text": "I'm still **at** home. I'll be there in ten minutes.",
+          "translation": "Todavía estoy en casa. Llego en diez minutos.",
           "highlight": true
         },
         {
           "speaker": "Leo",
           "text": "I'm sitting **at** the table **in** the corner, **on** the left side.",
+          "translation": "Estoy sentado en la mesa del rincón, del lado izquierdo.",
           "highlight": true
         },
         {
           "speaker": "Sara",
           "text": "Got it. Is there a parking lot **in** the building?",
+          "translation": "Entendido. ¿Hay estacionamiento en el edificio?",
           "highlight": true
         },
         {
           "speaker": "Leo",
           "text": "Yes, it's **on** the ground floor.",
+          "translation": "Sí, está en la planta baja.",
           "highlight": true
         }
       ],
@@ -3369,6 +3672,7 @@
       "structured_input": [
         {
           "sentence": "There is a supermarket ___ the corner.",
+          "translation": "Hay un supermercado en la esquina.",
           "question": "Which preposition is correct?",
           "options": [
             "in",
@@ -3381,6 +3685,7 @@
         },
         {
           "sentence": "She left her keys ___ the table.",
+          "translation": "Ella dejó sus llaves sobre la mesa.",
           "question": "Which preposition is correct?",
           "options": [
             "at",
@@ -3393,6 +3698,7 @@
         },
         {
           "sentence": "The meeting room is ___ the third floor.",
+          "translation": "La sala de reuniones está en el tercer piso.",
           "question": "Which preposition is correct?",
           "options": [
             "in",
@@ -3407,6 +3713,7 @@
       "quiz": [
         {
           "sentence": "I'll meet you ___ the entrance.",
+          "translation": "Te veo en la entrada.",
           "answer": "at",
           "accepted": [
             "at"
@@ -3416,6 +3723,7 @@
         },
         {
           "sentence": "She lives ___ a small village.",
+          "translation": "Ella vive en un pueblo pequeño.",
           "answer": "in",
           "accepted": [
             "in"
@@ -3425,6 +3733,7 @@
         },
         {
           "sentence": "Your coat is ___ the chair.",
+          "translation": "Tu abrigo está en la silla.",
           "answer": "on",
           "accepted": [
             "on"
@@ -3434,6 +3743,7 @@
         },
         {
           "sentence": "He works ___ a hospital.",
+          "translation": "Él trabaja en un hospital.",
           "answer": "in",
           "accepted": [
             "in"
@@ -3443,6 +3753,7 @@
         },
         {
           "sentence": "There is a photo ___ the wall.",
+          "translation": "Hay una foto en la pared.",
           "answer": "on",
           "accepted": [
             "on"
@@ -3475,26 +3786,31 @@
         {
           "speaker": "Ana",
           "text": "I've been thinking **about** changing careers.",
+          "translation": "He estado pensando en cambiar de carrera.",
           "highlight": true
         },
         {
           "speaker": "Tom",
           "text": "Really? What are you interested **in**?",
+          "translation": "¿En serio? ¿En qué estás interesado?",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "I've always dreamed **of** working in design. But I'm worried **about** starting over.",
+          "translation": "Siempre he soñado con trabajar en diseño. Pero me preocupa empezar de cero.",
           "highlight": true
         },
         {
           "speaker": "Tom",
           "text": "I believe **in** you. You should apply **for** that design course.",
+          "translation": "Creo en ti. Deberías inscribirte en ese curso de diseño.",
           "highlight": true
         },
         {
           "speaker": "Ana",
           "text": "You're right. I'll stop waiting **for** the perfect moment and just do it.",
+          "translation": "Tienes razón. Dejaré de esperar el momento perfecto y simplemente lo haré.",
           "highlight": true
         }
       ],
@@ -3516,6 +3832,7 @@
       "structured_input": [
         {
           "sentence": "She is really good ___ public speaking.",
+          "translation": "Ella es muy buena para hablar en público.",
           "question": "Which preposition collocates with 'good'?",
           "options": [
             "in",
@@ -3528,6 +3845,7 @@
         },
         {
           "sentence": "They decided to apply ___ the job.",
+          "translation": "Decidieron postularse para el trabajo.",
           "question": "Which preposition correctly follows 'apply'?",
           "options": [
             "to",
@@ -3540,6 +3858,7 @@
         },
         {
           "sentence": "I really believe ___ second chances.",
+          "translation": "Creo de verdad en las segundas oportunidades.",
           "question": "Which preposition follows 'believe' when talking about principles or ideas?",
           "options": [
             "about",
@@ -3554,6 +3873,7 @@
       "quiz": [
         {
           "sentence": "She's been thinking ___ moving abroad.",
+          "translation": "Ella ha estado pensando en mudarse al extranjero.",
           "answer": "about",
           "accepted": [
             "about"
@@ -3563,6 +3883,7 @@
         },
         {
           "sentence": "He apologised ___ being late.",
+          "translation": "Él se disculpó por llegar tarde.",
           "answer": "for",
           "accepted": [
             "for"
@@ -3572,6 +3893,7 @@
         },
         {
           "sentence": "I'm not very good ___ cooking.",
+          "translation": "No soy muy bueno para cocinar.",
           "answer": "at",
           "accepted": [
             "at"
@@ -3581,6 +3903,7 @@
         },
         {
           "sentence": "Can I rely ___ you to be there on time?",
+          "translation": "¿Puedo contar contigo para que estés ahí a tiempo?",
           "answer": "on",
           "accepted": [
             "on"
@@ -3590,6 +3913,7 @@
         },
         {
           "sentence": "They're waiting ___ the results.",
+          "translation": "Están esperando los resultados.",
           "answer": "for",
           "accepted": [
             "for"
@@ -3614,26 +3938,31 @@
         {
           "speaker": "Jake",
           "text": "Can you **turn down** the music? I'm trying to work.",
+          "translation": "¿Puedes bajar la música? Estoy tratando de trabajar.",
           "highlight": true
         },
         {
           "speaker": "Amy",
           "text": "Sure! I didn't realise it was so loud. I'll **turn it down** right now.",
+          "translation": "¡Claro! No me di cuenta de que estaba tan fuerte. La bajo ahora mismo.",
           "highlight": true
         },
         {
           "speaker": "Jake",
           "text": "Thanks. Also, did you **find out** about the Wi-Fi password?",
+          "translation": "Gracias. Por cierto, ¿averiguaste la contraseña del wifi?",
           "highlight": true
         },
         {
           "speaker": "Amy",
           "text": "Not yet. I'll **look it up** online. Or we can just ask the receptionist.",
+          "translation": "Todavía no. La busco en internet. O podemos preguntarle a la recepcionista.",
           "highlight": true
         },
         {
           "speaker": "Jake",
           "text": "Good idea. I have to **log in** to the work server before noon.",
+          "translation": "Buena idea. Tengo que iniciar sesión en el servidor del trabajo antes del mediodía.",
           "highlight": true
         }
       ],
@@ -3655,6 +3984,7 @@
       "structured_input": [
         {
           "sentence": "She ___ the offer because the salary was too low.",
+          "translation": "Ella rechazó la oferta porque el salario era demasiado bajo.",
           "question": "Which phrasal verb means 'refused'?",
           "options": [
             "turned down",
@@ -3667,6 +3997,7 @@
         },
         {
           "sentence": "I need to ___ the meeting time — can you check the email?",
+          "translation": "Necesito confirmar la hora de la reunión, ¿puedes revisar el correo?",
           "question": "Which phrasal verb means 'discover'?",
           "options": [
             "look for",
@@ -3679,6 +4010,7 @@
         },
         {
           "sentence": "I don't know what this word means. I'll ___ in the dictionary.",
+          "translation": "No sé qué significa esta palabra. La buscaré en el diccionario.",
           "question": "Which option is grammatically correct (pronoun placement)?",
           "options": [
             "look up it",
@@ -3693,6 +4025,7 @@
       "quiz": [
         {
           "sentence": "He ___ smoking after his doctor's advice.",
+          "translation": "Él dejó de fumar tras el consejo de su médico.",
           "answer": "gave up",
           "accepted": [
             "gave up"
@@ -3702,6 +4035,7 @@
         },
         {
           "sentence": "Can you ___ the volume? I can barely hear it.",
+          "translation": "¿Puedes subir el volumen? Casi no lo escucho.",
           "answer": "turn up",
           "accepted": [
             "turn up"
@@ -3711,6 +4045,7 @@
         },
         {
           "sentence": "She ___ a great cafe near the office.",
+          "translation": "Ella descubrió una cafetería estupenda cerca de la oficina.",
           "answer": "came across",
           "accepted": [
             "came across",
@@ -3721,6 +4056,7 @@
         },
         {
           "sentence": "Don't forget to ___ before you leave the computer.",
+          "translation": "No olvides cerrar sesión antes de dejar la computadora.",
           "answer": "log out",
           "accepted": [
             "log out",
@@ -3731,6 +4067,7 @@
         },
         {
           "sentence": "The meeting was ___ because the manager was ill.",
+          "translation": "La reunión se canceló porque el gerente estaba enfermo.",
           "answer": "put off",
           "accepted": [
             "put off"
@@ -3760,26 +4097,31 @@
         {
           "speaker": "Lena",
           "text": "I need to **fill in** this form. Can you help me?",
+          "translation": "Necesito llenar este formulario. ¿Me puedes ayudar?",
           "highlight": true
         },
         {
           "speaker": "Mark",
           "text": "Sure. Just **fill it in** and I'll check it afterward.",
+          "translation": "Claro. Tú llénalo y yo lo reviso después.",
           "highlight": true
         },
         {
           "speaker": "Lena",
           "text": "Thanks. Also, we need to **deal with** the complaint from the client.",
+          "translation": "Gracias. Además, tenemos que ocuparnos de la queja del cliente.",
           "highlight": true
         },
         {
           "speaker": "Mark",
           "text": "I'll **look into** it today. We can't just **put it off**.",
+          "translation": "Lo investigaré hoy. No podemos simplemente posponerlo.",
           "highlight": true
         },
         {
           "speaker": "Lena",
           "text": "Agreed. Let's **go over** the report together at three.",
+          "translation": "De acuerdo. Repasemos el informe juntos a las tres.",
           "highlight": true
         }
       ],
@@ -3801,6 +4143,7 @@
       "structured_input": [
         {
           "sentence": "She _____ the children while their parents were away.",
+          "translation": "Ella cuidó a los niños mientras sus padres estaban fuera.",
           "question": "Which phrasal verb means 'took care of'?",
           "options": [
             "looked after",
@@ -3813,6 +4156,7 @@
         },
         {
           "sentence": "I ran ___ my old teacher at the supermarket.",
+          "translation": "Me encontré por casualidad con mi antigua profesora en el supermercado.",
           "question": "Which particle completes this inseparable phrasal verb?",
           "options": [
             "up",
@@ -3825,6 +4169,7 @@
         },
         {
           "sentence": "Can you _____ this document before the meeting?",
+          "translation": "¿Puedes revisar este documento antes de la reunión?",
           "question": "Which option correctly uses a separable phrasal verb meaning 'review'?",
           "options": [
             "go over it",
@@ -3839,6 +4184,7 @@
       "quiz": [
         {
           "sentence": "She ___ her younger brother every day after school.",
+          "translation": "Ella cuida a su hermano menor todos los días después de la escuela.",
           "answer": "looked after",
           "accepted": [
             "looked after"
@@ -3848,6 +4194,7 @@
         },
         {
           "sentence": "Please ___ the contract carefully before you sign.",
+          "translation": "Por favor, revisa el contrato con cuidado antes de firmar.",
           "answer": "go over",
           "accepted": [
             "go over"
@@ -3857,6 +4204,7 @@
         },
         {
           "sentence": "The manager ___ the problem immediately.",
+          "translation": "El gerente se ocupó del problema de inmediato.",
           "answer": "looked into",
           "accepted": [
             "looked into"
@@ -3866,6 +4214,7 @@
         },
         {
           "sentence": "He ___ an old friend at the airport.",
+          "translation": "Él se encontró por casualidad con un viejo amigo en el aeropuerto.",
           "answer": "ran into",
           "accepted": [
             "ran into"
@@ -3875,6 +4224,7 @@
         },
         {
           "sentence": "I need to ___ this application form.",
+          "translation": "Necesito llenar este formulario de solicitud.",
           "answer": "fill in",
           "accepted": [
             "fill in",
@@ -3904,26 +4254,31 @@
         {
           "speaker": "Eva",
           "text": "I tried to **bring up** the budget issue in the meeting, but no one listened.",
+          "translation": "Traté de sacar el tema del presupuesto en la reunión, pero nadie escuchó.",
           "highlight": true
         },
         {
           "speaker": "Sam",
           "text": "That topic always **comes up** at the worst times.",
+          "translation": "Ese tema siempre surge en los peores momentos.",
           "highlight": true
         },
         {
           "speaker": "Eva",
           "text": "I know. I didn't want to **fall out** with my boss over it, so I just let it go.",
+          "translation": "Lo sé. No quería pelearme con mi jefe por eso, así que lo dejé pasar.",
           "highlight": true
         },
         {
           "speaker": "Sam",
           "text": "Smart. Sometimes you have to **put up with** things you don't like.",
+          "translation": "Inteligente. A veces hay que soportar cosas que no te gustan.",
           "highlight": true
         },
         {
           "speaker": "Eva",
           "text": "True. But if it happens again, I'm going to **stand up for** myself.",
+          "translation": "Es cierto. Pero si vuelve a pasar, voy a defenderme.",
           "highlight": true
         }
       ],
@@ -3945,6 +4300,7 @@
       "structured_input": [
         {
           "sentence": "She's incredibly patient — she can ___ a lot of stress.",
+          "translation": "Ella es increíblemente paciente, puede soportar mucho estrés.",
           "question": "Which phrasal verb means 'tolerate'?",
           "options": [
             "put up with",
@@ -3957,6 +4313,7 @@
         },
         {
           "sentence": "He always ___ his colleagues when they're treated unfairly.",
+          "translation": "Él siempre defiende a sus colegas cuando los tratan injustamente.",
           "question": "Which phrasal verb means 'defends'?",
           "options": [
             "stands up for",
@@ -3969,6 +4326,7 @@
         },
         {
           "sentence": "An interesting problem ___ during the meeting.",
+          "translation": "Surgió un problema interesante durante la reunión.",
           "question": "Which phrasal verb means 'appeared or was mentioned'?",
           "options": [
             "came up",
@@ -3983,6 +4341,7 @@
       "quiz": [
         {
           "sentence": "I don't want to ___ with my flatmate over something so trivial.",
+          "translation": "No quiero pelearme con mi compañero de cuarto por algo tan trivial.",
           "answer": "fall out",
           "accepted": [
             "fall out"
@@ -3992,6 +4351,7 @@
         },
         {
           "sentence": "Don't worry about what happened — just ___ and move on.",
+          "translation": "No te preocupes por lo que pasó, solo déjalo pasar y sigue adelante.",
           "answer": "let it go",
           "accepted": [
             "let it go",
@@ -4002,6 +4362,7 @@
         },
         {
           "sentence": "She ___ her three children alone after her husband left.",
+          "translation": "Ella crió a sus tres hijos sola después de que su esposo se fue.",
           "answer": "brought up",
           "accepted": [
             "brought up"
@@ -4011,6 +4372,7 @@
         },
         {
           "sentence": "You should always ___ what you believe in.",
+          "translation": "Siempre deberías defender aquello en lo que crees.",
           "answer": "stand up for",
           "accepted": [
             "stand up for"
@@ -4020,6 +4382,7 @@
         },
         {
           "sentence": "I cannot ___ the noise from the construction next door any longer.",
+          "translation": "Ya no soporto el ruido de la construcción de al lado.",
           "answer": "put up with",
           "accepted": [
             "put up with"
@@ -4055,7 +4418,10 @@
       "tips": "This structure is formal and literary. It emphasizes the adverbial and creates a dramatic effect. Common in written English, speeches, and formal presentations.",
       "topics": [
         "pensamientos_opiniones"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "mixed_conditionals",
@@ -4076,7 +4442,10 @@
       "tips": "Mixed conditionals express regret about the past and its present consequences. The if-clause uses past perfect; the result clause uses would + base verb.",
       "topics": [
         "conversacion"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "subjunctive_formal",
@@ -4101,7 +4470,10 @@
       "tips": "Use the base form: he submit (not he submits). More common in American English; British English often uses should + infinitive instead.",
       "topics": [
         "oficina"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "nominalization",
@@ -4126,7 +4498,10 @@
       "tips": "Nominalizations are common in academic, legal, and business writing. They allow complex ideas to be packaged as noun phrases. Overuse can make text heavy and impersonal.",
       "topics": [
         "accountability"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "cleft_sentences",
@@ -4152,7 +4527,10 @@
       "topics": [
         "calendario",
         "accommodation"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "ellipsis_substitution",
@@ -4177,7 +4555,10 @@
       "tips": "Do so substitutes a verb phrase when the subject differs. I might do (British English) omits the repeated verb phrase. Common in formal spoken and written English.",
       "topics": [
         "conversacion"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     },
     {
       "id": "discourse_markers_advanced",
@@ -4202,7 +4583,10 @@
       "tips": "These markers are confined to formal writing, legal documents, and academic prose. Overusing them in speech sounds unnatural. Master their precise meaning before using them.",
       "topics": [
         "pensamientos_opiniones"
-      ]
+      ],
+      "context_dialogue": [],
+      "structured_input": [],
+      "quiz": []
     }
   ]
 }

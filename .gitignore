@@ -87,3 +87,4 @@ tools/gloss-embeddings-cache.json
 # Audio text-hash manifest (staleness safeguard; local dev tooling, like .manifest.json)
 shared/audio/.text-hashes.json
 tools/bump-assets.mjs
+tools/grammar-translate.mjs

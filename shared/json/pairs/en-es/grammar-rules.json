@@ -139,26 +139,31 @@
         {
           "speaker": "MIA",
           "text": "Hola, ¿tú **eres** nueva en la oficina?",
+          "translation": "Hi, are you new in the office?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, **soy** diseñadora gráfica. Empecé esta semana.",
+          "translation": "Yes, I'm a graphic designer. I started this week.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué bien! Yo **soy** del departamento de marketing. ¿De dónde **eres**?",
+          "translation": "How nice! I'm from the marketing department. Where are you from?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Soy** de Colombia, pero llevo tres años viviendo aquí.",
+          "translation": "I'm from Colombia, but I've been living here for three years.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué interesante! Mis colegas también **son** de América Latina.",
+          "translation": "How interesting! My colleagues are from Latin America too.",
           "highlight": true
         }
       ],
@@ -175,6 +180,7 @@
       "structured_input": [
         {
           "sentence": "Soy estudiante de español.",
+          "translation": "I'm a Spanish student.",
           "question": "What does this sentence tell us about the speaker?",
           "options": [
             "Their profession or role",
@@ -187,6 +193,7 @@
         },
         {
           "sentence": "Ella es médica y trabaja en un hospital.",
+          "translation": "She's a doctor and works at a hospital.",
           "question": "Why is 'es' used here instead of 'está'?",
           "options": [
             "Because being a doctor is a defining characteristic, not a temporary state",
@@ -201,6 +208,7 @@
       "quiz": [
         {
           "sentence": "Yo ___ profesor de inglés.",
+          "translation": "I'm an English teacher.",
           "answer": "soy",
           "accepted": [
             "soy"
@@ -210,6 +218,7 @@
         },
         {
           "sentence": "Ellos ___ de México.",
+          "translation": "They're from Mexico.",
           "answer": "son",
           "accepted": [
             "son"
@@ -219,6 +228,7 @@
         },
         {
           "sentence": "Mi hermana ___ muy inteligente.",
+          "translation": "My sister is very intelligent.",
           "answer": "es",
           "accepted": [
             "es"
@@ -247,31 +257,37 @@
         {
           "speaker": "MIA",
           "text": "¿Qué hora **es**? Se me olvidó el teléfono.",
+          "translation": "What time is it? I forgot my phone.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Son** las tres y cuarto. ¿Por qué lo preguntas?",
+          "translation": "It's a quarter past three. Why do you ask?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "La reunión **es** a las cuatro. Todavía tenemos tiempo.",
+          "translation": "The meeting is at four. We still have time.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Y el cumpleaños de Sofía? Creo que también **es** esta semana.",
+          "translation": "And Sofía's birthday? I think it's this week too.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, **es** el jueves por la noche. ¿Vas a ir a la cena?",
+          "translation": "Yes, it's on Thursday night. Are you going to the dinner?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Claro, ya tengo el regalo listo. ¿A qué hora **es** exactamente?",
+          "translation": "Of course, I already have the gift ready. What time is it exactly?",
           "highlight": true
         }
       ],
@@ -288,6 +304,7 @@
       "structured_input": [
         {
           "sentence": "Hoy es lunes y mañana es martes.",
+          "translation": "Today is Monday and tomorrow is Tuesday.",
           "question": "What is the role of 'es' in this sentence?",
           "options": [
             "It expresses what day of the week it is",
@@ -300,6 +317,7 @@
         },
         {
           "sentence": "La fiesta es el sábado a las nueve.",
+          "translation": "The party is on Saturday at nine.",
           "question": "Why is 'es' used here instead of 'está'?",
           "options": [
             "Because 'es' (ser) is used for scheduled events and their time",
@@ -314,6 +332,7 @@
       "quiz": [
         {
           "sentence": "La clase ___ a las ocho de la mañana.",
+          "translation": "The class is at eight in the morning.",
           "answer": "es",
           "accepted": [
             "es"
@@ -323,6 +342,7 @@
         },
         {
           "sentence": "___ las cinco en punto.",
+          "translation": "It's five o'clock sharp.",
           "answer": "Son",
           "accepted": [
             "Son",
@@ -333,6 +353,7 @@
         },
         {
           "sentence": "¿Qué hora ___?",
+          "translation": "What time is it?",
           "answer": "es",
           "accepted": [
             "es"
@@ -358,26 +379,31 @@
         {
           "speaker": "MIA",
           "text": "Hola, ¿cómo **estás**? Te noto un poco cansada.",
+          "translation": "Hi, how are you? You seem a little tired.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Estoy** agotada. Llevo tres días sin dormir bien.",
+          "translation": "I'm exhausted. I haven't slept well for three days.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Sabes dónde **está** la enfermería del edificio?",
+          "translation": "Do you know where the building's infirmary is?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Creo que **está** en el segundo piso, junto a los ascensores.",
+          "translation": "I think it's on the second floor, next to the elevators.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Yo **estoy** bien hoy, pero ayer también **estaba** fatal.",
+          "translation": "I'm fine today, but yesterday I was feeling terrible too.",
           "highlight": true
         }
       ],
@@ -394,6 +420,7 @@
       "structured_input": [
         {
           "sentence": "Estoy en la biblioteca ahora mismo.",
+          "translation": "I'm at the library right now.",
           "question": "Why is 'estoy' used here instead of 'soy'?",
           "options": [
             "Because location — where someone is right now — uses estar",
@@ -406,6 +433,7 @@
         },
         {
           "sentence": "El café está caliente.",
+          "translation": "The coffee is hot.",
           "question": "What does 'está caliente' tell us about the coffee?",
           "options": [
             "The coffee is currently hot (a temporary condition)",
@@ -420,6 +448,7 @@
       "quiz": [
         {
           "sentence": "¿Dónde ___ el supermercado?",
+          "translation": "Where is the supermarket?",
           "answer": "está",
           "accepted": [
             "está"
@@ -429,6 +458,7 @@
         },
         {
           "sentence": "Nosotros ___ muy contentos hoy.",
+          "translation": "We're very happy today.",
           "answer": "estamos",
           "accepted": [
             "estamos"
@@ -438,6 +468,7 @@
         },
         {
           "sentence": "El restaurante ___ cerrado los domingos.",
+          "translation": "The restaurant is closed on Sundays.",
           "answer": "está",
           "accepted": [
             "está"
@@ -483,26 +514,31 @@
         {
           "speaker": "MIA",
           "text": "¿**Trabajas** mucho los fines de semana?",
+          "translation": "Do you work a lot on weekends?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "No mucho. Los sábados **descanso** y los domingos **camino** por el parque.",
+          "translation": "Not much. On Saturdays I rest and on Sundays I walk in the park.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué buena rutina! Yo **escucho** pódcasts mientras **cocino** el domingo.",
+          "translation": "What a good routine! I listen to podcasts while I cook on Sunday.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Y **estudias** algún idioma? Yo **hablo** inglés y un poco de francés.",
+          "translation": "And do you study any language? I speak English and a little French.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, **practico** italiano con una aplicación cada noche antes de dormir.",
+          "translation": "Yes, I practice Italian with an app every night before sleeping.",
           "highlight": true
         }
       ],
@@ -519,6 +555,7 @@
       "structured_input": [
         {
           "sentence": "Yo hablo español un poco.",
+          "translation": "I speak a little Spanish.",
           "question": "Which ending does a regular -ar verb take for the 'yo' (I) form?",
           "options": [
             "-o (hablo)",
@@ -531,6 +568,7 @@
         },
         {
           "sentence": "Nosotros estudiamos inglés todos los días.",
+          "translation": "We study English every day.",
           "question": "What subject is 'estudiamos' used with?",
           "options": [
             "Nosotros (we)",
@@ -545,6 +583,7 @@
       "quiz": [
         {
           "sentence": "Yo ___ (trabajar) en un hospital.",
+          "translation": "I work at a hospital.",
           "answer": "trabajo",
           "accepted": [
             "trabajo"
@@ -554,6 +593,7 @@
         },
         {
           "sentence": "¿Tú ___ (hablar) inglés?",
+          "translation": "Do you speak English?",
           "answer": "hablas",
           "accepted": [
             "hablas"
@@ -563,6 +603,7 @@
         },
         {
           "sentence": "Ellos ___ (caminar) al parque por las tardes.",
+          "translation": "They walk to the park in the afternoons.",
           "answer": "caminan",
           "accepted": [
             "caminan"
@@ -611,31 +652,37 @@
         {
           "speaker": "MIA",
           "text": "¿Dónde **vives** ahora? ¿Sigues en el mismo apartamento?",
+          "translation": "Where do you live now? Are you still in the same apartment?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "No, **vivo** más cerca del trabajo ahora. ¿Y tú?",
+          "translation": "No, I live closer to work now. And you?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Yo **vivo** con mis padres todavía. **Como** en casa casi todos los días.",
+          "translation": "I still live with my parents. I eat at home almost every day.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Qué bien. Yo **como** fuera muchas veces porque no tengo tiempo de cocinar.",
+          "translation": "Nice. I often eat out because I don't have time to cook.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Y **bebes** mucho café? Pareces cansado últimamente.",
+          "translation": "And do you drink a lot of coffee? You seem tired lately.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, **bebo** demasiado. Mis amigos también me lo **dicen** siempre.",
+          "translation": "Yes, I drink too much. My friends always tell me that too.",
           "highlight": true
         }
       ],
@@ -652,6 +699,7 @@
       "structured_input": [
         {
           "sentence": "Yo como una manzana cada mañana.",
+          "translation": "I eat an apple every morning.",
           "question": "Which verb group does 'comer' belong to?",
           "options": [
             "-er verbs (comer, beber, leer)",
@@ -664,6 +712,7 @@
         },
         {
           "sentence": "Nosotros vivimos cerca del centro.",
+          "translation": "We live near downtown.",
           "question": "How does the nosotros ending of a -ir verb differ from a -er verb?",
           "options": [
             "-ir → -imos (vivimos); -er → -emos (comemos)",
@@ -678,6 +727,7 @@
       "quiz": [
         {
           "sentence": "Yo ___ (comer) ensalada para el almuerzo.",
+          "translation": "I eat salad for lunch.",
           "answer": "como",
           "accepted": [
             "como"
@@ -687,6 +737,7 @@
         },
         {
           "sentence": "¿Dónde ___ (vivir) tú?",
+          "translation": "Where do you live?",
           "answer": "vives",
           "accepted": [
             "vives"
@@ -696,6 +747,7 @@
         },
         {
           "sentence": "Ellos ___ (beber) agua después del ejercicio.",
+          "translation": "They drink water after exercising.",
           "answer": "beben",
           "accepted": [
             "beben"
@@ -738,26 +790,31 @@
         {
           "speaker": "MIA",
           "text": "¿Dónde pusiste **el** informe que imprimí esta mañana?",
+          "translation": "Where did you put the report I printed this morning?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Está encima de **la** mesa, junto a la computadora.",
+          "translation": "It's on the table, next to the computer.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Ah, gracias. ¿Y **los** bolígrafos? No encuentro ninguno.",
+          "translation": "Ah, thanks. And the pens? I can't find any.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Creo que **las** chicas del fondo se los llevaron al reunirse.",
+          "translation": "I think the women at the back took them when they met.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Siempre igual. **El** problema es que nunca vuelven **las** cosas al sitio.",
+          "translation": "Always the same. The problem is that things never get put back.",
           "highlight": true
         }
       ],
@@ -774,6 +831,7 @@
       "structured_input": [
         {
           "sentence": "El libro está en la mesa.",
+          "translation": "The book is on the table.",
           "question": "Which article is used with 'libro' and why?",
           "options": [
             "'El' — because 'libro' is masculine singular",
@@ -786,6 +844,7 @@
         },
         {
           "sentence": "Los niños juegan en el parque.",
+          "translation": "The children play in the park.",
           "question": "Why is 'los' used before 'niños'?",
           "options": [
             "Because 'niños' is masculine plural",
@@ -800,6 +859,7 @@
       "quiz": [
         {
           "sentence": "___ carro de mi padre es rojo.",
+          "translation": "My father's car is red.",
           "answer": "El",
           "accepted": [
             "El",
@@ -810,6 +870,7 @@
         },
         {
           "sentence": "___ casa tiene tres habitaciones.",
+          "translation": "The house has three bedrooms.",
           "answer": "La",
           "accepted": [
             "La",
@@ -820,6 +881,7 @@
         },
         {
           "sentence": "___ profesores explican muy bien.",
+          "translation": "The teachers explain very well.",
           "answer": "Los",
           "accepted": [
             "Los",
@@ -847,26 +909,31 @@
         {
           "speaker": "MIA",
           "text": "¿Cómo es tu nuevo compañero de apartamento? ¿Es simpático?",
+          "translation": "What's your new roommate like? Is he nice?",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Sí, es muy **simpático** y también muy **ordenado**, lo cual me alegra mucho.",
+          "translation": "Yes, he's very nice and also very tidy, which makes me really glad.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué suerte! El mío es bastante **desordenado** y tiene una moto **ruidosa**.",
+          "translation": "How lucky! Mine is quite messy and has a noisy motorcycle.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Ay, qué difícil. ¿Y la habitación es **grande** o **pequeña**?",
+          "translation": "Oh, how difficult. And is the room big or small?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Es **pequeña** pero tiene una ventana **grande** que da a la calle.",
+          "translation": "It's small but it has a big window facing the street.",
           "highlight": true
         }
       ],
@@ -883,6 +950,7 @@
       "structured_input": [
         {
           "sentence": "El chico alto y la chica alta son hermanos.",
+          "translation": "The tall boy and the tall girl are siblings.",
           "question": "Why are both 'alto' and 'alta' used in the same sentence?",
           "options": [
             "Because 'alto' agrees with masculine 'chico' and 'alta' agrees with feminine 'chica'",
@@ -895,6 +963,7 @@
         },
         {
           "sentence": "Los exámenes difíciles me ponen nervioso.",
+          "translation": "Difficult exams make me nervous.",
           "question": "Why is 'difíciles' (not 'difícil') used here?",
           "options": [
             "Because 'exámenes' is plural, so the adjective must be plural too",
@@ -909,6 +978,7 @@
       "quiz": [
         {
           "sentence": "Mi hermana es muy _____. (inteligente)",
+          "translation": "My sister is very intelligent.",
           "answer": "inteligente",
           "accepted": [
             "inteligente"
@@ -918,6 +988,7 @@
         },
         {
           "sentence": "Los zapatos son _____. (negro/negra/negros/negras)",
+          "translation": "The shoes are black.",
           "answer": "negros",
           "accepted": [
             "negros"
@@ -927,6 +998,7 @@
         },
         {
           "sentence": "Ella tiene una maleta _____. (pequeño/pequeña/pequeños/pequeñas)",
+          "translation": "She has a small suitcase.",
           "answer": "pequeña",
           "accepted": [
             "pequeña"
@@ -954,26 +1026,31 @@
         {
           "speaker": "MIA",
           "text": "¿Qué tal el fin de semana? ¿Hiciste algo especial?",
+          "translation": "How was the weekend? Did you do anything special?",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Sí, el sábado **visité** a mis abuelos y el domingo **descansé** en casa.",
+          "translation": "Yes, on Saturday I visited my grandparents and on Sunday I rested at home.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué bien! Yo **salí** con unas amigas el viernes y **llegué** tarde a casa.",
+          "translation": "How nice! I went out with some friends on Friday and got home late.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Y **comieron** en algún sitio bueno?",
+          "translation": "And did you eat somewhere nice?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, **cenamos** en ese restaurante nuevo del centro. ¡**Pedí** el arroz con mariscos y estaba delicioso!",
+          "translation": "Yes, we had dinner at that new restaurant downtown. I ordered the seafood rice and it was delicious!",
           "highlight": true
         }
       ],
@@ -990,6 +1067,7 @@
       "structured_input": [
         {
           "sentence": "Ayer comí pizza con mis amigos.",
+          "translation": "Yesterday I ate pizza with my friends.",
           "question": "Which ending is used for 'yo' in a regular -er verb in the preterite?",
           "options": [
             "-í (comí)",
@@ -1002,6 +1080,7 @@
         },
         {
           "sentence": "Ella llamó a su madre hace una hora.",
+          "translation": "She called her mother an hour ago.",
           "question": "Which ending does a regular -ar verb take for 'él/ella' in the preterite?",
           "options": [
             "-ó (llamó)",
@@ -1016,6 +1095,7 @@
       "quiz": [
         {
           "sentence": "Ayer yo ___ (hablar) con mi jefe.",
+          "translation": "Yesterday I spoke with my boss.",
           "answer": "hablé",
           "accepted": [
             "hablé"
@@ -1025,6 +1105,7 @@
         },
         {
           "sentence": "Ella ___ (vivir) en París el año pasado.",
+          "translation": "She lived in Paris last year.",
           "answer": "vivió",
           "accepted": [
             "vivió"
@@ -1034,6 +1115,7 @@
         },
         {
           "sentence": "Nosotros ___ (comer) en ese restaurante anoche.",
+          "translation": "We ate at that restaurant last night.",
           "answer": "comimos",
           "accepted": [
             "comimos"
@@ -1077,26 +1159,31 @@
         {
           "speaker": "MIA",
           "text": "¿**Pudiste** ir al concierto el jueves pasado?",
+          "translation": "Were you able to go to the concert last Thursday?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "No, no **pude**. **Tuve** que quedarme en el trabajo hasta muy tarde.",
+          "translation": "No, I couldn't. I had to stay at work until very late.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Qué lástima. Yo **fui** con mi hermana y **fue** increíble.",
+          "translation": "What a shame. I went with my sister and it was incredible.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Qué **dijo** el cantante al final? Me contaron que **hizo** algo especial.",
+          "translation": "What did the singer say at the end? I was told he did something special.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Sí! **Vino** un músico sorpresa al escenario y **tocaron** juntos dos canciones.",
+          "translation": "Yes! A surprise musician came onstage and they played two songs together.",
           "highlight": true
         }
       ],
@@ -1113,6 +1200,7 @@
       "structured_input": [
         {
           "sentence": "Fui al médico ayer porque me sentía mal.",
+          "translation": "I went to the doctor yesterday because I felt sick.",
           "question": "What is the infinitive of 'fui' and which subject does it correspond to here?",
           "options": [
             "Ir or ser — yo (I went / I was)",
@@ -1125,6 +1213,7 @@
         },
         {
           "sentence": "Ella hizo la tarea antes de cenar.",
+          "translation": "She did the homework before dinner.",
           "question": "Why is 'hizo' used instead of 'hacó'?",
           "options": [
             "Because 'hacer' is irregular in the preterite — its stem changes to 'hiz-'",
@@ -1139,6 +1228,7 @@
       "quiz": [
         {
           "sentence": "El año pasado ___ (ir) a la universidad.",
+          "translation": "Last year I went to university.",
           "answer": "fui",
           "accepted": [
             "fui"
@@ -1148,6 +1238,7 @@
         },
         {
           "sentence": "¿Qué ___ (hacer) tú el domingo?",
+          "translation": "What did you do on Sunday?",
           "answer": "hiciste",
           "accepted": [
             "hiciste"
@@ -1157,6 +1248,7 @@
         },
         {
           "sentence": "Ella no ___ (poder) venir a la cena.",
+          "translation": "She couldn't come to the dinner.",
           "answer": "pudo",
           "accepted": [
             "pudo"
@@ -1191,31 +1283,37 @@
         {
           "speaker": "MIA",
           "text": "¿Cómo era tu barrio cuando eras pequeña?",
+          "translation": "What was your neighborhood like when you were little?",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Era muy tranquilo. **Vivíamos** cerca del río y los niños **jugábamos** en la calle sin peligro.",
+          "translation": "It was very quiet. We lived near the river and we children used to play in the street safely.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Qué bonito. Mi familia **comía** junta todos los domingos. Lo echo de menos.",
+          "translation": "How lovely. My family used to eat together every Sunday. I miss it.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Yo también. Mi abuela siempre **hacía** una sopa increíble los inviernos.",
+          "translation": "Me too. My grandmother always used to make an incredible soup in the winters.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Y tus padres **trabajaban** cerca de casa o **viajaban** mucho?",
+          "translation": "And did your parents work near home or did they travel a lot?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Mi madre **trabajaba** en el colegio del pueblo, así que siempre **estaba** en casa por las tardes.",
+          "translation": "My mother worked at the village school, so she was always home in the afternoons.",
           "highlight": true
         }
       ],
@@ -1232,6 +1330,7 @@
       "structured_input": [
         {
           "sentence": "Cuando era niño, vivía en una ciudad pequeña.",
+          "translation": "When I was a child, I lived in a small city.",
           "question": "Why is 'vivía' (imperfect) used here instead of the preterite 'vivió'?",
           "options": [
             "Because living somewhere as a child was an ongoing background state, not a single completed event",
@@ -1244,6 +1343,7 @@
         },
         {
           "sentence": "Antes comíamos en familia todos los domingos.",
+          "translation": "We used to eat as a family every Sunday.",
           "question": "What does 'comíamos' express in this context?",
           "options": [
             "A habitual past action — something they used to do regularly",
@@ -1258,6 +1358,7 @@
       "quiz": [
         {
           "sentence": "De niño, yo ___ (jugar) en el parque cada tarde.",
+          "translation": "As a child, I used to play in the park every afternoon.",
           "answer": "jugaba",
           "accepted": [
             "jugaba"
@@ -1267,6 +1368,7 @@
         },
         {
           "sentence": "Ellos ___ (vivir) cerca de la playa cuando eran jóvenes.",
+          "translation": "They used to live near the beach when they were young.",
           "answer": "vivían",
           "accepted": [
             "vivían"
@@ -1276,6 +1378,7 @@
         },
         {
           "sentence": "Antes ella siempre ___ (llegar) puntual al trabajo.",
+          "translation": "She always used to arrive on time to work.",
           "answer": "llegaba",
           "accepted": [
             "llegaba"
@@ -1304,31 +1407,37 @@
         {
           "speaker": "MIA",
           "text": "¿Te enteraste de lo que pasó ayer en el metro?",
+          "translation": "Did you hear what happened yesterday on the subway?",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "No, cuéntame. Yo **viajaba** en autobús cuando **llegó** un mensaje tuyo.",
+          "translation": "No, tell me. I was riding the bus when a message from you arrived.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Pues **llovía** muchísimo y el metro se paró. La gente **esperaba** en el andén sin información.",
+          "translation": "Well, it was raining heavily and the subway stopped. People were waiting on the platform with no information.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Qué caos. ¿Cuánto tiempo **estuvieron** ahí?",
+          "translation": "What chaos. How long were you there?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Casi una hora. Mientras todos **miraban** el celular, alguien **empezó** a tocar la guitarra.",
+          "translation": "Almost an hour. While everyone was looking at their phone, someone started to play the guitar.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¡No me lo puedo creer! ¿La gente **aplaudía** o **ignoraba** al músico?",
+          "translation": "I can't believe it! Were people applauding or ignoring the musician?",
           "highlight": true
         }
       ],
@@ -1345,6 +1454,7 @@
       "structured_input": [
         {
           "sentence": "Mientras dormía, sonó el teléfono.",
+          "translation": "While I was sleeping, the phone rang.",
           "question": "Which verb is in the imperfect and what role does it play?",
           "options": [
             "'Dormía' (imperfect) — the ongoing background action that was interrupted",
@@ -1357,6 +1467,7 @@
         },
         {
           "sentence": "Estudiaba inglés cuando conocí a mi mejor amigo.",
+          "translation": "I was studying English when I met my best friend.",
           "question": "Why is 'conocí' in the preterite rather than the imperfect?",
           "options": [
             "Because meeting someone was a specific, completed event at a single point in time",
@@ -1371,6 +1482,7 @@
       "quiz": [
         {
           "sentence": "Mientras ___ (caminar/yo), vi un accidente.",
+          "translation": "While I was walking, I saw an accident.",
           "answer": "caminaba",
           "accepted": [
             "caminaba"
@@ -1380,6 +1492,7 @@
         },
         {
           "sentence": "Cuando éramos niños, ___ (ir/nosotros) al mar cada verano.",
+          "translation": "When we were children, we used to go to the sea every summer.",
           "answer": "íbamos",
           "accepted": [
             "íbamos"
@@ -1389,6 +1502,7 @@
         },
         {
           "sentence": "Ella ___ (leer) cuando entré en la habitación.",
+          "translation": "She was reading when I entered the room.",
           "answer": "leía",
           "accepted": [
             "leía"
@@ -1417,26 +1531,31 @@
         {
           "speaker": "MIA",
           "text": "Mañana tengo la entrevista de trabajo. Estoy muy nerviosa.",
+          "translation": "Tomorrow I have the job interview. I'm very nervous.",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Espero que todo **salga** bien. Confía en ti misma.",
+          "translation": "I hope everything goes well. Trust yourself.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Gracias. Mi madre quiere que **llegue** muy temprano y que **descanse** bien esta noche.",
+          "translation": "Thanks. My mother wants me to arrive very early and to rest well tonight.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Tiene razón. También te recomiendo que **practiques** tus respuestas en voz alta.",
+          "translation": "She's right. I also recommend that you practice your answers out loud.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, lo haré. Y quiero que me **des** tu opinión después, ¿de acuerdo?",
+          "translation": "Yes, I will. And I want you to give me your opinion afterward, okay?",
           "highlight": true
         }
       ],
@@ -1453,6 +1572,7 @@
       "structured_input": [
         {
           "sentence": "Quiero que vengas a mi fiesta.",
+          "translation": "I want you to come to my party.",
           "question": "Why is 'vengas' (subjunctive) used instead of 'vienes' (indicative)?",
           "options": [
             "Because 'quiero que' expresses a wish and triggers the subjunctive when the subjects differ",
@@ -1465,6 +1585,7 @@
         },
         {
           "sentence": "El médico recomienda que descansemos más.",
+          "translation": "The doctor recommends that we rest more.",
           "question": "What is the subjunctive form of 'descansar' for 'nosotros'?",
           "options": [
             "descansemos",
@@ -1479,6 +1600,7 @@
       "quiz": [
         {
           "sentence": "Quiero que tú ___ (llegar) a tiempo.",
+          "translation": "I want you to arrive on time.",
           "answer": "llegues",
           "accepted": [
             "llegues"
@@ -1488,6 +1610,7 @@
         },
         {
           "sentence": "El profesor pide que nosotros ___ (leer) el capítulo.",
+          "translation": "The teacher asks us to read the chapter.",
           "answer": "leamos",
           "accepted": [
             "leamos"
@@ -1497,6 +1620,7 @@
         },
         {
           "sentence": "Espero que ella ___ (estar) bien.",
+          "translation": "I hope she is well.",
           "answer": "esté",
           "accepted": [
             "esté"
@@ -1522,26 +1646,31 @@
         {
           "speaker": "MIA",
           "text": "¿A qué hora **te despiertas** normalmente para ir al trabajo?",
+          "translation": "What time do you usually wake up to go to work?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Me despierto** a las seis y media. **Me ducho**, desayuno y salgo a las ocho.",
+          "translation": "I wake up at half past six. I shower, have breakfast, and leave at eight.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué madrugador! Yo **me levanto** tardísimo, casi a las ocho.",
+          "translation": "What an early riser! I get up really late, almost at eight.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Y a qué hora **te acuestas**? Yo **me acuesto** a las diez para poder madrugar.",
+          "translation": "And what time do you go to bed? I go to bed at ten so I can get up early.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Me acuesto casi a medianoche. Por eso siempre **me visto** con prisa por las mañanas.",
+          "translation": "I go to bed almost at midnight. That's why I always get dressed in a hurry in the mornings.",
           "highlight": true
         }
       ],
@@ -1558,6 +1687,7 @@
       "structured_input": [
         {
           "sentence": "Me despierto a las siete todos los días.",
+          "translation": "I wake up at seven every day.",
           "question": "What does the reflexive pronoun 'me' tell us in this sentence?",
           "options": [
             "That the subject (yo) wakes themselves up — the action is done to oneself",
@@ -1570,6 +1700,7 @@
         },
         {
           "sentence": "¿A qué hora te acuestas normalmente?",
+          "translation": "What time do you usually go to bed?",
           "question": "Which reflexive pronoun would you use if the subject were 'ella' instead of 'tú'?",
           "options": [
             "se (se acuesta)",
@@ -1584,6 +1715,7 @@
       "quiz": [
         {
           "sentence": "Yo ___ (levantarse) a las seis de la mañana.",
+          "translation": "I get up at six in the morning.",
           "answer": "me levanto",
           "accepted": [
             "me levanto"
@@ -1593,6 +1725,7 @@
         },
         {
           "sentence": "¿Cómo ___ (llamarse) tu hermano?",
+          "translation": "What's your brother's name?",
           "answer": "se llama",
           "accepted": [
             "se llama"
@@ -1602,6 +1735,7 @@
         },
         {
           "sentence": "Ellos ___ (acostarse) muy tarde los viernes.",
+          "translation": "They go to bed very late on Fridays.",
           "answer": "se acuestan",
           "accepted": [
             "se acuestan"
@@ -1627,26 +1761,31 @@
         {
           "speaker": "MIA",
           "text": "Últimamente **me aburro** mucho en casa. No sé qué hacer con el tiempo libre.",
+          "translation": "Lately I get very bored at home. I don't know what to do with my free time.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Por qué no aprendes algo nuevo? Yo **me alegro** mucho cuando descubro una afición.",
+          "translation": "Why don't you learn something new? I get really happy when I discover a hobby.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Tienes razón. Aunque también **me canso** rápido si algo no me engancha desde el principio.",
+          "translation": "You're right. Although I also get tired quickly if something doesn't hook me from the start.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Eso me pasa con el deporte. **Me pongo** muy nervioso en competencias y acabo abandonando.",
+          "translation": "That happens to me with sports. I get very nervous in competitions and end up quitting.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡A mí también! **Nos parecemos** más de lo que creía.",
+          "translation": "Me too! We're more alike than I thought.",
           "highlight": true
         }
       ],
@@ -1663,6 +1802,7 @@
       "structured_input": [
         {
           "sentence": "Me aburro cuando no tengo nada que hacer.",
+          "translation": "I get bored when I have nothing to do.",
           "question": "What does 'me aburro' mean, and how does it differ from 'me aburre'?",
           "options": [
             "'Me aburro' = I get bored (I experience boredom); 'me aburre' = it bores me (something causes boredom)",
@@ -1675,6 +1815,7 @@
         },
         {
           "sentence": "Ella se pone nerviosa antes de los exámenes.",
+          "translation": "She gets nervous before exams.",
           "question": "What does 'ponerse + adjective' express?",
           "options": [
             "A change of state — becoming a certain way",
@@ -1689,6 +1830,7 @@
       "quiz": [
         {
           "sentence": "Él ___ (enfadarse) cuando alguien llega tarde.",
+          "translation": "He gets angry when someone arrives late.",
           "answer": "se enfada",
           "accepted": [
             "se enfada"
@@ -1698,6 +1840,7 @@
         },
         {
           "sentence": "Nosotros ___ (cansarse) después de correr diez kilómetros.",
+          "translation": "We get tired after running ten kilometers.",
           "answer": "nos cansamos",
           "accepted": [
             "nos cansamos"
@@ -1707,6 +1850,7 @@
         },
         {
           "sentence": "¿Por qué ___ (preocuparse/tú) tanto?",
+          "translation": "Why do you worry so much?",
           "answer": "te preocupas",
           "accepted": [
             "te preocupas"
@@ -1733,26 +1877,31 @@
         {
           "speaker": "MIA",
           "text": "Gracias **por** haberme ayudado con la mudanza el fin de semana.",
+          "translation": "Thanks for helping me with the move over the weekend.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¡De nada! Oye, te llamé **por** teléfono ayer pero no contestaste.",
+          "translation": "You're welcome! Hey, I called you on the phone yesterday but you didn't answer.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Lo sé, perdona. Estuve sin cobertura **por** varias horas en el camino.",
+          "translation": "I know, sorry. I had no signal for several hours on the way.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Entiendo. ¿Y ya tienes todo organizado en el apartamento nuevo?",
+          "translation": "I understand. And do you have everything organized in the new apartment yet?",
           "highlight": false
         },
         {
           "speaker": "MIA",
           "text": "Casi. Estuve cargando cajas **por** toda la tarde. Estoy agotada.",
+          "translation": "Almost. I was carrying boxes all afternoon. I'm exhausted.",
           "highlight": true
         }
       ],
@@ -1769,6 +1918,7 @@
       "structured_input": [
         {
           "sentence": "Gracias por tu ayuda, lo aprecio mucho.",
+          "translation": "Thanks for your help, I really appreciate it.",
           "question": "What function does 'por' serve in 'gracias por tu ayuda'?",
           "options": [
             "It expresses the reason or cause — you are grateful because of the help",
@@ -1781,6 +1931,7 @@
         },
         {
           "sentence": "Estudié español por dos años en la universidad.",
+          "translation": "I studied Spanish for two years at university.",
           "question": "What does 'por dos años' express?",
           "options": [
             "Duration — how long the studying lasted",
@@ -1795,6 +1946,7 @@
       "quiz": [
         {
           "sentence": "Te escribo ___ correo electrónico mañana.",
+          "translation": "I'll write to you by email tomorrow.",
           "answer": "por",
           "accepted": [
             "por"
@@ -1804,6 +1956,7 @@
         },
         {
           "sentence": "Gracias ___ todo lo que hiciste.",
+          "translation": "Thanks for everything you did.",
           "answer": "por",
           "accepted": [
             "por"
@@ -1813,6 +1966,7 @@
         },
         {
           "sentence": "Viví en España ___ seis meses.",
+          "translation": "I lived in Spain for six months.",
           "answer": "por",
           "accepted": [
             "por"
@@ -1849,31 +2003,37 @@
         {
           "speaker": "MIA",
           "text": "¿Mañana vienes a la oficina o trabajas desde casa?",
+          "translation": "Are you coming to the office tomorrow or working from home?",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Salgo **para** Madrid mañana temprano. Tengo una reunión importante allí.",
+          "translation": "I leave for Madrid early tomorrow. I have an important meeting there.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Qué bien! ¿Viajes **para** conocer clientes nuevos?",
+          "translation": "How nice! Are you traveling to meet new clients?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, y también **para** presentar el nuevo proyecto. Llevo semanas preparándolo.",
+          "translation": "Yes, and also to present the new project. I've been preparing it for weeks.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Te deseo mucho éxito. Le compré estos chocolates **para** el equipo de allí. ¿Los llevas?",
+          "translation": "I wish you lots of success. I bought these chocolates for the team there. Will you take them?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¡Claro que sí! **Para** eso somos compañeros, ¿no?",
+          "translation": "Of course! That's what colleagues are for, right?",
           "highlight": true
         }
       ],
@@ -1890,6 +2050,7 @@
       "structured_input": [
         {
           "sentence": "Estudio español para comunicarme con mis amigos.",
+          "translation": "I study Spanish to communicate with my friends.",
           "question": "What role does 'para' play in this sentence?",
           "options": [
             "It expresses purpose — the reason (goal) for studying Spanish",
@@ -1902,6 +2063,7 @@
         },
         {
           "sentence": "Este regalo es para mi madre.",
+          "translation": "This gift is for my mother.",
           "question": "What does 'para mi madre' express?",
           "options": [
             "The recipient — who the gift is intended for",
@@ -1916,6 +2078,7 @@
       "quiz": [
         {
           "sentence": "Compré flores ___ mi profesora.",
+          "translation": "I bought flowers for my teacher.",
           "answer": "para",
           "accepted": [
             "para"
@@ -1925,6 +2088,7 @@
         },
         {
           "sentence": "Necesitas estudiar más ___ aprobar el examen.",
+          "translation": "You need to study more to pass the exam.",
           "answer": "para",
           "accepted": [
             "para"
@@ -1934,6 +2098,7 @@
         },
         {
           "sentence": "El avión sale ___ Nueva York a las diez.",
+          "translation": "The plane leaves for New York at ten.",
           "answer": "para",
           "accepted": [
             "para"
@@ -1969,31 +2134,37 @@
         {
           "speaker": "MIA",
           "text": "¿Has visto las llaves de la oficina? No **las** encuentro.",
+          "translation": "Have you seen the office keys? I can't find them.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Creo que **las** dejaste en la mesa de la sala. Ahora **las** busco.",
+          "translation": "I think you left them on the living room table. I'll look for them now.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Gracias! Ah, ¿tienes el informe de ayer? Necesito revisarlo.",
+          "translation": "Thanks! Ah, do you have yesterday's report? I need to review it.",
           "highlight": false
         },
         {
           "speaker": "DAN",
           "text": "Sí, **lo** tengo aquí. Te **lo** paso por correo en un momento.",
+          "translation": "Yes, I have it here. I'll send it to you by email in a moment.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Perfecto. Y a ti, ¿**te** avisaron de la reunión del viernes?",
+          "translation": "Perfect. And you, did they tell you about Friday's meeting?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, **me** avisaron esta mañana. No **me** esperaba que fuera tan pronto.",
+          "translation": "Yes, they told me this morning. I didn't expect it to be so soon.",
           "highlight": true
         }
       ],
@@ -2010,6 +2181,7 @@
       "structured_input": [
         {
           "sentence": "¿Has visto a María? Sí, la vi ayer.",
+          "translation": "Have you seen María? Yes, I saw her yesterday.",
           "question": "Why is 'la' used instead of 'lo' to replace 'María'?",
           "options": [
             "Because María is feminine, so the pronoun must be feminine: 'la'",
@@ -2022,6 +2194,7 @@
         },
         {
           "sentence": "Tengo el libro. ¿Lo necesitas?",
+          "translation": "I have the book. Do you need it?",
           "question": "What does 'lo' replace in '¿Lo necesitas?'",
           "options": [
             "'El libro' — a masculine singular noun",
@@ -2036,6 +2209,7 @@
       "quiz": [
         {
           "sentence": "¿Tienes el pasaporte? Sí, ___ tengo.",
+          "translation": "Do you have the passport? Yes, I have it.",
           "answer": "lo",
           "accepted": [
             "lo"
@@ -2045,6 +2219,7 @@
         },
         {
           "sentence": "¿Ves a las chicas? No, no ___ veo.",
+          "translation": "Do you see the girls? No, I don't see them.",
           "answer": "las",
           "accepted": [
             "las"
@@ -2054,6 +2229,7 @@
         },
         {
           "sentence": "Mi madre ___ llama cada noche. (a mí)",
+          "translation": "My mother calls me every night.",
           "answer": "me",
           "accepted": [
             "me"
@@ -2081,26 +2257,31 @@
         {
           "speaker": "MIA",
           "text": "¿Ya **le** diste el mensaje a Roberto sobre el cambio de horario?",
+          "translation": "Did you already give Roberto the message about the schedule change?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, **le** mandé un correo esta mañana. ¿Y a los del equipo de diseño?",
+          "translation": "Yes, I sent him an email this morning. And the design team?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "A ellos **les** dije en persona durante el desayuno. Se sorprendieron bastante.",
+          "translation": "I told them in person during breakfast. They were quite surprised.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿Y a ti **te** explicaron por qué cambiaron los horarios tan de repente?",
+          "translation": "And did they explain to you why they changed the schedules so suddenly?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "La jefa **nos** reunió ayer y **nos** explicó que hay un cliente nuevo con distinto huso horario.",
+          "translation": "The boss gathered us yesterday and explained that there's a new client in a different time zone.",
           "highlight": true
         }
       ],
@@ -2117,6 +2298,7 @@
       "structured_input": [
         {
           "sentence": "Le di el regalo a ella ayer.",
+          "translation": "I gave her the gift yesterday.",
           "question": "What does 'le' refer to in this sentence?",
           "options": [
             "The indirect object — the person to whom the gift was given (ella)",
@@ -2129,6 +2311,7 @@
         },
         {
           "sentence": "¿Me puedes explicar la tarea?",
+          "translation": "Can you explain the homework to me?",
           "question": "What does 'me' represent in this question?",
           "options": [
             "The indirect object — the person to whom the explanation is given (yo)",
@@ -2143,6 +2326,7 @@
       "quiz": [
         {
           "sentence": "___ compré un regalo a mi madre.",
+          "translation": "I bought my mother a gift.",
           "answer": "Le",
           "accepted": [
             "Le",
@@ -2153,6 +2337,7 @@
         },
         {
           "sentence": "¿Puedes ___ dar este mensaje a ellos?",
+          "translation": "Can you give them this message?",
           "answer": "les",
           "accepted": [
             "les"
@@ -2162,6 +2347,7 @@
         },
         {
           "sentence": "Ella ___ explicó el problema a nosotros.",
+          "translation": "She explained the problem to us.",
           "answer": "nos",
           "accepted": [
             "nos"
@@ -2187,31 +2373,37 @@
         {
           "speaker": "MIA",
           "text": "Perdona, ¿**cómo** se llama esta calle? Estoy un poco perdida.",
+          "translation": "Excuse me, what is this street called? I'm a little lost.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Es la calle Mayor. ¿**Adónde** vas? Quizás te puedo orientar.",
+          "translation": "It's Mayor Street. Where are you going? Maybe I can point you the way.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Busco la oficina de correos. ¿**Dónde** queda exactamente?",
+          "translation": "I'm looking for the post office. Where exactly is it?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Está a dos manzanas. ¿**Cuándo** necesitas llegar? Porque cierra a las dos.",
+          "translation": "It's two blocks away. When do you need to get there? Because it closes at two.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Son las doce. Voy bien. ¿**Cuánto** tarda en llegar caminando?",
+          "translation": "It's twelve. I'm doing fine. How long does it take to get there walking?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Unos diez minutos. Sigue recto y **¿quién** no te sabrá indicar mejor que yo?",
+          "translation": "About ten minutes. Go straight, and who could give you better directions than me?",
           "highlight": true
         }
       ],
@@ -2228,6 +2420,7 @@
       "structured_input": [
         {
           "sentence": "¿Cómo te llamas?",
+          "translation": "What's your name?",
           "question": "What does '¿Cómo?' ask about?",
           "options": [
             "Manner or name — how something is done or called",
@@ -2240,6 +2433,7 @@
         },
         {
           "sentence": "¿Dónde está la farmacia más cercana?",
+          "translation": "Where is the nearest pharmacy?",
           "question": "Which question word would you use to ask about time instead of place?",
           "options": [
             "¿Cuándo? (When?)",
@@ -2254,6 +2448,7 @@
       "quiz": [
         {
           "sentence": "¿___ es tu nombre?",
+          "translation": "What is your name?",
           "answer": "Cuál",
           "accepted": [
             "Cuál",
@@ -2264,6 +2459,7 @@
         },
         {
           "sentence": "¿___ vives tú?",
+          "translation": "Where do you live?",
           "answer": "Dónde",
           "accepted": [
             "Dónde",
@@ -2274,6 +2470,7 @@
         },
         {
           "sentence": "¿___ cuesta este libro?",
+          "translation": "How much does this book cost?",
           "answer": "Cuánto",
           "accepted": [
             "Cuánto",
@@ -2324,31 +2521,37 @@
         {
           "speaker": "MIA",
           "text": "¿**Qué** es el subjuntivo? No lo entiendo muy bien.",
+          "translation": "What is the subjunctive? I don't understand it very well.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Es un modo verbal para expresar deseos y dudas. ¿**Cuál** es la parte que más te confunde?",
+          "translation": "It's a verb mood to express wishes and doubts. Which part confuses you the most?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "No sé cuándo usar «qué» y «cuál». Por ejemplo, ¿**qué** libro recomiendas para aprender gramática?",
+          "translation": "I don't know when to use 'qué' and 'cuál'. For example, which book do you recommend to learn grammar?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Eso depende de tu nivel. ¿**Cuál** es tu nivel actual, A2 o B1?",
+          "translation": "That depends on your level. Which is your current level, A2 or B1?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Creo que B1. Pero ¿**qué** diferencia hay entre los dos libros que me mencionaste?",
+          "translation": "I think B1. But what difference is there between the two books you mentioned?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Uno explica las reglas y el otro tiene ejercicios. ¿**Cuál** prefieres, teoría o práctica?",
+          "translation": "One explains the rules and the other has exercises. Which do you prefer, theory or practice?",
           "highlight": true
         }
       ],
@@ -2365,6 +2568,7 @@
       "structured_input": [
         {
           "sentence": "¿Qué es la paella?",
+          "translation": "What is paella?",
           "question": "Why is '¿Qué?' used here instead of '¿Cuál?'?",
           "options": [
             "Because the speaker is asking for a definition or explanation of what paella is",
@@ -2377,6 +2581,7 @@
         },
         {
           "sentence": "¿Cuál es tu película favorita?",
+          "translation": "What is your favorite movie?",
           "question": "Why is '¿Cuál?' used here instead of '¿Qué?'?",
           "options": [
             "Because the speaker is asking which movie you select as your favorite from all the movies you know",
@@ -2391,6 +2596,7 @@
       "quiz": [
         {
           "sentence": "¿___ es la capital de España?",
+          "translation": "What is the capital of Spain?",
           "answer": "Cuál",
           "accepted": [
             "Cuál",
@@ -2401,6 +2607,7 @@
         },
         {
           "sentence": "¿___ deporte practicas?",
+          "translation": "Which sport do you play?",
           "answer": "Qué",
           "accepted": [
             "Qué",
@@ -2411,6 +2618,7 @@
         },
         {
           "sentence": "¿___ son tus zapatos? ¿Los negros o los marrones?",
+          "translation": "Which are your shoes? The black ones or the brown ones?",
           "answer": "Cuáles",
           "accepted": [
             "Cuáles",
@@ -2441,21 +2649,25 @@
         {
           "speaker": "MIA",
           "text": "¿**Te gustan** los tacos o **te gusta** más la pizza?",
+          "translation": "Do you like tacos or do you prefer pizza?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "A mí **me encantan** los tacos, pero a mi hermana **le gusta** más la pizza.",
+          "translation": "I love tacos, but my sister prefers pizza.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Y qué **les gusta** hacer a ustedes los fines de semana?",
+          "translation": "And what do you all like to do on weekends?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "A nosotros **nos gusta** cocinar juntos. **Nos encanta** experimentar con recetas nuevas.",
+          "translation": "We like to cook together. We love experimenting with new recipes.",
           "highlight": true
         }
       ],
@@ -2472,6 +2684,7 @@
       "structured_input": [
         {
           "sentence": "A ella le gusta el café.",
+          "translation": "She likes coffee.",
           "question": "Why is 'gusta' singular here?",
           "options": [
             "Because 'el café' is singular — it is the subject of the verb",
@@ -2484,6 +2697,7 @@
         },
         {
           "sentence": "No me gustan las reuniones largas.",
+          "translation": "I don't like long meetings.",
           "question": "Why is 'gustan' plural?",
           "options": [
             "Because 'las reuniones largas' is plural — it is the subject",
@@ -2498,6 +2712,7 @@
       "quiz": [
         {
           "sentence": "A mis padres ___ mucho las películas de acción.",
+          "translation": "My parents really like action movies.",
           "answer": "les gustan",
           "accepted": [
             "les gustan"
@@ -2507,6 +2722,7 @@
         },
         {
           "sentence": "¿___ interesa la música clásica? (tú)",
+          "translation": "Are you interested in classical music?",
           "answer": "Te",
           "accepted": [
             "Te",
@@ -2517,6 +2733,7 @@
         },
         {
           "sentence": "A mí no ___ las arañas. Son terroríficas.",
+          "translation": "I don't like spiders. They're terrifying.",
           "answer": "me gustan",
           "accepted": [
             "me gustan"
@@ -2548,21 +2765,25 @@
         {
           "speaker": "DAN",
           "text": "Perdona, ¿**hay** un supermercado cerca de aquí?",
+          "translation": "Excuse me, is there a supermarket near here?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, **hay** uno a dos minutos caminando. Y también **hay** una farmacia en el mismo edificio.",
+          "translation": "Yes, there's one two minutes away on foot. And there's also a pharmacy in the same building.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Perfecto. ¿Y **hay** estacionamiento?",
+          "translation": "Perfect. And is there parking?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "No, no **hay** estacionamiento, pero **hay** muchas plazas de bicicletas.",
+          "translation": "No, there's no parking, but there are many bicycle spaces.",
           "highlight": true
         }
       ],
@@ -2579,6 +2800,7 @@
       "structured_input": [
         {
           "sentence": "Hay tres estudiantes en la clase.",
+          "translation": "There are three students in the class.",
           "question": "What does 'hay' express in this sentence?",
           "options": [
             "That three students exist / are present in the class",
@@ -2591,6 +2813,7 @@
         },
         {
           "sentence": "¿Hay leche en el refrigerador?",
+          "translation": "Is there milk in the refrigerator?",
           "question": "Which answer correctly responds to this question?",
           "options": [
             "Sí, hay un poco.",
@@ -2605,6 +2828,7 @@
       "quiz": [
         {
           "sentence": "En este barrio ___ muchos restaurantes buenos.",
+          "translation": "In this neighborhood there are many good restaurants.",
           "answer": "hay",
           "accepted": [
             "hay"
@@ -2614,6 +2838,7 @@
         },
         {
           "sentence": "¿___ algún problema con el pedido?",
+          "translation": "Is there a problem with the order?",
           "answer": "Hay",
           "accepted": [
             "Hay",
@@ -2624,6 +2849,7 @@
         },
         {
           "sentence": "No ___ ninguna mesa libre en el restaurante.",
+          "translation": "There isn't a single free table in the restaurant.",
           "answer": "hay",
           "accepted": [
             "hay"
@@ -2663,21 +2889,25 @@
         {
           "speaker": "MIA",
           "text": "No quiero invitar a Carlos. **Es muy aburrido**, siempre habla de lo mismo.",
+          "translation": "I don't want to invite Carlos. He's very boring, he always talks about the same thing.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Pero el otro día **estaba muy aburrido** en casa y me llamó para salir.",
+          "translation": "But the other day he was very bored at home and called me to go out.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿**Estás seguro**? Porque **es seguro** que no quería verte a ti especialmente.",
+          "translation": "Are you sure? Because it's certain he didn't especially want to see you.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Oye, ¿y la paella de tu madre? Dicen que **está buenísima**. Tu madre **es muy buena** cocinera.",
+          "translation": "Hey, and your mother's paella? They say it's delicious. Your mother is a very good cook.",
           "highlight": true
         }
       ],
@@ -2694,6 +2924,7 @@
       "structured_input": [
         {
           "sentence": "El examen es muy difícil y los estudiantes están muy nerviosos.",
+          "translation": "The exam is very hard and the students are very nervous.",
           "question": "Why is 'es' used for the exam and 'están' for the students?",
           "options": [
             "'Es' describes the inherent nature of the exam; 'están' describes the temporary state of the students",
@@ -2706,6 +2937,7 @@
         },
         {
           "sentence": "¿Estás listo? Ya son las ocho.",
+          "translation": "Are you ready? It's already eight.",
           "question": "What does 'estás listo' mean here?",
           "options": [
             "Are you ready? (in a prepared state)",
@@ -2720,6 +2952,7 @@
       "quiz": [
         {
           "sentence": "Cuidado, ese cuchillo ___ muy afilado. (inherent property)",
+          "translation": "Careful, that knife is very sharp. (inherent property)",
           "answer": "es",
           "accepted": [
             "es"
@@ -2729,6 +2962,7 @@
         },
         {
           "sentence": "¿___ malo el niño? Creo que tiene fiebre. (temporary state)",
+          "translation": "Is the boy sick? I think he has a fever. (temporary state)",
           "answer": "Está",
           "accepted": [
             "Está",
@@ -2739,6 +2973,7 @@
         },
         {
           "sentence": "No ___ seguro de la respuesta. Voy a revisar.",
+          "translation": "I'm not sure of the answer. I'll check.",
           "answer": "estoy",
           "accepted": [
             "estoy"
@@ -2775,21 +3010,25 @@
         {
           "speaker": "DAN",
           "text": "¿A qué hora **empieza** la reunión? **Prefiero** llegar un poco antes.",
+          "translation": "What time does the meeting start? I prefer to arrive a bit early.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "**Empieza** a las diez, pero nosotros siempre **empezamos** cinco minutos tarde.",
+          "translation": "It starts at ten, but we always start five minutes late.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "No **entiendo** por qué. ¿No **piensan** que es una falta de respeto?",
+          "translation": "I don't understand why. Don't you all think it's disrespectful?",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Tienes razón. Yo también lo **pienso**, pero el jefe **prefiere** esperar a que llegue todo el mundo.",
+          "translation": "You're right. I think so too, but the boss prefers to wait until everyone arrives.",
           "highlight": true
         }
       ],
@@ -2806,6 +3045,7 @@
       "structured_input": [
         {
           "sentence": "Ellos prefieren el café solo.",
+          "translation": "They prefer black coffee.",
           "question": "Which form of 'preferir' is used here and why does it have a stem change?",
           "options": [
             "Third person plural 'prefieren' — the stress falls on the stem, triggering e→ie",
@@ -2818,6 +3058,7 @@
         },
         {
           "sentence": "Nosotros pensamos que es una buena idea.",
+          "translation": "We think it's a good idea.",
           "question": "Why is 'pensamos' NOT 'piensamos'?",
           "options": [
             "In nosotros form, the stress falls on the ending (-amos), not the stem, so no change occurs",
@@ -2832,6 +3073,7 @@
       "quiz": [
         {
           "sentence": "¿A qué hora ___ (cerrar) el banco hoy?",
+          "translation": "What time does the bank close today?",
           "answer": "cierra",
           "accepted": [
             "cierra"
@@ -2841,6 +3083,7 @@
         },
         {
           "sentence": "Yo ___ (entender) un poco de italiano.",
+          "translation": "I understand a little Italian.",
           "answer": "entiendo",
           "accepted": [
             "entiendo"
@@ -2850,6 +3093,7 @@
         },
         {
           "sentence": "Nosotros ___ (preferir) quedarnos en casa.",
+          "translation": "We prefer to stay home.",
           "answer": "preferimos",
           "accepted": [
             "preferimos"
@@ -2890,21 +3134,25 @@
         {
           "speaker": "MIA",
           "text": "El informe **estará** listo para el viernes. Lo **terminaré** esta tarde.",
+          "translation": "The report will be ready by Friday. I'll finish it this afternoon.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿**Podrás** enviármelo antes del mediodía? **Tendré** una reunión a las dos.",
+          "translation": "Will you be able to send it to me before noon? I'll have a meeting at two.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, te lo **mandaré** por correo. Y si hay cambios, te **avisaré** de inmediato.",
+          "translation": "Yes, I'll send it to you by email. And if there are changes, I'll let you know right away.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Perfecto. Con los nuevos datos, el proyecto **saldrá** adelante seguro.",
+          "translation": "Perfect. With the new data, the project will surely move forward.",
           "highlight": true
         }
       ],
@@ -2921,6 +3169,7 @@
       "structured_input": [
         {
           "sentence": "Mañana lloverá en toda la región.",
+          "translation": "Tomorrow it will rain across the whole region.",
           "question": "What is the infinitive form and stem used to form 'lloverá'?",
           "options": [
             "Infinitive 'llover' — regular future stem 'llover-' + -á",
@@ -2933,6 +3182,7 @@
         },
         {
           "sentence": "¿Dónde estará mi cartera? La he buscado por todas partes.",
+          "translation": "Where can my wallet be? I've looked everywhere for it.",
           "question": "What special function does 'estará' serve here?",
           "options": [
             "It expresses probability or speculation in the present — 'I wonder where my wallet is'",
@@ -2947,6 +3197,7 @@
       "quiz": [
         {
           "sentence": "Nosotros ___ (salir) a cenar el sábado.",
+          "translation": "We'll go out for dinner on Saturday.",
           "answer": "saldremos",
           "accepted": [
             "saldremos"
@@ -2956,6 +3207,7 @@
         },
         {
           "sentence": "¿___ (tú / poder) ayudarme con esto?",
+          "translation": "Will you be able to help me with this?",
           "answer": "Podrás",
           "accepted": [
             "Podrás",
@@ -2966,6 +3218,7 @@
         },
         {
           "sentence": "El concierto ___ (empezar) a las nueve en punto.",
+          "translation": "The concert will start at nine o'clock sharp.",
           "answer": "empezará",
           "accepted": [
             "empezará"
@@ -3004,21 +3257,25 @@
         {
           "speaker": "DAN",
           "text": "Si pudiera, **viviría** en España. **Comería** paella cada semana.",
+          "translation": "If I could, I would live in Spain. I would eat paella every week.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Y **trabajarías** allí también, o solo **estarías** de vacaciones permanentes?",
+          "translation": "And would you work there too, or would you just be on permanent vacation?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Buscaría** trabajo en alguna empresa internacional. **Hablaría** español todo el día.",
+          "translation": "I would look for work at some international company. I would speak Spanish all day.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Suena bien. Yo también **querría** ir, pero no **podría** dejar mi trabajo ahora mismo.",
+          "translation": "Sounds good. I would want to go too, but I couldn't leave my job right now.",
           "highlight": true
         }
       ],
@@ -3035,6 +3292,7 @@
       "structured_input": [
         {
           "sentence": "¿Podrías pasarme la sal, por favor?",
+          "translation": "Could you pass me the salt, please?",
           "question": "What function does 'podrías' serve here?",
           "options": [
             "A polite request — using conditional softens the demand",
@@ -3047,6 +3305,7 @@
         },
         {
           "sentence": "Dijo que llegaría antes de las ocho.",
+          "translation": "He said he would arrive before eight.",
           "question": "Why is 'llegaría' (conditional) used instead of 'llegará' (future)?",
           "options": [
             "Because it reports what someone said they would do — future-in-the-past in reported speech",
@@ -3061,6 +3320,7 @@
       "quiz": [
         {
           "sentence": "Con más tiempo libre, yo ___ (aprender) a tocar la guitarra.",
+          "translation": "With more free time, I would learn to play the guitar.",
           "answer": "aprendería",
           "accepted": [
             "aprendería"
@@ -3070,6 +3330,7 @@
         },
         {
           "sentence": "¿___ (ustedes / poder) enviarme la factura por correo?",
+          "translation": "Could you send me the invoice by email?",
           "answer": "Podrían",
           "accepted": [
             "Podrían",
@@ -3080,6 +3341,7 @@
         },
         {
           "sentence": "Ella dijo que ___ (venir) a la fiesta.",
+          "translation": "She said she would come to the party.",
           "answer": "vendría",
           "accepted": [
             "vendría"
@@ -3116,21 +3378,25 @@
         {
           "speaker": "MIA",
           "text": "¿**Has probado** alguna vez el ceviche? Yo lo **he comido** dos veces este mes.",
+          "translation": "Have you ever tried ceviche? I've eaten it twice this month.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "No, nunca lo **he probado**. Pero **he oído** que es delicioso.",
+          "translation": "No, I've never tried it. But I've heard it's delicious.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¡Tienes que ir! El restaurante nuevo **ha abierto** esta semana y ya **he hecho** una reserva.",
+          "translation": "You have to go! The new restaurant has opened this week and I've already made a reservation.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¡Qué bien! ¿Les **has dicho** a los demás? Todavía no **he visto** a nadie hoy.",
+          "translation": "How nice! Have you told the others? I haven't seen anyone yet today.",
           "highlight": true
         }
       ],
@@ -3147,6 +3413,7 @@
       "structured_input": [
         {
           "sentence": "Nunca he visitado Australia.",
+          "translation": "I've never visited Australia.",
           "question": "Why is pretérito perfecto used and not simple preterite?",
           "options": [
             "Because it expresses a life experience (up to now) — the time period extends to the present",
@@ -3159,6 +3426,7 @@
         },
         {
           "sentence": "Esta mañana he tomado café con leche.",
+          "translation": "This morning I've had coffee with milk.",
           "question": "Why is pretérito perfecto appropriate here?",
           "options": [
             "Because 'esta mañana' is an uncompleted time period — the morning may still be going on",
@@ -3173,6 +3441,7 @@
       "quiz": [
         {
           "sentence": "¿Ya ___ (tú / hacer) los deberes?",
+          "translation": "Have you done the homework yet?",
           "answer": "has hecho",
           "accepted": [
             "has hecho"
@@ -3182,6 +3451,7 @@
         },
         {
           "sentence": "Nosotros ___ (escribir) tres informes esta semana.",
+          "translation": "We've written three reports this week.",
           "answer": "hemos escrito",
           "accepted": [
             "hemos escrito"
@@ -3191,6 +3461,7 @@
         },
         {
           "sentence": "¿___ (ustedes / ver) la nueva serie de Netflix?",
+          "translation": "Have you seen the new Netflix series?",
           "answer": "Han visto",
           "accepted": [
             "Han visto",
@@ -3221,21 +3492,25 @@
         {
           "speaker": "DAN",
           "text": "Si **tuviera** más dinero, **compraría** una casa en el campo.",
+          "translation": "If I had more money, I would buy a house in the countryside.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Yo también lo **haría** si **pudiera**. Mis padres querían que yo **estudiara** arquitectura.",
+          "translation": "I would do it too if I could. My parents wanted me to study architecture.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿De verdad? ¿Y por qué no lo **hiciste**?",
+          "translation": "Really? And why didn't you do it?",
           "highlight": false
         },
         {
           "speaker": "MIA",
           "text": "Era difícil que **encontrara** trabajo en esa área aquí. Necesitaba que la situación **fuera** mejor.",
+          "translation": "It was hard for me to find work in that field here. I needed the situation to be better.",
           "highlight": true
         }
       ],
@@ -3252,6 +3527,7 @@
       "structured_input": [
         {
           "sentence": "Si tuviéramos más tiempo, terminaríamos el proyecto hoy.",
+          "translation": "If we had more time, we would finish the project today.",
           "question": "What tense pair is used and what does it express?",
           "options": [
             "Imperfect subjunctive + conditional — a hypothetical/unlikely situation in the present or future",
@@ -3264,6 +3540,7 @@
         },
         {
           "sentence": "El director pedía que los empleados llegaran puntualmente.",
+          "translation": "The director used to ask the employees to arrive on time.",
           "question": "Why is 'llegaran' in the imperfect subjunctive?",
           "options": [
             "Because the main verb 'pedía' is in the imperfect — past tense triggers imperfect subjunctive in the subordinate clause",
@@ -3278,6 +3555,7 @@
       "quiz": [
         {
           "sentence": "Si yo ___ (ser) el jefe, cambiaría muchas cosas.",
+          "translation": "If I were the boss, I would change many things.",
           "answer": "fuera",
           "accepted": [
             "fuera",
@@ -3288,6 +3566,7 @@
         },
         {
           "sentence": "Quería que tú ___ (venir) a la reunión.",
+          "translation": "I wanted you to come to the meeting.",
           "answer": "vinieras",
           "accepted": [
             "vinieras",
@@ -3298,6 +3577,7 @@
         },
         {
           "sentence": "___ (yo / querer) un café con leche, por favor. (polite formal request)",
+          "translation": "I would like a coffee with milk, please. (polite formal request)",
           "answer": "Quisiera",
           "accepted": [
             "Quisiera",
@@ -3326,21 +3606,25 @@
         {
           "speaker": "MIA",
           "text": "¿Saben que el nuevo parque **fue inaugurado** ayer por el alcalde?",
+          "translation": "Do you know the new park was inaugurated yesterday by the mayor?",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, lo vi en las noticias. También **se anunciaron** nuevas rutas de metro.",
+          "translation": "Yes, I saw it on the news. New subway lines were also announced.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "En este barrio **se construyen** muchos edificios últimamente. **Se espera** que los precios suban.",
+          "translation": "In this neighborhood many buildings are being built lately. Prices are expected to rise.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "La nueva ley **fue aprobada** por el parlamento la semana pasada. Todo **se está cambiando** muy rápido.",
+          "translation": "The new law was passed by parliament last week. Everything is being changed very quickly.",
           "highlight": true
         }
       ],
@@ -3357,6 +3641,7 @@
       "structured_input": [
         {
           "sentence": "El contrato fue firmado por ambas partes.",
+          "translation": "The contract was signed by both parties.",
           "question": "What is the structure of this passive sentence?",
           "options": [
             "Subject 'El contrato' + ser (past) + past participle 'firmado' + agent 'por ambas partes'",
@@ -3369,6 +3654,7 @@
         },
         {
           "sentence": "Se habla español en más de 20 países.",
+          "translation": "Spanish is spoken in more than 20 countries.",
           "question": "Why is 'habla' singular here?",
           "options": [
             "Because 'español' (the grammatical subject in se-pasiva) is singular",
@@ -3383,6 +3669,7 @@
       "quiz": [
         {
           "sentence": "Los documentos ___ (preparar) por el equipo legal.",
+          "translation": "The documents were prepared by the legal team.",
           "answer": "fueron preparados",
           "accepted": [
             "fueron preparados"
@@ -3392,6 +3679,7 @@
         },
         {
           "sentence": "___ alquilan apartamentos en esta zona.",
+          "translation": "Apartments are rented in this area.",
           "answer": "Se",
           "accepted": [
             "Se",
@@ -3402,6 +3690,7 @@
         },
         {
           "sentence": "La novela ___ (escribir) en solo tres semanas por la autora.",
+          "translation": "The novel was written in only three weeks by the author.",
           "answer": "fue escrita",
           "accepted": [
             "fue escrita"
@@ -3428,21 +3717,25 @@
         {
           "speaker": "DAN",
           "text": "El colega **con quien** trabajo es el **que** más sabe de finanzas.",
+          "translation": "The colleague I work with is the one who knows the most about finance.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "¿Es el chico **cuyo** padre trabaja en el banco? Le conocí en la conferencia.",
+          "translation": "Is he the guy whose father works at the bank? I met him at the conference.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Sí, exacto. **Lo que** más me impresiona es su capacidad de análisis.",
+          "translation": "Yes, exactly. What impresses me most is his analytical ability.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "La empresa para **la que** trabajan tiene muy buena reputación, **lo que** es importante.",
+          "translation": "The company they work for has a very good reputation, which is important.",
           "highlight": true
         }
       ],
@@ -3459,6 +3752,7 @@
       "structured_input": [
         {
           "sentence": "La empresa para la que trabajo tiene 500 empleados.",
+          "translation": "The company I work for has 500 employees.",
           "question": "Why is 'la que' used instead of just 'que'?",
           "options": [
             "Because 'para' (a preposition) requires a pronoun with an article; 'que' alone cannot follow prepositions",
@@ -3471,6 +3765,7 @@
         },
         {
           "sentence": "Lo que dijiste ayer me hizo pensar mucho.",
+          "translation": "What you said yesterday made me think a lot.",
           "question": "What does 'lo que' refer to?",
           "options": [
             "The whole idea or thing that you said — referring to an action/concept rather than a specific noun",
@@ -3485,6 +3780,7 @@
       "quiz": [
         {
           "sentence": "La persona ___ te recomendé es experta en marketing.",
+          "translation": "The person I recommended to you is a marketing expert.",
           "answer": "que",
           "accepted": [
             "que"
@@ -3494,6 +3790,7 @@
         },
         {
           "sentence": "Es una empresa ___ empleados trabajan en más de 30 países.",
+          "translation": "It's a company whose employees work in more than 30 countries.",
           "answer": "cuyos",
           "accepted": [
             "cuyos"
@@ -3503,6 +3800,7 @@
         },
         {
           "sentence": "No entiendo ___ quieres decir con eso.",
+          "translation": "I don't understand what you mean by that.",
           "answer": "lo que",
           "accepted": [
             "lo que"
@@ -3530,21 +3828,25 @@
         {
           "speaker": "MIA",
           "text": "Cuando llegué a la fiesta, la mayoría de la gente ya **se había marchado**.",
+          "translation": "When I got to the party, most people had already left.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿De verdad? Yo creía que **habías dicho** que empezaba a las nueve.",
+          "translation": "Really? I thought you had said it started at nine.",
           "highlight": false
         },
         {
           "speaker": "MIA",
           "text": "Sí, pero se retrasó. Para cuando me avisaron, ya **había perdido** el autobús.",
+          "translation": "Yes, but it was delayed. By the time they told me, I had already missed the bus.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Qué mala suerte. ¿Y la comida? ¿**Habían** ya **terminado** todo?",
+          "translation": "What bad luck. And the food? Had they already finished everything?",
           "highlight": true
         }
       ],
@@ -3561,6 +3863,7 @@
       "structured_input": [
         {
           "sentence": "Cuando llegué al aeropuerto, el avión ya había despegado.",
+          "translation": "When I got to the airport, the plane had already taken off.",
           "question": "Which event happened first — arriving at the airport or the plane departing?",
           "options": [
             "The plane departing — pluperfect signals it was already completed before arrival",
@@ -3573,6 +3876,7 @@
         },
         {
           "sentence": "No había dormido bien porque había tomado demasiado café.",
+          "translation": "I hadn't slept well because I had drunk too much coffee.",
           "question": "What sequence of events does this sentence describe?",
           "options": [
             "Drinking too much coffee (first) → not sleeping well (second, later in the past)",
@@ -3587,6 +3891,7 @@
       "quiz": [
         {
           "sentence": "Cuando llamé, ya ___ (salir / ella).",
+          "translation": "When I called, she had already left.",
           "answer": "había salido",
           "accepted": [
             "había salido"
@@ -3596,6 +3901,7 @@
         },
         {
           "sentence": "Nos fuimos a casa porque ___ (terminar / el concierto).",
+          "translation": "We went home because the concert had ended.",
           "answer": "había terminado",
           "accepted": [
             "había terminado"
@@ -3605,6 +3911,7 @@
         },
         {
           "sentence": "¿___ (tú / ver) esa película antes de ayer?",
+          "translation": "Had you seen that movie before yesterday?",
           "answer": "Habías visto",
           "accepted": [
             "Habías visto",
@@ -3631,21 +3938,25 @@
         {
           "speaker": "DAN",
           "text": "Para fin de año, **habremos completado** los tres proyectos.",
+          "translation": "By the end of the year, we will have completed the three projects.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Espero que sí. Para entonces yo ya **habré acabado** el máster.",
+          "translation": "I hope so. By then I will have already finished the master's degree.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "¿No ha llegado todavía Ana? **Habrá** tenido algún problema en el metro.",
+          "translation": "Hasn't Ana arrived yet? She must have had some problem on the subway.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Sí, o **habrá** olvidado la reunión. Eso también le **habrá pasado** antes.",
+          "translation": "Yes, or she must have forgotten the meeting. That must have happened to her before too.",
           "highlight": true
         }
       ],
@@ -3662,6 +3973,7 @@
       "structured_input": [
         {
           "sentence": "Para cuando llegues, ya habremos comido.",
+          "translation": "By the time you arrive, we will have already eaten.",
           "question": "What two future events are described and which comes first?",
           "options": [
             "Eating comes first (habremos comido), then your arrival (llegues) — we will have already eaten by the time you arrive",
@@ -3674,6 +3986,7 @@
         },
         {
           "sentence": "No contesta. Habrá salido a comer.",
+          "translation": "She's not answering. She must have gone out to eat.",
           "question": "What function does 'habrá salido' serve here?",
           "options": [
             "Speculation about a past or present action — 'She has probably gone out to eat'",
@@ -3688,6 +4001,7 @@
       "quiz": [
         {
           "sentence": "Para el próximo lunes, nosotros ___ (entregar) todos los documentos.",
+          "translation": "By next Monday, we will have submitted all the documents.",
           "answer": "habremos entregado",
           "accepted": [
             "habremos entregado"
@@ -3697,6 +4011,7 @@
         },
         {
           "sentence": "No encuentro las llaves. Las ___ (dejar / yo) en la oficina.",
+          "translation": "I can't find the keys. I must have left them at the office.",
           "answer": "habré dejado",
           "accepted": [
             "habré dejado"
@@ -3706,6 +4021,7 @@
         },
         {
           "sentence": "¿Cuántos libros ___ (leer / él) para el final del año?",
+          "translation": "How many books will he have read by the end of the year?",
           "answer": "habrá leído",
           "accepted": [
             "habrá leído"
@@ -3731,21 +4047,25 @@
         {
           "speaker": "MIA",
           "text": "Necesitamos un candidato que **tenga** experiencia internacional y que **hable** tres idiomas.",
+          "translation": "We need a candidate who has international experience and who speaks three languages.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**Aunque sea** difícil de encontrar, no vamos a bajar el listón. Por mucho que **cueste**, vale la pena.",
+          "translation": "Even if it's hard to find, we won't lower the bar. However much it costs, it's worth it.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Ojalá **hayamos tomado** la decisión correcta con el candidato anterior.",
+          "translation": "I hope we've made the right decision with the previous candidate.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "Buscaremos hasta que **encontremos** a la persona idónea, **aunque nos lleve** meses.",
+          "translation": "We'll search until we find the right person, even if it takes us months.",
           "highlight": true
         }
       ],
@@ -3762,6 +4082,7 @@
       "structured_input": [
         {
           "sentence": "Quiero un apartamento que tenga terraza.",
+          "translation": "I want an apartment that has a terrace.",
           "question": "Why is 'tenga' in the subjunctive?",
           "options": [
             "Because the apartment is hypothetical — no specific apartment has been identified yet",
@@ -3774,6 +4095,7 @@
         },
         {
           "sentence": "Por más que estudies, si no descansas, no rendirás bien.",
+          "translation": "No matter how much you study, if you don't rest, you won't perform well.",
           "question": "What does 'por más que + subjunctive' express?",
           "options": [
             "A concessive clause — no matter how much you study, the result is still the same",
@@ -3788,6 +4110,7 @@
       "quiz": [
         {
           "sentence": "Buscan empleados que ___ (tener) al menos cinco años de experiencia.",
+          "translation": "They're looking for employees who have at least five years of experience.",
           "answer": "tengan",
           "accepted": [
             "tengan"
@@ -3797,6 +4120,7 @@
         },
         {
           "sentence": "Esperaba que ellos ___ (llegar) antes de la cena.",
+          "translation": "I hoped they would arrive before dinner.",
           "answer": "llegaran",
           "accepted": [
             "llegaran",
@@ -3807,6 +4131,7 @@
         },
         {
           "sentence": "___ mucho que lo intentes, no podrás convencerle.",
+          "translation": "No matter how much you try, you won't be able to convince him.",
           "answer": "Por más",
           "accepted": [
             "Por más",
@@ -3834,21 +4159,25 @@
         {
           "speaker": "DAN",
           "text": "El proyecto tiene ventajas evidentes. **Sin embargo**, los costes son elevados. **Además**, el plazo es muy ajustado.",
+          "translation": "The project has clear advantages. However, the costs are high. Moreover, the deadline is very tight.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "**Dado que** los inversores ya han comprometido fondos, no podemos retirarnos. **Por consiguiente**, debemos seguir adelante.",
+          "translation": "Since the investors have already committed funds, we can't back out. Therefore, we must go ahead.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "**En otras palabras**, no tenemos alternativa. **No obstante**, podríamos renegociar los plazos.",
+          "translation": "In other words, we have no alternative. Nevertheless, we could renegotiate the deadlines.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "**En definitiva**, la decisión es arriesgada pero necesaria. **De ahí que** el equipo esté tan preocupado.",
+          "translation": "In short, the decision is risky but necessary. Hence the team is so worried.",
           "highlight": true
         }
       ],
@@ -3865,6 +4194,7 @@
       "structured_input": [
         {
           "sentence": "No teníamos presupuesto. Por lo tanto, cancelamos el viaje.",
+          "translation": "We had no budget. Therefore, we canceled the trip.",
           "question": "What logical relationship does 'por lo tanto' express?",
           "options": [
             "Consequence — the cancellation is the result of the budget problem",
@@ -3877,6 +4207,7 @@
         },
         {
           "sentence": "Puesto que ya conoces la situación, no hace falta explicarlo.",
+          "translation": "Since you already know the situation, there's no need to explain it.",
           "question": "What does 'puesto que' express?",
           "options": [
             "Cause/reason — since/because you already know the situation",
@@ -3891,6 +4222,7 @@
       "quiz": [
         {
           "sentence": "La propuesta es interesante, ___ tiene varios puntos débiles.",
+          "translation": "The proposal is interesting, however it has several weak points.",
           "answer": "sin embargo",
           "accepted": [
             "sin embargo",
@@ -3901,6 +4233,7 @@
         },
         {
           "sentence": "___ que la economía mejora, podríamos invertir más.",
+          "translation": "Given that the economy is improving, we could invest more.",
           "answer": "Dado",
           "accepted": [
             "Dado",
@@ -3913,6 +4246,7 @@
         },
         {
           "sentence": "El sistema es complejo, ___ requiere formación especializada.",
+          "translation": "The system is complex, therefore it requires specialized training.",
           "answer": "por consiguiente",
           "accepted": [
             "por consiguiente",
@@ -3940,21 +4274,25 @@
         {
           "speaker": "DAN",
           "text": "Ana dijo «Llegaré mañana y traeré los documentos.»",
+          "translation": "Ana said, 'I'll arrive tomorrow and I'll bring the documents.'",
           "highlight": false
         },
         {
           "speaker": "MIA",
           "text": "O sea, Ana dijo que **llegaría** al día siguiente y que **traería** los documentos.",
+          "translation": "In other words, Ana said she would arrive the next day and would bring the documents.",
           "highlight": true
         },
         {
           "speaker": "DAN",
           "text": "También nos pidió «**Preparen** la sala de reuniones.»",
+          "translation": "She also asked us, 'Prepare the meeting room.'",
           "highlight": false
         },
         {
           "speaker": "MIA",
           "text": "Sí, nos pidió que **preparáramos** la sala de reuniones.",
+          "translation": "Yes, she asked us to prepare the meeting room.",
           "highlight": true
         }
       ],
@@ -3971,6 +4309,7 @@
       "structured_input": [
         {
           "sentence": "Dijo «Estoy cansado.» → Dijo que ___ cansado.",
+          "translation": "He said, 'I'm tired.' → He said that he was tired.",
           "question": "Which tense replaces the present 'estoy' in reported speech with past reporting verb?",
           "options": [
             "Imperfect: 'estaba' — present shifts to imperfect in past reported speech",
@@ -3983,6 +4322,7 @@
         },
         {
           "sentence": "Prometió «No lo haré.» → Prometió que no lo ___.",
+          "translation": "He promised, 'I won't do it.' → He promised that he wouldn't do it.",
           "question": "The future 'haré' shifts to which tense in reported speech?",
           "options": [
             "Conditional 'haría' — future shifts to conditional in past reported speech",
@@ -3997,6 +4337,7 @@
       "quiz": [
         {
           "sentence": "Dijo «Tengo hambre.» → Dijo que ___ hambre.",
+          "translation": "She said, 'I'm hungry.' → She said that she was hungry.",
           "answer": "tenía",
           "accepted": [
             "tenía"
@@ -4006,6 +4347,7 @@
         },
         {
           "sentence": "Nos preguntó «¿Han terminado?» → Nos preguntó si ___ terminado.",
+          "translation": "She asked us, 'Have you finished?' → She asked us if we had finished.",
           "answer": "habíamos",
           "accepted": [
             "habíamos"
@@ -4015,6 +4357,7 @@
         },
         {
           "sentence": "Me dijo «Llama mañana.» → Me dijo que ___ al día siguiente.",
+          "translation": "He told me, 'Call tomorrow.' → He told me to call the next day.",
           "answer": "llamara",
           "accepted": [
             "llamara",
