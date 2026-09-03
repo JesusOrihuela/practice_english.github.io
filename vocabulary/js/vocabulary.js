@@ -237,14 +237,16 @@ function showCard(index) {
 
   // Front
   const _POS = { Noun: 'pos_noun', Verb: 'pos_verb', Adjective: 'pos_adjective', Adverb: 'pos_adverb' };
-  document.getElementById('word-category').textContent = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
-  // Front shows the word's FORMS: ALL variants, each with its tag (grouped — grammatical forms vs
-  // alternative words), consistent for every word; or the plain term when the word has no variants.
+  const _posLabel = word.category ? AppLang.t(_POS[word.category] || word.category) : '';
+  // Front shows the word's FORMS: variants grouped in bordered boxes whose CONNECTED header carries the
+  // POS + group label (no floating labels). A word with no variants shows its plain term + POS above.
   const _wtEl = document.getElementById('word-text');
   _wtEl.textContent = '';
   _wtEl.classList.remove('word-text--variants');
   const _frontFrag = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
-    ? AppFeedback.buildWordVariants(word.variants, null, AppLang.t) : null;
+    ? AppFeedback.buildWordVariants(word.variants, null, AppLang.t, _posLabel) : null;
+  // POS lives INSIDE the box header when the box is shown; otherwise it's the small label above the word.
+  document.getElementById('word-category').textContent = _frontFrag ? '' : _posLabel;
   if (_frontFrag) { _wtEl.classList.add('word-text--variants'); _wtEl.appendChild(_frontFrag); }
   else { _wtEl.textContent = _displayWord; _renderCurrentFormBadge('word-text', _currentPickedForm); }
 
@@ -259,13 +261,13 @@ function showCard(index) {
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 
-  // The BACK also shows the variants table (below the meaning), so the alternatives sit alongside the
-  // definition and the back never has an empty gap. Same table as the front (built fresh).
+  // The BACK shows a COMPACT one-line list of the forms (below the meaning) — a reference, not the whole
+  // table again (which read as "too much"). The full table is on the front.
   const _vBlock = document.getElementById('fc-variants-block');
   const _vHost  = document.getElementById('word-variants');
   if (_vHost) _vHost.textContent = '';
-  const _vBack = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
-    ? AppFeedback.buildWordVariants(word.variants, null, AppLang.t) : null;
+  const _vBack = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariantsCompact)
+    ? AppFeedback.buildWordVariantsCompact(word.variants, null, AppLang.t) : null;
   if (_vBack && _vHost) { _vHost.appendChild(_vBack); _vBlock && _vBlock.classList.remove('hidden'); }
   else if (_vBlock) { _vBlock.classList.add('hidden'); }
 

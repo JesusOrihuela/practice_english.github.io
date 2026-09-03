@@ -1501,6 +1501,23 @@ body.path-mode {
   min-width: 280px;
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.06));
 }
+/* Connected header inside the box: POS (left) + group label (right) — belongs to the box, not floating. */
+.variant-thead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 16px;
+  border-bottom: 1px solid var(--clr-border);
+  background: var(--clr-surface-2);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clr-text-muted);
+}
+.variant-thead .variant-pos { color: var(--clr-text-muted); }
+.variant-thead .variant-kind { margin-left: auto; }
 .variant-row {
   display: flex;
   align-items: center;
@@ -1510,6 +1527,8 @@ body.path-mode {
   border-bottom: 1px solid var(--clr-border);
 }
 .variant-row:last-child { border-bottom: none; }
+/* Card BACK: a compact one-line reference of the forms (matches the other back values' text style). */
+.variant-compact { font-weight: 600; color: var(--clr-text); }
 .variant-form {
   font-size: 1.2rem;
   font-weight: 700;

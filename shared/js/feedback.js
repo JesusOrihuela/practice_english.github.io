@@ -413,20 +413,47 @@ const AppFeedback = (() => {
     return row;
   }
 
-  function buildWordVariants(variants, currentText, t) {
+  // Full variants display for the card FRONT: one bordered box per kind, each with a CONNECTED header
+  // (its group label — "Grammatical forms" / "Alternative words" — plus, on the first box, the word's
+  // part-of-speech) so the labels belong to the box instead of floating above it. `pos` = localized POS.
+  function buildWordVariants(variants, currentText, t, pos) {
     if (!Array.isArray(variants) || variants.length === 0) return null;
     const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
-    // ONE bordered table (no group caption): every variant is a form|label row, each row's own tag
-    // (Masculine, Nominative, region flag, Synonym…) already says which kind it is. Inflectional forms
-    // are ordered before lexical ones so a rare mixed word still reads paradigm-then-alternatives.
-    const tbl = document.createElement('div');
-    tbl.className = 'variant-table';
-    const infl = shown.filter(v => _variantKind(v && v.labels) === 'inflectional');
-    const lex  = shown.filter(v => _variantKind(v && v.labels) !== 'inflectional');
-    [...infl, ...lex].forEach(v => tbl.appendChild(_variantRow(v)));
-    return tbl;
+    const tt = (typeof t === 'function') ? t : (k => k);
+    const frag = document.createDocumentFragment();
+    let posShown = false;
+    function group(items, labelKey) {
+      if (!items.length) return;
+      const box = document.createElement('div');
+      box.className = 'variant-table';
+      const head = document.createElement('div');
+      head.className = 'variant-thead';
+      const kind = document.createElement('span');
+      kind.className = 'variant-kind';
+      kind.textContent = tt(labelKey);
+      if (!posShown && pos) { const p = document.createElement('span'); p.className = 'variant-pos'; p.textContent = pos; head.appendChild(p); posShown = true; }
+      head.appendChild(kind);
+      box.appendChild(head);
+      items.forEach(v => box.appendChild(_variantRow(v)));
+      frag.appendChild(box);
+    }
+    group(shown.filter(v => _variantKind(v && v.labels) === 'inflectional'), 'var_group_forms');
+    group(shown.filter(v => _variantKind(v && v.labels) !== 'inflectional'), 'var_group_alt');
+    return frag;
   }
 
-  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge, buildWordVariants };
+  // Compact one-line forms for the card BACK: the variant forms joined by "·" (no box), so the back
+  // references the alternatives without repeating the whole table. Returns a span, or null.
+  function buildWordVariantsCompact(variants, currentText, t) {
+    if (!Array.isArray(variants) || variants.length === 0) return null;
+    const shown = variants.filter(v => !(currentText && v && v.text === currentText));
+    if (shown.length === 0) return null;
+    const span = document.createElement('span');
+    span.className = 'variant-compact';
+    span.textContent = shown.map(v => _capitalize((v && v.text) || '')).join('  ·  ');
+    return span;
+  }
+
+  return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge, buildWordVariants, buildWordVariantsCompact };
 })();
