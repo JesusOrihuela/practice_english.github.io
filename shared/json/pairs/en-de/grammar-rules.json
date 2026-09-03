@@ -80,6 +80,16 @@
           ],
           "correct": 0,
           "feedback": "'Bruder' is the object of 'haben', so the masculine article takes the accusative form 'einen'."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose the sentence that fits your family.",
+          "options": [
+            "Ich habe einen Bruder.",
+            "Ich habe eine Schwester.",
+            "Ich habe keinen Bruder und keine Schwester."
+          ],
+          "feedback": "Each option uses the accusative object. Notice 'einen' (masculine) vs 'eine' (feminine, unchanged)."
         }
       ],
       "quiz": [
@@ -105,7 +115,15 @@
         }
       ],
       "related_phrases": [],
-      "topics": []
+      "topics": [],
+      "communicative_production": [
+        {
+          "prompt": "Write one sentence about something you have or see, using the accusative (e.g. Ich habe einen ... / Ich sehe den ...).",
+          "model": "Ich sehe den Mann und einen Hund.",
+          "model_translation": "I see the man and a dog.",
+          "hint": "Only the masculine article changes: der → den, ein → einen."
+        }
+      ]
     },
     {
       "id": "gender_articles",
@@ -158,6 +176,16 @@
           ],
           "correct": 0,
           "feedback": "'Kind' is neuter, so it takes the neuter article 'das'."
+        },
+        {
+          "affective": true,
+          "question": "Which sentence is true for you? Pick one.",
+          "options": [
+            "Der Hund ist mein Lieblingstier.",
+            "Die Katze ist mein Lieblingstier.",
+            "Das Pferd ist mein Lieblingstier."
+          ],
+          "feedback": "Each noun carries its gender: der Hund (m), die Katze (f), das Pferd (n)."
         }
       ],
       "quiz": [
@@ -183,7 +211,15 @@
         }
       ],
       "related_phrases": [],
-      "topics": []
+      "topics": [],
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence naming a person or thing with its correct article (der / die / das).",
+          "model": "Die Frau liest ein Buch.",
+          "model_translation": "The woman reads a book.",
+          "hint": "Learn every noun together with its article."
+        }
+      ]
     },
     {
       "id": "separable_verbs",
@@ -236,6 +272,16 @@
           ],
           "correct": 0,
           "feedback": "'aufstehen' is separable, so in a main clause the prefix 'auf' moves to the end."
+        },
+        {
+          "affective": true,
+          "question": "Which describes your morning? Choose the true one.",
+          "options": [
+            "Ich stehe früh auf.",
+            "Ich stehe spät auf.",
+            "Am Wochenende stehe ich sehr spät auf."
+          ],
+          "feedback": "In each one the prefix 'auf' jumps to the end: aufstehen → stehe ... auf."
         }
       ],
       "quiz": [
@@ -261,7 +307,15 @@
         }
       ],
       "related_phrases": [],
-      "topics": []
+      "topics": [],
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence with a separable verb (aufstehen, ankommen, einkaufen ...) about your day.",
+          "model": "Ich kaufe am Samstag ein.",
+          "model_translation": "I go shopping on Saturday.",
+          "hint": "The prefix moves to the end: einkaufen → kaufe ... ein."
+        }
+      ]
     }
   ]
 }

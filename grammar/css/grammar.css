@@ -845,6 +845,91 @@ blockquote.rule-tip {
 .option-btn--correct .option-letter { background: var(--clr-success); color: #fff; }
 .option-btn--wrong   { border-color: var(--clr-danger);  background: var(--clr-danger-light);  opacity: 0.7; }
 .option-btn--wrong .option-letter   { background: var(--clr-danger);  color: #fff; }
+/* Affective item: the learner's pick is acknowledged, never marked right/wrong (any view is valid). */
+.option-btn--chosen { border-color: var(--clr-primary); background: var(--clr-primary-light, rgba(37,99,235,0.08)); }
+.option-btn--chosen .option-letter { background: var(--clr-primary); color: #fff; }
+
+/* Affective structured-input tag ("Your view") — signals no right answer, react to real meaning. */
+.structured-affective-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-primary);
+  background: var(--clr-primary-light, rgba(37,99,235,0.08));
+  border-radius: var(--radius-full, 999px);
+}
+
+/* ── PHASE 6: Express (communicative / self-assessed production) ── */
+.express-counter { font-size: 0.8rem; font-weight: 700; color: var(--clr-text-muted); margin-bottom: 10px; }
+.express-card {
+  background: var(--clr-surface);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-xl);
+  padding: 22px 20px;
+}
+.express-prompt { font-size: 1.05rem; font-weight: 700; color: var(--clr-text); line-height: 1.5; }
+.express-hint { margin-top: 6px; font-size: 0.85rem; color: var(--clr-text-muted); }
+.express-input {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--clr-text);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-md, 10px);
+  resize: vertical;
+}
+.express-input:focus { outline: none; border-color: var(--clr-primary); }
+.express-model-btn {
+  margin-top: 14px;
+  padding: 9px 18px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-primary);
+  border-radius: var(--radius-full, 999px);
+  cursor: pointer;
+  transition: background var(--transition, .2s);
+}
+.express-model-btn:hover:not(:disabled) { background: var(--clr-primary-light, rgba(37,99,235,0.08)); }
+.express-model-btn:disabled { opacity: 0.5; cursor: default; }
+.express-model {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--clr-primary-light, rgba(37,99,235,0.06));
+  border-left: 3px solid var(--clr-primary);
+  border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0;
+}
+.express-model-label {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-text-muted);
+  margin-bottom: 4px;
+}
+.express-model-text { font-size: 1.05rem; font-weight: 600; color: var(--clr-text); line-height: 1.5; }
+.express-model-translation { margin-top: 4px; font-size: 0.85rem; font-style: italic; color: var(--clr-text-muted); }
+.express-selfcheck { margin-top: 12px; font-size: 0.85rem; font-weight: 600; color: var(--clr-text); }
+.express-next-btn {
+  padding: 10px 22px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--clr-primary);
+  border: none;
+  border-radius: var(--radius-full, 999px);
+  cursor: pointer;
+}
 
 .structured-feedback {
   margin-top: 14px;

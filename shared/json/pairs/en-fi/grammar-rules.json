@@ -66,6 +66,16 @@
           ],
           "correct": 0,
           "feedback": "An unbounded or partial object (some water) takes the partitive, so 'vesi' becomes 'vettä'."
+        },
+        {
+          "affective": true,
+          "question": "Which do you usually drink? Choose the true one.",
+          "options": [
+            "Juon vettä.",
+            "Juon kahvia.",
+            "Juon teetä."
+          ],
+          "feedback": "Each object is in the partitive (an unbounded amount): vettä, kahvia, teetä."
         }
       ],
       "quiz": [
@@ -91,7 +101,15 @@
         }
       ],
       "related_phrases": [],
-      "topics": []
+      "topics": [],
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence about something you drink or eat, using a partitive object.",
+          "model": "Juon kahvia joka aamu.",
+          "model_translation": "I drink coffee every morning.",
+          "hint": "An unbounded or uncountable object takes the partitive (-a / -ä)."
+        }
+      ]
     }
   ]
 }

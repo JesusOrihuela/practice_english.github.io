@@ -13,26 +13,53 @@ The data lives at `shared/json/pairs/{pairId}/grammar-rules.json` (one file per 
 
 ## 1. The pedagogical model — a five-phase Focus-on-Form sequence
 
-A grammar rule is not a page of prose the learner reads. Each rule is a **guided five-phase
-sequence** that moves the learner from meaning-bearing input to explicit knowledge to production —
-the arc that current second-language-acquisition (SLA) research supports for teaching form without
-sacrificing meaning. The phases (see `grammar/js/grammar.js`, `goToPhase`) are:
+A grammar rule is not a page of prose the learner reads. Each rule is a **guided six-phase
+sequence** that moves the learner from meaning-bearing input, through explicit knowledge and
+controlled practice, to open communicative production — the arc that current second-language-
+acquisition (SLA) research supports for teaching form without sacrificing meaning. The phases (see
+`grammar/js/grammar.js`, `goToPhase`) are:
 
 | # | Phase | Field consumed | What the learner does | SLA grounding |
 |---|-------|----------------|-----------------------|---------------|
 | 1 | **Context** | `context_dialogue` | Reads a short natural dialogue where the target structure is used repeatedly and **highlighted** (input flood). | Comprehensible input (Krashen 1985); input flood / enhanced input (Sharwood Smith 1993). |
 | 2 | **Notice** | `noticing_prompts` | Answers open questions that direct attention to the form **before** any rule is given. | The **Noticing Hypothesis** (Schmidt 1990, 2001): learners must consciously attend to a form to acquire it. |
 | 3 | **The Rule** | `explanation` (+ the learner's phase-2 answers echoed back) | Reads the explicit rule, now anchored to what they just noticed. | Explicit instruction after noticing (PACE model: Adair-Hauck & Donato 2002); Focus on Form (Long 1991). |
-| 4 | **Comprehension** | `structured_input` | Answers referential/affective multiple-choice items about meaning **before** producing the form. | **Processing Instruction / Structured Input** (VanPatten 1996, 2004): interpret before you produce. |
-| 5 | **Production** | `quiz` | Produces the form in fill-in-the-blank items with feedback. | Output Hypothesis (Swain 1985); the generation effect (Slamecka & Graf 1978). |
+| 4 | **Comprehension** | `structured_input` | Answers **referential** items (one correct answer, form→meaning) **and** an **affective** item (reacts to real meaning, no right answer) before producing the form. | **Processing Instruction / Structured Input** (VanPatten 1996, 2004): interpret before you produce — with **both** referential and affective activities. |
+| 5 | **Production** | `quiz` | Produces the form in controlled fill-in-the-blank items with feedback. | Output Hypothesis (Swain 1985); the generation effect (Slamecka & Graf 1978). |
+| 6 | **Express** | `communicative_production` | Writes their **own** sentence using the structure, then reveals a model answer + gloss and self-checks. | The practice progression mechanical → **meaningful → communicative** (Paulston 1970; DeKeyser 1998/2007 skill acquisition; Ellis 2006). |
 
-Two consequences of this model are **rules**, not options:
+Three consequences of this model are **rules**, not options:
 
-- **Every rule must populate all five phases.** A rule with an empty `context_dialogue`,
-  `structured_input`, or `quiz` collapses the sequence into a wall of text — the learner reads the
-  explanation and then practices nothing. The gate rejects empty phases.
+- **Every rule must populate all six phases** (context_dialogue ≥ 2; noticing_prompts ≥ 1;
+  structured_input with ≥ 1 referential **and** ≥ 1 affective item; quiz ≥ 1;
+  communicative_production ≥ 1). A missing phase collapses the sequence — the learner reads the
+  explanation and then practices nothing, or drills mechanically and never uses the form for real
+  meaning. The gate rejects any empty phase.
+- **Comprehension is referential *and* affective.** Processing Instruction is only complete when the
+  learner both makes form-meaning connections (referential) and processes the form while engaging
+  real content/opinion (affective). One of each is required.
 - **The phase order is fixed** and encoded in the activity. Do not add a rule that expects a
   different order.
+
+### Phase 4 — referential vs affective structured input
+
+A **referential** item shows a target sentence and asks a question with **one correct answer** that
+can only be answered by connecting the form to its meaning (e.g. *"Why is 'vettä' in the
+partitive?"*). An **affective** item (`"affective": true`) has **no single correct answer**: its
+options are all short target-language statements using the structure, and the learner picks the one
+**true for them** (*"Which describes your morning?"*). It processes the form while attaching it to
+real meaning — and is acknowledged, never marked right/wrong. VanPatten's Processing Instruction
+prescribes both; without the affective item the design is only half-built.
+
+### Phase 6 — Express (communicative production, self-assessed)
+
+Controlled fill-in-the-blank practice is **mechanical**; skill-acquisition theory (DeKeyser) and the
+mechanical → meaningful → communicative progression (Paulston; Ellis 2006) hold that proceduralizing
+a form needs the learner to produce it for **their own meaning**. With no backend to grade free text,
+Express is **self-assessed**: the learner writes their own sentence using the structure, then reveals
+a `model` answer with its `model_translation` gloss and self-checks against a rubric prompt (does it
+use the structure, and is it true for me?). It is deliberately not auto-graded — the value is in
+producing and comparing, not in a machine verdict.
 
 ### The L1 gloss — comprehension support on every target sentence
 
@@ -97,14 +124,25 @@ These citations are mirrored in `CREDITS.md` (§ "Grammar system — academic so
   "noticing_prompts": [               // phase 2 — REQUIRED, ≥ 1
     { "q": "…question in the SOURCE language…", "placeholder": "e.g. …" }
   ],
-  "structured_input": [               // phase 4 — REQUIRED, ≥ 1
+  "structured_input": [               // phase 4 — REQUIRED, ≥ 1 REFERENTIAL + ≥ 1 AFFECTIVE
+    // referential: one correct answer (form → meaning)
     { "sentence": "…target…", "translation": "…L1…",
       "question": "…source-language question…",
-      "options": ["…", "…", "…", "…"], "correct": 0, "feedback": "…" }
+      "options": ["…", "…", "…", "…"], "correct": 0, "feedback": "…" },
+    // affective: no correct answer, no sentence — options are target statements the learner reacts to
+    { "affective": true,
+      "question": "…source-language prompt: which is true for you?…",
+      "options": ["…target statement…", "…target statement…", "…target statement…"],
+      "feedback": "…source-language acknowledgment (note how each uses the form)…" }
   ],
   "quiz": [                           // phase 5 — REQUIRED, ≥ 1
     { "sentence": "…target with ___ blank… (lemma cue)", "translation": "…L1…",
       "answer": "form", "accepted": ["form"], "feedback_why": "…", "contrast": "" }
+  ],
+  "communicative_production": [       // phase 6 (Express) — REQUIRED, ≥ 1
+    { "prompt": "…source-language: write your own sentence using X…",
+      "model": "…a model answer in the TARGET language…",
+      "model_translation": "…its L1 gloss…", "hint": "…optional source-language nudge…" }
   ],
 
   "related_phrases": [],              // optional
@@ -114,18 +152,21 @@ These citations are mirrored in `CREDITS.md` (§ "Grammar system — academic so
 
 Field rules that the gate enforces:
 
-- **`translation` is required** on every `context_dialogue` turn, `structured_input` item, and
-  `quiz` item. It is a faithful, natural **source-language** rendering of the `text`/`sentence`.
+- **`translation` is required** on every `context_dialogue` turn, **referential** `structured_input`
+  item, and `quiz` item — a faithful, natural **source-language** rendering of the `text`/`sentence`.
+  (Affective items have no target sentence, so no `translation`.)
 - The `translation` follows the same prose hygiene as other content: natural, correct orthography,
   Spanish glosses use `¿ ¡`, and avoid `— ; :` as prose punctuation (a colon inside a dialogue
   speaker label like `A: '…'` that mirrors the source is not prose punctuation).
-- **All five phases are populated** (`context_dialogue` ≥ 2 turns; `noticing_prompts`,
-  `structured_input`, `quiz` each ≥ 1).
+- **All six phases are populated** (`context_dialogue` ≥ 2 turns; `noticing_prompts` ≥ 1;
+  `structured_input` with ≥ 1 referential **and** ≥ 1 affective item; `quiz` ≥ 1;
+  `communicative_production` ≥ 1 with `prompt` + `model` + `model_translation`).
 - `category` matches an entry in the file's `categories[]`.
 - `title_en` / `title_es` exist so the title shows in the active source language.
-- `noticing_prompts[].q` and `structured_input[].question` are written in the **source** language
-  (they talk *to* the learner); everything the learner reads *as target practice*
-  (`text`, `sentence`) is in the **target** language and carries a `translation`.
+- The learner is *addressed* in the **source** language (`noticing_prompts[].q`,
+  `structured_input[].question`, affective `feedback`, `communicative_production[].prompt`/`hint`) and
+  *practices* in the **target** language (`text`, referential `sentence`, affective `options`,
+  `model`) — the target-practice strings carry a source-language gloss/translation.
 
 A quiz `sentence` may carry a compact base-form cue for the word to inflect — e.g.
 `"Puhun ___. (englanti)"` — so the learner knows *which* word to produce the form of; the full
@@ -138,10 +179,12 @@ inside the sentence; that is what `translation` is for.
 
 Runs in the `validate` job of `ci.yml`. Fails the build when any pair's `grammar-rules.json`:
 
-- has a rule with an **empty phase** (missing/empty `context_dialogue` < 2, or empty
-  `noticing_prompts` / `structured_input` / `quiz`);
-- has a learner-facing target sentence **missing `translation`** (dialogue turn, structured-input
-  sentence, or quiz sentence);
+- has a rule with an **empty phase** (`context_dialogue` < 2, or empty `noticing_prompts` /
+  `structured_input` / `quiz` / `communicative_production`);
+- has a `structured_input` with **no referential** item, or **no affective** item;
+- has a `communicative_production` item missing `prompt` / `model` / `model_translation`;
+- has a learner-facing target sentence **missing `translation`** (dialogue turn, referential
+  structured-input sentence, or quiz sentence);
 - references a `category` not defined in `categories[]`;
 - is missing `title_en` / `title_es` / `level` / `explanation`;
 - has a `structured_input` item whose `correct` index is out of range, or a `quiz` item whose

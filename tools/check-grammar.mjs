@@ -79,18 +79,29 @@ function checkRule(pair, srcLang, rule, categoryIds) {
   if (notice.length < 1) issues.push(`${at}: noticing_prompts empty — phase 2 empty`);
   notice.forEach((p, i) => { if (!isNonEmptyStr(promptText(p))) issues.push(`${at}: noticing_prompt #${i} has no text`); });
 
-  // Phase 4 — structured_input (≥ 1; sentence+translation, question, options, correct in range, feedback)
+  // Phase 4 — structured_input (≥ 1 REFERENTIAL + ≥ 1 AFFECTIVE — Processing Instruction needs both).
+  //   Referential: target sentence + gloss, one correct index (form-meaning connection).
+  //   Affective:   no single correct answer (the learner reacts to real meaning); question + options only.
   const si = rule.structured_input || [];
   if (si.length < 1) issues.push(`${at}: structured_input empty — phase 4 empty`);
+  let referential = 0, affective = 0;
   si.forEach((s, i) => {
-    if (!isNonEmptyStr(s.sentence)) issues.push(`${at}: structured_input #${i} missing "sentence"`);
-    else checkTranslation(`${at} structured_input #${i}`, s, 'sentence');
     if (!isNonEmptyStr(s.question)) issues.push(`${at}: structured_input #${i} missing "question"`);
     if (!Array.isArray(s.options) || s.options.length < 2) issues.push(`${at}: structured_input #${i} needs ≥ 2 options`);
-    else if (!Number.isInteger(s.correct) || s.correct < 0 || s.correct >= s.options.length)
-      issues.push(`${at}: structured_input #${i} "correct" index ${s.correct} out of range`);
     if (!isNonEmptyStr(s.feedback)) issues.push(`${at}: structured_input #${i} missing "feedback"`);
+    if (s.affective) {
+      affective++;
+      // affective items intentionally have no `correct` and no target `sentence`/`translation`.
+    } else {
+      referential++;
+      if (!isNonEmptyStr(s.sentence)) issues.push(`${at}: structured_input #${i} (referential) missing "sentence"`);
+      else checkTranslation(`${at} structured_input #${i}`, s, 'sentence');
+      if (Array.isArray(s.options) && (!Number.isInteger(s.correct) || s.correct < 0 || s.correct >= s.options.length))
+        issues.push(`${at}: structured_input #${i} "correct" index ${s.correct} out of range`);
+    }
   });
+  if (si.length && referential < 1) issues.push(`${at}: structured_input has no REFERENTIAL item`);
+  if (si.length && affective < 1) issues.push(`${at}: structured_input has no AFFECTIVE item (add one with "affective": true)`);
 
   // Phase 5 — quiz (≥ 1; sentence+translation + an answer key in either schema)
   const quiz = rule.quiz || [];
@@ -99,6 +110,15 @@ function checkRule(pair, srcLang, rule, categoryIds) {
     if (!isNonEmptyStr(q.sentence)) issues.push(`${at}: quiz #${i} missing "sentence"`);
     else checkTranslation(`${at} quiz #${i}`, q, 'sentence');
     if (!quizHasAnswer(q)) issues.push(`${at}: quiz #${i} has no answer key (needs "answer" or "blanks[].answer")`);
+  });
+
+  // Phase 6 — communicative production (≥ 1; open prompt + model answer + its gloss, self-assessed)
+  const cp = rule.communicative_production || [];
+  if (cp.length < 1) issues.push(`${at}: communicative_production empty — phase 6 (Express) empty`);
+  cp.forEach((c, i) => {
+    if (!isNonEmptyStr(c.prompt)) issues.push(`${at}: communicative_production #${i} missing "prompt"`);
+    if (!isNonEmptyStr(c.model)) issues.push(`${at}: communicative_production #${i} missing "model"`);
+    if (!isNonEmptyStr(c.model_translation)) issues.push(`${at}: communicative_production #${i} missing "model_translation"`);
   });
 }
 

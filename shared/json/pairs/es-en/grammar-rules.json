@@ -163,6 +163,16 @@
           ],
           "correct": 2,
           "feedback": "Don't drink en Present Simple expresa un hábito general o preferencia permanente, no una acción puntual."
+        },
+        {
+          "affective": true,
+          "question": "¿Cuál describe mejor tu rutina? Elige la opción verdadera para ti.",
+          "options": [
+            "I wake up before 7 a.m.",
+            "I wake up around 8 a.m.",
+            "I rarely wake up early."
+          ],
+          "feedback": "Nota cómo cada opción usa el Present Simple para hablar de un hábito."
         }
       ],
       "quiz": [
@@ -225,6 +235,14 @@
         "kitchen",
         "movies",
         "technology"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre tu rutina de la mañana usando el Present Simple.",
+          "model": "I wake up at seven, drink a coffee, and check my email.",
+          "model_translation": "Me levanto a las siete, tomo un café y reviso mi correo.",
+          "hint": "Recuerda la -s en he/she/it si hablas de otra persona."
+        }
       ]
     },
     {
@@ -313,6 +331,16 @@
           ],
           "correct": 1,
           "feedback": "Are you wearing = ahora, hoy (temporal). Never wear = hábito permanente. Es el contraste clásico entre ambos tiempos."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué estás haciendo ahora mismo? Elige lo verdadero para ti.",
+          "options": [
+            "I'm studying English.",
+            "I'm working right now.",
+            "I'm relaxing at home."
+          ],
+          "feedback": "Cada opción usa el Present Continuous (am/is/are + -ing) para algo en progreso ahora."
         }
       ],
       "quiz": [
@@ -383,6 +411,14 @@
         "politica",
         "theater",
         "cuerpo"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre lo que estás haciendo en este momento, usando el Present Continuous.",
+          "model": "I'm drinking a coffee and reading the news.",
+          "model_translation": "Estoy tomando un café y leyendo las noticias.",
+          "hint": "am/is/are + verbo-ing."
+        }
       ]
     },
     {
@@ -471,6 +507,16 @@
           ],
           "correct": 2,
           "feedback": "Simple Past = evento con tiempo definido ('in college', 'five years later'). Present Perfect sería para experiencias sin tiempo."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué hiciste ayer? Elige lo verdadero para ti.",
+          "options": [
+            "I watched a movie.",
+            "I studied for an exam.",
+            "I met some friends."
+          ],
+          "feedback": "Cada opción usa el Pasado Simple para una acción terminada (regulares -ed e irregulares)."
         }
       ],
       "quiz": [
@@ -562,6 +608,14 @@
         "estudios",
         "deportes",
         "oficina"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre algo que hiciste el fin de semana pasado, en Pasado Simple.",
+          "model": "I visited my grandparents and we cooked together.",
+          "model_translation": "Visité a mis abuelos y cocinamos juntos.",
+          "hint": "Regulares +ed. Irregulares: go→went, have→had."
+        }
       ]
     },
     {
@@ -650,6 +704,16 @@
           ],
           "correct": 1,
           "feedback": "La negación es wasn't/weren't + verbo-ing. Nunca 'didn't listening' — 'didn't' es para Simple Past."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué estabas haciendo anoche a las ocho? Elige lo verdadero para ti.",
+          "options": [
+            "I was cooking dinner.",
+            "I was watching TV.",
+            "I was still working."
+          ],
+          "feedback": "Cada opción usa el Pasado Continuo (was/were + -ing) para algo en progreso en ese momento."
         }
       ],
       "quiz": [
@@ -706,6 +770,14 @@
       ],
       "topics": [
         "daily_routine"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe qué estabas haciendo ayer cuando ocurrió algo, usando el Pasado Continuo.",
+          "model": "I was reading when the lights went out.",
+          "model_translation": "Estaba leyendo cuando se fue la luz.",
+          "hint": "was/were + verbo-ing para la acción en progreso."
+        }
       ]
     },
     {
@@ -794,6 +866,16 @@
           ],
           "correct": 2,
           "feedback": "'Just' + Present Perfect = hace muy poco. 'She's still at the door' confirma que el resultado es inmediato y actual."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué has hecho en tu vida? Elige lo verdadero para ti.",
+          "options": [
+            "I have traveled abroad.",
+            "I have never broken a bone.",
+            "I have tried sushi."
+          ],
+          "feedback": "Cada opción usa el Present Perfect (have/has + participio) para experiencias de vida."
         }
       ],
       "quiz": [
@@ -866,6 +948,14 @@
         "movies",
         "music",
         "technology"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una experiencia que has tenido (o nunca has tenido), usando el Present Perfect.",
+          "model": "I have visited three countries in Europe.",
+          "model_translation": "He visitado tres países en Europa.",
+          "hint": "have/has + participio pasado."
+        }
       ]
     },
     {
@@ -955,6 +1045,16 @@
           ],
           "correct": 1,
           "feedback": "Will = predicción basada en opinión ('I think'). No hay evidencia visible — es una expectativa personal sobre el futuro."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué vas a hacer este fin de semana? Elige lo verdadero para ti.",
+          "options": [
+            "I'm going to relax.",
+            "I'll probably study.",
+            "I'm going to see friends."
+          ],
+          "feedback": "'going to' para planes decididos, 'will' para decisiones y predicciones."
         }
       ],
       "quiz": [
@@ -1023,6 +1123,14 @@
         "restaurant",
         "viajes",
         "gym"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe un plan o una predicción para mañana, usando 'will' o 'going to'.",
+          "model": "I'm going to start a new book tonight.",
+          "model_translation": "Voy a empezar un libro nuevo esta noche.",
+          "hint": "going to = plan, will = decisión o predicción."
+        }
       ]
     },
     {
@@ -1112,6 +1220,16 @@
           ],
           "correct": 2,
           "feedback": "Wish + Past Perfect = arrepentimiento sobre el pasado. La situación ya no se puede cambiar — el examen ya ocurrió."
+        },
+        {
+          "affective": true,
+          "question": "Piensa en un momento del pasado. ¿Qué había pasado antes? Elige lo verdadero para ti.",
+          "options": [
+            "When I arrived, the class had already started.",
+            "By 2020, I had finished my studies.",
+            "Before that trip, I had never flown."
+          ],
+          "feedback": "Cada opción usa el Past Perfect (had + participio) para algo anterior a otro momento pasado."
         }
       ],
       "quiz": [
@@ -1174,6 +1292,14 @@
       "topics": [
         "conversacion",
         "pensamientos_opiniones"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe sobre algo que ya había pasado antes de otro momento del pasado, en Past Perfect.",
+          "model": "When I got home, my family had already eaten.",
+          "model_translation": "Cuando llegué a casa, mi familia ya había comido.",
+          "hint": "had + participio para el pasado anterior al pasado."
+        }
       ]
     },
     {
@@ -1260,6 +1386,16 @@
           ],
           "correct": 1,
           "feedback": "A/an = indefinido. No es UN médico específico — cualquier médico servirá. El headache tampoco es un concepto específico conocido por el oyente."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué tienes cerca de ti ahora? Elige lo verdadero para ti.",
+          "options": [
+            "I have a phone on the table.",
+            "I have an apple here.",
+            "I have a book in my bag."
+          ],
+          "feedback": "'a' antes de sonido consonante, 'an' antes de sonido vocálico (a phone, an apple)."
         }
       ],
       "quiz": [
@@ -1317,6 +1453,14 @@
       "topics": [
         "restaurant",
         "supermarket"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración presentando algo por primera vez, usando 'a' o 'an'.",
+          "model": "I want to buy a new laptop and an external screen.",
+          "model_translation": "Quiero comprar una computadora nueva y una pantalla externa.",
+          "hint": "a + consonante, an + vocal, según el sonido."
+        }
       ]
     },
     {
@@ -1405,6 +1549,16 @@
           ],
           "correct": 1,
           "feedback": "Cuando hay un solo referente posible en un contexto (el presidente de un país), se usa the aunque no se haya mencionado antes."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué es cierto sobre tu ciudad? Elige lo verdadero para ti.",
+          "options": [
+            "The park near my house is beautiful.",
+            "The traffic is terrible in the morning.",
+            "The people here are friendly."
+          ],
+          "feedback": "'the' señala algo específico o ya conocido por ambos hablantes."
         }
       ],
       "quiz": [
@@ -1466,6 +1620,14 @@
       "topics": [
         "restaurant",
         "supermarket"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre algo específico de tu ciudad, usando 'the'.",
+          "model": "The market on Sundays is my favorite place.",
+          "model_translation": "El mercado de los domingos es mi lugar favorito.",
+          "hint": "'the' = algo definido o ya conocido."
+        }
       ]
     },
     {
@@ -1555,6 +1717,16 @@
           ],
           "correct": 1,
           "feedback": "Plural sin artículo = generalización (los perros como especie). The dog = ese perro concreto de al lado, que ambos conocen."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué te gusta en general? Elige lo verdadero para ti.",
+          "options": [
+            "I love music.",
+            "I don't like coffee.",
+            "I enjoy sports."
+          ],
+          "feedback": "Con sustantivos generales o incontables NO se usa artículo (love music, no 'the music')."
         }
       ],
       "quiz": [
@@ -1624,6 +1796,14 @@
       "topics": [
         "technology",
         "accountability"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre algo que te gusta en general, sin artículo (artículo cero).",
+          "model": "I love books and quiet mornings.",
+          "model_translation": "Me encantan los libros y las mañanas tranquilas.",
+          "hint": "Generalidades e incontables van sin artículo."
+        }
       ]
     },
     {
@@ -1710,6 +1890,16 @@
           ],
           "correct": 2,
           "feedback": "Can't = imposibilidad situacional — no es que no tenga habilidad, sino que la acción no está resultando posible en este momento."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué puedes o no puedes hacer? Elige lo verdadero para ti.",
+          "options": [
+            "I can swim.",
+            "I can speak two languages.",
+            "I can't drive."
+          ],
+          "feedback": "'can/can't' + verbo base para expresar habilidad."
         }
       ],
       "quiz": [
@@ -1786,6 +1976,14 @@
         "directions",
         "emergencias",
         "health"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración sobre algo que sabes o no sabes hacer, usando 'can/can't'.",
+          "model": "I can cook, but I can't bake very well.",
+          "model_translation": "Sé cocinar, pero no sé hornear muy bien.",
+          "hint": "can/can't + verbo base."
+        }
       ]
     },
     {
@@ -1874,6 +2072,16 @@
           ],
           "correct": 1,
           "feedback": "Should + pregunta = pedir una recomendación o consejo sobre qué es mejor hacer."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué consejo te viene bien ahora? Elige lo verdadero para ti.",
+          "options": [
+            "I should sleep more.",
+            "I should exercise regularly.",
+            "I shouldn't drink so much coffee."
+          ],
+          "feedback": "'should/shouldn't' + verbo base para dar consejos."
         }
       ],
       "quiz": [
@@ -1935,6 +2143,14 @@
         "health",
         "movies",
         "technology"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe un consejo para ti mismo usando 'should' o 'shouldn't'.",
+          "model": "I should spend less time on my phone.",
+          "model_translation": "Debería pasar menos tiempo en el teléfono.",
+          "hint": "should/shouldn't + verbo base."
+        }
       ]
     },
     {
@@ -2023,6 +2239,16 @@
           ],
           "correct": 1,
           "feedback": "Must = obligación sentida internamente. El hablante no está obligado por una regla externa — es su propio sentido de responsabilidad."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué tienes que hacer esta semana? Elige lo verdadero para ti.",
+          "options": [
+            "I have to work every day.",
+            "I must finish a project.",
+            "I don't have to wake up early."
+          ],
+          "feedback": "'must/have to' expresan obligación, 'don't have to' = no es necesario."
         }
       ],
       "quiz": [
@@ -2088,6 +2314,14 @@
         "airport",
         "gym",
         "cotidianidad"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una obligación tuya usando 'must' o 'have to'.",
+          "model": "I have to submit the report by Friday.",
+          "model_translation": "Tengo que entregar el informe para el viernes.",
+          "hint": "must/have to + verbo base = obligación."
+        }
       ]
     },
     {
@@ -2176,6 +2410,16 @@
           ],
           "correct": 1,
           "feedback": "En el zero conditional (y todos los condicionales), las dos partes son invertibles. Solo cambia una coma cuando 'if' va al principio."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué te pasa siempre en cierta situación? Elige lo verdadero para ti.",
+          "options": [
+            "If I drink coffee at night, I don't sleep.",
+            "If I'm tired, I get grumpy.",
+            "If it rains, I stay home."
+          ],
+          "feedback": "Condicional cero: If + presente, presente (verdades generales)."
         }
       ],
       "quiz": [
@@ -2235,6 +2479,14 @@
         "conversacion",
         "pensamientos_opiniones",
         "technology"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una verdad general sobre ti usando el condicional cero (If + presente, presente).",
+          "model": "If I skip breakfast, I feel tired all morning.",
+          "model_translation": "Si me salto el desayuno, me siento cansado toda la mañana.",
+          "hint": "If + presente, presente."
+        }
       ]
     },
     {
@@ -2324,6 +2576,16 @@
           ],
           "correct": 1,
           "feedback": "Primer condicional = situación posible y real en el futuro. Si tiene buen rendimiento (condición real y posible), conseguirá el trabajo."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué harás si se da la situación? Elige lo verdadero para ti.",
+          "options": [
+            "If I have time tonight, I'll read.",
+            "If it's sunny tomorrow, I'll go out.",
+            "If I finish early, I'll rest."
+          ],
+          "feedback": "Primer condicional: If + presente, will + infinitivo (situación real futura)."
         }
       ],
       "quiz": [
@@ -2382,6 +2644,14 @@
       ],
       "topics": [
         "planes"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe un plan condicional real para mañana usando el primer condicional.",
+          "model": "If the weather is nice, I'll walk to work.",
+          "model_translation": "Si hace buen tiempo, iré caminando al trabajo.",
+          "hint": "If + presente, will + infinitivo."
+        }
       ]
     },
     {
@@ -2470,6 +2740,16 @@
           ],
           "correct": 1,
           "feedback": "Segundo condicional = situación contraria a la realidad. 'If she had more free time' implica que actualmente NO tiene suficiente tiempo libre."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué harías en un mundo ideal? Elige lo verdadero para ti.",
+          "options": [
+            "If I had more time, I'd learn piano.",
+            "If I were rich, I'd travel more.",
+            "If I could, I'd live by the sea."
+          ],
+          "feedback": "Segundo condicional: If + pasado, would + infinitivo (situación hipotética)."
         }
       ],
       "quiz": [
@@ -2532,6 +2812,14 @@
         "conversacion",
         "pensamientos_opiniones",
         "planes"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe algo hipotético sobre tu vida usando el segundo condicional.",
+          "model": "If I lived abroad, I would learn the language fast.",
+          "model_translation": "Si viviera en el extranjero, aprendería el idioma rápido.",
+          "hint": "If + pasado, would + infinitivo."
+        }
       ]
     },
     {
@@ -2621,6 +2909,16 @@
           ],
           "correct": 1,
           "feedback": "Would = certeza. Might = posibilidad (quizás). Could = capacidad. El resultado del tercer condicional admite estos matices de probabilidad."
+        },
+        {
+          "affective": true,
+          "question": "Piensa en el pasado. ¿Qué habría cambiado? Elige lo verdadero para ti.",
+          "options": [
+            "If I had studied more, I would have passed.",
+            "If I had left earlier, I wouldn't have been late.",
+            "If I had known, I would have helped."
+          ],
+          "feedback": "Tercer condicional: If + past perfect, would have + participio (pasado imposible)."
         }
       ],
       "quiz": [
@@ -2681,6 +2979,14 @@
       ],
       "topics": [
         "conversacion"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe sobre algo del pasado que habría sido distinto, usando el tercer condicional.",
+          "model": "If I had saved money, I would have bought that house.",
+          "model_translation": "Si hubiera ahorrado dinero, habría comprado esa casa.",
+          "hint": "If + had + participio, would have + participio."
+        }
       ]
     },
     {
@@ -2769,6 +3075,16 @@
           ],
           "correct": 1,
           "feedback": "Pasiva con agente vago o universal ('todos cometemos errores') — es más natural que 'People make mistakes' en este contexto filosófico."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué es cierto sobre cosas que usas? Elige lo verdadero para ti.",
+          "options": [
+            "My phone is made of glass and metal.",
+            "Coffee is grown in many countries.",
+            "English is spoken where I work."
+          ],
+          "feedback": "Voz pasiva presente: is/are + participio (el foco es la acción, no quién la hace)."
         }
       ],
       "quiz": [
@@ -2829,6 +3145,14 @@
         "accountability",
         "kitchen",
         "gym"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración en voz pasiva (presente) sobre cómo se hace o se usa algo.",
+          "model": "Chocolate is made from cacao beans.",
+          "model_translation": "El chocolate se hace con granos de cacao.",
+          "hint": "is/are + participio pasado."
+        }
       ]
     },
     {
@@ -2915,6 +3239,16 @@
           ],
           "correct": 1,
           "feedback": "How long = duración ('¿Cuánto tiempo llevas esperando?'). Otras combinaciones: how often (frecuencia), how much (cantidad incontable), how many (cantidad contable)."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué pregunta te gustaría que te hicieran? Elige lo verdadero para ti.",
+          "options": [
+            "Where do you live?",
+            "What do you do?",
+            "Why do you study English?"
+          ],
+          "feedback": "Las preguntas Wh- usan Wh- + auxiliar + sujeto + verbo."
         }
       ],
       "quiz": [
@@ -2995,6 +3329,14 @@
         "weather",
         "viajes",
         "health"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una pregunta Wh- que le harías a alguien que acabas de conocer.",
+          "model": "Where did you grow up?",
+          "model_translation": "¿Dónde creciste?",
+          "hint": "Wh- + do/did + sujeto + verbo base."
+        }
       ]
     },
     {
@@ -3081,6 +3423,16 @@
           ],
           "correct": 1,
           "feedback": "Much/a lot + comparativo = diferencia significativa ('mucho más rápido'). A little/slightly + comparativo = diferencia pequeña ('un poco más rápido')."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué prefieres? Elige lo verdadero para ti.",
+          "options": [
+            "Coffee is better than tea for me.",
+            "My city is bigger than my hometown.",
+            "Weekends are shorter than weekdays."
+          ],
+          "feedback": "Comparativos cortos: adjetivo + -er + than."
         }
       ],
       "quiz": [
@@ -3137,6 +3489,14 @@
       ],
       "topics": [
         "movies"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Compara dos cosas de tu vida usando un comparativo (-er than).",
+          "model": "My new job is busier than my old one.",
+          "model_translation": "Mi nuevo trabajo es más ajetreado que el anterior.",
+          "hint": "adjetivo corto + -er + than."
+        }
       ]
     },
     {
@@ -3225,6 +3585,16 @@
           ],
           "correct": 1,
           "feedback": "Mind + -ing = molestarle algo. Don't mind + -ing = no le molesta, es aceptable. 'Do you mind waiting?' = ¿te importa/molesta esperar?"
+        },
+        {
+          "affective": true,
+          "question": "¿Qué disfrutas o evitas hacer? Elige lo verdadero para ti.",
+          "options": [
+            "I enjoy cooking.",
+            "I don't mind waiting.",
+            "I keep forgetting names."
+          ],
+          "feedback": "Ciertos verbos (enjoy, mind, keep, avoid) van seguidos de -ing."
         }
       ],
       "quiz": [
@@ -3290,6 +3660,14 @@
         "tiempo_libre",
         "transportation",
         "accountability"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe algo que disfrutas o evitas hacer, usando verbo + gerundio (-ing).",
+          "model": "I enjoy listening to music while I work.",
+          "model_translation": "Disfruto escuchar música mientras trabajo.",
+          "hint": "enjoy/avoid/keep/finish + verbo-ing."
+        }
       ]
     },
     {
@@ -3378,6 +3756,16 @@
           ],
           "correct": 1,
           "feedback": "Afford to = tener suficiente dinero/tiempo para hacer algo. 'Can't afford to' = no tener los medios para."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué quieres o esperas hacer? Elige lo verdadero para ti.",
+          "options": [
+            "I want to travel more.",
+            "I hope to learn a new skill.",
+            "I decided to change jobs."
+          ],
+          "feedback": "Ciertos verbos (want, hope, decide, need) van seguidos de to + infinitivo."
         }
       ],
       "quiz": [
@@ -3458,6 +3846,14 @@
         "museums",
         "economia",
         "politica"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una meta tuya usando verbo + to + infinitivo.",
+          "model": "I want to improve my English this year.",
+          "model_translation": "Quiero mejorar mi inglés este año.",
+          "hint": "want/hope/decide/need + to + infinitivo."
+        }
       ]
     },
     {
@@ -3553,6 +3949,16 @@
           ],
           "correct": 2,
           "feedback": "Use **in** for parts of the day: *in the afternoon*. Exception: at night."
+        },
+        {
+          "affective": true,
+          "question": "¿Cuándo haces cosas? Elige lo verdadero para ti.",
+          "options": [
+            "I work in the morning.",
+            "I relax on weekends.",
+            "I was born in summer."
+          ],
+          "feedback": "at para horas, on para días y fechas, in para meses, años y partes del día."
         }
       ],
       "quiz": [
@@ -3611,6 +4017,14 @@
         "weather",
         "daily_routine",
         "calendario"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe cuándo haces algo, usando at, on o in.",
+          "model": "I usually exercise in the evening on Mondays.",
+          "model_translation": "Normalmente hago ejercicio por la tarde los lunes.",
+          "hint": "at hora, on día, in mes/año/parte del día."
+        }
       ]
     },
     {
@@ -3708,6 +4122,16 @@
           ],
           "correct": 2,
           "feedback": "Use **on** for floors of a building: *on the third floor*."
+        },
+        {
+          "affective": true,
+          "question": "¿Dónde están tus cosas? Elige lo verdadero para ti.",
+          "options": [
+            "I work at an office.",
+            "My keys are usually in my bag.",
+            "There's a photo on my desk."
+          ],
+          "feedback": "at para un punto, in para dentro, on para una superficie."
         }
       ],
       "quiz": [
@@ -3771,6 +4195,14 @@
         "accountability",
         "sitios",
         "airport"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Describe dónde está algo tuyo, usando at, in o on.",
+          "model": "My laptop is on the table in the living room.",
+          "model_translation": "Mi computadora está sobre la mesa en la sala.",
+          "hint": "at punto, in dentro, on superficie."
+        }
       ]
     },
     {
@@ -3868,6 +4300,16 @@
           ],
           "correct": 1,
           "feedback": "**believe in** something = to have faith in it. *I believe in hard work.*"
+        },
+        {
+          "affective": true,
+          "question": "¿Qué es cierto para ti? Elige lo verdadero para ti.",
+          "options": [
+            "I'm good at cooking.",
+            "I depend on my calendar.",
+            "I often think about the future."
+          ],
+          "feedback": "Algunos verbos y adjetivos piden una preposición fija: good at, depend on, think about."
         }
       ],
       "quiz": [
@@ -3925,6 +4367,14 @@
       "topics": [
         "music",
         "technology"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración con una colocación de verbo o adjetivo + preposición (good at, depend on, worry about).",
+          "model": "I always worry about being late.",
+          "model_translation": "Siempre me preocupo por llegar tarde.",
+          "hint": "La preposición es fija: good at, depend on, worry about."
+        }
       ]
     },
     {
@@ -4020,6 +4470,16 @@
           ],
           "correct": 1,
           "feedback": "With pronouns, the object goes between verb and particle: **look it up**, not *look up it*."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué haces en tu día? Elige lo verdadero para ti.",
+          "options": [
+            "I wake up early.",
+            "I often eat out.",
+            "I try to work out at the gym."
+          ],
+          "feedback": "Los phrasal verbs (wake up, eat out, work out) combinan verbo + partícula con un significado propio."
         }
       ],
       "quiz": [
@@ -4082,6 +4542,14 @@
         "vestimenta",
         "hogar",
         "accommodation"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe algo de tu rutina usando un phrasal verb (get up, eat out, work out).",
+          "model": "I usually get up at seven and work out before breakfast.",
+          "model_translation": "Normalmente me levanto a las siete y hago ejercicio antes del desayuno.",
+          "hint": "verbo + partícula con un significado propio."
+        }
       ]
     },
     {
@@ -4179,6 +4647,16 @@
           ],
           "correct": 0,
           "feedback": "**Go over** = review. With pronouns: *go over it* is the natural form."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué haces con tus cosas? Elige lo verdadero para ti.",
+          "options": [
+            "I turn off my phone at night.",
+            "I always put my keys away.",
+            "I pick up my messages later."
+          ],
+          "feedback": "En los separables, el objeto puede ir en medio: turn it off, put them away."
         }
       ],
       "quiz": [
@@ -4239,6 +4717,14 @@
         "technology",
         "vestimenta",
         "hogar"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración con un phrasal verb separable y su objeto (turn off, put away, pick up).",
+          "model": "I turn my phone off before bed.",
+          "model_translation": "Apago el teléfono antes de dormir.",
+          "hint": "Separable: turn the TV off. Con pronombre solo en medio: turn it off."
+        }
       ]
     },
     {
@@ -4336,6 +4822,16 @@
           ],
           "correct": 0,
           "feedback": "**Come up** = appear or be mentioned (of a topic, problem, or issue)."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué te pasa a veces? Elige lo verdadero para ti.",
+          "options": [
+            "I sometimes put off difficult tasks.",
+            "I get along with most people.",
+            "I look up to my mentor."
+          ],
+          "feedback": "Los phrasal idiomáticos no se deducen literalmente: put off = posponer, get along = llevarse bien."
         }
       ],
       "quiz": [
@@ -4393,6 +4889,14 @@
       ],
       "topics": [
         "conversacion"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración con un phrasal verb idiomático (put off, get along, look up to, come up with).",
+          "model": "I always put off cleaning until the weekend.",
+          "model_translation": "Siempre pospongo la limpieza hasta el fin de semana.",
+          "hint": "Significado no literal: put off = posponer."
+        }
       ]
     },
     {
@@ -4458,6 +4962,16 @@
           ],
           "correct": 0,
           "feedback": "Al empezar con un adverbio negativo (Never), el auxiliar va antes del sujeto: 'Never have I seen'."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué sientes con énfasis? Elige lo verdadero para ti.",
+          "options": [
+            "Never have I worked so hard.",
+            "Rarely do I take a full day off.",
+            "Not only do I work, but I also study."
+          ],
+          "feedback": "Tras un adverbio negativo al inicio se invierte: Never have I..., Rarely do I..."
         }
       ],
       "quiz": [
@@ -4487,6 +5001,14 @@
         "Fíjate en 'Never have I seen'. ¿Qué orden tienen el sujeto (I) y el auxiliar (have)?",
         "En 'Not only did she thank', ¿el verbo principal va en forma base o conjugada?",
         "¿Qué tono crea esta inversión: informal o formal y enfático?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una oración enfática empezando con un adverbio negativo (Never, Rarely, Not only).",
+          "model": "Never have I felt so proud of a project.",
+          "model_translation": "Nunca me he sentido tan orgulloso de un proyecto.",
+          "hint": "Adverbio negativo + auxiliar + sujeto."
+        }
       ]
     },
     {
@@ -4548,6 +5070,16 @@
           ],
           "correct": 0,
           "feedback": "Condición pasada (had saved) + resultado presente (would travel now): un condicional mixto."
+        },
+        {
+          "affective": true,
+          "question": "¿Cómo sería tu presente con otro pasado? Elige lo verdadero para ti.",
+          "options": [
+            "If I had studied medicine, I'd be a doctor now.",
+            "If I had saved more, I wouldn't worry today.",
+            "If I hadn't moved, I'd still live there."
+          ],
+          "feedback": "Condicional mixto: condición pasada (had + participio) con resultado presente (would + infinitivo)."
         }
       ],
       "quiz": [
@@ -4579,6 +5111,14 @@
         "En 'If I had chosen..., I wouldn't be...', ¿la condición se refiere al pasado o al presente?",
         "¿Y el resultado 'I wouldn't be so exhausted now' se refiere al pasado o al presente?",
         "¿Qué tiempo se usa tras 'If' para la condición pasada?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe cómo tu presente sería distinto por algo del pasado, con un condicional mixto.",
+          "model": "If I had learned to code earlier, I would have more options now.",
+          "model_translation": "Si hubiera aprendido a programar antes, ahora tendría más opciones.",
+          "hint": "If + past perfect, would + infinitivo (resultado presente)."
+        }
       ]
     },
     {
@@ -4638,6 +5178,16 @@
           ],
           "correct": 0,
           "feedback": "Tras expresiones de necesidad (it is essential that) se usa la forma base: 'he be present'."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué recomiendas en tu trabajo o estudio? Elige lo verdadero para ti.",
+          "options": [
+            "I suggest that everyone arrive on time.",
+            "It is important that the team be honest.",
+            "I recommend that he take a break."
+          ],
+          "feedback": "Tras suggest/recommend/it is important that se usa la forma base: arrive, be, take."
         }
       ],
       "quiz": [
@@ -4667,6 +5217,14 @@
         "En 'I recommend that the candidate start', ¿por qué es 'start' y no 'starts'?",
         "En 'I insist that she be given', ¿qué forma del verbo 'be' se usa?",
         "¿Este registro es formal o informal?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe una recomendación formal usando el subjuntivo (suggest/recommend that + forma base).",
+          "model": "I recommend that every student read the manual first.",
+          "model_translation": "Recomiendo que cada estudiante lea primero el manual.",
+          "hint": "recommend/suggest that + forma base, sin -s."
+        }
       ]
     },
     {
@@ -4732,6 +5290,16 @@
           ],
           "correct": 0,
           "feedback": "'Analysis' es el sustantivo derivado de 'to analyze': una nominalización que da tono formal."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué valoras en el trabajo? Elige lo verdadero para ti.",
+          "options": [
+            "Clear communication matters most.",
+            "A good decision saves time.",
+            "Careful analysis prevents mistakes."
+          ],
+          "feedback": "Los sustantivos (communication, decision, analysis) hacen el lenguaje más formal y conciso."
         }
       ],
       "quiz": [
@@ -4761,6 +5329,14 @@
         "'The delay in the approval': ¿de qué verbos vienen 'delay' y 'approval'?",
         "'The decision to wait': ¿qué verbo se esconde en 'decision'?",
         "¿El lenguaje con sustantivos suena más formal o más informal?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Expresa una idea usando un sustantivo derivado de un verbo (decide→decision, improve→improvement).",
+          "model": "The improvement in our sales was clear.",
+          "model_translation": "La mejora en nuestras ventas fue clara.",
+          "hint": "verbo o adjetivo → sustantivo (improve → improvement)."
+        }
       ]
     },
     {
@@ -4827,6 +5403,16 @@
           ],
           "correct": 0,
           "feedback": "La estructura 'It was ... that' destaca el lugar: 'It was in Paris that they first met'."
+        },
+        {
+          "affective": true,
+          "question": "¿Qué es lo que más te importa? Elige lo verdadero para ti.",
+          "options": [
+            "What I value most is my free time.",
+            "It's my family that keeps me going.",
+            "What I need now is a break."
+          ],
+          "feedback": "Las hendidas enfatizan: What I value is... / It's ... that..."
         }
       ],
       "quiz": [
@@ -4856,6 +5442,14 @@
         "'It was Diego who booked the venue': ¿qué elemento se está enfatizando?",
         "'What Marta did was design the program': ¿cómo empieza esta oración hendida?",
         "¿Por qué usarías esta estructura en lugar de 'Diego booked the venue'?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Enfatiza algo importante para ti con una oración hendida (What... is... / It's... that...).",
+          "model": "What I really want is more time to travel.",
+          "model_translation": "Lo que de verdad quiero es más tiempo para viajar.",
+          "hint": "What + oración + is + foco, o It's + foco + that..."
+        }
       ]
     },
     {
@@ -4921,6 +5515,16 @@
           ],
           "correct": 0,
           "feedback": "'Not' sustituye a toda la oración negativa: 'I hope it will not rain tomorrow' → 'I hope not'."
+        },
+        {
+          "affective": true,
+          "question": "¿Cómo respondes normalmente? Elige lo verdadero para ti.",
+          "options": [
+            "I'd like to help, but I can't.",
+            "I think so, but I'm not sure.",
+            "I have one if you need it."
+          ],
+          "feedback": "La elipsis (I can't [help]) y la sustitución (so, one) hacen el inglés más natural."
         }
       ],
       "quiz": [
@@ -4950,6 +5554,14 @@
         "'I'd love to, but I can't': ¿qué palabras se omiten después de 'to' y 'can't'?",
         "'I need one': ¿qué sustantivo reemplaza 'one'?",
         "'I think so': ¿qué idea completa reemplaza 'so'?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Escribe un intercambio breve usando elipsis o sustitución (so, one, do).",
+          "model": "Are you coming tonight? I'd love to, but I can't.",
+          "model_translation": "¿Vienes esta noche? Me encantaría, pero no puedo.",
+          "hint": "Omite lo repetido (I can't [come]) o sustituye con so/one/do."
+        }
       ]
     },
     {
@@ -5015,6 +5627,16 @@
           ],
           "correct": 0,
           "feedback": "'Nevertheless' introduce un contraste: a pesar del riesgo, se aprobó el plan."
+        },
+        {
+          "affective": true,
+          "question": "¿Cómo conectas tus ideas? Elige lo verdadero para ti.",
+          "options": [
+            "I work hard. Nevertheless, I make time to rest.",
+            "I like cities, whereas my partner prefers the countryside.",
+            "The plan was risky. Hence, we prepared carefully."
+          ],
+          "feedback": "Nevertheless (contraste), whereas (contraste), hence (consecuencia) dan un registro formal."
         }
       ],
       "quiz": [
@@ -5044,6 +5666,14 @@
         "'Nevertheless, we met our targets': ¿qué relación marca (contraste, causa o adición)?",
         "'Hence, I recommend...': ¿'hence' expresa consecuencia o contraste?",
         "¿Estos conectores suenan formales o informales?"
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Une dos ideas tuyas con un conector avanzado (nevertheless, whereas, moreover, hence).",
+          "model": "I enjoy my job. Nevertheless, I need more balance.",
+          "model_translation": "Disfruto mi trabajo. No obstante, necesito más equilibrio.",
+          "hint": "Nevertheless/Whereas/Moreover al inicio, seguido de coma."
+        }
       ]
     }
   ]

@@ -203,6 +203,16 @@
           ],
           "correct": 0,
           "feedback": "'Es médica' uses ser because a profession describes who someone is — it is a permanent trait, not a changeable condition."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose one.",
+          "options": [
+            "Soy estudiante.",
+            "Soy profesor.",
+            "Soy de otro país."
+          ],
+          "feedback": "Each option uses 'ser' for identity or a permanent trait."
         }
       ],
       "quiz": [
@@ -244,7 +254,15 @@
         "family",
         "descripciones"
       ],
-      "title_en": "To Be — Identity and permanent traits"
+      "title_en": "To Be — Identity and permanent traits",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence about who you are, using 'ser'.",
+          "model": "Soy curioso y me gusta aprender.",
+          "model_translation": "I'm curious and I like to learn.",
+          "hint": "ser (soy/eres/es) for identity and lasting traits."
+        }
+      ]
     },
     {
       "id": "ser_time_events",
@@ -327,6 +345,16 @@
           ],
           "correct": 0,
           "feedback": "Scheduled events use ser, not estar. 'La fiesta es el sábado' = The party is (takes place) on Saturday."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for your week? Choose one.",
+          "options": [
+            "La reunión es el lunes.",
+            "Mi cumpleaños es en verano.",
+            "La clase es por la mañana."
+          ],
+          "feedback": "'ser' is used for time, dates and when events take place."
         }
       ],
       "quiz": [
@@ -366,7 +394,15 @@
       "topics": [
         "calendario"
       ],
-      "title_en": "To Be — Time, dates, and events"
+      "title_en": "To Be — Time, dates, and events",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence saying when something is (a class, an event), using 'ser'.",
+          "model": "La fiesta es el sábado a las ocho.",
+          "model_translation": "The party is on Saturday at eight.",
+          "hint": "ser for the time or date of an event."
+        }
+      ]
     },
     {
       "id": "estar_location_states",
@@ -443,6 +479,16 @@
           ],
           "correct": 0,
           "feedback": "'Está caliente' uses estar because the temperature of the coffee is a temporary, changeable state — not a permanent characteristic."
+        },
+        {
+          "affective": true,
+          "question": "Where are you right now? Choose one.",
+          "options": [
+            "Estoy en casa.",
+            "Estoy en el trabajo.",
+            "Estoy de viaje."
+          ],
+          "feedback": "'estar' is used for location and temporary states."
         }
       ],
       "quiz": [
@@ -501,7 +547,15 @@
         "viajes",
         "vestimenta"
       ],
-      "title_en": "To Be — Location and temporary states"
+      "title_en": "To Be — Location and temporary states",
+      "communicative_production": [
+        {
+          "prompt": "Write where you are right now, using 'estar'.",
+          "model": "Estoy en casa después del trabajo.",
+          "model_translation": "I'm at home after work.",
+          "hint": "estar for location and temporary states."
+        }
+      ]
     },
     {
       "id": "present_ar_verbs",
@@ -578,6 +632,16 @@
           ],
           "correct": 0,
           "feedback": "The -amos ending belongs to nosotros (we). Estudiar → nosotros estudiamos."
+        },
+        {
+          "affective": true,
+          "question": "Which do you do? Choose one.",
+          "options": [
+            "Hablo dos idiomas.",
+            "Trabajo en una oficina.",
+            "Estudio por la noche."
+          ],
+          "feedback": "Regular -ar verbs in the present: hablo, trabajas, estudia."
         }
       ],
       "quiz": [
@@ -639,7 +703,15 @@
         "airport",
         "movies"
       ],
-      "title_en": "Present tense — Regular -ar verbs"
+      "title_en": "Present tense — Regular -ar verbs",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence about something you do, using a regular -ar verb (hablar, trabajar, estudiar).",
+          "model": "Trabajo por la mañana y estudio por la tarde.",
+          "model_translation": "I work in the morning and study in the afternoon.",
+          "hint": "-ar present: -o, -as, -a, -amos, -an."
+        }
+      ]
     },
     {
       "id": "present_er_ir_verbs",
@@ -722,6 +794,16 @@
           ],
           "correct": 0,
           "feedback": "The nosotros form is the key difference: -er verbs use -emos (comemos), -ir verbs use -imos (vivimos)."
+        },
+        {
+          "affective": true,
+          "question": "Which do you do? Choose one.",
+          "options": [
+            "Como en casa casi siempre.",
+            "Vivo cerca del centro.",
+            "Bebo mucho café."
+          ],
+          "feedback": "Regular -er and -ir verbs in the present: como, vives, bebe."
         }
       ],
       "quiz": [
@@ -777,7 +859,15 @@
         "supermarket",
         "technology"
       ],
-      "title_en": "Present tense — Regular -er and -ir verbs"
+      "title_en": "Present tense — Regular -er and -ir verbs",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence about your habits using an -er or -ir verb (comer, vivir, beber).",
+          "model": "Vivo en una ciudad pequeña y como en casa.",
+          "model_translation": "I live in a small city and eat at home.",
+          "hint": "-er: -o,-es,-e,-emos,-en. -ir: -o,-es,-e,-imos,-en."
+        }
+      ]
     },
     {
       "id": "gender_nouns_articles",
@@ -854,6 +944,16 @@
           ],
           "correct": 0,
           "feedback": "'Niños' (boys/children) is masculine plural. The masculine plural definite article is 'los'."
+        },
+        {
+          "affective": true,
+          "question": "Which do you have with you now? Choose one.",
+          "options": [
+            "Tengo el teléfono.",
+            "Tengo la llave.",
+            "Tengo el libro."
+          ],
+          "feedback": "Nouns have gender: el teléfono (m), la llave (f), el libro (m)."
         }
       ],
       "quiz": [
@@ -896,7 +996,15 @@
         "descripciones",
         "supermarket"
       ],
-      "title_en": "Noun gender and definite articles"
+      "title_en": "Noun gender and definite articles",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence naming an object with its article (el / la).",
+          "model": "La computadora está sobre la mesa.",
+          "model_translation": "The computer is on the table.",
+          "hint": "Learn each noun with its article: el / la."
+        }
+      ]
     },
     {
       "id": "gender_adjective_agreement",
@@ -973,6 +1081,16 @@
           ],
           "correct": 0,
           "feedback": "'Exámenes' is plural, so the adjective becomes 'difíciles'. Adjectives ending in a consonant add -es for plural."
+        },
+        {
+          "affective": true,
+          "question": "How would you describe your day? Choose one.",
+          "options": [
+            "Es un día tranquilo.",
+            "Es una semana ocupada.",
+            "Son días largos."
+          ],
+          "feedback": "The adjective agrees in gender and number: día tranquilo, semana ocupada, días largos."
         }
       ],
       "quiz": [
@@ -1013,7 +1131,15 @@
         "describiendo_personas",
         "cuerpo"
       ],
-      "title_en": "Adjective agreement in gender and number"
+      "title_en": "Adjective agreement in gender and number",
+      "communicative_production": [
+        {
+          "prompt": "Describe something with an adjective that agrees in gender and number.",
+          "model": "Mi casa es pequeña pero muy cómoda.",
+          "model_translation": "My house is small but very comfortable.",
+          "hint": "The adjective matches the noun: casa pequeña, libro pequeño."
+        }
+      ]
     },
     {
       "id": "preterite_regular",
@@ -1090,6 +1216,16 @@
           ],
           "correct": 0,
           "feedback": "Regular -ar verbs use -ó for él/ella/usted in the preterite. Llamar → ella llamó."
+        },
+        {
+          "affective": true,
+          "question": "What did you do yesterday? Choose one.",
+          "options": [
+            "Trabajé todo el día.",
+            "Estudié para un examen.",
+            "Cociné para mi familia."
+          ],
+          "feedback": "Regular preterite for finished actions: trabajé, estudiaste, cocinó."
         }
       ],
       "quiz": [
@@ -1146,7 +1282,15 @@
         "museums",
         "economia"
       ],
-      "title_en": "Simple past — Regular verbs"
+      "title_en": "Simple past — Regular verbs",
+      "communicative_production": [
+        {
+          "prompt": "Write about something you did yesterday, using the regular preterite.",
+          "model": "Ayer terminé un proyecto importante.",
+          "model_translation": "Yesterday I finished an important project.",
+          "hint": "-ar: -é,-aste,-ó. -er/-ir: -í,-iste,-ió."
+        }
+      ]
     },
     {
       "id": "preterite_irregular",
@@ -1223,6 +1367,16 @@
           ],
           "correct": 0,
           "feedback": "'Hacer' is irregular in the preterite. Stem: hic-/hiz-. Ella form: hizo (not *hacó). These forms carry no accent mark."
+        },
+        {
+          "affective": true,
+          "question": "What happened last weekend? Choose one.",
+          "options": [
+            "Fui a un concierto.",
+            "Tuve que trabajar.",
+            "Hice ejercicio cada día."
+          ],
+          "feedback": "Irregular preterite: fui (ir/ser), tuve (tener), hice (hacer)."
         }
       ],
       "quiz": [
@@ -1270,7 +1424,15 @@
         "conversacion",
         "movies"
       ],
-      "title_en": "Simple past — Common irregular verbs"
+      "title_en": "Simple past — Common irregular verbs",
+      "communicative_production": [
+        {
+          "prompt": "Write about last weekend using an irregular preterite (ir, tener, hacer, estar).",
+          "model": "El fin de semana fui a la playa y estuve con amigos.",
+          "model_translation": "Last weekend I went to the beach and was with friends.",
+          "hint": "Irregular stems: fui, tuve, hice, estuve, dije."
+        }
+      ]
     },
     {
       "id": "imperfect_habits_descriptions",
@@ -1353,6 +1515,16 @@
           ],
           "correct": 0,
           "feedback": "'Comíamos' (imperfect) expresses a repeated past habit. 'Antes' and 'todos los domingos' are strong markers of habitual imperfect usage."
+        },
+        {
+          "affective": true,
+          "question": "How was your childhood? Choose one.",
+          "options": [
+            "Vivía en un pueblo pequeño.",
+            "Jugaba en la calle con amigos.",
+            "Leía muchos libros."
+          ],
+          "feedback": "The imperfect describes past habits and background: vivía, jugabas, leía."
         }
       ],
       "quiz": [
@@ -1394,7 +1566,15 @@
         "transportation",
         "movies"
       ],
-      "title_en": "Imperfect past — Habits and descriptions"
+      "title_en": "Imperfect past — Habits and descriptions",
+      "communicative_production": [
+        {
+          "prompt": "Write about a habit from your childhood, using the imperfect.",
+          "model": "De niño, pasaba los veranos con mis abuelos.",
+          "model_translation": "As a child, I spent the summers with my grandparents.",
+          "hint": "Imperfect for repeated past actions: -aba / -ía."
+        }
+      ]
     },
     {
       "id": "imperfect_vs_preterite",
@@ -1477,6 +1657,16 @@
           ],
           "correct": 0,
           "feedback": "'Conocí' (preterite) marks the single, completed event — the moment of meeting. 'Estudiaba' (imperfect) is the ongoing background activity."
+        },
+        {
+          "affective": true,
+          "question": "Think of a moment from your past. Choose one.",
+          "options": [
+            "Estudiaba cuando sonó el teléfono.",
+            "Caminaba por la calle y vi a un amigo.",
+            "Llovía cuando salí de casa."
+          ],
+          "feedback": "Imperfect = background in progress, preterite = the completed action that interrupts it."
         }
       ],
       "quiz": [
@@ -1518,7 +1708,15 @@
         "transportation",
         "movies"
       ],
-      "title_en": "Imperfect vs. Simple past — Contrast"
+      "title_en": "Imperfect vs. Simple past — Contrast",
+      "communicative_production": [
+        {
+          "prompt": "Describe a past scene where one action interrupted another (imperfect + preterite).",
+          "model": "Leía tranquilamente cuando alguien llamó a la puerta.",
+          "model_translation": "I was reading quietly when someone knocked on the door.",
+          "hint": "Imperfect (background) + preterite (the event)."
+        }
+      ]
     },
     {
       "id": "subjunctive_present_wishes",
@@ -1595,6 +1793,16 @@
           ],
           "correct": 0,
           "feedback": "Nosotros subjunctive of 'descansar' (-ar): remove -ar, add -emos → descansemos. Note: -ar verbs use -e- vowel in subjunctive."
+        },
+        {
+          "affective": true,
+          "question": "What do you hope for? Choose one.",
+          "options": [
+            "Espero que todo salga bien.",
+            "Quiero que mi familia esté sana.",
+            "Ojalá que el fin de semana llegue pronto."
+          ],
+          "feedback": "After espero que / quiero que / ojalá, the verb goes in the subjunctive: salga, esté, llegue."
         }
       ],
       "quiz": [
@@ -1633,7 +1841,15 @@
       "topics": [
         "greetings"
       ],
-      "title_en": "Present subjunctive — Wishes and recommendations"
+      "title_en": "Present subjunctive — Wishes and recommendations",
+      "communicative_production": [
+        {
+          "prompt": "Write a wish using the present subjunctive (espero que / ojalá + subjunctive).",
+          "model": "Espero que este año traiga buenas noticias.",
+          "model_translation": "I hope this year brings good news.",
+          "hint": "espero/quiero que + subjunctive (salga, tenga, sea)."
+        }
+      ]
     },
     {
       "id": "reflexive_verbs_daily_routine",
@@ -1710,6 +1926,16 @@
           ],
           "correct": 0,
           "feedback": "For él/ella/usted the reflexive pronoun is 'se'. So: ella se acuesta."
+        },
+        {
+          "affective": true,
+          "question": "What is your morning like? Choose one.",
+          "options": [
+            "Me levanto muy temprano.",
+            "Me ducho antes de desayunar.",
+            "Me acuesto tarde casi siempre."
+          ],
+          "feedback": "Reflexive verbs use me/te/se: me levanto, te duchas, se acuesta."
         }
       ],
       "quiz": [
@@ -1748,7 +1974,15 @@
       "topics": [
         "daily_routine"
       ],
-      "title_en": "Reflexive verbs — Daily routine"
+      "title_en": "Reflexive verbs — Daily routine",
+      "communicative_production": [
+        {
+          "prompt": "Describe part of your daily routine using a reflexive verb (levantarse, ducharse, acostarse).",
+          "model": "Me levanto a las siete y me preparo un café.",
+          "model_translation": "I get up at seven and make myself a coffee.",
+          "hint": "me/te/se + verb: me levanto, te levantas, se levanta."
+        }
+      ]
     },
     {
       "id": "reflexive_verbs_emotions",
@@ -1825,6 +2059,16 @@
           ],
           "correct": 0,
           "feedback": "'Ponerse + adjective' expresses a change of state — becoming nervous, sad, happy, etc. It indicates a transition, not a permanent quality."
+        },
+        {
+          "affective": true,
+          "question": "What makes you react? Choose one.",
+          "options": [
+            "Me alegro cuando veo a mis amigos.",
+            "Me enojo si algo es injusto.",
+            "Me aburro si no tengo nada que hacer."
+          ],
+          "feedback": "Reflexive verbs of emotion and change: me alegro, me enojo, me aburro."
         }
       ],
       "quiz": [
@@ -1864,7 +2108,15 @@
         "emociones",
         "health"
       ],
-      "title_en": "Reflexive verbs — Emotions and change of state"
+      "title_en": "Reflexive verbs — Emotions and change of state",
+      "communicative_production": [
+        {
+          "prompt": "Write how you react in a situation, using a reflexive emotion verb (alegrarse, enojarse, aburrirse).",
+          "model": "Me alegro mucho cuando aprendo algo nuevo.",
+          "model_translation": "I get very happy when I learn something new.",
+          "hint": "me alegro, me enojo, me pongo... (reflexive emotion verbs)."
+        }
+      ]
     },
     {
       "id": "por_cause_means_duration",
@@ -1941,6 +2193,16 @@
           ],
           "correct": 0,
           "feedback": "'Por + time expression' indicates duration — how long an action continued. Here it means 'for two years'."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose one.",
+          "options": [
+            "Estudio español por mi trabajo.",
+            "Viajo por avión cuando puedo.",
+            "Estudié inglés por muchos años."
+          ],
+          "feedback": "'por' expresses cause (por mi trabajo), means (por avión) and duration (por años)."
         }
       ],
       "quiz": [
@@ -1990,7 +2252,15 @@
         "hogar",
         "kitchen"
       ],
-      "title_en": "For — Cause, means, and duration"
+      "title_en": "For — Cause, means, and duration",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence using 'por' for a reason, a means, or a duration.",
+          "model": "Camino al trabajo por la mañana por salud.",
+          "model_translation": "I walk to work in the morning for my health.",
+          "hint": "por = cause, means, or duration."
+        }
+      ]
     },
     {
       "id": "para_purpose_destination",
@@ -2073,6 +2343,16 @@
           ],
           "correct": 0,
           "feedback": "'Para + person' expresses the recipient — who something is for or intended to benefit."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose one.",
+          "options": [
+            "Estudio para mejorar mi carrera.",
+            "Este fin de semana salgo para la costa.",
+            "Necesito el informe para el lunes."
+          ],
+          "feedback": "'para' expresses purpose (para mejorar), destination (para la costa) and deadline (para el lunes)."
         }
       ],
       "quiz": [
@@ -2121,7 +2401,15 @@
         "accommodation",
         "movies"
       ],
-      "title_en": "For — Purpose, destination, and deadline"
+      "title_en": "For — Purpose, destination, and deadline",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence using 'para' for a purpose, destination, or deadline.",
+          "model": "Ahorro dinero para viajar el próximo año.",
+          "model_translation": "I'm saving money to travel next year.",
+          "hint": "para = purpose, destination, or deadline."
+        }
+      ]
     },
     {
       "id": "direct_object_pronouns",
@@ -2204,6 +2492,16 @@
           ],
           "correct": 0,
           "feedback": "'Lo' replaces 'el libro'. 'Libro' is masculine singular → direct object pronoun 'lo'."
+        },
+        {
+          "affective": true,
+          "question": "How do you handle your tasks? Choose one.",
+          "options": [
+            "Los correos, los respondo por la mañana.",
+            "La tarea, la hago por la noche.",
+            "Las llamadas, las devuelvo enseguida."
+          ],
+          "feedback": "The direct object pronoun (lo/la/los/las) replaces the object: los respondo, la hago."
         }
       ],
       "quiz": [
@@ -2244,7 +2542,15 @@
         "kitchen",
         "economia"
       ],
-      "title_en": "Direct object pronouns"
+      "title_en": "Direct object pronouns",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence replacing a direct object with lo/la/los/las.",
+          "model": "¿El informe? Lo termino esta tarde.",
+          "model_translation": "The report? I'll finish it this afternoon.",
+          "hint": "lo/la/los/las replace the direct object."
+        }
+      ]
     },
     {
       "id": "indirect_object_pronouns",
@@ -2321,6 +2627,16 @@
           ],
           "correct": 0,
           "feedback": "'Me' is the indirect object pronoun — you are asking someone to explain the homework to you (to me). 'La tarea' is the direct object."
+        },
+        {
+          "affective": true,
+          "question": "Who do you communicate with? Choose one.",
+          "options": [
+            "A mi familia le escribo cada semana.",
+            "A mis amigos les mando mensajes.",
+            "A mi jefe le hablo con respeto."
+          ],
+          "feedback": "The indirect object pronoun (le/les) marks the recipient: le escribo, les mando."
         }
       ],
       "quiz": [
@@ -2360,7 +2676,15 @@
       "topics": [
         "accommodation"
       ],
-      "title_en": "Indirect object pronouns"
+      "title_en": "Indirect object pronouns",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence with an indirect object pronoun (le/les) for the recipient.",
+          "model": "A mi madre le regalo flores en su cumpleaños.",
+          "model_translation": "I give my mother flowers on her birthday.",
+          "hint": "le/les mark to whom something is given or said."
+        }
+      ]
     },
     {
       "id": "question_words",
@@ -2443,6 +2767,16 @@
           ],
           "correct": 0,
           "feedback": "'¿Dónde?' asks about location (where). '¿Cuándo?' asks about time (when). All Spanish question words carry a written accent."
+        },
+        {
+          "affective": true,
+          "question": "Which would you ask someone new? Choose one.",
+          "options": [
+            "¿Cómo te llamas?",
+            "¿De dónde eres?",
+            "¿Dónde vives?"
+          ],
+          "feedback": "Question words open the question: cómo, dónde, cuándo, qué."
         }
       ],
       "quiz": [
@@ -2508,7 +2842,15 @@
         "health",
         "oficina"
       ],
-      "title_en": "Question words — Basic interrogatives"
+      "title_en": "Question words — Basic interrogatives",
+      "communicative_production": [
+        {
+          "prompt": "Write a question you would ask someone you just met, using a question word.",
+          "model": "¿Cuál es tu comida favorita?",
+          "model_translation": "What is your favorite food?",
+          "hint": "cómo, dónde, cuándo, qué, cuál at the start."
+        }
+      ]
     },
     {
       "id": "question_cual_vs_que",
@@ -2591,6 +2933,16 @@
           ],
           "correct": 0,
           "feedback": "'¿Cuál es tu película favorita?' asks you to pick one from a set (all the films you have seen). When 'ser' is not followed by a noun, use '¿Cuál?'."
+        },
+        {
+          "affective": true,
+          "question": "Which would you ask? Choose one.",
+          "options": [
+            "¿Qué música te gusta?",
+            "¿Cuál es tu película favorita?",
+            "¿Qué haces los fines de semana?"
+          ],
+          "feedback": "'qué' asks for a definition or goes with a noun, 'cuál' asks you to choose among options."
         }
       ],
       "quiz": [
@@ -2636,7 +2988,15 @@
         "accountability",
         "technology"
       ],
-      "title_en": "What vs. Which — Choosing the right word"
+      "title_en": "What vs. Which — Choosing the right word",
+      "communicative_production": [
+        {
+          "prompt": "Write a question choosing correctly between 'qué' and 'cuál'.",
+          "model": "¿Cuál prefieres, el té o el café?",
+          "model_translation": "Which do you prefer, tea or coffee?",
+          "hint": "qué + noun or definition, cuál to choose among options."
+        }
+      ]
     },
     {
       "id": "gustar_structure",
@@ -2707,6 +3067,16 @@
           ],
           "correct": 0,
           "feedback": "'Las reuniones largas' is plural, so the verb becomes 'gustan'. The person (me) does not affect the conjugation."
+        },
+        {
+          "affective": true,
+          "question": "What do you like? Choose one.",
+          "options": [
+            "Me gusta el café.",
+            "Me gustan las películas de acción.",
+            "Me encanta viajar."
+          ],
+          "feedback": "With gustar, the thing liked is the subject: me gusta el café, me gustan las películas."
         }
       ],
       "quiz": [
@@ -2752,7 +3122,15 @@
         "movies",
         "technology"
       ],
-      "title_en": "Gustar — Verb that works backwards"
+      "title_en": "Gustar — Verb that works backwards",
+      "communicative_production": [
+        {
+          "prompt": "Write what you like or love, using gustar/encantar (mind gusta vs gustan).",
+          "model": "Me gustan los libros y me encanta la música.",
+          "model_translation": "I like books and I love music.",
+          "hint": "gusta + singular or infinitive, gustan + plural."
+        }
+      ]
     },
     {
       "id": "hay_existence",
@@ -2823,6 +3201,16 @@
           ],
           "correct": 0,
           "feedback": "Respond with 'hay' to questions about existence. 'Está' would require a specific, known item (la leche está…)."
+        },
+        {
+          "affective": true,
+          "question": "What is near your home? Choose one.",
+          "options": [
+            "Hay un parque cerca.",
+            "Hay muchos restaurantes.",
+            "No hay estacionamiento."
+          ],
+          "feedback": "'hay' expresses existence (there is / there are) and never changes form."
         }
       ],
       "quiz": [
@@ -2876,7 +3264,15 @@
         "technology",
         "theater"
       ],
-      "title_en": "Hay — Expressing existence"
+      "title_en": "Hay — Expressing existence",
+      "communicative_production": [
+        {
+          "prompt": "Write about what there is (or isn't) in your neighborhood, using 'hay'.",
+          "model": "En mi barrio hay una plaza y varios cafés.",
+          "model_translation": "In my neighborhood there is a square and several cafés.",
+          "hint": "hay = there is / there are (invariable)."
+        }
+      ]
     },
     {
       "id": "ser_estar_adjectives",
@@ -2947,6 +3343,16 @@
           ],
           "correct": 0,
           "feedback": "'Estar listo' = to be ready/prepared (a temporary state). 'Ser listo' = to be clever (a personality trait)."
+        },
+        {
+          "affective": true,
+          "question": "Which is true right now? Choose one.",
+          "options": [
+            "Estoy aburrido en este momento.",
+            "Soy una persona tranquila.",
+            "La película está muy interesante."
+          ],
+          "feedback": "ser + adjective = a trait, estar + adjective = a state or opinion of the moment."
         }
       ],
       "quiz": [
@@ -2997,7 +3403,15 @@
         "gym",
         "accountability"
       ],
-      "title_en": "Ser vs. Estar — Adjectives that change meaning"
+      "title_en": "Ser vs. Estar — Adjectives that change meaning",
+      "communicative_production": [
+        {
+          "prompt": "Write two sentences with the same adjective, one with ser and one with estar.",
+          "model": "Mi trabajo es interesante, pero hoy estoy cansado.",
+          "model_translation": "My job is interesting, but today I'm tired.",
+          "hint": "ser = trait, estar = current state (aburrido: boring vs bored)."
+        }
+      ]
     },
     {
       "id": "stem_changing_eie",
@@ -3068,6 +3482,16 @@
           ],
           "correct": 0,
           "feedback": "The stress in 'pensamos' falls on '-a-' of the ending. When the stressed syllable is not in the stem, no vowel change happens."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose one.",
+          "options": [
+            "Prefiero el té al café.",
+            "Empiezo a trabajar temprano.",
+            "Pienso que el descanso es importante."
+          ],
+          "feedback": "Stem-changing e→ie: prefiero, empiezas, piensa (the e becomes ie in the stressed stem)."
         }
       ],
       "quiz": [
@@ -3121,7 +3545,15 @@
         "museums",
         "theater"
       ],
-      "title_en": "Stem-changing verbs — e→ie"
+      "title_en": "Stem-changing verbs — e→ie",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence with an e→ie stem-changing verb (preferir, empezar, pensar, querer).",
+          "model": "Prefiero caminar cuando el clima está agradable.",
+          "model_translation": "I prefer to walk when the weather is nice.",
+          "hint": "e→ie in the stressed syllable: quiero, prefiero, empiezo."
+        }
+      ]
     },
     {
       "id": "futuro_simple",
@@ -3192,6 +3624,16 @@
           ],
           "correct": 0,
           "feedback": "The future tense can express present probability: 'Estará en el bolso' = 'It's probably in the bag' / 'I wonder if it's in the bag'."
+        },
+        {
+          "affective": true,
+          "question": "What will you do next year? Choose one.",
+          "options": [
+            "Viajaré a un país nuevo.",
+            "Aprenderé una habilidad nueva.",
+            "Cambiaré algunos hábitos."
+          ],
+          "feedback": "Simple future: infinitive + -é, -ás, -á (viajaré, aprenderás)."
         }
       ],
       "quiz": [
@@ -3244,7 +3686,15 @@
         "transportation",
         "technology"
       ],
-      "title_en": "Simple Future — Plans and predictions"
+      "title_en": "Simple Future — Plans and predictions",
+      "communicative_production": [
+        {
+          "prompt": "Write a plan or prediction for next year, using the simple future.",
+          "model": "El próximo año empezaré a estudiar otro idioma.",
+          "model_translation": "Next year I'll start studying another language.",
+          "hint": "infinitive + é/ás/á/emos/án."
+        }
+      ]
     },
     {
       "id": "condicional_simple",
@@ -3315,6 +3765,16 @@
           ],
           "correct": 0,
           "feedback": "When reporting speech ('dijo que…'), a future idea becomes conditional: 'Llegaré' (direct) → 'dijo que llegaría' (reported)."
+        },
+        {
+          "affective": true,
+          "question": "What would you do in an ideal world? Choose one.",
+          "options": [
+            "Viviría cerca del mar.",
+            "Trabajaría menos horas.",
+            "Viajaría por todo el mundo."
+          ],
+          "feedback": "Conditional: infinitive + -ía (viviría, trabajarías)."
         }
       ],
       "quiz": [
@@ -3365,7 +3825,15 @@
         "music",
         "theater"
       ],
-      "title_en": "Conditional — Hypothetical situations"
+      "title_en": "Conditional — Hypothetical situations",
+      "communicative_production": [
+        {
+          "prompt": "Write something hypothetical using the simple conditional.",
+          "model": "Con más tiempo libre, aprendería a tocar el piano.",
+          "model_translation": "With more free time, I would learn to play the piano.",
+          "hint": "infinitive + ía/ías/ía/íamos/ían."
+        }
+      ]
     },
     {
       "id": "preterito_perfecto",
@@ -3436,6 +3904,16 @@
           ],
           "correct": 0,
           "feedback": "'Esta mañana' (this morning) is a time period that includes the present moment. In Spain, pretérito perfecto is used for actions within still-current time periods."
+        },
+        {
+          "affective": true,
+          "question": "What have you done today? Choose one.",
+          "options": [
+            "He tomado un café.",
+            "He revisado mis correos.",
+            "Todavía no he salido de casa."
+          ],
+          "feedback": "Present perfect: he/has/ha + participle for the recent past (he tomado, has revisado)."
         }
       ],
       "quiz": [
@@ -3479,7 +3957,15 @@
         "technology",
         "gym"
       ],
-      "title_en": "Present Perfect — Recent past with haber"
+      "title_en": "Present Perfect — Recent past with haber",
+      "communicative_production": [
+        {
+          "prompt": "Write something you have done today, using the present perfect (haber + participle).",
+          "model": "Hoy he terminado un libro que me encantó.",
+          "model_translation": "Today I finished a book that I loved.",
+          "hint": "he/has/ha + participle (-ado/-ido)."
+        }
+      ]
     },
     {
       "id": "imperfecto_subjuntivo",
@@ -3550,6 +4036,16 @@
           ],
           "correct": 0,
           "feedback": "The rule of 'sequence of tenses': when the main verb is in a past tense (pedía), the subordinate subjunctive must also be past (llegaran)."
+        },
+        {
+          "affective": true,
+          "question": "What would you wish for? Choose one.",
+          "options": [
+            "Si tuviera más tiempo, viajaría más.",
+            "Ojalá pudiera vivir cerca del mar.",
+            "Me gustaría que el día durara más."
+          ],
+          "feedback": "Imperfect subjunctive for hypotheticals: tuviera, pudiera, durara."
         }
       ],
       "quiz": [
@@ -3593,7 +4089,15 @@
         "accommodation",
         "transportation"
       ],
-      "title_en": "Imperfect Subjunctive — Past hypotheticals"
+      "title_en": "Imperfect Subjunctive — Past hypotheticals",
+      "communicative_production": [
+        {
+          "prompt": "Write a hypothetical wish using the imperfect subjunctive (si + tuviera/pudiera).",
+          "model": "Si viviera en otro país, aprendería el idioma rápido.",
+          "model_translation": "If I lived in another country, I would learn the language fast.",
+          "hint": "-ara/-iera: tuviera, fuera, pudiera."
+        }
+      ]
     },
     {
       "id": "voz_pasiva",
@@ -3664,6 +4168,16 @@
           ],
           "correct": 0,
           "feedback": "In se-pasiva, the verb agrees with the grammatical subject. 'Español' is singular → 'se habla'. If it were 'Se hablan varios idiomas', 'idiomas' (plural) would require 'hablan'."
+        },
+        {
+          "affective": true,
+          "question": "Which is true about things you use? Choose one.",
+          "options": [
+            "Aquí se habla español.",
+            "El café se cultiva en muchos países.",
+            "Este producto fue hecho a mano."
+          ],
+          "feedback": "Passive with 'se' (se habla, se cultiva) or ser + participle (fue hecho)."
         }
       ],
       "quiz": [
@@ -3704,7 +4218,15 @@
         "accountability",
         "technology"
       ],
-      "title_en": "Passive Voice — ser + participle and se pasiva"
+      "title_en": "Passive Voice — ser + participle and se pasiva",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence in the passive (se pasiva or ser + participle).",
+          "model": "En esta región se producen muchas frutas.",
+          "model_translation": "In this region a lot of fruit is produced.",
+          "hint": "se + verb, or ser + participle (fue construido)."
+        }
+      ]
     },
     {
       "id": "clausulas_relativo",
@@ -3775,6 +4297,16 @@
           ],
           "correct": 0,
           "feedback": "'Lo que' = 'what' / 'that which'. It refers to an abstract idea or action, not a specific noun. It is neuter and invariable."
+        },
+        {
+          "affective": true,
+          "question": "Which describes someone you know? Choose one.",
+          "options": [
+            "Tengo un amigo que vive en el extranjero.",
+            "La persona que más admiro es mi madre.",
+            "Conozco a alguien cuyo trabajo es fascinante."
+          ],
+          "feedback": "Relative clauses join ideas: que, quien, el que, cuyo."
         }
       ],
       "quiz": [
@@ -3815,7 +4347,15 @@
         "pensamientos_opiniones",
         "supermarket"
       ],
-      "title_en": "Relative Clauses — que, quien, el que, cuyo"
+      "title_en": "Relative Clauses — que, quien, el que, cuyo",
+      "communicative_production": [
+        {
+          "prompt": "Describe a person or thing with a relative clause (que, quien, cuyo).",
+          "model": "Trabajo en una empresa que valora la creatividad.",
+          "model_translation": "I work at a company that values creativity.",
+          "hint": "que (general), quien (people), cuyo (whose)."
+        }
+      ]
     },
     {
       "id": "pluscuamperfecto",
@@ -3886,6 +4426,16 @@
           ],
           "correct": 0,
           "feedback": "Both verbs are in the pluperfect, giving them the same relative time level — they are both background past. The causal relationship (porque) tells us the coffee came first logically."
+        },
+        {
+          "affective": true,
+          "question": "Think of a past moment. Choose one.",
+          "options": [
+            "Cuando llegué, la reunión ya había empezado.",
+            "Nunca había probado esa comida antes.",
+            "Para las diez, ya había terminado todo."
+          ],
+          "feedback": "Pluperfect: había + participle for an action before another past one."
         }
       ],
       "quiz": [
@@ -3925,7 +4475,15 @@
       "topics": [
         "conversacion"
       ],
-      "title_en": "Pluperfect — The past before the past"
+      "title_en": "Pluperfect — The past before the past",
+      "communicative_production": [
+        {
+          "prompt": "Write about something that had already happened before another past moment (pluperfect).",
+          "model": "Cuando llamaste, yo ya había salido de casa.",
+          "model_translation": "When you called, I had already left home.",
+          "hint": "había/habías/había + participle."
+        }
+      ]
     },
     {
       "id": "futuro_perfecto",
@@ -3996,6 +4554,16 @@
           ],
           "correct": 0,
           "feedback": "When future perfect is used without a future time reference, it expresses probability about the past or present: 'Habrá salido' = 'She's probably/must have gone out'."
+        },
+        {
+          "affective": true,
+          "question": "What will you have done by the end of the year? Choose one.",
+          "options": [
+            "Para diciembre, habré terminado el curso.",
+            "Para entonces, habré ahorrado lo suficiente.",
+            "Para fin de año, habré leído muchos libros."
+          ],
+          "feedback": "Future perfect: habré + participle for something completed by a future point."
         }
       ],
       "quiz": [
@@ -4034,7 +4602,15 @@
       "topics": [
         "planes"
       ],
-      "title_en": "Future Perfect — Completed future actions"
+      "title_en": "Future Perfect — Completed future actions",
+      "communicative_production": [
+        {
+          "prompt": "Write something you will have completed by a future point (future perfect).",
+          "model": "Para el próximo verano, habré aprendido a nadar mejor.",
+          "model_translation": "By next summer, I will have learned to swim better.",
+          "hint": "habré/habrás/habrá + participle."
+        }
+      ]
     },
     {
       "id": "subjuntivo_avanzado",
@@ -4105,6 +4681,16 @@
           ],
           "correct": 0,
           "feedback": "'Por más que + subjunctive' = 'no matter how much'. It concedes the effort but denies that it changes the outcome. Equivalent patterns: por mucho que, por bien que, por más que."
+        },
+        {
+          "affective": true,
+          "question": "Which reflects how you think? Choose one.",
+          "options": [
+            "Trabajaré hasta que encuentre una solución.",
+            "Aunque sea difícil, no me rindo.",
+            "Por mucho que cueste, vale la pena."
+          ],
+          "feedback": "Advanced subjunctive after hasta que, aunque, por mucho que: encuentre, sea, cueste."
         }
       ],
       "quiz": [
@@ -4146,7 +4732,15 @@
         "kitchen",
         "technology"
       ],
-      "title_en": "Advanced Subjunctive — Sequence and nuance"
+      "title_en": "Advanced Subjunctive — Sequence and nuance",
+      "communicative_production": [
+        {
+          "prompt": "Write a sentence with the subjunctive after aunque / hasta que / por mucho que.",
+          "model": "Aunque llueva mañana, saldré a caminar.",
+          "model_translation": "Even if it rains tomorrow, I'll go out for a walk.",
+          "hint": "aunque/hasta que/por mucho que + subjunctive."
+        }
+      ]
     },
     {
       "id": "marcadores_discursivos",
@@ -4217,6 +4811,16 @@
           ],
           "correct": 0,
           "feedback": "'Puesto que', 'dado que', 'ya que' all introduce a cause or reason (more formal than 'porque'). They present the reason as already known or obvious."
+        },
+        {
+          "affective": true,
+          "question": "How do you connect your ideas? Choose one.",
+          "options": [
+            "Me gusta mi trabajo. Sin embargo, quiero más equilibrio.",
+            "Ahorré poco. Por lo tanto, cambié mis gastos.",
+            "En resumen, fue una buena decisión."
+          ],
+          "feedback": "Discourse markers: sin embargo (contrast), por lo tanto (consequence), en resumen (summary)."
         }
       ],
       "quiz": [
@@ -4261,7 +4865,15 @@
       "topics": [
         "pensamientos_opiniones"
       ],
-      "title_en": "Discourse Markers — Connecting ideas in speech and writing"
+      "title_en": "Discourse Markers — Connecting ideas in speech and writing",
+      "communicative_production": [
+        {
+          "prompt": "Connect two of your ideas with a discourse marker (sin embargo, por lo tanto, además).",
+          "model": "El proyecto fue difícil. Sin embargo, aprendí mucho.",
+          "model_translation": "The project was hard. Nevertheless, I learned a lot.",
+          "hint": "sin embargo, por lo tanto, además, en resumen."
+        }
+      ]
     },
     {
       "id": "estilo_indirecto",
@@ -4332,6 +4944,16 @@
           ],
           "correct": 0,
           "feedback": "Future (haré) → conditional (haría) in past reported speech. 'Prometió que no lo haría.'"
+        },
+        {
+          "affective": true,
+          "question": "How would you report what someone said? Choose one.",
+          "options": [
+            "Dijo que llegaría tarde.",
+            "Me contó que estaba muy feliz.",
+            "Preguntó si podía ayudar."
+          ],
+          "feedback": "Reported speech shifts the tense: 'Llegaré' becomes dijo que llegaría."
         }
       ],
       "quiz": [
@@ -4371,7 +4993,15 @@
       "topics": [
         "conversacion"
       ],
-      "title_en": "Reported Speech — Indirect style tense shifts"
+      "title_en": "Reported Speech — Indirect style tense shifts",
+      "communicative_production": [
+        {
+          "prompt": "Report something someone told you, shifting the tense (estilo indirecto).",
+          "model": "Mi amigo dijo que vendría a visitarme el domingo.",
+          "model_translation": "My friend said he would come to visit me on Sunday.",
+          "hint": "Present→imperfect, future→conditional (dijo que llegaría)."
+        }
+      ]
     }
   ]
 }

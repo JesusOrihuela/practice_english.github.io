@@ -19,9 +19,10 @@ let currentRule  = null;
 /* ── Path mode (set once on load) ── */
 const _pathMode  = new URLSearchParams(window.location.search).get('path') === '1';
 const _pathTopic = new URLSearchParams(window.location.search).get('topic') || null;
-let phase        = 0;          // 0-4 = phases; 5 = complete
+let phase        = 0;          // 0-5 = phases; 6 = complete
 let siIndex      = 0;          // structured input item index
 let prodIndex    = 0;          // production item index
+let expIndex     = 0;          // express (communicative production) item index
 let prodCorrect      = 0;      // count of correct FITB answers
 let prodAnswered     = false;  // whether current FITB was answered
 let currentAutoQuality = 3;   // SRS quality calculated from accuracy (1/3/5)
@@ -34,6 +35,7 @@ const PHASE_IDS = [
   'phase-rule',
   'phase-structured',
   'phase-production',
+  'phase-express',      // communicative / meaningful production (open, self-assessed)
   'phase-complete',
 ];
 
@@ -250,6 +252,7 @@ function startExercise(rule) {
   phase           = 0;
   siIndex         = 0;
   prodIndex       = 0;
+  expIndex        = 0;
   prodCorrect     = 0;
   prodAnswered    = false;
   noticingAnswers = [];
@@ -305,7 +308,8 @@ function goToPhase(p) {
   if (p === 2) { buildPhase3(); }
   if (p === 3) { buildPhase4(); }
   if (p === 4) { buildPhase5(); }
-  if (p === 5) { buildPhaseComplete(); }
+  if (p === 5) { buildPhase6(); }
+  if (p === 6) { buildPhaseComplete(); }
 
   _placeBack();
 }
@@ -317,7 +321,7 @@ function goToPhase(p) {
 function _placeBack() {
   const back = document.getElementById('phase-back-btn');
   if (!back) return;
-  const show = phase >= 1 && phase <= 4 && !_pathMode;
+  const show = phase >= 1 && phase <= 5 && !_pathMode;
   back.classList.toggle('hidden', !show);
   if (!show) return;
   const section = document.getElementById(PHASE_IDS[phase]);
@@ -331,7 +335,7 @@ function updatePhaseDots() {
     const dp = parseInt(dot.dataset.phase, 10);
     dot.classList.toggle('phase-dot--active', dp === phase);
     // Mark as done: either naturally passed, or skipped via re-entry
-    dot.classList.toggle('phase-dot--done', dp < phase && phase <= 4);
+    dot.classList.toggle('phase-dot--done', dp < phase && phase <= 5);
   });
 }
 
@@ -534,16 +538,30 @@ function showStructuredItem(idx) {
   // Drop the previous item's Next button from the action bar (back stays) while this item is unanswered.
   document.querySelectorAll('#structured-actions .structured-next-btn').forEach(x => x.remove());
 
-  const sentEl = document.createElement('div');
-  sentEl.className = 'structured-sentence';
-  sentEl.innerHTML = parseInlineMarkdown(escapeHTML(item.sentence));
-  card.appendChild(sentEl);
+  // Affective items (Processing Instruction: the learner reacts to real meaning while processing the
+  // form) have no single target sentence — the OPTIONS are the meaning-bearing statements. Referential
+  // items show the target sentence + its gloss.
+  const affective = !!item.affective;
+
+  if (item.sentence) {
+    const sentEl = document.createElement('div');
+    sentEl.className = 'structured-sentence';
+    sentEl.innerHTML = parseInlineMarkdown(escapeHTML(item.sentence));
+    card.appendChild(sentEl);
+  }
 
   if (item.translation) {
     const trEl = document.createElement('div');
     trEl.className   = 'structured-translation';
     trEl.textContent = item.translation;
     card.appendChild(trEl);
+  }
+
+  if (affective) {
+    const tag = document.createElement('div');
+    tag.className = 'structured-affective-tag';
+    tag.textContent = AppLang.t('grammar_affective_tag');
+    card.appendChild(tag);
   }
 
   const qEl = document.createElement('div');
@@ -567,17 +585,25 @@ function showStructuredItem(idx) {
       // Disable all
       optsEl.querySelectorAll('.option-btn').forEach(b => { b.disabled = true; });
 
-      const isCorrect = i === item.correct;
-      btn.classList.add(isCorrect ? 'option-btn--correct' : 'option-btn--wrong');
-      if (!isCorrect) {
-        optsEl.querySelectorAll('.option-btn')[item.correct].classList.add('option-btn--correct');
+      if (affective) {
+        // No right/wrong — any answer is valid; just mark the learner's choice and acknowledge.
+        btn.classList.add('option-btn--chosen');
+        const fb = document.createElement('div');
+        fb.className = 'structured-feedback';
+        fb.textContent = item.feedback;
+        card.appendChild(fb);
+      } else {
+        const isCorrect = i === item.correct;
+        btn.classList.add(isCorrect ? 'option-btn--correct' : 'option-btn--wrong');
+        if (!isCorrect) {
+          optsEl.querySelectorAll('.option-btn')[item.correct].classList.add('option-btn--correct');
+        }
+        // Show feedback
+        const fb = document.createElement('div');
+        fb.className = 'structured-feedback' + (isCorrect ? '' : ' structured-feedback--wrong');
+        fb.textContent = item.feedback;
+        card.appendChild(fb);
       }
-
-      // Show feedback
-      const fb = document.createElement('div');
-      fb.className = 'structured-feedback' + (isCorrect ? '' : ' structured-feedback--wrong');
-      fb.textContent = item.feedback;
-      card.appendChild(fb);
 
       const advance = () => {
         siIndex++;
@@ -747,7 +773,102 @@ function showProductionItem(idx) {
 }
 
 /* ══════════════════════════════════════════
-   PHASE 6 — Complete / Rating
+   PHASE 6 — Express (communicative / meaningful production, self-assessed)
+
+   Skill-acquisition theory (DeKeyser) and the practice progression mechanical → meaningful →
+   communicative (Paulston; Ellis 2006) call for open production, not only mechanical drills. With no
+   backend to grade free text, this is a SELF-ASSESSED step: the learner produces their own sentence
+   using the structure, then reveals a model answer + gloss and self-checks against it.
+══════════════════════════════════════════ */
+function buildPhase6() {
+  expIndex = 0;
+  showExpressItem(0);
+}
+
+function showExpressItem(idx) {
+  const items = currentRule.communicative_production || [];
+  const total = items.length;
+
+  if (idx >= total) { goToPhase(6); return; }   // nothing to express → straight to complete
+
+  const item = items[idx];
+  const card = document.getElementById('express-card');
+  if (!card) return;
+  card.innerHTML = '';
+  const counter = document.getElementById('express-counter');
+  if (counter) counter.textContent = AppLang.t('cta_exercise_n', { cur: idx + 1, total });
+
+  // The prompt: a source-language instruction to produce something real using the structure.
+  const promptEl = document.createElement('div');
+  promptEl.className = 'express-prompt';
+  promptEl.textContent = item.prompt;
+  card.appendChild(promptEl);
+
+  if (item.hint) {
+    const hintEl = document.createElement('div');
+    hintEl.className = 'express-hint';
+    hintEl.textContent = item.hint;
+    card.appendChild(hintEl);
+  }
+
+  // The learner's own production (free text — not auto-graded; it is theirs to compare).
+  const ta = document.createElement('textarea');
+  ta.className = 'express-input';
+  ta.rows = 2;
+  ta.autocomplete = 'off';
+  ta.spellcheck = false;
+  ta.setAttribute('aria-label', AppLang.t('grammar_express_placeholder'));
+  ta.placeholder = AppLang.t('grammar_express_placeholder');
+  card.appendChild(ta);
+
+  // Reveal-model button (self-assessment: compare your sentence to a model).
+  const showBtn = document.createElement('button');
+  showBtn.className = 'express-model-btn';
+  showBtn.textContent = AppLang.t('grammar_show_model');
+  card.appendChild(showBtn);
+
+  const bar = document.getElementById('express-actions');
+  bar.querySelectorAll('.express-next-btn').forEach(x => x.remove());
+
+  showBtn.addEventListener('click', () => {
+    showBtn.disabled = true;
+    ta.readOnly = true;
+
+    const model = document.createElement('div');
+    model.className = 'express-model';
+    const label = document.createElement('div');
+    label.className = 'express-model-label';
+    label.textContent = AppLang.t('grammar_express_model_label');
+    const modelText = document.createElement('div');
+    modelText.className = 'express-model-text';
+    modelText.textContent = item.model;
+    model.appendChild(label);
+    model.appendChild(modelText);
+    if (item.model_translation) {
+      const mtr = document.createElement('div');
+      mtr.className = 'express-model-translation';
+      mtr.textContent = item.model_translation;
+      model.appendChild(mtr);
+    }
+    const self = document.createElement('div');
+    self.className = 'express-selfcheck';
+    self.textContent = AppLang.t('grammar_express_selfcheck');
+    model.appendChild(self);
+    card.appendChild(model);
+
+    const nextBtn = document.createElement('button');
+    nextBtn.className = 'express-next-btn';
+    nextBtn.textContent = idx + 1 < total ? AppLang.t('btn_next') : AppLang.t('btn_results');
+    nextBtn.addEventListener('click', () => { expIndex++; showExpressItem(expIndex); });
+    bar.appendChild(nextBtn);
+    nextBtn.focus();
+  });
+
+  ta.focus();
+}
+
+/* ══════════════════════════════════════════
+   PHASE 7 — Complete / Rating
 ══════════════════════════════════════════ */
 /* Maps FITB accuracy to SM-2 quality score:
    ≥80% → 5 (Easy)  |  50–79% → 3 (OK)  |  <50% → 1 (Hard) */
