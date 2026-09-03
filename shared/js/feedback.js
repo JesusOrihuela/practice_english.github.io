@@ -417,28 +417,15 @@ const AppFeedback = (() => {
     if (!Array.isArray(variants) || variants.length === 0) return null;
     const shown = variants.filter(v => !(currentText && v && v.text === currentText));
     if (shown.length === 0) return null;
-    const tt = (typeof t === 'function') ? t : (k => k);
-    const frag = document.createDocumentFragment();
-
-    // GROUP by kind with a caption (grammatical FORMS of one word vs ALTERNATIVE WORDS), each group a
-    // bordered table of form|label rows — so the learner sees the whole paradigm at a glance.
-    function group(items, labelKey) {
-      if (!items.length) return;
-      const g = document.createElement('div');
-      g.className = 'alt-group';
-      const lbl = document.createElement('div');
-      lbl.className = 'alt-group-label';
-      lbl.textContent = tt(labelKey);
-      g.appendChild(lbl);
-      const tbl = document.createElement('div');
-      tbl.className = 'variant-table';
-      items.forEach(v => tbl.appendChild(_variantRow(v)));
-      g.appendChild(tbl);
-      frag.appendChild(g);
-    }
-    group(shown.filter(v => _variantKind(v && v.labels) === 'inflectional'), 'var_group_forms');
-    group(shown.filter(v => _variantKind(v && v.labels) !== 'inflectional'), 'var_group_alt');
-    return frag;
+    // ONE bordered table (no group caption): every variant is a form|label row, each row's own tag
+    // (Masculine, Nominative, region flag, Synonym…) already says which kind it is. Inflectional forms
+    // are ordered before lexical ones so a rare mixed word still reads paradigm-then-alternatives.
+    const tbl = document.createElement('div');
+    tbl.className = 'variant-table';
+    const infl = shown.filter(v => _variantKind(v && v.labels) === 'inflectional');
+    const lex  = shown.filter(v => _variantKind(v && v.labels) !== 'inflectional');
+    [...infl, ...lex].forEach(v => tbl.appendChild(_variantRow(v)));
+    return tbl;
   }
 
   return { buildDiff, buildCorrect, buildCloze, buildQuiz, buildAltNote, applyVariantBadge, buildWordVariants };

@@ -259,12 +259,15 @@ function showCard(index) {
   document.getElementById('word-example').textContent    = word.example || (word.gloss_example?.[_srcCode] || '');
   document.getElementById('word-translation').textContent = _displayHint;
 
-  // Variants now live on the FRONT (all forms, each tagged), so the back's separate breakdown would
-  // just duplicate them — keep the back for the meaning only.
+  // The BACK also shows the variants table (below the meaning), so the alternatives sit alongside the
+  // definition and the back never has an empty gap. Same table as the front (built fresh).
   const _vBlock = document.getElementById('fc-variants-block');
   const _vHost  = document.getElementById('word-variants');
   if (_vHost) _vHost.textContent = '';
-  if (_vBlock) _vBlock.classList.add('hidden');
+  const _vBack = (word.variants && word.variants.length && typeof AppFeedback !== 'undefined' && AppFeedback.buildWordVariants)
+    ? AppFeedback.buildWordVariants(word.variants, null, AppLang.t) : null;
+  if (_vBack && _vHost) { _vHost.appendChild(_vBack); _vBlock && _vBlock.classList.remove('hidden'); }
+  else if (_vBlock) { _vBlock.classList.add('hidden'); }
 
   document.getElementById('next-btn').classList.add('hidden');
   document.getElementById('back-to-path')?.classList.add('hidden');

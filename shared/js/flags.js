@@ -190,33 +190,34 @@ const AppFlags = (() => {
     wrap.setAttribute('aria-hidden', 'true');
     if (!n) return wrap;
 
-    // Overlap by HALF the covered flag's width so EXACTLY half of every covered flag shows, whatever
-    // its aspect. Flags share one vertical line (clean half, no partial-vertical-overlap artefact).
-    // pos[i] = { x, z }. n=3: the MIDDLE flag (México in es/mx/ar) is front-centre and ON TOP, covering
-    // the inner half of each neighbour; the last (Argentina) is behind on the left, the first on the
-    // right. n=2: the second flag covers the first's right half and sits on top.
+    // ZIGZAG (vertical levels) + overlap by HALF the covered flag's width, so a covered flag never
+    // shows less than half whatever its aspect. pos[i] = { x, y, z }.
+    //   n=2 → diagonal: back flag top-left; front flag down-right, covering the back's right half.
+    //   n=3 → staircase: last flag (Argentina) top-left/back; first (España) middle-right; middle flag
+    //         (México) bottom-centre and ON TOP, covering the inner half of each neighbour (uncovered).
+    const DY = 4;                                         // vertical step between levels
     let pos = [];
     if (n === 1) {
-      pos[0] = { x: 0, z: 1 };
+      pos[0] = { x: 0, y: 0, z: 1 };
     } else if (n === 2) {
-      pos[0] = { x: 0,        z: 1 };
-      pos[1] = { x: w(0) / 2, z: 2 };                     // covers flag 0's right half
+      pos[0] = { x: 0,        y: 0,  z: 1 };
+      pos[1] = { x: w(0) / 2, y: DY, z: 2 };
     } else if (n === 3) {
-      pos[2] = { x: 0,                          z: 1 };   // last (ar): back, left
-      pos[1] = { x: w(2) / 2,                   z: 3 };   // middle (mx): front, covers ar's right half
-      pos[0] = { x: w(2) / 2 + w(1) - w(0) / 2, z: 2 };   // first (es): right, mx covers its left half
+      pos[2] = { x: 0,                          y: 0,      z: 1 };
+      pos[0] = { x: w(2) / 2 + w(1) - w(0) / 2, y: DY,     z: 2 };
+      pos[1] = { x: w(2) / 2,                   y: 2 * DY, z: 3 };
     } else {
-      let x = 0;                                          // 4+: half-overlap cascade, later on top
-      for (let i = 0; i < n; i++) { pos[i] = { x: x, z: i + 1 }; x += w(i) / 2; }
+      let x = 0;                                          // 4+: half-overlap zigzag cascade
+      for (let i = 0; i < n; i++) { pos[i] = { x: x, y: (i % 2) * DY, z: i + 1 }; x += w(i) / 2; }
     }
 
-    var minX = Infinity, maxX = -Infinity;
-    list.forEach(function (code, i) { minX = Math.min(minX, pos[i].x); maxX = Math.max(maxX, pos[i].x + w(i)); });
-    var top = (HC - FH) / 2;                              // one shared, vertically centred line
+    var minX = Infinity, maxX = -Infinity, maxY = 0;
+    list.forEach(function (code, i) { minX = Math.min(minX, pos[i].x); maxX = Math.max(maxX, pos[i].x + w(i)); maxY = Math.max(maxY, pos[i].y); });
+    var offY = (HC - (FH + maxY)) / 2;                    // centre the whole cascade in the fixed height
     list.forEach(function (code, i) {
       var img = flagImg(code, 'flag-layer');
       img.style.left = (pos[i].x - minX) + 'px';
-      img.style.top  = top + 'px';
+      img.style.top  = (offY + pos[i].y) + 'px';
       img.style.zIndex = String(pos[i].z);
       wrap.appendChild(img);
     });
