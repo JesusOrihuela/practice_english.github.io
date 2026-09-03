@@ -21,21 +21,25 @@
         {
           "speaker": "ANNA",
           "text": "Mitä sinä juot?",
+          "translation": "What are you drinking?",
           "highlight": false
         },
         {
           "speaker": "BEN",
           "text": "Juon **vettä**.",
+          "translation": "I'm drinking (some) water.",
           "highlight": true
         },
         {
           "speaker": "ANNA",
           "text": "Puhutko **englantia**?",
+          "translation": "Do you speak English?",
           "highlight": true
         },
         {
           "speaker": "BEN",
           "text": "Puhun vähän **suomea**.",
+          "translation": "I speak a little Finnish.",
           "highlight": true
         }
       ],
@@ -52,6 +56,7 @@
       "structured_input": [
         {
           "sentence": "Juon vettä.",
+          "translation": "I'm drinking (some) water.",
           "question": "Why is 'vettä' in the partitive?",
           "options": [
             "The object is an unbounded, uncountable amount (some water)",
@@ -65,7 +70,8 @@
       ],
       "quiz": [
         {
-          "sentence": "Puhun ___. (englanti = English)",
+          "sentence": "Puhun ___. (englanti)",
+          "translation": "I speak English.",
           "answer": "englantia",
           "accepted": [
             "englantia"
@@ -74,7 +80,8 @@
           "contrast": ""
         },
         {
-          "sentence": "Juon ___. (vesi = water)",
+          "sentence": "Juon ___. (vesi)",
+          "translation": "I'm drinking (some) water.",
           "answer": "vettä",
           "accepted": [
             "vettä"

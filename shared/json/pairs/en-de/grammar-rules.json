@@ -35,21 +35,25 @@
         {
           "speaker": "ANNA",
           "text": "Ich suche **einen** Kellner.",
+          "translation": "I'm looking for a waiter.",
           "highlight": true
         },
         {
           "speaker": "TOM",
           "text": "Dort ist **der** Kellner. Ich sehe **den** Mann am Fenster.",
+          "translation": "There's the waiter. I see the man by the window.",
           "highlight": true
         },
         {
           "speaker": "ANNA",
           "text": "Gut. Hast du **einen** Kugelschreiber?",
+          "translation": "Good. Do you have a pen?",
           "highlight": true
         },
         {
           "speaker": "TOM",
           "text": "Ja, ich habe **einen** Kugelschreiber.",
+          "translation": "Yes, I have a pen.",
           "highlight": true
         }
       ],
@@ -66,6 +70,7 @@
       "structured_input": [
         {
           "sentence": "Ich habe einen Bruder.",
+          "translation": "I have a brother.",
           "question": "Why is 'einen' used instead of 'ein'?",
           "options": [
             "Because 'Bruder' is a masculine direct object (accusative)",
@@ -80,6 +85,7 @@
       "quiz": [
         {
           "sentence": "Ich sehe ___ Mann.",
+          "translation": "I see the man.",
           "answer": "den",
           "accepted": [
             "den"
@@ -89,6 +95,7 @@
         },
         {
           "sentence": "Ich habe ___ Bruder.",
+          "translation": "I have a brother.",
           "answer": "einen",
           "accepted": [
             "einen"
@@ -112,16 +119,19 @@
         {
           "speaker": "LEA",
           "text": "**Der** Mann und **die** Frau lesen.",
+          "translation": "The man and the woman are reading.",
           "highlight": true
         },
         {
           "speaker": "JAN",
           "text": "Und **das** Kind spielt.",
+          "translation": "And the child is playing.",
           "highlight": true
         },
         {
           "speaker": "LEA",
           "text": "Meine Schwester ist **die** Lehrerin hier.",
+          "translation": "My sister is the teacher here.",
           "highlight": true
         }
       ],
@@ -138,6 +148,7 @@
       "structured_input": [
         {
           "sentence": "Das Kind spielt.",
+          "translation": "The child is playing.",
           "question": "Why is the article 'das'?",
           "options": [
             "Because 'Kind' is a neuter noun",
@@ -152,6 +163,7 @@
       "quiz": [
         {
           "sentence": "___ Frau arbeitet.",
+          "translation": "The woman is working.",
           "answer": "die",
           "accepted": [
             "die"
@@ -161,6 +173,7 @@
         },
         {
           "sentence": "___ Mann liest.",
+          "translation": "The man is reading.",
           "answer": "der",
           "accepted": [
             "der"
@@ -184,16 +197,19 @@
         {
           "speaker": "MIA",
           "text": "Wann **stehst** du **auf**?",
+          "translation": "When do you get up?",
           "highlight": true
         },
         {
           "speaker": "BEN",
           "text": "Ich **stehe** um sieben Uhr **auf**.",
+          "translation": "I get up at seven o'clock.",
           "highlight": true
         },
         {
           "speaker": "MIA",
           "text": "Der Zug **kommt** um acht **an**.",
+          "translation": "The train arrives at eight.",
           "highlight": true
         }
       ],
@@ -210,6 +226,7 @@
       "structured_input": [
         {
           "sentence": "Ich stehe früh auf.",
+          "translation": "I get up early.",
           "question": "Why is 'auf' at the end of the sentence?",
           "options": [
             "Because 'aufstehen' is a separable verb and the prefix detaches",
@@ -224,6 +241,7 @@
       "quiz": [
         {
           "sentence": "Ich stehe um sieben Uhr ___.",
+          "translation": "I get up at seven o'clock.",
           "answer": "auf",
           "accepted": [
             "auf"
@@ -233,6 +251,7 @@
         },
         {
           "sentence": "Der Zug kommt um acht ___.",
+          "translation": "The train arrives at eight.",
           "answer": "an",
           "accepted": [
             "an"

@@ -351,13 +351,26 @@ function buildPhase1() {
     spk.className   = 'dialogue-speaker';
     spk.textContent = turn.speaker;
 
+    // Text + its L1 gloss stack in a column so the speaker stays in its own left column.
+    const body = document.createElement('div');
+    body.className = 'dialogue-body';
+
     const txt = document.createElement('span');
     txt.className  = 'dialogue-text';
     // **word** → <span class="dialogue-target"> for target structure highlighting
     txt.innerHTML = parseDialogueText(escapeHTML(turn.text));
+    body.appendChild(txt);
+
+    // L1 translation (source language) so a distant-target sentence is never opaque.
+    if (turn.translation) {
+      const tr = document.createElement('span');
+      tr.className   = 'dialogue-translation';
+      tr.textContent = turn.translation;
+      body.appendChild(tr);
+    }
 
     div.appendChild(spk);
-    div.appendChild(txt);
+    div.appendChild(body);
     card.appendChild(div);
   });
 }
@@ -526,6 +539,13 @@ function showStructuredItem(idx) {
   sentEl.innerHTML = parseInlineMarkdown(escapeHTML(item.sentence));
   card.appendChild(sentEl);
 
+  if (item.translation) {
+    const trEl = document.createElement('div');
+    trEl.className   = 'structured-translation';
+    trEl.textContent = item.translation;
+    card.appendChild(trEl);
+  }
+
   const qEl = document.createElement('div');
   qEl.className   = 'structured-question';
   qEl.textContent = item.question;
@@ -644,6 +664,15 @@ function showProductionItem(idx) {
     }
   });
   card.appendChild(sentEl);
+
+  // L1 gloss of the sentence: the meaning is given (the challenge is the grammatical FORM, not the
+  // meaning), so a distant-target sentence is understandable instead of opaque.
+  if (item.translation) {
+    const trEl = document.createElement('div');
+    trEl.className   = 'production-translation';
+    trEl.textContent = item.translation;
+    card.appendChild(trEl);
+  }
 
   // Check button in its own row below the sentence
   const checkBtn = document.createElement('button');
