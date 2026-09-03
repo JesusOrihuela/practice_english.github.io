@@ -54,7 +54,7 @@
     },
     {
       "id": "painter",
-      "term": "pintor / pintora",
+      "term": "pintor",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -68,7 +68,23 @@
       },
       "gloss_example": {
         "en": "The painter sold three works this month."
-      }
+      },
+      "variants": [
+        {
+          "text": "pintor",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "pintor"
+        },
+        {
+          "text": "pintora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "pintora"
+        }
+      ]
     },
     {
       "id": "culture",
@@ -216,7 +232,7 @@
     },
     {
       "id": "sculptor",
-      "term": "escultor / escultora",
+      "term": "escultor",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -230,7 +246,23 @@
       },
       "gloss_example": {
         "en": "The sculptor carves the stone carefully."
-      }
+      },
+      "variants": [
+        {
+          "text": "escultor",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "escultor"
+        },
+        {
+          "text": "escultora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "escultora"
+        }
+      ]
     }
   ]
 }

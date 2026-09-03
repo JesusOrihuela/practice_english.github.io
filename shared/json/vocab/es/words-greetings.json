@@ -144,7 +144,7 @@
     },
     {
       "id": "acquaintance",
-      "term": "conocido / conocida",
+      "term": "conocido",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -158,7 +158,23 @@
       },
       "gloss_example": {
         "en": "She is just an acquaintance. We met once at a conference."
-      }
+      },
+      "variants": [
+        {
+          "text": "conocido",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "conocido"
+        },
+        {
+          "text": "conocida",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "conocida"
+        }
+      ]
     },
     {
       "id": "sincerely",

@@ -84,6 +84,9 @@ const es = {
     if (la.length > 2 && lb.length > 2 && la.slice(0, -2) === lb.slice(0, -2) &&
         ((la.endsWith('os') && lb.endsWith('as')) || (la.endsWith('as') && lb.endsWith('os')))) return true; // niños/niñas
     if (lb === la + 'a' || la === lb + 'a') return true;   // profesor/profesora, español/española
+    if (la.length > 2 && lb.length > 2 &&                    // jefe/jefa, presidente/presidenta (-e → -a)
+        ((la.endsWith('e') && lb === la.slice(0, -1) + 'a') ||
+         (lb.endsWith('e') && la === lb.slice(0, -1) + 'a'))) return true;
     return false;
   },
 

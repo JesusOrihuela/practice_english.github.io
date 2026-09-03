@@ -36,7 +36,7 @@
     },
     {
       "id": "worker",
-      "term": "trabajador / trabajadora",
+      "term": "trabajador",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -50,7 +50,23 @@
       },
       "gloss_example": {
         "en": "The factory workers asked for higher pay."
-      }
+      },
+      "variants": [
+        {
+          "text": "trabajador",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "trabajador"
+        },
+        {
+          "text": "trabajadora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "trabajadora"
+        }
+      ]
     },
     {
       "id": "industry",
@@ -178,7 +194,7 @@
     },
     {
       "id": "boss",
-      "term": "jefe / jefa",
+      "term": "jefe",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -192,11 +208,27 @@
       },
       "gloss_example": {
         "en": "My boss approved the day off."
-      }
+      },
+      "variants": [
+        {
+          "text": "jefe",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "jefe"
+        },
+        {
+          "text": "jefa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "jefa"
+        }
+      ]
     },
     {
       "id": "partner_business",
-      "term": "socio / socia",
+      "term": "socio",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -210,7 +242,23 @@
       },
       "gloss_example": {
         "en": "She started the firm with two partners."
-      }
+      },
+      "variants": [
+        {
+          "text": "socio",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "socio"
+        },
+        {
+          "text": "socia",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "socia"
+        }
+      ]
     },
     {
       "id": "interview",
@@ -484,7 +532,7 @@
     },
     {
       "id": "director",
-      "term": "director / directora",
+      "term": "director",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -498,7 +546,23 @@
       },
       "gloss_example": {
         "en": "The director spoke with the team."
-      }
+      },
+      "variants": [
+        {
+          "text": "director",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "director"
+        },
+        {
+          "text": "directora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "directora"
+        }
+      ]
     },
     {
       "id": "compania",
@@ -608,7 +672,7 @@
     },
     {
       "id": "cashier",
-      "term": "cajero / cajera",
+      "term": "cajero",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -622,7 +686,23 @@
       },
       "gloss_example": {
         "en": "The cashier scanned all my items and put them in a bag."
-      }
+      },
+      "variants": [
+        {
+          "text": "cajero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "cajero"
+        },
+        {
+          "text": "cajera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "cajera"
+        }
+      ]
     },
     {
       "id": "anuncio",
@@ -644,7 +724,7 @@
     },
     {
       "id": "lawyer",
-      "term": "abogado / abogada",
+      "term": "abogado",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -658,11 +738,27 @@
       },
       "gloss_example": {
         "en": "The lawyer reviewed the contract carefully."
-      }
+      },
+      "variants": [
+        {
+          "text": "abogado",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "abogado"
+        },
+        {
+          "text": "abogada",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "abogada"
+        }
+      ]
     },
     {
       "id": "nurse",
-      "term": "enfermero / enfermera",
+      "term": "enfermero",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -676,11 +772,27 @@
       },
       "gloss_example": {
         "en": "The nurse gave me the vaccine."
-      }
+      },
+      "variants": [
+        {
+          "text": "enfermero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "enfermero"
+        },
+        {
+          "text": "enfermera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "enfermera"
+        }
+      ]
     },
     {
       "id": "salesperson",
-      "term": "vendedor / vendedora",
+      "term": "vendedor",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -694,11 +806,27 @@
       },
       "gloss_example": {
         "en": "The salesperson showed me several models."
-      }
+      },
+      "variants": [
+        {
+          "text": "vendedor",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "vendedor"
+        },
+        {
+          "text": "vendedora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "vendedora"
+        }
+      ]
     },
     {
       "id": "engineer",
-      "term": "ingeniero / ingeniera",
+      "term": "ingeniero",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -712,11 +840,27 @@
       },
       "gloss_example": {
         "en": "The engineer leads the bridge project."
-      }
+      },
+      "variants": [
+        {
+          "text": "ingeniero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ingeniero"
+        },
+        {
+          "text": "ingeniera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ingeniera"
+        }
+      ]
     },
     {
       "id": "cook",
-      "term": "cocinero / cocinera",
+      "term": "cocinero",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -730,7 +874,23 @@
       },
       "gloss_example": {
         "en": "The cook prepared a delicious dish."
-      }
+      },
+      "variants": [
+        {
+          "text": "cocinero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "cocinero"
+        },
+        {
+          "text": "cocinera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "cocinera"
+        }
+      ]
     },
     {
       "id": "taxi_driver",
@@ -752,7 +912,7 @@
     },
     {
       "id": "firefighter",
-      "term": "bombero / bombera",
+      "term": "bombero",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -766,11 +926,27 @@
       },
       "gloss_example": {
         "en": "The firefighters arrived very quickly."
-      }
+      },
+      "variants": [
+        {
+          "text": "bombero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "bombero"
+        },
+        {
+          "text": "bombera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "bombera"
+        }
+      ]
     },
     {
       "id": "architect",
-      "term": "arquitecto / arquitecta",
+      "term": "arquitecto",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -784,11 +960,27 @@
       },
       "gloss_example": {
         "en": "The architect drew the plans for the house."
-      }
+      },
+      "variants": [
+        {
+          "text": "arquitecto",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "arquitecto"
+        },
+        {
+          "text": "arquitecta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "arquitecta"
+        }
+      ]
     },
     {
       "id": "mechanic",
-      "term": "mecánico / mecánica",
+      "term": "mecánico",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -802,11 +994,27 @@
       },
       "gloss_example": {
         "en": "The mechanic fixed the engine quickly."
-      }
+      },
+      "variants": [
+        {
+          "text": "mecánico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "mecanico"
+        },
+        {
+          "text": "mecánica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "mecanica"
+        }
+      ]
     },
     {
       "id": "photographer",
-      "term": "fotógrafo / fotógrafa",
+      "term": "fotógrafo",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -820,7 +1028,23 @@
       },
       "gloss_example": {
         "en": "The photographer took the wedding photos."
-      }
+      },
+      "variants": [
+        {
+          "text": "fotógrafo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "fotografo"
+        },
+        {
+          "text": "fotógrafa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "fotografa"
+        }
+      ]
     },
     {
       "id": "pilot",
@@ -842,7 +1066,7 @@
     },
     {
       "id": "driver",
-      "term": "conductor / conductora",
+      "term": "conductor",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -856,11 +1080,27 @@
       },
       "gloss_example": {
         "en": "The bus driver was very kind."
-      }
+      },
+      "variants": [
+        {
+          "text": "conductor",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "conductor"
+        },
+        {
+          "text": "conductora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "conductora"
+        }
+      ]
     },
     {
       "id": "employee",
-      "term": "empleado / empleada",
+      "term": "empleado",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -874,11 +1114,27 @@
       },
       "gloss_example": {
         "en": "The employee served the customers kindly."
-      }
+      },
+      "variants": [
+        {
+          "text": "empleado",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "empleado"
+        },
+        {
+          "text": "empleada",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "empleada"
+        }
+      ]
     },
     {
       "id": "civil_servant",
-      "term": "funcionario / funcionaria",
+      "term": "funcionario",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -892,11 +1148,27 @@
       },
       "gloss_example": {
         "en": "The civil servant stamped my documents."
-      }
+      },
+      "variants": [
+        {
+          "text": "funcionario",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "funcionario"
+        },
+        {
+          "text": "funcionaria",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "funcionaria"
+        }
+      ]
     },
     {
       "id": "mathematician",
-      "term": "matemático / matemática",
+      "term": "matemático",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -910,11 +1182,27 @@
       },
       "gloss_example": {
         "en": "The mathematician explained the formula to the students."
-      }
+      },
+      "variants": [
+        {
+          "text": "matemático",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "matematico"
+        },
+        {
+          "text": "matemática",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "matematica"
+        }
+      ]
     },
     {
       "id": "buyer",
-      "term": "comprador / compradora",
+      "term": "comprador",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -928,11 +1216,27 @@
       },
       "gloss_example": {
         "en": "The buyer negotiated a better price with the supplier."
-      }
+      },
+      "variants": [
+        {
+          "text": "comprador",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "comprador"
+        },
+        {
+          "text": "compradora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "compradora"
+        }
+      ]
     },
     {
       "id": "clerk_admin",
-      "term": "administrativo / administrativa",
+      "term": "administrativo",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -946,7 +1250,23 @@
       },
       "gloss_example": {
         "en": "The administrative clerk organizes the office documents."
-      }
+      },
+      "variants": [
+        {
+          "text": "administrativo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "administrativo"
+        },
+        {
+          "text": "administrativa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "administrativa"
+        }
+      ]
     },
     {
       "id": "profession",
@@ -1020,7 +1340,7 @@
     },
     {
       "id": "judge",
-      "term": "juez / jueza",
+      "term": "juez",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -1034,7 +1354,23 @@
       },
       "gloss_example": {
         "en": "The judge listened carefully to both sides."
-      }
+      },
+      "variants": [
+        {
+          "text": "juez",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "juez"
+        },
+        {
+          "text": "jueza",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "jueza"
+        }
+      ]
     },
     {
       "id": "chef",
@@ -1056,7 +1392,7 @@
     },
     {
       "id": "butcher",
-      "term": "carnicero / carnicera",
+      "term": "carnicero",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -1070,11 +1406,27 @@
       },
       "gloss_example": {
         "en": "The butcher prepared the steaks for dinner."
-      }
+      },
+      "variants": [
+        {
+          "text": "carnicero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "carnicero"
+        },
+        {
+          "text": "carnicera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "carnicera"
+        }
+      ]
     },
     {
       "id": "entrepreneur",
-      "term": "empresario / empresaria",
+      "term": "empresario",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -1088,7 +1440,23 @@
       },
       "gloss_example": {
         "en": "The businesswoman opened three shops in one year."
-      }
+      },
+      "variants": [
+        {
+          "text": "empresario",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "empresario"
+        },
+        {
+          "text": "empresaria",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "empresaria"
+        }
+      ]
     },
     {
       "id": "credit_finance",

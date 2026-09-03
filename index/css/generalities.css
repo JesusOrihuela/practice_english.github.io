@@ -1489,17 +1489,29 @@ body.path-mode {
   display: block;
 }
 
-/* Variant list, FORM-FIRST: an aligned two-column table [FORM (prominent)] | [tag(s), small + muted].
-   Reads like a dictionary entry — no pill-in-pill; the tag keeps its small colour icon but no pill bg. */
+/* Variant list as a BORDERED TABLE (a declension paradigm): each row is [FORM, prominent] on the left
+   and [its label(s), muted + small icon] on the right, with dividers between rows. */
 .variant-table {
-  display: grid;
-  grid-template-columns: max-content max-content;
-  row-gap: 14px;
-  column-gap: 18px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--clr-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--clr-surface);
+  min-width: 280px;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.06));
 }
+.variant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--clr-border);
+}
+.variant-row:last-child { border-bottom: none; }
 .variant-form {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--clr-text);
   text-align: left;

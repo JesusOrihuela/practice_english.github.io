@@ -16,7 +16,23 @@
       },
       "gloss_example": {
         "en": "The child laughed while playing in the park."
-      }
+      },
+      "variants": [
+        {
+          "text": "niño",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "nino"
+        },
+        {
+          "text": "niña",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "nina"
+        }
+      ]
     },
     {
       "id": "boy",
@@ -90,7 +106,7 @@
     },
     {
       "id": "kid",
-      "term": "chico / chica",
+      "term": "chico",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -104,11 +120,27 @@
       },
       "gloss_example": {
         "en": "The kid plays in the park with his friends."
-      }
+      },
+      "variants": [
+        {
+          "text": "chico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "chico"
+        },
+        {
+          "text": "chica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "chica"
+        }
+      ]
     },
     {
       "id": "parent",
-      "term": "padre / madre",
+      "term": "padre",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -122,7 +154,23 @@
       },
       "gloss_example": {
         "en": "Every parent wants their children to be happy."
-      }
+      },
+      "variants": [
+        {
+          "text": "padre",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "padre"
+        },
+        {
+          "text": "madre",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "madre"
+        }
+      ]
     },
     {
       "id": "couple",
@@ -144,7 +192,7 @@
     },
     {
       "id": "adult",
-      "term": "adulto / adulta",
+      "term": "adulto",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -158,7 +206,23 @@
       },
       "gloss_example": {
         "en": "Tickets are cheaper for children than for adults."
-      }
+      },
+      "variants": [
+        {
+          "text": "adulto",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "adulto"
+        },
+        {
+          "text": "adulta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "adulta"
+        }
+      ]
     },
     {
       "id": "wife",
@@ -320,7 +384,7 @@
     },
     {
       "id": "friend",
-      "term": "amigo / amiga",
+      "term": "amigo",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -334,7 +398,23 @@
       },
       "gloss_example": {
         "en": "She is my best friend."
-      }
+      },
+      "variants": [
+        {
+          "text": "amigo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "amigo"
+        },
+        {
+          "text": "amiga",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "amiga"
+        }
+      ]
     },
     {
       "id": "boyfriend",
@@ -374,7 +454,7 @@
     },
     {
       "id": "neighbor",
-      "term": "vecino / vecina",
+      "term": "vecino",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -388,11 +468,27 @@
       },
       "gloss_example": {
         "en": "Our neighbor watered the plants for us."
-      }
+      },
+      "variants": [
+        {
+          "text": "vecino",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "vecino"
+        },
+        {
+          "text": "vecina",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "vecina"
+        }
+      ]
     },
     {
       "id": "companero",
-      "term": "compañero / compañera",
+      "term": "compañero",
       "definition": "Persona con la que compartes algo.",
       "example": "Es mi compañero de trabajo.",
       "level": "A2",
@@ -406,7 +502,23 @@
       },
       "gloss_example": {
         "en": "He is my coworker."
-      }
+      },
+      "variants": [
+        {
+          "text": "compañero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "companero"
+        },
+        {
+          "text": "compañera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "companera"
+        }
+      ]
     },
     {
       "id": "beso",
@@ -428,7 +540,7 @@
     },
     {
       "id": "guapo",
-      "term": "guapo / guapa",
+      "term": "guapo",
       "definition": "Persona de aspecto atractivo.",
       "example": "Tu hermano es muy guapo.",
       "level": "A2",
@@ -442,7 +554,23 @@
       },
       "gloss_example": {
         "en": "Your brother is very good-looking."
-      }
+      },
+      "variants": [
+        {
+          "text": "guapo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "guapo"
+        },
+        {
+          "text": "guapa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "guapa"
+        }
+      ]
     },
     {
       "id": "boda",
@@ -464,7 +592,7 @@
     },
     {
       "id": "lindo",
-      "term": "lindo / linda",
+      "term": "lindo",
       "definition": "Bonito o agradable a la vista.",
       "example": "Qué lindo día hace hoy.",
       "level": "A2",
@@ -478,7 +606,23 @@
       },
       "gloss_example": {
         "en": "What a lovely day it is today."
-      }
+      },
+      "variants": [
+        {
+          "text": "lindo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "lindo"
+        },
+        {
+          "text": "linda",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "linda"
+        }
+      ]
     },
     {
       "id": "member",
@@ -642,7 +786,7 @@
     },
     {
       "id": "tio",
-      "term": "tío / tía",
+      "term": "tío",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -656,7 +800,23 @@
       },
       "gloss_example": {
         "en": "My aunt lives near us."
-      }
+      },
+      "variants": [
+        {
+          "text": "tío",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "tio"
+        },
+        {
+          "text": "tía",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "tia"
+        }
+      ]
     },
     {
       "id": "familia",
@@ -678,7 +838,7 @@
     },
     {
       "id": "cousin",
-      "term": "primo / prima",
+      "term": "primo",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -692,11 +852,27 @@
       },
       "gloss_example": {
         "en": "My cousin lives in another city."
-      }
+      },
+      "variants": [
+        {
+          "text": "primo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "primo"
+        },
+        {
+          "text": "prima",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "prima"
+        }
+      ]
     },
     {
       "id": "nephew_niece",
-      "term": "sobrino / sobrina",
+      "term": "sobrino",
       "level": "A2",
       "category": "Noun",
       "difficulty": "medium",
@@ -710,11 +886,27 @@
       },
       "gloss_example": {
         "en": "I look after my nephew on weekends."
-      }
+      },
+      "variants": [
+        {
+          "text": "sobrino",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "sobrino"
+        },
+        {
+          "text": "sobrina",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "sobrina"
+        }
+      ]
     },
     {
       "id": "grandchild",
-      "term": "nieto / nieta",
+      "term": "nieto",
       "level": "A2",
       "category": "Noun",
       "difficulty": "medium",
@@ -728,7 +920,23 @@
       },
       "gloss_example": {
         "en": "The grandparents play with their grandchild in the park."
-      }
+      },
+      "variants": [
+        {
+          "text": "nieto",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "nieto"
+        },
+        {
+          "text": "nieta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "nieta"
+        }
+      ]
     },
     {
       "id": "surname",
@@ -768,7 +976,7 @@
     },
     {
       "id": "twin",
-      "term": "gemelo / gemela",
+      "term": "gemelo",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -782,7 +990,23 @@
       },
       "gloss_example": {
         "en": "My cousins are twins and look very alike."
-      }
+      },
+      "variants": [
+        {
+          "text": "gemelo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "gemelo"
+        },
+        {
+          "text": "gemela",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "gemela"
+        }
+      ]
     },
     {
       "id": "teenager",

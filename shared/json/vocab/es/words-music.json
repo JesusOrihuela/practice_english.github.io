@@ -774,7 +774,7 @@
     },
     {
       "id": "musician",
-      "term": "músico / música",
+      "term": "músico",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -788,7 +788,23 @@
       },
       "gloss_example": {
         "en": "The musician played for two hours."
-      }
+      },
+      "variants": [
+        {
+          "text": "músico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "musico"
+        },
+        {
+          "text": "música",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "musica"
+        }
+      ]
     },
     {
       "id": "baile",

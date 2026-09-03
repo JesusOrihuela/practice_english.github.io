@@ -20,7 +20,7 @@
     },
     {
       "id": "actor",
-      "term": "actor / actriz",
+      "term": "actor",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -34,7 +34,23 @@
       },
       "gloss_example": {
         "en": "My favorite actor won an award for his role in that drama."
-      }
+      },
+      "variants": [
+        {
+          "text": "actor",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "actor"
+        },
+        {
+          "text": "actriz",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "actriz"
+        }
+      ]
     },
     {
       "id": "cinema",

@@ -658,7 +658,7 @@
     },
     {
       "id": "player",
-      "term": "jugador / jugadora",
+      "term": "jugador",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -672,7 +672,23 @@
       },
       "gloss_example": {
         "en": "Each team has eleven players."
-      }
+      },
+      "variants": [
+        {
+          "text": "jugador",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "jugador"
+        },
+        {
+          "text": "jugadora",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "jugadora"
+        }
+      ]
     },
     {
       "id": "fit",

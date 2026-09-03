@@ -308,7 +308,7 @@
     },
     {
       "id": "old",
-      "term": "viejo / vieja",
+      "term": "viejo",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -322,7 +322,23 @@
       },
       "gloss_example": {
         "en": "They live in an old house."
-      }
+      },
+      "variants": [
+        {
+          "text": "viejo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "viejo"
+        },
+        {
+          "text": "vieja",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "vieja"
+        }
+      ]
     },
     {
       "id": "young",
@@ -344,7 +360,7 @@
     },
     {
       "id": "pretty",
-      "term": "bonito / bonita",
+      "term": "bonito",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -358,7 +374,23 @@
       },
       "gloss_example": {
         "en": "What a pretty garden."
-      }
+      },
+      "variants": [
+        {
+          "text": "bonito",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "bonito"
+        },
+        {
+          "text": "bonita",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "bonita"
+        }
+      ]
     },
     {
       "id": "easy",
@@ -414,7 +446,7 @@
     },
     {
       "id": "content_adj",
-      "term": "contento / contenta",
+      "term": "contento",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -428,11 +460,27 @@
       },
       "gloss_example": {
         "en": "He felt content after a good meal."
-      }
+      },
+      "variants": [
+        {
+          "text": "contento",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "contento"
+        },
+        {
+          "text": "contenta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "contenta"
+        }
+      ]
     },
     {
       "id": "malo",
-      "term": "malo / mala",
+      "term": "malo",
       "definition": "Que no es bueno o no funciona bien.",
       "example": "Hoy tuve un día muy malo.",
       "level": "A1",
@@ -446,7 +494,23 @@
       },
       "gloss_example": {
         "en": "I had a very bad day today."
-      }
+      },
+      "variants": [
+        {
+          "text": "malo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "malo"
+        },
+        {
+          "text": "mala",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "mala"
+        }
+      ]
     },
     {
       "id": "natural_adj",
@@ -468,7 +532,7 @@
     },
     {
       "id": "serio",
-      "term": "serio / seria",
+      "term": "serio",
       "definition": "Que no bromea, o que es importante.",
       "example": "Es un problema muy serio.",
       "level": "A2",
@@ -482,7 +546,23 @@
       },
       "gloss_example": {
         "en": "It is a very serious problem."
-      }
+      },
+      "variants": [
+        {
+          "text": "serio",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "serio"
+        },
+        {
+          "text": "seria",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "seria"
+        }
+      ]
     },
     {
       "id": "imposible",
@@ -504,7 +584,7 @@
     },
     {
       "id": "maravilloso",
-      "term": "maravilloso / maravillosa",
+      "term": "maravilloso",
       "definition": "Muy bueno o admirable.",
       "example": "Pasamos un día maravilloso en la playa.",
       "level": "A2",
@@ -518,11 +598,27 @@
       },
       "gloss_example": {
         "en": "We had a wonderful day at the beach."
-      }
+      },
+      "variants": [
+        {
+          "text": "maravilloso",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "maravilloso"
+        },
+        {
+          "text": "maravillosa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "maravillosa"
+        }
+      ]
     },
     {
       "id": "famoso",
-      "term": "famoso / famosa",
+      "term": "famoso",
       "definition": "Muy conocido por mucha gente.",
       "example": "Es un actor famoso.",
       "level": "A2",
@@ -536,11 +632,27 @@
       },
       "gloss_example": {
         "en": "He is a famous actor."
-      }
+      },
+      "variants": [
+        {
+          "text": "famoso",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "famoso"
+        },
+        {
+          "text": "famosa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "famosa"
+        }
+      ]
     },
     {
       "id": "tipico",
-      "term": "típico / típica",
+      "term": "típico",
       "definition": "Propio o característico de algo.",
       "example": "Es un plato típico de la región.",
       "level": "A2",
@@ -554,11 +666,27 @@
       },
       "gloss_example": {
         "en": "It is a typical dish of the region."
-      }
+      },
+      "variants": [
+        {
+          "text": "típico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "tipico"
+        },
+        {
+          "text": "típica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "tipica"
+        }
+      ]
     },
     {
       "id": "antiguo",
-      "term": "antiguo / antigua",
+      "term": "antiguo",
       "definition": "Que existe desde hace mucho tiempo.",
       "example": "Visitamos un castillo antiguo.",
       "level": "A2",
@@ -572,7 +700,23 @@
       },
       "gloss_example": {
         "en": "We visited an old castle."
-      }
+      },
+      "variants": [
+        {
+          "text": "antiguo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "antiguo"
+        },
+        {
+          "text": "antigua",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "antigua"
+        }
+      ]
     },
     {
       "id": "pobre",
@@ -1458,7 +1602,7 @@
     },
     {
       "id": "fat",
-      "term": "gordo / gorda",
+      "term": "gordo",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1472,11 +1616,27 @@
       },
       "gloss_example": {
         "en": "The cat is a little fat."
-      }
+      },
+      "variants": [
+        {
+          "text": "gordo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "gordo"
+        },
+        {
+          "text": "gorda",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "gorda"
+        }
+      ]
     },
     {
       "id": "ugly",
-      "term": "feo / fea",
+      "term": "feo",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1490,11 +1650,27 @@
       },
       "gloss_example": {
         "en": "That new building is quite ugly."
-      }
+      },
+      "variants": [
+        {
+          "text": "feo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "feo"
+        },
+        {
+          "text": "fea",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "fea"
+        }
+      ]
     },
     {
       "id": "thin",
-      "term": "delgado / delgada",
+      "term": "delgado",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1508,11 +1684,27 @@
       },
       "gloss_example": {
         "en": "My sister is tall and thin."
-      }
+      },
+      "variants": [
+        {
+          "text": "delgado",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "delgado"
+        },
+        {
+          "text": "delgada",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "delgada"
+        }
+      ]
     },
     {
       "id": "bald",
-      "term": "calvo / calva",
+      "term": "calvo",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1526,11 +1718,27 @@
       },
       "gloss_example": {
         "en": "My grandfather went bald very young."
-      }
+      },
+      "variants": [
+        {
+          "text": "calvo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "calvo"
+        },
+        {
+          "text": "calva",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "calva"
+        }
+      ]
     },
     {
       "id": "nice_person",
-      "term": "simpático / simpática",
+      "term": "simpático",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1544,11 +1752,27 @@
       },
       "gloss_example": {
         "en": "The new neighbor is very nice."
-      }
+      },
+      "variants": [
+        {
+          "text": "simpático",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "simpatico"
+        },
+        {
+          "text": "simpática",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "simpatica"
+        }
+      ]
     },
     {
       "id": "unfriendly",
-      "term": "antipático / antipática",
+      "term": "antipático",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1562,11 +1786,27 @@
       },
       "gloss_example": {
         "en": "The doorman is a little unfriendly."
-      }
+      },
+      "variants": [
+        {
+          "text": "antipático",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "antipatico"
+        },
+        {
+          "text": "antipática",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "antipatica"
+        }
+      ]
     },
     {
       "id": "shy",
-      "term": "tímido / tímida",
+      "term": "tímido",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1580,11 +1820,27 @@
       },
       "gloss_example": {
         "en": "As a child he was very shy."
-      }
+      },
+      "variants": [
+        {
+          "text": "tímido",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "timido"
+        },
+        {
+          "text": "tímida",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "timida"
+        }
+      ]
     },
     {
       "id": "generous",
-      "term": "generoso / generosa",
+      "term": "generoso",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1598,7 +1854,23 @@
       },
       "gloss_example": {
         "en": "He is very generous with his friends."
-      }
+      },
+      "variants": [
+        {
+          "text": "generoso",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "generoso"
+        },
+        {
+          "text": "generosa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "generosa"
+        }
+      ]
     },
     {
       "id": "selfish",
@@ -1656,7 +1928,7 @@
     },
     {
       "id": "dirty",
-      "term": "sucio / sucia",
+      "term": "sucio",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1670,11 +1942,27 @@
       },
       "gloss_example": {
         "en": "The dishes are dirty in the sink."
-      }
+      },
+      "variants": [
+        {
+          "text": "sucio",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "sucio"
+        },
+        {
+          "text": "sucia",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "sucia"
+        }
+      ]
     },
     {
       "id": "dry",
-      "term": "seco / seca",
+      "term": "seco",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1688,11 +1976,27 @@
       },
       "gloss_example": {
         "en": "The clothes are already dry."
-      }
+      },
+      "variants": [
+        {
+          "text": "seco",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "seco"
+        },
+        {
+          "text": "seca",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "seca"
+        }
+      ]
     },
     {
       "id": "boring",
-      "term": "aburrido / aburrida",
+      "term": "aburrido",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1706,11 +2010,27 @@
       },
       "gloss_example": {
         "en": "The meeting was long and boring."
-      }
+      },
+      "variants": [
+        {
+          "text": "aburrido",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "aburrido"
+        },
+        {
+          "text": "aburrida",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "aburrida"
+        }
+      ]
     },
     {
       "id": "sick",
-      "term": "enfermo / enferma",
+      "term": "enfermo",
       "level": "A1",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1724,7 +2044,23 @@
       },
       "gloss_example": {
         "en": "I did not go to work today because I am sick."
-      }
+      },
+      "variants": [
+        {
+          "text": "enfermo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "enfermo"
+        },
+        {
+          "text": "enferma",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "enferma"
+        }
+      ]
     },
     {
       "id": "intelligent",
@@ -1782,7 +2118,7 @@
     },
     {
       "id": "married",
-      "term": "casado / casada",
+      "term": "casado",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "medium",
@@ -1796,11 +2132,27 @@
       },
       "gloss_example": {
         "en": "My uncle has been married for ten years."
-      }
+      },
+      "variants": [
+        {
+          "text": "casado",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "casado"
+        },
+        {
+          "text": "casada",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "casada"
+        }
+      ]
     },
     {
       "id": "single_unmarried",
-      "term": "soltero / soltera",
+      "term": "soltero",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "medium",
@@ -1814,11 +2166,27 @@
       },
       "gloss_example": {
         "en": "He is still single and lives with his parents."
-      }
+      },
+      "variants": [
+        {
+          "text": "soltero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soltero"
+        },
+        {
+          "text": "soltera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soltera"
+        }
+      ]
     },
     {
       "id": "widowed",
-      "term": "viudo / viuda",
+      "term": "viudo",
       "level": "B1",
       "category": "Adjective",
       "difficulty": "medium",
@@ -1832,11 +2200,27 @@
       },
       "gloss_example": {
         "en": "Her grandmother was widowed very young."
-      }
+      },
+      "variants": [
+        {
+          "text": "viudo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "viudo"
+        },
+        {
+          "text": "viuda",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "viuda"
+        }
+      ]
     },
     {
       "id": "divorced",
-      "term": "divorciado / divorciada",
+      "term": "divorciado",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "medium",
@@ -1850,11 +2234,27 @@
       },
       "gloss_example": {
         "en": "They are divorced but are still friends."
-      }
+      },
+      "variants": [
+        {
+          "text": "divorciado",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "divorciado"
+        },
+        {
+          "text": "divorciada",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "divorciada"
+        }
+      ]
     },
     {
       "id": "wide",
-      "term": "ancho / ancha",
+      "term": "ancho",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1868,11 +2268,27 @@
       },
       "gloss_example": {
         "en": "The avenue is very wide and has six lanes."
-      }
+      },
+      "variants": [
+        {
+          "text": "ancho",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ancho"
+        },
+        {
+          "text": "ancha",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ancha"
+        }
+      ]
     },
     {
       "id": "narrow",
-      "term": "estrecho / estrecha",
+      "term": "estrecho",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1886,11 +2302,27 @@
       },
       "gloss_example": {
         "en": "The hallway is so narrow that only one person fits."
-      }
+      },
+      "variants": [
+        {
+          "text": "estrecho",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estrecho"
+        },
+        {
+          "text": "estrecha",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estrecha"
+        }
+      ]
     },
     {
       "id": "medium_size",
-      "term": "mediano / mediana",
+      "term": "mediano",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1904,11 +2336,27 @@
       },
       "gloss_example": {
         "en": "I want a medium-size shirt."
-      }
+      },
+      "variants": [
+        {
+          "text": "mediano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "mediano"
+        },
+        {
+          "text": "mediana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "mediana"
+        }
+      ]
     },
     {
       "id": "dark_haired",
-      "term": "moreno / morena",
+      "term": "moreno",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1922,11 +2370,27 @@
       },
       "gloss_example": {
         "en": "My sister is dark-haired and has black eyes."
-      }
+      },
+      "variants": [
+        {
+          "text": "moreno",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "moreno"
+        },
+        {
+          "text": "morena",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "morena"
+        }
+      ]
     },
     {
       "id": "blond",
-      "term": "rubio / rubia",
+      "term": "rubio",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1940,11 +2404,27 @@
       },
       "gloss_example": {
         "en": "The blond boy looks a lot like his father."
-      }
+      },
+      "variants": [
+        {
+          "text": "rubio",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "rubio"
+        },
+        {
+          "text": "rubia",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "rubia"
+        }
+      ]
     },
     {
       "id": "german_nat",
-      "term": "alemán / alemana",
+      "term": "alemán",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1958,11 +2438,27 @@
       },
       "gloss_example": {
         "en": "He bought a very expensive German car."
-      }
+      },
+      "variants": [
+        {
+          "text": "alemán",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "aleman"
+        },
+        {
+          "text": "alemana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "alemana"
+        }
+      ]
     },
     {
       "id": "japanese_nat",
-      "term": "japonés / japonesa",
+      "term": "japonés",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1976,11 +2472,27 @@
       },
       "gloss_example": {
         "en": "I love Japanese food."
-      }
+      },
+      "variants": [
+        {
+          "text": "japonés",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "japones"
+        },
+        {
+          "text": "japonesa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "japonesa"
+        }
+      ]
     },
     {
       "id": "chinese_nat",
-      "term": "chino / china",
+      "term": "chino",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1994,7 +2506,23 @@
       },
       "gloss_example": {
         "en": "She has been studying Chinese for two years."
-      }
+      },
+      "variants": [
+        {
+          "text": "chino",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "chino"
+        },
+        {
+          "text": "china",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "china"
+        }
+      ]
     },
     {
       "id": "moroccan_nat",
@@ -2016,7 +2544,7 @@
     },
     {
       "id": "vegetarian",
-      "term": "vegetariano / vegetariana",
+      "term": "vegetariano",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -2030,7 +2558,23 @@
       },
       "gloss_example": {
         "en": "My sister has been vegetarian for years."
-      }
+      },
+      "variants": [
+        {
+          "text": "vegetariano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "vegetariano"
+        },
+        {
+          "text": "vegetariana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "vegetariana"
+        }
+      ]
     },
     {
       "id": "useful",
@@ -2052,7 +2596,7 @@
     },
     {
       "id": "specific",
-      "term": "específico / específica",
+      "term": "específico",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "medium",
@@ -2066,7 +2610,23 @@
       },
       "gloss_example": {
         "en": "Give me a specific date for the meeting."
-      }
+      },
+      "variants": [
+        {
+          "text": "específico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "especifico"
+        },
+        {
+          "text": "específica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "especifica"
+        }
+      ]
     },
     {
       "id": "individual_adj",
@@ -2088,7 +2648,7 @@
     },
     {
       "id": "electric",
-      "term": "eléctrico / eléctrica",
+      "term": "eléctrico",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -2102,7 +2662,23 @@
       },
       "gloss_example": {
         "en": "They bought a new electric car."
-      }
+      },
+      "variants": [
+        {
+          "text": "eléctrico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "electrico"
+        },
+        {
+          "text": "eléctrica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "electrica"
+        }
+      ]
     }
   ]
 }

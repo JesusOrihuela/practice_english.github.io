@@ -56,7 +56,7 @@
     },
     {
       "id": "president",
-      "term": "presidente / presidenta",
+      "term": "presidente",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -70,7 +70,23 @@
       },
       "gloss_example": {
         "en": "The president gave a speech on television."
-      }
+      },
+      "variants": [
+        {
+          "text": "presidente",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "presidente"
+        },
+        {
+          "text": "presidenta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "presidenta"
+        }
+      ]
     },
     {
       "id": "police",
@@ -432,7 +448,7 @@
     },
     {
       "id": "citizen",
-      "term": "ciudadano / ciudadana",
+      "term": "ciudadano",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -446,7 +462,23 @@
       },
       "gloss_example": {
         "en": "Every citizen has the right to vote."
-      }
+      },
+      "variants": [
+        {
+          "text": "ciudadano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ciudadano"
+        },
+        {
+          "text": "ciudadana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ciudadana"
+        }
+      ]
     },
     {
       "id": "freedom",
@@ -720,7 +752,7 @@
     },
     {
       "id": "prince_princess",
-      "term": "príncipe / princesa",
+      "term": "príncipe",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -734,11 +766,27 @@
       },
       "gloss_example": {
         "en": "The prince visited the city last week."
-      }
+      },
+      "variants": [
+        {
+          "text": "príncipe",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "principe"
+        },
+        {
+          "text": "princesa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "princesa"
+        }
+      ]
     },
     {
       "id": "minister",
-      "term": "ministro / ministra",
+      "term": "ministro",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -752,11 +800,27 @@
       },
       "gloss_example": {
         "en": "The Health minister announced a new measure."
-      }
+      },
+      "variants": [
+        {
+          "text": "ministro",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ministro"
+        },
+        {
+          "text": "ministra",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ministra"
+        }
+      ]
     },
     {
       "id": "politician",
-      "term": "político / política",
+      "term": "político",
       "level": "A2",
       "category": "Noun",
       "difficulty": "medium",
@@ -770,11 +834,27 @@
       },
       "gloss_example": {
         "en": "The politician gave a speech in the square."
-      }
+      },
+      "variants": [
+        {
+          "text": "político",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "politico"
+        },
+        {
+          "text": "política",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "politica"
+        }
+      ]
     },
     {
       "id": "christian",
-      "term": "cristiano / cristiana",
+      "term": "cristiano",
       "level": "A2",
       "category": "Noun",
       "difficulty": "medium",
@@ -788,11 +868,27 @@
       },
       "gloss_example": {
         "en": "In that town most people are Christian."
-      }
+      },
+      "variants": [
+        {
+          "text": "cristiano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "cristiano"
+        },
+        {
+          "text": "cristiana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "cristiana"
+        }
+      ]
     },
     {
       "id": "muslim",
-      "term": "musulmán / musulmana",
+      "term": "musulmán",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -806,11 +902,27 @@
       },
       "gloss_example": {
         "en": "Muslims pray five times a day."
-      }
+      },
+      "variants": [
+        {
+          "text": "musulmán",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "musulman"
+        },
+        {
+          "text": "musulmana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "musulmana"
+        }
+      ]
     },
     {
       "id": "jewish_person",
-      "term": "judío / judía",
+      "term": "judío",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -824,7 +936,23 @@
       },
       "gloss_example": {
         "en": "The Jewish community celebrates its own holidays."
-      }
+      },
+      "variants": [
+        {
+          "text": "judío",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "judio"
+        },
+        {
+          "text": "judía",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "judia"
+        }
+      ]
     },
     {
       "id": "buddhist",

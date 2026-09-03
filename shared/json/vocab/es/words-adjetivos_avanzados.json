@@ -873,7 +873,7 @@
     },
     {
       "id": "distinto",
-      "term": "distinto / distinta",
+      "term": "distinto",
       "definition": "Que no es igual a otra cosa.",
       "example": "Su idea es distinta a la mía.",
       "level": "B1",
@@ -887,11 +887,27 @@
       },
       "gloss_example": {
         "en": "Her idea is different from mine."
-      }
+      },
+      "variants": [
+        {
+          "text": "distinto",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "distinto"
+        },
+        {
+          "text": "distinta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "distinta"
+        }
+      ]
     },
     {
       "id": "verdadero",
-      "term": "verdadero / verdadera",
+      "term": "verdadero",
       "definition": "Que es cierto o real.",
       "example": "Esa es la verdadera razón.",
       "level": "B1",
@@ -905,11 +921,27 @@
       },
       "gloss_example": {
         "en": "That is the real reason."
-      }
+      },
+      "variants": [
+        {
+          "text": "verdadero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "verdadero"
+        },
+        {
+          "text": "verdadera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "verdadera"
+        }
+      ]
     },
     {
       "id": "cierto",
-      "term": "cierto / cierta",
+      "term": "cierto",
       "definition": "Que es verdad o seguro.",
       "example": "Es cierto que hace frío.",
       "level": "B1",
@@ -923,11 +955,27 @@
       },
       "gloss_example": {
         "en": "It is true that it is cold."
-      }
+      },
+      "variants": [
+        {
+          "text": "cierto",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "cierto"
+        },
+        {
+          "text": "cierta",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "cierta"
+        }
+      ]
     },
     {
       "id": "loco",
-      "term": "loco / loca",
+      "term": "loco",
       "definition": "Que actúa de forma poco sensata.",
       "example": "Tuvo una idea un poco loca.",
       "level": "B1",
@@ -941,7 +989,23 @@
       },
       "gloss_example": {
         "en": "He had a slightly crazy idea."
-      }
+      },
+      "variants": [
+        {
+          "text": "loco",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "loco"
+        },
+        {
+          "text": "loca",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "loca"
+        }
+      ]
     },
     {
       "id": "actual",
@@ -1323,7 +1387,7 @@
     },
     {
       "id": "ingles",
-      "term": "inglés / inglesa",
+      "term": "inglés",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1337,11 +1401,27 @@
       },
       "gloss_example": {
         "en": "I have an English friend."
-      }
+      },
+      "variants": [
+        {
+          "text": "inglés",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ingles"
+        },
+        {
+          "text": "inglesa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "inglesa"
+        }
+      ]
     },
     {
       "id": "frances",
-      "term": "francés / francesa",
+      "term": "francés",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1355,11 +1435,27 @@
       },
       "gloss_example": {
         "en": "French cheese is delicious."
-      }
+      },
+      "variants": [
+        {
+          "text": "francés",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "frances"
+        },
+        {
+          "text": "francesa",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "francesa"
+        }
+      ]
     },
     {
       "id": "mexicano",
-      "term": "mexicano / mexicana",
+      "term": "mexicano",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1373,11 +1469,27 @@
       },
       "gloss_example": {
         "en": "Mexican food is tasty."
-      }
+      },
+      "variants": [
+        {
+          "text": "mexicano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "mexicano"
+        },
+        {
+          "text": "mexicana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "mexicana"
+        }
+      ]
     },
     {
       "id": "italiano",
-      "term": "italiano / italiana",
+      "term": "italiano",
       "level": "A2",
       "category": "Adjective",
       "difficulty": "easy",
@@ -1391,7 +1503,23 @@
       },
       "gloss_example": {
         "en": "I like Italian art."
-      }
+      },
+      "variants": [
+        {
+          "text": "italiano",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "italiano"
+        },
+        {
+          "text": "italiana",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "italiana"
+        }
+      ]
     }
   ]
 }

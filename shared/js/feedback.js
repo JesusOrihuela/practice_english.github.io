@@ -382,11 +382,12 @@ const AppFeedback = (() => {
     return 'lexical';
   }
 
-  // One variant as TWO aligned cells appended to a grid table: [the FORM, prominent] | [its tag(s) as a
-  // small muted label]. Form-first, reads like a dictionary entry; no pill-in-pill. The tag keeps its
-  // small colour icon but drops the pill background so it stays subtle beside the bigger form.
-  function _variantCells(v, tbl) {
+  // One variant as a ROW of a bordered table: [FORM, prominent] ......... [its label(s), muted + icon].
+  // The rows stack inside a boxed .variant-table (dividers between), like a textbook declension table.
+  function _variantRow(v) {
     const labs = (v && v.labels) || {};
+    const row = document.createElement('div');
+    row.className = 'variant-row';
     const form = document.createElement('span');
     form.className = 'variant-form';
     form.textContent = _capitalize((v && v.text) || '');
@@ -407,8 +408,9 @@ const AppFeedback = (() => {
       }
       meta.appendChild(item);
     }
-    tbl.appendChild(form);
-    tbl.appendChild(meta);
+    row.appendChild(form);
+    row.appendChild(meta);
+    return row;
   }
 
   function buildWordVariants(variants, currentText, t) {
@@ -418,8 +420,8 @@ const AppFeedback = (() => {
     const tt = (typeof t === 'function') ? t : (k => k);
     const frag = document.createDocumentFragment();
 
-    // GROUP by kind with an explanatory caption, so the learner understands WHY the variants differ —
-    // grammatical FORMS of one word vs ALTERNATIVE WORDS — and each group is a tag|form aligned table.
+    // GROUP by kind with a caption (grammatical FORMS of one word vs ALTERNATIVE WORDS), each group a
+    // bordered table of form|label rows — so the learner sees the whole paradigm at a glance.
     function group(items, labelKey) {
       if (!items.length) return;
       const g = document.createElement('div');
@@ -430,7 +432,7 @@ const AppFeedback = (() => {
       g.appendChild(lbl);
       const tbl = document.createElement('div');
       tbl.className = 'variant-table';
-      items.forEach(v => _variantCells(v, tbl));
+      items.forEach(v => tbl.appendChild(_variantRow(v)));
       g.appendChild(tbl);
       frag.appendChild(g);
     }

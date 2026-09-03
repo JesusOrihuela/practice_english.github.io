@@ -554,7 +554,7 @@
     },
     {
       "id": "medico",
-      "term": "médico / médica",
+      "term": "médico",
       "level": "A2",
       "category": "Noun",
       "difficulty": "easy",
@@ -568,7 +568,23 @@
       },
       "gloss_example": {
         "en": "The doctor examined the patient."
-      }
+      },
+      "variants": [
+        {
+          "text": "médico",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "medico"
+        },
+        {
+          "text": "médica",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "medica"
+        }
+      ]
     },
     {
       "id": "tooth",

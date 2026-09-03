@@ -1118,7 +1118,7 @@
     },
     {
       "id": "veal",
-      "term": "ternero / ternera",
+      "term": "ternero",
       "level": "B1",
       "category": "Noun",
       "difficulty": "medium",
@@ -1132,7 +1132,23 @@
       },
       "gloss_example": {
         "en": "I bought veal to make a stew."
-      }
+      },
+      "variants": [
+        {
+          "text": "ternero",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "ternero"
+        },
+        {
+          "text": "ternera",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "ternera"
+        }
+      ]
     },
     {
       "id": "jam",

@@ -440,7 +440,7 @@
     },
     {
       "id": "playwright",
-      "term": "dramaturgo / dramaturga",
+      "term": "dramaturgo",
       "level": "B2",
       "category": "Noun",
       "difficulty": "hard",
@@ -454,7 +454,23 @@
       },
       "gloss_example": {
         "en": "She is considered one of the most important playwrights of her generation."
-      }
+      },
+      "variants": [
+        {
+          "text": "dramaturgo",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "dramaturgo"
+        },
+        {
+          "text": "dramaturga",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "dramaturga"
+        }
+      ]
     },
     {
       "id": "script",
