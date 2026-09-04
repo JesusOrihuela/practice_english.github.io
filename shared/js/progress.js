@@ -494,6 +494,22 @@ const Progress = (() => {
   }
 
   /**
+   * Total content counts for the ACTIVE pair, derived from the embedded ID map
+   * (which is kept in sync with the JSON content by fix-phrase-ids.js). Lets the
+   * landing page show the real size of each pair instead of a hardcoded number.
+   * @returns {{ phrases: number, words: number }}
+   */
+  function getContentCounts() {
+    const ph = _ID_MAP.phrases[_activePair()] || {};
+    let phrases = 0;
+    for (const t in ph) phrases += (ph[t] || []).length;
+    const vb = _ID_MAP.vocab[_targetLang()] || {};
+    let words = 0;
+    for (const t in vb) words += ((vb[t] && vb[t].ids) || []).length;
+    return { phrases, words };
+  }
+
+  /**
    * Count seen cards from an explicit list of card IDs.
    * 'seen' = reps ≥ 1.
    * @param {string[]} ids
@@ -515,6 +531,7 @@ const Progress = (() => {
     getNextIndex,
     getPhraseIds,
     getVocabIds,
+    getContentCounts,
     getStatsForCards,
     setLevel,
     getLevel,

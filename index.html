@@ -104,7 +104,7 @@
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <div class="stat-number">700+</div>
+                        <div class="stat-number" id="stat-phrases-num">—</div>
                         <div class="stat-label" data-i18n="index_stat_phrases"></div>
                     </div>
                     <div class="stat-divider"></div>
@@ -335,7 +335,7 @@
     <script src="shared/js/cefr.js?v=4737c1d0"></script>
     <script src="shared/js/lang-pair.js?v=80b2cfe8"></script>
     <script src="shared/js/proficiency.js?v=5fd50d9f"></script>
-    <script src="lang/ui.js?v=b9fe784b"></script>
+    <script src="lang/ui.js?v=57d4f414"></script>
     <script src="lang/target/en.js?v=2cd78c3d"></script>
     <script src="shared/js/lang.js?v=d2e47532"></script>
     <script src="shared/js/i18n-dom.js?v=1278e66a"></script>
@@ -598,6 +598,22 @@
           // for ALL pairs — no hardcoded UI text in the HTML (project standard).
           AppI18nDom.apply(document, AppI18nDom.params());
 
+          // Hero "Phrases" stat = the REAL number of phrases the active pair has (from the ID map),
+          // not a hardcoded figure — so each pair shows its own size. Floor to a round number with a
+          // "+" for large decks (honest: "at least N"); exact for small stress-test pairs.
+          // progress.js loads later in the body, so run once it's available (DOMContentLoaded).
+          var _setPhrasesStat = function () {
+            try {
+              var _pn = document.getElementById('stat-phrases-num');
+              if (_pn && typeof Progress !== 'undefined' && Progress.getContentCounts) {
+                var _ph = Progress.getContentCounts().phrases;
+                _pn.textContent = _ph >= 100 ? (Math.floor(_ph / 100) * 100) + '+' : String(_ph);
+              }
+            } catch (e) { /* stat stays as the placeholder */ }
+          };
+          if (typeof Progress !== 'undefined') _setPhrasesStat();
+          else document.addEventListener('DOMContentLoaded', _setPhrasesStat);
+
           // Footer: invariant name + translatable "developed by" + dynamic year.
           var fp = document.querySelector('footer .footer-content p');
           if (fp && typeof AppLang !== 'undefined') {
@@ -711,7 +727,7 @@
         }
       })();
     </script>
-    <script src="shared/js/progress.js?v=7764cc72"></script>
+    <script src="shared/js/progress.js?v=35d6e525"></script>
     <script src="shared/js/topic-data.js?v=4420c42d"></script>
     <script src="shared/js/topics.js?v=4b06b99c"></script>
     <script src="shared/js/path.js?v=384b7b1a"></script>
