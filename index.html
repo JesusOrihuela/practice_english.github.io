@@ -406,15 +406,13 @@
 
         if (localStorage.getItem(AppLangPair.storageKey('pe_onboarded'))) return;
 
-        // ── Placement questions (from shared/json/common/placement-questions.json) ──
-        // To add a new language pair: add a key matching the pair id in the JSON.
+        // ── Placement questions — the ACTIVE PAIR's own placement.json ──
+        // Every pair ships one (shared/json/pairs/<pair>/placement.json), already in the source
+        // language, so the onboarding quiz auto-adapts to any pair with NO per-pair key to maintain.
         var QUESTIONS = null;
-        fetch('shared/json/common/placement-questions.json')
+        fetch('shared/json/pairs/' + AppLangPair.getActive().id + '/placement.json')
           .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
-          .then(function(data) {
-            var pairId = AppLangPair.getActive().id;
-            QUESTIONS = data[pairId] || data['es-en'] || [];
-          })
+          .then(function(data) { QUESTIONS = data.questions || []; })
           .catch(function() { QUESTIONS = []; });
 
         var overlay = document.getElementById('ob-overlay');
@@ -468,19 +466,24 @@
           });
         }
 
-        function scoreToLevel(s) {
-          if (s <= 3)  return 'A1';
-          if (s <= 6)  return 'A2';
-          if (s <= 9)  return 'B1';
-          if (s <= 11) return 'B2';
-          if (s <= 13) return 'C1';
+        // Score → CEFR, proportional to the question count (pairs differ: 14 vs 6), so the same
+        // band ratios apply whatever the pair's placement length is.
+        function scoreToLevel(s, total) {
+          var pct = total > 0 ? s / total : 0;
+          if (pct <= 3 / 14)  return 'A1';
+          if (pct <= 6 / 14)  return 'A2';
+          if (pct <= 9 / 14)  return 'B1';
+          if (pct <= 11 / 14) return 'B2';
+          if (pct <= 13 / 14) return 'C1';
           return 'C2';
         }
 
         var _isEnSrc = AppLangPair.getActive().source.code === 'en';
-        var LEVEL_LABEL = _isEnSrc
-          ? { A1: 'A1 — Beginner', A2: 'A2 — Elementary', B1: 'B1 — Intermediate', B2: 'B2 — Upper Intermediate', C1: 'C1 — Advanced', C2: 'C2 — Mastery' }
-          : { A1: 'A1 — Principiante', A2: 'A2 — Elemental', B1: 'B1 — Intermedio', B2: 'B2 — Avanzado', C1: 'C1 — Competente', C2: 'C2 — Maestría' };
+        // Level label localized to the source language (any pair), not a hardcoded en/es dict.
+        function _levelLabel(level) {
+          var t = AppLang.t('placement_result_' + level.toLowerCase() + '_label');
+          return (t && t.indexOf('placement_result_') !== 0) ? t : level;
+        }
 
         function _finishPlacement(level) {
           localStorage.setItem(AppLangPair.storageKey('pe_placement_done'), 'done');
@@ -488,7 +491,7 @@
           if (typeof AppProficiency !== 'undefined') AppProficiency.initFromManual(level);
           var msg = document.getElementById('ob-welcome-msg');
           if (msg) {
-            msg.textContent = AppLang.t('ob_welcome_msg', { level: LEVEL_LABEL[level] || level });
+            msg.textContent = AppLang.t('ob_welcome_msg', { level: _levelLabel(level) });
           }
           goStep(3);
         }
@@ -532,7 +535,7 @@
               showQuestion(quizIdx);
             } else {
               document.getElementById('ob-quiz-fill').style.width = '100%';
-              _finishPlacement(scoreToLevel(quizScore));
+              _finishPlacement(scoreToLevel(quizScore, QUESTIONS.length));
             }
           }, 850);
         }
@@ -555,7 +558,9 @@
             var btn = document.createElement('button');
             btn.className = 'ob-bubble';
             btn.type = 'button';
-            var _label = (_isEnSrc && t.labelEn) ? t.labelEn : t.label;
+            var _label = (typeof AppTopics !== 'undefined' && AppTopics.getLabel)
+              ? AppTopics.getLabel(t)
+              : ((_isEnSrc && t.labelEn) ? t.labelEn : t.label);
             btn.textContent = t.emoji + ' ' + _label;
             btn.dataset.id = t.id;
             btn.addEventListener('click', function () { btn.classList.toggle('ob-bubble--on'); });
