@@ -70,6 +70,18 @@ const AppLangPair = (() => {
       ttsVoices:   ['plf_zofia', 'plm_marek'],
       sttLanguage: 'polish',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): the 4th and final divergent target. Portuguese
+      // stresses (1) the KOKORO audio engine with a non-English language (first non-en Kokoro target),
+      // (2) a 3-WAY register cline tu / você / o senhor (register's first non-binary use), and (3)
+      // BR↔PT regional variation (flags br + pt). Grammatical gender -o/-a applies.
+      id:          'en-pt',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English',    localName: 'English' },
+      target:      { code: 'pt', flags: ['br', 'pt'], name: 'Português', localName: 'Portuguese' },
+      label:       'English → Português',
+      ttsVoices:   ['pf_dora', 'pm_alex', 'pm_santa'],
+      sttLanguage: 'portuguese',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

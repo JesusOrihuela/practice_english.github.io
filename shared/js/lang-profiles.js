@@ -495,7 +495,76 @@
     },
   };
 
-  const PROFILES = { en, es, de, fi, pl };
+  // ── Portuguese (pt) — STRESS-TEST target (en-pt), intentionally minimal/non-shippable ──
+  // The 4th and final stress-test target. It exercises: (1) the KOKORO audio engine with a language
+  // OTHER than English (every other non-en target uses edge-tts; pt is the first non-English Kokoro
+  // target, so generate-audio.mjs's non-English path is validated); (2) a 3-WAY register cline
+  // (tu / você / o senhor) — the register dimension's first non-binary use; (3) BR↔PT regional
+  // variation (ônibus/autocarro, celular/telemóvel). Portuguese has grammatical gender (-o/-a) → the
+  // gender-detector block applies. Brazilian orthography (post-1990 Acordo Ortográfico).
+  const pt = {
+    name: 'Portuguese',
+    grammaticalGender: true,    // masc/fem agreement (-o/-a) → gender-variant enrichment + gender-detector block.
+    voices: ['pf_dora', 'pm_alex', 'pm_santa'],   // Kokoro pt-BR voices (see generate-audio.mjs LANG_VOICES).
+    tts: { engine: 'kokoro' },   // FIRST non-English Kokoro target — validates the Kokoro path for a new language.
+    // Portuguese uses accented vowels (á â ã à é ê í ó ô õ ú) and ç. These carry meaning (avô≠avó,
+    // pêra≠pera historically, and ã/õ are nasal) so preserve them, exactly like es keeps ñ. Answer-
+    // checking stays strict on the diacritics that distinguish words.
+    foldPreserve: 'áâãàéêíóôõúç',
+    nativeChars: 'áâãàéêíóôõúç',
+    // Cloze must blank a CONTENT word, never these closed-class Portuguese words.
+    clozeStopWords: [
+      'eu', 'tu', 'ele', 'ela', 'nós', 'vós', 'eles', 'elas', 'você', 'vocês', 'me', 'te', 'se', 'lhe', 'nos', 'vos', 'lhes',
+      'meu', 'minha', 'teu', 'tua', 'seu', 'sua', 'nosso', 'nossa', 'este', 'esta', 'esse', 'essa', 'aquele', 'aquela', 'isto', 'isso', 'aquilo',
+      'o', 'a', 'os', 'as', 'um', 'uma', 'uns', 'umas',
+      'de', 'do', 'da', 'dos', 'das', 'em', 'no', 'na', 'nos', 'nas', 'por', 'para', 'com', 'sem', 'sob', 'sobre', 'até', 'desde', 'entre',
+      'e', 'ou', 'mas', 'porque', 'que', 'se', 'quando', 'como', 'embora', 'pois', 'nem',
+      'não', 'sim', 'já', 'ainda', 'agora', 'sempre', 'muito', 'também', 'só', 'bem',
+      'sou', 'és', 'é', 'somos', 'são', 'estou', 'está', 'estamos', 'estão', 'ser', 'estar', 'ter', 'tem', 'há',
+      // wh-words — blanking these yields trivial gaps
+      'qual', 'quais', 'quem', 'onde', 'quanto', 'quanta', 'quantos', 'quantas',
+    ],
+    // Closed-class Portuguese words excluded from the VOCAB coverage denominator.
+    functionWords: [
+      // pronomes (pessoais / possessivos / demonstrativos / relativos / interrogativos)
+      'eu', 'tu', 'ele', 'ela', 'nós', 'vós', 'eles', 'elas', 'você', 'vocês', 'me', 'te', 'se', 'lhe', 'nos', 'vos', 'lhes', 'mim', 'ti', 'si', 'consigo', 'connosco',
+      'meu', 'minha', 'meus', 'minhas', 'teu', 'tua', 'seu', 'sua', 'nosso', 'nossa', 'dele', 'dela', 'deles', 'delas',
+      'este', 'esta', 'esse', 'essa', 'aquele', 'aquela', 'isto', 'isso', 'aquilo', 'estes', 'estas',
+      'que', 'quem', 'qual', 'quais', 'cujo', 'onde', 'quando', 'como', 'quanto',
+      // conjunções
+      'e', 'ou', 'mas', 'porém', 'contudo', 'porque', 'pois', 'que', 'se', 'quando', 'enquanto', 'embora', 'como', 'nem', 'logo', 'portanto',
+      // negação
+      'não', 'nunca', 'jamais', 'nada', 'ninguém', 'nenhum',
+      // ser / estar / ter / haver
+      'sou', 'és', 'é', 'somos', 'sois', 'são', 'ser', 'era', 'foi', 'estou', 'estás', 'está', 'estamos', 'estão', 'estar',
+      'tenho', 'tens', 'tem', 'temos', 'têm', 'ter', 'há', 'haver',
+      // preposições + contrações
+      'de', 'do', 'da', 'dos', 'das', 'em', 'no', 'na', 'nos', 'nas', 'a', 'ao', 'à', 'aos', 'às', 'por', 'pelo', 'pela',
+      'para', 'com', 'sem', 'sob', 'sobre', 'até', 'desde', 'entre', 'contra', 'perante',
+      // partículas / advérbios funcionais
+      'já', 'ainda', 'agora', 'sempre', 'muito', 'também', 'só', 'bem', 'mal', 'aqui', 'ali', 'lá', 'assim', 'talvez', 'sim',
+    ],
+    ignoreTokens: ['né', 'ãh', 'hmm', 'aha', 'ah', 'eh', 'tá'],
+    // Authored Portuguese tip → Portuguese rule id (only ruleIds that exist in en-pt/grammar-rules.json).
+    grammarTipLabels: [
+      [/g[eê]nero|masculin|feminin|concord/i, 'Gênero', 'gender_agreement'],
+      [/ser\b|estar\b|permanent|tempor/i, 'Ser vs Estar', 'ser_vs_estar'],
+      [/tratamento|registro|você|senhor|formalidade/i, 'Formas de tratamento', 'forms_of_address'],
+    ],
+    frequency: {
+      list: 'Referencial Camões PLE (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until promoted to a real, coverage-complete pair.
+      stressTest: true,
+      note: 'Referencial Camões PLE (Português Língua Estrangeira) A1/A2, public reference. The ' +
+            'committeable top-1000 index is built when this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de, fi, pl, pt };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.
@@ -505,6 +574,12 @@
       ['tion', 'cion'], ['ty', 'dad'], ['ous', 'o'], ['ous', 'oso'],
       ['ate', 'ar'], ['ize', 'izar'], ['ise', 'izar'], ['al', 'al'], ['ble', 'ble'],
       ['ent', 'ente'], ['ant', 'ante'], ['ic', 'ico'], ['ical', 'ico'], ['ly', 'mente'],
+    ],
+    // Portuguese cognates fold like Spanish (ç→c, ã→a via NFD): -ção→cao, -dade, -oso, -vel, -mente.
+    'en|pt': [
+      ['tion', 'cao'], ['ty', 'dade'], ['ous', 'oso'], ['ate', 'ar'], ['ize', 'izar'],
+      ['al', 'al'], ['ble', 'vel'], ['ent', 'ente'], ['ant', 'ante'], ['ic', 'ico'],
+      ['ical', 'ico'], ['ly', 'mente'], ['ment', 'mento'],
     ],
   };
 

@@ -242,4 +242,84 @@ const pl = {
   retainedAdjMismatch() { return null; },   // adjective concordance out of scope for the stress-test slice.
 };
 
-export const GENDER = { es, de, pl };
+// ── Portuguese (pt) — STRESS-TEST target (en-pt), minimal ────────────────────
+// Portuguese person gender is the -o/-a Romance morphology (aluno/aluna, professor/professora), so
+// the DETECTION METHODS are the same shape as Spanish; only the DATA differs (Portuguese lemmas,
+// articles o/a, and the nasal -ão/-ã suppletive pairs irmão/irmã, cidadão/cidadã). `_w` folds the
+// diacritics (ã→a, ç→c…), so lemmas/irregulars are stored folded. avô/avó are omitted (both fold to
+// "avo" → indistinguishable after folding); they are not used in the stress-test content.
+const pt = {
+  personNouns: [
+    'menino', 'garoto', 'amigo', 'filho', 'tio', 'sobrinho', 'neto', 'namorado', 'esposo', 'vizinho',
+    'aluno', 'passageiro', 'empregado', 'dono', 'medico', 'enfermeiro', 'engenheiro', 'advogado',
+    'cozinheiro', 'arquiteto', 'bombeiro', 'padeiro', 'professor', 'jogador', 'vendedor', 'diretor',
+    'cantor', 'trabalhador', 'morador',
+  ],
+  personAdjs: [
+    'alto', 'baixo', 'gordo', 'magro', 'bonito', 'feio', 'loiro', 'moreno', 'simpatico', 'nervoso',
+    'cansado', 'ocupado', 'preocupado', 'animado', 'orgulhoso', 'calado', 'timido', 'curioso',
+    'honesto', 'generoso', 'preguicoso', 'casado', 'solteiro', 'divorciado', 'surpreso', 'assustado',
+    'chateado', 'tonto', 'agradecido', 'perdido', 'pronto',
+  ],
+  _adjAdverbs: ['alto', 'baixo'],
+  personCtx: /\b(estou|sou|est[aá]s|és|est[aá]|é|fico|me sinto|serei|seja|esteja)\b|\b(os|as)\s+(mais|menos)\s/i,
+  arts: { o: 'a', os: 'as', um: 'uma', uns: 'umas', este: 'esta', estes: 'estas', esse: 'essa', esses: 'essas',
+          aquele: 'aquela', aqueles: 'aquelas', ele: 'ela', eles: 'elas', meu: 'minha', teu: 'tua', seu: 'sua',
+          nosso: 'nossa', nossos: 'nossas' },
+  irregular: [
+    ['ator', 'atriz'], ['rei', 'rainha'], ['homem', 'mulher'], ['pai', 'mae'], ['irmao', 'irma'],
+    ['cidadao', 'cidada'], ['heroi', 'heroina'], ['principe', 'princesa'], ['genro', 'nora'],
+    ['padrinho', 'madrinha'], ['garcom', 'garconete'], ['cavalheiro', 'dama'],
+    // plural irregulars (the check runs on the surface words, so list both numbers)
+    ['atores', 'atrizes'], ['reis', 'rainhas'], ['homens', 'mulheres'], ['irmaos', 'irmas'],
+    ['cidadaos', 'cidadas'], ['herois', 'heroinas'], ['principes', 'princesas'],
+  ],
+
+  gestureGendered(text) {
+    for (const l of this.personNouns) {
+      const stem = l.replace(/o$/, '');
+      if (reWord(stem + '[oa]').test(text) || reWord(stem + 'as').test(text)) return l;
+    }
+    if (this.personCtx.test(text)) {
+      for (const l of this.personAdjs) {
+        const stem = l.replace(/o$/, '');
+        if (reWord(stem + '[oa]s?').test(text)) return l;
+      }
+    }
+    return null;
+  },
+
+  isGenderInfl(a, b) {
+    const la = _w(a), lb = _w(b); if (la === lb) return true;
+    if (this.arts[la] === lb || this.arts[lb] === la) return true;
+    if (this.irregular.some(([m, f]) => (la === m && lb === f) || (la === f && lb === m))) return true;
+    if (la.length > 1 && lb.length > 1 && la.slice(0, -1) === lb.slice(0, -1) &&
+        ((la.endsWith('o') && lb.endsWith('a')) || (la.endsWith('a') && lb.endsWith('o')))) return true;   // aluno/aluna
+    if (la.length > 2 && lb.length > 2 && la.slice(0, -2) === lb.slice(0, -2) &&
+        ((la.endsWith('os') && lb.endsWith('as')) || (la.endsWith('as') && lb.endsWith('os')))) return true; // alunos/alunas
+    if (lb === la + 'a' || la === lb + 'a') return true;   // professor/professora, cantor/cantora
+    return false;
+  },
+
+  bothGendersPresent(lemma, text) {
+    if (/o$/.test(lemma)) {                       // -o nouns: masc = stem+o, fem = stem+a (aluno/aluna)
+      const stem = lemma.slice(0, -1);
+      return reWord(stem + 'os?').test(text) && reWord(stem + 'as?').test(text);
+    }
+    return reWord(lemma + '(es)?').test(text) && reWord(lemma + 'as?').test(text);   // professor/professora
+  },
+
+  retainedAdjMismatch(mascText, femText) {
+    for (const lemma of this.personAdjs) {
+      if (this._adjAdverbs.includes(lemma)) continue;
+      const stem = lemma.replace(/o$/, '');
+      const masc = new RegExp('(^|[^\\p{L}])' + stem + 'os?($|[^\\p{L}])', 'iu');
+      const fem = new RegExp('(^|[^\\p{L}])' + stem + 'as?($|[^\\p{L}])', 'iu');
+      if (masc.test(femText)) return `adjetivo "${lemma}" no masculino dentro da forma feminina (sem concordar)`;
+      if (fem.test(mascText)) return `adjetivo "${lemma}" no feminino dentro da forma masculina (sem concordar)`;
+    }
+    return null;
+  },
+};
+
+export const GENDER = { es, de, pl, pt };

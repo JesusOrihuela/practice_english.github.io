@@ -137,6 +137,16 @@ const DETECTORS = {
     verb_aspect: null,
     noun_gender: null,
   },
+  // ── Portuguese target (en-pt) — STRESS-TEST, minimal ──────────────
+  // Gender agreement (-o/-a) and forms of address (tu/você/o senhor) are pervasive and collide with
+  // ordinary word-forms, and ser/estar both appear constantly — no reliable per-rule regex. Like the
+  // other stress-test targets these map to null → hand-curated; each rule teaches from its own
+  // self-contained context/examples.
+  pt: {
+    gender_agreement: null,
+    ser_vs_estar: null,
+    forms_of_address: null,
+  },
 };
 
 export { DETECTORS };

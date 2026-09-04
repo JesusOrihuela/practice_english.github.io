@@ -163,6 +163,13 @@ const CONTENT_RULES = {
     grammarChecks: null,
   },
 
+  pt: {
+    label: 'Portuguese',
+    anglicisms: [],      // none flagged in the minimal stress-test set (Brazilian PT naturalizes many loans).
+    regionalTerms: [],   // BR↔PT regional splits live in target[]/variants[] with labels.region, not errors here.
+    grammarChecks: null,
+  },
+
   // ─── TEMPLATE FOR A NEW TARGET LANGUAGE ──────────────────────────────────
   // fr: {
   //   label: 'French',
