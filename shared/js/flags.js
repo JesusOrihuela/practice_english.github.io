@@ -256,6 +256,8 @@ const AppFlags = (() => {
     'schweiz': ['ch'], 'suiza': ['ch'], 'switzerland': ['ch'],
     'dach': ['de', 'at', 'ch'],
     'espana': ['es'], 'uk': ['gb'], 'reino unido': ['gb'],
+    // Portuguese-speaking regions (en-pt BR↔PT split) — br/pt flag assets exist in shared/img/flags/.
+    'brasil': ['br'], 'brazil': ['br'], 'portugal': ['pt'],
     'us': ['us'], 'usa': ['us'], 'ee. uu.': ['us'], 'ee.uu.': ['us'], 'estados unidos': ['us'],
     'mexico': ['mx'], 'argentina': ['ar'], 'chile': ['cl'], 'peru': ['pe'], 'bolivia': ['bo'],
     'uruguay': ['uy'], 'colombia': ['co'], 'venezuela': ['ve'], 'australia': ['au'],

@@ -206,7 +206,7 @@ const AppFeedback = (() => {
       for (const dim of _dimOrder()) {
         const v = labs[dim];
         if (v === undefined || v === '') continue;
-        if (dim === 'register') parts.push(v === 'formal' ? t('alt_note_register_f') : t('alt_note_register_i'));
+        if (dim === 'register') parts.push(t({ formal: 'alt_note_register_f', neutral: 'alt_note_register_neu', informal: 'alt_note_register_i' }[v] || 'alt_note_register_i'));
         else if (dim === 'loanword') parts.push(t('alt_note_loanword'));
         else if (dim === 'synonym') parts.push(t('alt_note_synonym'));
         else parts.push(_capitalize(v));   // gender, region, number, + any future axis
@@ -259,7 +259,7 @@ const AppFeedback = (() => {
   // back to the capitalized raw value.
   const _VAL_KEY = {
     gender:   { femenino: 'alt_note_gender_f', masculino: 'alt_note_gender_m', neutro: 'alt_note_gender_n' },
-    register: { formal: 'alt_note_register_f', informal: 'alt_note_register_i' },
+    register: { formal: 'alt_note_register_f', neutral: 'alt_note_register_neu', informal: 'alt_note_register_i' },
     number:   { singular: 'alt_note_number_s', plural: 'alt_note_number_p' },
     case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen',
                 nominatiivi: 'alt_note_case_nom', partitiivi: 'alt_note_case_part', genetiivi: 'alt_note_case_gen',
@@ -289,6 +289,7 @@ const AppFeedback = (() => {
     },
     register: {
       formal:   _svg('<path d="M5 11V6C5 5.4 5.5 5 6 5h4c.5 0 1 .4 1 1v5"/><path d="M2.7 11.3h10.6M5 9h6"/>', '#4F46E5'),
+      neutral:  _svg('<rect x="2.7" y="4" width="10.6" height="8" rx="1.5"/><path d="M5.2 7.3h5.6M5.2 9.6h3.6"/>', '#6B7280'),
       informal: _svg('<rect x="2.5" y="3.5" width="11" height="7" rx="2"/><path d="M6 10.5 5.2 13 8.4 10.5"/>', '#0D9488'),
     },
     number:   _svg('<path d="M6 3.2 5 12.8M11 3.2 10 12.8M3.2 6.4h9.6M2.7 9.6h9.6"/>', '#D97706'),

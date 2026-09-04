@@ -36,7 +36,7 @@
   const DIMENSIONS = {
     loanword: { kind: 'lexical',      open: true,                              priority: 0, badge: 'text',   appliesTo: '*' },
     region:   { kind: 'lexical',      open: true,                              priority: 1, badge: 'flag',   appliesTo: '*' },
-    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es', 'de', 'pl'],
+    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es', 'de', 'pl', 'pt'],
                 agreement: ['articulo', 'sustantivo', 'adjetivo', 'participio', 'pronombre'] },
     // NUMBER (singular/plural) — a content dimension only where the plural is more than a bare "+s"
     // and drives real agreement (German: article + noun umlaut/ending + adjective + verb all co-vary,
@@ -56,7 +56,11 @@
                          'mianownik', 'dopełniacz', 'celownik', 'biernik', 'narzędnik', 'miejscownik', 'wołacz'],
                 priority: 4, badge: 'pill', appliesTo: ['de', 'fi', 'pl'],
                 agreement: ['artikel', 'adjektiv', 'pronomen'] },
-    register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 5, badge: 'pill',   appliesTo: '*' },
+    // REGISTER — forms of address / formality. Binary (formal/informal) for most languages, but a
+    // 3-WAY politeness cline where a language marks three tiers of address: Portuguese tu (informal) /
+    // você (neutral, the standard) / o senhor (formal). Added data-only for the en-pt stress-test pair;
+    // 'neutral' is harmless for binary languages (they simply never author it).
+    register: { kind: 'lexical',      values: ['formal', 'neutral', 'informal'], priority: 5, badge: 'pill',   appliesTo: '*' },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
     // takes the rotation + recognition presentation ("also: albergue") — which is what the synonym-
     // interference research prescribes, unlike showing them as co-equal slash targets. A single
