@@ -505,8 +505,11 @@
   const pt = {
     name: 'Portuguese',
     grammaticalGender: true,    // masc/fem agreement (-o/-a) → gender-variant enrichment + gender-detector block.
-    voices: ['pf_dora', 'pm_alex', 'pm_santa'],   // Kokoro pt-BR voices (see generate-audio.mjs LANG_VOICES).
-    tts: { engine: 'kokoro' },   // FIRST non-English Kokoro target — validates the Kokoro path for a new language.
+    // Audio: edge-tts pt-BR (Azure Neural). kokoro-js ships ONLY English voices, so despite the model
+    // supporting pt, every non-English target — pt included — uses edge-tts. pf_dora→pt-BR-Francisca,
+    // pm_alex→pt-BR-Antonio (the only pt-BR male; there is no distinct second BR male, so 2 voices).
+    voices: ['pf_dora', 'pm_alex'],
+    tts: { engine: 'edge' },   // generate-audio-tgt.py --lang pt (Azure Neural pt-BR).
     // Portuguese uses accented vowels (á â ã à é ê í ó ô õ ú) and ç. These carry meaning (avô≠avó,
     // pêra≠pera historically, and ã/õ are nasal) so preserve them, exactly like es keeps ñ. Answer-
     // checking stays strict on the diacritics that distinguish words.

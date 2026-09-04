@@ -72,14 +72,15 @@ const AppLangPair = (() => {
     },
     {
       // STRESS-TEST pair (intentionally minimal): the 4th and final divergent target. Portuguese
-      // stresses (1) the KOKORO audio engine with a non-English language (first non-en Kokoro target),
-      // (2) a 3-WAY register cline tu / você / o senhor (register's first non-binary use), and (3)
-      // BR↔PT regional variation (flags br + pt). Grammatical gender -o/-a applies.
+      // stresses (1) a 3-WAY register cline tu / você / o senhor (register's first non-binary use),
+      // (2) BR↔PT regional variation (flags br + pt), and grammatical gender -o/-a. NOTE: it also
+      // exposed that kokoro-js ships ONLY English voices, so pt (like every non-en target) uses
+      // edge-tts pt-BR — the "Kokoro with a new language" premise is not achievable with kokoro-js.
       id:          'en-pt',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English',    localName: 'English' },
       target:      { code: 'pt', flags: ['br', 'pt'], name: 'Português', localName: 'Portuguese' },
       label:       'English → Português',
-      ttsVoices:   ['pf_dora', 'pm_alex', 'pm_santa'],
+      ttsVoices:   ['pf_dora', 'pm_alex'],
       sttLanguage: 'portuguese',
     },
     // To add a new pair, insert an object here with id, source, target, label,
