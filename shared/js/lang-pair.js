@@ -31,7 +31,7 @@ const AppLangPair = (() => {
     {
       id:          'en-es',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
-      target:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'español' },
+      target:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'Spanish' },
       label:       'English → Español',
       ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
       sttLanguage: 'spanish',
@@ -41,7 +41,7 @@ const AppLangPair = (() => {
       // dimensions (number, case) + 3-way gender and du/Sie register with a German target.
       id:          'en-de',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
-      target:      { code: 'de', flags: ['at', 'de'], name: 'Deutsch', localName: 'Deutsch' },
+      target:      { code: 'de', flags: ['at', 'de'], name: 'Deutsch', localName: 'German' },
       label:       'English → Deutsch',
       ttsVoices:   ['df_hedda', 'dm_conrad'],
       sttLanguage: 'german',
@@ -53,7 +53,7 @@ const AppLangPair = (() => {
       // never assumes exactly two.
       id:          'en-fi',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
-      target:      { code: 'fi', flags: ['fi'],       name: 'Suomi',   localName: 'suomi'   },
+      target:      { code: 'fi', flags: ['fi'],       name: 'Suomi',   localName: 'Finnish' },
       label:       'English → Suomi',
       ttsVoices:   ['fif_noora', 'fim_harri'],
       sttLanguage: 'finnish',

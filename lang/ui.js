@@ -879,7 +879,7 @@
       act_scramble:           'Scramble',
 
       // ── Onboarding ────────────────────────────────────────────
-      ob_title_how:           'Your {targetName}, in real conversations',
+      ob_title_how:           'Your {target}, in real conversations',
       ob_body_how:            'Practice speaking, listening and writing with phrases from everyday life — restaurants, travel, work and more.<br><br>The system learns with you: shows you exactly what you need, right when you need it.',
       ob_btn_find_level:      'Get started →',
       ob_title_topics:        'What interests you?',
@@ -1170,7 +1170,7 @@
       placement_suggestions_label:'Recommended activities for your level:',
       placement_result_cta:       'Start practicing →',
       placement_page_h1:          'Level <span>Test</span>',
-      placement_subtitle_enes:    '14 questions to find your {targetName} level (A1–C2) and suggest the best starting point.',
+      placement_subtitle_enes:    '14 questions to find your {target} level (A1–C2) and suggest the best starting point.',
       placement_time_pill:        '⏱️ ~3 minutes',
       placement_questions_pill:   '❓ 14 questions',
       placement_result_pill:      '📊 CEFR Result',
