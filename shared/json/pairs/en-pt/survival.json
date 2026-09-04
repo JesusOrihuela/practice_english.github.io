@@ -1,0 +1,74 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Excuse me, do you speak English?",
+      "level": "A1",
+      "grammar": "Com tu o verbo ganha -s (falas), com você e o senhor não (fala).",
+      "target": [
+        {
+          "text": "Com licença, tu falas inglês?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "com_licenca_tu_falas_ingles"
+        },
+        {
+          "text": "Com licença, você fala inglês?",
+          "labels": {
+            "register": "neutral"
+          },
+          "audioSlug": "com_licenca_voce_fala_ingles"
+        },
+        {
+          "text": "Com licença, o senhor fala inglês?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "com_licenca_o_senhor_fala_ingles"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Can you help me?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tu podes me ajudar?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "tu_podes_me_ajudar"
+        },
+        {
+          "text": "Você pode me ajudar?",
+          "labels": {
+            "register": "neutral"
+          },
+          "audioSlug": "voce_pode_me_ajudar"
+        },
+        {
+          "text": "O senhor pode me ajudar?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "o_senhor_pode_me_ajudar"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "I don't understand.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Não entendo.",
+          "audioSlug": "nao_entendo"
+        }
+      ]
+    }
+  ]
+}

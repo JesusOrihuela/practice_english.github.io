@@ -1,0 +1,50 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_my_name_is",
+      "source": "My name is Ana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Meu nome é Ana.",
+          "audioSlug": "meu_nome_e_ana"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_from_brazil",
+      "source": "I am from Brazil.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Sou do Brasil.",
+          "audioSlug": "sou_do_brasil"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": "O gênero muda a terminação, aluno (masculino) e aluna (feminino).",
+      "target": [
+        {
+          "text": "Sou aluno.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "sou_aluno"
+        },
+        {
+          "text": "Sou aluna.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "sou_aluna"
+        }
+      ]
+    }
+  ]
+}

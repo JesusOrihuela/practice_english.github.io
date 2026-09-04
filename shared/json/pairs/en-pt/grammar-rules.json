@@ -1,0 +1,324 @@
+{
+  "categories": [
+    {
+      "id": "gender",
+      "label_en": "Gender",
+      "label_es": "Género",
+      "label_pt": "Gênero",
+      "emoji": "🚻",
+      "color": "#DB2777"
+    },
+    {
+      "id": "address",
+      "label_en": "Forms of Address",
+      "label_es": "Formas de tratamiento",
+      "label_pt": "Formas de tratamento",
+      "emoji": "🙋",
+      "color": "#0D9488"
+    },
+    {
+      "id": "verbs",
+      "label_en": "Verbs",
+      "label_es": "Verbos",
+      "label_pt": "Verbos",
+      "emoji": "🏃",
+      "color": "#16A34A"
+    }
+  ],
+  "rules": [
+    {
+      "id": "gender_agreement",
+      "category": "gender",
+      "level": "A1",
+      "title": "Noun and Adjective Gender",
+      "title_en": "Noun and Adjective Gender",
+      "title_es": "Género del sustantivo y del adjetivo",
+      "title_pt": "Gênero do substantivo e do adjetivo",
+      "explanation": "Portuguese nouns and adjectives are **masculine** or **feminine**. Masculine words often end in **-o** (alun**o**) and feminine in **-a** (alun**a**). The article agrees too, **o** aluno / **a** aluna, and so does the adjective, o menino alt**o** / a menina alt**a**.",
+      "context_dialogue": [
+        {
+          "speaker": "LUCAS",
+          "text": "Eu sou **aluno**.",
+          "translation": "I am a student.",
+          "highlight": true
+        },
+        {
+          "speaker": "MARIA",
+          "text": "E eu sou **aluna**.",
+          "translation": "And I am a student.",
+          "highlight": true
+        },
+        {
+          "speaker": "LUCAS",
+          "text": "O professor é **simpático**.",
+          "translation": "The teacher is nice.",
+          "highlight": true
+        },
+        {
+          "speaker": "MARIA",
+          "text": "E a professora é **simpática**.",
+          "translation": "And the teacher is nice.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Look at aluno and aluna. Which ending is masculine and which is feminine?",
+        "How does the article change between o aluno and a aluna?",
+        "The adjective simpático becomes simpática. What makes it change?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "A menina é alta.",
+          "translation": "The girl is tall.",
+          "question": "Why does the adjective appear as alta and not alto?",
+          "options": [
+            "It agrees with the feminine noun menina",
+            "It is plural",
+            "It is a verb form",
+            "Adjectives in Portuguese never change"
+          ],
+          "correct": 0,
+          "feedback": "The adjective agrees in gender with the noun, menina (feminine) takes alta."
+        },
+        {
+          "affective": true,
+          "question": "Which is true for you? Choose one.",
+          "options": [
+            "Tenho um irmão.",
+            "Tenho uma irmã.",
+            "Tenho um amigo."
+          ],
+          "feedback": "irmão is masculine and irmã feminine, the ending marks the gender."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "A ___ é simpática. (aluno/aluna)",
+          "translation": "The student is nice.",
+          "answer": "aluna",
+          "accepted": [
+            "aluna"
+          ],
+          "feedback_why": "A feminine subject takes the feminine form aluna and the article a.",
+          "contrast": ""
+        },
+        {
+          "sentence": "O menino é ___. (alto/alta)",
+          "translation": "The boy is tall.",
+          "answer": "alto",
+          "accepted": [
+            "alto"
+          ],
+          "feedback_why": "The masculine noun menino takes the masculine adjective alto.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Describe a man and a woman you know, with an adjective that agrees with each.",
+          "model": "O meu amigo é alto e a minha amiga é alta.",
+          "model_translation": "My friend is tall and my friend is tall.",
+          "hint": "Masculine ends in -o, feminine in -a, and the article and adjective agree."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "forms_of_address",
+      "category": "address",
+      "level": "A1",
+      "title": "Forms of Address (tu, você, o senhor)",
+      "title_en": "Forms of Address (tu, você, o senhor)",
+      "title_es": "Formas de tratamiento (tu, você, o senhor)",
+      "title_pt": "Formas de tratamento (tu, você, o senhor)",
+      "explanation": "Portuguese has three ways to say **you**. **tu** is informal (friends, family) and takes the 2nd person verb, tu fala**s**. **você** is the neutral, everyday form and takes the 3rd person, você fal**a**. **o senhor / a senhora** is formal (respect, elders, strangers) and also takes the 3rd person, o senhor fal**a**.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Tu** falas inglês?",
+          "translation": "Do you speak English?",
+          "highlight": true
+        },
+        {
+          "speaker": "PEDRO",
+          "text": "Falo um pouco.",
+          "translation": "I speak a little.",
+          "highlight": false
+        },
+        {
+          "speaker": "ANA",
+          "text": "**O senhor** fala inglês?",
+          "translation": "Do you speak English?",
+          "highlight": true
+        },
+        {
+          "speaker": "SENHOR",
+          "text": "Falo, sim.",
+          "translation": "Yes, I do.",
+          "highlight": false
+        }
+      ],
+      "noticing_prompts": [
+        "Compare tu falas and o senhor fala. Which verb ending goes with tu?",
+        "você and o senhor use the same verb form. Which person is it?",
+        "When would you choose o senhor instead of tu?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Você pode me ajudar?",
+          "translation": "Can you help me?",
+          "question": "Why is it pode and not podes?",
+          "options": [
+            "você takes the 3rd person verb",
+            "você is always plural",
+            "você can only be informal",
+            "it is a spelling mistake"
+          ],
+          "correct": 0,
+          "feedback": "você, like o senhor, uses the 3rd person, so você pode."
+        },
+        {
+          "affective": true,
+          "question": "How would you speak to YOUR teacher? Choose what fits.",
+          "options": [
+            "O senhor pode repetir?",
+            "Você pode repetir?",
+            "Tu podes repetir?"
+          ],
+          "feedback": "With a teacher many speakers use o senhor or a senhora (formal) or você (neutral), tu is informal."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Tu ___ português? (falar)",
+          "translation": "Do you speak Portuguese?",
+          "answer": "falas",
+          "accepted": [
+            "falas"
+          ],
+          "feedback_why": "tu takes the 2nd person form falas.",
+          "contrast": ""
+        },
+        {
+          "sentence": "O senhor ___ me ajudar? (poder)",
+          "translation": "Can you help me?",
+          "answer": "pode",
+          "accepted": [
+            "pode"
+          ],
+          "feedback_why": "o senhor takes the 3rd person form pode.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Ask if someone has time, once to a friend (tu) and once to a stranger (o senhor).",
+          "model": "Tu tens tempo? O senhor tem tempo?",
+          "model_translation": "Do you have time? Do you have time?",
+          "hint": "tu takes the 2nd person (tens), o senhor takes the 3rd person (tem)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "ser_vs_estar",
+      "category": "verbs",
+      "level": "A2",
+      "title": "Ser vs Estar",
+      "title_en": "Ser vs Estar",
+      "title_es": "Ser vs Estar",
+      "title_pt": "Ser vs Estar",
+      "explanation": "Both **ser** and **estar** mean **to be**. **ser** is for permanent, defining facts (origin, profession, identity), Eu **sou** do Brasil. **estar** is for temporary states and locations, Eu **estou** cansado, A porta **está** aberta.",
+      "context_dialogue": [
+        {
+          "speaker": "JOÃO",
+          "text": "Eu **sou** professor.",
+          "translation": "I am a teacher.",
+          "highlight": true
+        },
+        {
+          "speaker": "LIA",
+          "text": "E hoje **estou** cansada.",
+          "translation": "And today I am tired.",
+          "highlight": true
+        },
+        {
+          "speaker": "JOÃO",
+          "text": "A escola **é** grande.",
+          "translation": "The school is big.",
+          "highlight": true
+        },
+        {
+          "speaker": "LIA",
+          "text": "Mas hoje **está** fechada.",
+          "translation": "But today it is closed.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "sou professor and estou cansada, which one is a lasting fact about the person?",
+        "é grande and está fechada, which one describes a temporary situation?",
+        "Which verb would you use for I am in Brazil right now?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "A porta está aberta.",
+          "translation": "The door is open.",
+          "question": "Why está and not é?",
+          "options": [
+            "Being open is a temporary, changeable state",
+            "It is a permanent trait of the door",
+            "está is only informal",
+            "é is only used for people"
+          ],
+          "correct": 0,
+          "feedback": "A changeable state or condition takes estar, so está aberta."
+        },
+        {
+          "affective": true,
+          "question": "What is true about you right now? Choose one.",
+          "options": [
+            "Estou feliz.",
+            "Estou cansado.",
+            "Estou em casa."
+          ],
+          "feedback": "All three use estar for a temporary state or a location."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Eu ___ do Brasil. (ser/estar)",
+          "translation": "I am from Brazil.",
+          "answer": "sou",
+          "accepted": [
+            "sou"
+          ],
+          "feedback_why": "Origin is a permanent fact, so ser gives sou.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nós ___ cansados hoje. (ser/estar)",
+          "translation": "We are tired today.",
+          "answer": "estamos",
+          "accepted": [
+            "estamos"
+          ],
+          "feedback_why": "A temporary state takes estar, so estamos.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Say one permanent thing (ser) and one temporary thing (estar) about yourself.",
+          "model": "Sou estudante e estou feliz hoje.",
+          "model_translation": "I am a student and I am happy today.",
+          "hint": "Use ser for identity and traits, estar for states and location."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

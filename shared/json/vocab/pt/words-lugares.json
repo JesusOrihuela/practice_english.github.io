@@ -1,0 +1,56 @@
+{
+  "words": [
+    {
+      "id": "banheiro",
+      "term": "banheiro / casa de banho",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar onde a pessoa lava as mãos e usa o sanitário.",
+      "example": "O banheiro fica no fim do corredor.",
+      "translations": { "en": "bathroom" },
+      "gloss": { "en": "The room where you wash and use the toilet." },
+      "gloss_example": { "en": "The bathroom is at the end of the hallway." },
+      "variants": [
+        { "text": "banheiro",      "labels": { "region": "Brasil" },   "audioSlug": "banheiro" },
+        { "text": "casa de banho", "labels": { "region": "Portugal" }, "audioSlug": "casa_de_banho" }
+      ]
+    },
+    {
+      "id": "cidade",
+      "term": "cidade",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar grande onde vivem muitas pessoas.",
+      "example": "São Paulo é uma cidade grande.",
+      "translations": { "en": "city" },
+      "gloss": { "en": "A large place where many people live." },
+      "gloss_example": { "en": "São Paulo is a big city." }
+    },
+    {
+      "id": "rua",
+      "term": "rua",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Caminho na cidade com casas dos dois lados.",
+      "example": "Esta rua é muito longa.",
+      "translations": { "en": "street" },
+      "gloss": { "en": "A way in the city with houses on both sides." },
+      "gloss_example": { "en": "This street is very long." }
+    },
+    {
+      "id": "parque",
+      "term": "parque",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Lugar verde na cidade onde as pessoas descansam.",
+      "example": "As crianças brincam no parque.",
+      "translations": { "en": "park" },
+      "gloss": { "en": "A green place in the city where people relax." },
+      "gloss_example": { "en": "The children play in the park." }
+    }
+  ]
+}

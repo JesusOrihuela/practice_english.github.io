@@ -1,0 +1,7 @@
+{
+  "topics": [
+    { "id": "survival",      "label": "Sobrevivir",          "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true,  "vocab": false, "level": "A1", "order": 1 },
+    { "id": "personal_info", "label": "Información Personal", "labelEn": "Personal Information", "emoji": "🪪", "phrase": true,  "vocab": false, "level": "A1", "order": 2 },
+    { "id": "lugares",       "label": "Lugares",             "labelEn": "Places",              "emoji": "📍", "phrase": false, "vocab": true,  "level": "A1", "order": 3, "vocabOrder": 0 }
+  ]
+}
