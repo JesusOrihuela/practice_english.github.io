@@ -1,0 +1,319 @@
+{
+  "categories": [
+    {
+      "id": "gender",
+      "label_de": "Genus",
+      "label_en": "Gender",
+      "label_es": "Género",
+      "emoji": "🚻",
+      "color": "#DB2777"
+    },
+    {
+      "id": "cases",
+      "label_de": "Grammatische Fälle",
+      "label_en": "Grammatical Cases",
+      "label_es": "Casos gramaticales",
+      "emoji": "🎯",
+      "color": "#2563EB"
+    },
+    {
+      "id": "verbs",
+      "label_de": "Verben",
+      "label_en": "Verbs",
+      "label_es": "Verbos",
+      "emoji": "🏃",
+      "color": "#16A34A"
+    }
+  ],
+  "rules": [
+    {
+      "id": "noun_gender",
+      "category": "gender",
+      "level": "A1",
+      "title": "Das Genus (Rodzaj)",
+      "title_de": "Das Genus (Rodzaj)",
+      "title_en": "Noun Gender",
+      "title_es": "El género del sustantivo",
+      "explanation": "Jedes polnische Substantiv hat ein **Genus**: **männlich** (rodzaj męski, oft Konsonant-Ende: **dom**), **weiblich** (żeński, oft **-a**: **kobieta**) oder **sächlich** (nijaki, oft **-o/-e**: **okno**). Es gibt **keine Artikel**; das Genus zeigt sich an der Endung und an **ten / ta / to** (dieser / diese / dieses).",
+      "context_dialogue": [
+        {
+          "speaker": "LENA",
+          "text": "**Ten** dom jest duży.",
+          "translation": "Dieses Haus ist groß.",
+          "highlight": true
+        },
+        {
+          "speaker": "JAN",
+          "text": "A **ta** ulica jest długa.",
+          "translation": "Und diese Straße ist lang.",
+          "highlight": true
+        },
+        {
+          "speaker": "LENA",
+          "text": "**To** miasto jest piękne.",
+          "translation": "Diese Stadt ist schön.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Welches Wort steht vor „dom\", „ulica\" und „miasto\" (ten / ta / to)?",
+        "„dom\" endet auf einen Konsonanten, „ulica\" auf -a, „miasto\" auf -o. Welches Genus ist welches?",
+        "Gibt es im Polnischen Artikel wie „der / die / das\"?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "To okno jest małe.",
+          "translation": "Dieses Fenster ist klein.",
+          "question": "Welches Genus hat „okno\"?",
+          "options": [
+            "Sächlich (nijaki), Endung -o",
+            "Männlich (męski)",
+            "Weiblich (żeński)",
+            "Plural"
+          ],
+          "correct": 0,
+          "feedback": "„okno\" endet auf -o und nimmt „to\", also sächlich (nijaki)."
+        },
+        {
+          "affective": true,
+          "question": "Was gibt es in deiner Stadt? Wähle das Wahre.",
+          "options": [
+            "Jest tu park.",
+            "Jest tu ładna ulica.",
+            "Jest tu duże miasto."
+          ],
+          "feedback": "Jede Option nennt ein Substantiv mit seinem Genus: park (m), ulica (f), miasto (n)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ kobieta jest miła. (ten/ta/to)",
+          "translation": "Diese Frau ist nett.",
+          "answer": "ta",
+          "accepted": [
+            "ta"
+          ],
+          "feedback_why": "„kobieta\" ist weiblich (Endung -a), also „ta\".",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ dom jest nowy. (ten/ta/to)",
+          "translation": "Dieses Haus ist neu.",
+          "answer": "ten",
+          "accepted": [
+            "ten"
+          ],
+          "feedback_why": "„dom\" ist männlich (Konsonant-Ende), also „ten\".",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Beschreib etwas in deiner Stadt mit „ten / ta / to\" + Substantiv.",
+          "model": "Ten park jest bardzo duży.",
+          "model_translation": "Dieser Park ist sehr groß.",
+          "hint": "männlich → ten, weiblich → ta, sächlich → to."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "instrumental_case",
+      "category": "cases",
+      "level": "A2",
+      "title": "Der Instrumental (Narzędnik)",
+      "title_de": "Der Instrumental (Narzędnik)",
+      "title_en": "The Instrumental Case",
+      "title_es": "El caso instrumental",
+      "explanation": "Nach dem Verb **być** (sein) und nach **z** (mit) steht das Substantiv im **Narzędnik** (Instrumental). Endungen: männlich/sächlich **-em** (nauczyciel → nauczyciel**em**), weiblich **-ą** (studentka → studentk**ą**). Beispiel: Jestem lekarz**em**. Idę z koleg**ą**.",
+      "context_dialogue": [
+        {
+          "speaker": "ANNA",
+          "text": "Kim jesteś?",
+          "translation": "Wer bist du (von Beruf)?",
+          "highlight": false
+        },
+        {
+          "speaker": "BEN",
+          "text": "Jestem **nauczycielem**.",
+          "translation": "Ich bin Lehrer.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANNA",
+          "text": "A ja jestem **studentką**.",
+          "translation": "Und ich bin Studentin.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Idę z **kolegą** do parku.",
+          "translation": "Ich gehe mit einem Kollegen in den Park.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In „Jestem nauczycielem\", welche Endung hat das Substantiv?",
+        "„nauczyciel\" ist männlich, „studentka\" ist weiblich. Wie unterscheiden sich ihre Endungen im Narzędnik?",
+        "Nach welchen Wörtern steht hier der Narzędnik (być, z ...)?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Jestem lekarzem.",
+          "translation": "Ich bin Arzt.",
+          "question": "Warum steht „lekarz\" als „lekarzem\"?",
+          "options": [
+            "Weil nach „być\" (sein) der Narzędnik steht",
+            "Weil es Plural ist",
+            "Weil es das Subjekt ist",
+            "Weil es weiblich ist"
+          ],
+          "correct": 0,
+          "feedback": "Nach „być\" steht das Substantiv im Narzędnik: lekarz → lekarzem."
+        },
+        {
+          "affective": true,
+          "question": "Was bist du von Beruf (oder möchtest du sein)? Wähle das Passende.",
+          "options": [
+            "Jestem studentem.",
+            "Jestem nauczycielem.",
+            "Jestem lekarzem."
+          ],
+          "feedback": "Jede Option benutzt den Narzędnik nach „jestem\" (ich bin)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Jestem ___. (nauczyciel)",
+          "translation": "Ich bin Lehrer.",
+          "answer": "nauczycielem",
+          "accepted": [
+            "nauczycielem"
+          ],
+          "feedback_why": "Nach „być\" steht der Narzędnik: nauczyciel → nauczycielem.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Idę z ___ do parku. (kolega)",
+          "translation": "Ich gehe mit einem Kollegen in den Park.",
+          "answer": "kolegą",
+          "accepted": [
+            "kolegą"
+          ],
+          "feedback_why": "Nach „z\" (mit) steht der Narzędnik: kolega → kolegą.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Schreib einen Satz über deinen Beruf mit „Jestem ...\" (Narzędnik).",
+          "model": "Jestem studentem i lubię język polski.",
+          "model_translation": "Ich bin Student und ich mag die polnische Sprache.",
+          "hint": "Nach „jestem\" steht der Narzędnik: -em (m/n) / -ą (f)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "verb_aspect",
+      "category": "verbs",
+      "level": "B1",
+      "title": "Der Verbalaspekt (Aspekt)",
+      "title_de": "Der Verbalaspekt (Aspekt)",
+      "title_en": "Verbal Aspect",
+      "title_es": "El aspecto verbal",
+      "explanation": "Polnische Verben haben zwei **Aspekte**: **niedokonany** (unvollendet, Prozess oder Gewohnheit: **robić**) und **dokonany** (vollendet, das Ergebnis zählt: **zrobić**). Der vollendete Aspekt entsteht oft durch eine Vorsilbe (z-, na-, po-, wy-). „Piszę list\" (ich schreibe gerade) vs „Napisałem list\" (ich habe ihn fertig geschrieben).",
+      "context_dialogue": [
+        {
+          "speaker": "MAREK",
+          "text": "Co **robisz**?",
+          "translation": "Was machst du (gerade)?",
+          "highlight": true
+        },
+        {
+          "speaker": "EWA",
+          "text": "**Piszę** list.",
+          "translation": "Ich schreibe (gerade) einen Brief.",
+          "highlight": true
+        },
+        {
+          "speaker": "MAREK",
+          "text": "Już go **napisałaś**?",
+          "translation": "Hast du ihn schon (fertig) geschrieben?",
+          "highlight": true
+        },
+        {
+          "speaker": "EWA",
+          "text": "Tak, właśnie **napisałam**.",
+          "translation": "Ja, ich habe ihn gerade fertig geschrieben.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "„Piszę\" gegen „napisałam\": Welches beschreibt einen Prozess, welches ein Ergebnis?",
+        "Wie entsteht „napisać\" aus „pisać\" (welche Vorsilbe)?",
+        "Welcher Aspekt betont, dass die Handlung abgeschlossen ist?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Wczoraj przeczytałem tę książkę.",
+          "translation": "Gestern habe ich dieses Buch (zu Ende) gelesen.",
+          "question": "Was betont „przeczytałem\" (dokonany)?",
+          "options": [
+            "Die Handlung ist abgeschlossen (das Buch ist fertig gelesen)",
+            "Die Handlung dauert noch an",
+            "Es ist eine Gewohnheit",
+            "Es passiert jetzt gerade"
+          ],
+          "correct": 0,
+          "feedback": "Der vollendete Aspekt (dokonany) betont das abgeschlossene Ergebnis."
+        },
+        {
+          "affective": true,
+          "question": "Was machst du oft? Wähle das Wahre.",
+          "options": [
+            "Czytam książki.",
+            "Piszę e-maile.",
+            "Gotuję obiad."
+          ],
+          "feedback": "Jede Option benutzt den unvollendeten Aspekt (niedokonany) für eine Gewohnheit."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Codziennie ___ kawę. (pić)",
+          "translation": "Jeden Tag trinke ich Kaffee.",
+          "answer": "piję",
+          "accepted": [
+            "piję"
+          ],
+          "feedback_why": "Gewohnheit, also unvollendeter Aspekt: pić → piję.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Wczoraj ___ całą kawę. (wypić)",
+          "translation": "Gestern habe ich den ganzen Kaffee ausgetrunken.",
+          "answer": "wypiłem",
+          "accepted": [
+            "wypiłem",
+            "wypiłam"
+          ],
+          "feedback_why": "Abgeschlossene Handlung, also vollendeter Aspekt: wypić → wypiłem.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Schreib, was du gestern fertig gemacht hast (vollendeter Aspekt).",
+          "model": "Wczoraj napisałem długi list.",
+          "model_translation": "Gestern habe ich einen langen Brief geschrieben.",
+          "hint": "Vollendet: oft mit einer Vorsilbe (na-, z-, po-, wy-)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

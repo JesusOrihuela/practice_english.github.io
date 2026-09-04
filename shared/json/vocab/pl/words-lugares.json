@@ -1,0 +1,58 @@
+{
+  "words": [
+    {
+      "id": "dom",
+      "term": "dom",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Budynek, w którym mieszkają ludzie.",
+      "example": "Mój dom jest duży.",
+      "translations": { "de": "Haus" },
+      "gloss": { "de": "Ein Gebäude, in dem Menschen wohnen." },
+      "gloss_example": { "de": "Mein Haus ist groß." },
+      "variants": [
+        { "text": "dom",    "labels": { "case": "mianownik" },   "audioSlug": "dom" },
+        { "text": "domu",   "labels": { "case": "dopełniacz" }, "audioSlug": "domu" },
+        { "text": "domowi", "labels": { "case": "celownik" },    "audioSlug": "domowi" },
+        { "text": "domem",  "labels": { "case": "narzędnik" },  "audioSlug": "domem" }
+      ]
+    },
+    {
+      "id": "miasto",
+      "term": "miasto",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Duże miejsce, gdzie mieszka wielu ludzi.",
+      "example": "Warszawa to duże miasto.",
+      "translations": { "de": "Stadt" },
+      "gloss": { "de": "Ein großer Ort, an dem viele Menschen leben." },
+      "gloss_example": { "de": "Warschau ist eine große Stadt." }
+    },
+    {
+      "id": "ulica",
+      "term": "ulica",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Droga w mieście z domami po bokach.",
+      "example": "Ta ulica jest długa.",
+      "translations": { "de": "Straße" },
+      "gloss": { "de": "Ein Weg in der Stadt mit Häusern an den Seiten." },
+      "gloss_example": { "de": "Diese Straße ist lang." }
+    },
+    {
+      "id": "park",
+      "term": "park",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Zielone miejsce w mieście, gdzie ludzie odpoczywają.",
+      "example": "Dzieci bawią się w parku.",
+      "translations": { "de": "Park" },
+      "gloss": { "de": "Ein grüner Ort in der Stadt, wo Menschen sich erholen." },
+      "gloss_example": { "de": "Die Kinder spielen im Park." }
+    }
+  ]
+}

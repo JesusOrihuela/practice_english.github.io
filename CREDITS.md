@@ -103,6 +103,8 @@ per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrigh
   reference: *Nueva gramática de la lengua española* (NGLE, RAE & ASALE).
 - **German** — Goethe-Institut / *Profile deutsch* CEFR descriptors; reference: *Duden — Die Grammatik*.
 - **Finnish** — CEFR descriptors (YKI/EOI); reference: *Iso suomen kielioppi* (VISK, SKS).
+- **Polish** — ORViL (*Opis referencyjny znajomości języka polskiego*, the Polish CEFR reference
+  description) + CKE certification A1/A2 word stock; reference grammar: *Gramatyka języka polskiego*.
 
 ### National flags (`shared/img/flags/`)
 Faithful national flag SVGs used for the region/variant badges. National flags are in the

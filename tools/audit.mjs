@@ -156,6 +156,13 @@ const CONTENT_RULES = {
     grammarChecks: null,
   },
 
+  pl: {
+    label: 'Polish',
+    anglicisms: [],      // none flagged in the minimal stress-test set (komputer/weekend are naturalized).
+    regionalTerms: [],   // no regional split authored for the stress-test pair.
+    grammarChecks: null,
+  },
+
   // ─── TEMPLATE FOR A NEW TARGET LANGUAGE ──────────────────────────────────
   // fr: {
   //   label: 'French',

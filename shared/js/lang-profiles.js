@@ -397,7 +397,75 @@
     },
   };
 
-  const PROFILES = { en, es, de, fi };
+  // ── Polish (pl) — STRESS-TEST target (de-pl), intentionally minimal/non-shippable ──
+  // The 3rd stress-test target and the first with a NON-en/es SOURCE (German). Polish stresses:
+  // grammatical gender (masc/fem/neut, plus masculine animacy), a 7-CASE system (the pair exercises
+  // a slice, e.g. the instrumental), verbal ASPECT (perfective/imperfective: robić/zrobić), NO
+  // articles, and consonant-heavy orthography with 9 special letters (ą ć ę ł ń ó ś ź ż).
+  const pl = {
+    name: 'Polish',
+    grammaticalGender: true,    // masc/fem/neut agreement → gender-variant enrichment applies + gender-detector block.
+    voices: ['plf_zofia', 'plm_marek'],   // edge-tts pl-PL voices (see generate-audio-tgt.py).
+    tts: { engine: 'edge' },
+    // The 9 Polish special letters are DISTINCT letters (ó≠o phonemically in spelling, ł≠l, etc.), not
+    // accented ASCII — preserve them all so answer-checking stays strict (like es keeps ñ, de keeps äöüß).
+    foldPreserve: 'ąćęłńóśźż',
+    nativeChars: 'ąćęłńóśźż',
+    // Cloze must blank a CONTENT word, never these closed-class Polish words.
+    clozeStopWords: [
+      'ja', 'ty', 'on', 'ona', 'ono', 'my', 'wy', 'oni', 'one',
+      'mnie', 'mię', 'ciebie', 'cię', 'jego', 'go', 'jej', 'ją', 'nas', 'was', 'ich', 'im', 'mu',
+      'ten', 'ta', 'to', 'ci', 'te', 'tego', 'tej', 'tym',
+      'i', 'a', 'ale', 'lub', 'albo', 'oraz', 'czy', 'że', 'żeby', 'aby', 'bo', 'gdy', 'kiedy', 'jeśli', 'jeżeli', 'choć', 'więc', 'ani', 'lecz',
+      'nie',
+      'jestem', 'jesteś', 'jest', 'jesteśmy', 'jesteście', 'są', 'był', 'była', 'było', 'byli', 'były', 'będę', 'będziesz', 'będzie', 'będą', 'być',
+      'w', 'we', 'na', 'do', 'z', 'ze', 'od', 'po', 'przy', 'dla', 'o', 'u', 'za', 'pod', 'nad', 'przed',
+      'już', 'tylko', 'jeszcze', 'teraz', 'potem', 'zawsze', 'może', 'tak', 'też', 'także', 'bardzo',
+      // wh-words — blanking these yields trivial gaps
+      'co', 'kto', 'gdzie', 'dlaczego', 'jak', 'który', 'która', 'które', 'ile',
+    ],
+    // Closed-class Polish words excluded from the VOCAB coverage denominator.
+    functionWords: [
+      // zaimki (osobowe / dzierżawcze / wskazujące / względne / pytające)
+      'ja', 'ty', 'on', 'ona', 'ono', 'my', 'wy', 'oni', 'one', 'siebie', 'się',
+      'mnie', 'mię', 'ciebie', 'cię', 'jego', 'go', 'jej', 'ją', 'nas', 'was', 'ich', 'im', 'mu', 'nam', 'wam',
+      'mój', 'moja', 'moje', 'twój', 'twoja', 'nasz', 'wasz', 'swój',
+      'ten', 'ta', 'to', 'ci', 'te', 'tamten', 'tamta', 'ów', 'taki', 'taka',
+      'który', 'która', 'które', 'jaki', 'jaka', 'jakie', 'czyj',
+      'co', 'kto', 'gdzie', 'kiedy', 'dlaczego', 'jak', 'ile', 'skąd', 'dokąd',
+      // spójniki
+      'i', 'a', 'ale', 'lub', 'albo', 'oraz', 'czy', 'że', 'żeby', 'aby', 'bo', 'ponieważ', 'gdy', 'jeśli', 'jeżeli', 'choć', 'chociaż', 'więc', 'dlatego', 'ani', 'lecz',
+      // przeczenie
+      'nie',
+      // być
+      'jestem', 'jesteś', 'jest', 'jesteśmy', 'jesteście', 'są', 'był', 'była', 'było', 'byli', 'były', 'będę', 'będziesz', 'będzie', 'będziemy', 'będziecie', 'będą', 'być',
+      // przyimki
+      'w', 'we', 'na', 'do', 'z', 'ze', 'od', 'po', 'przy', 'dla', 'o', 'u', 'za', 'pod', 'nad', 'przed', 'między', 'obok', 'koło', 'bez', 'przez', 'około', 'wśród',
+      // partykuły / przysłówki funkcyjne
+      'już', 'tylko', 'jeszcze', 'teraz', 'potem', 'zawsze', 'nigdy', 'może', 'tak', 'też', 'także', 'bardzo', 'właśnie', 'chyba', 'oczywiście', 'niech',
+    ],
+    ignoreTokens: ['yyy', 'eee', 'hmm', 'aha', 'no', 'ee'],
+    // Authored Polish tip → Polish rule id (only ruleIds that exist in de-pl/grammar-rules.json).
+    grammarTipLabels: [
+      [/narzędnik|instrumental|narzednik/i, 'Narzędnik', 'instrumental_case'],
+      [/aspekt|dokonany|niedokonany|aspect/i, 'Aspekt', 'verb_aspect'],
+      [/rodzaj|gender|męski|żeński|nijaki/i, 'Rodzaj', 'noun_gender'],
+    ],
+    frequency: {
+      list: 'ORViL / CKE (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until promoted to a real, coverage-complete pair.
+      stressTest: true,
+      note: 'ORViL (Opis referencyjny znajomości języka polskiego, the Polish CEFR reference ' +
+            'description) + CKE certification A1/A2 word stock. The committeable top-1000 index is ' +
+            'built when this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de, fi, pl };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.

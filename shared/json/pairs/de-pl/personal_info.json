@@ -1,0 +1,32 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_my_name_is",
+      "source": "Ich heiße Anna.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Nazywam się Anna.", "audioSlug": "nazywam_sie_anna" }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_from_germany",
+      "source": "Ich komme aus Deutschland.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Pochodzę z Niemiec.", "audioSlug": "pochodze_z_niemiec" }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "Ich bin Student/in.",
+      "level": "A1",
+      "grammar": "Nach dem Verb „być\" (sein) steht das Substantiv im Narzędnik (Instrumental): studentem / studentką.",
+      "target": [
+        { "text": "Jestem studentem.", "labels": { "gender": "masculino" }, "audioSlug": "jestem_studentem" },
+        { "text": "Jestem studentką.", "labels": { "gender": "femenino" }, "audioSlug": "jestem_studentka" }
+      ]
+    }
+  ]
+}

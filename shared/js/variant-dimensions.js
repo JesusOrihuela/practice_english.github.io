@@ -36,7 +36,7 @@
   const DIMENSIONS = {
     loanword: { kind: 'lexical',      open: true,                              priority: 0, badge: 'text',   appliesTo: '*' },
     region:   { kind: 'lexical',      open: true,                              priority: 1, badge: 'flag',   appliesTo: '*' },
-    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es', 'de'],
+    gender:   { kind: 'inflectional', values: ['masculino', 'femenino', 'neutro'], priority: 2, badge: 'gender', appliesTo: ['es', 'de', 'pl'],
                 agreement: ['articulo', 'sustantivo', 'adjetivo', 'participio', 'pronombre'] },
     // NUMBER (singular/plural) — a content dimension only where the plural is more than a bare "+s"
     // and drives real agreement (German: article + noun umlaut/ending + adjective + verb all co-vary,
@@ -51,8 +51,10 @@
     // language's case names. A NEW dimension proving the registry is open: no consumer hardcodes it.
     case:     { kind: 'inflectional',
                 values: ['nominativ', 'akkusativ', 'dativ', 'genitiv',
-                         'nominatiivi', 'partitiivi', 'genetiivi', 'inessiivi', 'elatiivi', 'illatiivi'],
-                priority: 4, badge: 'pill', appliesTo: ['de', 'fi'],
+                         'nominatiivi', 'partitiivi', 'genetiivi', 'inessiivi', 'elatiivi', 'illatiivi',
+                         // Polish (de-pl): the 7-case system (a minimal slice authored for the stress-test).
+                         'mianownik', 'dopełniacz', 'celownik', 'biernik', 'narzędnik', 'miejscownik', 'wołacz'],
+                priority: 4, badge: 'pill', appliesTo: ['de', 'fi', 'pl'],
                 agreement: ['artikel', 'adjektiv', 'pronomen'] },
     register: { kind: 'lexical',      values: ['formal', 'informal'],          priority: 5, badge: 'pill',   appliesTo: '*' },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it

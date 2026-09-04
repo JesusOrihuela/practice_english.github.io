@@ -126,6 +126,17 @@ const DETECTORS = {
   fi: {
     partitive: null,
   },
+
+  // ── Polish target (de-pl) — STRESS-TEST, minimal ──────────────
+  // Case endings and aspect prefixes collide too much with ordinary word-forms to detect by regex
+  // (the instrumental -em/-ą look like countless other endings; perfective prefixes z-/po-/na- are
+  // also ordinary derivational prefixes). Like German gender and Finnish partitive, these map to
+  // null → hand-curated; each rule teaches from its own self-contained context/examples.
+  pl: {
+    instrumental_case: null,
+    verb_aspect: null,
+    noun_gender: null,
+  },
 };
 
 export { DETECTORS };

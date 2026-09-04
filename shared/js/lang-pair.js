@@ -58,6 +58,18 @@ const AppLangPair = (() => {
       ttsVoices:   ['fif_noora', 'fim_harri'],
       sttLanguage: 'finnish',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): the 3rd divergent target AND the first pair with a
+      // NON-en/es SOURCE (German). Polish stresses a 7-case system + verbal aspect (perf/imperf) +
+      // 3-gender agreement, no articles, and 9 special letters (ąćęłńóśźż). localName follows the
+      // convention "target's name in the SOURCE language" → Polnisch (Polish, in German).
+      id:          'de-pl',
+      source:      { code: 'de', flags: ['de', 'at'], name: 'Deutsch', localName: 'Deutsch'  },
+      target:      { code: 'pl', flags: ['pl'],       name: 'Polski',  localName: 'Polnisch' },
+      label:       'Deutsch → Polski',
+      ttsVoices:   ['plf_zofia', 'plm_marek'],
+      sttLanguage: 'polish',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

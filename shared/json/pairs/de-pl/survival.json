@@ -1,0 +1,33 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Entschuldigung, sprechen Sie Englisch?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Przepraszam, czy mówisz po angielsku?", "labels": { "register": "informal" }, "audioSlug": "przepraszam_czy_mowisz_po_angielsku" },
+        { "text": "Przepraszam, czy mówi pan po angielsku?", "labels": { "register": "formal" }, "audioSlug": "przepraszam_czy_mowi_pan_po_angielsku" }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Können Sie mir helfen?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Czy możesz mi pomóc?", "labels": { "register": "informal" }, "audioSlug": "czy_mozesz_mi_pomoc" },
+        { "text": "Czy może pan mi pomóc?", "labels": { "register": "formal" }, "audioSlug": "czy_moze_pan_mi_pomoc" }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "Ich verstehe nicht.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Nie rozumiem.", "audioSlug": "nie_rozumiem" }
+      ]
+    }
+  ]
+}

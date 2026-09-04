@@ -158,4 +158,57 @@ const de = {
   retainedAdjMismatch() { return null; },   // adj concordance (strong/weak/mixed) out of scope for the stress-test slice.
 };
 
-export const GENDER = { es, de };
+// ── Polish (pl) — STRESS-TEST target (de-pl), minimal ────────────────────────
+// Polish person nouns form the feminine mostly with -ka (student → studentka, nauczyciel →
+// nauczycielka, aktor → aktorka; -arz → -arka: lekarz → lekarka), plus a set of suppletive pairs
+// (mężczyzna/kobieta). `_w` folds the Polish diacritics that decompose (ą→a, ę→e, ó→o, ś→s, ć→c,
+// ń→n, ź→z, ż→z) but keeps ł (a distinct letter), so the irregular/arts data is stored ALREADY
+// folded to match `_w`. Adjective agreement (7 cases × 3 genders) is out of the stress-test slice.
+const pl = {
+  personNouns: [
+    'student', 'nauczyciel', 'kelner', 'aktor', 'lekarz', 'kucharz', 'kolega', 'sąsiad',
+    'pracownik', 'przyjaciel', 'pisarz', 'dziennikarz',
+  ],
+  personAdjs: [],
+  personCtx: /\b(jestem|jesteś|jest|on jest|ona jest|to)\b/i,
+  // Masculine → feminine gendered determiners/possessives (folded to _w form: mój→moj, który→ktory).
+  arts: { ten: 'ta', tamten: 'tamta', moj: 'moja', twoj: 'twoja', nasz: 'nasza', wasz: 'wasza',
+          swoj: 'swoja', jeden: 'jedna', ktory: 'ktora', jaki: 'jaka', taki: 'taka' },
+  irregular: [
+    ['mezczyzna', 'kobieta'], ['ojciec', 'matka'], ['brat', 'siostra'], ['syn', 'corka'],
+    ['chłopiec', 'dziewczyna'], ['pan', 'pani'], ['maz', 'zona'], ['dziadek', 'babcia'],
+    ['kolega', 'kolezanka'],
+  ],
+
+  gestureGendered(text) {
+    for (const l of this.personNouns) {
+      if (reWord(l).test(text) || reWord(l + 'ka').test(text) || reWord(l + 'a').test(text)) return l;
+    }
+    return null;
+  },
+
+  isGenderInfl(a, b) {
+    const la = _w(a), lb = _w(b); if (la === lb) return true;
+    if (this.arts[la] === lb || this.arts[lb] === la) return true;
+    if (this.irregular.some(([m, f]) => (la === m && lb === f) || (la === f && lb === m))) return true;
+    // Person-noun gender pairs (mostly -ka feminine), compared at the NOMINATIVE stem so they also
+    // match when both forms carry a case ending. `być` forces the Narzędnik (instrumental): masc -em,
+    // fem -ą (folded to -a by _w) — strip those so studentem/studentką ↦ student/studentka.
+    const nom = (w) => w.replace(/em$/, '').replace(/ą$/, 'a');
+    const pair = (x, y) =>
+      x === y + 'ka' || y === x + 'ka' ||                                  // student/studentka
+      x === y.replace(/arz$/, 'arka') || y === x.replace(/arz$/, 'arka') || // lekarz/lekarka
+      x === y.replace(/el$/, 'elka') || y === x.replace(/el$/, 'elka');     // nauczyciel/nauczycielka
+    if (pair(la, lb)) return true;
+    if (pair(nom(la), nom(lb))) return true;
+    return false;
+  },
+
+  bothGendersPresent(lemma, text) {
+    return reWord(lemma).test(text) && (reWord(lemma + 'ka').test(text) || reWord(_w(lemma) + 'ka').test(text));
+  },
+
+  retainedAdjMismatch() { return null; },   // adjective concordance out of scope for the stress-test slice.
+};
+
+export const GENDER = { es, de, pl };
