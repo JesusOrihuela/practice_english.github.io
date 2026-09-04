@@ -1353,7 +1353,7 @@
           "translation": "Ella compró un carro europeo y un paraguas.",
           "question": "¿Por qué 'a European' si European empieza con vocal?",
           "options": [
-            "Es un error gramatical",
+            "Porque 'European' empieza con la vocal E",
             "European empieza con sonido consonántico 'yu' (como 'you')",
             "Se puede usar tanto a como an aquí",
             "Porque European es un adjetivo"
@@ -1366,9 +1366,9 @@
           "translation": "Es un hombre honesto con un MBA.",
           "question": "¿Por qué 'an honest' y 'an MBA'?",
           "options": [
-            "H y M son vocales",
+            "Porque después de la h y la m viene una vocal",
             "Honest tiene h muda (suena 'onest'); MBA se lee 'em-bi-ei' empezando con sonido 'e'",
-            "Es incorrecto, debería ser 'a honest man'",
+            "Porque 'honest' y 'MBA' empiezan con letra consonante",
             "Cuando hay un adjetivo siempre se usa an"
           ],
           "correct": 1,
@@ -1518,8 +1518,8 @@
           "options": [
             "Porque dog empieza con consonante",
             "Porque en la segunda mención, ya sabemos de qué perro se habla",
-            "Porque es un error, debería ser 'a dog' siempre",
-            "Porque es un perro famoso"
+            "Porque 'the' se usa siempre que se repite un sustantivo",
+            "Porque 'the dog' es el sujeto de esa oración"
           ],
           "correct": 1,
           "feedback": "Primera mención → a (indefinido, desconocido). Segunda mención → the (ya sabemos exactamente de qué perro/gato hablamos)."
@@ -1529,10 +1529,10 @@
           "translation": "¿Puedes cerrar la puerta, por favor?",
           "question": "¿Por qué 'the door' si no se mencionó antes?",
           "options": [
-            "Error gramatical, debería ser 'a door'",
+            "Porque 'the' se usa con los objetos de la casa",
             "Contexto compartido, hay una sola puerta relevante en la situación (la de esta habitación)",
             "The door es más formal",
-            "Porque la puerta es famosa"
+            "Porque 'the door' suena más educado"
           ],
           "correct": 1,
           "feedback": "No hace falta mencionar antes cuando el contexto hace la referencia obvia. Ambos saben de qué puerta se habla, la de la habitación donde están."
@@ -1542,7 +1542,7 @@
           "translation": "El presidente anunció nuevas políticas hoy.",
           "question": "¿Por qué 'The president' sin haberlo mencionado antes?",
           "options": [
-            "Error, debería ser 'A president'",
+            "Porque 'president' es un cargo muy importante",
             "Hay solo un presidente del país en cuestión, la referencia es única y compartida",
             "Porque el presidente es conocido personalmente",
             "The se usa siempre con títulos"
@@ -1684,7 +1684,7 @@
           "translation": "Los niños necesitan amor y estabilidad para crecer bien.",
           "question": "¿Por qué no hay artículo delante de 'love' y 'stability'?",
           "options": [
-            "Es un error, debería ser 'the love'",
+            "Porque 'love' y 'stability' son conceptos importantes",
             "Son sustantivos incontables usados en sentido general, sin especificar",
             "Porque son adjetivos",
             "Porque empiezan con consonante"
@@ -1697,7 +1697,7 @@
           "translation": "Ella va a la iglesia todos los domingos. La iglesia queda cerca de su casa.",
           "question": "¿Por qué 'goes to church' pero 'The church is near'?",
           "options": [
-            "Error en la segunda oración",
+            "Porque la segunda vez 'church' está en plural",
             "La primera usa la institución en su función (práctica religiosa); la segunda se refiere al edificio específico",
             "Church es contable en la primera e incontable en la segunda",
             "No hay diferencia real"
@@ -2209,7 +2209,7 @@
             "No es necesario hacerlo",
             "Está prohibido / no tienes permiso",
             "Es una recomendación",
-            "Es imposible"
+            "Es una sugerencia amable"
           ],
           "correct": 1,
           "feedback": "Must not = prohibición. Es muy diferente a 'don't have to' (no es necesario). Must not = no puedes / no debes hacerlo bajo ninguna circunstancia."
@@ -2569,7 +2569,7 @@
           "translation": "Ella conseguirá el trabajo si le va bien en la entrevista.",
           "question": "¿Es posible o imposible que ella consiga el trabajo?",
           "options": [
-            "Es imposible, es solo una fantasía",
+            "Es solo hipotético, muy poco probable",
             "Es posible y real, depende de su rendimiento en la entrevista",
             "Ya ocurrió en el pasado",
             "Es una certeza, seguro que lo conseguirá"
@@ -2722,7 +2722,7 @@
           "options": [
             "I es plural",
             "En el segundo condicional, 'were' se usa con todos los sujetos (especialmente 'I/he/she') en el inglés formal",
-            "Es un error gramatical",
+            "Porque 'was' solo se usa para el pasado real",
             "Porque 'you' afecta la forma"
           ],
           "correct": 1,
@@ -2902,7 +2902,7 @@
           "translation": "Si me lo hubieras dicho antes, quizás habría podido ayudar.",
           "question": "¿Qué expresa 'might have been able' en lugar de 'would have been able'?",
           "options": [
-            "Es un error, debería ser would",
+            "Significa lo mismo que 'would have been able'",
             "Menos certeza, quizás habría podido ayudar, pero no es seguro",
             "Más certeza que would",
             "Indica que sí ayudó finalmente"
@@ -3219,7 +3219,7 @@
           "translation": "¿Quién te contó sobre la reunión?",
           "question": "¿Por qué no hay auxiliar (did) en esta pregunta?",
           "options": [
-            "Es un error gramatical",
+            "Porque 'who' hace la pregunta más informal",
             "When who/what es el sujeto, no se necesita auxiliar ni inversión",
             "Porque es informal",
             "Porque 'told' ya es el auxiliar"
@@ -3390,7 +3390,7 @@
           "translation": "El teléfono nuevo es más caro que el modelo viejo.",
           "question": "¿Por qué 'more expensive' y no 'expensiver'?",
           "options": [
-            "Error, 'expensiver' es correcto",
+            "Porque 'expensive' ya es un comparativo",
             "'Expensive' tiene 3 sílabas → siempre more + adjetivo",
             "Porque empieza con vocal",
             "Porque es un adjetivo negativo"
@@ -5172,7 +5172,7 @@
           "question": "¿Por qué se usa 'be' y no 'is'?",
           "options": [
             "Es el subjuntivo formal: forma base tras 'it is essential that'",
-            "Es un error gramatical",
+            "Porque tras 'that' el verbo va en infinitivo con 'to'",
             "Porque 'he' es plural",
             "Porque la oración está en pasado"
           ],
@@ -5511,7 +5511,7 @@
             "La oración completa 'it will not rain tomorrow'",
             "El sujeto 'it'",
             "El verbo 'hope'",
-            "Nada, es un error"
+            "El adverbio 'not' modifica al verbo 'hope'"
           ],
           "correct": 0,
           "feedback": "'Not' sustituye a toda la oración negativa: 'I hope it will not rain tomorrow' → 'I hope not'."

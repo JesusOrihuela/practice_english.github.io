@@ -51,6 +51,32 @@ options are all short target-language statements using the structure, and the le
 real meaning — and is acknowledged, never marked right/wrong. VanPatten's Processing Instruction
 prescribes both; without the affective item the design is only half-built.
 
+#### Distractor quality (referential items) — the standard
+
+A referential item only teaches if the wrong options are **plausible**. If the distractors are
+obviously silly, the learner picks the right answer without processing the form, and the item tests
+nothing. Every distractor must follow these rules:
+
+1. **Plausible, not self-defeating.** A distractor is a mistake a real learner at this level could
+   genuinely make: a competing rule, an over-generalization, a confused form-meaning link. It must
+   **never announce that it is wrong** — no *"it's an error"*, *"it's impossible"*, *"it's a
+   certainty"*, *"it should be X instead"*. State the wrong interpretation **confidently**, the way a
+   confused learner would believe it (*"It's happening right now"*, not *"This is grammatically
+   wrong"*).
+2. **Targets the real confusion.** Each distractor should probe the specific contrast the rule
+   teaches — for present-simple-as-habit, distractors are the *present-continuous* reading ("right
+   now"), the *past* reading, the *recently-stopped* reading. Random unrelated options don't test.
+3. **Parallel in form, length and register** to the correct option, so nothing but the meaning gives
+   the answer away. Avoid a correct option that is noticeably longer or more detailed.
+4. **Exactly one is correct.** Distractors are unambiguously wrong on inspection, but not obviously so
+   at a glance — no partially-correct "trap" that could also be defended.
+5. **Grounded in the meaning, not the metalanguage.** Options describe *what the sentence means / why
+   the form is used*, phrased as interpretations a learner weighs — not verdicts on correctness.
+
+The same bar applies to `quiz` `contrast` notes and to affective options (which must all be genuine,
+true-for-someone statements). New rules and new pairs must meet this bar; obvious distractors are a
+content defect, not a stylistic preference.
+
 ### Phase 6 — Express (communicative production, self-assessed)
 
 Controlled fill-in-the-blank practice is **mechanical**; skill-acquisition theory (DeKeyser) and the
