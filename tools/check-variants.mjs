@@ -34,10 +34,21 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { GENDER } from './gender-detectors.mjs';   // per-target-language gender detection (perfil-driven)
 import AppVariantDims from '../shared/js/variant-dimensions.js';   // the open dimension registry (inflectional dims are data-driven)
+import AppLangProfiles from '../shared/js/lang-profiles.js';   // per-language facts (source-side gender lists live here, not hardcoded)
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAIRS_DIR = path.join(ROOT, 'shared/json/pairs');
 const GATE = process.argv.includes('--gate');
+
+// Source languages that learn a given TARGET — DERIVED from the pairs dir (e.g. target "pl" is
+// learned by de-pl ⇒ source "de"). Used so target-centric vocab checks read the RIGHT source gloss
+// (translations.<src>) and its source-gender list, never a hardcoded "en". No language literals.
+function srcLangsForTarget(target) {
+  return [...new Set(fs.readdirSync(PAIRS_DIR)
+    .filter(d => { try { return fs.statSync(path.join(PAIRS_DIR, d)).isDirectory(); } catch { return false; } })
+    .filter(d => d.split('-')[1] === target)
+    .map(d => d.split('-')[0]))];
+}
 
 // A variant SET = the same meaning across regions. Each member: the word(s) (lowercased,
 // matched as whole words), the region LABEL to use, and the countries it covers (provenance).
@@ -142,21 +153,28 @@ function memberInText(member, text) {
 // Person-noun / person-adjective lexicons and the gender morphology now live per TARGET language in
 // tools/gender-detectors.mjs (GENDER[lang]) — a new gendered language adds a block there, not here.
 
-// Does the SOURCE already fix the person's gender? (source language = English here — the only
-// source that reaches the gender block, since the target must be Spanish.) A gendered pronoun /
-// kinship / role noun, or a proper name (mid-sentence capital), means the single-gender Spanish
-// is a FAITHFUL translation, not a missing variant (Rule 10/14.4). Only a gender-NEUTRAL source
-// (neighbor, friend, teacher, cousin, they, the person) that Spanish must render in one gender is
-// a genuine missing-variant case (→ both forms as variants). Keeps "Mi vecino ← My neighbor" (real)
-// while dropping "Ese muchacho ← That boy", "Su esposo ← Her husband", "mi amiga Ana" (source-fixed).
-const EN_GENDER_WORDS = /\b(he|him|his|she|her|hers|son|daughter|brother|sister|uncle|aunt|husband|wife|boyfriend|girlfriend|grand(mother|father|ma|pa|son|daughter)|granny|mother|father|mom|mum|dad|nephew|niece|king|queen|prince|princess|actor|actress|waiter|waitress|host|hostess|widow|widower|groom|bride|boy|girl|man|men|woman|women|lady|ladies|gentleman|guy|sir|madam|mister|mrs|mr|ms|monk|nun)\b/i;
-function sourceFixesGender(src) {
+// Does the SOURCE (L1 hint) already fix the person's gender? A gendered pronoun / kinship / role
+// noun, or a proper name, means the single-gender target is a FAITHFUL translation, not a missing
+// variant (Rule 10/14.4). Only a gender-NEUTRAL source (neighbor, friend, teacher, cousin, they, the
+// person) that the target must render in one gender is a genuine missing-variant case (→ both forms).
+// The word lists are per SOURCE language in lang-profiles (`sourceGender.fixWords`) — NOT hardcoded
+// here — so de-pl (German source) is checked with German words, not English. `nounsCapitalized:true`
+// (German) disables the proper-name-by-capital heuristic, which misfires when a language capitalizes
+// ALL nouns. Token-equality (not regex \b) so umlaut/ß-initial words (Ärztin) match correctly.
+function sourceFixesGender(src, srcLang) {
   if (!src) return false;
-  if (EN_GENDER_WORDS.test(src)) return true;
-  const words = src.split(/\s+/);          // a proper name (mid-sentence capital) fixes the gender
-  for (let i = 1; i < words.length; i++) {
-    if (/[.?!]$/.test(words[i - 1])) continue;                 // skip token after sentence break
-    if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]/.test(words[i])) return true;  // mid-sentence Capital → name
+  const cfg = AppLangProfiles.sourceGender(srcLang);
+  if (!cfg) return false;
+  const fix = new Set((cfg.fixWords || []).map(w => w.toLowerCase()));
+  for (const tok of src.toLowerCase().normalize('NFC').split(/[^\p{L}]+/u)) {
+    if (tok && fix.has(tok)) return true;
+  }
+  if (!cfg.nounsCapitalized) {                 // capitals reliably mark proper names (not in German)
+    const words = src.split(/\s+/);
+    for (let i = 1; i < words.length; i++) {
+      if (/[.?!]$/.test(words[i - 1])) continue;                 // skip token after sentence break
+      if (/^[A-ZÁÉÍÓÚÑ][a-záéíóúñ]/.test(words[i])) return true;  // mid-sentence Capital → name
+    }
   }
   return false;
 }
@@ -241,7 +259,7 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       // (2) GENDER completeness (es) — a phrase describing the speaker/addressee with a gendered
       //     predicate, but no gender variant.
       const gLemma = G ? G.gestureGendered(allText) : null;
-      const genderMissing = gLemma && !hasGender && !sourceFixesGender(p.source);
+      const genderMissing = gLemma && !hasGender && !sourceFixesGender(p.source, pair.split('-')[0]);
       if (genderMissing) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" (source no fija género) sin variante masculino/femenino` });
 
       // (3) COMBINATIONS — one dimension present, the other genuinely applies too.
@@ -289,8 +307,12 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
     for (const w of (data.words || [])) {
       const variants = w.variants || [];
       const allText = [w.term, ...variants.map(v => v.text || '')].join('  ');
-      const enGloss = (w.translations && w.translations.en) || '';
       const base = { pair: 'vocab/' + lang, topic: deck, id: w.id };
+      // A single-gender term is faithful only if EVERY source that learns this target has a gloss that
+      // fixes the gender (translations.<src> read per source, with that source's own gender-word list).
+      const _srcs = srcLangsForTarget(lang);
+      const glossFixesGender = _srcs.length > 0 &&
+        _srcs.every(s => sourceFixesGender((w.translations && w.translations[s]) || '', s));
 
       for (const set of lex) {           // REGION completeness (same rule as phrases)
         const present = set.members.filter(m => memberInText(m, allText));
@@ -304,8 +326,8 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
       // GENDER — a person noun present but NOT in both gender forms, and the English gloss doesn't
       // fix the gender (gloss "child" is neutral → needs niño/niña; "man" fixes it → single is fine).
       const gLemma = G ? G.gestureGendered(allText) : null;
-      if (gLemma && !G.bothGendersPresent(gLemma, allText) && !sourceFixesGender(enGloss))
-        findings.push({ ...base, type: 'gender', detail: `término con género "${gLemma}" (gloss "${enGloss}" no fija género) sin ambas formas masculino/femenino` });
+      if (gLemma && !G.bothGendersPresent(gLemma, allText) && !glossFixesGender)
+        findings.push({ ...base, type: 'gender', detail: `término con género "${gLemma}" sin ambas formas masculino/femenino (ningún gloss de origen [${_srcs.join(',')}] fija el género)` });
 
       // MISLABEL — a LEXICAL variant set (synonym/loanword) whose forms are actually a gender
       // inflection of one lemma (inglés/inglesa) must NOT rotate: gender is the dictionary-slash

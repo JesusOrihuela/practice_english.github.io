@@ -62,6 +62,21 @@
   const en = {
     name: 'English',
     grammaticalGender: false,   // no grammatical gender → no gender-variant enrichment.
+    // SOURCE-side gender: words that, when they appear in a SOURCE (L1) hint, FIX a person's gender
+    // (a gendered pronoun/kinship/role/title), so a single-gender target rendering is a faithful
+    // translation, not a missing variant (Rule 10/14.4). Read by check-variants sourceFixesGender()
+    // keyed by the pair's SOURCE language — NOT hardcoded in the tool. `nounsCapitalized:false` ⇒ a
+    // mid-sentence Capital reliably marks a proper name (which also fixes gender).
+    sourceGender: {
+      nounsCapitalized: false,
+      fixWords: ['he', 'him', 'his', 'she', 'her', 'hers', 'son', 'daughter', 'brother', 'sister',
+        'uncle', 'aunt', 'husband', 'wife', 'boyfriend', 'girlfriend', 'grandmother', 'grandfather',
+        'grandma', 'grandpa', 'grandson', 'granddaughter', 'granny', 'mother', 'father', 'mom', 'mum',
+        'dad', 'nephew', 'niece', 'king', 'queen', 'prince', 'princess', 'actor', 'actress', 'waiter',
+        'waitress', 'host', 'hostess', 'widow', 'widower', 'groom', 'bride', 'boy', 'girl', 'man',
+        'men', 'woman', 'women', 'lady', 'ladies', 'gentleman', 'guy', 'sir', 'madam', 'mister',
+        'mrs', 'mr', 'ms', 'monk', 'nun'],
+    },
     voices: ['af_bella', 'af_heart', 'am_michael', 'bf_emma'],   // TTS voices spoken for this language (audio filename suffixes).
     tts: { engine: 'kokoro' },   // audio generator: 'kokoro' (generate-audio.mjs) | 'edge' (generate-audio-tgt.py)
     foldPreserve: '',   // English has no letters that folding would destroy → pure ASCII fold.
@@ -264,6 +279,21 @@
   const de = {
     name: 'German',
     grammaticalGender: true,   // der/die/das + person -in → gender-variant enrichment applies.
+    // SOURCE-side gender (German as L1 hint, e.g. de-pl). `nounsCapitalized:true` ⇒ German capitalizes
+    // ALL nouns, so a mid-sentence Capital is NOT a proper-name signal (the English heuristic must be
+    // skipped). fixWords = gendered pronouns/kinship/roles/titles that fix a person's gender; the
+    // ambiguous bare pronouns (sie=she/they/formal-you, ihr=her/you-pl) and 'sein' (=his / verb "to be")
+    // are deliberately EXCLUDED — a German "she" context reliably carries a feminine noun that IS listed
+    // (Schwester, Frau, Ärztin…), so dropping them avoids false negatives without losing coverage.
+    sourceGender: {
+      nounsCapitalized: true,
+      fixWords: ['er', 'ihn', 'ihm', 'bruder', 'schwester', 'onkel', 'tante', 'ehemann', 'ehefrau',
+        'mann', 'frau', 'freund', 'freundin', 'großmutter', 'großvater', 'oma', 'opa', 'enkel',
+        'enkelin', 'mutter', 'vater', 'mama', 'papa', 'neffe', 'nichte', 'sohn', 'tochter', 'könig',
+        'königin', 'prinz', 'prinzessin', 'herr', 'dame', 'junge', 'mädchen', 'witwe', 'witwer',
+        'bräutigam', 'braut', 'kellner', 'kellnerin', 'lehrer', 'lehrerin', 'arzt', 'ärztin',
+        'schauspieler', 'schauspielerin', 'student', 'studentin'],
+    },
     voices: ['df_hedda', 'dm_conrad'],   // edge-tts de-DE voices (see generate-audio-tgt.py).
     tts: { engine: 'edge' },
     // Umlauts and ß are phonemic/meaning-bearing (schon≠schön, Straße): preserve them as distinct
@@ -488,6 +518,8 @@
     foldPreserve: function (code) { const p = PROFILES[code]; return p ? (p.foldPreserve || '') : ''; },
     /** Non-ASCII letters/marks the language legitimately uses ('' if pure ASCII). */
     nativeChars: function (code) { const p = PROFILES[code]; return p ? (p.nativeChars || '') : ''; },
+    /** Source-side gender config ({fixWords, nounsCapitalized}) or null — used when this language is a SOURCE (L1) hint. */
+    sourceGender: function (code) { const p = PROFILES[code]; return p ? (p.sourceGender || null) : null; },
     /** Cloze blank-exclusion set (falls back to empty). */
     clozeStopWords: function (code) { const p = PROFILES[code]; return new Set(p ? p.clozeStopWords : []); },
     /** Closed-class function-word set (coverage vocab channel). */

@@ -180,9 +180,39 @@ const pl = {
     ['kolega', 'kolezanka'],
   ],
 
+  // The feminine NOMINATIVE stem of a masculine person-lemma (folded): mostly -ka (student→studentk),
+  // -arz→-arka (lekarz→lekark), -el→-elka (nauczyciel→nauczycielk), plus the suppletive pairs from
+  // `irregular` (kolega→koleżanka). Returned WITHOUT the final -a so case endings attach to the stem.
+  _femStem(lemma) {
+    const lf = _w(lemma);
+    const irr = this.irregular.find(([m]) => m === lf);
+    if (irr) return irr[1].replace(/a$/, '');
+    if (/arz$/.test(lf)) return lf.replace(/arz$/, 'ark');
+    if (/el$/.test(lf)) return lf.replace(/el$/, 'elk');
+    return lf + 'k';
+  },
+  // Does the text contain a masculine / feminine CASE-inflected form of `lemma`? być forces the
+  // Narzędnik (studentem / studentką), and other cases add endings too, so we stem-match in the folded
+  // space (ą→a, ę→e…) instead of exact whole-word — otherwise "studentem" never matches "student".
+  _matchLemma(text, lemma) {
+    const lem = _w(lemma);
+    const fem = this._femStem(lemma);
+    const MEND = ['', 'a', 'owi', 'em', 'u', 'ie', 'ze', 'ow', 'om', 'ami', 'ach'];   // masc sing/pl case endings (folded)
+    const FEND = ['a', 'i', 'e', 'o', 'y', 'ce', 'ke', 'om', 'ami', 'ach'];           // fem (-k stem) case endings (ę→e, ą→a folded)
+    let m = false, f = false;
+    for (const raw of text.split(/[^\p{L}]+/u)) {
+      if (!raw) continue;
+      const t = _w(raw);
+      if (t.startsWith(fem) && FEND.includes(t.slice(fem.length))) { f = true; continue; }  // fem first (studentka ⊃ student)
+      if (t.startsWith(lem) && MEND.includes(t.slice(lem.length))) m = true;
+    }
+    return { masc: m, fem: f };
+  },
+
   gestureGendered(text) {
     for (const l of this.personNouns) {
-      if (reWord(l).test(text) || reWord(l + 'ka').test(text) || reWord(l + 'a').test(text)) return l;
+      const r = this._matchLemma(text, l);
+      if (r.masc || r.fem) return l;
     }
     return null;
   },
@@ -205,7 +235,8 @@ const pl = {
   },
 
   bothGendersPresent(lemma, text) {
-    return reWord(lemma).test(text) && (reWord(lemma + 'ka').test(text) || reWord(_w(lemma) + 'ka').test(text));
+    const r = this._matchLemma(text, lemma);
+    return r.masc && r.fem;
   },
 
   retainedAdjMismatch() { return null; },   // adjective concordance out of scope for the stress-test slice.
