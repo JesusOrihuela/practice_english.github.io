@@ -203,6 +203,32 @@ for (const pair of PAIRS) {
         }
       }
 
+      // R14.4 — gender-hint coherence with the badge. When the TARGET carries ≥2 forms that
+      // differ by gender, each such form is shown with the adaptive gender badge, so the L1
+      // hint must match the badged gender. If the SOURCE language marks gender morphologically
+      // (grammaticalGender in lang-profiles), a single phrase-level `source` cannot serve both
+      // genders — the badge would say one gender while the hint shows the combined slash (or the
+      // wrong gender). Each gendered form must therefore carry its own per-form `source`.
+      // Fully derived: source-gender from lang-profiles, gender variance from labels. A source
+      // with NO grammatical gender (English) needs no per-form source — one genderless hint fits
+      // every form — so those pairs never trip this. See docs/ADD-A-LANGUAGE.md (variant source).
+      const _srcLang = pair.split('-')[0];
+      const _srcProfile = AppLangProfiles.get(_srcLang);
+      if (_srcProfile && _srcProfile.grammaticalGender && (phrase.target || []).length > 1) {
+        const _gendered = (phrase.target || [])
+          .map((f, i) => ({ f, i }))
+          .filter(x => x.f.labels && x.f.labels.gender);
+        const _genders = new Set(_gendered.map(x => x.f.labels.gender));
+        if (_genders.size > 1) {
+          for (const { f, i } of _gendered) {
+            if (f.source === undefined) {
+              flag(pair, topic, id, `target[${i}].source`, 'R14',
+                `Gendered target form needs a per-form source: the source language (${_srcLang}) marks gender, and the badge announces this form's gender, so the L1 hint must match it — do not fall back to the shared phrase source. Add "source" to each gender form (e.g. "Ich bin Student." / "Ich bin Studentin.").`);
+            }
+          }
+        }
+      }
+
       // Grammar tip checks (R11)
       if (phrase.grammar) {
         const tip = phrase.grammar;

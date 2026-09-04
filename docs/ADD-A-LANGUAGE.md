@@ -142,9 +142,25 @@ lemma, shown as the dictionary-style slash pattern / taught as the agreement rul
 recognition variants, to avoid synonym interference — Tinkham/Waring/Webb). Two structural facts, both
 registry-validated:
 - **Phrases** may carry a per-form `source` (`target[].source`): the L1 hint shown adapts to the
-  variant on screen when the variant changes the REFERENT (`El niño es listo.`←`The boy is smart.` /
-  `La niña es lista.`←`The girl is smart.`); speaker-determined variants keep one combined source
-  (`I have a cold.`→`Estoy resfriado/a.`). The 5 phrase activities read the picked form's source.
+  variant on screen. The 5 phrase activities read the picked form's source (`pickedForm.source ||
+  p.source`), and the **same picked form drives the gender/region badge** — so hint and badge must
+  never disagree. **The deciding factor is whether the TARGET carries gendered variants + whether the
+  SOURCE language marks gender** (not "referent- vs speaker-determined"):
+  - **Target has ONE form** (gender not a target variant) **and the source marks gender** → keep one
+    combined-slash phrase `source` (Rule 14.4): `I have a cold.`→`Estoy resfriado/a.` (es-en: Spanish
+    source, English target has no gender). No per-form source.
+  - **Target carries ≥2 gendered forms** (each shown with the adaptive badge) → **each gendered form
+    MUST carry its own faithful per-form `source`**, so the hint matches the badged gender. If the
+    source marks gender this is mandatory (`Jestem studentem.`←`Ich bin Student.` /
+    `Jestem studentką.`←`Ich bin Studentin.` — de-pl); a combined slash would contradict the badge,
+    and a bare masculine fallback would mislabel the feminine form. If the source has **no** gender
+    (English → `en-es` "I'm tired" for both `estoy cansado/a`), one genderless phrase source already
+    fits every form, so per-form source is optional. `check-content` R14 enforces this: a gendered
+    target form with a gender-marking source but no per-form `source` is flagged.
+  - **Referent-determined variants** (the words genuinely differ: `El niño`/`La niña`) also get a
+    per-form source — that case is subsumed by the rule above (≥2 gendered forms → per-form source).
+  The phrase-level `source` remains the neutral label for the PhraseBrowser index (e.g. the German
+  `Student/in.` slash), reached only as a fallback the exercises no longer hit for gendered forms.
 - **Vocab words** may carry structured `variants[]` (`{text, labels, audioSlug}`) so words — not only
   phrases — have their variants, identified; `check-variants` scans them, and the flashcard renders
   the kind-differentiated display. LEXICAL variant words ROTATE (no base — `Progress.pickVariant`, like
