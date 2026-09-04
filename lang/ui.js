@@ -395,7 +395,7 @@
       index_scroll_left:         'Desplazar a la izquierda',
       index_scroll_right:        'Desplazar a la derecha',
       ob_close_aria:            'Cerrar',
-      index_hero_title:          '¿Listo para dominar<br><span class="highlight">{target}?</span>',
+      index_hero_title:          '¿Listo para dominar<br><span class="highlight">el {target}?</span>',
       index_hero_sub:           'Escucha, habla y amplía tu vocabulario con ejercicios interactivos diseñados para hacer el aprendizaje natural y divertido.',
       index_stat_activities:    'Actividades',
       index_stat_phrases:       'Frases',
