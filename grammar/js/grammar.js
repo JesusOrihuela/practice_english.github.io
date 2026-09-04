@@ -543,31 +543,38 @@ function showStructuredItem(idx) {
   // items show the target sentence + its gloss.
   const affective = !!item.affective;
 
+  // Referential: the target sentence and its L1 gloss form ONE boxed prompt (so the gloss reads as
+  // part of the sentence, not a detached line). Affective: no sentence — a small "Your view" tag sits
+  // tight above the question.
   if (item.sentence) {
+    const prompt = document.createElement('div');
+    prompt.className = 'structured-prompt';
     const sentEl = document.createElement('div');
     sentEl.className = 'structured-sentence';
     sentEl.innerHTML = parseInlineMarkdown(escapeHTML(item.sentence));
-    card.appendChild(sentEl);
+    prompt.appendChild(sentEl);
+    if (item.translation) {
+      const trEl = document.createElement('div');
+      trEl.className   = 'structured-translation';
+      trEl.textContent = item.translation;
+      prompt.appendChild(trEl);
+    }
+    card.appendChild(prompt);
   }
 
-  if (item.translation) {
-    const trEl = document.createElement('div');
-    trEl.className   = 'structured-translation';
-    trEl.textContent = item.translation;
-    card.appendChild(trEl);
-  }
-
+  const qHead = document.createElement('div');
+  qHead.className = 'structured-qhead';
   if (affective) {
-    const tag = document.createElement('div');
+    const tag = document.createElement('span');
     tag.className = 'structured-affective-tag';
     tag.textContent = AppLang.t('grammar_affective_tag');
-    card.appendChild(tag);
+    qHead.appendChild(tag);
   }
-
   const qEl = document.createElement('div');
   qEl.className   = 'structured-question';
   qEl.textContent = item.question;
-  card.appendChild(qEl);
+  qHead.appendChild(qEl);
+  card.appendChild(qHead);
 
   const optsEl = document.createElement('div');
   optsEl.className = 'structured-options';
@@ -689,16 +696,18 @@ function showProductionItem(idx) {
       sentEl.appendChild(inp);
     }
   });
-  card.appendChild(sentEl);
-
-  // L1 gloss of the sentence: the meaning is given (the challenge is the grammatical FORM, not the
-  // meaning), so a distant-target sentence is understandable instead of opaque.
+  // The sentence and its L1 gloss form ONE boxed prompt, so the meaning reads as part of the sentence
+  // (the challenge is the grammatical FORM, not the meaning) instead of a detached line below.
+  const prompt = document.createElement('div');
+  prompt.className = 'production-prompt';
+  prompt.appendChild(sentEl);
   if (item.translation) {
     const trEl = document.createElement('div');
     trEl.className   = 'production-translation';
     trEl.textContent = item.translation;
-    card.appendChild(trEl);
+    prompt.appendChild(trEl);
   }
+  card.appendChild(prompt);
 
   // Check button in its own row below the sentence
   const checkBtn = document.createElement('button');

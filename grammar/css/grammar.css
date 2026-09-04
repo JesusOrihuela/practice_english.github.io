@@ -527,8 +527,7 @@
   color: var(--clr-text-muted);
   line-height: 1.4;
 }
-.structured-translation { margin-top: 6px; }
-.production-translation { margin-top: 10px; }
+/* structured/production translations sit inside their prompt box (gap-controlled) — no own margin */
 
 /* All turns use full text color — the **word** chip provides sufficient contrast */
 
@@ -775,30 +774,44 @@ blockquote.rule-tip {
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
-  padding: 24px 22px;
-  display: flex;              /* uniform internal rhythm — one gap, equal top/bottom padding */
+  padding: 22px;
+  display: flex;              /* ONE gap governs the rhythm — children carry NO own vertical margin */
   flex-direction: column;
   gap: 16px;
   animation: fadeInScale 0.35s ease-out both;
+}
+
+/* The prompt = target sentence + its gloss as ONE boxed unit (referential items). */
+.structured-prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 16px;
+  background: var(--clr-surface-2);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--clr-primary);
 }
 
 .structured-sentence {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--clr-text);
-  margin-bottom: 14px;
   line-height: 1.5;
-  padding: 14px 16px;
-  background: var(--clr-surface-2);
-  border-radius: var(--radius-md);
-  border-left: 3px solid var(--clr-primary);
+}
+
+/* Tag + question sit tight together as the item's header. */
+.structured-qhead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .structured-question {
   font-size: 0.9rem;
   font-weight: 700;
   color: var(--clr-text);
-  margin-bottom: 14px;
+  line-height: 1.45;
 }
 
 .structured-options {
@@ -849,10 +862,10 @@ blockquote.rule-tip {
 .option-btn--chosen { border-color: var(--clr-primary); background: var(--clr-primary-light, rgba(37,99,235,0.08)); }
 .option-btn--chosen .option-letter { background: var(--clr-primary); color: #fff; }
 
-/* Affective structured-input tag ("Your view") — signals no right answer, react to real meaning. */
+/* Affective structured-input tag ("Your view") — signals no right answer, react to real meaning.
+   Lives inside .structured-qhead (gap-controlled), so it carries no own margin. */
 .structured-affective-tag {
   display: inline-block;
-  margin-bottom: 10px;
   padding: 3px 10px;
   font-size: 0.66rem;
   font-weight: 800;
@@ -864,7 +877,18 @@ blockquote.rule-tip {
 }
 
 /* ── PHASE 6: Express (communicative / self-assessed production) ── */
-.express-counter { font-size: 0.8rem; font-weight: 700; color: var(--clr-text-muted); margin-bottom: 10px; }
+/* Exercise counter — the SAME pill as structured/production, so all phases match. */
+.express-counter {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  background: var(--clr-surface-2);
+  border: 1px solid var(--clr-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 0;
+  align-self: flex-start;
+}
 .express-card {
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
@@ -932,7 +956,6 @@ blockquote.rule-tip {
 }
 
 .structured-feedback {
-  margin-top: 14px;
   padding: 10px 14px 10px 38px;
   background: var(--clr-success-light);
   border-left: 3px solid var(--clr-success);
@@ -997,11 +1020,22 @@ blockquote.rule-tip {
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
-  padding: 24px 22px;
-  display: flex;              /* uniform internal rhythm — one gap, equal top/bottom padding */
+  padding: 22px;
+  display: flex;              /* ONE gap governs the rhythm — children carry NO own vertical margin */
   flex-direction: column;
   gap: 16px;
   animation: fadeInScale 0.35s ease-out both;
+}
+
+/* Sentence (with the inline blank) + its gloss as ONE boxed prompt. */
+.production-prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+  background: var(--clr-surface-2);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--activity-clr, var(--clr-primary));
 }
 
 .production-sentence {
@@ -1009,10 +1043,6 @@ blockquote.rule-tip {
   font-weight: 700;
   color: var(--clr-text);
   line-height: 1.6;
-  padding: 14px 16px;
-  background: var(--clr-surface-2);
-  border-radius: var(--radius-md);
-  border-left: 3px solid var(--activity-clr, var(--clr-primary));
 }
 
 .production-sentence .blank {
