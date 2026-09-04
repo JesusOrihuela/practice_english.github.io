@@ -69,7 +69,7 @@
             "Sächlich (nijaki), Endung -o",
             "Männlich (męski)",
             "Weiblich (żeński)",
-            "Plural"
+            "Kein Genus, wie im Englischen"
           ],
           "correct": 0,
           "feedback": "„okno\" endet auf -o und nimmt „to\", also sächlich (nijaki)."
@@ -126,7 +126,7 @@
       "title_de": "Der Instrumental (Narzędnik)",
       "title_en": "The Instrumental Case",
       "title_es": "El caso instrumental",
-      "explanation": "Nach dem Verb **być** (sein) und nach **z** (mit) steht das Substantiv im **Narzędnik** (Instrumental). Endungen: männlich/sächlich **-em** (nauczyciel → nauczyciel**em**), weiblich **-ą** (studentka → studentk**ą**). Beispiel: Jestem lekarz**em**. Idę z koleg**ą**.",
+      "explanation": "Nach dem Verb **być** (sein) und nach **z** (mit) steht das Substantiv im **Narzędnik** (Instrumental). Endungen: männlich/sächlich **-em** (nauczyciel → nauczyciel**em**), weiblich **-ą** (studentka → studentk**ą**). Beispiel: Jestem lekarz**em**. Idę z brat**em**.",
       "context_dialogue": [
         {
           "speaker": "ANNA",
@@ -148,8 +148,8 @@
         },
         {
           "speaker": "BEN",
-          "text": "Idę z **kolegą** do parku.",
-          "translation": "Ich gehe mit einem Kollegen in den Park.",
+          "text": "Idę z **bratem** do parku.",
+          "translation": "Ich gehe mit meinem Bruder in den Park.",
           "highlight": true
         }
       ],
@@ -195,13 +195,13 @@
           "contrast": ""
         },
         {
-          "sentence": "Idę z ___ do parku. (kolega)",
-          "translation": "Ich gehe mit einem Kollegen in den Park.",
-          "answer": "kolegą",
+          "sentence": "Idę z ___ do parku. (brat)",
+          "translation": "Ich gehe mit meinem Bruder in den Park.",
+          "answer": "bratem",
           "accepted": [
-            "kolegą"
+            "bratem"
           ],
-          "feedback_why": "Nach „z\" (mit) steht der Narzędnik: kolega → kolegą.",
+          "feedback_why": "Nach „z\" (mit) steht der Narzędnik: brat → bratem.",
           "contrast": ""
         }
       ],
