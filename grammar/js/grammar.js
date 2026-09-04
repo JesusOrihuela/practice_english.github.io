@@ -127,11 +127,29 @@ function _ruleTitle(rule) {
 }
 
 
+// Order categories by COMPLEXITY, derived from their rules' CEFR levels — not by array order.
+// Primary: the easiest entry level (min CEFR) so a learner meets foundational categories first;
+// secondary: overall difficulty (avg CEFR); then id for stability. This is automatic, so every pair
+// is ordered consistently and any NEW category lands in a coherent spot by its own content level —
+// no manual ordering to maintain. (Advanced syntax, all C1/C2, therefore sorts LAST.)
+function _categoriesByComplexity() {
+  const cefr = lvl => (typeof CEFR_ORDER !== 'undefined' ? (CEFR_ORDER[lvl] ?? 99) : 99);
+  const key = cat => {
+    const levels = allRules.filter(r => r.category === cat.id).map(r => cefr(r.level));
+    if (!levels.length) return { min: 99, avg: 99 };
+    return { min: Math.min(...levels), avg: levels.reduce((a, b) => a + b, 0) / levels.length };
+  };
+  return categories.slice().sort((a, b) => {
+    const ka = key(a), kb = key(b);
+    return ka.min - kb.min || ka.avg - kb.avg || String(a.id).localeCompare(String(b.id));
+  });
+}
+
 function buildCategoryGrid() {
   const grid = document.getElementById('category-grid');
   grid.innerHTML = '';
 
-  categories.forEach(cat => {
+  _categoriesByComplexity().forEach(cat => {
     const rulesInCat = allRules.filter(r => r.category === cat.id);
     const cardIds    = rulesInCat.map(r => 'grammar_' + cat.id + '_' + r.id);
     const _cards     = Progress.getAllCards();
@@ -196,7 +214,10 @@ function showRules(categoryId) {
 
   document.getElementById('rule-category-label').textContent = cat.emoji + ' ' + _catLabel(cat);
 
-  const rulesInCat = allRules.filter(r => r.category === categoryId);
+  // Rules within a category also run easiest → hardest (CEFR), matching the category ordering.
+  const _cefr = lvl => (typeof CEFR_ORDER !== 'undefined' ? (CEFR_ORDER[lvl] ?? 99) : 99);
+  const rulesInCat = allRules.filter(r => r.category === categoryId)
+    .slice().sort((a, b) => _cefr(a.level) - _cefr(b.level));
   const list = document.getElementById('rule-list');
   list.innerHTML = '';
 
@@ -398,7 +419,11 @@ function buildPhase2() {
   const inputs  = [];
 
   prompts.forEach((prompt, i) => {
-    // Question row
+    // Each question + its textarea are ONE group, so a question sits tight with its own answer box
+    // (the card gap separates the groups, not a question from its box).
+    const item = document.createElement('div');
+    item.className = 'noticing-item';
+
     const questionDiv = document.createElement('div');
     questionDiv.className = 'noticing-question';
 
@@ -415,7 +440,7 @@ function buildPhase2() {
 
     questionDiv.appendChild(num);
     questionDiv.appendChild(txt);
-    card.appendChild(questionDiv);
+    item.appendChild(questionDiv);
 
     // Answer input
     const textarea = document.createElement('textarea');
@@ -423,7 +448,8 @@ function buildPhase2() {
     textarea.rows        = 2;
     textarea.placeholder = promptHint || AppLang.t('noticing_placeholder');
     textarea.setAttribute('aria-label', AppLang.t('grammar_noticing_answer_n', { n: i + 1 }));
-    card.appendChild(textarea);
+    item.appendChild(textarea);
+    card.appendChild(item);
     inputs.push(textarea);
 
     // Update gate on every keystroke

@@ -545,10 +545,17 @@
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-xl);
-  padding: 24px 22px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 22px;                 /* separates question GROUPS (each question tight with its own box) */
+}
+
+/* Question + its answer box as one tight group. */
+.noticing-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .noticing-question {
@@ -583,7 +590,7 @@
 .noticing-input {
   display: block;
   width: 100%;
-  margin: 8px 0 16px;
+  margin: 0;                 /* spacing comes from .noticing-item gap, not per-element margins */
   padding: 10px 14px;
   font-family: 'Raleway', sans-serif;
   font-size: 0.9rem;
@@ -1119,7 +1126,7 @@ blockquote.rule-tip {
 
 .production-input-row--check-only {
   justify-content: flex-end;
-  margin-top: 8px;
+  margin: 0;                 /* only the card gap spaces the button — no extra top/bottom margin */
 }
 
 .production-check-btn {

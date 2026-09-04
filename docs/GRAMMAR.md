@@ -202,13 +202,21 @@ node tools/check-grammar.mjs --pair en-de
 ## 5. Adding grammar for a new pair
 
 1. Pick the rule set from the target's CEFR inventory (§2). Do not invent rules or levels.
-2. For each rule, author **all five phases** and a `translation` on every target sentence, following
-   §3. Keep dialogues short and natural; highlight the target form with `**bold**`.
-3. Add `title_en` / `title_es`; write `noticing_prompts` and `structured_input.question` in the
-   source language.
+2. For each rule, author **all six phases** (§1) and a `translation` on every learner-facing target
+   sentence, following §3. Keep dialogues short and natural; highlight the target form with `**bold**`.
+   No em-dashes (—) in any learner-facing text — use a comma (the gate enforces this).
+3. Add `title_en` / `title_es`; write `noticing_prompts`, `structured_input.question`, affective
+   `feedback` and `communicative_production.prompt`/`hint` in the source language.
 4. Run `node tools/grammar-topics.mjs --write` (re-derives the evidence `topics` map) and
    `node tools/check-grammar.mjs` (must be clean) and `node tools/check-content.mjs`.
 5. Cite the target's inventory + reference grammar in `CREDITS.md`.
+
+**Ordering is automatic — do not hand-order the file.** The category grid and the rule list are
+ordered **by CEFR complexity** at render time (categories by their rules' easiest entry level then
+average level; rules within a category by level), so a learner always meets foundational categories
+first and advanced ones (e.g. advanced syntax, all C1/C2) last. A new category or rule lands in a
+coherent spot automatically by its own content level — the `categories[]` / rules array order in the
+JSON is irrelevant to what the learner sees.
 
 ---
 
