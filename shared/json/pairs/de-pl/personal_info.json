@@ -24,8 +24,8 @@
       "level": "A1",
       "grammar": "Nach dem Verb „być\" (sein) steht das Substantiv im Narzędnik (Instrumental): studentem / studentką.",
       "target": [
-        { "text": "Jestem studentem.", "labels": { "gender": "masculino" }, "audioSlug": "jestem_studentem" },
-        { "text": "Jestem studentką.", "labels": { "gender": "femenino" }, "audioSlug": "jestem_studentka" }
+        { "text": "Jestem studentem.", "source": "Ich bin Student.", "labels": { "gender": "masculino" }, "audioSlug": "jestem_studentem" },
+        { "text": "Jestem studentką.", "source": "Ich bin Studentin.", "labels": { "gender": "femenino" }, "audioSlug": "jestem_studentka" }
       ]
     }
   ]
