@@ -41,7 +41,7 @@ const AppLangPair = (() => {
       // dimensions (number, case) + 3-way gender and du/Sie register with a German target.
       id:          'en-de',
       source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
-      target:      { code: 'de', flags: ['at', 'de'], name: 'Deutsch', localName: 'German' },
+      target:      { code: 'de', flags: ['de', 'at'], name: 'Deutsch', localName: 'German' },
       label:       'English → Deutsch',
       ttsVoices:   ['df_hedda', 'dm_conrad'],
       sttLanguage: 'german',
