@@ -120,6 +120,17 @@ function checkRule(pair, srcLang, rule, categoryIds) {
     if (!isNonEmptyStr(c.model)) issues.push(`${at}: communicative_production #${i} missing "model"`);
     if (!isNonEmptyStr(c.model_translation)) issues.push(`${at}: communicative_production #${i} missing "model_translation"`);
   });
+
+  // No em-dash (—) in any learner-facing prose (Rule 6). `answer`/`accepted` are functional
+  // answer-matching data (may use — as a "no-article" token), so they are excluded.
+  const prose = [rule.title, rule.title_en, rule.title_es, rule.explanation];
+  for (const t of dlg) prose.push(t.text, t.translation);
+  for (const p of notice) prose.push(promptText(p), (p && p.placeholder));
+  for (const s of si) prose.push(s.sentence, s.translation, s.question, s.feedback, ...(s.options || []));
+  for (const q of quiz) prose.push(q.sentence, q.translation, q.feedback_why, q.contrast);
+  for (const c of cp) prose.push(c.prompt, c.model, c.model_translation, c.hint);
+  for (const s of prose) if (typeof s === 'string' && s.includes('—'))
+    issues.push(`${at}: em-dash (—) in learner-facing text — use a comma (Rule 6): "${s.slice(0, 50)}"`);
 }
 
 const pairs = (argPair ? [argPair] : discoverPairs())
