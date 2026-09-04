@@ -116,8 +116,8 @@
       "communicative_production": [
         {
           "prompt": "Describe a man and a woman you know, with an adjective that agrees with each.",
-          "model": "O meu amigo é alto e a minha amiga é alta.",
-          "model_translation": "My friend is tall and my friend is tall.",
+          "model": "Meu amigo é alto e minha amiga é alta.",
+          "model_translation": "My male friend is tall and my female friend is tall.",
           "hint": "Masculine ends in -o, feminine in -a, and the article and adjective agree."
         }
       ],
