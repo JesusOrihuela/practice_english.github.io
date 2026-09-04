@@ -85,6 +85,20 @@ for (const code of targets) {
       fail(`${label} — gender-detector block is incomplete (needs personNouns[] + gestureGendered/isGenderInfl/bothGendersPresent/retainedAdjMismatch)`);
   }
 
+  // 2c. Source-side gender — when the TARGET has gender detection, check-variants' gender-completeness
+  // check calls sourceFixesGender(src) for every pair into this target, so each SOURCE language MUST
+  // provide `sourceGender` (fixWords + nounsCapitalized) in its profile. Missing it floods the gate
+  // with false "missing gender variant" findings. English has grammaticalGender:false yet still needs
+  // it (gendered pronouns/kinship fix gender). Keyed by source — nothing hardcoded. See §2.9.
+  if (GENDER[code]) {
+    for (const pair of pairs.filter(x => x.split('-')[1] === code)) {
+      const src = pair.split('-')[0];
+      const sg = AppLangProfiles.sourceGender(src);
+      if (!sg || !isNonEmptyArray(sg.fixWords))
+        fail(`[${src}] (source in ${pair}) — target "${code}" has gender detection, so the source profile needs sourceGender.fixWords (L1 words that fix a person's gender); without it check-variants flags every gendered predicate. See docs/LANGUAGE-PROFILES.md §2.9`);
+    }
+  }
+
   // 3. grammarTipLabels ruleIds must exist in the grammar rules of this target's pairs.
   const ruleIds = new Set();
   for (const pair of pairs.filter(x => x.split('-')[1] === code)) {
