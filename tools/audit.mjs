@@ -177,6 +177,13 @@ const CONTENT_RULES = {
     grammarChecks: null,
   },
 
+  no: {
+    label: 'Norwegian',
+    anglicisms: [],      // Norwegian borrows freely in speech; none flagged in the minimal stress-test set.
+    regionalTerms: [],   // Bokmål/Nynorsk splits live in target[]/variants[] with labels.standard, not errors here.
+    grammarChecks: null,
+  },
+
   // ─── TEMPLATE FOR A NEW TARGET LANGUAGE ──────────────────────────────────
   // fr: {
   //   label: 'French',

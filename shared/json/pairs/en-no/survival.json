@@ -1,0 +1,70 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Excuse me, do you speak English?",
+      "level": "A1",
+      "grammar": "Bokmål bruker snakker, nynorsk bruker snakkar, same tale.",
+      "target": [
+        {
+          "text": "Unnskyld, snakker du engelsk?",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "unnskyld_snakker_du_engelsk"
+        },
+        {
+          "text": "Orsak, snakkar du engelsk?",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "orsak_snakkar_du_engelsk"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "I don't understand.",
+      "level": "A1",
+      "grammar": "Bokmål jeg/ikke, nynorsk eg/ikkje, to skriftformer.",
+      "target": [
+        {
+          "text": "Jeg forstår ikke.",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "jeg_forstar_ikke"
+        },
+        {
+          "text": "Eg forstår ikkje.",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "eg_forstar_ikkje"
+        }
+      ]
+    },
+    {
+      "id": "survival_what_is_this",
+      "source": "What is this?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hva er dette?",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "hva_er_dette"
+        },
+        {
+          "text": "Kva er dette?",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "kva_er_dette"
+        }
+      ]
+    }
+  ]
+}

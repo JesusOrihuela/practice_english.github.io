@@ -1,0 +1,68 @@
+{
+  "words": [
+    {
+      "id": "hus",
+      "term": "et hus",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "En bygning der folk bor.",
+      "example": "Huset er stort og gammelt.",
+      "translations": { "en": "house" },
+      "gloss": { "en": "A building where people live." },
+      "gloss_example": { "en": "The house is big and old." },
+      "variants": [
+        { "text": "et hus", "labels": { "definiteness": "indefinido" }, "audioSlug": "et_hus" },
+        { "text": "huset",  "labels": { "definiteness": "definido" },   "audioSlug": "huset" }
+      ]
+    },
+    {
+      "id": "by",
+      "term": "en by",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Et stort sted der mange mennesker bor.",
+      "example": "Byen er stor.",
+      "translations": { "en": "city" },
+      "gloss": { "en": "A large place where many people live." },
+      "gloss_example": { "en": "The city is big." },
+      "variants": [
+        { "text": "en by", "labels": { "definiteness": "indefinido" }, "audioSlug": "en_by" },
+        { "text": "byen",  "labels": { "definiteness": "definido" },   "audioSlug": "byen" }
+      ]
+    },
+    {
+      "id": "park",
+      "term": "en park",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Et grønt område i byen der man hviler.",
+      "example": "Barna leker i parken.",
+      "translations": { "en": "park" },
+      "gloss": { "en": "A green area in the city where people relax." },
+      "gloss_example": { "en": "The children play in the park." },
+      "variants": [
+        { "text": "en park", "labels": { "definiteness": "indefinido" }, "audioSlug": "en_park" },
+        { "text": "parken",  "labels": { "definiteness": "definido" },   "audioSlug": "parken" }
+      ]
+    },
+    {
+      "id": "bibliotek",
+      "term": "et bibliotek",
+      "level": "A1",
+      "category": "Noun",
+      "difficulty": "easy",
+      "definition": "Et sted der man låner bøker.",
+      "example": "Biblioteket ligger i byen.",
+      "translations": { "en": "library" },
+      "gloss": { "en": "A place where you borrow books." },
+      "gloss_example": { "en": "The library is in the city." },
+      "variants": [
+        { "text": "et bibliotek", "labels": { "definiteness": "indefinido" }, "audioSlug": "et_bibliotek" },
+        { "text": "biblioteket",  "labels": { "definiteness": "definido" },   "audioSlug": "biblioteket" }
+      ]
+    }
+  ]
+}

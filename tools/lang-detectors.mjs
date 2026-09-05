@@ -155,6 +155,14 @@ const DETECTORS = {
     gender_en_ett: null,
     definite_suffix: null,
   },
+  // ── Norwegian target (en-no) — STRESS-TEST, minimal ──────────────
+  // Bokmål/Nynorsk differences (jeg/eg, ikke/ikkje) and the suffixed definite (-en/-et) are pervasive
+  // and collide with countless word-forms — no reliable per-rule regex. Like the other stress-test
+  // targets these map to null → hand-curated; each rule teaches from its own self-contained examples.
+  no: {
+    bokmal_nynorsk: null,
+    definite_suffix: null,
+  },
 };
 
 export { DETECTORS };

@@ -96,6 +96,18 @@ const AppLangPair = (() => {
       ttsVoices:   ['svf_sofie', 'svm_mattias'],
       sttLanguage: 'swedish',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): the 6th and final divergent target. Norwegian closes
+      // the DUAL WRITTEN STANDARD gap — Bokmål ↔ Nynorsk, two official norms of one spoken language
+      // (jeg/eg, ikke/ikkje), handled by the new `standard` dimension with a TEXT badge (both are
+      // Norway → no distinct flag). Reuses common/neuter (en/et) + suffixed definite from en-sv.
+      id:          'en-no',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English', localName: 'English' },
+      target:      { code: 'no', flags: ['no'],       name: 'Norsk',   localName: 'Norwegian' },
+      label:       'English → Norsk',
+      ttsVoices:   ['nof_pernille', 'nom_finn'],
+      sttLanguage: 'norwegian',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

@@ -1,0 +1,70 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_my_name_is",
+      "source": "My name is Kari.",
+      "level": "A1",
+      "grammar": "Bokmål heter, nynorsk heiter, same tale.",
+      "target": [
+        {
+          "text": "Jeg heter Kari.",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "jeg_heter_kari"
+        },
+        {
+          "text": "Eg heiter Kari.",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "eg_heiter_kari"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_from_norway",
+      "source": "I am from Norway.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Jeg er fra Norge.",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "jeg_er_fra_norge"
+        },
+        {
+          "text": "Eg er frå Noreg.",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "eg_er_fra_noreg"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Jeg er student.",
+          "labels": {
+            "standard": "bokmål"
+          },
+          "audioSlug": "jeg_er_student"
+        },
+        {
+          "text": "Eg er student.",
+          "labels": {
+            "standard": "nynorsk"
+          },
+          "audioSlug": "eg_er_student"
+        }
+      ]
+    }
+  ]
+}

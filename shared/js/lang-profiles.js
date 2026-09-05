@@ -632,7 +632,72 @@
     },
   };
 
-  const PROFILES = { en, es, de, fi, pl, pt, sv };
+  // ── Norwegian (no) — STRESS-TEST target (en-no), intentionally minimal/non-shippable ──
+  // NORTH Germanic, the 6th and final stress-test target. It closes the DUAL WRITTEN STANDARD gap:
+  // Norwegian has TWO official written norms of the same spoken language, Bokmål and Nynorsk
+  // (jeg/eg, ikke/ikkje, hva/kva) — a variant axis that is NOT geographic (both are Norway → no
+  // distinct flag), handled by the new `standard` dimension with a TEXT badge. It also reuses the
+  // common/neuter gender (Bokmål en/et, article in the term) and the suffixed definite (et hus →
+  // huset, the `definiteness` dimension), both proven by en-sv → grammaticalGender:false, no case.
+  const no = {
+    name: 'Norwegian',
+    grammaticalGender: false,   // common/neuter is noun-inherent (article in term) → no person m/f variant path.
+    voices: ['nof_pernille', 'nom_finn'],   // edge-tts nb-NO voices (Pernille / Finn). No nn-NO voice → Nynorsk uses these.
+    tts: { engine: 'edge' },
+    // æ ø å are distinct letters of the Norwegian alphabet (not accented a/o) — preserve all three so
+    // answer-checking stays strict, like sv keeps äöå and de keeps äöüß.
+    foldPreserve: 'æøå',
+    nativeChars: 'æøå',
+    // Cloze must blank a CONTENT word, never these closed-class Norwegian words (Bokmål + Nynorsk forms).
+    clozeStopWords: [
+      'jeg', 'eg', 'du', 'han', 'hun', 'ho', 'den', 'det', 'vi', 'dere', 'de', 'dei', 'meg', 'deg', 'seg', 'oss',
+      'min', 'mitt', 'mine', 'din', 'ditt', 'hans', 'hennes', 'sin', 'sitt', 'sine', 'vår', 'våre',
+      'en', 'ei', 'et', 'ein', 'eit', 'og', 'eller', 'men', 'at', 'som', 'når', 'hvis', 'mens', 'fordi', 'så',
+      'ikke', 'ikkje', 'aldri', 'ingen', 'inkje',
+      'er', 'var', 'vært', 'vore', 'være', 'vera', 'har', 'hadde', 'hatt', 'ha', 'blir', 'ble', 'vart',
+      'i', 'på', 'av', 'til', 'fra', 'frå', 'med', 'om', 'under', 'over', 'ved', 'hos', 'uten', 'utan', 'mot', 'gjennom', 'mellom',
+      'her', 'der', 'nå', 'no', 'da', 'då', 'alltid', 'ofte', 'allerede', 'bare', 'også', 'mye', 'mykje', 'ja', 'nei',
+      // wh-words (Bokmål/Nynorsk) — blanking these yields trivial gaps
+      'hva', 'kva', 'hvem', 'kven', 'hvor', 'kvar', 'hvorfor', 'kvifor', 'hvordan', 'korleis', 'hvilken',
+    ],
+    // Closed-class Norwegian words excluded from the VOCAB coverage denominator (Bokmål + Nynorsk).
+    functionWords: [
+      // pronomen (personlege / eigedoms / peikande / relative / spørjande)
+      'jeg', 'eg', 'du', 'han', 'hun', 'ho', 'den', 'det', 'vi', 'dere', 'de', 'dei', 'meg', 'deg', 'seg', 'oss', 'man',
+      'min', 'mitt', 'mine', 'din', 'ditt', 'dine', 'hans', 'hennes', 'dens', 'dets', 'sin', 'sitt', 'sine', 'vår', 'vårt', 'våre', 'deres', 'deira',
+      'denne', 'dette', 'disse', 'desse', 'slik', 'samme', 'same', 'hver', 'kvar', 'noen', 'noe', 'nokon', 'noko', 'ingen', 'alle', 'alt',
+      'som', 'hvilken', 'hva', 'kva', 'hvem', 'kven', 'hvor', 'kvar', 'når', 'hvorfor', 'kvifor', 'hvordan', 'korleis',
+      // konjunksjonar
+      'og', 'eller', 'men', 'for', 'at', 'om', 'når', 'mens', 'fordi', 'så', 'samt', 'hvis', 'dersom', 'enn',
+      // nekting
+      'ikke', 'ikkje', 'aldri',
+      // vere / ha / bli
+      'er', 'var', 'vært', 'vore', 'være', 'vera', 'har', 'hadde', 'hatt', 'ha', 'blir', 'ble', 'vart', 'blitt',
+      // preposisjonar
+      'i', 'på', 'av', 'til', 'fra', 'frå', 'med', 'om', 'under', 'over', 'ved', 'hos', 'uten', 'utan', 'mot', 'gjennom', 'mellom', 'bak', 'foran', 'etter', 'før',
+      // artiklar + partiklar / adverb
+      'en', 'ei', 'et', 'ein', 'eit', 'jo', 'nok', 'vel', 'her', 'der', 'nå', 'no', 'da', 'då', 'alltid', 'ofte', 'allerede', 'bare', 'også', 'mye', 'mykje', 'ja', 'nei',
+    ],
+    ignoreTokens: ['øh', 'hmm', 'aha', 'åh', 'eh', 'liksom', 'på ein måte'],
+    // Authored Norwegian tip → Norwegian rule id (only ruleIds that exist in en-no/grammar-rules.json).
+    grammarTipLabels: [
+      [/bokmål|nynorsk|målform|skriftform|standard|written norm/i, 'Målform', 'bokmal_nynorsk'],
+      [/bestemt|ubestemt|definite|ending|suffiks|artikkel/i, 'Bestemt form', 'definite_suffix'],
+    ],
+    frequency: {
+      list: 'Norsk ordbank / CEFR (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until promoted to a real, coverage-complete pair.
+      stressTest: true,
+      note: 'Norsk ordbank (Språkrådet/UiB) + CEFR A1/A2 word stock, public reference. The ' +
+            'committeable top-1000 index is built when this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de, fi, pl, pt, sv, no };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.

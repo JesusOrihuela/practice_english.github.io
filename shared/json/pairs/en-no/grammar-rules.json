@@ -1,0 +1,220 @@
+{
+  "categories": [
+    {
+      "id": "standard",
+      "label_en": "Bokmål and Nynorsk",
+      "label_es": "Bokmål y Nynorsk",
+      "label_no": "Målform",
+      "emoji": "📝",
+      "color": "#7C3AED"
+    },
+    {
+      "id": "articles",
+      "label_en": "Articles",
+      "label_es": "Artículos",
+      "label_no": "Artiklar",
+      "emoji": "🔤",
+      "color": "#0EA5E9"
+    }
+  ],
+  "rules": [
+    {
+      "id": "bokmal_nynorsk",
+      "category": "standard",
+      "level": "A1",
+      "title": "Two Written Standards",
+      "title_en": "Two Written Standards (Bokmål / Nynorsk)",
+      "title_es": "Dos estándares escritos (Bokmål / Nynorsk)",
+      "title_no": "To målformer",
+      "explanation": "Norwegian has **two official written standards**, **Bokmål** and **Nynorsk**. They write the same spoken language in two ways. Common differences, **jeg** (Bokmål) versus **eg** (Nynorsk) for I, **ikke** versus **ikkje** for not, and **hva** versus **kva** for what.",
+      "context_dialogue": [
+        {
+          "speaker": "KARI",
+          "text": "**Jeg** heter Kari.",
+          "translation": "My name is Kari.",
+          "highlight": true
+        },
+        {
+          "speaker": "OLA",
+          "text": "**Eg** heiter Ola.",
+          "translation": "My name is Ola.",
+          "highlight": true
+        },
+        {
+          "speaker": "KARI",
+          "text": "Jeg forstår **ikke** nynorsk.",
+          "translation": "I don't understand Nynorsk.",
+          "highlight": true
+        },
+        {
+          "speaker": "OLA",
+          "text": "Eg forstår **ikkje** bokmål heller.",
+          "translation": "I don't understand Bokmål either.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "jeg and eg both mean I. Which standard uses which?",
+        "ikke and ikkje both mean not. What is the spelling difference?",
+        "Are Bokmål and Nynorsk two languages, or two ways of writing one?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Eg forstår ikkje.",
+          "translation": "I don't understand.",
+          "question": "Which written standard is this?",
+          "options": [
+            "Nynorsk (eg, ikkje)",
+            "Bokmål (jeg, ikke)",
+            "Swedish",
+            "Danish"
+          ],
+          "correct": 0,
+          "feedback": "eg and ikkje are the Nynorsk forms, Bokmål would be jeg and ikke."
+        },
+        {
+          "affective": true,
+          "question": "Which spelling would you like to learn? Choose one.",
+          "options": [
+            "Jeg vil lære bokmål.",
+            "Eg vil lære nynorsk.",
+            "Jeg vil lære begge."
+          ],
+          "feedback": "Both are correct Norwegian, most learners start with Bokmål."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ forstår ikkje. (jeg/eg, nynorsk)",
+          "translation": "I don't understand.",
+          "answer": "Eg",
+          "accepted": [
+            "eg",
+            "Eg"
+          ],
+          "feedback_why": "Nynorsk uses eg for I, Bokmål uses jeg.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Jeg snakker ___ norsk. (ikke/ikkje, bokmål)",
+          "translation": "I don't speak Norwegian.",
+          "answer": "ikke",
+          "accepted": [
+            "ikke"
+          ],
+          "feedback_why": "Bokmål uses ikke for not, Nynorsk uses ikkje.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Write \"I am from Norway\" once in Bokmål and once in Nynorsk.",
+          "model": "Jeg er fra Norge. Eg er frå Noreg.",
+          "model_translation": "I am from Norway. I am from Norway.",
+          "hint": "Bokmål jeg / fra / Norge, Nynorsk eg / frå / Noreg."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "definite_suffix",
+      "category": "articles",
+      "level": "A1",
+      "title": "The Definite is a Suffix",
+      "title_en": "The Definite is a Suffix",
+      "title_es": "El definido es un sufijo",
+      "title_no": "Bestemt form",
+      "explanation": "Like Swedish, Norwegian has **no separate word for the**. The definite is a **suffix** on the noun. Common (en) nouns add **-en** (by → by**en**), neuter (et) nouns add **-et** (hus → hus**et**).",
+      "context_dialogue": [
+        {
+          "speaker": "PER",
+          "text": "Hvor er **huset**?",
+          "translation": "Where is the house?",
+          "highlight": true
+        },
+        {
+          "speaker": "LIV",
+          "text": "**Huset** ligger i **byen**.",
+          "translation": "The house is in the city.",
+          "highlight": true
+        },
+        {
+          "speaker": "PER",
+          "text": "Og **bordet**?",
+          "translation": "And the table?",
+          "highlight": true
+        },
+        {
+          "speaker": "LIV",
+          "text": "**Bordet** er der.",
+          "translation": "The table is there.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "hus means a house. What does huset mean?",
+        "by → byen and hus → huset. Which ending goes with en-words, which with et-words?",
+        "Is there any separate word for the here?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Huset er stort.",
+          "translation": "The house is big.",
+          "question": "How is the house expressed here?",
+          "options": [
+            "With the -et suffix on hus (an et-word)",
+            "With a separate word before hus",
+            "hus is already definite by itself",
+            "With the word en"
+          ],
+          "correct": 0,
+          "feedback": "The definite is a suffix, and et-words take -et, so huset."
+        },
+        {
+          "affective": true,
+          "question": "Which is near you now? Choose one.",
+          "options": [
+            "Bordet står her.",
+            "Huset er der.",
+            "Byen er stor."
+          ],
+          "feedback": "Each noun is in the definite form with -en or -et, bordet, huset, byen."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Jeg ser ___. (hus, bestemt form)",
+          "translation": "I see the house.",
+          "answer": "huset",
+          "accepted": [
+            "huset"
+          ],
+          "feedback_why": "The neuter (et) noun hus takes -et, so huset.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ er stor. (by, bestemt form)",
+          "translation": "The city is big.",
+          "answer": "Byen",
+          "accepted": [
+            "byen",
+            "Byen"
+          ],
+          "feedback_why": "The common (en) noun by takes -en, so byen.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Say where two things are, using the definite form (-en / -et).",
+          "model": "Huset ligger i byen.",
+          "model_translation": "The house is in the city.",
+          "hint": "en-words take -en (byen), et-words take -et (huset)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}
