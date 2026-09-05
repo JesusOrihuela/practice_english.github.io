@@ -1,0 +1,110 @@
+{
+  "phrases": [
+    {
+      "id": "pensamientos_in_my_opinion_this_is_important",
+      "source": "Meiner Meinung nach ist das wichtig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En mi opinión, esto es importante.",
+          "audioSlug": "en_mi_opinion_esto_es_importante"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_i_think_its_a_good_idea",
+      "source": "Ich denke, dass es eine gute Idee ist.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pienso que es una buena idea.",
+          "audioSlug": "pienso_que_es_una_buena_idea"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_it_seems_complicated_to_me",
+      "source": "Es scheint mir kompliziert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me parece complicado.",
+          "audioSlug": "me_parece_complicado"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_im_sure_it_works",
+      "source": "Ich bin sicher, dass es funktioniert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy segura de que funciona.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_segura_de_que_funciona"
+        },
+        {
+          "text": "Estoy seguro de que funciona.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_seguro_de_que_funciona"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_i_prefer_coffee",
+      "source": "Ich bevorzuge Kaffee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero el café.",
+          "audioSlug": "prefiero_el_cafe"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_maybe_youre_right",
+      "source": "Vielleicht hast du recht.",
+      "level": "B1",
+      "grammar": "Después de quizás suele ir el subjuntivo, tengas.",
+      "target": [
+        {
+          "text": "Quizás tengas razón.",
+          "audioSlug": "quizas_tengas_razon"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_i_dont_know_if_thats_true",
+      "source": "Ich weiß nicht, ob das stimmt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No sé si eso es cierto.",
+          "audioSlug": "no_se_si_eso_es_cierto"
+        }
+      ]
+    },
+    {
+      "id": "pensamientos_i_find_that_interesting",
+      "source": "Das finde ich interessant.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Eso me parece interesante.",
+          "audioSlug": "eso_me_parece_interesante"
+        }
+      ]
+    }
+  ]
+}

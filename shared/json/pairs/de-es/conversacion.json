@@ -1,0 +1,100 @@
+{
+  "phrases": [
+    {
+      "id": "conversacion_i_want_to_ask_something",
+      "source": "Ich möchte etwas fragen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero preguntar algo.",
+          "audioSlug": "quiero_preguntar_algo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_agree",
+      "source": "Ich bin einverstanden.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy de acuerdo.",
+          "audioSlug": "estoy_de_acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_dont_agree",
+      "source": "Ich bin nicht einverstanden.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No estoy de acuerdo.",
+          "audioSlug": "no_estoy_de_acuerdo"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_what_do_you_think",
+      "source": "Was denkst du?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué piensas?",
+          "audioSlug": "que_piensas"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_think_youre_right",
+      "source": "Ich glaube, dass du recht hast.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Creo que tienes razón.",
+          "audioSlug": "creo_que_tienes_razon"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_understand_what_you_mean",
+      "source": "Ich verstehe, was du meinst.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Entiendo lo que quieres decir.",
+          "audioSlug": "entiendo_lo_que_quieres_decir"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_lets_talk_about_it",
+      "source": "Lass uns darüber reden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hablemos de eso.",
+          "audioSlug": "hablemos_de_eso"
+        }
+      ]
+    },
+    {
+      "id": "conversacion_i_agree_with_you",
+      "source": "Ich stimme dir zu.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy de acuerdo contigo.",
+          "audioSlug": "estoy_de_acuerdo_contigo"
+        }
+      ]
+    }
+  ]
+}

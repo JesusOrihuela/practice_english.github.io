@@ -1,0 +1,100 @@
+{
+  "phrases": [
+    {
+      "id": "calendario_today_is_monday",
+      "source": "Heute ist Montag.",
+      "level": "A2",
+      "grammar": "En español los días van en minúscula, lunes.",
+      "target": [
+        {
+          "text": "Hoy es lunes.",
+          "audioSlug": "hoy_es_lunes"
+        }
+      ]
+    },
+    {
+      "id": "calendario_tomorrow_is_tuesday",
+      "source": "Morgen ist Dienstag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mañana es martes.",
+          "audioSlug": "manana_es_martes"
+        }
+      ]
+    },
+    {
+      "id": "calendario_what_day_is_today",
+      "source": "Welcher Tag ist heute?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué día es hoy?",
+          "audioSlug": "que_dia_es_hoy"
+        }
+      ]
+    },
+    {
+      "id": "calendario_my_birthday_is_in_may",
+      "source": "Mein Geburtstag ist im Mai.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi cumpleaños es en mayo.",
+          "audioSlug": "mi_cumpleanos_es_en_mayo"
+        }
+      ]
+    },
+    {
+      "id": "calendario_we_meet_on_friday",
+      "source": "Wir treffen uns am Freitag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos vemos el viernes.",
+          "audioSlug": "nos_vemos_el_viernes"
+        }
+      ]
+    },
+    {
+      "id": "calendario_the_appointment_is_on_march_tenth",
+      "source": "Der Termin ist am zehnten März.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cita es el diez de marzo.",
+          "audioSlug": "la_cita_es_el_diez_de_marzo"
+        }
+      ]
+    },
+    {
+      "id": "calendario_in_winter_its_cold",
+      "source": "Im Winter ist es kalt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En invierno hace frío.",
+          "audioSlug": "en_invierno_hace_frio"
+        }
+      ]
+    },
+    {
+      "id": "calendario_next_week_i_have_vacation",
+      "source": "Nächste Woche habe ich Urlaub.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La próxima semana tengo vacaciones.",
+          "audioSlug": "la_proxima_semana_tengo_vacaciones"
+        }
+      ]
+    }
+  ]
+}
