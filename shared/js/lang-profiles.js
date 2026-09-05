@@ -567,7 +567,72 @@
     },
   };
 
-  const PROFILES = { en, es, de, fi, pl, pt };
+  // ── Swedish (sv) — STRESS-TEST target (en-sv), intentionally minimal/non-shippable ──
+  // NORTH Germanic. Closes the COMMON/NEUTER gender typology (utrum/neutrum, en/ett) shared by
+  // nl/sv/no/da — but that gender is NOUN-INHERENT (marked by the article in the term, like German
+  // "der Bruder"), NOT a speaker-chosen person variant, so grammaticalGender:false (no gender-variant
+  // path / no gender detector; Swedish person nouns are gender-neutral: en lärare). What it uniquely
+  // stresses: the DEFINITE article is a SUFFIX (hus → huset), modeled by the new `definiteness`
+  // inflectional dimension. du is universal → register is absent. Genitive -s aside, no case system.
+  const sv = {
+    name: 'Swedish',
+    grammaticalGender: false,   // common/neuter is noun-inherent (article in term) → no person m/f variant path.
+    voices: ['svf_sofie', 'svm_mattias'],   // edge-tts sv-SE voices (Sofie / Mattias).
+    tts: { engine: 'edge' },
+    // å ä ö are distinct letters of the Swedish alphabet (not accented a/o) — preserve all three so
+    // answer-checking stays strict, like fi keeps äöå and de keeps äöüß.
+    foldPreserve: 'äöå',
+    nativeChars: 'äöå',
+    // Cloze must blank a CONTENT word, never these closed-class Swedish words.
+    clozeStopWords: [
+      'jag', 'du', 'han', 'hon', 'den', 'det', 'vi', 'ni', 'de', 'dem', 'mig', 'dig', 'sig', 'oss', 'er',
+      'min', 'mitt', 'mina', 'din', 'ditt', 'dina', 'hans', 'hennes', 'vår', 'våra', 'sin', 'sitt', 'sina',
+      'en', 'ett', 'och', 'eller', 'men', 'att', 'som', 'om', 'när', 'medan', 'för', 'så',
+      'inte', 'ej', 'aldrig', 'ingen', 'inget', 'inga',
+      'är', 'var', 'varit', 'vara', 'har', 'hade', 'haft', 'ha', 'blir', 'blev',
+      'i', 'på', 'av', 'till', 'från', 'med', 'under', 'över', 'vid', 'hos', 'utan', 'mot', 'genom', 'mellan',
+      'här', 'där', 'nu', 'då', 'sedan', 'alltid', 'ofta', 'redan', 'bara', 'också', 'mycket', 'ja', 'nej',
+      // wh-words — blanking these yields trivial gaps
+      'vad', 'vem', 'vilken', 'vilket', 'vilka', 'vart', 'varför', 'hur',
+    ],
+    // Closed-class Swedish words excluded from the VOCAB coverage denominator.
+    functionWords: [
+      // pronomen (personliga / possessiva / demonstrativa / relativa / frågande)
+      'jag', 'du', 'han', 'hon', 'den', 'det', 'vi', 'ni', 'de', 'dem', 'mig', 'dig', 'sig', 'oss', 'er', 'man',
+      'min', 'mitt', 'mina', 'din', 'ditt', 'dina', 'hans', 'hennes', 'dess', 'vår', 'vårt', 'våra', 'deras', 'sin', 'sitt', 'sina',
+      'denna', 'detta', 'dessa', 'sådan', 'samma', 'varje', 'någon', 'något', 'några', 'ingen', 'inget', 'inga', 'all', 'allt', 'alla',
+      'som', 'vilken', 'vilket', 'vilka', 'vad', 'vem', 'vart', 'var', 'när', 'varför', 'hur',
+      // konjunktioner
+      'och', 'eller', 'men', 'för', 'att', 'om', 'när', 'medan', 'fast', 'så', 'samt', 'utan', 'därför',
+      // negation
+      'inte', 'ej', 'aldrig',
+      // vara / ha / bli
+      'är', 'var', 'varit', 'vara', 'har', 'hade', 'haft', 'ha', 'blir', 'blev', 'blivit',
+      // prepositioner
+      'i', 'på', 'av', 'till', 'från', 'med', 'om', 'under', 'över', 'vid', 'hos', 'utan', 'mot', 'genom', 'mellan', 'bakom', 'framför', 'efter', 'före',
+      // artiklar + partiklar / adverb
+      'en', 'ett', 'ju', 'nog', 'väl', 'här', 'där', 'nu', 'då', 'sedan', 'alltid', 'ofta', 'redan', 'bara', 'också', 'mycket', 'ja', 'nej',
+    ],
+    ignoreTokens: ['öh', 'hmm', 'aha', 'åh', 'eh', 'typ', 'liksom'],
+    // Authored Swedish tip → Swedish rule id (only ruleIds that exist in en-sv/grammar-rules.json).
+    grammarTipLabels: [
+      [/genus|utrum|neutrum|en-ord|ett-ord|en\/ett|common gender|neuter/i, 'Genus', 'gender_en_ett'],
+      [/bestämd|obestämd|definite|ändelse|suffix|artikel/i, 'Bestämd form', 'definite_suffix'],
+    ],
+    frequency: {
+      list: 'Kelly-listan (A1/A2)',
+      cefrGraded: true,
+      committed: false,
+      // STRESS-TEST pair: intentionally minimal, NOT shippable → exempt from the coverage gate
+      // (no committed top-1000 index required) until promoted to a real, coverage-complete pair.
+      stressTest: true,
+      note: 'Swedish Kelly list (Kelly-listan) A1/A2, public reference. The committeable top-1000 ' +
+            'index is built when this pair is promoted from stress-test to shippable.',
+      gateFloor: 0,
+    },
+  };
+
+  const PROFILES = { en, es, de, fi, pl, pt, sv };
 
   // Cognate suffix pairs, keyed by the two language codes SORTED and joined with
   // '|'. Each pair is [suffixInLangA, suffixInLangB] following the sorted order.

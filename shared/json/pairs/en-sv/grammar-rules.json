@@ -1,0 +1,220 @@
+{
+  "categories": [
+    {
+      "id": "gender",
+      "label_en": "Gender (en / ett)",
+      "label_es": "Género (en / ett)",
+      "label_sv": "Genus",
+      "emoji": "🚻",
+      "color": "#DB2777"
+    },
+    {
+      "id": "articles",
+      "label_en": "Articles",
+      "label_es": "Artículos",
+      "label_sv": "Artiklar",
+      "emoji": "🔤",
+      "color": "#0EA5E9"
+    }
+  ],
+  "rules": [
+    {
+      "id": "gender_en_ett",
+      "category": "gender",
+      "level": "A1",
+      "title": "Two Genders (en / ett)",
+      "title_en": "Two Genders (en / ett)",
+      "title_es": "Dos géneros (en / ett)",
+      "title_sv": "Genus (en / ett)",
+      "explanation": "Swedish nouns have one of two genders, **common** (en-words) or **neuter** (ett-words). You learn the gender together with the noun. The indefinite article shows it, **en** bil (a car) versus **ett** hus (a house). The adjective agrees too, en stor bil but ett stor**t** hus.",
+      "context_dialogue": [
+        {
+          "speaker": "EMMA",
+          "text": "Jag har **en** bil.",
+          "translation": "I have a car.",
+          "highlight": true
+        },
+        {
+          "speaker": "OSKAR",
+          "text": "Och jag har **ett** hus.",
+          "translation": "And I have a house.",
+          "highlight": true
+        },
+        {
+          "speaker": "EMMA",
+          "text": "Bilen är **stor**.",
+          "translation": "The car is big.",
+          "highlight": true
+        },
+        {
+          "speaker": "OSKAR",
+          "text": "Huset är **stort**.",
+          "translation": "The house is big.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In en bil and ett hus, which little word signals the gender?",
+        "The adjective stor becomes stort with hus. What triggers the extra -t?",
+        "How can you tell whether a noun is an en-word or an ett-word?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Jag ser ett stort hus.",
+          "translation": "I see a big house.",
+          "question": "Why is it stort and not stor?",
+          "options": [
+            "hus is a neuter (ett-word), so the adjective adds -t",
+            "hus is plural",
+            "stort is a verb",
+            "en-words also add -t"
+          ],
+          "correct": 0,
+          "feedback": "A neuter (ett-word) noun makes the adjective take -t, so stort."
+        },
+        {
+          "affective": true,
+          "question": "Which do you have? Choose the true one.",
+          "options": [
+            "Jag har en bil.",
+            "Jag har ett hus.",
+            "Jag har en cykel."
+          ],
+          "feedback": "bil and cykel are en-words (common), hus is an ett-word (neuter)."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ hus är gammalt. (en/ett)",
+          "translation": "A house is old.",
+          "answer": "Ett",
+          "accepted": [
+            "ett",
+            "Ett"
+          ],
+          "feedback_why": "hus is a neuter noun, so it takes ett.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Jag har en ___ bil. (stor/stort)",
+          "translation": "I have a big car.",
+          "answer": "stor",
+          "accepted": [
+            "stor"
+          ],
+          "feedback_why": "bil is a common (en) noun, so the adjective stays stor.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Name one en-word and one ett-word you own, each with an adjective.",
+          "model": "Jag har en ny cykel och ett litet bord.",
+          "model_translation": "I have a new bicycle and a small table.",
+          "hint": "en-word keeps the plain adjective (ny), ett-word adds -t (litet)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "definite_suffix",
+      "category": "articles",
+      "level": "A1",
+      "title": "The Definite is a Suffix",
+      "title_en": "The Definite is a Suffix",
+      "title_es": "El definido es un sufijo",
+      "title_sv": "Bestämd form",
+      "explanation": "Swedish has **no separate word for the**. The definite form is a **suffix** on the noun. Common (en) nouns add **-en** (bok → bok**en**), neuter (ett) nouns add **-et** (hus → hus**et**). So en bok (a book) becomes bok**en** (the book).",
+      "context_dialogue": [
+        {
+          "speaker": "LINA",
+          "text": "Var är **boken**?",
+          "translation": "Where is the book?",
+          "highlight": true
+        },
+        {
+          "speaker": "JON",
+          "text": "**Boken** ligger på **bordet**.",
+          "translation": "The book is on the table.",
+          "highlight": true
+        },
+        {
+          "speaker": "LINA",
+          "text": "Och **huset**?",
+          "translation": "And the house?",
+          "highlight": true
+        },
+        {
+          "speaker": "JON",
+          "text": "**Huset** är där.",
+          "translation": "The house is there.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "bok means a book. What does boken mean?",
+        "Compare boken and huset. Which ending goes with an en-word, which with an ett-word?",
+        "Is there any separate word for the in these sentences?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Huset är stort.",
+          "translation": "The house is big.",
+          "question": "How is the house expressed here?",
+          "options": [
+            "With the -et suffix on hus (an ett-word)",
+            "With a separate word before hus",
+            "hus is already definite by itself",
+            "With the word en"
+          ],
+          "correct": 0,
+          "feedback": "The definite is a suffix, and ett-words take -et, so huset."
+        },
+        {
+          "affective": true,
+          "question": "Which is on your table right now? Choose one.",
+          "options": [
+            "Boken ligger på bordet.",
+            "Datorn ligger på bordet.",
+            "Nyckeln ligger på bordet."
+          ],
+          "feedback": "Each noun is in the definite form with -en or -et, boken, datorn, nyckeln."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Jag läser ___. (bok, bestämd form)",
+          "translation": "I am reading the book.",
+          "answer": "boken",
+          "accepted": [
+            "boken"
+          ],
+          "feedback_why": "The common (en) noun bok takes -en, so boken.",
+          "contrast": ""
+        },
+        {
+          "sentence": "___ är stort. (hus, bestämd form)",
+          "translation": "The house is big.",
+          "answer": "Huset",
+          "accepted": [
+            "huset",
+            "Huset"
+          ],
+          "feedback_why": "The neuter (ett) noun hus takes -et, so huset.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Say where two things are, using the definite form (-en / -et).",
+          "model": "Boken ligger på bordet.",
+          "model_translation": "The book is on the table.",
+          "hint": "en-words take -en (boken), ett-words take -et (bordet)."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

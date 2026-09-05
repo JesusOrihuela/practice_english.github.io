@@ -83,6 +83,19 @@ const AppLangPair = (() => {
       ttsVoices:   ['pf_dora', 'pm_alex'],
       sttLanguage: 'portuguese',
     },
+    {
+      // STRESS-TEST pair (intentionally minimal): the 5th divergent target. Swedish (North Germanic)
+      // closes the COMMON/NEUTER gender typology (en/ett = utrum/neutrum, shared by nl/sv/no/da) and
+      // stresses the SUFFIXED definite article (hus → huset) via the new `definiteness` dimension. Its
+      // common/neuter is noun-inherent (article in the term), not a person m/f variant → no gender
+      // detector. du is universal (register absent).
+      id:          'en-sv',
+      source:      { code: 'en', flags: ['us', 'gb'], name: 'English',  localName: 'English' },
+      target:      { code: 'sv', flags: ['se'],       name: 'Svenska',  localName: 'Swedish' },
+      label:       'English → Svenska',
+      ttsVoices:   ['svf_sofie', 'svm_mattias'],
+      sttLanguage: 'swedish',
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).

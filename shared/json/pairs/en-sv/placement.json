@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "level": "A1",
+      "q": "What does \"Tack\" mean?",
+      "options": ["Thank you", "Please", "Hello", "Goodbye"],
+      "answer": 0
+    },
+    {
+      "level": "A1",
+      "q": "How do you say \"Good morning\" in Swedish?",
+      "options": ["God morgon", "God natt", "Ursäkta", "Hej då"],
+      "answer": 0
+    },
+    {
+      "level": "A2",
+      "q": "Which article goes with the neuter noun \"hus\"?",
+      "options": ["ett", "en", "den", "det"],
+      "answer": 0
+    },
+    {
+      "level": "A2",
+      "q": "How do you say \"the book\" in Swedish (from \"en bok\")?",
+      "options": ["boken", "bok en", "den bok", "ett bok"],
+      "answer": 0
+    },
+    {
+      "level": "B1",
+      "q": "\"ett ___ hus\" (a big house). Which adjective form?",
+      "options": ["stort", "stor", "stora", "störst"],
+      "answer": 0
+    },
+    {
+      "level": "B1",
+      "q": "The noun in \"en bil\" is which gender?",
+      "options": ["common (en-word)", "neuter (ett-word)", "masculine", "feminine"],
+      "answer": 0
+    }
+  ]
+}

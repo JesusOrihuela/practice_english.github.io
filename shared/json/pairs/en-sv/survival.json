@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "survival_do_you_speak_english",
+      "source": "Excuse me, do you speak English?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ursäkta, talar du engelska?",
+          "audioSlug": "ursakta_talar_du_engelska"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Can you help me?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Kan du hjälpa mig?",
+          "audioSlug": "kan_du_hjalpa_mig"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_do_not_understand",
+      "source": "I don't understand.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Jag förstår inte.",
+          "audioSlug": "jag_forstar_inte"
+        }
+      ]
+    }
+  ]
+}

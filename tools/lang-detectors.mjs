@@ -147,6 +147,14 @@ const DETECTORS = {
     ser_vs_estar: null,
     forms_of_address: null,
   },
+  // ── Swedish target (en-sv) — STRESS-TEST, minimal ──────────────
+  // Common/neuter gender (en/ett) and the suffixed definite form (-en/-et) are pervasive and collide
+  // with countless word-forms — no reliable per-rule regex. Like the other stress-test targets these
+  // map to null → hand-curated; each rule teaches from its own self-contained context/examples.
+  sv: {
+    gender_en_ett: null,
+    definite_suffix: null,
+  },
 };
 
 export { DETECTORS };

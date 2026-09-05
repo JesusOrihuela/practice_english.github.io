@@ -1,0 +1,40 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_my_name_is",
+      "source": "My name is Anna.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Jag heter Anna.",
+          "audioSlug": "jag_heter_anna"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_from_sweden",
+      "source": "I am from Sweden.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Jag kommer från Sverige.",
+          "audioSlug": "jag_kommer_fran_sverige"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_am_a_student",
+      "source": "I am a student.",
+      "level": "A1",
+      "grammar": "Yrkesord som student saknar genusform, samma ord för alla.",
+      "target": [
+        {
+          "text": "Jag är student.",
+          "audioSlug": "jag_ar_student"
+        }
+      ]
+    }
+  ]
+}

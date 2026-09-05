@@ -170,6 +170,13 @@ const CONTENT_RULES = {
     grammarChecks: null,
   },
 
+  sv: {
+    label: 'Swedish',
+    anglicisms: [],      // Swedish borrows freely in speech; none flagged in the minimal stress-test set.
+    regionalTerms: [],   // no regional split authored for the stress-test pair.
+    grammarChecks: null,
+  },
+
   // ─── TEMPLATE FOR A NEW TARGET LANGUAGE ──────────────────────────────────
   // fr: {
   //   label: 'French',
