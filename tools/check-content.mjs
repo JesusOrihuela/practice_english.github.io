@@ -42,6 +42,20 @@ function phraseTopicsFor(pair) {
 function srcLangsFor(lang) {
   return [...new Set(PAIRS.filter(p => p.split('-')[1] === lang && !WIP_PAIRS.has(p)).map(p => p.split('-')[0]))];
 }
+// Does a SOURCE (L1) hint actually MARK gender? True if it combines genders with a slash
+// (Student/in, resfriado/a) OR contains a gendered word from the source's `sourceGender.fixWords`
+// (Arzt, Bruder…). A genderless predicative adjective source (German "Ich bin groß.", like English
+// "I am tall.") does NOT mark gender → it fits both target gender forms, so no per-form source is
+// needed (the badge disambiguates). Used by R14 so it only fires on a real badge↔hint mismatch risk.
+function sourceMarksGender(src, srcLang) {
+  if (!src) return false;
+  if (src.includes('/')) return true;
+  const cfg = AppLangProfiles.sourceGender(srcLang);
+  if (!cfg) return false;
+  const fix = new Set((cfg.fixWords || []).map(w => w.toLowerCase()));
+  for (const tok of src.toLowerCase().normalize('NFC').split(/[^\p{L}]+/u)) if (tok && fix.has(tok)) return true;
+  return false;
+}
 // Normalize text for exact-duplicate detection: lowercase, strip accents + punctuation,
 // collapse whitespace. Deterministic; no model. (ñ folds to n via NFD — fine for dup keys.)
 function norm(s) {
@@ -220,7 +234,10 @@ for (const pair of PAIRS) {
       // every form — so those pairs never trip this. See docs/ADD-A-LANGUAGE.md (variant source).
       const _srcLang = pair.split('-')[0];
       const _srcProfile = AppLangProfiles.get(_srcLang);
-      if (_srcProfile && _srcProfile.grammaticalGender && (phrase.target || []).length > 1) {
+      // Only when the phrase-level source actually MARKS gender (a slash or a gendered word); a
+      // genderless adjective source (Ich bin groß ↔ Soy alto/alta) fits both forms — no per-form
+      // source needed, exactly like the English-source case (en-es).
+      if (_srcProfile && _srcProfile.grammaticalGender && sourceMarksGender(phrase.source, _srcLang) && (phrase.target || []).length > 1) {
         const _gendered = (phrase.target || [])
           .map((f, i) => ({ f, i }))
           .filter(x => x.f.labels && x.f.labels.gender);

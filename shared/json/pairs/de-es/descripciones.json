@@ -1,0 +1,120 @@
+{
+  "phrases": [
+    {
+      "id": "descripciones_i_am_tall",
+      "source": "Ich bin groß.",
+      "level": "A1",
+      "grammar": "Una cualidad permanente usa ser, soy alto.",
+      "target": [
+        {
+          "text": "Soy alta.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_alta"
+        },
+        {
+          "text": "Soy alto.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_alto"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_i_am_tired",
+      "source": "Ich bin müde.",
+      "level": "A1",
+      "grammar": "Un estado pasajero usa estar, estoy cansado.",
+      "target": [
+        {
+          "text": "Estoy cansada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_cansada"
+        },
+        {
+          "text": "Estoy cansado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_cansado"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_he_is_very_nice",
+      "source": "Er ist sehr nett.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Él es muy simpático.",
+          "audioSlug": "el_es_muy_simpatico"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_she_is_very_intelligent",
+      "source": "Sie ist sehr intelligent.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ella es muy inteligente.",
+          "audioSlug": "ella_es_muy_inteligente"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_the_house_is_big",
+      "source": "Das Haus ist groß.",
+      "level": "A1",
+      "grammar": "Una característica del objeto usa ser, la casa es grande.",
+      "target": [
+        {
+          "text": "La casa es grande.",
+          "audioSlug": "la_casa_es_grande"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_the_soup_is_hot",
+      "source": "Die Suppe ist heiß.",
+      "level": "A2",
+      "grammar": "Un estado del momento usa estar, la sopa está caliente.",
+      "target": [
+        {
+          "text": "La sopa está caliente.",
+          "audioSlug": "la_sopa_esta_caliente"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_i_am_very_happy",
+      "source": "Ich bin sehr glücklich.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy muy feliz.",
+          "audioSlug": "estoy_muy_feliz"
+        }
+      ]
+    },
+    {
+      "id": "descripciones_what_are_you_like",
+      "source": "Wie bist du?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo eres?",
+          "audioSlug": "como_eres"
+        }
+      ]
+    }
+  ]
+}

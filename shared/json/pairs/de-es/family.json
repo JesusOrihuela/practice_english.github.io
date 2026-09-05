@@ -1,0 +1,100 @@
+{
+  "phrases": [
+    {
+      "id": "family_this_is_my_family",
+      "source": "Das ist meine Familie.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Esta es mi familia.",
+          "audioSlug": "esta_es_mi_familia"
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_a_brother_and_a_sister",
+      "source": "Ich habe einen Bruder und eine Schwester.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo un hermano y una hermana.",
+          "audioSlug": "tengo_un_hermano_y_una_hermana"
+        }
+      ]
+    },
+    {
+      "id": "family_my_father_is_a_teacher",
+      "source": "Mein Vater ist Lehrer.",
+      "level": "A1",
+      "grammar": "El oficio usa ser, mi padre es profesor.",
+      "target": [
+        {
+          "text": "Mi padre es profesor.",
+          "audioSlug": "mi_padre_es_profesor"
+        }
+      ]
+    },
+    {
+      "id": "family_my_mother_is_a_doctor",
+      "source": "Meine Mutter ist Ärztin.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi madre es médica.",
+          "audioSlug": "mi_madre_es_medica"
+        }
+      ]
+    },
+    {
+      "id": "family_i_have_two_children",
+      "source": "Ich habe zwei Kinder.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo dos hijos.",
+          "audioSlug": "tengo_dos_hijos"
+        }
+      ]
+    },
+    {
+      "id": "family_whats_your_sisters_name",
+      "source": "Wie heißt deine Schwester?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo se llama tu hermana?",
+          "audioSlug": "como_se_llama_tu_hermana"
+        }
+      ]
+    },
+    {
+      "id": "family_my_grandparents_live_in_berlin",
+      "source": "Meine Großeltern wohnen in Berlin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mis abuelos viven en Berlín.",
+          "audioSlug": "mis_abuelos_viven_en_berlin"
+        }
+      ]
+    },
+    {
+      "id": "family_he_is_my_best_friend",
+      "source": "Er ist mein bester Freund.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Él es mi mejor amigo.",
+          "audioSlug": "el_es_mi_mejor_amigo"
+        }
+      ]
+    }
+  ]
+}
