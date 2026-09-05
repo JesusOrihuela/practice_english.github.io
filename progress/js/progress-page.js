@@ -50,7 +50,12 @@ function renderLangPair() {
   if (!grid || typeof AppLangPair === 'undefined') return;
 
   const active = AppLangPair.getActive();
-  const all    = AppLangPair.getAll();
+  // Shippable pairs only (stress-test pairs are hidden from real users; a ?dev=1 / pe_dev escape
+  // reveals them). If a stress-test pair is somehow active (dev-selected), keep it in the list so the
+  // current selection is never missing from its own settings.
+  const all    = AppLangPair.getShippable().some(p => p.id === active.id)
+    ? AppLangPair.getShippable()
+    : AppLangPair.getShippable().concat([active]);
 
   grid.innerHTML = '';
 

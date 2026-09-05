@@ -45,6 +45,7 @@ const AppLangPair = (() => {
       label:       'English → Deutsch',
       ttsVoices:   ['df_hedda', 'dm_conrad'],
       sttLanguage: 'german',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
       // STRESS-TEST pair (intentionally minimal): the opposite pole to en-de — a target with NO
@@ -57,6 +58,7 @@ const AppLangPair = (() => {
       label:       'English → Suomi',
       ttsVoices:   ['fif_noora', 'fim_harri'],
       sttLanguage: 'finnish',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
       // STRESS-TEST pair (intentionally minimal): the 3rd divergent target AND the first pair with a
@@ -69,6 +71,7 @@ const AppLangPair = (() => {
       label:       'Deutsch → Polski',
       ttsVoices:   ['plf_zofia', 'plm_marek'],
       sttLanguage: 'polish',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
       // STRESS-TEST pair (intentionally minimal): the 4th and final divergent target. Portuguese
@@ -82,6 +85,7 @@ const AppLangPair = (() => {
       label:       'English → Português',
       ttsVoices:   ['pf_dora', 'pm_alex'],
       sttLanguage: 'portuguese',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
       // STRESS-TEST pair (intentionally minimal): the 5th divergent target. Swedish (North Germanic)
@@ -95,6 +99,7 @@ const AppLangPair = (() => {
       label:       'English → Svenska',
       ttsVoices:   ['svf_sofie', 'svm_mattias'],
       sttLanguage: 'swedish',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
       // STRESS-TEST pair (intentionally minimal): the 6th and final divergent target. Norwegian closes
@@ -107,6 +112,7 @@ const AppLangPair = (() => {
       label:       'English → Norsk',
       ttsVoices:   ['nof_pernille', 'nom_finn'],
       sttLanguage: 'norwegian',
+      stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
@@ -129,6 +135,19 @@ const AppLangPair = (() => {
   }
 
   function getAll() { return PAIRS.slice(); }
+
+  // Pairs to offer in the SHIPPABLE product picker: everything EXCEPT the architecture stress-test
+  // pairs (`stressTest:true`), which are intentionally minimal and not for real users. A dev escape
+  // — localStorage `pe_dev='1'` or a `?dev=1` URL param — reveals ALL pairs so we can still select and
+  // test the stress-test ones during development. getAll() stays the full list (tools, audit, etc.).
+  function getShippable() {
+    var dev = false;
+    try {
+      dev = (typeof localStorage !== 'undefined' && localStorage.getItem('pe_dev') === '1') ||
+            (typeof location !== 'undefined' && /[?&]dev=1(&|$)/.test(location.search));
+    } catch (e) { /* storage/location blocked → default to shippable-only */ }
+    return dev ? PAIRS.slice() : PAIRS.filter(function (p) { return !p.stressTest; });
+  }
 
   // ── Key namespacing ───────────────────────────────────────────
   // Returns a pair-scoped localStorage key.
@@ -214,7 +233,7 @@ const AppLangPair = (() => {
   if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', _injectBadge);
 
   // ── Public API ────────────────────────────────────────────────
-  return { getActive, setActive, getAll, storageKey, grammarKey };
+  return { getActive, setActive, getAll, getShippable, storageKey, grammarKey };
 
 })();
 

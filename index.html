@@ -333,9 +333,9 @@
 
     <script src="shared/js/flags.js?v=e119628b"></script>
     <script src="shared/js/cefr.js?v=4737c1d0"></script>
-    <script src="shared/js/lang-pair.js?v=d68506b2"></script>
+    <script src="shared/js/lang-pair.js?v=73facd62"></script>
     <script src="shared/js/proficiency.js?v=5fd50d9f"></script>
-    <script src="lang/ui.js?v=3bf4475e"></script>
+    <script src="lang/ui.js?v=61c11304"></script>
     <script src="lang/target/en.js?v=2cd78c3d"></script>
     <script src="shared/js/lang.js?v=d2e47532"></script>
     <script src="shared/js/i18n-dom.js?v=1278e66a"></script>
@@ -652,7 +652,7 @@
           var _navCode = (navigator.language || 'en').toLowerCase().split('-')[0];
           var _lang  = _PICKER_UI[_navCode] ? _navCode : 'en';
           var _s     = _PICKER_UI[_lang];
-          var _pairs = AppLangPair.getAll();
+          var _pairs = AppLangPair.getShippable();
 
           var picker = document.createElement('div');
           picker.id  = 'lp-picker';
@@ -732,7 +732,7 @@
         }
       })();
     </script>
-    <script src="shared/js/progress.js?v=84a46acc"></script>
+    <script src="shared/js/progress.js?v=9a8a1680"></script>
     <script src="shared/js/topic-data.js?v=4420c42d"></script>
     <script src="shared/js/topics.js?v=4b06b99c"></script>
     <script src="shared/js/path.js?v=384b7b1a"></script>
