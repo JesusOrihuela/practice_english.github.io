@@ -114,6 +114,20 @@ const AppLangPair = (() => {
       sttLanguage: 'norwegian',
       stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
+    {
+      // SHIPPABLE pair IN PROGRESS (`wip:true`): German → Spanish, the first real product pair beyond
+      // es-en/en-es. Source German reuses the `de` UI block; target Spanish reuses vocab/es (adding
+      // German glosses) + es audio + the es coverage gate. `wip:true` HIDES it from the shippable
+      // picker and EXEMPTS it from the completeness/coverage gates while it is built (see
+      // docs/DE-ES-PLAN.md); remove the flag when it passes every gate. Reachable with ?dev=1.
+      id:          'de-es',
+      source:      { code: 'de', flags: ['de', 'at'],       name: 'Deutsch', localName: 'Deutsch' },
+      target:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'Spanisch' },
+      label:       'Deutsch → Español',
+      ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
+      sttLanguage: 'spanish',
+      wip:         true,   // work-in-progress shippable pair — hidden + gate-exempt until complete
+    },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
     // sttLanguage (Whisper language name for the target language).
@@ -146,7 +160,7 @@ const AppLangPair = (() => {
       dev = (typeof localStorage !== 'undefined' && localStorage.getItem('pe_dev') === '1') ||
             (typeof location !== 'undefined' && /[?&]dev=1(&|$)/.test(location.search));
     } catch (e) { /* storage/location blocked → default to shippable-only */ }
-    return dev ? PAIRS.slice() : PAIRS.filter(function (p) { return !p.stressTest; });
+    return dev ? PAIRS.slice() : PAIRS.filter(function (p) { return !p.stressTest && !p.wip; });
   }
 
   // ── Key namespacing ───────────────────────────────────────────

@@ -16,6 +16,12 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import AppLangProfiles from '../shared/js/lang-profiles.js';
 import AppVariantDims from '../shared/js/variant-dimensions.js';
+import AppLangPair from '../shared/js/lang-pair.js';
+
+// WIP pairs (`wip:true` in lang-pair.js) are shippable pairs still under construction — their vocab
+// glosses are added incrementally, so their SOURCE must NOT yet be required on the shared vocab of
+// their target. Exclude them from source derivation (they still have their own phrase files checked).
+const WIP_PAIRS = new Set(AppLangPair.getAll().filter(p => p.wip).map(p => p.id));
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const BASE = join(__dirname, '..', 'shared', 'json');
@@ -34,7 +40,7 @@ function phraseTopicsFor(pair) {
 // "es" is learned by en-es ⇒ source "en"). Used to know which translations.<src>/gloss.<src>
 // each vocab word must carry. No hardcoded language literals.
 function srcLangsFor(lang) {
-  return [...new Set(PAIRS.filter(p => p.split('-')[1] === lang).map(p => p.split('-')[0]))];
+  return [...new Set(PAIRS.filter(p => p.split('-')[1] === lang && !WIP_PAIRS.has(p)).map(p => p.split('-')[0]))];
 }
 // Normalize text for exact-duplicate detection: lowercase, strip accents + punctuation,
 // collapse whitespace. Deterministic; no model. (ñ folds to n via NFD — fine for dup keys.)

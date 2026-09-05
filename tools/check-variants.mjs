@@ -35,6 +35,11 @@ import { fileURLToPath } from 'node:url';
 import { GENDER } from './gender-detectors.mjs';   // per-target-language gender detection (perfil-driven)
 import AppVariantDims from '../shared/js/variant-dimensions.js';   // the open dimension registry (inflectional dims are data-driven)
 import AppLangProfiles from '../shared/js/lang-profiles.js';   // per-language facts (source-side gender lists live here, not hardcoded)
+import AppLangPair from '../shared/js/lang-pair.js';           // to skip WIP pairs (their source glosses aren't required yet)
+
+// WIP pairs (`wip:true`) are shippable pairs under construction — their source must not yet be
+// required on the target's shared vocab, so exclude them from source derivation.
+const WIP_PAIRS = new Set(AppLangPair.getAll().filter(p => p.wip).map(p => p.id));
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PAIRS_DIR = path.join(ROOT, 'shared/json/pairs');
@@ -46,7 +51,7 @@ const GATE = process.argv.includes('--gate');
 function srcLangsForTarget(target) {
   return [...new Set(fs.readdirSync(PAIRS_DIR)
     .filter(d => { try { return fs.statSync(path.join(PAIRS_DIR, d)).isDirectory(); } catch { return false; } })
-    .filter(d => d.split('-')[1] === target)
+    .filter(d => d.split('-')[1] === target && !WIP_PAIRS.has(d))
     .map(d => d.split('-')[0]))];
 }
 

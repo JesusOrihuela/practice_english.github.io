@@ -36,6 +36,10 @@ const pairs = AppLangPair.getAll();
 
 for (const pair of pairs) {
   const label = `[${pair.id}]`;
+  // WIP pairs (`wip:true`) are shippable pairs still under construction — intentionally incomplete
+  // (missing glosses/flags/content), hidden from the picker, and exempt from these gates until they
+  // pass everything and the flag is removed. Skip them here. See docs/DE-ES-PLAN.md.
+  if (pair.wip) continue;
 
   // 1. FLAGS — every declared flag code has an SVG asset.
   const codes = [...(pair.source?.flags || []), ...(pair.target?.flags || [])];
@@ -97,6 +101,7 @@ if (fs.existsSync(VOCAB_DIR)) {
 // always has both sides. Enforced per pair (each pair independent).
 const sourcesByTarget = {};
 for (const pr of pairs) {
+  if (pr.wip) continue;   // WIP pairs don't yet require their source's vocab glosses (built incrementally)
   const t = pr.target && pr.target.code, s = pr.source && pr.source.code;
   if (t && s) (sourcesByTarget[t] = sourcesByTarget[t] || new Set()).add(s);
 }
