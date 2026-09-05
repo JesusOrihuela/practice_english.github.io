@@ -208,6 +208,7 @@ const AppFeedback = (() => {
         if (v === undefined || v === '') continue;
         if (dim === 'register') parts.push(t({ formal: 'alt_note_register_f', neutral: 'alt_note_register_neu', informal: 'alt_note_register_i' }[v] || 'alt_note_register_i'));
         else if (dim === 'definiteness') parts.push(t({ indefinido: 'alt_note_definiteness_indef', definido: 'alt_note_definiteness_def' }[v] || 'alt_note_definiteness_indef'));
+        else if (dim === 'standard') parts.push(t({ 'bokmål': 'alt_note_standard_bokmal', 'nynorsk': 'alt_note_standard_nynorsk' }[v] || v));
         else if (dim === 'loanword') parts.push(t('alt_note_loanword'));
         else if (dim === 'synonym') parts.push(t('alt_note_synonym'));
         else parts.push(_capitalize(v));   // gender, region, number, + any future axis
@@ -263,6 +264,7 @@ const AppFeedback = (() => {
     register: { formal: 'alt_note_register_f', neutral: 'alt_note_register_neu', informal: 'alt_note_register_i' },
     number:   { singular: 'alt_note_number_s', plural: 'alt_note_number_p' },
     definiteness: { indefinido: 'alt_note_definiteness_indef', definido: 'alt_note_definiteness_def' },
+    standard: { 'bokmål': 'alt_note_standard_bokmal', 'nynorsk': 'alt_note_standard_nynorsk' },
     case:     { nominativ: 'alt_note_case_nom', akkusativ: 'alt_note_case_akk', dativ: 'alt_note_case_dat', genitiv: 'alt_note_case_gen',
                 nominatiivi: 'alt_note_case_nom', partitiivi: 'alt_note_case_part', genetiivi: 'alt_note_case_gen',
                 inessiivi: 'alt_note_case_iness', elatiivi: 'alt_note_case_elat', illatiivi: 'alt_note_case_illat' },
@@ -296,6 +298,7 @@ const AppFeedback = (() => {
     },
     number:   _svg('<path d="M6 3.2 5 12.8M11 3.2 10 12.8M3.2 6.4h9.6M2.7 9.6h9.6"/>', '#D97706'),
     definiteness: _svg('<rect x="2.7" y="4.5" width="10.6" height="7" rx="1.5"/><path d="M5.3 8h5.4"/>', '#0EA5E9'),
+    standard: _svg('<path d="M8 4.2c-1.4-1-3.6-1-5 0v7.6c1.4-1 3.6-1 5 0 1.4-1 3.6-1 5 0V4.2c-1.4-1-3.6-1-5 0zM8 4.2v7.6"/>', '#7C3AED'),
     case:     _svg('<circle cx="8" cy="8" r="5.3"/><circle cx="8" cy="8" r="2.7"/><circle cx="8" cy="8" r="0.7" fill="currentColor" stroke="none"/>', '#2563EB'),
     loanword: _svg('<circle cx="8" cy="8" r="5.3"/><path d="M2.7 8h10.6M8 2.7c2 1.9 2 8.7 0 10.6M8 2.7c-2 1.9-2 8.7 0 10.6"/>', '#059669'),
     synonym:  _svg('<path d="M4 6.6A4 4 0 0 1 11.4 5"/><path d="M11 2.4 11.6 5.3 8.7 4.9"/><path d="M12 9.4A4 4 0 0 1 4.6 11"/><path d="M5 13.6 4.4 10.7 7.3 11.1"/>', '#7C3AED'),

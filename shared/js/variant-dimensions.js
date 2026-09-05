@@ -65,8 +65,14 @@
     // (a/the, ein/der), but North Germanic marks the DEFINITE with a SUFFIX on the noun (Swedish
     // hus → hus-et, en bok → bok-en), so the two forms are an INFLECTION of one lemma. Added data-only
     // for the en-sv stress-test pair — the first pair whose article is a suffix, not a word.
-    definiteness: { kind: 'inflectional', values: ['indefinido', 'definido'], priority: 5, badge: 'pill', appliesTo: ['sv'],
+    definiteness: { kind: 'inflectional', values: ['indefinido', 'definido'], priority: 5, badge: 'pill', appliesTo: ['sv', 'no'],
                 agreement: ['sustantivo'] },
+    // STANDARD — the written standard / norm of ONE language, when a language has more than one official
+    // written form of the SAME spoken tongue. Norwegian has TWO: Bokmål and Nynorsk (jeg/eg, ikke/ikkje).
+    // This is NOT a country/region split (both are Norway → no distinct flag), so its badge is TEXT, not a
+    // flag — the first variant axis that is neither geographic nor grammatical. LEXICAL (the two forms
+    // rotate as recognition variants). Added data-only for the en-no stress-test pair.
+    standard: { kind: 'lexical', values: ['bokmål', 'nynorsk'], priority: 1, badge: 'pill', appliesTo: ['no'] },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
     // takes the rotation + recognition presentation ("also: albergue") — which is what the synonym-
     // interference research prescribes, unlike showing them as co-equal slash targets. A single
