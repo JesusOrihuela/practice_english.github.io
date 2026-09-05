@@ -843,6 +843,7 @@ details.section-block:not([open]) > summary.section-title {
   flex-wrap: wrap;
   gap: 10px;
   align-items: flex-start;
+  justify-content: center;   /* balance the leftover space symmetrically instead of a right-heavy gap */
 }
 
 .lp-card {
