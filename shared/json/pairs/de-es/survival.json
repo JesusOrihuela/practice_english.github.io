@@ -1,0 +1,136 @@
+{
+  "phrases": [
+    {
+      "id": "survival_can_you_repeat",
+      "source": "Kannst du das wiederholen?",
+      "level": "A1",
+      "grammar": "Con usted se conjuga en tercera persona, puede repetir.",
+      "target": [
+        {
+          "text": "¿Puedes repetir?",
+          "source": "Kannst du das wiederholen?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "puedes_repetir"
+        },
+        {
+          "text": "¿Puede repetir?",
+          "source": "Können Sie das wiederholen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_repetir"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_dont_understand",
+      "source": "Ich verstehe nicht.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No entiendo.",
+          "audioSlug": "no_entiendo"
+        }
+      ]
+    },
+    {
+      "id": "survival_how_do_you_say_this_in_spanish",
+      "source": "Wie sagt man das auf Spanisch?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo se dice esto en español?",
+          "audioSlug": "como_se_dice_esto_en_espanol"
+        }
+      ]
+    },
+    {
+      "id": "survival_what_does_this_mean",
+      "source": "Was bedeutet das?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué significa esto?",
+          "audioSlug": "que_significa_esto"
+        }
+      ]
+    },
+    {
+      "id": "survival_can_you_help_me",
+      "source": "Kannst du mir helfen?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes ayudarme?",
+          "source": "Kannst du mir helfen?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "puedes_ayudarme"
+        },
+        {
+          "text": "¿Puede ayudarme?",
+          "source": "Können Sie mir helfen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_ayudarme"
+        }
+      ]
+    },
+    {
+      "id": "survival_i_dont_know",
+      "source": "Ich weiß nicht.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No sé.",
+          "audioSlug": "no_se"
+        }
+      ]
+    },
+    {
+      "id": "survival_speak_more_slowly",
+      "source": "Sprich bitte langsamer.",
+      "level": "A2",
+      "grammar": "El imperativo con usted usa la forma hable, no habla.",
+      "target": [
+        {
+          "text": "Habla más despacio, por favor.",
+          "source": "Sprich bitte langsamer.",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "habla_mas_despacio_por_favor"
+        },
+        {
+          "text": "Hable más despacio, por favor.",
+          "source": "Sprechen Sie bitte langsamer.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "hable_mas_despacio_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "survival_where_is_the_bathroom",
+      "source": "Entschuldigung, wo ist die Toilette?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdón, ¿dónde está el baño?",
+          "audioSlug": "perdon_donde_esta_el_bano"
+        }
+      ]
+    }
+  ]
+}

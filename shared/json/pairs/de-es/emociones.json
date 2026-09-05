@@ -1,0 +1,150 @@
+{
+  "phrases": [
+    {
+      "id": "emociones_i_am_happy",
+      "source": "Ich bin glücklich.",
+      "level": "A1",
+      "grammar": "Las emociones usan estar, estoy contenta.",
+      "target": [
+        {
+          "text": "Estoy contenta.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_contenta"
+        },
+        {
+          "text": "Estoy contento.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_contento"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_sad",
+      "source": "Ich bin traurig.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy triste.",
+          "audioSlug": "estoy_triste"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_angry",
+      "source": "Ich bin wütend.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enojada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_enojada"
+        },
+        {
+          "text": "Estoy enojado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_enojado"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_nervous",
+      "source": "Ich bin nervös.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy nerviosa.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_nerviosa"
+        },
+        {
+          "text": "Estoy nervioso.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_nervioso"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_afraid",
+      "source": "Ich habe Angst.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo miedo.",
+          "audioSlug": "tengo_miedo"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_surprised",
+      "source": "Ich bin überrascht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy sorprendida.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_sorprendida"
+        },
+        {
+          "text": "Estoy sorprendido.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_sorprendido"
+        }
+      ]
+    },
+    {
+      "id": "emociones_i_am_excited",
+      "source": "Ich bin aufgeregt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy emocionada.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "estoy_emocionada"
+        },
+        {
+          "text": "Estoy emocionado.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "estoy_emocionado"
+        }
+      ]
+    },
+    {
+      "id": "emociones_why_are_you_sad",
+      "source": "Warum bist du traurig?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Por qué estás triste?",
+          "audioSlug": "por_que_estas_triste"
+        }
+      ]
+    }
+  ]
+}

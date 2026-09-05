@@ -3,6 +3,9 @@
     { "id": "greetings",     "label": "Saludos",             "labelEn": "Greetings",           "emoji": "👋", "phrase": true, "vocab": false, "level": "A1", "order": 1 },
     { "id": "personal_info", "label": "Información Personal", "labelEn": "Personal Information", "emoji": "🪪", "phrase": true, "vocab": false, "level": "A1", "order": 2 },
     { "id": "family",        "label": "Familia",             "labelEn": "Family",              "emoji": "👨‍👩‍👧", "phrase": true, "vocab": false, "level": "A1", "order": 3 },
-    { "id": "descripciones", "label": "Descripciones",       "labelEn": "Descriptions",        "emoji": "🔍", "phrase": true, "vocab": false, "level": "A2", "order": 4 }
+    { "id": "emociones",     "label": "Emociones",           "labelEn": "Emotions",            "emoji": "😊", "phrase": true, "vocab": false, "level": "A1", "order": 4 },
+    { "id": "daily_routine", "label": "Rutina Diaria",       "labelEn": "Daily Routine",       "emoji": "🗓️", "phrase": true, "vocab": false, "level": "A2", "order": 5 },
+    { "id": "survival",      "label": "Sobrevivir",          "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true, "vocab": false, "level": "A1", "order": 6 },
+    { "id": "descripciones", "label": "Descripciones",       "labelEn": "Descriptions",        "emoji": "🔍", "phrase": true, "vocab": false, "level": "A2", "order": 7 }
   ]
 }

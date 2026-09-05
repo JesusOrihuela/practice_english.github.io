@@ -1,0 +1,100 @@
+{
+  "phrases": [
+    {
+      "id": "daily_routine_i_get_up_at_seven",
+      "source": "Ich stehe um sieben Uhr auf.",
+      "level": "A2",
+      "grammar": "Los verbos reflexivos llevan me, me levanto.",
+      "target": [
+        {
+          "text": "Me levanto a las siete.",
+          "audioSlug": "me_levanto_a_las_siete"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_have_breakfast_at_eight",
+      "source": "Ich frühstücke um acht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Desayuno a las ocho.",
+          "audioSlug": "desayuno_a_las_ocho"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_go_to_work_at_nine",
+      "source": "Ich gehe um neun zur Arbeit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy al trabajo a las nueve.",
+          "audioSlug": "voy_al_trabajo_a_las_nueve"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_have_lunch_at_two",
+      "source": "Ich esse um zwei Uhr zu Mittag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Almuerzo a las dos.",
+          "audioSlug": "almuerzo_a_las_dos"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_come_home_at_six",
+      "source": "Ich komme um sechs nach Hause.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vuelvo a casa a las seis.",
+          "audioSlug": "vuelvo_a_casa_a_las_seis"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_cook_dinner",
+      "source": "Ich koche das Abendessen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Preparo la cena.",
+          "audioSlug": "preparo_la_cena"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_watch_tv_at_night",
+      "source": "Ich sehe abends fern.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Veo la televisión por la noche.",
+          "audioSlug": "veo_la_television_por_la_noche"
+        }
+      ]
+    },
+    {
+      "id": "daily_routine_i_go_to_bed_at_eleven",
+      "source": "Ich gehe um elf ins Bett.",
+      "level": "A2",
+      "grammar": "Acostarse es reflexivo, me acuesto.",
+      "target": [
+        {
+          "text": "Me acuesto a las once.",
+          "audioSlug": "me_acuesto_a_las_once"
+        }
+      ]
+    }
+  ]
+}
