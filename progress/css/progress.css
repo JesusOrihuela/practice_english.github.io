@@ -857,7 +857,11 @@ details.section-block:not([open]) > summary.section-title {
   cursor: pointer;
   font-family: 'Raleway', sans-serif;
   transition: border-color 0.15s, background 0.15s, transform 0.1s;
-  min-width: 140px;
+  /* Uniform width for every pair card (no more content-based irregular widths). Sized for the
+     worst case across the 16 supported languages: the longest label "Nederlands → Nederlands"
+     measures ~163px in this font; + 40px horizontal padding + 4px border = ~207px, rounded up to
+     215px for margin. The widest flag row (~127px at 3+3 flags) fits well inside. */
+  width: 215px;
 }
 
 .lp-card:hover { border-color: var(--clr-primary); }
