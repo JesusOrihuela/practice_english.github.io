@@ -61,6 +61,12 @@
     // você (neutral, the standard) / o senhor (formal). Added data-only for the en-pt stress-test pair;
     // 'neutral' is harmless for binary languages (they simply never author it).
     register: { kind: 'lexical',      values: ['formal', 'neutral', 'informal'], priority: 5, badge: 'pill',   appliesTo: '*' },
+    // DEFINITENESS — indefinite vs definite noun form. In most languages this is a separate article
+    // (a/the, ein/der), but North Germanic marks the DEFINITE with a SUFFIX on the noun (Swedish
+    // hus → hus-et, en bok → bok-en), so the two forms are an INFLECTION of one lemma. Added data-only
+    // for the en-sv stress-test pair — the first pair whose article is a suffix, not a word.
+    definiteness: { kind: 'inflectional', values: ['indefinido', 'definido'], priority: 5, badge: 'pill', appliesTo: ['sv'],
+                agreement: ['sustantivo'] },
     // Native near-synonyms for the same concept (hostal/albergue, tarifa/arancel). LEXICAL, so it
     // takes the rotation + recognition presentation ("also: albergue") — which is what the synonym-
     // interference research prescribes, unlike showing them as co-equal slash targets. A single
