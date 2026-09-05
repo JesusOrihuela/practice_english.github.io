@@ -1,0 +1,76 @@
+{
+  "phrases": [
+    {
+      "id": "personal_info_my_name_is",
+      "source": "Ich heiße Ana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me llamo Ana.",
+          "audioSlug": "me_llamo_ana"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_whats_your_name",
+      "source": "Wie heißt du?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo te llamas?",
+          "audioSlug": "como_te_llamas"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_from_germany",
+      "source": "Ich komme aus Deutschland.",
+      "level": "A1",
+      "grammar": "El origen es permanente, por eso se usa ser (soy), no estar.",
+      "target": [
+        {
+          "text": "Soy de Alemania.",
+          "audioSlug": "soy_de_alemania"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_live_in_madrid",
+      "source": "Ich wohne in Madrid.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo en Madrid.",
+          "audioSlug": "vivo_en_madrid"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_im_a_student",
+      "source": "Ich bin Student/in.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy estudiante.",
+          "audioSlug": "soy_estudiante"
+        }
+      ]
+    },
+    {
+      "id": "personal_info_i_speak_a_little_spanish",
+      "source": "Ich spreche ein bisschen Spanisch.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hablo un poco de español.",
+          "audioSlug": "hablo_un_poco_de_espanol"
+        }
+      ]
+    }
+  ]
+}

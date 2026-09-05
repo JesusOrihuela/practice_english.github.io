@@ -1,0 +1,112 @@
+{
+  "categories": [
+    {
+      "id": "verbs",
+      "label_de": "Verben",
+      "label_en": "Verbs",
+      "label_es": "Verbos",
+      "emoji": "🏃",
+      "color": "#16A34A"
+    }
+  ],
+  "rules": [
+    {
+      "id": "ser_vs_estar",
+      "category": "verbs",
+      "level": "A2",
+      "title": "Ser vs Estar",
+      "title_de": "Ser vs Estar",
+      "title_en": "Ser vs Estar",
+      "title_es": "Ser vs Estar",
+      "explanation": "Spanisch hat **zwei** Verben für „sein\". **ser** steht für Dauerhaftes und Identität (Herkunft, Beruf, Eigenschaft), Ich bin Lehrer, **Soy** profesor. **estar** steht für vorübergehende Zustände und den Ort, Ich bin müde, **Estoy** cansado, und Die Tür ist offen, La puerta **está** abierta.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Soy** de Alemania.",
+          "translation": "Ich bin aus Deutschland.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Y yo **soy** médico.",
+          "translation": "Und ich bin Arzt.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Hoy **estoy** cansada.",
+          "translation": "Heute bin ich müde.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Y la oficina **está** cerrada.",
+          "translation": "Und das Büro ist geschlossen.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "soy und estoy, welches steht für einen dauerhaften Fakt über die Person?",
+        "está cerrada, warum estar und nicht ser?",
+        "Welches Verb würdest du für „Ich bin gerade in Madrid\" nehmen?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "La puerta está abierta.",
+          "translation": "Die Tür ist offen.",
+          "question": "Warum está und nicht es?",
+          "options": [
+            "Offen sein ist ein veränderlicher Zustand, also estar",
+            "Es ist eine dauerhafte Eigenschaft der Tür",
+            "está ist nur umgangssprachlich",
+            "es steht nur bei Personen"
+          ],
+          "correct": 0,
+          "feedback": "Ein veränderlicher Zustand nimmt estar, also está abierta."
+        },
+        {
+          "affective": true,
+          "question": "Was trifft gerade auf dich zu? Wähle das Wahre.",
+          "options": [
+            "Estoy feliz.",
+            "Estoy cansado.",
+            "Estoy en casa."
+          ],
+          "feedback": "Alle drei nutzen estar für einen vorübergehenden Zustand oder einen Ort."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ de Alemania. (ser/estar)",
+          "translation": "Ich bin aus Deutschland.",
+          "answer": "soy",
+          "accepted": [
+            "soy"
+          ],
+          "feedback_why": "Herkunft ist dauerhaft, also ser, soy.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ cansados hoy. (ser/estar)",
+          "translation": "Wir sind heute müde.",
+          "answer": "estamos",
+          "accepted": [
+            "estamos"
+          ],
+          "feedback_why": "Ein vorübergehender Zustand, also estar, estamos.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Sag eine dauerhafte Sache (ser) und eine vorübergehende (estar) über dich.",
+          "model": "Soy estudiante y estoy feliz hoy.",
+          "model_translation": "Ich bin Student und ich bin heute glücklich.",
+          "hint": "ser für Identität und Eigenschaften, estar für Zustände und den Ort."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    }
+  ]
+}

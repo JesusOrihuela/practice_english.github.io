@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "greetings_hello",
+      "source": "Hallo.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hola.",
+          "audioSlug": "hola"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_morning",
+      "source": "Guten Morgen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenos días.",
+          "audioSlug": "buenos_dias"
+        }
+      ]
+    },
+    {
+      "id": "greetings_good_evening",
+      "source": "Guten Abend.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Buenas noches.",
+          "audioSlug": "buenas_noches"
+        }
+      ]
+    },
+    {
+      "id": "greetings_how_are_you",
+      "source": "Wie geht es dir?",
+      "level": "A1",
+      "grammar": "Con tú se usa estás (informal), con usted se usa está (formal).",
+      "target": [
+        {
+          "text": "¿Cómo estás?",
+          "source": "Wie geht es dir?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "como_estas"
+        },
+        {
+          "text": "¿Cómo está?",
+          "source": "Wie geht es Ihnen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "como_esta"
+        }
+      ]
+    },
+    {
+      "id": "greetings_im_fine_thanks",
+      "source": "Mir geht es gut, danke.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy bien, gracias.",
+          "audioSlug": "estoy_bien_gracias"
+        }
+      ]
+    },
+    {
+      "id": "greetings_goodbye",
+      "source": "Auf Wiedersehen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Adiós.",
+          "audioSlug": "adios"
+        }
+      ]
+    },
+    {
+      "id": "greetings_see_you_later",
+      "source": "Bis später.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hasta luego.",
+          "audioSlug": "hasta_luego"
+        }
+      ]
+    },
+    {
+      "id": "greetings_thank_you_very_much",
+      "source": "Vielen Dank.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Muchas gracias.",
+          "audioSlug": "muchas_gracias"
+        }
+      ]
+    },
+    {
+      "id": "greetings_youre_welcome",
+      "source": "Gern geschehen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "De nada.",
+          "audioSlug": "de_nada"
+        }
+      ]
+    }
+  ]
+}
