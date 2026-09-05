@@ -11,7 +11,7 @@ The data lives at `shared/json/pairs/{pairId}/grammar-rules.json` (one file per 
 
 ---
 
-## 1. The pedagogical model — a five-phase Focus-on-Form sequence
+## 1. The pedagogical model — a six-phase Focus-on-Form sequence
 
 A grammar rule is not a page of prose the learner reads. Each rule is a **guided six-phase
 sequence** that moves the learner from meaning-bearing input, through explicit knowledge and

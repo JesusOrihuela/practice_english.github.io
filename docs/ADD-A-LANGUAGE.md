@@ -86,7 +86,11 @@ are CC BY-**NC**-SA may only be a LOCAL cross-check (`frequency.localIndex`), ne
   verifies it resolves). Topic labels cross-check is es/en-only (topics.json stores those two).
 - **Audio**: generate it with the engine your profile's `tts.engine` names
   (`kokoro` → `tools/generate-audio.mjs`, `edge` → `tools/generate-audio-tgt.py`); the voice
-  set is read from `lang-profiles.voices`. `check-audio` then validates it.
+  set is read from `lang-profiles.voices`. `check-audio` then validates it. **IMPORTANT: kokoro-js
+  ships voices for English ONLY**, so `tts.engine:'kokoro'` works for `en` alone — **every
+  non-English target must use `tts.engine:'edge'`** (Azure Neural via `generate-audio-tgt.py`), even
+  Portuguese/French/Italian, which the Kokoro-82M model nominally supports but kokoro-js does not
+  expose. (The en-pt stress-test surfaced this; the project's old "pt = kokoro" assumption was wrong.)
 - **Perceptual curation** (dev-only, advisory): run `classify`/`semantic-audit` while
   authoring, `audit-images` / `audio-asr-audit` / `gloss-audit` over the new content.
 
@@ -126,10 +130,14 @@ the checklist so nothing is tribal when a new pair is added.
 - Grammar-tip length; anti-pedagogical patterns (Rule 11).
 
 ### The variant system (OPEN — the replication backbone)
-Variants (gender, region, number, register, loanword — and anything a future language needs) are
-driven by ONE data-driven registry, `shared/js/variant-dimensions.js` (dual-mode: browser + Node).
-To give a new language its own axes (grammatical case, honorifics, noun class, evidentiality…), add
-a dimension THERE — no code change: `check-content` validates its label values, `feedback.js` badges
+Variants (gender, region, number, case, register, loanword, synonym, **definiteness**, **standard** —
+and anything a future language needs) are driven by ONE data-driven registry,
+`shared/js/variant-dimensions.js` (dual-mode: browser + Node). The stress-test pairs proved this by
+adding new axes data-only: `case` (de/fi/pl), `number` (de), `definiteness` (sv/no — the North-Germanic
+suffixed definite article, hus→huset), and `standard` (no — Bokmål/Nynorsk, the first axis that is
+NEITHER geographic NOR grammatical, so its badge is TEXT not a flag). To give a new language its own
+axes (grammatical case, honorifics, noun class, evidentiality…), add a dimension THERE — no code
+change: `check-content` validates its label values, `feedback.js` badges
 it and lists it in the post-answer combinations, and `check-variants` checks its completeness, all
 from the registry. **This openness is CI-enforced by `tools/variant-openness.mjs`** (validate job):
 it registers a fictitious dimension at runtime and asserts the registry API, `validateLabels` (the

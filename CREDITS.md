@@ -90,9 +90,10 @@ The multi-dimensional variant system (`shared/js/variant-dimensions.js` registry
 No copyrighted text from these works is bundled; they inform the rules and the curated lexicons.
 
 ### Grammar system — academic sources
-The grammar activity (`grammar/`, `shared/json/pairs/{pair}/grammar-rules.json`) is a five-phase
-Focus-on-Form sequence, and its rule selection/leveling is grounded in a recognized CEFR inventory
-per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrighted text is bundled.
+The grammar activity (`grammar/`, `shared/json/pairs/{pair}/grammar-rules.json`) is a six-phase
+Focus-on-Form sequence (context → noticing → explanation → structured input incl. an affective item →
+quiz → communicative production), and its rule selection/leveling is grounded in a recognized CEFR
+inventory per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrighted text is bundled.
 - **Pedagogical model** — Schmidt (1990, noticing); VanPatten (1996/2004, processing instruction /
   structured input); Adair-Hauck & Donato (2002, PACE); Long (1991, focus on form); Swain (1985,
   output); Slamecka & Graf (1978, generation effect); Krashen (1985) & Sharwood Smith (1993, input /
@@ -105,6 +106,12 @@ per target language — not intuition. Full spec: `docs/GRAMMAR.md`. No copyrigh
 - **Finnish** — CEFR descriptors (YKI/EOI); reference: *Iso suomen kielioppi* (VISK, SKS).
 - **Polish** — ORViL (*Opis referencyjny znajomości języka polskiego*, the Polish CEFR reference
   description) + CKE certification A1/A2 word stock; reference grammar: *Gramatyka języka polskiego*.
+- **Portuguese** — Referencial Camões PLE (Português Língua Estrangeira) A1/A2; reference: *Gramática
+  do Português* (Raposo et al.) / Cunha & Cintra.
+- **Swedish** — CEFR descriptors + the Kelly list (Kelly-listan); reference: *Svenska Akademiens
+  grammatik* (SAG).
+- **Norwegian** — CEFR descriptors + Norsk ordbank (Språkrådet/UiB); reference: *Norsk referanse-
+  grammatikk* (Faarlund, Lie & Vannebo). Bokmål and Nynorsk are both covered (dual written standard).
 
 ### National flags (`shared/img/flags/`)
 Faithful national flag SVGs used for the region/variant badges. National flags are in the
