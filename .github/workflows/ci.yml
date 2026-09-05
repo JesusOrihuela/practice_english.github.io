@@ -24,13 +24,16 @@ jobs:
     steps:
       # Sparse checkout: the validators only read JSON + tool scripts, so we
       # skip the ~400 MB of audio for a fast, cheap run. shared/js is needed
-      # because fix-phrase-ids.js --check reads shared/js/progress.js (the _ID_MAP).
-      - name: Checkout (JSON + JS + tools only)
+      # because fix-phrase-ids.js --check reads shared/js/progress.js (the _ID_MAP);
+      # shared/img/flags is needed because check-pair-completeness.mjs verifies every
+      # flag code a pair declares has a real SVG asset (small — just the flag SVGs).
+      - name: Checkout (JSON + JS + tools + flags)
         uses: actions/checkout@v4
         with:
           sparse-checkout: |
             shared/json
             shared/js
+            shared/img/flags
             tools
           sparse-checkout-cone-mode: true
 
