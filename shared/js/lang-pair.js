@@ -151,13 +151,19 @@ const AppLangPair = (() => {
   function getAll() { return PAIRS.slice(); }
 
   // Pairs to offer in the SHIPPABLE product picker: everything EXCEPT the architecture stress-test
-  // pairs (`stressTest:true`), which are intentionally minimal and not for real users. A dev escape
-  // — localStorage `pe_dev='1'` or a `?dev=1` URL param — reveals ALL pairs so we can still select and
-  // test the stress-test ones during development. getAll() stays the full list (tools, audit, etc.).
+  // pairs (`stressTest:true`) and shippable pairs still under construction (`wip:true`) — neither is
+  // meant for real users. But when running LOCALLY (localhost / 127.0.0.1 / file://) we show ALL pairs
+  // automatically, so a pair being developed is reviewable during development with zero friction; the
+  // filtering applies only on the deployed site. An explicit `pe_dev='1'` (localStorage) or `?dev=1`
+  // URL param also reveals everything (e.g. reviewing on a phone over the LAN). getAll() stays the
+  // full list for tools/audit.
   function getShippable() {
     var dev = false;
     try {
-      dev = (typeof localStorage !== 'undefined' && localStorage.getItem('pe_dev') === '1') ||
+      var host = (typeof location !== 'undefined' && location.hostname) || '';
+      var isLocal = host === '' || host === 'localhost' || host === '127.0.0.1' || host === '[::1]';
+      dev = isLocal ||
+            (typeof localStorage !== 'undefined' && localStorage.getItem('pe_dev') === '1') ||
             (typeof location !== 'undefined' && /[?&]dev=1(&|$)/.test(location.search));
     } catch (e) { /* storage/location blocked → default to shippable-only */ }
     return dev ? PAIRS.slice() : PAIRS.filter(function (p) { return !p.stressTest && !p.wip; });
