@@ -191,7 +191,17 @@
       "target": [
         {
           "text": "¿Es un boleto de ida y vuelta?",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "es_un_boleto_de_ida_y_vuelta"
+        },
+        {
+          "text": "¿Es un billete de ida y vuelta?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "es_un_billete_de_ida_y_vuelta"
         }
       ]
     },

@@ -109,7 +109,17 @@
       "target": [
         {
           "text": "Necesito comprar un boleto para el tren de alta velocidad.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "necesito_comprar_un_boleto_para_el_tren_de_alta_velocidad"
+        },
+        {
+          "text": "Necesito comprar un billete para el tren de alta velocidad.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "necesito_comprar_un_billete_para_el_tren_de_alta_velocidad"
         }
       ]
     },
@@ -157,7 +167,17 @@
       "target": [
         {
           "text": "¿Cuánto cuesta un boleto de viaje sencillo para el metro?",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "cuanto_cuesta_un_boleto_de_viaje_sencillo_para_el_metro"
+        },
+        {
+          "text": "¿Cuánto cuesta un billete de viaje sencillo para el metro?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "cuanto_cuesta_un_billete_de_viaje_sencillo_para_el_metro"
         }
       ]
     },
@@ -458,7 +478,17 @@
       "target": [
         {
           "text": "Un boleto al aeropuerto, por favor.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "un_boleto_al_aeropuerto_por_favor"
+        },
+        {
+          "text": "Un billete al aeropuerto, por favor.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "un_billete_al_aeropuerto_por_favor"
         }
       ]
     },
@@ -612,7 +642,17 @@
       "target": [
         {
           "text": "¿Dónde puedo comprar un boleto?",
+          "labels": {
+            "region": "Latinoamérica"
+          },
           "audioSlug": "donde_puedo_comprar_un_boleto"
+        },
+        {
+          "text": "¿Dónde puedo comprar un billete?",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "donde_puedo_comprar_un_billete"
         }
       ]
     },
