@@ -1,0 +1,136 @@
+{
+  "phrases": [
+    {
+      "id": "directions_where_is_the_station",
+      "source": "Entschuldigung, wo ist der Bahnhof?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdón, ¿dónde está la estación?",
+          "audioSlug": "perdon_donde_esta_la_estacion"
+        }
+      ]
+    },
+    {
+      "id": "directions_how_do_i_get_to_the_center",
+      "source": "Wie komme ich zum Zentrum?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cómo llego al centro?",
+          "audioSlug": "como_llego_al_centro"
+        }
+      ]
+    },
+    {
+      "id": "directions_is_it_far_from_here",
+      "source": "Ist es weit von hier?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Está lejos de aquí?",
+          "audioSlug": "esta_lejos_de_aqui"
+        }
+      ]
+    },
+    {
+      "id": "directions_go_straight_ahead",
+      "source": "Geh geradeaus.",
+      "level": "A2",
+      "grammar": "El imperativo con usted usa siga, con tú sigue.",
+      "target": [
+        {
+          "text": "Sigue recto.",
+          "source": "Geh geradeaus.",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "sigue_recto"
+        },
+        {
+          "text": "Siga recto.",
+          "source": "Gehen Sie geradeaus.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "siga_recto"
+        }
+      ]
+    },
+    {
+      "id": "directions_turn_left",
+      "source": "Bieg links ab.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Gira a la izquierda.",
+          "source": "Bieg links ab.",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "gira_a_la_izquierda"
+        },
+        {
+          "text": "Gire a la izquierda.",
+          "source": "Biegen Sie links ab.",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "gire_a_la_izquierda"
+        }
+      ]
+    },
+    {
+      "id": "directions_its_next_to_the_bank",
+      "source": "Es ist neben der Bank.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está al lado del banco.",
+          "audioSlug": "esta_al_lado_del_banco"
+        }
+      ]
+    },
+    {
+      "id": "directions_can_you_show_me_the_way",
+      "source": "Kannst du mir den Weg zeigen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedes indicarme el camino?",
+          "source": "Kannst du mir den Weg zeigen?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "puedes_indicarme_el_camino"
+        },
+        {
+          "text": "¿Puede indicarme el camino?",
+          "source": "Können Sie mir den Weg zeigen?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "puede_indicarme_el_camino"
+        }
+      ]
+    },
+    {
+      "id": "directions_its_ten_minutes_on_foot",
+      "source": "Es ist zehn Minuten zu Fuß.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Está a diez minutos a pie.",
+          "audioSlug": "esta_a_diez_minutos_a_pie"
+        }
+      ]
+    }
+  ]
+}

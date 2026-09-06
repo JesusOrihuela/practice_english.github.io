@@ -1,11 +1,18 @@
 {
   "topics": [
-    { "id": "greetings",     "label": "Saludos",             "labelEn": "Greetings",           "emoji": "👋", "phrase": true, "vocab": false, "level": "A1", "order": 1 },
-    { "id": "personal_info", "label": "Información Personal", "labelEn": "Personal Information", "emoji": "🪪", "phrase": true, "vocab": false, "level": "A1", "order": 2 },
-    { "id": "family",        "label": "Familia",             "labelEn": "Family",              "emoji": "👨‍👩‍👧", "phrase": true, "vocab": false, "level": "A1", "order": 3 },
-    { "id": "emociones",     "label": "Emociones",           "labelEn": "Emotions",            "emoji": "😊", "phrase": true, "vocab": false, "level": "A1", "order": 4 },
-    { "id": "daily_routine", "label": "Rutina Diaria",       "labelEn": "Daily Routine",       "emoji": "🗓️", "phrase": true, "vocab": false, "level": "A2", "order": 5 },
-    { "id": "survival",      "label": "Sobrevivir",          "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true, "vocab": false, "level": "A1", "order": 6 },
-    { "id": "descripciones", "label": "Descripciones",       "labelEn": "Descriptions",        "emoji": "🔍", "phrase": true, "vocab": false, "level": "A2", "order": 7 }
+    { "id": "greetings",              "label": "Saludos",              "labelEn": "Greetings",           "emoji": "👋", "phrase": true, "vocab": false, "level": "A1", "order": 1 },
+    { "id": "personal_info",          "label": "Información Personal",  "labelEn": "Personal Information", "emoji": "🪪", "phrase": true, "vocab": false, "level": "A1", "order": 2 },
+    { "id": "family",                 "label": "Familia",              "labelEn": "Family",              "emoji": "👨‍👩‍👧", "phrase": true, "vocab": false, "level": "A1", "order": 3 },
+    { "id": "emociones",              "label": "Emociones",            "labelEn": "Emotions",            "emoji": "😊", "phrase": true, "vocab": false, "level": "A1", "order": 4 },
+    { "id": "daily_routine",          "label": "Rutina Diaria",        "labelEn": "Daily Routine",       "emoji": "🗓️", "phrase": true, "vocab": false, "level": "A2", "order": 5 },
+    { "id": "survival",               "label": "Sobrevivir",           "labelEn": "Language Survival",   "emoji": "🆘", "phrase": true, "vocab": false, "level": "A1", "order": 6 },
+    { "id": "descripciones",          "label": "Descripciones",        "labelEn": "Descriptions",        "emoji": "🔍", "phrase": true, "vocab": false, "level": "A2", "order": 7 },
+    { "id": "conversacion",           "label": "Conversación",         "labelEn": "Conversation",        "emoji": "💬", "phrase": true, "vocab": false, "level": "A2", "order": 8 },
+    { "id": "planes",                 "label": "Planes",               "labelEn": "Plans",               "emoji": "🎯", "phrase": true, "vocab": false, "level": "A2", "order": 9 },
+    { "id": "pensamientos_opiniones", "label": "Opiniones",            "labelEn": "Opinions",            "emoji": "🧠", "phrase": true, "vocab": false, "level": "B1", "order": 10 },
+    { "id": "calendario",             "label": "Calendario",           "labelEn": "Calendar",            "emoji": "📅", "phrase": true, "vocab": false, "level": "A2", "order": 11 },
+    { "id": "restaurant",             "label": "Restaurante",          "labelEn": "Restaurant",          "emoji": "🍽️", "phrase": true, "vocab": false, "level": "A1", "order": 12 },
+    { "id": "directions",             "label": "Direcciones",          "labelEn": "Directions",          "emoji": "🧭", "phrase": true, "vocab": false, "level": "A2", "order": 13 },
+    { "id": "transportation",         "label": "Transporte",           "labelEn": "Transportation",      "emoji": "🚌", "phrase": true, "vocab": false, "level": "A2", "order": 14 }
   ]
 }

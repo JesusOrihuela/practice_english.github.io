@@ -1,0 +1,122 @@
+{
+  "phrases": [
+    {
+      "id": "restaurant_a_table_for_two",
+      "source": "Ein Tisch für zwei, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Una mesa para dos, por favor.",
+          "audioSlug": "una_mesa_para_dos_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_the_menu_please",
+      "source": "Die Speisekarte, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El menú, por favor.",
+          "audioSlug": "el_menu_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_what_do_you_recommend",
+      "source": "Was empfiehlst du?",
+      "level": "A2",
+      "grammar": "Con usted se dice recomienda, con tú recomiendas.",
+      "target": [
+        {
+          "text": "¿Qué recomiendas?",
+          "source": "Was empfiehlst du?",
+          "labels": {
+            "register": "informal"
+          },
+          "audioSlug": "que_recomiendas"
+        },
+        {
+          "text": "¿Qué recomienda?",
+          "source": "Was empfehlen Sie?",
+          "labels": {
+            "register": "formal"
+          },
+          "audioSlug": "que_recomienda"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_i_would_like_a_coffee",
+      "source": "Ich möchte einen Kaffee.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero un café.",
+          "audioSlug": "quiero_un_cafe"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_a_glass_of_water_for_me",
+      "source": "Für mich ein Glas Wasser.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Para mí, un vaso de agua.",
+          "audioSlug": "para_mi_un_vaso_de_agua"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_the_bill_please",
+      "source": "Die Rechnung, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cuenta, por favor.",
+          "audioSlug": "la_cuenta_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_the_food_is_delicious",
+      "source": "Das Essen ist köstlich.",
+      "level": "A2",
+      "grammar": "El sabor del momento usa estar, está deliciosa.",
+      "target": [
+        {
+          "text": "La comida está deliciosa.",
+          "audioSlug": "la_comida_esta_deliciosa"
+        }
+      ]
+    },
+    {
+      "id": "restaurant_im_allergic_to_nuts",
+      "source": "Ich bin allergisch gegen Nüsse.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Soy alérgica a los frutos secos.",
+          "labels": {
+            "gender": "femenino"
+          },
+          "audioSlug": "soy_alergica_a_los_frutos_secos"
+        },
+        {
+          "text": "Soy alérgico a los frutos secos.",
+          "labels": {
+            "gender": "masculino"
+          },
+          "audioSlug": "soy_alergico_a_los_frutos_secos"
+        }
+      ]
+    }
+  ]
+}

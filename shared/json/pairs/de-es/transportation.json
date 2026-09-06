@@ -1,0 +1,127 @@
+{
+  "phrases": [
+    {
+      "id": "transportation_where_is_the_bus_stop",
+      "source": "Wo ist die Bushaltestelle?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la parada de autobús?",
+          "audioSlug": "donde_esta_la_parada_de_autobus"
+        }
+      ]
+    },
+    {
+      "id": "transportation_i_want_to_rent_a_car",
+      "source": "Ich möchte ein Auto mieten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero alquilar un carro.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "quiero_alquilar_un_carro"
+        },
+        {
+          "text": "Quiero alquilar un coche.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "quiero_alquilar_un_coche"
+        },
+        {
+          "text": "Quiero alquilar un auto.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "quiero_alquilar_un_auto"
+        }
+      ]
+    },
+    {
+      "id": "transportation_i_want_to_buy_a_ticket",
+      "source": "Ich möchte ein Ticket kaufen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero comprar un boleto.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "quiero_comprar_un_boleto"
+        },
+        {
+          "text": "Quiero comprar un billete.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "quiero_comprar_un_billete"
+        }
+      ]
+    },
+    {
+      "id": "transportation_when_does_the_next_train_leave",
+      "source": "Wann fährt der nächste Zug?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué hora sale el próximo tren?",
+          "audioSlug": "a_que_hora_sale_el_proximo_tren"
+        }
+      ]
+    },
+    {
+      "id": "transportation_i_take_a_taxi",
+      "source": "Ich nehme ein Taxi.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tomo un taxi.",
+          "audioSlug": "tomo_un_taxi"
+        }
+      ]
+    },
+    {
+      "id": "transportation_does_this_bus_go_downtown",
+      "source": "Fährt dieser Bus ins Zentrum?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Este autobús va al centro?",
+          "audioSlug": "este_autobus_va_al_centro"
+        }
+      ]
+    },
+    {
+      "id": "transportation_the_train_is_delayed",
+      "source": "Der Zug hat Verspätung.",
+      "level": "A2",
+      "grammar": "Un estado del momento usa estar, está retrasado.",
+      "target": [
+        {
+          "text": "El tren está retrasado.",
+          "audioSlug": "el_tren_esta_retrasado"
+        }
+      ]
+    },
+    {
+      "id": "transportation_how_much_is_the_fare",
+      "source": "Wie viel kostet die Fahrt?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto cuesta el viaje?",
+          "audioSlug": "cuanto_cuesta_el_viaje"
+        }
+      ]
+    }
+  ]
+}
