@@ -49,6 +49,35 @@
       ]
     },
     {
+      "id": "planes_i_plan_to_buy_a_car",
+      "source": "Ich habe vor, ein Auto zu kaufen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pienso comprar un carro.",
+          "labels": {
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "pienso_comprar_un_carro"
+        },
+        {
+          "text": "Pienso comprar un coche.",
+          "labels": {
+            "region": "España"
+          },
+          "audioSlug": "pienso_comprar_un_coche"
+        },
+        {
+          "text": "Pienso comprar un auto.",
+          "labels": {
+            "region": "Cono Sur"
+          },
+          "audioSlug": "pienso_comprar_un_auto"
+        }
+      ]
+    },
+    {
       "id": "planes_we_are_going_to_get_married",
       "source": "Wir werden im Sommer heiraten.",
       "level": "B1",
