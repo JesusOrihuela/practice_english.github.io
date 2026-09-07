@@ -559,7 +559,13 @@
       "grammar": null,
       "target": [
         {
+          "text": "Dos entradas para la función de las ocho.",
+          "labels": { "region": "General" },
+          "audioSlug": "dos_entradas_para_la_funcion_de_las_ocho"
+        },
+        {
           "text": "Dos boletos para la función de las ocho.",
+          "labels": { "region": "Latinoamérica" },
           "audioSlug": "dos_boletos_para_la_funcion_de_las_ocho"
         }
       ]
@@ -643,7 +649,13 @@
       "grammar": null,
       "target": [
         {
+          "text": "¿Dónde puedo comprar las entradas?",
+          "labels": { "region": "General" },
+          "audioSlug": "donde_puedo_comprar_las_entradas"
+        },
+        {
           "text": "¿Dónde puedo comprar los boletos?",
+          "labels": { "region": "Latinoamérica" },
           "audioSlug": "donde_puedo_comprar_los_boletos"
         }
       ]

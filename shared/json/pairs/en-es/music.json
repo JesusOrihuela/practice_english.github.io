@@ -499,7 +499,13 @@
       "grammar": null,
       "target": [
         {
+          "text": "Tengo entradas para el concierto.",
+          "labels": { "region": "General" },
+          "audioSlug": "tengo_entradas_para_el_concierto"
+        },
+        {
           "text": "Tengo boletos para el concierto.",
+          "labels": { "region": "Latinoamérica" },
           "audioSlug": "tengo_boletos_para_el_concierto"
         }
       ]

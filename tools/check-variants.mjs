@@ -121,6 +121,16 @@ const LEXICON = {
     { name: 'skirt',      members: [    // falda neutral (panhispánica); pollera=Río de la Plata y Andes
       { words: ['falda'],   label: 'General', neutral: true, countries: ['es', 'mx', 'co', 've', 'cl', 'cr'] },
       { words: ['pollera'], label: 'Río de la Plata y Andes', countries: ['ar', 'uy', 'py', 'bo', 'pe'] } ] },
+    // 'ticket' is POLYSEMOUS by sense, so it is split into TWO topic-anchored sets (never fires in
+    // 'economia', where "billete"=banknote is not a region split → no false positive on
+    // "Ese billete es falso."). Transport ticket: boleto/billete. Event ticket: entrada(neutral)/boleto
+    // (billete is NOT used for shows). DAMER: boleto=Mx,CA,Antillas,Co,Ve,Ec,Pe,Bo,Ch,RíoPlata; billete=España.
+    { name: 'ticket_transport', anchorTopics: ['transportation', 'viajes', 'airport'], members: [
+      { words: ['boleto', 'boletos'],   label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] },
+      { words: ['billete', 'billetes'], label: 'España',        countries: ['es'] } ] },
+    { name: 'ticket_event',     anchorTopics: ['movies', 'music', 'theater'], members: [
+      { words: ['entrada', 'entradas'], label: 'General', neutral: true, countries: ['es', 'co', 've', 'pe', 'cl'] },
+      { words: ['boleto', 'boletos'],   label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'ec', 'bo', 'py', 'ar', 'uy'] } ] },
   ],
   // English US/UK. Only CLEAN binary splits where the region marker is unambiguous. Polysemous or
   // register-neutral words are deliberately EXCLUDED (they produced mostly false positives):
@@ -264,12 +274,17 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       const hasGender = forms.some(t => t.labels && t.labels.gender !== undefined);
       const hasRegion = forms.some(t => t.labels && t.labels.region !== undefined);
       const base = { pair, topic: f.replace('.json', ''), id: p.id };
+      // A set may be TOPIC-ANCHORED (`anchorTopics`) when its words are polysemous across senses
+      // that only some topics carry — e.g. "ticket": boleto/billete only in transport topics, and
+      // "billete" alone (banknote) in economía must NOT be flagged. Anchoring by topic is safer than
+      // a text regex: it keys off the phrase's real context, so no false positive across senses.
+      const applicableLex = lex.filter(s => !s.anchorTopics || s.anchorTopics.includes(base.topic));
 
       // (1) REGION completeness — a region-variable word present without all its variants.
       //     A LONE NEUTRAL base (autobús, piscina) is fine everywhere → not flagged; only a REGIONAL
       //     term missing its siblings is. When the full set IS shown, the neutral is a first-class
       //     labelled variant with its own badge (rule: "si hay neutra, que también salga").
-      for (const set of lex) {
+      for (const set of applicableLex) {
         const present = set.members.filter(m => memberInText(m, allText));
         if (!present.length) continue;
         const missing = set.members.filter(m => !present.includes(m));
@@ -287,7 +302,7 @@ for (const pair of fs.readdirSync(PAIRS_DIR)) {
       if (genderMissing) findings.push({ ...base, type: 'gender', detail: `predicado con género "${gLemma}" (source no fija género) sin variante masculino/femenino` });
 
       // (3) COMBINATIONS — one dimension present, the other genuinely applies too.
-      if (hasGender && !hasRegion && anyRegionMember(lex, allText))
+      if (hasGender && !hasRegion && anyRegionMember(applicableLex, allText))
         findings.push({ ...base, type: 'combo', detail: 'tiene GÉNERO y usa un término región-variable → falta la dimensión REGIÓN (región×género)' });
       if (hasRegion && genderMissing)
         findings.push({ ...base, type: 'combo', detail: `tiene REGIÓN y un predicado con género ("${gLemma}") → falta la dimensión GÉNERO (región×género)` });
@@ -338,7 +353,8 @@ for (const lang of (fs.existsSync(VOCAB_BASE) ? fs.readdirSync(VOCAB_BASE) : [])
       const glossFixesGender = _srcs.length > 0 &&
         _srcs.every(s => sourceFixesGender((w.translations && w.translations[s]) || '', s));
 
-      for (const set of lex) {           // REGION completeness (same rule as phrases)
+      const applicableLex = lex.filter(s => !s.anchorTopics || s.anchorTopics.includes(deck));
+      for (const set of applicableLex) {  // REGION completeness (same rule as phrases; topic-anchored)
         const present = set.members.filter(m => memberInText(m, allText));
         if (!present.length) continue;
         const missing = set.members.filter(m => !present.includes(m));
