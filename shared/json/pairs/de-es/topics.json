@@ -19,6 +19,7 @@
     { "id": "airport",                "label": "Aeropuerto",           "labelEn": "Airport",             "emoji": "✈️", "phrase": true, "vocab": false, "level": "A2", "order": 17 },
     { "id": "accommodation",          "label": "Alojamiento",          "labelEn": "Accommodation",       "emoji": "🏨", "phrase": true, "vocab": false, "level": "A2", "order": 18 },
     { "id": "viajes",                 "label": "Viajes",               "labelEn": "Travel",              "emoji": "🧳", "phrase": true, "vocab": false, "level": "A2", "order": 19 },
-    { "id": "weather",                "label": "El Clima",             "labelEn": "Weather",             "emoji": "🌦️", "phrase": true, "vocab": false, "level": "A1", "order": 20 }
+    { "id": "weather",                "label": "El Clima",             "labelEn": "Weather",             "emoji": "🌦️", "phrase": true, "vocab": false, "level": "A1", "order": 20 },
+    { "id": "health",                 "label": "Salud",                "labelEn": "Health",              "emoji": "🩺", "phrase": true, "vocab": false, "level": "A2", "order": 21 }
   ]
 }

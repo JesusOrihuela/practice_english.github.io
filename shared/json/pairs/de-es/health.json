@@ -1,0 +1,136 @@
+{
+  "phrases": [
+    {
+      "id": "health_me_duele_la_cabeza",
+      "source": "Ich habe Kopfschmerzen.",
+      "level": "A1",
+      "grammar": "doler funciona como gustar, me duele la cabeza.",
+      "target": [
+        {
+          "text": "Me duele la cabeza.",
+          "audioSlug": "me_duele_la_cabeza"
+        }
+      ]
+    },
+    {
+      "id": "health_necesito_ver_a_un_medico",
+      "source": "Ich muss einen Arzt aufsuchen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito ver a un médico.",
+          "audioSlug": "necesito_ver_a_un_medico"
+        }
+      ]
+    },
+    {
+      "id": "health_estoy_enferma",
+      "source": "Ich bin krank.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estoy enferma.",
+          "labels": { "gender": "femenino" },
+          "audioSlug": "estoy_enferma"
+        },
+        {
+          "text": "Estoy enfermo.",
+          "labels": { "gender": "masculino" },
+          "audioSlug": "estoy_enfermo"
+        }
+      ]
+    },
+    {
+      "id": "health_tengo_fiebre_y_tos",
+      "source": "Ich habe Fieber und Husten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo fiebre y tos.",
+          "audioSlug": "tengo_fiebre_y_tos"
+        }
+      ]
+    },
+    {
+      "id": "health_donde_esta_la_farmacia_mas_cercana",
+      "source": "Wo ist die nächste Apotheke?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la farmacia más cercana?",
+          "audioSlug": "donde_esta_la_farmacia_mas_cercana"
+        }
+      ]
+    },
+    {
+      "id": "health_necesito_un_medicamento_para_el_dolor",
+      "source": "Ich brauche ein Medikament gegen die Schmerzen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito un medicamento para el dolor.",
+          "audioSlug": "necesito_un_medicamento_para_el_dolor"
+        }
+      ]
+    },
+    {
+      "id": "health_me_siento_mareada",
+      "source": "Mir ist schwindelig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me siento mareada.",
+          "labels": { "gender": "femenino" },
+          "audioSlug": "me_siento_mareada"
+        },
+        {
+          "text": "Me siento mareado.",
+          "labels": { "gender": "masculino" },
+          "audioSlug": "me_siento_mareado"
+        }
+      ]
+    },
+    {
+      "id": "health_debes_descansar_y_beber_agua",
+      "source": "Du musst dich ausruhen und Wasser trinken.",
+      "level": "A2",
+      "grammar": "deber más infinitivo da un consejo, debes descansar.",
+      "target": [
+        {
+          "text": "Debes descansar y beber agua.",
+          "audioSlug": "debes_descansar_y_beber_agua"
+        }
+      ]
+    },
+    {
+      "id": "health_me_torci_el_tobillo_en_el_parque",
+      "source": "Ich habe mir den Knöchel im Park verstaucht.",
+      "level": "B1",
+      "grammar": "me torcí es pretérito de un verbo reflexivo.",
+      "target": [
+        {
+          "text": "Me torcí el tobillo en el parque.",
+          "audioSlug": "me_torci_el_tobillo_en_el_parque"
+        }
+      ]
+    },
+    {
+      "id": "health_tienes_algun_sintoma_mas",
+      "source": "Hast du noch weitere Symptome?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienes algún síntoma más?",
+          "audioSlug": "tienes_algun_sintoma_mas"
+        }
+      ]
+    }
+  ]
+}
