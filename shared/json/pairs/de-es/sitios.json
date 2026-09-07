@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "sitios_vivo_en_este_barrio",
+      "source": "Ich wohne in diesem Viertel.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Vivo en este barrio.",
+          "audioSlug": "vivo_en_este_barrio"
+        }
+      ]
+    },
+    {
+      "id": "sitios_nos_vemos_en_la_plaza",
+      "source": "Wir treffen uns auf dem Platz.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Nos vemos en la plaza.",
+          "audioSlug": "nos_vemos_en_la_plaza"
+        }
+      ]
+    },
+    {
+      "id": "sitios_la_ciudad_es_muy_grande",
+      "source": "Die Stadt ist sehr groß.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La ciudad es muy grande.",
+          "audioSlug": "la_ciudad_es_muy_grande"
+        }
+      ]
+    },
+    {
+      "id": "sitios_mi_pueblo_es_pequeno_y_tranquilo",
+      "source": "Mein Dorf ist klein und ruhig.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi pueblo es pequeño y tranquilo.",
+          "audioSlug": "mi_pueblo_es_pequeno_y_tranquilo"
+        }
+      ]
+    },
+    {
+      "id": "sitios_hay_un_parque_cerca_de_mi_casa",
+      "source": "In der Nähe meines Hauses gibt es einen Park.",
+      "level": "A2",
+      "grammar": "hay expresa que algo existe, hay un parque.",
+      "target": [
+        {
+          "text": "Hay un parque cerca de mi casa.",
+          "audioSlug": "hay_un_parque_cerca_de_mi_casa"
+        }
+      ]
+    },
+    {
+      "id": "sitios_el_centro_esta_lleno_de_gente",
+      "source": "Das Zentrum ist voller Menschen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El centro está lleno de gente.",
+          "audioSlug": "el_centro_esta_lleno_de_gente"
+        }
+      ]
+    },
+    {
+      "id": "sitios_me_mude_a_una_ciudad_nueva",
+      "source": "Ich bin letztes Jahr in eine neue Stadt gezogen.",
+      "level": "B1",
+      "grammar": "me mudé es pretérito de un verbo reflexivo, acción terminada.",
+      "target": [
+        {
+          "text": "Me mudé a una ciudad nueva el año pasado.",
+          "audioSlug": "me_mude_a_una_ciudad_nueva_el_ano_pasado"
+        }
+      ]
+    },
+    {
+      "id": "sitios_donde_esta_la_parada_mas_cercana",
+      "source": "Wo ist die nächste Haltestelle?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la parada más cercana?",
+          "audioSlug": "donde_esta_la_parada_mas_cercana"
+        }
+      ]
+    },
+    {
+      "id": "sitios_hay_muchas_tiendas_en_esta_calle",
+      "source": "In dieser Straße gibt es viele Geschäfte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hay muchas tiendas en esta calle.",
+          "audioSlug": "hay_muchas_tiendas_en_esta_calle"
+        }
+      ]
+    },
+    {
+      "id": "sitios_el_museo_esta_en_el_centro",
+      "source": "Das Museum ist im Stadtzentrum.",
+      "level": "A2",
+      "grammar": "estar indica ubicación, el museo está en el centro.",
+      "target": [
+        {
+          "text": "El museo está en el centro de la ciudad.",
+          "audioSlug": "el_museo_esta_en_el_centro_de_la_ciudad"
+        }
+      ]
+    }
+  ]
+}
