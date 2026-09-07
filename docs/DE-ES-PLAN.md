@@ -22,8 +22,26 @@ descripciones (ser/estar), conversacion, planes, pensamientos_opiniones, calenda
 **B · Situacionales — viaje/vida (12):** restaurant, supermarket, kitchen, directions, transportation,
 airport, accommodation, viajes, weather, health, cuerpo, hogar
 
-**C · Interés/cultura + cierre de cobertura (7):** trabajo_economia, estudios, tiempo_libre, deportes,
+**C · Interés/cultura + cierre de cobertura (7):** economia, estudios, tiempo_libre, deportes,
 naturaleza_lugares, technology, sitios
+
+> NOTA (ajuste al ejecutar): el plan decía `trabajo_economia`, pero el scope real en
+> `category-scopes.json` es **`economia`** (dinero/negocio/comercio); las frases de puesto/reunión
+> son `oficina` (scope excluido). Se usó `economia`, alineado con en-es.
+
+## Estado (actualizado)
+
+- **Fases 0-2 y armado de Fase 3: COMPLETO.** Los **30 temas** están armados (A 11 + B 12 + C 7),
+  ~10 frases c/u = **302 frases**, source alemán fiel + target español neutro, audio es (edge-tts),
+  variantes regionales/género donde aplican, tips en español (target), 11 reglas de gramática
+  (metalenguaje alemán) autovinculadas por evidencia. Todos los gates verdes por tema.
+- **Canal vocab de-es: 91.4%** (ya sobre el piso 86 %, vía vocab/es compartido).
+- **Canal frases de-es: ~31%** (305/991 del top-1000). **PENDIENTE**: cerrar a ≥86 % con el *tail*
+  funcional (`build-candidates-cover --pair de-es` para los lemas del top-1000 que falten; cientos de
+  frases atestadas en las categorías funcionales) — es el grueso restante de la Fase 3.
+- **Fase 4 (glosas alemanas del vocab): PENDIENTE** — `translations.de` + `gloss.de` en las ~1605
+  entradas de vocab/es (mecánica, por deck).
+- **Fase 5 (shippear): PENDIENTE** — al pasar el gate 86 % en frases y estar las glosas, quitar `wip`.
 
 *(Fuera de en-es por ser demasiado específicos: accountability, theater, museums, politica, oficina,
 fiesta, describiendo_personas → se pliega en descripciones.)*
