@@ -1,0 +1,130 @@
+{
+  "phrases": [
+    {
+      "id": "technology_uso_mi_telefono_todos_los_dias",
+      "source": "Ich benutze jeden Tag mein Handy.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Uso mi teléfono todos los días.",
+          "audioSlug": "uso_mi_telefono_todos_los_dias"
+        }
+      ]
+    },
+    {
+      "id": "technology_mi_computadora_no_funciona",
+      "source": "Mein Computer funktioniert nicht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi computadora no funciona.",
+          "labels": { "region": "Latinoamérica" },
+          "audioSlug": "mi_computadora_no_funciona"
+        },
+        {
+          "text": "Mi ordenador no funciona.",
+          "labels": { "region": "España" },
+          "audioSlug": "mi_ordenador_no_funciona"
+        }
+      ]
+    },
+    {
+      "id": "technology_necesito_cargar_la_bateria",
+      "source": "Ich muss den Akku laden.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito cargar la batería.",
+          "audioSlug": "necesito_cargar_la_bateria"
+        }
+      ]
+    },
+    {
+      "id": "technology_voy_a_descargar_una_aplicacion",
+      "source": "Ich werde eine App herunterladen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Voy a descargar una aplicación.",
+          "audioSlug": "voy_a_descargar_una_aplicacion"
+        }
+      ]
+    },
+    {
+      "id": "technology_te_envie_un_correo_electronico",
+      "source": "Ich habe dir eine E-Mail geschickt.",
+      "level": "A2",
+      "grammar": "envié es pretérito indefinido, una acción terminada.",
+      "target": [
+        {
+          "text": "Te envié un correo electrónico.",
+          "audioSlug": "te_envie_un_correo_electronico"
+        }
+      ]
+    },
+    {
+      "id": "technology_no_tengo_senal_aqui",
+      "source": "Ich habe hier kein Signal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No tengo señal aquí.",
+          "audioSlug": "no_tengo_senal_aqui"
+        }
+      ]
+    },
+    {
+      "id": "technology_cual_es_la_contrasena_del_wifi",
+      "source": "Wie lautet das WLAN-Passwort?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuál es la contraseña del wifi?",
+          "audioSlug": "cual_es_la_contrasena_del_wifi"
+        }
+      ]
+    },
+    {
+      "id": "technology_guardo_las_fotos_en_la_nube",
+      "source": "Ich speichere die Fotos in der Cloud.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Guardo las fotos en la nube.",
+          "audioSlug": "guardo_las_fotos_en_la_nube"
+        }
+      ]
+    },
+    {
+      "id": "technology_se_me_olvido_la_contrasena",
+      "source": "Ich habe das Passwort schon wieder vergessen.",
+      "level": "B1",
+      "grammar": "se me olvidó expresa un olvido involuntario.",
+      "target": [
+        {
+          "text": "Se me olvidó la contraseña otra vez.",
+          "audioSlug": "se_me_olvido_la_contrasena_otra_vez"
+        }
+      ]
+    },
+    {
+      "id": "technology_este_programa_es_facil_de_usar",
+      "source": "Dieses Programm ist sehr einfach zu benutzen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Este programa es muy fácil de usar.",
+          "audioSlug": "este_programa_es_muy_facil_de_usar"
+        }
+      ]
+    }
+  ]
+}
