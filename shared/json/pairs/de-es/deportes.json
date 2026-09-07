@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "deportes_me_gusta_el_futbol",
+      "source": "Ich mag Fußball.",
+      "level": "A1",
+      "grammar": "me gusta más sustantivo, me gusta el fútbol.",
+      "target": [
+        {
+          "text": "Me gusta el fútbol.",
+          "audioSlug": "me_gusta_el_futbol"
+        }
+      ]
+    },
+    {
+      "id": "deportes_juego_tenis_los_martes",
+      "source": "Dienstags spiele ich Tennis.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Juego tenis los martes.",
+          "audioSlug": "juego_tenis_los_martes"
+        }
+      ]
+    },
+    {
+      "id": "deportes_nuestro_equipo_gano_el_partido",
+      "source": "Unsere Mannschaft hat das Spiel gewonnen.",
+      "level": "A2",
+      "grammar": "ganó es pretérito indefinido, una acción terminada.",
+      "target": [
+        {
+          "text": "Nuestro equipo ganó el partido.",
+          "audioSlug": "nuestro_equipo_gano_el_partido"
+        }
+      ]
+    },
+    {
+      "id": "deportes_quiero_ganar_el_torneo",
+      "source": "Ich will dieses Jahr das Turnier gewinnen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero ganar el torneo este año.",
+          "audioSlug": "quiero_ganar_el_torneo_este_ano"
+        }
+      ]
+    },
+    {
+      "id": "deportes_el_partido_empieza_a_las_ocho",
+      "source": "Das Spiel beginnt um acht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El partido empieza a las ocho.",
+          "audioSlug": "el_partido_empieza_a_las_ocho"
+        }
+      ]
+    },
+    {
+      "id": "deportes_entreno_todos_los_dias",
+      "source": "Ich trainiere jeden Tag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Entreno todos los días.",
+          "audioSlug": "entreno_todos_los_dias"
+        }
+      ]
+    },
+    {
+      "id": "deportes_quien_gano_el_partido_de_ayer",
+      "source": "Wer hat das gestrige Spiel gewonnen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Quién ganó el partido de ayer?",
+          "audioSlug": "quien_gano_el_partido_de_ayer"
+        }
+      ]
+    },
+    {
+      "id": "deportes_perdimos_por_dos_goles",
+      "source": "Wir haben mit zwei Toren verloren.",
+      "level": "B1",
+      "grammar": "perdimos es pretérito indefinido, una acción terminada.",
+      "target": [
+        {
+          "text": "Perdimos por dos goles.",
+          "audioSlug": "perdimos_por_dos_goles"
+        }
+      ]
+    },
+    {
+      "id": "deportes_me_gusta_nadar",
+      "source": "Ich schwimme gern.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Me gusta nadar.",
+          "audioSlug": "me_gusta_nadar"
+        }
+      ]
+    },
+    {
+      "id": "deportes_el_equipo_juega_muy_bien",
+      "source": "Die Mannschaft spielt sehr gut.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El equipo juega muy bien.",
+          "audioSlug": "el_equipo_juega_muy_bien"
+        }
+      ]
+    }
+  ]
+}
