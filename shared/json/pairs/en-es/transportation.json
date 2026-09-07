@@ -620,17 +620,35 @@
       "target": [
         {
           "text": "¿Sabes conducir?",
-          "audioSlug": "sabes_conducir",
           "labels": {
-            "register": "informal"
-          }
+            "register": "informal",
+            "region": "España"
+          },
+          "audioSlug": "sabes_conducir"
         },
         {
           "text": "¿Sabe conducir?",
           "labels": {
-            "register": "formal"
+            "register": "formal",
+            "region": "España"
           },
           "audioSlug": "sabe_conducir"
+        },
+        {
+          "text": "¿Sabes manejar?",
+          "labels": {
+            "register": "informal",
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "sabes_manejar"
+        },
+        {
+          "text": "¿Sabe manejar?",
+          "labels": {
+            "register": "formal",
+            "region": "Latinoamérica"
+          },
+          "audioSlug": "sabe_manejar"
         }
       ]
     },

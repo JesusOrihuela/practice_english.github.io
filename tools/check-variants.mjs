@@ -102,6 +102,25 @@ const LEXICON = {
       { words: ['tarta'],  label: 'España',                countries: ['es'] },
       { words: ['pastel'], label: 'México y Centroamérica', countries: ['mx', 'gt', 'sv', 'cr', 'cu', 'do', 'pr'] },
       { words: ['torta'],  label: 'Sudamérica',            countries: ['ni', 'pa', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
+    { name: 'pen',        members: [    // NO neutral base: bolígrafo=ES; pluma=Mx/CA; lapicero=Andes; birome=Río de la Plata
+      { words: ['bolígrafo'], label: 'España',              countries: ['es'] },
+      { words: ['pluma'],     label: 'México y Centroamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa'] },
+      { words: ['lapicero'],  label: 'Región andina',       countries: ['co', 've', 'ec', 'pe', 'bo'] },
+      { words: ['birome'],    label: 'Río de la Plata',     countries: ['ar', 'uy', 'py'] } ] },
+    { name: 'drive',      members: [    // conducir un vehículo: DAMER manejar=Latam; conducir=España
+      { words: ['conducir'], label: 'España',        countries: ['es'] },
+      { words: ['manejar'],  label: 'Latinoamérica', countries: ['mx', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'do', 'pr', 'co', 've', 'ec', 'pe', 'bo', 'cl', 'py', 'ar', 'uy'] } ] },
+    { name: 'jacket',     members: [    // chaqueta neutral (panhispánica); chamarra=Mx, campera=Río de la Plata
+      { words: ['chaqueta'], label: 'General', neutral: true, countries: ['es', 'co', 've', 'pe', 'cl', 'ec'] },
+      { words: ['chamarra'], label: 'México',         countries: ['mx'] },
+      { words: ['campera'],  label: 'Río de la Plata', countries: ['ar', 'uy', 'py'] } ] },
+    { name: 'banana',     members: [    // plátano neutral (mayoritario); banana=Cono Sur, guineo=Caribe/CA
+      { words: ['plátano'], label: 'General', neutral: true, countries: ['es', 'mx', 'co', 've', 'ec', 'pe', 'bo', 'cl'] },
+      { words: ['banana'],  label: 'Cono Sur',       countries: ['ar', 'uy', 'py'] },
+      { words: ['guineo'],  label: 'Caribe y Centroamérica', countries: ['cu', 'do', 'pr', 'hn', 'ni'] } ] },
+    { name: 'skirt',      members: [    // falda neutral (panhispánica); pollera=Río de la Plata y Andes
+      { words: ['falda'],   label: 'General', neutral: true, countries: ['es', 'mx', 'co', 've', 'cl', 'cr'] },
+      { words: ['pollera'], label: 'Río de la Plata y Andes', countries: ['ar', 'uy', 'py', 'bo', 'pe'] } ] },
   ],
   // English US/UK. Only CLEAN binary splits where the region marker is unambiguous. Polysemous or
   // register-neutral words are deliberately EXCLUDED (they produced mostly false positives):

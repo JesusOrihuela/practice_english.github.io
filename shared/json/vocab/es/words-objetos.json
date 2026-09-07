@@ -326,7 +326,7 @@
     },
     {
       "id": "pen",
-      "term": "bolígrafo",
+      "term": "bolígrafo / pluma / lapicero / birome",
       "level": "A1",
       "category": "Noun",
       "difficulty": "easy",
@@ -340,7 +340,29 @@
       },
       "gloss_example": {
         "en": "I signed the paper with a blue pen."
-      }
+      },
+      "variants": [
+        {
+          "text": "bolígrafo",
+          "labels": { "region": "España" },
+          "audioSlug": "boligrafo"
+        },
+        {
+          "text": "pluma",
+          "labels": { "region": "México y Centroamérica" },
+          "audioSlug": "pluma"
+        },
+        {
+          "text": "lapicero",
+          "labels": { "region": "Región andina" },
+          "audioSlug": "lapicero"
+        },
+        {
+          "text": "birome",
+          "labels": { "region": "Río de la Plata" },
+          "audioSlug": "birome"
+        }
+      ]
     },
     {
       "id": "eraser",

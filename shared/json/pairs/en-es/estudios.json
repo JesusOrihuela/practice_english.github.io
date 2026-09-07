@@ -236,7 +236,23 @@
       "target": [
         {
           "text": "Escribo con un bolígrafo azul.",
+          "labels": { "region": "España" },
           "audioSlug": "escribo_con_un_boligrafo_azul"
+        },
+        {
+          "text": "Escribo con una pluma azul.",
+          "labels": { "region": "México y Centroamérica" },
+          "audioSlug": "escribo_con_una_pluma_azul"
+        },
+        {
+          "text": "Escribo con un lapicero azul.",
+          "labels": { "region": "Región andina" },
+          "audioSlug": "escribo_con_un_lapicero_azul"
+        },
+        {
+          "text": "Escribo con una birome azul.",
+          "labels": { "region": "Río de la Plata" },
+          "audioSlug": "escribo_con_una_birome_azul"
         }
       ]
     },
