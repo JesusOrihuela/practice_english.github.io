@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "economia_tenemos_una_empresa_pequena",
+      "source": "Wir haben ein kleines Unternehmen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tenemos una empresa pequeña.",
+          "audioSlug": "tenemos_una_empresa_pequena"
+        }
+      ]
+    },
+    {
+      "id": "economia_la_economia_crece_lentamente",
+      "source": "Die Wirtschaft wächst langsam.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La economía crece lentamente.",
+          "audioSlug": "la_economia_crece_lentamente"
+        }
+      ]
+    },
+    {
+      "id": "economia_pago_mis_impuestos_cada_ano",
+      "source": "Ich zahle jedes Jahr meine Steuern.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Pago mis impuestos cada año.",
+          "audioSlug": "pago_mis_impuestos_cada_ano"
+        }
+      ]
+    },
+    {
+      "id": "economia_el_alquiler_subio_este_ano",
+      "source": "Die Miete ist dieses Jahr gestiegen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El alquiler subió este año.",
+          "audioSlug": "el_alquiler_subio_este_ano"
+        }
+      ]
+    },
+    {
+      "id": "economia_la_empresa_aumento_sus_ganancias",
+      "source": "Das Unternehmen hat dieses Jahr seinen Gewinn gesteigert.",
+      "level": "B2",
+      "grammar": "aumentó es pretérito indefinido, una acción terminada.",
+      "target": [
+        {
+          "text": "La empresa aumentó sus ganancias este año.",
+          "audioSlug": "la_empresa_aumento_sus_ganancias_este_ano"
+        }
+      ]
+    },
+    {
+      "id": "economia_necesito_pagar_las_facturas",
+      "source": "Ich muss die Rechnungen bezahlen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito pagar las facturas.",
+          "audioSlug": "necesito_pagar_las_facturas"
+        }
+      ]
+    },
+    {
+      "id": "economia_los_precios_suben_por_la_inflacion",
+      "source": "Die Preise steigen wegen der Inflation.",
+      "level": "B2",
+      "grammar": "por indica la causa, suben por la inflación.",
+      "target": [
+        {
+          "text": "Los precios suben por la inflación.",
+          "audioSlug": "los_precios_suben_por_la_inflacion"
+        }
+      ]
+    },
+    {
+      "id": "economia_ahorro_dinero_cada_mes",
+      "source": "Ich spare jeden Monat Geld.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Ahorro dinero cada mes.",
+          "audioSlug": "ahorro_dinero_cada_mes"
+        }
+      ]
+    },
+    {
+      "id": "economia_me_gustaria_invertir_en_mi_negocio",
+      "source": "Ich würde gern in mein eigenes Geschäft investieren.",
+      "level": "B2",
+      "grammar": "me gustaría es condicional, para un deseo cortés.",
+      "target": [
+        {
+          "text": "Me gustaría invertir en mi propio negocio.",
+          "audioSlug": "me_gustaria_invertir_en_mi_propio_negocio"
+        }
+      ]
+    },
+    {
+      "id": "economia_el_banco_me_ofrecio_un_prestamo",
+      "source": "Die Bank hat mir einen Kredit angeboten.",
+      "level": "B2",
+      "grammar": "me ofreció, el me es objeto indirecto, a mí.",
+      "target": [
+        {
+          "text": "El banco me ofreció un préstamo.",
+          "audioSlug": "el_banco_me_ofrecio_un_prestamo"
+        }
+      ]
+    }
+  ]
+}

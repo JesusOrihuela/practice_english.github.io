@@ -22,6 +22,7 @@
     { "id": "weather",                "label": "El Clima",             "labelEn": "Weather",             "emoji": "🌦️", "phrase": true, "vocab": false, "level": "A1", "order": 20 },
     { "id": "health",                 "label": "Salud",                "labelEn": "Health",              "emoji": "🩺", "phrase": true, "vocab": false, "level": "A2", "order": 21 },
     { "id": "cuerpo",                 "label": "El Cuerpo",            "labelEn": "The Body",            "emoji": "🧍", "phrase": true, "vocab": false, "level": "A1", "order": 22 },
-    { "id": "hogar",                  "label": "El Hogar",             "labelEn": "The Home",            "emoji": "🏠", "phrase": true, "vocab": false, "level": "A1", "order": 23 }
+    { "id": "hogar",                  "label": "El Hogar",             "labelEn": "The Home",            "emoji": "🏠", "phrase": true, "vocab": false, "level": "A1", "order": 23 },
+    { "id": "economia",               "label": "Economía",             "labelEn": "Economy",             "emoji": "💰", "phrase": true, "vocab": false, "level": "B1", "order": 24 }
   ]
 }
