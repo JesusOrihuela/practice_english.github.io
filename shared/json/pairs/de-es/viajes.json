@@ -1,0 +1,130 @@
+{
+  "phrases": [
+    {
+      "id": "viajes_me_gusta_viajar_en_verano",
+      "source": "Ich reise gern im Sommer.",
+      "level": "A1",
+      "grammar": "me gusta más infinitivo, me gusta viajar.",
+      "target": [
+        {
+          "text": "Me gusta viajar en verano.",
+          "audioSlug": "me_gusta_viajar_en_verano"
+        }
+      ]
+    },
+    {
+      "id": "viajes_voy_a_reservar_un_hotel",
+      "source": "Ich werde ein Hotel in der Nähe des Strandes buchen.",
+      "level": "A2",
+      "grammar": "ir a más infinitivo expresa un plan, voy a reservar.",
+      "target": [
+        {
+          "text": "Voy a reservar un hotel cerca de la playa.",
+          "audioSlug": "voy_a_reservar_un_hotel_cerca_de_la_playa"
+        }
+      ]
+    },
+    {
+      "id": "viajes_que_lugares_me_recomiendas",
+      "source": "Welche Orte empfiehlst du mir?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué lugares me recomiendas?",
+          "audioSlug": "que_lugares_me_recomiendas"
+        }
+      ]
+    },
+    {
+      "id": "viajes_quiero_conocer_la_cultura",
+      "source": "Ich möchte die Kultur des Landes kennenlernen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero conocer la cultura del país.",
+          "audioSlug": "quiero_conocer_la_cultura_del_pais"
+        }
+      ]
+    },
+    {
+      "id": "viajes_necesito_cambiar_dinero",
+      "source": "Ich muss Geld wechseln.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito cambiar dinero.",
+          "audioSlug": "necesito_cambiar_dinero"
+        }
+      ]
+    },
+    {
+      "id": "viajes_es_un_boleto_de_ida_y_vuelta",
+      "source": "Ist es ein Hin- und Rückfahrticket?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Es un boleto de ida y vuelta?",
+          "labels": { "region": "Latinoamérica" },
+          "audioSlug": "es_un_boleto_de_ida_y_vuelta"
+        },
+        {
+          "text": "¿Es un billete de ida y vuelta?",
+          "labels": { "region": "España" },
+          "audioSlug": "es_un_billete_de_ida_y_vuelta"
+        }
+      ]
+    },
+    {
+      "id": "viajes_cuanto_dura_el_viaje",
+      "source": "Wie lange dauert die Reise?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto dura el viaje?",
+          "audioSlug": "cuanto_dura_el_viaje"
+        }
+      ]
+    },
+    {
+      "id": "viajes_viajo_con_poco_equipaje",
+      "source": "Ich reise mit wenig Gepäck.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Viajo con poco equipaje.",
+          "audioSlug": "viajo_con_poco_equipaje"
+        }
+      ]
+    },
+    {
+      "id": "viajes_todavia_no_he_decidido_adonde_ir",
+      "source": "Ich habe noch nicht entschieden, wohin ich reise.",
+      "level": "B1",
+      "grammar": "no he decidido es pretérito perfecto, para algo aún no cerrado.",
+      "target": [
+        {
+          "text": "Todavía no he decidido adónde ir.",
+          "audioSlug": "todavia_no_he_decidido_adonde_ir"
+        }
+      ]
+    },
+    {
+      "id": "viajes_tomo_muchas_fotos_cuando_viajo",
+      "source": "Ich mache viele Fotos, wenn ich reise.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tomo muchas fotos cuando viajo.",
+          "audioSlug": "tomo_muchas_fotos_cuando_viajo"
+        }
+      ]
+    }
+  ]
+}
