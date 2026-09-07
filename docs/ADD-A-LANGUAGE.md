@@ -226,6 +226,17 @@ registry-validated:
     marks the neutral member `neutral: true`: a **lone neutral base is valid** (not flagged), but a
     lone REGIONAL term still requires its siblings. A set with no neutral term (Latam↔Spain splits
     like *celular/móvil*, or three-way *carro/coche/auto*) has every member carry its own region.
+  - **Polysemy across senses → TOPIC-ANCHOR the set (`anchorTopics`), never omit it (RULE).** A word
+    can region-split in one sense while a homograph carries no split (or a *different* one) in another.
+    *ticket* is the canonical case: **transport** *boleto*(Latam)/*billete*(España); **espectáculo**
+    *entrada*(General)/*boleto*(Latam) — *billete* is NOT used for shows; and *billete* alone =
+    **banknote** (economía), no split at all. A single naïve set would false-positive on *"Ese billete
+    es falso."* The fix is architectural, not omission: give the set an `anchorTopics: [...]` list so it
+    fires **only** in the phrase topics / vocab decks that carry that sense (`ticket_transport` in
+    transportation/viajes/airport; `ticket_event` in movies/music/theater; neither in economía). Anchor
+    by **topic** — the phrase's real context — not a text regex, which cannot tell the senses apart.
+    Split one polysemous word into as many anchored sets as it has senses; each keeps its own members
+    and provenance. The mechanism is dimension-agnostic (any future language reuses it data-only).
   - **RULE — create ALL the region assets.** When a pair introduces region labels you must provide the
     real SVG assets they resolve to: a **country flag** per country (`shared/img/flags/<iso2>.svg`,
     public-domain from Wikimedia Commons), a **flag cluster** for a multi-country zone (just its member
