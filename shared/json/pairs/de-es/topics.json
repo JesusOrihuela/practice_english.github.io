@@ -14,6 +14,7 @@
     { "id": "restaurant",             "label": "Restaurante",          "labelEn": "Restaurant",          "emoji": "🍽️", "phrase": true, "vocab": false, "level": "A1", "order": 12 },
     { "id": "directions",             "label": "Direcciones",          "labelEn": "Directions",          "emoji": "🧭", "phrase": true, "vocab": false, "level": "A2", "order": 13 },
     { "id": "transportation",         "label": "Transporte",           "labelEn": "Transportation",      "emoji": "🚌", "phrase": true, "vocab": false, "level": "A2", "order": 14 },
-    { "id": "supermarket",            "label": "Supermercado",         "labelEn": "Supermarket",         "emoji": "🛒", "phrase": true, "vocab": false, "level": "A1", "order": 15 }
+    { "id": "supermarket",            "label": "Supermercado",         "labelEn": "Supermarket",         "emoji": "🛒", "phrase": true, "vocab": false, "level": "A1", "order": 15 },
+    { "id": "kitchen",                "label": "Cocina",               "labelEn": "Kitchen",             "emoji": "🍳", "phrase": true, "vocab": false, "level": "A2", "order": 16 }
   ]
 }

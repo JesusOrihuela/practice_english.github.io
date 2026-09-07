@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "kitchen_donde_esta_la_sarten",
+      "source": "Wo ist die Pfanne?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sartén?",
+          "audioSlug": "donde_esta_la_sarten"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_necesito_un_cuchillo_afilado",
+      "source": "Ich brauche ein scharfes Messer.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito un cuchillo afilado.",
+          "audioSlug": "necesito_un_cuchillo_afilado"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_voy_a_cocinar_la_cena",
+      "source": "Ich werde das Abendessen kochen.",
+      "level": "A2",
+      "grammar": "ir a más infinitivo expresa un plan, voy a cocinar.",
+      "target": [
+        {
+          "text": "Voy a cocinar la cena.",
+          "audioSlug": "voy_a_cocinar_la_cena"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_hay_que_lavar_los_platos",
+      "source": "Man muss das Geschirr abwaschen.",
+      "level": "A2",
+      "grammar": "hay que más infinitivo expresa una obligación general.",
+      "target": [
+        {
+          "text": "Hay que lavar los platos.",
+          "audioSlug": "hay_que_lavar_los_platos"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_el_agua_esta_hirviendo",
+      "source": "Das Wasser kocht.",
+      "level": "A2",
+      "grammar": "estar más gerundio expresa una acción en curso, está hirviendo.",
+      "target": [
+        {
+          "text": "El agua está hirviendo.",
+          "audioSlug": "el_agua_esta_hirviendo"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_corta_las_verduras_por_favor",
+      "source": "Schneide das Gemüse, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Corta las verduras, por favor.",
+          "audioSlug": "corta_las_verduras_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_me_pasas_la_sal",
+      "source": "Reichst du mir das Salz?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Me pasas la sal?",
+          "audioSlug": "me_pasas_la_sal"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_la_comida_esta_en_el_horno",
+      "source": "Das Essen ist im Ofen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La comida está en el horno.",
+          "audioSlug": "la_comida_esta_en_el_horno"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_primero_calienta_el_aceite",
+      "source": "Zuerst erhitze das Öl in der Pfanne.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Primero calienta el aceite en la sartén.",
+          "audioSlug": "primero_calienta_el_aceite_en_la_sarten"
+        }
+      ]
+    },
+    {
+      "id": "kitchen_se_me_quemo_el_arroz",
+      "source": "Mir ist der Reis angebrannt.",
+      "level": "B1",
+      "grammar": "el se involuntario expresa un hecho no intencional, se me quemó.",
+      "target": [
+        {
+          "text": "Se me quemó el arroz.",
+          "audioSlug": "se_me_quemo_el_arroz"
+        }
+      ]
+    }
+  ]
+}
