@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "airport_donde_esta_la_puerta_de_embarque",
+      "source": "Wo ist der Flugsteig?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la puerta de embarque?",
+          "audioSlug": "donde_esta_la_puerta_de_embarque"
+        }
+      ]
+    },
+    {
+      "id": "airport_mi_vuelo_sale_a_las_tres",
+      "source": "Mein Flug geht um drei.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi vuelo sale a las tres.",
+          "audioSlug": "mi_vuelo_sale_a_las_tres"
+        }
+      ]
+    },
+    {
+      "id": "airport_donde_entrego_el_equipaje",
+      "source": "Wo gebe ich das Gepäck ab?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde entrego el equipaje?",
+          "audioSlug": "donde_entrego_el_equipaje"
+        }
+      ]
+    },
+    {
+      "id": "airport_el_vuelo_esta_retrasado",
+      "source": "Der Flug hat Verspätung.",
+      "level": "A2",
+      "grammar": "un estado del momento usa estar, está retrasado.",
+      "target": [
+        {
+          "text": "El vuelo está retrasado.",
+          "audioSlug": "el_vuelo_esta_retrasado"
+        }
+      ]
+    },
+    {
+      "id": "airport_aqui_esta_mi_pasaporte",
+      "source": "Hier ist mein Reisepass.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Aquí está mi pasaporte.",
+          "audioSlug": "aqui_esta_mi_pasaporte"
+        }
+      ]
+    },
+    {
+      "id": "airport_cuanto_equipaje_puedo_llevar",
+      "source": "Wie viel Gepäck darf ich mitnehmen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto equipaje puedo llevar?",
+          "audioSlug": "cuanto_equipaje_puedo_llevar"
+        }
+      ]
+    },
+    {
+      "id": "airport_necesito_un_asiento_junto_a_la_ventana",
+      "source": "Ich brauche einen Fensterplatz.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito un asiento junto a la ventana.",
+          "audioSlug": "necesito_un_asiento_junto_a_la_ventana"
+        }
+      ]
+    },
+    {
+      "id": "airport_donde_esta_la_sala_de_espera",
+      "source": "Wo ist der Warteraum?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sala de espera?",
+          "audioSlug": "donde_esta_la_sala_de_espera"
+        }
+      ]
+    },
+    {
+      "id": "airport_perdi_mi_conexion",
+      "source": "Ich habe meinen Anschluss verpasst, was kann ich tun?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Perdí mi conexión, ¿qué puedo hacer?",
+          "audioSlug": "perdi_mi_conexion_que_puedo_hacer"
+        }
+      ]
+    },
+    {
+      "id": "airport_mi_maleta_no_llego",
+      "source": "Mein Koffer ist nicht angekommen, wo melde ich das?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi maleta no llegó, ¿dónde la reclamo?",
+          "audioSlug": "mi_maleta_no_llego_donde_la_reclamo"
+        }
+      ]
+    }
+  ]
+}
