@@ -63,7 +63,7 @@ const DETECTORS = {
     subjuntivo_avanzado: /\b(aunque \w+(e|es|a|as|amos|an)\b|para que|antes de que|a menos que|con tal de que|sin que|en caso de que|cuando \w+(es|as|amos)\b)\b/i,
     marcadores_discursivos: /\b(sin embargo|por lo tanto|no obstante|adem[aá]s|en cambio|por consiguiente|en resumen|es decir|as[ií] pues|por otra parte|de hecho|en definitiva)\b/i,
     estilo_indirecto: /\b(dijo que|dice que|coment[oó] que|pregunt[oó] si|explic[oó] que|afirm[oó] que|me dijo que|nos dijo que|asegur[oó] que|respondi[oó] que)\b/i,
-    gustar_structure: /\b(me|te|le|nos|les) (gusta|gustan|encanta|encantan|interesa|interesan|molesta|molestan|importa|importan|fascina|apetece)\b/i,
+    gustar_structure: /\b(me|te|le|nos|les) (gusta|gustan|encanta|encantan|interesa|interesan|molesta|molestan|importa|importan|fascina|apetece|parece|parecen)\b/i,
     hay_existence: /\bhay\b/i,
     ir_a_futuro: /\b(voy|vas|va|vamos|van) a \w{2,}(ar|er|ir)\b/i,
   },

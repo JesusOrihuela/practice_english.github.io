@@ -47,6 +47,22 @@
       "label_es": "Tú y Usted",
       "emoji": "🤝",
       "color": "#DB2777"
+    },
+    {
+      "id": "gustar",
+      "label_de": "Verben wie gustar",
+      "label_en": "Verbs like gustar",
+      "label_es": "Verbos como gustar",
+      "emoji": "💛",
+      "color": "#CA8A04"
+    },
+    {
+      "id": "subjuntivo",
+      "label_de": "Subjunktiv",
+      "label_en": "Subjunctive",
+      "label_es": "Subjuntivo",
+      "emoji": "🌙",
+      "color": "#4F46E5"
     }
   ],
   "rules": [
@@ -808,6 +824,285 @@
           "model": "¿Puedes ayudarme? ¿Puede ayudarme?",
           "model_translation": "Kannst du mir helfen? Können Sie mir helfen?",
           "hint": "tú, zweite Person; usted, dritte Person."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "present_er_ir_verbs",
+      "category": "presente",
+      "level": "A1",
+      "title": "Präsens der -er- und -ir-Verben",
+      "title_de": "Präsens der -er- und -ir-Verben",
+      "title_en": "Present Tense of -er and -ir Verbs",
+      "title_es": "Presente de los verbos en -er e -ir",
+      "explanation": "Verben auf **-er** (comer, aprender) und **-ir** (vivir, escribir) teilen sich fast alle Endungen, **-o**, **-es**, **-e**, **-en**. Nur wir unterscheidet sich, **-emos** bei -er, **-imos** bei -ir. Ich wohne in Madrid, **Vivo** en Madrid. Ich esse zu Hause, **Como** en casa.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Vivo** en Madrid.",
+          "translation": "Ich wohne in Madrid.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Yo **como** a las dos.",
+          "translation": "Ich esse um zwei.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Nosotros **escribimos** en español.",
+          "translation": "Wir schreiben auf Spanisch.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In vivo en Madrid, welche Endung zeigt yo?",
+        "Wie lautet die wir-Form von vivir, -emos oder -imos?",
+        "Teilen comer und vivir die yo-Endung?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Como en casa.",
+          "translation": "Ich esse zu Hause.",
+          "question": "Wer macht die Handlung?",
+          "options": [
+            "yo, die Endung -o zeigt die erste Person",
+            "tú, wegen der Endung -o",
+            "nosotros, die Endung -o steht für wir",
+            "ellos, die Endung -o steht für sie"
+          ],
+          "correct": 0,
+          "feedback": "Die Endung -o gehört zu yo, deshalb como, ich esse."
+        },
+        {
+          "affective": true,
+          "question": "Was trifft auf dich zu? Wähle das Wahre.",
+          "options": [
+            "Vivo en una ciudad.",
+            "Como mucha fruta.",
+            "Aprendo español."
+          ],
+          "feedback": "Alle drei sind -er/-ir-Verben mit der yo-Endung -o."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ en Madrid. (vivir)",
+          "translation": "Ich wohne in Madrid.",
+          "answer": "vivo",
+          "accepted": [
+            "vivo"
+          ],
+          "feedback_why": "vivir für yo, Endung -o, vivo.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ en español. (escribir)",
+          "translation": "Wir schreiben auf Spanisch.",
+          "answer": "escribimos",
+          "accepted": [
+            "escribimos"
+          ],
+          "feedback_why": "-ir-Verben nehmen für nosotros -imos, escribimos.",
+          "contrast": "-er-Verben nähmen -emos, comemos."
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Nenne, wo du wohnst und was du isst, mit -er/-ir-Verben.",
+          "model": "Vivo en Berlín y como pan por la mañana.",
+          "model_translation": "Ich wohne in Berlin und esse morgens Brot.",
+          "hint": "yo, Endung -o, vivo, como, escribo."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "gustar_structure",
+      "category": "gustar",
+      "level": "A2",
+      "title": "Verben wie gustar und parecer",
+      "title_de": "Verben wie gustar und parecer",
+      "title_en": "Verbs like gustar and parecer",
+      "title_es": "Verbos como gustar y parecer",
+      "explanation": "Verben wie **gustar** (gefallen) und **parecer** (scheinen) drehen den Satz um. Nicht die Person ist das Subjekt, sondern die Sache. Davor steht ein **indirektes Pronomen**, **me**, **te**, **le**, **nos**, **les**. Das Verb steht in der **dritten** Person, Singular oder Plural je nach Sache. Es scheint mir kompliziert, **Me parece** complicado. Mir gefällt der Kaffee, **Me gusta** el café.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Me parece** complicado.",
+          "translation": "Es scheint mir kompliziert.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "A mí **me gusta** el café.",
+          "translation": "Mir gefällt der Kaffee.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Eso **me parece** interesante.",
+          "translation": "Das finde ich interessant.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In me parece, wer oder was ist das Subjekt, ich oder die Sache?",
+        "Welches Pronomen zeigt, dass es MIR scheint?",
+        "In welcher Person steht parece?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Me gusta el café.",
+          "translation": "Mir gefällt der Kaffee.",
+          "question": "Was ist das Subjekt von gusta?",
+          "options": [
+            "el café, die Sache, die gefällt",
+            "yo, die Person, die trinkt",
+            "me, das Pronomen",
+            "gusta hat kein Subjekt"
+          ],
+          "correct": 0,
+          "feedback": "Das Subjekt ist el café, deshalb me gusta el café."
+        },
+        {
+          "affective": true,
+          "question": "Was findest du wirklich? Wähle das Wahre.",
+          "options": [
+            "Me parece interesante.",
+            "Me parece difícil.",
+            "Me gusta mucho."
+          ],
+          "feedback": "Alle nutzen ein indirektes Pronomen me mit dem Verb in der dritten Person."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "___ parece complicado. (a mí)",
+          "translation": "Es scheint mir kompliziert.",
+          "answer": "Me",
+          "accepted": [
+            "me",
+            "Me"
+          ],
+          "feedback_why": "Für a mí steht das indirekte Pronomen me, me parece.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Me ___ el café. (gustar, Singular)",
+          "translation": "Mir gefällt der Kaffee.",
+          "answer": "gusta",
+          "accepted": [
+            "gusta"
+          ],
+          "feedback_why": "el café ist Singular, also gusta in der dritten Person Singular.",
+          "contrast": "Für los cafés wäre es gustan."
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Sag, was dir gefällt und wie dir etwas scheint.",
+          "model": "Me gusta el chocolate y me parece rico.",
+          "model_translation": "Mir gefällt Schokolade und sie scheint mir lecker.",
+          "hint": "indirektes Pronomen me, Verb in der dritten Person."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "pensamientos_opiniones"
+      ]
+    },
+    {
+      "id": "subjunctive_present_wishes",
+      "category": "subjuntivo",
+      "level": "B1",
+      "title": "Subjunktiv bei Zweifel und Wunsch",
+      "title_de": "Subjunktiv bei Zweifel und Wunsch",
+      "title_en": "Subjunctive for Doubt and Wishes",
+      "title_es": "Subjuntivo en dudas y deseos",
+      "explanation": "Der **Subjunktiv** drückt keine Fakten aus, sondern Zweifel, Wunsch oder Möglichkeit. Nach **quizás** (vielleicht) und **ojalá** (hoffentlich) sowie nach **querer que** (wollen, dass) steht das Verb im Subjunktiv, nicht im normalen Präsens. Vielleicht hast du recht, **Quizás tengas** razón, nicht tienes. Bei -ar-Verben tauschen die Endungen zu **-e**, bei -er/-ir zu **-a**.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Quizás tengas** razón.",
+          "translation": "Vielleicht hast du recht.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "**Ojalá llegue** el tren pronto.",
+          "translation": "Hoffentlich kommt der Zug bald.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Quiero que **vengas** mañana.",
+          "translation": "Ich will, dass du morgen kommst.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Warum tengas und nicht tienes nach quizás?",
+        "Welches Wort löst den Subjunktiv in ojalá llegue aus?",
+        "Wie ändert sich die Endung von venir zu vengas?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Quizás tengas razón.",
+          "translation": "Vielleicht hast du recht.",
+          "question": "Warum steht tengas im Subjunktiv?",
+          "options": [
+            "quizás drückt Möglichkeit aus, also Subjunktiv",
+            "es ist eine sichere Tatsache",
+            "tengas ist die normale du-Form",
+            "nach quizás steht immer Vergangenheit"
+          ],
+          "correct": 0,
+          "feedback": "quizás nennt eine Möglichkeit, deshalb der Subjunktiv tengas."
+        },
+        {
+          "affective": true,
+          "question": "Welchen Wunsch teilst du? Wähle einen.",
+          "options": [
+            "Ojalá haga buen tiempo.",
+            "Ojalá tengamos tiempo.",
+            "Ojalá vengas a la fiesta."
+          ],
+          "feedback": "Alle nutzen ojalá plus Subjunktiv für einen Wunsch."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Quizás tú ___ razón. (tener)",
+          "translation": "Vielleicht hast du recht.",
+          "answer": "tengas",
+          "accepted": [
+            "tengas"
+          ],
+          "feedback_why": "Nach quizás steht der Subjunktiv, tengas, nicht tienes.",
+          "contrast": "Das normale Präsens wäre tienes."
+        },
+        {
+          "sentence": "Quiero que ___ mañana. (venir, tú)",
+          "translation": "Ich will, dass du morgen kommst.",
+          "answer": "vengas",
+          "accepted": [
+            "vengas"
+          ],
+          "feedback_why": "querer que löst den Subjunktiv aus, vengas.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Äußere einen Wunsch mit ojalá und einen Zweifel mit quizás.",
+          "model": "Ojalá llueva y quizás salgamos más tarde.",
+          "model_translation": "Hoffentlich regnet es und vielleicht gehen wir später raus.",
+          "hint": "ojalá und quizás lösen den Subjunktiv aus."
         }
       ],
       "related_phrases": [],
