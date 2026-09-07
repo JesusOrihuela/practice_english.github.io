@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "tiempo_libre_me_gusta_leer_novelas",
+      "source": "Ich lese gern Romane.",
+      "level": "A1",
+      "grammar": "me gusta más infinitivo, me gusta leer.",
+      "target": [
+        {
+          "text": "Me gusta leer novelas.",
+          "audioSlug": "me_gusta_leer_novelas"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_los_fines_de_semana_salgo_a_pasear",
+      "source": "Am Wochenende gehe ich spazieren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los fines de semana salgo a pasear.",
+          "audioSlug": "los_fines_de_semana_salgo_a_pasear"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_toco_la_guitarra",
+      "source": "In meiner Freizeit spiele ich Gitarre.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Toco la guitarra en mi tiempo libre.",
+          "audioSlug": "toco_la_guitarra_en_mi_tiempo_libre"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_que_haces_los_domingos",
+      "source": "Was machst du sonntags?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué haces los domingos?",
+          "audioSlug": "que_haces_los_domingos"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_encanta_ir_al_cine",
+      "source": "Ich gehe sehr gern ins Kino.",
+      "level": "A2",
+      "grammar": "encantar funciona como gustar, me encanta ir.",
+      "target": [
+        {
+          "text": "Me encanta ir al cine.",
+          "audioSlug": "me_encanta_ir_al_cine"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_estoy_aprendiendo_a_pintar",
+      "source": "Ich lerne gerade malen.",
+      "level": "B1",
+      "grammar": "estar más gerundio expresa una acción en curso, estoy aprendiendo.",
+      "target": [
+        {
+          "text": "Estoy aprendiendo a pintar.",
+          "audioSlug": "estoy_aprendiendo_a_pintar"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_escucho_musica_todos_los_dias",
+      "source": "Ich höre jeden Tag Musik.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Escucho música todos los días.",
+          "audioSlug": "escucho_musica_todos_los_dias"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_juego_a_las_cartas_con_amigos",
+      "source": "Samstags spiele ich mit Freunden Karten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Los sábados juego a las cartas con amigos.",
+          "audioSlug": "los_sabados_juego_a_las_cartas_con_amigos"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_cuando_tengo_tiempo_visito_museos",
+      "source": "Wenn ich Zeit habe, besuche ich Museen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Cuando tengo tiempo, visito museos.",
+          "audioSlug": "cuando_tengo_tiempo_visito_museos"
+        }
+      ]
+    },
+    {
+      "id": "tiempo_libre_prefiero_quedarme_en_casa",
+      "source": "Ich bleibe lieber zu Hause und ruhe mich aus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Prefiero quedarme en casa a descansar.",
+          "audioSlug": "prefiero_quedarme_en_casa_a_descansar"
+        }
+      ]
+    }
+  ]
+}
