@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "accommodation_tengo_una_reserva",
+      "source": "Ich habe eine Reservierung auf den Namen Ana.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo una reserva a nombre de Ana.",
+          "audioSlug": "tengo_una_reserva_a_nombre_de_ana"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_tienen_habitaciones_libres",
+      "source": "Haben Sie freie Zimmer?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Tienen habitaciones libres?",
+          "audioSlug": "tienen_habitaciones_libres"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_quisiera_una_habitacion_doble",
+      "source": "Ich hätte gern ein Doppelzimmer.",
+      "level": "A2",
+      "grammar": "quisiera es una forma cortés para pedir, más suave que quiero.",
+      "target": [
+        {
+          "text": "Quisiera una habitación doble.",
+          "audioSlug": "quisiera_una_habitacion_doble"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_a_que_hora_dejar_la_habitacion",
+      "source": "Wann muss ich das Zimmer verlassen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿A qué hora tengo que dejar la habitación?",
+          "audioSlug": "a_que_hora_tengo_que_dejar_la_habitacion"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_el_desayuno_esta_incluido",
+      "source": "Das Frühstück ist inbegriffen.",
+      "level": "A2",
+      "grammar": "estar más participio expresa un resultado, está incluido.",
+      "target": [
+        {
+          "text": "El desayuno está incluido.",
+          "audioSlug": "el_desayuno_esta_incluido"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_donde_esta_el_ascensor",
+      "source": "Wo ist der Aufzug?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está el ascensor?",
+          "audioSlug": "donde_esta_el_ascensor"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_el_aire_acondicionado_no_funciona",
+      "source": "Die Klimaanlage funktioniert nicht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El aire acondicionado no funciona.",
+          "audioSlug": "el_aire_acondicionado_no_funciona"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_hay_wifi_en_la_habitacion",
+      "source": "Gibt es WLAN im Zimmer?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Hay wifi en la habitación?",
+          "audioSlug": "hay_wifi_en_la_habitacion"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_quisiera_quedarme_una_noche_mas",
+      "source": "Ich möchte eine Nacht länger bleiben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quisiera quedarme una noche más.",
+          "audioSlug": "quisiera_quedarme_una_noche_mas"
+        }
+      ]
+    },
+    {
+      "id": "accommodation_la_habitacion_esta_sucia",
+      "source": "Das Zimmer ist schmutzig, können Sie es putzen?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La habitación está sucia, ¿pueden limpiarla?",
+          "audioSlug": "la_habitacion_esta_sucia_pueden_limpiarla"
+        }
+      ]
+    }
+  ]
+}
