@@ -1,0 +1,132 @@
+{
+  "phrases": [
+    {
+      "id": "estudios_estudio_en_la_universidad",
+      "source": "Ich studiere an der Universität.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estudio en la universidad.",
+          "audioSlug": "estudio_en_la_universidad"
+        }
+      ]
+    },
+    {
+      "id": "estudios_tengo_un_examen_el_lunes",
+      "source": "Ich habe am Montag eine Prüfung.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Tengo un examen el lunes.",
+          "audioSlug": "tengo_un_examen_el_lunes"
+        }
+      ]
+    },
+    {
+      "id": "estudios_tengo_que_hacer_la_tarea",
+      "source": "Ich muss die Hausaufgaben machen.",
+      "level": "A2",
+      "grammar": "tener que más infinitivo expresa una obligación, tengo que hacer.",
+      "target": [
+        {
+          "text": "Tengo que hacer la tarea.",
+          "audioSlug": "tengo_que_hacer_la_tarea"
+        }
+      ]
+    },
+    {
+      "id": "estudios_el_profesor_explica_la_leccion",
+      "source": "Der Lehrer erklärt die Lektion.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El profesor explica la lección.",
+          "audioSlug": "el_profesor_explica_la_leccion"
+        }
+      ]
+    },
+    {
+      "id": "estudios_me_gusta_aprender_idiomas",
+      "source": "Ich lerne gern Sprachen.",
+      "level": "A2",
+      "grammar": "me gusta más infinitivo, me gusta aprender.",
+      "target": [
+        {
+          "text": "Me gusta aprender idiomas.",
+          "audioSlug": "me_gusta_aprender_idiomas"
+        }
+      ]
+    },
+    {
+      "id": "estudios_saque_una_buena_nota",
+      "source": "Ich habe eine gute Note in der Prüfung bekommen.",
+      "level": "B1",
+      "grammar": "saqué es pretérito indefinido, una acción terminada.",
+      "target": [
+        {
+          "text": "Saqué una buena nota en el examen.",
+          "audioSlug": "saque_una_buena_nota_en_el_examen"
+        }
+      ]
+    },
+    {
+      "id": "estudios_la_biblioteca_esta_abierta",
+      "source": "Die Bibliothek ist bis zehn geöffnet.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La biblioteca está abierta hasta las diez.",
+          "audioSlug": "la_biblioteca_esta_abierta_hasta_las_diez"
+        }
+      ]
+    },
+    {
+      "id": "estudios_estudio_para_ser_ingeniera",
+      "source": "Ich studiere, um Ingenieur/in zu werden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Estudio para ser ingeniera.",
+          "source": "Ich studiere, um Ingenieurin zu werden.",
+          "labels": { "gender": "femenino" },
+          "audioSlug": "estudio_para_ser_ingeniera"
+        },
+        {
+          "text": "Estudio para ser ingeniero.",
+          "source": "Ich studiere, um Ingenieur zu werden.",
+          "labels": { "gender": "masculino" },
+          "audioSlug": "estudio_para_ser_ingeniero"
+        }
+      ]
+    },
+    {
+      "id": "estudios_que_carrera_estudias",
+      "source": "Was studierst du?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué carrera estudias?",
+          "audioSlug": "que_carrera_estudias"
+        }
+      ]
+    },
+    {
+      "id": "estudios_escribo_en_mi_cuaderno",
+      "source": "Ich schreibe in mein Heft.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Escribo en mi cuaderno.",
+          "audioSlug": "escribo_en_mi_cuaderno"
+        }
+      ]
+    }
+  ]
+}
