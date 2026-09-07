@@ -1,0 +1,130 @@
+{
+  "phrases": [
+    {
+      "id": "supermarket_necesito_leche_pan_huevos",
+      "source": "Ich muss Milch, Brot und Eier kaufen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito comprar leche, pan y huevos.",
+          "audioSlug": "necesito_comprar_leche_pan_y_huevos"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_donde_estan_frutas_verduras",
+      "source": "Wo sind Obst und Gemüse?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde están las frutas y las verduras?",
+          "audioSlug": "donde_estan_las_frutas_y_las_verduras"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_quiero_comprar_papas",
+      "source": "Ich möchte Kartoffeln kaufen.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Quiero comprar papas.",
+          "labels": { "region": "Latinoamérica" },
+          "audioSlug": "quiero_comprar_papas"
+        },
+        {
+          "text": "Quiero comprar patatas.",
+          "labels": { "region": "España" },
+          "audioSlug": "quiero_comprar_patatas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_cuanto_cuesta_el_kilo_de_manzanas",
+      "source": "Wie viel kostet das Kilo Äpfel?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Cuánto cuesta el kilo de manzanas?",
+          "audioSlug": "cuanto_cuesta_el_kilo_de_manzanas"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_hay_una_oferta_en_el_cafe",
+      "source": "Es gibt ein Angebot beim Kaffee.",
+      "level": "A2",
+      "grammar": "hay expresa que algo existe, hay una oferta.",
+      "target": [
+        {
+          "text": "Hay una oferta en el café.",
+          "audioSlug": "hay_una_oferta_en_el_cafe"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_puedo_pagar_con_tarjeta",
+      "source": "Kann ich mit Karte zahlen?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Puedo pagar con tarjeta?",
+          "audioSlug": "puedo_pagar_con_tarjeta"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_no_encuentro_el_arroz",
+      "source": "Ich finde den Reis nicht.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "No encuentro el arroz.",
+          "audioSlug": "no_encuentro_el_arroz"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_donde_esta_la_seccion_de_limpieza",
+      "source": "Wo ist die Abteilung für Reinigungsmittel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Dónde está la sección de productos de limpieza?",
+          "audioSlug": "donde_esta_la_seccion_de_productos_de_limpieza"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_necesito_una_bolsa_por_favor",
+      "source": "Ich brauche eine Tüte, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito una bolsa, por favor.",
+          "audioSlug": "necesito_una_bolsa_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "supermarket_me_podria_decir_donde_esta_la_panaderia",
+      "source": "Könnten Sie mir sagen, wo die Bäckerei ist?",
+      "level": "B1",
+      "grammar": "podría es el condicional de cortesía, más suave que puede.",
+      "target": [
+        {
+          "text": "¿Me podría decir dónde está la panadería?",
+          "audioSlug": "me_podria_decir_donde_esta_la_panaderia"
+        }
+      ]
+    }
+  ]
+}
