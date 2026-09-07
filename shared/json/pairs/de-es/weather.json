@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "weather_hoy_hace_mucho_calor",
+      "source": "Heute ist es sehr heiß.",
+      "level": "A1",
+      "grammar": "para el clima se usa hacer, hace calor.",
+      "target": [
+        {
+          "text": "Hoy hace mucho calor.",
+          "audioSlug": "hoy_hace_mucho_calor"
+        }
+      ]
+    },
+    {
+      "id": "weather_esta_lloviendo",
+      "source": "Es regnet.",
+      "level": "A1",
+      "grammar": "estar más gerundio expresa una acción en curso, está lloviendo.",
+      "target": [
+        {
+          "text": "Está lloviendo.",
+          "audioSlug": "esta_lloviendo"
+        }
+      ]
+    },
+    {
+      "id": "weather_manana_va_a_nevar",
+      "source": "Morgen wird es schneien.",
+      "level": "A2",
+      "grammar": "ir a más infinitivo expresa un pronóstico, va a nevar.",
+      "target": [
+        {
+          "text": "Mañana va a nevar.",
+          "audioSlug": "manana_va_a_nevar"
+        }
+      ]
+    },
+    {
+      "id": "weather_hace_mucho_viento_en_otono",
+      "source": "Im Herbst ist es sehr windig.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace mucho viento en otoño.",
+          "audioSlug": "hace_mucho_viento_en_otono"
+        }
+      ]
+    },
+    {
+      "id": "weather_el_cielo_esta_nublado",
+      "source": "Der Himmel ist bewölkt.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El cielo está nublado.",
+          "audioSlug": "el_cielo_esta_nublado"
+        }
+      ]
+    },
+    {
+      "id": "weather_que_tiempo_hace_hoy",
+      "source": "Wie ist das Wetter heute?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "¿Qué tiempo hace hoy?",
+          "audioSlug": "que_tiempo_hace_hoy"
+        }
+      ]
+    },
+    {
+      "id": "weather_en_verano_hace_sol",
+      "source": "Im Sommer scheint die Sonne.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "En verano hace sol.",
+          "audioSlug": "en_verano_hace_sol"
+        }
+      ]
+    },
+    {
+      "id": "weather_hace_frio_ponte_un_abrigo",
+      "source": "Es ist kalt, zieh einen Mantel an.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Hace frío, ponte un abrigo.",
+          "audioSlug": "hace_frio_ponte_un_abrigo"
+        }
+      ]
+    },
+    {
+      "id": "weather_parece_que_va_a_llover",
+      "source": "Es sieht nach Regen aus, nimm besser einen Regenschirm mit.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Parece que va a llover, mejor lleva paraguas.",
+          "audioSlug": "parece_que_va_a_llover_mejor_lleva_paraguas"
+        }
+      ]
+    },
+    {
+      "id": "weather_la_temperatura_bajo_mucho_anoche",
+      "source": "Die Temperatur ist letzte Nacht stark gefallen.",
+      "level": "B1",
+      "grammar": "bajó es pretérito indefinido, para una acción terminada, anoche.",
+      "target": [
+        {
+          "text": "La temperatura bajó mucho anoche.",
+          "audioSlug": "la_temperatura_bajo_mucho_anoche"
+        }
+      ]
+    }
+  ]
+}
