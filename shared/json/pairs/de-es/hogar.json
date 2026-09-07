@@ -1,0 +1,124 @@
+{
+  "phrases": [
+    {
+      "id": "hogar_la_cocina_es_pequena",
+      "source": "Die Küche ist klein.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La cocina es pequeña.",
+          "audioSlug": "la_cocina_es_pequena"
+        }
+      ]
+    },
+    {
+      "id": "hogar_mi_habitacion_tiene_una_ventana_grande",
+      "source": "Mein Zimmer hat ein großes Fenster.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Mi habitación tiene una ventana grande.",
+          "audioSlug": "mi_habitacion_tiene_una_ventana_grande"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_sofa_esta_en_la_sala",
+      "source": "Das Sofa steht im Wohnzimmer.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "El sofá está en la sala.",
+          "audioSlug": "el_sofa_esta_en_la_sala"
+        }
+      ]
+    },
+    {
+      "id": "hogar_hay_que_limpiar_la_casa_el_sabado",
+      "source": "Man muss am Samstag das Haus putzen.",
+      "level": "A2",
+      "grammar": "hay que más infinitivo expresa una obligación, hay que limpiar.",
+      "target": [
+        {
+          "text": "Hay que limpiar la casa el sábado.",
+          "audioSlug": "hay_que_limpiar_la_casa_el_sabado"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_pared_es_blanca",
+      "source": "Die Wand ist weiß.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La pared es blanca.",
+          "audioSlug": "la_pared_es_blanca"
+        }
+      ]
+    },
+    {
+      "id": "hogar_enciende_la_luz_por_favor",
+      "source": "Mach das Licht an, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Enciende la luz, por favor.",
+          "audioSlug": "enciende_la_luz_por_favor"
+        }
+      ]
+    },
+    {
+      "id": "hogar_el_bano_esta_al_final_del_pasillo",
+      "source": "Das Bad ist am Ende des Flurs.",
+      "level": "A2",
+      "grammar": "estar indica ubicación, está al final del pasillo.",
+      "target": [
+        {
+          "text": "El baño está al final del pasillo.",
+          "audioSlug": "el_bano_esta_al_final_del_pasillo"
+        }
+      ]
+    },
+    {
+      "id": "hogar_necesito_una_mesa_nueva_para_el_comedor",
+      "source": "Ich brauche einen neuen Tisch für das Esszimmer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        {
+          "text": "Necesito una mesa nueva para el comedor.",
+          "audioSlug": "necesito_una_mesa_nueva_para_el_comedor"
+        }
+      ]
+    },
+    {
+      "id": "hogar_acabamos_de_mudarnos",
+      "source": "Wir sind gerade in eine neue Wohnung gezogen.",
+      "level": "B1",
+      "grammar": "acabar de más infinitivo expresa un pasado reciente, acabamos de mudarnos.",
+      "target": [
+        {
+          "text": "Acabamos de mudarnos a un apartamento nuevo.",
+          "audioSlug": "acabamos_de_mudarnos_a_un_apartamento_nuevo"
+        }
+      ]
+    },
+    {
+      "id": "hogar_la_lampara_esta_sobre_la_mesa",
+      "source": "Die Lampe steht auf dem Tisch.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        {
+          "text": "La lámpara está sobre la mesa.",
+          "audioSlug": "la_lampara_esta_sobre_la_mesa"
+        }
+      ]
+    }
+  ]
+}
