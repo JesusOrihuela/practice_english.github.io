@@ -1,18 +1,249 @@
 {
   "categories": [
     {
-      "id": "verbs",
-      "label_de": "Verben",
-      "label_en": "Verbs",
-      "label_es": "Verbos",
-      "emoji": "🏃",
+      "id": "ser_estar",
+      "label_de": "Ser und Estar",
+      "label_en": "Ser and Estar",
+      "label_es": "Ser y Estar",
+      "emoji": "⚖️",
       "color": "#16A34A"
+    },
+    {
+      "id": "presente",
+      "label_de": "Präsens",
+      "label_en": "Present Tense",
+      "label_es": "Presente",
+      "emoji": "🏃",
+      "color": "#2563EB"
+    },
+    {
+      "id": "interrogativos",
+      "label_de": "Fragewörter",
+      "label_en": "Question Words",
+      "label_es": "Interrogativos",
+      "emoji": "❓",
+      "color": "#D97706"
+    },
+    {
+      "id": "reflexivos",
+      "label_de": "Reflexive Verben",
+      "label_en": "Reflexive Verbs",
+      "label_es": "Verbos reflexivos",
+      "emoji": "🔄",
+      "color": "#7C3AED"
+    },
+    {
+      "id": "futuro",
+      "label_de": "Nahe Zukunft",
+      "label_en": "Near Future",
+      "label_es": "Futuro próximo",
+      "emoji": "➡️",
+      "color": "#0891B2"
+    },
+    {
+      "id": "registro",
+      "label_de": "Tú und Usted",
+      "label_en": "Tú and Usted",
+      "label_es": "Tú y Usted",
+      "emoji": "🤝",
+      "color": "#DB2777"
     }
   ],
   "rules": [
     {
+      "id": "ser_identity",
+      "category": "ser_estar",
+      "level": "A1",
+      "title": "Ser: Identität und Herkunft",
+      "title_de": "Ser: Identität und Herkunft",
+      "title_en": "Ser: Identity and Origin",
+      "title_es": "Ser: identidad y origen",
+      "explanation": "**ser** benennt, WAS oder WER jemand dauerhaft ist, Identität, Herkunft, Beruf und Grundeigenschaften. Ich bin aus Deutschland, **Soy** de Alemania. Sie ist Ärztin, Ella **es** médica. Die Formen im Präsens sind **soy**, **eres**, **es**, **somos**, **son**.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "Hola, **soy** Ana.",
+          "translation": "Hallo, ich bin Ana.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "**Soy** de Alemania, y tú?",
+          "translation": "Ich bin aus Deutschland, und du?",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "**Soy** española y **soy** profesora.",
+          "translation": "Ich bin Spanierin und ich bin Lehrerin.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In soy de Alemania, sagt ser etwas Dauerhaftes oder Vorübergehendes?",
+        "Welche Form von ser gehört zu yo?",
+        "Warum steht bei es profesora ser und nicht estar?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Mi padre es profesor.",
+          "translation": "Mein Vater ist Lehrer.",
+          "question": "Warum es und nicht está?",
+          "options": [
+            "Der Beruf ist eine dauerhafte Identität, also ser",
+            "Der Beruf ist ein vorübergehender Zustand",
+            "Bei der Familie nutzt man immer estar",
+            "es ist nur die Höflichkeitsform"
+          ],
+          "correct": 0,
+          "feedback": "Der Beruf gehört zur Identität, deshalb ser, es profesor."
+        },
+        {
+          "affective": true,
+          "question": "Was ist wahr über dich? Wähle das Passende.",
+          "options": [
+            "Soy estudiante.",
+            "Soy de una ciudad grande.",
+            "Soy optimista."
+          ],
+          "feedback": "Alle drei beschreiben mit ser deine dauerhafte Identität oder Herkunft."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ de Alemania.",
+          "translation": "Ich bin aus Deutschland.",
+          "answer": "soy",
+          "accepted": [
+            "soy"
+          ],
+          "feedback_why": "Herkunft ist dauerhaft, also ser, soy.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Ella ___ médica.",
+          "translation": "Sie ist Ärztin.",
+          "answer": "es",
+          "accepted": [
+            "es"
+          ],
+          "feedback_why": "Der Beruf gehört zur Identität, also ser, es.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Stell dich vor, Name, Herkunft und Beruf, alles mit ser.",
+          "model": "Soy Marta, soy de Madrid y soy enfermera.",
+          "model_translation": "Ich bin Marta, ich bin aus Madrid und ich bin Krankenschwester.",
+          "hint": "yo soy, für Identität, Herkunft und Beruf."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "personal_info"
+      ]
+    },
+    {
+      "id": "estar_location_states",
+      "category": "ser_estar",
+      "level": "A1",
+      "title": "Estar: Zustände und Ort",
+      "title_de": "Estar: Zustände und Ort",
+      "title_en": "Estar: States and Location",
+      "title_es": "Estar: estados y ubicación",
+      "explanation": "**estar** benennt, WIE jemand oder etwas GERADE ist, vorübergehende Zustände und Gefühle, und WO sich etwas befindet, der Ort. Ich bin müde, **Estoy** cansada. Wo ist der Bahnhof? Dónde **está** la estación? Die Formen sind **estoy**, **estás**, **está**, **estamos**, **están**.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "Hoy **estoy** muy cansada.",
+          "translation": "Heute bin ich sehr müde.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Yo **estoy** contento.",
+          "translation": "Ich bin froh.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "El café **está** en la mesa.",
+          "translation": "Der Kaffee ist auf dem Tisch.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "estoy cansada, ist Müdigkeit dauerhaft oder vorübergehend?",
+        "In está en la mesa, sagt estar den Ort oder die Identität?",
+        "Welche Form von estar gehört zu él?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "La estación está cerca.",
+          "translation": "Der Bahnhof ist in der Nähe.",
+          "question": "Warum está und nicht es?",
+          "options": [
+            "Der Ort von etwas nimmt estar",
+            "Die Lage ist eine dauerhafte Identität, also ser",
+            "está gilt nur für Personen",
+            "Bei Gebäuden nutzt man immer ser"
+          ],
+          "correct": 0,
+          "feedback": "Der Ort nimmt immer estar, la estación está cerca."
+        },
+        {
+          "affective": true,
+          "question": "Wie fühlst du dich jetzt? Wähle das Wahre.",
+          "options": [
+            "Estoy bien.",
+            "Estoy un poco nervioso.",
+            "Estoy feliz."
+          ],
+          "feedback": "Alle drei nutzen estar für einen Gefühl oder Zustand von jetzt."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ cansada hoy.",
+          "translation": "Ich bin heute müde.",
+          "answer": "estoy",
+          "accepted": [
+            "estoy"
+          ],
+          "feedback_why": "Müdigkeit ist ein vorübergehender Zustand, also estar, estoy.",
+          "contrast": ""
+        },
+        {
+          "sentence": "El baño ___ a la derecha.",
+          "translation": "Die Toilette ist rechts.",
+          "answer": "está",
+          "accepted": [
+            "está"
+          ],
+          "feedback_why": "Der Ort nimmt estar, está.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Sag, wie du dich gerade fühlst und wo du bist, beides mit estar.",
+          "model": "Estoy contento y estoy en casa.",
+          "model_translation": "Ich bin froh und ich bin zu Hause.",
+          "hint": "estoy, für Zustand und Ort."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "emociones",
+        "conversacion",
+        "greetings",
+        "descripciones"
+      ]
+    },
+    {
       "id": "ser_vs_estar",
-      "category": "verbs",
+      "category": "ser_estar",
       "level": "A2",
       "title": "Ser vs Estar",
       "title_de": "Ser vs Estar",
@@ -103,6 +334,480 @@
           "model": "Soy estudiante y estoy feliz hoy.",
           "model_translation": "Ich bin Student und ich bin heute glücklich.",
           "hint": "ser für Identität und Eigenschaften, estar für Zustände und den Ort."
+        }
+      ],
+      "related_phrases": [],
+      "topics": []
+    },
+    {
+      "id": "present_ar_verbs",
+      "category": "presente",
+      "level": "A1",
+      "title": "Präsens der -ar-Verben",
+      "title_de": "Präsens der -ar-Verben",
+      "title_en": "Present Tense of -ar Verbs",
+      "title_es": "Presente de los verbos en -ar",
+      "explanation": "Regelmäßige Verben auf **-ar** (hablar, tomar, preparar) bilden das Präsens mit festen Endungen, **-o**, **-as**, **-a**, **-amos**, **-an**. Ich spreche Spanisch, **Hablo** español. Endungen zeigen die Person, deshalb steht das Pronomen (yo, tú) oft gar nicht.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Hablo** un poco de español.",
+          "translation": "Ich spreche ein bisschen Spanisch.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Yo **tomo** un taxi al centro.",
+          "translation": "Ich nehme ein Taxi ins Zentrum.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Por la tarde **preparo** la cena.",
+          "translation": "Am Abend bereite ich das Abendessen zu.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In hablo español, welche Endung zeigt yo?",
+        "Warum braucht hablo kein yo davor?",
+        "Wie lautet tomar für nosotros?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Preparo la cena.",
+          "translation": "Ich bereite das Abendessen zu.",
+          "question": "Wer macht die Handlung?",
+          "options": [
+            "yo, die Endung -o zeigt die erste Person",
+            "tú, wegen der Endung -o",
+            "él, die Endung -o steht für er",
+            "nosotros, die Endung -o steht für wir"
+          ],
+          "correct": 0,
+          "feedback": "Die Endung -o gehört zu yo, deshalb preparo, ich bereite zu."
+        },
+        {
+          "affective": true,
+          "question": "Was machst du oft? Wähle das Wahre.",
+          "options": [
+            "Hablo con mis amigos.",
+            "Tomo café por la mañana.",
+            "Preparo el desayuno."
+          ],
+          "feedback": "Alle drei sind -ar-Verben mit der yo-Endung -o."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ español. (hablar)",
+          "translation": "Ich spreche Spanisch.",
+          "answer": "hablo",
+          "accepted": [
+            "hablo"
+          ],
+          "feedback_why": "hablar für yo, Endung -o, hablo.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Nosotros ___ un taxi. (tomar)",
+          "translation": "Wir nehmen ein Taxi.",
+          "answer": "tomamos",
+          "accepted": [
+            "tomamos"
+          ],
+          "feedback_why": "tomar für nosotros, Endung -amos, tomamos.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Nenne zwei Dinge, die du jeden Tag machst, mit -ar-Verben.",
+          "model": "Hablo con mi familia y preparo la comida.",
+          "model_translation": "Ich spreche mit meiner Familie und bereite das Essen zu.",
+          "hint": "yo, Endung -o, hablo, tomo, preparo."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "daily_routine",
+        "directions"
+      ]
+    },
+    {
+      "id": "question_words",
+      "category": "interrogativos",
+      "level": "A1",
+      "title": "Fragewörter",
+      "title_de": "Fragewörter",
+      "title_en": "Question Words",
+      "title_es": "Palabras interrogativas",
+      "explanation": "Fragen nach Information beginnen mit einem Fragewort, immer **mit Akzent**, **qué** (was), **dónde** (wo), **cómo** (wie), **cuándo** (wann), **cuánto** (wie viel), **quién** (wer), **por qué** (warum). Spanisch setzt zusätzlich ein umgekehrtes Fragezeichen davor, **¿**Dónde está el baño**?**",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**¿Cómo** estás?",
+          "translation": "Wie geht es dir?",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Bien. **¿Dónde** está la estación?",
+          "translation": "Gut. Wo ist der Bahnhof?",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "**¿Cuánto** cuesta el viaje?",
+          "translation": "Wie viel kostet die Fahrt?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Welches Fragewort fragt nach dem Ort?",
+        "Warum trägt dónde einen Akzent?",
+        "Welches Zeichen steht am Anfang der Frage?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Cuánto cuesta el boleto?",
+          "translation": "Wie viel kostet das Ticket?",
+          "question": "Wonach wird gefragt?",
+          "options": [
+            "nach dem Preis, cuánto fragt nach der Menge",
+            "nach dem Ort, cuánto fragt nach dem Ort",
+            "nach der Zeit, cuánto fragt nach der Uhrzeit",
+            "nach dem Grund, cuánto fragt nach dem Warum"
+          ],
+          "correct": 0,
+          "feedback": "cuánto fragt nach Menge oder Preis, cuánto cuesta, wie viel kostet."
+        },
+        {
+          "affective": true,
+          "question": "Welche Frage würdest du einem neuen Freund stellen? Wähle eine.",
+          "options": [
+            "¿Cómo te llamas?",
+            "¿De dónde eres?",
+            "¿Qué haces?"
+          ],
+          "feedback": "Jede beginnt mit einem Fragewort mit Akzent, cómo, dónde, qué."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿___ está la estación?",
+          "translation": "Wo ist der Bahnhof?",
+          "answer": "Dónde",
+          "accepted": [
+            "dónde",
+            "Dónde"
+          ],
+          "feedback_why": "Nach dem Ort fragt dónde, mit Akzent.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿___ cuesta el viaje?",
+          "translation": "Wie viel kostet die Fahrt?",
+          "answer": "Cuánto",
+          "accepted": [
+            "cuánto",
+            "Cuánto"
+          ],
+          "feedback_why": "Nach dem Preis fragt cuánto.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Stell zwei Fragen mit verschiedenen Fragewörtern.",
+          "model": "¿Dónde vives? ¿Cómo estás?",
+          "model_translation": "Wo wohnst du? Wie geht es dir?",
+          "hint": "Fragewort mit Akzent, dazu ¿ am Anfang."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "survival",
+        "directions",
+        "transportation"
+      ]
+    },
+    {
+      "id": "reflexive_verbs_daily_routine",
+      "category": "reflexivos",
+      "level": "A2",
+      "title": "Reflexive Verben im Tagesablauf",
+      "title_de": "Reflexive Verben im Tagesablauf",
+      "title_en": "Reflexive Verbs in Daily Routine",
+      "title_es": "Verbos reflexivos de la rutina",
+      "explanation": "Reflexive Verben (levantarse, acostarse, llamarse) beschreiben eine Handlung an sich selbst. Sie brauchen ein **Reflexivpronomen** vor dem Verb, **me**, **te**, **se**, **nos**, **se**. Ich stehe auf, **Me** levanto. Ich heiße Ana, **Me** llamo Ana. Das Pronomen richtet sich nach der Person.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**Me** levanto a las siete.",
+          "translation": "Ich stehe um sieben auf.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Yo **me** acuesto a las once.",
+          "translation": "Ich gehe um elf ins Bett.",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Y cómo **te** llamas?",
+          "translation": "Und wie heißt du?",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "In me levanto, auf wen bezieht sich die Handlung?",
+        "Welches Pronomen gehört zu yo?",
+        "Warum steht me vor dem Verb, nicht danach?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Me acuesto a las once.",
+          "translation": "Ich gehe um elf ins Bett.",
+          "question": "Warum steht hier me?",
+          "options": [
+            "Die Handlung richtet sich auf mich selbst, reflexiv",
+            "me ist ein Artikel vor dem Verb",
+            "me zeigt einen Ort",
+            "me steht nur in Fragen"
+          ],
+          "correct": 0,
+          "feedback": "acostarse ist reflexiv, für yo also me acuesto."
+        },
+        {
+          "affective": true,
+          "question": "Was passt zu deinem Morgen? Wähle das Wahre.",
+          "options": [
+            "Me levanto temprano.",
+            "Me levanto tarde.",
+            "Me acuesto muy tarde."
+          ],
+          "feedback": "Alle nutzen ein reflexives Verb mit me für yo."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ levanto a las siete. (levantarse)",
+          "translation": "Ich stehe um sieben auf.",
+          "answer": "me",
+          "accepted": [
+            "me"
+          ],
+          "feedback_why": "levantarse ist reflexiv, für yo das Pronomen me.",
+          "contrast": ""
+        },
+        {
+          "sentence": "Yo me ___ a las once. (acostarse)",
+          "translation": "Ich gehe um elf ins Bett.",
+          "answer": "acuesto",
+          "accepted": [
+            "acuesto"
+          ],
+          "feedback_why": "acostarse für yo, me acuesto (Stammwechsel o zu ue).",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Beschreibe zwei reflexive Handlungen deines Tages.",
+          "model": "Me levanto a las ocho y me acuesto a las diez.",
+          "model_translation": "Ich stehe um acht auf und gehe um zehn ins Bett.",
+          "hint": "Reflexivpronomen me vor dem Verb."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "daily_routine"
+      ]
+    },
+    {
+      "id": "ir_a_futuro",
+      "category": "futuro",
+      "level": "A2",
+      "title": "Nahe Zukunft mit ir a",
+      "title_de": "Nahe Zukunft mit ir a",
+      "title_en": "Near Future with ir a",
+      "title_es": "Futuro próximo con ir a",
+      "explanation": "Für einen Plan oder eine nahe Zukunft nutzt Spanisch **ir a + Infinitiv**, wie das deutsche „werde ... tun\" oder „habe vor zu\". Ich werde nach Spanien reisen, **Voy a** viajar a España. Das Verb ir wird gebeugt, **voy**, **vas**, **va**, **vamos**, **van**, danach steht **a** und der Infinitiv.",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "Mañana **voy a** viajar a Madrid.",
+          "translation": "Morgen werde ich nach Madrid reisen.",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "Y qué **vas a** hacer allí?",
+          "translation": "Und was wirst du dort machen?",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "**Voy a** visitar a mi familia.",
+          "translation": "Ich werde meine Familie besuchen.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "Welche drei Teile bilden voy a viajar?",
+        "Welche Form von ir gehört zu tú?",
+        "Steht nach a ein Infinitiv oder ein gebeugtes Verb?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "Voy a comprar una casa.",
+          "translation": "Ich werde ein Haus kaufen.",
+          "question": "Was drückt voy a comprar aus?",
+          "options": [
+            "einen Plan für die Zukunft",
+            "eine abgeschlossene Handlung in der Vergangenheit",
+            "eine tägliche Gewohnheit",
+            "einen Befehl"
+          ],
+          "correct": 0,
+          "feedback": "ir a + Infinitiv nennt einen Plan, voy a comprar, ich werde kaufen."
+        },
+        {
+          "affective": true,
+          "question": "Was ist dein echter Plan? Wähle das Wahre.",
+          "options": [
+            "Voy a aprender español.",
+            "Voy a viajar este año.",
+            "Voy a descansar el fin de semana."
+          ],
+          "feedback": "Jeder Satz nutzt ir a + Infinitiv für einen Plan."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "Yo ___ a viajar a España. (ir)",
+          "translation": "Ich werde nach Spanien reisen.",
+          "answer": "voy",
+          "accepted": [
+            "voy"
+          ],
+          "feedback_why": "ir für yo ist voy, danach a + Infinitiv.",
+          "contrast": ""
+        },
+        {
+          "sentence": "¿Qué ___ a hacer mañana? (ir, tú)",
+          "translation": "Was wirst du morgen machen?",
+          "answer": "vas",
+          "accepted": [
+            "vas"
+          ],
+          "feedback_why": "ir für tú ist vas, vas a hacer.",
+          "contrast": ""
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Nenne zwei Pläne für nächste Woche mit ir a.",
+          "model": "Voy a estudiar y voy a ver a mis amigos.",
+          "model_translation": "Ich werde lernen und meine Freunde treffen.",
+          "hint": "voy a + Infinitiv, für einen Plan."
+        }
+      ],
+      "related_phrases": [],
+      "topics": [
+        "planes"
+      ]
+    },
+    {
+      "id": "tu_vs_usted",
+      "category": "registro",
+      "level": "A2",
+      "title": "Tú und Usted, du und Sie",
+      "title_de": "Tú und Usted, du und Sie",
+      "title_en": "Tú and Usted",
+      "title_es": "Tú y Usted",
+      "explanation": "Spanisch trennt vertraut und höflich. **tú** ist das vertraute „du\", das Verb steht in der **zweiten** Person, Kannst du wiederholen? **¿Puedes** repetir? **usted** ist das höfliche „Sie\", aber das Verb steht in der **dritten** Person, wie bei él, ella. Können Sie wiederholen? **¿Puede** repetir? Auch der Imperativ ändert sich, sigue (tú) gegenüber siga (usted).",
+      "context_dialogue": [
+        {
+          "speaker": "ANA",
+          "text": "**¿Puedes** ayudarme? (a un amigo)",
+          "translation": "Kannst du mir helfen? (zu einem Freund)",
+          "highlight": true
+        },
+        {
+          "speaker": "BEN",
+          "text": "**¿Puede** ayudarme? (a un desconocido)",
+          "translation": "Können Sie mir helfen? (zu einem Fremden)",
+          "highlight": true
+        },
+        {
+          "speaker": "ANA",
+          "text": "Con usted decimos **siga**, con tú decimos **sigue**.",
+          "translation": "Mit Sie sagen wir siga, mit du sagen wir sigue.",
+          "highlight": true
+        }
+      ],
+      "noticing_prompts": [
+        "puedes und puede, welches ist höflich (usted)?",
+        "In welcher Person steht das Verb bei usted?",
+        "Wie ändert sich sigue zum höflichen Imperativ?"
+      ],
+      "structured_input": [
+        {
+          "sentence": "¿Puede repetir, por favor?",
+          "translation": "Können Sie das bitte wiederholen?",
+          "question": "Zu wem spricht die Person?",
+          "options": [
+            "höflich, zu usted, Verb in der dritten Person",
+            "vertraut, zu tú, Verb in der zweiten Person",
+            "zu einer Gruppe von Freunden",
+            "zu sich selbst"
+          ],
+          "correct": 0,
+          "feedback": "puede ist die usted-Form, höflich, dritte Person."
+        },
+        {
+          "affective": true,
+          "question": "Wie fragst du deinen Chef höflich? Wähle das Passende.",
+          "options": [
+            "¿Puede repetir, por favor?",
+            "¿Puede hablar más despacio?",
+            "¿Puede ayudarme?"
+          ],
+          "feedback": "Alle drei nutzen die höfliche usted-Form puede."
+        }
+      ],
+      "quiz": [
+        {
+          "sentence": "¿___ repetir, por favor? (höflich, usted)",
+          "translation": "Können Sie wiederholen, bitte?",
+          "answer": "Puede",
+          "accepted": [
+            "puede",
+            "Puede"
+          ],
+          "feedback_why": "usted nimmt die dritte Person, puede.",
+          "contrast": "Vertraut wäre puedes (tú)."
+        },
+        {
+          "sentence": "¿Qué ___? (vertraut, tú, recomendar)",
+          "translation": "Was empfiehlst du?",
+          "answer": "recomiendas",
+          "accepted": [
+            "recomiendas"
+          ],
+          "feedback_why": "tú nimmt die zweite Person, recomiendas.",
+          "contrast": "Höflich wäre recomienda (usted)."
+        }
+      ],
+      "communicative_production": [
+        {
+          "prompt": "Frag dasselbe zweimal, einmal mit tú, einmal mit usted.",
+          "model": "¿Puedes ayudarme? ¿Puede ayudarme?",
+          "model_translation": "Kannst du mir helfen? Können Sie mir helfen?",
+          "hint": "tú, zweite Person; usted, dritte Person."
         }
       ],
       "related_phrases": [],

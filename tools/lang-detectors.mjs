@@ -65,6 +65,7 @@ const DETECTORS = {
     estilo_indirecto: /\b(dijo que|dice que|coment[oó] que|pregunt[oó] si|explic[oó] que|afirm[oó] que|me dijo que|nos dijo que|asegur[oó] que|respondi[oó] que)\b/i,
     gustar_structure: /\b(me|te|le|nos|les) (gusta|gustan|encanta|encantan|interesa|interesan|molesta|molestan|importa|importan|fascina|apetece)\b/i,
     hay_existence: /\bhay\b/i,
+    ir_a_futuro: /\b(voy|vas|va|vamos|van) a \w{2,}(ar|er|ir)\b/i,
   },
 
   // ── English target (e.g. es-en) ──────────────────────────────
