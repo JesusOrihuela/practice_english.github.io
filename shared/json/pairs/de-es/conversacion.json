@@ -95,6 +95,114 @@
           "audioSlug": "estoy_de_acuerdo_contigo"
         }
       ]
+    },
+    {
+      "id": "conversacion_yo_tambien_quiero_decir_algo",
+      "source": "Ich möchte auch etwas sagen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Yo también quiero decir algo.", "audioSlug": "yo_tambien_quiero_decir_algo" }
+      ]
+    },
+    {
+      "id": "conversacion_no_se_que_responder",
+      "source": "Ich weiß nicht, was ich antworten soll.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No sé qué responder.", "audioSlug": "no_se_que_responder" }
+      ]
+    },
+    {
+      "id": "conversacion_pero_eso_no_es_verdad",
+      "source": "Aber das ist nicht wahr.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pero eso no es verdad.", "audioSlug": "pero_eso_no_es_verdad" }
+      ]
+    },
+    {
+      "id": "conversacion_me_puedes_dar_tu_opinion",
+      "source": "Kannst du mir deine Meinung sagen?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me puedes dar tu opinión?", "audioSlug": "me_puedes_dar_tu_opinion" }
+      ]
+    },
+    {
+      "id": "conversacion_cada_persona_piensa_distinto",
+      "source": "Jede Person denkt anders.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada persona piensa distinto.", "audioSlug": "cada_persona_piensa_distinto" }
+      ]
+    },
+    {
+      "id": "conversacion_dime_la_verdad_por_favor",
+      "source": "Sag mir die Wahrheit, bitte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Dime la verdad, por favor.", "audioSlug": "dime_la_verdad_por_favor" }
+      ]
+    },
+    {
+      "id": "conversacion_siempre_digo_lo_que_siento",
+      "source": "Ich sage immer, was ich fühle.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Siempre digo lo que siento.", "audioSlug": "siempre_digo_lo_que_siento" }
+      ]
+    },
+    {
+      "id": "conversacion_hablamos_de_muchas_cosas",
+      "source": "Wir reden über viele Dinge.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hablamos de muchas cosas.", "audioSlug": "hablamos_de_muchas_cosas" }
+      ]
+    },
+    {
+      "id": "conversacion_si_eso_es_justo_lo_que_pienso",
+      "source": "Ja, genau das denke ich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Sí, eso es justo lo que pienso.", "audioSlug": "si_eso_es_justo_lo_que_pienso" }
+      ]
+    },
+    {
+      "id": "conversacion_no_quiero_hablar_de_eso_ahora",
+      "source": "Ich will jetzt nicht darüber reden.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No quiero hablar de eso ahora.", "audioSlug": "no_quiero_hablar_de_eso_ahora" }
+      ]
+    },
+    {
+      "id": "conversacion_cada_uno_tiene_su_opinion",
+      "source": "Jeder hat seine eigene Meinung.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada uno tiene su opinión.", "audioSlug": "cada_uno_tiene_su_opinion" }
+      ]
+    },
+    {
+      "id": "conversacion_escuchame_sin_interrumpir",
+      "source": "Hör mir zu, ohne zu unterbrechen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Escúchame sin interrumpir.", "audioSlug": "escuchame_sin_interrumpir" }
+      ]
     }
   ]
 }
