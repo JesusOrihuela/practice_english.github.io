@@ -189,6 +189,78 @@
       "target": [
         { "text": "La comida aquí siempre es fresca.", "audioSlug": "la_comida_aqui_siempre_es_fresca" }
       ]
+    },
+    {
+      "id": "restaurant_la_carne_esta_muy_tierna",
+      "source": "Das Fleisch ist sehr zart.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La carne está muy tierna.", "audioSlug": "la_carne_esta_muy_tierna" }
+      ]
+    },
+    {
+      "id": "restaurant_prefiere_pollo_o_pescado",
+      "source": "Möchten Sie Hähnchen oder Fisch?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Prefiere pollo o pescado?", "audioSlug": "prefiere_pollo_o_pescado" }
+      ]
+    },
+    {
+      "id": "restaurant_aqui_sirven_comida_tipica",
+      "source": "Hier servieren sie typisches Essen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Aquí sirven comida típica.", "audioSlug": "aqui_sirven_comida_tipica" }
+      ]
+    },
+    {
+      "id": "restaurant_el_queso_esta_delicioso",
+      "source": "Der Käse ist köstlich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El queso está delicioso.", "audioSlug": "el_queso_esta_delicioso" }
+      ]
+    },
+    {
+      "id": "restaurant_este_plato_es_muy_popular",
+      "source": "Dieses Gericht ist sehr beliebt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Este plato es muy popular.", "audioSlug": "este_plato_es_muy_popular" }
+      ]
+    },
+    {
+      "id": "restaurant_voy_a_tratar_de_comer_mas_sano",
+      "source": "Ich werde versuchen, gesünder zu essen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a tratar de comer más sano.", "audioSlug": "voy_a_tratar_de_comer_mas_sano" }
+      ]
+    },
+    {
+      "id": "restaurant_la_mayoria_pide_postre",
+      "source": "Die meisten Leute bestellen Nachtisch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La mayoría de la gente pide postre.", "audioSlug": "la_mayoria_de_la_gente_pide_postre" }
+      ]
+    },
+    {
+      "id": "restaurant_el_menu_tiene_muchas_opciones",
+      "source": "Die Speisekarte hat viele Optionen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El menú tiene muchas opciones.", "audioSlug": "el_menu_tiene_muchas_opciones" }
+      ]
     }
   ]
 }
