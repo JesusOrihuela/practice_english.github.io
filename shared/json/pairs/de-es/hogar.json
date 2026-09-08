@@ -119,6 +119,78 @@
           "audioSlug": "la_lampara_esta_sobre_la_mesa"
         }
       ]
+    },
+    {
+      "id": "hogar_vivo_en_el_tercer_piso",
+      "source": "Ich wohne im dritten Stock.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Vivo en el tercer piso.", "audioSlug": "vivo_en_el_tercer_piso" }
+      ]
+    },
+    {
+      "id": "hogar_tengo_que_ordenar_mi_cuarto",
+      "source": "Ich muss mein Zimmer aufräumen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que ordenar mi cuarto.", "audioSlug": "tengo_que_ordenar_mi_cuarto" }
+      ]
+    },
+    {
+      "id": "hogar_cierra_la_ventana_por_favor",
+      "source": "Mach das Fenster zu, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Cierra la ventana, por favor.", "audioSlug": "cierra_la_ventana_por_favor" }
+      ]
+    },
+    {
+      "id": "hogar_guardo_la_ropa_en_el_armario",
+      "source": "Ich räume die Kleidung in den Schrank.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Guardo la ropa en el armario.", "audioSlug": "guardo_la_ropa_en_el_armario" }
+      ]
+    },
+    {
+      "id": "hogar_la_cocina_siempre_esta_limpia",
+      "source": "Die Küche ist immer sauber.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La cocina siempre está limpia.", "audioSlug": "la_cocina_siempre_esta_limpia" }
+      ]
+    },
+    {
+      "id": "hogar_necesito_arreglar_la_puerta",
+      "source": "Ich muss die Tür reparieren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito arreglar la puerta.", "audioSlug": "necesito_arreglar_la_puerta" }
+      ]
+    },
+    {
+      "id": "hogar_el_techo_es_muy_alto",
+      "source": "Die Decke ist sehr hoch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El techo es muy alto.", "audioSlug": "el_techo_es_muy_alto" }
+      ]
+    },
+    {
+      "id": "hogar_cuelga_el_cuadro_en_la_pared",
+      "source": "Häng das Bild an die Wand.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cuelga el cuadro en la pared.", "audioSlug": "cuelga_el_cuadro_en_la_pared" }
+      ]
     }
   ]
 }
