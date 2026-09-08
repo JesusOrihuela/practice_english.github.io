@@ -122,6 +122,78 @@
           "audioSlug": "cuanto_cuesta_el_viaje"
         }
       ]
+    },
+    {
+      "id": "transportation_tengo_que_subir_al_tren",
+      "source": "Ich muss schnell in den Zug einsteigen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que subir al tren rápido.", "audioSlug": "tengo_que_subir_al_tren_rapido" }
+      ]
+    },
+    {
+      "id": "transportation_baja_en_la_proxima_parada",
+      "source": "Steig an der nächsten Haltestelle aus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Baja en la próxima parada.", "audioSlug": "baja_en_la_proxima_parada" }
+      ]
+    },
+    {
+      "id": "transportation_el_autobus_tarda_diez_minutos",
+      "source": "Der Bus braucht zehn Minuten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El autobús tarda diez minutos.", "audioSlug": "el_autobus_tarda_diez_minutos" }
+      ]
+    },
+    {
+      "id": "transportation_cual_es_la_mejor_forma_de_llegar",
+      "source": "Was ist der beste Weg, um dorthin zu kommen?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Cuál es la mejor forma de llegar?", "audioSlug": "cual_es_la_mejor_forma_de_llegar" }
+      ]
+    },
+    {
+      "id": "transportation_necesito_un_mapa_de_la_ciudad",
+      "source": "Ich brauche eine Stadtkarte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito un mapa de la ciudad.", "audioSlug": "necesito_un_mapa_de_la_ciudad" }
+      ]
+    },
+    {
+      "id": "transportation_el_viaje_en_tren_es_comodo",
+      "source": "Die Zugfahrt ist sehr bequem.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El viaje en tren es muy cómodo.", "audioSlug": "el_viaje_en_tren_es_muy_comodo" }
+      ]
+    },
+    {
+      "id": "transportation_los_domingos_hay_menos_gente",
+      "source": "Sonntags sind weniger Leute in der U-Bahn.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Los domingos hay menos gente en el metro.", "audioSlug": "los_domingos_hay_menos_gente_en_el_metro" }
+      ]
+    },
+    {
+      "id": "transportation_este_tren_para_en_todas_las_estaciones",
+      "source": "Hält dieser Zug an allen Bahnhöfen?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Este tren para en todas las estaciones?", "audioSlug": "este_tren_para_en_todas_las_estaciones" }
+      ]
     }
   ]
 }
