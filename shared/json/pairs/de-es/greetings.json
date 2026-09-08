@@ -140,11 +140,12 @@
     },
     {
       "id": "greetings_mi_vecino_es_muy_amable",
-      "source": "Mein Nachbar ist sehr freundlich.",
+      "source": "Mein Nachbar / Meine Nachbarin ist sehr freundlich.",
       "level": "A2",
       "grammar": null,
       "target": [
-        { "text": "Mi vecino es muy amable.", "audioSlug": "mi_vecino_es_muy_amable" }
+        { "text": "Mi vecino es muy amable.", "source": "Mein Nachbar ist sehr freundlich.", "labels": { "gender": "masculino" }, "audioSlug": "mi_vecino_es_muy_amable" },
+        { "text": "Mi vecina es muy amable.", "source": "Meine Nachbarin ist sehr freundlich.", "labels": { "gender": "femenino" }, "audioSlug": "mi_vecina_es_muy_amable" }
       ]
     },
     {
