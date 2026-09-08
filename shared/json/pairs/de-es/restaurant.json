@@ -117,6 +117,78 @@
           "audioSlug": "soy_alergico_a_los_frutos_secos"
         }
       ]
+    },
+    {
+      "id": "restaurant_que_van_a_comer_hoy",
+      "source": "Was möchten Sie heute essen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué van a comer hoy?", "audioSlug": "que_van_a_comer_hoy" }
+      ]
+    },
+    {
+      "id": "restaurant_quiero_probar_un_plato_tipico",
+      "source": "Ich möchte ein typisches Gericht probieren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero probar un plato típico.", "audioSlug": "quiero_probar_un_plato_tipico" }
+      ]
+    },
+    {
+      "id": "restaurant_me_puede_traer_la_carta",
+      "source": "Können Sie mir die Speisekarte bringen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me puede traer la carta?", "audioSlug": "me_puede_traer_la_carta" }
+      ]
+    },
+    {
+      "id": "restaurant_el_pescado_esta_muy_rico",
+      "source": "Der Fisch ist sehr lecker.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El pescado está muy rico.", "audioSlug": "el_pescado_esta_muy_rico" }
+      ]
+    },
+    {
+      "id": "restaurant_que_me_recomienda_para_beber",
+      "source": "Was empfehlen Sie zu trinken?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué me recomienda para beber?", "audioSlug": "que_me_recomienda_para_beber" }
+      ]
+    },
+    {
+      "id": "restaurant_esta_incluida_la_propina",
+      "source": "Ist das Trinkgeld inbegriffen?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Está incluida la propina?", "audioSlug": "esta_incluida_la_propina" }
+      ]
+    },
+    {
+      "id": "restaurant_tienen_platos_vegetarianos",
+      "source": "Haben Sie vegetarische Gerichte?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Tienen platos vegetarianos?", "audioSlug": "tienen_platos_vegetarianos" }
+      ]
+    },
+    {
+      "id": "restaurant_la_comida_aqui_es_fresca",
+      "source": "Das Essen hier ist immer frisch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La comida aquí siempre es fresca.", "audioSlug": "la_comida_aqui_siempre_es_fresca" }
+      ]
     }
   ]
 }
