@@ -205,6 +205,78 @@
       "target": [
         { "text": "Es una historia muy triste.", "audioSlug": "es_una_historia_muy_triste" }
       ]
+    },
+    {
+      "id": "descripciones_mi_color_favorito_es_el_azul",
+      "source": "Meine Lieblingsfarbe ist Blau.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Mi color favorito es el azul.", "audioSlug": "mi_color_favorito_es_el_azul" }
+      ]
+    },
+    {
+      "id": "descripciones_ese_actor_es_muy_famoso",
+      "source": "Dieser Schauspieler ist sehr berühmt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese actor es muy famoso.", "audioSlug": "ese_actor_es_muy_famoso" }
+      ]
+    },
+    {
+      "id": "descripciones_cada_persona_es_unica",
+      "source": "Jeder Mensch ist einzigartig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada persona es única.", "audioSlug": "cada_persona_es_unica" }
+      ]
+    },
+    {
+      "id": "descripciones_su_ropa_es_siempre_elegante",
+      "source": "Ihre Kleidung ist immer elegant.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Su ropa es siempre elegante.", "audioSlug": "su_ropa_es_siempre_elegante" }
+      ]
+    },
+    {
+      "id": "descripciones_el_novio_de_mi_hermana_es_divertido",
+      "source": "Der Freund meiner Schwester ist lustig.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El novio de mi hermana es divertido.", "audioSlug": "el_novio_de_mi_hermana_es_divertido" }
+      ]
+    },
+    {
+      "id": "descripciones_el_parque_es_un_lugar_publico",
+      "source": "Der Park ist ein öffentlicher Ort.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El parque es un lugar público.", "audioSlug": "el_parque_es_un_lugar_publico" }
+      ]
+    },
+    {
+      "id": "descripciones_aquel_edificio_es_muy_antiguo",
+      "source": "Jenes Gebäude ist sehr alt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Aquel edificio es muy antiguo.", "audioSlug": "aquel_edificio_es_muy_antiguo" }
+      ]
+    },
+    {
+      "id": "descripciones_el_clima_de_la_costa_es_agradable",
+      "source": "Das Klima an der Küste ist angenehm.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El clima de la costa es agradable.", "audioSlug": "el_clima_de_la_costa_es_agradable" }
+      ]
     }
   ]
 }
