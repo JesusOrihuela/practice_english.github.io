@@ -119,6 +119,78 @@
           "audioSlug": "mi_maleta_no_llego_donde_la_reclamo"
         }
       ]
+    },
+    {
+      "id": "airport_el_avion_aterriza_a_las_seis",
+      "source": "Das Flugzeug landet um sechs.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El avión aterriza a las seis.", "audioSlug": "el_avion_aterriza_a_las_seis" }
+      ]
+    },
+    {
+      "id": "airport_perdi_mi_vuelo_por_el_trafico",
+      "source": "Ich habe meinen Flug wegen des Verkehrs verpasst.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Perdí mi vuelo por el tráfico.", "audioSlug": "perdi_mi_vuelo_por_el_trafico" }
+      ]
+    },
+    {
+      "id": "airport_viajo_al_extranjero_cada_verano",
+      "source": "Ich reise jeden Sommer ins Ausland.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Viajo al extranjero cada verano.", "audioSlug": "viajo_al_extranjero_cada_verano" }
+      ]
+    },
+    {
+      "id": "airport_tengo_que_pasar_por_la_aduana",
+      "source": "Ich muss durch den Zoll gehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que pasar por la aduana.", "audioSlug": "tengo_que_pasar_por_la_aduana" }
+      ]
+    },
+    {
+      "id": "airport_el_vuelo_se_cancelo_por_el_mal_tiempo",
+      "source": "Der Flug wurde wegen des schlechten Wetters gestrichen.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "El vuelo se canceló por el mal tiempo.", "audioSlug": "el_vuelo_se_cancelo_por_el_mal_tiempo" }
+      ]
+    },
+    {
+      "id": "airport_donde_puedo_recoger_mi_equipaje",
+      "source": "Wo kann ich mein Gepäck abholen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Dónde puedo recoger mi equipaje?", "audioSlug": "donde_puedo_recoger_mi_equipaje" }
+      ]
+    },
+    {
+      "id": "airport_el_avion_despega_en_diez_minutos",
+      "source": "Das Flugzeug hebt in zehn Minuten ab.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El avión despega en diez minutos.", "audioSlug": "el_avion_despega_en_diez_minutos" }
+      ]
+    },
+    {
+      "id": "airport_viajo_con_mi_pareja_a_italia",
+      "source": "Ich reise mit meinem Partner nach Italien.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Viajo con mi pareja a Italia.", "audioSlug": "viajo_con_mi_pareja_a_italia" }
+      ]
     }
   ]
 }
