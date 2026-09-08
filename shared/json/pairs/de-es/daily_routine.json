@@ -95,6 +95,114 @@
           "audioSlug": "me_acuesto_a_las_once"
         }
       ]
+    },
+    {
+      "id": "daily_routine_pongo_la_mesa_antes_de_cenar",
+      "source": "Ich decke den Tisch vor dem Abendessen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pongo la mesa antes de cenar.", "audioSlug": "pongo_la_mesa_antes_de_cenar" }
+      ]
+    },
+    {
+      "id": "daily_routine_salgo_de_casa_a_las_ocho",
+      "source": "Ich gehe um acht aus dem Haus.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Salgo de casa a las ocho.", "audioSlug": "salgo_de_casa_a_las_ocho" }
+      ]
+    },
+    {
+      "id": "daily_routine_llego_al_trabajo_a_las_nueve",
+      "source": "Ich komme um neun bei der Arbeit an.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Llego al trabajo a las nueve.", "audioSlug": "llego_al_trabajo_a_las_nueve" }
+      ]
+    },
+    {
+      "id": "daily_routine_trabajo_desde_las_nueve",
+      "source": "Ich arbeite von neun bis fünf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Trabajo desde las nueve hasta las cinco.", "audioSlug": "trabajo_desde_las_nueve_hasta_las_cinco" }
+      ]
+    },
+    {
+      "id": "daily_routine_dejo_las_llaves_en_la_mesa",
+      "source": "Ich lasse die Schlüssel auf dem Tisch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Dejo las llaves en la mesa.", "audioSlug": "dejo_las_llaves_en_la_mesa" }
+      ]
+    },
+    {
+      "id": "daily_routine_empiezo_el_dia_con_un_cafe",
+      "source": "Ich beginne den Tag mit einem Kaffee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Empiezo el día con un café.", "audioSlug": "empiezo_el_dia_con_un_cafe" }
+      ]
+    },
+    {
+      "id": "daily_routine_solo_descanso_los_domingos",
+      "source": "Ich ruhe mich nur sonntags aus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Solo descanso los domingos.", "audioSlug": "solo_descanso_los_domingos" }
+      ]
+    },
+    {
+      "id": "daily_routine_conozco_a_mucha_gente",
+      "source": "Ich kenne viele Leute bei der Arbeit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Conozco a mucha gente en el trabajo.", "audioSlug": "conozco_a_mucha_gente_en_el_trabajo" }
+      ]
+    },
+    {
+      "id": "daily_routine_camino_entre_el_parque_y_mi_casa",
+      "source": "Ich gehe zwischen dem Park und meinem Haus.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Camino entre el parque y mi casa.", "audioSlug": "camino_entre_el_parque_y_mi_casa" }
+      ]
+    },
+    {
+      "id": "daily_routine_no_salgo_porque_llueve",
+      "source": "Ich gehe nicht raus, weil es regnet.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No salgo porque llueve.", "audioSlug": "no_salgo_porque_llueve" }
+      ]
+    },
+    {
+      "id": "daily_routine_tomo_cafe_o_te",
+      "source": "Ich trinke morgens Kaffee oder Tee.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Tomo café o té por la mañana.", "audioSlug": "tomo_cafe_o_te_por_la_manana" }
+      ]
+    },
+    {
+      "id": "daily_routine_termino_de_trabajar_a_las_seis",
+      "source": "Ich höre um sechs auf zu arbeiten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Termino de trabajar a las seis.", "audioSlug": "termino_de_trabajar_a_las_seis" }
+      ]
     }
   ]
 }
