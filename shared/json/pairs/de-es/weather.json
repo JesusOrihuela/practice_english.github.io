@@ -119,6 +119,78 @@
           "audioSlug": "la_temperatura_bajo_mucho_anoche"
         }
       ]
+    },
+    {
+      "id": "weather_hay_muchas_nubes_en_el_cielo",
+      "source": "Es sind viele Wolken am Himmel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay muchas nubes en el cielo.", "audioSlug": "hay_muchas_nubes_en_el_cielo" }
+      ]
+    },
+    {
+      "id": "weather_se_acerca_una_tormenta_fuerte",
+      "source": "Ein starker Sturm zieht auf.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Se acerca una tormenta fuerte.", "audioSlug": "se_acerca_una_tormenta_fuerte" }
+      ]
+    },
+    {
+      "id": "weather_el_clima_esta_muy_humedo",
+      "source": "Das Wetter ist heute sehr feucht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El clima está muy húmedo hoy.", "audioSlug": "el_clima_esta_muy_humedo_hoy" }
+      ]
+    },
+    {
+      "id": "weather_hoy_es_un_dia_soleado",
+      "source": "Heute ist ein sonniger Tag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hoy es un día soleado.", "audioSlug": "hoy_es_un_dia_soleado" }
+      ]
+    },
+    {
+      "id": "weather_el_viento_sopla_muy_fuerte",
+      "source": "Der Wind weht sehr stark.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El viento sopla muy fuerte.", "audioSlug": "el_viento_sopla_muy_fuerte" }
+      ]
+    },
+    {
+      "id": "weather_en_el_desierto_casi_nunca_llueve",
+      "source": "In der Wüste regnet es fast nie.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "En el desierto casi nunca llueve.", "audioSlug": "en_el_desierto_casi_nunca_llueve" }
+      ]
+    },
+    {
+      "id": "weather_la_primavera_es_mi_estacion_favorita",
+      "source": "Der Frühling ist meine Lieblingsjahreszeit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La primavera es mi estación favorita.", "audioSlug": "la_primavera_es_mi_estacion_favorita" }
+      ]
+    },
+    {
+      "id": "weather_hace_treinta_grados_a_la_sombra",
+      "source": "Es sind dreißig Grad im Schatten.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hace treinta grados a la sombra.", "audioSlug": "hace_treinta_grados_a_la_sombra" }
+      ]
     }
   ]
 }
