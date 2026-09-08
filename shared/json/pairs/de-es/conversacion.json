@@ -491,6 +491,78 @@
       "target": [
         { "text": "No quiero quejarme demasiado.", "audioSlug": "no_quiero_quejarme_demasiado" }
       ]
+    },
+    {
+      "id": "conversacion_no_te_preocupes_por_eso",
+      "source": "Mach dir darüber keine Sorgen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No te preocupes por eso.", "audioSlug": "no_te_preocupes_por_eso" }
+      ]
+    },
+    {
+      "id": "conversacion_es_dificil_elegir_entre_los_dos",
+      "source": "Es ist schwer, zwischen beiden zu wählen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es difícil elegir entre los dos.", "audioSlug": "es_dificil_elegir_entre_los_dos" }
+      ]
+    },
+    {
+      "id": "conversacion_tengo_buenas_noticias_para_ti",
+      "source": "Ich habe gute Nachrichten für dich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo buenas noticias para ti.", "audioSlug": "tengo_buenas_noticias_para_ti" }
+      ]
+    },
+    {
+      "id": "conversacion_los_demas_no_estan_de_acuerdo",
+      "source": "Die anderen sind nicht einverstanden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Los demás no están de acuerdo.", "audioSlug": "los_demas_no_estan_de_acuerdo" }
+      ]
+    },
+    {
+      "id": "conversacion_quiero_sugerir_una_idea",
+      "source": "Ich möchte eine Idee vorschlagen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero sugerir una idea.", "audioSlug": "quiero_sugerir_una_idea" }
+      ]
+    },
+    {
+      "id": "conversacion_dejame_aclarar_un_punto",
+      "source": "Lass mich einen Punkt klarstellen.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Déjame aclarar un punto.", "audioSlug": "dejame_aclarar_un_punto" }
+      ]
+    },
+    {
+      "id": "conversacion_prefiero_no_comentar_nada",
+      "source": "Ich ziehe es vor, nichts zu kommentieren.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero no comentar nada.", "audioSlug": "prefiero_no_comentar_nada" }
+      ]
+    },
+    {
+      "id": "conversacion_eso_me_da_igual",
+      "source": "Das ist mir egal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Eso me da igual.", "audioSlug": "eso_me_da_igual" }
+      ]
     }
   ]
 }
