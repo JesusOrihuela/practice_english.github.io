@@ -119,6 +119,78 @@
           "audioSlug": "de_nada"
         }
       ]
+    },
+    {
+      "id": "greetings_te_invito_a_mi_casa_el_sabado",
+      "source": "Ich lade dich am Samstag zu mir ein.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Te invito a mi casa el sábado.", "audioSlug": "te_invito_a_mi_casa_el_sabado" }
+      ]
+    },
+    {
+      "id": "greetings_ahi_viene_el_autobus",
+      "source": "Da kommt der Bus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ahí viene el autobús.", "audioSlug": "ahi_viene_el_autobus" }
+      ]
+    },
+    {
+      "id": "greetings_mi_vecino_es_muy_amable",
+      "source": "Mein Nachbar ist sehr freundlich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi vecino es muy amable.", "audioSlug": "mi_vecino_es_muy_amable" }
+      ]
+    },
+    {
+      "id": "greetings_bienvenidos_a_nuestra_casa",
+      "source": "Willkommen in unserem Haus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Bienvenidos a nuestra casa.", "audioSlug": "bienvenidos_a_nuestra_casa" }
+      ]
+    },
+    {
+      "id": "greetings_es_un_placer_conocerte",
+      "source": "Es ist mir eine Freude, dich kennenzulernen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es un placer conocerte.", "audioSlug": "es_un_placer_conocerte" }
+      ]
+    },
+    {
+      "id": "greetings_saludame_a_tu_familia",
+      "source": "Grüß deine Familie von mir.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Salúdame a tu familia.", "audioSlug": "saludame_a_tu_familia" }
+      ]
+    },
+    {
+      "id": "greetings_te_deseo_un_feliz_cumpleanos",
+      "source": "Ich wünsche dir alles Gute zum Geburtstag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Te deseo un feliz cumpleaños.", "audioSlug": "te_deseo_un_feliz_cumpleanos" }
+      ]
+    },
+    {
+      "id": "greetings_nos_despedimos_con_un_abrazo",
+      "source": "Wir verabschieden uns mit einer Umarmung.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Nos despedimos con un abrazo.", "audioSlug": "nos_despedimos_con_un_abrazo" }
+      ]
     }
   ]
 }
