@@ -419,6 +419,78 @@
       "target": [
         { "text": "No quiero discutir por eso.", "audioSlug": "no_quiero_discutir_por_eso" }
       ]
+    },
+    {
+      "id": "conversacion_no_tengo_nada_en_contra",
+      "source": "Ich habe nichts dagegen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No tengo nada en contra de eso.", "audioSlug": "no_tengo_nada_en_contra_de_eso" }
+      ]
+    },
+    {
+      "id": "conversacion_te_lo_prometo_de_verdad",
+      "source": "Ich verspreche es dir wirklich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Te lo prometo de verdad.", "audioSlug": "te_lo_prometo_de_verdad" }
+      ]
+    },
+    {
+      "id": "conversacion_nunca_debes_mentir_a_un_amigo",
+      "source": "Du solltest einen Freund nie anlügen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Nunca debes mentir a un amigo.", "audioSlug": "nunca_debes_mentir_a_un_amigo" }
+      ]
+    },
+    {
+      "id": "conversacion_avisame_cuando_llegues",
+      "source": "Sag mir Bescheid, wenn du ankommst.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Avísame cuando llegues.", "audioSlug": "avisame_cuando_llegues" }
+      ]
+    },
+    {
+      "id": "conversacion_te_aconsejo_que_descanses",
+      "source": "Ich rate dir, dich auszuruhen.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Te aconsejo que descanses.", "audioSlug": "te_aconsejo_que_descanses" }
+      ]
+    },
+    {
+      "id": "conversacion_este_regalo_es_para_ti",
+      "source": "Dieses Geschenk ist für dich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Este regalo es para ti.", "audioSlug": "este_regalo_es_para_ti" }
+      ]
+    },
+    {
+      "id": "conversacion_alguno_de_ustedes_debe_saberlo",
+      "source": "Einer von euch muss es wissen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Alguno de ustedes debe saberlo.", "audioSlug": "alguno_de_ustedes_debe_saberlo" }
+      ]
+    },
+    {
+      "id": "conversacion_no_quiero_quejarme_demasiado",
+      "source": "Ich will mich nicht zu sehr beschweren.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "No quiero quejarme demasiado.", "audioSlug": "no_quiero_quejarme_demasiado" }
+      ]
     }
   ]
 }
