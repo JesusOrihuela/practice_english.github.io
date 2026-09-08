@@ -263,6 +263,78 @@
       "target": [
         { "text": "A veces juego videojuegos por la noche.", "audioSlug": "a_veces_juego_videojuegos_por_la_noche" }
       ]
+    },
+    {
+      "id": "tiempo_libre_me_gusta_cantar_en_la_ducha",
+      "source": "Ich singe gern unter der Dusche.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta cantar en la ducha.", "audioSlug": "me_gusta_cantar_en_la_ducha" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_vamos_al_teatro_esta_noche",
+      "source": "Wir gehen heute Abend ins Theater.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Vamos al teatro esta noche.", "audioSlug": "vamos_al_teatro_esta_noche" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_estoy_leyendo_el_ultimo_capitulo",
+      "source": "Ich lese das letzte Kapitel.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Estoy leyendo el último capítulo.", "audioSlug": "estoy_leyendo_el_ultimo_capitulo" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_el_director_de_la_pelicula_es_famoso",
+      "source": "Der Regisseur des Films ist berühmt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El director de la película es famoso.", "audioSlug": "el_director_de_la_pelicula_es_famoso" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_dedico_a_la_fotografia",
+      "source": "Sonntags widme ich mich der Fotografie.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Me dedico a la fotografía los domingos.", "audioSlug": "me_dedico_a_la_fotografia_los_domingos" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_salimos_a_andar_por_el_parque",
+      "source": "Wir gehen im Park spazieren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Salimos a andar por el parque.", "audioSlug": "salimos_a_andar_por_el_parque" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_toco_en_una_banda_con_amigos",
+      "source": "Ich spiele in einer Band mit Freunden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Toco en una banda con amigos.", "audioSlug": "toco_en_una_banda_con_amigos" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_el_actor_principal_es_talentoso",
+      "source": "Der Hauptdarsteller ist sehr talentiert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El actor principal es muy talentoso.", "audioSlug": "el_actor_principal_es_muy_talentoso" }
+      ]
     }
   ]
 }
