@@ -119,6 +119,78 @@
           "audioSlug": "el_equipo_juega_muy_bien"
         }
       ]
+    },
+    {
+      "id": "deportes_el_deporte_es_bueno_para_la_salud",
+      "source": "Sport ist gut für die Gesundheit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El deporte es bueno para la salud.", "audioSlug": "el_deporte_es_bueno_para_la_salud" }
+      ]
+    },
+    {
+      "id": "deportes_este_deporte_es_muy_competitivo",
+      "source": "Dieser Sport ist sehr wettbewerbsintensiv.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este deporte es muy competitivo.", "audioSlug": "este_deporte_es_muy_competitivo" }
+      ]
+    },
+    {
+      "id": "deportes_hago_actividad_fisica_cada_dia",
+      "source": "Ich mache jeden Tag körperliche Aktivität.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hago actividad física cada día.", "audioSlug": "hago_actividad_fisica_cada_dia" }
+      ]
+    },
+    {
+      "id": "deportes_corro_demasiado_rapido_a_veces",
+      "source": "Manchmal laufe ich zu schnell.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Corro demasiado rápido a veces.", "audioSlug": "corro_demasiado_rapido_a_veces" }
+      ]
+    },
+    {
+      "id": "deportes_escucho_musica_mientras_entreno",
+      "source": "Ich höre Musik, während ich trainiere.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Escucho música mientras entreno.", "audioSlug": "escucho_musica_mientras_entreno" }
+      ]
+    },
+    {
+      "id": "deportes_ningun_equipo_gano_el_torneo",
+      "source": "Keine Mannschaft hat das Turnier gewonnen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ningún equipo ganó el torneo.", "audioSlug": "ningun_equipo_gano_el_torneo" }
+      ]
+    },
+    {
+      "id": "deportes_este_juego_requiere_practica",
+      "source": "Dieses Spiel erfordert viel Übung.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este juego requiere mucha práctica.", "audioSlug": "este_juego_requiere_mucha_practica" }
+      ]
+    },
+    {
+      "id": "deportes_el_entrenador_cambio_la_estrategia",
+      "source": "Der Trainer hat die Strategie geändert.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "El entrenador cambió la estrategia.", "audioSlug": "el_entrenador_cambio_la_estrategia" }
+      ]
     }
   ]
 }
