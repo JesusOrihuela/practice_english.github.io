@@ -347,6 +347,78 @@
       "target": [
         { "text": "Necesito más información sobre eso.", "audioSlug": "necesito_mas_informacion_sobre_eso" }
       ]
+    },
+    {
+      "id": "conversacion_no_dije_tal_cosa",
+      "source": "Das habe ich nicht gesagt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No dije tal cosa.", "audioSlug": "no_dije_tal_cosa" }
+      ]
+    },
+    {
+      "id": "conversacion_es_necesario_hablar_con_claridad",
+      "source": "Es ist nötig, klar zu sprechen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es necesario hablar con claridad.", "audioSlug": "es_necesario_hablar_con_claridad" }
+      ]
+    },
+    {
+      "id": "conversacion_me_resulta_dificil_expresarme",
+      "source": "Es fällt mir schwer, mich auszudrücken.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Me resulta difícil expresarme.", "audioSlug": "me_resulta_dificil_expresarme" }
+      ]
+    },
+    {
+      "id": "conversacion_eso_depende_de_muchos_factores",
+      "source": "Das hängt von vielen Faktoren ab.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Eso depende de muchos factores.", "audioSlug": "eso_depende_de_muchos_factores" }
+      ]
+    },
+    {
+      "id": "conversacion_vale_la_pena_intentarlo",
+      "source": "Es lohnt sich, es zu versuchen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Vale la pena intentarlo.", "audioSlug": "vale_la_pena_intentarlo" }
+      ]
+    },
+    {
+      "id": "conversacion_insisto_en_que_tengo_razon",
+      "source": "Ich bestehe darauf, dass ich recht habe.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Insisto en que tengo razón.", "audioSlug": "insisto_en_que_tengo_razon" }
+      ]
+    },
+    {
+      "id": "conversacion_cada_quien_tiene_derecho_a_opinar",
+      "source": "Jeder hat das Recht, seine Meinung zu sagen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada quien tiene derecho a opinar.", "audioSlug": "cada_quien_tiene_derecho_a_opinar" }
+      ]
+    },
+    {
+      "id": "conversacion_no_quiero_discutir_por_eso",
+      "source": "Ich will deswegen nicht streiten.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No quiero discutir por eso.", "audioSlug": "no_quiero_discutir_por_eso" }
+      ]
     }
   ]
 }
