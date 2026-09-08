@@ -119,6 +119,78 @@
           "audioSlug": "levanta_la_mano_si_tienes_una_pregunta"
         }
       ]
+    },
+    {
+      "id": "cuerpo_tengo_las_unas_largas",
+      "source": "Ich habe lange Fingernägel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo las uñas largas.", "audioSlug": "tengo_las_unas_largas" }
+      ]
+    },
+    {
+      "id": "cuerpo_tengo_los_pies_frios",
+      "source": "Ich habe kalte Füße.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo los pies fríos.", "audioSlug": "tengo_los_pies_frios" }
+      ]
+    },
+    {
+      "id": "cuerpo_levanta_el_brazo_derecho",
+      "source": "Heb den rechten Arm.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Levanta el brazo derecho.", "audioSlug": "levanta_el_brazo_derecho" }
+      ]
+    },
+    {
+      "id": "cuerpo_tiene_la_espalda_ancha",
+      "source": "Er hat einen breiten Rücken.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene la espalda ancha.", "audioSlug": "tiene_la_espalda_ancha" }
+      ]
+    },
+    {
+      "id": "cuerpo_tiene_los_dientes_muy_blancos",
+      "source": "Er hat sehr weiße Zähne.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene los dientes muy blancos.", "audioSlug": "tiene_los_dientes_muy_blancos" }
+      ]
+    },
+    {
+      "id": "cuerpo_tiene_el_cabello_rizado",
+      "source": "Sie hat lockiges Haar.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene el cabello rizado.", "audioSlug": "tiene_el_cabello_rizado" }
+      ]
+    },
+    {
+      "id": "cuerpo_el_corazon_bombea_sangre",
+      "source": "Das Herz pumpt Blut.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El corazón bombea sangre.", "audioSlug": "el_corazon_bombea_sangre" }
+      ]
+    },
+    {
+      "id": "cuerpo_tiene_una_sonrisa_bonita",
+      "source": "Sie hat ein sehr schönes Lächeln.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene una sonrisa muy bonita.", "audioSlug": "tiene_una_sonrisa_muy_bonita" }
+      ]
     }
   ]
 }
