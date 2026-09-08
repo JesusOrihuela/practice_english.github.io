@@ -115,6 +115,96 @@
           "audioSlug": "como_eres"
         }
       ]
+    },
+    {
+      "id": "descripciones_es_un_hombre_amable",
+      "source": "Er ist ein sehr netter Mann.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Es un hombre muy amable.", "audioSlug": "es_un_hombre_muy_amable" }
+      ]
+    },
+    {
+      "id": "descripciones_es_una_mujer_fuerte",
+      "source": "Sie ist eine sehr starke Frau.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Es una mujer muy fuerte.", "audioSlug": "es_una_mujer_muy_fuerte" }
+      ]
+    },
+    {
+      "id": "descripciones_mi_abuelo_es_muy_viejo",
+      "source": "Mein Großvater ist schon sehr alt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi abuelo ya es muy viejo.", "audioSlug": "mi_abuelo_ya_es_muy_viejo" }
+      ]
+    },
+    {
+      "id": "descripciones_ese_chico_es_muy_joven",
+      "source": "Der Junge ist noch sehr jung.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese chico es todavía muy joven.", "audioSlug": "ese_chico_es_todavia_muy_joven" }
+      ]
+    },
+    {
+      "id": "descripciones_el_examen_fue_malo",
+      "source": "Die Prüfung war ziemlich schlecht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El examen fue bastante malo.", "audioSlug": "el_examen_fue_bastante_malo" }
+      ]
+    },
+    {
+      "id": "descripciones_este_pueblo_es_pobre",
+      "source": "Dieses Dorf ist sehr arm.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Este pueblo es muy pobre.", "audioSlug": "este_pueblo_es_muy_pobre" }
+      ]
+    },
+    {
+      "id": "descripciones_su_familia_es_rica",
+      "source": "Seine Familie ist ziemlich reich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Su familia es bastante rica.", "audioSlug": "su_familia_es_bastante_rica" }
+      ]
+    },
+    {
+      "id": "descripciones_mi_hermano_es_mas_bajo",
+      "source": "Mein Bruder ist kleiner als ich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi hermano es más bajo que yo.", "audioSlug": "mi_hermano_es_mas_bajo_que_yo" }
+      ]
+    },
+    {
+      "id": "descripciones_es_una_persona_tranquila",
+      "source": "Sie ist ein sehr ruhiger Mensch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ella es una persona muy tranquila.", "audioSlug": "ella_es_una_persona_muy_tranquila" }
+      ]
+    },
+    {
+      "id": "descripciones_es_una_historia_triste",
+      "source": "Es ist eine sehr traurige Geschichte.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una historia muy triste.", "audioSlug": "es_una_historia_muy_triste" }
+      ]
     }
   ]
 }
