@@ -119,6 +119,78 @@
           "audioSlug": "se_me_quemo_el_arroz"
         }
       ]
+    },
+    {
+      "id": "kitchen_sirvo_la_cena_a_las_ocho",
+      "source": "Ich serviere das Abendessen um acht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Sirvo la cena a las ocho.", "audioSlug": "sirvo_la_cena_a_las_ocho" }
+      ]
+    },
+    {
+      "id": "kitchen_necesito_una_receta_facil",
+      "source": "Ich brauche ein einfaches Rezept.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito una receta fácil.", "audioSlug": "necesito_una_receta_facil" }
+      ]
+    },
+    {
+      "id": "kitchen_esta_salsa_tiene_mucho_sabor",
+      "source": "Diese Soße hat viel Geschmack.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Esta salsa tiene mucho sabor.", "audioSlug": "esta_salsa_tiene_mucho_sabor" }
+      ]
+    },
+    {
+      "id": "kitchen_el_postre_esta_muy_dulce",
+      "source": "Der Nachtisch ist sehr süß.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El postre está muy dulce.", "audioSlug": "el_postre_esta_muy_dulce" }
+      ]
+    },
+    {
+      "id": "kitchen_voy_a_freir_unos_huevos",
+      "source": "Ich werde ein paar Eier braten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a freír unos huevos.", "audioSlug": "voy_a_freir_unos_huevos" }
+      ]
+    },
+    {
+      "id": "kitchen_mezcla_la_harina_con_el_agua",
+      "source": "Misch das Mehl mit dem Wasser.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Mezcla la harina con el agua.", "audioSlug": "mezcla_la_harina_con_el_agua" }
+      ]
+    },
+    {
+      "id": "kitchen_la_comida_esta_demasiado_salada",
+      "source": "Das Essen ist zu salzig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La comida está demasiado salada.", "audioSlug": "la_comida_esta_demasiado_salada" }
+      ]
+    },
+    {
+      "id": "kitchen_anade_sal_y_pimienta",
+      "source": "Füge etwas Salz und Pfeffer hinzu.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Añade un poco de sal y pimienta.", "audioSlug": "anade_un_poco_de_sal_y_pimienta" }
+      ]
     }
   ]
 }
