@@ -125,6 +125,78 @@
           "audioSlug": "me_podria_decir_donde_esta_la_panaderia"
         }
       ]
+    },
+    {
+      "id": "supermarket_aqui_venden_fruta_fresca",
+      "source": "Hier verkaufen sie frisches Obst.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Aquí venden fruta fresca.", "audioSlug": "aqui_venden_fruta_fresca" }
+      ]
+    },
+    {
+      "id": "supermarket_hay_una_oferta_en_el_arroz",
+      "source": "Es gibt ein Angebot beim Reis.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay una oferta en el arroz.", "audioSlug": "hay_una_oferta_en_el_arroz" }
+      ]
+    },
+    {
+      "id": "supermarket_necesito_hacer_una_lista",
+      "source": "Ich muss eine Einkaufsliste machen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito hacer una lista de compras.", "audioSlug": "necesito_hacer_una_lista_de_compras" }
+      ]
+    },
+    {
+      "id": "supermarket_cuanto_pesa_esta_bolsa",
+      "source": "Wie viel wiegt diese Tüte?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Cuánto pesa esta bolsa?", "audioSlug": "cuanto_pesa_esta_bolsa" }
+      ]
+    },
+    {
+      "id": "supermarket_prefiero_esta_marca_de_cafe",
+      "source": "Ich bevorzuge diese Kaffeemarke.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero esta marca de café.", "audioSlug": "prefiero_esta_marca_de_cafe" }
+      ]
+    },
+    {
+      "id": "supermarket_hay_mucha_fila_en_la_caja",
+      "source": "An der Kasse ist eine lange Schlange.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay mucha fila en la caja.", "audioSlug": "hay_mucha_fila_en_la_caja" }
+      ]
+    },
+    {
+      "id": "supermarket_los_productos_frescos_estan_al_fondo",
+      "source": "Die frischen Produkte sind hinten.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Los productos frescos están al fondo.", "audioSlug": "los_productos_frescos_estan_al_fondo" }
+      ]
+    },
+    {
+      "id": "supermarket_este_supermercado_es_economico",
+      "source": "Dieser Supermarkt ist sehr günstig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este supermercado es muy económico.", "audioSlug": "este_supermercado_es_muy_economico" }
+      ]
     }
   ]
 }

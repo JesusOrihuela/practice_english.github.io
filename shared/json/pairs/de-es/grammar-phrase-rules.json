@@ -397,6 +397,10 @@
   "supermarket_cuanto_cuesta_el_kilo_de_manzanas": [
     "question_words"
   ],
+  "supermarket_cuanto_pesa_esta_bolsa": [
+    "estar_location_states",
+    "question_words"
+  ],
   "supermarket_donde_esta_la_seccion_de_limpieza": [
     "question_words"
   ],
@@ -404,11 +408,21 @@
     "estar_location_states",
     "question_words"
   ],
+  "supermarket_los_productos_frescos_estan_al_fondo": [
+    "estar_location_states"
+  ],
+  "supermarket_necesito_hacer_una_lista": [
+    "present_ar_verbs"
+  ],
   "supermarket_necesito_leche_pan_huevos": [
     "present_ar_verbs"
   ],
   "supermarket_necesito_una_bolsa_por_favor": [
     "present_ar_verbs"
+  ],
+  "supermarket_prefiero_esta_marca_de_cafe": [
+    "estar_location_states",
+    "present_er_ir_verbs"
   ],
   "survival_como_se_escribe_tu_nombre": [
     "present_er_ir_verbs",
