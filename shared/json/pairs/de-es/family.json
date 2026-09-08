@@ -95,6 +95,78 @@
           "audioSlug": "el_es_mi_mejor_amigo"
         }
       ]
+    },
+    {
+      "id": "family_tengo_dos_ninos_pequenos",
+      "source": "Ich habe zwei kleine Kinder.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo dos niños pequeños.", "audioSlug": "tengo_dos_ninos_pequenos" }
+      ]
+    },
+    {
+      "id": "family_somos_un_grupo_unido",
+      "source": "Wir sind eine sehr enge Gruppe.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Somos un grupo muy unido.", "audioSlug": "somos_un_grupo_muy_unido" }
+      ]
+    },
+    {
+      "id": "family_ellos_son_mis_primos",
+      "source": "Sie sind meine Cousins.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Ellos son mis primos.", "audioSlug": "ellos_son_mis_primos" }
+      ]
+    },
+    {
+      "id": "family_paso_gran_parte_del_dia_con_mi_familia",
+      "source": "Ich verbringe einen großen Teil des Tages mit meiner Familie.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Paso gran parte del día con mi familia.", "audioSlug": "paso_gran_parte_del_dia_con_mi_familia" }
+      ]
+    },
+    {
+      "id": "family_mi_tio_vive_lejos",
+      "source": "Mein Onkel wohnt weit weg von hier.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi tío vive lejos de aquí.", "audioSlug": "mi_tio_vive_lejos_de_aqui" }
+      ]
+    },
+    {
+      "id": "family_mi_hija_es_la_menor",
+      "source": "Meine Tochter ist die Jüngste in der Familie.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi hija es la menor de la familia.", "audioSlug": "mi_hija_es_la_menor_de_la_familia" }
+      ]
+    },
+    {
+      "id": "family_nos_reunimos_los_domingos",
+      "source": "Am Sonntag kommt die ganze Familie zusammen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Nos reunimos toda la familia los domingos.", "audioSlug": "nos_reunimos_toda_la_familia_los_domingos" }
+      ]
+    },
+    {
+      "id": "family_mi_esposa_trabaja_en_un_hospital",
+      "source": "Meine Frau arbeitet in einem Krankenhaus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi esposa trabaja en un hospital.", "audioSlug": "mi_esposa_trabaja_en_un_hospital" }
+      ]
     }
   ]
 }
