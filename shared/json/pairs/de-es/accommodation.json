@@ -119,6 +119,78 @@
           "audioSlug": "la_habitacion_esta_sucia_pueden_limpiarla"
         }
       ]
+    },
+    {
+      "id": "accommodation_la_recepcion_esta_en_la_planta_baja",
+      "source": "Die Rezeption ist im Erdgeschoss.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La recepción está en la planta baja.", "audioSlug": "la_recepcion_esta_en_la_planta_baja" }
+      ]
+    },
+    {
+      "id": "accommodation_necesito_otra_toalla",
+      "source": "Ich brauche noch ein Handtuch, bitte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito otra toalla, por favor.", "audioSlug": "necesito_otra_toalla_por_favor" }
+      ]
+    },
+    {
+      "id": "accommodation_la_cama_es_muy_comoda",
+      "source": "Das Bett ist sehr bequem.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La cama es muy cómoda.", "audioSlug": "la_cama_es_muy_comoda" }
+      ]
+    },
+    {
+      "id": "accommodation_me_da_la_llave_de_la_habitacion",
+      "source": "Geben Sie mir den Zimmerschlüssel?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me da la llave de la habitación?", "audioSlug": "me_da_la_llave_de_la_habitacion" }
+      ]
+    },
+    {
+      "id": "accommodation_el_hotel_ofrece_servicio_de_limpieza",
+      "source": "Das Hotel bietet Reinigungsservice.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El hotel ofrece servicio de limpieza.", "audioSlug": "el_hotel_ofrece_servicio_de_limpieza" }
+      ]
+    },
+    {
+      "id": "accommodation_los_huespedes_pueden_usar_la_piscina",
+      "source": "Die Gäste dürfen den Pool benutzen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Los huéspedes pueden usar la piscina.", "audioSlug": "los_huespedes_pueden_usar_la_piscina" }
+      ]
+    },
+    {
+      "id": "accommodation_el_precio_incluye_el_desayuno",
+      "source": "Der Preis schließt das Frühstück ein.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El precio incluye el desayuno.", "audioSlug": "el_precio_incluye_el_desayuno" }
+      ]
+    },
+    {
+      "id": "accommodation_a_que_hora_abre_el_restaurante",
+      "source": "Um wie viel Uhr öffnet das Hotelrestaurant?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿A qué hora abre el restaurante del hotel?", "audioSlug": "a_que_hora_abre_el_restaurante_del_hotel" }
+      ]
     }
   ]
 }
