@@ -275,6 +275,78 @@
       "target": [
         { "text": "Te entiendo aunque no estoy de acuerdo.", "audioSlug": "te_entiendo_aunque_no_estoy_de_acuerdo" }
       ]
+    },
+    {
+      "id": "conversacion_no_recuerdo_su_nombre",
+      "source": "Ich erinnere mich nicht an seinen Namen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No recuerdo su nombre.", "audioSlug": "no_recuerdo_su_nombre" }
+      ]
+    },
+    {
+      "id": "conversacion_cada_quien_opina_segun_su_experiencia",
+      "source": "Jeder urteilt nach seiner Erfahrung.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada quien opina según su experiencia.", "audioSlug": "cada_quien_opina_segun_su_experiencia" }
+      ]
+    },
+    {
+      "id": "conversacion_nosotros_llegamos_a_un_acuerdo",
+      "source": "Wir haben eine Einigung erreicht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Nosotros llegamos a un acuerdo.", "audioSlug": "nosotros_llegamos_a_un_acuerdo" }
+      ]
+    },
+    {
+      "id": "conversacion_la_politica_no_me_interesa",
+      "source": "Politik interessiert mich überhaupt nicht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La política no me interesa nada.", "audioSlug": "la_politica_no_me_interesa_nada" }
+      ]
+    },
+    {
+      "id": "conversacion_te_quiero_presentar_a_un_amigo",
+      "source": "Ich möchte dir einen Freund vorstellen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Te quiero presentar a un amigo.", "audioSlug": "te_quiero_presentar_a_un_amigo" }
+      ]
+    },
+    {
+      "id": "conversacion_pues_eso_no_tiene_sentido",
+      "source": "Na ja, das ergibt keinen Sinn.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Pues eso no tiene sentido.", "audioSlug": "pues_eso_no_tiene_sentido" }
+      ]
+    },
+    {
+      "id": "conversacion_aquella_idea_fue_muy_buena",
+      "source": "Jene Idee war sehr gut.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Aquella idea fue muy buena.", "audioSlug": "aquella_idea_fue_muy_buena" }
+      ]
+    },
+    {
+      "id": "conversacion_necesito_mas_informacion",
+      "source": "Ich brauche mehr Informationen darüber.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito más información sobre eso.", "audioSlug": "necesito_mas_informacion_sobre_eso" }
+      ]
     }
   ]
 }
