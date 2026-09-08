@@ -203,6 +203,78 @@
       "target": [
         { "text": "Escúchame sin interrumpir.", "audioSlug": "escuchame_sin_interrumpir" }
       ]
+    },
+    {
+      "id": "conversacion_claro_que_puedo_ayudarte",
+      "source": "Natürlich kann ich dir helfen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Claro que puedo ayudarte.", "audioSlug": "claro_que_puedo_ayudarte" }
+      ]
+    },
+    {
+      "id": "conversacion_ese_es_un_problema_dificil",
+      "source": "Das ist ein schwieriges Problem.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese es un problema difícil.", "audioSlug": "ese_es_un_problema_dificil" }
+      ]
+    },
+    {
+      "id": "conversacion_es_un_buen_plan_y_ademas_barato",
+      "source": "Es ist ein guter Plan und außerdem billig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es un buen plan y además es barato.", "audioSlug": "es_un_buen_plan_y_ademas_es_barato" }
+      ]
+    },
+    {
+      "id": "conversacion_que_hacemos_entonces",
+      "source": "Was machen wir dann?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué hacemos entonces?", "audioSlug": "que_hacemos_entonces" }
+      ]
+    },
+    {
+      "id": "conversacion_que_tipo_de_musica_te_gusta",
+      "source": "Welche Art von Musik magst du?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué tipo de música te gusta?", "audioSlug": "que_tipo_de_musica_te_gusta" }
+      ]
+    },
+    {
+      "id": "conversacion_en_ese_caso_prefiero_esperar",
+      "source": "In dem Fall warte ich lieber.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "En ese caso prefiero esperar.", "audioSlug": "en_ese_caso_prefiero_esperar" }
+      ]
+    },
+    {
+      "id": "conversacion_siento_que_no_me_escuchas",
+      "source": "Ich habe das Gefühl, dass du mir nicht zuhörst.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Siento que no me escuchas.", "audioSlug": "siento_que_no_me_escuchas" }
+      ]
+    },
+    {
+      "id": "conversacion_te_entiendo_aunque_no_estoy_de_acuerdo",
+      "source": "Ich verstehe dich, auch wenn ich nicht einverstanden bin.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Te entiendo aunque no estoy de acuerdo.", "audioSlug": "te_entiendo_aunque_no_estoy_de_acuerdo" }
+      ]
     }
   ]
 }
