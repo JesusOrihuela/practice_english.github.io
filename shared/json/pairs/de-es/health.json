@@ -131,6 +131,78 @@
           "audioSlug": "tienes_algun_sintoma_mas"
         }
       ]
+    },
+    {
+      "id": "health_toma_una_pastilla_si_te_duele_la_cabeza",
+      "source": "Nimm eine Tablette, wenn du Kopfschmerzen hast.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Toma una pastilla si te duele la cabeza.", "audioSlug": "toma_una_pastilla_si_te_duele_la_cabeza" }
+      ]
+    },
+    {
+      "id": "health_el_doctor_me_dio_una_receta",
+      "source": "Der Arzt hat mir ein Rezept gegeben.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El doctor me dio una receta.", "audioSlug": "el_doctor_me_dio_una_receta" }
+      ]
+    },
+    {
+      "id": "health_es_importante_mantenerse_sano",
+      "source": "Es ist wichtig, gesund zu bleiben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es importante mantenerse sano.", "audioSlug": "es_importante_mantenerse_sano" }
+      ]
+    },
+    {
+      "id": "health_tengo_una_herida_en_la_rodilla",
+      "source": "Ich habe eine Wunde am Knie.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo una herida en la rodilla.", "audioSlug": "tengo_una_herida_en_la_rodilla" }
+      ]
+    },
+    {
+      "id": "health_el_medico_curo_al_paciente",
+      "source": "Der Arzt hat den Patienten geheilt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El médico curó al paciente.", "audioSlug": "el_medico_curo_al_paciente" }
+      ]
+    },
+    {
+      "id": "health_debes_tomar_la_medicina_dos_veces_al_dia",
+      "source": "Du musst die Medizin zweimal täglich nehmen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Debes tomar la medicina dos veces al día.", "audioSlug": "debes_tomar_la_medicina_dos_veces_al_dia" }
+      ]
+    },
+    {
+      "id": "health_me_duele_la_garganta",
+      "source": "Mein Hals tut weh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me duele la garganta.", "audioSlug": "me_duele_la_garganta" }
+      ]
+    },
+    {
+      "id": "health_respira_profundo_y_relajate",
+      "source": "Atme tief ein und entspann dich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Respira profundo y relájate.", "audioSlug": "respira_profundo_y_relajate" }
+      ]
     }
   ]
 }
