@@ -119,6 +119,78 @@
           "audioSlug": "el_banco_me_ofrecio_un_prestamo"
         }
       ]
+    },
+    {
+      "id": "economia_recibo_mi_sueldo_cada_mes",
+      "source": "Ich bekomme jeden Monat mein Gehalt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Recibo mi sueldo cada mes.", "audioSlug": "recibo_mi_sueldo_cada_mes" }
+      ]
+    },
+    {
+      "id": "economia_utilizo_una_aplicacion_para_mis_gastos",
+      "source": "Ich benutze eine App für meine Ausgaben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Utilizo una aplicación para mis gastos.", "audioSlug": "utilizo_una_aplicacion_para_mis_gastos" }
+      ]
+    },
+    {
+      "id": "economia_el_comercio_en_esta_zona_es_activo",
+      "source": "Der Handel in dieser Gegend ist rege.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "El comercio en esta zona es activo.", "audioSlug": "el_comercio_en_esta_zona_es_activo" }
+      ]
+    },
+    {
+      "id": "economia_tenemos_una_buena_relacion_con_el_banco",
+      "source": "Wir haben eine gute Beziehung zur Bank.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tenemos una buena relación con el banco.", "audioSlug": "tenemos_una_buena_relacion_con_el_banco" }
+      ]
+    },
+    {
+      "id": "economia_firme_un_papel_importante",
+      "source": "Ich habe heute ein wichtiges Papier unterschrieben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Firmé un papel importante hoy.", "audioSlug": "firme_un_papel_importante_hoy" }
+      ]
+    },
+    {
+      "id": "economia_la_empresa_quiere_reducir_costos",
+      "source": "Das Unternehmen will die Kosten senken.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "La empresa quiere reducir costos.", "audioSlug": "la_empresa_quiere_reducir_costos" }
+      ]
+    },
+    {
+      "id": "economia_existen_muchas_tiendas_en_el_mercado",
+      "source": "Es gibt viele Geschäfte auf dem Markt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Existen muchas tiendas en el mercado.", "audioSlug": "existen_muchas_tiendas_en_el_mercado" }
+      ]
+    },
+    {
+      "id": "economia_pago_mis_deudas_poco_a_poco",
+      "source": "Ich zahle meine Schulden nach und nach ab.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Pago mis deudas poco a poco.", "audioSlug": "pago_mis_deudas_poco_a_poco" }
+      ]
     }
   ]
 }
