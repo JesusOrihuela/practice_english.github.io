@@ -203,6 +203,78 @@
       "target": [
         { "text": "Termino de trabajar a las seis.", "audioSlug": "termino_de_trabajar_a_las_seis" }
       ]
+    },
+    {
+      "id": "daily_routine_me_visto_rapido_por_la_manana",
+      "source": "Ich ziehe mich morgens schnell an.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me visto rápido por la mañana.", "audioSlug": "me_visto_rapido_por_la_manana" }
+      ]
+    },
+    {
+      "id": "daily_routine_suelo_organizar_mi_dia",
+      "source": "Ich organisiere meinen Tag normalerweise abends.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Suelo organizar mi día por la noche.", "audioSlug": "suelo_organizar_mi_dia_por_la_noche" }
+      ]
+    },
+    {
+      "id": "daily_routine_acompano_a_mis_hijos_a_la_escuela",
+      "source": "Ich begleite meine Kinder zur Schule.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Acompaño a mis hijos a la escuela.", "audioSlug": "acompano_a_mis_hijos_a_la_escuela" }
+      ]
+    },
+    {
+      "id": "daily_routine_tengo_que_recordar_comprar_pan",
+      "source": "Ich muss daran denken, Brot zu kaufen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que recordar comprar pan.", "audioSlug": "tengo_que_recordar_comprar_pan" }
+      ]
+    },
+    {
+      "id": "daily_routine_sirvo_el_desayuno_a_mis_hijos",
+      "source": "Ich serviere meinen Kindern das Frühstück.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Sirvo el desayuno a mis hijos.", "audioSlug": "sirvo_el_desayuno_a_mis_hijos" }
+      ]
+    },
+    {
+      "id": "daily_routine_saco_la_basura_cada_noche",
+      "source": "Ich bringe jeden Abend den Müll raus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Saco la basura cada noche.", "audioSlug": "saco_la_basura_cada_noche" }
+      ]
+    },
+    {
+      "id": "daily_routine_apago_las_luces_antes_de_dormir",
+      "source": "Vor dem Schlafen mache ich das Licht aus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Apago las luces antes de dormir.", "audioSlug": "apago_las_luces_antes_de_dormir" }
+      ]
+    },
+    {
+      "id": "daily_routine_me_gusta_sentir_el_aire_al_despertar",
+      "source": "Ich mag es, beim Aufwachen die frische Luft zu spüren.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta sentir el aire fresco al despertar.", "audioSlug": "me_gusta_sentir_el_aire_fresco_al_despertar" }
+      ]
     }
   ]
 }
