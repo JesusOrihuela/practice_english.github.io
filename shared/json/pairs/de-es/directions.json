@@ -131,6 +131,78 @@
           "audioSlug": "esta_a_diez_minutos_a_pie"
         }
       ]
+    },
+    {
+      "id": "directions_entra_por_la_puerta_principal",
+      "source": "Geh durch die Haupttür hinein.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Entra por la puerta principal.", "audioSlug": "entra_por_la_puerta_principal" }
+      ]
+    },
+    {
+      "id": "directions_camina_hacia_la_plaza",
+      "source": "Geh in Richtung Platz.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Camina hacia la plaza.", "audioSlug": "camina_hacia_la_plaza" }
+      ]
+    },
+    {
+      "id": "directions_este_es_el_lugar_donde_vivo",
+      "source": "Das ist der Ort, wo ich wohne.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Este es el lugar donde vivo.", "audioSlug": "este_es_el_lugar_donde_vivo" }
+      ]
+    },
+    {
+      "id": "directions_cruza_la_calle_con_cuidado",
+      "source": "Überquere die Straße vorsichtig.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Cruza la calle con cuidado.", "audioSlug": "cruza_la_calle_con_cuidado" }
+      ]
+    },
+    {
+      "id": "directions_el_hotel_queda_hacia_el_norte",
+      "source": "Das Hotel liegt Richtung Norden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El hotel queda hacia el norte.", "audioSlug": "el_hotel_queda_hacia_el_norte" }
+      ]
+    },
+    {
+      "id": "directions_gira_a_la_derecha_en_el_semaforo",
+      "source": "Bieg an der Ampel rechts ab.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Gira a la derecha en el semáforo.", "audioSlug": "gira_a_la_derecha_en_el_semaforo" }
+      ]
+    },
+    {
+      "id": "directions_esta_justo_enfrente_del_parque",
+      "source": "Es ist genau gegenüber dem Park.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Está justo enfrente del parque.", "audioSlug": "esta_justo_enfrente_del_parque" }
+      ]
+    },
+    {
+      "id": "directions_necesito_indicaciones_para_llegar",
+      "source": "Ich brauche eine Wegbeschreibung, um dorthin zu kommen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito indicaciones para llegar allí.", "audioSlug": "necesito_indicaciones_para_llegar_alli" }
+      ]
     }
   ]
 }
