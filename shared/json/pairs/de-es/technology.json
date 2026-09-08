@@ -125,6 +125,78 @@
           "audioSlug": "este_programa_es_muy_facil_de_usar"
         }
       ]
+    },
+    {
+      "id": "technology_la_pantalla_del_telefono_esta_rota",
+      "source": "Der Handybildschirm ist kaputt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La pantalla del teléfono está rota.", "audioSlug": "la_pantalla_del_telefono_esta_rota" }
+      ]
+    },
+    {
+      "id": "technology_no_tengo_conexion_a_internet",
+      "source": "Ich habe keine Internetverbindung.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No tengo conexión a internet.", "audioSlug": "no_tengo_conexion_a_internet" }
+      ]
+    },
+    {
+      "id": "technology_envie_un_mensaje_a_mi_jefe",
+      "source": "Ich habe meinem Chef eine Nachricht geschickt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Envié un mensaje a mi jefe.", "audioSlug": "envie_un_mensaje_a_mi_jefe" }
+      ]
+    },
+    {
+      "id": "technology_guarda_el_archivo_antes_de_cerrar",
+      "source": "Speichere die Datei, bevor du schließt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Guarda el archivo antes de cerrar.", "audioSlug": "guarda_el_archivo_antes_de_cerrar" }
+      ]
+    },
+    {
+      "id": "technology_presiona_el_boton_verde",
+      "source": "Drück den grünen Knopf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Presiona el botón verde.", "audioSlug": "presiona_el_boton_verde" }
+      ]
+    },
+    {
+      "id": "technology_la_red_social_es_muy_popular",
+      "source": "Das soziale Netzwerk ist sehr beliebt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La red social es muy popular.", "audioSlug": "la_red_social_es_muy_popular" }
+      ]
+    },
+    {
+      "id": "technology_necesito_conectar_el_cable",
+      "source": "Ich muss das Kabel anschließen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito conectar el cable.", "audioSlug": "necesito_conectar_el_cable" }
+      ]
+    },
+    {
+      "id": "technology_este_dispositivo_es_muy_moderno",
+      "source": "Dieses Gerät ist sehr modern.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este dispositivo es muy moderno.", "audioSlug": "este_dispositivo_es_muy_moderno" }
+      ]
     }
   ]
 }
