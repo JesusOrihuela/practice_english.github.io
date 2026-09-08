@@ -124,6 +124,96 @@
           "audioSlug": "el_ano_que_viene_me_voy_a_mudar"
         }
       ]
+    },
+    {
+      "id": "planes_debo_tomar_una_decision",
+      "source": "Ich muss bald eine Entscheidung treffen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Debo tomar una decisión pronto.", "audioSlug": "debo_tomar_una_decision_pronto" }
+      ]
+    },
+    {
+      "id": "planes_voy_a_intentar_hacerlo_mejor",
+      "source": "Ich werde versuchen, es besser zu machen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a intentar hacerlo mejor.", "audioSlug": "voy_a_intentar_hacerlo_mejor" }
+      ]
+    },
+    {
+      "id": "planes_quiero_conseguir_un_buen_trabajo",
+      "source": "Ich will einen guten Job bekommen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero conseguir un buen trabajo.", "audioSlug": "quiero_conseguir_un_buen_trabajo" }
+      ]
+    },
+    {
+      "id": "planes_pienso_seguir_estudiando",
+      "source": "Ich habe vor, nächstes Jahr weiterzustudieren.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Pienso seguir estudiando el año próximo.", "audioSlug": "pienso_seguir_estudiando_el_ano_proximo" }
+      ]
+    },
+    {
+      "id": "planes_algun_dia_quiero_conocer_japon",
+      "source": "Eines Tages will ich Japan kennenlernen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Algún día quiero conocer Japón.", "audioSlug": "algun_dia_quiero_conocer_japon" }
+      ]
+    },
+    {
+      "id": "planes_voy_a_pedir_ayuda",
+      "source": "Ich werde um Hilfe bitten, wenn ich sie brauche.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a pedir ayuda si la necesito.", "audioSlug": "voy_a_pedir_ayuda_si_la_necesito" }
+      ]
+    },
+    {
+      "id": "planes_quiero_quedarme_aqui_mas_tiempo",
+      "source": "Ich will noch eine Weile hier bleiben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero quedarme aquí un tiempo más.", "audioSlug": "quiero_quedarme_aqui_un_tiempo_mas" }
+      ]
+    },
+    {
+      "id": "planes_voy_a_buscar_trabajo",
+      "source": "Nächsten Monat werde ich Arbeit suchen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El próximo mes voy a buscar trabajo.", "audioSlug": "el_proximo_mes_voy_a_buscar_trabajo" }
+      ]
+    },
+    {
+      "id": "planes_le_voy_a_contar_mi_plan",
+      "source": "Ich werde meiner Familie meinen Plan erzählen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Le voy a contar mi plan a mi familia.", "audioSlug": "le_voy_a_contar_mi_plan_a_mi_familia" }
+      ]
+    },
+    {
+      "id": "planes_voy_a_mudarme_a_otra_ciudad",
+      "source": "Ich werde in eine andere Stadt ziehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a mudarme a otra ciudad.", "audioSlug": "voy_a_mudarme_a_otra_ciudad" }
+      ]
     }
   ]
 }
