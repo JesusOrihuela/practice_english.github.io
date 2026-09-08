@@ -145,6 +145,80 @@
           "audioSlug": "por_que_estas_triste"
         }
       ]
+    },
+    {
+      "id": "emociones_a_veces_me_pongo_nervioso",
+      "source": "Manchmal werde ich nervös.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "A veces me pongo nerviosa.", "labels": { "gender": "femenino" }, "audioSlug": "a_veces_me_pongo_nerviosa" },
+        { "text": "A veces me pongo nervioso.", "labels": { "gender": "masculino" }, "audioSlug": "a_veces_me_pongo_nervioso" }
+      ]
+    },
+    {
+      "id": "emociones_nunca_tengo_miedo_de_nada",
+      "source": "Ich habe nie vor irgendetwas Angst.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Nunca tengo miedo de nada.", "audioSlug": "nunca_tengo_miedo_de_nada" }
+      ]
+    },
+    {
+      "id": "emociones_ese_momento_me_hizo_feliz",
+      "source": "Dieser Moment hat mich sehr glücklich gemacht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ese momento me hizo muy feliz.", "audioSlug": "ese_momento_me_hizo_muy_feliz" }
+      ]
+    },
+    {
+      "id": "emociones_despues_de_llorar_me_senti_mejor",
+      "source": "Nach dem Weinen fühlte ich mich besser.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Después de llorar, me sentí mejor.", "audioSlug": "despues_de_llorar_me_senti_mejor" }
+      ]
+    },
+    {
+      "id": "emociones_estoy_tan_contento_hoy",
+      "source": "Ich bin heute so froh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Estoy tan contenta hoy.", "labels": { "gender": "femenino" }, "audioSlug": "estoy_tan_contenta_hoy" },
+        { "text": "Estoy tan contento hoy.", "labels": { "gender": "masculino" }, "audioSlug": "estoy_tan_contento_hoy" }
+      ]
+    },
+    {
+      "id": "emociones_casi_lloro_de_la_emocion",
+      "source": "Ich hätte fast vor Rührung geweint.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Casi lloro de la emoción.", "audioSlug": "casi_lloro_de_la_emocion" }
+      ]
+    },
+    {
+      "id": "emociones_nunca_habia_sentido_tanto_amor",
+      "source": "Ich hatte nie so viel Liebe gefühlt.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Nunca había sentido tanto amor.", "audioSlug": "nunca_habia_sentido_tanto_amor" }
+      ]
+    },
+    {
+      "id": "emociones_a_veces_me_siento_diferente",
+      "source": "Manchmal fühle ich mich anders.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "A veces me siento diferente.", "audioSlug": "a_veces_me_siento_diferente" }
+      ]
     }
   ]
 }
