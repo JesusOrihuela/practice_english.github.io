@@ -119,6 +119,78 @@
           "audioSlug": "el_museo_esta_en_el_centro_de_la_ciudad"
         }
       ]
+    },
+    {
+      "id": "sitios_la_comisaria_de_policia_esta_cerca",
+      "source": "Die Polizeiwache ist in der Nähe.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La comisaría de policía está cerca.", "audioSlug": "la_comisaria_de_policia_esta_cerca" }
+      ]
+    },
+    {
+      "id": "sitios_vamos_a_tomar_algo_a_un_bar",
+      "source": "Wir gehen etwas in einer Bar trinken.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Vamos a tomar algo a un bar.", "audioSlug": "vamos_a_tomar_algo_a_un_bar" }
+      ]
+    },
+    {
+      "id": "sitios_trabajo_en_una_oficina_del_centro",
+      "source": "Ich arbeite in einem Büro im Zentrum.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Trabajo en una oficina del centro.", "audioSlug": "trabajo_en_una_oficina_del_centro" }
+      ]
+    },
+    {
+      "id": "sitios_hay_una_obra_en_la_calle",
+      "source": "In der Straße gibt es eine Baustelle.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay una obra en construcción en la calle.", "audioSlug": "hay_una_obra_en_construccion_en_la_calle" }
+      ]
+    },
+    {
+      "id": "sitios_la_iglesia_esta_en_la_esquina",
+      "source": "Die Kirche ist an der Ecke.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La iglesia está en la esquina.", "audioSlug": "la_iglesia_esta_en_la_esquina" }
+      ]
+    },
+    {
+      "id": "sitios_es_posible_llegar_a_pie",
+      "source": "Es ist möglich, zu Fuß zu gehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es posible llegar a pie.", "audioSlug": "es_posible_llegar_a_pie" }
+      ]
+    },
+    {
+      "id": "sitios_cualquier_taxi_te_lleva_al_aeropuerto",
+      "source": "Jedes Taxi bringt dich zum Flughafen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cualquier taxi te lleva al aeropuerto.", "audioSlug": "cualquier_taxi_te_lleva_al_aeropuerto" }
+      ]
+    },
+    {
+      "id": "sitios_el_personal_del_hotel_es_amable",
+      "source": "Das Hotelpersonal ist sehr freundlich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El personal del hotel es muy amable.", "audioSlug": "el_personal_del_hotel_es_muy_amable" }
+      ]
     }
   ]
 }
