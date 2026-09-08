@@ -127,6 +127,78 @@
           "audioSlug": "escribo_en_mi_cuaderno"
         }
       ]
+    },
+    {
+      "id": "estudios_leo_un_libro_nuevo_cada_mes",
+      "source": "Ich lese jeden Monat ein neues Buch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Leo un libro nuevo cada mes.", "audioSlug": "leo_un_libro_nuevo_cada_mes" }
+      ]
+    },
+    {
+      "id": "estudios_mi_clase_empieza_a_las_nueve",
+      "source": "Mein Unterricht beginnt um neun.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Mi clase empieza a las nueve.", "audioSlug": "mi_clase_empieza_a_las_nueve" }
+      ]
+    },
+    {
+      "id": "estudios_estudio_con_mis_companeros",
+      "source": "Ich lerne mit meinen Mitschülern.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Estudio con mis compañeros de clase.", "audioSlug": "estudio_con_mis_companeros_de_clase" }
+      ]
+    },
+    {
+      "id": "estudios_estudio_la_lengua_espanola",
+      "source": "Ich studiere die spanische Sprache.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Estudio la lengua española.", "audioSlug": "estudio_la_lengua_espanola" }
+      ]
+    },
+    {
+      "id": "estudios_mi_hermano_mayor_va_a_la_universidad",
+      "source": "Mein älterer Bruder geht zur Universität.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi hermano mayor va a la universidad.", "audioSlug": "mi_hermano_mayor_va_a_la_universidad" }
+      ]
+    },
+    {
+      "id": "estudios_necesito_varios_libros_para_el_curso",
+      "source": "Ich brauche mehrere Bücher für den Kurs.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito varios libros para el curso.", "audioSlug": "necesito_varios_libros_para_el_curso" }
+      ]
+    },
+    {
+      "id": "estudios_el_senor_perez_es_mi_profesor",
+      "source": "Herr Pérez ist mein Lehrer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El señor Pérez es mi profesor.", "audioSlug": "el_senor_perez_es_mi_profesor" }
+      ]
+    },
+    {
+      "id": "estudios_este_tema_es_mas_dificil_que_el_anterior",
+      "source": "Dieses Thema ist schwieriger als das vorige.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este tema es más difícil que el anterior.", "audioSlug": "este_tema_es_mas_dificil_que_el_anterior" }
+      ]
     }
   ]
 }
