@@ -191,6 +191,78 @@
       "target": [
         { "text": "Pago mis deudas poco a poco.", "audioSlug": "pago_mis_deudas_poco_a_poco" }
       ]
+    },
+    {
+      "id": "economia_saco_dinero_del_cajero",
+      "source": "Ich hebe Geld am Automaten ab.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Saco dinero del cajero.", "audioSlug": "saco_dinero_del_cajero" }
+      ]
+    },
+    {
+      "id": "economia_la_fabrica_produce_muchos_autos",
+      "source": "Die Fabrik produziert viele Autos.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La fábrica produce muchos autos.", "audioSlug": "la_fabrica_produce_muchos_autos" }
+      ]
+    },
+    {
+      "id": "economia_el_cliente_siempre_tiene_la_razon",
+      "source": "Der Kunde hat immer recht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El cliente siempre tiene la razón.", "audioSlug": "el_cliente_siempre_tiene_la_razon" }
+      ]
+    },
+    {
+      "id": "economia_gano_lo_suficiente_para_vivir",
+      "source": "Ich verdiene genug zum Leben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Gano lo suficiente para vivir.", "audioSlug": "gano_lo_suficiente_para_vivir" }
+      ]
+    },
+    {
+      "id": "economia_hay_que_controlar_los_gastos",
+      "source": "Man muss die Ausgaben kontrollieren.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay que controlar los gastos.", "audioSlug": "hay_que_controlar_los_gastos" }
+      ]
+    },
+    {
+      "id": "economia_el_valor_de_la_casa_aumento",
+      "source": "Der Wert des Hauses ist gestiegen.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "El valor de la casa aumentó.", "audioSlug": "el_valor_de_la_casa_aumento" }
+      ]
+    },
+    {
+      "id": "economia_la_empresa_contrato_a_diez_personas",
+      "source": "Das Unternehmen hat zehn Personen eingestellt.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "La empresa contrató a diez personas.", "audioSlug": "la_empresa_contrato_a_diez_personas" }
+      ]
+    },
+    {
+      "id": "economia_el_sueldo_minimo_subio_este_ano",
+      "source": "Der Mindestlohn ist dieses Jahr gestiegen.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "El sueldo mínimo subió este año.", "audioSlug": "el_sueldo_minimo_subio_este_ano" }
+      ]
     }
   ]
 }
