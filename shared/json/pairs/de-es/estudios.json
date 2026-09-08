@@ -199,6 +199,78 @@
       "target": [
         { "text": "Este tema es más difícil que el anterior.", "audioSlug": "este_tema_es_mas_dificil_que_el_anterior" }
       ]
+    },
+    {
+      "id": "estudios_mis_hijos_van_a_la_escuela",
+      "source": "Meine Kinder gehen zur Schule.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Mis hijos van a la escuela.", "audioSlug": "mis_hijos_van_a_la_escuela" }
+      ]
+    },
+    {
+      "id": "estudios_quiero_crear_un_proyecto_nuevo",
+      "source": "Ich will ein neues Projekt schaffen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero crear un proyecto nuevo.", "audioSlug": "quiero_crear_un_proyecto_nuevo" }
+      ]
+    },
+    {
+      "id": "estudios_pasamos_al_siguiente_ejercicio",
+      "source": "Wir gehen zur nächsten Übung über.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pasamos al siguiente ejercicio.", "audioSlug": "pasamos_al_siguiente_ejercicio" }
+      ]
+    },
+    {
+      "id": "estudios_no_entiendo_este_punto",
+      "source": "Ich verstehe diesen Punkt der Lektion nicht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No entiendo este punto de la lección.", "audioSlug": "no_entiendo_este_punto_de_la_leccion" }
+      ]
+    },
+    {
+      "id": "estudios_aprender_idiomas_forma_el_caracter",
+      "source": "Sprachen lernen formt den Charakter.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Aprender idiomas forma el carácter.", "audioSlug": "aprender_idiomas_forma_el_caracter" }
+      ]
+    },
+    {
+      "id": "estudios_necesito_una_imagen_para_mi_presentacion",
+      "source": "Ich brauche ein Bild für meine Präsentation.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito una imagen para mi presentación.", "audioSlug": "necesito_una_imagen_para_mi_presentacion" }
+      ]
+    },
+    {
+      "id": "estudios_la_educacion_es_un_derecho",
+      "source": "Bildung ist ein Recht für alle.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "La educación es un derecho de todos.", "audioSlug": "la_educacion_es_un_derecho_de_todos" }
+      ]
+    },
+    {
+      "id": "estudios_cada_estudiante_tiene_un_horario",
+      "source": "Jeder Schüler hat einen anderen Stundenplan.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada estudiante tiene un horario diferente.", "audioSlug": "cada_estudiante_tiene_un_horario_diferente" }
+      ]
     }
   ]
 }
