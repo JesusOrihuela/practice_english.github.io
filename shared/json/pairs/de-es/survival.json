@@ -131,6 +131,78 @@
           "audioSlug": "perdon_donde_esta_el_bano"
         }
       ]
+    },
+    {
+      "id": "survival_disculpe_usted_habla_ingles",
+      "source": "Entschuldigung, sprechen Sie Englisch?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Disculpe, ¿usted habla inglés?", "audioSlug": "disculpe_usted_habla_ingles" }
+      ]
+    },
+    {
+      "id": "survival_como_se_escribe_tu_nombre",
+      "source": "Wie schreibt man deinen Namen?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Cómo se escribe tu nombre?", "audioSlug": "como_se_escribe_tu_nombre" }
+      ]
+    },
+    {
+      "id": "survival_asi_se_dice_en_espanol",
+      "source": "So sagt man es auf Spanisch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Así se dice en español.", "audioSlug": "asi_se_dice_en_espanol" }
+      ]
+    },
+    {
+      "id": "survival_me_lo_puede_explicar_de_otra_manera",
+      "source": "Können Sie es mir anders erklären?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me lo puede explicar de otra manera?", "audioSlug": "me_lo_puede_explicar_de_otra_manera" }
+      ]
+    },
+    {
+      "id": "survival_hablo_un_poco_pero_necesito_practicar",
+      "source": "Ich spreche ein bisschen Spanisch, aber ich muss üben.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hablo un poco de español, pero necesito practicar.", "audioSlug": "hablo_un_poco_de_espanol_pero_necesito_practicar" }
+      ]
+    },
+    {
+      "id": "survival_que_quiere_decir_esta_palabra",
+      "source": "Was bedeutet dieses Wort?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué quiere decir esta palabra?", "audioSlug": "que_quiere_decir_esta_palabra" }
+      ]
+    },
+    {
+      "id": "survival_hay_alguien_que_hable_aleman",
+      "source": "Gibt es hier jemanden, der Deutsch spricht?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Hay alguien aquí que hable alemán?", "audioSlug": "hay_alguien_aqui_que_hable_aleman" }
+      ]
+    },
+    {
+      "id": "survival_perdon_no_comprendo_la_pregunta",
+      "source": "Entschuldigung, ich verstehe die Frage nicht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Perdón, no comprendo la pregunta.", "audioSlug": "perdon_no_comprendo_la_pregunta" }
+      ]
     }
   ]
 }
