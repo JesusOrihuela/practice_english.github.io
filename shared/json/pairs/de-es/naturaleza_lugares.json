@@ -119,6 +119,78 @@
           "audioSlug": "hay_muchas_estrellas_esta_noche"
         }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_la_tierra_es_fertil",
+      "source": "Die Erde ist in dieser Region fruchtbar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La tierra es fértil en esta región.", "audioSlug": "la_tierra_es_fertil_en_esta_region" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_la_luna_brilla_esta_noche",
+      "source": "Der Mond scheint heute Nacht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La luna brilla esta noche.", "audioSlug": "la_luna_brilla_esta_noche" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_los_animales_viven_en_el_bosque",
+      "source": "Die Tiere leben im Wald.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los animales viven en el bosque.", "audioSlug": "los_animales_viven_en_el_bosque" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_hay_muchos_peces_en_el_lago",
+      "source": "Es gibt viele Fische im See.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay muchos peces en el lago.", "audioSlug": "hay_muchos_peces_en_el_lago" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_las_plantas_necesitan_agua_y_luz",
+      "source": "Pflanzen brauchen Wasser und Licht.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Las plantas necesitan agua y luz.", "audioSlug": "las_plantas_necesitan_agua_y_luz" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_fuego_destruyo_parte_del_bosque",
+      "source": "Das Feuer hat einen Teil des Waldes zerstört.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El fuego destruyó parte del bosque.", "audioSlug": "el_fuego_destruyo_parte_del_bosque" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_me_encanta_el_aire_del_campo",
+      "source": "Ich liebe die frische Landluft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me encanta el aire fresco del campo.", "audioSlug": "me_encanta_el_aire_fresco_del_campo" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_en_invierno_cae_mucha_nieve",
+      "source": "Im Winter fällt viel Schnee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "En invierno cae mucha nieve.", "audioSlug": "en_invierno_cae_mucha_nieve" }
+      ]
     }
   ]
 }
