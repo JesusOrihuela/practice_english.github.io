@@ -119,6 +119,78 @@
           "audioSlug": "prefiero_quedarme_en_casa_a_descansar"
         }
       ]
+    },
+    {
+      "id": "tiempo_libre_anoche_vi_una_pelicula_buena",
+      "source": "Gestern Abend habe ich einen sehr guten Film gesehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Anoche vi una película muy buena.", "audioSlug": "anoche_vi_una_pelicula_muy_buena" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_gusta_oir_musica_clasica",
+      "source": "Ich höre gern klassische Musik.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta oír música clásica.", "audioSlug": "me_gusta_oir_musica_clasica" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_los_domingos_duermo_hasta_tarde",
+      "source": "Sonntags schlafe ich lange.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los domingos duermo hasta tarde.", "audioSlug": "los_domingos_duermo_hasta_tarde" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_suelo_poner_musica_por_la_tarde",
+      "source": "Ich mache nachmittags oft Musik an.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Suelo poner música por la tarde.", "audioSlug": "suelo_poner_musica_por_la_tarde" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_no_juego_mal_al_ajedrez",
+      "source": "Ich spiele nicht schlecht Schach.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No juego mal al ajedrez.", "audioSlug": "no_juego_mal_al_ajedrez" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_alli_hay_un_parque_grande",
+      "source": "Dort gibt es einen sehr großen Park.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Allí hay un parque muy grande.", "audioSlug": "alli_hay_un_parque_muy_grande" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_prefiero_ver_series_en_casa",
+      "source": "Ich bleibe lieber zu Hause und schaue Serien.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero quedarme en casa a ver series.", "audioSlug": "prefiero_quedarme_en_casa_a_ver_series" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_toco_el_piano_desde_hace_anos",
+      "source": "Ich spiele seit Jahren Klavier.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Toco el piano desde hace años.", "audioSlug": "toco_el_piano_desde_hace_anos" }
+      ]
     }
   ]
 }
