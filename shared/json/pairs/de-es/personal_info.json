@@ -71,6 +71,78 @@
           "audioSlug": "hablo_un_poco_de_espanol"
         }
       ]
+    },
+    {
+      "id": "personal_info_naci_en_un_pueblo_pequeno",
+      "source": "Ich bin in einem kleinen Dorf geboren.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Nací en un pueblo pequeño.", "audioSlug": "naci_en_un_pueblo_pequeno" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_numero_de_telefono_es_facil",
+      "source": "Meine Telefonnummer ist einfach.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi número de teléfono es fácil.", "audioSlug": "mi_numero_de_telefono_es_facil" }
+      ]
+    },
+    {
+      "id": "personal_info_soy_de_origen_aleman",
+      "source": "Ich bin deutscher Herkunft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Soy de origen alemán.", "audioSlug": "soy_de_origen_aleman" }
+      ]
+    },
+    {
+      "id": "personal_info_vengo_de_un_pais_lejano",
+      "source": "Ich komme aus einem fernen Land.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Vengo de un país lejano.", "audioSlug": "vengo_de_un_pais_lejano" }
+      ]
+    },
+    {
+      "id": "personal_info_de_donde_eres_tu",
+      "source": "Woher kommst du?",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "¿De dónde eres tú?", "audioSlug": "de_donde_eres_tu" }
+      ]
+    },
+    {
+      "id": "personal_info_estudio_espanol_como_pasatiempo",
+      "source": "Ich lerne Spanisch als Hobby.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Estudio español como pasatiempo.", "audioSlug": "estudio_espanol_como_pasatiempo" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_ciudad_favorita_es_madrid",
+      "source": "Meine Lieblingsstadt ist Madrid.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi ciudad favorita es Madrid.", "audioSlug": "mi_ciudad_favorita_es_madrid" }
+      ]
+    },
+    {
+      "id": "personal_info_me_considero_una_persona_optimista",
+      "source": "Ich halte mich für einen Optimisten.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me considero una persona optimista.", "audioSlug": "me_considero_una_persona_optimista" }
+      ]
     }
   ]
 }
