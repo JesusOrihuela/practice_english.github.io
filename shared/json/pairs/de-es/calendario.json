@@ -95,6 +95,78 @@
           "audioSlug": "la_proxima_semana_tengo_vacaciones"
         }
       ]
+    },
+    {
+      "id": "calendario_la_fiesta_es_el_sabado_por_la_tarde",
+      "source": "Die Party ist am Samstagnachmittag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La fiesta es el sábado por la tarde.", "audioSlug": "la_fiesta_es_el_sabado_por_la_tarde" }
+      ]
+    },
+    {
+      "id": "calendario_el_ultimo_dia_del_mes_es_feriado",
+      "source": "Der letzte Tag des Monats ist ein Feiertag.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El último día del mes es feriado.", "audioSlug": "el_ultimo_dia_del_mes_es_feriado" }
+      ]
+    },
+    {
+      "id": "calendario_durante_las_vacaciones_descanso",
+      "source": "Während der Ferien ruhe ich mich viel aus.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Durante las vacaciones descanso mucho.", "audioSlug": "durante_las_vacaciones_descanso_mucho" }
+      ]
+    },
+    {
+      "id": "calendario_comemos_juntos_los_domingos",
+      "source": "Wir essen jeden Sonntag zusammen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Comemos juntos todos los domingos.", "audioSlug": "comemos_juntos_todos_los_domingos" }
+      ]
+    },
+    {
+      "id": "calendario_nos_vemos_dentro_de_una_semana",
+      "source": "Wir sehen uns in einer Woche.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Nos vemos dentro de una semana.", "audioSlug": "nos_vemos_dentro_de_una_semana" }
+      ]
+    },
+    {
+      "id": "calendario_falta_poco_para_las_vacaciones",
+      "source": "Es ist nicht mehr lange bis zu den Ferien.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Falta poco para las vacaciones.", "audioSlug": "falta_poco_para_las_vacaciones" }
+      ]
+    },
+    {
+      "id": "calendario_celebro_mi_cumpleanos_con_amigos",
+      "source": "Ich feiere meinen Geburtstag immer mit Freunden.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Siempre celebro mi cumpleaños con amigos.", "audioSlug": "siempre_celebro_mi_cumpleanos_con_amigos" }
+      ]
+    },
+    {
+      "id": "calendario_hoy_es_un_dia_especial",
+      "source": "Heute ist ein sehr besonderer Tag.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Hoy es un día muy especial.", "audioSlug": "hoy_es_un_dia_muy_especial" }
+      ]
     }
   ]
 }
