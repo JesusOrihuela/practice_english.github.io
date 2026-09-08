@@ -167,6 +167,78 @@
       "target": [
         { "text": "Hoy es un día muy especial.", "audioSlug": "hoy_es_un_dia_muy_especial" }
       ]
+    },
+    {
+      "id": "calendario_el_fin_de_semana_es_corto",
+      "source": "Das Wochenende ist sehr kurz.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El fin de semana es muy corto.", "audioSlug": "el_fin_de_semana_es_muy_corto" }
+      ]
+    },
+    {
+      "id": "calendario_el_lunes_es_un_dia_festivo",
+      "source": "Am Montag ist ein Feiertag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El lunes es un día festivo.", "audioSlug": "el_lunes_es_un_dia_festivo" }
+      ]
+    },
+    {
+      "id": "calendario_tengo_una_cita_a_mediodia",
+      "source": "Ich habe einen Termin am Mittag.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo una cita a mediodía.", "audioSlug": "tengo_una_cita_a_mediodia" }
+      ]
+    },
+    {
+      "id": "calendario_el_plazo_termina_el_viernes",
+      "source": "Die Frist endet am Freitag.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El plazo termina el viernes.", "audioSlug": "el_plazo_termina_el_viernes" }
+      ]
+    },
+    {
+      "id": "calendario_anoto_todo_en_mi_agenda",
+      "source": "Ich notiere alles in meinem Kalender.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Anoto todo en mi agenda.", "audioSlug": "anoto_todo_en_mi_agenda" }
+      ]
+    },
+    {
+      "id": "calendario_el_evento_dura_todo_el_dia",
+      "source": "Die Veranstaltung dauert den ganzen Tag.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El evento dura todo el día.", "audioSlug": "el_evento_dura_todo_el_dia" }
+      ]
+    },
+    {
+      "id": "calendario_cada_manana_reviso_mi_correo",
+      "source": "Jeden Morgen prüfe ich meine E-Mails.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Cada mañana reviso mi correo.", "audioSlug": "cada_manana_reviso_mi_correo" }
+      ]
+    },
+    {
+      "id": "calendario_la_reunion_se_pospuso_hasta_manana",
+      "source": "Das Treffen wurde auf morgen verschoben.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "La reunión se pospuso hasta mañana.", "audioSlug": "la_reunion_se_pospuso_hasta_manana" }
+      ]
     }
   ]
 }
