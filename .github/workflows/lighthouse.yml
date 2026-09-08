@@ -26,7 +26,7 @@ jobs:
       # the commit hash it tags the report with (deployment_status runs don't
       # check out by default). Shallow is enough.
       - name: Checkout (git context for the report)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Run Lighthouse (report-only)
         uses: treosh/lighthouse-ci-action@v12

@@ -44,7 +44,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout (Speaking + one audio topic for the fake mic + tests)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             index
@@ -58,7 +58,7 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
 
@@ -67,7 +67,7 @@ jobs:
 
       - name: Install Chrome
         id: setup-chrome
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@v2
 
       # Models load from third-party CDNs, so a transient network hiccup shouldn't red
       # the build — retry a couple of times before failing.

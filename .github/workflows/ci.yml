@@ -28,7 +28,7 @@ jobs:
       # shared/img/flags is needed because check-pair-completeness.mjs verifies every
       # flag code a pair declares has a real SVG asset (small — just the flag SVGs).
       - name: Checkout (JSON + JS + tools + flags)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             shared/json
@@ -38,7 +38,7 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
 
@@ -124,7 +124,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (images + JS + tools)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             cloze/img
@@ -140,11 +140,11 @@ jobs:
             tools
           sparse-checkout-cone-mode: true
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Install Pillow + numpy
@@ -163,7 +163,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (HTML + lang + tools)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             lang
@@ -183,7 +183,7 @@ jobs:
           sparse-checkout-cone-mode: true
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
 
@@ -208,7 +208,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (JSON + JS + tools)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           # shared/js is needed because coverage.mjs imports the language-profile
           # registry (shared/js/lang-profiles.js) for function-word / ignore sets.
@@ -218,7 +218,7 @@ jobs:
             tools
           sparse-checkout-cone-mode: true
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
       # Gates ALL languages, each against its committed index at its per-language floor
@@ -236,7 +236,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (app, no audio)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           sparse-checkout: |
             index
@@ -258,14 +258,14 @@ jobs:
             tests
           sparse-checkout-cone-mode: true
       - name: Set up Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '20'
       - name: Install deps (playwright-core)
         run: npm ci
       - name: Install Chrome
         id: setup-chrome
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@v2
       - name: Browser smoke suite
         run: npm test
         env:
