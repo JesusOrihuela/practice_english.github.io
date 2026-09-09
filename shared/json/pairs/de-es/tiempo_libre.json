@@ -499,6 +499,25 @@
       "target": [
         { "text": "En el parque hay una estatua de bronce.", "audioSlug": "en_el_parque_hay_una_estatua_de_bronce" }
       ]
+    },
+    {
+      "id": "tiempo_libre_la_pintora_expone_sus_cuadros",
+      "source": "Die Malerin stellt ihre Bilder aus.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La pintora expone sus cuadros.", "labels": { "gender": "femenino" }, "source": "Die Malerin stellt ihre Bilder aus.", "audioSlug": "la_pintora_expone_sus_cuadros" },
+        { "text": "El pintor expone sus cuadros.", "labels": { "gender": "masculino" }, "source": "Der Maler stellt seine Bilder aus.", "audioSlug": "el_pintor_expone_sus_cuadros" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_gusta_leer_poesia_por_la_noche",
+      "source": "Ich lese abends gern Gedichte.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta leer poesía por la noche.", "audioSlug": "me_gusta_leer_poesia_por_la_noche" }
+      ]
     }
   ]
 }

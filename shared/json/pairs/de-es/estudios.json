@@ -482,6 +482,24 @@
       "target": [
         { "text": "Escribe una oración completa.", "audioSlug": "escribe_una_oracion_completa" }
       ]
+    },
+    {
+      "id": "estudios_me_interesa_mucho_la_ciencia",
+      "source": "Ich interessiere mich sehr für Wissenschaft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me interesa mucho la ciencia.", "audioSlug": "me_interesa_mucho_la_ciencia" }
+      ]
+    },
+    {
+      "id": "estudios_la_clase_de_ciencias_es_mi_favorita",
+      "source": "Der Naturwissenschaftsunterricht ist mein Lieblingsfach.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La clase de ciencias es mi favorita.", "audioSlug": "la_clase_de_ciencias_es_mi_favorita" }
+      ]
     }
   ]
 }

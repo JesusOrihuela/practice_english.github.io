@@ -153,6 +153,24 @@
       "target": [
         { "text": "Necesito un guante para el frío.", "audioSlug": "necesito_un_guante_para_el_frio" }
       ]
+    },
+    {
+      "id": "vestimenta_necesito_una_talla_mas_grande",
+      "source": "Ich brauche eine größere Größe.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito una talla más grande.", "audioSlug": "necesito_una_talla_mas_grande" }
+      ]
+    },
+    {
+      "id": "vestimenta_esta_tela_es_muy_suave",
+      "source": "Dieser Stoff ist sehr weich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Esta tela es muy suave.", "audioSlug": "esta_tela_es_muy_suave" }
+      ]
     }
   ]
 }

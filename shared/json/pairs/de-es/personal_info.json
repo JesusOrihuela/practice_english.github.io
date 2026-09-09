@@ -369,6 +369,44 @@
       "target": [
         { "text": "Tengo una hija adolescente.", "audioSlug": "tengo_una_hija_adolescente" }
       ]
+    },
+    {
+      "id": "personal_info_la_presidenta_dara_un_discurso",
+      "source": "Die Präsidentin hält eine Rede.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La presidenta dará un discurso.", "labels": { "gender": "femenino" }, "source": "Die Präsidentin hält eine Rede.", "audioSlug": "la_presidenta_dara_un_discurso" },
+        { "text": "El presidente dará un discurso.", "labels": { "gender": "masculino" }, "source": "Der Präsident hält eine Rede.", "audioSlug": "el_presidente_dara_un_discurso" }
+      ]
+    },
+    {
+      "id": "personal_info_la_ministra_visita_el_hospital",
+      "source": "Die Ministerin besucht das Krankenhaus.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La ministra visita el hospital.", "labels": { "gender": "femenino" }, "source": "Die Ministerin besucht das Krankenhaus.", "audioSlug": "la_ministra_visita_el_hospital" },
+        { "text": "El ministro visita el hospital.", "labels": { "gender": "masculino" }, "source": "Der Minister besucht das Krankenhaus.", "audioSlug": "el_ministro_visita_el_hospital" }
+      ]
+    },
+    {
+      "id": "personal_info_ese_artista_es_muy_original",
+      "source": "Dieser Künstler ist sehr originell.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ese artista es muy original.", "audioSlug": "ese_artista_es_muy_original" }
+      ]
+    },
+    {
+      "id": "personal_info_celebramos_el_nacimiento_del_bebe",
+      "source": "Wir feiern die Geburt des Babys.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Celebramos el nacimiento del bebé.", "audioSlug": "celebramos_el_nacimiento_del_bebe" }
+      ]
     }
   ]
 }
