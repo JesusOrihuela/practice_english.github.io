@@ -563,6 +563,78 @@
       "target": [
         { "text": "Eso me da igual.", "audioSlug": "eso_me_da_igual" }
       ]
+    },
+    {
+      "id": "conversacion_no_contesto_mi_pregunta",
+      "source": "Er hat meine Frage nicht beantwortet.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "No contestó mi pregunta.", "audioSlug": "no_contesto_mi_pregunta" }
+      ]
+    },
+    {
+      "id": "conversacion_leeme_el_texto_en_voz_alta",
+      "source": "Lies mir den Text laut vor.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Léeme el texto en voz alta.", "audioSlug": "leeme_el_texto_en_voz_alta" }
+      ]
+    },
+    {
+      "id": "conversacion_todos_quieren_participar",
+      "source": "Alle wollen an der Besprechung teilnehmen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Todos quieren participar en la reunión.", "audioSlug": "todos_quieren_participar_en_la_reunion" }
+      ]
+    },
+    {
+      "id": "conversacion_te_deseo_mucha_suerte",
+      "source": "Ich wünsche dir viel Glück.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Te deseo mucha suerte.", "audioSlug": "te_deseo_mucha_suerte" }
+      ]
+    },
+    {
+      "id": "conversacion_por_lo_general_estoy_de_acuerdo",
+      "source": "Im Allgemeinen stimme ich zu.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Por lo general estoy de acuerdo.", "audioSlug": "por_lo_general_estoy_de_acuerdo" }
+      ]
+    },
+    {
+      "id": "conversacion_deja_de_repetir_lo_mismo",
+      "source": "Hör auf, dasselbe zu wiederholen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Deja de repetir lo mismo.", "audioSlug": "deja_de_repetir_lo_mismo" }
+      ]
+    },
+    {
+      "id": "conversacion_prefiero_la_verdad_a_la_mentira",
+      "source": "Ich bevorzuge die Wahrheit vor der Lüge.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero la verdad a la mentira.", "audioSlug": "prefiero_la_verdad_a_la_mentira" }
+      ]
+    },
+    {
+      "id": "conversacion_quiero_expresar_mi_agradecimiento",
+      "source": "Ich möchte meinen Dank ausdrücken.",
+      "level": "B2",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero expresar mi agradecimiento.", "audioSlug": "quiero_expresar_mi_agradecimiento" }
+      ]
     }
   ]
 }
