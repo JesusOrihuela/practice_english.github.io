@@ -203,6 +203,88 @@
       "target": [
         { "text": "Necesito indicaciones para llegar allí.", "audioSlug": "necesito_indicaciones_para_llegar_alli" }
       ]
+    },
+    {
+      "id": "directions_el_colegio_esta_al_final_de_la_calle",
+      "source": "Die Schule ist am Ende der Straße.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El colegio está al final de la calle.", "audioSlug": "el_colegio_esta_al_final_de_la_calle" }
+      ]
+    },
+    {
+      "id": "directions_sube_por_la_escalera_hasta_el_tercer_piso",
+      "source": "Geh die Treppe hinauf bis zum dritten Stock.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Sube por la escalera hasta el tercer piso.", "audioSlug": "sube_por_la_escalera_hasta_el_tercer_piso" }
+      ]
+    },
+    {
+      "id": "directions_la_carretera_esta_cerrada_por_obras",
+      "source": "Die Landstraße ist wegen Bauarbeiten gesperrt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La carretera está cerrada por obras.", "audioSlug": "la_carretera_esta_cerrada_por_obras" }
+      ]
+    },
+    {
+      "id": "directions_el_instituto_queda_muy_cerca_de_aqui",
+      "source": "Die Oberschule ist ganz in der Nähe.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El instituto queda muy cerca de aquí.", "audioSlug": "el_instituto_queda_muy_cerca_de_aqui" }
+      ]
+    },
+    {
+      "id": "directions_la_salida_de_emergencia_esta_a_la_derecha",
+      "source": "Der Notausgang ist auf der rechten Seite.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La salida de emergencia está a la derecha.", "audioSlug": "la_salida_de_emergencia_esta_a_la_derecha" }
+      ]
+    },
+    {
+      "id": "directions_el_pueblo_esta_a_diez_kilometros",
+      "source": "Das Dorf ist zehn Kilometer entfernt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El pueblo está a diez kilómetros.", "audioSlug": "el_pueblo_esta_a_diez_kilometros" }
+      ]
+    },
+    {
+      "id": "directions_sigue_recto_por_esta_avenida",
+      "source": "Geh geradeaus diese Allee entlang.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Sigue recto por esta avenida.", "audioSlug": "sigue_recto_por_esta_avenida" }
+      ]
+    },
+    {
+      "id": "directions_el_aparcamiento_esta_debajo_del_edificio",
+      "source": "Der Parkplatz ist unter dem Gebäude.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El estacionamiento está debajo del edificio.", "labels": { "region": "Latinoamérica" }, "audioSlug": "el_estacionamiento_esta_debajo_del_edificio" },
+        { "text": "El aparcamiento está debajo del edificio.", "labels": { "region": "España" }, "audioSlug": "el_aparcamiento_esta_debajo_del_edificio" }
+      ]
+    },
+    {
+      "id": "directions_el_ayuntamiento_esta_en_la_plaza_central",
+      "source": "Das Rathaus ist am zentralen Platz.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El ayuntamiento está en la plaza central.", "audioSlug": "el_ayuntamiento_esta_en_la_plaza_central" }
+      ]
     }
   ]
 }

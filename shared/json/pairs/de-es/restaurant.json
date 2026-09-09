@@ -288,6 +288,90 @@
       "target": [
         { "text": "El pan es un alimento básico.", "audioSlug": "el_pan_es_un_alimento_basico" }
       ]
+    },
+    {
+      "id": "restaurant_quiero_una_hamburguesa_con_queso",
+      "source": "Ich möchte einen Hamburger mit Käse.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero una hamburguesa con queso.", "audioSlug": "quiero_una_hamburguesa_con_queso" }
+      ]
+    },
+    {
+      "id": "restaurant_de_primero_una_ensalada_mixta",
+      "source": "Als Vorspeise einen gemischten Salat.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "De primero, una ensalada mixta.", "audioSlug": "de_primero_una_ensalada_mixta" }
+      ]
+    },
+    {
+      "id": "restaurant_para_llevar_un_sandwich_de_pollo",
+      "source": "Zum Mitnehmen ein Hähnchen-Sandwich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Para llevar, un sándwich de pollo.", "audioSlug": "para_llevar_un_sandwich_de_pollo" }
+      ]
+    },
+    {
+      "id": "restaurant_me_pongo_un_bocadillo_de_jamon",
+      "source": "Ich nehme ein Schinken-Sandwich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me pongo un bocadillo de jamón.", "audioSlug": "me_pongo_un_bocadillo_de_jamon" }
+      ]
+    },
+    {
+      "id": "restaurant_la_tortilla_de_patatas_esta_riquisima",
+      "source": "Die Kartoffeltortilla ist superlecker.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La tortilla de papas está riquísima.", "labels": { "region": "Latinoamérica" }, "audioSlug": "la_tortilla_de_papas_esta_riquisima" },
+        { "text": "La tortilla de patatas está riquísima.", "labels": { "region": "España" }, "audioSlug": "la_tortilla_de_patatas_esta_riquisima" }
+      ]
+    },
+    {
+      "id": "restaurant_la_paella_es_para_dos_personas",
+      "source": "Die Paella ist für zwei Personen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La paella es para dos personas.", "audioSlug": "la_paella_es_para_dos_personas" }
+      ]
+    },
+    {
+      "id": "restaurant_de_segundo_un_filete_a_la_plancha",
+      "source": "Als Hauptgang ein Steak vom Grill.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "De segundo, un filete a la plancha.", "audioSlug": "de_segundo_un_filete_a_la_plancha" }
+      ]
+    },
+    {
+      "id": "restaurant_de_postre_un_helado_de_vainilla",
+      "source": "Als Nachtisch ein Vanilleeis.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "De postre, un helado de vainilla.", "audioSlug": "de_postre_un_helado_de_vainilla" }
+      ]
+    },
+    {
+      "id": "restaurant_la_tarta_de_chocolate_es_casera",
+      "source": "Die Schokoladentorte ist hausgemacht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El pastel de chocolate es casero.", "labels": { "region": "México y Centroamérica" }, "audioSlug": "el_pastel_de_chocolate_es_casero" },
+        { "text": "La torta de chocolate es casera.", "labels": { "region": "Sudamérica" }, "audioSlug": "la_torta_de_chocolate_es_casera" },
+        { "text": "La tarta de chocolate es casera.", "labels": { "region": "España" }, "audioSlug": "la_tarta_de_chocolate_es_casera" }
+      ]
     }
   ]
 }

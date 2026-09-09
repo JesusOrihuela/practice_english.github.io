@@ -215,6 +215,74 @@
       "target": [
         { "text": "Dirijo un pequeño equipo en el trabajo.", "audioSlug": "dirijo_un_pequeno_equipo_en_el_trabajo" }
       ]
+    },
+    {
+      "id": "personal_info_es_una_abogada_excelente",
+      "source": "Sie ist eine ausgezeichnete Anwältin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Es una abogada excelente.", "labels": { "gender": "femenino" }, "source": "Sie ist eine ausgezeichnete Anwältin.", "audioSlug": "es_una_abogada_excelente" },
+        { "text": "Es un abogado excelente.", "labels": { "gender": "masculino" }, "source": "Er ist ein ausgezeichneter Anwalt.", "audioSlug": "es_un_abogado_excelente" }
+      ]
+    },
+    {
+      "id": "personal_info_es_una_enfermera_muy_amable",
+      "source": "Sie ist eine sehr freundliche Krankenpflegerin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Es una enfermera muy amable.", "labels": { "gender": "femenino" }, "source": "Sie ist eine sehr freundliche Krankenpflegerin.", "audioSlug": "es_una_enfermera_muy_amable" },
+        { "text": "Es un enfermero muy amable.", "labels": { "gender": "masculino" }, "source": "Er ist ein sehr freundlicher Krankenpfleger.", "audioSlug": "es_un_enfermero_muy_amable" }
+      ]
+    },
+    {
+      "id": "personal_info_es_una_arquitecta_brillante",
+      "source": "Sie ist eine brillante Architektin.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una arquitecta brillante.", "labels": { "gender": "femenino" }, "source": "Sie ist eine brillante Architektin.", "audioSlug": "es_una_arquitecta_brillante" },
+        { "text": "Es un arquitecto brillante.", "labels": { "gender": "masculino" }, "source": "Er ist ein brillanter Architekt.", "audioSlug": "es_un_arquitecto_brillante" }
+      ]
+    },
+    {
+      "id": "personal_info_es_una_cientifica_muy_capaz",
+      "source": "Sie ist eine sehr fähige Wissenschaftlerin.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una científica muy capaz.", "labels": { "gender": "femenino" }, "source": "Sie ist eine sehr fähige Wissenschaftlerin.", "audioSlug": "es_una_cientifica_muy_capaz" },
+        { "text": "Es un científico muy capaz.", "labels": { "gender": "masculino" }, "source": "Er ist ein sehr fähiger Wissenschaftler.", "audioSlug": "es_un_cientifico_muy_capaz" }
+      ]
+    },
+    {
+      "id": "personal_info_es_una_empresaria_responsable",
+      "source": "Sie ist eine verantwortungsvolle Unternehmerin.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una empresaria responsable.", "labels": { "gender": "femenino" }, "source": "Sie ist eine verantwortungsvolle Unternehmerin.", "audioSlug": "es_una_empresaria_responsable" },
+        { "text": "Es un empresario responsable.", "labels": { "gender": "masculino" }, "source": "Er ist ein verantwortungsvoller Unternehmer.", "audioSlug": "es_un_empresario_responsable" }
+      ]
+    },
+    {
+      "id": "personal_info_trabaja_como_periodista",
+      "source": "Sie arbeitet als Journalistin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Trabaja como periodista.", "audioSlug": "trabaja_como_periodista" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_padre_esta_casado",
+      "source": "Mein Vater ist verheiratet.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi padre está casado.", "audioSlug": "mi_padre_esta_casado" }
+      ]
     }
   ]
 }

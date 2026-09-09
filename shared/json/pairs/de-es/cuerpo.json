@@ -191,6 +191,51 @@
       "target": [
         { "text": "Tiene una sonrisa muy bonita.", "audioSlug": "tiene_una_sonrisa_muy_bonita" }
       ]
+    },
+    {
+      "id": "cuerpo_me_duele_la_nariz_por_el_resfriado",
+      "source": "Meine Nase tut wegen der Erkältung weh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me duele la nariz por el resfriado.", "audioSlug": "me_duele_la_nariz_por_el_resfriado" }
+      ]
+    },
+    {
+      "id": "cuerpo_mi_tio_tiene_barba_y_bigote",
+      "source": "Mein Onkel hat Bart und Schnurrbart.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi tío tiene barba y bigote.", "audioSlug": "mi_tio_tiene_barba_y_bigote" }
+      ]
+    },
+    {
+      "id": "cuerpo_me_duele_el_cuello_de_dormir_mal",
+      "source": "Mein Nacken tut vom schlechten Schlafen weh.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me duele el cuello de dormir mal.", "audioSlug": "me_duele_el_cuello_de_dormir_mal" }
+      ]
+    },
+    {
+      "id": "cuerpo_me_duele_el_estomago_despues_de_comer",
+      "source": "Nach dem Essen tut mir der Magen weh.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me duele el estómago después de comer.", "audioSlug": "me_duele_el_estomago_despues_de_comer" }
+      ]
+    },
+    {
+      "id": "cuerpo_el_oido_izquierdo_me_molesta_un_poco",
+      "source": "Mein linkes Ohr stört mich ein wenig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El oído izquierdo me molesta un poco.", "audioSlug": "el_oido_izquierdo_me_molesta_un_poco" }
+      ]
     }
   ]
 }

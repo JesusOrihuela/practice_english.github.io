@@ -197,6 +197,70 @@
       "target": [
         { "text": "Este supermercado es muy económico.", "audioSlug": "este_supermercado_es_muy_economico" }
       ]
+    },
+    {
+      "id": "supermarket_un_paquete_de_galletas_de_chocolate",
+      "source": "Eine Packung Schokoladenkekse.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Un paquete de galletas de chocolate.", "audioSlug": "un_paquete_de_galletas_de_chocolate" }
+      ]
+    },
+    {
+      "id": "supermarket_compra_un_yogur_natural",
+      "source": "Kauf einen Naturjoghurt.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Compra un yogur natural.", "audioSlug": "compra_un_yogur_natural" }
+      ]
+    },
+    {
+      "id": "supermarket_prefiero_el_zumo_de_naranja",
+      "source": "Ich mag lieber Orangensaft.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero el jugo de naranja.", "labels": { "region": "Latinoamérica" }, "audioSlug": "prefiero_el_jugo_de_naranja" },
+        { "text": "Prefiero el zumo de naranja.", "labels": { "region": "España" }, "audioSlug": "prefiero_el_zumo_de_naranja" }
+      ]
+    },
+    {
+      "id": "supermarket_los_platanos_estan_muy_maduros",
+      "source": "Die Bananen sind sehr reif.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los plátanos están muy maduros.", "audioSlug": "los_platanos_estan_muy_maduros" }
+      ]
+    },
+    {
+      "id": "supermarket_las_fresas_son_de_temporada",
+      "source": "Die Erdbeeren haben gerade Saison.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Las fresas son de temporada.", "audioSlug": "las_fresas_son_de_temporada" }
+      ]
+    },
+    {
+      "id": "supermarket_los_ninos_desayunan_cereales",
+      "source": "Die Kinder essen Müsli zum Frühstück.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los niños desayunan cereales.", "audioSlug": "los_ninos_desayunan_cereales" }
+      ]
+    },
+    {
+      "id": "supermarket_necesito_un_paquete_de_pasta",
+      "source": "Ich brauche eine Packung Nudeln.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito un paquete de pasta.", "audioSlug": "necesito_un_paquete_de_pasta" }
+      ]
     }
   ]
 }

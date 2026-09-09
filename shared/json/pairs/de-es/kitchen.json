@@ -245,6 +245,69 @@
       "target": [
         { "text": "¿Qué bebida prefieres con la comida?", "audioSlug": "que_bebida_prefieres_con_la_comida" }
       ]
+    },
+    {
+      "id": "kitchen_pica_la_cebolla_muy_fina",
+      "source": "Schneide die Zwiebel sehr fein.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pica la cebolla muy fina.", "audioSlug": "pica_la_cebolla_muy_fina" }
+      ]
+    },
+    {
+      "id": "kitchen_ralla_una_zanahoria_para_la_ensalada",
+      "source": "Reibe eine Karotte für den Salat.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ralla una zanahoria para la ensalada.", "audioSlug": "ralla_una_zanahoria_para_la_ensalada" }
+      ]
+    },
+    {
+      "id": "kitchen_unta_mantequilla_en_el_pan",
+      "source": "Streiche Butter auf das Brot.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Unta mantequilla en el pan.", "audioSlug": "unta_mantequilla_en_el_pan" }
+      ]
+    },
+    {
+      "id": "kitchen_desayuno_tostadas_con_mermelada",
+      "source": "Zum Frühstück gibt es Toast mit Marmelade.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Desayuno tostadas con mermelada.", "audioSlug": "desayuno_tostadas_con_mermelada" }
+      ]
+    },
+    {
+      "id": "kitchen_abre_una_lata_de_atun",
+      "source": "Öffne eine Dose Thunfisch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Abre una lata de atún.", "audioSlug": "abre_una_lata_de_atun" }
+      ]
+    },
+    {
+      "id": "kitchen_el_salmon_se_hace_al_horno",
+      "source": "Der Lachs wird im Ofen zubereitet.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El salmón se hace al horno.", "audioSlug": "el_salmon_se_hace_al_horno" }
+      ]
+    },
+    {
+      "id": "kitchen_el_cordero_asado_es_su_especialidad",
+      "source": "Das Lammbraten ist ihre Spezialität.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El cordero asado es su especialidad.", "audioSlug": "el_cordero_asado_es_su_especialidad" }
+      ]
     }
   ]
 }

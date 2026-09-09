@@ -1,0 +1,131 @@
+{
+  "phrases": [
+    {
+      "id": "vestimenta_hoy_llevo_una_camisa_blanca",
+      "source": "Heute trage ich ein weißes Hemd.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Hoy llevo una camisa blanca.", "audioSlug": "hoy_llevo_una_camisa_blanca" }
+      ]
+    },
+    {
+      "id": "vestimenta_ese_pantalon_te_queda_muy_bien",
+      "source": "Diese Hose steht dir sehr gut.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese pantalón te queda muy bien.", "audioSlug": "ese_pantalon_te_queda_muy_bien" }
+      ]
+    },
+    {
+      "id": "vestimenta_ella_lleva_una_falda_larga",
+      "source": "Sie trägt einen langen Rock.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Ella lleva una falda larga.", "audioSlug": "ella_lleva_una_falda_larga" }
+      ]
+    },
+    {
+      "id": "vestimenta_necesito_unos_zapatos_comodos",
+      "source": "Ich brauche bequeme Schuhe.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito unos zapatos cómodos.", "audioSlug": "necesito_unos_zapatos_comodos" }
+      ]
+    },
+    {
+      "id": "vestimenta_guardo_las_llaves_en_el_bolso",
+      "source": "Ich bewahre die Schlüssel in der Tasche auf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Guardo las llaves en el bolso.", "audioSlug": "guardo_las_llaves_en_el_bolso" }
+      ]
+    },
+    {
+      "id": "vestimenta_hace_frio_ponte_el_jersey",
+      "source": "Es ist kalt, zieh den Pullover an.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hace frío, ponte el suéter.", "labels": { "region": "Latinoamérica" }, "audioSlug": "hace_frio_ponte_el_sueter" },
+        { "text": "Hace frío, ponte el jersey.", "labels": { "region": "España" }, "audioSlug": "hace_frio_ponte_el_jersey" }
+      ]
+    },
+    {
+      "id": "vestimenta_se_puso_una_corbata_azul",
+      "source": "Er hat eine blaue Krawatte angezogen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Se puso una corbata azul.", "audioSlug": "se_puso_una_corbata_azul" }
+      ]
+    },
+    {
+      "id": "vestimenta_llevo_calcetines_de_lana_en_invierno",
+      "source": "Im Winter trage ich Wollsocken.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Llevo calcetines de lana en invierno.", "audioSlug": "llevo_calcetines_de_lana_en_invierno" }
+      ]
+    },
+    {
+      "id": "vestimenta_usa_una_gorra_para_el_sol",
+      "source": "Trag eine Mütze gegen die Sonne.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Usa una gorra para el sol.", "audioSlug": "usa_una_gorra_para_el_sol" }
+      ]
+    },
+    {
+      "id": "vestimenta_ella_tiene_una_blusa_de_seda",
+      "source": "Sie hat eine Bluse aus Seide.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ella tiene una blusa de seda.", "audioSlug": "ella_tiene_una_blusa_de_seda" }
+      ]
+    },
+    {
+      "id": "vestimenta_se_compro_un_sombrero_elegante",
+      "source": "Sie hat sich einen eleganten Hut gekauft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Se compró un sombrero elegante.", "audioSlug": "se_compro_un_sombrero_elegante" }
+      ]
+    },
+    {
+      "id": "vestimenta_los_ninos_usan_botas_de_goma",
+      "source": "Die Kinder tragen Gummistiefel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los niños usan botas de goma.", "audioSlug": "los_ninos_usan_botas_de_goma" }
+      ]
+    },
+    {
+      "id": "vestimenta_duermo_con_un_pijama_comodo",
+      "source": "Ich schlafe in einem bequemen Schlafanzug.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Duermo con un pijama cómodo.", "audioSlug": "duermo_con_un_pijama_comodo" }
+      ]
+    },
+    {
+      "id": "vestimenta_lleva_un_traje_gris_a_la_oficina",
+      "source": "Er trägt einen grauen Anzug ins Büro.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Lleva un traje gris a la oficina.", "audioSlug": "lleva_un_traje_gris_a_la_oficina" }
+      ]
+    }
+  ]
+}
