@@ -23,6 +23,8 @@ tools/sources/raw/
 tools/sources/derived/*
 !tools/sources/derived/pcic-greetings.json
 !tools/sources/derived/pcic-*.json
+tools/sources/de-glosses/
+tools/apply-de-glosses.mjs
 !tools/sources/derived/core-inventory-*.json
 !tools/sources/derived/*-provenance.json
 !tools/sources/derived/ngsl-*.json
