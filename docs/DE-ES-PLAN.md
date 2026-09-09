@@ -50,8 +50,12 @@ naturaleza_lugares, technology, sitios
   entradas de vocab/es. Hechas por-deck vía delegación a `code-writer` (haiku) + revisión/auditoría
   (convención orthográfica adj/sust, coverage por id, glosa fiel). Auditoría estructural: 0 huecos.
   Habilita Vocabulario/Quiz de-es para germanoparlantes y satisface `check-pair-completeness`.
-- **Fase 5 (shippear): PENDIENTE** — al pasar el canal frases ≥86 %, quitar `wip`. Las glosas ya están;
-  el único faltante es la cobertura de frases.
+- **Fase 5 (shippear): ✅ COMPLETA** — canal frases PCIC **86.3 %** y vocab **88.2 %** (ambos ≥86). Se quitó
+  `wip` en `lang-pair.js`; con de-es ya sin exención, los **9 gates** de CI pasan globalmente
+  (check-content, audit, check-variants --gate, coverage --gate, taxonomy, pair-completeness,
+  grammar-topics, fix-phrase-ids, check-length). `bump-assets` corrido. de-es ahora aparece en el picker
+  como par de producto normal. **Pendiente: `git push` (despliega en vivo).**
+  Se añadió el tema **`vestimenta`** (#31) durante el cierre PCIC (ropa era núcleo A1 sin hogar propio).
 
 *(Fuera de en-es por ser demasiado específicos: accountability, theater, museums, politica, oficina,
 fiesta, describiendo_personas → se pliega en descripciones.)*
