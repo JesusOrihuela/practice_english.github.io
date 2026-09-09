@@ -308,6 +308,33 @@
       "target": [
         { "text": "El cordero asado es su especialidad.", "audioSlug": "el_cordero_asado_es_su_especialidad" }
       ]
+    },
+    {
+      "id": "kitchen_brindamos_con_una_copa_de_champan",
+      "source": "Wir stoßen mit einem Glas Champagner an.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Brindamos con una copa de champán.", "audioSlug": "brindamos_con_una_copa_de_champan" }
+      ]
+    },
+    {
+      "id": "kitchen_tomate_una_taza_de_cafe_caliente",
+      "source": "Trink eine Tasse heißen Kaffee.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tómate una taza de café caliente.", "audioSlug": "tomate_una_taza_de_cafe_caliente" }
+      ]
+    },
+    {
+      "id": "kitchen_la_crema_pastelera_esta_deliciosa",
+      "source": "Die Konditorcreme ist köstlich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La crema pastelera está deliciosa.", "audioSlug": "la_crema_pastelera_esta_deliciosa" }
+      ]
     }
   ]
 }

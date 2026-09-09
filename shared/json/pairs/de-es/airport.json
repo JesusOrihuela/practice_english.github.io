@@ -191,6 +191,42 @@
       "target": [
         { "text": "Viajo con mi pareja a Italia.", "audioSlug": "viajo_con_mi_pareja_a_italia" }
       ]
+    },
+    {
+      "id": "airport_el_piloto_anuncia_el_despegue",
+      "source": "Der Pilot kündigt den Start an.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El piloto anuncia el despegue.", "audioSlug": "el_piloto_anuncia_el_despegue" }
+      ]
+    },
+    {
+      "id": "airport_pasa_por_el_control_de_seguridad",
+      "source": "Geh durch die Sicherheitskontrolle.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pasa por el control de seguridad.", "audioSlug": "pasa_por_el_control_de_seguridad" }
+      ]
+    },
+    {
+      "id": "airport_muestra_tu_documento_de_identidad",
+      "source": "Zeig deinen Ausweis.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Muestra tu documento de identidad.", "audioSlug": "muestra_tu_documento_de_identidad" }
+      ]
+    },
+    {
+      "id": "airport_llevo_el_portatil_en_el_maletin",
+      "source": "Ich trage den Laptop in der Aktentasche.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Llevo el portátil en el maletín.", "audioSlug": "llevo_el_portatil_en_el_maletin" }
+      ]
     }
   ]
 }

@@ -288,6 +288,42 @@
       "target": [
         { "text": "Guarda mi número de contacto.", "audioSlug": "guarda_mi_numero_de_contacto" }
       ]
+    },
+    {
+      "id": "technology_olvide_el_codigo_de_la_puerta",
+      "source": "Ich habe den Türcode vergessen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Olvidé el código de la puerta.", "audioSlug": "olvide_el_codigo_de_la_puerta" }
+      ]
+    },
+    {
+      "id": "technology_apaga_la_tele_antes_de_dormir",
+      "source": "Schalt den Fernseher aus, bevor du schläfst.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Apaga la tele antes de dormir.", "audioSlug": "apaga_la_tele_antes_de_dormir" }
+      ]
+    },
+    {
+      "id": "technology_mi_portatil_nuevo_es_muy_ligero",
+      "source": "Mein neuer Laptop ist sehr leicht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Mi portátil nuevo es muy ligero.", "audioSlug": "mi_portatil_nuevo_es_muy_ligero" }
+      ]
+    },
+    {
+      "id": "technology_el_aparato_funciona_con_energia_electrica",
+      "source": "Das Gerät funktioniert mit elektrischem Strom.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El aparato funciona con energía eléctrica.", "audioSlug": "el_aparato_funciona_con_energia_electrica" }
+      ]
     }
   ]
 }

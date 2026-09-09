@@ -302,6 +302,24 @@
       "target": [
         { "text": "Hay que continuar con el plan previsto.", "audioSlug": "hay_que_continuar_con_el_plan_previsto" }
       ]
+    },
+    {
+      "id": "calendario_espera_un_segundo_por_favor",
+      "source": "Warte eine Sekunde, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Espera un segundo, por favor.", "audioSlug": "espera_un_segundo_por_favor" }
+      ]
+    },
+    {
+      "id": "calendario_ya_son_las_tres_y_media",
+      "source": "Es ist schon halb vier.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ya son las tres y media.", "audioSlug": "ya_son_las_tres_y_media" }
+      ]
     }
   ]
 }

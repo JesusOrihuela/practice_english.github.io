@@ -299,6 +299,51 @@
       "target": [
         { "text": "Es un aeropuerto internacional muy grande.", "audioSlug": "es_un_aeropuerto_internacional_muy_grande" }
       ]
+    },
+    {
+      "id": "sitios_el_museo_esta_al_sur_de_la_ciudad",
+      "source": "Das Museum liegt im Süden der Stadt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El museo está al sur de la ciudad.", "audioSlug": "el_museo_esta_al_sur_de_la_ciudad" }
+      ]
+    },
+    {
+      "id": "sitios_vivo_en_las_afueras_de_madrid",
+      "source": "Ich wohne am Stadtrand von Madrid.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Vivo en las afueras de Madrid.", "audioSlug": "vivo_en_las_afueras_de_madrid" }
+      ]
+    },
+    {
+      "id": "sitios_visitamos_un_monumento_muy_antiguo",
+      "source": "Wir besuchten ein sehr altes Denkmal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Visitamos un monumento muy antiguo.", "audioSlug": "visitamos_un_monumento_muy_antiguo" }
+      ]
+    },
+    {
+      "id": "sitios_entrenan_en_el_gimnasio_del_barrio",
+      "source": "Sie trainieren im Fitnessstudio des Viertels.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Entrenan en el gimnasio del barrio.", "audioSlug": "entrenan_en_el_gimnasio_del_barrio" }
+      ]
+    },
+    {
+      "id": "sitios_tomamos_un_cafe_en_la_cafeteria",
+      "source": "Wir trinken einen Kaffee im Café.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tomamos un café en la cafetería.", "audioSlug": "tomamos_un_cafe_en_la_cafeteria" }
+      ]
     }
   ]
 }
