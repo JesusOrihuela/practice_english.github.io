@@ -35,10 +35,17 @@ naturaleza_lugares, technology, sitios
   ~10 frases c/u = **302 frases**, source alemán fiel + target español neutro, audio es (edge-tts),
   variantes regionales/género donde aplican, tips en español (target), 11 reglas de gramática
   (metalenguaje alemán) autovinculadas por evidencia. Todos los gates verdes por tema.
-- **Canal vocab de-es: 91.4%** (ya sobre el piso 86 %, vía vocab/es compartido).
-- **Canal frases de-es: ~66%** (712 frases; 652/991 del top-1000). **PENDIENTE (único bloqueador restante)**:
-  cerrar a ≥86 % con más frases naturales densas en los lemas top-1000 que faltan (cadencia calidad-primero,
-  verificación inline con `gate-run.mjs`, chequeo anti-duplicado). Rendimiento decreciente (~0.3-0.5 pt/batch).
+- **Canal vocab de-es: 88.2%** (PCIC-gate; sobre el piso 86 %, vía vocab/es compartido).
+- **IMPORTANTE — dos métricas (ver memoria `project_coverage_two_lists`):** `coverage` imprime ELELex
+  (informativo, 12325 lemmas) y el **GATE real = PCIC es-core** (`gateIndex`). El envío gatea contra **PCIC**.
+  El canal frases ELELex llegó a **86.2%** (854/991) pero el **PCIC-gate está en 60.7%** — son listas distintas.
+- **Canal frases de-es (PCIC-gate): 60.7%.** **PENDIENTE (único bloqueador restante)**: cerrar a ≥86 %
+  apuntando la lista del gate → `node tools/coverage.mjs --pair de-es --gate-missing` (PCIC faltantes por rango).
+  Son ~250 lemas de **vocabulario concreto A1-A2**: profesiones (abogado/enfermero/camarero…, con variantes de
+  género), ropa (pantalón/camisa/falda…), comida (ensalada/tortilla/jamón…), colores (gris/marrón/rubio…),
+  lugares (colegio/garaje…), reflexivos (levantarse/ducharse/sentarse…). Mejor pedagogía que la cola ELELex.
+  Nota: el trabajo previo contra ELELex (frases B1 naturales) es contenido válido y se queda; solo no cuenta
+  para el gate.
 - **Fase 4 (glosas alemanas del vocab): ✅ COMPLETA** — `translations.de` + `gloss.de` en las **1604/1604**
   entradas de vocab/es. Hechas por-deck vía delegación a `code-writer` (haiku) + revisión/auditoría
   (convención orthográfica adj/sust, coverage por id, glosa fiel). Auditoría estructural: 0 huecos.
