@@ -35,6 +35,9 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional"></noscript>
     <link rel="stylesheet" href="index/css/generalities.css?v=e7426ae7">
     <link rel="stylesheet" href="index/css/index.css?v=10be1cdf">
+    <!-- LCP image on the landing hero — fetch it early and at high priority so mobile
+         (Slow 4G) discovers it before scripts instead of after CSS+parse. -->
+    <link rel="preload" as="image" href="index/img/learn.webp" fetchpriority="high">
     <link rel="icon" href="index/img/ico/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="index/img/ico/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="index/img/ico/favicon-32x32.png">
@@ -119,7 +122,7 @@
             <div class="hero-right">
                 <div class="hexagon"></div>
                 <div class="hero-image-glow"></div>
-                <img id="skewingImage" src="index/img/learn.webp" alt="Learn English illustration" width="640" height="640" />
+                <img id="skewingImage" src="index/img/learn.webp" alt="Learn English illustration" width="640" height="640" fetchpriority="high" decoding="async" />
             </div>
         </section>
 
