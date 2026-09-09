@@ -191,6 +191,60 @@
       "target": [
         { "text": "Añade un poco de sal y pimienta.", "audioSlug": "anade_un_poco_de_sal_y_pimienta" }
       ]
+    },
+    {
+      "id": "kitchen_la_salsa_lleva_tomate_y_ajo",
+      "source": "Die Soße enthält Tomate und Knoblauch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La salsa lleva tomate y ajo.", "audioSlug": "la_salsa_lleva_tomate_y_ajo" }
+      ]
+    },
+    {
+      "id": "kitchen_necesito_azucar_para_el_postre",
+      "source": "Ich brauche Zucker für den Nachtisch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito azúcar para el postre.", "audioSlug": "necesito_azucar_para_el_postre" }
+      ]
+    },
+    {
+      "id": "kitchen_falta_un_ingrediente_en_la_receta",
+      "source": "In dem Rezept fehlt eine Zutat.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Falta un ingrediente en la receta.", "audioSlug": "falta_un_ingrediente_en_la_receta" }
+      ]
+    },
+    {
+      "id": "kitchen_me_encanta_el_chocolate_negro",
+      "source": "Ich liebe dunkle Schokolade.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me encanta el chocolate negro.", "audioSlug": "me_encanta_el_chocolate_negro" }
+      ]
+    },
+    {
+      "id": "kitchen_hay_una_botella_de_agua_en_la_mesa",
+      "source": "Auf dem Tisch steht eine Flasche Wasser.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay una botella de agua en la mesa.", "audioSlug": "hay_una_botella_de_agua_en_la_mesa" }
+      ]
+    },
+    {
+      "id": "kitchen_que_bebida_prefieres_con_la_comida",
+      "source": "Welches Getränk möchtest du zum Essen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Qué bebida prefieres con la comida?", "audioSlug": "que_bebida_prefieres_con_la_comida" }
+      ]
     }
   ]
 }

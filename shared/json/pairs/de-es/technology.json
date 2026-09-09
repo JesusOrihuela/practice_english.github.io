@@ -197,6 +197,43 @@
       "target": [
         { "text": "Este dispositivo es muy moderno.", "audioSlug": "este_dispositivo_es_muy_moderno" }
       ]
+    },
+    {
+      "id": "technology_mi_movil_tiene_una_buena_camara",
+      "source": "Mein Handy hat eine gute Kamera.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi móvil tiene una buena cámara.", "labels": { "region": "España" }, "audioSlug": "mi_movil_tiene_una_buena_camara" },
+        { "text": "Mi celular tiene una buena cámara.", "labels": { "region": "Latinoamérica" }, "audioSlug": "mi_celular_tiene_una_buena_camara" }
+      ]
+    },
+    {
+      "id": "technology_me_gusta_el_diseno_de_esta_pagina",
+      "source": "Mir gefällt das Design dieser Seite.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta el diseño de esta página.", "audioSlug": "me_gusta_el_diseno_de_esta_pagina" }
+      ]
+    },
+    {
+      "id": "technology_guarde_el_documento_en_la_nube",
+      "source": "Ich habe das Dokument in der Cloud gespeichert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Guardé el documento en la nube.", "audioSlug": "guarde_el_documento_en_la_nube" }
+      ]
+    },
+    {
+      "id": "technology_cada_elemento_de_la_pantalla_es_util",
+      "source": "Jedes Element auf dem Bildschirm ist nützlich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Cada elemento de la pantalla es útil.", "audioSlug": "cada_elemento_de_la_pantalla_es_util" }
+      ]
     }
   ]
 }

@@ -215,6 +215,9 @@
   "economia_el_comercio_en_esta_zona_es_activo": [
     "estar_location_states"
   ],
+  "economia_firme_un_contrato_de_trabajo": [
+    "present_ar_verbs"
+  ],
   "economia_necesito_pagar_las_facturas": [
     "present_ar_verbs"
   ],
@@ -222,6 +225,9 @@
     "present_ar_verbs"
   ],
   "economia_pago_mis_impuestos_cada_ano": [
+    "present_ar_verbs"
+  ],
+  "economia_trabaja_en_una_agencia_de_viajes": [
     "present_ar_verbs"
   ],
   "emociones_estoy_tan_contento_hoy": [
@@ -341,6 +347,9 @@
   "health_tomo_vitaminas_todas_las_mananas": [
     "present_ar_verbs"
   ],
+  "hogar_la_mesa_es_de_madera_maciza": [
+    "ser_identity"
+  ],
   "hogar_necesito_arreglar_la_puerta": [
     "present_ar_verbs"
   ],
@@ -356,11 +365,23 @@
   "kitchen_esta_salsa_tiene_mucho_sabor": [
     "estar_location_states"
   ],
+  "kitchen_la_salsa_lleva_tomate_y_ajo": [
+    "present_ar_verbs"
+  ],
+  "kitchen_me_encanta_el_chocolate_negro": [
+    "gustar_structure"
+  ],
+  "kitchen_necesito_azucar_para_el_postre": [
+    "present_ar_verbs"
+  ],
   "kitchen_necesito_un_cuchillo_afilado": [
     "present_ar_verbs"
   ],
   "kitchen_necesito_una_receta_facil": [
     "present_ar_verbs"
+  ],
+  "kitchen_que_bebida_prefieres_con_la_comida": [
+    "question_words"
   ],
   "kitchen_sirvo_la_cena_a_las_ocho": [
     "present_ar_verbs"
@@ -564,6 +585,10 @@
   ],
   "technology_cual_es_la_contrasena_del_wifi": [
     "question_words"
+  ],
+  "technology_me_gusta_el_diseno_de_esta_pagina": [
+    "estar_location_states",
+    "gustar_structure"
   ],
   "technology_necesito_cargar_la_bateria": [
     "present_ar_verbs"

@@ -191,6 +191,42 @@
       "target": [
         { "text": "Cuelga el cuadro en la pared.", "audioSlug": "cuelga_el_cuadro_en_la_pared" }
       ]
+    },
+    {
+      "id": "hogar_mi_perro_juega_en_el_jardin",
+      "source": "Mein Hund spielt im Garten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi perro juega en el jardín.", "audioSlug": "mi_perro_juega_en_el_jardin" }
+      ]
+    },
+    {
+      "id": "hogar_la_mesa_es_de_madera_maciza",
+      "source": "Der Tisch ist aus massivem Holz.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La mesa es de madera maciza.", "audioSlug": "la_mesa_es_de_madera_maciza" }
+      ]
+    },
+    {
+      "id": "hogar_el_hogar_siempre_debe_estar_limpio",
+      "source": "Das Zuhause sollte immer sauber sein.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El hogar siempre debe estar limpio.", "audioSlug": "el_hogar_siempre_debe_estar_limpio" }
+      ]
+    },
+    {
+      "id": "hogar_arreglo_la_bicicleta_en_el_taller",
+      "source": "Ich repariere das Fahrrad in der Werkstatt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Arreglo la bicicleta en el taller.", "audioSlug": "arreglo_la_bicicleta_en_el_taller" }
+      ]
     }
   ]
 }
