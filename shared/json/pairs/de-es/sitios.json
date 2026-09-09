@@ -263,6 +263,42 @@
       "target": [
         { "text": "El barrio es tranquilo y seguro.", "audioSlug": "el_barrio_es_tranquilo_y_seguro" }
       ]
+    },
+    {
+      "id": "sitios_el_barco_sale_del_puerto_al_amanecer",
+      "source": "Das Schiff läuft im Morgengrauen aus dem Hafen aus.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El barco sale del puerto al amanecer.", "audioSlug": "el_barco_sale_del_puerto_al_amanecer" }
+      ]
+    },
+    {
+      "id": "sitios_esta_zona_es_muy_turistica",
+      "source": "Diese Gegend ist sehr touristisch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Esta zona es muy turística.", "audioSlug": "esta_zona_es_muy_turistica" }
+      ]
+    },
+    {
+      "id": "sitios_el_guia_nos_mostro_la_ciudad_vieja",
+      "source": "Der Reiseführer zeigte uns die Altstadt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El guía nos mostró la ciudad vieja.", "audioSlug": "el_guia_nos_mostro_la_ciudad_vieja" }
+      ]
+    },
+    {
+      "id": "sitios_es_un_aeropuerto_internacional_muy_grande",
+      "source": "Es ist ein sehr großer internationaler Flughafen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es un aeropuerto internacional muy grande.", "audioSlug": "es_un_aeropuerto_internacional_muy_grande" }
+      ]
     }
   ]
 }

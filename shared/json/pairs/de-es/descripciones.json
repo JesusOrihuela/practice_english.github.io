@@ -673,6 +673,42 @@
       "target": [
         { "text": "Habla francés con mucha fluidez.", "audioSlug": "habla_frances_con_mucha_fluidez" }
       ]
+    },
+    {
+      "id": "descripciones_me_gusta_mucho_la_musica_cubana",
+      "source": "Ich mag kubanische Musik sehr.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta mucho la música cubana.", "audioSlug": "me_gusta_mucho_la_musica_cubana" }
+      ]
+    },
+    {
+      "id": "descripciones_tiene_un_marcado_acento_americano",
+      "source": "Er hat einen ausgeprägten amerikanischen Akzent.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene un marcado acento americano.", "audioSlug": "tiene_un_marcado_acento_americano" }
+      ]
+    },
+    {
+      "id": "descripciones_ella_aprende_una_lengua_indigena",
+      "source": "Sie lernt eine indigene Sprache.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ella aprende una lengua indígena.", "audioSlug": "ella_aprende_una_lengua_indigena" }
+      ]
+    },
+    {
+      "id": "descripciones_esta_silla_es_de_plastico_duro",
+      "source": "Dieser Stuhl ist aus hartem Plastik.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Esta silla es de plástico duro.", "audioSlug": "esta_silla_es_de_plastico_duro" }
+      ]
     }
   ]
 }

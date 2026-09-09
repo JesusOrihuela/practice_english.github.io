@@ -245,6 +245,33 @@
       "target": [
         { "text": "Busco una vivienda más grande.", "audioSlug": "busco_una_vivienda_mas_grande" }
       ]
+    },
+    {
+      "id": "hogar_necesito_un_par_de_zapatos_nuevos",
+      "source": "Ich brauche ein paar neue Schuhe.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito un par de zapatos nuevos.", "audioSlug": "necesito_un_par_de_zapatos_nuevos" }
+      ]
+    },
+    {
+      "id": "hogar_voy_a_colocar_los_libros_en_el_estante",
+      "source": "Ich stelle die Bücher ins Regal.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Voy a colocar los libros en el estante.", "audioSlug": "voy_a_colocar_los_libros_en_el_estante" }
+      ]
+    },
+    {
+      "id": "hogar_hay_que_quitar_el_polvo_de_los_muebles",
+      "source": "Man muss die Möbel abstauben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay que quitar el polvo de los muebles.", "audioSlug": "hay_que_quitar_el_polvo_de_los_muebles" }
+      ]
     }
   ]
 }

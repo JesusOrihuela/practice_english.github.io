@@ -261,6 +261,33 @@
       "target": [
         { "text": "Este icono puede representar un error.", "audioSlug": "este_icono_puede_representar_un_error" }
       ]
+    },
+    {
+      "id": "technology_veo_la_tele_por_la_noche",
+      "source": "Ich sehe abends fern.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Veo la tele por la noche.", "audioSlug": "veo_la_tele_por_la_noche" }
+      ]
+    },
+    {
+      "id": "technology_la_linea_del_telefono_esta_ocupada",
+      "source": "Die Telefonleitung ist besetzt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La línea del teléfono está ocupada.", "audioSlug": "la_linea_del_telefono_esta_ocupada" }
+      ]
+    },
+    {
+      "id": "technology_guarda_mi_numero_de_contacto",
+      "source": "Speichere meine Kontaktnummer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Guarda mi número de contacto.", "audioSlug": "guarda_mi_numero_de_contacto" }
+      ]
     }
   ]
 }
