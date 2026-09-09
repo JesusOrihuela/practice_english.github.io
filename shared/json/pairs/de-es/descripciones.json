@@ -880,6 +880,24 @@
       "target": [
         { "text": "El paisaje es realmente impresionante.", "audioSlug": "el_paisaje_es_realmente_impresionante" }
       ]
+    },
+    {
+      "id": "descripciones_ese_callejon_es_demasiado_estrecho",
+      "source": "Diese Gasse ist zu eng.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ese callejón es demasiado estrecho.", "audioSlug": "ese_callejon_es_demasiado_estrecho" }
+      ]
+    },
+    {
+      "id": "descripciones_quiero_un_vaso_de_tamano_mediano",
+      "source": "Ich möchte ein mittelgroßes Glas.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Quiero un vaso de tamaño mediano.", "audioSlug": "quiero_un_vaso_de_tamano_mediano" }
+      ]
     }
   ]
 }

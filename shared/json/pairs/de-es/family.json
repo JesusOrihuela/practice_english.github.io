@@ -316,6 +316,15 @@
         { "text": "La princesa vive en un gran castillo.", "labels": { "gender": "femenino" }, "source": "Die Prinzessin wohnt in einem großen Schloss.", "audioSlug": "la_princesa_vive_en_un_gran_castillo" },
         { "text": "El príncipe vive en un gran castillo.", "labels": { "gender": "masculino" }, "source": "Der Prinz wohnt in einem großen Schloss.", "audioSlug": "el_principe_vive_en_un_gran_castillo" }
       ]
+    },
+    {
+      "id": "family_mis_primos_van_a_casarse_en_junio",
+      "source": "Meine Cousins werden im Juni heiraten.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Mis primos van a casarse en junio.", "audioSlug": "mis_primos_van_a_casarse_en_junio" }
+      ]
     }
   ]
 }
