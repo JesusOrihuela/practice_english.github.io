@@ -115,18 +115,16 @@ const AppLangPair = (() => {
       stressTest:  true,   // architecture stress-test pair — hidden from the shippable picker + exempt from coverage
     },
     {
-      // SHIPPABLE pair IN PROGRESS (`wip:true`): German → Spanish, the first real product pair beyond
-      // es-en/en-es. Source German reuses the `de` UI block; target Spanish reuses vocab/es (adding
-      // German glosses) + es audio + the es coverage gate. `wip:true` HIDES it from the shippable
-      // picker and EXEMPTS it from the completeness/coverage gates while it is built (see
-      // docs/DE-ES-PLAN.md); remove the flag when it passes every gate. Reachable with ?dev=1.
+      // SHIPPABLE pair: German → Spanish, the first real product pair beyond es-en/en-es. Source German
+      // reuses the `de` UI block; target Spanish reuses vocab/es (with German glosses) + es audio + the
+      // es coverage gate. Passes both es channels (phrases + vocab) of the PCIC core gate and every
+      // completeness/grammar/taxonomy check, so it ships like es-en/en-es (see docs/DE-ES-PLAN.md).
       id:          'de-es',
       source:      { code: 'de', flags: ['de', 'at'],       name: 'Deutsch', localName: 'Deutsch' },
       target:      { code: 'es', flags: ['es', 'mx', 'ar'], name: 'Español', localName: 'Spanisch' },
       label:       'Deutsch → Español',
       ttsVoices:   ['ef_dora', 'em_alex', 'em_santa'],
       sttLanguage: 'spanish',
-      wip:         true,   // work-in-progress shippable pair — hidden + gate-exempt until complete
     },
     // To add a new pair, insert an object here with id, source, target, label,
     // ttsVoices (Kokoro voice names for the target language),
