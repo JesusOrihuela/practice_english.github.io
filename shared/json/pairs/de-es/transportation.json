@@ -240,6 +240,25 @@
       "target": [
         { "text": "La rueda de la bici está pinchada.", "audioSlug": "la_rueda_de_la_bici_esta_pinchada" }
       ]
+    },
+    {
+      "id": "transportation_el_taxista_conoce_bien_la_ciudad",
+      "source": "Der Taxifahrer kennt die Stadt gut.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El taxista conoce bien la ciudad.", "audioSlug": "el_taxista_conoce_bien_la_ciudad" }
+      ]
+    },
+    {
+      "id": "transportation_el_mecanico_revisa_el_motor",
+      "source": "Der Mechaniker überprüft den Motor.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La mecánica revisa el motor.", "labels": { "gender": "femenino" }, "source": "Die Mechanikerin überprüft den Motor.", "audioSlug": "la_mecanica_revisa_el_motor" },
+        { "text": "El mecánico revisa el motor.", "labels": { "gender": "masculino" }, "source": "Der Mechaniker überprüft den Motor.", "audioSlug": "el_mecanico_revisa_el_motor" }
+      ]
     }
   ]
 }

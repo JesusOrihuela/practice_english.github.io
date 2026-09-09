@@ -313,6 +313,62 @@
         { "text": "La jueza dicta la sentencia.", "labels": { "gender": "femenino" }, "source": "Die Richterin verkündet das Urteil.", "audioSlug": "la_jueza_dicta_la_sentencia" },
         { "text": "El juez dicta la sentencia.", "labels": { "gender": "masculino" }, "source": "Der Richter verkündet das Urteil.", "audioSlug": "el_juez_dicta_la_sentencia" }
       ]
+    },
+    {
+      "id": "personal_info_respeto_todas_las_religiones_del_mundo",
+      "source": "Ich respektiere alle Religionen der Welt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Respeto todas las religiones del mundo.", "audioSlug": "respeto_todas_las_religiones_del_mundo" }
+      ]
+    },
+    {
+      "id": "personal_info_en_clase_hay_alumnos_cristianos_musulmanes_y_judios",
+      "source": "In der Klasse gibt es christliche, muslimische und jüdische Schüler.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "En clase hay alumnos cristianos, musulmanes y judíos.", "audioSlug": "en_clase_hay_alumnos_cristianos_musulmanes_y_judios" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_abuela_quedo_viuda_muy_joven",
+      "source": "Meine Großmutter wurde sehr jung Witwe.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Mi abuela quedó viuda muy joven.", "labels": { "gender": "femenino" }, "source": "Meine Großmutter wurde sehr jung Witwe.", "audioSlug": "mi_abuela_quedo_viuda_muy_joven" },
+        { "text": "Mi abuelo quedó viudo muy joven.", "labels": { "gender": "masculino" }, "source": "Mein Großvater wurde sehr jung Witwer.", "audioSlug": "mi_abuelo_quedo_viudo_muy_joven" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_tia_esta_divorciada_desde_hace_anos",
+      "source": "Meine Tante ist seit Jahren geschieden.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Mi tía está divorciada desde hace años.", "labels": { "gender": "femenino" }, "source": "Meine Tante ist seit Jahren geschieden.", "audioSlug": "mi_tia_esta_divorciada_desde_hace_anos" },
+        { "text": "Mi tío está divorciado desde hace años.", "labels": { "gender": "masculino" }, "source": "Mein Onkel ist seit Jahren geschieden.", "audioSlug": "mi_tio_esta_divorciado_desde_hace_anos" }
+      ]
+    },
+    {
+      "id": "personal_info_mi_hijo_mayor_ya_es_adulto",
+      "source": "Mein ältester Sohn ist schon erwachsen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi hijo mayor ya es adulto.", "audioSlug": "mi_hijo_mayor_ya_es_adulto" }
+      ]
+    },
+    {
+      "id": "personal_info_tengo_una_hija_adolescente",
+      "source": "Ich habe eine jugendliche Tochter.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo una hija adolescente.", "audioSlug": "tengo_una_hija_adolescente" }
+      ]
     }
   ]
 }

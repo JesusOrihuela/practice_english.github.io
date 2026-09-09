@@ -380,6 +380,33 @@
       "target": [
         { "text": "Le regalé una margarita blanca.", "audioSlug": "le_regale_una_margarita_blanca" }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_un_mosquito_me_pico_anoche",
+      "source": "Eine Mücke hat mich letzte Nacht gestochen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Un mosquito me picó anoche.", "audioSlug": "un_mosquito_me_pico_anoche" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_canguro_vive_en_australia",
+      "source": "Das Känguru lebt in Australien.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El canguro vive en Australia.", "audioSlug": "el_canguro_vive_en_australia" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_ternero_sigue_a_su_madre",
+      "source": "Das Kalb folgt seiner Mutter.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El ternero sigue a su madre.", "audioSlug": "el_ternero_sigue_a_su_madre" }
+      ]
     }
   ]
 }

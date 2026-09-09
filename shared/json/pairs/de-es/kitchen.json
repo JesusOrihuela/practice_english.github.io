@@ -335,6 +335,24 @@
       "target": [
         { "text": "La crema pastelera está deliciosa.", "audioSlug": "la_crema_pastelera_esta_deliciosa" }
       ]
+    },
+    {
+      "id": "kitchen_este_postre_lleva_un_poco_de_ron",
+      "source": "Dieser Nachtisch enthält etwas Rum.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este postre lleva un poco de ron.", "audioSlug": "este_postre_lleva_un_poco_de_ron" }
+      ]
+    },
+    {
+      "id": "kitchen_servimos_un_aperitivo_antes_de_comer",
+      "source": "Wir servieren einen Aperitif vor dem Essen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Servimos un aperitivo antes de comer.", "audioSlug": "servimos_un_aperitivo_antes_de_comer" }
+      ]
     }
   ]
 }

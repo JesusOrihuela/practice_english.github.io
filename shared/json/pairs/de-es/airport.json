@@ -227,6 +227,24 @@
       "target": [
         { "text": "Llevo el portátil en el maletín.", "audioSlug": "llevo_el_portatil_en_el_maletin" }
       ]
+    },
+    {
+      "id": "airport_el_personal_aereo_es_muy_amable",
+      "source": "Das Flugpersonal ist sehr freundlich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El personal aéreo es muy amable.", "audioSlug": "el_personal_aereo_es_muy_amable" }
+      ]
+    },
+    {
+      "id": "airport_reserve_un_asiento_individual",
+      "source": "Ich habe einen Einzelsitz reserviert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Reservé un asiento individual.", "audioSlug": "reserve_un_asiento_individual" }
+      ]
     }
   ]
 }

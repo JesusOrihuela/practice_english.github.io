@@ -509,6 +509,34 @@
       "target": [
         { "text": "La publicidad influye en la compra.", "audioSlug": "la_publicidad_influye_en_la_compra" }
       ]
+    },
+    {
+      "id": "economia_el_comprador_pide_un_descuento",
+      "source": "Der Käufer bittet um einen Rabatt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La compradora pide un descuento.", "labels": { "gender": "femenino" }, "source": "Die Käuferin bittet um einen Rabatt.", "audioSlug": "la_compradora_pide_un_descuento" },
+        { "text": "El comprador pide un descuento.", "labels": { "gender": "masculino" }, "source": "Der Käufer bittet um einen Rabatt.", "audioSlug": "el_comprador_pide_un_descuento" }
+      ]
+    },
+    {
+      "id": "economia_manana_tengo_una_entrevista_de_trabajo",
+      "source": "Morgen habe ich ein Vorstellungsgespräch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mañana tengo una entrevista de trabajo.", "audioSlug": "manana_tengo_una_entrevista_de_trabajo" }
+      ]
+    },
+    {
+      "id": "economia_el_precio_es_por_unidad",
+      "source": "Der Preis gilt pro Stück.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El precio es por unidad.", "audioSlug": "el_precio_es_por_unidad" }
+      ]
     }
   ]
 }
