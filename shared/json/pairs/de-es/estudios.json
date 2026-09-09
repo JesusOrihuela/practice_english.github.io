@@ -271,6 +271,61 @@
       "target": [
         { "text": "Cada estudiante tiene un horario diferente.", "audioSlug": "cada_estudiante_tiene_un_horario_diferente" }
       ]
+    },
+    {
+      "id": "estudios_el_alumno_estudia_para_el_examen",
+      "source": "Der Schüler lernt für die Prüfung.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La alumna estudia para el examen.", "labels": { "gender": "femenino" }, "audioSlug": "la_alumna_estudia_para_el_examen" },
+        { "text": "El alumno estudia para el examen.", "labels": { "gender": "masculino" }, "audioSlug": "el_alumno_estudia_para_el_examen" }
+      ]
+    },
+    {
+      "id": "estudios_me_gusta_ensenar_a_los_mas_jovenes",
+      "source": "Ich unterrichte gern die Jüngeren.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me gusta enseñar a los más jóvenes.", "audioSlug": "me_gusta_ensenar_a_los_mas_jovenes" }
+      ]
+    },
+    {
+      "id": "estudios_la_prueba_final_fue_muy_dificil",
+      "source": "Die Abschlussprüfung war sehr schwierig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La prueba final fue muy difícil.", "audioSlug": "la_prueba_final_fue_muy_dificil" }
+      ]
+    },
+    {
+      "id": "estudios_dame_un_ejemplo_concreto_por_favor",
+      "source": "Gib mir bitte ein konkretes Beispiel.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Dame un ejemplo concreto, por favor.", "audioSlug": "dame_un_ejemplo_concreto_por_favor" }
+      ]
+    },
+    {
+      "id": "estudios_la_literatura_espanola_es_muy_rica",
+      "source": "Die spanische Literatur ist sehr reich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La literatura española es muy rica.", "audioSlug": "la_literatura_espanola_es_muy_rica" }
+      ]
+    },
+    {
+      "id": "estudios_guarde_todos_los_datos_del_estudio",
+      "source": "Ich habe alle Daten der Studie gespeichert.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Guardé todos los datos del estudio.", "audioSlug": "guarde_todos_los_datos_del_estudio" }
+      ]
     }
   ]
 }

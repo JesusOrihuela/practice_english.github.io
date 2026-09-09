@@ -275,6 +275,33 @@
       "target": [
         { "text": "Me gusta sentir el aire fresco al despertar.", "audioSlug": "me_gusta_sentir_el_aire_fresco_al_despertar" }
       ]
+    },
+    {
+      "id": "daily_routine_necesito_sacar_dinero_del_banco",
+      "source": "Ich muss Geld von der Bank abheben.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito sacar dinero del banco.", "audioSlug": "necesito_sacar_dinero_del_banco" }
+      ]
+    },
+    {
+      "id": "daily_routine_tengo_que_echar_una_carta_al_buzon",
+      "source": "Ich muss einen Brief in den Briefkasten einwerfen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que echar una carta al buzón.", "audioSlug": "tengo_que_echar_una_carta_al_buzon" }
+      ]
+    },
+    {
+      "id": "daily_routine_siempre_me_falta_tiempo_por_la_manana",
+      "source": "Morgens fehlt mir immer die Zeit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Siempre me falta tiempo por la mañana.", "audioSlug": "siempre_me_falta_tiempo_por_la_manana" }
+      ]
     }
   ]
 }

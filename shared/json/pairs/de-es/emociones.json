@@ -219,6 +219,43 @@
       "target": [
         { "text": "A veces me siento diferente.", "audioSlug": "a_veces_me_siento_diferente" }
       ]
+    },
+    {
+      "id": "emociones_es_facil_enamorarse_en_primavera",
+      "source": "Im Frühling verliebt man sich leicht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es fácil enamorarse en primavera.", "audioSlug": "es_facil_enamorarse_en_primavera" }
+      ]
+    },
+    {
+      "id": "emociones_hoy_no_tengo_ganas_de_salir",
+      "source": "Heute habe ich keine Lust auszugehen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hoy no tengo ganas de salir.", "audioSlug": "hoy_no_tengo_ganas_de_salir" }
+      ]
+    },
+    {
+      "id": "emociones_esta_loca_de_alegria_por_la_noticia",
+      "source": "Sie ist außer sich vor Freude über die Nachricht.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Está loca de alegría por la noticia.", "labels": { "gender": "femenino" }, "audioSlug": "esta_loca_de_alegria_por_la_noticia" },
+        { "text": "Está loco de alegría por la noticia.", "labels": { "gender": "masculino" }, "audioSlug": "esta_loco_de_alegria_por_la_noticia" }
+      ]
+    },
+    {
+      "id": "emociones_lo_hago_con_mucho_gusto",
+      "source": "Ich mache es sehr gern.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Lo hago con mucho gusto.", "audioSlug": "lo_hago_con_mucho_gusto" }
+      ]
     }
   ]
 }

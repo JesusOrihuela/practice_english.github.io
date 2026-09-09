@@ -227,6 +227,24 @@
       "target": [
         { "text": "Arreglo la bicicleta en el taller.", "audioSlug": "arreglo_la_bicicleta_en_el_taller" }
       ]
+    },
+    {
+      "id": "hogar_el_salon_de_la_casa_es_muy_amplio",
+      "source": "Das Wohnzimmer des Hauses ist sehr geräumig.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El salón de la casa es muy amplio.", "audioSlug": "el_salon_de_la_casa_es_muy_amplio" }
+      ]
+    },
+    {
+      "id": "hogar_busco_una_vivienda_mas_grande",
+      "source": "Ich suche eine größere Wohnung.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Busco una vivienda más grande.", "audioSlug": "busco_una_vivienda_mas_grande" }
+      ]
     }
   ]
 }

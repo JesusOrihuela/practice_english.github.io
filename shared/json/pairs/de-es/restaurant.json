@@ -261,6 +261,33 @@
       "target": [
         { "text": "El menú tiene muchas opciones.", "audioSlug": "el_menu_tiene_muchas_opciones" }
       ]
+    },
+    {
+      "id": "restaurant_vamos_a_compartir_una_pizza",
+      "source": "Wir teilen uns eine Pizza.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Vamos a compartir una pizza.", "audioSlug": "vamos_a_compartir_una_pizza" }
+      ]
+    },
+    {
+      "id": "restaurant_una_cerveza_bien_fria_por_favor",
+      "source": "Ein gut gekühltes Bier, bitte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Una cerveza bien fría, por favor.", "audioSlug": "una_cerveza_bien_fria_por_favor" }
+      ]
+    },
+    {
+      "id": "restaurant_el_pan_es_un_alimento_basico",
+      "source": "Brot ist ein Grundnahrungsmittel.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El pan es un alimento básico.", "audioSlug": "el_pan_es_un_alimento_basico" }
+      ]
     }
   ]
 }

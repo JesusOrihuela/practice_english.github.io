@@ -203,6 +203,33 @@
       "target": [
         { "text": "Perdón, no comprendo la pregunta.", "audioSlug": "perdon_no_comprendo_la_pregunta" }
       ]
+    },
+    {
+      "id": "survival_no_quiero_ocupar_mucho_de_tu_tiempo",
+      "source": "Ich möchte nicht viel von deiner Zeit beanspruchen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No quiero ocupar mucho de tu tiempo.", "audioSlug": "no_quiero_ocupar_mucho_de_tu_tiempo" }
+      ]
+    },
+    {
+      "id": "survival_donde_puedo_comprar_una_entrada",
+      "source": "Wo kann ich eine Eintrittskarte kaufen?",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "¿Dónde puedo comprar una entrada?", "audioSlug": "donde_puedo_comprar_una_entrada" }
+      ]
+    },
+    {
+      "id": "survival_me_puede_situar_en_el_mapa",
+      "source": "Können Sie mich auf der Karte verorten?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me puede situar en el mapa?", "audioSlug": "me_puede_situar_en_el_mapa" }
+      ]
     }
   ]
 }
