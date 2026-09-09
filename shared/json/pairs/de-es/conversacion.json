@@ -707,6 +707,60 @@
       "target": [
         { "text": "Debemos comenzar de nuevo.", "audioSlug": "debemos_comenzar_de_nuevo" }
       ]
+    },
+    {
+      "id": "conversacion_repite_la_frase_por_favor",
+      "source": "Wiederhole den Satz, bitte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Repite la frase, por favor.", "audioSlug": "repite_la_frase_por_favor" }
+      ]
+    },
+    {
+      "id": "conversacion_tuvimos_una_conversacion_muy_larga",
+      "source": "Wir hatten ein sehr langes Gespräch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tuvimos una conversación muy larga.", "audioSlug": "tuvimos_una_conversacion_muy_larga" }
+      ]
+    },
+    {
+      "id": "conversacion_hay_que_aceptar_las_criticas",
+      "source": "Man muss Kritik annehmen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay que aceptar las críticas.", "audioSlug": "hay_que_aceptar_las_criticas" }
+      ]
+    },
+    {
+      "id": "conversacion_es_bueno_reconocer_los_errores",
+      "source": "Es ist gut, seine Fehler einzugestehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es bueno reconocer los errores.", "audioSlug": "es_bueno_reconocer_los_errores" }
+      ]
+    },
+    {
+      "id": "conversacion_prefiero_el_silencio_por_la_manana",
+      "source": "Ich mag morgens lieber die Stille.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero el silencio por la mañana.", "audioSlug": "prefiero_el_silencio_por_la_manana" }
+      ]
+    },
+    {
+      "id": "conversacion_es_dificil_comunicar_lo_que_siento",
+      "source": "Es ist schwer, das auszudrücken, was ich fühle.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es difícil comunicar lo que siento.", "audioSlug": "es_dificil_comunicar_lo_que_siento" }
+      ]
     }
   ]
 }
