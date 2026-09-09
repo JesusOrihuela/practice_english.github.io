@@ -261,6 +261,33 @@
       "target": [
         { "text": "Necesito un paquete de pasta.", "audioSlug": "necesito_un_paquete_de_pasta" }
       ]
+    },
+    {
+      "id": "supermarket_compra_una_docena_de_huevos",
+      "source": "Kauf ein Dutzend Eier.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Compra una docena de huevos.", "audioSlug": "compra_una_docena_de_huevos" }
+      ]
+    },
+    {
+      "id": "supermarket_un_litro_de_leche_por_favor",
+      "source": "Einen Liter Milch, bitte.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "Un litro de leche, por favor.", "audioSlug": "un_litro_de_leche_por_favor" }
+      ]
+    },
+    {
+      "id": "supermarket_pon_un_bote_de_tomate_frito",
+      "source": "Nimm eine Dose Tomatensoße.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Pon un bote de tomate frito.", "audioSlug": "pon_un_bote_de_tomate_frito" }
+      ]
     }
   ]
 }

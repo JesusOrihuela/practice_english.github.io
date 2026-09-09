@@ -844,6 +844,42 @@
       "target": [
         { "text": "El servicio de hoy fue bastante regular.", "audioSlug": "el_servicio_de_hoy_fue_bastante_regular" }
       ]
+    },
+    {
+      "id": "descripciones_su_horario_de_trabajo_es_fijo",
+      "source": "Ihre Arbeitszeit ist fest.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Su horario de trabajo es fijo.", "audioSlug": "su_horario_de_trabajo_es_fijo" }
+      ]
+    },
+    {
+      "id": "descripciones_es_probable_que_llueva_manana",
+      "source": "Es ist wahrscheinlich, dass es morgen regnet.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es probable que llueva mañana.", "audioSlug": "es_probable_que_llueva_manana" }
+      ]
+    },
+    {
+      "id": "descripciones_su_voz_es_parecida_a_la_tuya",
+      "source": "Ihre Stimme ähnelt deiner.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Su voz es parecida a la tuya.", "audioSlug": "su_voz_es_parecida_a_la_tuya" }
+      ]
+    },
+    {
+      "id": "descripciones_el_paisaje_es_realmente_impresionante",
+      "source": "Die Landschaft ist wirklich beeindruckend.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El paisaje es realmente impresionante.", "audioSlug": "el_paisaje_es_realmente_impresionante" }
+      ]
     }
   ]
 }

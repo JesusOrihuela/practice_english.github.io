@@ -326,6 +326,69 @@
       "target": [
         { "text": "Escucho la radio en la cocina.", "audioSlug": "escucho_la_radio_en_la_cocina" }
       ]
+    },
+    {
+      "id": "hogar_el_dormitorio_principal_es_muy_amplio",
+      "source": "Das Hauptschlafzimmer ist sehr geräumig.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El dormitorio principal es muy amplio.", "audioSlug": "el_dormitorio_principal_es_muy_amplio" }
+      ]
+    },
+    {
+      "id": "hogar_necesito_jabon_para_lavarme_las_manos",
+      "source": "Ich brauche Seife, um mir die Hände zu waschen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito jabón para lavarme las manos.", "audioSlug": "necesito_jabon_para_lavarme_las_manos" }
+      ]
+    },
+    {
+      "id": "hogar_usa_el_cepillo_de_dientes_cada_dia",
+      "source": "Benutze jeden Tag die Zahnbürste.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Usa el cepillo de dientes cada día.", "audioSlug": "usa_el_cepillo_de_dientes_cada_dia" }
+      ]
+    },
+    {
+      "id": "hogar_la_ventana_del_salon_es_de_cristal",
+      "source": "Das Fenster im Wohnzimmer ist aus Glas.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La ventana del salón es de cristal.", "audioSlug": "la_ventana_del_salon_es_de_cristal" }
+      ]
+    },
+    {
+      "id": "hogar_la_leche_esta_en_la_nevera",
+      "source": "Die Milch ist im Kühlschrank.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La leche está en la nevera.", "audioSlug": "la_leche_esta_en_la_nevera" }
+      ]
+    },
+    {
+      "id": "hogar_pon_la_ropa_sucia_en_la_lavadora",
+      "source": "Tu die schmutzige Wäsche in die Waschmaschine.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Pon la ropa sucia en la lavadora.", "audioSlug": "pon_la_ropa_sucia_en_la_lavadora" }
+      ]
+    },
+    {
+      "id": "hogar_caliento_la_comida_en_el_microondas",
+      "source": "Ich wärme das Essen in der Mikrowelle auf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Caliento la comida en el microondas.", "audioSlug": "caliento_la_comida_en_el_microondas" }
+      ]
     }
   ]
 }

@@ -285,6 +285,51 @@
       "target": [
         { "text": "El ayuntamiento está en la plaza central.", "audioSlug": "el_ayuntamiento_esta_en_la_plaza_central" }
       ]
+    },
+    {
+      "id": "directions_el_sol_se_pone_por_el_oeste",
+      "source": "Die Sonne geht im Westen unter.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El sol se pone por el oeste.", "audioSlug": "el_sol_se_pone_por_el_oeste" }
+      ]
+    },
+    {
+      "id": "directions_la_puerta_exterior_esta_cerrada",
+      "source": "Die Außentür ist geschlossen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La puerta exterior está cerrada.", "audioSlug": "la_puerta_exterior_esta_cerrada" }
+      ]
+    },
+    {
+      "id": "directions_el_patio_interior_es_muy_tranquilo",
+      "source": "Der Innenhof ist sehr ruhig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El patio interior es muy tranquilo.", "audioSlug": "el_patio_interior_es_muy_tranquilo" }
+      ]
+    },
+    {
+      "id": "directions_el_garaje_esta_al_lado_de_la_casa",
+      "source": "Die Garage ist neben dem Haus.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El garaje está al lado de la casa.", "audioSlug": "el_garaje_esta_al_lado_de_la_casa" }
+      ]
+    },
+    {
+      "id": "directions_hay_poca_distancia_hasta_la_playa",
+      "source": "Bis zum Strand ist es nicht weit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Hay poca distancia hasta la playa.", "audioSlug": "hay_poca_distancia_hasta_la_playa" }
+      ]
     }
   ]
 }

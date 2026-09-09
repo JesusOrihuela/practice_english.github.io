@@ -392,6 +392,42 @@
         { "text": "La cocinera prepara el plato.", "labels": { "gender": "femenino" }, "source": "Die Köchin bereitet das Gericht zu.", "audioSlug": "la_cocinera_prepara_el_plato" },
         { "text": "El cocinero prepara el plato.", "labels": { "gender": "masculino" }, "source": "Der Koch bereitet das Gericht zu.", "audioSlug": "el_cocinero_prepara_el_plato" }
       ]
+    },
+    {
+      "id": "restaurant_los_ninos_toman_la_merienda_a_las_cinco",
+      "source": "Die Kinder essen um fünf ihre Zwischenmahlzeit.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Los niños toman la merienda a las cinco.", "audioSlug": "los_ninos_toman_la_merienda_a_las_cinco" }
+      ]
+    },
+    {
+      "id": "restaurant_ponme_una_cana_bien_fria",
+      "source": "Gib mir ein kühles Bier vom Fass.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ponme una caña bien fría.", "audioSlug": "ponme_una_cana_bien_fria" }
+      ]
+    },
+    {
+      "id": "restaurant_necesito_una_servilleta_limpia",
+      "source": "Ich brauche eine saubere Serviette.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito una servilleta limpia.", "audioSlug": "necesito_una_servilleta_limpia" }
+      ]
+    },
+    {
+      "id": "restaurant_no_bebo_alcohol_cuando_conduzco",
+      "source": "Ich trinke keinen Alkohol, wenn ich fahre.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No bebo alcohol cuando conduzco.", "audioSlug": "no_bebo_alcohol_cuando_conduzco" }
+      ]
     }
   ]
 }

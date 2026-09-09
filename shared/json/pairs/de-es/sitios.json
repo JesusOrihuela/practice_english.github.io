@@ -344,6 +344,42 @@
       "target": [
         { "text": "Tomamos un café en la cafetería.", "audioSlug": "tomamos_un_cafe_en_la_cafeteria" }
       ]
+    },
+    {
+      "id": "sitios_bailamos_toda_la_noche_en_la_discoteca",
+      "source": "Wir tanzten die ganze Nacht in der Disco.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Bailamos toda la noche en la discoteca.", "audioSlug": "bailamos_toda_la_noche_en_la_discoteca" }
+      ]
+    },
+    {
+      "id": "sitios_compro_novelas_en_la_libreria",
+      "source": "Ich kaufe Romane in der Buchhandlung.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Compro novelas en la librería.", "audioSlug": "compro_novelas_en_la_libreria" }
+      ]
+    },
+    {
+      "id": "sitios_estudio_idiomas_en_una_academia",
+      "source": "Ich lerne Sprachen in einer Sprachschule.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Estudio idiomas en una academia.", "audioSlug": "estudio_idiomas_en_una_academia" }
+      ]
+    },
+    {
+      "id": "sitios_los_ninos_disfrutan_en_el_zoo",
+      "source": "Die Kinder haben Spaß im Zoo.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los niños disfrutan en el zoo.", "audioSlug": "los_ninos_disfrutan_en_el_zoo" }
+      ]
     }
   ]
 }

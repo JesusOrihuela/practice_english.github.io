@@ -230,6 +230,33 @@
       "target": [
         { "text": "¿Me puede situar en el mapa?", "audioSlug": "me_puede_situar_en_el_mapa" }
       ]
+    },
+    {
+      "id": "survival_me_puede_mandar_la_informacion_por_correo",
+      "source": "Können Sie mir die Informationen per E-Mail schicken?",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "¿Me puede mandar la información por correo?", "audioSlug": "me_puede_mandar_la_informacion_por_correo" }
+      ]
+    },
+    {
+      "id": "survival_necesito_consultar_el_horario_del_tren",
+      "source": "Ich muss den Zugfahrplan nachsehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito consultar el horario del tren.", "audioSlug": "necesito_consultar_el_horario_del_tren" }
+      ]
+    },
+    {
+      "id": "survival_tengo_que_devolver_este_libro_hoy",
+      "source": "Ich muss dieses Buch heute zurückgeben.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo que devolver este libro hoy.", "audioSlug": "tengo_que_devolver_este_libro_hoy" }
+      ]
     }
   ]
 }

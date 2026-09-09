@@ -191,6 +191,24 @@
       "target": [
         { "text": "Hace treinta grados a la sombra.", "audioSlug": "hace_treinta_grados_a_la_sombra" }
       ]
+    },
+    {
+      "id": "weather_la_lluvia_no_para_desde_ayer",
+      "source": "Der Regen hört seit gestern nicht auf.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La lluvia no para desde ayer.", "audioSlug": "la_lluvia_no_para_desde_ayer" }
+      ]
+    },
+    {
+      "id": "weather_se_acerca_un_fuerte_temporal_de_viento",
+      "source": "Ein starker Sturm zieht auf.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Se acerca un fuerte temporal de viento.", "audioSlug": "se_acerca_un_fuerte_temporal_de_viento" }
+      ]
     }
   ]
 }

@@ -472,6 +472,33 @@
       "target": [
         { "text": "Ese cantante tiene mucho éxito.", "audioSlug": "ese_cantante_tiene_mucho_exito" }
       ]
+    },
+    {
+      "id": "tiempo_libre_toco_un_instrumento_musical",
+      "source": "Ich spiele ein Musikinstrument.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Toco un instrumento musical.", "audioSlug": "toco_un_instrumento_musical" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_me_relaja_dibujar_por_las_tardes",
+      "source": "Zeichnen am Nachmittag entspannt mich.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me relaja dibujar por las tardes.", "audioSlug": "me_relaja_dibujar_por_las_tardes" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_en_el_parque_hay_una_estatua_de_bronce",
+      "source": "Im Park steht eine Bronzestatue.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "En el parque hay una estatua de bronce.", "audioSlug": "en_el_parque_hay_una_estatua_de_bronce" }
+      ]
     }
   ]
 }

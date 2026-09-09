@@ -428,6 +428,60 @@
       "target": [
         { "text": "Meto los cuadernos en la cartera.", "audioSlug": "meto_los_cuadernos_en_la_cartera" }
       ]
+    },
+    {
+      "id": "estudios_espero_aprobar_todos_los_examenes",
+      "source": "Ich hoffe, alle Prüfungen zu bestehen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Espero aprobar todos los exámenes.", "audioSlug": "espero_aprobar_todos_los_examenes" }
+      ]
+    },
+    {
+      "id": "estudios_no_quiero_suspender_esta_asignatura",
+      "source": "Ich will dieses Fach nicht durchfallen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "No quiero suspender esta asignatura.", "audioSlug": "no_quiero_suspender_esta_asignatura" }
+      ]
+    },
+    {
+      "id": "estudios_ya_pague_la_matricula_del_curso",
+      "source": "Ich habe die Kursgebühr schon bezahlt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ya pagué la matrícula del curso.", "audioSlug": "ya_pague_la_matricula_del_curso" }
+      ]
+    },
+    {
+      "id": "estudios_necesito_un_certificado_de_estudios",
+      "source": "Ich brauche ein Studienzeugnis.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito un certificado de estudios.", "audioSlug": "necesito_un_certificado_de_estudios" }
+      ]
+    },
+    {
+      "id": "estudios_la_gramatica_alemana_es_dificil",
+      "source": "Die deutsche Grammatik ist schwer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La gramática alemana es difícil.", "audioSlug": "la_gramatica_alemana_es_dificil" }
+      ]
+    },
+    {
+      "id": "estudios_escribe_una_oracion_completa",
+      "source": "Schreib einen vollständigen Satz.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Escribe una oración completa.", "audioSlug": "escribe_una_oracion_completa" }
+      ]
     }
   ]
 }

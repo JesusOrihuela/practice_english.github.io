@@ -126,6 +126,33 @@
       "target": [
         { "text": "Lleva un traje gris a la oficina.", "audioSlug": "lleva_un_traje_gris_a_la_oficina" }
       ]
+    },
+    {
+      "id": "vestimenta_llevo_los_libros_en_la_mochila",
+      "source": "Ich trage die Bücher im Rucksack.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Llevo los libros en la mochila.", "audioSlug": "llevo_los_libros_en_la_mochila" }
+      ]
+    },
+    {
+      "id": "vestimenta_en_invierno_uso_gorro_y_bufanda",
+      "source": "Im Winter trage ich Mütze und Schal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "En invierno uso gorro y bufanda.", "audioSlug": "en_invierno_uso_gorro_y_bufanda" }
+      ]
+    },
+    {
+      "id": "vestimenta_necesito_un_guante_para_el_frio",
+      "source": "Ich brauche einen Handschuh gegen die Kälte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito un guante para el frío.", "audioSlug": "necesito_un_guante_para_el_frio" }
+      ]
     }
   ]
 }

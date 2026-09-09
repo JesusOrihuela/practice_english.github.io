@@ -464,6 +464,51 @@
         { "text": "La propietaria vive arriba.", "labels": { "gender": "femenino" }, "source": "Die Eigentümerin wohnt oben.", "audioSlug": "la_propietaria_vive_arriba" },
         { "text": "El propietario vive arriba.", "labels": { "gender": "masculino" }, "source": "Der Eigentümer wohnt oben.", "audioSlug": "el_propietario_vive_arriba" }
       ]
+    },
+    {
+      "id": "economia_elige_una_profesion_con_futuro",
+      "source": "Wähle einen Beruf mit Zukunft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Elige una profesión con futuro.", "audioSlug": "elige_una_profesion_con_futuro" }
+      ]
+    },
+    {
+      "id": "economia_pago_la_cuenta_con_un_cheque",
+      "source": "Er bezahlte die Rechnung mit einem Scheck.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Pagó la cuenta con un cheque.", "audioSlug": "pago_la_cuenta_con_un_cheque" }
+      ]
+    },
+    {
+      "id": "economia_prefiero_pagar_siempre_en_efectivo",
+      "source": "Ich zahle immer lieber bar.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Prefiero pagar siempre en efectivo.", "audioSlug": "prefiero_pagar_siempre_en_efectivo" }
+      ]
+    },
+    {
+      "id": "economia_esta_en_el_paro_desde_enero",
+      "source": "Sie ist seit Januar arbeitslos.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Está en el paro desde enero.", "audioSlug": "esta_en_el_paro_desde_enero" }
+      ]
+    },
+    {
+      "id": "economia_la_publicidad_influye_en_la_compra",
+      "source": "Werbung beeinflusst den Kauf.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La publicidad influye en la compra.", "audioSlug": "la_publicidad_influye_en_la_compra" }
+      ]
     }
   ]
 }

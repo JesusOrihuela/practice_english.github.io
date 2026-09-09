@@ -362,6 +362,24 @@
       "target": [
         { "text": "Hay mucha niebla en la montaña.", "audioSlug": "hay_mucha_niebla_en_la_montana" }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_el_pino_es_un_arbol_muy_alto",
+      "source": "Die Kiefer ist ein sehr hoher Baum.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El pino es un árbol muy alto.", "audioSlug": "el_pino_es_un_arbol_muy_alto" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_le_regale_una_margarita_blanca",
+      "source": "Ich schenkte ihr ein weißes Gänseblümchen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Le regalé una margarita blanca.", "audioSlug": "le_regale_una_margarita_blanca" }
+      ]
     }
   ]
 }
