@@ -493,6 +493,33 @@
       "target": [
         { "text": "Es un problema muy común.", "audioSlug": "es_un_problema_muy_comun" }
       ]
+    },
+    {
+      "id": "descripciones_ese_actor_es_muy_guapo",
+      "source": "Dieser Schauspieler ist sehr gut aussehend.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese actor es muy guapo.", "audioSlug": "ese_actor_es_muy_guapo" }
+      ]
+    },
+    {
+      "id": "descripciones_van_a_construir_un_puente_nuevo",
+      "source": "Sie werden eine neue Brücke bauen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Van a construir un puente nuevo.", "audioSlug": "van_a_construir_un_puente_nuevo" }
+      ]
+    },
+    {
+      "id": "descripciones_este_objeto_es_muy_antiguo",
+      "source": "Dieser Gegenstand ist sehr alt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Este objeto es muy antiguo.", "audioSlug": "este_objeto_es_muy_antiguo" }
+      ]
     }
   ]
 }
