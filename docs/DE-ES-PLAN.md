@@ -36,12 +36,15 @@ naturaleza_lugares, technology, sitios
   variantes regionales/género donde aplican, tips en español (target), 11 reglas de gramática
   (metalenguaje alemán) autovinculadas por evidencia. Todos los gates verdes por tema.
 - **Canal vocab de-es: 91.4%** (ya sobre el piso 86 %, vía vocab/es compartido).
-- **Canal frases de-es: ~31%** (305/991 del top-1000). **PENDIENTE**: cerrar a ≥86 % con el *tail*
-  funcional (`build-candidates-cover --pair de-es` para los lemas del top-1000 que falten; cientos de
-  frases atestadas en las categorías funcionales) — es el grueso restante de la Fase 3.
-- **Fase 4 (glosas alemanas del vocab): PENDIENTE** — `translations.de` + `gloss.de` en las ~1605
-  entradas de vocab/es (mecánica, por deck).
-- **Fase 5 (shippear): PENDIENTE** — al pasar el gate 86 % en frases y estar las glosas, quitar `wip`.
+- **Canal frases de-es: ~66%** (712 frases; 652/991 del top-1000). **PENDIENTE (único bloqueador restante)**:
+  cerrar a ≥86 % con más frases naturales densas en los lemas top-1000 que faltan (cadencia calidad-primero,
+  verificación inline con `gate-run.mjs`, chequeo anti-duplicado). Rendimiento decreciente (~0.3-0.5 pt/batch).
+- **Fase 4 (glosas alemanas del vocab): ✅ COMPLETA** — `translations.de` + `gloss.de` en las **1604/1604**
+  entradas de vocab/es. Hechas por-deck vía delegación a `code-writer` (haiku) + revisión/auditoría
+  (convención orthográfica adj/sust, coverage por id, glosa fiel). Auditoría estructural: 0 huecos.
+  Habilita Vocabulario/Quiz de-es para germanoparlantes y satisface `check-pair-completeness`.
+- **Fase 5 (shippear): PENDIENTE** — al pasar el canal frases ≥86 %, quitar `wip`. Las glosas ya están;
+  el único faltante es la cobertura de frases.
 
 *(Fuera de en-es por ser demasiado específicos: accountability, theater, museums, politica, oficina,
 fiesta, describiendo_personas → se pliega en descripciones.)*
