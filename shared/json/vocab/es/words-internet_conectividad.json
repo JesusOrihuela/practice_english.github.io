@@ -9,10 +9,12 @@
       "definition": "Red mundial que conecta computadoras.",
       "example": "Busqué la receta en internet.",
       "translations": {
-        "en": "internet"
+        "en": "internet",
+        "de": "Internet"
       },
       "gloss": {
-        "en": "The global network that connects computers."
+        "en": "The global network that connects computers.",
+        "de": "Ein weltweites Netzwerk, das Computer verbindet."
       },
       "gloss_example": {
         "en": "I looked up the recipe on the internet."
@@ -27,10 +29,12 @@
       "definition": "Programa que se usa para acceder y navegar por internet.",
       "example": "Chrome y Firefox son los navegadores web más populares.",
       "translations": {
-        "en": "browser"
+        "en": "browser",
+        "de": "Browser"
       },
       "gloss": {
-        "en": "A program used to access and navigate the internet"
+        "en": "A program used to access and navigate the internet",
+        "de": "Ein Programm, das verwendet wird, um auf das Internet zuzugreifen und darin zu navigieren."
       },
       "gloss_example": {
         "en": "Chrome and Firefox are the most popular web browsers."
@@ -45,10 +49,12 @@
       "definition": "Mensaje que se envía por internet o por carta.",
       "example": "Te mandé un correo ayer.",
       "translations": {
-        "en": "email / mail"
+        "en": "email / mail",
+        "de": "E-Mail"
       },
       "gloss": {
-        "en": "A message sent over the internet or by letter"
+        "en": "A message sent over the internet or by letter",
+        "de": "Eine Nachricht, die über das Internet oder durch Brief versendet wird."
       },
       "gloss_example": {
         "en": "I sent you an email yesterday."
@@ -63,10 +69,12 @@
       "definition": "Grupo de computadoras o personas conectadas entre sí.",
       "example": "La red de la oficina estuvo caída toda la mañana.",
       "translations": {
-        "en": "network"
+        "en": "network",
+        "de": "Netzwerk"
       },
       "gloss": {
-        "en": "A group of computers or people connected together."
+        "en": "A group of computers or people connected together.",
+        "de": "Eine Gruppe von Computern oder Menschen, die untereinander verbunden sind."
       },
       "gloss_example": {
         "en": "The office network was down all morning."
@@ -81,10 +89,12 @@
       "definition": "Que usa señales de radio en lugar de cables para transmitir datos.",
       "example": "El hotel ofrece internet inalámbrico gratuito en todo el edificio.",
       "translations": {
-        "en": "wireless"
+        "en": "wireless",
+        "de": "drahtlos"
       },
       "gloss": {
-        "en": "Using radio signals instead of cables to transmit data"
+        "en": "Using radio signals instead of cables to transmit data",
+        "de": "Das Übertragen von Daten mit Hilfe von Funksignalen statt Kabeln."
       },
       "gloss_example": {
         "en": "The hotel offers free wireless internet throughout the building."
@@ -99,10 +109,12 @@
       "definition": "Enviar datos desde tu dispositivo a internet.",
       "example": "Necesito subir el documento a la carpeta compartida.",
       "translations": {
-        "en": "upload"
+        "en": "upload",
+        "de": "hochladen"
       },
       "gloss": {
-        "en": "To transfer data from your device to the internet or a server"
+        "en": "To transfer data from your device to the internet or a server",
+        "de": "Daten von deinem Gerät ins Internet oder auf einen Server übertragen."
       },
       "gloss_example": {
         "en": "I need to upload the document to the shared folder."
@@ -133,10 +145,12 @@
       "definition": "Transferir datos desde internet o un servidor a tu dispositivo.",
       "example": "Puedes descargar la aplicación gratis desde la tienda.",
       "translations": {
-        "en": "download"
+        "en": "download",
+        "de": "herunterladen"
       },
       "gloss": {
-        "en": "To transfer data from the internet or a server to your device"
+        "en": "To transfer data from the internet or a server to your device",
+        "de": "Daten vom Internet oder von einem Server auf dein Gerät übertragen."
       },
       "gloss_example": {
         "en": "You can download the app for free from the store."
@@ -151,10 +165,12 @@
       "definition": "La cantidad de datos que pueden transferirse por una red en un tiempo determinado.",
       "example": "Ver videos en 4K en línea requiere mucho ancho de banda.",
       "translations": {
-        "en": "bandwidth"
+        "en": "bandwidth",
+        "de": "Bandbreite"
       },
       "gloss": {
-        "en": "The amount of data that can be transferred over a network in a given time"
+        "en": "The amount of data that can be transferred over a network in a given time",
+        "de": "Die Menge an Daten, die in einer bestimmten Zeit über ein Netzwerk übertragen werden können."
       },
       "gloss_example": {
         "en": "Streaming videos in 4K requires a lot of bandwidth."
@@ -169,10 +185,12 @@
       "definition": "El retraso entre el envío de una solicitud y la recepción de una respuesta en una red.",
       "example": "Una latencia alta hace que las videollamadas se sientan lentas y poco naturales.",
       "translations": {
-        "en": "latency"
+        "en": "latency",
+        "de": "Latenz"
       },
       "gloss": {
-        "en": "The delay between sending a request and receiving a response"
+        "en": "The delay between sending a request and receiving a response",
+        "de": "Die Verzögerung zwischen dem Senden einer Anforderung und dem Empfangen einer Antwort in einem Netzwerk."
       },
       "gloss_example": {
         "en": "High latency makes video calls feel laggy and unnatural."
@@ -187,10 +205,12 @@
       "definition": "Dirección que lleva a una página web.",
       "example": "Haz clic en el enlace para continuar.",
       "translations": {
-        "en": "link"
+        "en": "link",
+        "de": "Link"
       },
       "gloss": {
-        "en": "An address that takes you to a web page."
+        "en": "An address that takes you to a web page.",
+        "de": "Eine Adresse, die dich zu einer Webseite führt."
       },
       "gloss_example": {
         "en": "Click the link to continue."
@@ -205,10 +225,12 @@
       "definition": "Computadora que provee datos a otras en una red.",
       "example": "El servidor está caído esta mañana.",
       "translations": {
-        "en": "server"
+        "en": "server",
+        "de": "Server"
       },
       "gloss": {
-        "en": "A computer that provides data to others on a network."
+        "en": "A computer that provides data to others on a network.",
+        "de": "Ein Computer, der anderen in einem Netzwerk Daten zur Verfügung stellt."
       },
       "gloss_example": {
         "en": "The server is down this morning."
@@ -223,10 +245,12 @@
       "definition": "El enlace que permite acceder a internet.",
       "example": "La conexión está lenta hoy.",
       "translations": {
-        "en": "connection"
+        "en": "connection",
+        "de": "Verbindung"
       },
       "gloss": {
-        "en": "The link that lets you access the internet."
+        "en": "The link that lets you access the internet.",
+        "de": "Die Verbindung, die den Zugang zum Internet ermöglicht."
       },
       "gloss_example": {
         "en": "The connection is slow today."
