@@ -203,6 +203,78 @@
       "target": [
         { "text": "Respira profundo y relájate.", "audioSlug": "respira_profundo_y_relajate" }
       ]
+    },
+    {
+      "id": "health_el_ejercicio_fortalece_el_cuerpo",
+      "source": "Bewegung stärkt den Körper.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El ejercicio fortalece el cuerpo.", "audioSlug": "el_ejercicio_fortalece_el_cuerpo" }
+      ]
+    },
+    {
+      "id": "health_necesito_una_cita_con_el_especialista",
+      "source": "Ich brauche einen Termin beim Facharzt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Necesito una cita con el especialista.", "audioSlug": "necesito_una_cita_con_el_especialista" }
+      ]
+    },
+    {
+      "id": "health_el_tratamiento_dura_varias_semanas",
+      "source": "Die Behandlung dauert mehrere Wochen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El tratamiento dura varias semanas.", "audioSlug": "el_tratamiento_dura_varias_semanas" }
+      ]
+    },
+    {
+      "id": "health_me_pusieron_una_vacuna_ayer",
+      "source": "Ich wurde gestern geimpft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me pusieron una vacuna ayer.", "audioSlug": "me_pusieron_una_vacuna_ayer" }
+      ]
+    },
+    {
+      "id": "health_descansa_y_recuperate_pronto",
+      "source": "Ruh dich aus und werde bald wieder gesund.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Descansa y recupérate pronto.", "audioSlug": "descansa_y_recuperate_pronto" }
+      ]
+    },
+    {
+      "id": "health_el_paciente_necesita_una_operacion",
+      "source": "Der Patient braucht eine Operation.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El paciente necesita una operación.", "audioSlug": "el_paciente_necesita_una_operacion" }
+      ]
+    },
+    {
+      "id": "health_tomo_vitaminas_todas_las_mananas",
+      "source": "Ich nehme jeden Morgen Vitamine.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tomo vitaminas todas las mañanas.", "audioSlug": "tomo_vitaminas_todas_las_mananas" }
+      ]
+    },
+    {
+      "id": "health_el_dolor_desaparece_con_el_descanso",
+      "source": "Der Schmerz verschwindet mit Ruhe.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El dolor desaparece con el descanso.", "audioSlug": "el_dolor_desaparece_con_el_descanso" }
+      ]
     }
   ]
 }
