@@ -46,13 +46,13 @@
       ]
     },
     {
-      "id": "vestimenta_hace_frio_ponte_el_jersey",
-      "source": "Es ist kalt, zieh den Pullover an.",
+      "id": "vestimenta_si_tienes_frio_ponte_el_jersey",
+      "source": "Wenn dir kalt ist, zieh den Pullover an.",
       "level": "A2",
       "grammar": null,
       "target": [
-        { "text": "Hace frío, ponte el suéter.", "labels": { "region": "Latinoamérica" }, "audioSlug": "hace_frio_ponte_el_sueter" },
-        { "text": "Hace frío, ponte el jersey.", "labels": { "region": "España" }, "audioSlug": "hace_frio_ponte_el_jersey" }
+        { "text": "Si tienes frío, ponte el suéter.", "labels": { "region": "Latinoamérica" }, "audioSlug": "si_tienes_frio_ponte_el_sueter" },
+        { "text": "Si tienes frío, ponte el jersey.", "labels": { "region": "España" }, "audioSlug": "si_tienes_frio_ponte_el_jersey" }
       ]
     },
     {
