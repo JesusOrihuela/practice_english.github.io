@@ -326,6 +326,51 @@
       "target": [
         { "text": "Guardé todos los datos del estudio.", "audioSlug": "guarde_todos_los_datos_del_estudio" }
       ]
+    },
+    {
+      "id": "estudios_me_gustan_las_novelas_de_detective",
+      "source": "Ich mag Detektivromane.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Me gustan las novelas de detective.", "audioSlug": "me_gustan_las_novelas_de_detective" }
+      ]
+    },
+    {
+      "id": "estudios_ese_cuento_infantil_es_precioso",
+      "source": "Diese Kindergeschichte ist wunderschön.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Ese cuento infantil es precioso.", "audioSlug": "ese_cuento_infantil_es_precioso" }
+      ]
+    },
+    {
+      "id": "estudios_sigue_el_modelo_del_libro",
+      "source": "Folge dem Muster im Buch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Sigue el modelo del libro.", "audioSlug": "sigue_el_modelo_del_libro" }
+      ]
+    },
+    {
+      "id": "estudios_escribo_en_mi_diario_cada_noche",
+      "source": "Ich schreibe jeden Abend in mein Tagebuch.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Escribo en mi diario cada noche.", "audioSlug": "escribo_en_mi_diario_cada_noche" }
+      ]
+    },
+    {
+      "id": "estudios_casi_no_entiendo_tu_letra",
+      "source": "Ich kann deine Handschrift kaum lesen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Casi no entiendo tu letra.", "audioSlug": "casi_no_entiendo_tu_letra" }
+      ]
     }
   ]
 }

@@ -194,6 +194,25 @@
       "target": [
         { "text": "¿Este tren para en todas las estaciones?", "audioSlug": "este_tren_para_en_todas_las_estaciones" }
       ]
+    },
+    {
+      "id": "transportation_hay_que_conducir_con_mucho_cuidado",
+      "source": "Man muss sehr vorsichtig fahren.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay que conducir con mucho cuidado.", "labels": { "region": "España" }, "audioSlug": "hay_que_conducir_con_mucho_cuidado" },
+        { "text": "Hay que manejar con mucho cuidado.", "labels": { "region": "Latinoamérica" }, "audioSlug": "hay_que_manejar_con_mucho_cuidado" }
+      ]
+    },
+    {
+      "id": "transportation_este_es_un_buen_sitio_para_aparcar",
+      "source": "Das ist ein guter Ort zum Parken.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este es un buen sitio para aparcar.", "audioSlug": "este_es_un_buen_sitio_para_aparcar" }
+      ]
     }
   ]
 }

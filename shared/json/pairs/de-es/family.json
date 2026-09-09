@@ -239,6 +239,24 @@
       "target": [
         { "text": "En Navidad visitamos a los abuelos.", "audioSlug": "en_navidad_visitamos_a_los_abuelos" }
       ]
+    },
+    {
+      "id": "family_ese_muchacho_es_mi_primo",
+      "source": "Dieser Junge ist mein Cousin.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese muchacho es mi primo.", "audioSlug": "ese_muchacho_es_mi_primo" }
+      ]
+    },
+    {
+      "id": "family_suelo_visitar_a_mi_abuela_los_domingos",
+      "source": "Sonntags besuche ich meistens meine Oma.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Suelo visitar a mi abuela los domingos.", "audioSlug": "suelo_visitar_a_mi_abuela_los_domingos" }
+      ]
     }
   ]
 }
