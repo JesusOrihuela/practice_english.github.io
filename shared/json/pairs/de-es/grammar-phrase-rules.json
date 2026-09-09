@@ -211,6 +211,9 @@
   "descripciones_el_rey_vive_en_un_palacio": [
     "present_er_ir_verbs"
   ],
+  "descripciones_el_sol_es_de_color_amarillo": [
+    "ser_identity"
+  ],
   "descripciones_ella_aprende_una_lengua_indigena": [
     "present_er_ir_verbs"
   ],
@@ -279,8 +282,14 @@
   "economia_el_comercio_en_esta_zona_es_activo": [
     "estar_location_states"
   ],
+  "economia_el_empleado_nuevo_aprende_rapido": [
+    "present_er_ir_verbs"
+  ],
   "economia_firme_un_contrato_de_trabajo": [
     "present_ar_verbs"
+  ],
+  "economia_la_propietaria_vive_arriba": [
+    "present_er_ir_verbs"
   ],
   "economia_necesito_pagar_las_facturas": [
     "present_ar_verbs"
@@ -335,8 +344,14 @@
   "estudios_el_alumno_estudia_para_el_examen": [
     "present_ar_verbs"
   ],
+  "estudios_el_profesor_escribe_en_la_pizarra": [
+    "present_er_ir_verbs"
+  ],
   "estudios_el_senor_perez_es_mi_profesor": [
     "ser_identity"
+  ],
+  "estudios_escribo_con_un_boligrafo_azul": [
+    "present_er_ir_verbs"
   ],
   "estudios_escribo_en_mi_cuaderno": [
     "present_er_ir_verbs"
@@ -362,6 +377,9 @@
   "estudios_leo_un_libro_nuevo_cada_mes": [
     "present_er_ir_verbs"
   ],
+  "estudios_los_libros_estan_en_la_estanteria": [
+    "estar_location_states"
+  ],
   "estudios_me_gusta_aprender_idiomas": [
     "gustar_structure"
   ],
@@ -383,12 +401,18 @@
   "estudios_que_carrera_estudias": [
     "question_words"
   ],
+  "family_la_princesa_vive_en_un_gran_castillo": [
+    "present_er_ir_verbs"
+  ],
   "family_mi_cunado_trabaja_como_medico": [
     "present_ar_verbs",
     "present_er_ir_verbs"
   ],
   "family_mi_esposa_trabaja_en_un_hospital": [
     "present_ar_verbs"
+  ],
+  "family_mi_nieta_vive_muy_lejos": [
+    "present_er_ir_verbs"
   ],
   "family_mi_tio_vive_lejos": [
     "present_er_ir_verbs"
@@ -496,6 +520,12 @@
   "kitchen_voy_a_cocinar_la_cena": [
     "ir_a_futuro",
     "present_ar_verbs"
+  ],
+  "naturaleza_lugares_el_caballo_corre_por_el_campo": [
+    "present_er_ir_verbs"
+  ],
+  "naturaleza_lugares_el_cerdo_vive_en_la_granja": [
+    "present_er_ir_verbs"
   ],
   "naturaleza_lugares_hay_muchas_estrellas_esta_noche": [
     "estar_location_states"
@@ -816,6 +846,9 @@
     "present_ar_verbs"
   ],
   "transportation_necesito_un_mapa_de_la_ciudad": [
+    "present_ar_verbs"
+  ],
+  "transportation_voy_al_trabajo_en_moto": [
     "present_ar_verbs"
   ],
   "transportation_when_does_the_next_train_leave": [

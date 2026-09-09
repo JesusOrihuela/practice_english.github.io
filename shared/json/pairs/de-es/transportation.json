@@ -213,6 +213,33 @@
       "target": [
         { "text": "Este es un buen sitio para aparcar.", "audioSlug": "este_es_un_buen_sitio_para_aparcar" }
       ]
+    },
+    {
+      "id": "transportation_voy_al_trabajo_en_moto",
+      "source": "Ich fahre mit dem Motorrad zur Arbeit.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Voy al trabajo en moto.", "audioSlug": "voy_al_trabajo_en_moto" }
+      ]
+    },
+    {
+      "id": "transportation_el_transporte_publico_es_barato_aqui",
+      "source": "Die öffentlichen Verkehrsmittel sind hier billig.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El transporte público es barato aquí.", "audioSlug": "el_transporte_publico_es_barato_aqui" }
+      ]
+    },
+    {
+      "id": "transportation_la_rueda_de_la_bici_esta_pinchada",
+      "source": "Der Fahrradreifen ist platt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La rueda de la bici está pinchada.", "audioSlug": "la_rueda_de_la_bici_esta_pinchada" }
+      ]
     }
   ]
 }

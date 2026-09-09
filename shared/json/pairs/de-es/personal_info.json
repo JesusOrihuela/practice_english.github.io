@@ -283,6 +283,36 @@
       "target": [
         { "text": "Mi padre está casado.", "audioSlug": "mi_padre_esta_casado" }
       ]
+    },
+    {
+      "id": "personal_info_es_un_buen_matematico",
+      "source": "Er ist ein guter Mathematiker.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una buena matemática.", "labels": { "gender": "femenino" }, "source": "Sie ist eine gute Mathematikerin.", "audioSlug": "es_una_buena_matematica" },
+        { "text": "Es un buen matemático.", "labels": { "gender": "masculino" }, "source": "Er ist ein guter Mathematiker.", "audioSlug": "es_un_buen_matematico" }
+      ]
+    },
+    {
+      "id": "personal_info_el_bombero_apaga_el_fuego",
+      "source": "Der Feuerwehrmann löscht das Feuer.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La bombera apaga el fuego.", "labels": { "gender": "femenino" }, "source": "Die Feuerwehrfrau löscht das Feuer.", "audioSlug": "la_bombera_apaga_el_fuego" },
+        { "text": "El bombero apaga el fuego.", "labels": { "gender": "masculino" }, "source": "Der Feuerwehrmann löscht das Feuer.", "audioSlug": "el_bombero_apaga_el_fuego" }
+      ]
+    },
+    {
+      "id": "personal_info_el_juez_dicta_la_sentencia",
+      "source": "Der Richter verkündet das Urteil.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La jueza dicta la sentencia.", "labels": { "gender": "femenino" }, "source": "Die Richterin verkündet das Urteil.", "audioSlug": "la_jueza_dicta_la_sentencia" },
+        { "text": "El juez dicta la sentencia.", "labels": { "gender": "masculino" }, "source": "Der Richter verkündet das Urteil.", "audioSlug": "el_juez_dicta_la_sentencia" }
+      ]
     }
   ]
 }

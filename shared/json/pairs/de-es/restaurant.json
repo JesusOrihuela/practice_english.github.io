@@ -372,6 +372,26 @@
         { "text": "La torta de chocolate es casera.", "labels": { "region": "Sudamérica" }, "audioSlug": "la_torta_de_chocolate_es_casera" },
         { "text": "La tarta de chocolate es casera.", "labels": { "region": "España" }, "audioSlug": "la_tarta_de_chocolate_es_casera" }
       ]
+    },
+    {
+      "id": "restaurant_el_camarero_nos_trae_la_carta",
+      "source": "Der Kellner bringt uns die Speisekarte.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La camarera nos trae la carta.", "labels": { "gender": "femenino" }, "source": "Die Kellnerin bringt uns die Speisekarte.", "audioSlug": "la_camarera_nos_trae_la_carta" },
+        { "text": "El camarero nos trae la carta.", "labels": { "gender": "masculino" }, "source": "Der Kellner bringt uns die Speisekarte.", "audioSlug": "el_camarero_nos_trae_la_carta" }
+      ]
+    },
+    {
+      "id": "restaurant_el_cocinero_prepara_el_plato",
+      "source": "Der Koch bereitet das Gericht zu.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La cocinera prepara el plato.", "labels": { "gender": "femenino" }, "source": "Die Köchin bereitet das Gericht zu.", "audioSlug": "la_cocinera_prepara_el_plato" },
+        { "text": "El cocinero prepara el plato.", "labels": { "gender": "masculino" }, "source": "Der Koch bereitet das Gericht zu.", "audioSlug": "el_cocinero_prepara_el_plato" }
+      ]
     }
   ]
 }

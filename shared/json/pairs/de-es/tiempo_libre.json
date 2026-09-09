@@ -443,6 +443,35 @@
       "target": [
         { "text": "El arte moderno me resulta interesante.", "audioSlug": "el_arte_moderno_me_resulta_interesante" }
       ]
+    },
+    {
+      "id": "tiempo_libre_ese_actor_es_muy_conocido",
+      "source": "Dieser Schauspieler ist sehr bekannt.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Esa actriz es muy conocida.", "labels": { "gender": "femenino" }, "source": "Diese Schauspielerin ist sehr bekannt.", "audioSlug": "esa_actriz_es_muy_conocida" },
+        { "text": "Ese actor es muy conocido.", "labels": { "gender": "masculino" }, "source": "Dieser Schauspieler ist sehr bekannt.", "audioSlug": "ese_actor_es_muy_conocido" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_el_escritor_firma_su_nuevo_libro",
+      "source": "Der Schriftsteller signiert sein neues Buch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La escritora firma su nuevo libro.", "labels": { "gender": "femenino" }, "source": "Die Schriftstellerin signiert ihr neues Buch.", "audioSlug": "la_escritora_firma_su_nuevo_libro" },
+        { "text": "El escritor firma su nuevo libro.", "labels": { "gender": "masculino" }, "source": "Der Schriftsteller signiert sein neues Buch.", "audioSlug": "el_escritor_firma_su_nuevo_libro" }
+      ]
+    },
+    {
+      "id": "tiempo_libre_ese_cantante_tiene_mucho_exito",
+      "source": "Dieser Sänger hat großen Erfolg.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Ese cantante tiene mucho éxito.", "audioSlug": "ese_cantante_tiene_mucho_exito" }
+      ]
     }
   ]
 }

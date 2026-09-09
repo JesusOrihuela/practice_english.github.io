@@ -272,6 +272,60 @@
       "target": [
         { "text": "Hay que quitar el polvo de los muebles.", "audioSlug": "hay_que_quitar_el_polvo_de_los_muebles" }
       ]
+    },
+    {
+      "id": "hogar_el_reloj_de_la_pared_esta_parado",
+      "source": "Die Wanduhr steht still.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El reloj de la pared está parado.", "audioSlug": "el_reloj_de_la_pared_esta_parado" }
+      ]
+    },
+    {
+      "id": "hogar_me_siento_en_el_sillon_a_leer",
+      "source": "Ich setze mich zum Lesen in den Sessel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Me siento en el sillón a leer.", "audioSlug": "me_siento_en_el_sillon_a_leer" }
+      ]
+    },
+    {
+      "id": "hogar_en_invierno_enciendo_la_calefaccion",
+      "source": "Im Winter schalte ich die Heizung ein.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "En invierno enciendo la calefacción.", "audioSlug": "en_invierno_enciendo_la_calefaccion" }
+      ]
+    },
+    {
+      "id": "hogar_guardo_cada_herramienta_en_su_caja",
+      "source": "Ich bewahre jedes Werkzeug in seiner Kiste auf.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Guardo cada herramienta en su caja.", "audioSlug": "guardo_cada_herramienta_en_su_caja" }
+      ]
+    },
+    {
+      "id": "hogar_el_lavabo_del_bano_esta_atascado",
+      "source": "Das Waschbecken im Bad ist verstopft.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El lavabo del baño está atascado.", "audioSlug": "el_lavabo_del_bano_esta_atascado" }
+      ]
+    },
+    {
+      "id": "hogar_escucho_la_radio_en_la_cocina",
+      "source": "Ich höre in der Küche Radio.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Escucho la radio en la cocina.", "audioSlug": "escucho_la_radio_en_la_cocina" }
+      ]
     }
   ]
 }

@@ -275,6 +275,51 @@
       "target": [
         { "text": "El dolor desaparece con el descanso.", "audioSlug": "el_dolor_desaparece_con_el_descanso" }
       ]
+    },
+    {
+      "id": "health_es_una_enfermedad_poco_comun",
+      "source": "Es ist eine seltene Krankheit.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Es una enfermedad poco común.", "audioSlug": "es_una_enfermedad_poco_comun" }
+      ]
+    },
+    {
+      "id": "health_llama_a_una_ambulancia_por_favor",
+      "source": "Ruf bitte einen Krankenwagen.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Llama a una ambulancia, por favor.", "audioSlug": "llama_a_una_ambulancia_por_favor" }
+      ]
+    },
+    {
+      "id": "health_tengo_gripe_y_mucha_tos",
+      "source": "Ich habe Grippe und starken Husten.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Tengo gripe y mucha tos.", "audioSlug": "tengo_gripe_y_mucha_tos" }
+      ]
+    },
+    {
+      "id": "health_tenemos_que_ir_a_urgencias_ya",
+      "source": "Wir müssen sofort in die Notaufnahme.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tenemos que ir a urgencias ya.", "audioSlug": "tenemos_que_ir_a_urgencias_ya" }
+      ]
+    },
+    {
+      "id": "health_este_virus_se_contagia_muy_rapido",
+      "source": "Dieses Virus ist sehr ansteckend.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Este virus se contagia muy rápido.", "audioSlug": "este_virus_se_contagia_muy_rapido" }
+      ]
     }
   ]
 }

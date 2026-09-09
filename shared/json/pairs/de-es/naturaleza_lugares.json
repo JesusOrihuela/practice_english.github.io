@@ -308,6 +308,60 @@
       "target": [
         { "text": "Dimos un paseo por la playa.", "audioSlug": "dimos_un_paseo_por_la_playa" }
       ]
+    },
+    {
+      "id": "naturaleza_lugares_el_caballo_corre_por_el_campo",
+      "source": "Das Pferd läuft über das Feld.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El caballo corre por el campo.", "audioSlug": "el_caballo_corre_por_el_campo" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_cerdo_vive_en_la_granja",
+      "source": "Das Schwein lebt auf dem Bauernhof.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El cerdo vive en la granja.", "audioSlug": "el_cerdo_vive_en_la_granja" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_hay_un_pez_de_colores_en_el_estanque",
+      "source": "Im Teich ist ein bunter Fisch.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay un pez de colores en el estanque.", "audioSlug": "hay_un_pez_de_colores_en_el_estanque" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_le_tengo_miedo_a_las_aranas",
+      "source": "Ich habe Angst vor Spinnen.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Le tengo miedo a las arañas.", "audioSlug": "le_tengo_miedo_a_las_aranas" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_el_lago_se_cubre_de_hielo_en_invierno",
+      "source": "Der See ist im Winter mit Eis bedeckt.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "El lago se cubre de hielo en invierno.", "audioSlug": "el_lago_se_cubre_de_hielo_en_invierno" }
+      ]
+    },
+    {
+      "id": "naturaleza_lugares_hay_mucha_niebla_en_la_montana",
+      "source": "In den Bergen ist viel Nebel.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Hay mucha niebla en la montaña.", "audioSlug": "hay_mucha_niebla_en_la_montana" }
+      ]
     }
   ]
 }

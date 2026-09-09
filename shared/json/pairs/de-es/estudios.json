@@ -371,6 +371,63 @@
       "target": [
         { "text": "Casi no entiendo tu letra.", "audioSlug": "casi_no_entiendo_tu_letra" }
       ]
+    },
+    {
+      "id": "estudios_escribo_con_un_boligrafo_azul",
+      "source": "Ich schreibe mit einem blauen Kugelschreiber.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Escribo con un bolígrafo azul.", "labels": { "region": "España" }, "audioSlug": "escribo_con_un_boligrafo_azul" },
+        { "text": "Escribo con una pluma azul.", "labels": { "region": "México y Centroamérica" }, "audioSlug": "escribo_con_una_pluma_azul" },
+        { "text": "Escribo con un lapicero azul.", "labels": { "region": "Región andina" }, "audioSlug": "escribo_con_un_lapicero_azul" },
+        { "text": "Escribo con una birome azul.", "labels": { "region": "Río de la Plata" }, "audioSlug": "escribo_con_una_birome_azul" }
+      ]
+    },
+    {
+      "id": "estudios_dibujo_con_lapiz_y_goma",
+      "source": "Ich zeichne mit Bleistift und Radiergummi.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Dibujo con lápiz y goma.", "audioSlug": "dibujo_con_lapiz_y_goma" }
+      ]
+    },
+    {
+      "id": "estudios_busco_la_palabra_en_el_diccionario",
+      "source": "Ich schlage das Wort im Wörterbuch nach.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Busco la palabra en el diccionario.", "audioSlug": "busco_la_palabra_en_el_diccionario" }
+      ]
+    },
+    {
+      "id": "estudios_el_profesor_escribe_en_la_pizarra",
+      "source": "Der Lehrer schreibt an die Tafel.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "El profesor escribe en la pizarra.", "audioSlug": "el_profesor_escribe_en_la_pizarra" }
+      ]
+    },
+    {
+      "id": "estudios_los_libros_estan_en_la_estanteria",
+      "source": "Die Bücher stehen im Regal.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Los libros están en la estantería.", "audioSlug": "los_libros_estan_en_la_estanteria" }
+      ]
+    },
+    {
+      "id": "estudios_meto_los_cuadernos_en_la_cartera",
+      "source": "Ich stecke die Hefte in die Schultasche.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Meto los cuadernos en la cartera.", "audioSlug": "meto_los_cuadernos_en_la_cartera" }
+      ]
     }
   ]
 }

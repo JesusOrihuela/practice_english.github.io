@@ -266,6 +266,56 @@
       "target": [
         { "text": "Mi marido cocina muy bien.", "audioSlug": "mi_marido_cocina_muy_bien" }
       ]
+    },
+    {
+      "id": "family_la_nina_pequena_juega_feliz",
+      "source": "Das kleine Mädchen spielt fröhlich.",
+      "level": "A1",
+      "grammar": null,
+      "target": [
+        { "text": "La niña pequeña juega feliz.", "labels": { "gender": "femenino" }, "source": "Das kleine Mädchen spielt fröhlich.", "audioSlug": "la_nina_pequena_juega_feliz" },
+        { "text": "El niño pequeño juega feliz.", "labels": { "gender": "masculino" }, "source": "Der kleine Junge spielt fröhlich.", "audioSlug": "el_nino_pequeno_juega_feliz" }
+      ]
+    },
+    {
+      "id": "family_mi_nieta_vive_muy_lejos",
+      "source": "Meine Enkelin wohnt sehr weit weg.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "Mi nieta vive muy lejos.", "labels": { "gender": "femenino" }, "source": "Meine Enkelin wohnt sehr weit weg.", "audioSlug": "mi_nieta_vive_muy_lejos" },
+        { "text": "Mi nieto vive muy lejos.", "labels": { "gender": "masculino" }, "source": "Mein Enkel wohnt sehr weit weg.", "audioSlug": "mi_nieto_vive_muy_lejos" }
+      ]
+    },
+    {
+      "id": "family_tiene_una_hermana_gemela",
+      "source": "Sie hat eine Zwillingsschwester.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "Tiene una hermana gemela.", "labels": { "gender": "femenino" }, "source": "Sie hat eine Zwillingsschwester.", "audioSlug": "tiene_una_hermana_gemela" },
+        { "text": "Tiene un hermano gemelo.", "labels": { "gender": "masculino" }, "source": "Er hat einen Zwillingsbruder.", "audioSlug": "tiene_un_hermano_gemelo" }
+      ]
+    },
+    {
+      "id": "family_la_senora_del_piso_de_arriba_es_amable",
+      "source": "Die Dame aus der oberen Wohnung ist nett.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La señora del piso de arriba es amable.", "labels": { "gender": "femenino" }, "source": "Die Dame aus der oberen Wohnung ist nett.", "audioSlug": "la_senora_del_piso_de_arriba_es_amable" },
+        { "text": "El señor del piso de arriba es amable.", "labels": { "gender": "masculino" }, "source": "Der Herr aus der oberen Wohnung ist nett.", "audioSlug": "el_senor_del_piso_de_arriba_es_amable" }
+      ]
+    },
+    {
+      "id": "family_la_princesa_vive_en_un_gran_castillo",
+      "source": "Die Prinzessin wohnt in einem großen Schloss.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La princesa vive en un gran castillo.", "labels": { "gender": "femenino" }, "source": "Die Prinzessin wohnt in einem großen Schloss.", "audioSlug": "la_princesa_vive_en_un_gran_castillo" },
+        { "text": "El príncipe vive en un gran castillo.", "labels": { "gender": "masculino" }, "source": "Der Prinz wohnt in einem großen Schloss.", "audioSlug": "el_principe_vive_en_un_gran_castillo" }
+      ]
     }
   ]
 }

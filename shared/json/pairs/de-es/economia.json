@@ -434,6 +434,36 @@
       "target": [
         { "text": "Hubo un movimiento fuerte en el mercado.", "audioSlug": "hubo_un_movimiento_fuerte_en_el_mercado" }
       ]
+    },
+    {
+      "id": "economia_el_vendedor_de_la_tienda_es_amable",
+      "source": "Der Verkäufer im Laden ist freundlich.",
+      "level": "A2",
+      "grammar": null,
+      "target": [
+        { "text": "La vendedora de la tienda es amable.", "labels": { "gender": "femenino" }, "source": "Die Verkäuferin im Laden ist freundlich.", "audioSlug": "la_vendedora_de_la_tienda_es_amable" },
+        { "text": "El vendedor de la tienda es amable.", "labels": { "gender": "masculino" }, "source": "Der Verkäufer im Laden ist freundlich.", "audioSlug": "el_vendedor_de_la_tienda_es_amable" }
+      ]
+    },
+    {
+      "id": "economia_el_empleado_nuevo_aprende_rapido",
+      "source": "Der neue Angestellte lernt schnell.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La empleada nueva aprende rápido.", "labels": { "gender": "femenino" }, "source": "Die neue Angestellte lernt schnell.", "audioSlug": "la_empleada_nueva_aprende_rapido" },
+        { "text": "El empleado nuevo aprende rápido.", "labels": { "gender": "masculino" }, "source": "Der neue Angestellte lernt schnell.", "audioSlug": "el_empleado_nuevo_aprende_rapido" }
+      ]
+    },
+    {
+      "id": "economia_la_propietaria_vive_arriba",
+      "source": "Die Eigentümerin wohnt oben.",
+      "level": "B1",
+      "grammar": null,
+      "target": [
+        { "text": "La propietaria vive arriba.", "labels": { "gender": "femenino" }, "source": "Die Eigentümerin wohnt oben.", "audioSlug": "la_propietaria_vive_arriba" },
+        { "text": "El propietario vive arriba.", "labels": { "gender": "masculino" }, "source": "Der Eigentümer wohnt oben.", "audioSlug": "el_propietario_vive_arriba" }
+      ]
     }
   ]
 }
