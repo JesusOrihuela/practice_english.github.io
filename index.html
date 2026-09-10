@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional"></noscript>
     <link rel="stylesheet" href="index/css/generalities.css?v=e7426ae7">
-    <link rel="stylesheet" href="index/css/index.css?v=57360111">
+    <link rel="stylesheet" href="index/css/index.css?v=10be1cdf">
     <!-- LCP image on the landing hero — fetch it early and at high priority so mobile
          (Slow 4G) discovers it before scripts instead of after CSS+parse. -->
     <link rel="preload" as="image" href="index/img/learn.webp" fetchpriority="high">
@@ -630,15 +630,6 @@
               fp.innerHTML = '© <span id="footer-year">' + new Date().getFullYear() + '</span> ' + dev + ' Jesús Orihuela';
             }
           }
-
-          // Reveal now: every above-the-fold element (hero title/subtitle/stat labels,
-          // footer) is filled at PARSE time here — no need to wait for DOMContentLoaded
-          // (which is gated by ~10 end-of-body scripts downloading on Slow 4G). This cuts
-          // mobile FCP/LCP sharply. The one still-async value, the "phrases" number, fills
-          // a moment later via _setPhrasesStat (its "—" placeholder reserves the line, so
-          // the update is a text swap, not a layout shift). The DOMContentLoaded + 2 s
-          // failsafe listeners in the cloak IIFE remain as a backstop.
-          try { document.documentElement.classList.remove('lang-cloak'); } catch (e) {}
         }
 
         // ── Pair picker (shown when pe_active_pair === null) ──────────
@@ -744,7 +735,7 @@
         }
       })();
     </script>
-    <script src="shared/js/progress.js?v=7e9ad7d3"></script>
+    <script src="shared/js/progress.js?v=d6909ba6"></script>
     <script src="shared/js/topic-data.js?v=4420c42d"></script>
     <script src="shared/js/topics.js?v=4b06b99c"></script>
     <script src="shared/js/path.js?v=384b7b1a"></script>

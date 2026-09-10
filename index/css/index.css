@@ -123,14 +123,6 @@
   margin-bottom: 3px;
 }
 
-/* The "phrases" count is filled asynchronously (— → e.g. "1100+") a moment after
-   the landing's early cloak reveal. Reserve its width so that update is an in-place
-   text swap, never a reflow of the flanking stats — keeps mobile CLS at 0. */
-#stat-phrases-num {
-  min-width: 5.5ch;
-  font-variant-numeric: tabular-nums;
-}
-
 .stat-label {
   font-size: 0.72rem;
   color: var(--clr-text-muted);
