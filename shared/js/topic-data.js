@@ -20,7 +20,7 @@ const AppData = (() => {
   const _SS_PREFIX = 'pe_topic_v11_';    // v11: faithful-translation sources + new phrase categories
 
   // IDs still shared across all pairs (no pair prefix).
-  const _SHARED = /^word-equivalents($|[-_])/;
+  const _SHARED = /^(word-equivalents|id-map)($|[-_])/;
   // Vocabulary lives under vocab/{targetLang}/ (target-centric — shared by target
   // language, so all X→en pairs reuse the English vocab, all X→es reuse Spanish).
   const _VOCAB  = /^words($|[-_])/;

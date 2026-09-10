@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', async function () {
   // Part B: load the active pair's topics before reading topic lists.
   await AppTopics.load();
+  // The id-map (phrase/vocab counts the path nodes need) is now fetched lazily; wait for
+  // it so the "Mi Aprendizaje" preview renders with correct progress. Below the fold →
+  // no effect on FCP/LCP. SW-precached, so ~instant for returning users.
+  if (typeof Progress !== 'undefined' && Progress.ensureIdMap) await Progress.ensureIdMap();
   if (typeof AppPath !== 'undefined' && AppPath.load) await AppPath.load();
 
   /* ── Hero image skew effect ── */

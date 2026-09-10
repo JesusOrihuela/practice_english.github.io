@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=optional"></noscript>
     <link rel="stylesheet" href="index/css/generalities.css?v=e7426ae7">
-    <link rel="stylesheet" href="index/css/index.css?v=74bdd5a1">
+    <link rel="stylesheet" href="index/css/index.css?v=639d0243">
     <!-- LCP image on the landing hero — fetch it early and at high priority so mobile
          (Slow 4G) discovers it before scripts instead of after CSS+parse. -->
     <link rel="preload" as="image" href="index/img/learn.webp" fetchpriority="high">
@@ -613,10 +613,15 @@
           var _setPhrasesStat = function () {
             try {
               var _pn = document.getElementById('stat-phrases-num');
-              if (_pn && typeof Progress !== 'undefined' && Progress.getContentCounts) {
+              if (!_pn || typeof Progress === 'undefined' || !Progress.getContentCounts) return;
+              // The count comes from the id-map, now fetched lazily (off the critical path).
+              // Wait for it, then fill; the "—" placeholder has a reserved width (index.css)
+              // so this late text swap causes no layout shift (CLS stays 0).
+              var _apply = function () {
                 var _ph = Progress.getContentCounts().phrases;
-                _pn.textContent = _ph >= 100 ? (Math.floor(_ph / 100) * 100) + '+' : String(_ph);
-              }
+                if (_ph > 0) _pn.textContent = _ph >= 100 ? (Math.floor(_ph / 100) * 100) + '+' : String(_ph);
+              };
+              if (Progress.ensureIdMap) Progress.ensureIdMap().then(_apply); else _apply();
             } catch (e) { /* stat stays as the placeholder */ }
           };
           if (typeof Progress !== 'undefined') _setPhrasesStat();
@@ -741,14 +746,14 @@
          stopping to fetch each one sequentially — the big win on Slow 4G. They still run
          in document order before DOMContentLoaded (which reveals the cloak), so the path
          preview, theme and stat are all filled before first paint. -->
-    <script defer src="shared/js/progress.js?v=7e9ad7d3"></script>
-    <script defer src="shared/js/topic-data.js?v=4420c42d"></script>
+    <script defer src="shared/js/progress.js?v=7e86c007"></script>
+    <script defer src="shared/js/topic-data.js?v=36f1f125"></script>
     <script defer src="shared/js/topics.js?v=4b06b99c"></script>
-    <script defer src="shared/js/path.js?v=384b7b1a"></script>
+    <script defer src="shared/js/path.js?v=284e5ce4"></script>
     <script defer src="shared/js/path-session.js?v=678a282f"></script>
     <script defer src="shared/js/milestones.js?v=cd178b62"></script>
     <script defer src="shared/js/notifications.js?v=1817e28c"></script>
-    <script defer src="index/js/index.js?v=91fcf941"></script>
+    <script defer src="index/js/index.js?v=9eea1989"></script>
     <script defer src="shared/js/network-status.js?v=b94cd881"></script>
     <script defer src="shared/js/theme.js?v=362c3938"></script>
     <script>

@@ -123,6 +123,14 @@
   margin-bottom: 3px;
 }
 
+/* The "phrases" count is filled after the id-map JSON is fetched (off the critical
+   path). Reserve its width so that late "—" → "1100+" swap is an in-place text change,
+   never a reflow of the flanking stats — keeps mobile CLS at 0. */
+#stat-phrases-num {
+  min-width: 5.5ch;
+  font-variant-numeric: tabular-nums;
+}
+
 .stat-label {
   font-size: 0.72rem;
   color: var(--clr-text-muted);

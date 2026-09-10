@@ -579,7 +579,11 @@ const AppPath = (() => {
     // resolve WITHOUT caching so a later call — after all scripts are parsed — rebuilds TOPICS from
     // the pair's records. Caching the empty attempt left a divergent pair's summary on the default list.
     if (typeof AppTopics === 'undefined' || !AppTopics.load) return Promise.resolve();
-    _loadPromise = AppTopics.load().then(() => {
+    // Also ensure the id-map (now fetched lazily) is loaded: every path/session function
+    // reads phrase/vocab ids via Progress, which returns empty until the map is in. Gating
+    // here means all AppPath/PathSession consumers see a ready map after load() resolves.
+    const _idMap = (typeof Progress !== 'undefined' && Progress.ensureIdMap) ? Progress.ensureIdMap() : Promise.resolve();
+    _loadPromise = Promise.all([AppTopics.load(), _idMap]).then(() => {
       const recs = (AppTopics.getRecords ? AppTopics.getRecords() : []).filter(t => t.phrase);
       if (!recs.length) return;
       const rebuilt = recs.slice().sort((a, b) => a.order - b.order)

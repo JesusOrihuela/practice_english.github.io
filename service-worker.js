@@ -49,6 +49,7 @@ const SHELL = [
   './index/css/generalities.css',
   './index/css/index.css',
   './shared/js/progress.js',
+  './shared/json/common/id-map.json',   // externalized from progress.js — needed by SRS/path offline
   './shared/js/network-status.js',
   './shared/js/theme.js',
   './shared/js/milestones.js',

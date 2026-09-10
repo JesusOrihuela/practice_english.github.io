@@ -85,40 +85,37 @@ for (const lang of VOCAB_LANGS) {
 
 const idMap = { phrases, vocab };
 
-// ── 2. Compare / replace the _ID_MAP block in progress.js ────────────────────
+// ── 2. Compare / write the id-map JSON ───────────────────────────────────────
+// Externalized (2026-09) from an inline const in progress.js to shared/json/common/
+// id-map.json: progress.js is precached by the service worker for offline, and the
+// map (~70 KiB) was gating first paint on the landing (parsed on the critical path).
+// Now it is a lazily-fetched, SW-precached JSON — off the critical path. progress.js
+// loads it via AppData.get('id-map') with a data-loss-proof migration guard.
 
-const progressPath = path.join(root, 'shared', 'js', 'progress.js');
-const src = fs.readFileSync(progressPath, 'utf8');
+const idMapPath = path.join(root, 'shared', 'json', 'common', 'id-map.json');
+const newJson   = JSON.stringify(idMap);
+const prevJson  = fs.existsSync(idMapPath) ? fs.readFileSync(idMapPath, 'utf8') : null;
 
-const _ID_MAP_RE = /const _ID_MAP = \{[\s\S]*?\};/;
-if (!_ID_MAP_RE.test(src)) {
-  console.error('  ✗ Could not locate the _ID_MAP block in progress.js');
-  process.exit(1);
-}
-
-const newBlock = 'const _ID_MAP = ' + JSON.stringify(idMap) + ';';
-const newSrc = src.replace(_ID_MAP_RE, newBlock);
-
-if (newSrc === src) {
-  console.log('✓ _ID_MAP is already up to date — no changes needed.');
+if (prevJson === newJson) {
+  console.log('✓ id-map.json is already up to date — no changes needed.');
   process.exit(0);
 }
 
 if (CHECK) {
-  console.error('✗ _ID_MAP is STALE — content (categories/phrases/vocab) changed but');
-  console.error('  shared/js/progress.js was not regenerated, so the Mi Aprendizaje path');
-  console.error('  would silently drop the new content.');
-  console.error('  Fix: node tools/fix-phrase-ids.js   (then commit shared/js/progress.js)');
+  console.error('✗ id-map.json is STALE — content (categories/phrases/vocab) changed but');
+  console.error('  shared/json/common/id-map.json was not regenerated, so the Mi Aprendizaje');
+  console.error('  path would silently drop the new content.');
+  console.error('  Fix: node tools/fix-phrase-ids.js   (then commit shared/json/common/id-map.json)');
   process.exit(1);
 }
 
-fs.writeFileSync(progressPath, newSrc, 'utf8');
+fs.writeFileSync(idMapPath, newJson, 'utf8');
 
 // ── 3. Verify the written map round-trips ────────────────────────────────────
 
-const written = JSON.parse(newSrc.match(/const _ID_MAP = (\{[\s\S]*?\});/)[1]);
-if (JSON.stringify(written) !== JSON.stringify(idMap)) {
-  console.error('❌ Verification failed — written _ID_MAP does not match the rebuilt map.');
+const written = JSON.parse(fs.readFileSync(idMapPath, 'utf8'));
+if (JSON.stringify(written) !== newJson) {
+  console.error('❌ Verification failed — written id-map.json does not match the rebuilt map.');
   process.exit(1);
 }
 
