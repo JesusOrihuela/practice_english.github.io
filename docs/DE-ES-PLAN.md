@@ -39,13 +39,13 @@ naturaleza_lugares, technology, sitios
 - **IMPORTANTE — dos métricas (ver memoria `project_coverage_two_lists`):** `coverage` imprime ELELex
   (informativo, 12325 lemmas) y el **GATE real = PCIC es-core** (`gateIndex`). El envío gatea contra **PCIC**.
   El canal frases ELELex llegó a **86.2%** (854/991) pero el **PCIC-gate está en 60.7%** — son listas distintas.
-- **Canal frases de-es (PCIC-gate): 60.7%.** **PENDIENTE (único bloqueador restante)**: cerrar a ≥86 %
-  apuntando la lista del gate → `node tools/coverage.mjs --pair de-es --gate-missing` (PCIC faltantes por rango).
-  Son ~250 lemas de **vocabulario concreto A1-A2**: profesiones (abogado/enfermero/camarero…, con variantes de
-  género), ropa (pantalón/camisa/falda…), comida (ensalada/tortilla/jamón…), colores (gris/marrón/rubio…),
-  lugares (colegio/garaje…), reflexivos (levantarse/ducharse/sentarse…). Mejor pedagogía que la cola ELELex.
-  Nota: el trabajo previo contra ELELex (frases B1 naturales) es contenido válido y se queda; solo no cuenta
-  para el gate.
+- **Canal frases de-es (PCIC-gate): ✅ 86.3%** (cerrado desde 60.7% en 12 olas apuntando `--gate-missing`).
+  Fue **vocabulario concreto A1-A2**: profesiones (abogado/enfermero/camarero…, con variantes de género),
+  ropa (pantalón/camisa/falda…, tema `vestimenta` nuevo), comida (ensalada/tortilla/jamón…), colores
+  (gris/marrón/rubio…), lugares (colegio/garaje…), reflexivos en infinitivo `-se` (levantarse/ducharse…).
+  Técnica clave: el lematizador mapea **infinitivos**, no conjugadas (ver `project_coverage_two_lists`).
+  El trabajo previo contra ELELex (frases B1 naturales) es contenido válido y se quedó; solo no contaba
+  para el gate. Total: **~1148 frases** de-es.
 - **Fase 4 (glosas alemanas del vocab): ✅ COMPLETA** — `translations.de` + `gloss.de` en las **1604/1604**
   entradas de vocab/es. Hechas por-deck vía delegación a `code-writer` (haiku) + revisión/auditoría
   (convención orthográfica adj/sust, coverage por id, glosa fiel). Auditoría estructural: 0 huecos.
