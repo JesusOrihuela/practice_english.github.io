@@ -55,12 +55,13 @@ var AppGrammarChip = (function () {
 
   function _activePair() { try { return AppLangPair.getActive().id; } catch (e) { return null; } }
   function _targetCode() { try { return AppLangPair.getActive().target.code; } catch (e) { return 'en'; } }
+  function _sourceCode() { try { return AppLangPair.getActive().source.code; } catch (e) { return 'en'; } }
 
   function load() {
     var pair = _activePair();
     if (_loaded && _pair === pair) return Promise.resolve();
     _pair = pair; _loaded = false;
-    var tgt = _targetCode();
+    var src = _sourceCode();
     return Promise.all([
       AppData.get('grammar-phrase-rules').catch(function () { return {}; }),
       AppData.get('grammar-rules').catch(function () { return { rules: [] }; })
@@ -69,7 +70,10 @@ var AppGrammarChip = (function () {
       _lvl = {}; _title = {};
       (res[1].rules || []).forEach(function (r) {
         _lvl[r.id]   = (ORDER[r.level] != null) ? ORDER[r.level] : null;
-        _title[r.id] = r['title_' + tgt] || r.title_en || r.title || r.id;   // per-target, generic
+        // Chip label in the SOURCE language (the learner's L1) so the grammar-topic
+        // name is readable — e.g. de-es shows the German title, not the Spanish one.
+        // The tip→rule RESOLUTION stays target-based (below); only the display changes.
+        _title[r.id] = r['title_' + src] || r.title_en || r.title || r.id;
       });
       _loaded = true;
     });
