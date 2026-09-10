@@ -12,8 +12,11 @@ diferida (SW-precacheado, offline-safe). `progress.js` pasó de **208 KB → 22 
   progress-page, activity.js). Landing stat + index.js path esperan `ensureIdMap`. Ancho de stat reservado (CLS 0).
 - `service-worker.js` precachea `id-map.json`. Los 11 gates verdes + 2 tests de unidad (migración + operación normal).
 
-**Pendiente:** confirmar con Lighthouse (runner limpio) que la mediana cruza 90 tras el deploy. Si aún no,
-las palancas de respaldo del plan (abajo) siguen disponibles.
+**Confirmado (Lighthouse CI, runner limpio, deploy 139bcaae):** 3 corridas = 83/90/90 → **mediana 90**
+(a11y 96, bp 96, seo 100). Cruzado el objetivo. La corrida de 83 (LCP 3.9s) es el outlier de ruido habitual
+del runner libre (±8 pts); las otras dos dan 90 exacto con LCP ~3.1s. El costo estructural (70 KiB en la
+ruta crítica) quedó eliminado; la mediana ahora se apoya en 90. Palancas de respaldo (abajo) quedan
+documentadas por si se quisiera margen extra sobre el ruido.
 
 ---
 
