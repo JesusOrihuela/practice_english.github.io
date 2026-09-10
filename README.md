@@ -15,12 +15,13 @@ A free, installable **language-learning PWA** that teaches a target language thr
 
 Practice English is a static Progressive Web App for language learners. It guides you through 13 everyday topics (greetings, restaurant, airport, technology, …) in CEFR order and builds a daily study session automatically using a custom **SM-2 spaced-repetition** engine. Everything — progress, placement, preferences — lives in your browser's `localStorage`; nothing is sent to a server.
 
-It ships as two independent language pairs:
+It ships as three independent language pairs:
 
 | Pair | You speak | You learn |
 |------|-----------|-----------|
 | `es-en` | Spanish | English |
 | `en-es` | English | Spanish (neutral) |
+| `de-es` | German  | Spanish (neutral) |
 
 Each pair has its own independent content, and switching pairs is a completely separate session — no data is shared or lost.
 
