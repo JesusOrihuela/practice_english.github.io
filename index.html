@@ -735,16 +735,22 @@
         }
       })();
     </script>
-    <script src="shared/js/progress.js?v=d6909ba6"></script>
-    <script src="shared/js/topic-data.js?v=4420c42d"></script>
-    <script src="shared/js/topics.js?v=4b06b99c"></script>
-    <script src="shared/js/path.js?v=384b7b1a"></script>
-    <script src="shared/js/path-session.js?v=678a282f"></script>
-    <script src="shared/js/milestones.js?v=cd178b62"></script>
-    <script src="shared/js/notifications.js?v=1817e28c"></script>
-    <script src="index/js/index.js?v=91fcf941"></script>
-    <script src="shared/js/network-status.js?v=b94cd881"></script>
-    <script src="shared/js/theme.js?v=362c3938"></script>
+    <!-- These landing scripts are NOT needed by the head inline IIFE at parse time
+         (it uses only head globals + guards, and defers its Progress-dependent stat to
+         DOMContentLoaded). `defer` lets all 10 download in PARALLEL instead of the parser
+         stopping to fetch each one sequentially — the big win on Slow 4G. They still run
+         in document order before DOMContentLoaded (which reveals the cloak), so the path
+         preview, theme and stat are all filled before first paint. -->
+    <script defer src="shared/js/progress.js?v=d6909ba6"></script>
+    <script defer src="shared/js/topic-data.js?v=4420c42d"></script>
+    <script defer src="shared/js/topics.js?v=4b06b99c"></script>
+    <script defer src="shared/js/path.js?v=384b7b1a"></script>
+    <script defer src="shared/js/path-session.js?v=678a282f"></script>
+    <script defer src="shared/js/milestones.js?v=cd178b62"></script>
+    <script defer src="shared/js/notifications.js?v=1817e28c"></script>
+    <script defer src="index/js/index.js?v=91fcf941"></script>
+    <script defer src="shared/js/network-status.js?v=b94cd881"></script>
+    <script defer src="shared/js/theme.js?v=362c3938"></script>
     <script>
       if ('serviceWorker' in navigator) {
         // Automatic updates — mirrors shared/js/sw-register.js (root path here).
@@ -775,8 +781,12 @@
             });
           })
           .catch(() => {});
-        // Fire daily reminder if conditions are met (once per day, after configured time)
-        if (window.NotificationSystem) window.NotificationSystem.checkAndNotify();
+        // Fire daily reminder if conditions are met (once per day, after configured time).
+        // notifications.js is now deferred, so wait for it (DOMContentLoaded runs after
+        // all deferred scripts) before calling in — the guard alone would skip it at parse.
+        document.addEventListener('DOMContentLoaded', function () {
+          if (window.NotificationSystem) window.NotificationSystem.checkAndNotify();
+        });
       }
     </script>
 </body>
