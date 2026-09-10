@@ -1,5 +1,22 @@
 # Plan — Performance móvil estable ≥90 (refactor de `progress.js`)
 
+## ✅ EJECUTADO (2026-09-10, commit 139bcaae)
+
+`_ID_MAP` (~70 KiB) externalizado de `progress.js` a **`shared/json/common/id-map.json`** de carga
+diferida (SW-precacheado, offline-safe). `progress.js` pasó de **208 KB → 22 KB**. Detalles:
+- `tools/fix-phrase-ids.js` genera el JSON (antes inyectaba el const en progress.js); `--check` lo valida en CI.
+- `progress.js`: loader `_ensureIdMap()` + helpers `_mapPhrases/_mapVocab` (devuelven {} hasta cargar).
+  **Migración v2→v3 DIFERIDA sin pérdida de progreso** — nunca sube `_v` sin el remap real; reintenta al
+  cargar el mapa. Verificado con test de migración (v2 posicional intacto, luego remapeado con reps preservados).
+- `AppPath.load()` espera el mapa → cubre TODOS los flujos path/session (index, my-learning, grammar,
+  progress-page, activity.js). Landing stat + index.js path esperan `ensureIdMap`. Ancho de stat reservado (CLS 0).
+- `service-worker.js` precachea `id-map.json`. Los 11 gates verdes + 2 tests de unidad (migración + operación normal).
+
+**Pendiente:** confirmar con Lighthouse (runner limpio) que la mediana cruza 90 tras el deploy. Si aún no,
+las palancas de respaldo del plan (abajo) siguen disponibles.
+
+---
+
 ## Contexto (estado verificado 2026-09-10)
 
 Todo lo demás del proyecto está **cerrado y en vivo**: par de-es shippado (Fases 0-5), matriz de
