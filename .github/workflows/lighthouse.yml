@@ -2,9 +2,14 @@ name: Lighthouse
 
 # Performance/accessibility/best-practices/SEO audit of the live site, run
 # automatically after every successful GitHub Pages deployment (same engine as
-# pagespeed.web.dev). Now GATED: .github/lighthouserc.json asserts per-category
-# minimum scores, calibrated a couple points below the live scores (perf 0.92,
-# a11y 0.96, best-practices 0.96, seo 1.00) so normal variance doesn't false-fail.
+# pagespeed.web.dev). GATED via .github/lighthouserc.json:
+#   - accessibility / best-practices: error @ 0.90, seo: error @ 0.95 — hard gates
+#     (live scores 96/96/100 leave a safe margin; a red run = a real regression).
+#   - performance: WARN @ 0.90 — a shift-left nudge on every build under 90 without
+#     false-failing. The free runner is ±8 pts noisy on TBT/LCP and picks up 3rd-party
+#     ad/analytics from the test environment (rubicon/sephora/gamdom) that the app's CSP
+#     forbids; live mobile is ~87-90, so a hard 0.90 perf gate would flake constantly.
+#     Use pagespeed.web.dev (incognito) for the authoritative number.
 # Post-deploy, so a red run flags a regression to fix — it doesn't block the deploy.
 
 on:
