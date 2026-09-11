@@ -71,13 +71,8 @@ const Progress = (() => {
   }
 
   // ── Migration v2→v3: positional cardIds → stable string IDs ────────────
-  // Compact lookup table: topic → [phraseId at origIdx 0, 1, 2, …]
-  // Maintained by tools/fix-phrase-ids.js — do not edit by hand.
-  // Kept INLINE (not a fetched JSON) on purpose: progress.js is part of the offline
-  // app shell (precached by the service worker), so inlining avoids an extra request
-  // and works offline with no fallback logic. The size cost is an accepted trade-off;
-  // if it grows large enough to matter, externalize it to a shell-precached JSON.
-  // _ID_MAP is loaded lazily from shared/json/common/id-map.json (service-worker
+  // _ID_MAP (topic → [phraseId at origIdx 0, 1, 2, …]) is loaded lazily from
+  // shared/json/common/id-map.json (service-worker
   // precached, offline-safe) instead of being inlined here — inline it was ~70 KiB
   // parsed on the landing's critical path (gated first paint). Consumers read it via
   // _mapPhrases/_mapVocab (return {} until loaded); the v2→v3 card-id migration is

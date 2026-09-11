@@ -152,40 +152,6 @@ const AppPath = (() => {
     return _grammarRules.filter(r => (CEFR_ORDER[r.level] ?? 0) <= userOrd);
   }
 
-  /**
-   * Grammar rules relevant to a topic (matched by topics[] field in the rule).
-   * Each rule declares which topics it belongs to — content-mapped, not just CEFR.
-   * @returns {{ total, seen, due, titles, href }} or null if no rules loaded
-   */
-  function getTopicGrammarInfo(topicId) {
-    const leveled = _leveledGrammarRules();
-    if (leveled.length === 0) return null;
-
-    const relevant = leveled.filter(r =>
-      Array.isArray(r.topics) && r.topics.includes(topicId)
-    );
-    if (relevant.length === 0) return null;
-
-    const cards = Progress.getAllCards();
-    const now   = Date.now();
-    let seen = 0, due = 0;
-
-    relevant.forEach(r => {
-      const key  = 'grammar_' + r.category + '_' + r.id;
-      const card = cards[key];
-      if (!card || card.reps === 0) return;
-      seen++;
-      if (card.due <= now) due++;
-    });
-
-    return {
-      total:  relevant.length,
-      seen,
-      due,
-      titles: relevant.map(r => r.title),
-      href:   'grammar/html/grammar.html',
-    };
-  }
 
   // ── Thresholds ────────────────────────────────────────────────────────────
   // Previous topic's Speaking seen% needed for the next topic to become 'active'.
@@ -611,7 +577,6 @@ const AppPath = (() => {
     getTopicNextDue,
     getGrammarProgress,
     setGrammarRules,
-    getTopicGrammarInfo,
     getLevelProgress,
     getNextActivityHref,
     getAheadHint,
